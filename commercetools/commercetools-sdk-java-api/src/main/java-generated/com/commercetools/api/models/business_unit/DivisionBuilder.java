@@ -137,7 +137,7 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
-     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the BusinessUnit.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
@@ -149,7 +149,7 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
-     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the BusinessUnit.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
@@ -161,7 +161,7 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
-     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the BusinessUnit.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -173,7 +173,7 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the BusinessUnit.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
@@ -185,7 +185,7 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the BusinessUnit.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
@@ -197,7 +197,7 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the BusinessUnit.</p>
      * @param createdBy value to be set
      * @return Builder
      */
@@ -208,7 +208,7 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Business Unit.</p>
+     *  <p>User-defined unique and immutable identifier of the Business Unit.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -884,7 +884,7 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
-     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the BusinessUnit.</p>
      * @return lastModifiedBy
      */
 
@@ -894,7 +894,7 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the BusinessUnit.</p>
      * @return createdBy
      */
 
@@ -904,7 +904,7 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Business Unit.</p>
+     *  <p>User-defined unique and immutable identifier of the Business Unit.</p>
      * @return key
      */
 

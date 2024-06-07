@@ -78,7 +78,7 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     public List<Attribute> getAttributes();
 
     /**
-     *  <p>Only available when Price selection is used. Cannot be used in a Query Predicate.</p>
+     *  <p>Only available when price selection is used. Cannot be used in a Query Predicate.</p>
      * @return price
      */
     @Valid
@@ -118,7 +118,7 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     public Boolean getIsMatchingVariant();
 
     /**
-     *  <p>Only available in response to a Product Projection Search request with price selection. Can be used to sort, filter, and facet.</p>
+     *  <p>Only available in response to a Product Projection Search request with Product price selection. Can be used to sort, filter, and facet.</p>
      * @return scopedPrice
      */
     @Valid
@@ -126,7 +126,7 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     public ScopedPrice getScopedPrice();
 
     /**
-     *  <p>Only available in response to a Product Projection Search request with price selection.</p>
+     *  <p>Only available in response to a Product Projection Search request with Product price selection.</p>
      * @return scopedPriceDiscounted
      */
 
@@ -186,7 +186,7 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     public void setAttributes(final List<Attribute> attributes);
 
     /**
-     *  <p>Only available when Price selection is used. Cannot be used in a Query Predicate.</p>
+     *  <p>Only available when price selection is used. Cannot be used in a Query Predicate.</p>
      * @param price value to be set
      */
 
@@ -237,14 +237,14 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     public void setIsMatchingVariant(final Boolean isMatchingVariant);
 
     /**
-     *  <p>Only available in response to a Product Projection Search request with price selection. Can be used to sort, filter, and facet.</p>
+     *  <p>Only available in response to a Product Projection Search request with Product price selection. Can be used to sort, filter, and facet.</p>
      * @param scopedPrice value to be set
      */
 
     public void setScopedPrice(final ScopedPrice scopedPrice);
 
     /**
-     *  <p>Only available in response to a Product Projection Search request with price selection.</p>
+     *  <p>Only available in response to a Product Projection Search request with Product price selection.</p>
      * @param scopedPriceDiscounted value to be set
      */
 

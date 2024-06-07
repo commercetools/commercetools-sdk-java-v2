@@ -16,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     ProductVariantAvailability productVariantAvailability = ProductVariantAvailability.builder()
- *             .isOnStock(true)
  *             .build()
  * </code></pre>
  * </div>
@@ -27,6 +26,7 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
     @Nullable
     private com.commercetools.api.models.product.ProductVariantChannelAvailabilityMap channels;
 
+    @Nullable
     private Boolean isOnStock;
 
     @Nullable
@@ -86,7 +86,7 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
      * @return Builder
      */
 
-    public ProductVariantAvailabilityBuilder isOnStock(final Boolean isOnStock) {
+    public ProductVariantAvailabilityBuilder isOnStock(@Nullable final Boolean isOnStock) {
         this.isOnStock = isOnStock;
         return this;
     }
@@ -150,6 +150,7 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
      * @return isOnStock
      */
 
+    @Nullable
     public Boolean getIsOnStock() {
         return this.isOnStock;
     }
@@ -199,7 +200,6 @@ public class ProductVariantAvailabilityBuilder implements Builder<ProductVariant
      * @return ProductVariantAvailability
      */
     public ProductVariantAvailability build() {
-        Objects.requireNonNull(isOnStock, ProductVariantAvailability.class + ": isOnStock is missing");
         return new ProductVariantAvailabilityImpl(channels, isOnStock, restockableInDays, availableQuantity, id,
             version);
     }

@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
 import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.store.StoreResourceIdentifier;
 import com.fasterxml.jackson.annotation.*;
@@ -24,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     CartDiscountSetStoresAction cartDiscountSetStoresAction = CartDiscountSetStoresAction.builder()
+ *             .plusStores(storesBuilder -> storesBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -46,6 +48,7 @@ public interface CartDiscountSetStoresAction extends CartDiscountUpdateAction {
      *  </ul>
      * @return stores
      */
+    @NotNull
     @Valid
     @JsonProperty("stores")
     public List<StoreResourceIdentifier> getStores();

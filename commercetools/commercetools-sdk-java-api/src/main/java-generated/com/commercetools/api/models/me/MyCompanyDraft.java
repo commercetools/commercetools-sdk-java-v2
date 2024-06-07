@@ -77,7 +77,7 @@ public interface MyCompanyDraft extends MyBusinessUnitDraft, io.vrap.rmf.base.cl
         instance.setKey(template.getKey());
         instance.setName(template.getName());
         instance.setContactEmail(template.getContactEmail());
-        instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         instance.setAddresses(Optional.ofNullable(template.getAddresses())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.common.BaseAddress::deepCopy)

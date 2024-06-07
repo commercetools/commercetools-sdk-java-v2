@@ -33,7 +33,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface AssociateRoleDraft extends io.vrap.rmf.base.client.Draft<AssociateRoleDraft> {
 
     /**
-     *  <p>User-defined unique identifier for the AssociateRole.</p>
+     *  <p>User-defined unique and immutable identifier for the AssociateRole.</p>
      * @return key
      */
     @NotNull
@@ -73,7 +73,7 @@ public interface AssociateRoleDraft extends io.vrap.rmf.base.client.Draft<Associ
     public CustomFieldsDraft getCustom();
 
     /**
-     *  <p>User-defined unique identifier for the AssociateRole.</p>
+     *  <p>User-defined unique and immutable identifier for the AssociateRole.</p>
      * @param key value to be set
      */
 

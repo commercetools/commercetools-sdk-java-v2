@@ -38,7 +38,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyCartDiscountsByIDPostString extends
         StringBodyApiMethod<ByProjectKeyCartDiscountsByIDPostString, com.commercetools.api.models.cart_discount.CartDiscount>
-        implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyCartDiscountsByIDPostString>,
+        implements CartDiscountExpansionMixin<ByProjectKeyCartDiscountsByIDPost>,
+        com.commercetools.api.client.ConflictingTrait<ByProjectKeyCartDiscountsByIDPostString>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyCartDiscountsByIDPostString>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyCartDiscountsByIDPostString>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyCartDiscountsByIDPostString> {

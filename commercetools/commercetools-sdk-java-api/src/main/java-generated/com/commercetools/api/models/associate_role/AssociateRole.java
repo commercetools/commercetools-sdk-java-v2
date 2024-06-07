@@ -75,7 +75,7 @@ public interface AssociateRole extends BaseResource, com.commercetools.api.model
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the AssociateRole.</p>
      * @return lastModifiedBy
      */
     @Valid
@@ -83,7 +83,7 @@ public interface AssociateRole extends BaseResource, com.commercetools.api.model
     public LastModifiedBy getLastModifiedBy();
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the AssociateRole.</p>
      * @return createdBy
      */
     @Valid
@@ -91,7 +91,7 @@ public interface AssociateRole extends BaseResource, com.commercetools.api.model
     public CreatedBy getCreatedBy();
 
     /**
-     *  <p>User-defined unique identifier of the AssociateRole.</p>
+     *  <p>User-defined unique and immutable identifier of the AssociateRole.</p>
      * @return key
      */
     @NotNull
@@ -159,21 +159,21 @@ public interface AssociateRole extends BaseResource, com.commercetools.api.model
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
     /**
-     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the AssociateRole.</p>
      * @param lastModifiedBy value to be set
      */
 
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the AssociateRole.</p>
      * @param createdBy value to be set
      */
 
     public void setCreatedBy(final CreatedBy createdBy);
 
     /**
-     *  <p>User-defined unique identifier of the AssociateRole.</p>
+     *  <p>User-defined unique and immutable identifier of the AssociateRole.</p>
      * @param key value to be set
      */
 

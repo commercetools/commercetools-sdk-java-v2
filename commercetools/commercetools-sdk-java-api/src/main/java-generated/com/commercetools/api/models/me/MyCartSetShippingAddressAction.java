@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Setting the shipping address also sets the TaxRate of Line Items and calculates the TaxedPrice.</p>
- *  <p>If a matching price cannot be found for the given shipping address during Line Item Price selection, a MissingTaxRateForCountry error is returned.</p>
+ *  <p>If a matching price cannot be found for the given shipping address during Line Item price selection, a MissingTaxRateForCountry error is returned.</p>
  *  <p>If you want to allow shipping to states inside a country that are not explicitly covered by a TaxRate, set the <code>countryTaxRateFallbackEnabled</code> field to <code>true</code> in the CartsConfiguration by using the Change CountryTaxRateFallbackEnabled update action.</p>
  *
  * <hr>

@@ -574,7 +574,7 @@ public class ProductTypeCreationDemoIntegrationTest {
                         .name(LAUNDRY_SYMBOLS_ATTR_NAME)
                         .value("cold")))
                 .executeBlocking()).isInstanceOf(ErrorResponseException.class)
-                        .matches(e -> ((ErrorResponseException) e).hasErrorCode(InvalidFieldError.INVALID_FIELD));
+                .matches(e -> ((ErrorResponseException) e).hasErrorCode(InvalidFieldError.INVALID_FIELD));
     }
 
     @Test

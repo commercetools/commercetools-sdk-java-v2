@@ -30,6 +30,8 @@ public class LastModifiedByTest {
                         .customer(new com.commercetools.api.models.customer.CustomerReferenceImpl()) },
                 new Object[] { LastModifiedBy.builder().anonymousId("anonymousId") },
                 new Object[] { LastModifiedBy.builder()
+                        .attributedTo(new com.commercetools.api.models.common.AttributionImpl()) },
+                new Object[] { LastModifiedBy.builder()
                         .associate(new com.commercetools.api.models.customer.CustomerReferenceImpl()) } };
     }
 
@@ -60,6 +62,14 @@ public class LastModifiedByTest {
         LastModifiedBy value = LastModifiedBy.of();
         value.setAnonymousId("anonymousId");
         Assertions.assertThat(value.getAnonymousId()).isEqualTo("anonymousId");
+    }
+
+    @Test
+    public void attributedTo() {
+        LastModifiedBy value = LastModifiedBy.of();
+        value.setAttributedTo(new com.commercetools.api.models.common.AttributionImpl());
+        Assertions.assertThat(value.getAttributedTo())
+                .isEqualTo(new com.commercetools.api.models.common.AttributionImpl());
     }
 
     @Test

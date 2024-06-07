@@ -24,7 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DirectDiscountDraftBuilder implements Builder<DirectDiscountDraft> {
 
-    private com.commercetools.api.models.cart_discount.CartDiscountValue value;
+    private com.commercetools.api.models.cart_discount.CartDiscountValueDraft value;
 
     @Nullable
     private com.commercetools.api.models.cart_discount.CartDiscountTarget target;
@@ -35,7 +35,8 @@ public class DirectDiscountDraftBuilder implements Builder<DirectDiscountDraft> 
      * @return Builder
      */
 
-    public DirectDiscountDraftBuilder value(final com.commercetools.api.models.cart_discount.CartDiscountValue value) {
+    public DirectDiscountDraftBuilder value(
+            final com.commercetools.api.models.cart_discount.CartDiscountValueDraft value) {
         this.value = value;
         return this;
     }
@@ -47,8 +48,9 @@ public class DirectDiscountDraftBuilder implements Builder<DirectDiscountDraft> 
      */
 
     public DirectDiscountDraftBuilder value(
-            Function<com.commercetools.api.models.cart_discount.CartDiscountValueBuilder, Builder<? extends com.commercetools.api.models.cart_discount.CartDiscountValue>> builder) {
-        this.value = builder.apply(com.commercetools.api.models.cart_discount.CartDiscountValueBuilder.of()).build();
+            Function<com.commercetools.api.models.cart_discount.CartDiscountValueDraftBuilder, Builder<? extends com.commercetools.api.models.cart_discount.CartDiscountValueDraft>> builder) {
+        this.value = builder.apply(com.commercetools.api.models.cart_discount.CartDiscountValueDraftBuilder.of())
+                .build();
         return this;
     }
 
@@ -83,7 +85,7 @@ public class DirectDiscountDraftBuilder implements Builder<DirectDiscountDraft> 
      * @return value
      */
 
-    public com.commercetools.api.models.cart_discount.CartDiscountValue getValue() {
+    public com.commercetools.api.models.cart_discount.CartDiscountValueDraft getValue() {
         return this.value;
     }
 

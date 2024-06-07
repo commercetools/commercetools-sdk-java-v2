@@ -40,6 +40,7 @@ public class PriceImportTest {
                 new Object[] { PriceImport.builder()
                         .discounted(new com.commercetools.importapi.models.common.DiscountedPriceImpl()) },
                 new Object[] { PriceImport.builder().publish(true) },
+                new Object[] { PriceImport.builder().staged(true) },
                 new Object[] {
                         PriceImport.builder()
                                 .tiers(Collections.singletonList(
@@ -118,6 +119,13 @@ public class PriceImportTest {
         PriceImport value = PriceImport.of();
         value.setPublish(true);
         Assertions.assertThat(value.getPublish()).isEqualTo(true);
+    }
+
+    @Test
+    public void staged() {
+        PriceImport value = PriceImport.of();
+        value.setStaged(true);
+        Assertions.assertThat(value.getStaged()).isEqualTo(true);
     }
 
     @Test

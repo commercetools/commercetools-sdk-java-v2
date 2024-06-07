@@ -324,6 +324,14 @@ public class StagedOrderUpdateActionBuilder {
         return com.commercetools.api.models.order_edit.StagedOrderSetShippingAddressCustomTypeActionBuilder.of();
     }
 
+    public com.commercetools.api.models.order_edit.StagedOrderSetShippingCustomFieldActionBuilder setShippingCustomFieldBuilder() {
+        return com.commercetools.api.models.order_edit.StagedOrderSetShippingCustomFieldActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.order_edit.StagedOrderSetShippingCustomTypeActionBuilder setShippingCustomTypeBuilder() {
+        return com.commercetools.api.models.order_edit.StagedOrderSetShippingCustomTypeActionBuilder.of();
+    }
+
     public com.commercetools.api.models.order_edit.StagedOrderSetShippingMethodActionBuilder setShippingMethodBuilder() {
         return com.commercetools.api.models.order_edit.StagedOrderSetShippingMethodActionBuilder.of();
     }

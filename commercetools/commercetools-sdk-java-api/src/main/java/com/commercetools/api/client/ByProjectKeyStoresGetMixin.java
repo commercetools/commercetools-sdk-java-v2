@@ -7,6 +7,7 @@ import com.commercetools.api.predicates.query.store.StoreQueryBuilderDsl;
 
 public interface ByProjectKeyStoresGetMixin
         extends PagedQueryResourceRequest<ByProjectKeyStoresGet, StorePagedQueryResponse, StoreQueryBuilderDsl> {
+
     @Override
     default StoreQueryBuilderDsl queryDsl() {
         return QueryPredicateDsl.store();

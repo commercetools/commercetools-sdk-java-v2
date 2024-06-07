@@ -19,6 +19,10 @@ public class ImportRequestBuilder {
         return com.commercetools.importapi.models.importrequests.CustomerImportRequestBuilder.of();
     }
 
+    public com.commercetools.importapi.models.importrequests.DiscountCodeImportRequestBuilder discountCodeBuilder() {
+        return com.commercetools.importapi.models.importrequests.DiscountCodeImportRequestBuilder.of();
+    }
+
     public com.commercetools.importapi.models.importrequests.InventoryImportRequestBuilder inventoryBuilder() {
         return com.commercetools.importapi.models.importrequests.InventoryImportRequestBuilder.of();
     }

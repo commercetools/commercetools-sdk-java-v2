@@ -150,7 +150,7 @@ public interface MyCartDraft extends com.commercetools.api.models.CustomizableDr
     public List<String> getDiscountCodes();
 
     /**
-     *  <p>Used for LineItem Price selection. If used for Create Cart in Store, the provided country must be one of the Store's <code>countries</code>.</p>
+     *  <p>Used for Line Item price selection. If used for Create Cart in Store, the provided country must be one of the Store's <code>countries</code>.</p>
      * @return country
      */
 
@@ -303,7 +303,7 @@ public interface MyCartDraft extends com.commercetools.api.models.CustomizableDr
     public void setDiscountCodes(final List<String> discountCodes);
 
     /**
-     *  <p>Used for LineItem Price selection. If used for Create Cart in Store, the provided country must be one of the Store's <code>countries</code>.</p>
+     *  <p>Used for Line Item price selection. If used for Create Cart in Store, the provided country must be one of the Store's <code>countries</code>.</p>
      * @param country value to be set
      */
 

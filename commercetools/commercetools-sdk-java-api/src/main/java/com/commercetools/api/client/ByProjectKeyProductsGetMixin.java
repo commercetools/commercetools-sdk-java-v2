@@ -11,4 +11,5 @@ public interface ByProjectKeyProductsGetMixin
     default ProductQueryBuilderDsl queryDsl() {
         return QueryPredicateDsl.product();
     }
+
 }

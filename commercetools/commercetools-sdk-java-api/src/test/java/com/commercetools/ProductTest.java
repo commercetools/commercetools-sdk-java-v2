@@ -9,6 +9,7 @@ import java.util.stream.Collectors;
 
 import com.commercetools.api.models.common.LocalizedStringBuilder;
 import com.commercetools.api.models.product.*;
+import com.commercetools.api.models.product_search.*;
 import com.commercetools.api.models.product_type.ProductTypeResourceIdentifierBuilder;
 import com.fasterxml.jackson.core.JsonProcessingException;
 
@@ -51,6 +52,17 @@ public class ProductTest {
 
         Assertions.assertThat(JsonUtils.toJsonString(productProjection))
                 .isEqualTo("{\"masterVariant\":{\"id\":1,\"sku\":\"foo\"},\"variants\":[{\"id\":2,\"sku\":\"bar\"}]}");
+    }
+
+    @Test
+    public void productSearchFacetDeserialize() {
+        ProductPagedSearchResponse result = JsonUtils.fromJsonString(stringFromResource("search-facet.json"),
+            ProductPagedSearchResponse.class);
+
+        Assertions.assertThat(result).isNotNull();
+        Assertions.assertThat(result.getFacets().get(0)).isExactlyInstanceOf(ProductSearchFacetResultImpl.class);
+        Assertions.assertThat(result.getFacets().get(1)).isExactlyInstanceOf(ProductSearchFacetResultBucketImpl.class);
+        Assertions.assertThat(result.getFacets().get(2)).isExactlyInstanceOf(ProductSearchFacetResultCountImpl.class);
     }
 
     @Test

@@ -5,7 +5,6 @@ import com.commercetools.api.models.cart.Cart;
 import com.commercetools.api.models.product.ProductProjection;
 import com.commercetools.sdk.examples.springmvc.service.CartRepository;
 import com.commercetools.sdk.examples.springmvc.service.ProductsRepository;
-import com.newrelic.api.agent.Trace;
 import jakarta.annotation.Resource;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +19,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 
 @Controller
-public class AppContoller {
+public class AppController {
     @GetMapping("/")
     public String home() {
         return "home/index";
@@ -34,9 +33,7 @@ public class AppContoller {
     ProjectScopedApiRoot apiRoot;
 
     @GetMapping("/p")
-    @Trace(dispatcher = true)
     public String pop(Model model, HttpSession session) throws ExecutionException, InterruptedException {
-
         CompletableFuture<List<ProductProjection>> products =  new ProductsRepository(apiRoot).products();
         CompletableFuture<Cart> cart = new CartRepository(apiRoot, session).meCart();
         model.addAttribute("products", products.get());
@@ -47,7 +44,6 @@ public class AppContoller {
     @GetMapping("/cart")
     public String cart(Model model, HttpSession session) {
         final CompletableFuture<Cart> cart = new CartRepository(apiRoot, session).meCart();
-
         model.addAttribute("cart", cart);
         return "mycart/index";
     }

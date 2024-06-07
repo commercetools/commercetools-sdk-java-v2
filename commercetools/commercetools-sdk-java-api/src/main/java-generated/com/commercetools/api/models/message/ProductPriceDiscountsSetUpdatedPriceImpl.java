@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Details about a Embedded Price that was updated due to a Discount. Specific to Product Price Discounts Set Message.</p>
+ *  <p>Details about an Embedded Price that was updated due to a Discount. Specific to Product Price Discounts Set Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductPriceDiscountsSetUpdatedPriceImpl implements ProductPriceDiscountsSetUpdatedPrice, ModelBase {

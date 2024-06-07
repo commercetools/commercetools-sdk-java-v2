@@ -17,11 +17,13 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Returned when the Price, Tax Rate, or Shipping Rate of some Line Items changed since they were last added to the Cart.</p>
+ *  <p>Returned when the Price or Tax Rate of some Line Items or Shipping Rate of some Shipping Methods changed since they were last added to the Cart.</p>
  *  <p>The error is returned as a failed response to:</p>
  *  <ul>
  *   <li>Create Order from Cart and Create Order in Store from Cart requests on Orders.</li>
  *   <li>Create Order from Cart and Create Order in Store from Cart requests on My Orders.</li>
+ *   <li>Create Order from Quote request on Orders.</li>
+ *   <li>Create Order from Quote request on My Orders.</li>
  *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")

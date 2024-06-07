@@ -28,7 +28,10 @@ public class CreatedByTest {
                 new Object[] { CreatedBy.builder().externalUserId("externalUserId") },
                 new Object[] { CreatedBy.builder()
                         .customer(new com.commercetools.api.models.customer.CustomerReferenceImpl()) },
-                new Object[] { CreatedBy.builder().anonymousId("anonymousId") }, new Object[] { CreatedBy.builder()
+                new Object[] { CreatedBy.builder().anonymousId("anonymousId") },
+                new Object[] {
+                        CreatedBy.builder().attributedTo(new com.commercetools.api.models.common.AttributionImpl()) },
+                new Object[] { CreatedBy.builder()
                         .associate(new com.commercetools.api.models.customer.CustomerReferenceImpl()) } };
     }
 
@@ -59,6 +62,14 @@ public class CreatedByTest {
         CreatedBy value = CreatedBy.of();
         value.setAnonymousId("anonymousId");
         Assertions.assertThat(value.getAnonymousId()).isEqualTo("anonymousId");
+    }
+
+    @Test
+    public void attributedTo() {
+        CreatedBy value = CreatedBy.of();
+        value.setAttributedTo(new com.commercetools.api.models.common.AttributionImpl());
+        Assertions.assertThat(value.getAttributedTo())
+                .isEqualTo(new com.commercetools.api.models.common.AttributionImpl());
     }
 
     @Test

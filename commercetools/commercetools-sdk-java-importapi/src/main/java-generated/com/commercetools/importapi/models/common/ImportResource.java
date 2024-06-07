@@ -82,6 +82,10 @@ public interface ImportResource {
             return com.commercetools.importapi.models.customers.CustomerImport
                     .deepCopy((com.commercetools.importapi.models.customers.CustomerImport) template);
         }
+        if (template instanceof com.commercetools.importapi.models.discount_codes.DiscountCodeImport) {
+            return com.commercetools.importapi.models.discount_codes.DiscountCodeImport
+                    .deepCopy((com.commercetools.importapi.models.discount_codes.DiscountCodeImport) template);
+        }
         if (template instanceof com.commercetools.importapi.models.inventories.InventoryImport) {
             return com.commercetools.importapi.models.inventories.InventoryImport
                     .deepCopy((com.commercetools.importapi.models.inventories.InventoryImport) template);

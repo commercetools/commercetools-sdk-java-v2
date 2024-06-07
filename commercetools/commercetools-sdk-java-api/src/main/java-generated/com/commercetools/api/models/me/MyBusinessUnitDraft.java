@@ -12,7 +12,7 @@ import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.business_unit.BusinessUnitType;
 import com.commercetools.api.models.common.BaseAddress;
-import com.commercetools.api.models.type.CustomFields;
+import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -38,8 +38,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "unitType", defaultImpl = MyBusinessUnitDraftImpl.class, visible = true)
 @JsonDeserialize(as = MyBusinessUnitDraftImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public interface MyBusinessUnitDraft
-        extends com.commercetools.api.models.Customizable<MyBusinessUnitDraft>, com.commercetools.api.models.WithKey {
+public interface MyBusinessUnitDraft extends com.commercetools.api.models.CustomizableDraft<MyBusinessUnitDraft>,
+        com.commercetools.api.models.WithKey {
 
     /**
      *  <p>User-defined unique identifier for the BusinessUnit.</p>
@@ -79,7 +79,7 @@ public interface MyBusinessUnitDraft
      */
     @Valid
     @JsonProperty("custom")
-    public CustomFields getCustom();
+    public CustomFieldsDraft getCustom();
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
@@ -147,7 +147,7 @@ public interface MyBusinessUnitDraft
      * @param custom value to be set
      */
 
-    public void setCustom(final CustomFields custom);
+    public void setCustom(final CustomFieldsDraft custom);
 
     /**
      *  <p>Addresses used by the Business Unit.</p>
@@ -230,7 +230,7 @@ public interface MyBusinessUnitDraft
         instance.setKey(template.getKey());
         instance.setName(template.getName());
         instance.setContactEmail(template.getContactEmail());
-        instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         instance.setAddresses(Optional.ofNullable(template.getAddresses())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.common.BaseAddress::deepCopy)

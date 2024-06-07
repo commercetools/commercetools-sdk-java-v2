@@ -118,7 +118,7 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
     public ExternalLineItemTotalPrice getExternalTotalPrice();
 
     /**
-     *  <p>Sets the external Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>Sets the external Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode and <code>Single</code> ShippingMode.</p>
      * @return externalTaxRate
      */
     @Valid
@@ -230,7 +230,7 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
     public void setExternalTotalPrice(final ExternalLineItemTotalPrice externalTotalPrice);
 
     /**
-     *  <p>Sets the external Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>Sets the external Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode and <code>Single</code> ShippingMode.</p>
      * @param externalTaxRate value to be set
      */
 

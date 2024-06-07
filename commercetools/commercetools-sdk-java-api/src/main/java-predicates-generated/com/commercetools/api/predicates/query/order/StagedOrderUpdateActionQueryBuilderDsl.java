@@ -622,6 +622,22 @@ public class StagedOrderUpdateActionQueryBuilderDsl {
             StagedOrderUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<StagedOrderUpdateActionQueryBuilderDsl> asSetShippingCustomField(
+            Function<com.commercetools.api.predicates.query.order_edit.StagedOrderSetShippingCustomFieldActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.order_edit.StagedOrderSetShippingCustomFieldActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.order_edit.StagedOrderSetShippingCustomFieldActionQueryBuilderDsl
+                    .of()),
+            StagedOrderUpdateActionQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<StagedOrderUpdateActionQueryBuilderDsl> asSetShippingCustomType(
+            Function<com.commercetools.api.predicates.query.order_edit.StagedOrderSetShippingCustomTypeActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.order_edit.StagedOrderSetShippingCustomTypeActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.order_edit.StagedOrderSetShippingCustomTypeActionQueryBuilderDsl
+                    .of()),
+            StagedOrderUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<StagedOrderUpdateActionQueryBuilderDsl> asSetShippingMethod(
             Function<com.commercetools.api.predicates.query.order_edit.StagedOrderSetShippingMethodActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.order_edit.StagedOrderSetShippingMethodActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(

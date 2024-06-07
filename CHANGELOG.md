@@ -1,4 +1,152 @@
 
+# 17.11.0 (2024-05-03)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/626
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/627
+* [DEVX-344] add missing service regions by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/628
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/629
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/631
+* update bootstrap, jquery, jquery-validation by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/632
+* chore(deps): update all dependencies by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/618
+* use codecov GH action by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/633
+* chore(deps): update actions/create-github-app-token digest to a0de6af by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/611
+* chore(deps): update gradle/wrapper-validation-action action to v3 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/619
+* chore(deps): update github/codeql-action digest to d39d31e by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/613
+* Newrelic add metrics by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/630
+* fix(deps): update dependency husky to v9 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/621
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.10.0...17.11.0
+
+# 17.10.0 (2024-04-18)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/616
+* deserialize product search facets by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/624
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/610
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/625
+
+**Api changes**
+
+<details>
+<summary>Changed Property(s)</summary>
+
+- :warning: changed property `custom` of type `MyBusinessUnitDraft` from type `CustomFields` to `CustomFieldsDraft`
+- :warning: changed property `custom` of type `MyCompanyDraft` from type `CustomFields` to `CustomFieldsDraft`
+- :warning: changed property `custom` of type `MyDivisionDraft` from type `CustomFields` to `CustomFieldsDraft`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `attributedTo` to type `CreatedBy`
+- added property `attributedTo` to type `LastModifiedBy`
+- added property `postFilter` to type `ProductSearchRequest`
+</details>
+
+
+<details>
+<summary>Required Property(s)</summary>
+
+- :warning: changed property `stores` of type `BusinessUnit` to be required
+- :warning: changed property `stores` of type `Company` to be required
+- :warning: changed property `stores` of type `Division` to be required
+- :warning: changed property `stores` of type `BusinessUnitSetStoresAction` to be required
+- :warning: changed property `stores` of type `CartDiscountSetStoresAction` to be required
+- :warning: changed property `stores` of type `Customer` to be required
+- :warning: changed property `stores` of type `CustomerSetStoresAction` to be required
+</details>
+
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `Attribution`
+- added type `AttributionSource`
+</details>
+
+
+<details>
+<summary>Removed Method(s)</summary>
+
+- :warning: removed method `apiRoot.withProjectKey().products().search().head()`
+</details>
+
+**Import changes**
+
+<details>
+<summary>Added Resource(s)</summary>
+
+- added resource `/{projectKey}/discount-codes`
+- added resource `/{projectKey}/discount-codes/import-containers`
+- added resource `/{projectKey}/discount-codes/import-containers/{importContainerKey}`
+</details>
+
+
+<details>
+<summary>Added Method(s)</summary>
+
+- added method `apiRoot.withProjectKeyValue().discountCodes().importContainers().withImportContainerKeyValue().post()`
+</details>
+
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `DiscountCodeImportRequest`
+- added type `DiscountCodeImport`
+</details>
+
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `discount-code` to type `ImportResourceType`
+</details>
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.9.0...17.10.0
+
+# 17.9.0 (2024-04-08)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/609
+* Make javadoc consistent across monitoring middlewares by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/615
+* Add dogstatsd support by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/599
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.8.0...17.9.0
+
+# 17.8.0 (2024-04-01)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/592
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/593
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/594
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/597
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/598
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/600
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/602
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/603
+* Replace deprecated retry middleware with policy middleware in docs by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/601
+* Add integration test to get a valid oauth token by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/596
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/605
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/607
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/608
+* chore(deps): update gradle/actions digest to 417ae3c by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/582
+* chore(deps): update yarn to v4 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/510
+* fix(deps): update dependency org.jdrupes.taglets:plantuml-taglet to v3 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/497
+* chore(deps): update all dependencies by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/575
+* chore(deps): update actions/create-github-app-token digest to 78e5f2d by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/574
+* chore(deps): update github/codeql-action digest to 1b1aada by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/581
+* chore(deps): update ts-graphviz/setup-graphviz action to v2 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/576
+* fix(deps): update dependency com.squareup.okio:okio to v3 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/590
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.7.0...17.8.0
+
 # 17.7.0 (2024-02-29)
 
 ## What's Changed

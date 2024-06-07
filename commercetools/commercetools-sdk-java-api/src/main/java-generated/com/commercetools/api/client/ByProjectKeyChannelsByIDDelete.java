@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *
+ *  <p>Returns a ReferenceExists error if other resources reference the Channel to be deleted.</p>
  *
  * <hr>
  * <div class=code-example>

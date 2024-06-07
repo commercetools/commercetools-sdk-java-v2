@@ -44,8 +44,8 @@ public class ApiRootBuilderUtil {
                 final String nullableValue = getEnvironmentVariable.apply(key);
                 return new ImmutablePair<>(suffix, nullableValue);
             })
-                    .filter(pair -> null != pair.getRight())
-                    .collect(Collectors.toMap(ImmutablePair::getLeft, ImmutablePair::getRight));
+                .filter(pair -> null != pair.getRight())
+                .collect(Collectors.toMap(ImmutablePair::getLeft, ImmutablePair::getRight));
 
         final Function<String, String> throwExceptionOnAbsent = key -> throwEnvException(prefix,
             buildEnvKey(prefix, key));

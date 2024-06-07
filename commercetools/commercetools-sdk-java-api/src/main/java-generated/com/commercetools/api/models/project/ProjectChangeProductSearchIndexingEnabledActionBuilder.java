@@ -3,6 +3,8 @@ package com.commercetools.api.models.project;
 
 import java.util.*;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -24,6 +26,9 @@ public class ProjectChangeProductSearchIndexingEnabledActionBuilder
 
     private Boolean enabled;
 
+    @Nullable
+    private com.commercetools.api.models.project.ProductSearchIndexingMode mode;
+
     /**
      *  <ul>
      *   <li>If <code>false</code>, the indexing of Product information will stop and the Product Projection Search as well as the Product Suggestions endpoint will not be available anymore for this Project. The Project's SearchIndexingConfiguration <code>status</code> for <code>products</code> will be changed to <code>"Deactivated"</code>.</li>
@@ -35,6 +40,18 @@ public class ProjectChangeProductSearchIndexingEnabledActionBuilder
 
     public ProjectChangeProductSearchIndexingEnabledActionBuilder enabled(final Boolean enabled) {
         this.enabled = enabled;
+        return this;
+    }
+
+    /**
+     *  <p>Controls whether the action should apply to Product Projection Search or to Product Search.</p>
+     * @param mode value to be set
+     * @return Builder
+     */
+
+    public ProjectChangeProductSearchIndexingEnabledActionBuilder mode(
+            @Nullable final com.commercetools.api.models.project.ProductSearchIndexingMode mode) {
+        this.mode = mode;
         return this;
     }
 
@@ -51,12 +68,22 @@ public class ProjectChangeProductSearchIndexingEnabledActionBuilder
     }
 
     /**
+     *  <p>Controls whether the action should apply to Product Projection Search or to Product Search.</p>
+     * @return mode
+     */
+
+    @Nullable
+    public com.commercetools.api.models.project.ProductSearchIndexingMode getMode() {
+        return this.mode;
+    }
+
+    /**
      * builds ProjectChangeProductSearchIndexingEnabledAction with checking for non-null required values
      * @return ProjectChangeProductSearchIndexingEnabledAction
      */
     public ProjectChangeProductSearchIndexingEnabledAction build() {
         Objects.requireNonNull(enabled, ProjectChangeProductSearchIndexingEnabledAction.class + ": enabled is missing");
-        return new ProjectChangeProductSearchIndexingEnabledActionImpl(enabled);
+        return new ProjectChangeProductSearchIndexingEnabledActionImpl(enabled, mode);
     }
 
     /**
@@ -64,7 +91,7 @@ public class ProjectChangeProductSearchIndexingEnabledActionBuilder
      * @return ProjectChangeProductSearchIndexingEnabledAction
      */
     public ProjectChangeProductSearchIndexingEnabledAction buildUnchecked() {
-        return new ProjectChangeProductSearchIndexingEnabledActionImpl(enabled);
+        return new ProjectChangeProductSearchIndexingEnabledActionImpl(enabled, mode);
     }
 
     /**
@@ -84,6 +111,7 @@ public class ProjectChangeProductSearchIndexingEnabledActionBuilder
             final ProjectChangeProductSearchIndexingEnabledAction template) {
         ProjectChangeProductSearchIndexingEnabledActionBuilder builder = new ProjectChangeProductSearchIndexingEnabledActionBuilder();
         builder.enabled = template.getEnabled();
+        builder.mode = template.getMode();
         return builder;
     }
 

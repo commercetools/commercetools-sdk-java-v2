@@ -94,7 +94,7 @@ public class BusinessUnitDraftImpl implements BusinessUnitDraft, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier for the Business Unit.</p>
+     *  <p>User-defined unique and immutable identifier for the Business Unit.</p>
      */
 
     public String getKey() {

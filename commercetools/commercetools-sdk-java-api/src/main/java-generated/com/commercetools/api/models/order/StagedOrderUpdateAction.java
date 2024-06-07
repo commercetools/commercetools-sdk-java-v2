@@ -86,6 +86,8 @@ import com.commercetools.api.models.order_edit.StagedOrderSetShippingAddressAndC
 import com.commercetools.api.models.order_edit.StagedOrderSetShippingAddressAndShippingMethodAction;
 import com.commercetools.api.models.order_edit.StagedOrderSetShippingAddressCustomFieldAction;
 import com.commercetools.api.models.order_edit.StagedOrderSetShippingAddressCustomTypeAction;
+import com.commercetools.api.models.order_edit.StagedOrderSetShippingCustomFieldAction;
+import com.commercetools.api.models.order_edit.StagedOrderSetShippingCustomTypeAction;
 import com.commercetools.api.models.order_edit.StagedOrderSetShippingMethodAction;
 import com.commercetools.api.models.order_edit.StagedOrderSetShippingMethodTaxAmountAction;
 import com.commercetools.api.models.order_edit.StagedOrderSetShippingMethodTaxRateAction;
@@ -195,6 +197,8 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetShippingAddressAndShippingMethodActionImpl.class, name = StagedOrderSetShippingAddressAndShippingMethodAction.SET_SHIPPING_ADDRESS_AND_SHIPPING_METHOD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetShippingAddressCustomFieldActionImpl.class, name = StagedOrderSetShippingAddressCustomFieldAction.SET_SHIPPING_ADDRESS_CUSTOM_FIELD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetShippingAddressCustomTypeActionImpl.class, name = StagedOrderSetShippingAddressCustomTypeAction.SET_SHIPPING_ADDRESS_CUSTOM_TYPE),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetShippingCustomFieldActionImpl.class, name = StagedOrderSetShippingCustomFieldAction.SET_SHIPPING_CUSTOM_FIELD),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetShippingCustomTypeActionImpl.class, name = StagedOrderSetShippingCustomTypeAction.SET_SHIPPING_CUSTOM_TYPE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetShippingMethodActionImpl.class, name = StagedOrderSetShippingMethodAction.SET_SHIPPING_METHOD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetShippingMethodTaxAmountActionImpl.class, name = StagedOrderSetShippingMethodTaxAmountAction.SET_SHIPPING_METHOD_TAX_AMOUNT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetShippingMethodTaxRateActionImpl.class, name = StagedOrderSetShippingMethodTaxRateAction.SET_SHIPPING_METHOD_TAX_RATE),
@@ -542,6 +546,14 @@ public interface StagedOrderUpdateAction
         if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetShippingAddressCustomTypeAction) {
             return com.commercetools.api.models.order_edit.StagedOrderSetShippingAddressCustomTypeAction.deepCopy(
                 (com.commercetools.api.models.order_edit.StagedOrderSetShippingAddressCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetShippingCustomFieldAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetShippingCustomFieldAction.deepCopy(
+                (com.commercetools.api.models.order_edit.StagedOrderSetShippingCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetShippingCustomTypeAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetShippingCustomTypeAction.deepCopy(
+                (com.commercetools.api.models.order_edit.StagedOrderSetShippingCustomTypeAction) template);
         }
         if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetShippingMethodAction) {
             return com.commercetools.api.models.order_edit.StagedOrderSetShippingMethodAction
@@ -1210,6 +1222,22 @@ public interface StagedOrderUpdateAction
      */
     public static com.commercetools.api.models.order_edit.StagedOrderSetShippingAddressCustomTypeActionBuilder setShippingAddressCustomTypeBuilder() {
         return com.commercetools.api.models.order_edit.StagedOrderSetShippingAddressCustomTypeActionBuilder.of();
+    }
+
+    /**
+     * builder for setShippingCustomField subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.order_edit.StagedOrderSetShippingCustomFieldActionBuilder setShippingCustomFieldBuilder() {
+        return com.commercetools.api.models.order_edit.StagedOrderSetShippingCustomFieldActionBuilder.of();
+    }
+
+    /**
+     * builder for setShippingCustomType subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.order_edit.StagedOrderSetShippingCustomTypeActionBuilder setShippingCustomTypeBuilder() {
+        return com.commercetools.api.models.order_edit.StagedOrderSetShippingCustomTypeActionBuilder.of();
     }
 
     /**

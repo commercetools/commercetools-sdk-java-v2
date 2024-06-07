@@ -34,7 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ErrorResponse {
 
     /**
-     *  <p>The http status code of the response.</p>
+     *  <p>The HTTP status code of the response.</p>
      * @return statusCode
      */
     @NotNull
@@ -74,7 +74,7 @@ public interface ErrorResponse {
     public List<ErrorObject> getErrors();
 
     /**
-     *  <p>The http status code of the response.</p>
+     *  <p>The HTTP status code of the response.</p>
      * @param statusCode value to be set
      */
 

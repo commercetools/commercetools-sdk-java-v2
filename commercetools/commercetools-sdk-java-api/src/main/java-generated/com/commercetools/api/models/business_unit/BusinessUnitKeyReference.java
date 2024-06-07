@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Reference to a BusinessUnit by its key.</p>
+ *  <p>KeyReference to a BusinessUnit.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

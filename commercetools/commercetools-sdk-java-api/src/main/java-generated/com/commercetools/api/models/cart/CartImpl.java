@@ -260,7 +260,7 @@ public class CartImpl implements Cart, ModelBase {
     }
 
     /**
-     *  <p>Reference to the Customer Group of the Customer that the Cart belongs to. Used for LineItem Price selection.</p>
+     *  <p>Reference to the Customer Group of the Customer that the Cart belongs to. Used for Line Item price selection.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupReference getCustomerGroup() {
@@ -326,8 +326,8 @@ public class CartImpl implements Cart, ModelBase {
 
     /**
      *  <ul>
-     *   <li>For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
-     *   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
+     *   <li>For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set. For Carts with <code>Multiple</code> ShippingMode, all Line Items and Custom Line Items must be fully distributed between the Shipping Methods (via <code>shippingDetails</code>), otherwise <code>taxedPrice</code> is not automatically set.</li>
+     *   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set. For Carts with <code>Multiple</code> ShippingMode, all allocations must have their respective tax rates present in <code>perMethodTaxRate</code>, otherwise <code>taxedPrice</code> is not automatically set.</li>
      *  </ul>
      *  <p>If a discount applies on <code>totalPrice</code>, this field holds the discounted values.</p>
      */
@@ -503,7 +503,7 @@ public class CartImpl implements Cart, ModelBase {
     }
 
     /**
-     *  <p>Used for LineItem Price selection.</p>
+     *  <p>Used for Line Item price selection.</p>
      */
 
     public String getCountry() {
@@ -543,7 +543,7 @@ public class CartImpl implements Cart, ModelBase {
     }
 
     /**
-     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the Cart.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -551,7 +551,7 @@ public class CartImpl implements Cart, ModelBase {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Cart.</p>
      */
 
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {

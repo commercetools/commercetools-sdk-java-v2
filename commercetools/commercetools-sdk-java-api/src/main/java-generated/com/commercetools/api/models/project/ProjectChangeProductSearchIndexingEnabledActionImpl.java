@@ -27,12 +27,16 @@ public class ProjectChangeProductSearchIndexingEnabledActionImpl
 
     private Boolean enabled;
 
+    private com.commercetools.api.models.project.ProductSearchIndexingMode mode;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
-    ProjectChangeProductSearchIndexingEnabledActionImpl(@JsonProperty("enabled") final Boolean enabled) {
+    ProjectChangeProductSearchIndexingEnabledActionImpl(@JsonProperty("enabled") final Boolean enabled,
+            @JsonProperty("mode") final com.commercetools.api.models.project.ProductSearchIndexingMode mode) {
         this.enabled = enabled;
+        this.mode = mode;
         this.action = CHANGE_PRODUCT_SEARCH_INDEXING_ENABLED;
     }
 
@@ -62,8 +66,20 @@ public class ProjectChangeProductSearchIndexingEnabledActionImpl
         return this.enabled;
     }
 
+    /**
+     *  <p>Controls whether the action should apply to Product Projection Search or to Product Search.</p>
+     */
+
+    public com.commercetools.api.models.project.ProductSearchIndexingMode getMode() {
+        return this.mode;
+    }
+
     public void setEnabled(final Boolean enabled) {
         this.enabled = enabled;
+    }
+
+    public void setMode(final com.commercetools.api.models.project.ProductSearchIndexingMode mode) {
+        this.mode = mode;
     }
 
     @Override
@@ -78,20 +94,23 @@ public class ProjectChangeProductSearchIndexingEnabledActionImpl
 
         return new EqualsBuilder().append(action, that.action)
                 .append(enabled, that.enabled)
+                .append(mode, that.mode)
                 .append(action, that.action)
                 .append(enabled, that.enabled)
+                .append(mode, that.mode)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(enabled).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action).append(enabled).append(mode).toHashCode();
     }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
                 .append("enabled", enabled)
+                .append("mode", mode)
                 .build();
     }
 

@@ -27,9 +27,10 @@ public class ShippingRateTest {
     @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { ShippingRate.builder().price(new com.commercetools.api.models.common.TypedMoneyImpl()) },
-                new Object[] {
-                        ShippingRate.builder().freeAbove(new com.commercetools.api.models.common.TypedMoneyImpl()) },
+                new Object[] { ShippingRate.builder()
+                        .price(new com.commercetools.api.models.common.CentPrecisionMoneyImpl()) },
+                new Object[] { ShippingRate.builder()
+                        .freeAbove(new com.commercetools.api.models.common.CentPrecisionMoneyImpl()) },
                 new Object[] { ShippingRate.builder().isMatching(true) },
                 new Object[] { ShippingRate.builder()
                         .tiers(Collections.singletonList(
@@ -39,15 +40,17 @@ public class ShippingRateTest {
     @Test
     public void price() {
         ShippingRate value = ShippingRate.of();
-        value.setPrice(new com.commercetools.api.models.common.TypedMoneyImpl());
-        Assertions.assertThat(value.getPrice()).isEqualTo(new com.commercetools.api.models.common.TypedMoneyImpl());
+        value.setPrice(new com.commercetools.api.models.common.CentPrecisionMoneyImpl());
+        Assertions.assertThat(value.getPrice())
+                .isEqualTo(new com.commercetools.api.models.common.CentPrecisionMoneyImpl());
     }
 
     @Test
     public void freeAbove() {
         ShippingRate value = ShippingRate.of();
-        value.setFreeAbove(new com.commercetools.api.models.common.TypedMoneyImpl());
-        Assertions.assertThat(value.getFreeAbove()).isEqualTo(new com.commercetools.api.models.common.TypedMoneyImpl());
+        value.setFreeAbove(new com.commercetools.api.models.common.CentPrecisionMoneyImpl());
+        Assertions.assertThat(value.getFreeAbove())
+                .isEqualTo(new com.commercetools.api.models.common.CentPrecisionMoneyImpl());
     }
 
     @Test

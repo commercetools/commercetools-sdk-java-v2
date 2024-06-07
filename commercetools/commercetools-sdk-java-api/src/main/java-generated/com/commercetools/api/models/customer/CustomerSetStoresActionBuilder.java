@@ -4,8 +4,6 @@ package com.commercetools.api.models.customer;
 import java.util.*;
 import java.util.function.Function;
 
-import javax.annotation.Nullable;
-
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -16,6 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     CustomerSetStoresAction customerSetStoresAction = CustomerSetStoresAction.builder()
+ *             .plusStores(storesBuilder -> storesBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -23,7 +22,6 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerSetStoresActionBuilder implements Builder<CustomerSetStoresAction> {
 
-    @Nullable
     private java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores;
 
     /**
@@ -33,7 +31,7 @@ public class CustomerSetStoresActionBuilder implements Builder<CustomerSetStores
      */
 
     public CustomerSetStoresActionBuilder stores(
-            @Nullable final com.commercetools.api.models.store.StoreResourceIdentifier... stores) {
+            final com.commercetools.api.models.store.StoreResourceIdentifier... stores) {
         this.stores = new ArrayList<>(Arrays.asList(stores));
         return this;
     }
@@ -45,7 +43,7 @@ public class CustomerSetStoresActionBuilder implements Builder<CustomerSetStores
      */
 
     public CustomerSetStoresActionBuilder stores(
-            @Nullable final java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores) {
+            final java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores) {
         this.stores = stores;
         return this;
     }
@@ -57,7 +55,7 @@ public class CustomerSetStoresActionBuilder implements Builder<CustomerSetStores
      */
 
     public CustomerSetStoresActionBuilder plusStores(
-            @Nullable final com.commercetools.api.models.store.StoreResourceIdentifier... stores) {
+            final com.commercetools.api.models.store.StoreResourceIdentifier... stores) {
         if (this.stores == null) {
             this.stores = new ArrayList<>();
         }
@@ -120,7 +118,6 @@ public class CustomerSetStoresActionBuilder implements Builder<CustomerSetStores
      * @return stores
      */
 
-    @Nullable
     public java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> getStores() {
         return this.stores;
     }
@@ -130,6 +127,7 @@ public class CustomerSetStoresActionBuilder implements Builder<CustomerSetStores
      * @return CustomerSetStoresAction
      */
     public CustomerSetStoresAction build() {
+        Objects.requireNonNull(stores, CustomerSetStoresAction.class + ": stores is missing");
         return new CustomerSetStoresActionImpl(stores);
     }
 

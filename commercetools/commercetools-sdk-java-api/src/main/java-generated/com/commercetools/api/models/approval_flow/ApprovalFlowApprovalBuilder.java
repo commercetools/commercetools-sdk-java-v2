@@ -63,7 +63,7 @@ public class ApprovalFlowApprovalBuilder implements Builder<ApprovalFlowApproval
     }
 
     /**
-     *  <p>Date and time (UTC) when the Approval Flow was approved at.</p>
+     *  <p>Date and time (UTC) the Approval Flow was approved.</p>
      * @param approvedAt value to be set
      * @return Builder
      */
@@ -83,7 +83,7 @@ public class ApprovalFlowApprovalBuilder implements Builder<ApprovalFlowApproval
     }
 
     /**
-     *  <p>Date and time (UTC) when the Approval Flow was approved at.</p>
+     *  <p>Date and time (UTC) the Approval Flow was approved.</p>
      * @return approvedAt
      */
 

@@ -40,6 +40,7 @@ public class ByProjectKeyProductTypesByIDDelete
         extends TypeApiMethod<ByProjectKeyProductTypesByIDDelete, com.commercetools.api.models.product_type.ProductType>
         implements
         com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyProductTypesByIDDelete, com.commercetools.api.models.product_type.ProductType>,
+        ProductTypeExpansionMixin<ByProjectKeyProductTypesByIDDelete>,
         com.commercetools.api.client.VersionedTrait<ByProjectKeyProductTypesByIDDelete>,
         com.commercetools.api.client.ConflictingTrait<ByProjectKeyProductTypesByIDDelete>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyProductTypesByIDDelete>,

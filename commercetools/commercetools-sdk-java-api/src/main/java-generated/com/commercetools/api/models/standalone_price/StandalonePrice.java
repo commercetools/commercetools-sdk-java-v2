@@ -85,7 +85,7 @@ public interface StandalonePrice
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the StandalonePrice.</p>
      * @return lastModifiedBy
      */
     @Valid
@@ -93,7 +93,7 @@ public interface StandalonePrice
     public LastModifiedBy getLastModifiedBy();
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the StandalonePrice.</p>
      * @return createdBy
      */
     @Valid
@@ -175,7 +175,7 @@ public interface StandalonePrice
     public List<PriceTier> getTiers();
 
     /**
-     *  <p>Set if a matching ProductDiscount exists. If set, the API uses the <code>discounted</code> value for the LineItem Price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p>
+     *  <p>Set if a matching ProductDiscount exists. If set, the API uses the <code>discounted</code> value for the Line Item price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p>
      * @return discounted
      */
     @Valid
@@ -199,7 +199,7 @@ public interface StandalonePrice
     public StagedStandalonePrice getStaged();
 
     /**
-     *  <p>If set to <code>true</code>, the StandalonePrice is considered during price selection. If set to <code>false</code>, the StandalonePrice is not considered during price selection.</p>
+     *  <p>If set to <code>true</code>, the StandalonePrice is considered during Product price selection. If set to <code>false</code>, the StandalonePrice is not considered during Product price selection.</p>
      * @return active
      */
     @NotNull
@@ -235,14 +235,14 @@ public interface StandalonePrice
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the StandalonePrice.</p>
      * @param lastModifiedBy value to be set
      */
 
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the StandalonePrice.</p>
      * @param createdBy value to be set
      */
 
@@ -322,7 +322,7 @@ public interface StandalonePrice
     public void setTiers(final List<PriceTier> tiers);
 
     /**
-     *  <p>Set if a matching ProductDiscount exists. If set, the API uses the <code>discounted</code> value for the LineItem Price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p>
+     *  <p>Set if a matching ProductDiscount exists. If set, the API uses the <code>discounted</code> value for the Line Item price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p>
      * @param discounted value to be set
      */
 
@@ -343,7 +343,7 @@ public interface StandalonePrice
     public void setStaged(final StagedStandalonePrice staged);
 
     /**
-     *  <p>If set to <code>true</code>, the StandalonePrice is considered during price selection. If set to <code>false</code>, the StandalonePrice is not considered during price selection.</p>
+     *  <p>If set to <code>true</code>, the StandalonePrice is considered during Product price selection. If set to <code>false</code>, the StandalonePrice is not considered during Product price selection.</p>
      * @param active value to be set
      */
 

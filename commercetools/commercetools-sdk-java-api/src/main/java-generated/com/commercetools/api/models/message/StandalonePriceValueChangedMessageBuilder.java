@@ -55,12 +55,12 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
     @Nullable
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
-    private com.commercetools.api.models.common.Money value;
+    private com.commercetools.api.models.common.TypedMoney value;
 
     private Boolean staged;
 
     @Nullable
-    private com.commercetools.api.models.common.Money oldValue;
+    private com.commercetools.api.models.common.TypedMoney oldValue;
 
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
@@ -107,7 +107,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
     }
 
     /**
-     *  <p>Value of <code>createdBy</code>.</p>
+     *  <p>IDs and references that last modified the Message.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
@@ -119,7 +119,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
     }
 
     /**
-     *  <p>Value of <code>createdBy</code>.</p>
+     *  <p>IDs and references that last modified the Message.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
@@ -131,7 +131,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
     }
 
     /**
-     *  <p>Value of <code>createdBy</code>.</p>
+     *  <p>IDs and references that last modified the Message.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -143,7 +143,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Message.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
@@ -155,7 +155,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Message.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
@@ -167,7 +167,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Message.</p>
      * @param createdBy value to be set
      * @return Builder
      */
@@ -265,36 +265,24 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
 
     /**
      *  <p>The new value of the updated StandalonePrice.</p>
+     * @param value value to be set
+     * @return Builder
+     */
+
+    public StandalonePriceValueChangedMessageBuilder value(final com.commercetools.api.models.common.TypedMoney value) {
+        this.value = value;
+        return this;
+    }
+
+    /**
+     *  <p>The new value of the updated StandalonePrice.</p>
      * @param builder function to build the value value
      * @return Builder
      */
 
     public StandalonePriceValueChangedMessageBuilder value(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
-        this.value = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>The new value of the updated StandalonePrice.</p>
-     * @param builder function to build the value value
-     * @return Builder
-     */
-
-    public StandalonePriceValueChangedMessageBuilder withValue(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
-        this.value = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
-        return this;
-    }
-
-    /**
-     *  <p>The new value of the updated StandalonePrice.</p>
-     * @param value value to be set
-     * @return Builder
-     */
-
-    public StandalonePriceValueChangedMessageBuilder value(final com.commercetools.api.models.common.Money value) {
-        this.value = value;
+            Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
+        this.value = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();
         return this;
     }
 
@@ -311,37 +299,25 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
 
     /**
      *  <p>The old value of the updated StandalonePrice. Present on Messages created after 3 February 2023. Optional for backwards compatibility.</p>
-     * @param builder function to build the oldValue value
-     * @return Builder
-     */
-
-    public StandalonePriceValueChangedMessageBuilder oldValue(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
-        this.oldValue = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>The old value of the updated StandalonePrice. Present on Messages created after 3 February 2023. Optional for backwards compatibility.</p>
-     * @param builder function to build the oldValue value
-     * @return Builder
-     */
-
-    public StandalonePriceValueChangedMessageBuilder withOldValue(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
-        this.oldValue = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
-        return this;
-    }
-
-    /**
-     *  <p>The old value of the updated StandalonePrice. Present on Messages created after 3 February 2023. Optional for backwards compatibility.</p>
      * @param oldValue value to be set
      * @return Builder
      */
 
     public StandalonePriceValueChangedMessageBuilder oldValue(
-            @Nullable final com.commercetools.api.models.common.Money oldValue) {
+            @Nullable final com.commercetools.api.models.common.TypedMoney oldValue) {
         this.oldValue = oldValue;
+        return this;
+    }
+
+    /**
+     *  <p>The old value of the updated StandalonePrice. Present on Messages created after 3 February 2023. Optional for backwards compatibility.</p>
+     * @param builder function to build the oldValue value
+     * @return Builder
+     */
+
+    public StandalonePriceValueChangedMessageBuilder oldValue(
+            Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
+        this.oldValue = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();
         return this;
     }
 
@@ -382,7 +358,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
     }
 
     /**
-     *  <p>Value of <code>createdBy</code>.</p>
+     *  <p>IDs and references that last modified the Message.</p>
      * @return lastModifiedBy
      */
 
@@ -392,7 +368,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Message.</p>
      * @return createdBy
      */
 
@@ -443,7 +419,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
      * @return value
      */
 
-    public com.commercetools.api.models.common.Money getValue() {
+    public com.commercetools.api.models.common.TypedMoney getValue() {
         return this.value;
     }
 
@@ -462,7 +438,7 @@ public class StandalonePriceValueChangedMessageBuilder implements Builder<Standa
      */
 
     @Nullable
-    public com.commercetools.api.models.common.Money getOldValue() {
+    public com.commercetools.api.models.common.TypedMoney getOldValue() {
         return this.oldValue;
     }
 

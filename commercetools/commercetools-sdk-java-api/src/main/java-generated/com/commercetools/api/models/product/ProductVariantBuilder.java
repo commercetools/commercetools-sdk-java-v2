@@ -270,7 +270,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Only available when Price selection is used. Cannot be used in a Query Predicate.</p>
+     *  <p>Only available when price selection is used. Cannot be used in a Query Predicate.</p>
      * @param builder function to build the price value
      * @return Builder
      */
@@ -282,7 +282,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Only available when Price selection is used. Cannot be used in a Query Predicate.</p>
+     *  <p>Only available when price selection is used. Cannot be used in a Query Predicate.</p>
      * @param builder function to build the price value
      * @return Builder
      */
@@ -294,7 +294,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Only available when Price selection is used. Cannot be used in a Query Predicate.</p>
+     *  <p>Only available when price selection is used. Cannot be used in a Query Predicate.</p>
      * @param price value to be set
      * @return Builder
      */
@@ -527,7 +527,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Only available in response to a Product Projection Search request with price selection. Can be used to sort, filter, and facet.</p>
+     *  <p>Only available in response to a Product Projection Search request with Product price selection. Can be used to sort, filter, and facet.</p>
      * @param builder function to build the scopedPrice value
      * @return Builder
      */
@@ -539,7 +539,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Only available in response to a Product Projection Search request with price selection. Can be used to sort, filter, and facet.</p>
+     *  <p>Only available in response to a Product Projection Search request with Product price selection. Can be used to sort, filter, and facet.</p>
      * @param builder function to build the scopedPrice value
      * @return Builder
      */
@@ -551,7 +551,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Only available in response to a Product Projection Search request with price selection. Can be used to sort, filter, and facet.</p>
+     *  <p>Only available in response to a Product Projection Search request with Product price selection. Can be used to sort, filter, and facet.</p>
      * @param scopedPrice value to be set
      * @return Builder
      */
@@ -563,7 +563,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Only available in response to a Product Projection Search request with price selection.</p>
+     *  <p>Only available in response to a Product Projection Search request with Product price selection.</p>
      * @param scopedPriceDiscounted value to be set
      * @return Builder
      */
@@ -624,7 +624,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Only available when Price selection is used. Cannot be used in a Query Predicate.</p>
+     *  <p>Only available when price selection is used. Cannot be used in a Query Predicate.</p>
      * @return price
      */
 
@@ -674,7 +674,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Only available in response to a Product Projection Search request with price selection. Can be used to sort, filter, and facet.</p>
+     *  <p>Only available in response to a Product Projection Search request with Product price selection. Can be used to sort, filter, and facet.</p>
      * @return scopedPrice
      */
 
@@ -684,7 +684,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Only available in response to a Product Projection Search request with price selection.</p>
+     *  <p>Only available in response to a Product Projection Search request with Product price selection.</p>
      * @return scopedPriceDiscounted
      */
 

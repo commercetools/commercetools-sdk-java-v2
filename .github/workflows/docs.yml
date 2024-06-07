@@ -17,15 +17,12 @@ jobs:
   docs:
     name: Build and release docs
 
-    permissions:
-        contents: write  # for stefanzweifel/git-auto-commit-action to push code in repo
-
     runs-on: ubuntu-latest
     steps:
         # Get GitHub token via the CT SDKs App
       - name: Generate GitHub token (via CT SDKs App)
         id: generate_github_token
-        uses: actions/create-github-app-token@86576b355dd19da0519e0bdb63d8edb5bcf76a25 # v1
+        uses: actions/create-github-app-token@a0de6af83968303c8c955486bf9739a57d23c7f1 # v1
         with:
           app-id: ${{ secrets.CT_SDKS_APP_ID }}
           private-key: ${{ secrets.CT_SDKS_APP_PEM }}
@@ -57,15 +54,17 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
+      - uses: gradle/wrapper-validation-action@216d1ad2b3710bf005dc39237337b9673fd8fcd5 # v3.3.2
+
       - name: Setup Graphviz
-        uses: ts-graphviz/setup-graphviz@c001ccfb5aff62e28bda6a6c39b59a7e061be5b9 # v1.2.0
+        uses: ts-graphviz/setup-graphviz@b1de5da23ed0a6d14e0aeee8ed52fdd87af2363c # v2.0.2
 
       - run: ./gradlew -Pversion=${{ github.event.inputs.version }} alljavadoc
         working-directory: sdk
 
       - run: rsync -r sdk/build/docs/javadoc/ doc/javadoc
 
-      - uses: stefanzweifel/git-auto-commit-action@8756aa072ef5b4a080af5dc8fef36c5d586e521d # v5.0.0
+      - uses: stefanzweifel/git-auto-commit-action@8621497c8c39c72f3e2a999a26b4ca1b5058a842 # v5.0.1
         with:
           repository: doc
           commit_message: "Update javadoc"

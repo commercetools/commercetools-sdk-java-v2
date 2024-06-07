@@ -54,7 +54,7 @@ public class AssociateRoleDraftImpl implements AssociateRoleDraft, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier for the AssociateRole.</p>
+     *  <p>User-defined unique and immutable identifier for the AssociateRole.</p>
      */
 
     public String getKey() {

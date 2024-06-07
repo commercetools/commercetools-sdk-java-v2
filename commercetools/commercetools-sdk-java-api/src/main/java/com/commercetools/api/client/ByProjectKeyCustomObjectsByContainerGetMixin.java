@@ -7,6 +7,7 @@ import com.commercetools.api.predicates.query.custom_object.CustomObjectQueryBui
 
 public interface ByProjectKeyCustomObjectsByContainerGetMixin extends
         PagedQueryResourceRequest<ByProjectKeyCustomObjectsByContainerGet, CustomObjectPagedQueryResponse, CustomObjectQueryBuilderDsl> {
+
     @Override
     default CustomObjectQueryBuilderDsl queryDsl() {
         return QueryPredicateDsl.customObject();

@@ -25,10 +25,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingRateBuilder implements Builder<ShippingRate> {
 
-    private com.commercetools.api.models.common.TypedMoney price;
+    private com.commercetools.api.models.common.CentPrecisionMoney price;
 
     @Nullable
-    private com.commercetools.api.models.common.TypedMoney freeAbove;
+    private com.commercetools.api.models.common.CentPrecisionMoney freeAbove;
 
     @Nullable
     private Boolean isMatching;
@@ -37,12 +37,13 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
 
     /**
      *  <p>Currency amount of the ShippingRate.</p>
-     * @param price value to be set
+     * @param builder function to build the price value
      * @return Builder
      */
 
-    public ShippingRateBuilder price(final com.commercetools.api.models.common.TypedMoney price) {
-        this.price = price;
+    public ShippingRateBuilder price(
+            Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoneyBuilder> builder) {
+        this.price = builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of()).build();
         return this;
     }
 
@@ -52,20 +53,20 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
      * @return Builder
      */
 
-    public ShippingRateBuilder price(
-            Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
-        this.price = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();
+    public ShippingRateBuilder withPrice(
+            Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoney> builder) {
+        this.price = builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of());
         return this;
     }
 
     /**
-     *  <p>Free shipping is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
-     * @param freeAbove value to be set
+     *  <p>Currency amount of the ShippingRate.</p>
+     * @param price value to be set
      * @return Builder
      */
 
-    public ShippingRateBuilder freeAbove(@Nullable final com.commercetools.api.models.common.TypedMoney freeAbove) {
-        this.freeAbove = freeAbove;
+    public ShippingRateBuilder price(final com.commercetools.api.models.common.CentPrecisionMoney price) {
+        this.price = price;
         return this;
     }
 
@@ -76,8 +77,32 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
      */
 
     public ShippingRateBuilder freeAbove(
-            Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
-        this.freeAbove = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();
+            Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoneyBuilder> builder) {
+        this.freeAbove = builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Free shipping is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
+     * @param builder function to build the freeAbove value
+     * @return Builder
+     */
+
+    public ShippingRateBuilder withFreeAbove(
+            Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoney> builder) {
+        this.freeAbove = builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Free shipping is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
+     * @param freeAbove value to be set
+     * @return Builder
+     */
+
+    public ShippingRateBuilder freeAbove(
+            @Nullable final com.commercetools.api.models.common.CentPrecisionMoney freeAbove) {
+        this.freeAbove = freeAbove;
         return this;
     }
 
@@ -166,7 +191,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
      * @return price
      */
 
-    public com.commercetools.api.models.common.TypedMoney getPrice() {
+    public com.commercetools.api.models.common.CentPrecisionMoney getPrice() {
         return this.price;
     }
 
@@ -176,7 +201,7 @@ public class ShippingRateBuilder implements Builder<ShippingRate> {
      */
 
     @Nullable
-    public com.commercetools.api.models.common.TypedMoney getFreeAbove() {
+    public com.commercetools.api.models.common.CentPrecisionMoney getFreeAbove() {
         return this.freeAbove;
     }
 

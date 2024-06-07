@@ -34,7 +34,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface TaxedItemPriceDraft extends io.vrap.rmf.base.client.Draft<TaxedItemPriceDraft> {
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Draft object to store money in cent amounts for a specific currency.</p>
      * @return totalNet
      */
     @NotNull
@@ -43,7 +43,7 @@ public interface TaxedItemPriceDraft extends io.vrap.rmf.base.client.Draft<Taxed
     public Money getTotalNet();
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Draft object to store money in cent amounts for a specific currency.</p>
      * @return totalGross
      */
     @NotNull
@@ -52,14 +52,14 @@ public interface TaxedItemPriceDraft extends io.vrap.rmf.base.client.Draft<Taxed
     public Money getTotalGross();
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Draft object to store money in cent amounts for a specific currency.</p>
      * @param totalNet value to be set
      */
 
     public void setTotalNet(final Money totalNet);
 
     /**
-     *  <p>Draft type that stores amounts only in cent precision for the specified currency.</p>
+     *  <p>Draft object to store money in cent amounts for a specific currency.</p>
      * @param totalGross value to be set
      */
 

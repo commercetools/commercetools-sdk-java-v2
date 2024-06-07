@@ -129,7 +129,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>Date and time (UTC) when the change was made.</p>
+     *  <p>Date and time (UTC) the change was made.</p>
      * @param modifiedAt value to be set
      * @return Builder
      */
@@ -461,7 +461,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>Date and time (UTC) when the change was made.</p>
+     *  <p>Date and time (UTC) the change was made.</p>
      * @return modifiedAt
      */
 

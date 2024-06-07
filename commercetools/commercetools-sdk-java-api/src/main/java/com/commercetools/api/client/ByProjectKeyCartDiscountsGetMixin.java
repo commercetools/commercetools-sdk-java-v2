@@ -7,6 +7,8 @@ import com.commercetools.api.predicates.query.cart_discount.CartDiscountQueryBui
 
 public interface ByProjectKeyCartDiscountsGetMixin extends
         PagedQueryResourceRequest<ByProjectKeyCartDiscountsGet, CartDiscountPagedQueryResponse, CartDiscountQueryBuilderDsl> {
+
+    @Override
     default CartDiscountQueryBuilderDsl queryDsl() {
         return QueryPredicateDsl.cartDiscount();
     }

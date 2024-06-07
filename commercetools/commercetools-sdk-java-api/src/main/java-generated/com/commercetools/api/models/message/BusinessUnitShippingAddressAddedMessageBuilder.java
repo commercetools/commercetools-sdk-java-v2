@@ -102,7 +102,7 @@ public class BusinessUnitShippingAddressAddedMessageBuilder
     }
 
     /**
-     *  <p>Value of <code>createdBy</code>.</p>
+     *  <p>IDs and references that last modified the Message.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
@@ -114,7 +114,7 @@ public class BusinessUnitShippingAddressAddedMessageBuilder
     }
 
     /**
-     *  <p>Value of <code>createdBy</code>.</p>
+     *  <p>IDs and references that last modified the Message.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
@@ -126,7 +126,7 @@ public class BusinessUnitShippingAddressAddedMessageBuilder
     }
 
     /**
-     *  <p>Value of <code>createdBy</code>.</p>
+     *  <p>IDs and references that last modified the Message.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -138,7 +138,7 @@ public class BusinessUnitShippingAddressAddedMessageBuilder
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Message.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
@@ -150,7 +150,7 @@ public class BusinessUnitShippingAddressAddedMessageBuilder
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Message.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
@@ -162,7 +162,7 @@ public class BusinessUnitShippingAddressAddedMessageBuilder
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Message.</p>
      * @param createdBy value to be set
      * @return Builder
      */
@@ -331,7 +331,7 @@ public class BusinessUnitShippingAddressAddedMessageBuilder
     }
 
     /**
-     *  <p>Value of <code>createdBy</code>.</p>
+     *  <p>IDs and references that last modified the Message.</p>
      * @return lastModifiedBy
      */
 
@@ -341,7 +341,7 @@ public class BusinessUnitShippingAddressAddedMessageBuilder
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Message.</p>
      * @return createdBy
      */
 

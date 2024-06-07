@@ -13,7 +13,7 @@ import javax.validation.constraints.NotNull;
 import com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity;
 import com.commercetools.api.models.cart.MethodTaxedPrice;
 import com.commercetools.api.models.cart.TaxedItemPrice;
-import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.common.CentPrecisionMoney;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -83,7 +83,7 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
     @NotNull
     @Valid
     @JsonProperty("totalPrice")
-    public Money getTotalPrice();
+    public CentPrecisionMoney getTotalPrice();
 
     /**
      *  <p>TaxedItemPrice of the Line Item after the Discount recalculation.</p>
@@ -137,7 +137,7 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
      * @param totalPrice value to be set
      */
 
-    public void setTotalPrice(final Money totalPrice);
+    public void setTotalPrice(final CentPrecisionMoney totalPrice);
 
     /**
      *  <p>TaxedItemPrice of the Line Item after the Discount recalculation.</p>
@@ -225,7 +225,8 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
                         .map(com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setTotalPrice(com.commercetools.api.models.common.Money.deepCopy(template.getTotalPrice()));
+        instance.setTotalPrice(
+            com.commercetools.api.models.common.CentPrecisionMoney.deepCopy(template.getTotalPrice()));
         instance.setTaxedPrice(com.commercetools.api.models.cart.TaxedItemPrice.deepCopy(template.getTaxedPrice()));
         instance.setTaxedPricePortions(Optional.ofNullable(template.getTaxedPricePortions())
                 .map(t -> t.stream()

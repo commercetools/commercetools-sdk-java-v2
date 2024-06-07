@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * StandalonePricePagedQueryResponse
+ *  <p>PagedQueryResult with <code>results</code> containing an array of StandalonePrice.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

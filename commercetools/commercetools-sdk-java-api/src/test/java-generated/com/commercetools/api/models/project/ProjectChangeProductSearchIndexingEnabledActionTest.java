@@ -27,7 +27,10 @@ public class ProjectChangeProductSearchIndexingEnabledActionTest {
     @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { ProjectChangeProductSearchIndexingEnabledAction.builder().enabled(true) } };
+                new Object[] { ProjectChangeProductSearchIndexingEnabledAction.builder().enabled(true) },
+                new Object[] { ProjectChangeProductSearchIndexingEnabledAction.builder()
+                        .mode(com.commercetools.api.models.project.ProductSearchIndexingMode
+                                .findEnum("ProductProjectionsSearch")) } };
     }
 
     @Test
@@ -35,5 +38,15 @@ public class ProjectChangeProductSearchIndexingEnabledActionTest {
         ProjectChangeProductSearchIndexingEnabledAction value = ProjectChangeProductSearchIndexingEnabledAction.of();
         value.setEnabled(true);
         Assertions.assertThat(value.getEnabled()).isEqualTo(true);
+    }
+
+    @Test
+    public void mode() {
+        ProjectChangeProductSearchIndexingEnabledAction value = ProjectChangeProductSearchIndexingEnabledAction.of();
+        value.setMode(
+            com.commercetools.api.models.project.ProductSearchIndexingMode.findEnum("ProductProjectionsSearch"));
+        Assertions.assertThat(value.getMode())
+                .isEqualTo(com.commercetools.api.models.project.ProductSearchIndexingMode
+                        .findEnum("ProductProjectionsSearch"));
     }
 }

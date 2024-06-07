@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Setting a distribution channel for a LineItem can lead to an updated <code>price</code> as described in LineItem Price selection.</p>
+ *  <p>Setting a distribution channel for a LineItem can lead to an updated <code>price</code> as described in Line Item price selection.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

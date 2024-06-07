@@ -41,7 +41,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey {
 
     /**
-     *  <p>User-defined unique identifier for the Business Unit.</p>
+     *  <p>User-defined unique and immutable identifier for the Business Unit.</p>
      * @return key
      */
     @NotNull
@@ -163,7 +163,7 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
     public CustomFieldsDraft getCustom();
 
     /**
-     *  <p>User-defined unique identifier for the Business Unit.</p>
+     *  <p>User-defined unique and immutable identifier for the Business Unit.</p>
      * @param key value to be set
      */
 

@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Present on resources modified after 1 February 2019 except for events not tracked.</p>
+ *  <p>IDs and references that last modified the resource. This is present on resources created or updated after 1 February 2019 except for events not tracked.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -63,6 +63,14 @@ public interface LastModifiedBy extends ClientLogging {
     public String getAnonymousId();
 
     /**
+     *  <p>Indicates if the resource was modified indirectly.</p>
+     * @return attributedTo
+     */
+    @Valid
+    @JsonProperty("attributedTo")
+    public Attribution getAttributedTo();
+
+    /**
      *  <p>Indicates the Customer who modified the resource in the context of a Business Unit. Only present when an Associate acts on behalf of a company using the associate endpoints.</p>
      * @return associate
      */
@@ -99,6 +107,13 @@ public interface LastModifiedBy extends ClientLogging {
     public void setAnonymousId(final String anonymousId);
 
     /**
+     *  <p>Indicates if the resource was modified indirectly.</p>
+     * @param attributedTo value to be set
+     */
+
+    public void setAttributedTo(final Attribution attributedTo);
+
+    /**
      *  <p>Indicates the Customer who modified the resource in the context of a Business Unit. Only present when an Associate acts on behalf of a company using the associate endpoints.</p>
      * @param associate value to be set
      */
@@ -125,6 +140,7 @@ public interface LastModifiedBy extends ClientLogging {
         instance.setCustomer(template.getCustomer());
         instance.setAnonymousId(template.getAnonymousId());
         instance.setAssociate(template.getAssociate());
+        instance.setAttributedTo(template.getAttributedTo());
         return instance;
     }
 
@@ -145,6 +161,7 @@ public interface LastModifiedBy extends ClientLogging {
         instance.setAnonymousId(template.getAnonymousId());
         instance.setAssociate(
             com.commercetools.api.models.customer.CustomerReference.deepCopy(template.getAssociate()));
+        instance.setAttributedTo(com.commercetools.api.models.common.Attribution.deepCopy(template.getAttributedTo()));
         return instance;
     }
 

@@ -1,5 +1,5 @@
 # Use an official OpenJDK runtime as a base image
-FROM openjdk:17-jdk-slim
+FROM eclipse-temurin:17-jdk-jammy@sha256:1ff2f842e17a0da7acfbf0063758b6643d7815ba3fe8ccbf262db130088de425
 
 ENV DT_PAAS_TOKEN="your PAAS token from Dynatrace (https://docs.dynatrace.com/docs/manage/access-control/access-tokens#paas-token)"
 ENV DT_ENVIRONMENT_URL="your environment URL from Dynatrace (https://docs.dynatrace.com/docs/setup-and-configuration/setup-on-container-platforms/docker/set-up-oneagent-on-containers-for-application-only-monitoring#cloud-platforms)"

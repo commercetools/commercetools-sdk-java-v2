@@ -18,13 +18,12 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Represents a CartDiscount that can only be associated with a single Cart or Order.</p>
- *  <p>Direct Discounts are always active and valid, and have the default <code>Stacking</code> StackingMode. They apply in the order in which they are listed in the <code>directDiscounts</code> array of Carts or Orders, and do not have a sorting order like Cart Discounts.</p>
- *  <p>If a Direct Discount is present, any matching Cart Discounts in the Project are ignored. Additionally, a Cart or Order supports either Discount Codes or Direct Discounts at the same time.</p>
+ *  <p>For an introduction to Direct Discounts and to understand how they work in Composable Commerce, see the Direct Discounts overview.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DirectDiscountDraftImpl implements DirectDiscountDraft, ModelBase {
 
-    private com.commercetools.api.models.cart_discount.CartDiscountValue value;
+    private com.commercetools.api.models.cart_discount.CartDiscountValueDraft value;
 
     private com.commercetools.api.models.cart_discount.CartDiscountTarget target;
 
@@ -33,7 +32,7 @@ public class DirectDiscountDraftImpl implements DirectDiscountDraft, ModelBase {
      */
     @JsonCreator
     DirectDiscountDraftImpl(
-            @JsonProperty("value") final com.commercetools.api.models.cart_discount.CartDiscountValue value,
+            @JsonProperty("value") final com.commercetools.api.models.cart_discount.CartDiscountValueDraft value,
             @JsonProperty("target") final com.commercetools.api.models.cart_discount.CartDiscountTarget target) {
         this.value = value;
         this.target = target;
@@ -49,7 +48,7 @@ public class DirectDiscountDraftImpl implements DirectDiscountDraft, ModelBase {
      *  <p>Defines the effect the Discount will have.</p>
      */
 
-    public com.commercetools.api.models.cart_discount.CartDiscountValue getValue() {
+    public com.commercetools.api.models.cart_discount.CartDiscountValueDraft getValue() {
         return this.value;
     }
 
@@ -62,7 +61,7 @@ public class DirectDiscountDraftImpl implements DirectDiscountDraft, ModelBase {
         return this.target;
     }
 
-    public void setValue(final com.commercetools.api.models.cart_discount.CartDiscountValue value) {
+    public void setValue(final com.commercetools.api.models.cart_discount.CartDiscountValueDraft value) {
         this.value = value;
     }
 

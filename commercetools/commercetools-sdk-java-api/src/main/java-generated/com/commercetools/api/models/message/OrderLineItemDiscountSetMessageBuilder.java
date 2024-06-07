@@ -64,7 +64,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
 
     private java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity;
 
-    private com.commercetools.api.models.common.Money totalPrice;
+    private com.commercetools.api.models.common.CentPrecisionMoney totalPrice;
 
     @Nullable
     private com.commercetools.api.models.cart.TaxedItemPrice taxedPrice;
@@ -116,7 +116,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>Value of <code>createdBy</code>.</p>
+     *  <p>IDs and references that last modified the Message.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
@@ -128,7 +128,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>Value of <code>createdBy</code>.</p>
+     *  <p>IDs and references that last modified the Message.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
@@ -140,7 +140,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>Value of <code>createdBy</code>.</p>
+     *  <p>IDs and references that last modified the Message.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -152,7 +152,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Message.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
@@ -164,7 +164,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Message.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
@@ -176,7 +176,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Message.</p>
      * @param createdBy value to be set
      * @return Builder
      */
@@ -394,8 +394,8 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
      */
 
     public OrderLineItemDiscountSetMessageBuilder totalPrice(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
-        this.totalPrice = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
+            Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoneyBuilder> builder) {
+        this.totalPrice = builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of()).build();
         return this;
     }
 
@@ -406,8 +406,8 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
      */
 
     public OrderLineItemDiscountSetMessageBuilder withTotalPrice(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
-        this.totalPrice = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
+            Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoney> builder) {
+        this.totalPrice = builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of());
         return this;
     }
 
@@ -418,7 +418,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
      */
 
     public OrderLineItemDiscountSetMessageBuilder totalPrice(
-            final com.commercetools.api.models.common.Money totalPrice) {
+            final com.commercetools.api.models.common.CentPrecisionMoney totalPrice) {
         this.totalPrice = totalPrice;
         return this;
     }
@@ -587,7 +587,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>Value of <code>createdBy</code>.</p>
+     *  <p>IDs and references that last modified the Message.</p>
      * @return lastModifiedBy
      */
 
@@ -597,7 +597,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Message.</p>
      * @return createdBy
      */
 
@@ -676,7 +676,7 @@ public class OrderLineItemDiscountSetMessageBuilder implements Builder<OrderLine
      * @return totalPrice
      */
 
-    public com.commercetools.api.models.common.Money getTotalPrice() {
+    public com.commercetools.api.models.common.CentPrecisionMoney getTotalPrice() {
         return this.totalPrice;
     }
 

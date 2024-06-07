@@ -40,6 +40,7 @@ public class ByProjectKeyCartDiscountsKeyByKeyDelete extends
         TypeApiMethod<ByProjectKeyCartDiscountsKeyByKeyDelete, com.commercetools.api.models.cart_discount.CartDiscount>
         implements
         com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyCartDiscountsKeyByKeyDelete, com.commercetools.api.models.cart_discount.CartDiscount>,
+        CartDiscountExpansionMixin<ByProjectKeyCartDiscountsKeyByKeyDelete>,
         com.commercetools.api.client.VersionedTrait<ByProjectKeyCartDiscountsKeyByKeyDelete>,
         com.commercetools.api.client.ConflictingTrait<ByProjectKeyCartDiscountsKeyByKeyDelete>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyCartDiscountsKeyByKeyDelete>,

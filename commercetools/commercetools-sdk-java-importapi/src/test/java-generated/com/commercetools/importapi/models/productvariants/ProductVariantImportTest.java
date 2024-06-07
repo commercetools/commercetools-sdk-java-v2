@@ -37,6 +37,7 @@ public class ProductVariantImportTest {
                 new Object[] { ProductVariantImport.builder()
                         .assets(Collections.singletonList(new com.commercetools.importapi.models.common.AssetImpl())) },
                 new Object[] { ProductVariantImport.builder().publish(true) },
+                new Object[] { ProductVariantImport.builder().staged(true) },
                 new Object[] { ProductVariantImport.builder()
                         .product(new com.commercetools.importapi.models.common.ProductKeyReferenceImpl()) } };
     }
@@ -93,6 +94,13 @@ public class ProductVariantImportTest {
         ProductVariantImport value = ProductVariantImport.of();
         value.setPublish(true);
         Assertions.assertThat(value.getPublish()).isEqualTo(true);
+    }
+
+    @Test
+    public void staged() {
+        ProductVariantImport value = ProductVariantImport.of();
+        value.setStaged(true);
+        Assertions.assertThat(value.getStaged()).isEqualTo(true);
     }
 
     @Test

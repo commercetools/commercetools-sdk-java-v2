@@ -21,7 +21,7 @@ repositories {
 
 ext {
     versions = [
-            commercetools: "17.7.0",
+            commercetools: "17.11.0",
     ]
 }
 

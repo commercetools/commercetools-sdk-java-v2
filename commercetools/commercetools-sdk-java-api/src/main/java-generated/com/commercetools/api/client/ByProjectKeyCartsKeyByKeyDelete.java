@@ -39,6 +39,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 public class ByProjectKeyCartsKeyByKeyDelete
         extends TypeApiMethod<ByProjectKeyCartsKeyByKeyDelete, com.commercetools.api.models.cart.Cart> implements
         com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyCartsKeyByKeyDelete, com.commercetools.api.models.cart.Cart>,
+        CartExpansionMixin<ByProjectKeyCartsKeyByKeyDelete>,
         com.commercetools.api.client.DataerasureTrait<ByProjectKeyCartsKeyByKeyDelete>,
         com.commercetools.api.client.VersionedTrait<ByProjectKeyCartsKeyByKeyDelete>,
         com.commercetools.api.client.ConflictingTrait<ByProjectKeyCartsKeyByKeyDelete>,

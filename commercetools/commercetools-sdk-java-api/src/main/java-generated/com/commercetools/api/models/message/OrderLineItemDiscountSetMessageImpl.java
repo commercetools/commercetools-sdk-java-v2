@@ -50,7 +50,7 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
 
     private java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity;
 
-    private com.commercetools.api.models.common.Money totalPrice;
+    private com.commercetools.api.models.common.CentPrecisionMoney totalPrice;
 
     private com.commercetools.api.models.cart.TaxedItemPrice taxedPrice;
 
@@ -72,7 +72,7 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
             @JsonProperty("lineItemId") final String lineItemId, @JsonProperty("lineItemKey") final String lineItemKey,
             @JsonProperty("discountedPricePerQuantity") final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity,
-            @JsonProperty("totalPrice") final com.commercetools.api.models.common.Money totalPrice,
+            @JsonProperty("totalPrice") final com.commercetools.api.models.common.CentPrecisionMoney totalPrice,
             @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice,
             @JsonProperty("taxedPricePortions") final java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> taxedPricePortions) {
         this.id = id;
@@ -134,7 +134,7 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
     }
 
     /**
-     *  <p>Value of <code>createdBy</code>.</p>
+     *  <p>IDs and references that last modified the Message.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -142,7 +142,7 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Message.</p>
      */
 
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
@@ -217,7 +217,7 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
      *  <p>Total Price of the Line Item after the Discount recalculation.</p>
      */
 
-    public com.commercetools.api.models.common.Money getTotalPrice() {
+    public com.commercetools.api.models.common.CentPrecisionMoney getTotalPrice() {
         return this.totalPrice;
     }
 
@@ -296,7 +296,7 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
         this.discountedPricePerQuantity = discountedPricePerQuantity;
     }
 
-    public void setTotalPrice(final com.commercetools.api.models.common.Money totalPrice) {
+    public void setTotalPrice(final com.commercetools.api.models.common.CentPrecisionMoney totalPrice) {
         this.totalPrice = totalPrice;
     }
 

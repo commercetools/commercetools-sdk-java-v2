@@ -56,7 +56,7 @@ public class ApprovalFlowRejectionImpl implements ApprovalFlowRejection, ModelBa
     }
 
     /**
-     *  <p>Date and time (UTC) when the Approval Flow was rejected at.</p>
+     *  <p>Date and time (UTC) the Approval Flow was rejected.</p>
      */
 
     public java.time.ZonedDateTime getRejectedAt() {

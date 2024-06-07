@@ -16,6 +16,10 @@ import com.fasterxml.jackson.databind.JavaType;
 import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.ResponseSerializer;
 
+/**
+ * This serializer uses API to submit metrics to datadog.
+ * If you are using dogstatsd, use {@link com.commercetools.monitoring.datadog.statsd.DatadogResponseSerializer} to submit metrics to datadog with statsd.
+ */
 public class DatadogResponseSerializer implements ResponseSerializer {
     private final ResponseSerializer serializer;
 

@@ -1389,7 +1389,7 @@ types:
   ScopedPrice:
     (java-extends): 'com.commercetools.api.models.Customizable<ScopedPrice>'
   MyBusinessUnitDraft:
-    (java-extends): 'com.commercetools.api.models.Customizable<MyBusinessUnitDraft>, com.commercetools.api.models.WithKey'
+    (java-extends): 'com.commercetools.api.models.CustomizableDraft<MyBusinessUnitDraft>, com.commercetools.api.models.WithKey'
   AssociateRolePagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<AssociateRole>'
   AssociateRole:
@@ -1413,45 +1413,81 @@ types:
   /categories:
     (java-implements): 'ByProjectKeyCategoriesRequestBuilderMixin'
     get:
-      (java-implements): 'ByProjectKeyCategoriesGetMixin'
+      (java-implements): 'ByProjectKeyCategoriesGetMixin, CategoryExpansionMixin<ByProjectKeyCategoriesGet>'
     /key={key}:
+      get:
+        (java-implements):
+          'CategoryExpansionMixin<ByProjectKeyCategoriesKeyByKeyGet>'
+      post:
+        (java-implements):
+          'CategoryExpansionMixin<ByProjectKeyCategoriesKeyByKeyPost>'
       delete:
         (java-implements):
-          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyCategoriesKeyByKeyDelete, com.commercetools.api.models.category.Category>'
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyCategoriesKeyByKeyDelete, com.commercetools.api.models.category.Category>, CategoryExpansionMixin<ByProjectKeyCategoriesKeyByKeyDelete>'
     /{ID}:
+      get:
+        (java-implements):
+          'CategoryExpansionMixin<ByProjectKeyCategoriesByIDGet>'
+      post:
+        (java-implements):
+          'CategoryExpansionMixin<ByProjectKeyCategoriesByIDPost>'
       delete:
         (java-implements):
-          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyCategoriesByIDDelete, com.commercetools.api.models.category.Category>'
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyCategoriesByIDDelete, com.commercetools.api.models.category.Category>, CategoryExpansionMixin<ByProjectKeyCategoriesByIDDelete>'
   /carts:
     (java-implements): 'ByProjectKeyCartsRequestBuilderMixin'
     get:
-      (java-implements): 'ByProjectKeyCartsGetMixin'
+      (java-implements): 'ByProjectKeyCartsGetMixin, CartExpansionMixin<ByProjectKeyCartsGet>'
     /key={key}:
+      get:
+        (java-implements):
+          'CartExpansionMixin<ByProjectKeyCartsKeyByKeyGet>'
+      post:
+        (java-implements):
+          'CartExpansionMixin<ByProjectKeyCartsKeyByKeyPost>'
       delete:
         (java-implements):
-          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyCartsKeyByKeyDelete, com.commercetools.api.models.cart.Cart>'
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyCartsKeyByKeyDelete, com.commercetools.api.models.cart.Cart>, CartExpansionMixin<ByProjectKeyCartsKeyByKeyDelete>'
     /{ID}:
+      get:
+        (java-implements):
+          'CartExpansionMixin<ByProjectKeyCartsByIDGet>'
+      post:
+        (java-implements):
+          'CartExpansionMixin<ByProjectKeyCartsByIDPost>'
       delete:
         (java-implements):
-          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyCartsByIDDelete, com.commercetools.api.models.cart.Cart>'
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyCartsByIDDelete, com.commercetools.api.models.cart.Cart>, CartExpansionMixin<ByProjectKeyCartsByIDDelete>'
 
   /cart-discounts:
     (java-implements): 'ByProjectKeyCartDiscountsRequestBuilderMixin'
     get:
-      (java-implements): 'ByProjectKeyCartDiscountsGetMixin'
+      (java-implements): 'ByProjectKeyCartDiscountsGetMixin, CartDiscountExpansionMixin<ByProjectKeyCartDiscountsGet>'
     /key={key}:
+      get:
+        (java-implements):
+          'CartDiscountExpansionMixin<ByProjectKeyCartDiscountsKeyByKeyGet>'
+      post:
+        (java-implements):
+          'CartDiscountExpansionMixin<ByProjectKeyCartDiscountsKeyByKeyPost>'
       delete:
         (java-implements):
-          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyCartDiscountsKeyByKeyDelete, com.commercetools.api.models.cart_discount.CartDiscount>'
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyCartDiscountsKeyByKeyDelete, com.commercetools.api.models.cart_discount.CartDiscount>, CartDiscountExpansionMixin<ByProjectKeyCartDiscountsKeyByKeyDelete>'
     /{ID}:
+      get:
+        (java-implements):
+          'CartDiscountExpansionMixin<ByProjectKeyCartDiscountsByIDGet>'
+      post:
+        (java-implements):
+          'CartDiscountExpansionMixin<ByProjectKeyCartDiscountsByIDPost>'
       delete:
         (java-implements):
-          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyCartDiscountsByIDDelete, com.commercetools.api.models.cart_discount.CartDiscount>'
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyCartDiscountsByIDDelete, com.commercetools.api.models.cart_discount.CartDiscount>, CartDiscountExpansionMixin<ByProjectKeyCartDiscountsByIDDelete>'
 
   /channels:
     (java-implements): 'ByProjectKeyChannelsRequestBuilderMixin'
     get:
-      (java-implements): 'ByProjectKeyChannelsGetMixin'
+      (java-implements): 'ByProjectKeyChannelsGetMixin, ChannelExpansionMixin<ByProjectKeyChannelsGet>'
     /{ID}:
       delete:
         (java-implements):
@@ -1461,7 +1497,7 @@ types:
     (java-implements): 'ByProjectKeyCustomersRequestBuilderMixin'
     get:
       (java-implements):
-        'ByProjectKeyCustomersGetMixin'
+        'ByProjectKeyCustomersGetMixin, CustomerExpansionMixin<ByProjectKeyCustomersGet>'
     /key={key}:
       delete:
         (java-implements):
@@ -1607,6 +1643,14 @@ types:
           'ByProjectKeyProductProjectionsSearchGetMixin'
       post:
         (java-implements): 'ByProjectKeyProductProjectionsSearchPostMixin'
+    /key={key}:
+      get:
+        (java-implements):
+          'ProductProjectionExpansionMixin<ByProjectKeyProductProjectionsKeyByKeyGet>'
+    /{ID}:
+      get:
+        (java-implements):
+          'ProductProjectionExpansionMixin<ByProjectKeyProductProjectionsByIDGet>'
   /product-selections:
     (java-implements): 'ByProjectKeyProductSelectionsRequestMixin'
     get:
@@ -1624,15 +1668,21 @@ types:
     (java-implements): 'ByProjectKeyProductTypesRequestBuilderMixin'
     get:
       (java-implements):
-        'ByProjectKeyProductTypesGetMixin'
+        'ByProjectKeyProductTypesGetMixin, ProductTypeExpansionMixin<ByProjectKeyProductTypesGet>'
     /key={key}:
       delete:
         (java-implements):
           'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyProductTypesKeyByKeyDelete, com.commercetools.api.models.product_type.ProductType>'
     /{ID}:
+      get:
+        (java-implements):
+          'ProductTypeExpansionMixin<ByProjectKeyProductTypesByIDGet>'
+      post:
+        (java-implements):
+          'ProductTypeExpansionMixin<ByProjectKeyProductTypesByIDPost>'
       delete:
         (java-implements):
-          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyProductTypesByIDDelete, com.commercetools.api.models.product_type.ProductType>'
+          'com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyProductTypesByIDDelete, com.commercetools.api.models.product_type.ProductType>, ProductTypeExpansionMixin<ByProjectKeyProductTypesByIDDelete>'
   /quotes:
     (java-implements): 'ByProjectKeyQuotesRequestBuilderMixin'
     /key={key}:

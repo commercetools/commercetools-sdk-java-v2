@@ -34,6 +34,9 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
+      - name: Setup Graphviz
+        uses: ts-graphviz/setup-graphviz@b1de5da23ed0a6d14e0aeee8ed52fdd87af2363c # v2.0.2
+
       - run: scripts/setup-signing-key.sh
         env:
           DECRYPTER: ${{ secrets.DECRYPTER }}

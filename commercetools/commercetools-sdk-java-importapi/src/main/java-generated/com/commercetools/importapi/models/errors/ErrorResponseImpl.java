@@ -54,7 +54,7 @@ public class ErrorResponseImpl implements ErrorResponse, ModelBase {
     }
 
     /**
-     *  <p>The http status code of the response.</p>
+     *  <p>The HTTP status code of the response.</p>
      */
 
     public Integer getStatusCode() {

@@ -13,7 +13,7 @@ import javax.validation.constraints.NotNull;
 import com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity;
 import com.commercetools.api.models.cart.MethodTaxedPrice;
 import com.commercetools.api.models.cart.TaxedItemPrice;
-import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.common.CentPrecisionMoney;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -83,7 +83,7 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
     @NotNull
     @Valid
     @JsonProperty("totalPrice")
-    public Money getTotalPrice();
+    public CentPrecisionMoney getTotalPrice();
 
     /**
      *  <p>TaxedItemPrice of the Line Item after the Discount recalculation.</p>
@@ -94,7 +94,7 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
     public TaxedItemPrice getTaxedPrice();
 
     /**
-     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>Total taxed prices based on the quantity of Line Item assigned to each Shipping Method. Only applicable for Carts with <code>Multiple</code> ShippingMode. Automatically set after <code>perMethodTaxRate</code> is set.</p>
      * @return taxedPricePortions
      */
     @NotNull
@@ -137,7 +137,7 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
      * @param totalPrice value to be set
      */
 
-    public void setTotalPrice(final Money totalPrice);
+    public void setTotalPrice(final CentPrecisionMoney totalPrice);
 
     /**
      *  <p>TaxedItemPrice of the Line Item after the Discount recalculation.</p>
@@ -147,7 +147,7 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
     public void setTaxedPrice(final TaxedItemPrice taxedPrice);
 
     /**
-     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>Total taxed prices based on the quantity of Line Item assigned to each Shipping Method. Only applicable for Carts with <code>Multiple</code> ShippingMode. Automatically set after <code>perMethodTaxRate</code> is set.</p>
      * @param taxedPricePortions values to be set
      */
 
@@ -155,7 +155,7 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
     public void setTaxedPricePortions(final MethodTaxedPrice... taxedPricePortions);
 
     /**
-     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>Total taxed prices based on the quantity of Line Item assigned to each Shipping Method. Only applicable for Carts with <code>Multiple</code> ShippingMode. Automatically set after <code>perMethodTaxRate</code> is set.</p>
      * @param taxedPricePortions values to be set
      */
 
@@ -225,7 +225,8 @@ public interface OrderLineItemDiscountSetMessage extends OrderMessage {
                         .map(com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setTotalPrice(com.commercetools.api.models.common.Money.deepCopy(template.getTotalPrice()));
+        instance.setTotalPrice(
+            com.commercetools.api.models.common.CentPrecisionMoney.deepCopy(template.getTotalPrice()));
         instance.setTaxedPrice(com.commercetools.api.models.cart.TaxedItemPrice.deepCopy(template.getTaxedPrice()));
         instance.setTaxedPricePortions(Optional.ofNullable(template.getTaxedPricePortions())
                 .map(t -> t.stream()

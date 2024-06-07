@@ -62,6 +62,22 @@ public interface ProductVariantAvailability {
     public Long getAvailableQuantity();
 
     /**
+     *  <p>Unique identifier of the InventoryEntry.</p>
+     * @return id
+     */
+
+    @JsonProperty("id")
+    public String getId();
+
+    /**
+     *  <p>Current version of the InventoryEntry.</p>
+     * @return version
+     */
+
+    @JsonProperty("version")
+    public Long getVersion();
+
+    /**
      *  <p>For each InventoryEntry with a supply Channel, an entry is added to <code>channels</code>.</p>
      * @param channels value to be set
      */
@@ -90,6 +106,20 @@ public interface ProductVariantAvailability {
     public void setAvailableQuantity(final Long availableQuantity);
 
     /**
+     *  <p>Unique identifier of the InventoryEntry.</p>
+     * @param id value to be set
+     */
+
+    public void setId(final String id);
+
+    /**
+     *  <p>Current version of the InventoryEntry.</p>
+     * @param version value to be set
+     */
+
+    public void setVersion(final Long version);
+
+    /**
      * factory method
      * @return instance of ProductVariantAvailability
      */
@@ -108,6 +138,8 @@ public interface ProductVariantAvailability {
         instance.setIsOnStock(template.getIsOnStock());
         instance.setRestockableInDays(template.getRestockableInDays());
         instance.setAvailableQuantity(template.getAvailableQuantity());
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
         return instance;
     }
 
@@ -127,6 +159,8 @@ public interface ProductVariantAvailability {
         instance.setIsOnStock(template.getIsOnStock());
         instance.setRestockableInDays(template.getRestockableInDays());
         instance.setAvailableQuantity(template.getAvailableQuantity());
+        instance.setId(template.getId());
+        instance.setVersion(template.getVersion());
         return instance;
     }
 

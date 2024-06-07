@@ -41,4 +41,15 @@ public class ProductVariantAvailabilityQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, ProductVariantAvailabilityQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<ProductVariantAvailabilityQueryBuilderDsl> id() {
+        return new StringComparisonPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("id")),
+            p -> new CombinationQueryPredicate<>(p, ProductVariantAvailabilityQueryBuilderDsl::of));
+    }
+
+    public LongComparisonPredicateBuilder<ProductVariantAvailabilityQueryBuilderDsl> version() {
+        return new LongComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("version")),
+            p -> new CombinationQueryPredicate<>(p, ProductVariantAvailabilityQueryBuilderDsl::of));
+    }
+
 }

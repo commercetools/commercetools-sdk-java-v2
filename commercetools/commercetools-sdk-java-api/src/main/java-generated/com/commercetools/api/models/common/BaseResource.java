@@ -194,6 +194,10 @@ public interface BaseResource {
             return com.commercetools.api.models.product_selection.ProductSelection
                     .deepCopy((com.commercetools.api.models.product_selection.ProductSelection) template);
         }
+        if (template instanceof com.commercetools.api.models.product_tailoring.ProductTailoring) {
+            return com.commercetools.api.models.product_tailoring.ProductTailoring
+                    .deepCopy((com.commercetools.api.models.product_tailoring.ProductTailoring) template);
+        }
         if (template instanceof com.commercetools.api.models.product_type.ProductType) {
             return com.commercetools.api.models.product_type.ProductType
                     .deepCopy((com.commercetools.api.models.product_type.ProductType) template);

@@ -18,7 +18,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>The LineItem price is updated as described in LineItem Price selection.</p>
+ *  <p>The LineItem price is updated as described in Line Item price selection.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

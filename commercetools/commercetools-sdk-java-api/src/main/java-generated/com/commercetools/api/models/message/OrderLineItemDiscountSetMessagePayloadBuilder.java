@@ -34,7 +34,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
 
     private java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity;
 
-    private com.commercetools.api.models.common.Money totalPrice;
+    private com.commercetools.api.models.common.CentPrecisionMoney totalPrice;
 
     @Nullable
     private com.commercetools.api.models.cart.TaxedItemPrice taxedPrice;
@@ -163,8 +163,8 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
      */
 
     public OrderLineItemDiscountSetMessagePayloadBuilder totalPrice(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.MoneyBuilder> builder) {
-        this.totalPrice = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of()).build();
+            Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoneyBuilder> builder) {
+        this.totalPrice = builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of()).build();
         return this;
     }
 
@@ -175,8 +175,8 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
      */
 
     public OrderLineItemDiscountSetMessagePayloadBuilder withTotalPrice(
-            Function<com.commercetools.api.models.common.MoneyBuilder, com.commercetools.api.models.common.Money> builder) {
-        this.totalPrice = builder.apply(com.commercetools.api.models.common.MoneyBuilder.of());
+            Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoney> builder) {
+        this.totalPrice = builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of());
         return this;
     }
 
@@ -187,7 +187,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
      */
 
     public OrderLineItemDiscountSetMessagePayloadBuilder totalPrice(
-            final com.commercetools.api.models.common.Money totalPrice) {
+            final com.commercetools.api.models.common.CentPrecisionMoney totalPrice) {
         this.totalPrice = totalPrice;
         return this;
     }
@@ -229,7 +229,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>Total taxed prices based on the quantity of Line Item assigned to each Shipping Method. Only applicable for Carts with <code>Multiple</code> ShippingMode. Automatically set after <code>perMethodTaxRate</code> is set.</p>
      * @param taxedPricePortions value to be set
      * @return Builder
      */
@@ -241,7 +241,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>Total taxed prices based on the quantity of Line Item assigned to each Shipping Method. Only applicable for Carts with <code>Multiple</code> ShippingMode. Automatically set after <code>perMethodTaxRate</code> is set.</p>
      * @param taxedPricePortions value to be set
      * @return Builder
      */
@@ -253,7 +253,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>Total taxed prices based on the quantity of Line Item assigned to each Shipping Method. Only applicable for Carts with <code>Multiple</code> ShippingMode. Automatically set after <code>perMethodTaxRate</code> is set.</p>
      * @param taxedPricePortions value to be set
      * @return Builder
      */
@@ -268,7 +268,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>Total taxed prices based on the quantity of Line Item assigned to each Shipping Method. Only applicable for Carts with <code>Multiple</code> ShippingMode. Automatically set after <code>perMethodTaxRate</code> is set.</p>
      * @param builder function to build the taxedPricePortions value
      * @return Builder
      */
@@ -284,7 +284,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>Total taxed prices based on the quantity of Line Item assigned to each Shipping Method. Only applicable for Carts with <code>Multiple</code> ShippingMode. Automatically set after <code>perMethodTaxRate</code> is set.</p>
      * @param builder function to build the taxedPricePortions value
      * @return Builder
      */
@@ -298,7 +298,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>Total taxed prices based on the quantity of Line Item assigned to each Shipping Method. Only applicable for Carts with <code>Multiple</code> ShippingMode. Automatically set after <code>perMethodTaxRate</code> is set.</p>
      * @param builder function to build the taxedPricePortions value
      * @return Builder
      */
@@ -309,7 +309,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>Total taxed prices based on the quantity of Line Item assigned to each Shipping Method. Only applicable for Carts with <code>Multiple</code> ShippingMode. Automatically set after <code>perMethodTaxRate</code> is set.</p>
      * @param builder function to build the taxedPricePortions value
      * @return Builder
      */
@@ -352,7 +352,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
      * @return totalPrice
      */
 
-    public com.commercetools.api.models.common.Money getTotalPrice() {
+    public com.commercetools.api.models.common.CentPrecisionMoney getTotalPrice() {
         return this.totalPrice;
     }
 
@@ -367,7 +367,7 @@ public class OrderLineItemDiscountSetMessagePayloadBuilder implements Builder<Or
     }
 
     /**
-     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>Total taxed prices based on the quantity of Line Item assigned to each Shipping Method. Only applicable for Carts with <code>Multiple</code> ShippingMode. Automatically set after <code>perMethodTaxRate</code> is set.</p>
      * @return taxedPricePortions
      */
 

@@ -656,7 +656,6 @@ input ApplyStagedChanges {
   dummy: String
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 type ApprovalFlow implements Versioned {
   status: String!
   approvals: [ApprovalFlowApproval!]!
@@ -669,6 +668,7 @@ type ApprovalFlow implements Versioned {
   eligibleApprovers: [RuleApprover!]!
   pendingApprovers: [RuleApprover!]!
   currentTierPendingApprovers: [RuleApprover!]!
+  custom: CustomFieldsType
   id: String!
   version: Long!
   createdAt: DateTime!
@@ -677,13 +677,11 @@ type ApprovalFlow implements Versioned {
   lastModifiedBy: Initiator
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 type ApprovalFlowApproval {
   approver: Associate!
   approvedAt: DateTime!
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 type ApprovalFlowApproved implements MessagePayload {
   associate: Customer
   order: Order
@@ -692,7 +690,6 @@ type ApprovalFlowApproved implements MessagePayload {
   type: String!
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 type ApprovalFlowCompleted implements MessagePayload {
   status: String!
   order: Order
@@ -700,7 +697,6 @@ type ApprovalFlowCompleted implements MessagePayload {
   type: String!
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 type ApprovalFlowCreated implements MessagePayload {
   approvalFlow: ApprovalFlow!
   type: String!
@@ -714,7 +710,6 @@ type ApprovalFlowQueryResult {
   results: [ApprovalFlow!]!
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 type ApprovalFlowRejected implements MessagePayload {
   rejectionReason: String
   associate: Customer
@@ -724,23 +719,19 @@ type ApprovalFlowRejected implements MessagePayload {
   type: String!
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 type ApprovalFlowRejection {
   rejecter: Associate!
   rejectedAt: DateTime!
   reason: String
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 input ApprovalFlowUpdateAction {
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
-  approve: ApproveApprovalFlow
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   reject: RejectApprovalFlow
+  setCustomField: SetApprovalFlowCustomField
+  setCustomType: SetApprovalFlowCustomType
+  approve: ApproveApprovalFlow
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 type ApprovalRule implements Versioned {
   key: String
   name: String!
@@ -759,27 +750,23 @@ type ApprovalRule implements Versioned {
   lastModifiedBy: Initiator
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 type ApprovalRuleApproversSet implements MessagePayload {
   oldApprovers: ApproverHierarchy!
   approvers: ApproverHierarchy!
   type: String!
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 type ApprovalRuleCreated implements MessagePayload {
   approvalRule: ApprovalRule!
   type: String!
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 type ApprovalRuleDescriptionSet implements MessagePayload {
   oldDescription: String
   description: String
   type: String!
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 input ApprovalRuleDraft {
   key: String
   name: String!
@@ -790,21 +777,18 @@ input ApprovalRuleDraft {
   requesters: [RuleRequesterDraft!]!
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 type ApprovalRuleKeySet implements MessagePayload {
   oldKey: String
   key: String
   type: String!
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 type ApprovalRuleNameSet implements MessagePayload {
   oldName: String!
   name: String!
   type: String!
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 type ApprovalRulePredicateSet implements MessagePayload {
   oldPredicate: String!
   predicate: String!
@@ -819,81 +803,57 @@ type ApprovalRuleQueryResult {
   results: [ApprovalRule!]!
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 type ApprovalRuleRequestersSet implements MessagePayload {
   oldRequesters: [RuleRequester!]!
   requesters: [RuleRequester!]!
   type: String!
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 enum ApprovalRuleStatus {
   Active
   Inactive
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 type ApprovalRuleStatusSet implements MessagePayload {
   oldStatus: ApprovalRuleStatus!
   status: ApprovalRuleStatus!
   type: String!
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 input ApprovalRuleUpdateAction {
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
-  setApprovers: SetApprovalRuleApprovers
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   setKey: SetApprovalRuleKey
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   setName: SetApprovalRuleName
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   setDescription: SetApprovalRuleDescription
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   setPredicate: SetApprovalRulePredicate
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   setRequesters: SetApprovalRuleRequesters
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   setStatus: SetApprovalRuleStatus
+  setApprovers: SetApprovalRuleApprovers
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 input ApproveApprovalFlow {
   dummy: String
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 type ApproverConjunction {
   and: [ApproverDisjunction!]!
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 input ApproverConjunctionDraft {
   and: [ApproverDisjunctionDraft!]!
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 type ApproverDisjunction {
   or: [RuleApprover!]!
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 input ApproverDisjunctionDraft {
   or: [RuleApproverDraft!]!
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 type ApproverHierarchy {
   tiers: [ApproverConjunction!]!
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 input ApproverHierarchyDraft {
   tiers: [ApproverConjunctionDraft!]!
 }
@@ -919,22 +879,14 @@ type AsAssociate implements CartQueryInterface & OrderQueryInterface & QuoteQuer
     "Queries with specified key"
     key: String): Quote
   quotes(where: String, sort: [String!], limit: Int, offset: Int): QuoteQueryResult!
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   approvalRule(
     "Queries with specified ID"
     id: String,
 
     "Queries with specified key"
     key: String): ApprovalRule
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   approvalRules(where: String, sort: [String!], limit: Int, offset: Int): ApprovalRuleQueryResult!
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   approvalFlow(id: String!): ApprovalFlow
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   approvalFlows(where: String, sort: [String!], limit: Int, offset: Int): ApprovalFlowQueryResult!
   businessUnit(
     "Queries with specified ID"
@@ -1022,7 +974,7 @@ enum AssociateInheritanceMode {
   Enabled
 }
 
-type AssociateRole implements Versioned {
+type AssociateRole implements Versioned & ReferenceExpandable {
   key: String!
   buyerAssignable: Boolean!
   name: String
@@ -1261,7 +1213,18 @@ input AttributeTypeDraft {
   ltext: SimpleAttributeTypeDraft
 }
 
-"AuthenticationMode values. BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+type Attribution {
+  clientId: String
+  source: AttributionSource!
+  userRef: Reference
+}
+
+enum AttributionSource {
+  Export
+  Import
+}
+
+"AuthenticationMode values."
 enum AuthenticationMode {
   ExternalAuth
   Password
@@ -1297,17 +1260,6 @@ type AzureServiceBusDestination implements Destination {
 
 input AzureServiceBusDestinationInput {
   connectionString: String!
-}
-
-input CartDiscountValueBaseMoneyInput {
-  centPrecision: MoneyInput
-  highPrecision: HighPrecisionMoneyInput
-
-  "CurrencyCode and centAmount are deprecated. Please use `Money`(centPrecision) or `HighPrecisionMoney`(highPrecision)."
-  currencyCode: Currency
-
-  "CurrencyCode and centAmount are deprecated. Please use `Money`(centPrecision) or `HighPrecisionMoney`(highPrecision)."
-  centAmount: Long
 }
 
 interface BaseMoney {
@@ -1348,7 +1300,7 @@ type BooleanType implements FieldType {
   name: String!
 }
 
-type BusinessUnit implements Versioned {
+type BusinessUnit implements Versioned & ReferenceExpandable {
   key: String!
   name: String!
   contactEmail: String
@@ -1782,6 +1734,15 @@ type CartDiscount implements Versioned & ReferenceExpandable {
   lastModifiedBy: Initiator
 }
 
+type CartDiscountCreated implements MessagePayload {
+  cartDiscount: CartDiscount!
+  type: String!
+}
+
+type CartDiscountDeleted implements MessagePayload {
+  type: String!
+}
+
 input CartDiscountDraft {
   value: CartDiscountValueInput!
   cartPredicate: String!
@@ -1827,6 +1788,24 @@ type CartDiscountQueryResult {
   results: [CartDiscount!]!
 }
 
+type CartDiscountStoreAdded implements MessagePayload {
+  store: Store!
+  storeRef: KeyReference!
+  type: String!
+}
+
+type CartDiscountStoreRemoved implements MessagePayload {
+  store: Store!
+  storeRef: KeyReference!
+  type: String!
+}
+
+type CartDiscountStoresSet implements MessagePayload {
+  storesRef: [KeyReference!]!
+  stores: [Store!]!
+  type: String!
+}
+
 interface CartDiscountTarget {
   type: String!
 }
@@ -1847,6 +1826,7 @@ type CartDiscountTotalPriceTarget implements CartDiscountTarget {
 input CartDiscountTotalPriceTargetInput {
   dummy: String
 }
+
 input CartDiscountUpdateAction {
   setStores: SetCartDiscountStores
   addStore: AddCartDiscountStore
@@ -1870,6 +1850,17 @@ input CartDiscountUpdateAction {
 
 interface CartDiscountValue {
   type: String!
+}
+
+input CartDiscountValueBaseMoneyInput {
+  centPrecision: MoneyInput
+  highPrecision: HighPrecisionMoneyInput
+
+  "CurrencyCode and centAmount are deprecated. Please use `Money`(centPrecision) or `HighPrecisionMoney`(highPrecision)."
+  currencyCode: Currency
+
+  "CurrencyCode and centAmount are deprecated. Please use `Money`(centPrecision) or `HighPrecisionMoney`(highPrecision)."
+  centAmount: Long
 }
 
 input CartDiscountValueInput {
@@ -1921,14 +1912,14 @@ type CartLimitsProjection {
 }
 
 enum CartOrigin {
-  "The cart was created by our platform and belongs to a Quote."
-  Quote
+  "The cart was created by the customer. This is the default value"
+  Customer
 
   "The cart was created by the merchant on behalf of the customer"
   Merchant
 
-  "The cart was created by the customer. This is the default value"
-  Customer
+  "The cart was created by our platform and belongs to a Quote."
+  Quote
 }
 
 "Fields to access carts. Includes direct access to a single cart and searching for carts."
@@ -3712,8 +3703,6 @@ input CustomerSignUpDraft {
   customerGroup: ResourceIdentifierInput
   isEmailVerified: Boolean
   anonymousId: String
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   authenticationMode: AuthenticationMode
 }
 
@@ -3902,6 +3891,7 @@ type DirectDiscountDraftOutput {
 "With discount codes it is possible to give specific cart discounts to an eligible amount of users. They are defined by a string value which can be added to a cart so that specific cart discounts can be applied to the cart."
 type DiscountCode implements Versioned & ReferenceExpandable {
   code: String!
+  key: String
   isActive: Boolean!
   maxApplications: Long
   maxApplicationsPerCustomer: Long
@@ -3939,11 +3929,21 @@ type DiscountCode implements Versioned & ReferenceExpandable {
   lastModifiedBy: Initiator
 }
 
+type DiscountCodeCreated implements MessagePayload {
+  discountCode: DiscountCode!
+  type: String!
+}
+
+type DiscountCodeDeleted implements MessagePayload {
+  type: String!
+}
+
 input DiscountCodeDraft {
   code: String!
   name: [LocalizedStringItemInputType!]
+  key: String
   description: [LocalizedStringItemInputType!]
-  cartDiscounts: [ReferenceInput!]!
+  cartDiscounts: [ResourceIdentifierInput!]!
   isActive: Boolean = true
   maxApplications: Long
   maxApplicationsPerCustomer: Long
@@ -3958,6 +3958,12 @@ type DiscountCodeInfo {
   discountCodeRef: Reference!
   state: DiscountCodeState
   discountCode: DiscountCode
+}
+
+type DiscountCodeKeySet implements MessagePayload {
+  key: String
+  oldKey: String
+  type: String!
 }
 
 type DiscountCodeQueryResult {
@@ -3996,12 +4002,20 @@ input DiscountCodeUpdateAction {
   setCustomField: SetDiscountCodeCustomField
   setCustomType: SetDiscountCodeCustomType
   setDescription: SetDiscountCodeDescription
+  setKey: SetDiscountCodeKey
   setMaxApplications: SetDiscountCodeMaxApplications
   setMaxApplicationsPerCustomer: SetDiscountCodeMaxApplicationsPerCustomer
   setName: SetDiscountCodeName
   setValidFrom: SetDiscountCodeValidFrom
   setValidFromAndUntil: SetDiscountCodeValidFromAndUntil
   setValidUntil: SetDiscountCodeValidUntil
+}
+
+type DiscountOnTotalPrice {
+  discountedAmount: BaseMoney!
+  includedDiscounts: [DiscountedTotalPricePortion!]!
+  discountedNetAmount: BaseMoney
+  discountedGrossAmount: BaseMoney
 }
 
 type DiscountedLineItemPortion {
@@ -4320,9 +4334,9 @@ input FieldTypeSetTypeDraft {
 }
 
 type FixedPriceDiscountValue implements CartDiscountValue {
-  money: [BaseMoney!]!
   type: String!
-  }
+  money: [BaseMoney!]!
+}
 
 input FixedPriceDiscountValueInput {
   money: [CartDiscountValueBaseMoneyInput!]!
@@ -4374,6 +4388,51 @@ type GoogleCloudPubSubDestination implements Destination {
 input GoogleCloudPubSubDestinationInput {
   projectId: String!
   topic: String!
+}
+
+interface HasProductTailoringData {
+  name(
+    "String is defined for different locales. This argument specifies the desired locale."
+    locale: Locale,
+
+    "List of languages the client is able to understand, and which locale variant is preferred."
+    acceptLanguage: [Locale!]): String
+  nameAllLocales: [LocalizedString!]
+  description(
+    "String is defined for different locales. This argument specifies the desired locale."
+    locale: Locale,
+
+    "List of languages the client is able to understand, and which locale variant is preferred."
+    acceptLanguage: [Locale!]): String
+  descriptionAllLocales: [LocalizedString!]
+  slug(
+    "String is defined for different locales. This argument specifies the desired locale."
+    locale: Locale,
+
+    "List of languages the client is able to understand, and which locale variant is preferred."
+    acceptLanguage: [Locale!]): String
+  slugAllLocales: [LocalizedString!]
+  metaTitle(
+    "String is defined for different locales. This argument specifies the desired locale."
+    locale: Locale,
+
+    "List of languages the client is able to understand, and which locale variant is preferred."
+    acceptLanguage: [Locale!]): String
+  metaTitleAllLocales: [LocalizedString!]
+  metaDescription(
+    "String is defined for different locales. This argument specifies the desired locale."
+    locale: Locale,
+
+    "List of languages the client is able to understand, and which locale variant is preferred."
+    acceptLanguage: [Locale!]): String
+  metaDescriptionAllLocales: [LocalizedString!]
+  metaKeywords(
+    "String is defined for different locales. This argument specifies the desired locale."
+    locale: Locale,
+
+    "List of languages the client is able to understand, and which locale variant is preferred."
+    acceptLanguage: [Locale!]): String
+  metaKeywordsAllLocales: [LocalizedString!]
 }
 
 type HighPrecisionMoney implements BaseMoney {
@@ -4552,6 +4611,19 @@ type InStore implements CartDiscountQueryInterface & CartQueryInterface & Custom
     key: String): ShoppingList
   shoppingLists(where: String, sort: [String!], limit: Int, offset: Int): ShoppingListQueryResult!
   productSelectionAssignments(where: String, sort: [String!], limit: Int, offset: Int): ProductAssignmentQueryResult!
+  productTailoring(
+    "Queries with specified ID"
+    id: String,
+
+    "Queries with specified key"
+    key: String,
+
+    "Queries with specified Product ID"
+    productId: String,
+
+    "Queries with specified Product key"
+    productKey: String): ProductTailoring
+  productTailoringList(where: String, sort: [String!], limit: Int, offset: Int): ProductTailoringQueryResult!
 }
 
 type InStoreMe implements MeQueryInterface & CartQueryInterface & ActiveCartInterface & OrderQueryInterface & ShoppingListQueryInterface {
@@ -4607,6 +4679,7 @@ type Initiator {
   isPlatformClient: Boolean
   externalUserId: String
   anonymousId: String
+  attributedTo: Attribution
   clientId: String
   customerRef: Reference
   userRef: Reference
@@ -5440,10 +5513,28 @@ type Mutation {
     "Queries with specified key"
     key: String): TaxCategory
   createDiscountCode(draft: DiscountCodeDraft!): DiscountCode
-  updateDiscountCode(id: String!, version: Long!, actions: [DiscountCodeUpdateAction!]!): DiscountCode
-  deleteDiscountCode(id: String!, version: Long!): DiscountCode
-  createCartDiscount(draft: CartDiscountDraft!): CartDiscount
+  updateDiscountCode(version: Long!, actions: [DiscountCodeUpdateAction!]!,
+
+    "Queries with specified ID"
+    id: String,
+
+    "Queries with specified key"
+    key: String): DiscountCode
+  deleteDiscountCode(version: Long!,
+
+    "Queries with specified ID"
+    id: String,
+
+    "Queries with specified key"
+    key: String): DiscountCode
+  createCartDiscount(draft: CartDiscountDraft!,
+
+    "The mutation is only performed if the resource is part of the store. Can be used with store-specific OAuth permissions."
+    storeKey: KeyReferenceInput): CartDiscount
   updateCartDiscount(version: Long!, actions: [CartDiscountUpdateAction!]!,
+
+    "The mutation is only performed if the resource is part of the store. Can be used with store-specific OAuth permissions."
+    storeKey: KeyReferenceInput,
 
     "Queries with specified ID"
     id: String,
@@ -5451,6 +5542,9 @@ type Mutation {
     "Queries with specified key"
     key: String): CartDiscount
   deleteCartDiscount(version: Long!,
+
+    "The mutation is only performed if the resource is part of the store. Can be used with store-specific OAuth permissions."
+    storeKey: KeyReferenceInput,
 
     "Queries with specified ID"
     id: String,
@@ -5883,6 +5977,39 @@ type Mutation {
 
     "Queries with specified key"
     key: String): ProductSelection
+  createProductTailoring(
+    "The mutation is only performed if the resource is part of the store. Can be used with store-specific OAuth permissions."
+    storeKey: KeyReferenceInput, draft: ProductTailoringDraft!): ProductTailoring
+  updateProductTailoring(
+    "The mutation is only performed if the resource is part of the store. Can be used with store-specific OAuth permissions."
+    storeKey: KeyReferenceInput,
+
+    "Queries with specified Product ID"
+    productId: String,
+
+    "Queries with specified Product key"
+    productKey: String,
+
+    "Queries with specified ID"
+    id: String,
+
+    "Queries with specified key"
+    key: String, actions: [ProductTailoringUpdateAction!]!, version: Long!): ProductTailoring
+  deleteProductTailoring(
+    "The mutation is only performed if the resource is part of the store. Can be used with store-specific OAuth permissions."
+    storeKey: KeyReferenceInput,
+
+    "Queries with specified Product ID"
+    productId: String,
+
+    "Queries with specified Product key"
+    productKey: String,
+
+    "Queries with specified ID"
+    id: String,
+
+    "Queries with specified key"
+    key: String, version: Long!): ProductTailoring
   updateProject(version: Long!, actions: [ProjectSettingsUpdateAction!]!): ProjectProjection
   createStore(draft: CreateStore!): Store
   updateStore(version: Long!, actions: [StoreUpdateAction!]!,
@@ -6030,14 +6157,10 @@ type Mutation {
 
     "Queries with specified key"
     key: String): Quote
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   createApprovalRule(draft: ApprovalRuleDraft!,
 
     "Create/modify entity as an associate in business-unit."
     asAssociate: AsAssociateArgument!): ApprovalRule
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   updateApprovalRule(version: Long!, actions: [ApprovalRuleUpdateAction!]!,
 
     "Create/modify entity as an associate in business-unit."
@@ -6048,8 +6171,6 @@ type Mutation {
 
     "Queries with specified key"
     key: String): ApprovalRule
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   updateApprovalFlow(version: Long!, actions: [ApprovalFlowUpdateAction!]!,
 
     "Create/modify entity as an associate in business-unit."
@@ -6492,17 +6613,6 @@ type OrderCustomFieldRemoved implements MessagePayload & OrderMessagePayload {
   type: String!
 }
 
-type OrderCustomTypeRemoved implements MessagePayload & OrderMessagePayload {
-  previousTypeId: String
-  type: String!
-}
-
-type OrderCustomTypeSet implements MessagePayload & OrderMessagePayload {
-  customFields: CustomFieldsType!
-  previousTypeId: String
-  type: String!
-}
-
 type OrderCustomLineItemAdded implements MessagePayload & OrderMessagePayload {
   customLineItem: CustomLineItem!
   type: String!
@@ -6528,6 +6638,17 @@ type OrderCustomLineItemRemoved implements MessagePayload & OrderMessagePayload 
   customLineItemId: String!
   customLineItemKey: String
   customLineItem: CustomLineItem
+  type: String!
+}
+
+type OrderCustomTypeRemoved implements MessagePayload & OrderMessagePayload {
+  previousTypeId: String
+  type: String!
+}
+
+type OrderCustomTypeSet implements MessagePayload & OrderMessagePayload {
+  customFields: CustomFieldsType!
+  previousTypeId: String
   type: String!
 }
 
@@ -6666,8 +6787,8 @@ type OrderLineItemDiscountSet implements MessagePayload & OrderMessagePayload {
   lineItemKey: String
   discountedPricePerQuantity: [DiscountedLineItemPriceForQuantity!]!
   totalPrice: Money!
-  taxedPrice: TaxedItemPrice
   taxedPricePortions: [MethodTaxedPrice!]!
+  taxedPrice: TaxedItemPrice
   type: String!
 }
 
@@ -6686,9 +6807,9 @@ type OrderLineItemRemoved implements MessagePayload & OrderMessagePayload {
   newQuantity: Long!
   newState: Set!
   newTotalPrice: Money!
-  newTaxedPrice: TaxedItemPrice
   newPrice: ProductPrice
   newShippingDetails: ItemShippingDetails
+  newTaxedPrice: TaxedItemPrice
   type: String!
 }
 
@@ -7129,8 +7250,6 @@ enum Permission {
   AcceptMyQuotes
   AcceptOthersQuotes
   AddChildUnits
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   CreateApprovalRules
   CreateMyCarts
   CreateMyOrdersFromMyCarts
@@ -7148,11 +7267,7 @@ enum Permission {
   ReassignOthersQuotes
   RenegotiateMyQuotes
   RenegotiateOthersQuotes
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   UpdateApprovalFlows
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   UpdateApprovalRules
   UpdateAssociates
   UpdateBusinessUnitDetails
@@ -7277,8 +7392,6 @@ type ProductAssignment {
   productSelectionRef: Reference!
   productSelection: ProductSelection
   variantSelection: ProductVariantSelection
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   variantExclusion: ProductVariantExclusion
 }
 
@@ -7540,14 +7653,13 @@ type ProductImageAdded implements MessagePayload {
 type ProductLimitsProjection {
   pricesPerVariant: Limit!
   variants: Limit!
+  productTailoring: Limit!
 }
 
 type ProductOfSelection {
   productRef: Reference!
   product: Product
   variantSelection: ProductVariantSelection
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   variantExclusion: ProductVariantExclusion
 }
 
@@ -7963,7 +8075,7 @@ enum ProductSelectionMode {
   "Mode of Product Selection used to include a specific list of individual Products"
   Individual
 
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta. Mode of Product Selection used to exclude a specific list of individual Products"
+  "Mode of Product Selection used to exclude a specific list of individual Products"
   IndividualExclusion
 }
 
@@ -7974,7 +8086,6 @@ type ProductSelectionProductAdded implements MessagePayload {
   type: String!
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 type ProductSelectionProductExcluded implements MessagePayload {
   variantExclusion: ProductVariantExclusion
   product: Product
@@ -8020,20 +8131,15 @@ input ProductSelectionSettingInActionInput {
 input ProductSelectionUpdateAction {
   addProduct: AddProductSelectionProduct
   changeName: ChangeProductSelectionName
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   excludeProduct: ExcludeProductSelectionProduct
   removeProduct: RemoveProductSelectionProduct
   setCustomField: SetProductSelectionCustomField
   setCustomType: SetProductSelectionCustomType
   setKey: SetProductSelectionKey
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   setVariantExclusion: SetProductSelectionVariantExclusion
   setVariantSelection: SetProductSelectionVariantSelection
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 type ProductSelectionVariantExclusionChanged implements MessagePayload {
   oldVariantExclusion: ProductVariantExclusion
   newVariantExclusion: ProductVariantExclusion
@@ -8073,6 +8179,236 @@ type ProductStateTransition implements MessagePayload {
   state: State
   stateRef: Reference!
   type: String!
+}
+
+type ProductTailoring implements Versioned {
+  key: String
+  productRef: Reference!
+  product: Product
+  storeRef: KeyReference!
+  store: Store
+  current: ProductTailoringData
+  staged: ProductTailoringData
+  published: Boolean!
+  hasStagedChanges: Boolean!
+  id: String!
+  version: Long!
+  createdAt: DateTime!
+  lastModifiedAt: DateTime!
+  createdBy: Initiator
+  lastModifiedBy: Initiator
+}
+
+type ProductTailoringCreated implements MessagePayload & HasProductTailoringData {
+  type: String!
+  storeRef: KeyReference!
+  productRef: Reference!
+  key: String
+  productKey: String
+  publish: Boolean!
+  name(
+    "String is defined for different locales. This argument specifies the desired locale."
+    locale: Locale,
+
+    "List of languages the client is able to understand, and which locale variant is preferred."
+    acceptLanguage: [Locale!]): String
+  nameAllLocales: [LocalizedString!]
+  description(
+    "String is defined for different locales. This argument specifies the desired locale."
+    locale: Locale,
+
+    "List of languages the client is able to understand, and which locale variant is preferred."
+    acceptLanguage: [Locale!]): String
+  descriptionAllLocales: [LocalizedString!]
+  slug(
+    "String is defined for different locales. This argument specifies the desired locale."
+    locale: Locale,
+
+    "List of languages the client is able to understand, and which locale variant is preferred."
+    acceptLanguage: [Locale!]): String
+  slugAllLocales: [LocalizedString!]
+  metaTitle(
+    "String is defined for different locales. This argument specifies the desired locale."
+    locale: Locale,
+
+    "List of languages the client is able to understand, and which locale variant is preferred."
+    acceptLanguage: [Locale!]): String
+  metaTitleAllLocales: [LocalizedString!]
+  metaDescription(
+    "String is defined for different locales. This argument specifies the desired locale."
+    locale: Locale,
+
+    "List of languages the client is able to understand, and which locale variant is preferred."
+    acceptLanguage: [Locale!]): String
+  metaDescriptionAllLocales: [LocalizedString!]
+  metaKeywords(
+    "String is defined for different locales. This argument specifies the desired locale."
+    locale: Locale,
+
+    "List of languages the client is able to understand, and which locale variant is preferred."
+    acceptLanguage: [Locale!]): String
+  metaKeywordsAllLocales: [LocalizedString!]
+}
+
+type ProductTailoringData implements HasProductTailoringData {
+  name(
+    "String is defined for different locales. This argument specifies the desired locale."
+    locale: Locale,
+
+    "List of languages the client is able to understand, and which locale variant is preferred."
+    acceptLanguage: [Locale!]): String
+  nameAllLocales: [LocalizedString!]
+  description(
+    "String is defined for different locales. This argument specifies the desired locale."
+    locale: Locale,
+
+    "List of languages the client is able to understand, and which locale variant is preferred."
+    acceptLanguage: [Locale!]): String
+  descriptionAllLocales: [LocalizedString!]
+  slug(
+    "String is defined for different locales. This argument specifies the desired locale."
+    locale: Locale,
+
+    "List of languages the client is able to understand, and which locale variant is preferred."
+    acceptLanguage: [Locale!]): String
+  slugAllLocales: [LocalizedString!]
+  metaTitle(
+    "String is defined for different locales. This argument specifies the desired locale."
+    locale: Locale,
+
+    "List of languages the client is able to understand, and which locale variant is preferred."
+    acceptLanguage: [Locale!]): String
+  metaTitleAllLocales: [LocalizedString!]
+  metaDescription(
+    "String is defined for different locales. This argument specifies the desired locale."
+    locale: Locale,
+
+    "List of languages the client is able to understand, and which locale variant is preferred."
+    acceptLanguage: [Locale!]): String
+  metaDescriptionAllLocales: [LocalizedString!]
+  metaKeywords(
+    "String is defined for different locales. This argument specifies the desired locale."
+    locale: Locale,
+
+    "List of languages the client is able to understand, and which locale variant is preferred."
+    acceptLanguage: [Locale!]): String
+  metaKeywordsAllLocales: [LocalizedString!]
+}
+
+type ProductTailoringDeleted implements MessagePayload {
+  storeRef: KeyReference!
+  productRef: Reference!
+  productKey: String
+  type: String!
+}
+
+type ProductTailoringDescriptionSet implements MessagePayload {
+  storeRef: KeyReference!
+  productRef: Reference!
+  productKey: String
+  description(
+    "String is defined for different locales. This argument specifies the desired locale."
+    locale: Locale,
+
+    "List of languages the client is able to understand, and which locale variant is preferred."
+    acceptLanguage: [Locale!]): String
+  oldDescription(
+    "String is defined for different locales. This argument specifies the desired locale."
+    locale: Locale,
+
+    "List of languages the client is able to understand, and which locale variant is preferred."
+    acceptLanguage: [Locale!]): String
+  descriptionAllLocales: [LocalizedString!]
+  oldDescriptionAllLocales: [LocalizedString!]
+  type: String!
+}
+
+input ProductTailoringDraft {
+  product: ResourceIdentifierInput!
+  name: [LocalizedStringItemInputType!]
+  key: String
+  description: [LocalizedStringItemInputType!]
+  slug: [LocalizedStringItemInputType!]
+  metaTitle: [LocalizedStringItemInputType!]
+  metaDescription: [LocalizedStringItemInputType!]
+  metaKeywords: [LocalizedStringItemInputType!]
+  publish: Boolean
+}
+
+type ProductTailoringNameSet implements MessagePayload {
+  storeRef: KeyReference!
+  productRef: Reference!
+  productKey: String
+  name(
+    "String is defined for different locales. This argument specifies the desired locale."
+    locale: Locale,
+
+    "List of languages the client is able to understand, and which locale variant is preferred."
+    acceptLanguage: [Locale!]): String
+  oldName(
+    "String is defined for different locales. This argument specifies the desired locale."
+    locale: Locale,
+
+    "List of languages the client is able to understand, and which locale variant is preferred."
+    acceptLanguage: [Locale!]): String
+  nameAllLocales: [LocalizedString!]
+  oldNameAllLocales: [LocalizedString!]
+  type: String!
+}
+
+type ProductTailoringPublished implements MessagePayload {
+  storeRef: KeyReference!
+  productRef: Reference!
+  productKey: String
+  type: String!
+}
+
+type ProductTailoringQueryResult {
+  offset: Int!
+  count: Int!
+  total: Long!
+  exists: Boolean!
+  results: [ProductTailoring!]!
+}
+
+type ProductTailoringSlugSet implements MessagePayload {
+  storeRef: KeyReference!
+  productRef: Reference!
+  productKey: String
+  slug(
+    "String is defined for different locales. This argument specifies the desired locale."
+    locale: Locale,
+
+    "List of languages the client is able to understand, and which locale variant is preferred."
+    acceptLanguage: [Locale!]): String
+  oldSlug(
+    "String is defined for different locales. This argument specifies the desired locale."
+    locale: Locale,
+
+    "List of languages the client is able to understand, and which locale variant is preferred."
+    acceptLanguage: [Locale!]): String
+  slugAllLocales: [LocalizedString!]
+  oldSlugAllLocales: [LocalizedString!]
+  type: String!
+}
+
+type ProductTailoringUnpublished implements MessagePayload {
+  storeRef: KeyReference!
+  productRef: Reference!
+  productKey: String
+  type: String!
+}
+
+input ProductTailoringUpdateAction {
+  publish: PublishTailoring
+  unpublish: UnpublishTailoring
+  setDescription: SetProductTailoringDescription
+  setMetaAttributes: SetProductTailoringMetaAttributes
+  setMetaDescription: SetProductTailoringMetaDescription
+  setMetaKeywords: SetProductTailoringMetaKeywords
+  setMetaTitle: SetProductTailoringMetaTitle
+  setName: SetProductTailoringName
+  setSlug: SetProductTailoringSlug
 }
 
 type ProductTypeDefinition implements Versioned & ReferenceExpandable {
@@ -8283,15 +8619,13 @@ type ProductVariantAvailabilityWithChannels {
 type ProductVariantDeleted implements MessagePayload {
   removedImageUrls: Set!
   variant: ProductVariant
-    type: String!
+  type: String!
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 type ProductVariantExclusion {
   skus: [String!]!
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 input ProductVariantExclusionDraft {
   skus: [String!]
 }
@@ -8339,6 +8673,7 @@ type ProjectCustomLimitsProjection {
   products: ProductLimitsProjection!
   shoppingLists: ShoppingListLimitsProjection!
   extensions: ExtensionLimitsProjection!
+  subscriptions: SubscriptionsLimitsProjection!
   productDiscounts: ProductDiscountLimitsProjection!
   cartDiscounts: CartDiscountLimitsProjection!
   orderEdits: OrderEditLimitsProjection!
@@ -8385,13 +8720,13 @@ input ProjectSettingsUpdateAction {
   changeMyBusinessUnitStatusOnCreation: ChangeProjectSettingsMyBusinessUnitStatusOnCreation
   changeName: ChangeProjectSettingsName
   changeOrderSearchStatus: ChangeProjectSettingsOrderSearchStatus
-  changeProductSearchIndexingEnabled: ChangeProjectSettingsProductSearchIndexingEnabled
   changeShoppingListsConfiguration: ChangeProjectSettingsShoppingListsConfiguration
   setExternalOAuth: SetProjectSettingsExternalOAuth
   setShippingRateInputType: SetProjectSettingsShippingRateInputType
 
   "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   setMyBusinessUnitAssociateRoleOnCreation: SetProjectSettingsMyBusinessUnitAssociateRoleOnCreation
+  changeProductSearchIndexingEnabled: ChangeProjectSettingsProductSearchIndexingEnabled
 }
 
 input PublishProduct {
@@ -8404,6 +8739,10 @@ enum PublishScope {
 
   "Publishes only prices on the staged projection"
   Prices
+}
+
+input PublishTailoring {
+  dummy: String
 }
 
 type PurchaseOrderNumberSet implements MessagePayload & OrderMessagePayload {
@@ -8500,7 +8839,12 @@ type Query {
     "Queries with specified key"
     key: String): CartDiscount
   cartDiscounts(where: String, sort: [String!], limit: Int, offset: Int): CartDiscountQueryResult!
-  discountCode(id: String!): DiscountCode
+  discountCode(
+    "Queries with specified ID"
+    id: String,
+
+    "Queries with specified key"
+    key: String): DiscountCode
   discountCodes(where: String, sort: [String!], limit: Int, offset: Int): DiscountCodeQueryResult!
   productDiscount(
     "Queries with specified ID"
@@ -8602,6 +8946,22 @@ type Query {
     "Queries with specified key"
     key: String): ProductSelection
   productSelections(where: String, sort: [String!], limit: Int, offset: Int): ProductSelectionQueryResult!
+  productTailoring(
+    "Queries with specified ID"
+    id: String,
+
+    "Queries with specified key"
+    key: String,
+
+    "Queries with specified Product ID"
+    productId: String,
+
+    "Queries with specified Product key"
+    productKey: String,
+
+    "The mutation is only performed if the resource is part of the store. Can be used with store-specific OAuth permissions."
+    storeKey: KeyReferenceInput): ProductTailoring
+  productTailoringList(where: String, sort: [String!], limit: Int, offset: Int): ProductTailoringQueryResult!
   productProjectionsSuggest(searchKeywords: [SearchKeywordArgument!]!, fuzzy: Boolean, limit: Int = 10, staged: Boolean = false): SuggestResult!
   project: ProjectProjection!
   store(
@@ -9049,15 +9409,6 @@ input RecalculateCart {
   updateProductData: Boolean = false
 }
 
-input RecalculateStagedOrder {
-  updateProductData: Boolean = false
-}
-
-type RecalculateStagedOrderOutput implements StagedOrderUpdateActionOutput {
-  type: String!
-  updateProductData: Boolean!
-}
-
 type Reference {
   typeId: String!
   id: String!
@@ -9112,7 +9463,6 @@ type RefreshTokenLimitsProjection {
   total: RefreshTokenLimitWithCurrent!
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 input RejectApprovalFlow {
   reason: String
 }
@@ -9642,24 +9992,20 @@ enum RoundingMode {
   HalfUp
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 type RuleApprover {
   associateRole: AssociateRole!
   associateRoleRef: KeyReference!
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 input RuleApproverDraft {
   associateRole: ResourceIdentifierInput!
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 type RuleRequester {
   associateRole: AssociateRole!
   associateRoleRef: KeyReference!
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 input RuleRequesterDraft {
   associateRole: ResourceIdentifierInput!
 }
@@ -9726,7 +10072,6 @@ type ScoreShippingRateInputDraftOutput implements ShippingRateInputDraftOutput {
 }
 
 input SearchFacetInput {
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   model: SearchFacetModelInput
   string: String
 }
@@ -9737,7 +10082,6 @@ input SearchFacetModelInput {
 }
 
 input SearchFilterInput {
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   model: SearchFilterModelInput
   string: String
 }
@@ -9753,7 +10097,7 @@ input SearchFilterModelInput {
 type SearchIndexingConfiguration {
   products: SearchIndexingConfigurationValues
   orders: OrderSearchConfiguration
-  }
+}
 
 type SearchIndexingConfigurationValues {
   status: SearchIndexingStatus
@@ -9816,11 +10160,9 @@ type SelectionOfProduct {
   productSelectionRef: Reference!
   productSelection: ProductSelection
   variantSelection: ProductVariantSelection
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   variantExclusion: ProductVariantExclusion
   createdAt: DateTime!
-  }
+}
 
 type SelectionOfProductQueryResult {
   offset: Int!
@@ -9833,37 +10175,42 @@ type SelectionOfProductQueryResult {
 "A set."
 scalar Set
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+input SetApprovalFlowCustomField {
+  name: String!
+  value: String
+}
+
+input SetApprovalFlowCustomType {
+  fields: [CustomFieldInput!]
+  type: ResourceIdentifierInput
+  typeKey: String
+  typeId: String
+}
+
 input SetApprovalRuleApprovers {
   approvers: ApproverHierarchyDraft!
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 input SetApprovalRuleDescription {
   description: String
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 input SetApprovalRuleKey {
   key: String
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 input SetApprovalRuleName {
   name: String!
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 input SetApprovalRulePredicate {
   predicate: String!
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 input SetApprovalRuleRequesters {
   requesters: [RuleRequesterDraft!]!
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 input SetApprovalRuleStatus {
   status: ApprovalRuleStatus!
 }
@@ -10019,13 +10366,15 @@ input SetCartCustomLineItemTaxAmount {
   customLineItemId: String
   customLineItemKey: String
   externalTaxAmount: ExternalTaxAmountDraft
-  }
+  shippingKey: String
+}
 
 input SetCartCustomLineItemTaxRate {
   customLineItemId: String
   customLineItemKey: String
   externalTaxRate: ExternalTaxRateDraft
-  }
+  shippingKey: String
+}
 
 input SetCartCustomShippingMethod {
   shippingMethodName: String!
@@ -10482,6 +10831,10 @@ input SetDiscountCodeCustomType {
 
 input SetDiscountCodeDescription {
   description: [LocalizedStringItemInputType!]
+}
+
+input SetDiscountCodeKey {
+  key: String
 }
 
 input SetDiscountCodeMaxApplications {
@@ -11160,6 +11513,43 @@ input SetProductSku {
   staged: Boolean = true
 }
 
+input SetProductTailoringDescription {
+  description: [LocalizedStringItemInputType!]
+  staged: Boolean = true
+}
+
+input SetProductTailoringMetaAttributes {
+  metaDescription: [LocalizedStringItemInputType!]
+  metaKeywords: [LocalizedStringItemInputType!]
+  metaTitle: [LocalizedStringItemInputType!]
+  staged: Boolean = true
+}
+
+input SetProductTailoringMetaDescription {
+  metaDescription: [LocalizedStringItemInputType!]
+  staged: Boolean = true
+}
+
+input SetProductTailoringMetaKeywords {
+  metaKeywords: [LocalizedStringItemInputType!]
+  staged: Boolean = true
+}
+
+input SetProductTailoringMetaTitle {
+  metaTitle: [LocalizedStringItemInputType!]
+  staged: Boolean = true
+}
+
+input SetProductTailoringName {
+  name: [LocalizedStringItemInputType!]
+  staged: Boolean = true
+}
+
+input SetProductTailoringSlug {
+  slug: [LocalizedStringItemInputType!]
+  staged: Boolean = true
+}
+
 input SetProductTaxCategory {
   taxCategory: ResourceIdentifierInput
 }
@@ -11467,27 +11857,31 @@ input SetStagedOrderCustomLineItemTaxAmount {
   customLineItemId: String
   customLineItemKey: String
   externalTaxAmount: ExternalTaxAmountDraft
-  }
+  shippingKey: String
+}
 
 type SetStagedOrderCustomLineItemTaxAmountOutput implements StagedOrderUpdateActionOutput {
   type: String!
   customLineItemId: String
   customLineItemKey: String
   externalTaxAmount: ExternalTaxAmountDraftOutput
-  }
+  shippingKey: String
+}
 
 input SetStagedOrderCustomLineItemTaxRate {
   customLineItemId: String
   customLineItemKey: String
   externalTaxRate: ExternalTaxRateDraft
-  }
+  shippingKey: String
+}
 
 type SetStagedOrderCustomLineItemTaxRateOutput implements StagedOrderUpdateActionOutput {
   type: String!
   customLineItemId: String
   customLineItemKey: String
   externalTaxRate: ExternalTaxRateDraftOutput
-  }
+  shippingKey: String
+}
 
 input SetStagedOrderCustomShippingMethod {
   shippingMethodName: String!
@@ -12264,12 +12658,12 @@ type ShippingInfo {
   taxRate: TaxRate
   deliveries: [Delivery!]!
   discountedPrice: DiscountedLineItemPrice
-  taxedPrice: TaxedItemPrice
   shippingMethodState: ShippingMethodState!
   shippingMethod: ShippingMethod
   shippingMethodRef: Reference
   taxCategory: TaxCategory
   taxCategoryRef: Reference
+  taxedPrice: TaxedItemPrice
 }
 
 input ShippingInfoImportDraft {
@@ -12704,7 +13098,6 @@ input StagedOrderUpdateAction {
   changeTaxRoundingMode: ChangeStagedOrderTaxRoundingMode
   importCustomLineItemState: ImportStagedOrderCustomLineItemState
   importLineItemState: ImportStagedOrderLineItemState
-  recalculate: RecalculateStagedOrder
   removeCustomLineItem: RemoveStagedOrderCustomLineItem
   removeDelivery: RemoveStagedOrderDelivery
   removeDiscountCode: RemoveStagedOrderDiscountCode
@@ -13282,6 +13675,7 @@ enum SubscriptionHealthStatus {
   ConfigurationErrorDeliveryStopped
   Healthy
   TemporaryError
+  ManuallySuspended
 }
 
 input SubscriptionUpdateAction {
@@ -13289,6 +13683,10 @@ input SubscriptionUpdateAction {
   setChanges: SetSubscriptionChanges
   setKey: SetSubscriptionKey
   setMessages: SetSubscriptionMessages
+}
+
+type SubscriptionsLimitsProjection {
+  maxSubscriptions: Limit!
 }
 
 type SuggestResult {
@@ -13488,6 +13886,7 @@ input TaxRateInput {
 type TaxedItemPrice {
   totalNet: Money!
   totalGross: Money!
+  taxPortions: [TaxPortion!]!
   totalTax: Money
 }
 
@@ -13586,13 +13985,6 @@ type TimeField implements CustomField {
 
 type TimeType implements FieldType {
   name: String!
-}
-
-type DiscountOnTotalPrice {
-  discountedAmount: BaseMoney!
-  includedDiscounts: [DiscountedTotalPricePortion!]!
-  discountedNetAmount: BaseMoney
-  discountedGrossAmount: BaseMoney
 }
 
 type TrackingData {
@@ -13843,6 +14235,10 @@ input UnfreezeCart {
 }
 
 input UnpublishProduct {
+  dummy: String
+}
+
+input UnpublishTailoring {
   dummy: String
 }
 

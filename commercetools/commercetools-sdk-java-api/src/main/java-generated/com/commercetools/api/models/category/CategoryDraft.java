@@ -72,7 +72,7 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
     public CategoryResourceIdentifier getParent();
 
     /**
-     *  <p>Decimal value between 0 and 1 used to order Categories that are on the same level in the Category tree. If not set, a random value will be assigned.</p>
+     *  <p>Decimal value between 0 and 1. Frontend applications can use this value for ordering Categories within the same level in the category tree. If not set, a random value will be assigned.</p>
      * @return orderHint
      */
 
@@ -80,7 +80,7 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
     public String getOrderHint();
 
     /**
-     *  <p>Additional identifier for external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
+     *  <p>Additional identifier for external systems like customer relationship management (CRM) or enterprise resource planning (ERP).</p>
      * @return externalId
      */
 
@@ -164,14 +164,14 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
     public void setParent(final CategoryResourceIdentifier parent);
 
     /**
-     *  <p>Decimal value between 0 and 1 used to order Categories that are on the same level in the Category tree. If not set, a random value will be assigned.</p>
+     *  <p>Decimal value between 0 and 1. Frontend applications can use this value for ordering Categories within the same level in the category tree. If not set, a random value will be assigned.</p>
      * @param orderHint value to be set
      */
 
     public void setOrderHint(final String orderHint);
 
     /**
-     *  <p>Additional identifier for external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
+     *  <p>Additional identifier for external systems like customer relationship management (CRM) or enterprise resource planning (ERP).</p>
      * @param externalId value to be set
      */
 

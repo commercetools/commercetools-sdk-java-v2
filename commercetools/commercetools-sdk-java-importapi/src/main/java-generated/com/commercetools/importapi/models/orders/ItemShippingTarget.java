@@ -45,7 +45,7 @@ public interface ItemShippingTarget {
      */
     @NotNull
     @JsonProperty("quantity")
-    public Double getQuantity();
+    public Long getQuantity();
 
     /**
      *  <p>Maps to <code>ItemShippingTarget.addressKey</code>.</p>
@@ -59,7 +59,7 @@ public interface ItemShippingTarget {
      * @param quantity value to be set
      */
 
-    public void setQuantity(final Double quantity);
+    public void setQuantity(final Long quantity);
 
     /**
      * factory method

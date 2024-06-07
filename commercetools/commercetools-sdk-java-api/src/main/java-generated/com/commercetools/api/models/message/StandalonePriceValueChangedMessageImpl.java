@@ -44,11 +44,11 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
 
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
-    private com.commercetools.api.models.common.Money value;
+    private com.commercetools.api.models.common.TypedMoney value;
 
     private Boolean staged;
 
-    private com.commercetools.api.models.common.Money oldValue;
+    private com.commercetools.api.models.common.TypedMoney oldValue;
 
     /**
      * create instance with all properties
@@ -64,9 +64,9 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
             @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource,
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
-            @JsonProperty("value") final com.commercetools.api.models.common.Money value,
+            @JsonProperty("value") final com.commercetools.api.models.common.TypedMoney value,
             @JsonProperty("staged") final Boolean staged,
-            @JsonProperty("oldValue") final com.commercetools.api.models.common.Money oldValue) {
+            @JsonProperty("oldValue") final com.commercetools.api.models.common.TypedMoney oldValue) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -123,7 +123,7 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
     }
 
     /**
-     *  <p>Value of <code>createdBy</code>.</p>
+     *  <p>IDs and references that last modified the Message.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -131,7 +131,7 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Message.</p>
      */
 
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
@@ -182,7 +182,7 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
      *  <p>The new value of the updated StandalonePrice.</p>
      */
 
-    public com.commercetools.api.models.common.Money getValue() {
+    public com.commercetools.api.models.common.TypedMoney getValue() {
         return this.value;
     }
 
@@ -198,7 +198,7 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
      *  <p>The old value of the updated StandalonePrice. Present on Messages created after 3 February 2023. Optional for backwards compatibility.</p>
      */
 
-    public com.commercetools.api.models.common.Money getOldValue() {
+    public com.commercetools.api.models.common.TypedMoney getOldValue() {
         return this.oldValue;
     }
 
@@ -243,7 +243,7 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
     }
 
-    public void setValue(final com.commercetools.api.models.common.Money value) {
+    public void setValue(final com.commercetools.api.models.common.TypedMoney value) {
         this.value = value;
     }
 
@@ -251,7 +251,7 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
         this.staged = staged;
     }
 
-    public void setOldValue(final com.commercetools.api.models.common.Money oldValue) {
+    public void setOldValue(final com.commercetools.api.models.common.TypedMoney oldValue) {
         this.oldValue = oldValue;
     }
 

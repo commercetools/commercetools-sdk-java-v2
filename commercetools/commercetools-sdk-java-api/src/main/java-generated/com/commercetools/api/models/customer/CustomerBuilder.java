@@ -23,6 +23,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .email("{email}")
  *             .plusAddresses(addressesBuilder -> addressesBuilder)
  *             .isEmailVerified(true)
+ *             .plusStores(storesBuilder -> storesBuilder)
  *             .authenticationMode(AuthenticationMode.PASSWORD)
  *             .build()
  * </code></pre>
@@ -108,7 +109,6 @@ public class CustomerBuilder implements Builder<Customer> {
     @Nullable
     private String salutation;
 
-    @Nullable
     private java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores;
 
     private com.commercetools.api.models.customer.AuthenticationMode authenticationMode;
@@ -181,7 +181,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>Optional identifier for use in external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
+     *  <p>Optional identifier for use in external systems like customer relationship management (CRM) or enterprise resource planning (ERP).</p>
      * @param externalId value to be set
      * @return Builder
      */
@@ -192,7 +192,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the Customer.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
@@ -204,7 +204,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the Customer.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
@@ -216,7 +216,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the Customer.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -228,7 +228,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Customer.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
@@ -240,7 +240,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Customer.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
@@ -252,7 +252,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Customer.</p>
      * @param createdBy value to be set
      * @return Builder
      */
@@ -651,14 +651,14 @@ public class CustomerBuilder implements Builder<Customer> {
     /**
      *  <p>Stores to which the Customer is assigned to.</p>
      *  <ul>
-     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
+     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
      *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
      *  </ul>
      * @param stores value to be set
      * @return Builder
      */
 
-    public CustomerBuilder stores(@Nullable final com.commercetools.api.models.store.StoreKeyReference... stores) {
+    public CustomerBuilder stores(final com.commercetools.api.models.store.StoreKeyReference... stores) {
         this.stores = new ArrayList<>(Arrays.asList(stores));
         return this;
     }
@@ -666,15 +666,14 @@ public class CustomerBuilder implements Builder<Customer> {
     /**
      *  <p>Stores to which the Customer is assigned to.</p>
      *  <ul>
-     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
+     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
      *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
      *  </ul>
      * @param stores value to be set
      * @return Builder
      */
 
-    public CustomerBuilder stores(
-            @Nullable final java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores) {
+    public CustomerBuilder stores(final java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores) {
         this.stores = stores;
         return this;
     }
@@ -682,14 +681,14 @@ public class CustomerBuilder implements Builder<Customer> {
     /**
      *  <p>Stores to which the Customer is assigned to.</p>
      *  <ul>
-     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
+     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
      *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
      *  </ul>
      * @param stores value to be set
      * @return Builder
      */
 
-    public CustomerBuilder plusStores(@Nullable final com.commercetools.api.models.store.StoreKeyReference... stores) {
+    public CustomerBuilder plusStores(final com.commercetools.api.models.store.StoreKeyReference... stores) {
         if (this.stores == null) {
             this.stores = new ArrayList<>();
         }
@@ -700,7 +699,7 @@ public class CustomerBuilder implements Builder<Customer> {
     /**
      *  <p>Stores to which the Customer is assigned to.</p>
      *  <ul>
-     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
+     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
      *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
      *  </ul>
      * @param builder function to build the stores value
@@ -719,7 +718,7 @@ public class CustomerBuilder implements Builder<Customer> {
     /**
      *  <p>Stores to which the Customer is assigned to.</p>
      *  <ul>
-     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
+     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
      *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
      *  </ul>
      * @param builder function to build the stores value
@@ -736,7 +735,7 @@ public class CustomerBuilder implements Builder<Customer> {
     /**
      *  <p>Stores to which the Customer is assigned to.</p>
      *  <ul>
-     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
+     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
      *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
      *  </ul>
      * @param builder function to build the stores value
@@ -751,7 +750,7 @@ public class CustomerBuilder implements Builder<Customer> {
     /**
      *  <p>Stores to which the Customer is assigned to.</p>
      *  <ul>
-     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
+     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
      *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
      *  </ul>
      * @param builder function to build the stores value
@@ -833,7 +832,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>Optional identifier for use in external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
+     *  <p>Optional identifier for use in external systems like customer relationship management (CRM) or enterprise resource planning (ERP).</p>
      * @return externalId
      */
 
@@ -843,7 +842,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the Customer.</p>
      * @return lastModifiedBy
      */
 
@@ -853,7 +852,7 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Customer.</p>
      * @return createdBy
      */
 
@@ -1052,13 +1051,12 @@ public class CustomerBuilder implements Builder<Customer> {
     /**
      *  <p>Stores to which the Customer is assigned to.</p>
      *  <ul>
-     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
+     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
      *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
      *  </ul>
      * @return stores
      */
 
-    @Nullable
     public java.util.List<com.commercetools.api.models.store.StoreKeyReference> getStores() {
         return this.stores;
     }
@@ -1084,6 +1082,7 @@ public class CustomerBuilder implements Builder<Customer> {
         Objects.requireNonNull(email, Customer.class + ": email is missing");
         Objects.requireNonNull(addresses, Customer.class + ": addresses is missing");
         Objects.requireNonNull(isEmailVerified, Customer.class + ": isEmailVerified is missing");
+        Objects.requireNonNull(stores, Customer.class + ": stores is missing");
         Objects.requireNonNull(authenticationMode, Customer.class + ": authenticationMode is missing");
         return new CustomerImpl(id, version, createdAt, lastModifiedAt, key, customerNumber, externalId, lastModifiedBy,
             createdBy, email, password, firstName, lastName, middleName, title, dateOfBirth, companyName, vatId,

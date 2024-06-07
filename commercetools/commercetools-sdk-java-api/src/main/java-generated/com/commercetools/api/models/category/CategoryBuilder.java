@@ -125,7 +125,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the Category.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
@@ -137,7 +137,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the Category.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
@@ -149,7 +149,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the Category.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -161,7 +161,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Category.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
@@ -173,7 +173,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Category.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
@@ -185,7 +185,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Category.</p>
      * @param createdBy value to be set
      * @return Builder
      */
@@ -424,7 +424,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Decimal value between 0 and 1 used to order Categories that are on the same level in the Category tree.</p>
+     *  <p>Decimal value between 0 and 1. Frontend applications can use this value for ordering Categories within the same level in the category tree.</p>
      * @param orderHint value to be set
      * @return Builder
      */
@@ -435,7 +435,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Additional identifier for external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
+     *  <p>Additional identifier for external systems like customer relationship management (CRM) or enterprise resource planning (ERP).</p>
      * @param externalId value to be set
      * @return Builder
      */
@@ -721,7 +721,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the Category.</p>
      * @return lastModifiedBy
      */
 
@@ -731,7 +731,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Category.</p>
      * @return createdBy
      */
 
@@ -788,7 +788,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Decimal value between 0 and 1 used to order Categories that are on the same level in the Category tree.</p>
+     *  <p>Decimal value between 0 and 1. Frontend applications can use this value for ordering Categories within the same level in the category tree.</p>
      * @return orderHint
      */
 
@@ -797,7 +797,7 @@ public class CategoryBuilder implements Builder<Category> {
     }
 
     /**
-     *  <p>Additional identifier for external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
+     *  <p>Additional identifier for external systems like customer relationship management (CRM) or enterprise resource planning (ERP).</p>
      * @return externalId
      */
 

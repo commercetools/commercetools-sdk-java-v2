@@ -27,7 +27,7 @@ public class CustomerEmailVerifiedMessagePayloadImpl implements CustomerEmailVer
      * create instance with all properties
      */
     @JsonCreator
-    CustomerEmailVerifiedMessagePayloadImpl() {
+    public CustomerEmailVerifiedMessagePayloadImpl() {
         this.type = CUSTOMER_EMAIL_VERIFIED;
     }
 

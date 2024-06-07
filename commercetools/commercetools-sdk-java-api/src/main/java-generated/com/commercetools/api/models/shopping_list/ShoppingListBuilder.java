@@ -547,7 +547,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the ShoppingList.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
@@ -559,7 +559,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the ShoppingList.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
@@ -571,7 +571,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the ShoppingList.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -583,7 +583,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the ShoppingList.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
@@ -595,7 +595,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the ShoppingList.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
@@ -607,7 +607,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the ShoppingList.</p>
      * @param createdBy value to be set
      * @return Builder
      */
@@ -761,7 +761,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the ShoppingList.</p>
      * @return lastModifiedBy
      */
 
@@ -771,7 +771,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the ShoppingList.</p>
      * @return createdBy
      */
 

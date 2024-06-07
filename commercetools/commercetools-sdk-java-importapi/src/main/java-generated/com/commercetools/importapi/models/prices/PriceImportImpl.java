@@ -38,7 +38,10 @@ public class PriceImportImpl implements PriceImport, ModelBase {
 
     private com.commercetools.importapi.models.common.DiscountedPrice discounted;
 
+    @Deprecated
     private Boolean publish;
+
+    private Boolean staged;
 
     private java.util.List<com.commercetools.importapi.models.common.PriceTier> tiers;
 
@@ -60,7 +63,7 @@ public class PriceImportImpl implements PriceImport, ModelBase {
             @JsonProperty("customerGroup") final com.commercetools.importapi.models.common.CustomerGroupKeyReference customerGroup,
             @JsonProperty("channel") final com.commercetools.importapi.models.common.ChannelKeyReference channel,
             @JsonProperty("discounted") final com.commercetools.importapi.models.common.DiscountedPrice discounted,
-            @JsonProperty("publish") final Boolean publish,
+            @JsonProperty("publish") final Boolean publish, @JsonProperty("staged") final Boolean staged,
             @JsonProperty("tiers") final java.util.List<com.commercetools.importapi.models.common.PriceTier> tiers,
             @JsonProperty("custom") final com.commercetools.importapi.models.customfields.Custom custom,
             @JsonProperty("productVariant") final com.commercetools.importapi.models.common.ProductVariantKeyReference productVariant,
@@ -74,6 +77,7 @@ public class PriceImportImpl implements PriceImport, ModelBase {
         this.channel = channel;
         this.discounted = discounted;
         this.publish = publish;
+        this.staged = staged;
         this.tiers = tiers;
         this.custom = custom;
         this.productVariant = productVariant;
@@ -153,9 +157,20 @@ public class PriceImportImpl implements PriceImport, ModelBase {
     /**
      *  <p>Only the Embedded Price updates will be published to <code>staged</code> and <code>current</code> projection.</p>
      */
-
+    @Deprecated
     public Boolean getPublish() {
         return this.publish;
+    }
+
+    /**
+     *  <ul>
+     *   <li>Set to <code>false</code> to update both the current and staged projections of the Product with the new Price data.</li>
+     *   <li>Leave empty or set to <code>true</code> to only update the staged projection.</li>
+     *  </ul>
+     */
+
+    public Boolean getStaged() {
+        return this.staged;
     }
 
     /**
@@ -223,8 +238,13 @@ public class PriceImportImpl implements PriceImport, ModelBase {
         this.discounted = discounted;
     }
 
+    @Deprecated
     public void setPublish(final Boolean publish) {
         this.publish = publish;
+    }
+
+    public void setStaged(final Boolean staged) {
+        this.staged = staged;
     }
 
     public void setTiers(final com.commercetools.importapi.models.common.PriceTier... tiers) {
@@ -267,6 +287,7 @@ public class PriceImportImpl implements PriceImport, ModelBase {
                 .append(channel, that.channel)
                 .append(discounted, that.discounted)
                 .append(publish, that.publish)
+                .append(staged, that.staged)
                 .append(tiers, that.tiers)
                 .append(custom, that.custom)
                 .append(productVariant, that.productVariant)
@@ -280,6 +301,7 @@ public class PriceImportImpl implements PriceImport, ModelBase {
                 .append(channel, that.channel)
                 .append(discounted, that.discounted)
                 .append(publish, that.publish)
+                .append(staged, that.staged)
                 .append(tiers, that.tiers)
                 .append(custom, that.custom)
                 .append(productVariant, that.productVariant)
@@ -298,6 +320,7 @@ public class PriceImportImpl implements PriceImport, ModelBase {
                 .append(channel)
                 .append(discounted)
                 .append(publish)
+                .append(staged)
                 .append(tiers)
                 .append(custom)
                 .append(productVariant)
@@ -316,6 +339,7 @@ public class PriceImportImpl implements PriceImport, ModelBase {
                 .append("channel", channel)
                 .append("discounted", discounted)
                 .append("publish", publish)
+                .append("staged", staged)
                 .append("tiers", tiers)
                 .append("custom", custom)
                 .append("productVariant", productVariant)

@@ -24,15 +24,15 @@ public class ItemStateTest {
 
     @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ItemState.builder().quantity(0.52277106) }, new Object[] {
+        return new Object[][] { new Object[] { ItemState.builder().quantity(8L) }, new Object[] {
                 ItemState.builder().state(new com.commercetools.importapi.models.common.StateKeyReferenceImpl()) } };
     }
 
     @Test
     public void quantity() {
         ItemState value = ItemState.of();
-        value.setQuantity(0.52277106);
-        Assertions.assertThat(value.getQuantity()).isEqualTo(0.52277106);
+        value.setQuantity(8L);
+        Assertions.assertThat(value.getQuantity()).isEqualTo(8L);
     }
 
     @Test

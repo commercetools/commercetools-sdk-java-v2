@@ -71,6 +71,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidSubjectErrorImpl.class, name = InvalidSubjectError.INVALID_SUBJECT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.InvalidTokenErrorImpl.class, name = InvalidTokenError.INVALID_TOKEN),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.LanguageUsedInStoresErrorImpl.class, name = LanguageUsedInStoresError.LANGUAGE_USED_IN_STORES),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.error.LockedFieldErrorImpl.class, name = LockedFieldError.LOCKED_FIELD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.MatchingPriceNotFoundErrorImpl.class, name = MatchingPriceNotFoundError.MATCHING_PRICE_NOT_FOUND),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.MaxCartDiscountsReachedErrorImpl.class, name = MaxCartDiscountsReachedError.MAX_CART_DISCOUNTS_REACHED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.MaxResourceLimitExceededErrorImpl.class, name = MaxResourceLimitExceededError.MAX_RESOURCE_LIMIT_EXCEEDED),
@@ -329,6 +330,10 @@ public interface ErrorObject {
         if (template instanceof com.commercetools.api.models.error.LanguageUsedInStoresError) {
             return com.commercetools.api.models.error.LanguageUsedInStoresError
                     .deepCopy((com.commercetools.api.models.error.LanguageUsedInStoresError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.LockedFieldError) {
+            return com.commercetools.api.models.error.LockedFieldError
+                    .deepCopy((com.commercetools.api.models.error.LockedFieldError) template);
         }
         if (template instanceof com.commercetools.api.models.error.MatchingPriceNotFoundError) {
             return com.commercetools.api.models.error.MatchingPriceNotFoundError
@@ -806,6 +811,14 @@ public interface ErrorObject {
      */
     public static com.commercetools.api.models.error.LanguageUsedInStoresErrorBuilder languageUsedInStoresBuilder() {
         return com.commercetools.api.models.error.LanguageUsedInStoresErrorBuilder.of();
+    }
+
+    /**
+     * builder for lockedField subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.LockedFieldErrorBuilder lockedFieldBuilder() {
+        return com.commercetools.api.models.error.LockedFieldErrorBuilder.of();
     }
 
     /**

@@ -57,6 +57,9 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
     @Nullable
+    private java.util.List<com.commercetools.api.models.cart.MethodExternalTaxRateDraft> perMethodExternalTaxRate;
+
+    @Nullable
     private com.commercetools.api.models.cart.InventoryMode inventoryMode;
 
     @Nullable
@@ -287,7 +290,7 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     }
 
     /**
-     *  <p>External Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>External Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode and <code>Single</code> ShippingMode.</p>
      * @param builder function to build the externalTaxRate value
      * @return Builder
      */
@@ -300,7 +303,7 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     }
 
     /**
-     *  <p>External Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>External Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode and <code>Single</code> ShippingMode.</p>
      * @param builder function to build the externalTaxRate value
      * @return Builder
      */
@@ -312,7 +315,7 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     }
 
     /**
-     *  <p>External Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>External Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode and <code>Single</code> ShippingMode.</p>
      * @param externalTaxRate value to be set
      * @return Builder
      */
@@ -321,6 +324,99 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
             @Nullable final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
         this.externalTaxRate = externalTaxRate;
         return this;
+    }
+
+    /**
+     *  <p>Sets the external Tax Rates for individual Shipping Methods, if the Cart has the <code>External</code> TaxMode and <code>Multiple</code> ShippingMode.</p>
+     * @param perMethodExternalTaxRate value to be set
+     * @return Builder
+     */
+
+    public CartAddLineItemActionBuilder perMethodExternalTaxRate(
+            @Nullable final com.commercetools.api.models.cart.MethodExternalTaxRateDraft... perMethodExternalTaxRate) {
+        this.perMethodExternalTaxRate = new ArrayList<>(Arrays.asList(perMethodExternalTaxRate));
+        return this;
+    }
+
+    /**
+     *  <p>Sets the external Tax Rates for individual Shipping Methods, if the Cart has the <code>External</code> TaxMode and <code>Multiple</code> ShippingMode.</p>
+     * @param perMethodExternalTaxRate value to be set
+     * @return Builder
+     */
+
+    public CartAddLineItemActionBuilder perMethodExternalTaxRate(
+            @Nullable final java.util.List<com.commercetools.api.models.cart.MethodExternalTaxRateDraft> perMethodExternalTaxRate) {
+        this.perMethodExternalTaxRate = perMethodExternalTaxRate;
+        return this;
+    }
+
+    /**
+     *  <p>Sets the external Tax Rates for individual Shipping Methods, if the Cart has the <code>External</code> TaxMode and <code>Multiple</code> ShippingMode.</p>
+     * @param perMethodExternalTaxRate value to be set
+     * @return Builder
+     */
+
+    public CartAddLineItemActionBuilder plusPerMethodExternalTaxRate(
+            @Nullable final com.commercetools.api.models.cart.MethodExternalTaxRateDraft... perMethodExternalTaxRate) {
+        if (this.perMethodExternalTaxRate == null) {
+            this.perMethodExternalTaxRate = new ArrayList<>();
+        }
+        this.perMethodExternalTaxRate.addAll(Arrays.asList(perMethodExternalTaxRate));
+        return this;
+    }
+
+    /**
+     *  <p>Sets the external Tax Rates for individual Shipping Methods, if the Cart has the <code>External</code> TaxMode and <code>Multiple</code> ShippingMode.</p>
+     * @param builder function to build the perMethodExternalTaxRate value
+     * @return Builder
+     */
+
+    public CartAddLineItemActionBuilder plusPerMethodExternalTaxRate(
+            Function<com.commercetools.api.models.cart.MethodExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.MethodExternalTaxRateDraftBuilder> builder) {
+        if (this.perMethodExternalTaxRate == null) {
+            this.perMethodExternalTaxRate = new ArrayList<>();
+        }
+        this.perMethodExternalTaxRate
+                .add(builder.apply(com.commercetools.api.models.cart.MethodExternalTaxRateDraftBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Sets the external Tax Rates for individual Shipping Methods, if the Cart has the <code>External</code> TaxMode and <code>Multiple</code> ShippingMode.</p>
+     * @param builder function to build the perMethodExternalTaxRate value
+     * @return Builder
+     */
+
+    public CartAddLineItemActionBuilder withPerMethodExternalTaxRate(
+            Function<com.commercetools.api.models.cart.MethodExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.MethodExternalTaxRateDraftBuilder> builder) {
+        this.perMethodExternalTaxRate = new ArrayList<>();
+        this.perMethodExternalTaxRate
+                .add(builder.apply(com.commercetools.api.models.cart.MethodExternalTaxRateDraftBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Sets the external Tax Rates for individual Shipping Methods, if the Cart has the <code>External</code> TaxMode and <code>Multiple</code> ShippingMode.</p>
+     * @param builder function to build the perMethodExternalTaxRate value
+     * @return Builder
+     */
+
+    public CartAddLineItemActionBuilder addPerMethodExternalTaxRate(
+            Function<com.commercetools.api.models.cart.MethodExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.MethodExternalTaxRateDraft> builder) {
+        return plusPerMethodExternalTaxRate(
+            builder.apply(com.commercetools.api.models.cart.MethodExternalTaxRateDraftBuilder.of()));
+    }
+
+    /**
+     *  <p>Sets the external Tax Rates for individual Shipping Methods, if the Cart has the <code>External</code> TaxMode and <code>Multiple</code> ShippingMode.</p>
+     * @param builder function to build the perMethodExternalTaxRate value
+     * @return Builder
+     */
+
+    public CartAddLineItemActionBuilder setPerMethodExternalTaxRate(
+            Function<com.commercetools.api.models.cart.MethodExternalTaxRateDraftBuilder, com.commercetools.api.models.cart.MethodExternalTaxRateDraft> builder) {
+        return perMethodExternalTaxRate(
+            builder.apply(com.commercetools.api.models.cart.MethodExternalTaxRateDraftBuilder.of()));
     }
 
     /**
@@ -513,13 +609,23 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     }
 
     /**
-     *  <p>External Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>External Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode and <code>Single</code> ShippingMode.</p>
      * @return externalTaxRate
      */
 
     @Nullable
     public com.commercetools.api.models.cart.ExternalTaxRateDraft getExternalTaxRate() {
         return this.externalTaxRate;
+    }
+
+    /**
+     *  <p>Sets the external Tax Rates for individual Shipping Methods, if the Cart has the <code>External</code> TaxMode and <code>Multiple</code> ShippingMode.</p>
+     * @return perMethodExternalTaxRate
+     */
+
+    @Nullable
+    public java.util.List<com.commercetools.api.models.cart.MethodExternalTaxRateDraft> getPerMethodExternalTaxRate() {
+        return this.perMethodExternalTaxRate;
     }
 
     /**
@@ -558,7 +664,8 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
      */
     public CartAddLineItemAction build() {
         return new CartAddLineItemActionImpl(key, productId, variantId, sku, quantity, addedAt, distributionChannel,
-            supplyChannel, externalPrice, externalTotalPrice, externalTaxRate, inventoryMode, shippingDetails, custom);
+            supplyChannel, externalPrice, externalTotalPrice, externalTaxRate, perMethodExternalTaxRate, inventoryMode,
+            shippingDetails, custom);
     }
 
     /**
@@ -567,7 +674,8 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
      */
     public CartAddLineItemAction buildUnchecked() {
         return new CartAddLineItemActionImpl(key, productId, variantId, sku, quantity, addedAt, distributionChannel,
-            supplyChannel, externalPrice, externalTotalPrice, externalTaxRate, inventoryMode, shippingDetails, custom);
+            supplyChannel, externalPrice, externalTotalPrice, externalTaxRate, perMethodExternalTaxRate, inventoryMode,
+            shippingDetails, custom);
     }
 
     /**
@@ -596,6 +704,7 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
         builder.externalPrice = template.getExternalPrice();
         builder.externalTotalPrice = template.getExternalTotalPrice();
         builder.externalTaxRate = template.getExternalTaxRate();
+        builder.perMethodExternalTaxRate = template.getPerMethodExternalTaxRate();
         builder.inventoryMode = template.getInventoryMode();
         builder.shippingDetails = template.getShippingDetails();
         builder.custom = template.getCustom();

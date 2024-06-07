@@ -17,189 +17,115 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ChangeSubscriptionResourceTypeId extends JsonEnum {
 
     /**
-    	<p>Changes related to <a href="ctp:api:type:ApprovalFlow">ApprovalFlows</a>.</p>
-
-    */
+    <p>Changes related to ApprovalFlows.</p> */
     ChangeSubscriptionResourceTypeId APPROVAL_FLOW = ChangeSubscriptionResourceTypeIdEnum.APPROVAL_FLOW;
     /**
-    	<p>Changes related to <a href="ctp:api:type:ApprovalRule">ApprovalRules</a>.</p>
-
-    */
+    <p>Changes related to ApprovalRules.</p> */
     ChangeSubscriptionResourceTypeId APPROVAL_RULE = ChangeSubscriptionResourceTypeIdEnum.APPROVAL_RULE;
     /**
-    	<p>Changes related to <a href="ctp:api:type:AssociateRole">AssociateRoles</a>.</p>
-
-    */
+    <p>Changes related to AssociateRoles.</p> */
     ChangeSubscriptionResourceTypeId ASSOCIATE_ROLE = ChangeSubscriptionResourceTypeIdEnum.ASSOCIATE_ROLE;
     /**
-    	<p>Changes to <a href="ctp:api:type:BusinessUnit">BusinessUnits</a>.</p>
-
-    */
+    <p>Changes to BusinessUnits.</p> */
     ChangeSubscriptionResourceTypeId BUSINESS_UNIT = ChangeSubscriptionResourceTypeIdEnum.BUSINESS_UNIT;
     /**
-    	<p>Changes to <a href="ctp:api:type:Cart">Carts</a>.</p>
-
-    */
+    <p>Changes to Carts.</p> */
     ChangeSubscriptionResourceTypeId CART = ChangeSubscriptionResourceTypeIdEnum.CART;
     /**
-    	<p>Changes to <a href="ctp:api:type:CartDiscount">CartDiscounts</a>.</p>
-
-    */
+    <p>Changes to CartDiscounts.</p> */
     ChangeSubscriptionResourceTypeId CART_DISCOUNT = ChangeSubscriptionResourceTypeIdEnum.CART_DISCOUNT;
     /**
-    	<p>Changes to <a href="ctp:api:type:Category">Categories</a>.</p>
-
-    */
+    <p>Changes to Categories.</p> */
     ChangeSubscriptionResourceTypeId CATEGORY = ChangeSubscriptionResourceTypeIdEnum.CATEGORY;
     /**
-    	<p>Changes to <a href="ctp:api:type:Channel">Channels</a>.</p>
-
-    */
+    <p>Changes to Channels.</p> */
     ChangeSubscriptionResourceTypeId CHANNEL = ChangeSubscriptionResourceTypeIdEnum.CHANNEL;
     /**
-    	<p>Changes to <a href="ctp:api:type:Customer">Customers</a>.</p>
-
-    */
+    <p>Changes to Customers.</p> */
     ChangeSubscriptionResourceTypeId CUSTOMER = ChangeSubscriptionResourceTypeIdEnum.CUSTOMER;
     /**
-    	<p>Changes to <a href="ctp:api:type:CustomerToken">CustomerTokens</a>.</p>
-
-    */
+    <p>Changes to CustomerTokens.</p> */
     ChangeSubscriptionResourceTypeId CUSTOMER_EMAIL_TOKEN = ChangeSubscriptionResourceTypeIdEnum.CUSTOMER_EMAIL_TOKEN;
     /**
-    	<p>Changes to <a href="ctp:api:type:CustomerGroup">CustomerGroups</a>.</p>
-
-    */
+    <p>Changes to CustomerGroups.</p> */
     ChangeSubscriptionResourceTypeId CUSTOMER_GROUP = ChangeSubscriptionResourceTypeIdEnum.CUSTOMER_GROUP;
     /**
-    	<p>Changes to <a href="ctp:api:type:CustomerToken">CustomerTokens</a>.</p>
-
-    */
+    <p>Changes to CustomerTokens.</p> */
     ChangeSubscriptionResourceTypeId CUSTOMER_PASSWORD_TOKEN = ChangeSubscriptionResourceTypeIdEnum.CUSTOMER_PASSWORD_TOKEN;
     /**
-    	<p>Changes to <a href="ctp:api:type:DiscountCode">DiscountCodes</a>.</p>
-
-    */
+    <p>Changes to DiscountCodes.</p> */
     ChangeSubscriptionResourceTypeId DISCOUNT_CODE = ChangeSubscriptionResourceTypeIdEnum.DISCOUNT_CODE;
     /**
-    	<p>Changes to <a href="ctp:api:type:Extension">Extensions</a>.</p>
-
-    */
+    <p>Changes to Extensions.</p> */
     ChangeSubscriptionResourceTypeId EXTENSION = ChangeSubscriptionResourceTypeIdEnum.EXTENSION;
     /**
-    	<p>Changes to <a href="ctp:api:type:InventoryEntry">InventoryEntries</a>.</p>
-
-    */
+    <p>Changes to InventoryEntries.</p> */
     ChangeSubscriptionResourceTypeId INVENTORY_ENTRY = ChangeSubscriptionResourceTypeIdEnum.INVENTORY_ENTRY;
     /**
-    	<p>Changes to <a href="ctp:api:type:CustomObject">CustomObjects</a>.</p>
-
-    */
+    <p>Changes to CustomObjects.</p> */
     ChangeSubscriptionResourceTypeId KEY_VALUE_DOCUMENT = ChangeSubscriptionResourceTypeIdEnum.KEY_VALUE_DOCUMENT;
     /**
-    	<p>Changes to <a href="ctp:api:type:Order">Orders</a>. Changes to Orders via <a href="/../api/projects/order-edits">Order Edits</a> do not trigger a Message. To achieve this, a <a href="ctp:api:type:MessageSubscription">MessageSubscription</a> to <a href="ctp:api:type:OrderEditAppliedMessage">Order Edit Applied Message</a> is necessary.</p>
-
-    */
+    <p>Changes to Orders. Changes to Orders via Order Edits do not trigger a Message. To achieve this, a MessageSubscription to OrderEditApplied Message is necessary.</p> */
     ChangeSubscriptionResourceTypeId ORDER = ChangeSubscriptionResourceTypeIdEnum.ORDER;
     /**
-    	<p>Changes to <a href="ctp:api:type:OrderEdit">OrderEdits</a>.</p>
-
-    */
+    <p>Changes to OrderEdits.</p> */
     ChangeSubscriptionResourceTypeId ORDER_EDIT = ChangeSubscriptionResourceTypeIdEnum.ORDER_EDIT;
     /**
-    	<p>Changes to <a href="ctp:api:type:Payment">Payments</a>.</p>
-
-    */
+    <p>Changes to Payments.</p> */
     ChangeSubscriptionResourceTypeId PAYMENT = ChangeSubscriptionResourceTypeIdEnum.PAYMENT;
     /**
-    	<p>Changes to <a href="ctp:api:type:Product">Products</a>.</p>
-
-    */
+    <p>Changes to Products.</p> */
     ChangeSubscriptionResourceTypeId PRODUCT = ChangeSubscriptionResourceTypeIdEnum.PRODUCT;
     /**
-    	<p>Changes to <a href="ctp:api:type:ProductDiscount">ProductDiscount</a>.</p>
-
-    */
+    <p>Changes to ProductDiscount.</p> */
     ChangeSubscriptionResourceTypeId PRODUCT_DISCOUNT = ChangeSubscriptionResourceTypeIdEnum.PRODUCT_DISCOUNT;
     /**
-    	<p>Changes to <a href="ctp:api:type:Price">EmbeddedPrices</a>.</p>
-
-    */
+    <p>Changes to EmbeddedPrices.</p> */
     ChangeSubscriptionResourceTypeId PRODUCT_PRICE = ChangeSubscriptionResourceTypeIdEnum.PRODUCT_PRICE;
     /**
-    	<p>Changes to <a href="ctp:api:type:ProductSelection">ProductSelections</a>.</p>
-
-    */
+    <p>Changes to ProductSelections.</p> */
     ChangeSubscriptionResourceTypeId PRODUCT_SELECTION = ChangeSubscriptionResourceTypeIdEnum.PRODUCT_SELECTION;
     /**
-    	<p>Changes to <a href="ctp:api:type:ProductType">ProductTypes</a>.</p>
-
-    */
+    <p>Changes to ProductTypes.</p> */
     ChangeSubscriptionResourceTypeId PRODUCT_TYPE = ChangeSubscriptionResourceTypeIdEnum.PRODUCT_TYPE;
     /**
-    	<p>Changes to <a href="ctp:api:type:Quote">Quotes</a>.</p>
-
-    */
+    <p>Changes to Quotes.</p> */
     ChangeSubscriptionResourceTypeId QUOTE = ChangeSubscriptionResourceTypeIdEnum.QUOTE;
     /**
-    	<p>Changes to <a href="ctp:api:type:QuoteRequest">QuoteRequests</a>.</p>
-
-    */
+    <p>Changes to QuoteRequests.</p> */
     ChangeSubscriptionResourceTypeId QUOTE_REQUEST = ChangeSubscriptionResourceTypeIdEnum.QUOTE_REQUEST;
     /**
-    	<p>Changes to <a href="ctp:api:type:Review">Reviews</a>.</p>
-
-    */
+    <p>Changes to Reviews.</p> */
     ChangeSubscriptionResourceTypeId REVIEW = ChangeSubscriptionResourceTypeIdEnum.REVIEW;
     /**
-    	<p>Changes to <a href="ctp:api:type:ShippingMethod">ShippingMethods</a>.</p>
-
-    */
+    <p>Changes to ShippingMethods.</p> */
     ChangeSubscriptionResourceTypeId SHIPPING_METHOD = ChangeSubscriptionResourceTypeIdEnum.SHIPPING_METHOD;
     /**
-    	<p>Changes to <a href="ctp:api:type:ShoppingList">ShoppingLists</a>.</p>
-
-    */
+    <p>Changes to ShoppingLists.</p> */
     ChangeSubscriptionResourceTypeId SHOPPING_LIST = ChangeSubscriptionResourceTypeIdEnum.SHOPPING_LIST;
     /**
-    	<p>Changes to <a href="ctp:api:type:StagedQuote">StagedQuotes</a>.</p>
-
-    */
+    <p>Changes to StagedQuotes.</p> */
     ChangeSubscriptionResourceTypeId STAGED_QUOTE = ChangeSubscriptionResourceTypeIdEnum.STAGED_QUOTE;
     /**
-    	<p>Changes to <a href="ctp:api:type:StandalonePrice">StandalonePrices</a>.</p>
-
-    */
+    <p>Changes to StandalonePrices.</p> */
     ChangeSubscriptionResourceTypeId STANDALONE_PRICE = ChangeSubscriptionResourceTypeIdEnum.STANDALONE_PRICE;
     /**
-    	<p>Changes to <a href="ctp:api:type:State">States</a>.</p>
-
-    */
+    <p>Changes to States.</p> */
     ChangeSubscriptionResourceTypeId STATE = ChangeSubscriptionResourceTypeIdEnum.STATE;
     /**
-    	<p>Changes to <a href="ctp:api:type:Store">Stores</a>.</p>
-
-    */
+    <p>Changes to Stores.</p> */
     ChangeSubscriptionResourceTypeId STORE = ChangeSubscriptionResourceTypeIdEnum.STORE;
     /**
-    	<p>Changes to <a href="ctp:api:type:Subscription">Subscriptions</a>.</p>
-
-    */
+    <p>Changes to Subscriptions.</p> */
     ChangeSubscriptionResourceTypeId SUBSCRIPTION = ChangeSubscriptionResourceTypeIdEnum.SUBSCRIPTION;
     /**
-    	<p>Changes to <a href="ctp:api:type:TaxCategory">TaxCategories</a>.</p>
-
-    */
+    <p>Changes to TaxCategories.</p> */
     ChangeSubscriptionResourceTypeId TAX_CATEGORY = ChangeSubscriptionResourceTypeIdEnum.TAX_CATEGORY;
     /**
-    	<p>Changes to <a href="ctp:api:type:Type">Types</a>.</p>
-
-    */
+    <p>Changes to Types.</p> */
     ChangeSubscriptionResourceTypeId TYPE = ChangeSubscriptionResourceTypeIdEnum.TYPE;
     /**
-    	<p>Changes to <a href="ctp:api:type:Zone">Zones</a>.</p>
-
-    */
+    <p>Changes to Zones.</p> */
     ChangeSubscriptionResourceTypeId ZONE = ChangeSubscriptionResourceTypeIdEnum.ZONE;
 
     /**

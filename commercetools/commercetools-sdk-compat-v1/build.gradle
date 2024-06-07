@@ -16,6 +16,7 @@ dependencies {
     implementation javax.validation
     api slf4j.api
     api commons.lang3
+    api commons.text
 
     api project(':commercetools:commercetools-sdk-java-api')
     api ctsdkv1.client version ctsdkv1.version

@@ -44,6 +44,8 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
 
     private java.util.List<com.commercetools.api.models.common.BaseAddress> itemShippingAddresses;
 
+    private com.commercetools.api.models.cart.ShippingMode shippingMode;
+
     private java.util.List<String> discountCodes;
 
     private String country;
@@ -69,6 +71,7 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
             @JsonProperty("shippingAddress") final com.commercetools.api.models.common.BaseAddress shippingAddress,
             @JsonProperty("shippingMethod") final com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier shippingMethod,
             @JsonProperty("itemShippingAddresses") final java.util.List<com.commercetools.api.models.common.BaseAddress> itemShippingAddresses,
+            @JsonProperty("shippingMode") final com.commercetools.api.models.cart.ShippingMode shippingMode,
             @JsonProperty("discountCodes") final java.util.List<String> discountCodes,
             @JsonProperty("country") final String country, @JsonProperty("locale") final String locale,
             @JsonProperty("deleteDaysAfterLastModification") final Long deleteDaysAfterLastModification,
@@ -84,6 +87,7 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
         this.shippingAddress = shippingAddress;
         this.shippingMethod = shippingMethod;
         this.itemShippingAddresses = itemShippingAddresses;
+        this.shippingMode = shippingMode;
         this.discountCodes = discountCodes;
         this.country = country;
         this.locale = locale;
@@ -187,6 +191,17 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
     }
 
     /**
+     *  <ul>
+     *   <li>If set to <code>Single</code>, only a single Shipping Method can be added to the Cart.</li>
+     *   <li>If set to <code>Multiple</code>, multiple Shipping Methods can be added to the Cart.</li>
+     *  </ul>
+     */
+
+    public com.commercetools.api.models.cart.ShippingMode getShippingMode() {
+        return this.shippingMode;
+    }
+
+    /**
      *  <p><code>code</code> of the existing DiscountCodes to add to the Cart.</p>
      */
 
@@ -195,7 +210,7 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
     }
 
     /**
-     *  <p>Used for LineItem Price selection. If used for Create Cart in Store, the provided country must be one of the Store's <code>countries</code>.</p>
+     *  <p>Used for Line Item price selection. If used for Create Cart in Store, the provided country must be one of the Store's <code>countries</code>.</p>
      */
 
     public String getCountry() {
@@ -283,6 +298,10 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
         this.itemShippingAddresses = itemShippingAddresses;
     }
 
+    public void setShippingMode(final com.commercetools.api.models.cart.ShippingMode shippingMode) {
+        this.shippingMode = shippingMode;
+    }
+
     public void setDiscountCodes(final String... discountCodes) {
         this.discountCodes = new ArrayList<>(Arrays.asList(discountCodes));
     }
@@ -328,6 +347,7 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
                 .append(shippingAddress, that.shippingAddress)
                 .append(shippingMethod, that.shippingMethod)
                 .append(itemShippingAddresses, that.itemShippingAddresses)
+                .append(shippingMode, that.shippingMode)
                 .append(discountCodes, that.discountCodes)
                 .append(country, that.country)
                 .append(locale, that.locale)
@@ -344,6 +364,7 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
                 .append(shippingAddress, that.shippingAddress)
                 .append(shippingMethod, that.shippingMethod)
                 .append(itemShippingAddresses, that.itemShippingAddresses)
+                .append(shippingMode, that.shippingMode)
                 .append(discountCodes, that.discountCodes)
                 .append(country, that.country)
                 .append(locale, that.locale)
@@ -365,6 +386,7 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
                 .append(shippingAddress)
                 .append(shippingMethod)
                 .append(itemShippingAddresses)
+                .append(shippingMode)
                 .append(discountCodes)
                 .append(country)
                 .append(locale)
@@ -386,6 +408,7 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
                 .append("shippingAddress", shippingAddress)
                 .append("shippingMethod", shippingMethod)
                 .append("itemShippingAddresses", itemShippingAddresses)
+                .append("shippingMode", shippingMode)
                 .append("discountCodes", discountCodes)
                 .append("country", country)
                 .append("locale", locale)

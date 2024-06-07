@@ -31,9 +31,12 @@ public class TaxedPriceDraftTest {
                         TaxedPriceDraft.builder().totalNet(new com.commercetools.api.models.common.MoneyImpl()) },
                 new Object[] {
                         TaxedPriceDraft.builder().totalGross(new com.commercetools.api.models.common.MoneyImpl()) },
+                new Object[] {
+                        TaxedPriceDraft.builder()
+                                .taxPortions(Collections
+                                        .singletonList(new com.commercetools.api.models.cart.TaxPortionDraftImpl())) },
                 new Object[] { TaxedPriceDraft.builder()
-                        .taxPortions(
-                            Collections.singletonList(new com.commercetools.api.models.cart.TaxPortionDraftImpl())) } };
+                        .totalTax(new com.commercetools.api.models.common.TypedMoneyDraftImpl()) } };
     }
 
     @Test
@@ -56,5 +59,13 @@ public class TaxedPriceDraftTest {
         value.setTaxPortions(Collections.singletonList(new com.commercetools.api.models.cart.TaxPortionDraftImpl()));
         Assertions.assertThat(value.getTaxPortions())
                 .isEqualTo(Collections.singletonList(new com.commercetools.api.models.cart.TaxPortionDraftImpl()));
+    }
+
+    @Test
+    public void totalTax() {
+        TaxedPriceDraft value = TaxedPriceDraft.of();
+        value.setTotalTax(new com.commercetools.api.models.common.TypedMoneyDraftImpl());
+        Assertions.assertThat(value.getTotalTax())
+                .isEqualTo(new com.commercetools.api.models.common.TypedMoneyDraftImpl());
     }
 }

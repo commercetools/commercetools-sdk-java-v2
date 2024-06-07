@@ -30,7 +30,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
  *             .orderState(OrderState.OPEN)
- *             .oldOrderState(OrderState.OPEN)
  *             .build()
  * </code></pre>
  * </div>
@@ -56,7 +55,7 @@ public interface OrderStateChangedMessage extends OrderMessage {
      *  <p>OrderState before the Change Order State update action.</p>
      * @return oldOrderState
      */
-    @NotNull
+
     @JsonProperty("oldOrderState")
     public OrderState getOldOrderState();
 

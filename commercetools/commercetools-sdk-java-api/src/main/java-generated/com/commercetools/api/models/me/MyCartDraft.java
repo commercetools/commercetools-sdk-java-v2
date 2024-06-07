@@ -12,6 +12,7 @@ import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier;
 import com.commercetools.api.models.cart.InventoryMode;
+import com.commercetools.api.models.cart.ShippingMode;
 import com.commercetools.api.models.cart.TaxMode;
 import com.commercetools.api.models.common.BaseAddress;
 import com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier;
@@ -130,6 +131,17 @@ public interface MyCartDraft extends com.commercetools.api.models.CustomizableDr
     public List<BaseAddress> getItemShippingAddresses();
 
     /**
+     *  <ul>
+     *   <li>If set to <code>Single</code>, only a single Shipping Method can be added to the Cart.</li>
+     *   <li>If set to <code>Multiple</code>, multiple Shipping Methods can be added to the Cart.</li>
+     *  </ul>
+     * @return shippingMode
+     */
+
+    @JsonProperty("shippingMode")
+    public ShippingMode getShippingMode();
+
+    /**
      *  <p><code>code</code> of the existing DiscountCodes to add to the Cart.</p>
      * @return discountCodes
      */
@@ -138,7 +150,7 @@ public interface MyCartDraft extends com.commercetools.api.models.CustomizableDr
     public List<String> getDiscountCodes();
 
     /**
-     *  <p>Used for LineItem Price selection. If used for Create Cart in Store, the provided country must be one of the Store's <code>countries</code>.</p>
+     *  <p>Used for Line Item price selection. If used for Create Cart in Store, the provided country must be one of the Store's <code>countries</code>.</p>
      * @return country
      */
 
@@ -266,6 +278,16 @@ public interface MyCartDraft extends com.commercetools.api.models.CustomizableDr
     public void setItemShippingAddresses(final List<BaseAddress> itemShippingAddresses);
 
     /**
+     *  <ul>
+     *   <li>If set to <code>Single</code>, only a single Shipping Method can be added to the Cart.</li>
+     *   <li>If set to <code>Multiple</code>, multiple Shipping Methods can be added to the Cart.</li>
+     *  </ul>
+     * @param shippingMode value to be set
+     */
+
+    public void setShippingMode(final ShippingMode shippingMode);
+
+    /**
      *  <p><code>code</code> of the existing DiscountCodes to add to the Cart.</p>
      * @param discountCodes values to be set
      */
@@ -281,7 +303,7 @@ public interface MyCartDraft extends com.commercetools.api.models.CustomizableDr
     public void setDiscountCodes(final List<String> discountCodes);
 
     /**
-     *  <p>Used for LineItem Price selection. If used for Create Cart in Store, the provided country must be one of the Store's <code>countries</code>.</p>
+     *  <p>Used for Line Item price selection. If used for Create Cart in Store, the provided country must be one of the Store's <code>countries</code>.</p>
      * @param country value to be set
      */
 
@@ -335,6 +357,7 @@ public interface MyCartDraft extends com.commercetools.api.models.CustomizableDr
         instance.setShippingAddress(template.getShippingAddress());
         instance.setShippingMethod(template.getShippingMethod());
         instance.setItemShippingAddresses(template.getItemShippingAddresses());
+        instance.setShippingMode(template.getShippingMode());
         instance.setDiscountCodes(template.getDiscountCodes());
         instance.setCountry(template.getCountry());
         instance.setLocale(template.getLocale());
@@ -377,6 +400,7 @@ public interface MyCartDraft extends com.commercetools.api.models.CustomizableDr
                         .map(com.commercetools.api.models.common.BaseAddress::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setShippingMode(template.getShippingMode());
         instance.setDiscountCodes(Optional.ofNullable(template.getDiscountCodes()).map(ArrayList::new).orElse(null));
         instance.setCountry(template.getCountry());
         instance.setLocale(template.getLocale());

@@ -87,7 +87,7 @@ public class LineItemStateTransitionMessagePayloadImpl implements LineItemStateT
     }
 
     /**
-     *  <p>Date and time (UTC) when the transition of the Line Item State was performed.</p>
+     *  <p>Date and time (UTC) the transition of the Line Item State was performed.</p>
      */
 
     public java.time.ZonedDateTime getTransitionDate() {

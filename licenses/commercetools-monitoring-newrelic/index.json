@@ -2,7 +2,7 @@
     "dependencies": [
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-annotations",
-            "moduleVersion": "2.16.0",
+            "moduleVersion": "2.17.0",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson"
             ],
@@ -15,7 +15,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-core",
-            "moduleVersion": "2.16.0",
+            "moduleVersion": "2.17.0",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-core"
             ],
@@ -28,7 +28,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-databind",
-            "moduleVersion": "2.16.0",
+            "moduleVersion": "2.17.0",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson"
             ],
@@ -41,7 +41,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.datatype:jackson-datatype-jsr310",
-            "moduleVersion": "2.16.0",
+            "moduleVersion": "2.17.0",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-modules-java8/jackson-datatype-jsr310"
             ],
@@ -67,7 +67,7 @@
         },
         {
             "moduleName": "com.newrelic.agent.java:newrelic-api",
-            "moduleVersion": "8.7.0",
+            "moduleVersion": "8.11.1",
             "moduleUrls": [
                 "https://github.com/newrelic/newrelic-java-agent"
             ],
@@ -80,7 +80,7 @@
         },
         {
             "moduleName": "com.spotify:completable-futures",
-            "moduleVersion": "0.3.5",
+            "moduleVersion": "0.3.6",
             "moduleUrls": [
                 "https://spotify.github.io/completable-futures"
             ],
@@ -106,6 +106,16 @@
             ]
         },
         {
+            "moduleName": "net.bytebuddy:byte-buddy",
+            "moduleVersion": "1.14.9",
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
             "moduleName": "org.apache.commons:commons-lang3",
             "moduleVersion": "3.14.0",
             "moduleUrls": [
@@ -120,11 +130,15 @@
         },
         {
             "moduleName": "org.slf4j:slf4j-api",
-            "moduleVersion": "1.7.36",
+            "moduleVersion": "2.0.13",
             "moduleUrls": [
                 "http://www.slf4j.org"
             ],
             "moduleLicenses": [
+                {
+                    "moduleLicense": null,
+                    "moduleLicenseUrl": "http://www.opensource.org/licenses/mit-license.php"
+                },
                 {
                     "moduleLicense": "MIT License",
                     "moduleLicenseUrl": "https://opensource.org/licenses/MIT"

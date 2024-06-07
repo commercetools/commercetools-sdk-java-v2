@@ -223,6 +223,26 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.BusinessUnitStoresSetMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.CartDiscountCreatedMessageBuilder cartDiscountCreatedBuilder() {
+        return com.commercetools.api.models.message.CartDiscountCreatedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CartDiscountDeletedMessageBuilder cartDiscountDeletedBuilder() {
+        return com.commercetools.api.models.message.CartDiscountDeletedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CartDiscountStoreAddedMessageBuilder cartDiscountStoreAddedBuilder() {
+        return com.commercetools.api.models.message.CartDiscountStoreAddedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CartDiscountStoreRemovedMessageBuilder cartDiscountStoreRemovedBuilder() {
+        return com.commercetools.api.models.message.CartDiscountStoreRemovedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CartDiscountStoresSetMessageBuilder cartDiscountStoresSetBuilder() {
+        return com.commercetools.api.models.message.CartDiscountStoresSetMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.CategoryCreatedMessageBuilder categoryCreatedBuilder() {
         return com.commercetools.api.models.message.CategoryCreatedMessageBuilder.of();
     }
@@ -373,6 +393,18 @@ public class MessageBuilder {
 
     public com.commercetools.api.models.message.DeliveryRemovedMessageBuilder deliveryRemovedBuilder() {
         return com.commercetools.api.models.message.DeliveryRemovedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.DiscountCodeCreatedMessageBuilder discountCodeCreatedBuilder() {
+        return com.commercetools.api.models.message.DiscountCodeCreatedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.DiscountCodeDeletedMessageBuilder discountCodeDeletedBuilder() {
+        return com.commercetools.api.models.message.DiscountCodeDeletedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.DiscountCodeKeySetMessageBuilder discountCodeKeySetBuilder() {
+        return com.commercetools.api.models.message.DiscountCodeKeySetMessageBuilder.of();
     }
 
     public com.commercetools.api.models.message.InventoryEntryCreatedMessageBuilder inventoryEntryCreatedBuilder() {
@@ -669,6 +701,34 @@ public class MessageBuilder {
 
     public com.commercetools.api.models.message.ProductStateTransitionMessageBuilder productStateTransitionBuilder() {
         return com.commercetools.api.models.message.ProductStateTransitionMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ProductTailoringCreatedMessageBuilder productTailoringCreatedBuilder() {
+        return com.commercetools.api.models.message.ProductTailoringCreatedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ProductTailoringDeletedMessageBuilder productTailoringDeletedBuilder() {
+        return com.commercetools.api.models.message.ProductTailoringDeletedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ProductTailoringDescriptionSetMessageBuilder productTailoringDescriptionSetBuilder() {
+        return com.commercetools.api.models.message.ProductTailoringDescriptionSetMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ProductTailoringNameSetMessageBuilder productTailoringNameSetBuilder() {
+        return com.commercetools.api.models.message.ProductTailoringNameSetMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ProductTailoringPublishedMessageBuilder productTailoringPublishedBuilder() {
+        return com.commercetools.api.models.message.ProductTailoringPublishedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ProductTailoringSlugSetMessageBuilder productTailoringSlugSetBuilder() {
+        return com.commercetools.api.models.message.ProductTailoringSlugSetMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ProductTailoringUnpublishedMessageBuilder productTailoringUnpublishedBuilder() {
+        return com.commercetools.api.models.message.ProductTailoringUnpublishedMessageBuilder.of();
     }
 
     public com.commercetools.api.models.message.ProductUnpublishedMessageBuilder productUnpublishedBuilder() {

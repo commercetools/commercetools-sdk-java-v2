@@ -161,7 +161,7 @@ public class BusinessUnitImpl implements BusinessUnit, ModelBase {
     }
 
     /**
-     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the BusinessUnit.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -169,7 +169,7 @@ public class BusinessUnitImpl implements BusinessUnit, ModelBase {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the BusinessUnit.</p>
      */
 
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
@@ -177,7 +177,7 @@ public class BusinessUnitImpl implements BusinessUnit, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier of the Business Unit.</p>
+     *  <p>User-defined unique and immutable identifier of the Business Unit.</p>
      */
 
     public String getKey() {

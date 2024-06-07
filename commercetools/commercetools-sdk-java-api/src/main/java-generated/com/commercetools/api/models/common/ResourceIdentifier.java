@@ -23,6 +23,7 @@ import com.commercetools.api.models.payment.PaymentResourceIdentifier;
 import com.commercetools.api.models.product.ProductResourceIdentifier;
 import com.commercetools.api.models.product_discount.ProductDiscountResourceIdentifier;
 import com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier;
+import com.commercetools.api.models.product_tailoring.ProductTailoringResourceIdentifier;
 import com.commercetools.api.models.product_type.ProductTypeResourceIdentifier;
 import com.commercetools.api.models.quote.QuoteResourceIdentifier;
 import com.commercetools.api.models.quote_request.QuoteRequestResourceIdentifier;
@@ -71,6 +72,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.product_discount.ProductDiscountResourceIdentifierImpl.class, name = ProductDiscountResourceIdentifier.PRODUCT_DISCOUNT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.product.ProductResourceIdentifierImpl.class, name = ProductResourceIdentifier.PRODUCT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierImpl.class, name = ProductSelectionResourceIdentifier.PRODUCT_SELECTION),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.product_tailoring.ProductTailoringResourceIdentifierImpl.class, name = ProductTailoringResourceIdentifier.PRODUCT_TAILORING),
         @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.ProductTypeResourceIdentifierImpl.class, name = ProductTypeResourceIdentifier.PRODUCT_TYPE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.quote_request.QuoteRequestResourceIdentifierImpl.class, name = QuoteRequestResourceIdentifier.QUOTE_REQUEST),
         @JsonSubTypes.Type(value = com.commercetools.api.models.quote.QuoteResourceIdentifierImpl.class, name = QuoteResourceIdentifier.QUOTE),
@@ -200,6 +202,10 @@ public interface ResourceIdentifier extends com.commercetools.api.models.WithKey
         if (template instanceof com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier) {
             return com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier.deepCopy(
                 (com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifier) template);
+        }
+        if (template instanceof com.commercetools.api.models.product_tailoring.ProductTailoringResourceIdentifier) {
+            return com.commercetools.api.models.product_tailoring.ProductTailoringResourceIdentifier.deepCopy(
+                (com.commercetools.api.models.product_tailoring.ProductTailoringResourceIdentifier) template);
         }
         if (template instanceof com.commercetools.api.models.product_type.ProductTypeResourceIdentifier) {
             return com.commercetools.api.models.product_type.ProductTypeResourceIdentifier
@@ -385,6 +391,14 @@ public interface ResourceIdentifier extends com.commercetools.api.models.WithKey
      */
     public static com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierBuilder productSelectionBuilder() {
         return com.commercetools.api.models.product_selection.ProductSelectionResourceIdentifierBuilder.of();
+    }
+
+    /**
+     * builder for productTailoring subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.product_tailoring.ProductTailoringResourceIdentifierBuilder productTailoringBuilder() {
+        return com.commercetools.api.models.product_tailoring.ProductTailoringResourceIdentifierBuilder.of();
     }
 
     /**

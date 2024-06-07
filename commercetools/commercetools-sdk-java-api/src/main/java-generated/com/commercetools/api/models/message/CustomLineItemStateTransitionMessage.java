@@ -66,7 +66,7 @@ public interface CustomLineItemStateTransitionMessage extends OrderMessage {
     public String getCustomLineItemKey();
 
     /**
-     *  <p>Date and time (UTC) when the transition of the Custom Line Item State was performed.</p>
+     *  <p>Date and time (UTC) the transition of the Custom Line Item State was performed.</p>
      * @return transitionDate
      */
     @NotNull
@@ -114,7 +114,7 @@ public interface CustomLineItemStateTransitionMessage extends OrderMessage {
     public void setCustomLineItemKey(final String customLineItemKey);
 
     /**
-     *  <p>Date and time (UTC) when the transition of the Custom Line Item State was performed.</p>
+     *  <p>Date and time (UTC) the transition of the Custom Line Item State was performed.</p>
      * @param transitionDate value to be set
      */
 

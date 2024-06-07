@@ -52,7 +52,7 @@ public class ShoppingListStoreSetMessagePayloadImpl implements ShoppingListStore
     }
 
     /**
-     *  <p>Reference to a Store by its key.</p>
+     *  <p>KeyReference to a Store.</p>
      */
 
     public com.commercetools.api.models.store.StoreKeyReference getStore() {

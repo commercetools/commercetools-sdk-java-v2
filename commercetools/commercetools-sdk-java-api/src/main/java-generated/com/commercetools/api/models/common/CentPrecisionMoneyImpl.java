@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Object that stores cent amounts in a specific currency.</p>
+ *  <p>Object that stores money in cent amounts of a specific currency.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CentPrecisionMoneyImpl implements CentPrecisionMoney, ModelBase {

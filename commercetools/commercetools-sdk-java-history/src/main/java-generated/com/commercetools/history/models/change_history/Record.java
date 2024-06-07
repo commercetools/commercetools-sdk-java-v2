@@ -82,7 +82,7 @@ public interface Record {
     public ModifiedBy getModifiedBy();
 
     /**
-     *  <p>Date and time (UTC) when the change was made.</p>
+     *  <p>Date and time (UTC) the change was made.</p>
      * @return modifiedAt
      */
     @NotNull
@@ -182,7 +182,7 @@ public interface Record {
     public void setModifiedBy(final ModifiedBy modifiedBy);
 
     /**
-     *  <p>Date and time (UTC) when the change was made.</p>
+     *  <p>Date and time (UTC) the change was made.</p>
      * @param modifiedAt value to be set
      */
 

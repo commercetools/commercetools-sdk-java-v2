@@ -17,14 +17,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface StateRoleEnum extends JsonEnum {
 
     /**
-    	<p>If a <a href="ctp:api:type:Review">Review's</a> <code>state</code> has this role its <code>rating</code> is taken into account for <a href="ctp:api:type:ReviewRatingStatistics">ReviewRatingStatistics</a>. This role only applies for the <code>ReviewState</code> <a href="ctp:api:type:StateTypeEnum">StateTypeEnum</a>.</p>
-
-    */
+    <p>If a Review's <code>state</code> has this role its <code>rating</code> is taken into account for ReviewRatingStatistics. This role only applies for the <code>ReviewState</code> StateTypeEnum.</p> */
     StateRoleEnum REVIEW_INCLUDED_IN_STATISTICS = StateRoleEnumEnum.REVIEW_INCLUDED_IN_STATISTICS;
     /**
-    	<p>Used by <a href="ctp:api:type:Order">Orders</a> in the update action <a href="ctp:api:type:OrderTransitionLineItemStateAction">transitionLineItemState</a>. This role only applies for the <code>LineItemState</code> <a href="ctp:api:type:StateTypeEnum">StateTypeEnum</a>.</p>
-
-    */
+    <p>Used by Orders in the update action transitionLineItemState. This role only applies for the <code>LineItemState</code> StateTypeEnum.</p> */
     StateRoleEnum RETURN = StateRoleEnumEnum.RETURN;
 
     /**

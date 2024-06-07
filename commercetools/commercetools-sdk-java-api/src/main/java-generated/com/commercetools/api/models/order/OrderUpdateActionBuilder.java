@@ -215,6 +215,14 @@ public class OrderUpdateActionBuilder {
         return com.commercetools.api.models.order.OrderSetShippingAddressCustomTypeActionBuilder.of();
     }
 
+    public com.commercetools.api.models.order.OrderSetShippingCustomFieldActionBuilder setShippingCustomFieldBuilder() {
+        return com.commercetools.api.models.order.OrderSetShippingCustomFieldActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.order.OrderSetShippingCustomTypeActionBuilder setShippingCustomTypeBuilder() {
+        return com.commercetools.api.models.order.OrderSetShippingCustomTypeActionBuilder.of();
+    }
+
     public com.commercetools.api.models.order.OrderSetStoreActionBuilder setStoreBuilder() {
         return com.commercetools.api.models.order.OrderSetStoreActionBuilder.of();
     }

@@ -12,7 +12,7 @@ plugins {
     id 'java'
     id 'java-library' // needed to make sure that transitive deps have 'compile' scope
 
-    id "com.diffplug.spotless" version "6.13.0"
+    id "com.diffplug.spotless" version "6.25.0"
 
     id 'io.github.gradle-nexus.publish-plugin' version '1.3.0'
     id 'com.github.jk1.dependency-license-report' version '2.0'
@@ -63,13 +63,14 @@ allprojects {
 
     configurations {
         taglet {
-            resolutionStrategy.force("net.sourceforge.plantuml:plantuml:1.2023.12")
+            resolutionStrategy.force("net.sourceforge.plantuml:plantuml:1.2024.5")
         }
     }
 
     dependencies {
         taglet 'com.commercetools.build.taglets:commercetools-taglets:3.6.3'
-        taglet 'org.jdrupes.taglets:plantuml-taglet:2.1.0'
+        taglet 'com.google.guava:guava:33.2.1-jre'
+        taglet 'org.jdrupes.taglets:plantuml-taglet:3.1.0'
     }
 }
 
@@ -105,6 +106,11 @@ subprojects { project ->
     }
     tasks.withType(Javadoc).configureEach {
         javadocTool = javaToolchains.javadocToolFor {
+            languageVersion = JavaLanguageVersion.of(17)
+        }
+    }
+    compileTestJava {
+        javaCompiler = javaToolchains.compilerFor {
             languageVersion = JavaLanguageVersion.of(17)
         }
     }
@@ -195,6 +201,7 @@ def documentationProjects= [
         ":commercetools:commercetools-money",
         ":commercetools:commercetools-monitoring-newrelic",
         ":commercetools:commercetools-monitoring-opentelemetry",
+        ":commercetools:commercetools-monitoring-datadog",
         ":commercetools:commercetools-okhttp-client3",
         ":commercetools:commercetools-okhttp-client4",
         ":commercetools:commercetools-reactive",
@@ -351,6 +358,8 @@ tasks.register("writeVersionToExamples") {
                 include(name: 'examples/spring/build.gradle')
                 include(name: 'examples/spring-newrelic/build.gradle')
                 include(name: 'examples/spring-otel/build.gradle')
+                include(name: 'examples/spring-datadog/build.gradle')
+                include(name: 'examples/spring-datadog-statsd/build.gradle')
             }
         }
         ant.replaceregexp(match: '<commercetools.version>.+</commercetools.version>', replace: "<commercetools.version>${globalVersion}</commercetools.version>", flags:'g', byline:true) {

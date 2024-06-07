@@ -11,6 +11,7 @@ import java.util.function.Function;
 
 import com.commercetools.api.client.error.ConcurrentModificationException;
 import com.commercetools.api.models.ResourceUpdate;
+import com.spotify.futures.CompletableFutures;
 
 import io.vrap.rmf.base.client.*;
 
@@ -45,9 +46,7 @@ final class ConcurrentModificationRetryHandler<T extends BodyApiMethod<T, TResul
             return f;
         };
 
-        return request.execute()
-                .handle((r, ex) -> (ex == null) ? this : fn.apply(ex))
-                .thenCompose(x -> (CompletableFuture<ApiHttpResponse<TResult>>) x);
+        return CompletableFutures.exceptionallyCompose(request.execute(), fn).toCompletableFuture();
     }
 
     @Override

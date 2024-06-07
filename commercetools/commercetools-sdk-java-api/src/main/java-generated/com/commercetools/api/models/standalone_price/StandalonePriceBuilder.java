@@ -125,7 +125,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the StandalonePrice.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
@@ -137,7 +137,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the StandalonePrice.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
@@ -149,7 +149,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the StandalonePrice.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -161,7 +161,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the StandalonePrice.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
@@ -173,7 +173,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the StandalonePrice.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
@@ -185,7 +185,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the StandalonePrice.</p>
      * @param createdBy value to be set
      * @return Builder
      */
@@ -350,6 +350,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Price tiers if any are defined.</p>
+     *  <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p>
      * @param tiers value to be set
      * @return Builder
      */
@@ -361,6 +362,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Price tiers if any are defined.</p>
+     *  <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p>
      * @param tiers value to be set
      * @return Builder
      */
@@ -373,6 +375,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Price tiers if any are defined.</p>
+     *  <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p>
      * @param tiers value to be set
      * @return Builder
      */
@@ -387,6 +390,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Price tiers if any are defined.</p>
+     *  <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p>
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -402,6 +406,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Price tiers if any are defined.</p>
+     *  <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p>
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -415,6 +420,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Price tiers if any are defined.</p>
+     *  <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p>
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -426,6 +432,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Price tiers if any are defined.</p>
+     *  <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p>
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -436,7 +443,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Set if a matching ProductDiscount exists. If set, the API uses the <code>discounted</code> value for the LineItem Price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p>
+     *  <p>Set if a matching ProductDiscount exists. If set, the API uses the <code>discounted</code> value for the Line Item price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p>
      * @param builder function to build the discounted value
      * @return Builder
      */
@@ -448,7 +455,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Set if a matching ProductDiscount exists. If set, the API uses the <code>discounted</code> value for the LineItem Price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p>
+     *  <p>Set if a matching ProductDiscount exists. If set, the API uses the <code>discounted</code> value for the Line Item price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p>
      * @param builder function to build the discounted value
      * @return Builder
      */
@@ -460,7 +467,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Set if a matching ProductDiscount exists. If set, the API uses the <code>discounted</code> value for the LineItem Price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p>
+     *  <p>Set if a matching ProductDiscount exists. If set, the API uses the <code>discounted</code> value for the Line Item price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p>
      * @param discounted value to be set
      * @return Builder
      */
@@ -544,7 +551,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>If set to <code>true</code>, the StandalonePrice is considered during price selection. If set to <code>false</code>, the StandalonePrice is not considered during price selection.</p>
+     *  <p>If set to <code>true</code>, the StandalonePrice is considered during Product price selection. If set to <code>false</code>, the StandalonePrice is not considered during Product price selection.</p>
      * @param active value to be set
      * @return Builder
      */
@@ -591,7 +598,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the StandalonePrice.</p>
      * @return lastModifiedBy
      */
 
@@ -601,7 +608,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the StandalonePrice.</p>
      * @return createdBy
      */
 
@@ -690,6 +697,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     /**
      *  <p>Price tiers if any are defined.</p>
+     *  <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p>
      * @return tiers
      */
 
@@ -699,7 +707,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>Set if a matching ProductDiscount exists. If set, the API uses the <code>discounted</code> value for the LineItem Price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p>
+     *  <p>Set if a matching ProductDiscount exists. If set, the API uses the <code>discounted</code> value for the Line Item price selection. When a relative discount is applied and the fraction part of the <code>discounted</code> price is 0.5, the discounted price is rounded in favor of the customer with the half down rounding.</p>
      * @return discounted
      */
 
@@ -729,7 +737,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
-     *  <p>If set to <code>true</code>, the StandalonePrice is considered during price selection. If set to <code>false</code>, the StandalonePrice is not considered during price selection.</p>
+     *  <p>If set to <code>true</code>, the StandalonePrice is considered during Product price selection. If set to <code>false</code>, the StandalonePrice is not considered during Product price selection.</p>
      * @return active
      */
 

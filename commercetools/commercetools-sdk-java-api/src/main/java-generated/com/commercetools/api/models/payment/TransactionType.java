@@ -17,29 +17,19 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface TransactionType extends JsonEnum {
 
     /**
-    	<p>Financially reliable reservation of an amount. Typically does not indicate an actual transfer of money.</p>
-
-    */
+    <p>Financially reliable reservation of an amount. Typically does not indicate an actual transfer of money.</p> */
     TransactionType AUTHORIZATION = TransactionTypeEnum.AUTHORIZATION;
     /**
-    	<p>Explicit cancellation of an authorized amount before its expiry.</p>
-
-    */
+    <p>Explicit cancellation of an authorized amount before its expiry.</p> */
     TransactionType CANCEL_AUTHORIZATION = TransactionTypeEnum.CANCEL_AUTHORIZATION;
     /**
-    	<p>Collection of money from the customer. Can use an authorized amount or be directly executed.</p>
-
-    */
+    <p>Collection of money from the customer. Can use an authorized amount or be directly executed.</p> */
     TransactionType CHARGE = TransactionTypeEnum.CHARGE;
     /**
-    	<p>Explicit transfer of money back to the customer.</p>
-
-    */
+    <p>Explicit transfer of money back to the customer.</p> */
     TransactionType REFUND = TransactionTypeEnum.REFUND;
     /**
-    	<p>Customer-initiated transfer of money back to the customer.</p>
-
-    */
+    <p>Customer-initiated transfer of money back to the customer.</p> */
     TransactionType CHARGEBACK = TransactionTypeEnum.CHARGEBACK;
 
     /**

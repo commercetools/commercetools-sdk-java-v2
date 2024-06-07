@@ -60,4 +60,12 @@ public class ByProjectKeyInStoreKeyByStoreKeyRequestBuilder {
         return new ByProjectKeyInStoreKeyByStoreKeyCartDiscountsRequestBuilder(apiHttpClient, projectKey, storeKey);
     }
 
+    public ByProjectKeyInStoreKeyByStoreKeyProductTailoringRequestBuilder productTailoring() {
+        return new ByProjectKeyInStoreKeyByStoreKeyProductTailoringRequestBuilder(apiHttpClient, projectKey, storeKey);
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyProductsRequestBuilder products() {
+        return new ByProjectKeyInStoreKeyByStoreKeyProductsRequestBuilder(apiHttpClient, projectKey, storeKey);
+    }
+
 }

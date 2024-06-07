@@ -9,7 +9,7 @@ import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.common.TypedMoney;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -45,7 +45,7 @@ public interface StandalonePriceValueChangedMessagePayload extends MessagePayloa
     @NotNull
     @Valid
     @JsonProperty("value")
-    public Money getValue();
+    public TypedMoney getValue();
 
     /**
      *  <p>Whether the new value was applied to the current or the staged representation of the StandalonePrice. Staged changes are stored on the StagedStandalonePrice.</p>
@@ -61,14 +61,14 @@ public interface StandalonePriceValueChangedMessagePayload extends MessagePayloa
      */
     @Valid
     @JsonProperty("oldValue")
-    public Money getOldValue();
+    public TypedMoney getOldValue();
 
     /**
      *  <p>The new value of the updated StandalonePrice.</p>
      * @param value value to be set
      */
 
-    public void setValue(final Money value);
+    public void setValue(final TypedMoney value);
 
     /**
      *  <p>Whether the new value was applied to the current or the staged representation of the StandalonePrice. Staged changes are stored on the StagedStandalonePrice.</p>
@@ -82,7 +82,7 @@ public interface StandalonePriceValueChangedMessagePayload extends MessagePayloa
      * @param oldValue value to be set
      */
 
-    public void setOldValue(final Money oldValue);
+    public void setOldValue(final TypedMoney oldValue);
 
     /**
      * factory method
@@ -118,9 +118,9 @@ public interface StandalonePriceValueChangedMessagePayload extends MessagePayloa
             return null;
         }
         StandalonePriceValueChangedMessagePayloadImpl instance = new StandalonePriceValueChangedMessagePayloadImpl();
-        instance.setValue(com.commercetools.api.models.common.Money.deepCopy(template.getValue()));
+        instance.setValue(com.commercetools.api.models.common.TypedMoney.deepCopy(template.getValue()));
         instance.setStaged(template.getStaged());
-        instance.setOldValue(com.commercetools.api.models.common.Money.deepCopy(template.getOldValue()));
+        instance.setOldValue(com.commercetools.api.models.common.TypedMoney.deepCopy(template.getOldValue()));
         return instance;
     }
 

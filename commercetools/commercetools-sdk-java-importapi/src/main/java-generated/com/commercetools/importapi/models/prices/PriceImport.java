@@ -114,9 +114,20 @@ public interface PriceImport extends ImportResource {
      *  <p>Only the Embedded Price updates will be published to <code>staged</code> and <code>current</code> projection.</p>
      * @return publish
      */
-
+    @Deprecated
     @JsonProperty("publish")
     public Boolean getPublish();
+
+    /**
+     *  <ul>
+     *   <li>Set to <code>false</code> to update both the current and staged projections of the Product with the new Price data.</li>
+     *   <li>Leave empty or set to <code>true</code> to only update the staged projection.</li>
+     *  </ul>
+     * @return staged
+     */
+
+    @JsonProperty("staged")
+    public Boolean getStaged();
 
     /**
      *  <p>The tiered prices for this price.</p>
@@ -212,8 +223,18 @@ public interface PriceImport extends ImportResource {
      *  <p>Only the Embedded Price updates will be published to <code>staged</code> and <code>current</code> projection.</p>
      * @param publish value to be set
      */
-
+    @Deprecated
     public void setPublish(final Boolean publish);
+
+    /**
+     *  <ul>
+     *   <li>Set to <code>false</code> to update both the current and staged projections of the Product with the new Price data.</li>
+     *   <li>Leave empty or set to <code>true</code> to only update the staged projection.</li>
+     *  </ul>
+     * @param staged value to be set
+     */
+
+    public void setStaged(final Boolean staged);
 
     /**
      *  <p>The tiered prices for this price.</p>
@@ -275,6 +296,7 @@ public interface PriceImport extends ImportResource {
         instance.setChannel(template.getChannel());
         instance.setDiscounted(template.getDiscounted());
         instance.setPublish(template.getPublish());
+        instance.setStaged(template.getStaged());
         instance.setTiers(template.getTiers());
         instance.setCustom(template.getCustom());
         instance.setProductVariant(template.getProductVariant());
@@ -305,6 +327,7 @@ public interface PriceImport extends ImportResource {
         instance.setDiscounted(
             com.commercetools.importapi.models.common.DiscountedPrice.deepCopy(template.getDiscounted()));
         instance.setPublish(template.getPublish());
+        instance.setStaged(template.getStaged());
         instance.setTiers(Optional.ofNullable(template.getTiers())
                 .map(t -> t.stream()
                         .map(com.commercetools.importapi.models.common.PriceTier::deepCopy)

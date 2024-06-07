@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>This update action sets a new ID that can be used as an additional identifier for external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
+ *  <p>This update action sets a new ID that can be used as an additional identifier for external systems like customer relationship management (CRM) or enterprise resource planning (ERP).</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CategorySetExternalIdActionImpl implements CategorySetExternalIdAction, ModelBase {

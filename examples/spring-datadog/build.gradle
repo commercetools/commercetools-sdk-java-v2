@@ -1,0 +1,61 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.0.4'
+    id 'io.spring.dependency-management' version '1.1.0'
+    id "de.undercouch.download" version "5.3.0"
+}
+
+group = 'com.commercetools.sdk.examples'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+ext {
+    versions = [
+            commercetools: "17.11.0",
+    ]
+}
+
+dependencies {
+    implementation "com.commercetools.sdk:commercetools-sdk-java-api:${versions.commercetools}"
+    implementation "com.commercetools.sdk:commercetools-apachehttp-client:${versions.commercetools}"
+    implementation "com.commercetools.sdk:commercetools-monitoring-datadog:${versions.commercetools}"
+    implementation 'javax.inject:javax.inject:1'
+    implementation 'com.dynatrace.metric.util:dynatrace-metric-utils-java:2.2.0'
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
+    implementation 'org.springframework.session:spring-session-core'
+    implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity5:3.0.4.RELEASE'
+    implementation "com.datadoghq:datadog-api-client:2.20.0"
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.springframework.security:spring-security-test'
+    developmentOnly "org.springframework.boot:spring-boot-devtools"
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+
+tasks.register('downloadDatadog', Download) {
+    mkdir 'datadog'
+    src 'https://repo1.maven.org/maven2/com/datadoghq/dd-java-agent/1.32.0/dd-java-agent-1.32.0.jar'
+    dest file('datadog')
+}
+
+if (project.file("datadog/dd-java-agent-1.32.0.jar").exists()) {
+    tasks.withType(JavaExec)
+            {
+                jvmArgs "-javaagent:datadog/dd-java-agent-1.32.0.jar", "-Ddd.logs.injection=true", "-Ddd.service=example-app", "-Ddd.env=test"
+            }
+}

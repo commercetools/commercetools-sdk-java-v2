@@ -82,7 +82,7 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the Category.</p>
      * @return lastModifiedBy
      */
     @Valid
@@ -90,7 +90,7 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
     public LastModifiedBy getLastModifiedBy();
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Category.</p>
      * @return createdBy
      */
     @Valid
@@ -141,7 +141,7 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
     public CategoryReference getParent();
 
     /**
-     *  <p>Decimal value between 0 and 1 used to order Categories that are on the same level in the Category tree.</p>
+     *  <p>Decimal value between 0 and 1. Frontend applications can use this value for ordering Categories within the same level in the category tree.</p>
      * @return orderHint
      */
     @NotNull
@@ -149,7 +149,7 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
     public String getOrderHint();
 
     /**
-     *  <p>Additional identifier for external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
+     *  <p>Additional identifier for external systems like customer relationship management (CRM) or enterprise resource planning (ERP).</p>
      * @return externalId
      */
 
@@ -233,14 +233,14 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
     /**
-     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the Category.</p>
      * @param lastModifiedBy value to be set
      */
 
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Category.</p>
      * @param createdBy value to be set
      */
 
@@ -290,14 +290,14 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
     public void setParent(final CategoryReference parent);
 
     /**
-     *  <p>Decimal value between 0 and 1 used to order Categories that are on the same level in the Category tree.</p>
+     *  <p>Decimal value between 0 and 1. Frontend applications can use this value for ordering Categories within the same level in the category tree.</p>
      * @param orderHint value to be set
      */
 
     public void setOrderHint(final String orderHint);
 
     /**
-     *  <p>Additional identifier for external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
+     *  <p>Additional identifier for external systems like customer relationship management (CRM) or enterprise resource planning (ERP).</p>
      * @param externalId value to be set
      */
 

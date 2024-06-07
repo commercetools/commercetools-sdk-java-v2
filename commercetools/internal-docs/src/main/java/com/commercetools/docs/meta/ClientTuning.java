@@ -20,9 +20,11 @@ import io.vrap.rmf.base.client.ApiMethod;
  * <p>The {@link io.vrap.rmf.base.client.http.PolicyMiddleware} configures a client to handle failures like gateway timeouts
  * and version conflicts through retrying the request. Limiting the number of parallel requests or timeouts</p>
  *
- * <p>A best practice example to retry on gateway timeouts and similar problems</p>
+ * <p>A best practice example to retry on gateway timeouts and similar problems.</p>
  *
  * {@include.example example.ExamplesTest#retry()}
+ *
+ * <p>For more configuration options see {@link io.vrap.rmf.base.client.http.PolicyBuilder}</p>
  *
  * <h3 id=configure-http-client>Configure the underlying http client</h3>
  *

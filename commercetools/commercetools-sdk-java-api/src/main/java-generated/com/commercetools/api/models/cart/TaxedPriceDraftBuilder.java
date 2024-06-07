@@ -4,6 +4,8 @@ package com.commercetools.api.models.cart;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -29,6 +31,9 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
     private com.commercetools.api.models.common.Money totalGross;
 
     private java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> taxPortions;
+
+    @Nullable
+    private com.commercetools.api.models.common.TypedMoneyDraft totalTax;
 
     /**
      *  <p>Total net price of the Cart or Order.</p>
@@ -196,6 +201,30 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
     }
 
     /**
+     *  <p>Total tax applicable for the Cart or Order.</p>
+     * @param totalTax value to be set
+     * @return Builder
+     */
+
+    public TaxedPriceDraftBuilder totalTax(
+            @Nullable final com.commercetools.api.models.common.TypedMoneyDraft totalTax) {
+        this.totalTax = totalTax;
+        return this;
+    }
+
+    /**
+     *  <p>Total tax applicable for the Cart or Order.</p>
+     * @param builder function to build the totalTax value
+     * @return Builder
+     */
+
+    public TaxedPriceDraftBuilder totalTax(
+            Function<com.commercetools.api.models.common.TypedMoneyDraftBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoneyDraft>> builder) {
+        this.totalTax = builder.apply(com.commercetools.api.models.common.TypedMoneyDraftBuilder.of()).build();
+        return this;
+    }
+
+    /**
      *  <p>Total net price of the Cart or Order.</p>
      * @return totalNet
      */
@@ -224,6 +253,16 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
     }
 
     /**
+     *  <p>Total tax applicable for the Cart or Order.</p>
+     * @return totalTax
+     */
+
+    @Nullable
+    public com.commercetools.api.models.common.TypedMoneyDraft getTotalTax() {
+        return this.totalTax;
+    }
+
+    /**
      * builds TaxedPriceDraft with checking for non-null required values
      * @return TaxedPriceDraft
      */
@@ -231,7 +270,7 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
         Objects.requireNonNull(totalNet, TaxedPriceDraft.class + ": totalNet is missing");
         Objects.requireNonNull(totalGross, TaxedPriceDraft.class + ": totalGross is missing");
         Objects.requireNonNull(taxPortions, TaxedPriceDraft.class + ": taxPortions is missing");
-        return new TaxedPriceDraftImpl(totalNet, totalGross, taxPortions);
+        return new TaxedPriceDraftImpl(totalNet, totalGross, taxPortions, totalTax);
     }
 
     /**
@@ -239,7 +278,7 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
      * @return TaxedPriceDraft
      */
     public TaxedPriceDraft buildUnchecked() {
-        return new TaxedPriceDraftImpl(totalNet, totalGross, taxPortions);
+        return new TaxedPriceDraftImpl(totalNet, totalGross, taxPortions, totalTax);
     }
 
     /**
@@ -260,6 +299,7 @@ public class TaxedPriceDraftBuilder implements Builder<TaxedPriceDraft> {
         builder.totalNet = template.getTotalNet();
         builder.totalGross = template.getTotalGross();
         builder.taxPortions = template.getTaxPortions();
+        builder.totalTax = template.getTotalTax();
         return builder;
     }
 

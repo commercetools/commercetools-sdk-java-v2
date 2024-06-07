@@ -41,6 +41,7 @@ public interface CartDiscountValueGiftLineItem extends CartDiscountValue, CartDi
 
     /**
      *  <p>Reference to a Product.</p>
+     *  <p>A Gift Line Item can be present on a Cart even if the referenced Product is unpublished.</p>
      * @return product
      */
     @NotNull
@@ -74,6 +75,7 @@ public interface CartDiscountValueGiftLineItem extends CartDiscountValue, CartDi
 
     /**
      *  <p>Reference to a Product.</p>
+     *  <p>A Gift Line Item can be present on a Cart even if the referenced Product is unpublished.</p>
      * @param product value to be set
      */
 

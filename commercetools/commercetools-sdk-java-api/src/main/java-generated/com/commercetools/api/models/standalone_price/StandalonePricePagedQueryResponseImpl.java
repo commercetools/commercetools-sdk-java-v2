@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * StandalonePricePagedQueryResponse
+ *  <p>PagedQueryResult with <code>results</code> containing an array of StandalonePrice.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StandalonePricePagedQueryResponseImpl implements StandalonePricePagedQueryResponse, ModelBase {

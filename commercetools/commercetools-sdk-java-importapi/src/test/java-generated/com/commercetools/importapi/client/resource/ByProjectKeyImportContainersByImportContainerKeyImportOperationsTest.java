@@ -63,26 +63,26 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsTes
 
     @DataProvider
     public static Object[][] requestWithMethodParameters() {
-        return new Object[][] { new Object[] {
-                apiRoot.withProjectKeyValue("test_projectKey")
-                        .importContainers()
-                        .withImportContainerKeyValue("test_importContainerKey")
-                        .importOperations()
-                        .get()
-                        .withLimit(0.26748633)
-                        .createHttpRequest(),
-                "get",
-                "test_projectKey/import-containers/test_importContainerKey/import-operations?limit=0.26748633", },
+        return new Object[][] {
                 new Object[] {
                         apiRoot.withProjectKeyValue("test_projectKey")
                                 .importContainers()
                                 .withImportContainerKeyValue("test_importContainerKey")
                                 .importOperations()
                                 .get()
-                                .withOffset(0.7475848)
+                                .withLimit(7)
+                                .createHttpRequest(),
+                        "get", "test_projectKey/import-containers/test_importContainerKey/import-operations?limit=7", },
+                new Object[] {
+                        apiRoot.withProjectKeyValue("test_projectKey")
+                                .importContainers()
+                                .withImportContainerKeyValue("test_importContainerKey")
+                                .importOperations()
+                                .get()
+                                .withOffset(3)
                                 .createHttpRequest(),
                         "get",
-                        "test_projectKey/import-containers/test_importContainerKey/import-operations?offset=0.7475848", },
+                        "test_projectKey/import-containers/test_importContainerKey/import-operations?offset=3", },
                 new Object[] {
                         apiRoot.withProjectKeyValue("test_projectKey")
                                 .importContainers()
@@ -141,13 +141,13 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportOperationsTes
                         .withImportContainerKeyValue("test_importContainerKey")
                         .importOperations()
                         .get()
-                        .withLimit(0.26748633), },
+                        .withLimit(7), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .importContainers()
                         .withImportContainerKeyValue("test_importContainerKey")
                         .importOperations()
                         .get()
-                        .withOffset(0.7475848), },
+                        .withOffset(3), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .importContainers()
                         .withImportContainerKeyValue("test_importContainerKey")

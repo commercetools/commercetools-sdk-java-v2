@@ -22,9 +22,9 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingRateImpl implements ShippingRate, ModelBase {
 
-    private com.commercetools.api.models.common.TypedMoney price;
+    private com.commercetools.api.models.common.CentPrecisionMoney price;
 
-    private com.commercetools.api.models.common.TypedMoney freeAbove;
+    private com.commercetools.api.models.common.CentPrecisionMoney freeAbove;
 
     private Boolean isMatching;
 
@@ -34,8 +34,8 @@ public class ShippingRateImpl implements ShippingRate, ModelBase {
      * create instance with all properties
      */
     @JsonCreator
-    ShippingRateImpl(@JsonProperty("price") final com.commercetools.api.models.common.TypedMoney price,
-            @JsonProperty("freeAbove") final com.commercetools.api.models.common.TypedMoney freeAbove,
+    ShippingRateImpl(@JsonProperty("price") final com.commercetools.api.models.common.CentPrecisionMoney price,
+            @JsonProperty("freeAbove") final com.commercetools.api.models.common.CentPrecisionMoney freeAbove,
             @JsonProperty("isMatching") final Boolean isMatching,
             @JsonProperty("tiers") final java.util.List<com.commercetools.api.models.shipping_method.ShippingRatePriceTier> tiers) {
         this.price = price;
@@ -54,15 +54,15 @@ public class ShippingRateImpl implements ShippingRate, ModelBase {
      *  <p>Currency amount of the ShippingRate.</p>
      */
 
-    public com.commercetools.api.models.common.TypedMoney getPrice() {
+    public com.commercetools.api.models.common.CentPrecisionMoney getPrice() {
         return this.price;
     }
 
     /**
-     *  <p>Shipping is free if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
+     *  <p>Free shipping is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
      */
 
-    public com.commercetools.api.models.common.TypedMoney getFreeAbove() {
+    public com.commercetools.api.models.common.CentPrecisionMoney getFreeAbove() {
         return this.freeAbove;
     }
 
@@ -82,11 +82,11 @@ public class ShippingRateImpl implements ShippingRate, ModelBase {
         return this.tiers;
     }
 
-    public void setPrice(final com.commercetools.api.models.common.TypedMoney price) {
+    public void setPrice(final com.commercetools.api.models.common.CentPrecisionMoney price) {
         this.price = price;
     }
 
-    public void setFreeAbove(final com.commercetools.api.models.common.TypedMoney freeAbove) {
+    public void setFreeAbove(final com.commercetools.api.models.common.CentPrecisionMoney freeAbove) {
         this.freeAbove = freeAbove;
     }
 

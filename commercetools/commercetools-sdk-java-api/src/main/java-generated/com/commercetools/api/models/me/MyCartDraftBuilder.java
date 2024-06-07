@@ -57,6 +57,9 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     private java.util.List<com.commercetools.api.models.common.BaseAddress> itemShippingAddresses;
 
     @Nullable
+    private com.commercetools.api.models.cart.ShippingMode shippingMode;
+
+    @Nullable
     private java.util.List<String> discountCodes;
 
     @Nullable
@@ -488,6 +491,21 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
+     *  <ul>
+     *   <li>If set to <code>Single</code>, only a single Shipping Method can be added to the Cart.</li>
+     *   <li>If set to <code>Multiple</code>, multiple Shipping Methods can be added to the Cart.</li>
+     *  </ul>
+     * @param shippingMode value to be set
+     * @return Builder
+     */
+
+    public MyCartDraftBuilder shippingMode(
+            @Nullable final com.commercetools.api.models.cart.ShippingMode shippingMode) {
+        this.shippingMode = shippingMode;
+        return this;
+    }
+
+    /**
      *  <p><code>code</code> of the existing DiscountCodes to add to the Cart.</p>
      * @param discountCodes value to be set
      * @return Builder
@@ -524,7 +542,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     *  <p>Used for LineItem Price selection. If used for Create Cart in Store, the provided country must be one of the Store's <code>countries</code>.</p>
+     *  <p>Used for Line Item price selection. If used for Create Cart in Store, the provided country must be one of the Store's <code>countries</code>.</p>
      * @param country value to be set
      * @return Builder
      */
@@ -703,6 +721,19 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
+     *  <ul>
+     *   <li>If set to <code>Single</code>, only a single Shipping Method can be added to the Cart.</li>
+     *   <li>If set to <code>Multiple</code>, multiple Shipping Methods can be added to the Cart.</li>
+     *  </ul>
+     * @return shippingMode
+     */
+
+    @Nullable
+    public com.commercetools.api.models.cart.ShippingMode getShippingMode() {
+        return this.shippingMode;
+    }
+
+    /**
      *  <p><code>code</code> of the existing DiscountCodes to add to the Cart.</p>
      * @return discountCodes
      */
@@ -713,7 +744,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     }
 
     /**
-     *  <p>Used for LineItem Price selection. If used for Create Cart in Store, the provided country must be one of the Store's <code>countries</code>.</p>
+     *  <p>Used for Line Item price selection. If used for Create Cart in Store, the provided country must be one of the Store's <code>countries</code>.</p>
      * @return country
      */
 
@@ -760,8 +791,8 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
     public MyCartDraft build() {
         Objects.requireNonNull(currency, MyCartDraft.class + ": currency is missing");
         return new MyCartDraftImpl(currency, customerEmail, businessUnit, store, lineItems, taxMode, inventoryMode,
-            billingAddress, shippingAddress, shippingMethod, itemShippingAddresses, discountCodes, country, locale,
-            deleteDaysAfterLastModification, custom);
+            billingAddress, shippingAddress, shippingMethod, itemShippingAddresses, shippingMode, discountCodes,
+            country, locale, deleteDaysAfterLastModification, custom);
     }
 
     /**
@@ -770,8 +801,8 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
      */
     public MyCartDraft buildUnchecked() {
         return new MyCartDraftImpl(currency, customerEmail, businessUnit, store, lineItems, taxMode, inventoryMode,
-            billingAddress, shippingAddress, shippingMethod, itemShippingAddresses, discountCodes, country, locale,
-            deleteDaysAfterLastModification, custom);
+            billingAddress, shippingAddress, shippingMethod, itemShippingAddresses, shippingMode, discountCodes,
+            country, locale, deleteDaysAfterLastModification, custom);
     }
 
     /**
@@ -800,6 +831,7 @@ public class MyCartDraftBuilder implements Builder<MyCartDraft> {
         builder.shippingAddress = template.getShippingAddress();
         builder.shippingMethod = template.getShippingMethod();
         builder.itemShippingAddresses = template.getItemShippingAddresses();
+        builder.shippingMode = template.getShippingMode();
         builder.discountCodes = template.getDiscountCodes();
         builder.country = template.getCountry();
         builder.locale = template.getLocale();

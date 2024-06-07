@@ -7,6 +7,7 @@ import com.commercetools.api.predicates.query.shipping_method.ShippingMethodQuer
 
 public interface ByProjectKeyShippingMethodsGetMixin extends
         PagedQueryResourceRequest<ByProjectKeyShippingMethodsGet, ShippingMethodPagedQueryResponse, ShippingMethodQueryBuilderDsl> {
+
     @Override
     default ShippingMethodQueryBuilderDsl queryDsl() {
         return QueryPredicateDsl.shippingMethod();

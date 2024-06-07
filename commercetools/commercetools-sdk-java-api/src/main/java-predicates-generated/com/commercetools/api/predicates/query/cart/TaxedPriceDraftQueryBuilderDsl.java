@@ -46,4 +46,13 @@ public class TaxedPriceDraftQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, TaxedPriceDraftQueryBuilderDsl::of));
     }
 
+    public CombinationQueryPredicate<TaxedPriceDraftQueryBuilderDsl> totalTax(
+            Function<com.commercetools.api.predicates.query.common.TypedMoneyDraftQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.TypedMoneyDraftQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("totalTax"))
+                    .inner(fn.apply(com.commercetools.api.predicates.query.common.TypedMoneyDraftQueryBuilderDsl.of())),
+            TaxedPriceDraftQueryBuilderDsl::of);
+    }
+
 }

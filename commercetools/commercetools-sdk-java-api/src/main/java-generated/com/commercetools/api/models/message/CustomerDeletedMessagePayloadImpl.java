@@ -27,7 +27,7 @@ public class CustomerDeletedMessagePayloadImpl implements CustomerDeletedMessage
      * create instance with all properties
      */
     @JsonCreator
-    CustomerDeletedMessagePayloadImpl() {
+    public CustomerDeletedMessagePayloadImpl() {
         this.type = CUSTOMER_DELETED;
     }
 

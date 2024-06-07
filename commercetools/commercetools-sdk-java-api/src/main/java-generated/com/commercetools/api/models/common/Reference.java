@@ -29,6 +29,7 @@ import com.commercetools.api.models.payment.PaymentReference;
 import com.commercetools.api.models.product.ProductReference;
 import com.commercetools.api.models.product_discount.ProductDiscountReference;
 import com.commercetools.api.models.product_selection.ProductSelectionReference;
+import com.commercetools.api.models.product_tailoring.ProductTailoringReference;
 import com.commercetools.api.models.product_type.ProductTypeReference;
 import com.commercetools.api.models.quote.QuoteReference;
 import com.commercetools.api.models.quote_request.QuoteRequestReference;
@@ -82,6 +83,7 @@ import io.vrap.rmf.base.client.utils.Generated;
         @JsonSubTypes.Type(value = com.commercetools.api.models.product_discount.ProductDiscountReferenceImpl.class, name = ProductDiscountReference.PRODUCT_DISCOUNT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.product.ProductReferenceImpl.class, name = ProductReference.PRODUCT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductSelectionReferenceImpl.class, name = ProductSelectionReference.PRODUCT_SELECTION),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.product_tailoring.ProductTailoringReferenceImpl.class, name = ProductTailoringReference.PRODUCT_TAILORING),
         @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.ProductTypeReferenceImpl.class, name = ProductTypeReference.PRODUCT_TYPE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.quote.QuoteReferenceImpl.class, name = QuoteReference.QUOTE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.quote_request.QuoteRequestReferenceImpl.class, name = QuoteRequestReference.QUOTE_REQUEST),
@@ -216,6 +218,10 @@ public interface Reference extends ReferenceMixin {
         if (template instanceof com.commercetools.api.models.product_selection.ProductSelectionReference) {
             return com.commercetools.api.models.product_selection.ProductSelectionReference
                     .deepCopy((com.commercetools.api.models.product_selection.ProductSelectionReference) template);
+        }
+        if (template instanceof com.commercetools.api.models.product_tailoring.ProductTailoringReference) {
+            return com.commercetools.api.models.product_tailoring.ProductTailoringReference
+                    .deepCopy((com.commercetools.api.models.product_tailoring.ProductTailoringReference) template);
         }
         if (template instanceof com.commercetools.api.models.product_type.ProductTypeReference) {
             return com.commercetools.api.models.product_type.ProductTypeReference
@@ -440,6 +446,14 @@ public interface Reference extends ReferenceMixin {
      */
     public static com.commercetools.api.models.product_selection.ProductSelectionReferenceBuilder productSelectionBuilder() {
         return com.commercetools.api.models.product_selection.ProductSelectionReferenceBuilder.of();
+    }
+
+    /**
+     * builder for productTailoring subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.product_tailoring.ProductTailoringReferenceBuilder productTailoringBuilder() {
+        return com.commercetools.api.models.product_tailoring.ProductTailoringReferenceBuilder.of();
     }
 
     /**

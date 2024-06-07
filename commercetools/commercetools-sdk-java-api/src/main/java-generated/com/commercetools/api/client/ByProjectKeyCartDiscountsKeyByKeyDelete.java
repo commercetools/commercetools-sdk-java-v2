@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *
+ *  <p>Deleting a Cart Discount produces the CartDiscountDeleted Message.</p>
  *
  * <hr>
  * <div class=code-example>
@@ -40,6 +40,7 @@ public class ByProjectKeyCartDiscountsKeyByKeyDelete extends
         TypeApiMethod<ByProjectKeyCartDiscountsKeyByKeyDelete, com.commercetools.api.models.cart_discount.CartDiscount>
         implements
         com.commercetools.api.client.ApiDeleteMethod<ByProjectKeyCartDiscountsKeyByKeyDelete, com.commercetools.api.models.cart_discount.CartDiscount>,
+        CartDiscountExpansionMixin<ByProjectKeyCartDiscountsKeyByKeyDelete>,
         com.commercetools.api.client.VersionedTrait<ByProjectKeyCartDiscountsKeyByKeyDelete>,
         com.commercetools.api.client.ConflictingTrait<ByProjectKeyCartDiscountsKeyByKeyDelete>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyCartDiscountsKeyByKeyDelete>,

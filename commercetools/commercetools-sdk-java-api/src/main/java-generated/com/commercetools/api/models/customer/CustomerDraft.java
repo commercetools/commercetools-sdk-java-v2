@@ -57,7 +57,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
     public String getCustomerNumber();
 
     /**
-     *  <p>Optional identifier for use in external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
+     *  <p>Optional identifier for use in external systems like customer relationship management (CRM) or enterprise resource planning (ERP).</p>
      * @return externalId
      */
 
@@ -279,7 +279,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
     public void setCustomerNumber(final String customerNumber);
 
     /**
-     *  <p>Optional identifier for use in external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
+     *  <p>Optional identifier for use in external systems like customer relationship management (CRM) or enterprise resource planning (ERP).</p>
      * @param externalId value to be set
      */
 

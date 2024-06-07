@@ -267,7 +267,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *  <p>Reference to the Customer Group of the Customer that the Order belongs to. Used for LineItem Price selection.</p>
+     *  <p>Reference to the Customer Group of the Customer that the Order belongs to. Used for Line Item price selection.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -281,7 +281,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *  <p>Reference to the Customer Group of the Customer that the Order belongs to. Used for LineItem Price selection.</p>
+     *  <p>Reference to the Customer Group of the Customer that the Order belongs to. Used for Line Item price selection.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -294,7 +294,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *  <p>Reference to the Customer Group of the Customer that the Order belongs to. Used for LineItem Price selection.</p>
+     *  <p>Reference to the Customer Group of the Customer that the Order belongs to. Used for Line Item price selection.</p>
      * @param customerGroup value to be set
      * @return Builder
      */
@@ -1439,7 +1439,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *  <p>Used for LineItem Price selection.</p>
+     *  <p>Used for Line Item price selection.</p>
      * @param country value to be set
      * @return Builder
      */
@@ -1843,7 +1843,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the Order.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
@@ -1855,7 +1855,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the Order.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
@@ -1867,7 +1867,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the Order.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -1879,7 +1879,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Order.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
@@ -1891,7 +1891,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Order.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
@@ -1903,7 +1903,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Order.</p>
      * @param createdBy value to be set
      * @return Builder
      */
@@ -1991,7 +1991,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *  <p>Reference to the Customer Group of the Customer that the Order belongs to. Used for LineItem Price selection.</p>
+     *  <p>Reference to the Customer Group of the Customer that the Order belongs to. Used for Line Item price selection.</p>
      * @return customerGroup
      */
 
@@ -2265,7 +2265,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *  <p>Used for LineItem Price selection.</p>
+     *  <p>Used for Line Item price selection.</p>
      * @return country
      */
 
@@ -2402,7 +2402,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the Order.</p>
      * @return lastModifiedBy
      */
 
@@ -2412,7 +2412,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Order.</p>
      * @return createdBy
      */
 

@@ -5,6 +5,7 @@ import java.time.*;
 import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
 import javax.validation.Valid;
@@ -18,7 +19,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>If the Cart contains a LineItem for a Product Variant with the same LineItemMode, Custom Fields, supply and distribution channel, then only the quantity of the existing Line Item is increased. If LineItem <code>shippingDetails</code> is set, it is merged. All addresses will be present afterwards and, for address keys present in both shipping details, the quantity will be summed up. A new Line Item is added when the <code>externalPrice</code> or <code>externalTotalPrice</code> is set in this update action. The LineItem price is set as described in LineItem Price selection.</p>
+ *  <p>If the Cart contains a LineItem for a Product Variant with the same LineItemMode, Custom Fields, supply and distribution channel, then only the quantity of the existing Line Item is increased. If LineItem <code>shippingDetails</code> is set, it is merged. All addresses will be present afterwards and, for address keys present in both shipping details, the quantity will be summed up. A new Line Item is added when the <code>externalPrice</code> or <code>externalTotalPrice</code> is set in this update action. The LineItem price is set as described in Line Item price selection.</p>
  *  <p>If the Tax Rate is not set, a MissingTaxRateForCountry error is returned.</p>
  *  <p>If the Line Items do not have a Price according to the Product <code>priceMode</code> value for a selected currency and/or country, Customer Group, or Channel, a MatchingPriceNotFound error is returned.</p>
  *
@@ -126,12 +127,20 @@ public interface CartAddLineItemAction
     public ExternalLineItemTotalPrice getExternalTotalPrice();
 
     /**
-     *  <p>External Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>External Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode and <code>Single</code> ShippingMode.</p>
      * @return externalTaxRate
      */
     @Valid
     @JsonProperty("externalTaxRate")
     public ExternalTaxRateDraft getExternalTaxRate();
+
+    /**
+     *  <p>Sets the external Tax Rates for individual Shipping Methods, if the Cart has the <code>External</code> TaxMode and <code>Multiple</code> ShippingMode.</p>
+     * @return perMethodExternalTaxRate
+     */
+    @Valid
+    @JsonProperty("perMethodExternalTaxRate")
+    public List<MethodExternalTaxRateDraft> getPerMethodExternalTaxRate();
 
     /**
      *  <p>Inventory mode specific to the Line Item only, and valid for the entire <code>quantity</code> of the Line Item. Set only if the inventory mode should be different from the <code>inventoryMode</code> specified on the Cart.</p>
@@ -232,11 +241,26 @@ public interface CartAddLineItemAction
     public void setExternalTotalPrice(final ExternalLineItemTotalPrice externalTotalPrice);
 
     /**
-     *  <p>External Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode.</p>
+     *  <p>External Tax Rate for the Line Item, if the Cart has the <code>External</code> TaxMode and <code>Single</code> ShippingMode.</p>
      * @param externalTaxRate value to be set
      */
 
     public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
+
+    /**
+     *  <p>Sets the external Tax Rates for individual Shipping Methods, if the Cart has the <code>External</code> TaxMode and <code>Multiple</code> ShippingMode.</p>
+     * @param perMethodExternalTaxRate values to be set
+     */
+
+    @JsonIgnore
+    public void setPerMethodExternalTaxRate(final MethodExternalTaxRateDraft... perMethodExternalTaxRate);
+
+    /**
+     *  <p>Sets the external Tax Rates for individual Shipping Methods, if the Cart has the <code>External</code> TaxMode and <code>Multiple</code> ShippingMode.</p>
+     * @param perMethodExternalTaxRate values to be set
+     */
+
+    public void setPerMethodExternalTaxRate(final List<MethodExternalTaxRateDraft> perMethodExternalTaxRate);
 
     /**
      *  <p>Inventory mode specific to the Line Item only, and valid for the entire <code>quantity</code> of the Line Item. Set only if the inventory mode should be different from the <code>inventoryMode</code> specified on the Cart.</p>
@@ -285,6 +309,7 @@ public interface CartAddLineItemAction
         instance.setExternalPrice(template.getExternalPrice());
         instance.setExternalTotalPrice(template.getExternalTotalPrice());
         instance.setExternalTaxRate(template.getExternalTaxRate());
+        instance.setPerMethodExternalTaxRate(template.getPerMethodExternalTaxRate());
         instance.setInventoryMode(template.getInventoryMode());
         instance.setShippingDetails(template.getShippingDetails());
         instance.setCustom(template.getCustom());
@@ -317,6 +342,11 @@ public interface CartAddLineItemAction
             com.commercetools.api.models.cart.ExternalLineItemTotalPrice.deepCopy(template.getExternalTotalPrice()));
         instance.setExternalTaxRate(
             com.commercetools.api.models.cart.ExternalTaxRateDraft.deepCopy(template.getExternalTaxRate()));
+        instance.setPerMethodExternalTaxRate(Optional.ofNullable(template.getPerMethodExternalTaxRate())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.cart.MethodExternalTaxRateDraft::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         instance.setInventoryMode(template.getInventoryMode());
         instance.setShippingDetails(
             com.commercetools.api.models.cart.ItemShippingDetailsDraft.deepCopy(template.getShippingDetails()));

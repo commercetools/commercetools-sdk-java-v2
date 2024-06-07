@@ -2,8 +2,8 @@
 dependencies {
     api project(":rmf:rmf-java-base")
 
-    api "io.projectreactor.netty:reactor-netty-http:1.1.13"
-    api "io.projectreactor.netty:reactor-netty-core:1.1.13"
+    api "io.projectreactor.netty:reactor-netty-http:1.1.19"
+    api "io.projectreactor.netty:reactor-netty-core:1.1.19"
 
     implementation javax.validation
 }

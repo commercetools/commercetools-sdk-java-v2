@@ -68,7 +68,7 @@ public class ApprovalFlowRejectionBuilder implements Builder<ApprovalFlowRejecti
     }
 
     /**
-     *  <p>Date and time (UTC) when the Approval Flow was rejected at.</p>
+     *  <p>Date and time (UTC) the Approval Flow was rejected.</p>
      * @param rejectedAt value to be set
      * @return Builder
      */
@@ -99,7 +99,7 @@ public class ApprovalFlowRejectionBuilder implements Builder<ApprovalFlowRejecti
     }
 
     /**
-     *  <p>Date and time (UTC) when the Approval Flow was rejected at.</p>
+     *  <p>Date and time (UTC) the Approval Flow was rejected.</p>
      * @return rejectedAt
      */
 

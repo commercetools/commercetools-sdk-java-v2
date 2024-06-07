@@ -134,7 +134,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-     *  <p>Date and time (UTC) for the CartDiscount was initially created.</p>
+     *  <p>Date and time (UTC) the CartDiscount was initially created.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -142,7 +142,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-     *  <p>Date and time (UTC) for the CartDiscount was last updated.</p>
+     *  <p>Date and time (UTC) the CartDiscount was last updated.</p>
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -150,7 +150,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the CartDiscount.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -158,7 +158,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the CartDiscount.</p>
      */
 
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {

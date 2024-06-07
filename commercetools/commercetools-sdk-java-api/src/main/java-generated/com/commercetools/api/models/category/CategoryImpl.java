@@ -141,7 +141,7 @@ public class CategoryImpl implements Category, ModelBase {
     }
 
     /**
-     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the Category.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -149,7 +149,7 @@ public class CategoryImpl implements Category, ModelBase {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Category.</p>
      */
 
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
@@ -197,7 +197,7 @@ public class CategoryImpl implements Category, ModelBase {
     }
 
     /**
-     *  <p>Decimal value between 0 and 1 used to order Categories that are on the same level in the Category tree.</p>
+     *  <p>Decimal value between 0 and 1. Frontend applications can use this value for ordering Categories within the same level in the category tree.</p>
      */
 
     public String getOrderHint() {
@@ -205,7 +205,7 @@ public class CategoryImpl implements Category, ModelBase {
     }
 
     /**
-     *  <p>Additional identifier for external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
+     *  <p>Additional identifier for external systems like customer relationship management (CRM) or enterprise resource planning (ERP).</p>
      */
 
     public String getExternalId() {

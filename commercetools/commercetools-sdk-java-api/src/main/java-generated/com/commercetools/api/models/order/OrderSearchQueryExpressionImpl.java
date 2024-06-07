@@ -25,7 +25,7 @@ public class OrderSearchQueryExpressionImpl implements OrderSearchQueryExpressio
      * create instance with all properties
      */
     @JsonCreator
-    OrderSearchQueryExpressionImpl() {
+    public OrderSearchQueryExpressionImpl() {
     }
 
     @Override

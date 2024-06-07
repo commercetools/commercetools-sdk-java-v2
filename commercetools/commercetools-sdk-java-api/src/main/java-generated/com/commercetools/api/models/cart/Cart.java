@@ -106,7 +106,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public String getCustomerEmail();
 
     /**
-     *  <p>Reference to the Customer Group of the Customer that the Cart belongs to. Used for LineItem Price selection.</p>
+     *  <p>Reference to the Customer Group of the Customer that the Cart belongs to. Used for Line Item price selection.</p>
      * @return customerGroup
      */
     @Valid
@@ -175,8 +175,8 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
 
     /**
      *  <ul>
-     *   <li>For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
-     *   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
+     *   <li>For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set. For Carts with <code>Multiple</code> ShippingMode, all Line Items and Custom Line Items must be fully distributed between the Shipping Methods (via <code>shippingDetails</code>), otherwise <code>taxedPrice</code> is not automatically set.</li>
+     *   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set. For Carts with <code>Multiple</code> ShippingMode, all allocations must have their respective tax rates present in <code>perMethodTaxRate</code>, otherwise <code>taxedPrice</code> is not automatically set.</li>
      *  </ul>
      *  <p>If a discount applies on <code>totalPrice</code>, this field holds the discounted values.</p>
      * @return taxedPrice
@@ -357,7 +357,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public PaymentInfo getPaymentInfo();
 
     /**
-     *  <p>Used for LineItem Price selection.</p>
+     *  <p>Used for Line Item price selection.</p>
      * @return country
      */
 
@@ -413,7 +413,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the Cart.</p>
      * @return lastModifiedBy
      */
     @Valid
@@ -421,7 +421,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public LastModifiedBy getLastModifiedBy();
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Cart.</p>
      * @return createdBy
      */
     @Valid
@@ -464,7 +464,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public void setCustomerEmail(final String customerEmail);
 
     /**
-     *  <p>Reference to the Customer Group of the Customer that the Cart belongs to. Used for LineItem Price selection.</p>
+     *  <p>Reference to the Customer Group of the Customer that the Cart belongs to. Used for Line Item price selection.</p>
      * @param customerGroup value to be set
      */
 
@@ -538,8 +538,8 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
 
     /**
      *  <ul>
-     *   <li>For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
-     *   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
+     *   <li>For a Cart with <code>Platform</code> TaxMode, it is automatically set when a shipping address is set. For Carts with <code>Multiple</code> ShippingMode, all Line Items and Custom Line Items must be fully distributed between the Shipping Methods (via <code>shippingDetails</code>), otherwise <code>taxedPrice</code> is not automatically set.</li>
+     *   <li>For a Cart with <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set. For Carts with <code>Multiple</code> ShippingMode, all allocations must have their respective tax rates present in <code>perMethodTaxRate</code>, otherwise <code>taxedPrice</code> is not automatically set.</li>
      *  </ul>
      *  <p>If a discount applies on <code>totalPrice</code>, this field holds the discounted values.</p>
      * @param taxedPrice value to be set
@@ -735,7 +735,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public void setPaymentInfo(final PaymentInfo paymentInfo);
 
     /**
-     *  <p>Used for LineItem Price selection.</p>
+     *  <p>Used for Line Item price selection.</p>
      * @param country value to be set
      */
 
@@ -784,14 +784,14 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
     /**
-     *  <p>Present on resources updated after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the Cart.</p>
      * @param lastModifiedBy value to be set
      */
 
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Cart.</p>
      * @param createdBy value to be set
      */
 

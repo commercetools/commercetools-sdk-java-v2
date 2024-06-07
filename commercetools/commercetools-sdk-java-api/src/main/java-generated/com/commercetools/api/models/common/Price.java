@@ -103,7 +103,7 @@ public interface Price extends com.commercetools.api.models.Customizable<Price>,
     public ZonedDateTime getValidUntil();
 
     /**
-     *  <p>Is set if a ProductDiscount has been applied. If set, the API uses the DiscountedPrice value for the Line Item Price selection. When a relative discount has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with half-down rounding.</p>
+     *  <p>Is set if a ProductDiscount has been applied. If set, the API uses the DiscountedPrice value for the Line Item price selection. When a relative discount has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with half-down rounding.</p>
      * @return discounted
      */
     @Valid
@@ -112,6 +112,7 @@ public interface Price extends com.commercetools.api.models.Customizable<Price>,
 
     /**
      *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
+     *  <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p>
      * @return tiers
      */
     @Valid
@@ -183,7 +184,7 @@ public interface Price extends com.commercetools.api.models.Customizable<Price>,
     public void setValidUntil(final ZonedDateTime validUntil);
 
     /**
-     *  <p>Is set if a ProductDiscount has been applied. If set, the API uses the DiscountedPrice value for the Line Item Price selection. When a relative discount has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with half-down rounding.</p>
+     *  <p>Is set if a ProductDiscount has been applied. If set, the API uses the DiscountedPrice value for the Line Item price selection. When a relative discount has been applied and the fraction part of the DiscountedPrice <code>value</code> is 0.5, the <code>value</code> is rounded in favor of the customer with half-down rounding.</p>
      * @param discounted value to be set
      */
 
@@ -191,6 +192,7 @@ public interface Price extends com.commercetools.api.models.Customizable<Price>,
 
     /**
      *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
+     *  <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p>
      * @param tiers values to be set
      */
 
@@ -199,6 +201,7 @@ public interface Price extends com.commercetools.api.models.Customizable<Price>,
 
     /**
      *  <p>Present if different Prices for certain LineItem quantities have been specified.</p>
+     *  <p>If <code>discounted</code> is present, the tiered Price is ignored for a Product Variant.</p>
      * @param tiers values to be set
      */
 

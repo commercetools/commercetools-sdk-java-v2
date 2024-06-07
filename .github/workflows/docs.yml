@@ -17,15 +17,12 @@ jobs:
   docs:
     name: Build and release docs
 
-    permissions:
-        contents: write  # for stefanzweifel/git-auto-commit-action to push code in repo
-
     runs-on: ubuntu-latest
     steps:
         # Get GitHub token via the CT SDKs App
       - name: Generate GitHub token (via CT SDKs App)
         id: generate_github_token
-        uses: actions/create-github-app-token@v1
+        uses: actions/create-github-app-token@a0de6af83968303c8c955486bf9739a57d23c7f1 # v1
         with:
           app-id: ${{ secrets.CT_SDKS_APP_ID }}
           private-key: ${{ secrets.CT_SDKS_APP_PEM }}
@@ -39,33 +36,35 @@ jobs:
           echo "email=${GH_APP_USER}+ct-sdks[bot]@users.noreply.github.com" >> "$GITHUB_OUTPUT"
 
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4
         with:
           path: sdk
           token: ${{ steps.generate_github_token.outputs.token }}
 
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4
         with:
           path: doc
           ref: gh-pages
           token: ${{ steps.generate_github_token.outputs.token }}
 
       - name: Setup Java
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@99b8673ff64fbf99d8d325f52d9a5bdedb8483e9 # v4
         with:
           distribution: 'temurin'
           java-version: '17'
 
+      - uses: gradle/wrapper-validation-action@216d1ad2b3710bf005dc39237337b9673fd8fcd5 # v3.3.2
+
       - name: Setup Graphviz
-        uses: ts-graphviz/setup-graphviz@c001ccfb5aff62e28bda6a6c39b59a7e061be5b9
+        uses: ts-graphviz/setup-graphviz@b1de5da23ed0a6d14e0aeee8ed52fdd87af2363c # v2.0.2
 
       - run: ./gradlew -Pversion=${{ github.event.inputs.version }} alljavadoc
         working-directory: sdk
 
       - run: rsync -r sdk/build/docs/javadoc/ doc/javadoc
 
-      - uses: stefanzweifel/git-auto-commit-action@e8f94e4dd298db5a6a2aa2d42fe0bcef6f2c9660
+      - uses: stefanzweifel/git-auto-commit-action@8621497c8c39c72f3e2a999a26b4ca1b5058a842 # v5.0.1
         with:
           repository: doc
           commit_message: "Update javadoc"

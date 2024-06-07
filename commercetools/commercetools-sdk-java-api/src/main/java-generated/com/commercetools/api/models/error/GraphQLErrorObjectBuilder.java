@@ -183,6 +183,10 @@ public class GraphQLErrorObjectBuilder {
         return com.commercetools.api.models.error.GraphQLLanguageUsedInStoresErrorBuilder.of();
     }
 
+    public com.commercetools.api.models.error.GraphQLLockedFieldErrorBuilder lockedFieldBuilder() {
+        return com.commercetools.api.models.error.GraphQLLockedFieldErrorBuilder.of();
+    }
+
     public com.commercetools.api.models.error.GraphQLMatchingPriceNotFoundErrorBuilder matchingPriceNotFoundBuilder() {
         return com.commercetools.api.models.error.GraphQLMatchingPriceNotFoundErrorBuilder.of();
     }

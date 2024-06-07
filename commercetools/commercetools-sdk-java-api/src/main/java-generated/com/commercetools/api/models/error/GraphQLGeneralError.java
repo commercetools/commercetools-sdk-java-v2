@@ -14,8 +14,8 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Returned when a server-side problem occurs.</p>
- *  <p>If you encounter this error, report it using the Support Portal.</p>
+ *  <p>Returned when a server-side problem occurs before or after data persistence. In some cases, the requested action may successfully complete after the error is returned. Therefore, it is recommended to verify the status of the requested resource after receiving a 500 error.</p>
+ *  <p>If you encounter this error, report it to the Composable Commerce support team.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

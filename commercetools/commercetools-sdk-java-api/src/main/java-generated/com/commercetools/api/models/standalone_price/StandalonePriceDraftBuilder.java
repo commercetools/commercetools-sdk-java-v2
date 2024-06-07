@@ -230,6 +230,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
 
     /**
      *  <p>Sets price tiers.</p>
+     *  <p>If <code>discounted</code> is set, the tiered Price is ignored for a Product Variant.</p>
      * @param tiers value to be set
      * @return Builder
      */
@@ -242,6 +243,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
 
     /**
      *  <p>Sets price tiers.</p>
+     *  <p>If <code>discounted</code> is set, the tiered Price is ignored for a Product Variant.</p>
      * @param tiers value to be set
      * @return Builder
      */
@@ -254,6 +256,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
 
     /**
      *  <p>Sets price tiers.</p>
+     *  <p>If <code>discounted</code> is set, the tiered Price is ignored for a Product Variant.</p>
      * @param tiers value to be set
      * @return Builder
      */
@@ -269,6 +272,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
 
     /**
      *  <p>Sets price tiers.</p>
+     *  <p>If <code>discounted</code> is set, the tiered Price is ignored for a Product Variant.</p>
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -284,6 +288,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
 
     /**
      *  <p>Sets price tiers.</p>
+     *  <p>If <code>discounted</code> is set, the tiered Price is ignored for a Product Variant.</p>
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -297,6 +302,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
 
     /**
      *  <p>Sets price tiers.</p>
+     *  <p>If <code>discounted</code> is set, the tiered Price is ignored for a Product Variant.</p>
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -308,6 +314,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
 
     /**
      *  <p>Sets price tiers.</p>
+     *  <p>If <code>discounted</code> is set, the tiered Price is ignored for a Product Variant.</p>
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -426,7 +433,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     }
 
     /**
-     *  <p>Set to <code>false</code>, if the StandalonePrice should not be considered during price selection.</p>
+     *  <p>Set to <code>false</code>, if the StandalonePrice should not be considered during Prodct price selection.</p>
      * @param active value to be set
      * @return Builder
      */
@@ -516,6 +523,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
 
     /**
      *  <p>Sets price tiers.</p>
+     *  <p>If <code>discounted</code> is set, the tiered Price is ignored for a Product Variant.</p>
      * @return tiers
      */
 
@@ -555,7 +563,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
     }
 
     /**
-     *  <p>Set to <code>false</code>, if the StandalonePrice should not be considered during price selection.</p>
+     *  <p>Set to <code>false</code>, if the StandalonePrice should not be considered during Prodct price selection.</p>
      * @return active
      */
 

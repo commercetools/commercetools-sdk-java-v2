@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Present on resources modified after 1 February 2019 except for events not tracked.</p>
+ *  <p>IDs and references that last modified the resource. This is present on resources created or updated after 1 February 2019 except for events not tracked.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class LastModifiedByImpl implements LastModifiedBy, ModelBase {
@@ -32,6 +32,8 @@ public class LastModifiedByImpl implements LastModifiedBy, ModelBase {
 
     private com.commercetools.api.models.customer.CustomerReference associate;
 
+    private com.commercetools.api.models.common.Attribution attributedTo;
+
     /**
      * create instance with all properties
      */
@@ -40,12 +42,14 @@ public class LastModifiedByImpl implements LastModifiedBy, ModelBase {
             @JsonProperty("externalUserId") final String externalUserId,
             @JsonProperty("customer") final com.commercetools.api.models.customer.CustomerReference customer,
             @JsonProperty("anonymousId") final String anonymousId,
-            @JsonProperty("associate") final com.commercetools.api.models.customer.CustomerReference associate) {
+            @JsonProperty("associate") final com.commercetools.api.models.customer.CustomerReference associate,
+            @JsonProperty("attributedTo") final com.commercetools.api.models.common.Attribution attributedTo) {
         this.clientId = clientId;
         this.externalUserId = externalUserId;
         this.customer = customer;
         this.anonymousId = anonymousId;
         this.associate = associate;
+        this.attributedTo = attributedTo;
     }
 
     /**
@@ -94,6 +98,14 @@ public class LastModifiedByImpl implements LastModifiedBy, ModelBase {
         return this.associate;
     }
 
+    /**
+     *  <p>Indicates if the resource was modified indirectly.</p>
+     */
+
+    public com.commercetools.api.models.common.Attribution getAttributedTo() {
+        return this.attributedTo;
+    }
+
     public void setClientId(final String clientId) {
         this.clientId = clientId;
     }
@@ -114,6 +126,10 @@ public class LastModifiedByImpl implements LastModifiedBy, ModelBase {
         this.associate = associate;
     }
 
+    public void setAttributedTo(final com.commercetools.api.models.common.Attribution attributedTo) {
+        this.attributedTo = attributedTo;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -129,11 +145,13 @@ public class LastModifiedByImpl implements LastModifiedBy, ModelBase {
                 .append(customer, that.customer)
                 .append(anonymousId, that.anonymousId)
                 .append(associate, that.associate)
+                .append(attributedTo, that.attributedTo)
                 .append(clientId, that.clientId)
                 .append(externalUserId, that.externalUserId)
                 .append(customer, that.customer)
                 .append(anonymousId, that.anonymousId)
                 .append(associate, that.associate)
+                .append(attributedTo, that.attributedTo)
                 .isEquals();
     }
 
@@ -144,6 +162,7 @@ public class LastModifiedByImpl implements LastModifiedBy, ModelBase {
                 .append(customer)
                 .append(anonymousId)
                 .append(associate)
+                .append(attributedTo)
                 .toHashCode();
     }
 
@@ -154,6 +173,7 @@ public class LastModifiedByImpl implements LastModifiedBy, ModelBase {
                 .append("customer", customer)
                 .append("anonymousId", anonymousId)
                 .append("associate", associate)
+                .append("attributedTo", attributedTo)
                 .build();
     }
 

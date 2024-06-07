@@ -17,8 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Standalone Prices are defined with a scope consisting of <code>currency</code> and optionally <code>country</code>, <code>customerGroup</code>, and <code>channel</code> and/or a validity period (<code>validFrom</code> and/or <code>validTo</code>). For more information see price selection.</p>
- *  <p>Creating a Standalone Price for an SKU which has a Standalone Price with exactly the same price scope, or with overlapping validity periods within the same price scope returns the DuplicateStandalonePriceScope and OverlappingStandalonePriceValidity errors, respectively. A Price without validity period does not conflict with a Price defined for a time period.</p>
+ * StandalonePriceDraft
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase {
@@ -152,6 +151,7 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
 
     /**
      *  <p>Sets price tiers.</p>
+     *  <p>If <code>discounted</code> is set, the tiered Price is ignored for a Product Variant.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.PriceTierDraft> getTiers() {
@@ -183,7 +183,7 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
     }
 
     /**
-     *  <p>Set to <code>false</code>, if the StandalonePrice should not be considered during price selection.</p>
+     *  <p>Set to <code>false</code>, if the StandalonePrice should not be considered during Prodct price selection.</p>
      */
 
     public Boolean getActive() {

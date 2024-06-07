@@ -515,7 +515,7 @@ public class MoneyTest {
         return TaxedItemPriceBuilder.of()
                 .totalNet(centMonetaryAmountOf(100))
                 .totalGross(centMonetaryAmountOf(119))
-                .build();
+                .buildUnchecked();
     }
 
     private static TaxRate taxRateOf(boolean includedPrice) {

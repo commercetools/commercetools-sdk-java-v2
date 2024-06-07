@@ -49,8 +49,12 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     @Nullable
     private com.commercetools.importapi.models.common.DiscountedPrice discounted;
 
+    @Deprecated
     @Nullable
     private Boolean publish;
+
+    @Nullable
+    private Boolean staged;
 
     @Nullable
     private java.util.List<com.commercetools.importapi.models.common.PriceTier> tiers;
@@ -245,9 +249,23 @@ public class PriceImportBuilder implements Builder<PriceImport> {
      * @param publish value to be set
      * @return Builder
      */
-
+    @Deprecated
     public PriceImportBuilder publish(@Nullable final Boolean publish) {
         this.publish = publish;
+        return this;
+    }
+
+    /**
+     *  <ul>
+     *   <li>Set to <code>false</code> to update both the current and staged projections of the Product with the new Price data.</li>
+     *   <li>Leave empty or set to <code>true</code> to only update the staged projection.</li>
+     *  </ul>
+     * @param staged value to be set
+     * @return Builder
+     */
+
+    public PriceImportBuilder staged(@Nullable final Boolean staged) {
+        this.staged = staged;
         return this;
     }
 
@@ -529,10 +547,23 @@ public class PriceImportBuilder implements Builder<PriceImport> {
      *  <p>Only the Embedded Price updates will be published to <code>staged</code> and <code>current</code> projection.</p>
      * @return publish
      */
-
+    @Deprecated
     @Nullable
     public Boolean getPublish() {
         return this.publish;
+    }
+
+    /**
+     *  <ul>
+     *   <li>Set to <code>false</code> to update both the current and staged projections of the Product with the new Price data.</li>
+     *   <li>Leave empty or set to <code>true</code> to only update the staged projection.</li>
+     *  </ul>
+     * @return staged
+     */
+
+    @Nullable
+    public Boolean getStaged() {
+        return this.staged;
     }
 
     /**
@@ -583,7 +614,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
         Objects.requireNonNull(productVariant, PriceImport.class + ": productVariant is missing");
         Objects.requireNonNull(product, PriceImport.class + ": product is missing");
         return new PriceImportImpl(key, value, country, validFrom, validUntil, customerGroup, channel, discounted,
-            publish, tiers, custom, productVariant, product);
+            publish, staged, tiers, custom, productVariant, product);
     }
 
     /**
@@ -592,7 +623,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
      */
     public PriceImport buildUnchecked() {
         return new PriceImportImpl(key, value, country, validFrom, validUntil, customerGroup, channel, discounted,
-            publish, tiers, custom, productVariant, product);
+            publish, staged, tiers, custom, productVariant, product);
     }
 
     /**
@@ -619,6 +650,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
         builder.channel = template.getChannel();
         builder.discounted = template.getDiscounted();
         builder.publish = template.getPublish();
+        builder.staged = template.getStaged();
         builder.tiers = template.getTiers();
         builder.custom = template.getCustom();
         builder.productVariant = template.getProductVariant();

@@ -17,14 +17,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface BusinessUnitAssociateMode extends JsonEnum {
 
     /**
-    	<p>All Associates of a Business Unit must be explicitly assigned. The Business Unit cannot inherit Associates from a parent.</p>
-
-    */
+    <p>All Associates of a Business Unit must be explicitly assigned. The Business Unit cannot inherit Associates from a parent.</p> */
     BusinessUnitAssociateMode EXPLICIT = BusinessUnitAssociateModeEnum.EXPLICIT;
     /**
-    	<p>Associates of a Business Unit can be assigned explicitly and inherited from a parent.</p>
-
-    */
+    <p>Associates of a Business Unit can be assigned explicitly and inherited from a parent.</p> */
     BusinessUnitAssociateMode EXPLICIT_AND_FROM_PARENT = BusinessUnitAssociateModeEnum.EXPLICIT_AND_FROM_PARENT;
 
     /**

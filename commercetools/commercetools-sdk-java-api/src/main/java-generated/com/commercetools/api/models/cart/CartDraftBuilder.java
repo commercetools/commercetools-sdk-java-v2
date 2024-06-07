@@ -155,7 +155,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier to the Customer Group of the Customer that the Cart belongs to. Used for LineItem Price selection.</p>
+     *  <p>ResourceIdentifier to the Customer Group of the Customer that the Cart belongs to. Used for Line Item price selection.</p>
      *  <p>It is automatically set if the Customer referenced in <code>customerId</code> belongs to a Customer Group. It can also be set explicitly when no <code>customerId</code> is present.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
@@ -170,7 +170,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier to the Customer Group of the Customer that the Cart belongs to. Used for LineItem Price selection.</p>
+     *  <p>ResourceIdentifier to the Customer Group of the Customer that the Cart belongs to. Used for Line Item price selection.</p>
      *  <p>It is automatically set if the Customer referenced in <code>customerId</code> belongs to a Customer Group. It can also be set explicitly when no <code>customerId</code> is present.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
@@ -184,7 +184,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier to the Customer Group of the Customer that the Cart belongs to. Used for LineItem Price selection.</p>
+     *  <p>ResourceIdentifier to the Customer Group of the Customer that the Cart belongs to. Used for Line Item price selection.</p>
      *  <p>It is automatically set if the Customer referenced in <code>customerId</code> belongs to a Customer Group. It can also be set explicitly when no <code>customerId</code> is present.</p>
      * @param customerGroup value to be set
      * @return Builder
@@ -583,7 +583,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-     *  <p>Shipping address for a Cart with <code>Single</code> ShippingMode. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     *  <p>Shipping address for a Cart with <code>Single</code> ShippingMode. Determines eligible ShippingMethod rates and Tax Rates of Line Items. Must be one of the <code>itemShippingAddresses</code> when that field is also provided.</p>
      * @param builder function to build the shippingAddress value
      * @return Builder
      */
@@ -595,7 +595,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-     *  <p>Shipping address for a Cart with <code>Single</code> ShippingMode. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     *  <p>Shipping address for a Cart with <code>Single</code> ShippingMode. Determines eligible ShippingMethod rates and Tax Rates of Line Items. Must be one of the <code>itemShippingAddresses</code> when that field is also provided.</p>
      * @param builder function to build the shippingAddress value
      * @return Builder
      */
@@ -607,7 +607,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-     *  <p>Shipping address for a Cart with <code>Single</code> ShippingMode. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     *  <p>Shipping address for a Cart with <code>Single</code> ShippingMode. Determines eligible ShippingMethod rates and Tax Rates of Line Items. Must be one of the <code>itemShippingAddresses</code> when that field is also provided.</p>
      * @param shippingAddress value to be set
      * @return Builder
      */
@@ -1019,7 +1019,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-     *  <p>Used for LineItem Price selection. If used for Create Cart in Store, the provided country must be one of the Store's <code>countries</code>.</p>
+     *  <p>Used for Line Item price selection. If used for Create Cart in Store, the provided country must be one of the Store's <code>countries</code>.</p>
      * @param country value to be set
      * @return Builder
      */
@@ -1138,7 +1138,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier to the Customer Group of the Customer that the Cart belongs to. Used for LineItem Price selection.</p>
+     *  <p>ResourceIdentifier to the Customer Group of the Customer that the Cart belongs to. Used for Line Item price selection.</p>
      *  <p>It is automatically set if the Customer referenced in <code>customerId</code> belongs to a Customer Group. It can also be set explicitly when no <code>customerId</code> is present.</p>
      * @return customerGroup
      */
@@ -1259,7 +1259,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-     *  <p>Shipping address for a Cart with <code>Single</code> ShippingMode. Determines eligible ShippingMethod rates and Tax Rates of Line Items.</p>
+     *  <p>Shipping address for a Cart with <code>Single</code> ShippingMode. Determines eligible ShippingMethod rates and Tax Rates of Line Items. Must be one of the <code>itemShippingAddresses</code> when that field is also provided.</p>
      * @return shippingAddress
      */
 
@@ -1348,7 +1348,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-     *  <p>Used for LineItem Price selection. If used for Create Cart in Store, the provided country must be one of the Store's <code>countries</code>.</p>
+     *  <p>Used for Line Item price selection. If used for Create Cart in Store, the provided country must be one of the Store's <code>countries</code>.</p>
      * @return country
      */
 

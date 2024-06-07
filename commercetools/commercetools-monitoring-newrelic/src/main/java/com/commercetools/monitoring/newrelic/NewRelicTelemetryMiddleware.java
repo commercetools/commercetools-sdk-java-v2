@@ -1,6 +1,10 @@
 
 package com.commercetools.monitoring.newrelic;
 
+import static com.commercetools.monitoring.newrelic.NewrelicInfo.*;
+
+import java.time.Duration;
+import java.time.Instant;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
@@ -18,6 +22,18 @@ import io.vrap.rmf.base.client.http.TelemetryMiddleware;
  * or the ApiRootBuilder.</p>
  *
  * {@include.example example.NewRelicApiRootBuilderTest#addNewRelic()}
+ *
+ * The middleware adds the following metrics to Newrelic:
+ * <ul>
+ *     <li>Custom/Commercetools/Client/Duration: The duration of the request in milliseconds</li>
+ *     <li>Custom/Commercetools/Client/Request/Total: The total number of requests</li>
+ *     <li>Custom/Commercetools/Client/Request/Error: The total number of requests with a status code greater or equal to 400</li>
+ * </ul>
+ *
+ * <p>The metrics are added as metric timeslice data, therefore an APM is expected in the application.</p>
+ *
+ * <br/>
+ * <h2>Implementation details</h2>
  *
  * <p>The middleware reads the {@link NewRelicContext} from the Request and restores the transaction using a {@link Token}
  * The details of the request and response are then reported as {@link Segment} with {@link HttpParameters}</p>
@@ -39,7 +55,7 @@ public class NewRelicTelemetryMiddleware implements TelemetryMiddleware {
     @Override
     public CompletableFuture<ApiHttpResponse<byte[]>> invoke(ApiHttpRequest request,
             Function<ApiHttpRequest, CompletableFuture<ApiHttpResponse<byte[]>>> next) {
-
+        final Instant start = Instant.now();
         Optional<NewRelicContext> context = Optional.ofNullable(request.getContext(NewRelicContext.class));
         context.map(NewRelicContext::getToken).ifPresent(Token::link);
         Optional<Token> token = context.map(NewRelicContext::getTransaction).map(Transaction::getToken);
@@ -54,6 +70,14 @@ public class NewRelicTelemetryMiddleware implements TelemetryMiddleware {
                     .status(response.getStatusCode(), response.getMessage())
                     .build()));
             segment.ifPresent(Segment::end);
+
+            NewRelic.incrementCounter(PREFIX + CLIENT_REQUEST_TOTAL);
+            NewRelic.recordResponseTimeMetric(PREFIX + CLIENT_DURATION,
+                Duration.between(start, Instant.now()).toMillis());
+
+            if (response.getStatusCode() >= 400) {
+                NewRelic.incrementCounter(PREFIX + CLIENT_REQUEST_ERROR);
+            }
             return response;
         });
     }

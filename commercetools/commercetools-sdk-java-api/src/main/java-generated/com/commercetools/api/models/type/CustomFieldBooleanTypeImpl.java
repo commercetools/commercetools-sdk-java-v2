@@ -27,7 +27,7 @@ public class CustomFieldBooleanTypeImpl implements CustomFieldBooleanType, Model
      * create instance with all properties
      */
     @JsonCreator
-    CustomFieldBooleanTypeImpl() {
+    public CustomFieldBooleanTypeImpl() {
         this.name = BOOLEAN;
     }
 

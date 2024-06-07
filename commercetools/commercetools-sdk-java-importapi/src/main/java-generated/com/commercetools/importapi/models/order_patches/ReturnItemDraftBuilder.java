@@ -24,7 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
 
-    private Double quantity;
+    private Long quantity;
 
     @Nullable
     private String lineItemId;
@@ -43,7 +43,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
      * @return Builder
      */
 
-    public ReturnItemDraftBuilder quantity(final Double quantity) {
+    public ReturnItemDraftBuilder quantity(final Long quantity) {
         this.quantity = quantity;
         return this;
     }
@@ -98,7 +98,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
      * @return quantity
      */
 
-    public Double getQuantity() {
+    public Long getQuantity() {
         return this.quantity;
     }
 

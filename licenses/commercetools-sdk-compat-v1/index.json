@@ -42,7 +42,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-annotations",
-            "moduleVersion": "2.16.0",
+            "moduleVersion": "2.17.0",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson"
             ],
@@ -55,7 +55,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-core",
-            "moduleVersion": "2.16.0",
+            "moduleVersion": "2.17.0",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-core"
             ],
@@ -68,7 +68,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-databind",
-            "moduleVersion": "2.16.0",
+            "moduleVersion": "2.17.0",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson"
             ],
@@ -81,7 +81,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.dataformat:jackson-dataformat-cbor",
-            "moduleVersion": "2.16.0",
+            "moduleVersion": "2.17.0",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-dataformats-binary"
             ],
@@ -94,7 +94,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.datatype:jackson-datatype-jsr310",
-            "moduleVersion": "2.16.0",
+            "moduleVersion": "2.17.0",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-modules-java8/jackson-datatype-jsr310"
             ],
@@ -107,7 +107,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.module:jackson-module-parameter-names",
-            "moduleVersion": "2.16.0",
+            "moduleVersion": "2.17.0",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-modules-java8/jackson-module-parameter-names"
             ],
@@ -146,9 +146,39 @@
         },
         {
             "moduleName": "com.spotify:completable-futures",
-            "moduleVersion": "0.3.5",
+            "moduleVersion": "0.3.6",
             "moduleUrls": [
                 "https://spotify.github.io/completable-futures"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "com.squareup.okhttp3:okhttp",
+            "moduleVersion": "4.12.0",
+            "moduleUrls": [
+                "https://square.github.io/okhttp/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "com.squareup.okio:okio",
+            "moduleVersion": "3.6.0"
+        },
+        {
+            "moduleName": "com.squareup.okio:okio-jvm",
+            "moduleVersion": "3.6.0",
+            "moduleUrls": [
+                "https://github.com/square/okio/"
             ],
             "moduleLicenses": [
                 {
@@ -168,6 +198,24 @@
                 {
                     "moduleLicense": "Apache License, Version 2.0",
                     "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "jakarta.annotation:jakarta.annotation-api",
+            "moduleVersion": "2.0.0",
+            "moduleUrls": [
+                "https://projects.eclipse.org/projects/ee4j.ca",
+                "https://www.eclipse.org"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Eclipse Public License - v 2.0",
+                    "moduleLicenseUrl": "https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.txt"
+                },
+                {
+                    "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2 + Classpath Exception",
+                    "moduleLicenseUrl": "https://openjdk.java.net/legal/gplv2+ce.html"
                 }
             ]
         },
@@ -221,6 +269,16 @@
             ]
         },
         {
+            "moduleName": "net.bytebuddy:byte-buddy",
+            "moduleVersion": "1.14.9",
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
             "moduleName": "org.apache.commons:commons-lang3",
             "moduleVersion": "3.14.0",
             "moduleUrls": [
@@ -235,7 +293,7 @@
         },
         {
             "moduleName": "org.apache.commons:commons-text",
-            "moduleVersion": "1.9",
+            "moduleVersion": "1.12.0",
             "moduleUrls": [
                 "https://commons.apache.org/proper/commons-text"
             ],
@@ -301,7 +359,7 @@
         },
         {
             "moduleName": "org.javamoney.moneta:moneta-core",
-            "moduleVersion": "1.4.2",
+            "moduleVersion": "1.4.4",
             "moduleUrls": [
                 "http://javamoney.org",
                 "http://www.javamoney.org"
@@ -327,12 +385,81 @@
             ]
         },
         {
+            "moduleName": "org.jetbrains.kotlin:kotlin-stdlib",
+            "moduleVersion": "1.9.10",
+            "moduleUrls": [
+                "https://kotlinlang.org/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "org.jetbrains.kotlin:kotlin-stdlib-common",
+            "moduleVersion": "1.9.10",
+            "moduleUrls": [
+                "https://kotlinlang.org/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "org.jetbrains.kotlin:kotlin-stdlib-jdk7",
+            "moduleVersion": "1.9.10",
+            "moduleUrls": [
+                "https://kotlinlang.org/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "org.jetbrains.kotlin:kotlin-stdlib-jdk8",
+            "moduleVersion": "1.9.10",
+            "moduleUrls": [
+                "https://kotlinlang.org/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "org.jetbrains:annotations",
+            "moduleVersion": "13.0",
+            "moduleUrls": [
+                "http://www.jetbrains.org"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
             "moduleName": "org.slf4j:slf4j-api",
-            "moduleVersion": "1.7.36",
+            "moduleVersion": "2.0.13",
             "moduleUrls": [
                 "http://www.slf4j.org"
             ],
             "moduleLicenses": [
+                {
+                    "moduleLicense": null,
+                    "moduleLicenseUrl": "http://www.opensource.org/licenses/mit-license.php"
+                },
                 {
                     "moduleLicense": "MIT License",
                     "moduleLicenseUrl": "https://opensource.org/licenses/MIT"

@@ -37,7 +37,7 @@ public interface ReturnItemDraft extends io.vrap.rmf.base.client.Draft<ReturnIte
      */
     @NotNull
     @JsonProperty("quantity")
-    public Double getQuantity();
+    public Long getQuantity();
 
     /**
      *
@@ -76,7 +76,7 @@ public interface ReturnItemDraft extends io.vrap.rmf.base.client.Draft<ReturnIte
      * @param quantity value to be set
      */
 
-    public void setQuantity(final Double quantity);
+    public void setQuantity(final Long quantity);
 
     /**
      * set lineItemId

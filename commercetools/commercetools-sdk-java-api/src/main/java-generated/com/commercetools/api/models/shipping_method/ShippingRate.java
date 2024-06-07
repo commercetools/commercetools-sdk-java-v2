@@ -10,7 +10,7 @@ import javax.annotation.Nullable;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-import com.commercetools.api.models.common.TypedMoney;
+import com.commercetools.api.models.common.CentPrecisionMoney;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -41,15 +41,15 @@ public interface ShippingRate {
     @NotNull
     @Valid
     @JsonProperty("price")
-    public TypedMoney getPrice();
+    public CentPrecisionMoney getPrice();
 
     /**
-     *  <p>Shipping is free if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
+     *  <p>Free shipping is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
      * @return freeAbove
      */
     @Valid
     @JsonProperty("freeAbove")
-    public TypedMoney getFreeAbove();
+    public CentPrecisionMoney getFreeAbove();
 
     /**
      *  <p><code>true</code> if the ShippingRate matches given Cart or Location. Only appears in response to requests for Get ShippingMethods for a Cart or Get ShippingMethods for a Location.</p>
@@ -73,14 +73,14 @@ public interface ShippingRate {
      * @param price value to be set
      */
 
-    public void setPrice(final TypedMoney price);
+    public void setPrice(final CentPrecisionMoney price);
 
     /**
-     *  <p>Shipping is free if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
+     *  <p>Free shipping is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
      * @param freeAbove value to be set
      */
 
-    public void setFreeAbove(final TypedMoney freeAbove);
+    public void setFreeAbove(final CentPrecisionMoney freeAbove);
 
     /**
      *  <p><code>true</code> if the ShippingRate matches given Cart or Location. Only appears in response to requests for Get ShippingMethods for a Cart or Get ShippingMethods for a Location.</p>
@@ -137,8 +137,8 @@ public interface ShippingRate {
             return null;
         }
         ShippingRateImpl instance = new ShippingRateImpl();
-        instance.setPrice(com.commercetools.api.models.common.TypedMoney.deepCopy(template.getPrice()));
-        instance.setFreeAbove(com.commercetools.api.models.common.TypedMoney.deepCopy(template.getFreeAbove()));
+        instance.setPrice(com.commercetools.api.models.common.CentPrecisionMoney.deepCopy(template.getPrice()));
+        instance.setFreeAbove(com.commercetools.api.models.common.CentPrecisionMoney.deepCopy(template.getFreeAbove()));
         instance.setIsMatching(template.getIsMatching());
         instance.setTiers(Optional.ofNullable(template.getTiers())
                 .map(t -> t.stream()

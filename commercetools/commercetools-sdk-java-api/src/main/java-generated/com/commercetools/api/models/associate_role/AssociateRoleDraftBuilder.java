@@ -39,7 +39,7 @@ public class AssociateRoleDraftBuilder implements Builder<AssociateRoleDraft> {
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
-     *  <p>User-defined unique identifier for the AssociateRole.</p>
+     *  <p>User-defined unique and immutable identifier for the AssociateRole.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -147,7 +147,7 @@ public class AssociateRoleDraftBuilder implements Builder<AssociateRoleDraft> {
     }
 
     /**
-     *  <p>User-defined unique identifier for the AssociateRole.</p>
+     *  <p>User-defined unique and immutable identifier for the AssociateRole.</p>
      * @return key
      */
 

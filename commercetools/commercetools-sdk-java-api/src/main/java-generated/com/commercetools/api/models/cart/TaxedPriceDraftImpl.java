@@ -28,16 +28,20 @@ public class TaxedPriceDraftImpl implements TaxedPriceDraft, ModelBase {
 
     private java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> taxPortions;
 
+    private com.commercetools.api.models.common.TypedMoneyDraft totalTax;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
     TaxedPriceDraftImpl(@JsonProperty("totalNet") final com.commercetools.api.models.common.Money totalNet,
             @JsonProperty("totalGross") final com.commercetools.api.models.common.Money totalGross,
-            @JsonProperty("taxPortions") final java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> taxPortions) {
+            @JsonProperty("taxPortions") final java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> taxPortions,
+            @JsonProperty("totalTax") final com.commercetools.api.models.common.TypedMoneyDraft totalTax) {
         this.totalNet = totalNet;
         this.totalGross = totalGross;
         this.taxPortions = taxPortions;
+        this.totalTax = totalTax;
     }
 
     /**
@@ -71,6 +75,14 @@ public class TaxedPriceDraftImpl implements TaxedPriceDraft, ModelBase {
         return this.taxPortions;
     }
 
+    /**
+     *  <p>Total tax applicable for the Cart or Order.</p>
+     */
+
+    public com.commercetools.api.models.common.TypedMoneyDraft getTotalTax() {
+        return this.totalTax;
+    }
+
     public void setTotalNet(final com.commercetools.api.models.common.Money totalNet) {
         this.totalNet = totalNet;
     }
@@ -87,6 +99,10 @@ public class TaxedPriceDraftImpl implements TaxedPriceDraft, ModelBase {
         this.taxPortions = taxPortions;
     }
 
+    public void setTotalTax(final com.commercetools.api.models.common.TypedMoneyDraft totalTax) {
+        this.totalTax = totalTax;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -100,15 +116,21 @@ public class TaxedPriceDraftImpl implements TaxedPriceDraft, ModelBase {
         return new EqualsBuilder().append(totalNet, that.totalNet)
                 .append(totalGross, that.totalGross)
                 .append(taxPortions, that.taxPortions)
+                .append(totalTax, that.totalTax)
                 .append(totalNet, that.totalNet)
                 .append(totalGross, that.totalGross)
                 .append(taxPortions, that.taxPortions)
+                .append(totalTax, that.totalTax)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(totalNet).append(totalGross).append(taxPortions).toHashCode();
+        return new HashCodeBuilder(17, 37).append(totalNet)
+                .append(totalGross)
+                .append(taxPortions)
+                .append(totalTax)
+                .toHashCode();
     }
 
     @Override
@@ -116,6 +138,7 @@ public class TaxedPriceDraftImpl implements TaxedPriceDraft, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("totalNet", totalNet)
                 .append("totalGross", totalGross)
                 .append("taxPortions", taxPortions)
+                .append("totalTax", totalTax)
                 .build();
     }
 

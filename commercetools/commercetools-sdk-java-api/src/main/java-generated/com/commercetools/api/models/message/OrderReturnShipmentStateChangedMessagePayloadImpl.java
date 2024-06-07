@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Set ReturnShipmentState update action.</p>
+ *  <p>Generated after a successful Set ReturnShipmentState update action on Orders and Order Edits.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderReturnShipmentStateChangedMessagePayloadImpl

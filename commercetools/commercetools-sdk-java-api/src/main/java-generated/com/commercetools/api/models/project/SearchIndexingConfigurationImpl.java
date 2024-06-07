@@ -24,6 +24,8 @@ public class SearchIndexingConfigurationImpl implements SearchIndexingConfigurat
 
     private com.commercetools.api.models.project.SearchIndexingConfigurationValues products;
 
+    private com.commercetools.api.models.project.SearchIndexingConfigurationValues productsSearch;
+
     private com.commercetools.api.models.project.SearchIndexingConfigurationValues orders;
 
     /**
@@ -32,8 +34,10 @@ public class SearchIndexingConfigurationImpl implements SearchIndexingConfigurat
     @JsonCreator
     SearchIndexingConfigurationImpl(
             @JsonProperty("products") final com.commercetools.api.models.project.SearchIndexingConfigurationValues products,
+            @JsonProperty("productsSearch") final com.commercetools.api.models.project.SearchIndexingConfigurationValues productsSearch,
             @JsonProperty("orders") final com.commercetools.api.models.project.SearchIndexingConfigurationValues orders) {
         this.products = products;
+        this.productsSearch = productsSearch;
         this.orders = orders;
     }
 
@@ -52,6 +56,14 @@ public class SearchIndexingConfigurationImpl implements SearchIndexingConfigurat
     }
 
     /**
+     *  <p>Configuration for the Product Search feature.</p>
+     */
+
+    public com.commercetools.api.models.project.SearchIndexingConfigurationValues getProductsSearch() {
+        return this.productsSearch;
+    }
+
+    /**
      *  <p>Configuration for the Order Search feature.</p>
      */
 
@@ -61,6 +73,11 @@ public class SearchIndexingConfigurationImpl implements SearchIndexingConfigurat
 
     public void setProducts(final com.commercetools.api.models.project.SearchIndexingConfigurationValues products) {
         this.products = products;
+    }
+
+    public void setProductsSearch(
+            final com.commercetools.api.models.project.SearchIndexingConfigurationValues productsSearch) {
+        this.productsSearch = productsSearch;
     }
 
     public void setOrders(final com.commercetools.api.models.project.SearchIndexingConfigurationValues orders) {
@@ -78,20 +95,23 @@ public class SearchIndexingConfigurationImpl implements SearchIndexingConfigurat
         SearchIndexingConfigurationImpl that = (SearchIndexingConfigurationImpl) o;
 
         return new EqualsBuilder().append(products, that.products)
+                .append(productsSearch, that.productsSearch)
                 .append(orders, that.orders)
                 .append(products, that.products)
+                .append(productsSearch, that.productsSearch)
                 .append(orders, that.orders)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(products).append(orders).toHashCode();
+        return new HashCodeBuilder(17, 37).append(products).append(productsSearch).append(orders).toHashCode();
     }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("products", products)
+                .append("productsSearch", productsSearch)
                 .append("orders", orders)
                 .build();
     }

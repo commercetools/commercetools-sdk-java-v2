@@ -5,6 +5,7 @@ import com.github.javaparser.ast.CompilationUnit
 import com.github.javaparser.ast.body.ClassOrInterfaceDeclaration
 import com.github.javaparser.ast.body.MethodDeclaration
 import com.github.javaparser.ast.body.TypeDeclaration
+import com.github.javaparser.ast.expr.NormalAnnotationExpr
 import com.google.gson.stream.JsonWriter
 import org.gradle.api.Plugin
 import org.gradle.api.Project
@@ -34,6 +35,7 @@ class SrcInfoPlugin : Plugin<Project> {
         exportTask.group = "documentation"
         exportTask.doLast {
             val outputFolder = extension.outputFolder.map { o -> Paths.get(o) }.getOrElse(project.buildDir.resolve("src-info").toPath())
+            val docsUrnOnly = extension.docsUrnOnly.getOrElse(false)
             outputFolder.toFile().mkdir()
             val javaFiles = project.fileTree(mapOf("dir" to extension.baseFolder.getOrElse("src"), "include" to "**/*.java")).files
             val fileWriter: Writer = Files.newBufferedWriter(outputFolder.resolve(project.name + ".json"))
@@ -44,7 +46,7 @@ class SrcInfoPlugin : Plugin<Project> {
             writer.beginObject()
             javaFiles.forEach { file ->
                 run {
-                    javaFileInfo(file, project, hash, extension.includePackages.orNull).forEach { entry ->
+                    javaFileInfo(file, project, hash, extension.includePackages.orNull, docsUrnOnly).forEach { entry ->
                         run {
                             writer.name(entry.key)
                             writer.beginObject()
@@ -63,7 +65,7 @@ class SrcInfoPlugin : Plugin<Project> {
         }
     }
 
-    private fun javaFileInfo(file: File, project: Project, hash: String, includePackages: List<String>?):  Map<String, Map<String, String>> {
+    private fun javaFileInfo(file: File, project: Project, hash: String, includePackages: List<String>?, docsUrnOnly: Boolean):  Map<String, Map<String, String>> {
         val parse: CompilationUnit = StaticJavaParser.parse(file)
         val relativeFile = file.relativeTo(project.rootDir)
         if (includePackages != null && includePackages.firstOrNull { s: String -> parse.packageDeclaration.get().nameAsString.startsWith(s) } == null) {
@@ -74,26 +76,36 @@ class SrcInfoPlugin : Plugin<Project> {
                 .filterIsInstance<ClassOrInterfaceDeclaration>()
                 .map { typeDeclaration: TypeDeclaration<*> -> typeDeclaration as ClassOrInterfaceDeclaration }
 
+
         return declarations.flatMap { declaration ->
-            listOf(declaration.fullyQualifiedName.get() to mapOf(
-                    "type" to "class",
-                    "gitHash" to hash,
-                    "simpleName" to declaration.name.toString(),
-                    "name" to declaration.fullyQualifiedName.get(),
-                    "file" to relativeFile.toString(),
-                    "start" to declaration.begin.get().line.toString(),
-                    "end" to declaration.end.get().line.toString(),
-                    "srcUrl" to "https://github.com/commercetools/commercetools-sdk-java-v2/blob/${hash}/${relativeFile}#L${declaration.begin.get().line}-L${declaration.end.get().line}",
-                    "content" to declaration.classBody()
-            )).plus( classInfo(relativeFile, declaration, hash) )
+            if (docsUrnOnly) {
+                classInfo(relativeFile, declaration, hash, true)
+            } else {
+                listOf(declaration.fullyQualifiedName.get() to mapOf(
+                        "type" to "class",
+                        "gitHash" to hash,
+                        "simpleName" to declaration.name.toString(),
+                        "name" to declaration.fullyQualifiedName.get(),
+                        "file" to relativeFile.toString(),
+                        "start" to declaration.begin.get().line.toString(),
+                        "end" to declaration.end.get().line.toString(),
+                        "srcUrl" to "https://github.com/commercetools/commercetools-sdk-java-v2/blob/${hash}/${relativeFile}#L${declaration.begin.get().line}-L${declaration.end.get().line}",
+                        "content" to declaration.classBody()
+                )).plus(classInfo(relativeFile, declaration, hash, false))
+            }
         }.toMap()
     }
 
-    fun classInfo(file: File, info: ClassOrInterfaceDeclaration, hash: String): List<Pair<String, Map<String, String>>> {
-        return info.methods.map { methodInfo ->
-            "${info.fullyQualifiedName.get()}#${methodInfo.signature}" to mapOf(
+    fun classInfo(file: File, info: ClassOrInterfaceDeclaration, hash: String, docsUrnOnly: Boolean): List<Pair<String, Map<String, String>>> {
+        return info.methods.filter { if(docsUrnOnly) it.getAnnotationByName("DocsUrn").isPresent else true } .map { methodInfo ->
+            val docsUrn = methodInfo.getAnnotationByName("DocsUrn").map {
+                (it as NormalAnnotationExpr).pairs.first().value.asLiteralStringValueExpr().value
+            }.orElse("")
+            val key = if (docsUrnOnly) docsUrn else "${info.fullyQualifiedName.get()}#${methodInfo.signature}"
+            key to mapOf(
                     "type" to "method",
                     "gitHash" to hash,
+                    "docsUrn" to docsUrn,
                     "methodName" to methodInfo.name.toString(),
                     "simpleName" to "${info.name}#${methodInfo.name}",
                     "name" to "${info.fullyQualifiedName.get()}#${methodInfo.name}",

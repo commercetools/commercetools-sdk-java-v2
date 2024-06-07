@@ -4,6 +4,7 @@ package com.commercetools.api.models.cart;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
 import javax.validation.Valid;
@@ -25,6 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     TaxedItemPrice taxedItemPrice = TaxedItemPrice.builder()
  *             .totalNet(totalNetBuilder -> totalNetBuilder)
  *             .totalGross(totalGrossBuilder -> totalGrossBuilder)
+ *             .plusTaxPortions(taxPortionsBuilder -> taxPortionsBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -52,6 +54,16 @@ public interface TaxedItemPrice {
     public CentPrecisionMoney getTotalGross();
 
     /**
+     *  <p>Taxable portions added to the total net price.</p>
+     *  <p>Calculated from the TaxRates.</p>
+     * @return taxPortions
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("taxPortions")
+    public List<TaxPortion> getTaxPortions();
+
+    /**
      *  <p>Total tax applicable for the Line Item or Custom Line Item. Automatically calculated as the difference between the <code>totalGross</code> and <code>totalNet</code> values.</p>
      * @return totalTax
      */
@@ -72,6 +84,23 @@ public interface TaxedItemPrice {
      */
 
     public void setTotalGross(final CentPrecisionMoney totalGross);
+
+    /**
+     *  <p>Taxable portions added to the total net price.</p>
+     *  <p>Calculated from the TaxRates.</p>
+     * @param taxPortions values to be set
+     */
+
+    @JsonIgnore
+    public void setTaxPortions(final TaxPortion... taxPortions);
+
+    /**
+     *  <p>Taxable portions added to the total net price.</p>
+     *  <p>Calculated from the TaxRates.</p>
+     * @param taxPortions values to be set
+     */
+
+    public void setTaxPortions(final List<TaxPortion> taxPortions);
 
     /**
      *  <p>Total tax applicable for the Line Item or Custom Line Item. Automatically calculated as the difference between the <code>totalGross</code> and <code>totalNet</code> values.</p>
@@ -97,6 +126,7 @@ public interface TaxedItemPrice {
         TaxedItemPriceImpl instance = new TaxedItemPriceImpl();
         instance.setTotalNet(template.getTotalNet());
         instance.setTotalGross(template.getTotalGross());
+        instance.setTaxPortions(template.getTaxPortions());
         instance.setTotalTax(template.getTotalTax());
         return instance;
     }
@@ -115,6 +145,11 @@ public interface TaxedItemPrice {
         instance.setTotalNet(com.commercetools.api.models.common.CentPrecisionMoney.deepCopy(template.getTotalNet()));
         instance.setTotalGross(
             com.commercetools.api.models.common.CentPrecisionMoney.deepCopy(template.getTotalGross()));
+        instance.setTaxPortions(Optional.ofNullable(template.getTaxPortions())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.cart.TaxPortion::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         instance.setTotalTax(com.commercetools.api.models.common.CentPrecisionMoney.deepCopy(template.getTotalTax()));
         return instance;
     }

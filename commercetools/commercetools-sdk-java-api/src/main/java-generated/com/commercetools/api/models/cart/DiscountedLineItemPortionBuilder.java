@@ -28,7 +28,7 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
     private com.commercetools.api.models.common.TypedMoney discountedAmount;
 
     /**
-     *  <p>A CartDiscountReference or DirectDiscountReference for the applicable discount on the Line Item.</p>
+     *  <p>A CartDiscountReference or DirectDiscountReference of the applicable discount on the Line Item.</p>
      * @param discount value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
     }
 
     /**
-     *  <p>A CartDiscountReference or DirectDiscountReference for the applicable discount on the Line Item.</p>
+     *  <p>A CartDiscountReference or DirectDiscountReference of the applicable discount on the Line Item.</p>
      * @param builder function to build the discount value
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
     }
 
     /**
-     *  <p>Money value of the discount applicable.</p>
+     *  <p>Money value of the applicable discount.</p>
      * @param discountedAmount value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
     }
 
     /**
-     *  <p>Money value of the discount applicable.</p>
+     *  <p>Money value of the applicable discount.</p>
      * @param builder function to build the discountedAmount value
      * @return Builder
      */
@@ -75,7 +75,7 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
     }
 
     /**
-     *  <p>A CartDiscountReference or DirectDiscountReference for the applicable discount on the Line Item.</p>
+     *  <p>A CartDiscountReference or DirectDiscountReference of the applicable discount on the Line Item.</p>
      * @return discount
      */
 
@@ -84,7 +84,7 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
     }
 
     /**
-     *  <p>Money value of the discount applicable.</p>
+     *  <p>Money value of the applicable discount.</p>
      * @return discountedAmount
      */
 

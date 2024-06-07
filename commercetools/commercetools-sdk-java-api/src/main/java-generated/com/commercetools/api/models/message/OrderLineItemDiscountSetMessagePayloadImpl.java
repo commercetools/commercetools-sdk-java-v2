@@ -30,7 +30,7 @@ public class OrderLineItemDiscountSetMessagePayloadImpl implements OrderLineItem
 
     private java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity;
 
-    private com.commercetools.api.models.common.Money totalPrice;
+    private com.commercetools.api.models.common.CentPrecisionMoney totalPrice;
 
     private com.commercetools.api.models.cart.TaxedItemPrice taxedPrice;
 
@@ -43,7 +43,7 @@ public class OrderLineItemDiscountSetMessagePayloadImpl implements OrderLineItem
     OrderLineItemDiscountSetMessagePayloadImpl(@JsonProperty("lineItemId") final String lineItemId,
             @JsonProperty("lineItemKey") final String lineItemKey,
             @JsonProperty("discountedPricePerQuantity") final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity,
-            @JsonProperty("totalPrice") final com.commercetools.api.models.common.Money totalPrice,
+            @JsonProperty("totalPrice") final com.commercetools.api.models.common.CentPrecisionMoney totalPrice,
             @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedItemPrice taxedPrice,
             @JsonProperty("taxedPricePortions") final java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> taxedPricePortions) {
         this.lineItemId = lineItemId;
@@ -98,7 +98,7 @@ public class OrderLineItemDiscountSetMessagePayloadImpl implements OrderLineItem
      *  <p>Total Price of the Line Item after the Discount recalculation.</p>
      */
 
-    public com.commercetools.api.models.common.Money getTotalPrice() {
+    public com.commercetools.api.models.common.CentPrecisionMoney getTotalPrice() {
         return this.totalPrice;
     }
 
@@ -111,7 +111,7 @@ public class OrderLineItemDiscountSetMessagePayloadImpl implements OrderLineItem
     }
 
     /**
-     *  <p>Taxed price of the Shipping Methods in a Cart with <code>Multiple</code> ShippingMode.</p>
+     *  <p>Total taxed prices based on the quantity of Line Item assigned to each Shipping Method. Only applicable for Carts with <code>Multiple</code> ShippingMode. Automatically set after <code>perMethodTaxRate</code> is set.</p>
      */
 
     public java.util.List<com.commercetools.api.models.cart.MethodTaxedPrice> getTaxedPricePortions() {
@@ -136,7 +136,7 @@ public class OrderLineItemDiscountSetMessagePayloadImpl implements OrderLineItem
         this.discountedPricePerQuantity = discountedPricePerQuantity;
     }
 
-    public void setTotalPrice(final com.commercetools.api.models.common.Money totalPrice) {
+    public void setTotalPrice(final com.commercetools.api.models.common.CentPrecisionMoney totalPrice) {
         this.totalPrice = totalPrice;
     }
 

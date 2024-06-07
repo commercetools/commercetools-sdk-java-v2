@@ -61,6 +61,14 @@ public interface DiscountCode
     public String getId();
 
     /**
+     *  <p>User-defined unique identifier of the DiscountCode.</p>
+     * @return key
+     */
+
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
      *  <p>Current version of the DiscountCode.</p>
      * @return version
      */
@@ -85,7 +93,7 @@ public interface DiscountCode
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the DiscountCode.</p>
      * @return lastModifiedBy
      */
     @Valid
@@ -93,7 +101,7 @@ public interface DiscountCode
     public LastModifiedBy getLastModifiedBy();
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the DiscountCode.</p>
      * @return createdBy
      */
     @Valid
@@ -222,6 +230,13 @@ public interface DiscountCode
     public void setId(final String id);
 
     /**
+     *  <p>User-defined unique identifier of the DiscountCode.</p>
+     * @param key value to be set
+     */
+
+    public void setKey(final String key);
+
+    /**
      *  <p>Current version of the DiscountCode.</p>
      * @param version value to be set
      */
@@ -243,14 +258,14 @@ public interface DiscountCode
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the DiscountCode.</p>
      * @param lastModifiedBy value to be set
      */
 
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the DiscountCode.</p>
      * @param createdBy value to be set
      */
 
@@ -397,6 +412,7 @@ public interface DiscountCode
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setKey(template.getKey());
         instance.setLastModifiedBy(template.getLastModifiedBy());
         instance.setCreatedBy(template.getCreatedBy());
         instance.setName(template.getName());
@@ -431,6 +447,7 @@ public interface DiscountCode
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setKey(template.getKey());
         instance.setLastModifiedBy(
             com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));

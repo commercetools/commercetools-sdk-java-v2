@@ -27,7 +27,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  */
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.approval_flow.ApprovalFlowApproveActionImpl.class, name = ApprovalFlowApproveAction.APPROVE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.approval_flow.ApprovalFlowRejectActionImpl.class, name = ApprovalFlowRejectAction.REJECT) })
+        @JsonSubTypes.Type(value = com.commercetools.api.models.approval_flow.ApprovalFlowRejectActionImpl.class, name = ApprovalFlowRejectAction.REJECT),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.approval_flow.ApprovalFlowSetCustomFieldActionImpl.class, name = ApprovalFlowSetCustomFieldAction.SET_CUSTOM_FIELD),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.approval_flow.ApprovalFlowSetCustomTypeActionImpl.class, name = ApprovalFlowSetCustomTypeAction.SET_CUSTOM_TYPE) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = ApprovalFlowUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = ApprovalFlowUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -59,6 +61,14 @@ public interface ApprovalFlowUpdateAction {
             return com.commercetools.api.models.approval_flow.ApprovalFlowRejectAction
                     .deepCopy((com.commercetools.api.models.approval_flow.ApprovalFlowRejectAction) template);
         }
+        if (template instanceof com.commercetools.api.models.approval_flow.ApprovalFlowSetCustomFieldAction) {
+            return com.commercetools.api.models.approval_flow.ApprovalFlowSetCustomFieldAction
+                    .deepCopy((com.commercetools.api.models.approval_flow.ApprovalFlowSetCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.approval_flow.ApprovalFlowSetCustomTypeAction) {
+            return com.commercetools.api.models.approval_flow.ApprovalFlowSetCustomTypeAction
+                    .deepCopy((com.commercetools.api.models.approval_flow.ApprovalFlowSetCustomTypeAction) template);
+        }
         ApprovalFlowUpdateActionImpl instance = new ApprovalFlowUpdateActionImpl();
         return instance;
     }
@@ -77,6 +87,22 @@ public interface ApprovalFlowUpdateAction {
      */
     public static com.commercetools.api.models.approval_flow.ApprovalFlowRejectActionBuilder rejectBuilder() {
         return com.commercetools.api.models.approval_flow.ApprovalFlowRejectActionBuilder.of();
+    }
+
+    /**
+     * builder for setCustomField subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.approval_flow.ApprovalFlowSetCustomFieldActionBuilder setCustomFieldBuilder() {
+        return com.commercetools.api.models.approval_flow.ApprovalFlowSetCustomFieldActionBuilder.of();
+    }
+
+    /**
+     * builder for setCustomType subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.approval_flow.ApprovalFlowSetCustomTypeActionBuilder setCustomTypeBuilder() {
+        return com.commercetools.api.models.approval_flow.ApprovalFlowSetCustomTypeActionBuilder.of();
     }
 
     /**

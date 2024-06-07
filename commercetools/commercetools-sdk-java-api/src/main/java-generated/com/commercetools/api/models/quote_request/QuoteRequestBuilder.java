@@ -178,7 +178,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the QuoteRequest.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
@@ -190,7 +190,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the QuoteRequest.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
@@ -202,7 +202,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the QuoteRequest.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -214,7 +214,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the QuoteRequest.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
@@ -226,7 +226,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the QuoteRequest.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
@@ -238,7 +238,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the QuoteRequest.</p>
      * @param createdBy value to be set
      * @return Builder
      */
@@ -1217,7 +1217,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the QuoteRequest.</p>
      * @return lastModifiedBy
      */
 
@@ -1227,7 +1227,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the QuoteRequest.</p>
      * @return createdBy
      */
 

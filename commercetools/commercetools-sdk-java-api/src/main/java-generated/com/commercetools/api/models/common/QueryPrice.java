@@ -111,6 +111,7 @@ public interface QueryPrice extends com.commercetools.api.models.Customizable<Qu
 
     /**
      *  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
+     *  <p>If <code>discounted</code> is specified, the tiered Price is ignored for a Product Variant.</p>
      * @return tiers
      */
     @Valid
@@ -182,6 +183,7 @@ public interface QueryPrice extends com.commercetools.api.models.Customizable<Qu
 
     /**
      *  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
+     *  <p>If <code>discounted</code> is specified, the tiered Price is ignored for a Product Variant.</p>
      * @param tiers values to be set
      */
 
@@ -190,6 +192,7 @@ public interface QueryPrice extends com.commercetools.api.models.Customizable<Qu
 
     /**
      *  <p>Price tier applied when the minimum quantity for the LineItem of a ProductVariant with the related Price is reached in a Cart.</p>
+     *  <p>If <code>discounted</code> is specified, the tiered Price is ignored for a Product Variant.</p>
      * @param tiers values to be set
      */
 

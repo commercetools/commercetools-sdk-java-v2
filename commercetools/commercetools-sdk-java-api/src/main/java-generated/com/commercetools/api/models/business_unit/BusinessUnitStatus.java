@@ -17,15 +17,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface BusinessUnitStatus extends JsonEnum {
 
     /**
-    	<p>The Business Unit can be used in Carts, Orders, Quote Requests, and Quotes and can be edited.</p>
-
-    */
+    <p>The Business Unit can be used in Carts, Orders, Quote Requests, and Quotes and can be edited.</p> */
     BusinessUnitStatus ACTIVE = BusinessUnitStatusEnum.ACTIVE;
     /**
-    	<p>The Business Unit cannot be used in Carts, Orders, Quote Requests, and Quotes and can only be edited using the <a href="/../api/associates-overview#through-the-general-endpoints">general endpoint</a>.
-    	Status doesn't affect inheritance. Even if a parent unit is inactive, its children remain active and can inherit role assignments.</p>
-
-    */
+    <p>The Business Unit cannot be used in Carts, Orders, Quote Requests, and Quotes and can only be edited using the general endpoint. Status doesn't affect inheritance. Even if a parent unit is inactive, its children remain active and can inherit role assignments.</p> */
     BusinessUnitStatus INACTIVE = BusinessUnitStatusEnum.INACTIVE;
 
     /**

@@ -17,14 +17,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface TypeTextInputHint extends JsonEnum {
 
     /**
-    	<p>Hint for GUIs to display the field's content in a single line of text.</p>
-
-    */
+    <p>Hint for GUIs to display the field's content in a single line of text.</p> */
     TypeTextInputHint SINGLE_LINE = TypeTextInputHintEnum.SINGLE_LINE;
     /**
-    	<p>Hint for GUIs to display the field's content over multiple lines of text.</p>
-
-    */
+    <p>Hint for GUIs to display the field's content over multiple lines of text.</p> */
     TypeTextInputHint MULTI_LINE = TypeTextInputHintEnum.MULTI_LINE;
 
     /**

@@ -216,7 +216,7 @@ public class LocalizedStringTest {
     public void jsonSerialize() throws Exception {
         assertThat(JsonUtils.createObjectMapper()
                 .writeValueAsString(LocalizedString.of(Locale.GERMAN, "Hundefutter", Locale.ENGLISH, "dog food")))
-                        .isEqualTo(DOG_FOOD_JSON);
+                .isEqualTo(DOG_FOOD_JSON);
     }
 
     @Test

@@ -7,6 +7,7 @@ import com.commercetools.api.predicates.query.shopping_list.ShoppingListQueryBui
 
 public interface ByProjectKeyShoppingListsGetMixin extends
         PagedQueryResourceRequest<ByProjectKeyShoppingListsGet, ShoppingListPagedQueryResponse, ShoppingListQueryBuilderDsl> {
+
     @Override
     default ShoppingListQueryBuilderDsl queryDsl() {
         return QueryPredicateDsl.shoppingList();

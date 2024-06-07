@@ -7,6 +7,7 @@ import com.commercetools.api.predicates.query.cart.CartQueryBuilderDsl;
 
 public interface ByProjectKeyCartsGetMixin
         extends PagedQueryResourceRequest<ByProjectKeyCartsGet, CartPagedQueryResponse, CartQueryBuilderDsl> {
+
     @Override
     default CartQueryBuilderDsl queryDsl() {
         return QueryPredicateDsl.cart();

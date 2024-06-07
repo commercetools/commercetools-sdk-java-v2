@@ -17,37 +17,29 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CartState extends JsonEnum {
 
     /**
-    	<p>The default state where a Cart can be updated and ordered.</p>
-
-    */
+    <p>The default state where a Cart can be updated and ordered.</p> */
     CartState ACTIVE = CartStateEnum.ACTIVE;
     /**
-    	<p>An anonymous Cart was merged into a Customer's Cart on <a href="/../api/projects/customers#authenticate-sign-in-customer">sign-in</a>, and no further operations are allowed on the Cart.</p>
-
-    */
+    <p>An anonymous Cart was merged into a Customer's Cart on sign-in, and no further operations are allowed on the Cart.</p> */
     CartState MERGED = CartStateEnum.MERGED;
     /**
-    	<p>A Cart was <a href="/../api/projects/orders#create-order-from-cart">ordered</a>, and no further operations are allowed on the Cart.</p>
-
-    */
+    <p>A Cart was ordered, and no further operations are allowed on the Cart.</p> */
     CartState ORDERED = CartStateEnum.ORDERED;
     /**
-    	<p>A Cart is <a href="ctp:api:type:FrozenCarts">frozen</a>. Update actions that can change the price of (Custom) Line Items are not allowed.</p>
-    	<ul>
-    	<li><a href="ctp:api:type:CartAddLineItemAction">Add LineItem</a></li>
-    	<li><a href="ctp:api:type:CartChangeLineItemQuantityAction">Change LineItem Quantity</a></li>
-    	<li><a href="ctp:api:type:CartRemoveLineItemAction">Remove LineItem</a></li>
-    	<li><a href="ctp:api:type:CartSetLineItemDistributionChannelAction">Set LineItem DistributionChannel</a></li>
-    	<li><a href="ctp:api:type:CartSetLineItemSupplyChannelAction">Set LineItem SupplyChannel</a></li>
-    	<li><a href="ctp:api:type:CartAddCustomLineItemAction">Add CustomLineItem</a></li>
-    	<li><a href="ctp:api:type:CartChangeCustomLineItemQuantityAction">Change CustomLineItem Quantity</a></li>
-    	<li><a href="ctp:api:type:CartRemoveCustomLineItemAction">Remove CustomLineItem</a></li>
-    	<li><a href="ctp:api:type:CartChangeTaxModeAction">Change TaxMode</a></li>
-    	<li><a href="ctp:api:type:CartSetLineItemPriceAction">Set LineItem Price</a></li>
-    	<li><a href="ctp:api:type:CartSetLineItemTotalPriceAction">Set LineItem TotalPrice</a></li>
-    	</ul>
-
-    */
+    <p>A Cart is frozen. Update actions that can change the price of (Custom) Line Items are not allowed.</p>
+    <ul>
+     <li>Add LineItem</li>
+     <li>Change LineItem Quantity</li>
+     <li>Remove LineItem</li>
+     <li>Set LineItem DistributionChannel</li>
+     <li>Set LineItem SupplyChannel</li>
+     <li>Add CustomLineItem</li>
+     <li>Change CustomLineItem Quantity</li>
+     <li>Remove CustomLineItem</li>
+     <li>Change TaxMode</li>
+     <li>Set LineItem Price</li>
+     <li>Set LineItem TotalPrice</li>
+    </ul> */
     CartState FROZEN = CartStateEnum.FROZEN;
 
     /**

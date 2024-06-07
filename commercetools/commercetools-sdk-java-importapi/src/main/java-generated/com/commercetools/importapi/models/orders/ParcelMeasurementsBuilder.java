@@ -23,16 +23,16 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class ParcelMeasurementsBuilder implements Builder<ParcelMeasurements> {
 
     @Nullable
-    private Double heightInMillimeter;
+    private Integer heightInMillimeter;
 
     @Nullable
-    private Double lengthInMillimeter;
+    private Integer lengthInMillimeter;
 
     @Nullable
-    private Double widthInMillimeter;
+    private Integer widthInMillimeter;
 
     @Nullable
-    private Double weightInGram;
+    private Integer weightInGram;
 
     /**
      * set the value to the heightInMillimeter
@@ -40,7 +40,7 @@ public class ParcelMeasurementsBuilder implements Builder<ParcelMeasurements> {
      * @return Builder
      */
 
-    public ParcelMeasurementsBuilder heightInMillimeter(@Nullable final Double heightInMillimeter) {
+    public ParcelMeasurementsBuilder heightInMillimeter(@Nullable final Integer heightInMillimeter) {
         this.heightInMillimeter = heightInMillimeter;
         return this;
     }
@@ -51,7 +51,7 @@ public class ParcelMeasurementsBuilder implements Builder<ParcelMeasurements> {
      * @return Builder
      */
 
-    public ParcelMeasurementsBuilder lengthInMillimeter(@Nullable final Double lengthInMillimeter) {
+    public ParcelMeasurementsBuilder lengthInMillimeter(@Nullable final Integer lengthInMillimeter) {
         this.lengthInMillimeter = lengthInMillimeter;
         return this;
     }
@@ -62,7 +62,7 @@ public class ParcelMeasurementsBuilder implements Builder<ParcelMeasurements> {
      * @return Builder
      */
 
-    public ParcelMeasurementsBuilder widthInMillimeter(@Nullable final Double widthInMillimeter) {
+    public ParcelMeasurementsBuilder widthInMillimeter(@Nullable final Integer widthInMillimeter) {
         this.widthInMillimeter = widthInMillimeter;
         return this;
     }
@@ -73,7 +73,7 @@ public class ParcelMeasurementsBuilder implements Builder<ParcelMeasurements> {
      * @return Builder
      */
 
-    public ParcelMeasurementsBuilder weightInGram(@Nullable final Double weightInGram) {
+    public ParcelMeasurementsBuilder weightInGram(@Nullable final Integer weightInGram) {
         this.weightInGram = weightInGram;
         return this;
     }
@@ -84,7 +84,7 @@ public class ParcelMeasurementsBuilder implements Builder<ParcelMeasurements> {
      */
 
     @Nullable
-    public Double getHeightInMillimeter() {
+    public Integer getHeightInMillimeter() {
         return this.heightInMillimeter;
     }
 
@@ -94,7 +94,7 @@ public class ParcelMeasurementsBuilder implements Builder<ParcelMeasurements> {
      */
 
     @Nullable
-    public Double getLengthInMillimeter() {
+    public Integer getLengthInMillimeter() {
         return this.lengthInMillimeter;
     }
 
@@ -104,7 +104,7 @@ public class ParcelMeasurementsBuilder implements Builder<ParcelMeasurements> {
      */
 
     @Nullable
-    public Double getWidthInMillimeter() {
+    public Integer getWidthInMillimeter() {
         return this.widthInMillimeter;
     }
 
@@ -114,7 +114,7 @@ public class ParcelMeasurementsBuilder implements Builder<ParcelMeasurements> {
      */
 
     @Nullable
-    public Double getWeightInGram() {
+    public Integer getWeightInGram() {
         return this.weightInGram;
     }
 

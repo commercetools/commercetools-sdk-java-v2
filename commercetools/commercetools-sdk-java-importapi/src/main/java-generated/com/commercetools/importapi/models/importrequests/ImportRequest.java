@@ -30,6 +30,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.importapi.models.importrequests.CategoryImportRequestImpl.class, name = CategoryImportRequest.CATEGORY),
         @JsonSubTypes.Type(value = com.commercetools.importapi.models.importrequests.CustomerImportRequestImpl.class, name = CustomerImportRequest.CUSTOMER),
+        @JsonSubTypes.Type(value = com.commercetools.importapi.models.importrequests.DiscountCodeImportRequestImpl.class, name = DiscountCodeImportRequest.DISCOUNT_CODE),
         @JsonSubTypes.Type(value = com.commercetools.importapi.models.importrequests.InventoryImportRequestImpl.class, name = InventoryImportRequest.INVENTORY),
         @JsonSubTypes.Type(value = com.commercetools.importapi.models.importrequests.OrderImportRequestImpl.class, name = OrderImportRequest.ORDER),
         @JsonSubTypes.Type(value = com.commercetools.importapi.models.importrequests.OrderPatchImportRequestImpl.class, name = OrderPatchImportRequest.ORDER_PATCH),
@@ -71,6 +72,10 @@ public interface ImportRequest {
         if (template instanceof com.commercetools.importapi.models.importrequests.CustomerImportRequest) {
             return com.commercetools.importapi.models.importrequests.CustomerImportRequest
                     .deepCopy((com.commercetools.importapi.models.importrequests.CustomerImportRequest) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.importrequests.DiscountCodeImportRequest) {
+            return com.commercetools.importapi.models.importrequests.DiscountCodeImportRequest
+                    .deepCopy((com.commercetools.importapi.models.importrequests.DiscountCodeImportRequest) template);
         }
         if (template instanceof com.commercetools.importapi.models.importrequests.InventoryImportRequest) {
             return com.commercetools.importapi.models.importrequests.InventoryImportRequest
@@ -134,6 +139,14 @@ public interface ImportRequest {
      */
     public static com.commercetools.importapi.models.importrequests.CustomerImportRequestBuilder customerBuilder() {
         return com.commercetools.importapi.models.importrequests.CustomerImportRequestBuilder.of();
+    }
+
+    /**
+     * builder for discountCode subtype
+     * @return builder
+     */
+    public static com.commercetools.importapi.models.importrequests.DiscountCodeImportRequestBuilder discountCodeBuilder() {
+        return com.commercetools.importapi.models.importrequests.DiscountCodeImportRequestBuilder.of();
     }
 
     /**

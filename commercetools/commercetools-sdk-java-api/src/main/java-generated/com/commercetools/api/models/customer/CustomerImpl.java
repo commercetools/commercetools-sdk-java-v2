@@ -197,7 +197,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     *  <p>Optional identifier for use in external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
+     *  <p>Optional identifier for use in external systems like customer relationship management (CRM) or enterprise resource planning (ERP).</p>
      */
 
     public String getExternalId() {
@@ -205,7 +205,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the Customer.</p>
      */
 
     public com.commercetools.api.models.common.LastModifiedBy getLastModifiedBy() {
@@ -213,7 +213,7 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Customer.</p>
      */
 
     public com.commercetools.api.models.common.CreatedBy getCreatedBy() {
@@ -375,7 +375,7 @@ public class CustomerImpl implements Customer, ModelBase {
     /**
      *  <p>Stores to which the Customer is assigned to.</p>
      *  <ul>
-     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
+     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
      *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
      *  </ul>
      */

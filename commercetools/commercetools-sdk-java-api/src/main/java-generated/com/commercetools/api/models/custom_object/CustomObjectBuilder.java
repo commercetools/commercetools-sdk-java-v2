@@ -94,7 +94,7 @@ public class CustomObjectBuilder implements Builder<CustomObject> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the CustomObject.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
@@ -106,7 +106,7 @@ public class CustomObjectBuilder implements Builder<CustomObject> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the CustomObject.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
@@ -118,7 +118,7 @@ public class CustomObjectBuilder implements Builder<CustomObject> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the CustomObject.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -130,7 +130,7 @@ public class CustomObjectBuilder implements Builder<CustomObject> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the CustomObject.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
@@ -142,7 +142,7 @@ public class CustomObjectBuilder implements Builder<CustomObject> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the CustomObject.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
@@ -154,7 +154,7 @@ public class CustomObjectBuilder implements Builder<CustomObject> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the CustomObject.</p>
      * @param createdBy value to be set
      * @return Builder
      */
@@ -234,7 +234,7 @@ public class CustomObjectBuilder implements Builder<CustomObject> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the CustomObject.</p>
      * @return lastModifiedBy
      */
 
@@ -244,7 +244,7 @@ public class CustomObjectBuilder implements Builder<CustomObject> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the CustomObject.</p>
      * @return createdBy
      */
 

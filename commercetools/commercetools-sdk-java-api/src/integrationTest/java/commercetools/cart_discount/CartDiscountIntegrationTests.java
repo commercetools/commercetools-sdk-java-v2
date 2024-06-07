@@ -11,6 +11,7 @@ import java.util.Optional;
 
 import com.commercetools.api.models.cart_discount.*;
 import com.commercetools.api.models.common.ReferenceTypeId;
+import commercetools.DocsUrn;
 import commercetools.type.TypeFixtures;
 import commercetools.utils.CommercetoolsTestUtils;
 
@@ -84,6 +85,7 @@ public class CartDiscountIntegrationTests {
     }
 
     @Test
+    @DocsUrn(value = "ctp:api:endpoint:/{projectKey}/cart-discounts/key={key}:POST")
     public void updateByKey() {
         withUpdateableCartDiscount(cartDiscount -> {
             List<CartDiscountUpdateAction> updateActions = new ArrayList<>();

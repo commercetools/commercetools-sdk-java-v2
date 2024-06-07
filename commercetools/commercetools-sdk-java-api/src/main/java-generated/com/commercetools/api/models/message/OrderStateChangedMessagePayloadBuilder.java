@@ -3,6 +3,8 @@ package com.commercetools.api.models.message;
 
 import java.util.*;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -14,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <pre><code class='java'>
  *     OrderStateChangedMessagePayload orderStateChangedMessagePayload = OrderStateChangedMessagePayload.builder()
  *             .orderState(OrderState.OPEN)
- *             .oldOrderState(OrderState.OPEN)
  *             .build()
  * </code></pre>
  * </div>
@@ -24,6 +25,7 @@ public class OrderStateChangedMessagePayloadBuilder implements Builder<OrderStat
 
     private com.commercetools.api.models.order.OrderState orderState;
 
+    @Nullable
     private com.commercetools.api.models.order.OrderState oldOrderState;
 
     /**
@@ -45,7 +47,7 @@ public class OrderStateChangedMessagePayloadBuilder implements Builder<OrderStat
      */
 
     public OrderStateChangedMessagePayloadBuilder oldOrderState(
-            final com.commercetools.api.models.order.OrderState oldOrderState) {
+            @Nullable final com.commercetools.api.models.order.OrderState oldOrderState) {
         this.oldOrderState = oldOrderState;
         return this;
     }
@@ -64,6 +66,7 @@ public class OrderStateChangedMessagePayloadBuilder implements Builder<OrderStat
      * @return oldOrderState
      */
 
+    @Nullable
     public com.commercetools.api.models.order.OrderState getOldOrderState() {
         return this.oldOrderState;
     }
@@ -74,7 +77,6 @@ public class OrderStateChangedMessagePayloadBuilder implements Builder<OrderStat
      */
     public OrderStateChangedMessagePayload build() {
         Objects.requireNonNull(orderState, OrderStateChangedMessagePayload.class + ": orderState is missing");
-        Objects.requireNonNull(oldOrderState, OrderStateChangedMessagePayload.class + ": oldOrderState is missing");
         return new OrderStateChangedMessagePayloadImpl(orderState, oldOrderState);
     }
 

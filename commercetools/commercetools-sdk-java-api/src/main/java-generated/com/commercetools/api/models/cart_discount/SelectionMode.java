@@ -17,14 +17,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface SelectionMode extends JsonEnum {
 
     /**
-    	<p>Select the cheapest items.</p>
-
-    */
+    <p>Select the cheapest items.</p> */
     SelectionMode CHEAPEST = SelectionModeEnum.CHEAPEST;
     /**
-    	<p>Select the most expensive items.</p>
-
-    */
+    <p>Select the most expensive items.</p> */
     SelectionMode MOST_EXPENSIVE = SelectionModeEnum.MOST_EXPENSIVE;
 
     /**

@@ -34,7 +34,7 @@ public interface ParcelMeasurements {
      */
 
     @JsonProperty("heightInMillimeter")
-    public Double getHeightInMillimeter();
+    public Integer getHeightInMillimeter();
 
     /**
      *
@@ -42,7 +42,7 @@ public interface ParcelMeasurements {
      */
 
     @JsonProperty("lengthInMillimeter")
-    public Double getLengthInMillimeter();
+    public Integer getLengthInMillimeter();
 
     /**
      *
@@ -50,7 +50,7 @@ public interface ParcelMeasurements {
      */
 
     @JsonProperty("widthInMillimeter")
-    public Double getWidthInMillimeter();
+    public Integer getWidthInMillimeter();
 
     /**
      *
@@ -58,35 +58,35 @@ public interface ParcelMeasurements {
      */
 
     @JsonProperty("weightInGram")
-    public Double getWeightInGram();
+    public Integer getWeightInGram();
 
     /**
      * set heightInMillimeter
      * @param heightInMillimeter value to be set
      */
 
-    public void setHeightInMillimeter(final Double heightInMillimeter);
+    public void setHeightInMillimeter(final Integer heightInMillimeter);
 
     /**
      * set lengthInMillimeter
      * @param lengthInMillimeter value to be set
      */
 
-    public void setLengthInMillimeter(final Double lengthInMillimeter);
+    public void setLengthInMillimeter(final Integer lengthInMillimeter);
 
     /**
      * set widthInMillimeter
      * @param widthInMillimeter value to be set
      */
 
-    public void setWidthInMillimeter(final Double widthInMillimeter);
+    public void setWidthInMillimeter(final Integer widthInMillimeter);
 
     /**
      * set weightInGram
      * @param weightInGram value to be set
      */
 
-    public void setWeightInGram(final Double weightInGram);
+    public void setWeightInGram(final Integer weightInGram);
 
     /**
      * factory method

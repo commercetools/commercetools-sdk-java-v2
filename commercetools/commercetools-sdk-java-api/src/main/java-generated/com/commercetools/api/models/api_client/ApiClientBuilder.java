@@ -116,7 +116,7 @@ public class ApiClientBuilder implements Builder<ApiClient> {
     }
 
     /**
-     *  <p>Date and time (UTC) the APIClient was initially created at.</p>
+     *  <p>Date and time (UTC) the APIClient was initially created.</p>
      * @param createdAt value to be set
      * @return Builder
      */
@@ -206,7 +206,7 @@ public class ApiClientBuilder implements Builder<ApiClient> {
     }
 
     /**
-     *  <p>Date and time (UTC) the APIClient was initially created at.</p>
+     *  <p>Date and time (UTC) the APIClient was initially created.</p>
      * @return createdAt
      */
 

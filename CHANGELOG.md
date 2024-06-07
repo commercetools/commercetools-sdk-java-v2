@@ -1,4 +1,379 @@
 
+# 17.11.0 (2024-05-03)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/626
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/627
+* [DEVX-344] add missing service regions by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/628
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/629
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/631
+* update bootstrap, jquery, jquery-validation by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/632
+* chore(deps): update all dependencies by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/618
+* use codecov GH action by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/633
+* chore(deps): update actions/create-github-app-token digest to a0de6af by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/611
+* chore(deps): update gradle/wrapper-validation-action action to v3 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/619
+* chore(deps): update github/codeql-action digest to d39d31e by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/613
+* Newrelic add metrics by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/630
+* fix(deps): update dependency husky to v9 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/621
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.10.0...17.11.0
+
+# 17.10.0 (2024-04-18)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/616
+* deserialize product search facets by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/624
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/610
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/625
+
+**Api changes**
+
+<details>
+<summary>Changed Property(s)</summary>
+
+- :warning: changed property `custom` of type `MyBusinessUnitDraft` from type `CustomFields` to `CustomFieldsDraft`
+- :warning: changed property `custom` of type `MyCompanyDraft` from type `CustomFields` to `CustomFieldsDraft`
+- :warning: changed property `custom` of type `MyDivisionDraft` from type `CustomFields` to `CustomFieldsDraft`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `attributedTo` to type `CreatedBy`
+- added property `attributedTo` to type `LastModifiedBy`
+- added property `postFilter` to type `ProductSearchRequest`
+</details>
+
+
+<details>
+<summary>Required Property(s)</summary>
+
+- :warning: changed property `stores` of type `BusinessUnit` to be required
+- :warning: changed property `stores` of type `Company` to be required
+- :warning: changed property `stores` of type `Division` to be required
+- :warning: changed property `stores` of type `BusinessUnitSetStoresAction` to be required
+- :warning: changed property `stores` of type `CartDiscountSetStoresAction` to be required
+- :warning: changed property `stores` of type `Customer` to be required
+- :warning: changed property `stores` of type `CustomerSetStoresAction` to be required
+</details>
+
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `Attribution`
+- added type `AttributionSource`
+</details>
+
+
+<details>
+<summary>Removed Method(s)</summary>
+
+- :warning: removed method `apiRoot.withProjectKey().products().search().head()`
+</details>
+
+**Import changes**
+
+<details>
+<summary>Added Resource(s)</summary>
+
+- added resource `/{projectKey}/discount-codes`
+- added resource `/{projectKey}/discount-codes/import-containers`
+- added resource `/{projectKey}/discount-codes/import-containers/{importContainerKey}`
+</details>
+
+
+<details>
+<summary>Added Method(s)</summary>
+
+- added method `apiRoot.withProjectKeyValue().discountCodes().importContainers().withImportContainerKeyValue().post()`
+</details>
+
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `DiscountCodeImportRequest`
+- added type `DiscountCodeImport`
+</details>
+
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `discount-code` to type `ImportResourceType`
+</details>
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.9.0...17.10.0
+
+# 17.9.0 (2024-04-08)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/609
+* Make javadoc consistent across monitoring middlewares by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/615
+* Add dogstatsd support by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/599
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.8.0...17.9.0
+
+# 17.8.0 (2024-04-01)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/592
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/593
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/594
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/597
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/598
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/600
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/602
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/603
+* Replace deprecated retry middleware with policy middleware in docs by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/601
+* Add integration test to get a valid oauth token by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/596
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/605
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/607
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/608
+* chore(deps): update gradle/actions digest to 417ae3c by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/582
+* chore(deps): update yarn to v4 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/510
+* fix(deps): update dependency org.jdrupes.taglets:plantuml-taglet to v3 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/497
+* chore(deps): update all dependencies by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/575
+* chore(deps): update actions/create-github-app-token digest to 78e5f2d by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/574
+* chore(deps): update github/codeql-action digest to 1b1aada by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/581
+* chore(deps): update ts-graphviz/setup-graphviz action to v2 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/576
+* fix(deps): update dependency com.squareup.okio:okio to v3 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/590
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.7.0...17.8.0
+
+# 17.7.0 (2024-02-29)
+
+## What's Changed
+* Update CODEOWNERS by @evansinho in https://github.com/commercetools/commercetools-sdk-java-v2/pull/577
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/579
+* chore(deps): pin dependencies by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/573
+* Add how to use datadog module example by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/578
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/580
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/584
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/585
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/586
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/587
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/588
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/591
+* Highlight tests in the docs by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/583
+
+**Api changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `DiscountedLineItemPortionDraft`
+</details>
+
+
+<details>
+<summary>Required Property(s)</summary>
+
+- :warning: changed property `isOnStock` of type `ProductVariantAvailability` to be required
+- changed property `priceMode` of type `CustomLineItemDraft` to be optional
+- changed property `oldShipmentState` of type `OrderShipmentStateChangedMessage` to be optional
+- changed property `oldOrderState` of type `OrderStateChangedMessage` to be optional
+- changed property `oldShipmentState` of type `OrderShipmentStateChangedMessagePayload` to be optional
+- changed property `oldOrderState` of type `OrderStateChangedMessagePayload` to be optional
+</details>
+
+
+<details>
+<summary>Changed Property(s)</summary>
+
+- :warning: changed property `includedDiscounts` of type `DiscountedLineItemPriceDraft` from type `DiscountedLineItemPortion[]` to `DiscountedLineItemPortionDraft[]`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `totalTax` to type `TaxedPriceDraft`
+- added property `id` to type `ProductVariantAvailability`
+- added property `version` to type `ProductVariantAvailability`
+</details>
+
+## New Contributors
+* @evansinho made their first contribution in https://github.com/commercetools/commercetools-sdk-java-v2/pull/577
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.6.0...17.7.0
+
+# 17.6.0 (2024-02-12)
+
+## What's Changed
+* Search builder by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/542
+* Remove the incorrect lines by @johthor in https://github.com/commercetools/commercetools-sdk-java-v2/pull/558
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/557
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/561
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/562
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/563
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/564
+* chore(deps): update all dependencies by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/549
+* chore(deps): update stefanzweifel/git-auto-commit-action digest to 12f6863 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/532
+* update mockito by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/565
+* chore(deps): pin dependencies by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/566
+* chore(deps): update all dependencies by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/567
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/570
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/571
+* update dependencies by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/572
+* Add datadog monitoring module by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/568
+
+## New Contributors
+* @johthor made their first contribution in https://github.com/commercetools/commercetools-sdk-java-v2/pull/558
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.5.0...17.6.0
+
+# 17.5.0 (2024-01-22)
+
+## What's Changed
+* add option to customise log formats by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/548
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/547
+* fix RetryHandler class cast exception by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/556
+
+**Api changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `CartDiscountCreatedMessage`
+- added type `CartDiscountDeletedMessage`
+- added type `CartDiscountStoreAddedMessage`
+- added type `CartDiscountStoreRemovedMessage`
+- added type `CartDiscountStoresSetMessage`
+- added type `CartDiscountCreatedMessagePayload`
+- added type `CartDiscountDeletedMessagePayload`
+- added type `CartDiscountStoreAddedMessagePayload`
+- added type `CartDiscountStoreRemovedMessagePayload`
+- added type `CartDiscountStoresSetMessagePayload`
+</details>
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.4.0...17.5.0
+
+# 17.5.0-alpha.1 (2024-01-12)
+
+## What's Changed
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.4.0...17.5.0-alpha.1
+
+# 17.4.0 (2024-01-11)
+
+## What's Changed
+* add PolicyMiddleware by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/521
+* add predicate builder for custom fields by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/543
+* Oneagent dynatrace by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/529
+* Update generated SDKs by @github-actions in https://github.com/commercetools/commercetools-sdk-java-v2/pull/520
+* Update generated SDKs by @github-actions in https://github.com/commercetools/commercetools-sdk-java-v2/pull/525
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/534
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/544
+* chore(deps): update all dependencies by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/489
+* fix(deps): update all dependencies by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/526
+* Add example for opentelemetry export to dynatrace by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/524
+* Add an example test for static auth token by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/536
+* fix deserialization of head API requests by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/538
+* fix renovate builds by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/541
+* remove ML module by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/539
+* remove ML package code by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/540
+
+**Api changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `ApprovalFlowSetCustomFieldAction`
+- added type `ApprovalFlowSetCustomTypeAction`
+</details>
+
+
+<details>
+<summary>Removed Type(s)</summary>
+
+- :warning: removed type `NotEnabledError`
+- :warning: removed type `GraphQLNotEnabledError`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `custom` to type `ApprovalFlow`
+</details>
+
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `associate-role` to type `AttributeReferenceTypeId`
+- added enum `business-unit` to type `AttributeReferenceTypeId`
+- added enum `cart-discount` to type `AttributeReferenceTypeId`
+- added enum `approval-flow` to type `CustomFieldReferenceValue`
+- added enum `approval-flow` to type `ResourceTypeId`
+</details>
+
+**History changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `AttributeLocalizedEnumValue`
+- added type `AttributePlainEnumValue`
+- added type `ChannelRoleEnum`
+- added type `StateRoleEnum`
+- added type `StateTypeEnum`
+</details>
+
+
+<details>
+<summary>Removed Type(s)</summary>
+
+- :warning: removed type `ChannelRole`
+- :warning: removed type `StateRole`
+- :warning: removed type `StateType`
+</details>
+
+
+<details>
+<summary>Removed Property(s)</summary>
+
+- :warning: removed property `previousValue` from type `AddAddressChange`
+- :warning: removed property `previousValue` from type `AddLocationChange`
+- :warning: removed property `nextValue` from type `RemoveLocationChange`
+- :warning: removed property `nextValue` from type `RemoveTaxRateChange`
+</details>
+
+
+<details>
+<summary>Changed Property(s)</summary>
+
+- :warning: changed property `previousValue` of type `AddChannelRolesChange` from type `ChannelRole[]` to `ChannelRoleEnum[]`
+- :warning: changed property `nextValue` of type `AddChannelRolesChange` from type `ChannelRole[]` to `ChannelRoleEnum[]`
+- :warning: changed property `nextValue` of type `AddLocalizedEnumValueChange` from type `LocalizedEnumValue` to `AttributeLocalizedEnumValue`
+- :warning: changed property `nextValue` of type `AddPlainEnumValueChange` from type `EnumValue` to `AttributePlainEnumValue`
+- :warning: changed property `previousValue` of type `AddStateRolesChange` from type `StateRole[]` to `StateRoleEnum[]`
+- :warning: changed property `nextValue` of type `AddStateRolesChange` from type `StateRole[]` to `StateRoleEnum[]`
+- :warning: changed property `previousValue` of type `ChangeStateTypeChange` from type `StateType` to `StateTypeEnum`
+- :warning: changed property `nextValue` of type `ChangeStateTypeChange` from type `StateType` to `StateTypeEnum`
+- :warning: changed property `previousValue` of type `RemoveChannelRolesChange` from type `ChannelRole[]` to `ChannelRoleEnum[]`
+- :warning: changed property `nextValue` of type `RemoveChannelRolesChange` from type `ChannelRole[]` to `ChannelRoleEnum[]`
+- :warning: changed property `previousValue` of type `RemoveStateRolesChange` from type `StateRole[]` to `StateRoleEnum[]`
+- :warning: changed property `nextValue` of type `RemoveStateRolesChange` from type `StateRole[]` to `StateRoleEnum[]`
+- :warning: changed property `previousValue` of type `SetChannelRolesChange` from type `ChannelRole[]` to `ChannelRoleEnum[]`
+- :warning: changed property `nextValue` of type `SetChannelRolesChange` from type `ChannelRole[]` to `ChannelRoleEnum[]`
+- :warning: changed property `previousValue` of type `SetStateRolesChange` from type `StateRole[]` to `StateRoleEnum[]`
+- :warning: changed property `nextValue` of type `SetStateRolesChange` from type `StateRole[]` to `StateRoleEnum[]`
+</details>
+
+## New Contributors
+* @ct-sdks made their first contribution in https://github.com/commercetools/commercetools-sdk-java-v2/pull/534
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.3.0...17.4.0
+
 # 17.3.0 (2023-12-04)
 
 ## What's Changed

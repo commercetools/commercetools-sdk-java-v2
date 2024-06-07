@@ -27,7 +27,7 @@ public class CartDiscountShippingCostTargetImpl implements CartDiscountShippingC
      * create instance with all properties
      */
     @JsonCreator
-    CartDiscountShippingCostTargetImpl() {
+    public CartDiscountShippingCostTargetImpl() {
         this.type = SHIPPING;
     }
 

@@ -7,6 +7,7 @@ import com.commercetools.api.predicates.query.state.StateQueryBuilderDsl;
 
 public interface ByProjectKeyStatesGetMixin
         extends PagedQueryResourceRequest<ByProjectKeyStatesGet, StatePagedQueryResponse, StateQueryBuilderDsl> {
+
     @Override
     default StateQueryBuilderDsl queryDsl() {
         return QueryPredicateDsl.state();

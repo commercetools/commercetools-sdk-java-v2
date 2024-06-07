@@ -45,4 +45,12 @@ public class ErrorResponseQueryBuilderDsl {
             fn.apply(com.commercetools.api.predicates.query.error.AuthErrorResponseQueryBuilderDsl.of()),
             ErrorResponseQueryBuilderDsl::of);
     }
+
+    public CombinationQueryPredicate<ErrorResponseQueryBuilderDsl> asProductSearchErrorResponse(
+            Function<com.commercetools.api.predicates.query.product_search.ProductSearchErrorResponseQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product_search.ProductSearchErrorResponseQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.product_search.ProductSearchErrorResponseQueryBuilderDsl.of()),
+            ErrorResponseQueryBuilderDsl::of);
+    }
 }

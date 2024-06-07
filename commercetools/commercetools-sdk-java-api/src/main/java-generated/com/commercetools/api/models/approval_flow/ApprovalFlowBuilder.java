@@ -68,6 +68,9 @@ public class ApprovalFlowBuilder implements Builder<ApprovalFlow> {
 
     private java.util.List<com.commercetools.api.models.approval_rule.RuleApprover> currentTierPendingApprovers;
 
+    @Nullable
+    private com.commercetools.api.models.type.CustomFields custom;
+
     /**
      *  <p>Unique identifier of the Approval Flow.</p>
      * @param id value to be set
@@ -113,7 +116,7 @@ public class ApprovalFlowBuilder implements Builder<ApprovalFlow> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the ApprovalFlow.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
@@ -125,7 +128,7 @@ public class ApprovalFlowBuilder implements Builder<ApprovalFlow> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the ApprovalFlow.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
@@ -137,7 +140,7 @@ public class ApprovalFlowBuilder implements Builder<ApprovalFlow> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the ApprovalFlow.</p>
      * @param createdBy value to be set
      * @return Builder
      */
@@ -148,7 +151,7 @@ public class ApprovalFlowBuilder implements Builder<ApprovalFlow> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the ApprovalFlow.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
@@ -160,7 +163,7 @@ public class ApprovalFlowBuilder implements Builder<ApprovalFlow> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the ApprovalFlow.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
@@ -172,7 +175,7 @@ public class ApprovalFlowBuilder implements Builder<ApprovalFlow> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the ApprovalFlow.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -761,6 +764,41 @@ public class ApprovalFlowBuilder implements Builder<ApprovalFlow> {
     }
 
     /**
+     *  <p>Custom Fields on the Approval Flow.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public ApprovalFlowBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields on the Approval Flow.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public ApprovalFlowBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields on the Approval Flow.</p>
+     * @param custom value to be set
+     * @return Builder
+     */
+
+    public ApprovalFlowBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
+        this.custom = custom;
+        return this;
+    }
+
+    /**
      *  <p>Unique identifier of the Approval Flow.</p>
      * @return id
      */
@@ -797,7 +835,7 @@ public class ApprovalFlowBuilder implements Builder<ApprovalFlow> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the ApprovalFlow.</p>
      * @return createdBy
      */
 
@@ -807,7 +845,7 @@ public class ApprovalFlowBuilder implements Builder<ApprovalFlow> {
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the ApprovalFlow.</p>
      * @return lastModifiedBy
      */
 
@@ -899,6 +937,16 @@ public class ApprovalFlowBuilder implements Builder<ApprovalFlow> {
     }
 
     /**
+     *  <p>Custom Fields on the Approval Flow.</p>
+     * @return custom
+     */
+
+    @Nullable
+    public com.commercetools.api.models.type.CustomFields getCustom() {
+        return this.custom;
+    }
+
+    /**
      * builds ApprovalFlow with checking for non-null required values
      * @return ApprovalFlow
      */
@@ -918,7 +966,7 @@ public class ApprovalFlowBuilder implements Builder<ApprovalFlow> {
             ApprovalFlow.class + ": currentTierPendingApprovers is missing");
         return new ApprovalFlowImpl(id, version, createdAt, lastModifiedAt, createdBy, lastModifiedBy, order,
             businessUnit, rules, status, rejection, approvals, eligibleApprovers, pendingApprovers,
-            currentTierPendingApprovers);
+            currentTierPendingApprovers, custom);
     }
 
     /**
@@ -928,7 +976,7 @@ public class ApprovalFlowBuilder implements Builder<ApprovalFlow> {
     public ApprovalFlow buildUnchecked() {
         return new ApprovalFlowImpl(id, version, createdAt, lastModifiedAt, createdBy, lastModifiedBy, order,
             businessUnit, rules, status, rejection, approvals, eligibleApprovers, pendingApprovers,
-            currentTierPendingApprovers);
+            currentTierPendingApprovers, custom);
     }
 
     /**
@@ -961,6 +1009,7 @@ public class ApprovalFlowBuilder implements Builder<ApprovalFlow> {
         builder.eligibleApprovers = template.getEligibleApprovers();
         builder.pendingApprovers = template.getPendingApprovers();
         builder.currentTierPendingApprovers = template.getCurrentTierPendingApprovers();
+        builder.custom = template.getCustom();
         return builder;
     }
 

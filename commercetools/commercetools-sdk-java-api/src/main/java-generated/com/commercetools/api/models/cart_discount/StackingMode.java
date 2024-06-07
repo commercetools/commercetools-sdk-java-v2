@@ -17,14 +17,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface StackingMode extends JsonEnum {
 
     /**
-    	<p>Applies other matching Discounts after applying this one.</p>
-
-    */
+    <p>Applies other matching Discounts after applying this one.</p> */
     StackingMode STACKING = StackingModeEnum.STACKING;
     /**
-    	<p>Doesn't apply any more matching Discounts after this one if it's successfully applied.</p>
-
-    */
+    <p>Doesn't apply any more matching Discounts after this one if it's successfully applied.</p> */
     StackingMode STOP_AFTER_THIS_DISCOUNT = StackingModeEnum.STOP_AFTER_THIS_DISCOUNT;
 
     /**

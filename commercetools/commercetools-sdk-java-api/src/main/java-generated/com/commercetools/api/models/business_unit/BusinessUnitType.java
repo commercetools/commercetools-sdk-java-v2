@@ -17,14 +17,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface BusinessUnitType extends JsonEnum {
 
     /**
-    	<p>Top-level Business Unit. Must not have a <code>parentUnit</code> defined.</p>
-
-    */
+    <p>Top-level Business Unit. Must not have a <code>parentUnit</code> defined.</p> */
     BusinessUnitType COMPANY = BusinessUnitTypeEnum.COMPANY;
     /**
-    	<p>Business Unit with a <code>parentUnit</code> reference to a <a href="ctp:api:type:Division">Company</a> or another Division.</p>
-
-    */
+    <p>Business Unit with a <code>parentUnit</code> reference to a Company or another Division.</p> */
     BusinessUnitType DIVISION = BusinessUnitTypeEnum.DIVISION;
 
     /**

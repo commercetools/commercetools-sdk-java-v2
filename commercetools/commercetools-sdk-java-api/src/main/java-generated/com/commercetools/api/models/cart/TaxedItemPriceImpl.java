@@ -26,6 +26,8 @@ public class TaxedItemPriceImpl implements TaxedItemPrice, ModelBase {
 
     private com.commercetools.api.models.common.CentPrecisionMoney totalGross;
 
+    private java.util.List<com.commercetools.api.models.cart.TaxPortion> taxPortions;
+
     private com.commercetools.api.models.common.CentPrecisionMoney totalTax;
 
     /**
@@ -34,9 +36,11 @@ public class TaxedItemPriceImpl implements TaxedItemPrice, ModelBase {
     @JsonCreator
     TaxedItemPriceImpl(@JsonProperty("totalNet") final com.commercetools.api.models.common.CentPrecisionMoney totalNet,
             @JsonProperty("totalGross") final com.commercetools.api.models.common.CentPrecisionMoney totalGross,
+            @JsonProperty("taxPortions") final java.util.List<com.commercetools.api.models.cart.TaxPortion> taxPortions,
             @JsonProperty("totalTax") final com.commercetools.api.models.common.CentPrecisionMoney totalTax) {
         this.totalNet = totalNet;
         this.totalGross = totalGross;
+        this.taxPortions = taxPortions;
         this.totalTax = totalTax;
     }
 
@@ -63,6 +67,15 @@ public class TaxedItemPriceImpl implements TaxedItemPrice, ModelBase {
     }
 
     /**
+     *  <p>Taxable portions added to the total net price.</p>
+     *  <p>Calculated from the TaxRates.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.cart.TaxPortion> getTaxPortions() {
+        return this.taxPortions;
+    }
+
+    /**
      *  <p>Total tax applicable for the Line Item or Custom Line Item. Automatically calculated as the difference between the <code>totalGross</code> and <code>totalNet</code> values.</p>
      */
 
@@ -76,6 +89,14 @@ public class TaxedItemPriceImpl implements TaxedItemPrice, ModelBase {
 
     public void setTotalGross(final com.commercetools.api.models.common.CentPrecisionMoney totalGross) {
         this.totalGross = totalGross;
+    }
+
+    public void setTaxPortions(final com.commercetools.api.models.cart.TaxPortion... taxPortions) {
+        this.taxPortions = new ArrayList<>(Arrays.asList(taxPortions));
+    }
+
+    public void setTaxPortions(final java.util.List<com.commercetools.api.models.cart.TaxPortion> taxPortions) {
+        this.taxPortions = taxPortions;
     }
 
     public void setTotalTax(final com.commercetools.api.models.common.CentPrecisionMoney totalTax) {
@@ -94,22 +115,29 @@ public class TaxedItemPriceImpl implements TaxedItemPrice, ModelBase {
 
         return new EqualsBuilder().append(totalNet, that.totalNet)
                 .append(totalGross, that.totalGross)
+                .append(taxPortions, that.taxPortions)
                 .append(totalTax, that.totalTax)
                 .append(totalNet, that.totalNet)
                 .append(totalGross, that.totalGross)
+                .append(taxPortions, that.taxPortions)
                 .append(totalTax, that.totalTax)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(totalNet).append(totalGross).append(totalTax).toHashCode();
+        return new HashCodeBuilder(17, 37).append(totalNet)
+                .append(totalGross)
+                .append(taxPortions)
+                .append(totalTax)
+                .toHashCode();
     }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("totalNet", totalNet)
                 .append("totalGross", totalGross)
+                .append("taxPortions", taxPortions)
                 .append("totalTax", totalTax)
                 .build();
     }

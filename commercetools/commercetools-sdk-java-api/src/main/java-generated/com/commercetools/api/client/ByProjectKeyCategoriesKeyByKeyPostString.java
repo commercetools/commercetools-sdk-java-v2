@@ -38,7 +38,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ByProjectKeyCategoriesKeyByKeyPostString extends
         StringBodyApiMethod<ByProjectKeyCategoriesKeyByKeyPostString, com.commercetools.api.models.category.Category>
-        implements com.commercetools.api.client.ConflictingTrait<ByProjectKeyCategoriesKeyByKeyPostString>,
+        implements CategoryExpansionMixin<ByProjectKeyCategoriesKeyByKeyPost>,
+        com.commercetools.api.client.ConflictingTrait<ByProjectKeyCategoriesKeyByKeyPostString>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyCategoriesKeyByKeyPostString>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyCategoriesKeyByKeyPostString>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyCategoriesKeyByKeyPostString> {

@@ -24,7 +24,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
  *             .shipmentState(ShipmentState.SHIPPED)
- *             .oldShipmentState(ShipmentState.SHIPPED)
  *             .build()
  * </code></pre>
  * </div>
@@ -57,6 +56,7 @@ public class OrderShipmentStateChangedMessageBuilder implements Builder<OrderShi
 
     private com.commercetools.api.models.order.ShipmentState shipmentState;
 
+    @Nullable
     private com.commercetools.api.models.order.ShipmentState oldShipmentState;
 
     /**
@@ -104,7 +104,7 @@ public class OrderShipmentStateChangedMessageBuilder implements Builder<OrderShi
     }
 
     /**
-     *  <p>Value of <code>createdBy</code>.</p>
+     *  <p>IDs and references that last modified the Message.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
@@ -116,7 +116,7 @@ public class OrderShipmentStateChangedMessageBuilder implements Builder<OrderShi
     }
 
     /**
-     *  <p>Value of <code>createdBy</code>.</p>
+     *  <p>IDs and references that last modified the Message.</p>
      * @param builder function to build the lastModifiedBy value
      * @return Builder
      */
@@ -128,7 +128,7 @@ public class OrderShipmentStateChangedMessageBuilder implements Builder<OrderShi
     }
 
     /**
-     *  <p>Value of <code>createdBy</code>.</p>
+     *  <p>IDs and references that last modified the Message.</p>
      * @param lastModifiedBy value to be set
      * @return Builder
      */
@@ -140,7 +140,7 @@ public class OrderShipmentStateChangedMessageBuilder implements Builder<OrderShi
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Message.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
@@ -152,7 +152,7 @@ public class OrderShipmentStateChangedMessageBuilder implements Builder<OrderShi
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Message.</p>
      * @param builder function to build the createdBy value
      * @return Builder
      */
@@ -164,7 +164,7 @@ public class OrderShipmentStateChangedMessageBuilder implements Builder<OrderShi
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Message.</p>
      * @param createdBy value to be set
      * @return Builder
      */
@@ -279,7 +279,7 @@ public class OrderShipmentStateChangedMessageBuilder implements Builder<OrderShi
      */
 
     public OrderShipmentStateChangedMessageBuilder oldShipmentState(
-            final com.commercetools.api.models.order.ShipmentState oldShipmentState) {
+            @Nullable final com.commercetools.api.models.order.ShipmentState oldShipmentState) {
         this.oldShipmentState = oldShipmentState;
         return this;
     }
@@ -321,7 +321,7 @@ public class OrderShipmentStateChangedMessageBuilder implements Builder<OrderShi
     }
 
     /**
-     *  <p>Value of <code>createdBy</code>.</p>
+     *  <p>IDs and references that last modified the Message.</p>
      * @return lastModifiedBy
      */
 
@@ -331,7 +331,7 @@ public class OrderShipmentStateChangedMessageBuilder implements Builder<OrderShi
     }
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Message.</p>
      * @return createdBy
      */
 
@@ -391,6 +391,7 @@ public class OrderShipmentStateChangedMessageBuilder implements Builder<OrderShi
      * @return oldShipmentState
      */
 
+    @Nullable
     public com.commercetools.api.models.order.ShipmentState getOldShipmentState() {
         return this.oldShipmentState;
     }
@@ -409,8 +410,6 @@ public class OrderShipmentStateChangedMessageBuilder implements Builder<OrderShi
         Objects.requireNonNull(resourceVersion,
             OrderShipmentStateChangedMessage.class + ": resourceVersion is missing");
         Objects.requireNonNull(shipmentState, OrderShipmentStateChangedMessage.class + ": shipmentState is missing");
-        Objects.requireNonNull(oldShipmentState,
-            OrderShipmentStateChangedMessage.class + ": oldShipmentState is missing");
         return new OrderShipmentStateChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, shipmentState,
             oldShipmentState);

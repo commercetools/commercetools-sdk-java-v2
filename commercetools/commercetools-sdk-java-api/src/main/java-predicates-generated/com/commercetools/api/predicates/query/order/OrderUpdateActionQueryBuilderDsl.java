@@ -390,6 +390,21 @@ public class OrderUpdateActionQueryBuilderDsl {
             OrderUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<OrderUpdateActionQueryBuilderDsl> asSetShippingCustomField(
+            Function<com.commercetools.api.predicates.query.order.OrderSetShippingCustomFieldActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.order.OrderSetShippingCustomFieldActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.order.OrderSetShippingCustomFieldActionQueryBuilderDsl.of()),
+            OrderUpdateActionQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<OrderUpdateActionQueryBuilderDsl> asSetShippingCustomType(
+            Function<com.commercetools.api.predicates.query.order.OrderSetShippingCustomTypeActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.order.OrderSetShippingCustomTypeActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.order.OrderSetShippingCustomTypeActionQueryBuilderDsl.of()),
+            OrderUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<OrderUpdateActionQueryBuilderDsl> asSetStore(
             Function<com.commercetools.api.predicates.query.order.OrderSetStoreActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.order.OrderSetStoreActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

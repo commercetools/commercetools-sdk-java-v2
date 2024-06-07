@@ -75,4 +75,8 @@ public class ByProjectKeyRequestBuilder {
         return new ByProjectKeyTypesRequestBuilder(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyDiscountCodesRequestBuilder discountCodes() {
+        return new ByProjectKeyDiscountCodesRequestBuilder(apiHttpClient, projectKey);
+    }
+
 }

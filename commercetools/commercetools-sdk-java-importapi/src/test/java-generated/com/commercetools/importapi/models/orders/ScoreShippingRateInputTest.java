@@ -24,13 +24,13 @@ public class ScoreShippingRateInputTest {
 
     @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ScoreShippingRateInput.builder().score(0.9551507) } };
+        return new Object[][] { new Object[] { ScoreShippingRateInput.builder().score(9L) } };
     }
 
     @Test
     public void score() {
         ScoreShippingRateInput value = ScoreShippingRateInput.of();
-        value.setScore(0.9551507);
-        Assertions.assertThat(value.getScore()).isEqualTo(0.9551507);
+        value.setScore(9L);
+        Assertions.assertThat(value.getScore()).isEqualTo(9L);
     }
 }

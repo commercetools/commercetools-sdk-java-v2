@@ -80,6 +80,39 @@ public class ConcurrentModificationTest {
     }
 
     @Test
+    public void concurrentModWithoutRetry() {
+        ServiceRegion region = System.getenv("CTP_REGION") == null ? ServiceRegion.GCP_EUROPE_WEST1
+                : ServiceRegion.valueOf(System.getenv("CTP_REGION"));
+        String authURL = System.getenv("CTP_AUTH_URL") == null ? region.getOAuthTokenUrl()
+                : System.getenv("CTP_AUTH_URL");
+        String apiUrl = System.getenv("CTP_API_URL") == null ? region.getApiUrl() : System.getenv("CTP_API_URL");
+
+        final ProjectApiRoot projectApiRoot = ApiRootBuilder.of()
+                .defaultClient(ClientCredentials.of()
+                        .withClientId(CommercetoolsTestUtils.getClientId())
+                        .withClientSecret(CommercetoolsTestUtils.getClientSecret())
+                        .build(),
+                    authURL, apiUrl)
+                .withErrorMiddleware(ErrorMiddleware.ExceptionMode.UNWRAP_COMPLETION_EXCEPTION)
+                .build(CommercetoolsTestUtils.getProjectKey());
+
+        CartsFixtures.withUpdateableCart(cart -> {
+
+            final Cart modCart = RetryHandler
+                    .concurrentModification(projectApiRoot.carts()
+                            .withId(cart.getId())
+                            .post(CartUpdateBuilder.of()
+                                    .version(cart.getVersion())
+                                    .actions(CartSetCountryActionBuilder.of().country("DE").build())
+                                    .build()),
+                        CartUpdate::builder, CartUpdateBuilder::version)
+                    .executeBlocking()
+                    .getBody();
+            return modCart;
+        });
+    }
+
+    @Test
     public void concurrentModDelete() {
         ServiceRegion region = System.getenv("CTP_REGION") == null ? ServiceRegion.GCP_EUROPE_WEST1
                 : ServiceRegion.valueOf(System.getenv("CTP_REGION"));
@@ -109,6 +142,60 @@ public class ConcurrentModificationTest {
                     .executeBlocking()
                     .getBody();
             return deletedProductType;
+        });
+    }
+
+    @Test
+    public void concurrentModDeleteWithoutRetry() {
+        ServiceRegion region = System.getenv("CTP_REGION") == null ? ServiceRegion.GCP_EUROPE_WEST1
+                : ServiceRegion.valueOf(System.getenv("CTP_REGION"));
+        String authURL = System.getenv("CTP_AUTH_URL") == null ? region.getOAuthTokenUrl()
+                : System.getenv("CTP_AUTH_URL");
+        String apiUrl = System.getenv("CTP_API_URL") == null ? region.getApiUrl() : System.getenv("CTP_API_URL");
+
+        final ProjectApiRoot projectApiRoot = ApiRootBuilder.of()
+                .defaultClient(ClientCredentials.of()
+                        .withClientId(CommercetoolsTestUtils.getClientId())
+                        .withClientSecret(CommercetoolsTestUtils.getClientSecret())
+                        .build(),
+                    authURL, apiUrl)
+                .withErrorMiddleware(ErrorMiddleware.ExceptionMode.UNWRAP_COMPLETION_EXCEPTION)
+                .build(CommercetoolsTestUtils.getProjectKey());
+
+        ProductTypeFixtures.withUpdateableProductType(productType -> {
+
+            final ProductType deletedProductType = RetryHandler
+                    .concurrentModification(projectApiRoot.productTypes().delete(productType))
+                    .executeBlocking()
+                    .getBody();
+            return deletedProductType;
+        });
+    }
+
+    @Test
+    public void concurrentModMiddlewareSuccess() {
+        String projectKey = CommercetoolsTestUtils.getProjectKey();
+
+        ProjectApiRoot projectApiRoot = ApiRootBuilder.of()
+                .defaultClient(ClientCredentials.of()
+                        .withClientId(CommercetoolsTestUtils.getClientId())
+                        .withClientSecret(CommercetoolsTestUtils.getClientSecret())
+                        .build(),
+                    ServiceRegion.GCP_EUROPE_WEST1)
+                .addConcurrentModificationMiddleware(3)
+                .build(projectKey);
+
+        CartsFixtures.withUpdateableCart(cart -> {
+
+            final Cart modCart = projectApiRoot.carts()
+                    .withId(cart.getId())
+                    .post(CartUpdateBuilder.of()
+                            .version(cart.getVersion())
+                            .actions(CartSetCountryActionBuilder.of().country("DE").build())
+                            .build())
+                    .executeBlocking()
+                    .getBody();
+            return modCart;
         });
     }
 

@@ -17,14 +17,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ImportOperationState extends JsonEnum {
 
     /**
-    	<p>This is an initial state of import resource and is currently processing.</p>
-
-    */
+    <p>This is an initial state of import resource and is currently processing.</p> */
     ImportOperationState PROCESSING = ImportOperationStateEnum.PROCESSING;
     /**
-    	<p>The validation of the import resource failed.</p>
-
-    */
+    <p>The validation of the import resource failed.</p> */
     ImportOperationState VALIDATION_FAILED = ImportOperationStateEnum.VALIDATION_FAILED;
 
     /**

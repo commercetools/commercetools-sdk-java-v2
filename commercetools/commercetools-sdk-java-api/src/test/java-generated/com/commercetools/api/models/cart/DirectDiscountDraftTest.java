@@ -26,7 +26,7 @@ public class DirectDiscountDraftTest {
     public static Object[][] objectBuilder() {
         return new Object[][] {
                 new Object[] { DirectDiscountDraft.builder()
-                        .value(new com.commercetools.api.models.cart_discount.CartDiscountValueImpl()) },
+                        .value(new com.commercetools.api.models.cart_discount.CartDiscountValueDraftImpl()) },
                 new Object[] { DirectDiscountDraft.builder()
                         .target(new com.commercetools.api.models.cart_discount.CartDiscountTargetImpl()) } };
     }
@@ -34,9 +34,9 @@ public class DirectDiscountDraftTest {
     @Test
     public void value() {
         DirectDiscountDraft value = DirectDiscountDraft.of();
-        value.setValue(new com.commercetools.api.models.cart_discount.CartDiscountValueImpl());
+        value.setValue(new com.commercetools.api.models.cart_discount.CartDiscountValueDraftImpl());
         Assertions.assertThat(value.getValue())
-                .isEqualTo(new com.commercetools.api.models.cart_discount.CartDiscountValueImpl());
+                .isEqualTo(new com.commercetools.api.models.cart_discount.CartDiscountValueDraftImpl());
     }
 
     @Test

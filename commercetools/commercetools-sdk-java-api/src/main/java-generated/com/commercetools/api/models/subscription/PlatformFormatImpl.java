@@ -27,7 +27,7 @@ public class PlatformFormatImpl implements PlatformFormat, ModelBase {
      * create instance with all properties
      */
     @JsonCreator
-    PlatformFormatImpl() {
+    public PlatformFormatImpl() {
         this.type = PLATFORM;
     }
 

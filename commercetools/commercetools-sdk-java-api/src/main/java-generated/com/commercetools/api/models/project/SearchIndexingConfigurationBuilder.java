@@ -27,6 +27,9 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     private com.commercetools.api.models.project.SearchIndexingConfigurationValues products;
 
     @Nullable
+    private com.commercetools.api.models.project.SearchIndexingConfigurationValues productsSearch;
+
+    @Nullable
     private com.commercetools.api.models.project.SearchIndexingConfigurationValues orders;
 
     /**
@@ -65,6 +68,45 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     public SearchIndexingConfigurationBuilder products(
             @Nullable final com.commercetools.api.models.project.SearchIndexingConfigurationValues products) {
         this.products = products;
+        return this;
+    }
+
+    /**
+     *  <p>Configuration for the Product Search feature.</p>
+     * @param builder function to build the productsSearch value
+     * @return Builder
+     */
+
+    public SearchIndexingConfigurationBuilder productsSearch(
+            Function<com.commercetools.api.models.project.SearchIndexingConfigurationValuesBuilder, com.commercetools.api.models.project.SearchIndexingConfigurationValuesBuilder> builder) {
+        this.productsSearch = builder
+                .apply(com.commercetools.api.models.project.SearchIndexingConfigurationValuesBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>Configuration for the Product Search feature.</p>
+     * @param builder function to build the productsSearch value
+     * @return Builder
+     */
+
+    public SearchIndexingConfigurationBuilder withProductsSearch(
+            Function<com.commercetools.api.models.project.SearchIndexingConfigurationValuesBuilder, com.commercetools.api.models.project.SearchIndexingConfigurationValues> builder) {
+        this.productsSearch = builder
+                .apply(com.commercetools.api.models.project.SearchIndexingConfigurationValuesBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Configuration for the Product Search feature.</p>
+     * @param productsSearch value to be set
+     * @return Builder
+     */
+
+    public SearchIndexingConfigurationBuilder productsSearch(
+            @Nullable final com.commercetools.api.models.project.SearchIndexingConfigurationValues productsSearch) {
+        this.productsSearch = productsSearch;
         return this;
     }
 
@@ -116,6 +158,16 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     }
 
     /**
+     *  <p>Configuration for the Product Search feature.</p>
+     * @return productsSearch
+     */
+
+    @Nullable
+    public com.commercetools.api.models.project.SearchIndexingConfigurationValues getProductsSearch() {
+        return this.productsSearch;
+    }
+
+    /**
      *  <p>Configuration for the Order Search feature.</p>
      * @return orders
      */
@@ -130,7 +182,7 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
      * @return SearchIndexingConfiguration
      */
     public SearchIndexingConfiguration build() {
-        return new SearchIndexingConfigurationImpl(products, orders);
+        return new SearchIndexingConfigurationImpl(products, productsSearch, orders);
     }
 
     /**
@@ -138,7 +190,7 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
      * @return SearchIndexingConfiguration
      */
     public SearchIndexingConfiguration buildUnchecked() {
-        return new SearchIndexingConfigurationImpl(products, orders);
+        return new SearchIndexingConfigurationImpl(products, productsSearch, orders);
     }
 
     /**
@@ -157,6 +209,7 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     public static SearchIndexingConfigurationBuilder of(final SearchIndexingConfiguration template) {
         SearchIndexingConfigurationBuilder builder = new SearchIndexingConfigurationBuilder();
         builder.products = template.getProducts();
+        builder.productsSearch = template.getProductsSearch();
         builder.orders = template.getOrders();
         return builder;
     }

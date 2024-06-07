@@ -121,6 +121,10 @@ public class ByProjectKeyRequestBuilder {
         return new ByProjectKeyProductSelectionsRequestBuilder(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyProductTailoringRequestBuilder productTailoring() {
+        return new ByProjectKeyProductTailoringRequestBuilder(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyProductTypesRequestBuilder productTypes() {
         return new ByProjectKeyProductTypesRequestBuilder(apiHttpClient, projectKey);
     }

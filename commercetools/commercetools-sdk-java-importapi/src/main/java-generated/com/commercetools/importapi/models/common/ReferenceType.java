@@ -17,104 +17,64 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ReferenceType extends JsonEnum {
 
     /**
-    	<p>References a cart.</p>
-
-    */
+    <p>References a cart.</p> */
     ReferenceType CART = ReferenceTypeEnum.CART;
     /**
-    	<p>References a cart discount.</p>
-
-    */
+    <p>References a cart discount.</p> */
     ReferenceType CART_DISCOUNT = ReferenceTypeEnum.CART_DISCOUNT;
     /**
-    	<p>References a category.</p>
-
-    */
+    <p>References a category.</p> */
     ReferenceType CATEGORY = ReferenceTypeEnum.CATEGORY;
     /**
-    	<p>References a channel.</p>
-
-    */
+    <p>References a channel.</p> */
     ReferenceType CHANNEL = ReferenceTypeEnum.CHANNEL;
     /**
-    	<p>References a customer.</p>
-
-    */
+    <p>References a customer.</p> */
     ReferenceType CUSTOMER = ReferenceTypeEnum.CUSTOMER;
     /**
-    	<p>References a customer group.</p>
-
-    */
+    <p>References a customer group.</p> */
     ReferenceType CUSTOMER_GROUP = ReferenceTypeEnum.CUSTOMER_GROUP;
     /**
-    	<p>References a discount code.</p>
-
-    */
+    <p>References a discount code.</p> */
     ReferenceType DISCOUNT_CODE = ReferenceTypeEnum.DISCOUNT_CODE;
     /**
-    	<p>References an order.</p>
-
-    */
+    <p>References an order.</p> */
     ReferenceType ORDER = ReferenceTypeEnum.ORDER;
     /**
-    	<p>References a payment</p>
-
-    */
+    <p>References a payment</p> */
     ReferenceType PAYMENT = ReferenceTypeEnum.PAYMENT;
     /**
-    	<p>References a price.</p>
-
-    */
+    <p>References a price.</p> */
     ReferenceType PRICE = ReferenceTypeEnum.PRICE;
     /**
-    	<p>References a product.</p>
-
-    */
+    <p>References a product.</p> */
     ReferenceType PRODUCT = ReferenceTypeEnum.PRODUCT;
     /**
-    	<p>References a product discount.</p>
-
-    */
+    <p>References a product discount.</p> */
     ReferenceType PRODUCT_DISCOUNT = ReferenceTypeEnum.PRODUCT_DISCOUNT;
     /**
-    	<p>References a product type.</p>
-
-    */
+    <p>References a product type.</p> */
     ReferenceType PRODUCT_TYPE = ReferenceTypeEnum.PRODUCT_TYPE;
     /**
-    	<p>References a product variant.</p>
-
-    */
+    <p>References a product variant.</p> */
     ReferenceType PRODUCT_VARIANT = ReferenceTypeEnum.PRODUCT_VARIANT;
     /**
-    	<p>References a shipping method.</p>
-
-    */
+    <p>References a shipping method.</p> */
     ReferenceType SHIPPING_METHOD = ReferenceTypeEnum.SHIPPING_METHOD;
     /**
-    	<p>References a state.</p>
-
-    */
+    <p>References a state.</p> */
     ReferenceType STATE = ReferenceTypeEnum.STATE;
     /**
-    	<p>References a store.</p>
-
-    */
+    <p>References a store.</p> */
     ReferenceType STORE = ReferenceTypeEnum.STORE;
     /**
-    	<p>References a tax-category.</p>
-
-    */
+    <p>References a tax-category.</p> */
     ReferenceType TAX_CATEGORY = ReferenceTypeEnum.TAX_CATEGORY;
     /**
-    	<p>References a type.</p>
-
-    */
+    <p>References a type.</p> */
     ReferenceType TYPE = ReferenceTypeEnum.TYPE;
     /**
-    	<p>References a custom object</p>
-
-    */
+    <p>References a custom object</p> */
     ReferenceType KEY_VALUE_DOCUMENT = ReferenceTypeEnum.KEY_VALUE_DOCUMENT;
 
     /**

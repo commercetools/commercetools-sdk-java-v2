@@ -30,6 +30,10 @@ public class ProductVariantAvailabilityImpl implements ProductVariantAvailabilit
 
     private Long availableQuantity;
 
+    private String id;
+
+    private Long version;
+
     /**
      * create instance with all properties
      */
@@ -38,11 +42,14 @@ public class ProductVariantAvailabilityImpl implements ProductVariantAvailabilit
             @JsonProperty("channels") final com.commercetools.api.models.product.ProductVariantChannelAvailabilityMap channels,
             @JsonProperty("isOnStock") final Boolean isOnStock,
             @JsonProperty("restockableInDays") final Long restockableInDays,
-            @JsonProperty("availableQuantity") final Long availableQuantity) {
+            @JsonProperty("availableQuantity") final Long availableQuantity, @JsonProperty("id") final String id,
+            @JsonProperty("version") final Long version) {
         this.channels = channels;
         this.isOnStock = isOnStock;
         this.restockableInDays = restockableInDays;
         this.availableQuantity = availableQuantity;
+        this.id = id;
+        this.version = version;
     }
 
     /**
@@ -83,6 +90,22 @@ public class ProductVariantAvailabilityImpl implements ProductVariantAvailabilit
         return this.availableQuantity;
     }
 
+    /**
+     *  <p>Unique identifier of the InventoryEntry.</p>
+     */
+
+    public String getId() {
+        return this.id;
+    }
+
+    /**
+     *  <p>Current version of the InventoryEntry.</p>
+     */
+
+    public Long getVersion() {
+        return this.version;
+    }
+
     public void setChannels(final com.commercetools.api.models.product.ProductVariantChannelAvailabilityMap channels) {
         this.channels = channels;
     }
@@ -99,6 +122,14 @@ public class ProductVariantAvailabilityImpl implements ProductVariantAvailabilit
         this.availableQuantity = availableQuantity;
     }
 
+    public void setId(final String id) {
+        this.id = id;
+    }
+
+    public void setVersion(final Long version) {
+        this.version = version;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -113,10 +144,14 @@ public class ProductVariantAvailabilityImpl implements ProductVariantAvailabilit
                 .append(isOnStock, that.isOnStock)
                 .append(restockableInDays, that.restockableInDays)
                 .append(availableQuantity, that.availableQuantity)
+                .append(id, that.id)
+                .append(version, that.version)
                 .append(channels, that.channels)
                 .append(isOnStock, that.isOnStock)
                 .append(restockableInDays, that.restockableInDays)
                 .append(availableQuantity, that.availableQuantity)
+                .append(id, that.id)
+                .append(version, that.version)
                 .isEquals();
     }
 
@@ -126,6 +161,8 @@ public class ProductVariantAvailabilityImpl implements ProductVariantAvailabilit
                 .append(isOnStock)
                 .append(restockableInDays)
                 .append(availableQuantity)
+                .append(id)
+                .append(version)
                 .toHashCode();
     }
 
@@ -135,6 +172,8 @@ public class ProductVariantAvailabilityImpl implements ProductVariantAvailabilit
                 .append("isOnStock", isOnStock)
                 .append("restockableInDays", restockableInDays)
                 .append("availableQuantity", availableQuantity)
+                .append("id", id)
+                .append("version", version)
                 .build();
     }
 

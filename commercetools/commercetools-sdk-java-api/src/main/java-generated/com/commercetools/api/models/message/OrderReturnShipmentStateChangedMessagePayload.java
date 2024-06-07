@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Generated after a successful Set ReturnShipmentState update action.</p>
+ *  <p>Generated after a successful Set ReturnShipmentState update action on Orders and Order Edits.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

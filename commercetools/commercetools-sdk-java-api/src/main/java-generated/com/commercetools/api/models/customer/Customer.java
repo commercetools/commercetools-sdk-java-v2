@@ -39,6 +39,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .email("{email}")
  *             .plusAddresses(addressesBuilder -> addressesBuilder)
  *             .isEmailVerified(true)
+ *             .plusStores(storesBuilder -> storesBuilder)
  *             .authenticationMode(AuthenticationMode.PASSWORD)
  *             .build()
  * </code></pre>
@@ -85,7 +86,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
     public String getCustomerNumber();
 
     /**
-     *  <p>Optional identifier for use in external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
+     *  <p>Optional identifier for use in external systems like customer relationship management (CRM) or enterprise resource planning (ERP).</p>
      * @return externalId
      */
 
@@ -109,7 +110,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the Customer.</p>
      * @return lastModifiedBy
      */
     @Valid
@@ -117,7 +118,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
     public LastModifiedBy getLastModifiedBy();
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Customer.</p>
      * @return createdBy
      */
     @Valid
@@ -280,11 +281,12 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
     /**
      *  <p>Stores to which the Customer is assigned to.</p>
      *  <ul>
-     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
+     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
      *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
      *  </ul>
      * @return stores
      */
+    @NotNull
     @Valid
     @JsonProperty("stores")
     public List<StoreKeyReference> getStores();
@@ -327,7 +329,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
     public void setCustomerNumber(final String customerNumber);
 
     /**
-     *  <p>Optional identifier for use in external systems like Customer Relationship Management (CRM) or Enterprise Resource Planning (ERP).</p>
+     *  <p>Optional identifier for use in external systems like customer relationship management (CRM) or enterprise resource planning (ERP).</p>
      * @param externalId value to be set
      */
 
@@ -348,14 +350,14 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that last modified the Customer.</p>
      * @param lastModifiedBy value to be set
      */
 
     public void setLastModifiedBy(final LastModifiedBy lastModifiedBy);
 
     /**
-     *  <p>Present on resources created after 1 February 2019 except for events not tracked.</p>
+     *  <p>IDs and references that created the Customer.</p>
      * @param createdBy value to be set
      */
 
@@ -521,7 +523,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
     /**
      *  <p>Stores to which the Customer is assigned to.</p>
      *  <ul>
-     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
+     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
      *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
      *  </ul>
      * @param stores values to be set
@@ -533,7 +535,7 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
     /**
      *  <p>Stores to which the Customer is assigned to.</p>
      *  <ul>
-     *   <li>If no Stores are specified, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
+     *   <li>If <code>stores</code> is empty, the Customer is a global customer, and can log in using the Password Flow for global Customers.</li>
      *   <li>If any Stores are specified, the Customer can only log in using the Password Flow for Customers in a Store for those specific Stores.</li>
      *  </ul>
      * @param stores values to be set

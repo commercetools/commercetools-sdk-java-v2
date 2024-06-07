@@ -44,7 +44,7 @@ public interface ApprovalFlowApproval {
     public Associate getApprover();
 
     /**
-     *  <p>Date and time (UTC) when the Approval Flow was approved at.</p>
+     *  <p>Date and time (UTC) the Approval Flow was approved.</p>
      * @return approvedAt
      */
     @NotNull
@@ -59,7 +59,7 @@ public interface ApprovalFlowApproval {
     public void setApprover(final Associate approver);
 
     /**
-     *  <p>Date and time (UTC) when the Approval Flow was approved at.</p>
+     *  <p>Date and time (UTC) the Approval Flow was approved.</p>
      * @param approvedAt value to be set
      */
 

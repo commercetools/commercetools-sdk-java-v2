@@ -27,7 +27,7 @@ public class AttributeMoneyTypeImpl implements AttributeMoneyType, ModelBase {
      * create instance with all properties
      */
     @JsonCreator
-    AttributeMoneyTypeImpl() {
+    public AttributeMoneyTypeImpl() {
         this.name = MONEY;
     }
 

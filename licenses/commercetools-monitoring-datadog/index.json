@@ -2,7 +2,7 @@
     "dependencies": [
         {
             "moduleName": "com.datadoghq:datadog-api-client",
-            "moduleVersion": "2.24.0",
+            "moduleVersion": "2.25.0",
             "moduleUrls": [
                 "https://github.com/DataDog/datadog-api-client-java"
             ],
@@ -15,7 +15,7 @@
         },
         {
             "moduleName": "com.datadoghq:java-dogstatsd-client",
-            "moduleVersion": "4.3.0",
+            "moduleVersion": "4.4.2",
             "moduleUrls": [
                 "https://github.com/DataDog/java-dogstatsd-client"
             ],
@@ -32,7 +32,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-annotations",
-            "moduleVersion": "2.17.0",
+            "moduleVersion": "2.17.1",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson"
             ],
@@ -45,7 +45,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-core",
-            "moduleVersion": "2.17.0",
+            "moduleVersion": "2.17.1",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-core"
             ],
@@ -58,7 +58,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-databind",
-            "moduleVersion": "2.17.0",
+            "moduleVersion": "2.17.1",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson"
             ],
@@ -71,7 +71,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.datatype:jackson-datatype-jsr310",
-            "moduleVersion": "2.17.0",
+            "moduleVersion": "2.17.1",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-modules-java8/jackson-datatype-jsr310"
             ],
@@ -84,7 +84,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.module:jackson-module-jakarta-xmlbind-annotations",
-            "moduleVersion": "2.17.0",
+            "moduleVersion": "2.17.1",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-modules-base"
             ],
@@ -383,16 +383,6 @@
                 {
                     "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2 + Classpath Exception",
                     "moduleLicenseUrl": "https://openjdk.java.net/legal/gplv2+ce.html"
-                }
-            ]
-        },
-        {
-            "moduleName": "net.bytebuddy:byte-buddy",
-            "moduleVersion": "1.14.9",
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
                 }
             ]
         },

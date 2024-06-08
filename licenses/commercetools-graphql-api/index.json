@@ -192,6 +192,28 @@
             ]
         },
         {
+            "moduleName": "jakarta.validation:jakarta.validation-api",
+            "moduleVersion": "3.1.0",
+            "moduleUrls": [
+                "https://beanvalidation.org",
+                "https://www.eclipse.org"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                },
+                {
+                    "moduleLicense": "Eclipse Public License - v 2.0",
+                    "moduleLicenseUrl": "https://www.eclipse.org/org/documents/epl-2.0/EPL-2.0.txt"
+                },
+                {
+                    "moduleLicense": "GNU GENERAL PUBLIC LICENSE, Version 2 + Classpath Exception",
+                    "moduleLicenseUrl": "https://openjdk.java.net/legal/gplv2+ce.html"
+                }
+            ]
+        },
+        {
             "moduleName": "javax.money:money-api",
             "moduleVersion": "1.1",
             "moduleUrls": [
@@ -206,19 +228,6 @@
                 {
                     "moduleLicense": "JSR 354 Spec Evaluation/Implementation License",
                     "moduleLicenseUrl": null
-                }
-            ]
-        },
-        {
-            "moduleName": "javax.validation:validation-api",
-            "moduleVersion": "2.0.1.Final",
-            "moduleUrls": [
-                "http://beanvalidation.org"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
                 }
             ]
         },

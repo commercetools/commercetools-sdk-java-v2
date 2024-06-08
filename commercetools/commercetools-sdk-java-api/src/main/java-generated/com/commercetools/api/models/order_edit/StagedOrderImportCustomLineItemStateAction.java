@@ -7,8 +7,6 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.order.ItemState;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
@@ -16,6 +14,9 @@ import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
 
 /**
  *  <p>The import of States does not follow any predefined rules and should be only used if no transitions are defined. The <code>quantity</code> of the ItemStates must match the sum of all Custom Line Item states' quantities.</p>

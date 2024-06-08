@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
 
 /**
  *  <p>Generated after adding a Custom Field to an Address of a Customer using the Set CustomField in Address update action. If a Custom Field already exists with the same name, a CustomerAddressCustomFieldChanged Message is generated instead.</p>

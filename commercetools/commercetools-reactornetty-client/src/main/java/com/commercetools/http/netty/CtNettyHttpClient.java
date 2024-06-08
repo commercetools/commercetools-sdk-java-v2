@@ -8,8 +8,6 @@ import java.util.function.BiFunction;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
-import javax.validation.constraints.NotNull;
-
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelOption;
 import io.netty.handler.codec.http.HttpHeaderValues;
@@ -23,6 +21,7 @@ import io.vrap.rmf.base.client.HttpClientBase;
 
 import org.reactivestreams.Publisher;
 
+import jakarta.validation.constraints.NotNull;
 import reactor.core.publisher.Mono;
 import reactor.netty.ByteBufMono;
 import reactor.netty.NettyOutbound;

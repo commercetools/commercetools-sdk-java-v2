@@ -7,12 +7,13 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
-import javax.validation.Valid;
 
 import com.commercetools.api.models.graph_ql.GraphQLError;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+
+import jakarta.validation.Valid;
 
 /**
  * GraphQLResponse

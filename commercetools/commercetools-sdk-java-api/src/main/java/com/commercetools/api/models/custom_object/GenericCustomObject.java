@@ -4,13 +4,13 @@ package com.commercetools.api.models.custom_object;
 import java.time.ZonedDateTime;
 import java.util.function.Function;
 
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-
 import com.commercetools.api.models.Referencable;
 import com.commercetools.api.models.common.*;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
 
 /**
  * entity to implement a type safe generic custom object

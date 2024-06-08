@@ -9,11 +9,10 @@ import java.util.concurrent.TimeUnit;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-import javax.validation.constraints.NotNull;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.utils.Utils;
 
+import jakarta.validation.constraints.NotNull;
 import okhttp3.OkHttpClient;
 import okio.GzipSource;
 import okio.Okio;

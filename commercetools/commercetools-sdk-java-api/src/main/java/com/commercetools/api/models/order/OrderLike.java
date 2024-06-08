@@ -8,8 +8,6 @@ import java.util.List;
 import java.util.Optional;
 
 import javax.money.MonetaryAmount;
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import com.commercetools.api.models.cart.*;
 import com.commercetools.api.models.cart_discount.CartDiscountReference;
@@ -17,6 +15,9 @@ import com.commercetools.api.models.common.*;
 import com.commercetools.api.models.customer_group.CustomerGroupReference;
 import com.commercetools.api.models.store.StoreKeyReference;
 import com.commercetools.api.models.type.CustomFields;
+
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
 
 /**
  * Interface to collect the common stuff between carts and orders.

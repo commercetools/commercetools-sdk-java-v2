@@ -50,7 +50,7 @@ ext {
     ]
 
     javax = [
-            validation: 'javax.validation:validation-api:2.0.1.Final',
+            validation: 'jakarta.validation:jakarta.validation-api:3.1.0',
     ]
 
     junit = [

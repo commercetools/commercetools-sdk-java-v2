@@ -6,12 +6,13 @@ import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
-import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
+
+import jakarta.validation.constraints.NotNull;
 
 /**
  *  <p>This destination can be used to push events and messages to Confluent Cloud. To set up a Subscription of this type, first, create a topic in Confluent Cloud. Then, to allow Composable Commerce to push events and messages to your topic, generate API keys for your topic, and create the Subscription destination using the generated credentials.</p>

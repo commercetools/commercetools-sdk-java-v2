@@ -18,7 +18,7 @@ import jakarta.validation.constraints.NotNull;
  *  <p>Returned when the Tax Category of at least one of the <code>lineItems</code>, <code>customLineItems</code>, or <code>shippingInfo</code> in the Cart is missing the TaxRate matching <code>country</code> and <code>state</code> given in the <code>shippingAddress</code> of that Cart.</p>
  *  <p>The error is returned as a failed response to:</p>
  *  <ul>
- *   <li>Set Default Shipping Address, Add LineItem, Add CustomLineItem, Set Shipping Address, Add LineItem, Add LineItem, and Add CustomLineItem update actions</li>
+ *   <li>Add LineItem, Add CustomLineItem, Set Shipping Address, Add LineItem, Add LineItem, and Add CustomLineItem update actions</li>
  *   <li>Create Order from Cart and Create Order in Store from Cart requests.</li>
  *  </ul>
  *

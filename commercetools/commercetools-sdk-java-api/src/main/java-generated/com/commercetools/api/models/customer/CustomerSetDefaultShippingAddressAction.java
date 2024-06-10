@@ -14,7 +14,6 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Sets the default shipping address from <code>addresses</code>. The action adds the <code>id</code> of the specified address to the <code>shippingAddressIds</code> if not contained already. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
- *  <p>If the Tax Category of the Cart ShippingInfo is missing the TaxRate matching country and state given in the <code>shippingAddress</code> of that Cart, a MissingTaxRateForCountry error is returned.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

@@ -11,7 +11,7 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Determines whether a ShippingMethod is allowed for a Cart.</p>
+ *  <p>Determines whether the selected ShippingMethod is allowed for the Cart. For more information, see Predicates.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ShippingMethodState extends JsonEnum {

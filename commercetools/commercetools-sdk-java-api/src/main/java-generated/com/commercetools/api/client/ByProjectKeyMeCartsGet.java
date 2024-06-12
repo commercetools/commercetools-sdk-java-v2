@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *
+ *  <p>Returns all Carts that match a given Query Predicate and contain either a matching <code>customerId</code> or <code>anonymousId</code>.</p>
  *
  * <hr>
  * <div class=code-example>

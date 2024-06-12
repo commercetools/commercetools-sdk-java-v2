@@ -20,6 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
+ *  <p>Creates a Cart in the specified Store for a given <code>customerId</code> or <code>anonymousId</code>.</p>
  *  <p>The <code>store</code> field in the created Cart is set to the Store specified by the <code>storeKey</code> path parameter.</p>
  *  <p>Specific Error Codes: CountryNotConfiguredInStore</p>
  *

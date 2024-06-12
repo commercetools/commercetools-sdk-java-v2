@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Queries carts in a specific Store.</p>
+ *  <p>Queries Carts in a specific Store.</p>
  *
  * <hr>
  * <div class=code-example>

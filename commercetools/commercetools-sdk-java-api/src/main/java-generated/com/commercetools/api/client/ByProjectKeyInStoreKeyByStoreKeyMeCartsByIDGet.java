@@ -20,7 +20,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *
+ *  <p>Returns a Cart for a given <code>id</code> in a Store. Returns a <code>200 OK</code> status if the Cart exists, or a ResourceNotFound error otherwise.</p>
+ *  <p>If the Cart exists in the Project but does not belong to a Store, or the Cart's <code>store</code> field references a different Store, this method returns a ResourceNotFound error.</p>
+ *  <p>If the Cart exists in the Project but does not have a matching <code>customerId</code> or <code>anonymousId</code>, this method returns a ResourceNotFound error.</p>
  *
  * <hr>
  * <div class=code-example>

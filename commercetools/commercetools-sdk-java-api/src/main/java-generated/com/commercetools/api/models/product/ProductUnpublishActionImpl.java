@@ -17,7 +17,11 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Removes the current projection of the Product. The staged projection is unaffected. To retrieve unpublished Products, the <code>staged</code> parameter must be set to <code>false</code> when querying/searching Product Projections. Produces the ProductUnpublished Message.</p>
- *  <p>Unpublished Products cannot be added to a Cart. However, if a Cart contains Line Items for Products that were added before the Product was unpublished, the Cart is unaffected and can still be used to create an Order. To prevent this, in addition to unpublishing the Product you should remove the Prices from the Product using Remove Price for Embedded Prices or Delete StandalonePrice for Standalone Prices.</p>
+ *  <p>When a Product is unpublished, any associated Line Items already present in a Cart remain unaffected and can still be ordered. To prevent this, do the following:</p>
+ *  <ul>
+ *   <li>If the Product uses Embedded Prices, remove the Embedded Prices from the unpublished Product.</li>
+ *   <li>If the Product uses Standalone Prices, inactivate or delete the Standalone Prices.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductUnpublishActionImpl implements ProductUnpublishAction, ModelBase {

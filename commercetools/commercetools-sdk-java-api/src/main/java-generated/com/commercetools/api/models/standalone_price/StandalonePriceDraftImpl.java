@@ -183,7 +183,7 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
     }
 
     /**
-     *  <p>Set to <code>false</code>, if the StandalonePrice should not be considered during Prodct price selection.</p>
+     *  <p>Set to <code>false</code>, if the StandalonePrice should not be considered during Product price selection.</p>
      */
 
     public Boolean getActive() {

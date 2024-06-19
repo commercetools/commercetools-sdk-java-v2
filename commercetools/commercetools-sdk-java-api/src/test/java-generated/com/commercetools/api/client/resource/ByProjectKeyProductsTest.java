@@ -88,13 +88,6 @@ public class ByProjectKeyProductsTest {
                         .get()
                         .withPriceChannel("priceChannel")
                         .createHttpRequest(), "get", "test_projectKey/products?priceChannel=priceChannel", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .products()
-                                .get()
-                                .withLocaleProjection("localeProjection")
-                                .createHttpRequest(),
-                        "get", "test_projectKey/products?localeProjection=localeProjection", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .get()
@@ -150,13 +143,6 @@ public class ByProjectKeyProductsTest {
                         .post(com.commercetools.api.models.product.ProductDraft.of())
                         .withPriceChannel("priceChannel")
                         .createHttpRequest(), "post", "test_projectKey/products?priceChannel=priceChannel", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .products()
-                                .post(com.commercetools.api.models.product.ProductDraft.of())
-                                .withLocaleProjection("localeProjection")
-                                .createHttpRequest(),
-                        "post", "test_projectKey/products?localeProjection=localeProjection", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .post(com.commercetools.api.models.product.ProductDraft.of())
@@ -184,10 +170,6 @@ public class ByProjectKeyProductsTest {
                         .withPriceCustomerGroup("priceCustomerGroup"), },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").products().get().withPriceChannel("priceChannel"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .products()
-                        .get()
-                        .withLocaleProjection("localeProjection"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").products().get().withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").products().get().withSort("sort"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").products().get().withLimit(7), },
@@ -216,10 +198,6 @@ public class ByProjectKeyProductsTest {
                         .products()
                         .post(com.commercetools.api.models.product.ProductDraft.of())
                         .withPriceChannel("priceChannel"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .products()
-                        .post(com.commercetools.api.models.product.ProductDraft.of())
-                        .withLocaleProjection("localeProjection"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .post(com.commercetools.api.models.product.ProductDraft.of())

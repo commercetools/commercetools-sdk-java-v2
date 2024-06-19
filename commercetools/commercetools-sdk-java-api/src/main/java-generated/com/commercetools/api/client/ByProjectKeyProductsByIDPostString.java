@@ -119,10 +119,6 @@ public class ByProjectKeyProductsByIDPostString
         return this.getQueryParam("priceChannel");
     }
 
-    public List<String> getLocaleProjection() {
-        return this.getQueryParam("localeProjection");
-    }
-
     public List<String> getExpand() {
         return this.getQueryParam("expand");
     }
@@ -458,87 +454,6 @@ public class ByProjectKeyProductsByIDPostString
     public <TValue> ByProjectKeyProductsByIDPostString addPriceChannel(final Collection<TValue> priceChannel) {
         return copy().addQueryParams(priceChannel.stream()
                 .map(s -> new ParamEntry<>("priceChannel", s.toString()))
-                .collect(Collectors.toList()));
-    }
-
-    /**
-     * set localeProjection with the specified value
-     * @param <TValue> value type
-     * @param localeProjection value to be set
-     * @return ByProjectKeyProductsByIDPostString
-     */
-    public <TValue> ByProjectKeyProductsByIDPostString withLocaleProjection(final TValue localeProjection) {
-        return copy().withQueryParam("localeProjection", localeProjection);
-    }
-
-    /**
-     * add additional localeProjection query parameter
-     * @param <TValue> value type
-     * @param localeProjection value to be added
-     * @return ByProjectKeyProductsByIDPostString
-     */
-    public <TValue> ByProjectKeyProductsByIDPostString addLocaleProjection(final TValue localeProjection) {
-        return copy().addQueryParam("localeProjection", localeProjection);
-    }
-
-    /**
-     * set localeProjection with the specified value
-     * @param supplier supplier for the value to be set
-     * @return ByProjectKeyProductsByIDPostString
-     */
-    public ByProjectKeyProductsByIDPostString withLocaleProjection(final Supplier<String> supplier) {
-        return copy().withQueryParam("localeProjection", supplier.get());
-    }
-
-    /**
-     * add additional localeProjection query parameter
-     * @param supplier supplier for the value to be added
-     * @return ByProjectKeyProductsByIDPostString
-     */
-    public ByProjectKeyProductsByIDPostString addLocaleProjection(final Supplier<String> supplier) {
-        return copy().addQueryParam("localeProjection", supplier.get());
-    }
-
-    /**
-     * set localeProjection with the specified value
-     * @param op builder for the value to be set
-     * @return ByProjectKeyProductsByIDPostString
-     */
-    public ByProjectKeyProductsByIDPostString withLocaleProjection(final Function<StringBuilder, StringBuilder> op) {
-        return copy().withQueryParam("localeProjection", op.apply(new StringBuilder()));
-    }
-
-    /**
-     * add additional localeProjection query parameter
-     * @param op builder for the value to be added
-     * @return ByProjectKeyProductsByIDPostString
-     */
-    public ByProjectKeyProductsByIDPostString addLocaleProjection(final Function<StringBuilder, StringBuilder> op) {
-        return copy().addQueryParam("localeProjection", op.apply(new StringBuilder()));
-    }
-
-    /**
-     * set localeProjection with the specified values
-     * @param <TValue> value type
-     * @param localeProjection values to be set
-     * @return ByProjectKeyProductsByIDPostString
-     */
-    public <TValue> ByProjectKeyProductsByIDPostString withLocaleProjection(final Collection<TValue> localeProjection) {
-        return copy().withoutQueryParam("localeProjection")
-                .addQueryParams(localeProjection.stream()
-                        .map(s -> new ParamEntry<>("localeProjection", s.toString()))
-                        .collect(Collectors.toList()));
-    }
-
-    /**
-     * add additional localeProjection query parameters
-     * @param <TValue> value type
-     * @param localeProjection values to be added
-     * @return ByProjectKeyProductsByIDPostString
-     */
-    public <TValue> ByProjectKeyProductsByIDPostString addLocaleProjection(final Collection<TValue> localeProjection) {
-        return copy().addQueryParams(localeProjection.stream()
-                .map(s -> new ParamEntry<>("localeProjection", s.toString()))
                 .collect(Collectors.toList()));
     }
 

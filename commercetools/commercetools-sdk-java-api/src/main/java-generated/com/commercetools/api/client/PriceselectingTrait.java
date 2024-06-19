@@ -19,8 +19,6 @@ public interface PriceselectingTrait<T extends PriceselectingTrait<T>> {
 
     List<String> getPriceChannel();
 
-    List<String> getLocaleProjection();
-
     /**
      * set priceCurrency with the specificied value
      * @param priceCurrency value to be set
@@ -84,22 +82,6 @@ public interface PriceselectingTrait<T extends PriceselectingTrait<T>> {
      * @return PriceselectingTrait
      */
     <TValue> PriceselectingTrait<T> addPriceChannel(final TValue priceChannel);
-
-    /**
-     * set localeProjection with the specificied value
-     * @param localeProjection value to be set
-     * @param <TValue> value type
-     * @return PriceselectingTrait
-     */
-    <TValue> PriceselectingTrait<T> withLocaleProjection(final TValue localeProjection);
-
-    /**
-     * add additional localeProjection query parameter
-     * @param localeProjection value to be added
-     * @param <TValue> value type
-     * @return PriceselectingTrait
-     */
-    <TValue> PriceselectingTrait<T> addLocaleProjection(final TValue localeProjection);
 
     default PriceselectingTrait<T> asPriceselectingTrait() {
         return this;

@@ -26,6 +26,9 @@ public interface ChangeSubscriptionResourceTypeId extends JsonEnum {
     <p>Changes related to AssociateRoles.</p> */
     ChangeSubscriptionResourceTypeId ASSOCIATE_ROLE = ChangeSubscriptionResourceTypeIdEnum.ASSOCIATE_ROLE;
     /**
+    <p>Changes related to AttributeGroups.</p> */
+    ChangeSubscriptionResourceTypeId ATTRIBUTE_GROUP = ChangeSubscriptionResourceTypeIdEnum.ATTRIBUTE_GROUP;
+    /**
     <p>Changes to BusinessUnits.</p> */
     ChangeSubscriptionResourceTypeId BUSINESS_UNIT = ChangeSubscriptionResourceTypeIdEnum.BUSINESS_UNIT;
     /**
@@ -80,11 +83,11 @@ public interface ChangeSubscriptionResourceTypeId extends JsonEnum {
     <p>Changes to ProductDiscount.</p> */
     ChangeSubscriptionResourceTypeId PRODUCT_DISCOUNT = ChangeSubscriptionResourceTypeIdEnum.PRODUCT_DISCOUNT;
     /**
-    <p>Changes to EmbeddedPrices.</p> */
-    ChangeSubscriptionResourceTypeId PRODUCT_PRICE = ChangeSubscriptionResourceTypeIdEnum.PRODUCT_PRICE;
-    /**
     <p>Changes to ProductSelections.</p> */
     ChangeSubscriptionResourceTypeId PRODUCT_SELECTION = ChangeSubscriptionResourceTypeIdEnum.PRODUCT_SELECTION;
+    /**
+    <p>Changes to ProductTailorings.</p> */
+    ChangeSubscriptionResourceTypeId PRODUCT_TAILORING = ChangeSubscriptionResourceTypeIdEnum.PRODUCT_TAILORING;
     /**
     <p>Changes to ProductTypes.</p> */
     ChangeSubscriptionResourceTypeId PRODUCT_TYPE = ChangeSubscriptionResourceTypeIdEnum.PRODUCT_TYPE;
@@ -146,6 +149,11 @@ public interface ChangeSubscriptionResourceTypeId extends JsonEnum {
          * associate-role
          */
         ASSOCIATE_ROLE("associate-role"),
+
+        /**
+         * attribute-group
+         */
+        ATTRIBUTE_GROUP("attribute-group"),
 
         /**
          * business-unit
@@ -238,14 +246,14 @@ public interface ChangeSubscriptionResourceTypeId extends JsonEnum {
         PRODUCT_DISCOUNT("product-discount"),
 
         /**
-         * product-price
-         */
-        PRODUCT_PRICE("product-price"),
-
-        /**
          * product-selection
          */
         PRODUCT_SELECTION("product-selection"),
+
+        /**
+         * product-tailoring
+         */
+        PRODUCT_TAILORING("product-tailoring"),
 
         /**
          * product-type

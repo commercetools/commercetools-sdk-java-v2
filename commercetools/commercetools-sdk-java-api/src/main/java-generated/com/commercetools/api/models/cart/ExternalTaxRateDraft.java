@@ -83,7 +83,7 @@ public interface ExternalTaxRateDraft extends io.vrap.rmf.base.client.Draft<Exte
     public String getState();
 
     /**
-     *  <p>For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes). The total of all subrates must equal the TaxRate <code>amount</code>.</p>
+     *  <p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). The total of all subrates must equal the TaxRate <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a Cart or Order and the <code>taxedPrice</code> field of LineItems, CustomLineItems, and ShippingInfos.</p>
      * @return subRates
      */
     @Valid
@@ -133,7 +133,7 @@ public interface ExternalTaxRateDraft extends io.vrap.rmf.base.client.Draft<Exte
     public void setState(final String state);
 
     /**
-     *  <p>For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes). The total of all subrates must equal the TaxRate <code>amount</code>.</p>
+     *  <p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). The total of all subrates must equal the TaxRate <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a Cart or Order and the <code>taxedPrice</code> field of LineItems, CustomLineItems, and ShippingInfos.</p>
      * @param subRates values to be set
      */
 
@@ -141,7 +141,7 @@ public interface ExternalTaxRateDraft extends io.vrap.rmf.base.client.Draft<Exte
     public void setSubRates(final SubRate... subRates);
 
     /**
-     *  <p>For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes). The total of all subrates must equal the TaxRate <code>amount</code>.</p>
+     *  <p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). The total of all subrates must equal the TaxRate <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a Cart or Order and the <code>taxedPrice</code> field of LineItems, CustomLineItems, and ShippingInfos.</p>
      * @param subRates values to be set
      */
 

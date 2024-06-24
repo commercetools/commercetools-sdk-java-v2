@@ -16,6 +16,7 @@ import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.customer.CustomerReference;
 import com.commercetools.api.models.quote_request.QuoteRequestReference;
 import com.commercetools.api.models.state.StateReference;
+import com.commercetools.api.models.store.StoreKeyReference;
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -187,6 +188,14 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
     public BusinessUnitKeyReference getBusinessUnit();
 
     /**
+     *  <p>The Store to which the Buyer belongs.</p>
+     * @return store
+     */
+    @Valid
+    @JsonProperty("store")
+    public StoreKeyReference getStore();
+
+    /**
      *  <p>The unique ID of the StagedQuote.</p>
      * @param id value to be set
      */
@@ -306,6 +315,13 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
     public void setBusinessUnit(final BusinessUnitKeyReference businessUnit);
 
     /**
+     *  <p>The Store to which the Buyer belongs.</p>
+     * @param store value to be set
+     */
+
+    public void setStore(final StoreKeyReference store);
+
+    /**
      * factory method
      * @return instance of StagedQuote
      */
@@ -337,6 +353,7 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
         instance.setState(template.getState());
         instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
         instance.setBusinessUnit(template.getBusinessUnit());
+        instance.setStore(template.getStore());
         return instance;
     }
 
@@ -372,6 +389,7 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
         instance.setPurchaseOrderNumber(template.getPurchaseOrderNumber());
         instance.setBusinessUnit(
             com.commercetools.api.models.business_unit.BusinessUnitKeyReference.deepCopy(template.getBusinessUnit()));
+        instance.setStore(com.commercetools.api.models.store.StoreKeyReference.deepCopy(template.getStore()));
         return instance;
     }
 

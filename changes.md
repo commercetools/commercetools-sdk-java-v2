@@ -1,6 +1,29 @@
 **Api changes**
 
 <details>
+<summary>Added Property(s)</summary>
+
+- added property `store` to type `StagedQuote`
+</details>
+
+
+<details>
+<summary>Added Resource(s)</summary>
+
+- added resource `/{projectKey}/in-store/key={storeKey}/quote-requests`
+- added resource `/{projectKey}/in-store/key={storeKey}/staged-quotes`
+- added resource `/{projectKey}/in-store/key={storeKey}/quotes`
+- added resource `/{projectKey}/in-store/key={storeKey}/orders/quotes`
+- added resource `/{projectKey}/in-store/key={storeKey}/quote-requests/key={key}`
+- added resource `/{projectKey}/in-store/key={storeKey}/quote-requests/{ID}`
+- added resource `/{projectKey}/in-store/key={storeKey}/staged-quotes/key={key}`
+- added resource `/{projectKey}/in-store/key={storeKey}/staged-quotes/{ID}`
+- added resource `/{projectKey}/in-store/key={storeKey}/quotes/key={key}`
+- added resource `/{projectKey}/in-store/key={storeKey}/quotes/{ID}`
+</details>
+
+
+<details>
 <summary>Removed Enum(s)</summary>
 
 - :warning: removed enum `product-price` from type `ChangeSubscriptionResourceTypeId`
@@ -12,6 +35,46 @@
 
 - added enum `attribute-group` to type `ChangeSubscriptionResourceTypeId`
 - added enum `product-tailoring` to type `ChangeSubscriptionResourceTypeId`
+</details>
+
+
+<details>
+<summary>Added Method(s)</summary>
+
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quoteRequests().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quoteRequests().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quoteRequests().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().stagedQuotes().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().stagedQuotes().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().stagedQuotes().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().orders().orderQuote().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quoteRequests().withKey().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quoteRequests().withKey().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quoteRequests().withKey().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quoteRequests().withKey().delete()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quoteRequests().withId().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quoteRequests().withId().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quoteRequests().withId().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quoteRequests().withId().delete()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().stagedQuotes().withKey().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().stagedQuotes().withKey().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().stagedQuotes().withKey().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().stagedQuotes().withKey().delete()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().stagedQuotes().withId().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().stagedQuotes().withId().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().stagedQuotes().withId().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().stagedQuotes().withId().delete()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().withKey().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().withKey().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().withKey().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().withKey().delete()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().withId().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().withId().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().withId().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().withId().delete()`
 </details>
 
 

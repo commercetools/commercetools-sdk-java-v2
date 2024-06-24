@@ -74,6 +74,9 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     @Nullable
     private com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit;
 
+    @Nullable
+    private com.commercetools.api.models.store.StoreKeyReference store;
+
     /**
      *  <p>The unique ID of the StagedQuote.</p>
      * @param id value to be set
@@ -463,6 +466,41 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
+     *  <p>The Store to which the Buyer belongs.</p>
+     * @param builder function to build the store value
+     * @return Builder
+     */
+
+    public StagedQuoteBuilder store(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReferenceBuilder> builder) {
+        this.store = builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>The Store to which the Buyer belongs.</p>
+     * @param builder function to build the store value
+     * @return Builder
+     */
+
+    public StagedQuoteBuilder withStore(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReference> builder) {
+        this.store = builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The Store to which the Buyer belongs.</p>
+     * @param store value to be set
+     * @return Builder
+     */
+
+    public StagedQuoteBuilder store(@Nullable final com.commercetools.api.models.store.StoreKeyReference store) {
+        this.store = store;
+        return this;
+    }
+
+    /**
      *  <p>The unique ID of the StagedQuote.</p>
      * @return id
      */
@@ -626,6 +664,16 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
+     *  <p>The Store to which the Buyer belongs.</p>
+     * @return store
+     */
+
+    @Nullable
+    public com.commercetools.api.models.store.StoreKeyReference getStore() {
+        return this.store;
+    }
+
+    /**
      * builds StagedQuote with checking for non-null required values
      * @return StagedQuote
      */
@@ -639,7 +687,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
         Objects.requireNonNull(quotationCart, StagedQuote.class + ": quotationCart is missing");
         return new StagedQuoteImpl(id, version, createdAt, lastModifiedAt, key, lastModifiedBy, createdBy,
             stagedQuoteState, customer, quoteRequest, quotationCart, validTo, sellerComment, custom, state,
-            purchaseOrderNumber, businessUnit);
+            purchaseOrderNumber, businessUnit, store);
     }
 
     /**
@@ -649,7 +697,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     public StagedQuote buildUnchecked() {
         return new StagedQuoteImpl(id, version, createdAt, lastModifiedAt, key, lastModifiedBy, createdBy,
             stagedQuoteState, customer, quoteRequest, quotationCart, validTo, sellerComment, custom, state,
-            purchaseOrderNumber, businessUnit);
+            purchaseOrderNumber, businessUnit, store);
     }
 
     /**
@@ -684,6 +732,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
         builder.state = template.getState();
         builder.purchaseOrderNumber = template.getPurchaseOrderNumber();
         builder.businessUnit = template.getBusinessUnit();
+        builder.store = template.getStore();
         return builder;
     }
 

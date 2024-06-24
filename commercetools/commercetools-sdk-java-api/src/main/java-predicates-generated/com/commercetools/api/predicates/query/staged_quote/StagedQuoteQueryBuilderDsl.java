@@ -138,4 +138,12 @@ public class StagedQuoteQueryBuilderDsl {
             StagedQuoteQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<StagedQuoteQueryBuilderDsl> store(
+            Function<com.commercetools.api.predicates.query.store.StoreKeyReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.store.StoreKeyReferenceQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("store"))
+                .inner(fn.apply(com.commercetools.api.predicates.query.store.StoreKeyReferenceQueryBuilderDsl.of())),
+            StagedQuoteQueryBuilderDsl::of);
+    }
+
 }

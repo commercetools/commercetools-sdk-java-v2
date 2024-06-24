@@ -44,6 +44,10 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersRequestBuilder
         return post(op.apply(com.commercetools.api.models.order.OrderFromCartDraftBuilder.of()).build());
     }
 
+    public ByProjectKeyInStoreKeyByStoreKeyOrdersQuotesRequestBuilder orderQuote() {
+        return new ByProjectKeyInStoreKeyByStoreKeyOrdersQuotesRequestBuilder(apiHttpClient, projectKey, storeKey);
+    }
+
     public ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberRequestBuilder withOrderNumber(
             String orderNumber) {
         return new ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberRequestBuilder(apiHttpClient,

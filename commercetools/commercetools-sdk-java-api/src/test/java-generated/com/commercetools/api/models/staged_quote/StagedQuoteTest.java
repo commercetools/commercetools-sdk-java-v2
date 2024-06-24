@@ -51,8 +51,9 @@ public class StagedQuoteTest {
                         StagedQuote.builder().state(new com.commercetools.api.models.state.StateReferenceImpl()) },
                 new Object[] { StagedQuote.builder().purchaseOrderNumber("purchaseOrderNumber") },
                 new Object[] { StagedQuote.builder()
-                        .businessUnit(
-                            new com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceImpl()) } };
+                        .businessUnit(new com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceImpl()) },
+                new Object[] {
+                        StagedQuote.builder().store(new com.commercetools.api.models.store.StoreKeyReferenceImpl()) } };
     }
 
     @Test
@@ -178,5 +179,13 @@ public class StagedQuoteTest {
         value.setBusinessUnit(new com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceImpl());
         Assertions.assertThat(value.getBusinessUnit())
                 .isEqualTo(new com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceImpl());
+    }
+
+    @Test
+    public void store() {
+        StagedQuote value = StagedQuote.of();
+        value.setStore(new com.commercetools.api.models.store.StoreKeyReferenceImpl());
+        Assertions.assertThat(value.getStore())
+                .isEqualTo(new com.commercetools.api.models.store.StoreKeyReferenceImpl());
     }
 }

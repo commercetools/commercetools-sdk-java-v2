@@ -68,4 +68,16 @@ public class ByProjectKeyInStoreKeyByStoreKeyRequestBuilder {
         return new ByProjectKeyInStoreKeyByStoreKeyProductsRequestBuilder(apiHttpClient, projectKey, storeKey);
     }
 
+    public ByProjectKeyInStoreKeyByStoreKeyQuoteRequestsRequestBuilder quoteRequests() {
+        return new ByProjectKeyInStoreKeyByStoreKeyQuoteRequestsRequestBuilder(apiHttpClient, projectKey, storeKey);
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyStagedQuotesRequestBuilder stagedQuotes() {
+        return new ByProjectKeyInStoreKeyByStoreKeyStagedQuotesRequestBuilder(apiHttpClient, projectKey, storeKey);
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyQuotesRequestBuilder quotes() {
+        return new ByProjectKeyInStoreKeyByStoreKeyQuotesRequestBuilder(apiHttpClient, projectKey, storeKey);
+    }
+
 }

@@ -56,6 +56,8 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
 
     private com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit;
 
+    private com.commercetools.api.models.store.StoreKeyReference store;
+
     /**
      * create instance with all properties
      */
@@ -75,7 +77,8 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
             @JsonProperty("state") final com.commercetools.api.models.state.StateReference state,
             @JsonProperty("purchaseOrderNumber") final String purchaseOrderNumber,
-            @JsonProperty("businessUnit") final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit) {
+            @JsonProperty("businessUnit") final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit,
+            @JsonProperty("store") final com.commercetools.api.models.store.StoreKeyReference store) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -93,6 +96,7 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
         this.state = state;
         this.purchaseOrderNumber = purchaseOrderNumber;
         this.businessUnit = businessUnit;
+        this.store = store;
     }
 
     /**
@@ -237,6 +241,14 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
         return this.businessUnit;
     }
 
+    /**
+     *  <p>The Store to which the Buyer belongs.</p>
+     */
+
+    public com.commercetools.api.models.store.StoreKeyReference getStore() {
+        return this.store;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -306,6 +318,10 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
         this.businessUnit = businessUnit;
     }
 
+    public void setStore(final com.commercetools.api.models.store.StoreKeyReference store) {
+        this.store = store;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -333,6 +349,7 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
                 .append(state, that.state)
                 .append(purchaseOrderNumber, that.purchaseOrderNumber)
                 .append(businessUnit, that.businessUnit)
+                .append(store, that.store)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -350,6 +367,7 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
                 .append(state, that.state)
                 .append(purchaseOrderNumber, that.purchaseOrderNumber)
                 .append(businessUnit, that.businessUnit)
+                .append(store, that.store)
                 .isEquals();
     }
 
@@ -372,6 +390,7 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
                 .append(state)
                 .append(purchaseOrderNumber)
                 .append(businessUnit)
+                .append(store)
                 .toHashCode();
     }
 
@@ -394,6 +413,7 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
                 .append("state", state)
                 .append("purchaseOrderNumber", purchaseOrderNumber)
                 .append("businessUnit", businessUnit)
+                .append("store", store)
                 .build();
     }
 

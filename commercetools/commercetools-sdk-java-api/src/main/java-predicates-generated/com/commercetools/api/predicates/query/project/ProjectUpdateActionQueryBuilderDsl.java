@@ -56,6 +56,13 @@ public class ProjectUpdateActionQueryBuilderDsl {
             ProjectUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl> asChangeCustomerSearchStatus(
+            Function<com.commercetools.api.predicates.query.project.ProjectChangeCustomerSearchStatusActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.project.ProjectChangeCustomerSearchStatusActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.project.ProjectChangeCustomerSearchStatusActionQueryBuilderDsl.of()),
+            ProjectUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl> asChangeLanguages(
             Function<com.commercetools.api.predicates.query.project.ProjectChangeLanguagesActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.project.ProjectChangeLanguagesActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

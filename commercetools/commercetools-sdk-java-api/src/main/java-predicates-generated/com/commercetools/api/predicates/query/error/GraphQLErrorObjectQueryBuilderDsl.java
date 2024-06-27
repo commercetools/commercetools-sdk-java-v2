@@ -87,6 +87,14 @@ public class GraphQLErrorObjectQueryBuilderDsl {
             GraphQLErrorObjectQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asGraphQLCustomerSearchProjectNotIndexedError(
+            Function<com.commercetools.api.predicates.query.error.GraphQLCustomerSearchProjectNotIndexedErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.GraphQLCustomerSearchProjectNotIndexedErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.error.GraphQLCustomerSearchProjectNotIndexedErrorQueryBuilderDsl
+                    .of()),
+            GraphQLErrorObjectQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asDiscountCodeNonApplicable(
             Function<com.commercetools.api.predicates.query.error.GraphQLDiscountCodeNonApplicableErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.GraphQLDiscountCodeNonApplicableErrorQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

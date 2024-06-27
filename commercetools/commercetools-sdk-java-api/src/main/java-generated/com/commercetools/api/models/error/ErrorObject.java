@@ -196,6 +196,10 @@ public interface ErrorObject {
             return com.commercetools.api.models.error.CountryNotConfiguredInStoreError
                     .deepCopy((com.commercetools.api.models.error.CountryNotConfiguredInStoreError) template);
         }
+        if (template instanceof com.commercetools.api.models.error.CustomerSearchProjectNotIndexedError) {
+            return com.commercetools.api.models.error.CustomerSearchProjectNotIndexedError
+                    .deepCopy((com.commercetools.api.models.error.CustomerSearchProjectNotIndexedError) template);
+        }
         if (template instanceof com.commercetools.api.models.error.DiscountCodeNonApplicableError) {
             return com.commercetools.api.models.error.DiscountCodeNonApplicableError
                     .deepCopy((com.commercetools.api.models.error.DiscountCodeNonApplicableError) template);

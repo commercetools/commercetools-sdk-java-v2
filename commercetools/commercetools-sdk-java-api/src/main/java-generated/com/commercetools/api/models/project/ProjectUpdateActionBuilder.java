@@ -31,6 +31,10 @@ public class ProjectUpdateActionBuilder {
         return com.commercetools.api.models.project.ProjectChangeCurrenciesActionBuilder.of();
     }
 
+    public com.commercetools.api.models.project.ProjectChangeCustomerSearchStatusActionBuilder changeCustomerSearchStatusBuilder() {
+        return com.commercetools.api.models.project.ProjectChangeCustomerSearchStatusActionBuilder.of();
+    }
+
     public com.commercetools.api.models.project.ProjectChangeLanguagesActionBuilder changeLanguagesBuilder() {
         return com.commercetools.api.models.project.ProjectChangeLanguagesActionBuilder.of();
     }

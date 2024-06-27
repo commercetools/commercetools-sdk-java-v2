@@ -75,4 +75,12 @@ public class ByProjectKeyCustomersRequestBuilder implements ByProjectKeyCustomer
         return new ByProjectKeyCustomersByIDRequestBuilder(apiHttpClient, projectKey, ID);
     }
 
+    public ByProjectKeyCustomersSearchRequestBuilder search() {
+        return new ByProjectKeyCustomersSearchRequestBuilder(apiHttpClient, projectKey);
+    }
+
+    public ByProjectKeyCustomersSearchIndexingStatusRequestBuilder searchIndexingStatus() {
+        return new ByProjectKeyCustomersSearchIndexingStatusRequestBuilder(apiHttpClient, projectKey);
+    }
+
 }

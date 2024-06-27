@@ -4,6 +4,7 @@ package com.commercetools.api.models.product_tailoring;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
 
@@ -119,6 +120,14 @@ public interface ProductTailoringDraft extends io.vrap.rmf.base.client.Draft<Pro
     public Boolean getPublish();
 
     /**
+     *  <p>Tailored Variants of the Product.</p>
+     * @return variants
+     */
+    @Valid
+    @JsonProperty("variants")
+    public List<ProductVariantTailoringDraft> getVariants();
+
+    /**
      *  <p>User-defined unique identifier of the ProductTailoring.</p>
      * @param key value to be set
      */
@@ -189,6 +198,21 @@ public interface ProductTailoringDraft extends io.vrap.rmf.base.client.Draft<Pro
     public void setPublish(final Boolean publish);
 
     /**
+     *  <p>Tailored Variants of the Product.</p>
+     * @param variants values to be set
+     */
+
+    @JsonIgnore
+    public void setVariants(final ProductVariantTailoringDraft... variants);
+
+    /**
+     *  <p>Tailored Variants of the Product.</p>
+     * @param variants values to be set
+     */
+
+    public void setVariants(final List<ProductVariantTailoringDraft> variants);
+
+    /**
      * factory method
      * @return instance of ProductTailoringDraft
      */
@@ -213,6 +237,7 @@ public interface ProductTailoringDraft extends io.vrap.rmf.base.client.Draft<Pro
         instance.setMetaKeywords(template.getMetaKeywords());
         instance.setSlug(template.getSlug());
         instance.setPublish(template.getPublish());
+        instance.setVariants(template.getVariants());
         return instance;
     }
 
@@ -241,6 +266,11 @@ public interface ProductTailoringDraft extends io.vrap.rmf.base.client.Draft<Pro
             com.commercetools.api.models.common.LocalizedString.deepCopy(template.getMetaKeywords()));
         instance.setSlug(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getSlug()));
         instance.setPublish(template.getPublish());
+        instance.setVariants(Optional.ofNullable(template.getVariants())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.product_tailoring.ProductVariantTailoringDraft::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

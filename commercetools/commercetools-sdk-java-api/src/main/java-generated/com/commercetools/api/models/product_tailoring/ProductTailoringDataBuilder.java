@@ -41,6 +41,9 @@ public class ProductTailoringDataBuilder implements Builder<ProductTailoringData
     @Nullable
     private com.commercetools.api.models.common.LocalizedString slug;
 
+    @Nullable
+    private java.util.List<com.commercetools.api.models.product_tailoring.ProductVariantTailoring> variants;
+
     /**
      *  <p>Tailored name of the Product.</p>
      * @param builder function to build the name value
@@ -256,6 +259,99 @@ public class ProductTailoringDataBuilder implements Builder<ProductTailoringData
     }
 
     /**
+     *  <p>Tailored Variants of the Product.</p>
+     * @param variants value to be set
+     * @return Builder
+     */
+
+    public ProductTailoringDataBuilder variants(
+            @Nullable final com.commercetools.api.models.product_tailoring.ProductVariantTailoring... variants) {
+        this.variants = new ArrayList<>(Arrays.asList(variants));
+        return this;
+    }
+
+    /**
+     *  <p>Tailored Variants of the Product.</p>
+     * @param variants value to be set
+     * @return Builder
+     */
+
+    public ProductTailoringDataBuilder variants(
+            @Nullable final java.util.List<com.commercetools.api.models.product_tailoring.ProductVariantTailoring> variants) {
+        this.variants = variants;
+        return this;
+    }
+
+    /**
+     *  <p>Tailored Variants of the Product.</p>
+     * @param variants value to be set
+     * @return Builder
+     */
+
+    public ProductTailoringDataBuilder plusVariants(
+            @Nullable final com.commercetools.api.models.product_tailoring.ProductVariantTailoring... variants) {
+        if (this.variants == null) {
+            this.variants = new ArrayList<>();
+        }
+        this.variants.addAll(Arrays.asList(variants));
+        return this;
+    }
+
+    /**
+     *  <p>Tailored Variants of the Product.</p>
+     * @param builder function to build the variants value
+     * @return Builder
+     */
+
+    public ProductTailoringDataBuilder plusVariants(
+            Function<com.commercetools.api.models.product_tailoring.ProductVariantTailoringBuilder, com.commercetools.api.models.product_tailoring.ProductVariantTailoringBuilder> builder) {
+        if (this.variants == null) {
+            this.variants = new ArrayList<>();
+        }
+        this.variants.add(
+            builder.apply(com.commercetools.api.models.product_tailoring.ProductVariantTailoringBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Tailored Variants of the Product.</p>
+     * @param builder function to build the variants value
+     * @return Builder
+     */
+
+    public ProductTailoringDataBuilder withVariants(
+            Function<com.commercetools.api.models.product_tailoring.ProductVariantTailoringBuilder, com.commercetools.api.models.product_tailoring.ProductVariantTailoringBuilder> builder) {
+        this.variants = new ArrayList<>();
+        this.variants.add(
+            builder.apply(com.commercetools.api.models.product_tailoring.ProductVariantTailoringBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Tailored Variants of the Product.</p>
+     * @param builder function to build the variants value
+     * @return Builder
+     */
+
+    public ProductTailoringDataBuilder addVariants(
+            Function<com.commercetools.api.models.product_tailoring.ProductVariantTailoringBuilder, com.commercetools.api.models.product_tailoring.ProductVariantTailoring> builder) {
+        return plusVariants(
+            builder.apply(com.commercetools.api.models.product_tailoring.ProductVariantTailoringBuilder.of()));
+    }
+
+    /**
+     *  <p>Tailored Variants of the Product.</p>
+     * @param builder function to build the variants value
+     * @return Builder
+     */
+
+    public ProductTailoringDataBuilder setVariants(
+            Function<com.commercetools.api.models.product_tailoring.ProductVariantTailoringBuilder, com.commercetools.api.models.product_tailoring.ProductVariantTailoring> builder) {
+        return variants(
+            builder.apply(com.commercetools.api.models.product_tailoring.ProductVariantTailoringBuilder.of()));
+    }
+
+    /**
      *  <p>Tailored name of the Product.</p>
      * @return name
      */
@@ -316,11 +412,22 @@ public class ProductTailoringDataBuilder implements Builder<ProductTailoringData
     }
 
     /**
+     *  <p>Tailored Variants of the Product.</p>
+     * @return variants
+     */
+
+    @Nullable
+    public java.util.List<com.commercetools.api.models.product_tailoring.ProductVariantTailoring> getVariants() {
+        return this.variants;
+    }
+
+    /**
      * builds ProductTailoringData with checking for non-null required values
      * @return ProductTailoringData
      */
     public ProductTailoringData build() {
-        return new ProductTailoringDataImpl(name, description, metaTitle, metaDescription, metaKeywords, slug);
+        return new ProductTailoringDataImpl(name, description, metaTitle, metaDescription, metaKeywords, slug,
+            variants);
     }
 
     /**
@@ -328,7 +435,8 @@ public class ProductTailoringDataBuilder implements Builder<ProductTailoringData
      * @return ProductTailoringData
      */
     public ProductTailoringData buildUnchecked() {
-        return new ProductTailoringDataImpl(name, description, metaTitle, metaDescription, metaKeywords, slug);
+        return new ProductTailoringDataImpl(name, description, metaTitle, metaDescription, metaKeywords, slug,
+            variants);
     }
 
     /**
@@ -352,6 +460,7 @@ public class ProductTailoringDataBuilder implements Builder<ProductTailoringData
         builder.metaDescription = template.getMetaDescription();
         builder.metaKeywords = template.getMetaKeywords();
         builder.slug = template.getSlug();
+        builder.variants = template.getVariants();
         return builder;
     }
 

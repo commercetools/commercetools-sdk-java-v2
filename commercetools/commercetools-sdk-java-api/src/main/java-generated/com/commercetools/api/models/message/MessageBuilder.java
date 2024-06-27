@@ -715,6 +715,14 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.ProductTailoringDescriptionSetMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.ProductTailoringImageAddedMessageBuilder productTailoringImageAddedBuilder() {
+        return com.commercetools.api.models.message.ProductTailoringImageAddedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ProductTailoringImagesSetMessageBuilder productTailoringImagesSetBuilder() {
+        return com.commercetools.api.models.message.ProductTailoringImagesSetMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.ProductTailoringNameSetMessageBuilder productTailoringNameSetBuilder() {
         return com.commercetools.api.models.message.ProductTailoringNameSetMessageBuilder.of();
     }
@@ -741,6 +749,14 @@ public class MessageBuilder {
 
     public com.commercetools.api.models.message.ProductVariantDeletedMessageBuilder productVariantDeletedBuilder() {
         return com.commercetools.api.models.message.ProductVariantDeletedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ProductVariantTailoringAddedMessageBuilder productVariantTailoringAddedBuilder() {
+        return com.commercetools.api.models.message.ProductVariantTailoringAddedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ProductVariantTailoringRemovedMessageBuilder productVariantTailoringRemovedBuilder() {
+        return com.commercetools.api.models.message.ProductVariantTailoringRemovedMessageBuilder.of();
     }
 
     public com.commercetools.api.models.message.QuoteCreatedMessageBuilder quoteCreatedBuilder() {

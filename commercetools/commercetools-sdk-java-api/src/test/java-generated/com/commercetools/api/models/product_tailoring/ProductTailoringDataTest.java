@@ -1,6 +1,8 @@
 
 package com.commercetools.api.models.product_tailoring;
 
+import java.util.Collections;
+
 import com.tngtech.junit.dataprovider.DataProvider;
 import com.tngtech.junit.dataprovider.DataProviderExtension;
 import com.tngtech.junit.dataprovider.UseDataProvider;
@@ -36,7 +38,10 @@ public class ProductTailoringDataTest {
                 new Object[] { ProductTailoringData.builder()
                         .metaKeywords(new com.commercetools.api.models.common.LocalizedStringImpl()) },
                 new Object[] { ProductTailoringData.builder()
-                        .slug(new com.commercetools.api.models.common.LocalizedStringImpl()) } };
+                        .slug(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { ProductTailoringData.builder()
+                        .variants(Collections.singletonList(
+                            new com.commercetools.api.models.product_tailoring.ProductVariantTailoringImpl())) } };
     }
 
     @Test
@@ -83,5 +88,15 @@ public class ProductTailoringDataTest {
         ProductTailoringData value = ProductTailoringData.of();
         value.setSlug(new com.commercetools.api.models.common.LocalizedStringImpl());
         Assertions.assertThat(value.getSlug()).isEqualTo(new com.commercetools.api.models.common.LocalizedStringImpl());
+    }
+
+    @Test
+    public void variants() {
+        ProductTailoringData value = ProductTailoringData.of();
+        value.setVariants(Collections
+                .singletonList(new com.commercetools.api.models.product_tailoring.ProductVariantTailoringImpl()));
+        Assertions.assertThat(value.getVariants())
+                .isEqualTo(Collections.singletonList(
+                    new com.commercetools.api.models.product_tailoring.ProductVariantTailoringImpl()));
     }
 }

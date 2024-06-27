@@ -4,6 +4,7 @@ package com.commercetools.api.models.product_tailoring;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
 
@@ -80,6 +81,14 @@ public interface ProductTailoringData {
     public LocalizedString getSlug();
 
     /**
+     *  <p>Tailored Variants of the Product.</p>
+     * @return variants
+     */
+    @Valid
+    @JsonProperty("variants")
+    public List<ProductVariantTailoring> getVariants();
+
+    /**
      *  <p>Tailored name of the Product.</p>
      * @param name value to be set
      */
@@ -122,6 +131,21 @@ public interface ProductTailoringData {
     public void setSlug(final LocalizedString slug);
 
     /**
+     *  <p>Tailored Variants of the Product.</p>
+     * @param variants values to be set
+     */
+
+    @JsonIgnore
+    public void setVariants(final ProductVariantTailoring... variants);
+
+    /**
+     *  <p>Tailored Variants of the Product.</p>
+     * @param variants values to be set
+     */
+
+    public void setVariants(final List<ProductVariantTailoring> variants);
+
+    /**
      * factory method
      * @return instance of ProductTailoringData
      */
@@ -142,6 +166,7 @@ public interface ProductTailoringData {
         instance.setMetaDescription(template.getMetaDescription());
         instance.setMetaKeywords(template.getMetaKeywords());
         instance.setSlug(template.getSlug());
+        instance.setVariants(template.getVariants());
         return instance;
     }
 
@@ -165,6 +190,11 @@ public interface ProductTailoringData {
         instance.setMetaKeywords(
             com.commercetools.api.models.common.LocalizedString.deepCopy(template.getMetaKeywords()));
         instance.setSlug(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getSlug()));
+        instance.setVariants(Optional.ofNullable(template.getVariants())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.product_tailoring.ProductVariantTailoring::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

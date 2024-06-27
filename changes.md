@@ -3,6 +3,17 @@
 <details>
 <summary>Added Property(s)</summary>
 
+- added property `metaTitle` to type `ProductTailoringCreatedMessage`
+- added property `metaDescription` to type `ProductTailoringCreatedMessage`
+- added property `metaKeywords` to type `ProductTailoringCreatedMessage`
+- added property `variants` to type `ProductTailoringCreatedMessage`
+- added property `metaTitle` to type `ProductTailoringCreatedMessagePayload`
+- added property `metaDescription` to type `ProductTailoringCreatedMessagePayload`
+- added property `metaKeywords` to type `ProductTailoringCreatedMessagePayload`
+- added property `variants` to type `ProductTailoringCreatedMessagePayload`
+- added property `variants` to type `ProductTailoringData`
+- added property `variants` to type `ProductTailoringDraft`
+- added property `variants` to type `ProductTailoringInStoreDraft`
 - added property `store` to type `StagedQuote`
 </details>
 
@@ -14,6 +25,8 @@
 - added resource `/{projectKey}/in-store/key={storeKey}/staged-quotes`
 - added resource `/{projectKey}/in-store/key={storeKey}/quotes`
 - added resource `/{projectKey}/in-store/key={storeKey}/orders/quotes`
+- added resource `/{projectKey}/in-store/key={storeKey}/products/{productID}/product-tailoring/images`
+- added resource `/{projectKey}/in-store/key={storeKey}/products/key={productKey}/product-tailoring/images`
 - added resource `/{projectKey}/in-store/key={storeKey}/quote-requests/key={key}`
 - added resource `/{projectKey}/in-store/key={storeKey}/quote-requests/{ID}`
 - added resource `/{projectKey}/in-store/key={storeKey}/staged-quotes/key={key}`
@@ -51,6 +64,8 @@
 - added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().head()`
 - added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().post()`
 - added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().orders().orderQuote().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().products().withProductId().productTailoring().images().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().products().withProductKey().productTailoring().images().post()`
 - added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quoteRequests().withKey().get()`
 - added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quoteRequests().withKey().head()`
 - added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quoteRequests().withKey().post()`
@@ -75,6 +90,39 @@
 - added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().withId().head()`
 - added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().withId().post()`
 - added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().withId().delete()`
+</details>
+
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `ProductTailoringImageAddedMessage`
+- added type `ProductTailoringImagesSetMessage`
+- added type `ProductVariantTailoringAddedMessage`
+- added type `ProductVariantTailoringRemovedMessage`
+- added type `ProductTailoringImageAddedMessagePayload`
+- added type `ProductTailoringImagesSetMessagePayload`
+- added type `ProductVariantTailoringAddedMessagePayload`
+- added type `ProductVariantTailoringRemovedMessagePayload`
+- added type `ProductVariantTailoring`
+- added type `ProductVariantTailoringDraft`
+- added type `ProductTailoringAddAssetAction`
+- added type `ProductTailoringAddExternalImageAction`
+- added type `ProductTailoringAddVariantAction`
+- added type `ProductTailoringChangeAssetNameAction`
+- added type `ProductTailoringChangeAssetOrderAction`
+- added type `ProductTailoringMoveImageToPositionAction`
+- added type `ProductTailoringRemoveAssetAction`
+- added type `ProductTailoringRemoveImageAction`
+- added type `ProductTailoringRemoveVariantAction`
+- added type `ProductTailoringSetAssetCustomFieldAction`
+- added type `ProductTailoringSetAssetCustomTypeAction`
+- added type `ProductTailoringSetAssetDescriptionAction`
+- added type `ProductTailoringSetAssetKeyAction`
+- added type `ProductTailoringSetAssetSourcesAction`
+- added type `ProductTailoringSetAssetTagsAction`
+- added type `ProductTailoringSetExternalImagesAction`
+- added type `ProductTailoringSetImageLabelAction`
 </details>
 
 

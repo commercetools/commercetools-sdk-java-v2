@@ -40,6 +40,8 @@ public class ProductTailoringInStoreDraftImpl implements ProductTailoringInStore
 
     private Boolean publish;
 
+    private java.util.List<com.commercetools.api.models.product_tailoring.ProductVariantTailoringDraft> variants;
+
     /**
      * create instance with all properties
      */
@@ -52,7 +54,8 @@ public class ProductTailoringInStoreDraftImpl implements ProductTailoringInStore
             @JsonProperty("metaDescription") final com.commercetools.api.models.common.LocalizedString metaDescription,
             @JsonProperty("metaKeywords") final com.commercetools.api.models.common.LocalizedString metaKeywords,
             @JsonProperty("slug") final com.commercetools.api.models.common.LocalizedString slug,
-            @JsonProperty("publish") final Boolean publish) {
+            @JsonProperty("publish") final Boolean publish,
+            @JsonProperty("variants") final java.util.List<com.commercetools.api.models.product_tailoring.ProductVariantTailoringDraft> variants) {
         this.key = key;
         this.product = product;
         this.name = name;
@@ -62,6 +65,7 @@ public class ProductTailoringInStoreDraftImpl implements ProductTailoringInStore
         this.metaKeywords = metaKeywords;
         this.slug = slug;
         this.publish = publish;
+        this.variants = variants;
     }
 
     /**
@@ -142,6 +146,14 @@ public class ProductTailoringInStoreDraftImpl implements ProductTailoringInStore
         return this.publish;
     }
 
+    /**
+     *  <p>Tailored Variants of the Product.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.product_tailoring.ProductVariantTailoringDraft> getVariants() {
+        return this.variants;
+    }
+
     public void setKey(final String key) {
         this.key = key;
     }
@@ -178,6 +190,16 @@ public class ProductTailoringInStoreDraftImpl implements ProductTailoringInStore
         this.publish = publish;
     }
 
+    public void setVariants(
+            final com.commercetools.api.models.product_tailoring.ProductVariantTailoringDraft... variants) {
+        this.variants = new ArrayList<>(Arrays.asList(variants));
+    }
+
+    public void setVariants(
+            final java.util.List<com.commercetools.api.models.product_tailoring.ProductVariantTailoringDraft> variants) {
+        this.variants = variants;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -197,6 +219,7 @@ public class ProductTailoringInStoreDraftImpl implements ProductTailoringInStore
                 .append(metaKeywords, that.metaKeywords)
                 .append(slug, that.slug)
                 .append(publish, that.publish)
+                .append(variants, that.variants)
                 .append(key, that.key)
                 .append(product, that.product)
                 .append(name, that.name)
@@ -206,6 +229,7 @@ public class ProductTailoringInStoreDraftImpl implements ProductTailoringInStore
                 .append(metaKeywords, that.metaKeywords)
                 .append(slug, that.slug)
                 .append(publish, that.publish)
+                .append(variants, that.variants)
                 .isEquals();
     }
 
@@ -220,6 +244,7 @@ public class ProductTailoringInStoreDraftImpl implements ProductTailoringInStore
                 .append(metaKeywords)
                 .append(slug)
                 .append(publish)
+                .append(variants)
                 .toHashCode();
     }
 
@@ -234,6 +259,7 @@ public class ProductTailoringInStoreDraftImpl implements ProductTailoringInStore
                 .append("metaKeywords", metaKeywords)
                 .append("slug", slug)
                 .append("publish", publish)
+                .append("variants", variants)
                 .build();
     }
 

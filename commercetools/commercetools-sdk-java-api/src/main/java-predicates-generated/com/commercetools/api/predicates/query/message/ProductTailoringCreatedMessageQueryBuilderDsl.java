@@ -145,6 +145,48 @@ public class ProductTailoringCreatedMessageQueryBuilderDsl {
             ProductTailoringCreatedMessageQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ProductTailoringCreatedMessageQueryBuilderDsl> metaTitle(
+            Function<com.commercetools.api.predicates.query.common.LocalizedStringQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.LocalizedStringQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("metaTitle"))
+                    .inner(fn.apply(com.commercetools.api.predicates.query.common.LocalizedStringQueryBuilderDsl.of())),
+            ProductTailoringCreatedMessageQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<ProductTailoringCreatedMessageQueryBuilderDsl> metaDescription(
+            Function<com.commercetools.api.predicates.query.common.LocalizedStringQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.LocalizedStringQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("metaDescription"))
+                    .inner(fn.apply(com.commercetools.api.predicates.query.common.LocalizedStringQueryBuilderDsl.of())),
+            ProductTailoringCreatedMessageQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<ProductTailoringCreatedMessageQueryBuilderDsl> metaKeywords(
+            Function<com.commercetools.api.predicates.query.common.LocalizedStringQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.LocalizedStringQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("metaKeywords"))
+                    .inner(fn.apply(com.commercetools.api.predicates.query.common.LocalizedStringQueryBuilderDsl.of())),
+            ProductTailoringCreatedMessageQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<ProductTailoringCreatedMessageQueryBuilderDsl> variants(
+            Function<com.commercetools.api.predicates.query.product_tailoring.ProductVariantTailoringQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product_tailoring.ProductVariantTailoringQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("variants"))
+                .inner(fn.apply(
+                    com.commercetools.api.predicates.query.product_tailoring.ProductVariantTailoringQueryBuilderDsl
+                            .of())),
+            ProductTailoringCreatedMessageQueryBuilderDsl::of);
+    }
+
+    public CollectionPredicateBuilder<ProductTailoringCreatedMessageQueryBuilderDsl> variants() {
+        return new CollectionPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("variants")),
+            p -> new CombinationQueryPredicate<>(p, ProductTailoringCreatedMessageQueryBuilderDsl::of));
+    }
+
     public BooleanComparisonPredicateBuilder<ProductTailoringCreatedMessageQueryBuilderDsl> published() {
         return new BooleanComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("published")),

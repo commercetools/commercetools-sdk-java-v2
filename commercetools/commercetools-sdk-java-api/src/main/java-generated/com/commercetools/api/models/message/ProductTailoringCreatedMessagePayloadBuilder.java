@@ -45,6 +45,18 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     @Nullable
     private com.commercetools.api.models.common.LocalizedString slug;
 
+    @Nullable
+    private com.commercetools.api.models.common.LocalizedString metaTitle;
+
+    @Nullable
+    private com.commercetools.api.models.common.LocalizedString metaDescription;
+
+    @Nullable
+    private com.commercetools.api.models.common.LocalizedString metaKeywords;
+
+    @Nullable
+    private java.util.List<com.commercetools.api.models.product_tailoring.ProductVariantTailoring> variants;
+
     private Boolean published;
 
     /**
@@ -250,6 +262,207 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
+     *  <p>The metaTitle of the Product Tailoring at the time of creation.</p>
+     * @param builder function to build the metaTitle value
+     * @return Builder
+     */
+
+    public ProductTailoringCreatedMessagePayloadBuilder metaTitle(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.metaTitle = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>The metaTitle of the Product Tailoring at the time of creation.</p>
+     * @param builder function to build the metaTitle value
+     * @return Builder
+     */
+
+    public ProductTailoringCreatedMessagePayloadBuilder withMetaTitle(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.metaTitle = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The metaTitle of the Product Tailoring at the time of creation.</p>
+     * @param metaTitle value to be set
+     * @return Builder
+     */
+
+    public ProductTailoringCreatedMessagePayloadBuilder metaTitle(
+            @Nullable final com.commercetools.api.models.common.LocalizedString metaTitle) {
+        this.metaTitle = metaTitle;
+        return this;
+    }
+
+    /**
+     *  <p>The metaDescription of the Product Tailoring at the time of creation.</p>
+     * @param builder function to build the metaDescription value
+     * @return Builder
+     */
+
+    public ProductTailoringCreatedMessagePayloadBuilder metaDescription(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.metaDescription = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>The metaDescription of the Product Tailoring at the time of creation.</p>
+     * @param builder function to build the metaDescription value
+     * @return Builder
+     */
+
+    public ProductTailoringCreatedMessagePayloadBuilder withMetaDescription(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.metaDescription = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The metaDescription of the Product Tailoring at the time of creation.</p>
+     * @param metaDescription value to be set
+     * @return Builder
+     */
+
+    public ProductTailoringCreatedMessagePayloadBuilder metaDescription(
+            @Nullable final com.commercetools.api.models.common.LocalizedString metaDescription) {
+        this.metaDescription = metaDescription;
+        return this;
+    }
+
+    /**
+     *  <p>The metaKeywords of the Product Tailoring at the time of creation.</p>
+     * @param builder function to build the metaKeywords value
+     * @return Builder
+     */
+
+    public ProductTailoringCreatedMessagePayloadBuilder metaKeywords(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedStringBuilder> builder) {
+        this.metaKeywords = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>The metaKeywords of the Product Tailoring at the time of creation.</p>
+     * @param builder function to build the metaKeywords value
+     * @return Builder
+     */
+
+    public ProductTailoringCreatedMessagePayloadBuilder withMetaKeywords(
+            Function<com.commercetools.api.models.common.LocalizedStringBuilder, com.commercetools.api.models.common.LocalizedString> builder) {
+        this.metaKeywords = builder.apply(com.commercetools.api.models.common.LocalizedStringBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The metaKeywords of the Product Tailoring at the time of creation.</p>
+     * @param metaKeywords value to be set
+     * @return Builder
+     */
+
+    public ProductTailoringCreatedMessagePayloadBuilder metaKeywords(
+            @Nullable final com.commercetools.api.models.common.LocalizedString metaKeywords) {
+        this.metaKeywords = metaKeywords;
+        return this;
+    }
+
+    /**
+     *  <p>The variants of the Product Tailoring at the time of creation.</p>
+     * @param variants value to be set
+     * @return Builder
+     */
+
+    public ProductTailoringCreatedMessagePayloadBuilder variants(
+            @Nullable final com.commercetools.api.models.product_tailoring.ProductVariantTailoring... variants) {
+        this.variants = new ArrayList<>(Arrays.asList(variants));
+        return this;
+    }
+
+    /**
+     *  <p>The variants of the Product Tailoring at the time of creation.</p>
+     * @param variants value to be set
+     * @return Builder
+     */
+
+    public ProductTailoringCreatedMessagePayloadBuilder variants(
+            @Nullable final java.util.List<com.commercetools.api.models.product_tailoring.ProductVariantTailoring> variants) {
+        this.variants = variants;
+        return this;
+    }
+
+    /**
+     *  <p>The variants of the Product Tailoring at the time of creation.</p>
+     * @param variants value to be set
+     * @return Builder
+     */
+
+    public ProductTailoringCreatedMessagePayloadBuilder plusVariants(
+            @Nullable final com.commercetools.api.models.product_tailoring.ProductVariantTailoring... variants) {
+        if (this.variants == null) {
+            this.variants = new ArrayList<>();
+        }
+        this.variants.addAll(Arrays.asList(variants));
+        return this;
+    }
+
+    /**
+     *  <p>The variants of the Product Tailoring at the time of creation.</p>
+     * @param builder function to build the variants value
+     * @return Builder
+     */
+
+    public ProductTailoringCreatedMessagePayloadBuilder plusVariants(
+            Function<com.commercetools.api.models.product_tailoring.ProductVariantTailoringBuilder, com.commercetools.api.models.product_tailoring.ProductVariantTailoringBuilder> builder) {
+        if (this.variants == null) {
+            this.variants = new ArrayList<>();
+        }
+        this.variants.add(
+            builder.apply(com.commercetools.api.models.product_tailoring.ProductVariantTailoringBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>The variants of the Product Tailoring at the time of creation.</p>
+     * @param builder function to build the variants value
+     * @return Builder
+     */
+
+    public ProductTailoringCreatedMessagePayloadBuilder withVariants(
+            Function<com.commercetools.api.models.product_tailoring.ProductVariantTailoringBuilder, com.commercetools.api.models.product_tailoring.ProductVariantTailoringBuilder> builder) {
+        this.variants = new ArrayList<>();
+        this.variants.add(
+            builder.apply(com.commercetools.api.models.product_tailoring.ProductVariantTailoringBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>The variants of the Product Tailoring at the time of creation.</p>
+     * @param builder function to build the variants value
+     * @return Builder
+     */
+
+    public ProductTailoringCreatedMessagePayloadBuilder addVariants(
+            Function<com.commercetools.api.models.product_tailoring.ProductVariantTailoringBuilder, com.commercetools.api.models.product_tailoring.ProductVariantTailoring> builder) {
+        return plusVariants(
+            builder.apply(com.commercetools.api.models.product_tailoring.ProductVariantTailoringBuilder.of()));
+    }
+
+    /**
+     *  <p>The variants of the Product Tailoring at the time of creation.</p>
+     * @param builder function to build the variants value
+     * @return Builder
+     */
+
+    public ProductTailoringCreatedMessagePayloadBuilder setVariants(
+            Function<com.commercetools.api.models.product_tailoring.ProductVariantTailoringBuilder, com.commercetools.api.models.product_tailoring.ProductVariantTailoring> builder) {
+        return variants(
+            builder.apply(com.commercetools.api.models.product_tailoring.ProductVariantTailoringBuilder.of()));
+    }
+
+    /**
      *  <p><code>true</code> if the ProductTailoring is published.</p>
      * @param published value to be set
      * @return Builder
@@ -329,6 +542,46 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
+     *  <p>The metaTitle of the Product Tailoring at the time of creation.</p>
+     * @return metaTitle
+     */
+
+    @Nullable
+    public com.commercetools.api.models.common.LocalizedString getMetaTitle() {
+        return this.metaTitle;
+    }
+
+    /**
+     *  <p>The metaDescription of the Product Tailoring at the time of creation.</p>
+     * @return metaDescription
+     */
+
+    @Nullable
+    public com.commercetools.api.models.common.LocalizedString getMetaDescription() {
+        return this.metaDescription;
+    }
+
+    /**
+     *  <p>The metaKeywords of the Product Tailoring at the time of creation.</p>
+     * @return metaKeywords
+     */
+
+    @Nullable
+    public com.commercetools.api.models.common.LocalizedString getMetaKeywords() {
+        return this.metaKeywords;
+    }
+
+    /**
+     *  <p>The variants of the Product Tailoring at the time of creation.</p>
+     * @return variants
+     */
+
+    @Nullable
+    public java.util.List<com.commercetools.api.models.product_tailoring.ProductVariantTailoring> getVariants() {
+        return this.variants;
+    }
+
+    /**
      *  <p><code>true</code> if the ProductTailoring is published.</p>
      * @return published
      */
@@ -346,7 +599,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
         Objects.requireNonNull(product, ProductTailoringCreatedMessagePayload.class + ": product is missing");
         Objects.requireNonNull(published, ProductTailoringCreatedMessagePayload.class + ": published is missing");
         return new ProductTailoringCreatedMessagePayloadImpl(key, store, productKey, product, description, name, slug,
-            published);
+            metaTitle, metaDescription, metaKeywords, variants, published);
     }
 
     /**
@@ -355,7 +608,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
      */
     public ProductTailoringCreatedMessagePayload buildUnchecked() {
         return new ProductTailoringCreatedMessagePayloadImpl(key, store, productKey, product, description, name, slug,
-            published);
+            metaTitle, metaDescription, metaKeywords, variants, published);
     }
 
     /**
@@ -381,6 +634,10 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
         builder.description = template.getDescription();
         builder.name = template.getName();
         builder.slug = template.getSlug();
+        builder.metaTitle = template.getMetaTitle();
+        builder.metaDescription = template.getMetaDescription();
+        builder.metaKeywords = template.getMetaKeywords();
+        builder.variants = template.getVariants();
         builder.published = template.getPublished();
         return builder;
     }

@@ -34,6 +34,8 @@ public class ProductTailoringDataImpl implements ProductTailoringData, ModelBase
 
     private com.commercetools.api.models.common.LocalizedString slug;
 
+    private java.util.List<com.commercetools.api.models.product_tailoring.ProductVariantTailoring> variants;
+
     /**
      * create instance with all properties
      */
@@ -43,13 +45,15 @@ public class ProductTailoringDataImpl implements ProductTailoringData, ModelBase
             @JsonProperty("metaTitle") final com.commercetools.api.models.common.LocalizedString metaTitle,
             @JsonProperty("metaDescription") final com.commercetools.api.models.common.LocalizedString metaDescription,
             @JsonProperty("metaKeywords") final com.commercetools.api.models.common.LocalizedString metaKeywords,
-            @JsonProperty("slug") final com.commercetools.api.models.common.LocalizedString slug) {
+            @JsonProperty("slug") final com.commercetools.api.models.common.LocalizedString slug,
+            @JsonProperty("variants") final java.util.List<com.commercetools.api.models.product_tailoring.ProductVariantTailoring> variants) {
         this.name = name;
         this.description = description;
         this.metaTitle = metaTitle;
         this.metaDescription = metaDescription;
         this.metaKeywords = metaKeywords;
         this.slug = slug;
+        this.variants = variants;
     }
 
     /**
@@ -106,6 +110,14 @@ public class ProductTailoringDataImpl implements ProductTailoringData, ModelBase
         return this.slug;
     }
 
+    /**
+     *  <p>Tailored Variants of the Product.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.product_tailoring.ProductVariantTailoring> getVariants() {
+        return this.variants;
+    }
+
     public void setName(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
     }
@@ -130,6 +142,15 @@ public class ProductTailoringDataImpl implements ProductTailoringData, ModelBase
         this.slug = slug;
     }
 
+    public void setVariants(final com.commercetools.api.models.product_tailoring.ProductVariantTailoring... variants) {
+        this.variants = new ArrayList<>(Arrays.asList(variants));
+    }
+
+    public void setVariants(
+            final java.util.List<com.commercetools.api.models.product_tailoring.ProductVariantTailoring> variants) {
+        this.variants = variants;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -146,12 +167,14 @@ public class ProductTailoringDataImpl implements ProductTailoringData, ModelBase
                 .append(metaDescription, that.metaDescription)
                 .append(metaKeywords, that.metaKeywords)
                 .append(slug, that.slug)
+                .append(variants, that.variants)
                 .append(name, that.name)
                 .append(description, that.description)
                 .append(metaTitle, that.metaTitle)
                 .append(metaDescription, that.metaDescription)
                 .append(metaKeywords, that.metaKeywords)
                 .append(slug, that.slug)
+                .append(variants, that.variants)
                 .isEquals();
     }
 
@@ -163,6 +186,7 @@ public class ProductTailoringDataImpl implements ProductTailoringData, ModelBase
                 .append(metaDescription)
                 .append(metaKeywords)
                 .append(slug)
+                .append(variants)
                 .toHashCode();
     }
 
@@ -174,6 +198,7 @@ public class ProductTailoringDataImpl implements ProductTailoringData, ModelBase
                 .append("metaDescription", metaDescription)
                 .append("metaKeywords", metaKeywords)
                 .append("slug", slug)
+                .append("variants", variants)
                 .build();
     }
 

@@ -53,6 +53,9 @@ public class ProductTailoringDraftBuilder implements Builder<ProductTailoringDra
     @Nullable
     private Boolean publish;
 
+    @Nullable
+    private java.util.List<com.commercetools.api.models.product_tailoring.ProductVariantTailoringDraft> variants;
+
     /**
      *  <p>User-defined unique identifier of the ProductTailoring.</p>
      * @param key value to be set
@@ -362,6 +365,101 @@ public class ProductTailoringDraftBuilder implements Builder<ProductTailoringDra
     }
 
     /**
+     *  <p>Tailored Variants of the Product.</p>
+     * @param variants value to be set
+     * @return Builder
+     */
+
+    public ProductTailoringDraftBuilder variants(
+            @Nullable final com.commercetools.api.models.product_tailoring.ProductVariantTailoringDraft... variants) {
+        this.variants = new ArrayList<>(Arrays.asList(variants));
+        return this;
+    }
+
+    /**
+     *  <p>Tailored Variants of the Product.</p>
+     * @param variants value to be set
+     * @return Builder
+     */
+
+    public ProductTailoringDraftBuilder variants(
+            @Nullable final java.util.List<com.commercetools.api.models.product_tailoring.ProductVariantTailoringDraft> variants) {
+        this.variants = variants;
+        return this;
+    }
+
+    /**
+     *  <p>Tailored Variants of the Product.</p>
+     * @param variants value to be set
+     * @return Builder
+     */
+
+    public ProductTailoringDraftBuilder plusVariants(
+            @Nullable final com.commercetools.api.models.product_tailoring.ProductVariantTailoringDraft... variants) {
+        if (this.variants == null) {
+            this.variants = new ArrayList<>();
+        }
+        this.variants.addAll(Arrays.asList(variants));
+        return this;
+    }
+
+    /**
+     *  <p>Tailored Variants of the Product.</p>
+     * @param builder function to build the variants value
+     * @return Builder
+     */
+
+    public ProductTailoringDraftBuilder plusVariants(
+            Function<com.commercetools.api.models.product_tailoring.ProductVariantTailoringDraftBuilder, com.commercetools.api.models.product_tailoring.ProductVariantTailoringDraftBuilder> builder) {
+        if (this.variants == null) {
+            this.variants = new ArrayList<>();
+        }
+        this.variants.add(
+            builder.apply(com.commercetools.api.models.product_tailoring.ProductVariantTailoringDraftBuilder.of())
+                    .build());
+        return this;
+    }
+
+    /**
+     *  <p>Tailored Variants of the Product.</p>
+     * @param builder function to build the variants value
+     * @return Builder
+     */
+
+    public ProductTailoringDraftBuilder withVariants(
+            Function<com.commercetools.api.models.product_tailoring.ProductVariantTailoringDraftBuilder, com.commercetools.api.models.product_tailoring.ProductVariantTailoringDraftBuilder> builder) {
+        this.variants = new ArrayList<>();
+        this.variants.add(
+            builder.apply(com.commercetools.api.models.product_tailoring.ProductVariantTailoringDraftBuilder.of())
+                    .build());
+        return this;
+    }
+
+    /**
+     *  <p>Tailored Variants of the Product.</p>
+     * @param builder function to build the variants value
+     * @return Builder
+     */
+
+    public ProductTailoringDraftBuilder addVariants(
+            Function<com.commercetools.api.models.product_tailoring.ProductVariantTailoringDraftBuilder, com.commercetools.api.models.product_tailoring.ProductVariantTailoringDraft> builder) {
+        return plusVariants(
+            builder.apply(com.commercetools.api.models.product_tailoring.ProductVariantTailoringDraftBuilder.of()));
+    }
+
+    /**
+     *  <p>Tailored Variants of the Product.</p>
+     * @param builder function to build the variants value
+     * @return Builder
+     */
+
+    public ProductTailoringDraftBuilder setVariants(
+            Function<com.commercetools.api.models.product_tailoring.ProductVariantTailoringDraftBuilder, com.commercetools.api.models.product_tailoring.ProductVariantTailoringDraft> builder) {
+        return variants(
+            builder.apply(com.commercetools.api.models.product_tailoring.ProductVariantTailoringDraftBuilder.of()));
+    }
+
+    /**
      *  <p>User-defined unique identifier of the ProductTailoring.</p>
      * @return key
      */
@@ -460,6 +558,16 @@ public class ProductTailoringDraftBuilder implements Builder<ProductTailoringDra
     }
 
     /**
+     *  <p>Tailored Variants of the Product.</p>
+     * @return variants
+     */
+
+    @Nullable
+    public java.util.List<com.commercetools.api.models.product_tailoring.ProductVariantTailoringDraft> getVariants() {
+        return this.variants;
+    }
+
+    /**
      * builds ProductTailoringDraft with checking for non-null required values
      * @return ProductTailoringDraft
      */
@@ -467,7 +575,7 @@ public class ProductTailoringDraftBuilder implements Builder<ProductTailoringDra
         Objects.requireNonNull(store, ProductTailoringDraft.class + ": store is missing");
         Objects.requireNonNull(product, ProductTailoringDraft.class + ": product is missing");
         return new ProductTailoringDraftImpl(key, store, product, name, description, metaTitle, metaDescription,
-            metaKeywords, slug, publish);
+            metaKeywords, slug, publish, variants);
     }
 
     /**
@@ -476,7 +584,7 @@ public class ProductTailoringDraftBuilder implements Builder<ProductTailoringDra
      */
     public ProductTailoringDraft buildUnchecked() {
         return new ProductTailoringDraftImpl(key, store, product, name, description, metaTitle, metaDescription,
-            metaKeywords, slug, publish);
+            metaKeywords, slug, publish, variants);
     }
 
     /**
@@ -504,6 +612,7 @@ public class ProductTailoringDraftBuilder implements Builder<ProductTailoringDra
         builder.metaKeywords = template.getMetaKeywords();
         builder.slug = template.getSlug();
         builder.publish = template.getPublish();
+        builder.variants = template.getVariants();
         return builder;
     }
 

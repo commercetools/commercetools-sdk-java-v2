@@ -33,6 +33,7 @@ import jakarta.validation.constraints.NotNull;
         @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeCountriesActionImpl.class, name = ProjectChangeCountriesAction.CHANGE_COUNTRIES),
         @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeCountryTaxRateFallbackEnabledActionImpl.class, name = ProjectChangeCountryTaxRateFallbackEnabledAction.CHANGE_COUNTRY_TAX_RATE_FALLBACK_ENABLED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeCurrenciesActionImpl.class, name = ProjectChangeCurrenciesAction.CHANGE_CURRENCIES),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeCustomerSearchStatusActionImpl.class, name = ProjectChangeCustomerSearchStatusAction.CHANGE_CUSTOMER_SEARCH_STATUS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeLanguagesActionImpl.class, name = ProjectChangeLanguagesAction.CHANGE_LANGUAGES),
         @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeMessagesConfigurationActionImpl.class, name = ProjectChangeMessagesConfigurationAction.CHANGE_MESSAGES_CONFIGURATION),
         @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeNameActionImpl.class, name = ProjectChangeNameAction.CHANGE_NAME),
@@ -84,6 +85,10 @@ public interface ProjectUpdateAction extends com.commercetools.api.models.Resour
         if (template instanceof com.commercetools.api.models.project.ProjectChangeCurrenciesAction) {
             return com.commercetools.api.models.project.ProjectChangeCurrenciesAction
                     .deepCopy((com.commercetools.api.models.project.ProjectChangeCurrenciesAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.project.ProjectChangeCustomerSearchStatusAction) {
+            return com.commercetools.api.models.project.ProjectChangeCustomerSearchStatusAction
+                    .deepCopy((com.commercetools.api.models.project.ProjectChangeCustomerSearchStatusAction) template);
         }
         if (template instanceof com.commercetools.api.models.project.ProjectChangeLanguagesAction) {
             return com.commercetools.api.models.project.ProjectChangeLanguagesAction
@@ -163,6 +168,14 @@ public interface ProjectUpdateAction extends com.commercetools.api.models.Resour
      */
     public static com.commercetools.api.models.project.ProjectChangeCurrenciesActionBuilder changeCurrenciesBuilder() {
         return com.commercetools.api.models.project.ProjectChangeCurrenciesActionBuilder.of();
+    }
+
+    /**
+     * builder for changeCustomerSearchStatus subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.project.ProjectChangeCustomerSearchStatusActionBuilder changeCustomerSearchStatusBuilder() {
+        return com.commercetools.api.models.project.ProjectChangeCustomerSearchStatusActionBuilder.of();
     }
 
     /**

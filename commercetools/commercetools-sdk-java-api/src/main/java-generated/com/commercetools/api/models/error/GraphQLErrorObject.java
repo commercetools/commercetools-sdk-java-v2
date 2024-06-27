@@ -179,6 +179,10 @@ public interface GraphQLErrorObject {
             return com.commercetools.api.models.error.GraphQLCountryNotConfiguredInStoreError
                     .deepCopy((com.commercetools.api.models.error.GraphQLCountryNotConfiguredInStoreError) template);
         }
+        if (template instanceof com.commercetools.api.models.error.GraphQLCustomerSearchProjectNotIndexedError) {
+            return com.commercetools.api.models.error.GraphQLCustomerSearchProjectNotIndexedError.deepCopy(
+                (com.commercetools.api.models.error.GraphQLCustomerSearchProjectNotIndexedError) template);
+        }
         if (template instanceof com.commercetools.api.models.error.GraphQLDiscountCodeNonApplicableError) {
             return com.commercetools.api.models.error.GraphQLDiscountCodeNonApplicableError
                     .deepCopy((com.commercetools.api.models.error.GraphQLDiscountCodeNonApplicableError) template);

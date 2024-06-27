@@ -1,6 +1,8 @@
 
 package com.commercetools.api.models.message;
 
+import java.util.Collections;
+
 import com.tngtech.junit.dataprovider.DataProvider;
 import com.tngtech.junit.dataprovider.DataProviderExtension;
 import com.tngtech.junit.dataprovider.UseDataProvider;
@@ -37,6 +39,15 @@ public class ProductTailoringCreatedMessagePayloadTest {
                         .name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
                 new Object[] { ProductTailoringCreatedMessagePayload.builder()
                         .slug(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { ProductTailoringCreatedMessagePayload.builder()
+                        .metaTitle(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { ProductTailoringCreatedMessagePayload.builder()
+                        .metaDescription(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { ProductTailoringCreatedMessagePayload.builder()
+                        .metaKeywords(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { ProductTailoringCreatedMessagePayload.builder()
+                        .variants(Collections.singletonList(
+                            new com.commercetools.api.models.product_tailoring.ProductVariantTailoringImpl())) },
                 new Object[] { ProductTailoringCreatedMessagePayload.builder().published(true) } };
     }
 
@@ -90,6 +101,40 @@ public class ProductTailoringCreatedMessagePayloadTest {
         ProductTailoringCreatedMessagePayload value = ProductTailoringCreatedMessagePayload.of();
         value.setSlug(new com.commercetools.api.models.common.LocalizedStringImpl());
         Assertions.assertThat(value.getSlug()).isEqualTo(new com.commercetools.api.models.common.LocalizedStringImpl());
+    }
+
+    @Test
+    public void metaTitle() {
+        ProductTailoringCreatedMessagePayload value = ProductTailoringCreatedMessagePayload.of();
+        value.setMetaTitle(new com.commercetools.api.models.common.LocalizedStringImpl());
+        Assertions.assertThat(value.getMetaTitle())
+                .isEqualTo(new com.commercetools.api.models.common.LocalizedStringImpl());
+    }
+
+    @Test
+    public void metaDescription() {
+        ProductTailoringCreatedMessagePayload value = ProductTailoringCreatedMessagePayload.of();
+        value.setMetaDescription(new com.commercetools.api.models.common.LocalizedStringImpl());
+        Assertions.assertThat(value.getMetaDescription())
+                .isEqualTo(new com.commercetools.api.models.common.LocalizedStringImpl());
+    }
+
+    @Test
+    public void metaKeywords() {
+        ProductTailoringCreatedMessagePayload value = ProductTailoringCreatedMessagePayload.of();
+        value.setMetaKeywords(new com.commercetools.api.models.common.LocalizedStringImpl());
+        Assertions.assertThat(value.getMetaKeywords())
+                .isEqualTo(new com.commercetools.api.models.common.LocalizedStringImpl());
+    }
+
+    @Test
+    public void variants() {
+        ProductTailoringCreatedMessagePayload value = ProductTailoringCreatedMessagePayload.of();
+        value.setVariants(Collections
+                .singletonList(new com.commercetools.api.models.product_tailoring.ProductVariantTailoringImpl()));
+        Assertions.assertThat(value.getVariants())
+                .isEqualTo(Collections.singletonList(
+                    new com.commercetools.api.models.product_tailoring.ProductVariantTailoringImpl()));
     }
 
     @Test

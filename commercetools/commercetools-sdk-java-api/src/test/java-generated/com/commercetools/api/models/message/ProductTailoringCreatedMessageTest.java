@@ -1,6 +1,8 @@
 
 package com.commercetools.api.models.message;
 
+import java.util.Collections;
+
 import com.tngtech.junit.dataprovider.DataProvider;
 import com.tngtech.junit.dataprovider.DataProviderExtension;
 import com.tngtech.junit.dataprovider.UseDataProvider;
@@ -36,6 +38,15 @@ public class ProductTailoringCreatedMessageTest {
                         .name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
                 new Object[] { ProductTailoringCreatedMessage.builder()
                         .slug(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { ProductTailoringCreatedMessage.builder()
+                        .metaTitle(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { ProductTailoringCreatedMessage.builder()
+                        .metaDescription(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { ProductTailoringCreatedMessage.builder()
+                        .metaKeywords(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { ProductTailoringCreatedMessage.builder()
+                        .variants(Collections.singletonList(
+                            new com.commercetools.api.models.product_tailoring.ProductVariantTailoringImpl())) },
                 new Object[] { ProductTailoringCreatedMessage.builder().published(true) } };
     }
 
@@ -89,6 +100,40 @@ public class ProductTailoringCreatedMessageTest {
         ProductTailoringCreatedMessage value = ProductTailoringCreatedMessage.of();
         value.setSlug(new com.commercetools.api.models.common.LocalizedStringImpl());
         Assertions.assertThat(value.getSlug()).isEqualTo(new com.commercetools.api.models.common.LocalizedStringImpl());
+    }
+
+    @Test
+    public void metaTitle() {
+        ProductTailoringCreatedMessage value = ProductTailoringCreatedMessage.of();
+        value.setMetaTitle(new com.commercetools.api.models.common.LocalizedStringImpl());
+        Assertions.assertThat(value.getMetaTitle())
+                .isEqualTo(new com.commercetools.api.models.common.LocalizedStringImpl());
+    }
+
+    @Test
+    public void metaDescription() {
+        ProductTailoringCreatedMessage value = ProductTailoringCreatedMessage.of();
+        value.setMetaDescription(new com.commercetools.api.models.common.LocalizedStringImpl());
+        Assertions.assertThat(value.getMetaDescription())
+                .isEqualTo(new com.commercetools.api.models.common.LocalizedStringImpl());
+    }
+
+    @Test
+    public void metaKeywords() {
+        ProductTailoringCreatedMessage value = ProductTailoringCreatedMessage.of();
+        value.setMetaKeywords(new com.commercetools.api.models.common.LocalizedStringImpl());
+        Assertions.assertThat(value.getMetaKeywords())
+                .isEqualTo(new com.commercetools.api.models.common.LocalizedStringImpl());
+    }
+
+    @Test
+    public void variants() {
+        ProductTailoringCreatedMessage value = ProductTailoringCreatedMessage.of();
+        value.setVariants(Collections
+                .singletonList(new com.commercetools.api.models.product_tailoring.ProductVariantTailoringImpl()));
+        Assertions.assertThat(value.getVariants())
+                .isEqualTo(Collections.singletonList(
+                    new com.commercetools.api.models.product_tailoring.ProductVariantTailoringImpl()));
     }
 
     @Test

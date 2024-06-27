@@ -4,11 +4,13 @@ package com.commercetools.api.models.message;
 import java.time.*;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.product.ProductReference;
+import com.commercetools.api.models.product_tailoring.ProductVariantTailoring;
 import com.commercetools.api.models.store.StoreKeyReference;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -108,6 +110,38 @@ public interface ProductTailoringCreatedMessage extends Message {
     public LocalizedString getSlug();
 
     /**
+     *  <p>The metaTitle of the Product Tailoring at the time of creation.</p>
+     * @return metaTitle
+     */
+    @Valid
+    @JsonProperty("metaTitle")
+    public LocalizedString getMetaTitle();
+
+    /**
+     *  <p>The metaDescription of the Product Tailoring at the time of creation.</p>
+     * @return metaDescription
+     */
+    @Valid
+    @JsonProperty("metaDescription")
+    public LocalizedString getMetaDescription();
+
+    /**
+     *  <p>The metaKeywords of the Product Tailoring at the time of creation.</p>
+     * @return metaKeywords
+     */
+    @Valid
+    @JsonProperty("metaKeywords")
+    public LocalizedString getMetaKeywords();
+
+    /**
+     *  <p>The variants of the Product Tailoring at the time of creation.</p>
+     * @return variants
+     */
+    @Valid
+    @JsonProperty("variants")
+    public List<ProductVariantTailoring> getVariants();
+
+    /**
      *  <p><code>true</code> if the ProductTailoring is published.</p>
      * @return published
      */
@@ -165,6 +199,42 @@ public interface ProductTailoringCreatedMessage extends Message {
     public void setSlug(final LocalizedString slug);
 
     /**
+     *  <p>The metaTitle of the Product Tailoring at the time of creation.</p>
+     * @param metaTitle value to be set
+     */
+
+    public void setMetaTitle(final LocalizedString metaTitle);
+
+    /**
+     *  <p>The metaDescription of the Product Tailoring at the time of creation.</p>
+     * @param metaDescription value to be set
+     */
+
+    public void setMetaDescription(final LocalizedString metaDescription);
+
+    /**
+     *  <p>The metaKeywords of the Product Tailoring at the time of creation.</p>
+     * @param metaKeywords value to be set
+     */
+
+    public void setMetaKeywords(final LocalizedString metaKeywords);
+
+    /**
+     *  <p>The variants of the Product Tailoring at the time of creation.</p>
+     * @param variants values to be set
+     */
+
+    @JsonIgnore
+    public void setVariants(final ProductVariantTailoring... variants);
+
+    /**
+     *  <p>The variants of the Product Tailoring at the time of creation.</p>
+     * @param variants values to be set
+     */
+
+    public void setVariants(final List<ProductVariantTailoring> variants);
+
+    /**
      *  <p><code>true</code> if the ProductTailoring is published.</p>
      * @param published value to be set
      */
@@ -203,6 +273,10 @@ public interface ProductTailoringCreatedMessage extends Message {
         instance.setDescription(template.getDescription());
         instance.setName(template.getName());
         instance.setSlug(template.getSlug());
+        instance.setMetaTitle(template.getMetaTitle());
+        instance.setMetaDescription(template.getMetaDescription());
+        instance.setMetaKeywords(template.getMetaKeywords());
+        instance.setVariants(template.getVariants());
         instance.setPublished(template.getPublished());
         return instance;
     }
@@ -238,6 +312,16 @@ public interface ProductTailoringCreatedMessage extends Message {
             com.commercetools.api.models.common.LocalizedString.deepCopy(template.getDescription()));
         instance.setName(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getName()));
         instance.setSlug(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getSlug()));
+        instance.setMetaTitle(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getMetaTitle()));
+        instance.setMetaDescription(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getMetaDescription()));
+        instance.setMetaKeywords(
+            com.commercetools.api.models.common.LocalizedString.deepCopy(template.getMetaKeywords()));
+        instance.setVariants(Optional.ofNullable(template.getVariants())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.product_tailoring.ProductVariantTailoring::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         instance.setPublished(template.getPublished());
         return instance;
     }

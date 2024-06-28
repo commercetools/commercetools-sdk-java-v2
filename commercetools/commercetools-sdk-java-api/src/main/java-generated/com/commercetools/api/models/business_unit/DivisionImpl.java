@@ -70,6 +70,8 @@ public class DivisionImpl implements Division, ModelBase {
 
     private com.commercetools.api.models.business_unit.BusinessUnitKeyReference topLevelUnit;
 
+    private com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode approvalRuleMode;
+
     /**
      * create instance with all properties
      */
@@ -94,7 +96,8 @@ public class DivisionImpl implements Division, ModelBase {
             @JsonProperty("associates") final java.util.List<com.commercetools.api.models.business_unit.Associate> associates,
             @JsonProperty("inheritedAssociates") final java.util.List<com.commercetools.api.models.business_unit.InheritedAssociate> inheritedAssociates,
             @JsonProperty("parentUnit") final com.commercetools.api.models.business_unit.BusinessUnitKeyReference parentUnit,
-            @JsonProperty("topLevelUnit") final com.commercetools.api.models.business_unit.BusinessUnitKeyReference topLevelUnit) {
+            @JsonProperty("topLevelUnit") final com.commercetools.api.models.business_unit.BusinessUnitKeyReference topLevelUnit,
+            @JsonProperty("approvalRuleMode") final com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode approvalRuleMode) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -118,6 +121,7 @@ public class DivisionImpl implements Division, ModelBase {
         this.inheritedAssociates = inheritedAssociates;
         this.parentUnit = parentUnit;
         this.topLevelUnit = topLevelUnit;
+        this.approvalRuleMode = approvalRuleMode;
         this.unitType = BusinessUnitType.findEnum("Division");
     }
 
@@ -322,6 +326,14 @@ public class DivisionImpl implements Division, ModelBase {
         return this.topLevelUnit;
     }
 
+    /**
+     *  <p>Determines whether a Business Unit can inherit Approval Rules from a parent.</p>
+     */
+
+    public com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode getApprovalRuleMode() {
+        return this.approvalRuleMode;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -442,6 +454,11 @@ public class DivisionImpl implements Division, ModelBase {
         this.topLevelUnit = topLevelUnit;
     }
 
+    public void setApprovalRuleMode(
+            final com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode approvalRuleMode) {
+        this.approvalRuleMode = approvalRuleMode;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -476,6 +493,7 @@ public class DivisionImpl implements Division, ModelBase {
                 .append(inheritedAssociates, that.inheritedAssociates)
                 .append(parentUnit, that.parentUnit)
                 .append(topLevelUnit, that.topLevelUnit)
+                .append(approvalRuleMode, that.approvalRuleMode)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -500,6 +518,7 @@ public class DivisionImpl implements Division, ModelBase {
                 .append(inheritedAssociates, that.inheritedAssociates)
                 .append(parentUnit, that.parentUnit)
                 .append(topLevelUnit, that.topLevelUnit)
+                .append(approvalRuleMode, that.approvalRuleMode)
                 .isEquals();
     }
 
@@ -529,6 +548,7 @@ public class DivisionImpl implements Division, ModelBase {
                 .append(inheritedAssociates)
                 .append(parentUnit)
                 .append(topLevelUnit)
+                .append(approvalRuleMode)
                 .toHashCode();
     }
 
@@ -558,6 +578,7 @@ public class DivisionImpl implements Division, ModelBase {
                 .append("inheritedAssociates", inheritedAssociates)
                 .append("parentUnit", parentUnit)
                 .append("topLevelUnit", topLevelUnit)
+                .append("approvalRuleMode", approvalRuleMode)
                 .build();
     }
 

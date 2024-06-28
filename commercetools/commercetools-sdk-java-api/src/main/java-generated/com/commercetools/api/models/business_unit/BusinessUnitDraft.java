@@ -116,6 +116,14 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
     public List<AssociateDraft> getAssociates();
 
     /**
+     *  <p>Determines whether the Business Unit can inherit Approval Rules from a parent. For Companies, the value of this field is always <code>Explicit</code>. For Divisions, the default value is <code>ExplicitAndFromParent</code>.</p>
+     * @return approvalRuleMode
+     */
+
+    @JsonProperty("approvalRuleMode")
+    public BusinessUnitApprovalRuleMode getApprovalRuleMode();
+
+    /**
      *  <p>Addresses used by the Business Unit.</p>
      * @return addresses
      */
@@ -240,6 +248,13 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
     public void setAssociates(final List<AssociateDraft> associates);
 
     /**
+     *  <p>Determines whether the Business Unit can inherit Approval Rules from a parent. For Companies, the value of this field is always <code>Explicit</code>. For Divisions, the default value is <code>ExplicitAndFromParent</code>.</p>
+     * @param approvalRuleMode value to be set
+     */
+
+    public void setApprovalRuleMode(final BusinessUnitApprovalRuleMode approvalRuleMode);
+
+    /**
      *  <p>Addresses used by the Business Unit.</p>
      * @param addresses values to be set
      */
@@ -340,6 +355,7 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
                         .map(com.commercetools.api.models.business_unit.AssociateDraft::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setApprovalRuleMode(template.getApprovalRuleMode());
         instance.setAddresses(Optional.ofNullable(template.getAddresses())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.common.BaseAddress::deepCopy)

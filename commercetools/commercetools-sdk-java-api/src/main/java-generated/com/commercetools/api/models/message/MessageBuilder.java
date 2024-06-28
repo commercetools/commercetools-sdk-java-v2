@@ -119,6 +119,10 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.BusinessUnitAddressRemovedMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.BusinessUnitApprovalRuleModeChangedMessageBuilder businessUnitApprovalRuleModeChangedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitApprovalRuleModeChangedMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.BusinessUnitAssociateAddedMessageBuilder businessUnitAssociateAddedBuilder() {
         return com.commercetools.api.models.message.BusinessUnitAssociateAddedMessageBuilder.of();
     }

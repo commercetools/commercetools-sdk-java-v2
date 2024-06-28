@@ -37,6 +37,7 @@ import jakarta.validation.constraints.NotNull;
  *             .plusAssociates(associatesBuilder -> associatesBuilder)
  *             .parentUnit(parentUnitBuilder -> parentUnitBuilder)
  *             .topLevelUnit(topLevelUnitBuilder -> topLevelUnitBuilder)
+ *             .approvalRuleMode(BusinessUnitApprovalRuleMode.EXPLICIT)
  *             .build()
  * </code></pre>
  * </div>
@@ -76,6 +77,14 @@ public interface Division extends BusinessUnit {
     public BusinessUnitAssociateMode getAssociateMode();
 
     /**
+     *  <p>Determines whether a Business Unit can inherit Approval Rules from a parent.</p>
+     * @return approvalRuleMode
+     */
+    @NotNull
+    @JsonProperty("approvalRuleMode")
+    public BusinessUnitApprovalRuleMode getApprovalRuleMode();
+
+    /**
      *  <p>Parent unit of the Division.</p>
      * @param parentUnit value to be set
      */
@@ -95,6 +104,13 @@ public interface Division extends BusinessUnit {
      */
 
     public void setAssociateMode(final BusinessUnitAssociateMode associateMode);
+
+    /**
+     *  <p>Determines whether a Business Unit can inherit Approval Rules from a parent.</p>
+     * @param approvalRuleMode value to be set
+     */
+
+    public void setApprovalRuleMode(final BusinessUnitApprovalRuleMode approvalRuleMode);
 
     /**
      * factory method
@@ -134,6 +150,7 @@ public interface Division extends BusinessUnit {
         instance.setInheritedAssociates(template.getInheritedAssociates());
         instance.setParentUnit(template.getParentUnit());
         instance.setTopLevelUnit(template.getTopLevelUnit());
+        instance.setApprovalRuleMode(template.getApprovalRuleMode());
         return instance;
     }
 
@@ -192,6 +209,7 @@ public interface Division extends BusinessUnit {
             com.commercetools.api.models.business_unit.BusinessUnitKeyReference.deepCopy(template.getParentUnit()));
         instance.setTopLevelUnit(
             com.commercetools.api.models.business_unit.BusinessUnitKeyReference.deepCopy(template.getTopLevelUnit()));
+        instance.setApprovalRuleMode(template.getApprovalRuleMode());
         return instance;
     }
 

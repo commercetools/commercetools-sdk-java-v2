@@ -48,6 +48,9 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
     private java.util.List<com.commercetools.api.models.business_unit.AssociateDraft> associates;
 
     @Nullable
+    private com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode approvalRuleMode;
+
+    @Nullable
     private java.util.List<com.commercetools.api.models.common.BaseAddress> addresses;
 
     @Nullable
@@ -326,6 +329,18 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
     public CompanyDraftBuilder setAssociates(
             Function<com.commercetools.api.models.business_unit.AssociateDraftBuilder, com.commercetools.api.models.business_unit.AssociateDraft> builder) {
         return associates(builder.apply(com.commercetools.api.models.business_unit.AssociateDraftBuilder.of()));
+    }
+
+    /**
+     *  <p>Determines whether the Business Unit can inherit Approval Rules from a parent. For Companies, the value of this field is always <code>Explicit</code>. For Divisions, the default value is <code>ExplicitAndFromParent</code>.</p>
+     * @param approvalRuleMode value to be set
+     * @return Builder
+     */
+
+    public CompanyDraftBuilder approvalRuleMode(
+            @Nullable final com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode approvalRuleMode) {
+        this.approvalRuleMode = approvalRuleMode;
+        return this;
     }
 
     /**
@@ -626,6 +641,16 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
     }
 
     /**
+     *  <p>Determines whether the Business Unit can inherit Approval Rules from a parent. For Companies, the value of this field is always <code>Explicit</code>. For Divisions, the default value is <code>ExplicitAndFromParent</code>.</p>
+     * @return approvalRuleMode
+     */
+
+    @Nullable
+    public com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode getApprovalRuleMode() {
+        return this.approvalRuleMode;
+    }
+
+    /**
      *  <p>Addresses used by the Business Unit.</p>
      * @return addresses
      */
@@ -693,7 +718,8 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
         Objects.requireNonNull(key, CompanyDraft.class + ": key is missing");
         Objects.requireNonNull(name, CompanyDraft.class + ": name is missing");
         return new CompanyDraftImpl(key, status, stores, storeMode, name, contactEmail, associateMode, associates,
-            addresses, shippingAddresses, defaultShippingAddress, billingAddresses, defaultBillingAddress, custom);
+            approvalRuleMode, addresses, shippingAddresses, defaultShippingAddress, billingAddresses,
+            defaultBillingAddress, custom);
     }
 
     /**
@@ -702,7 +728,8 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
      */
     public CompanyDraft buildUnchecked() {
         return new CompanyDraftImpl(key, status, stores, storeMode, name, contactEmail, associateMode, associates,
-            addresses, shippingAddresses, defaultShippingAddress, billingAddresses, defaultBillingAddress, custom);
+            approvalRuleMode, addresses, shippingAddresses, defaultShippingAddress, billingAddresses,
+            defaultBillingAddress, custom);
     }
 
     /**
@@ -728,6 +755,7 @@ public class CompanyDraftBuilder implements Builder<CompanyDraft> {
         builder.contactEmail = template.getContactEmail();
         builder.associateMode = template.getAssociateMode();
         builder.associates = template.getAssociates();
+        builder.approvalRuleMode = template.getApprovalRuleMode();
         builder.addresses = template.getAddresses();
         builder.shippingAddresses = template.getShippingAddresses();
         builder.defaultShippingAddress = template.getDefaultShippingAddress();

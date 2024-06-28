@@ -203,4 +203,10 @@ public class CompanyQueryBuilderDsl {
             CompanyQueryBuilderDsl::of);
     }
 
+    public StringComparisonPredicateBuilder<CompanyQueryBuilderDsl> approvalRuleMode() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("approvalRuleMode")),
+            p -> new CombinationQueryPredicate<>(p, CompanyQueryBuilderDsl::of));
+    }
+
 }

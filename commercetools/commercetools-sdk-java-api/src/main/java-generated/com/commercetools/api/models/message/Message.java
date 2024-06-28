@@ -69,6 +69,7 @@ import jakarta.validation.constraints.NotNull;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitAddressCustomTypeRemovedMessageImpl.class, name = BusinessUnitAddressCustomTypeRemovedMessage.BUSINESS_UNIT_ADDRESS_CUSTOM_TYPE_REMOVED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitAddressCustomTypeSetMessageImpl.class, name = BusinessUnitAddressCustomTypeSetMessage.BUSINESS_UNIT_ADDRESS_CUSTOM_TYPE_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitAddressRemovedMessageImpl.class, name = BusinessUnitAddressRemovedMessage.BUSINESS_UNIT_ADDRESS_REMOVED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitApprovalRuleModeChangedMessageImpl.class, name = BusinessUnitApprovalRuleModeChangedMessage.BUSINESS_UNIT_APPROVAL_RULE_MODE_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitAssociateAddedMessageImpl.class, name = BusinessUnitAssociateAddedMessage.BUSINESS_UNIT_ASSOCIATE_ADDED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitAssociateChangedMessageImpl.class, name = BusinessUnitAssociateChangedMessage.BUSINESS_UNIT_ASSOCIATE_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitAssociateModeChangedMessageImpl.class, name = BusinessUnitAssociateModeChangedMessage.BUSINESS_UNIT_ASSOCIATE_MODE_CHANGED),
@@ -555,6 +556,10 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
         if (template instanceof com.commercetools.api.models.message.BusinessUnitAddressRemovedMessage) {
             return com.commercetools.api.models.message.BusinessUnitAddressRemovedMessage
                     .deepCopy((com.commercetools.api.models.message.BusinessUnitAddressRemovedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.BusinessUnitApprovalRuleModeChangedMessage) {
+            return com.commercetools.api.models.message.BusinessUnitApprovalRuleModeChangedMessage.deepCopy(
+                (com.commercetools.api.models.message.BusinessUnitApprovalRuleModeChangedMessage) template);
         }
         if (template instanceof com.commercetools.api.models.message.BusinessUnitAssociateAddedMessage) {
             return com.commercetools.api.models.message.BusinessUnitAssociateAddedMessage
@@ -1422,6 +1427,14 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
      */
     public static com.commercetools.api.models.message.BusinessUnitAddressRemovedMessageBuilder businessUnitAddressRemovedBuilder() {
         return com.commercetools.api.models.message.BusinessUnitAddressRemovedMessageBuilder.of();
+    }
+
+    /**
+     * builder for businessUnitApprovalRuleModeChanged subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.BusinessUnitApprovalRuleModeChangedMessageBuilder businessUnitApprovalRuleModeChangedBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitApprovalRuleModeChangedMessageBuilder.of();
     }
 
     /**

@@ -66,6 +66,14 @@ public interface DivisionDraft extends BusinessUnitDraft, io.vrap.rmf.base.clien
     public BusinessUnitAssociateMode getAssociateMode();
 
     /**
+     *  <p>Determines whether the Division can inherit Approval Rules from a parent.</p>
+     * @return approvalRuleMode
+     */
+
+    @JsonProperty("approvalRuleMode")
+    public BusinessUnitApprovalRuleMode getApprovalRuleMode();
+
+    /**
      *  <p>The parent unit of this Division. Can be a Company or a Division.</p>
      * @param parentUnit value to be set
      */
@@ -85,6 +93,13 @@ public interface DivisionDraft extends BusinessUnitDraft, io.vrap.rmf.base.clien
      */
 
     public void setAssociateMode(final BusinessUnitAssociateMode associateMode);
+
+    /**
+     *  <p>Determines whether the Division can inherit Approval Rules from a parent.</p>
+     * @param approvalRuleMode value to be set
+     */
+
+    public void setApprovalRuleMode(final BusinessUnitApprovalRuleMode approvalRuleMode);
 
     /**
      * factory method
@@ -109,6 +124,7 @@ public interface DivisionDraft extends BusinessUnitDraft, io.vrap.rmf.base.clien
         instance.setContactEmail(template.getContactEmail());
         instance.setAssociateMode(template.getAssociateMode());
         instance.setAssociates(template.getAssociates());
+        instance.setApprovalRuleMode(template.getApprovalRuleMode());
         instance.setAddresses(template.getAddresses());
         instance.setShippingAddresses(template.getShippingAddresses());
         instance.setDefaultShippingAddress(template.getDefaultShippingAddress());
@@ -146,6 +162,7 @@ public interface DivisionDraft extends BusinessUnitDraft, io.vrap.rmf.base.clien
                         .map(com.commercetools.api.models.business_unit.AssociateDraft::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setApprovalRuleMode(template.getApprovalRuleMode());
         instance.setAddresses(Optional.ofNullable(template.getAddresses())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.common.BaseAddress::deepCopy)

@@ -85,6 +85,12 @@ public class CompanyDraftQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, CompanyDraftQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<CompanyDraftQueryBuilderDsl> approvalRuleMode() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("approvalRuleMode")),
+            p -> new CombinationQueryPredicate<>(p, CompanyDraftQueryBuilderDsl::of));
+    }
+
     public CombinationQueryPredicate<CompanyDraftQueryBuilderDsl> addresses(
             Function<com.commercetools.api.predicates.query.common.BaseAddressQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.BaseAddressQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

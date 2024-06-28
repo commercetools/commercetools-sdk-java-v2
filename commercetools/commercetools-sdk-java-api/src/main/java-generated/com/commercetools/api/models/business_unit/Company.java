@@ -35,6 +35,7 @@ import jakarta.validation.constraints.NotNull;
  *             .associateMode(BusinessUnitAssociateMode.EXPLICIT)
  *             .plusAssociates(associatesBuilder -> associatesBuilder)
  *             .topLevelUnit(topLevelUnitBuilder -> topLevelUnitBuilder)
+ *             .approvalRuleMode(BusinessUnitApprovalRuleMode.EXPLICIT)
  *             .build()
  * </code></pre>
  * </div>
@@ -49,7 +50,7 @@ public interface Company extends BusinessUnit {
     String COMPANY = "Company";
 
     /**
-     *  <p>Is always <code>Explicit</code> since a Company cannot have a parent Business Unit that Stores can be inherited from.</p>
+     *  <p>The value of this field is always <code>Explicit</code> because a Company cannot have a parent Business Unit that Stores can be inherited from.</p>
      * @return storeMode
      */
     @NotNull
@@ -57,7 +58,7 @@ public interface Company extends BusinessUnit {
     public BusinessUnitStoreMode getStoreMode();
 
     /**
-     *  <p>Is always <code>Explicit</code> since a Company cannot have a parent Business Unit that Associates can be inherited from.</p>
+     *  <p>The value of this field is always <code>Explicit</code> because a Company cannot have a parent Business Unit that Associates can be inherited from.</p>
      * @return associateMode
      */
     @NotNull
@@ -65,18 +66,33 @@ public interface Company extends BusinessUnit {
     public BusinessUnitAssociateMode getAssociateMode();
 
     /**
-     *  <p>Is always <code>Explicit</code> since a Company cannot have a parent Business Unit that Stores can be inherited from.</p>
+     *  <p>The value of this field is always <code>Explicit</code> because a Company cannot have a parent Business Unit that Approval Rules can be inherited from.</p>
+     * @return approvalRuleMode
+     */
+    @NotNull
+    @JsonProperty("approvalRuleMode")
+    public BusinessUnitApprovalRuleMode getApprovalRuleMode();
+
+    /**
+     *  <p>The value of this field is always <code>Explicit</code> because a Company cannot have a parent Business Unit that Stores can be inherited from.</p>
      * @param storeMode value to be set
      */
 
     public void setStoreMode(final BusinessUnitStoreMode storeMode);
 
     /**
-     *  <p>Is always <code>Explicit</code> since a Company cannot have a parent Business Unit that Associates can be inherited from.</p>
+     *  <p>The value of this field is always <code>Explicit</code> because a Company cannot have a parent Business Unit that Associates can be inherited from.</p>
      * @param associateMode value to be set
      */
 
     public void setAssociateMode(final BusinessUnitAssociateMode associateMode);
+
+    /**
+     *  <p>The value of this field is always <code>Explicit</code> because a Company cannot have a parent Business Unit that Approval Rules can be inherited from.</p>
+     * @param approvalRuleMode value to be set
+     */
+
+    public void setApprovalRuleMode(final BusinessUnitApprovalRuleMode approvalRuleMode);
 
     /**
      * factory method
@@ -116,6 +132,7 @@ public interface Company extends BusinessUnit {
         instance.setInheritedAssociates(template.getInheritedAssociates());
         instance.setParentUnit(template.getParentUnit());
         instance.setTopLevelUnit(template.getTopLevelUnit());
+        instance.setApprovalRuleMode(template.getApprovalRuleMode());
         return instance;
     }
 
@@ -174,6 +191,7 @@ public interface Company extends BusinessUnit {
             com.commercetools.api.models.business_unit.BusinessUnitKeyReference.deepCopy(template.getParentUnit()));
         instance.setTopLevelUnit(
             com.commercetools.api.models.business_unit.BusinessUnitKeyReference.deepCopy(template.getTopLevelUnit()));
+        instance.setApprovalRuleMode(template.getApprovalRuleMode());
         return instance;
     }
 

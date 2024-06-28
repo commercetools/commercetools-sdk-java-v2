@@ -295,6 +295,14 @@ public class MessageQueryBuilderDsl {
             MessageQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<MessageQueryBuilderDsl> asBusinessUnitApprovalRuleModeChanged(
+            Function<com.commercetools.api.predicates.query.message.BusinessUnitApprovalRuleModeChangedMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.BusinessUnitApprovalRuleModeChangedMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.message.BusinessUnitApprovalRuleModeChangedMessageQueryBuilderDsl
+                    .of()),
+            MessageQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<MessageQueryBuilderDsl> asBusinessUnitAssociateAdded(
             Function<com.commercetools.api.predicates.query.message.BusinessUnitAssociateAddedMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.BusinessUnitAssociateAddedMessageQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

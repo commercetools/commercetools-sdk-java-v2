@@ -203,4 +203,10 @@ public class DivisionQueryBuilderDsl {
             DivisionQueryBuilderDsl::of);
     }
 
+    public StringComparisonPredicateBuilder<DivisionQueryBuilderDsl> approvalRuleMode() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("approvalRuleMode")),
+            p -> new CombinationQueryPredicate<>(p, DivisionQueryBuilderDsl::of));
+    }
+
 }

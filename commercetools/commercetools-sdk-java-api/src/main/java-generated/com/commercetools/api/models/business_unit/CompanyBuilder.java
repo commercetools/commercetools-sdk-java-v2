@@ -28,6 +28,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .associateMode(BusinessUnitAssociateMode.EXPLICIT)
  *             .plusAssociates(associatesBuilder -> associatesBuilder)
  *             .topLevelUnit(topLevelUnitBuilder -> topLevelUnitBuilder)
+ *             .approvalRuleMode(BusinessUnitApprovalRuleMode.EXPLICIT)
  *             .build()
  * </code></pre>
  * </div>
@@ -91,6 +92,8 @@ public class CompanyBuilder implements Builder<Company> {
     private com.commercetools.api.models.business_unit.BusinessUnitKeyReference parentUnit;
 
     private com.commercetools.api.models.business_unit.BusinessUnitKeyReference topLevelUnit;
+
+    private com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode approvalRuleMode;
 
     /**
      *  <p>Unique identifier of the Business Unit.</p>
@@ -331,7 +334,7 @@ public class CompanyBuilder implements Builder<Company> {
     }
 
     /**
-     *  <p>Is always <code>Explicit</code> since a Company cannot have a parent Business Unit that Stores can be inherited from.</p>
+     *  <p>The value of this field is always <code>Explicit</code> because a Company cannot have a parent Business Unit that Stores can be inherited from.</p>
      * @param storeMode value to be set
      * @return Builder
      */
@@ -579,7 +582,7 @@ public class CompanyBuilder implements Builder<Company> {
     }
 
     /**
-     *  <p>Is always <code>Explicit</code> since a Company cannot have a parent Business Unit that Associates can be inherited from.</p>
+     *  <p>The value of this field is always <code>Explicit</code> because a Company cannot have a parent Business Unit that Associates can be inherited from.</p>
      * @param associateMode value to be set
      * @return Builder
      */
@@ -848,6 +851,18 @@ public class CompanyBuilder implements Builder<Company> {
     }
 
     /**
+     *  <p>The value of this field is always <code>Explicit</code> because a Company cannot have a parent Business Unit that Approval Rules can be inherited from.</p>
+     * @param approvalRuleMode value to be set
+     * @return Builder
+     */
+
+    public CompanyBuilder approvalRuleMode(
+            final com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode approvalRuleMode) {
+        this.approvalRuleMode = approvalRuleMode;
+        return this;
+    }
+
+    /**
      *  <p>Unique identifier of the Business Unit.</p>
      * @return id
      */
@@ -934,7 +949,7 @@ public class CompanyBuilder implements Builder<Company> {
     }
 
     /**
-     *  <p>Is always <code>Explicit</code> since a Company cannot have a parent Business Unit that Stores can be inherited from.</p>
+     *  <p>The value of this field is always <code>Explicit</code> because a Company cannot have a parent Business Unit that Stores can be inherited from.</p>
      * @return storeMode
      */
 
@@ -1021,7 +1036,7 @@ public class CompanyBuilder implements Builder<Company> {
     }
 
     /**
-     *  <p>Is always <code>Explicit</code> since a Company cannot have a parent Business Unit that Associates can be inherited from.</p>
+     *  <p>The value of this field is always <code>Explicit</code> because a Company cannot have a parent Business Unit that Associates can be inherited from.</p>
      * @return associateMode
      */
 
@@ -1068,6 +1083,15 @@ public class CompanyBuilder implements Builder<Company> {
     }
 
     /**
+     *  <p>The value of this field is always <code>Explicit</code> because a Company cannot have a parent Business Unit that Approval Rules can be inherited from.</p>
+     * @return approvalRuleMode
+     */
+
+    public com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode getApprovalRuleMode() {
+        return this.approvalRuleMode;
+    }
+
+    /**
      * builds Company with checking for non-null required values
      * @return Company
      */
@@ -1084,10 +1108,11 @@ public class CompanyBuilder implements Builder<Company> {
         Objects.requireNonNull(associateMode, Company.class + ": associateMode is missing");
         Objects.requireNonNull(associates, Company.class + ": associates is missing");
         Objects.requireNonNull(topLevelUnit, Company.class + ": topLevelUnit is missing");
+        Objects.requireNonNull(approvalRuleMode, Company.class + ": approvalRuleMode is missing");
         return new CompanyImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, status, stores,
             storeMode, name, contactEmail, custom, addresses, shippingAddressIds, defaultShippingAddressId,
             billingAddressIds, defaultBillingAddressId, associateMode, associates, inheritedAssociates, parentUnit,
-            topLevelUnit);
+            topLevelUnit, approvalRuleMode);
     }
 
     /**
@@ -1098,7 +1123,7 @@ public class CompanyBuilder implements Builder<Company> {
         return new CompanyImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, status, stores,
             storeMode, name, contactEmail, custom, addresses, shippingAddressIds, defaultShippingAddressId,
             billingAddressIds, defaultBillingAddressId, associateMode, associates, inheritedAssociates, parentUnit,
-            topLevelUnit);
+            topLevelUnit, approvalRuleMode);
     }
 
     /**
@@ -1139,6 +1164,7 @@ public class CompanyBuilder implements Builder<Company> {
         builder.inheritedAssociates = template.getInheritedAssociates();
         builder.parentUnit = template.getParentUnit();
         builder.topLevelUnit = template.getTopLevelUnit();
+        builder.approvalRuleMode = template.getApprovalRuleMode();
         return builder;
     }
 

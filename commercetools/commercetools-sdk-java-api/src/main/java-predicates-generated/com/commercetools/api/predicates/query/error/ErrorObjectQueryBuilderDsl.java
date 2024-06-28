@@ -90,14 +90,6 @@ public class ErrorObjectQueryBuilderDsl {
             ErrorObjectQueryBuilderDsl::of);
     }
 
-    public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asCustomerSearchProjectNotIndexedError(
-            Function<com.commercetools.api.predicates.query.error.CustomerSearchProjectNotIndexedErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.CustomerSearchProjectNotIndexedErrorQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            fn.apply(
-                com.commercetools.api.predicates.query.error.CustomerSearchProjectNotIndexedErrorQueryBuilderDsl.of()),
-            ErrorObjectQueryBuilderDsl::of);
-    }
-
     public CombinationQueryPredicate<ErrorObjectQueryBuilderDsl> asDiscountCodeNonApplicable(
             Function<com.commercetools.api.predicates.query.error.DiscountCodeNonApplicableErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.DiscountCodeNonApplicableErrorQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

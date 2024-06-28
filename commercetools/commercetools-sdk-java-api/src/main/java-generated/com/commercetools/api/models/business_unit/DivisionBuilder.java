@@ -29,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusAssociates(associatesBuilder -> associatesBuilder)
  *             .parentUnit(parentUnitBuilder -> parentUnitBuilder)
  *             .topLevelUnit(topLevelUnitBuilder -> topLevelUnitBuilder)
+ *             .approvalRuleMode(BusinessUnitApprovalRuleMode.EXPLICIT)
  *             .build()
  * </code></pre>
  * </div>
@@ -91,6 +92,8 @@ public class DivisionBuilder implements Builder<Division> {
     private com.commercetools.api.models.business_unit.BusinessUnitKeyReference parentUnit;
 
     private com.commercetools.api.models.business_unit.BusinessUnitKeyReference topLevelUnit;
+
+    private com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode approvalRuleMode;
 
     /**
      *  <p>Unique identifier of the Business Unit.</p>
@@ -848,6 +851,18 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
+     *  <p>Determines whether a Business Unit can inherit Approval Rules from a parent.</p>
+     * @param approvalRuleMode value to be set
+     * @return Builder
+     */
+
+    public DivisionBuilder approvalRuleMode(
+            final com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode approvalRuleMode) {
+        this.approvalRuleMode = approvalRuleMode;
+        return this;
+    }
+
+    /**
      *  <p>Unique identifier of the Business Unit.</p>
      * @return id
      */
@@ -1067,6 +1082,15 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
+     *  <p>Determines whether a Business Unit can inherit Approval Rules from a parent.</p>
+     * @return approvalRuleMode
+     */
+
+    public com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode getApprovalRuleMode() {
+        return this.approvalRuleMode;
+    }
+
+    /**
      * builds Division with checking for non-null required values
      * @return Division
      */
@@ -1084,10 +1108,11 @@ public class DivisionBuilder implements Builder<Division> {
         Objects.requireNonNull(associates, Division.class + ": associates is missing");
         Objects.requireNonNull(parentUnit, Division.class + ": parentUnit is missing");
         Objects.requireNonNull(topLevelUnit, Division.class + ": topLevelUnit is missing");
+        Objects.requireNonNull(approvalRuleMode, Division.class + ": approvalRuleMode is missing");
         return new DivisionImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, status, stores,
             storeMode, name, contactEmail, custom, addresses, shippingAddressIds, defaultShippingAddressId,
             billingAddressIds, defaultBillingAddressId, associateMode, associates, inheritedAssociates, parentUnit,
-            topLevelUnit);
+            topLevelUnit, approvalRuleMode);
     }
 
     /**
@@ -1098,7 +1123,7 @@ public class DivisionBuilder implements Builder<Division> {
         return new DivisionImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, status, stores,
             storeMode, name, contactEmail, custom, addresses, shippingAddressIds, defaultShippingAddressId,
             billingAddressIds, defaultBillingAddressId, associateMode, associates, inheritedAssociates, parentUnit,
-            topLevelUnit);
+            topLevelUnit, approvalRuleMode);
     }
 
     /**
@@ -1139,6 +1164,7 @@ public class DivisionBuilder implements Builder<Division> {
         builder.inheritedAssociates = template.getInheritedAssociates();
         builder.parentUnit = template.getParentUnit();
         builder.topLevelUnit = template.getTopLevelUnit();
+        builder.approvalRuleMode = template.getApprovalRuleMode();
         return builder;
     }
 

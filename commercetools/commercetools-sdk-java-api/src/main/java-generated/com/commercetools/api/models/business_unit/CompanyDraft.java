@@ -59,6 +59,7 @@ public interface CompanyDraft extends BusinessUnitDraft, io.vrap.rmf.base.client
         instance.setContactEmail(template.getContactEmail());
         instance.setAssociateMode(template.getAssociateMode());
         instance.setAssociates(template.getAssociates());
+        instance.setApprovalRuleMode(template.getApprovalRuleMode());
         instance.setAddresses(template.getAddresses());
         instance.setShippingAddresses(template.getShippingAddresses());
         instance.setDefaultShippingAddress(template.getDefaultShippingAddress());
@@ -95,6 +96,7 @@ public interface CompanyDraft extends BusinessUnitDraft, io.vrap.rmf.base.client
                         .map(com.commercetools.api.models.business_unit.AssociateDraft::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setApprovalRuleMode(template.getApprovalRuleMode());
         instance.setAddresses(Optional.ofNullable(template.getAddresses())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.common.BaseAddress::deepCopy)

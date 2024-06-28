@@ -32,6 +32,9 @@ public class DivisionDraftTest {
                                         .findEnum("Explicit")) },
                 new Object[] { DivisionDraft.builder()
                         .associateMode(com.commercetools.api.models.business_unit.BusinessUnitAssociateMode
+                                .findEnum("Explicit")) },
+                new Object[] { DivisionDraft.builder()
+                        .approvalRuleMode(com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode
                                 .findEnum("Explicit")) } };
     }
 
@@ -58,5 +61,15 @@ public class DivisionDraftTest {
             com.commercetools.api.models.business_unit.BusinessUnitAssociateMode.findEnum("Explicit"));
         Assertions.assertThat(value.getAssociateMode())
                 .isEqualTo(com.commercetools.api.models.business_unit.BusinessUnitAssociateMode.findEnum("Explicit"));
+    }
+
+    @Test
+    public void approvalRuleMode() {
+        DivisionDraft value = DivisionDraft.of();
+        value.setApprovalRuleMode(
+            com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode.findEnum("Explicit"));
+        Assertions.assertThat(value.getApprovalRuleMode())
+                .isEqualTo(
+                    com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode.findEnum("Explicit"));
     }
 }

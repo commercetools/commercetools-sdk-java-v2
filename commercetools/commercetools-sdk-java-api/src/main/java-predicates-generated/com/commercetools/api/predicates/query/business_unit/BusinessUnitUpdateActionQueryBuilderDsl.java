@@ -65,6 +65,14 @@ public class BusinessUnitUpdateActionQueryBuilderDsl {
             BusinessUnitUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<BusinessUnitUpdateActionQueryBuilderDsl> asChangeApprovalRuleMode(
+            Function<com.commercetools.api.predicates.query.business_unit.BusinessUnitChangeApprovalRuleModeActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.business_unit.BusinessUnitChangeApprovalRuleModeActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.business_unit.BusinessUnitChangeApprovalRuleModeActionQueryBuilderDsl
+                    .of()),
+            BusinessUnitUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<BusinessUnitUpdateActionQueryBuilderDsl> asChangeAssociate(
             Function<com.commercetools.api.predicates.query.business_unit.BusinessUnitChangeAssociateActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.business_unit.BusinessUnitChangeAssociateActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(

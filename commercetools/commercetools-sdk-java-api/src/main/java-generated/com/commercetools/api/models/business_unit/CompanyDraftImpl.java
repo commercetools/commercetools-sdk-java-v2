@@ -40,6 +40,8 @@ public class CompanyDraftImpl implements CompanyDraft, ModelBase {
 
     private java.util.List<com.commercetools.api.models.business_unit.AssociateDraft> associates;
 
+    private com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode approvalRuleMode;
+
     private java.util.List<com.commercetools.api.models.common.BaseAddress> addresses;
 
     private java.util.List<Integer> shippingAddresses;
@@ -63,6 +65,7 @@ public class CompanyDraftImpl implements CompanyDraft, ModelBase {
             @JsonProperty("name") final String name, @JsonProperty("contactEmail") final String contactEmail,
             @JsonProperty("associateMode") final com.commercetools.api.models.business_unit.BusinessUnitAssociateMode associateMode,
             @JsonProperty("associates") final java.util.List<com.commercetools.api.models.business_unit.AssociateDraft> associates,
+            @JsonProperty("approvalRuleMode") final com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode approvalRuleMode,
             @JsonProperty("addresses") final java.util.List<com.commercetools.api.models.common.BaseAddress> addresses,
             @JsonProperty("shippingAddresses") final java.util.List<Integer> shippingAddresses,
             @JsonProperty("defaultShippingAddress") final Integer defaultShippingAddress,
@@ -77,6 +80,7 @@ public class CompanyDraftImpl implements CompanyDraft, ModelBase {
         this.contactEmail = contactEmail;
         this.associateMode = associateMode;
         this.associates = associates;
+        this.approvalRuleMode = approvalRuleMode;
         this.addresses = addresses;
         this.shippingAddresses = shippingAddresses;
         this.defaultShippingAddress = defaultShippingAddress;
@@ -165,6 +169,14 @@ public class CompanyDraftImpl implements CompanyDraft, ModelBase {
 
     public java.util.List<com.commercetools.api.models.business_unit.AssociateDraft> getAssociates() {
         return this.associates;
+    }
+
+    /**
+     *  <p>Determines whether the Business Unit can inherit Approval Rules from a parent. For Companies, the value of this field is always <code>Explicit</code>. For Divisions, the default value is <code>ExplicitAndFromParent</code>.</p>
+     */
+
+    public com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode getApprovalRuleMode() {
+        return this.approvalRuleMode;
     }
 
     /**
@@ -257,6 +269,11 @@ public class CompanyDraftImpl implements CompanyDraft, ModelBase {
         this.associates = associates;
     }
 
+    public void setApprovalRuleMode(
+            final com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode approvalRuleMode) {
+        this.approvalRuleMode = approvalRuleMode;
+    }
+
     public void setAddresses(final com.commercetools.api.models.common.BaseAddress... addresses) {
         this.addresses = new ArrayList<>(Arrays.asList(addresses));
     }
@@ -312,6 +329,7 @@ public class CompanyDraftImpl implements CompanyDraft, ModelBase {
                 .append(contactEmail, that.contactEmail)
                 .append(associateMode, that.associateMode)
                 .append(associates, that.associates)
+                .append(approvalRuleMode, that.approvalRuleMode)
                 .append(addresses, that.addresses)
                 .append(shippingAddresses, that.shippingAddresses)
                 .append(defaultShippingAddress, that.defaultShippingAddress)
@@ -327,6 +345,7 @@ public class CompanyDraftImpl implements CompanyDraft, ModelBase {
                 .append(contactEmail, that.contactEmail)
                 .append(associateMode, that.associateMode)
                 .append(associates, that.associates)
+                .append(approvalRuleMode, that.approvalRuleMode)
                 .append(addresses, that.addresses)
                 .append(shippingAddresses, that.shippingAddresses)
                 .append(defaultShippingAddress, that.defaultShippingAddress)
@@ -347,6 +366,7 @@ public class CompanyDraftImpl implements CompanyDraft, ModelBase {
                 .append(contactEmail)
                 .append(associateMode)
                 .append(associates)
+                .append(approvalRuleMode)
                 .append(addresses)
                 .append(shippingAddresses)
                 .append(defaultShippingAddress)
@@ -367,6 +387,7 @@ public class CompanyDraftImpl implements CompanyDraft, ModelBase {
                 .append("contactEmail", contactEmail)
                 .append("associateMode", associateMode)
                 .append("associates", associates)
+                .append("approvalRuleMode", approvalRuleMode)
                 .append("addresses", addresses)
                 .append("shippingAddresses", shippingAddresses)
                 .append("defaultShippingAddress", defaultShippingAddress)

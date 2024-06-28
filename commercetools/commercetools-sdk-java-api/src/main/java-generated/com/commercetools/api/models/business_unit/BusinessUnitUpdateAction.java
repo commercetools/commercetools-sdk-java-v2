@@ -34,6 +34,7 @@ import jakarta.validation.constraints.NotNull;
         @JsonSubTypes.Type(value = com.commercetools.api.models.business_unit.BusinessUnitAddShippingAddressIdActionImpl.class, name = BusinessUnitAddShippingAddressIdAction.ADD_SHIPPING_ADDRESS_ID),
         @JsonSubTypes.Type(value = com.commercetools.api.models.business_unit.BusinessUnitAddStoreActionImpl.class, name = BusinessUnitAddStoreAction.ADD_STORE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.business_unit.BusinessUnitChangeAddressActionImpl.class, name = BusinessUnitChangeAddressAction.CHANGE_ADDRESS),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.business_unit.BusinessUnitChangeApprovalRuleModeActionImpl.class, name = BusinessUnitChangeApprovalRuleModeAction.CHANGE_APPROVAL_RULE_MODE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.business_unit.BusinessUnitChangeAssociateActionImpl.class, name = BusinessUnitChangeAssociateAction.CHANGE_ASSOCIATE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.business_unit.BusinessUnitChangeAssociateModeActionImpl.class, name = BusinessUnitChangeAssociateModeAction.CHANGE_ASSOCIATE_MODE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.business_unit.BusinessUnitChangeNameActionImpl.class, name = BusinessUnitChangeNameAction.CHANGE_NAME),
@@ -101,6 +102,10 @@ public interface BusinessUnitUpdateAction
         if (template instanceof com.commercetools.api.models.business_unit.BusinessUnitChangeAddressAction) {
             return com.commercetools.api.models.business_unit.BusinessUnitChangeAddressAction
                     .deepCopy((com.commercetools.api.models.business_unit.BusinessUnitChangeAddressAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.business_unit.BusinessUnitChangeApprovalRuleModeAction) {
+            return com.commercetools.api.models.business_unit.BusinessUnitChangeApprovalRuleModeAction.deepCopy(
+                (com.commercetools.api.models.business_unit.BusinessUnitChangeApprovalRuleModeAction) template);
         }
         if (template instanceof com.commercetools.api.models.business_unit.BusinessUnitChangeAssociateAction) {
             return com.commercetools.api.models.business_unit.BusinessUnitChangeAssociateAction
@@ -232,6 +237,14 @@ public interface BusinessUnitUpdateAction
      */
     public static com.commercetools.api.models.business_unit.BusinessUnitChangeAddressActionBuilder changeAddressBuilder() {
         return com.commercetools.api.models.business_unit.BusinessUnitChangeAddressActionBuilder.of();
+    }
+
+    /**
+     * builder for changeApprovalRuleMode subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.business_unit.BusinessUnitChangeApprovalRuleModeActionBuilder changeApprovalRuleModeBuilder() {
+        return com.commercetools.api.models.business_unit.BusinessUnitChangeApprovalRuleModeActionBuilder.of();
     }
 
     /**

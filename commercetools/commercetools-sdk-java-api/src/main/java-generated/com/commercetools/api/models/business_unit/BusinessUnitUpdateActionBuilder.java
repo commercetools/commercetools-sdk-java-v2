@@ -35,6 +35,10 @@ public class BusinessUnitUpdateActionBuilder {
         return com.commercetools.api.models.business_unit.BusinessUnitChangeAddressActionBuilder.of();
     }
 
+    public com.commercetools.api.models.business_unit.BusinessUnitChangeApprovalRuleModeActionBuilder changeApprovalRuleModeBuilder() {
+        return com.commercetools.api.models.business_unit.BusinessUnitChangeApprovalRuleModeActionBuilder.of();
+    }
+
     public com.commercetools.api.models.business_unit.BusinessUnitChangeAssociateActionBuilder changeAssociateBuilder() {
         return com.commercetools.api.models.business_unit.BusinessUnitChangeAssociateActionBuilder.of();
     }

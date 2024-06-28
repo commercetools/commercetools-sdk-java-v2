@@ -43,6 +43,7 @@ import jakarta.validation.constraints.NotNull;
  *             associateMode(BusinessUnitAssociateMode.EXPLICIT)
  *             plusAssociates(associatesBuilder -> associatesBuilder)
  *             topLevelUnit(topLevelUnitBuilder -> topLevelUnitBuilder)
+ *             approvalRuleMode(BusinessUnitApprovalRuleMode.EXPLICIT)
  *             .build()
  * </code></pre>
  * </div>
@@ -251,6 +252,14 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
     @Valid
     @JsonProperty("topLevelUnit")
     public BusinessUnitKeyReference getTopLevelUnit();
+
+    /**
+     *  <p>Determines whether the Business Unit can inherit Approval Rules from a parent. Always <code>Explicit</code> for Companies and defaults to <code>ExplicitAndFromParent</code> for Divisions.</p>
+     * @return approvalRuleMode
+     */
+    @NotNull
+    @JsonProperty("approvalRuleMode")
+    public BusinessUnitApprovalRuleMode getApprovalRuleMode();
 
     /**
      *  <p>Unique identifier of the Business Unit.</p>
@@ -466,6 +475,13 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
     public void setTopLevelUnit(final BusinessUnitKeyReference topLevelUnit);
 
     /**
+     *  <p>Determines whether the Business Unit can inherit Approval Rules from a parent. Always <code>Explicit</code> for Companies and defaults to <code>ExplicitAndFromParent</code> for Divisions.</p>
+     * @param approvalRuleMode value to be set
+     */
+
+    public void setApprovalRuleMode(final BusinessUnitApprovalRuleMode approvalRuleMode);
+
+    /**
      * factory method to create a deep copy of BusinessUnit
      * @param template instance to be copied
      * @return copy instance
@@ -528,6 +544,7 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
             com.commercetools.api.models.business_unit.BusinessUnitKeyReference.deepCopy(template.getParentUnit()));
         instance.setTopLevelUnit(
             com.commercetools.api.models.business_unit.BusinessUnitKeyReference.deepCopy(template.getTopLevelUnit()));
+        instance.setApprovalRuleMode(template.getApprovalRuleMode());
         return instance;
     }
 

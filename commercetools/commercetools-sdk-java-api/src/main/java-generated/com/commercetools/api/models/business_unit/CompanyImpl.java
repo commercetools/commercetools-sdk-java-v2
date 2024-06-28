@@ -70,6 +70,8 @@ public class CompanyImpl implements Company, ModelBase {
 
     private com.commercetools.api.models.business_unit.BusinessUnitKeyReference topLevelUnit;
 
+    private com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode approvalRuleMode;
+
     /**
      * create instance with all properties
      */
@@ -94,7 +96,8 @@ public class CompanyImpl implements Company, ModelBase {
             @JsonProperty("associates") final java.util.List<com.commercetools.api.models.business_unit.Associate> associates,
             @JsonProperty("inheritedAssociates") final java.util.List<com.commercetools.api.models.business_unit.InheritedAssociate> inheritedAssociates,
             @JsonProperty("parentUnit") final com.commercetools.api.models.business_unit.BusinessUnitKeyReference parentUnit,
-            @JsonProperty("topLevelUnit") final com.commercetools.api.models.business_unit.BusinessUnitKeyReference topLevelUnit) {
+            @JsonProperty("topLevelUnit") final com.commercetools.api.models.business_unit.BusinessUnitKeyReference topLevelUnit,
+            @JsonProperty("approvalRuleMode") final com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode approvalRuleMode) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -118,6 +121,7 @@ public class CompanyImpl implements Company, ModelBase {
         this.inheritedAssociates = inheritedAssociates;
         this.parentUnit = parentUnit;
         this.topLevelUnit = topLevelUnit;
+        this.approvalRuleMode = approvalRuleMode;
         this.unitType = BusinessUnitType.findEnum("Company");
     }
 
@@ -203,7 +207,7 @@ public class CompanyImpl implements Company, ModelBase {
     }
 
     /**
-     *  <p>Is always <code>Explicit</code> since a Company cannot have a parent Business Unit that Stores can be inherited from.</p>
+     *  <p>The value of this field is always <code>Explicit</code> because a Company cannot have a parent Business Unit that Stores can be inherited from.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitStoreMode getStoreMode() {
@@ -283,7 +287,7 @@ public class CompanyImpl implements Company, ModelBase {
     }
 
     /**
-     *  <p>Is always <code>Explicit</code> since a Company cannot have a parent Business Unit that Associates can be inherited from.</p>
+     *  <p>The value of this field is always <code>Explicit</code> because a Company cannot have a parent Business Unit that Associates can be inherited from.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitAssociateMode getAssociateMode() {
@@ -320,6 +324,14 @@ public class CompanyImpl implements Company, ModelBase {
 
     public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getTopLevelUnit() {
         return this.topLevelUnit;
+    }
+
+    /**
+     *  <p>The value of this field is always <code>Explicit</code> because a Company cannot have a parent Business Unit that Approval Rules can be inherited from.</p>
+     */
+
+    public com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode getApprovalRuleMode() {
+        return this.approvalRuleMode;
     }
 
     public void setId(final String id) {
@@ -442,6 +454,11 @@ public class CompanyImpl implements Company, ModelBase {
         this.topLevelUnit = topLevelUnit;
     }
 
+    public void setApprovalRuleMode(
+            final com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode approvalRuleMode) {
+        this.approvalRuleMode = approvalRuleMode;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -476,6 +493,7 @@ public class CompanyImpl implements Company, ModelBase {
                 .append(inheritedAssociates, that.inheritedAssociates)
                 .append(parentUnit, that.parentUnit)
                 .append(topLevelUnit, that.topLevelUnit)
+                .append(approvalRuleMode, that.approvalRuleMode)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -500,6 +518,7 @@ public class CompanyImpl implements Company, ModelBase {
                 .append(inheritedAssociates, that.inheritedAssociates)
                 .append(parentUnit, that.parentUnit)
                 .append(topLevelUnit, that.topLevelUnit)
+                .append(approvalRuleMode, that.approvalRuleMode)
                 .isEquals();
     }
 
@@ -529,6 +548,7 @@ public class CompanyImpl implements Company, ModelBase {
                 .append(inheritedAssociates)
                 .append(parentUnit)
                 .append(topLevelUnit)
+                .append(approvalRuleMode)
                 .toHashCode();
     }
 
@@ -558,6 +578,7 @@ public class CompanyImpl implements Company, ModelBase {
                 .append("inheritedAssociates", inheritedAssociates)
                 .append("parentUnit", parentUnit)
                 .append("topLevelUnit", topLevelUnit)
+                .append("approvalRuleMode", approvalRuleMode)
                 .build();
     }
 

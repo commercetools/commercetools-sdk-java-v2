@@ -49,6 +49,9 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
     private java.util.List<com.commercetools.api.models.business_unit.AssociateDraft> associates;
 
     @Nullable
+    private com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode approvalRuleMode;
+
+    @Nullable
     private java.util.List<com.commercetools.api.models.common.BaseAddress> addresses;
 
     @Nullable
@@ -329,6 +332,18 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
     public DivisionDraftBuilder setAssociates(
             Function<com.commercetools.api.models.business_unit.AssociateDraftBuilder, com.commercetools.api.models.business_unit.AssociateDraft> builder) {
         return associates(builder.apply(com.commercetools.api.models.business_unit.AssociateDraftBuilder.of()));
+    }
+
+    /**
+     *  <p>Determines whether the Division can inherit Approval Rules from a parent.</p>
+     * @param approvalRuleMode value to be set
+     * @return Builder
+     */
+
+    public DivisionDraftBuilder approvalRuleMode(
+            @Nullable final com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode approvalRuleMode) {
+        this.approvalRuleMode = approvalRuleMode;
+        return this;
     }
 
     /**
@@ -669,6 +684,16 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
     }
 
     /**
+     *  <p>Determines whether the Division can inherit Approval Rules from a parent.</p>
+     * @return approvalRuleMode
+     */
+
+    @Nullable
+    public com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode getApprovalRuleMode() {
+        return this.approvalRuleMode;
+    }
+
+    /**
      *  <p>Addresses used by the Business Unit.</p>
      * @return addresses
      */
@@ -746,8 +771,8 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
         Objects.requireNonNull(name, DivisionDraft.class + ": name is missing");
         Objects.requireNonNull(parentUnit, DivisionDraft.class + ": parentUnit is missing");
         return new DivisionDraftImpl(key, status, stores, storeMode, name, contactEmail, associateMode, associates,
-            addresses, shippingAddresses, defaultShippingAddress, billingAddresses, defaultBillingAddress, custom,
-            parentUnit);
+            approvalRuleMode, addresses, shippingAddresses, defaultShippingAddress, billingAddresses,
+            defaultBillingAddress, custom, parentUnit);
     }
 
     /**
@@ -756,8 +781,8 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
      */
     public DivisionDraft buildUnchecked() {
         return new DivisionDraftImpl(key, status, stores, storeMode, name, contactEmail, associateMode, associates,
-            addresses, shippingAddresses, defaultShippingAddress, billingAddresses, defaultBillingAddress, custom,
-            parentUnit);
+            approvalRuleMode, addresses, shippingAddresses, defaultShippingAddress, billingAddresses,
+            defaultBillingAddress, custom, parentUnit);
     }
 
     /**
@@ -783,6 +808,7 @@ public class DivisionDraftBuilder implements Builder<DivisionDraft> {
         builder.contactEmail = template.getContactEmail();
         builder.associateMode = template.getAssociateMode();
         builder.associates = template.getAssociates();
+        builder.approvalRuleMode = template.getApprovalRuleMode();
         builder.addresses = template.getAddresses();
         builder.shippingAddresses = template.getShippingAddresses();
         builder.defaultShippingAddress = template.getDefaultShippingAddress();

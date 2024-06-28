@@ -203,6 +203,12 @@ public class BusinessUnitQueryBuilderDsl {
             BusinessUnitQueryBuilderDsl::of);
     }
 
+    public StringComparisonPredicateBuilder<BusinessUnitQueryBuilderDsl> approvalRuleMode() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("approvalRuleMode")),
+            p -> new CombinationQueryPredicate<>(p, BusinessUnitQueryBuilderDsl::of));
+    }
+
     public CombinationQueryPredicate<BusinessUnitQueryBuilderDsl> asCompany(
             Function<com.commercetools.api.predicates.query.business_unit.CompanyQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.business_unit.CompanyQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

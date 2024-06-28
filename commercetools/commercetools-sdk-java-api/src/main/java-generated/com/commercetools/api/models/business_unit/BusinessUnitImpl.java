@@ -70,6 +70,8 @@ public class BusinessUnitImpl implements BusinessUnit, ModelBase {
 
     private com.commercetools.api.models.business_unit.BusinessUnitKeyReference topLevelUnit;
 
+    private com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode approvalRuleMode;
+
     /**
      * create instance with all properties
      */
@@ -95,7 +97,8 @@ public class BusinessUnitImpl implements BusinessUnit, ModelBase {
             @JsonProperty("associates") final java.util.List<com.commercetools.api.models.business_unit.Associate> associates,
             @JsonProperty("inheritedAssociates") final java.util.List<com.commercetools.api.models.business_unit.InheritedAssociate> inheritedAssociates,
             @JsonProperty("parentUnit") final com.commercetools.api.models.business_unit.BusinessUnitKeyReference parentUnit,
-            @JsonProperty("topLevelUnit") final com.commercetools.api.models.business_unit.BusinessUnitKeyReference topLevelUnit) {
+            @JsonProperty("topLevelUnit") final com.commercetools.api.models.business_unit.BusinessUnitKeyReference topLevelUnit,
+            @JsonProperty("approvalRuleMode") final com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode approvalRuleMode) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -120,6 +123,7 @@ public class BusinessUnitImpl implements BusinessUnit, ModelBase {
         this.inheritedAssociates = inheritedAssociates;
         this.parentUnit = parentUnit;
         this.topLevelUnit = topLevelUnit;
+        this.approvalRuleMode = approvalRuleMode;
     }
 
     /**
@@ -322,6 +326,14 @@ public class BusinessUnitImpl implements BusinessUnit, ModelBase {
         return this.topLevelUnit;
     }
 
+    /**
+     *  <p>Determines whether the Business Unit can inherit Approval Rules from a parent. Always <code>Explicit</code> for Companies and defaults to <code>ExplicitAndFromParent</code> for Divisions.</p>
+     */
+
+    public com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode getApprovalRuleMode() {
+        return this.approvalRuleMode;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -442,6 +454,11 @@ public class BusinessUnitImpl implements BusinessUnit, ModelBase {
         this.topLevelUnit = topLevelUnit;
     }
 
+    public void setApprovalRuleMode(
+            final com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode approvalRuleMode) {
+        this.approvalRuleMode = approvalRuleMode;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -476,6 +493,7 @@ public class BusinessUnitImpl implements BusinessUnit, ModelBase {
                 .append(inheritedAssociates, that.inheritedAssociates)
                 .append(parentUnit, that.parentUnit)
                 .append(topLevelUnit, that.topLevelUnit)
+                .append(approvalRuleMode, that.approvalRuleMode)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -500,6 +518,7 @@ public class BusinessUnitImpl implements BusinessUnit, ModelBase {
                 .append(inheritedAssociates, that.inheritedAssociates)
                 .append(parentUnit, that.parentUnit)
                 .append(topLevelUnit, that.topLevelUnit)
+                .append(approvalRuleMode, that.approvalRuleMode)
                 .isEquals();
     }
 
@@ -529,6 +548,7 @@ public class BusinessUnitImpl implements BusinessUnit, ModelBase {
                 .append(inheritedAssociates)
                 .append(parentUnit)
                 .append(topLevelUnit)
+                .append(approvalRuleMode)
                 .toHashCode();
     }
 
@@ -558,6 +578,7 @@ public class BusinessUnitImpl implements BusinessUnit, ModelBase {
                 .append("inheritedAssociates", inheritedAssociates)
                 .append("parentUnit", parentUnit)
                 .append("topLevelUnit", topLevelUnit)
+                .append("approvalRuleMode", approvalRuleMode)
                 .build();
     }
 

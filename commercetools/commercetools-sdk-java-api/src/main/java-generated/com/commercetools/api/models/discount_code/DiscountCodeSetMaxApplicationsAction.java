@@ -34,7 +34,8 @@ public interface DiscountCodeSetMaxApplicationsAction extends DiscountCodeUpdate
     String SET_MAX_APPLICATIONS = "setMaxApplications";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set.</p>
+     *  <p>If empty, any existing value will be removed and the DiscountCode can be applied any number of times.</p>
      * @return maxApplications
      */
 
@@ -42,7 +43,8 @@ public interface DiscountCodeSetMaxApplicationsAction extends DiscountCodeUpdate
     public Long getMaxApplications();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set.</p>
+     *  <p>If empty, any existing value will be removed and the DiscountCode can be applied any number of times.</p>
      * @param maxApplications value to be set
      */
 

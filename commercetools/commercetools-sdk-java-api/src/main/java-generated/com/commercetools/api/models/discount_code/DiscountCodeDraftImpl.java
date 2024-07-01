@@ -143,6 +143,7 @@ public class DiscountCodeDraftImpl implements DiscountCodeDraft, ModelBase {
 
     /**
      *  <p>Number of times the DiscountCode can be applied.</p>
+     *  <p>If not set, the DiscountCode can be applied any number of times.</p>
      */
 
     public Long getMaxApplications() {
@@ -151,6 +152,7 @@ public class DiscountCodeDraftImpl implements DiscountCodeDraft, ModelBase {
 
     /**
      *  <p>Number of times the DiscountCode can be applied per Customer.</p>
+     *  <p>If not set, the DiscountCode can be applied any number of times.</p>
      */
 
     public Long getMaxApplicationsPerCustomer() {

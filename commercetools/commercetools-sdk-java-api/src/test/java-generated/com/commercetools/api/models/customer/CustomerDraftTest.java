@@ -64,7 +64,10 @@ public class CustomerDraftTest {
                                 .singletonList(new com.commercetools.api.models.store.StoreResourceIdentifierImpl())) },
                 new Object[] { CustomerDraft.builder()
                         .authenticationMode(
-                            com.commercetools.api.models.customer.AuthenticationMode.findEnum("Password")) } };
+                            com.commercetools.api.models.customer.AuthenticationMode.findEnum("Password")) },
+                new Object[] { CustomerDraft.builder()
+                        .customerGroupAssignments(Collections.singletonList(
+                            new com.commercetools.api.models.customer.CustomerGroupAssignmentDraftImpl())) } };
     }
 
     @Test
@@ -262,5 +265,15 @@ public class CustomerDraftTest {
         value.setAuthenticationMode(com.commercetools.api.models.customer.AuthenticationMode.findEnum("Password"));
         Assertions.assertThat(value.getAuthenticationMode())
                 .isEqualTo(com.commercetools.api.models.customer.AuthenticationMode.findEnum("Password"));
+    }
+
+    @Test
+    public void customerGroupAssignments() {
+        CustomerDraft value = CustomerDraft.of();
+        value.setCustomerGroupAssignments(
+            Collections.singletonList(new com.commercetools.api.models.customer.CustomerGroupAssignmentDraftImpl()));
+        Assertions.assertThat(value.getCustomerGroupAssignments())
+                .isEqualTo(Collections
+                        .singletonList(new com.commercetools.api.models.customer.CustomerGroupAssignmentDraftImpl()));
     }
 }

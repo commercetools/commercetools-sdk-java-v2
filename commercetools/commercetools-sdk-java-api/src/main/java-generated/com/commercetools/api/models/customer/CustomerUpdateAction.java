@@ -30,12 +30,14 @@ import jakarta.validation.constraints.NotNull;
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerAddAddressActionImpl.class, name = CustomerAddAddressAction.ADD_ADDRESS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerAddBillingAddressIdActionImpl.class, name = CustomerAddBillingAddressIdAction.ADD_BILLING_ADDRESS_ID),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerAddCustomerGroupAssignmentActionImpl.class, name = CustomerAddCustomerGroupAssignmentAction.ADD_CUSTOMER_GROUP_ASSIGNMENT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerAddShippingAddressIdActionImpl.class, name = CustomerAddShippingAddressIdAction.ADD_SHIPPING_ADDRESS_ID),
         @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerAddStoreActionImpl.class, name = CustomerAddStoreAction.ADD_STORE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerChangeAddressActionImpl.class, name = CustomerChangeAddressAction.CHANGE_ADDRESS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerChangeEmailActionImpl.class, name = CustomerChangeEmailAction.CHANGE_EMAIL),
         @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerRemoveAddressActionImpl.class, name = CustomerRemoveAddressAction.REMOVE_ADDRESS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerRemoveBillingAddressIdActionImpl.class, name = CustomerRemoveBillingAddressIdAction.REMOVE_BILLING_ADDRESS_ID),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerRemoveCustomerGroupAssignmentActionImpl.class, name = CustomerRemoveCustomerGroupAssignmentAction.REMOVE_CUSTOMER_GROUP_ASSIGNMENT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerRemoveShippingAddressIdActionImpl.class, name = CustomerRemoveShippingAddressIdAction.REMOVE_SHIPPING_ADDRESS_ID),
         @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerRemoveStoreActionImpl.class, name = CustomerRemoveStoreAction.REMOVE_STORE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerSetAddressCustomFieldActionImpl.class, name = CustomerSetAddressCustomFieldAction.SET_ADDRESS_CUSTOM_FIELD),
@@ -45,6 +47,7 @@ import jakarta.validation.constraints.NotNull;
         @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerSetCustomFieldActionImpl.class, name = CustomerSetCustomFieldAction.SET_CUSTOM_FIELD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerSetCustomTypeActionImpl.class, name = CustomerSetCustomTypeAction.SET_CUSTOM_TYPE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerSetCustomerGroupActionImpl.class, name = CustomerSetCustomerGroupAction.SET_CUSTOMER_GROUP),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerSetCustomerGroupAssignmentsActionImpl.class, name = CustomerSetCustomerGroupAssignmentsAction.SET_CUSTOMER_GROUP_ASSIGNMENTS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerSetCustomerNumberActionImpl.class, name = CustomerSetCustomerNumberAction.SET_CUSTOMER_NUMBER),
         @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerSetDateOfBirthActionImpl.class, name = CustomerSetDateOfBirthAction.SET_DATE_OF_BIRTH),
         @JsonSubTypes.Type(value = com.commercetools.api.models.customer.CustomerSetDefaultBillingAddressActionImpl.class, name = CustomerSetDefaultBillingAddressAction.SET_DEFAULT_BILLING_ADDRESS),
@@ -90,6 +93,10 @@ public interface CustomerUpdateAction extends com.commercetools.api.models.Resou
             return com.commercetools.api.models.customer.CustomerAddBillingAddressIdAction
                     .deepCopy((com.commercetools.api.models.customer.CustomerAddBillingAddressIdAction) template);
         }
+        if (template instanceof com.commercetools.api.models.customer.CustomerAddCustomerGroupAssignmentAction) {
+            return com.commercetools.api.models.customer.CustomerAddCustomerGroupAssignmentAction.deepCopy(
+                (com.commercetools.api.models.customer.CustomerAddCustomerGroupAssignmentAction) template);
+        }
         if (template instanceof com.commercetools.api.models.customer.CustomerAddShippingAddressIdAction) {
             return com.commercetools.api.models.customer.CustomerAddShippingAddressIdAction
                     .deepCopy((com.commercetools.api.models.customer.CustomerAddShippingAddressIdAction) template);
@@ -113,6 +120,10 @@ public interface CustomerUpdateAction extends com.commercetools.api.models.Resou
         if (template instanceof com.commercetools.api.models.customer.CustomerRemoveBillingAddressIdAction) {
             return com.commercetools.api.models.customer.CustomerRemoveBillingAddressIdAction
                     .deepCopy((com.commercetools.api.models.customer.CustomerRemoveBillingAddressIdAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.customer.CustomerRemoveCustomerGroupAssignmentAction) {
+            return com.commercetools.api.models.customer.CustomerRemoveCustomerGroupAssignmentAction.deepCopy(
+                (com.commercetools.api.models.customer.CustomerRemoveCustomerGroupAssignmentAction) template);
         }
         if (template instanceof com.commercetools.api.models.customer.CustomerRemoveShippingAddressIdAction) {
             return com.commercetools.api.models.customer.CustomerRemoveShippingAddressIdAction
@@ -149,6 +160,10 @@ public interface CustomerUpdateAction extends com.commercetools.api.models.Resou
         if (template instanceof com.commercetools.api.models.customer.CustomerSetCustomerGroupAction) {
             return com.commercetools.api.models.customer.CustomerSetCustomerGroupAction
                     .deepCopy((com.commercetools.api.models.customer.CustomerSetCustomerGroupAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.customer.CustomerSetCustomerGroupAssignmentsAction) {
+            return com.commercetools.api.models.customer.CustomerSetCustomerGroupAssignmentsAction.deepCopy(
+                (com.commercetools.api.models.customer.CustomerSetCustomerGroupAssignmentsAction) template);
         }
         if (template instanceof com.commercetools.api.models.customer.CustomerSetCustomerNumberAction) {
             return com.commercetools.api.models.customer.CustomerSetCustomerNumberAction
@@ -227,6 +242,14 @@ public interface CustomerUpdateAction extends com.commercetools.api.models.Resou
     }
 
     /**
+     * builder for addCustomerGroupAssignment subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.customer.CustomerAddCustomerGroupAssignmentActionBuilder addCustomerGroupAssignmentBuilder() {
+        return com.commercetools.api.models.customer.CustomerAddCustomerGroupAssignmentActionBuilder.of();
+    }
+
+    /**
      * builder for addShippingAddressId subtype
      * @return builder
      */
@@ -272,6 +295,14 @@ public interface CustomerUpdateAction extends com.commercetools.api.models.Resou
      */
     public static com.commercetools.api.models.customer.CustomerRemoveBillingAddressIdActionBuilder removeBillingAddressIdBuilder() {
         return com.commercetools.api.models.customer.CustomerRemoveBillingAddressIdActionBuilder.of();
+    }
+
+    /**
+     * builder for removeCustomerGroupAssignment subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.customer.CustomerRemoveCustomerGroupAssignmentActionBuilder removeCustomerGroupAssignmentBuilder() {
+        return com.commercetools.api.models.customer.CustomerRemoveCustomerGroupAssignmentActionBuilder.of();
     }
 
     /**
@@ -344,6 +375,14 @@ public interface CustomerUpdateAction extends com.commercetools.api.models.Resou
      */
     public static com.commercetools.api.models.customer.CustomerSetCustomerGroupActionBuilder setCustomerGroupBuilder() {
         return com.commercetools.api.models.customer.CustomerSetCustomerGroupActionBuilder.of();
+    }
+
+    /**
+     * builder for setCustomerGroupAssignments subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.customer.CustomerSetCustomerGroupAssignmentsActionBuilder setCustomerGroupAssignmentsBuilder() {
+        return com.commercetools.api.models.customer.CustomerSetCustomerGroupAssignmentsActionBuilder.of();
     }
 
     /**

@@ -34,6 +34,14 @@ public class CustomerUpdateActionQueryBuilderDsl {
             CustomerUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<CustomerUpdateActionQueryBuilderDsl> asAddCustomerGroupAssignment(
+            Function<com.commercetools.api.predicates.query.customer.CustomerAddCustomerGroupAssignmentActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.customer.CustomerAddCustomerGroupAssignmentActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.customer.CustomerAddCustomerGroupAssignmentActionQueryBuilderDsl
+                    .of()),
+            CustomerUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<CustomerUpdateActionQueryBuilderDsl> asAddShippingAddressId(
             Function<com.commercetools.api.predicates.query.customer.CustomerAddShippingAddressIdActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.customer.CustomerAddShippingAddressIdActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
@@ -74,6 +82,14 @@ public class CustomerUpdateActionQueryBuilderDsl {
             Function<com.commercetools.api.predicates.query.customer.CustomerRemoveBillingAddressIdActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.customer.CustomerRemoveBillingAddressIdActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(
             com.commercetools.api.predicates.query.customer.CustomerRemoveBillingAddressIdActionQueryBuilderDsl.of()),
+            CustomerUpdateActionQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<CustomerUpdateActionQueryBuilderDsl> asRemoveCustomerGroupAssignment(
+            Function<com.commercetools.api.predicates.query.customer.CustomerRemoveCustomerGroupAssignmentActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.customer.CustomerRemoveCustomerGroupAssignmentActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.customer.CustomerRemoveCustomerGroupAssignmentActionQueryBuilderDsl
+                    .of()),
             CustomerUpdateActionQueryBuilderDsl::of);
     }
 
@@ -139,6 +155,14 @@ public class CustomerUpdateActionQueryBuilderDsl {
         return new CombinationQueryPredicate<>(
             fn.apply(
                 com.commercetools.api.predicates.query.customer.CustomerSetCustomerGroupActionQueryBuilderDsl.of()),
+            CustomerUpdateActionQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<CustomerUpdateActionQueryBuilderDsl> asSetCustomerGroupAssignments(
+            Function<com.commercetools.api.predicates.query.customer.CustomerSetCustomerGroupAssignmentsActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.customer.CustomerSetCustomerGroupAssignmentsActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.customer.CustomerSetCustomerGroupAssignmentsActionQueryBuilderDsl
+                    .of()),
             CustomerUpdateActionQueryBuilderDsl::of);
     }
 

@@ -34,7 +34,8 @@ public interface DiscountCodeSetMaxApplicationsPerCustomerAction extends Discoun
     String SET_MAX_APPLICATIONS_PER_CUSTOMER = "setMaxApplicationsPerCustomer";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set.</p>
+     *  <p>If empty, any existing value will be removed and the DiscountCode can be applied any number of times.</p>
      * @return maxApplicationsPerCustomer
      */
 
@@ -42,7 +43,8 @@ public interface DiscountCodeSetMaxApplicationsPerCustomerAction extends Discoun
     public Long getMaxApplicationsPerCustomer();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set.</p>
+     *  <p>If empty, any existing value will be removed and the DiscountCode can be applied any number of times.</p>
      * @param maxApplicationsPerCustomer value to be set
      */
 

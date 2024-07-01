@@ -98,6 +98,7 @@ public interface DiscountCodeDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>Number of times the DiscountCode can be applied.</p>
+     *  <p>If not set, the DiscountCode can be applied any number of times.</p>
      * @return maxApplications
      */
 
@@ -106,6 +107,7 @@ public interface DiscountCodeDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>Number of times the DiscountCode can be applied per Customer.</p>
+     *  <p>If not set, the DiscountCode can be applied any number of times.</p>
      * @return maxApplicationsPerCustomer
      */
 
@@ -203,6 +205,7 @@ public interface DiscountCodeDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>Number of times the DiscountCode can be applied.</p>
+     *  <p>If not set, the DiscountCode can be applied any number of times.</p>
      * @param maxApplications value to be set
      */
 
@@ -210,6 +213,7 @@ public interface DiscountCodeDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>Number of times the DiscountCode can be applied per Customer.</p>
+     *  <p>If not set, the DiscountCode can be applied any number of times.</p>
      * @param maxApplicationsPerCustomer value to be set
      */
 

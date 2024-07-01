@@ -26,7 +26,8 @@ public class DiscountCodeSetMaxApplicationsActionBuilder implements Builder<Disc
     private Long maxApplications;
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set.</p>
+     *  <p>If empty, any existing value will be removed and the DiscountCode can be applied any number of times.</p>
      * @param maxApplications value to be set
      * @return Builder
      */
@@ -37,7 +38,8 @@ public class DiscountCodeSetMaxApplicationsActionBuilder implements Builder<Disc
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set.</p>
+     *  <p>If empty, any existing value will be removed and the DiscountCode can be applied any number of times.</p>
      * @return maxApplications
      */
 

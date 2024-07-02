@@ -635,6 +635,26 @@ public class MessagePayloadBuilder {
         return com.commercetools.api.models.message.ProductPriceChangedMessagePayloadBuilder.of();
     }
 
+    public com.commercetools.api.models.message.ProductPriceCustomFieldAddedMessagePayloadBuilder productPriceCustomFieldAddedBuilder() {
+        return com.commercetools.api.models.message.ProductPriceCustomFieldAddedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ProductPriceCustomFieldChangedMessagePayloadBuilder productPriceCustomFieldChangedBuilder() {
+        return com.commercetools.api.models.message.ProductPriceCustomFieldChangedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ProductPriceCustomFieldRemovedMessagePayloadBuilder productPriceCustomFieldRemovedBuilder() {
+        return com.commercetools.api.models.message.ProductPriceCustomFieldRemovedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ProductPriceCustomFieldsRemovedMessagePayloadBuilder productPriceCustomFieldsRemovedBuilder() {
+        return com.commercetools.api.models.message.ProductPriceCustomFieldsRemovedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ProductPriceCustomFieldsSetMessagePayloadBuilder productPriceCustomFieldsSetBuilder() {
+        return com.commercetools.api.models.message.ProductPriceCustomFieldsSetMessagePayloadBuilder.of();
+    }
+
     public com.commercetools.api.models.message.ProductPriceDiscountsSetMessagePayloadBuilder productPriceDiscountsSetBuilder() {
         return com.commercetools.api.models.message.ProductPriceDiscountsSetMessagePayloadBuilder.of();
     }

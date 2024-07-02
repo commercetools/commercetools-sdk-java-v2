@@ -1,46 +1,10 @@
 **Api changes**
 
 <details>
-<summary>Added Property(s)</summary>
+<summary>Added Enum(s)</summary>
 
-- added property `approvalRuleMode` to type `BusinessUnit`
-- added property `approvalRuleMode` to type `BusinessUnitDraft`
-- added property `approvalRuleMode` to type `Company`
-- added property `approvalRuleMode` to type `CompanyDraft`
-- added property `approvalRuleMode` to type `Division`
-- added property `approvalRuleMode` to type `DivisionDraft`
-- added property `metaTitle` to type `ProductTailoringCreatedMessage`
-- added property `metaDescription` to type `ProductTailoringCreatedMessage`
-- added property `metaKeywords` to type `ProductTailoringCreatedMessage`
-- added property `variants` to type `ProductTailoringCreatedMessage`
-- added property `metaTitle` to type `ProductTailoringCreatedMessagePayload`
-- added property `metaDescription` to type `ProductTailoringCreatedMessagePayload`
-- added property `metaKeywords` to type `ProductTailoringCreatedMessagePayload`
-- added property `variants` to type `ProductTailoringCreatedMessagePayload`
-- added property `variants` to type `ProductTailoringData`
-- added property `variants` to type `ProductTailoringDraft`
-- added property `variants` to type `ProductTailoringInStoreDraft`
-- added property `store` to type `StagedQuote`
-</details>
-
-
-<details>
-<summary>Added Resource(s)</summary>
-
-- added resource `/{projectKey}/customers/search`
-- added resource `/{projectKey}/customers/search/indexing-status`
-- added resource `/{projectKey}/in-store/key={storeKey}/quote-requests`
-- added resource `/{projectKey}/in-store/key={storeKey}/staged-quotes`
-- added resource `/{projectKey}/in-store/key={storeKey}/quotes`
-- added resource `/{projectKey}/in-store/key={storeKey}/orders/quotes`
-- added resource `/{projectKey}/in-store/key={storeKey}/products/{productID}/product-tailoring/images`
-- added resource `/{projectKey}/in-store/key={storeKey}/products/key={productKey}/product-tailoring/images`
-- added resource `/{projectKey}/in-store/key={storeKey}/quote-requests/key={key}`
-- added resource `/{projectKey}/in-store/key={storeKey}/quote-requests/{ID}`
-- added resource `/{projectKey}/in-store/key={storeKey}/staged-quotes/key={key}`
-- added resource `/{projectKey}/in-store/key={storeKey}/staged-quotes/{ID}`
-- added resource `/{projectKey}/in-store/key={storeKey}/quotes/key={key}`
-- added resource `/{projectKey}/in-store/key={storeKey}/quotes/{ID}`
+- added enum `attribute-group` to type `ChangeSubscriptionResourceTypeId`
+- added enum `product-tailoring` to type `ChangeSubscriptionResourceTypeId`
 </details>
 
 
@@ -48,14 +12,6 @@
 <summary>Removed Enum(s)</summary>
 
 - :warning: removed enum `product-price` from type `ChangeSubscriptionResourceTypeId`
-</details>
-
-
-<details>
-<summary>Added Enum(s)</summary>
-
-- added enum `attribute-group` to type `ChangeSubscriptionResourceTypeId`
-- added enum `product-tailoring` to type `ChangeSubscriptionResourceTypeId`
 </details>
 
 
@@ -105,6 +61,30 @@
 
 
 <details>
+<summary>Added Property(s)</summary>
+
+- added property `approvalRuleMode` to type `BusinessUnit`
+- added property `approvalRuleMode` to type `BusinessUnitDraft`
+- added property `approvalRuleMode` to type `Company`
+- added property `approvalRuleMode` to type `CompanyDraft`
+- added property `approvalRuleMode` to type `Division`
+- added property `approvalRuleMode` to type `DivisionDraft`
+- added property `metaTitle` to type `ProductTailoringCreatedMessage`
+- added property `metaDescription` to type `ProductTailoringCreatedMessage`
+- added property `metaKeywords` to type `ProductTailoringCreatedMessage`
+- added property `variants` to type `ProductTailoringCreatedMessage`
+- added property `metaTitle` to type `ProductTailoringCreatedMessagePayload`
+- added property `metaDescription` to type `ProductTailoringCreatedMessagePayload`
+- added property `metaKeywords` to type `ProductTailoringCreatedMessagePayload`
+- added property `variants` to type `ProductTailoringCreatedMessagePayload`
+- added property `variants` to type `ProductTailoringData`
+- added property `variants` to type `ProductTailoringDraft`
+- added property `variants` to type `ProductTailoringInStoreDraft`
+- added property `store` to type `StagedQuote`
+</details>
+
+
+<details>
 <summary>Added Type(s)</summary>
 
 - added type `BusinessUnitApprovalRuleMode`
@@ -116,11 +96,21 @@
 - added type `CustomerSearchRequest`
 - added type `CustomerSearchResult`
 - added type `BusinessUnitApprovalRuleModeChangedMessage`
+- added type `ProductPriceCustomFieldAddedMessage`
+- added type `ProductPriceCustomFieldChangedMessage`
+- added type `ProductPriceCustomFieldRemovedMessage`
+- added type `ProductPriceCustomFieldsRemovedMessage`
+- added type `ProductPriceCustomFieldsSetMessage`
 - added type `ProductTailoringImageAddedMessage`
 - added type `ProductTailoringImagesSetMessage`
 - added type `ProductVariantTailoringAddedMessage`
 - added type `ProductVariantTailoringRemovedMessage`
 - added type `BusinessUnitApprovalRuleModeChangedMessagePayload`
+- added type `ProductPriceCustomFieldAddedMessagePayload`
+- added type `ProductPriceCustomFieldChangedMessagePayload`
+- added type `ProductPriceCustomFieldRemovedMessagePayload`
+- added type `ProductPriceCustomFieldsRemovedMessagePayload`
+- added type `ProductPriceCustomFieldsSetMessagePayload`
 - added type `ProductTailoringImageAddedMessagePayload`
 - added type `ProductTailoringImagesSetMessagePayload`
 - added type `ProductVariantTailoringAddedMessagePayload`
@@ -160,5 +150,25 @@
 - :warning: removed query parameter `localeProjection` from method `get /{projectKey}/products/{ID}`
 - :warning: removed query parameter `localeProjection` from method `post /{projectKey}/products/{ID}`
 - :warning: removed query parameter `localeProjection` from method `delete /{projectKey}/products/{ID}`
+</details>
+
+
+<details>
+<summary>Added Resource(s)</summary>
+
+- added resource `/{projectKey}/customers/search`
+- added resource `/{projectKey}/customers/search/indexing-status`
+- added resource `/{projectKey}/in-store/key={storeKey}/quote-requests`
+- added resource `/{projectKey}/in-store/key={storeKey}/staged-quotes`
+- added resource `/{projectKey}/in-store/key={storeKey}/quotes`
+- added resource `/{projectKey}/in-store/key={storeKey}/orders/quotes`
+- added resource `/{projectKey}/in-store/key={storeKey}/products/{productID}/product-tailoring/images`
+- added resource `/{projectKey}/in-store/key={storeKey}/products/key={productKey}/product-tailoring/images`
+- added resource `/{projectKey}/in-store/key={storeKey}/quote-requests/key={key}`
+- added resource `/{projectKey}/in-store/key={storeKey}/quote-requests/{ID}`
+- added resource `/{projectKey}/in-store/key={storeKey}/staged-quotes/key={key}`
+- added resource `/{projectKey}/in-store/key={storeKey}/staged-quotes/{ID}`
+- added resource `/{projectKey}/in-store/key={storeKey}/quotes/key={key}`
+- added resource `/{projectKey}/in-store/key={storeKey}/quotes/{ID}`
 </details>
 

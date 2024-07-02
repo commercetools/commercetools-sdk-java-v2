@@ -635,6 +635,26 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.ProductPriceChangedMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.ProductPriceCustomFieldAddedMessageBuilder productPriceCustomFieldAddedBuilder() {
+        return com.commercetools.api.models.message.ProductPriceCustomFieldAddedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ProductPriceCustomFieldChangedMessageBuilder productPriceCustomFieldChangedBuilder() {
+        return com.commercetools.api.models.message.ProductPriceCustomFieldChangedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ProductPriceCustomFieldRemovedMessageBuilder productPriceCustomFieldRemovedBuilder() {
+        return com.commercetools.api.models.message.ProductPriceCustomFieldRemovedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ProductPriceCustomFieldsRemovedMessageBuilder productPriceCustomFieldsRemovedBuilder() {
+        return com.commercetools.api.models.message.ProductPriceCustomFieldsRemovedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ProductPriceCustomFieldsSetMessageBuilder productPriceCustomFieldsSetBuilder() {
+        return com.commercetools.api.models.message.ProductPriceCustomFieldsSetMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.ProductPriceDiscountsSetMessageBuilder productPriceDiscountsSetBuilder() {
         return com.commercetools.api.models.message.ProductPriceDiscountsSetMessageBuilder.of();
     }

@@ -919,6 +919,43 @@ public class MessageQueryBuilderDsl {
             MessageQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<MessageQueryBuilderDsl> asProductPriceCustomFieldAdded(
+            Function<com.commercetools.api.predicates.query.message.ProductPriceCustomFieldAddedMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.ProductPriceCustomFieldAddedMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.message.ProductPriceCustomFieldAddedMessageQueryBuilderDsl.of()),
+            MessageQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessageQueryBuilderDsl> asProductPriceCustomFieldChanged(
+            Function<com.commercetools.api.predicates.query.message.ProductPriceCustomFieldChangedMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.ProductPriceCustomFieldChangedMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.message.ProductPriceCustomFieldChangedMessageQueryBuilderDsl.of()),
+            MessageQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessageQueryBuilderDsl> asProductPriceCustomFieldRemoved(
+            Function<com.commercetools.api.predicates.query.message.ProductPriceCustomFieldRemovedMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.ProductPriceCustomFieldRemovedMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.message.ProductPriceCustomFieldRemovedMessageQueryBuilderDsl.of()),
+            MessageQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessageQueryBuilderDsl> asProductPriceCustomFieldsRemoved(
+            Function<com.commercetools.api.predicates.query.message.ProductPriceCustomFieldsRemovedMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.ProductPriceCustomFieldsRemovedMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.message.ProductPriceCustomFieldsRemovedMessageQueryBuilderDsl.of()),
+            MessageQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessageQueryBuilderDsl> asProductPriceCustomFieldsSet(
+            Function<com.commercetools.api.predicates.query.message.ProductPriceCustomFieldsSetMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.ProductPriceCustomFieldsSetMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.message.ProductPriceCustomFieldsSetMessageQueryBuilderDsl.of()),
+            MessageQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<MessageQueryBuilderDsl> asProductPriceDiscountsSet(
             Function<com.commercetools.api.predicates.query.message.ProductPriceDiscountsSetMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.ProductPriceDiscountsSetMessageQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

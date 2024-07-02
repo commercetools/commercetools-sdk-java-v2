@@ -185,6 +185,11 @@ import jakarta.validation.constraints.NotNull;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductImageAddedMessagePayloadImpl.class, name = ProductImageAddedMessagePayload.PRODUCT_IMAGE_ADDED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductPriceAddedMessagePayloadImpl.class, name = ProductPriceAddedMessagePayload.PRODUCT_PRICE_ADDED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductPriceChangedMessagePayloadImpl.class, name = ProductPriceChangedMessagePayload.PRODUCT_PRICE_CHANGED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductPriceCustomFieldAddedMessagePayloadImpl.class, name = ProductPriceCustomFieldAddedMessagePayload.PRODUCT_PRICE_CUSTOM_FIELD_ADDED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductPriceCustomFieldChangedMessagePayloadImpl.class, name = ProductPriceCustomFieldChangedMessagePayload.PRODUCT_PRICE_CUSTOM_FIELD_CHANGED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductPriceCustomFieldRemovedMessagePayloadImpl.class, name = ProductPriceCustomFieldRemovedMessagePayload.PRODUCT_PRICE_CUSTOM_FIELD_REMOVED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductPriceCustomFieldsRemovedMessagePayloadImpl.class, name = ProductPriceCustomFieldsRemovedMessagePayload.PRODUCT_PRICE_CUSTOM_FIELDS_REMOVED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductPriceCustomFieldsSetMessagePayloadImpl.class, name = ProductPriceCustomFieldsSetMessagePayload.PRODUCT_PRICE_CUSTOM_FIELDS_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductPriceDiscountsSetMessagePayloadImpl.class, name = ProductPriceDiscountsSetMessagePayload.PRODUCT_PRICE_DISCOUNTS_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductPriceExternalDiscountSetMessagePayloadImpl.class, name = ProductPriceExternalDiscountSetMessagePayload.PRODUCT_PRICE_EXTERNAL_DISCOUNT_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ProductPriceKeySetMessagePayloadImpl.class, name = ProductPriceKeySetMessagePayload.PRODUCT_PRICE_KEY_SET),
@@ -733,6 +738,26 @@ public interface MessagePayload extends MessagePayloadMixin {
         if (template instanceof com.commercetools.api.models.message.ProductPriceChangedMessagePayload) {
             return com.commercetools.api.models.message.ProductPriceChangedMessagePayload
                     .deepCopy((com.commercetools.api.models.message.ProductPriceChangedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ProductPriceCustomFieldAddedMessagePayload) {
+            return com.commercetools.api.models.message.ProductPriceCustomFieldAddedMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.ProductPriceCustomFieldAddedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ProductPriceCustomFieldChangedMessagePayload) {
+            return com.commercetools.api.models.message.ProductPriceCustomFieldChangedMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.ProductPriceCustomFieldChangedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ProductPriceCustomFieldRemovedMessagePayload) {
+            return com.commercetools.api.models.message.ProductPriceCustomFieldRemovedMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.ProductPriceCustomFieldRemovedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ProductPriceCustomFieldsRemovedMessagePayload) {
+            return com.commercetools.api.models.message.ProductPriceCustomFieldsRemovedMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.ProductPriceCustomFieldsRemovedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ProductPriceCustomFieldsSetMessagePayload) {
+            return com.commercetools.api.models.message.ProductPriceCustomFieldsSetMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.ProductPriceCustomFieldsSetMessagePayload) template);
         }
         if (template instanceof com.commercetools.api.models.message.ProductPriceDiscountsSetMessagePayload) {
             return com.commercetools.api.models.message.ProductPriceDiscountsSetMessagePayload
@@ -2288,6 +2313,46 @@ public interface MessagePayload extends MessagePayloadMixin {
      */
     public static com.commercetools.api.models.message.ProductPriceChangedMessagePayloadBuilder productPriceChangedBuilder() {
         return com.commercetools.api.models.message.ProductPriceChangedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for productPriceCustomFieldAdded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ProductPriceCustomFieldAddedMessagePayloadBuilder productPriceCustomFieldAddedBuilder() {
+        return com.commercetools.api.models.message.ProductPriceCustomFieldAddedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for productPriceCustomFieldChanged subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ProductPriceCustomFieldChangedMessagePayloadBuilder productPriceCustomFieldChangedBuilder() {
+        return com.commercetools.api.models.message.ProductPriceCustomFieldChangedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for productPriceCustomFieldRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ProductPriceCustomFieldRemovedMessagePayloadBuilder productPriceCustomFieldRemovedBuilder() {
+        return com.commercetools.api.models.message.ProductPriceCustomFieldRemovedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for productPriceCustomFieldsRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ProductPriceCustomFieldsRemovedMessagePayloadBuilder productPriceCustomFieldsRemovedBuilder() {
+        return com.commercetools.api.models.message.ProductPriceCustomFieldsRemovedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for productPriceCustomFieldsSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ProductPriceCustomFieldsSetMessagePayloadBuilder productPriceCustomFieldsSetBuilder() {
+        return com.commercetools.api.models.message.ProductPriceCustomFieldsSetMessagePayloadBuilder.of();
     }
 
     /**

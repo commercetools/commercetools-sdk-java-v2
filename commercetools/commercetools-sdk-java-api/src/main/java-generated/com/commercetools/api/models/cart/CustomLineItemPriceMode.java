@@ -21,7 +21,7 @@ public interface CustomLineItemPriceMode extends JsonEnum {
     <p>This is the default mode for backwards compatibility.</p> */
     CustomLineItemPriceMode STANDARD = CustomLineItemPriceModeEnum.STANDARD;
     /**
-    <p>Deactivates application of Cart Discounts for the Custom Line Item despite a matching CartDiscountCustomLineItemsTarget.</p> */
+    <p>Deactivates application of Cart Discounts for the Custom Line Item, despite a matching CartDiscountCustomLineItemsTarget and MultiBuyCustomLineItemsTarget.</p> */
     CustomLineItemPriceMode EXTERNAL = CustomLineItemPriceModeEnum.EXTERNAL;
 
     /**

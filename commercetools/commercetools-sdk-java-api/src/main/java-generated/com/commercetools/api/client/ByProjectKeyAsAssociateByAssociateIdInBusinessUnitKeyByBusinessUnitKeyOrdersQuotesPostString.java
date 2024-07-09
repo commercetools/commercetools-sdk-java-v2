@@ -18,6 +18,11 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>Creates an Order from a Quote in a BusinessUnit. Creating an Order fails with an InvalidOperation if the Quote does not reference the same BusinessUnit as the <code>businessUnitKey</code> path parameter.</p>
+ *  <p>Specific Error Codes:</p>
+ *  <ul>
+ *   <li>InvalidItemShippingDetails</li>
+ *   <li>OutOfStock</li>
+ *  </ul>
  *
  * <hr>
  * <div class=code-example>

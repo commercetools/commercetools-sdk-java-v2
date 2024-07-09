@@ -18,7 +18,13 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Returned when the Cart contains a ShippingMethod that is not allowed for the Cart. In this case, the ShippingMethodState value is <code>DoesNotMatchCart</code>.</p>
- *  <p>The error is returned as a failed response to the Create Order from Cart or Create Order in Store from Cart requests.</p>
+ *  <p>When a Cart is frozen, the error can be returned as a failed response to all update actions on Carts and My Carts.</p>
+ *  <p>The error is also returned as a failed response to:</p>
+ *  <ul>
+ *   <li>Create Order from Cart and Create Order in Store from Cart requests on Orders.</li>
+ *   <li>Create Order from Cart and Create Order in Store from Cart requests on My Orders.</li>
+ *   <li>Create Order from Cart in BusinessUnit request on Associate Orders.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingMethodDoesNotMatchCartErrorImpl implements ShippingMethodDoesNotMatchCartError, ModelBase {

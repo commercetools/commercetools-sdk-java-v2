@@ -19,8 +19,13 @@ import jakarta.validation.constraints.NotNull;
  *  <p>Returned when the Cart contains a Discount Code with a DiscountCodeState other than <code>MatchesCart</code>.</p>
  *  <p>The error is returned as a failed response to:</p>
  *  <ul>
+ *   <li>Create Cart and Create Cart in Store requests and Add DiscountCode update action on Carts.</li>
+ *   <li>Create Cart and Create Cart in Store requests and Add DiscountCode update action on My Carts.</li>
+ *   <li>Create Cart in BusinessUnit request on Associate Carts.</li>
  *   <li>Create Order from Cart and Create Order in Store from Cart requests on Orders.</li>
  *   <li>Create Order from Cart and Create Order in Store from Cart requests on My Orders.</li>
+ *   <li>Add DiscountCode update action on Order Edits.</li>
+ *   <li>Create Order from Cart in BusinessUnit request on Associate Orders.</li>
  *  </ul>
  *
  * <hr>

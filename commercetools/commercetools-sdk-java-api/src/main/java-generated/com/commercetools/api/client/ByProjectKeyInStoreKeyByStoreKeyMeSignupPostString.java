@@ -18,6 +18,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>If omitted in the request body, the Customer <code>stores</code> field is set to the Store specified in the path parameter.</p>
+ *  <p>A Cart returned in the CustomerSignInResult has any invalid Line Items removed and is updated with the latest prices, taxes, and discounts. During these updates, the following errors can be returned: MatchingPriceNotFound and MissingTaxRateForCountry.</p>
  *  <p>Creating a Customer produces the CustomerCreated Message.</p>
  *
  * <hr>

@@ -18,7 +18,17 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Returned when Line Item or Custom Line Item quantities set under ItemShippingDetails do not match the sum of the quantities in their respective shipping details.</p>
- *  <p>The error is returned as a failed response to the Create Order from Cart and Create Order in Store from Cart requests.</p>
+ *  <p>When a Cart is frozen, the error can be returned as a failed response to all update actions on Carts and My Carts.</p>
+ *  <p>The error is also returned as a failed response to:</p>
+ *  <ul>
+ *   <li>Create Cart and Create Cart in Store requests and Add LineItem, Add CustomLineItem, Set LineItem ShippingDetails, Set CustomLineItem ShippingDetails, Add Shopping List, and Remove LineItem update actions on Carts.</li>
+ *   <li>Create Cart and Create Cart in Store requests, and Add LineItem, Set LineItem ShippingDetails, and Remove LineItem update actions on My Carts.</li>
+ *   <li>Create Cart in BusinessUnit request on Associate Carts.</li>
+ *   <li>Create Order from Cart, Create Order in Store from Cart, Create Order from Quote, and Create Order by Import requests on Orders.</li>
+ *   <li>Create Order from Cart, Create Order in Store from Cart, and Create Order from Quote requests on My Orders.</li>
+ *   <li>Add LineItem, Add CustomLineItem, Set LineItem ShippingDetails, Set CustomLineItem ShippingDetails, Add Shopping List, and Remove LineItem update actions on Order Edits.</li>
+ *   <li>Create Order from Cart in BusinessUnit and Create Order from Quote in BusinessUnit requests on Associate Orders.</li>
+ *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InvalidItemShippingDetailsErrorImpl implements InvalidItemShippingDetailsError, ModelBase {

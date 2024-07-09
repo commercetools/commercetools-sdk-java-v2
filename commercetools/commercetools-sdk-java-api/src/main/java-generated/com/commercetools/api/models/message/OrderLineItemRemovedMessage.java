@@ -71,7 +71,7 @@ public interface OrderLineItemRemovedMessage extends OrderMessage {
     public String getLineItemKey();
 
     /**
-     *  <p>Quantity of Line Items that were removed during the Remove Line Item update action.</p>
+     *  <p>Quantity of Line Items that were removed during the Remove LineItem update action.</p>
      * @return removedQuantity
      */
     @NotNull
@@ -79,7 +79,7 @@ public interface OrderLineItemRemovedMessage extends OrderMessage {
     public Long getRemovedQuantity();
 
     /**
-     *  <p>Line Item quantity after the Remove Line Item update action.</p>
+     *  <p>Line Item quantity after the Remove LineItem update action.</p>
      * @return newQuantity
      */
     @NotNull
@@ -87,7 +87,7 @@ public interface OrderLineItemRemovedMessage extends OrderMessage {
     public Long getNewQuantity();
 
     /**
-     *  <p>ItemStates after the Remove Line Item update action.</p>
+     *  <p>ItemStates after the Remove LineItem update action.</p>
      * @return newState
      */
     @NotNull
@@ -96,7 +96,7 @@ public interface OrderLineItemRemovedMessage extends OrderMessage {
     public List<ItemState> getNewState();
 
     /**
-     *  <p><code>totalPrice</code> of the Order after the Remove Line Item update action.</p>
+     *  <p><code>totalPrice</code> of the Order after the Remove LineItem update action.</p>
      * @return newTotalPrice
      */
     @NotNull
@@ -105,7 +105,7 @@ public interface OrderLineItemRemovedMessage extends OrderMessage {
     public CentPrecisionMoney getNewTotalPrice();
 
     /**
-     *  <p>TaxedItemPrice of the Order after the Remove Line Item update action.</p>
+     *  <p>TaxedItemPrice of the Order after the Remove LineItem update action.</p>
      * @return newTaxedPrice
      */
     @Valid
@@ -113,7 +113,7 @@ public interface OrderLineItemRemovedMessage extends OrderMessage {
     public TaxedItemPrice getNewTaxedPrice();
 
     /**
-     *  <p>Price of the Order after the Remove Line Item update action.</p>
+     *  <p>Price of the Order after the Remove LineItem update action.</p>
      * @return newPrice
      */
     @Valid
@@ -121,7 +121,7 @@ public interface OrderLineItemRemovedMessage extends OrderMessage {
     public Price getNewPrice();
 
     /**
-     *  <p>Shipping Details of the Order after the Remove Line Item update action.</p>
+     *  <p>Shipping Details of the Order after the Remove LineItem update action.</p>
      * @return newShippingDetail
      */
     @Valid
@@ -143,21 +143,21 @@ public interface OrderLineItemRemovedMessage extends OrderMessage {
     public void setLineItemKey(final String lineItemKey);
 
     /**
-     *  <p>Quantity of Line Items that were removed during the Remove Line Item update action.</p>
+     *  <p>Quantity of Line Items that were removed during the Remove LineItem update action.</p>
      * @param removedQuantity value to be set
      */
 
     public void setRemovedQuantity(final Long removedQuantity);
 
     /**
-     *  <p>Line Item quantity after the Remove Line Item update action.</p>
+     *  <p>Line Item quantity after the Remove LineItem update action.</p>
      * @param newQuantity value to be set
      */
 
     public void setNewQuantity(final Long newQuantity);
 
     /**
-     *  <p>ItemStates after the Remove Line Item update action.</p>
+     *  <p>ItemStates after the Remove LineItem update action.</p>
      * @param newState values to be set
      */
 
@@ -165,35 +165,35 @@ public interface OrderLineItemRemovedMessage extends OrderMessage {
     public void setNewState(final ItemState... newState);
 
     /**
-     *  <p>ItemStates after the Remove Line Item update action.</p>
+     *  <p>ItemStates after the Remove LineItem update action.</p>
      * @param newState values to be set
      */
 
     public void setNewState(final List<ItemState> newState);
 
     /**
-     *  <p><code>totalPrice</code> of the Order after the Remove Line Item update action.</p>
+     *  <p><code>totalPrice</code> of the Order after the Remove LineItem update action.</p>
      * @param newTotalPrice value to be set
      */
 
     public void setNewTotalPrice(final CentPrecisionMoney newTotalPrice);
 
     /**
-     *  <p>TaxedItemPrice of the Order after the Remove Line Item update action.</p>
+     *  <p>TaxedItemPrice of the Order after the Remove LineItem update action.</p>
      * @param newTaxedPrice value to be set
      */
 
     public void setNewTaxedPrice(final TaxedItemPrice newTaxedPrice);
 
     /**
-     *  <p>Price of the Order after the Remove Line Item update action.</p>
+     *  <p>Price of the Order after the Remove LineItem update action.</p>
      * @param newPrice value to be set
      */
 
     public void setNewPrice(final Price newPrice);
 
     /**
-     *  <p>Shipping Details of the Order after the Remove Line Item update action.</p>
+     *  <p>Shipping Details of the Order after the Remove LineItem update action.</p>
      * @param newShippingDetail value to be set
      */
 

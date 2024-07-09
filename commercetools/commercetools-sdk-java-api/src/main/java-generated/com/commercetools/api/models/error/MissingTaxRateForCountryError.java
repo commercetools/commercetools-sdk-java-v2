@@ -16,10 +16,17 @@ import jakarta.validation.constraints.NotNull;
 
 /**
  *  <p>Returned when the Tax Category of at least one of the <code>lineItems</code>, <code>customLineItems</code>, or <code>shippingInfo</code> in the Cart is missing the TaxRate matching <code>country</code> and <code>state</code> given in the <code>shippingAddress</code> of that Cart.</p>
- *  <p>The error is returned as a failed response to:</p>
+ *  <p>The error can be returned as a failed response to all update actions on Carts and Staged Orders.</p>
+ *  <p>The error is also returned as a failed response to:</p>
  *  <ul>
- *   <li>Add LineItem, Add CustomLineItem, Set Shipping Address, Add LineItem, Add LineItem, and Add CustomLineItem update actions</li>
- *   <li>Create Order from Cart and Create Order in Store from Cart requests.</li>
+ *   <li>Authenticate (sign in) Customer and Authenticate (sign in) Customer in Store requests and Set CustomerGroup update action on Customers.</li>
+ *   <li>Authenticate (sign in) Customer and Authenticate (sign in) Customer in Store on My Customer Profile.</li>
+ *   <li>Create Cart, Create Cart in Store, Replicate Cart, and Replicate Cart in Store requests on Carts.</li>
+ *   <li>Create Cart and Create Cart in Store and Replicate My Cart requests on My Carts.</li>
+ *   <li>Create Cart in BusinessUnit and Replicate Cart in Business Unit requests on Associate Carts.</li>
+ *   <li>Create Order from Cart and Create Order in Store from Cart requests on Orders.</li>
+ *   <li>Create Order from Cart and Create Order in Store from Cart requests on My Orders.</li>
+ *   <li>Create Order from Cart in BusinessUnit requests on Associate Orders.</li>
  *  </ul>
  *
  * <hr>

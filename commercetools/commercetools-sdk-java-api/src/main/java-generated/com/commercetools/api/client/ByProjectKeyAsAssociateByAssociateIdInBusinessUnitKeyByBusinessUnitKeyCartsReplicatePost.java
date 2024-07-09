@@ -20,6 +20,11 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  *  <p>The replicated Cart preserves Customer information, Line Items and Custom Line Items, Custom Fields, Discount Codes, and other settings of the Cart or Order. If the Line Items become invalid, for example, due to removed Products or Prices, they are removed from the new Cart. If the Customer switches to another Customer Group, the new Cart is updated with the new value. It has up-to-date Tax Rates, Prices, and Line Item product data and is in <code>Active</code> CartState.</p>
  *  <p>The new Cart does not contain Payments or Deliveries. The State of Line Items and Custom Line Items is reset to <code>initial</code>.</p>
  *  <p>If the Cart exists in the Project but does not reference the requested BusinessUnit, this method returns an InvalidOperation error.</p>
+ *  <p>Specific Error Codes:</p>
+ *  <ul>
+ *   <li>MatchingPriceNotFound</li>
+ *   <li>MissingTaxRateForCountry</li>
+ *  </ul>
  *
  * <hr>
  * <div class=code-example>

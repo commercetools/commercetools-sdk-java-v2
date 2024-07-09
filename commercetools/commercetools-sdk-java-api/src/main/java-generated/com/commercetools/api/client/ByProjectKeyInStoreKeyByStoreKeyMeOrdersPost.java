@@ -24,11 +24,15 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  *  <p>Creating an Order produces the OrderCreated Message.</p>
  *  <p>Specific Error Codes:</p>
  *  <ul>
+ *   <li>AssociateMissingPermission</li>
+ *   <li>CountryNotConfiguredInStore</li>
+ *   <li>DiscountCodeNonApplicable</li>
+ *   <li>InvalidItemShippingDetails</li>
+ *   <li>MatchingPriceNotFound</li>
+ *   <li>MissingTaxRateForCountry</li>
  *   <li>OutOfStock</li>
  *   <li>PriceChanged</li>
- *   <li>DiscountCodeNonApplicable</li>
- *   <li>CountryNotConfiguredInStore</li>
- *   <li>AssociateMissingPermission</li>
+ *   <li>ShippingMethodDoesNotMatchCart</li>
  *  </ul>
  *
  * <hr>

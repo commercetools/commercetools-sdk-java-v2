@@ -18,8 +18,9 @@ import jakarta.validation.constraints.NotNull;
  *  <p>Returned when some of the Line Items are out of stock at the time of placing an Order.</p>
  *  <p>The error is returned as a failed response to:</p>
  *  <ul>
- *   <li>Create Order from Cart, Create Order in Store from Cart, and Create Order by Import requests on Orders.</li>
- *   <li>Create Order from Cart and Create Order in Store from Cart requests on My Orders.</li>
+ *   <li>Create Order from Cart, Create Order in Store from Cart, Create Order from Quote, and Create Order by Import requests on Orders.</li>
+ *   <li>Create Order from Cart, Create Order in Store from Cart, and Create Order from Quote requests on My Orders.</li>
+ *   <li>Create Order from Cart in BusinessUnit and Create Order from Quote in BusinessUnit requests on Associate Orders.</li>
  *  </ul>
  *
  * <hr>

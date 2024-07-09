@@ -22,6 +22,13 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>Creates a Cart for a given <code>customerId</code> or <code>anonymousId</code>.</p>
+ *  <p>Specific Error Codes:</p>
+ *  <ul>
+ *   <li>DiscountCodeNonApplicable</li>
+ *   <li>InvalidItemShippingDetails</li>
+ *   <li>MatchingPriceNotFound</li>
+ *   <li>MissingTaxRateForCountry</li>
+ *  </ul>
  *
  * <hr>
  * <div class=code-example>

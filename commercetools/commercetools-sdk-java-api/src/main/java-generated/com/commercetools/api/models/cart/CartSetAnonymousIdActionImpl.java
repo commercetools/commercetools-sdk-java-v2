@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * CartSetAnonymousIdAction
+ *  <p>If the Cart is already associated with a Customer, an InvalidOperation error is returned.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartSetAnonymousIdActionImpl implements CartSetAnonymousIdAction, ModelBase {

@@ -21,7 +21,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  *   <li>If the Customer does not have a Cart, the most recently modified anonymous cart becomes the Customer's Cart.</li>
  *   <li>If the Customer already has a Cart, the most recently modified anonymous cart is handled according to AnonymousCartSignInMode.</li>
  *  </ul>
- *  <p>If a Cart is returned as part of CustomerSignInResult, it has been recalculated with up-to-date prices, taxes, discounts, and invalid line items removed.</p>
+ *  <p>A Cart returned in the CustomerSignInResult has any invalid Line Items removed and is updated with the latest prices, taxes, and discounts. During these updates, the following errors can be returned: MatchingPriceNotFound and MissingTaxRateForCountry.</p>
  *  <p>If an account with the given credentials is not found, an InvalidCredentials error is returned.</p>
  *
  * <hr>

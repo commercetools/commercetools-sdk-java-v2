@@ -22,12 +22,10 @@ import org.apache.commons.lang3.builder.ToStringStyle;
  *  <ul>
  *   <li>Create Cart in Store request and Set Country update action on Carts.</li>
  *   <li>Create Cart in Store request and Set Country update action on My Carts.</li>
- *   <li>Create Order in Store from Cart requests on Orders.</li>
- *   <li>Create Order in Store from Cart requests on My Orders.</li>
- *   <li>Create Order from Quote requests on Orders.</li>
- *   <li>Create Order from Quote requests on My Orders.</li>
+ *   <li>Create Order in Store from Cart and Create Order from Quote requests on Orders.</li>
+ *   <li>Create Order in Store from Cart and Create Order from Quote requests on My Orders.</li>
  *   <li>Create Order by Import request on Order Import.</li>
- *   <li>Set Country on Order Edits.</li>
+ *   <li>Set Country update action on Order Edits.</li>
  *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")

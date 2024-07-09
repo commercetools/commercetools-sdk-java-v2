@@ -26,10 +26,14 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  *  <p>If a server-side problem occurs, indicated by a 500 Internal Server Error HTTP response, the Order creation may still successfully complete after the error is returned. If you receive this error, you should verify the status of the Order by querying a unique identifier supplied during the creation request, such as the Order number.</p>
  *  <p>Specific Error Codes:</p>
  *  <ul>
+ *   <li>AssociateMissingPermission</li>
+ *   <li>DiscountCodeNonApplicable</li>
+ *   <li>InvalidItemShippingDetails</li>
  *   <li>OutOfStock</li>
  *   <li>PriceChanged</li>
- *   <li>DiscountCodeNonApplicable</li>
- *   <li>AssociateMissingPermission</li>
+ *   <li>ShippingMethodDoesNotMatchCart</li>
+ *   <li>MatchingPriceNotFound</li>
+ *   <li>MissingTaxRateForCountry</li>
  *  </ul>
  *
  * <hr>

@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ShoppingListSetAnonymousIdAction
+ *  <p>If the Shopping List is already associated with a Customer, an InvalidOperation error is returned.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

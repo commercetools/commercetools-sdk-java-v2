@@ -217,7 +217,7 @@ public class OrderLineItemRemovedMessageImpl implements OrderLineItemRemovedMess
     }
 
     /**
-     *  <p>Quantity of Line Items that were removed during the Remove Line Item update action.</p>
+     *  <p>Quantity of Line Items that were removed during the Remove LineItem update action.</p>
      */
 
     public Long getRemovedQuantity() {
@@ -225,7 +225,7 @@ public class OrderLineItemRemovedMessageImpl implements OrderLineItemRemovedMess
     }
 
     /**
-     *  <p>Line Item quantity after the Remove Line Item update action.</p>
+     *  <p>Line Item quantity after the Remove LineItem update action.</p>
      */
 
     public Long getNewQuantity() {
@@ -233,7 +233,7 @@ public class OrderLineItemRemovedMessageImpl implements OrderLineItemRemovedMess
     }
 
     /**
-     *  <p>ItemStates after the Remove Line Item update action.</p>
+     *  <p>ItemStates after the Remove LineItem update action.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.ItemState> getNewState() {
@@ -241,7 +241,7 @@ public class OrderLineItemRemovedMessageImpl implements OrderLineItemRemovedMess
     }
 
     /**
-     *  <p><code>totalPrice</code> of the Order after the Remove Line Item update action.</p>
+     *  <p><code>totalPrice</code> of the Order after the Remove LineItem update action.</p>
      */
 
     public com.commercetools.api.models.common.CentPrecisionMoney getNewTotalPrice() {
@@ -249,7 +249,7 @@ public class OrderLineItemRemovedMessageImpl implements OrderLineItemRemovedMess
     }
 
     /**
-     *  <p>TaxedItemPrice of the Order after the Remove Line Item update action.</p>
+     *  <p>TaxedItemPrice of the Order after the Remove LineItem update action.</p>
      */
 
     public com.commercetools.api.models.cart.TaxedItemPrice getNewTaxedPrice() {
@@ -257,7 +257,7 @@ public class OrderLineItemRemovedMessageImpl implements OrderLineItemRemovedMess
     }
 
     /**
-     *  <p>Price of the Order after the Remove Line Item update action.</p>
+     *  <p>Price of the Order after the Remove LineItem update action.</p>
      */
 
     public com.commercetools.api.models.common.Price getNewPrice() {
@@ -265,7 +265,7 @@ public class OrderLineItemRemovedMessageImpl implements OrderLineItemRemovedMess
     }
 
     /**
-     *  <p>Shipping Details of the Order after the Remove Line Item update action.</p>
+     *  <p>Shipping Details of the Order after the Remove LineItem update action.</p>
      */
 
     public com.commercetools.api.models.cart.ItemShippingDetails getNewShippingDetail() {

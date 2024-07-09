@@ -17,8 +17,8 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>This update action can only be used if a Customer is not assigned to a Cart. If a Customer is already assigned, the Cart has the same Customer Group as the assigned Customer.</p>
- *  <p>Setting the Customer Group also updates the LineItem <code>prices</code> according to the Customer Group.</p>
+ *  <p>This update action can only be used if a Customer is not assigned to the Cart. If a Customer is already assigned, the Cart uses the Customer Group of the assigned Customer.</p>
+ *  <p>To reflect the new Customer Group, this update action can result in updates to the Cart. When this occurs, the following errors can be returned: MatchingPriceNotFound and MissingTaxRateForCountry.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartSetCustomerGroupActionImpl implements CartSetCustomerGroupAction, ModelBase {

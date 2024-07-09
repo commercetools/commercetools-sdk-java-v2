@@ -20,11 +20,11 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  *  <p>Creating an Order produces the OrderCreated Message.</p>
  *  <p>Specific Error Codes:</p>
  *  <ul>
- *   <li>OutOfStock</li>
- *   <li>PriceChanged</li>
+ *   <li>CountryNotConfiguredInStore</li>
  *   <li>InvalidItemShippingDetails</li>
  *   <li>InvalidOperation</li>
- *   <li>CountryNotConfiguredInStore</li>
+ *   <li>OutOfStock</li>
+ *   <li>PriceChanged</li>
  *  </ul>
  *
  * <hr>

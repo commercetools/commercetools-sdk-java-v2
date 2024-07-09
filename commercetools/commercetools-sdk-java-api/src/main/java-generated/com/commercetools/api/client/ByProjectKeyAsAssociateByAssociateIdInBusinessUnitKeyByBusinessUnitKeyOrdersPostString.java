@@ -22,6 +22,16 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>Creates an Order from a Cart in a BusinessUnit. The Cart must have a shipping address set before creating an Order. Creating an Order fails with an InvalidOperation if the Cart does not reference the same BusinessUnit as the <code>businessUnitKey</code> path parameter.</p>
+ *  <p>Specific Error Codes:</p>
+ *  <ul>
+ *   <li>DiscountCodeNonApplicable</li>
+ *   <li>InvalidItemShippingDetails</li>
+ *   <li>OutOfStock</li>
+ *   <li>PriceChanged</li>
+ *   <li>ShippingMethodDoesNotMatchCart</li>
+ *   <li>MatchingPriceNotFound</li>
+ *   <li>MissingTaxRateForCountry</li>
+ *  </ul>
  *
  * <hr>
  * <div class=code-example>

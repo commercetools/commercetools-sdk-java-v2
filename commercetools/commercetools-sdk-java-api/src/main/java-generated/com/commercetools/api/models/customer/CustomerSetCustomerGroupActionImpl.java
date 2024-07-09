@@ -18,6 +18,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Setting the Customer Group of the Customer produces the CustomerGroupSet Message.</p>
+ *  <p>To reflect the new Customer Group, this update action can result in updates to the most recently modified active Cart. When this occurs, the following errors can be returned: MatchingPriceNotFound and MissingTaxRateForCountry.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerSetCustomerGroupActionImpl implements CustomerSetCustomerGroupAction, ModelBase {

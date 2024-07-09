@@ -21,6 +21,13 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>Creates a Cart in the BusinessUnit referenced by <code>businessUnitKey</code>. As such, the <code>businessUnit</code> field on CartDraft is ignored for this request. Creating a Cart can fail with an InvalidOperation if the referenced ShippingMethod in the CartDraft has a predicate that does not match the Cart.</p>
+ *  <p>Specific Error Codes:</p>
+ *  <ul>
+ *   <li>DiscountCodeNonApplicable</li>
+ *   <li>InvalidItemShippingDetails</li>
+ *   <li>MatchingPriceNotFound</li>
+ *   <li>MissingTaxRateForCountry</li>
+ *  </ul>
  *
  * <hr>
  * <div class=code-example>

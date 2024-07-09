@@ -21,6 +21,14 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>Creates a Cart in the Store specified by <code>storeKey</code>. When using this endpoint the Cart's <code>store</code> field is always set to the Store specified in the path parameter. If the referenced ShippingMethod in the CartDraft has a predicate that does not match, an InvalidOperation error is returned.</p>
+ *  <p>Specific Error Codes:</p>
+ *  <ul>
+ *   <li>DiscountCodeNonApplicable</li>
+ *   <li>InvalidItemShippingDetails</li>
+ *   <li>MatchingPriceNotFound</li>
+ *   <li>MissingTaxRateForCountry</li>
+ *   <li>CountryNotConfiguredInStore</li>
+ *  </ul>
  *
  * <hr>
  * <div class=code-example>

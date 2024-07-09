@@ -18,12 +18,17 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Returned when the Product Variant does not have a Price according to the Product <code>priceMode</code> value for a selected currency, country, Customer Group, or Channel.</p>
- *  <p>The error is returned as a failed response to:</p>
+ *  <p>The error can be returned as a failed response to all update actions on Carts and Staged Orders.</p>
+ *  <p>The error is also returned as a failed response to:</p>
  *  <ul>
- *   <li>Add LineItem, Add CustomLineItem, and Add DiscountCode update actions on Carts.</li>
- *   <li>Add LineItem, Add CustomLineItem, and Add DiscountCode update actions on Order Edits.</li>
+ *   <li>Authenticate (sign in) Customer and Authenticate (sign in) Customer in Store requests and Set CustomerGroup update action on Customers.</li>
+ *   <li>Authenticate (sign in) Customer and Authenticate (sign in) Customer in Store requests on My Customer Profile.</li>
+ *   <li>Create Cart, Create Cart in Store, Replicate Cart, and Replicate Cart in Store requests on Carts.</li>
+ *   <li>Create Cart and Create Cart in Store and Replicate My Cart requests on My Carts.</li>
+ *   <li>Create Cart in BusinessUnit and Replicate Cart in Business Unit requests on Associate Carts.</li>
  *   <li>Create Order from Cart and Create Order in Store from Cart requests on Orders.</li>
  *   <li>Create Order from Cart and Create Order in Store from Cart requests on My Orders.</li>
+ *   <li>Create Order from Cart in BusinessUnit request on Associate Orders.</li>
  *  </ul>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")

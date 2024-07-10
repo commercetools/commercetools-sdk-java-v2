@@ -57,6 +57,9 @@ public class CustomerAddressCustomTypeRemovedMessageBuilder
     @Nullable
     private String previousTypeId;
 
+    @Nullable
+    private String addressId;
+
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      * @param id value to be set
@@ -270,6 +273,17 @@ public class CustomerAddressCustomTypeRemovedMessageBuilder
     }
 
     /**
+     *  <p><code>id</code> of the Address from which the Custom Type was removed.</p>
+     * @param addressId value to be set
+     * @return Builder
+     */
+
+    public CustomerAddressCustomTypeRemovedMessageBuilder addressId(@Nullable final String addressId) {
+        this.addressId = addressId;
+        return this;
+    }
+
+    /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      * @return id
      */
@@ -373,6 +387,16 @@ public class CustomerAddressCustomTypeRemovedMessageBuilder
     }
 
     /**
+     *  <p><code>id</code> of the Address from which the Custom Type was removed.</p>
+     * @return addressId
+     */
+
+    @Nullable
+    public String getAddressId() {
+        return this.addressId;
+    }
+
+    /**
      * builds CustomerAddressCustomTypeRemovedMessage with checking for non-null required values
      * @return CustomerAddressCustomTypeRemovedMessage
      */
@@ -388,7 +412,8 @@ public class CustomerAddressCustomTypeRemovedMessageBuilder
         Objects.requireNonNull(resourceVersion,
             CustomerAddressCustomTypeRemovedMessage.class + ": resourceVersion is missing");
         return new CustomerAddressCustomTypeRemovedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
-            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, previousTypeId);
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, previousTypeId,
+            addressId);
     }
 
     /**
@@ -397,7 +422,8 @@ public class CustomerAddressCustomTypeRemovedMessageBuilder
      */
     public CustomerAddressCustomTypeRemovedMessage buildUnchecked() {
         return new CustomerAddressCustomTypeRemovedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
-            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, previousTypeId);
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, previousTypeId,
+            addressId);
     }
 
     /**
@@ -427,6 +453,7 @@ public class CustomerAddressCustomTypeRemovedMessageBuilder
         builder.resourceVersion = template.getResourceVersion();
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
         builder.previousTypeId = template.getPreviousTypeId();
+        builder.addressId = template.getAddressId();
         return builder;
     }
 

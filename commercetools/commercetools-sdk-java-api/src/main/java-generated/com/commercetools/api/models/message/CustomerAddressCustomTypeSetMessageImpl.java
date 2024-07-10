@@ -48,6 +48,8 @@ public class CustomerAddressCustomTypeSetMessageImpl implements CustomerAddressC
 
     private String previousTypeId;
 
+    private String addressId;
+
     /**
      * create instance with all properties
      */
@@ -63,7 +65,8 @@ public class CustomerAddressCustomTypeSetMessageImpl implements CustomerAddressC
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
             @JsonProperty("customFields") final com.commercetools.api.models.type.CustomFields customFields,
-            @JsonProperty("previousTypeId") final String previousTypeId) {
+            @JsonProperty("previousTypeId") final String previousTypeId,
+            @JsonProperty("addressId") final String addressId) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -76,6 +79,7 @@ public class CustomerAddressCustomTypeSetMessageImpl implements CustomerAddressC
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.customFields = customFields;
         this.previousTypeId = previousTypeId;
+        this.addressId = addressId;
         this.type = CUSTOMER_ADDRESS_CUSTOM_TYPE_SET;
     }
 
@@ -190,6 +194,14 @@ public class CustomerAddressCustomTypeSetMessageImpl implements CustomerAddressC
         return this.previousTypeId;
     }
 
+    /**
+     *  <p><code>id</code> of the Address on which the Custom Field was set.</p>
+     */
+
+    public String getAddressId() {
+        return this.addressId;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -239,6 +251,10 @@ public class CustomerAddressCustomTypeSetMessageImpl implements CustomerAddressC
         this.previousTypeId = previousTypeId;
     }
 
+    public void setAddressId(final String addressId) {
+        this.addressId = addressId;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -262,6 +278,7 @@ public class CustomerAddressCustomTypeSetMessageImpl implements CustomerAddressC
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(customFields, that.customFields)
                 .append(previousTypeId, that.previousTypeId)
+                .append(addressId, that.addressId)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -275,6 +292,7 @@ public class CustomerAddressCustomTypeSetMessageImpl implements CustomerAddressC
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(customFields, that.customFields)
                 .append(previousTypeId, that.previousTypeId)
+                .append(addressId, that.addressId)
                 .isEquals();
     }
 
@@ -293,6 +311,7 @@ public class CustomerAddressCustomTypeSetMessageImpl implements CustomerAddressC
                 .append(resourceUserProvidedIdentifiers)
                 .append(customFields)
                 .append(previousTypeId)
+                .append(addressId)
                 .toHashCode();
     }
 
@@ -311,6 +330,7 @@ public class CustomerAddressCustomTypeSetMessageImpl implements CustomerAddressC
                 .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
                 .append("customFields", customFields)
                 .append("previousTypeId", previousTypeId)
+                .append("addressId", addressId)
                 .build();
     }
 

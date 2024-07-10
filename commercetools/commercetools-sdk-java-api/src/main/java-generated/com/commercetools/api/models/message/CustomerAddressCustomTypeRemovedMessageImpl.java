@@ -46,6 +46,8 @@ public class CustomerAddressCustomTypeRemovedMessageImpl implements CustomerAddr
 
     private String previousTypeId;
 
+    private String addressId;
+
     /**
      * create instance with all properties
      */
@@ -60,7 +62,8 @@ public class CustomerAddressCustomTypeRemovedMessageImpl implements CustomerAddr
             @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource,
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
-            @JsonProperty("previousTypeId") final String previousTypeId) {
+            @JsonProperty("previousTypeId") final String previousTypeId,
+            @JsonProperty("addressId") final String addressId) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -72,6 +75,7 @@ public class CustomerAddressCustomTypeRemovedMessageImpl implements CustomerAddr
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.previousTypeId = previousTypeId;
+        this.addressId = addressId;
         this.type = CUSTOMER_ADDRESS_CUSTOM_TYPE_REMOVED;
     }
 
@@ -178,6 +182,14 @@ public class CustomerAddressCustomTypeRemovedMessageImpl implements CustomerAddr
         return this.previousTypeId;
     }
 
+    /**
+     *  <p><code>id</code> of the Address from which the Custom Type was removed.</p>
+     */
+
+    public String getAddressId() {
+        return this.addressId;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -223,6 +235,10 @@ public class CustomerAddressCustomTypeRemovedMessageImpl implements CustomerAddr
         this.previousTypeId = previousTypeId;
     }
 
+    public void setAddressId(final String addressId) {
+        this.addressId = addressId;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -245,6 +261,7 @@ public class CustomerAddressCustomTypeRemovedMessageImpl implements CustomerAddr
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(previousTypeId, that.previousTypeId)
+                .append(addressId, that.addressId)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -257,6 +274,7 @@ public class CustomerAddressCustomTypeRemovedMessageImpl implements CustomerAddr
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(previousTypeId, that.previousTypeId)
+                .append(addressId, that.addressId)
                 .isEquals();
     }
 
@@ -274,6 +292,7 @@ public class CustomerAddressCustomTypeRemovedMessageImpl implements CustomerAddr
                 .append(type)
                 .append(resourceUserProvidedIdentifiers)
                 .append(previousTypeId)
+                .append(addressId)
                 .toHashCode();
     }
 
@@ -291,6 +310,7 @@ public class CustomerAddressCustomTypeRemovedMessageImpl implements CustomerAddr
                 .append("type", type)
                 .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
                 .append("previousTypeId", previousTypeId)
+                .append("addressId", addressId)
                 .build();
     }
 

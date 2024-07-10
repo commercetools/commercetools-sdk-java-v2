@@ -61,6 +61,14 @@ public interface BusinessUnitAddressCustomFieldChangedMessagePayload extends Mes
     public Object getOldValue();
 
     /**
+     *  <p><code>id</code> of the Address of which the Custom Field was changed.</p>
+     * @return addressId
+     */
+
+    @JsonProperty("addressId")
+    public String getAddressId();
+
+    /**
      *  <p>Name of the Custom Field that changed.</p>
      * @param name value to be set
      */
@@ -82,6 +90,13 @@ public interface BusinessUnitAddressCustomFieldChangedMessagePayload extends Mes
     public void setOldValue(final Object oldValue);
 
     /**
+     *  <p><code>id</code> of the Address of which the Custom Field was changed.</p>
+     * @param addressId value to be set
+     */
+
+    public void setAddressId(final String addressId);
+
+    /**
      * factory method
      * @return instance of BusinessUnitAddressCustomFieldChangedMessagePayload
      */
@@ -100,6 +115,7 @@ public interface BusinessUnitAddressCustomFieldChangedMessagePayload extends Mes
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         instance.setOldValue(template.getOldValue());
+        instance.setAddressId(template.getAddressId());
         return instance;
     }
 
@@ -118,6 +134,7 @@ public interface BusinessUnitAddressCustomFieldChangedMessagePayload extends Mes
         instance.setName(template.getName());
         instance.setValue(template.getValue());
         instance.setOldValue(template.getOldValue());
+        instance.setAddressId(template.getAddressId());
         return instance;
     }
 

@@ -47,6 +47,8 @@ public class BusinessUnitAddressCustomFieldRemovedMessageImpl
 
     private String name;
 
+    private String addressId;
+
     /**
      * create instance with all properties
      */
@@ -61,7 +63,7 @@ public class BusinessUnitAddressCustomFieldRemovedMessageImpl
             @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource,
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
-            @JsonProperty("name") final String name) {
+            @JsonProperty("name") final String name, @JsonProperty("addressId") final String addressId) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -73,6 +75,7 @@ public class BusinessUnitAddressCustomFieldRemovedMessageImpl
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.name = name;
+        this.addressId = addressId;
         this.type = BUSINESS_UNIT_ADDRESS_CUSTOM_FIELD_REMOVED;
     }
 
@@ -179,6 +182,14 @@ public class BusinessUnitAddressCustomFieldRemovedMessageImpl
         return this.name;
     }
 
+    /**
+     *  <p><code>id</code> of the Address from which the Custom Field was removed.</p>
+     */
+
+    public String getAddressId() {
+        return this.addressId;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -224,6 +235,10 @@ public class BusinessUnitAddressCustomFieldRemovedMessageImpl
         this.name = name;
     }
 
+    public void setAddressId(final String addressId) {
+        this.addressId = addressId;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -246,6 +261,7 @@ public class BusinessUnitAddressCustomFieldRemovedMessageImpl
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(name, that.name)
+                .append(addressId, that.addressId)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -258,6 +274,7 @@ public class BusinessUnitAddressCustomFieldRemovedMessageImpl
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(name, that.name)
+                .append(addressId, that.addressId)
                 .isEquals();
     }
 
@@ -275,6 +292,7 @@ public class BusinessUnitAddressCustomFieldRemovedMessageImpl
                 .append(type)
                 .append(resourceUserProvidedIdentifiers)
                 .append(name)
+                .append(addressId)
                 .toHashCode();
     }
 
@@ -292,6 +310,7 @@ public class BusinessUnitAddressCustomFieldRemovedMessageImpl
                 .append("type", type)
                 .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
                 .append("name", name)
+                .append("addressId", addressId)
                 .build();
     }
 

@@ -3,6 +3,8 @@ package com.commercetools.api.models.message;
 
 import java.util.*;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -25,6 +27,9 @@ public class CustomerAddressCustomFieldAddedMessagePayloadBuilder
     private String name;
 
     private java.lang.Object value;
+
+    @Nullable
+    private String addressId;
 
     /**
      *  <p>Name of the Custom Field that was added.</p>
@@ -49,6 +54,17 @@ public class CustomerAddressCustomFieldAddedMessagePayloadBuilder
     }
 
     /**
+     *  <p><code>id</code> of the Address to which the Custom Field was added.</p>
+     * @param addressId value to be set
+     * @return Builder
+     */
+
+    public CustomerAddressCustomFieldAddedMessagePayloadBuilder addressId(@Nullable final String addressId) {
+        this.addressId = addressId;
+        return this;
+    }
+
+    /**
      *  <p>Name of the Custom Field that was added.</p>
      * @return name
      */
@@ -67,13 +83,23 @@ public class CustomerAddressCustomFieldAddedMessagePayloadBuilder
     }
 
     /**
+     *  <p><code>id</code> of the Address to which the Custom Field was added.</p>
+     * @return addressId
+     */
+
+    @Nullable
+    public String getAddressId() {
+        return this.addressId;
+    }
+
+    /**
      * builds CustomerAddressCustomFieldAddedMessagePayload with checking for non-null required values
      * @return CustomerAddressCustomFieldAddedMessagePayload
      */
     public CustomerAddressCustomFieldAddedMessagePayload build() {
         Objects.requireNonNull(name, CustomerAddressCustomFieldAddedMessagePayload.class + ": name is missing");
         Objects.requireNonNull(value, CustomerAddressCustomFieldAddedMessagePayload.class + ": value is missing");
-        return new CustomerAddressCustomFieldAddedMessagePayloadImpl(name, value);
+        return new CustomerAddressCustomFieldAddedMessagePayloadImpl(name, value, addressId);
     }
 
     /**
@@ -81,7 +107,7 @@ public class CustomerAddressCustomFieldAddedMessagePayloadBuilder
      * @return CustomerAddressCustomFieldAddedMessagePayload
      */
     public CustomerAddressCustomFieldAddedMessagePayload buildUnchecked() {
-        return new CustomerAddressCustomFieldAddedMessagePayloadImpl(name, value);
+        return new CustomerAddressCustomFieldAddedMessagePayloadImpl(name, value, addressId);
     }
 
     /**
@@ -102,6 +128,7 @@ public class CustomerAddressCustomFieldAddedMessagePayloadBuilder
         CustomerAddressCustomFieldAddedMessagePayloadBuilder builder = new CustomerAddressCustomFieldAddedMessagePayloadBuilder();
         builder.name = template.getName();
         builder.value = template.getValue();
+        builder.addressId = template.getAddressId();
         return builder;
     }
 

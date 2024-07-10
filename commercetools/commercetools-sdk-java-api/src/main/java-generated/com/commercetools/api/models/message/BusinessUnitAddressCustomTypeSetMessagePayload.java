@@ -56,6 +56,14 @@ public interface BusinessUnitAddressCustomTypeSetMessagePayload extends MessageP
     public String getOldTypeId();
 
     /**
+     *  <p><code>id</code> of the Address on which the Custom Field was set.</p>
+     * @return addressId
+     */
+
+    @JsonProperty("addressId")
+    public String getAddressId();
+
+    /**
      *  <p>The Custom Fields that were set.</p>
      * @param customFields value to be set
      */
@@ -68,6 +76,13 @@ public interface BusinessUnitAddressCustomTypeSetMessagePayload extends MessageP
      */
 
     public void setOldTypeId(final String oldTypeId);
+
+    /**
+     *  <p><code>id</code> of the Address on which the Custom Field was set.</p>
+     * @param addressId value to be set
+     */
+
+    public void setAddressId(final String addressId);
 
     /**
      * factory method
@@ -87,6 +102,7 @@ public interface BusinessUnitAddressCustomTypeSetMessagePayload extends MessageP
         BusinessUnitAddressCustomTypeSetMessagePayloadImpl instance = new BusinessUnitAddressCustomTypeSetMessagePayloadImpl();
         instance.setCustomFields(template.getCustomFields());
         instance.setOldTypeId(template.getOldTypeId());
+        instance.setAddressId(template.getAddressId());
         return instance;
     }
 
@@ -104,6 +120,7 @@ public interface BusinessUnitAddressCustomTypeSetMessagePayload extends MessageP
         BusinessUnitAddressCustomTypeSetMessagePayloadImpl instance = new BusinessUnitAddressCustomTypeSetMessagePayloadImpl();
         instance.setCustomFields(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustomFields()));
         instance.setOldTypeId(template.getOldTypeId());
+        instance.setAddressId(template.getAddressId());
         return instance;
     }
 

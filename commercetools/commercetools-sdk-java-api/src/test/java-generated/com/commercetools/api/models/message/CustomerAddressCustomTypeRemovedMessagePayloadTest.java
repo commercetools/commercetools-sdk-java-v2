@@ -26,8 +26,10 @@ public class CustomerAddressCustomTypeRemovedMessagePayloadTest {
 
     @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] {
-                CustomerAddressCustomTypeRemovedMessagePayload.builder().previousTypeId("previousTypeId") } };
+        return new Object[][] {
+                new Object[] {
+                        CustomerAddressCustomTypeRemovedMessagePayload.builder().previousTypeId("previousTypeId") },
+                new Object[] { CustomerAddressCustomTypeRemovedMessagePayload.builder().addressId("addressId") } };
     }
 
     @Test
@@ -35,5 +37,12 @@ public class CustomerAddressCustomTypeRemovedMessagePayloadTest {
         CustomerAddressCustomTypeRemovedMessagePayload value = CustomerAddressCustomTypeRemovedMessagePayload.of();
         value.setPreviousTypeId("previousTypeId");
         Assertions.assertThat(value.getPreviousTypeId()).isEqualTo("previousTypeId");
+    }
+
+    @Test
+    public void addressId() {
+        CustomerAddressCustomTypeRemovedMessagePayload value = CustomerAddressCustomTypeRemovedMessagePayload.of();
+        value.setAddressId("addressId");
+        Assertions.assertThat(value.getAddressId()).isEqualTo("addressId");
     }
 }

@@ -27,12 +27,16 @@ public class CustomerAddressCustomTypeRemovedMessagePayloadImpl
 
     private String previousTypeId;
 
+    private String addressId;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
-    CustomerAddressCustomTypeRemovedMessagePayloadImpl(@JsonProperty("previousTypeId") final String previousTypeId) {
+    CustomerAddressCustomTypeRemovedMessagePayloadImpl(@JsonProperty("previousTypeId") final String previousTypeId,
+            @JsonProperty("addressId") final String addressId) {
         this.previousTypeId = previousTypeId;
+        this.addressId = addressId;
         this.type = CUSTOMER_ADDRESS_CUSTOM_TYPE_REMOVED;
     }
 
@@ -59,8 +63,20 @@ public class CustomerAddressCustomTypeRemovedMessagePayloadImpl
         return this.previousTypeId;
     }
 
+    /**
+     *  <p><code>id</code> of the Address from which the Custom Type was removed.</p>
+     */
+
+    public String getAddressId() {
+        return this.addressId;
+    }
+
     public void setPreviousTypeId(final String previousTypeId) {
         this.previousTypeId = previousTypeId;
+    }
+
+    public void setAddressId(final String addressId) {
+        this.addressId = addressId;
     }
 
     @Override
@@ -75,20 +91,23 @@ public class CustomerAddressCustomTypeRemovedMessagePayloadImpl
 
         return new EqualsBuilder().append(type, that.type)
                 .append(previousTypeId, that.previousTypeId)
+                .append(addressId, that.addressId)
                 .append(type, that.type)
                 .append(previousTypeId, that.previousTypeId)
+                .append(addressId, that.addressId)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(previousTypeId).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type).append(previousTypeId).append(addressId).toHashCode();
     }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
                 .append("previousTypeId", previousTypeId)
+                .append("addressId", addressId)
                 .build();
     }
 

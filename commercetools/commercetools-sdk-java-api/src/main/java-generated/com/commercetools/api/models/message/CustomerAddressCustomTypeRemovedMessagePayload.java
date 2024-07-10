@@ -42,11 +42,26 @@ public interface CustomerAddressCustomTypeRemovedMessagePayload extends MessageP
     public String getPreviousTypeId();
 
     /**
+     *  <p><code>id</code> of the Address from which the Custom Type was removed.</p>
+     * @return addressId
+     */
+
+    @JsonProperty("addressId")
+    public String getAddressId();
+
+    /**
      *  <p><code>id</code> of the Custom Type that was removed. Absent if there was no previous Custom Type present.</p>
      * @param previousTypeId value to be set
      */
 
     public void setPreviousTypeId(final String previousTypeId);
+
+    /**
+     *  <p><code>id</code> of the Address from which the Custom Type was removed.</p>
+     * @param addressId value to be set
+     */
+
+    public void setAddressId(final String addressId);
 
     /**
      * factory method
@@ -65,6 +80,7 @@ public interface CustomerAddressCustomTypeRemovedMessagePayload extends MessageP
             final CustomerAddressCustomTypeRemovedMessagePayload template) {
         CustomerAddressCustomTypeRemovedMessagePayloadImpl instance = new CustomerAddressCustomTypeRemovedMessagePayloadImpl();
         instance.setPreviousTypeId(template.getPreviousTypeId());
+        instance.setAddressId(template.getAddressId());
         return instance;
     }
 
@@ -81,6 +97,7 @@ public interface CustomerAddressCustomTypeRemovedMessagePayload extends MessageP
         }
         CustomerAddressCustomTypeRemovedMessagePayloadImpl instance = new CustomerAddressCustomTypeRemovedMessagePayloadImpl();
         instance.setPreviousTypeId(template.getPreviousTypeId());
+        instance.setAddressId(template.getAddressId());
         return instance;
     }
 

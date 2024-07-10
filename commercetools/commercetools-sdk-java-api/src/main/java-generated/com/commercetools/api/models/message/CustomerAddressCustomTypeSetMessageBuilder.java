@@ -59,6 +59,9 @@ public class CustomerAddressCustomTypeSetMessageBuilder implements Builder<Custo
     @Nullable
     private String previousTypeId;
 
+    @Nullable
+    private String addressId;
+
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      * @param id value to be set
@@ -308,6 +311,17 @@ public class CustomerAddressCustomTypeSetMessageBuilder implements Builder<Custo
     }
 
     /**
+     *  <p><code>id</code> of the Address on which the Custom Field was set.</p>
+     * @param addressId value to be set
+     * @return Builder
+     */
+
+    public CustomerAddressCustomTypeSetMessageBuilder addressId(@Nullable final String addressId) {
+        this.addressId = addressId;
+        return this;
+    }
+
+    /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      * @return id
      */
@@ -420,6 +434,16 @@ public class CustomerAddressCustomTypeSetMessageBuilder implements Builder<Custo
     }
 
     /**
+     *  <p><code>id</code> of the Address on which the Custom Field was set.</p>
+     * @return addressId
+     */
+
+    @Nullable
+    public String getAddressId() {
+        return this.addressId;
+    }
+
+    /**
      * builds CustomerAddressCustomTypeSetMessage with checking for non-null required values
      * @return CustomerAddressCustomTypeSetMessage
      */
@@ -437,7 +461,7 @@ public class CustomerAddressCustomTypeSetMessageBuilder implements Builder<Custo
         Objects.requireNonNull(customFields, CustomerAddressCustomTypeSetMessage.class + ": customFields is missing");
         return new CustomerAddressCustomTypeSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, customFields,
-            previousTypeId);
+            previousTypeId, addressId);
     }
 
     /**
@@ -447,7 +471,7 @@ public class CustomerAddressCustomTypeSetMessageBuilder implements Builder<Custo
     public CustomerAddressCustomTypeSetMessage buildUnchecked() {
         return new CustomerAddressCustomTypeSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, customFields,
-            previousTypeId);
+            previousTypeId, addressId);
     }
 
     /**
@@ -477,6 +501,7 @@ public class CustomerAddressCustomTypeSetMessageBuilder implements Builder<Custo
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
         builder.customFields = template.getCustomFields();
         builder.previousTypeId = template.getPreviousTypeId();
+        builder.addressId = template.getAddressId();
         return builder;
     }
 

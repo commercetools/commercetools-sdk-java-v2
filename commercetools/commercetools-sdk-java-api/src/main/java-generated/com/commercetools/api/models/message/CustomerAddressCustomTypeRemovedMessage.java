@@ -49,11 +49,26 @@ public interface CustomerAddressCustomTypeRemovedMessage extends Message {
     public String getPreviousTypeId();
 
     /**
+     *  <p><code>id</code> of the Address from which the Custom Type was removed.</p>
+     * @return addressId
+     */
+
+    @JsonProperty("addressId")
+    public String getAddressId();
+
+    /**
      *  <p><code>id</code> of the Custom Type that was removed. Absent if there was no previous Custom Type present.</p>
      * @param previousTypeId value to be set
      */
 
     public void setPreviousTypeId(final String previousTypeId);
+
+    /**
+     *  <p><code>id</code> of the Address from which the Custom Type was removed.</p>
+     * @param addressId value to be set
+     */
+
+    public void setAddressId(final String addressId);
 
     /**
      * factory method
@@ -81,6 +96,7 @@ public interface CustomerAddressCustomTypeRemovedMessage extends Message {
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         instance.setPreviousTypeId(template.getPreviousTypeId());
+        instance.setAddressId(template.getAddressId());
         return instance;
     }
 
@@ -109,6 +125,7 @@ public interface CustomerAddressCustomTypeRemovedMessage extends Message {
         instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
                 .deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setPreviousTypeId(template.getPreviousTypeId());
+        instance.setAddressId(template.getAddressId());
         return instance;
     }
 

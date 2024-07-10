@@ -25,7 +25,8 @@ public class CustomerAddressCustomFieldRemovedMessageTest {
 
     @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { CustomerAddressCustomFieldRemovedMessage.builder().name("name") } };
+        return new Object[][] { new Object[] { CustomerAddressCustomFieldRemovedMessage.builder().name("name") },
+                new Object[] { CustomerAddressCustomFieldRemovedMessage.builder().addressId("addressId") } };
     }
 
     @Test
@@ -33,5 +34,12 @@ public class CustomerAddressCustomFieldRemovedMessageTest {
         CustomerAddressCustomFieldRemovedMessage value = CustomerAddressCustomFieldRemovedMessage.of();
         value.setName("name");
         Assertions.assertThat(value.getName()).isEqualTo("name");
+    }
+
+    @Test
+    public void addressId() {
+        CustomerAddressCustomFieldRemovedMessage value = CustomerAddressCustomFieldRemovedMessage.of();
+        value.setAddressId("addressId");
+        Assertions.assertThat(value.getAddressId()).isEqualTo("addressId");
     }
 }

@@ -27,12 +27,16 @@ public class BusinessUnitAddressCustomTypeRemovedMessagePayloadImpl
 
     private String oldTypeId;
 
+    private String addressId;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
-    BusinessUnitAddressCustomTypeRemovedMessagePayloadImpl(@JsonProperty("oldTypeId") final String oldTypeId) {
+    BusinessUnitAddressCustomTypeRemovedMessagePayloadImpl(@JsonProperty("oldTypeId") final String oldTypeId,
+            @JsonProperty("addressId") final String addressId) {
         this.oldTypeId = oldTypeId;
+        this.addressId = addressId;
         this.type = BUSINESS_UNIT_ADDRESS_CUSTOM_TYPE_REMOVED;
     }
 
@@ -59,8 +63,20 @@ public class BusinessUnitAddressCustomTypeRemovedMessagePayloadImpl
         return this.oldTypeId;
     }
 
+    /**
+     *  <p><code>id</code> of the Address from which the Custom Type was removed.</p>
+     */
+
+    public String getAddressId() {
+        return this.addressId;
+    }
+
     public void setOldTypeId(final String oldTypeId) {
         this.oldTypeId = oldTypeId;
+    }
+
+    public void setAddressId(final String addressId) {
+        this.addressId = addressId;
     }
 
     @Override
@@ -75,20 +91,23 @@ public class BusinessUnitAddressCustomTypeRemovedMessagePayloadImpl
 
         return new EqualsBuilder().append(type, that.type)
                 .append(oldTypeId, that.oldTypeId)
+                .append(addressId, that.addressId)
                 .append(type, that.type)
                 .append(oldTypeId, that.oldTypeId)
+                .append(addressId, that.addressId)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(oldTypeId).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type).append(oldTypeId).append(addressId).toHashCode();
     }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
                 .append("oldTypeId", oldTypeId)
+                .append("addressId", addressId)
                 .build();
     }
 

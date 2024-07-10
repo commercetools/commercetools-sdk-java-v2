@@ -62,6 +62,9 @@ public class BusinessUnitAddressCustomFieldChangedMessageBuilder
     @Nullable
     private java.lang.Object oldValue;
 
+    @Nullable
+    private String addressId;
+
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      * @param id value to be set
@@ -298,6 +301,17 @@ public class BusinessUnitAddressCustomFieldChangedMessageBuilder
     }
 
     /**
+     *  <p><code>id</code> of the Address of which the Custom Field was changed.</p>
+     * @param addressId value to be set
+     * @return Builder
+     */
+
+    public BusinessUnitAddressCustomFieldChangedMessageBuilder addressId(@Nullable final String addressId) {
+        this.addressId = addressId;
+        return this;
+    }
+
+    /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      * @return id
      */
@@ -419,6 +433,16 @@ public class BusinessUnitAddressCustomFieldChangedMessageBuilder
     }
 
     /**
+     *  <p><code>id</code> of the Address of which the Custom Field was changed.</p>
+     * @return addressId
+     */
+
+    @Nullable
+    public String getAddressId() {
+        return this.addressId;
+    }
+
+    /**
      * builds BusinessUnitAddressCustomFieldChangedMessage with checking for non-null required values
      * @return BusinessUnitAddressCustomFieldChangedMessage
      */
@@ -438,7 +462,7 @@ public class BusinessUnitAddressCustomFieldChangedMessageBuilder
         Objects.requireNonNull(value, BusinessUnitAddressCustomFieldChangedMessage.class + ": value is missing");
         return new BusinessUnitAddressCustomFieldChangedMessageImpl(id, version, createdAt, lastModifiedAt,
             lastModifiedBy, createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, name,
-            value, oldValue);
+            value, oldValue, addressId);
     }
 
     /**
@@ -448,7 +472,7 @@ public class BusinessUnitAddressCustomFieldChangedMessageBuilder
     public BusinessUnitAddressCustomFieldChangedMessage buildUnchecked() {
         return new BusinessUnitAddressCustomFieldChangedMessageImpl(id, version, createdAt, lastModifiedAt,
             lastModifiedBy, createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, name,
-            value, oldValue);
+            value, oldValue, addressId);
     }
 
     /**
@@ -480,6 +504,7 @@ public class BusinessUnitAddressCustomFieldChangedMessageBuilder
         builder.name = template.getName();
         builder.value = template.getValue();
         builder.oldValue = template.getOldValue();
+        builder.addressId = template.getAddressId();
         return builder;
     }
 

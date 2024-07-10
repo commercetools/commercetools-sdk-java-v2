@@ -27,7 +27,8 @@ public class BusinessUnitAddressCustomTypeRemovedMessageTest {
     @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { BusinessUnitAddressCustomTypeRemovedMessage.builder().oldTypeId("oldTypeId") } };
+                new Object[] { BusinessUnitAddressCustomTypeRemovedMessage.builder().oldTypeId("oldTypeId") },
+                new Object[] { BusinessUnitAddressCustomTypeRemovedMessage.builder().addressId("addressId") } };
     }
 
     @Test
@@ -35,5 +36,12 @@ public class BusinessUnitAddressCustomTypeRemovedMessageTest {
         BusinessUnitAddressCustomTypeRemovedMessage value = BusinessUnitAddressCustomTypeRemovedMessage.of();
         value.setOldTypeId("oldTypeId");
         Assertions.assertThat(value.getOldTypeId()).isEqualTo("oldTypeId");
+    }
+
+    @Test
+    public void addressId() {
+        BusinessUnitAddressCustomTypeRemovedMessage value = BusinessUnitAddressCustomTypeRemovedMessage.of();
+        value.setAddressId("addressId");
+        Assertions.assertThat(value.getAddressId()).isEqualTo("addressId");
     }
 }

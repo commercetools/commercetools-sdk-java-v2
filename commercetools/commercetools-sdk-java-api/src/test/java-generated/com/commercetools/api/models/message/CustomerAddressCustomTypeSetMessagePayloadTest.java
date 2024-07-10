@@ -29,8 +29,8 @@ public class CustomerAddressCustomTypeSetMessagePayloadTest {
         return new Object[][] {
                 new Object[] { CustomerAddressCustomTypeSetMessagePayload.builder()
                         .customFields(new com.commercetools.api.models.type.CustomFieldsImpl()) },
-                new Object[] {
-                        CustomerAddressCustomTypeSetMessagePayload.builder().previousTypeId("previousTypeId") } };
+                new Object[] { CustomerAddressCustomTypeSetMessagePayload.builder().previousTypeId("previousTypeId") },
+                new Object[] { CustomerAddressCustomTypeSetMessagePayload.builder().addressId("addressId") } };
     }
 
     @Test
@@ -46,5 +46,12 @@ public class CustomerAddressCustomTypeSetMessagePayloadTest {
         CustomerAddressCustomTypeSetMessagePayload value = CustomerAddressCustomTypeSetMessagePayload.of();
         value.setPreviousTypeId("previousTypeId");
         Assertions.assertThat(value.getPreviousTypeId()).isEqualTo("previousTypeId");
+    }
+
+    @Test
+    public void addressId() {
+        CustomerAddressCustomTypeSetMessagePayload value = CustomerAddressCustomTypeSetMessagePayload.of();
+        value.setAddressId("addressId");
+        Assertions.assertThat(value.getAddressId()).isEqualTo("addressId");
     }
 }

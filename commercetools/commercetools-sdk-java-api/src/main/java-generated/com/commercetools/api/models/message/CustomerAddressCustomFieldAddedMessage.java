@@ -60,6 +60,14 @@ public interface CustomerAddressCustomFieldAddedMessage extends Message {
     public Object getValue();
 
     /**
+     *  <p><code>id</code> of the Address to which the Custom Field was added.</p>
+     * @return addressId
+     */
+
+    @JsonProperty("addressId")
+    public String getAddressId();
+
+    /**
      *  <p>Name of the Custom Field that was added.</p>
      * @param name value to be set
      */
@@ -72,6 +80,13 @@ public interface CustomerAddressCustomFieldAddedMessage extends Message {
      */
 
     public void setValue(final Object value);
+
+    /**
+     *  <p><code>id</code> of the Address to which the Custom Field was added.</p>
+     * @param addressId value to be set
+     */
+
+    public void setAddressId(final String addressId);
 
     /**
      * factory method
@@ -100,6 +115,7 @@ public interface CustomerAddressCustomFieldAddedMessage extends Message {
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         instance.setName(template.getName());
         instance.setValue(template.getValue());
+        instance.setAddressId(template.getAddressId());
         return instance;
     }
 
@@ -129,6 +145,7 @@ public interface CustomerAddressCustomFieldAddedMessage extends Message {
                 .deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setName(template.getName());
         instance.setValue(template.getValue());
+        instance.setAddressId(template.getAddressId());
         return instance;
     }
 

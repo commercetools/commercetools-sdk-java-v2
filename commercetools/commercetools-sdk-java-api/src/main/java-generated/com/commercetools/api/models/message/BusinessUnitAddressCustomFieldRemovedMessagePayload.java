@@ -45,11 +45,26 @@ public interface BusinessUnitAddressCustomFieldRemovedMessagePayload extends Mes
     public String getName();
 
     /**
+     *  <p><code>id</code> of the Address from which the Custom Field was removed.</p>
+     * @return addressId
+     */
+
+    @JsonProperty("addressId")
+    public String getAddressId();
+
+    /**
      *  <p>Name of the Custom Field that was removed.</p>
      * @param name value to be set
      */
 
     public void setName(final String name);
+
+    /**
+     *  <p><code>id</code> of the Address from which the Custom Field was removed.</p>
+     * @param addressId value to be set
+     */
+
+    public void setAddressId(final String addressId);
 
     /**
      * factory method
@@ -68,6 +83,7 @@ public interface BusinessUnitAddressCustomFieldRemovedMessagePayload extends Mes
             final BusinessUnitAddressCustomFieldRemovedMessagePayload template) {
         BusinessUnitAddressCustomFieldRemovedMessagePayloadImpl instance = new BusinessUnitAddressCustomFieldRemovedMessagePayloadImpl();
         instance.setName(template.getName());
+        instance.setAddressId(template.getAddressId());
         return instance;
     }
 
@@ -84,6 +100,7 @@ public interface BusinessUnitAddressCustomFieldRemovedMessagePayload extends Mes
         }
         BusinessUnitAddressCustomFieldRemovedMessagePayloadImpl instance = new BusinessUnitAddressCustomFieldRemovedMessagePayloadImpl();
         instance.setName(template.getName());
+        instance.setAddressId(template.getAddressId());
         return instance;
     }
 

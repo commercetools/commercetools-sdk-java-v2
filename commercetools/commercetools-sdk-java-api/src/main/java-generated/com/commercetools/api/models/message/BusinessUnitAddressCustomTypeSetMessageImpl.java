@@ -48,6 +48,8 @@ public class BusinessUnitAddressCustomTypeSetMessageImpl implements BusinessUnit
 
     private String oldTypeId;
 
+    private String addressId;
+
     /**
      * create instance with all properties
      */
@@ -63,7 +65,7 @@ public class BusinessUnitAddressCustomTypeSetMessageImpl implements BusinessUnit
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
             @JsonProperty("customFields") final com.commercetools.api.models.type.CustomFields customFields,
-            @JsonProperty("oldTypeId") final String oldTypeId) {
+            @JsonProperty("oldTypeId") final String oldTypeId, @JsonProperty("addressId") final String addressId) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -76,6 +78,7 @@ public class BusinessUnitAddressCustomTypeSetMessageImpl implements BusinessUnit
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.customFields = customFields;
         this.oldTypeId = oldTypeId;
+        this.addressId = addressId;
         this.type = BUSINESS_UNIT_ADDRESS_CUSTOM_TYPE_SET;
     }
 
@@ -190,6 +193,14 @@ public class BusinessUnitAddressCustomTypeSetMessageImpl implements BusinessUnit
         return this.oldTypeId;
     }
 
+    /**
+     *  <p><code>id</code> of the Address on which the Custom Field was set.</p>
+     */
+
+    public String getAddressId() {
+        return this.addressId;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -239,6 +250,10 @@ public class BusinessUnitAddressCustomTypeSetMessageImpl implements BusinessUnit
         this.oldTypeId = oldTypeId;
     }
 
+    public void setAddressId(final String addressId) {
+        this.addressId = addressId;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -262,6 +277,7 @@ public class BusinessUnitAddressCustomTypeSetMessageImpl implements BusinessUnit
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(customFields, that.customFields)
                 .append(oldTypeId, that.oldTypeId)
+                .append(addressId, that.addressId)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -275,6 +291,7 @@ public class BusinessUnitAddressCustomTypeSetMessageImpl implements BusinessUnit
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(customFields, that.customFields)
                 .append(oldTypeId, that.oldTypeId)
+                .append(addressId, that.addressId)
                 .isEquals();
     }
 
@@ -293,6 +310,7 @@ public class BusinessUnitAddressCustomTypeSetMessageImpl implements BusinessUnit
                 .append(resourceUserProvidedIdentifiers)
                 .append(customFields)
                 .append(oldTypeId)
+                .append(addressId)
                 .toHashCode();
     }
 
@@ -311,6 +329,7 @@ public class BusinessUnitAddressCustomTypeSetMessageImpl implements BusinessUnit
                 .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
                 .append("customFields", customFields)
                 .append("oldTypeId", oldTypeId)
+                .append("addressId", addressId)
                 .build();
     }
 

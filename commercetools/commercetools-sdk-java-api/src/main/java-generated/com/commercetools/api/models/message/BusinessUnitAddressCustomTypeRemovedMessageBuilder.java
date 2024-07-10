@@ -57,6 +57,9 @@ public class BusinessUnitAddressCustomTypeRemovedMessageBuilder
     @Nullable
     private String oldTypeId;
 
+    @Nullable
+    private String addressId;
+
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      * @param id value to be set
@@ -271,6 +274,17 @@ public class BusinessUnitAddressCustomTypeRemovedMessageBuilder
     }
 
     /**
+     *  <p><code>id</code> of the Address from which the Custom Type was removed.</p>
+     * @param addressId value to be set
+     * @return Builder
+     */
+
+    public BusinessUnitAddressCustomTypeRemovedMessageBuilder addressId(@Nullable final String addressId) {
+        this.addressId = addressId;
+        return this;
+    }
+
+    /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      * @return id
      */
@@ -374,6 +388,16 @@ public class BusinessUnitAddressCustomTypeRemovedMessageBuilder
     }
 
     /**
+     *  <p><code>id</code> of the Address from which the Custom Type was removed.</p>
+     * @return addressId
+     */
+
+    @Nullable
+    public String getAddressId() {
+        return this.addressId;
+    }
+
+    /**
      * builds BusinessUnitAddressCustomTypeRemovedMessage with checking for non-null required values
      * @return BusinessUnitAddressCustomTypeRemovedMessage
      */
@@ -390,7 +414,7 @@ public class BusinessUnitAddressCustomTypeRemovedMessageBuilder
             BusinessUnitAddressCustomTypeRemovedMessage.class + ": resourceVersion is missing");
         return new BusinessUnitAddressCustomTypeRemovedMessageImpl(id, version, createdAt, lastModifiedAt,
             lastModifiedBy, createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers,
-            oldTypeId);
+            oldTypeId, addressId);
     }
 
     /**
@@ -400,7 +424,7 @@ public class BusinessUnitAddressCustomTypeRemovedMessageBuilder
     public BusinessUnitAddressCustomTypeRemovedMessage buildUnchecked() {
         return new BusinessUnitAddressCustomTypeRemovedMessageImpl(id, version, createdAt, lastModifiedAt,
             lastModifiedBy, createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers,
-            oldTypeId);
+            oldTypeId, addressId);
     }
 
     /**
@@ -430,6 +454,7 @@ public class BusinessUnitAddressCustomTypeRemovedMessageBuilder
         builder.resourceVersion = template.getResourceVersion();
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
         builder.oldTypeId = template.getOldTypeId();
+        builder.addressId = template.getAddressId();
         return builder;
     }
 

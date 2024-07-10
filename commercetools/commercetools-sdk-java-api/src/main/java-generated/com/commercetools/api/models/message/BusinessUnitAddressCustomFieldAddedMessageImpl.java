@@ -49,6 +49,8 @@ public class BusinessUnitAddressCustomFieldAddedMessageImpl
 
     private java.lang.Object value;
 
+    private String addressId;
+
     /**
      * create instance with all properties
      */
@@ -63,7 +65,8 @@ public class BusinessUnitAddressCustomFieldAddedMessageImpl
             @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource,
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
-            @JsonProperty("name") final String name, @JsonProperty("value") final java.lang.Object value) {
+            @JsonProperty("name") final String name, @JsonProperty("value") final java.lang.Object value,
+            @JsonProperty("addressId") final String addressId) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -76,6 +79,7 @@ public class BusinessUnitAddressCustomFieldAddedMessageImpl
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.name = name;
         this.value = value;
+        this.addressId = addressId;
         this.type = BUSINESS_UNIT_ADDRESS_CUSTOM_FIELD_ADDED;
     }
 
@@ -190,6 +194,14 @@ public class BusinessUnitAddressCustomFieldAddedMessageImpl
         return this.value;
     }
 
+    /**
+     *  <p><code>id</code> of the Address to which the Custom Field was added.</p>
+     */
+
+    public String getAddressId() {
+        return this.addressId;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -239,6 +251,10 @@ public class BusinessUnitAddressCustomFieldAddedMessageImpl
         this.value = value;
     }
 
+    public void setAddressId(final String addressId) {
+        this.addressId = addressId;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -262,6 +278,7 @@ public class BusinessUnitAddressCustomFieldAddedMessageImpl
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(name, that.name)
                 .append(value, that.value)
+                .append(addressId, that.addressId)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -275,6 +292,7 @@ public class BusinessUnitAddressCustomFieldAddedMessageImpl
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(name, that.name)
                 .append(value, that.value)
+                .append(addressId, that.addressId)
                 .isEquals();
     }
 
@@ -293,6 +311,7 @@ public class BusinessUnitAddressCustomFieldAddedMessageImpl
                 .append(resourceUserProvidedIdentifiers)
                 .append(name)
                 .append(value)
+                .append(addressId)
                 .toHashCode();
     }
 
@@ -311,6 +330,7 @@ public class BusinessUnitAddressCustomFieldAddedMessageImpl
                 .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
                 .append("name", name)
                 .append("value", value)
+                .append("addressId", addressId)
                 .build();
     }
 

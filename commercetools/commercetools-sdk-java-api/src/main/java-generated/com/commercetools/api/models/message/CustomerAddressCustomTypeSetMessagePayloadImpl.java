@@ -29,15 +29,19 @@ public class CustomerAddressCustomTypeSetMessagePayloadImpl
 
     private String previousTypeId;
 
+    private String addressId;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
     CustomerAddressCustomTypeSetMessagePayloadImpl(
             @JsonProperty("customFields") final com.commercetools.api.models.type.CustomFields customFields,
-            @JsonProperty("previousTypeId") final String previousTypeId) {
+            @JsonProperty("previousTypeId") final String previousTypeId,
+            @JsonProperty("addressId") final String addressId) {
         this.customFields = customFields;
         this.previousTypeId = previousTypeId;
+        this.addressId = addressId;
         this.type = CUSTOMER_ADDRESS_CUSTOM_TYPE_SET;
     }
 
@@ -72,12 +76,24 @@ public class CustomerAddressCustomTypeSetMessagePayloadImpl
         return this.previousTypeId;
     }
 
+    /**
+     *  <p><code>id</code> of the Address on which the Custom Field was set.</p>
+     */
+
+    public String getAddressId() {
+        return this.addressId;
+    }
+
     public void setCustomFields(final com.commercetools.api.models.type.CustomFields customFields) {
         this.customFields = customFields;
     }
 
     public void setPreviousTypeId(final String previousTypeId) {
         this.previousTypeId = previousTypeId;
+    }
+
+    public void setAddressId(final String addressId) {
+        this.addressId = addressId;
     }
 
     @Override
@@ -93,15 +109,21 @@ public class CustomerAddressCustomTypeSetMessagePayloadImpl
         return new EqualsBuilder().append(type, that.type)
                 .append(customFields, that.customFields)
                 .append(previousTypeId, that.previousTypeId)
+                .append(addressId, that.addressId)
                 .append(type, that.type)
                 .append(customFields, that.customFields)
                 .append(previousTypeId, that.previousTypeId)
+                .append(addressId, that.addressId)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(customFields).append(previousTypeId).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type)
+                .append(customFields)
+                .append(previousTypeId)
+                .append(addressId)
+                .toHashCode();
     }
 
     @Override
@@ -109,6 +131,7 @@ public class CustomerAddressCustomTypeSetMessagePayloadImpl
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
                 .append("customFields", customFields)
                 .append("previousTypeId", previousTypeId)
+                .append("addressId", addressId)
                 .build();
     }
 

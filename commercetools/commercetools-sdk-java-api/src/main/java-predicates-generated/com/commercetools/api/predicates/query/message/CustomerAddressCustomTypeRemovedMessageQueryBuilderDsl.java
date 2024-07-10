@@ -97,4 +97,10 @@ public class CustomerAddressCustomTypeRemovedMessageQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, CustomerAddressCustomTypeRemovedMessageQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<CustomerAddressCustomTypeRemovedMessageQueryBuilderDsl> addressId() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("addressId")),
+            p -> new CombinationQueryPredicate<>(p, CustomerAddressCustomTypeRemovedMessageQueryBuilderDsl::of));
+    }
+
 }

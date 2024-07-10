@@ -42,11 +42,26 @@ public interface BusinessUnitAddressCustomTypeRemovedMessagePayload extends Mess
     public String getOldTypeId();
 
     /**
+     *  <p><code>id</code> of the Address from which the Custom Type was removed.</p>
+     * @return addressId
+     */
+
+    @JsonProperty("addressId")
+    public String getAddressId();
+
+    /**
      *  <p><code>id</code> of the Custom Type that was removed. Absent if there was no previous Custom Type present.</p>
      * @param oldTypeId value to be set
      */
 
     public void setOldTypeId(final String oldTypeId);
+
+    /**
+     *  <p><code>id</code> of the Address from which the Custom Type was removed.</p>
+     * @param addressId value to be set
+     */
+
+    public void setAddressId(final String addressId);
 
     /**
      * factory method
@@ -65,6 +80,7 @@ public interface BusinessUnitAddressCustomTypeRemovedMessagePayload extends Mess
             final BusinessUnitAddressCustomTypeRemovedMessagePayload template) {
         BusinessUnitAddressCustomTypeRemovedMessagePayloadImpl instance = new BusinessUnitAddressCustomTypeRemovedMessagePayloadImpl();
         instance.setOldTypeId(template.getOldTypeId());
+        instance.setAddressId(template.getAddressId());
         return instance;
     }
 
@@ -81,6 +97,7 @@ public interface BusinessUnitAddressCustomTypeRemovedMessagePayload extends Mess
         }
         BusinessUnitAddressCustomTypeRemovedMessagePayloadImpl instance = new BusinessUnitAddressCustomTypeRemovedMessagePayloadImpl();
         instance.setOldTypeId(template.getOldTypeId());
+        instance.setAddressId(template.getAddressId());
         return instance;
     }
 

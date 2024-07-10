@@ -29,4 +29,11 @@ public class BusinessUnitAddressCustomFieldAddedMessagePayloadQueryBuilderDsl {
                 BusinessUnitAddressCustomFieldAddedMessagePayloadQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<BusinessUnitAddressCustomFieldAddedMessagePayloadQueryBuilderDsl> addressId() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("addressId")),
+            p -> new CombinationQueryPredicate<>(p,
+                BusinessUnitAddressCustomFieldAddedMessagePayloadQueryBuilderDsl::of));
+    }
+
 }

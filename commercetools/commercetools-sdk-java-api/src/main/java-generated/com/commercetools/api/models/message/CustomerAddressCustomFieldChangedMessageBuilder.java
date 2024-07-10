@@ -62,6 +62,9 @@ public class CustomerAddressCustomFieldChangedMessageBuilder
     @Nullable
     private java.lang.Object previousValue;
 
+    @Nullable
+    private String addressId;
+
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      * @param id value to be set
@@ -299,6 +302,17 @@ public class CustomerAddressCustomFieldChangedMessageBuilder
     }
 
     /**
+     *  <p><code>id</code> of the Address of which the Custom Field was changed.</p>
+     * @param addressId value to be set
+     * @return Builder
+     */
+
+    public CustomerAddressCustomFieldChangedMessageBuilder addressId(@Nullable final String addressId) {
+        this.addressId = addressId;
+        return this;
+    }
+
+    /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      * @return id
      */
@@ -420,6 +434,16 @@ public class CustomerAddressCustomFieldChangedMessageBuilder
     }
 
     /**
+     *  <p><code>id</code> of the Address of which the Custom Field was changed.</p>
+     * @return addressId
+     */
+
+    @Nullable
+    public String getAddressId() {
+        return this.addressId;
+    }
+
+    /**
      * builds CustomerAddressCustomFieldChangedMessage with checking for non-null required values
      * @return CustomerAddressCustomFieldChangedMessage
      */
@@ -438,7 +462,7 @@ public class CustomerAddressCustomFieldChangedMessageBuilder
         Objects.requireNonNull(value, CustomerAddressCustomFieldChangedMessage.class + ": value is missing");
         return new CustomerAddressCustomFieldChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, name, value,
-            previousValue);
+            previousValue, addressId);
     }
 
     /**
@@ -448,7 +472,7 @@ public class CustomerAddressCustomFieldChangedMessageBuilder
     public CustomerAddressCustomFieldChangedMessage buildUnchecked() {
         return new CustomerAddressCustomFieldChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, name, value,
-            previousValue);
+            previousValue, addressId);
     }
 
     /**
@@ -480,6 +504,7 @@ public class CustomerAddressCustomFieldChangedMessageBuilder
         builder.name = template.getName();
         builder.value = template.getValue();
         builder.previousValue = template.getPreviousValue();
+        builder.addressId = template.getAddressId();
         return builder;
     }
 

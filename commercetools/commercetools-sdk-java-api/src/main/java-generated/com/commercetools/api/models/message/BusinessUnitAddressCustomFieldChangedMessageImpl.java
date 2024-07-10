@@ -51,6 +51,8 @@ public class BusinessUnitAddressCustomFieldChangedMessageImpl
 
     private java.lang.Object oldValue;
 
+    private String addressId;
+
     /**
      * create instance with all properties
      */
@@ -66,7 +68,8 @@ public class BusinessUnitAddressCustomFieldChangedMessageImpl
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
             @JsonProperty("name") final String name, @JsonProperty("value") final java.lang.Object value,
-            @JsonProperty("oldValue") final java.lang.Object oldValue) {
+            @JsonProperty("oldValue") final java.lang.Object oldValue,
+            @JsonProperty("addressId") final String addressId) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -80,6 +83,7 @@ public class BusinessUnitAddressCustomFieldChangedMessageImpl
         this.name = name;
         this.value = value;
         this.oldValue = oldValue;
+        this.addressId = addressId;
         this.type = BUSINESS_UNIT_ADDRESS_CUSTOM_FIELD_CHANGED;
     }
 
@@ -202,6 +206,14 @@ public class BusinessUnitAddressCustomFieldChangedMessageImpl
         return this.oldValue;
     }
 
+    /**
+     *  <p><code>id</code> of the Address of which the Custom Field was changed.</p>
+     */
+
+    public String getAddressId() {
+        return this.addressId;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -255,6 +267,10 @@ public class BusinessUnitAddressCustomFieldChangedMessageImpl
         this.oldValue = oldValue;
     }
 
+    public void setAddressId(final String addressId) {
+        this.addressId = addressId;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -279,6 +295,7 @@ public class BusinessUnitAddressCustomFieldChangedMessageImpl
                 .append(name, that.name)
                 .append(value, that.value)
                 .append(oldValue, that.oldValue)
+                .append(addressId, that.addressId)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -293,6 +310,7 @@ public class BusinessUnitAddressCustomFieldChangedMessageImpl
                 .append(name, that.name)
                 .append(value, that.value)
                 .append(oldValue, that.oldValue)
+                .append(addressId, that.addressId)
                 .isEquals();
     }
 
@@ -312,6 +330,7 @@ public class BusinessUnitAddressCustomFieldChangedMessageImpl
                 .append(name)
                 .append(value)
                 .append(oldValue)
+                .append(addressId)
                 .toHashCode();
     }
 
@@ -331,6 +350,7 @@ public class BusinessUnitAddressCustomFieldChangedMessageImpl
                 .append("name", name)
                 .append("value", value)
                 .append("oldValue", oldValue)
+                .append("addressId", addressId)
                 .build();
     }
 

@@ -31,6 +31,9 @@ public class BusinessUnitAddressCustomFieldChangedMessagePayloadBuilder
     @Nullable
     private java.lang.Object oldValue;
 
+    @Nullable
+    private String addressId;
+
     /**
      *  <p>Name of the Custom Field that changed.</p>
      * @param name value to be set
@@ -66,6 +69,17 @@ public class BusinessUnitAddressCustomFieldChangedMessagePayloadBuilder
     }
 
     /**
+     *  <p><code>id</code> of the Address of which the Custom Field was changed.</p>
+     * @param addressId value to be set
+     * @return Builder
+     */
+
+    public BusinessUnitAddressCustomFieldChangedMessagePayloadBuilder addressId(@Nullable final String addressId) {
+        this.addressId = addressId;
+        return this;
+    }
+
+    /**
      *  <p>Name of the Custom Field that changed.</p>
      * @return name
      */
@@ -94,13 +108,23 @@ public class BusinessUnitAddressCustomFieldChangedMessagePayloadBuilder
     }
 
     /**
+     *  <p><code>id</code> of the Address of which the Custom Field was changed.</p>
+     * @return addressId
+     */
+
+    @Nullable
+    public String getAddressId() {
+        return this.addressId;
+    }
+
+    /**
      * builds BusinessUnitAddressCustomFieldChangedMessagePayload with checking for non-null required values
      * @return BusinessUnitAddressCustomFieldChangedMessagePayload
      */
     public BusinessUnitAddressCustomFieldChangedMessagePayload build() {
         Objects.requireNonNull(name, BusinessUnitAddressCustomFieldChangedMessagePayload.class + ": name is missing");
         Objects.requireNonNull(value, BusinessUnitAddressCustomFieldChangedMessagePayload.class + ": value is missing");
-        return new BusinessUnitAddressCustomFieldChangedMessagePayloadImpl(name, value, oldValue);
+        return new BusinessUnitAddressCustomFieldChangedMessagePayloadImpl(name, value, oldValue, addressId);
     }
 
     /**
@@ -108,7 +132,7 @@ public class BusinessUnitAddressCustomFieldChangedMessagePayloadBuilder
      * @return BusinessUnitAddressCustomFieldChangedMessagePayload
      */
     public BusinessUnitAddressCustomFieldChangedMessagePayload buildUnchecked() {
-        return new BusinessUnitAddressCustomFieldChangedMessagePayloadImpl(name, value, oldValue);
+        return new BusinessUnitAddressCustomFieldChangedMessagePayloadImpl(name, value, oldValue, addressId);
     }
 
     /**
@@ -130,6 +154,7 @@ public class BusinessUnitAddressCustomFieldChangedMessagePayloadBuilder
         builder.name = template.getName();
         builder.value = template.getValue();
         builder.oldValue = template.getOldValue();
+        builder.addressId = template.getAddressId();
         return builder;
     }
 

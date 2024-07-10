@@ -26,6 +26,9 @@ public class CustomerAddressCustomTypeRemovedMessagePayloadBuilder
     @Nullable
     private String previousTypeId;
 
+    @Nullable
+    private String addressId;
+
     /**
      *  <p><code>id</code> of the Custom Type that was removed. Absent if there was no previous Custom Type present.</p>
      * @param previousTypeId value to be set
@@ -34,6 +37,17 @@ public class CustomerAddressCustomTypeRemovedMessagePayloadBuilder
 
     public CustomerAddressCustomTypeRemovedMessagePayloadBuilder previousTypeId(@Nullable final String previousTypeId) {
         this.previousTypeId = previousTypeId;
+        return this;
+    }
+
+    /**
+     *  <p><code>id</code> of the Address from which the Custom Type was removed.</p>
+     * @param addressId value to be set
+     * @return Builder
+     */
+
+    public CustomerAddressCustomTypeRemovedMessagePayloadBuilder addressId(@Nullable final String addressId) {
+        this.addressId = addressId;
         return this;
     }
 
@@ -48,11 +62,21 @@ public class CustomerAddressCustomTypeRemovedMessagePayloadBuilder
     }
 
     /**
+     *  <p><code>id</code> of the Address from which the Custom Type was removed.</p>
+     * @return addressId
+     */
+
+    @Nullable
+    public String getAddressId() {
+        return this.addressId;
+    }
+
+    /**
      * builds CustomerAddressCustomTypeRemovedMessagePayload with checking for non-null required values
      * @return CustomerAddressCustomTypeRemovedMessagePayload
      */
     public CustomerAddressCustomTypeRemovedMessagePayload build() {
-        return new CustomerAddressCustomTypeRemovedMessagePayloadImpl(previousTypeId);
+        return new CustomerAddressCustomTypeRemovedMessagePayloadImpl(previousTypeId, addressId);
     }
 
     /**
@@ -60,7 +84,7 @@ public class CustomerAddressCustomTypeRemovedMessagePayloadBuilder
      * @return CustomerAddressCustomTypeRemovedMessagePayload
      */
     public CustomerAddressCustomTypeRemovedMessagePayload buildUnchecked() {
-        return new CustomerAddressCustomTypeRemovedMessagePayloadImpl(previousTypeId);
+        return new CustomerAddressCustomTypeRemovedMessagePayloadImpl(previousTypeId, addressId);
     }
 
     /**
@@ -80,6 +104,7 @@ public class CustomerAddressCustomTypeRemovedMessagePayloadBuilder
             final CustomerAddressCustomTypeRemovedMessagePayload template) {
         CustomerAddressCustomTypeRemovedMessagePayloadBuilder builder = new CustomerAddressCustomTypeRemovedMessagePayloadBuilder();
         builder.previousTypeId = template.getPreviousTypeId();
+        builder.addressId = template.getAddressId();
         return builder;
     }
 

@@ -63,6 +63,14 @@ public interface CustomerAddressCustomTypeSetMessage extends Message {
     public String getPreviousTypeId();
 
     /**
+     *  <p><code>id</code> of the Address on which the Custom Field was set.</p>
+     * @return addressId
+     */
+
+    @JsonProperty("addressId")
+    public String getAddressId();
+
+    /**
      *  <p>The Custom Fields that have been set.</p>
      * @param customFields value to be set
      */
@@ -75,6 +83,13 @@ public interface CustomerAddressCustomTypeSetMessage extends Message {
      */
 
     public void setPreviousTypeId(final String previousTypeId);
+
+    /**
+     *  <p><code>id</code> of the Address on which the Custom Field was set.</p>
+     * @param addressId value to be set
+     */
+
+    public void setAddressId(final String addressId);
 
     /**
      * factory method
@@ -103,6 +118,7 @@ public interface CustomerAddressCustomTypeSetMessage extends Message {
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         instance.setCustomFields(template.getCustomFields());
         instance.setPreviousTypeId(template.getPreviousTypeId());
+        instance.setAddressId(template.getAddressId());
         return instance;
     }
 
@@ -132,6 +148,7 @@ public interface CustomerAddressCustomTypeSetMessage extends Message {
                 .deepCopy(template.getResourceUserProvidedIdentifiers()));
         instance.setCustomFields(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustomFields()));
         instance.setPreviousTypeId(template.getPreviousTypeId());
+        instance.setAddressId(template.getAddressId());
         return instance;
     }
 

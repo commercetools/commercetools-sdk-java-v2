@@ -60,6 +60,9 @@ public class BusinessUnitAddressCustomTypeSetMessageBuilder
     @Nullable
     private String oldTypeId;
 
+    @Nullable
+    private String addressId;
+
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      * @param id value to be set
@@ -309,6 +312,17 @@ public class BusinessUnitAddressCustomTypeSetMessageBuilder
     }
 
     /**
+     *  <p><code>id</code> of the Address on which the Custom Field was set.</p>
+     * @param addressId value to be set
+     * @return Builder
+     */
+
+    public BusinessUnitAddressCustomTypeSetMessageBuilder addressId(@Nullable final String addressId) {
+        this.addressId = addressId;
+        return this;
+    }
+
+    /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      * @return id
      */
@@ -421,6 +435,16 @@ public class BusinessUnitAddressCustomTypeSetMessageBuilder
     }
 
     /**
+     *  <p><code>id</code> of the Address on which the Custom Field was set.</p>
+     * @return addressId
+     */
+
+    @Nullable
+    public String getAddressId() {
+        return this.addressId;
+    }
+
+    /**
      * builds BusinessUnitAddressCustomTypeSetMessage with checking for non-null required values
      * @return BusinessUnitAddressCustomTypeSetMessage
      */
@@ -439,7 +463,7 @@ public class BusinessUnitAddressCustomTypeSetMessageBuilder
             BusinessUnitAddressCustomTypeSetMessage.class + ": customFields is missing");
         return new BusinessUnitAddressCustomTypeSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, customFields,
-            oldTypeId);
+            oldTypeId, addressId);
     }
 
     /**
@@ -449,7 +473,7 @@ public class BusinessUnitAddressCustomTypeSetMessageBuilder
     public BusinessUnitAddressCustomTypeSetMessage buildUnchecked() {
         return new BusinessUnitAddressCustomTypeSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, customFields,
-            oldTypeId);
+            oldTypeId, addressId);
     }
 
     /**
@@ -480,6 +504,7 @@ public class BusinessUnitAddressCustomTypeSetMessageBuilder
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
         builder.customFields = template.getCustomFields();
         builder.oldTypeId = template.getOldTypeId();
+        builder.addressId = template.getAddressId();
         return builder;
     }
 

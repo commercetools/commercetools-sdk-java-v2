@@ -27,12 +27,16 @@ public class CustomerAddressCustomFieldRemovedMessagePayloadImpl
 
     private String name;
 
+    private String addressId;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
-    CustomerAddressCustomFieldRemovedMessagePayloadImpl(@JsonProperty("name") final String name) {
+    CustomerAddressCustomFieldRemovedMessagePayloadImpl(@JsonProperty("name") final String name,
+            @JsonProperty("addressId") final String addressId) {
         this.name = name;
+        this.addressId = addressId;
         this.type = CUSTOMER_ADDRESS_CUSTOM_FIELD_REMOVED;
     }
 
@@ -59,8 +63,20 @@ public class CustomerAddressCustomFieldRemovedMessagePayloadImpl
         return this.name;
     }
 
+    /**
+     *  <p><code>id</code> of the Address from which the Custom Field was removed.</p>
+     */
+
+    public String getAddressId() {
+        return this.addressId;
+    }
+
     public void setName(final String name) {
         this.name = name;
+    }
+
+    public void setAddressId(final String addressId) {
+        this.addressId = addressId;
     }
 
     @Override
@@ -75,20 +91,23 @@ public class CustomerAddressCustomFieldRemovedMessagePayloadImpl
 
         return new EqualsBuilder().append(type, that.type)
                 .append(name, that.name)
+                .append(addressId, that.addressId)
                 .append(type, that.type)
                 .append(name, that.name)
+                .append(addressId, that.addressId)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(name).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type).append(name).append(addressId).toHashCode();
     }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
                 .append("name", name)
+                .append("addressId", addressId)
                 .build();
     }
 

@@ -29,14 +29,17 @@ public class CustomerAddressCustomFieldAddedMessagePayloadImpl
 
     private java.lang.Object value;
 
+    private String addressId;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
     CustomerAddressCustomFieldAddedMessagePayloadImpl(@JsonProperty("name") final String name,
-            @JsonProperty("value") final java.lang.Object value) {
+            @JsonProperty("value") final java.lang.Object value, @JsonProperty("addressId") final String addressId) {
         this.name = name;
         this.value = value;
+        this.addressId = addressId;
         this.type = CUSTOMER_ADDRESS_CUSTOM_FIELD_ADDED;
     }
 
@@ -71,12 +74,24 @@ public class CustomerAddressCustomFieldAddedMessagePayloadImpl
         return this.value;
     }
 
+    /**
+     *  <p><code>id</code> of the Address to which the Custom Field was added.</p>
+     */
+
+    public String getAddressId() {
+        return this.addressId;
+    }
+
     public void setName(final String name) {
         this.name = name;
     }
 
     public void setValue(final java.lang.Object value) {
         this.value = value;
+    }
+
+    public void setAddressId(final String addressId) {
+        this.addressId = addressId;
     }
 
     @Override
@@ -92,15 +107,17 @@ public class CustomerAddressCustomFieldAddedMessagePayloadImpl
         return new EqualsBuilder().append(type, that.type)
                 .append(name, that.name)
                 .append(value, that.value)
+                .append(addressId, that.addressId)
                 .append(type, that.type)
                 .append(name, that.name)
                 .append(value, that.value)
+                .append(addressId, that.addressId)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(name).append(value).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type).append(name).append(value).append(addressId).toHashCode();
     }
 
     @Override
@@ -108,6 +125,7 @@ public class CustomerAddressCustomFieldAddedMessagePayloadImpl
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
                 .append("name", name)
                 .append("value", value)
+                .append("addressId", addressId)
                 .build();
     }
 

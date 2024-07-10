@@ -30,6 +30,9 @@ public class CustomerAddressCustomTypeSetMessagePayloadBuilder
     @Nullable
     private String previousTypeId;
 
+    @Nullable
+    private String addressId;
+
     /**
      *  <p>The Custom Fields that have been set.</p>
      * @param builder function to build the customFields value
@@ -78,6 +81,17 @@ public class CustomerAddressCustomTypeSetMessagePayloadBuilder
     }
 
     /**
+     *  <p><code>id</code> of the Address on which the Custom Field was set.</p>
+     * @param addressId value to be set
+     * @return Builder
+     */
+
+    public CustomerAddressCustomTypeSetMessagePayloadBuilder addressId(@Nullable final String addressId) {
+        this.addressId = addressId;
+        return this;
+    }
+
+    /**
      *  <p>The Custom Fields that have been set.</p>
      * @return customFields
      */
@@ -97,13 +111,23 @@ public class CustomerAddressCustomTypeSetMessagePayloadBuilder
     }
 
     /**
+     *  <p><code>id</code> of the Address on which the Custom Field was set.</p>
+     * @return addressId
+     */
+
+    @Nullable
+    public String getAddressId() {
+        return this.addressId;
+    }
+
+    /**
      * builds CustomerAddressCustomTypeSetMessagePayload with checking for non-null required values
      * @return CustomerAddressCustomTypeSetMessagePayload
      */
     public CustomerAddressCustomTypeSetMessagePayload build() {
         Objects.requireNonNull(customFields,
             CustomerAddressCustomTypeSetMessagePayload.class + ": customFields is missing");
-        return new CustomerAddressCustomTypeSetMessagePayloadImpl(customFields, previousTypeId);
+        return new CustomerAddressCustomTypeSetMessagePayloadImpl(customFields, previousTypeId, addressId);
     }
 
     /**
@@ -111,7 +135,7 @@ public class CustomerAddressCustomTypeSetMessagePayloadBuilder
      * @return CustomerAddressCustomTypeSetMessagePayload
      */
     public CustomerAddressCustomTypeSetMessagePayload buildUnchecked() {
-        return new CustomerAddressCustomTypeSetMessagePayloadImpl(customFields, previousTypeId);
+        return new CustomerAddressCustomTypeSetMessagePayloadImpl(customFields, previousTypeId, addressId);
     }
 
     /**
@@ -132,6 +156,7 @@ public class CustomerAddressCustomTypeSetMessagePayloadBuilder
         CustomerAddressCustomTypeSetMessagePayloadBuilder builder = new CustomerAddressCustomTypeSetMessagePayloadBuilder();
         builder.customFields = template.getCustomFields();
         builder.previousTypeId = template.getPreviousTypeId();
+        builder.addressId = template.getAddressId();
         return builder;
     }
 

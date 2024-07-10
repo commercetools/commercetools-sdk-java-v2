@@ -27,7 +27,8 @@ public class CustomerAddressCustomFieldChangedMessageTest {
     public static Object[][] objectBuilder() {
         return new Object[][] { new Object[] { CustomerAddressCustomFieldChangedMessage.builder().name("name") },
                 new Object[] { CustomerAddressCustomFieldChangedMessage.builder().value("value") },
-                new Object[] { CustomerAddressCustomFieldChangedMessage.builder().previousValue("previousValue") } };
+                new Object[] { CustomerAddressCustomFieldChangedMessage.builder().previousValue("previousValue") },
+                new Object[] { CustomerAddressCustomFieldChangedMessage.builder().addressId("addressId") } };
     }
 
     @Test
@@ -49,5 +50,12 @@ public class CustomerAddressCustomFieldChangedMessageTest {
         CustomerAddressCustomFieldChangedMessage value = CustomerAddressCustomFieldChangedMessage.of();
         value.setPreviousValue("previousValue");
         Assertions.assertThat(value.getPreviousValue()).isEqualTo("previousValue");
+    }
+
+    @Test
+    public void addressId() {
+        CustomerAddressCustomFieldChangedMessage value = CustomerAddressCustomFieldChangedMessage.of();
+        value.setAddressId("addressId");
+        Assertions.assertThat(value.getAddressId()).isEqualTo("addressId");
     }
 }

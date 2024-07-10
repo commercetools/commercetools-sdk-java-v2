@@ -51,6 +51,8 @@ public class CustomerAddressCustomFieldChangedMessageImpl
 
     private java.lang.Object previousValue;
 
+    private String addressId;
+
     /**
      * create instance with all properties
      */
@@ -66,7 +68,8 @@ public class CustomerAddressCustomFieldChangedMessageImpl
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
             @JsonProperty("name") final String name, @JsonProperty("value") final java.lang.Object value,
-            @JsonProperty("previousValue") final java.lang.Object previousValue) {
+            @JsonProperty("previousValue") final java.lang.Object previousValue,
+            @JsonProperty("addressId") final String addressId) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -80,6 +83,7 @@ public class CustomerAddressCustomFieldChangedMessageImpl
         this.name = name;
         this.value = value;
         this.previousValue = previousValue;
+        this.addressId = addressId;
         this.type = CUSTOMER_ADDRESS_CUSTOM_FIELD_CHANGED;
     }
 
@@ -202,6 +206,14 @@ public class CustomerAddressCustomFieldChangedMessageImpl
         return this.previousValue;
     }
 
+    /**
+     *  <p><code>id</code> of the Address of which the Custom Field was changed.</p>
+     */
+
+    public String getAddressId() {
+        return this.addressId;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -255,6 +267,10 @@ public class CustomerAddressCustomFieldChangedMessageImpl
         this.previousValue = previousValue;
     }
 
+    public void setAddressId(final String addressId) {
+        this.addressId = addressId;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -279,6 +295,7 @@ public class CustomerAddressCustomFieldChangedMessageImpl
                 .append(name, that.name)
                 .append(value, that.value)
                 .append(previousValue, that.previousValue)
+                .append(addressId, that.addressId)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -293,6 +310,7 @@ public class CustomerAddressCustomFieldChangedMessageImpl
                 .append(name, that.name)
                 .append(value, that.value)
                 .append(previousValue, that.previousValue)
+                .append(addressId, that.addressId)
                 .isEquals();
     }
 
@@ -312,6 +330,7 @@ public class CustomerAddressCustomFieldChangedMessageImpl
                 .append(name)
                 .append(value)
                 .append(previousValue)
+                .append(addressId)
                 .toHashCode();
     }
 
@@ -331,6 +350,7 @@ public class CustomerAddressCustomFieldChangedMessageImpl
                 .append("name", name)
                 .append("value", value)
                 .append("previousValue", previousValue)
+                .append("addressId", addressId)
                 .build();
     }
 

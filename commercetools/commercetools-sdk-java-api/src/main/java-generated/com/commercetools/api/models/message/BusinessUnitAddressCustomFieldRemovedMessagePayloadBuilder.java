@@ -3,6 +3,8 @@ package com.commercetools.api.models.message;
 
 import java.util.*;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -24,6 +26,9 @@ public class BusinessUnitAddressCustomFieldRemovedMessagePayloadBuilder
 
     private String name;
 
+    @Nullable
+    private String addressId;
+
     /**
      *  <p>Name of the Custom Field that was removed.</p>
      * @param name value to be set
@@ -32,6 +37,17 @@ public class BusinessUnitAddressCustomFieldRemovedMessagePayloadBuilder
 
     public BusinessUnitAddressCustomFieldRemovedMessagePayloadBuilder name(final String name) {
         this.name = name;
+        return this;
+    }
+
+    /**
+     *  <p><code>id</code> of the Address from which the Custom Field was removed.</p>
+     * @param addressId value to be set
+     * @return Builder
+     */
+
+    public BusinessUnitAddressCustomFieldRemovedMessagePayloadBuilder addressId(@Nullable final String addressId) {
+        this.addressId = addressId;
         return this;
     }
 
@@ -45,12 +61,22 @@ public class BusinessUnitAddressCustomFieldRemovedMessagePayloadBuilder
     }
 
     /**
+     *  <p><code>id</code> of the Address from which the Custom Field was removed.</p>
+     * @return addressId
+     */
+
+    @Nullable
+    public String getAddressId() {
+        return this.addressId;
+    }
+
+    /**
      * builds BusinessUnitAddressCustomFieldRemovedMessagePayload with checking for non-null required values
      * @return BusinessUnitAddressCustomFieldRemovedMessagePayload
      */
     public BusinessUnitAddressCustomFieldRemovedMessagePayload build() {
         Objects.requireNonNull(name, BusinessUnitAddressCustomFieldRemovedMessagePayload.class + ": name is missing");
-        return new BusinessUnitAddressCustomFieldRemovedMessagePayloadImpl(name);
+        return new BusinessUnitAddressCustomFieldRemovedMessagePayloadImpl(name, addressId);
     }
 
     /**
@@ -58,7 +84,7 @@ public class BusinessUnitAddressCustomFieldRemovedMessagePayloadBuilder
      * @return BusinessUnitAddressCustomFieldRemovedMessagePayload
      */
     public BusinessUnitAddressCustomFieldRemovedMessagePayload buildUnchecked() {
-        return new BusinessUnitAddressCustomFieldRemovedMessagePayloadImpl(name);
+        return new BusinessUnitAddressCustomFieldRemovedMessagePayloadImpl(name, addressId);
     }
 
     /**
@@ -78,6 +104,7 @@ public class BusinessUnitAddressCustomFieldRemovedMessagePayloadBuilder
             final BusinessUnitAddressCustomFieldRemovedMessagePayload template) {
         BusinessUnitAddressCustomFieldRemovedMessagePayloadBuilder builder = new BusinessUnitAddressCustomFieldRemovedMessagePayloadBuilder();
         builder.name = template.getName();
+        builder.addressId = template.getAddressId();
         return builder;
     }
 

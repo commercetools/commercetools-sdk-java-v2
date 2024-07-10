@@ -29,7 +29,8 @@ public class BusinessUnitAddressCustomTypeSetMessagePayloadTest {
         return new Object[][] {
                 new Object[] { BusinessUnitAddressCustomTypeSetMessagePayload.builder()
                         .customFields(new com.commercetools.api.models.type.CustomFieldsImpl()) },
-                new Object[] { BusinessUnitAddressCustomTypeSetMessagePayload.builder().oldTypeId("oldTypeId") } };
+                new Object[] { BusinessUnitAddressCustomTypeSetMessagePayload.builder().oldTypeId("oldTypeId") },
+                new Object[] { BusinessUnitAddressCustomTypeSetMessagePayload.builder().addressId("addressId") } };
     }
 
     @Test
@@ -45,5 +46,12 @@ public class BusinessUnitAddressCustomTypeSetMessagePayloadTest {
         BusinessUnitAddressCustomTypeSetMessagePayload value = BusinessUnitAddressCustomTypeSetMessagePayload.of();
         value.setOldTypeId("oldTypeId");
         Assertions.assertThat(value.getOldTypeId()).isEqualTo("oldTypeId");
+    }
+
+    @Test
+    public void addressId() {
+        BusinessUnitAddressCustomTypeSetMessagePayload value = BusinessUnitAddressCustomTypeSetMessagePayload.of();
+        value.setAddressId("addressId");
+        Assertions.assertThat(value.getAddressId()).isEqualTo("addressId");
     }
 }

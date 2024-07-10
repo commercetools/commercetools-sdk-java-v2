@@ -58,6 +58,9 @@ public class CustomerAddressCustomFieldAddedMessageBuilder implements Builder<Cu
 
     private java.lang.Object value;
 
+    @Nullable
+    private String addressId;
+
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      * @param id value to be set
@@ -282,6 +285,17 @@ public class CustomerAddressCustomFieldAddedMessageBuilder implements Builder<Cu
     }
 
     /**
+     *  <p><code>id</code> of the Address to which the Custom Field was added.</p>
+     * @param addressId value to be set
+     * @return Builder
+     */
+
+    public CustomerAddressCustomFieldAddedMessageBuilder addressId(@Nullable final String addressId) {
+        this.addressId = addressId;
+        return this;
+    }
+
+    /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      * @return id
      */
@@ -393,6 +407,16 @@ public class CustomerAddressCustomFieldAddedMessageBuilder implements Builder<Cu
     }
 
     /**
+     *  <p><code>id</code> of the Address to which the Custom Field was added.</p>
+     * @return addressId
+     */
+
+    @Nullable
+    public String getAddressId() {
+        return this.addressId;
+    }
+
+    /**
      * builds CustomerAddressCustomFieldAddedMessage with checking for non-null required values
      * @return CustomerAddressCustomFieldAddedMessage
      */
@@ -410,7 +434,8 @@ public class CustomerAddressCustomFieldAddedMessageBuilder implements Builder<Cu
         Objects.requireNonNull(name, CustomerAddressCustomFieldAddedMessage.class + ": name is missing");
         Objects.requireNonNull(value, CustomerAddressCustomFieldAddedMessage.class + ": value is missing");
         return new CustomerAddressCustomFieldAddedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
-            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, name, value);
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, name, value,
+            addressId);
     }
 
     /**
@@ -419,7 +444,8 @@ public class CustomerAddressCustomFieldAddedMessageBuilder implements Builder<Cu
      */
     public CustomerAddressCustomFieldAddedMessage buildUnchecked() {
         return new CustomerAddressCustomFieldAddedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
-            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, name, value);
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, name, value,
+            addressId);
     }
 
     /**
@@ -450,6 +476,7 @@ public class CustomerAddressCustomFieldAddedMessageBuilder implements Builder<Cu
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
         builder.name = template.getName();
         builder.value = template.getValue();
+        builder.addressId = template.getAddressId();
         return builder;
     }
 

@@ -49,6 +49,8 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
 
     private java.util.List<com.commercetools.api.models.shipping_method.ZoneRate> zoneRates;
 
+    private Boolean active;
+
     private Boolean isDefault;
 
     private String predicate;
@@ -70,7 +72,8 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
             @JsonProperty("localizedDescription") final com.commercetools.api.models.common.LocalizedString localizedDescription,
             @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory,
             @JsonProperty("zoneRates") final java.util.List<com.commercetools.api.models.shipping_method.ZoneRate> zoneRates,
-            @JsonProperty("isDefault") final Boolean isDefault, @JsonProperty("predicate") final String predicate,
+            @JsonProperty("active") final Boolean active, @JsonProperty("isDefault") final Boolean isDefault,
+            @JsonProperty("predicate") final String predicate,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
         this.id = id;
         this.version = version;
@@ -85,6 +88,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
         this.localizedDescription = localizedDescription;
         this.taxCategory = taxCategory;
         this.zoneRates = zoneRates;
+        this.active = active;
         this.isDefault = isDefault;
         this.predicate = predicate;
         this.custom = custom;
@@ -201,7 +205,16 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
     }
 
     /**
-     *  <p>If <code>true</code> this ShippingMethod is the Project's default ShippingMethod.</p>
+     *  <p>Indicates if the ShippingMethod is active.</p>
+     *  <p>If <code>true</code>, the ShippingMethod can be used during the creation or update of a Cart or Order.</p>
+     */
+
+    public Boolean getActive() {
+        return this.active;
+    }
+
+    /**
+     *  <p>If <code>true</code>, this ShippingMethod is the Project's default ShippingMethod.</p>
      */
 
     public Boolean getIsDefault() {
@@ -282,6 +295,10 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
         this.zoneRates = zoneRates;
     }
 
+    public void setActive(final Boolean active) {
+        this.active = active;
+    }
+
     public void setIsDefault(final Boolean isDefault) {
         this.isDefault = isDefault;
     }
@@ -317,6 +334,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
                 .append(localizedDescription, that.localizedDescription)
                 .append(taxCategory, that.taxCategory)
                 .append(zoneRates, that.zoneRates)
+                .append(active, that.active)
                 .append(isDefault, that.isDefault)
                 .append(predicate, that.predicate)
                 .append(custom, that.custom)
@@ -333,6 +351,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
                 .append(localizedDescription, that.localizedDescription)
                 .append(taxCategory, that.taxCategory)
                 .append(zoneRates, that.zoneRates)
+                .append(active, that.active)
                 .append(isDefault, that.isDefault)
                 .append(predicate, that.predicate)
                 .append(custom, that.custom)
@@ -354,6 +373,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
                 .append(localizedDescription)
                 .append(taxCategory)
                 .append(zoneRates)
+                .append(active)
                 .append(isDefault)
                 .append(predicate)
                 .append(custom)
@@ -375,6 +395,7 @@ public class ShippingMethodImpl implements ShippingMethod, ModelBase {
                 .append("localizedDescription", localizedDescription)
                 .append("taxCategory", taxCategory)
                 .append("zoneRates", zoneRates)
+                .append("active", active)
                 .append("isDefault", isDefault)
                 .append("predicate", predicate)
                 .append("custom", custom)

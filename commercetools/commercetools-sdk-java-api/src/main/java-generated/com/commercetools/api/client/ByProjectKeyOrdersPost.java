@@ -30,6 +30,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  *   <li>DiscountCodeNonApplicable</li>
  *   <li>ShippingMethodDoesNotMatchCart</li>
  *   <li>InvalidItemShippingDetails</li>
+ *   <li>InvalidOperation</li>
  *   <li>MatchingPriceNotFound</li>
  *   <li>MissingTaxRateForCountry</li>
  *  </ul>

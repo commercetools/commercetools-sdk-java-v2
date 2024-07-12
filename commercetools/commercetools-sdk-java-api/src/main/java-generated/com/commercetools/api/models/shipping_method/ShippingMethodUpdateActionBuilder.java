@@ -19,6 +19,10 @@ public class ShippingMethodUpdateActionBuilder {
         return com.commercetools.api.models.shipping_method.ShippingMethodAddZoneActionBuilder.of();
     }
 
+    public com.commercetools.api.models.shipping_method.ShippingMethodChangeActiveActionBuilder changeActiveBuilder() {
+        return com.commercetools.api.models.shipping_method.ShippingMethodChangeActiveActionBuilder.of();
+    }
+
     public com.commercetools.api.models.shipping_method.ShippingMethodChangeIsDefaultActionBuilder changeIsDefaultBuilder() {
         return com.commercetools.api.models.shipping_method.ShippingMethodChangeIsDefaultActionBuilder.of();
     }

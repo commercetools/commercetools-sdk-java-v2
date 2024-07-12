@@ -47,6 +47,7 @@ public class ShippingMethodTest {
                 new Object[] { ShippingMethod.builder()
                         .zoneRates(Collections
                                 .singletonList(new com.commercetools.api.models.shipping_method.ZoneRateImpl())) },
+                new Object[] { ShippingMethod.builder().active(true) },
                 new Object[] { ShippingMethod.builder().isDefault(true) },
                 new Object[] { ShippingMethod.builder().predicate("predicate") }, new Object[] {
                         ShippingMethod.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) } };
@@ -146,6 +147,13 @@ public class ShippingMethodTest {
         value.setZoneRates(Collections.singletonList(new com.commercetools.api.models.shipping_method.ZoneRateImpl()));
         Assertions.assertThat(value.getZoneRates())
                 .isEqualTo(Collections.singletonList(new com.commercetools.api.models.shipping_method.ZoneRateImpl()));
+    }
+
+    @Test
+    public void active() {
+        ShippingMethod value = ShippingMethod.of();
+        value.setActive(true);
+        Assertions.assertThat(value.getActive()).isEqualTo(true);
     }
 
     @Test

@@ -35,6 +35,14 @@ public class ShippingMethodUpdateActionQueryBuilderDsl {
             ShippingMethodUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ShippingMethodUpdateActionQueryBuilderDsl> asChangeActive(
+            Function<com.commercetools.api.predicates.query.shipping_method.ShippingMethodChangeActiveActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.shipping_method.ShippingMethodChangeActiveActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.shipping_method.ShippingMethodChangeActiveActionQueryBuilderDsl
+                    .of()),
+            ShippingMethodUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ShippingMethodUpdateActionQueryBuilderDsl> asChangeIsDefault(
             Function<com.commercetools.api.predicates.query.shipping_method.ShippingMethodChangeIsDefaultActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.shipping_method.ShippingMethodChangeIsDefaultActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(

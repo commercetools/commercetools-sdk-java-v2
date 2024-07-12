@@ -38,6 +38,7 @@ import jakarta.validation.constraints.NotNull;
  *             .name("{name}")
  *             .taxCategory(taxCategoryBuilder -> taxCategoryBuilder)
  *             .plusZoneRates(zoneRatesBuilder -> zoneRatesBuilder)
+ *             .active(true)
  *             .isDefault(true)
  *             .build()
  * </code></pre>
@@ -158,7 +159,16 @@ public interface ShippingMethod
     public List<ZoneRate> getZoneRates();
 
     /**
-     *  <p>If <code>true</code> this ShippingMethod is the Project's default ShippingMethod.</p>
+     *  <p>Indicates if the ShippingMethod is active.</p>
+     *  <p>If <code>true</code>, the ShippingMethod can be used during the creation or update of a Cart or Order.</p>
+     * @return active
+     */
+    @NotNull
+    @JsonProperty("active")
+    public Boolean getActive();
+
+    /**
+     *  <p>If <code>true</code>, this ShippingMethod is the Project's default ShippingMethod.</p>
      * @return isDefault
      */
     @NotNull
@@ -281,7 +291,15 @@ public interface ShippingMethod
     public void setZoneRates(final List<ZoneRate> zoneRates);
 
     /**
-     *  <p>If <code>true</code> this ShippingMethod is the Project's default ShippingMethod.</p>
+     *  <p>Indicates if the ShippingMethod is active.</p>
+     *  <p>If <code>true</code>, the ShippingMethod can be used during the creation or update of a Cart or Order.</p>
+     * @param active value to be set
+     */
+
+    public void setActive(final Boolean active);
+
+    /**
+     *  <p>If <code>true</code>, this ShippingMethod is the Project's default ShippingMethod.</p>
      * @param isDefault value to be set
      */
 
@@ -329,6 +347,7 @@ public interface ShippingMethod
         instance.setLocalizedDescription(template.getLocalizedDescription());
         instance.setTaxCategory(template.getTaxCategory());
         instance.setZoneRates(template.getZoneRates());
+        instance.setActive(template.getActive());
         instance.setIsDefault(template.getIsDefault());
         instance.setPredicate(template.getPredicate());
         instance.setCustom(template.getCustom());
@@ -367,6 +386,7 @@ public interface ShippingMethod
                         .map(com.commercetools.api.models.shipping_method.ZoneRate::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setActive(template.getActive());
         instance.setIsDefault(template.getIsDefault());
         instance.setPredicate(template.getPredicate());
         instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));

@@ -99,7 +99,15 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
     public List<ZoneRateDraft> getZoneRates();
 
     /**
-     *  <p>If <code>true</code> the ShippingMethod will be the Project's default ShippingMethod.</p>
+     *  <p>If set to <code>true</code>, the ShippingMethod can be used during the creation or update of a Cart or Order.</p>
+     * @return active
+     */
+
+    @JsonProperty("active")
+    public Boolean getActive();
+
+    /**
+     *  <p>If set to <code>true</code>, the ShippingMethod will be the Project's default ShippingMethod.</p>
      * @return isDefault
      */
     @NotNull
@@ -180,7 +188,14 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
     public void setZoneRates(final List<ZoneRateDraft> zoneRates);
 
     /**
-     *  <p>If <code>true</code> the ShippingMethod will be the Project's default ShippingMethod.</p>
+     *  <p>If set to <code>true</code>, the ShippingMethod can be used during the creation or update of a Cart or Order.</p>
+     * @param active value to be set
+     */
+
+    public void setActive(final Boolean active);
+
+    /**
+     *  <p>If set to <code>true</code>, the ShippingMethod will be the Project's default ShippingMethod.</p>
      * @param isDefault value to be set
      */
 
@@ -222,6 +237,7 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
         instance.setLocalizedDescription(template.getLocalizedDescription());
         instance.setTaxCategory(template.getTaxCategory());
         instance.setZoneRates(template.getZoneRates());
+        instance.setActive(template.getActive());
         instance.setIsDefault(template.getIsDefault());
         instance.setPredicate(template.getPredicate());
         instance.setCustom(template.getCustom());
@@ -253,6 +269,7 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
                         .map(com.commercetools.api.models.shipping_method.ZoneRateDraft::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setActive(template.getActive());
         instance.setIsDefault(template.getIsDefault());
         instance.setPredicate(template.getPredicate());
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));

@@ -46,6 +46,9 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
 
     private java.util.List<com.commercetools.api.models.shipping_method.ZoneRateDraft> zoneRates;
 
+    @Nullable
+    private Boolean active;
+
     private Boolean isDefault;
 
     @Nullable
@@ -291,7 +294,18 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
     }
 
     /**
-     *  <p>If <code>true</code> the ShippingMethod will be the Project's default ShippingMethod.</p>
+     *  <p>If set to <code>true</code>, the ShippingMethod can be used during the creation or update of a Cart or Order.</p>
+     * @param active value to be set
+     * @return Builder
+     */
+
+    public ShippingMethodDraftBuilder active(@Nullable final Boolean active) {
+        this.active = active;
+        return this;
+    }
+
+    /**
+     *  <p>If set to <code>true</code>, the ShippingMethod will be the Project's default ShippingMethod.</p>
      * @param isDefault value to be set
      * @return Builder
      */
@@ -416,7 +430,17 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
     }
 
     /**
-     *  <p>If <code>true</code> the ShippingMethod will be the Project's default ShippingMethod.</p>
+     *  <p>If set to <code>true</code>, the ShippingMethod can be used during the creation or update of a Cart or Order.</p>
+     * @return active
+     */
+
+    @Nullable
+    public Boolean getActive() {
+        return this.active;
+    }
+
+    /**
+     *  <p>If set to <code>true</code>, the ShippingMethod will be the Project's default ShippingMethod.</p>
      * @return isDefault
      */
 
@@ -454,7 +478,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
         Objects.requireNonNull(zoneRates, ShippingMethodDraft.class + ": zoneRates is missing");
         Objects.requireNonNull(isDefault, ShippingMethodDraft.class + ": isDefault is missing");
         return new ShippingMethodDraftImpl(key, name, localizedName, description, localizedDescription, taxCategory,
-            zoneRates, isDefault, predicate, custom);
+            zoneRates, active, isDefault, predicate, custom);
     }
 
     /**
@@ -463,7 +487,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
      */
     public ShippingMethodDraft buildUnchecked() {
         return new ShippingMethodDraftImpl(key, name, localizedName, description, localizedDescription, taxCategory,
-            zoneRates, isDefault, predicate, custom);
+            zoneRates, active, isDefault, predicate, custom);
     }
 
     /**
@@ -488,6 +512,7 @@ public class ShippingMethodDraftBuilder implements Builder<ShippingMethodDraft> 
         builder.localizedDescription = template.getLocalizedDescription();
         builder.taxCategory = template.getTaxCategory();
         builder.zoneRates = template.getZoneRates();
+        builder.active = template.getActive();
         builder.isDefault = template.getIsDefault();
         builder.predicate = template.getPredicate();
         builder.custom = template.getCustom();

@@ -31,6 +31,7 @@ import jakarta.validation.constraints.NotNull;
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.shipping_method.ShippingMethodAddShippingRateActionImpl.class, name = ShippingMethodAddShippingRateAction.ADD_SHIPPING_RATE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.shipping_method.ShippingMethodAddZoneActionImpl.class, name = ShippingMethodAddZoneAction.ADD_ZONE),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.shipping_method.ShippingMethodChangeActiveActionImpl.class, name = ShippingMethodChangeActiveAction.CHANGE_ACTIVE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.shipping_method.ShippingMethodChangeIsDefaultActionImpl.class, name = ShippingMethodChangeIsDefaultAction.CHANGE_IS_DEFAULT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.shipping_method.ShippingMethodChangeNameActionImpl.class, name = ShippingMethodChangeNameAction.CHANGE_NAME),
         @JsonSubTypes.Type(value = com.commercetools.api.models.shipping_method.ShippingMethodChangeTaxCategoryActionImpl.class, name = ShippingMethodChangeTaxCategoryAction.CHANGE_TAX_CATEGORY),
@@ -74,6 +75,10 @@ public interface ShippingMethodUpdateAction
         if (template instanceof com.commercetools.api.models.shipping_method.ShippingMethodAddZoneAction) {
             return com.commercetools.api.models.shipping_method.ShippingMethodAddZoneAction
                     .deepCopy((com.commercetools.api.models.shipping_method.ShippingMethodAddZoneAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.shipping_method.ShippingMethodChangeActiveAction) {
+            return com.commercetools.api.models.shipping_method.ShippingMethodChangeActiveAction
+                    .deepCopy((com.commercetools.api.models.shipping_method.ShippingMethodChangeActiveAction) template);
         }
         if (template instanceof com.commercetools.api.models.shipping_method.ShippingMethodChangeIsDefaultAction) {
             return com.commercetools.api.models.shipping_method.ShippingMethodChangeIsDefaultAction.deepCopy(
@@ -141,6 +146,14 @@ public interface ShippingMethodUpdateAction
      */
     public static com.commercetools.api.models.shipping_method.ShippingMethodAddZoneActionBuilder addZoneBuilder() {
         return com.commercetools.api.models.shipping_method.ShippingMethodAddZoneActionBuilder.of();
+    }
+
+    /**
+     * builder for changeActive subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.shipping_method.ShippingMethodChangeActiveActionBuilder changeActiveBuilder() {
+        return com.commercetools.api.models.shipping_method.ShippingMethodChangeActiveActionBuilder.of();
     }
 
     /**

@@ -112,6 +112,12 @@ public class ShippingMethodQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, ShippingMethodQueryBuilderDsl::of));
     }
 
+    public BooleanComparisonPredicateBuilder<ShippingMethodQueryBuilderDsl> active() {
+        return new BooleanComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("active")),
+            p -> new CombinationQueryPredicate<>(p, ShippingMethodQueryBuilderDsl::of));
+    }
+
     public BooleanComparisonPredicateBuilder<ShippingMethodQueryBuilderDsl> isDefault() {
         return new BooleanComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("isDefault")),

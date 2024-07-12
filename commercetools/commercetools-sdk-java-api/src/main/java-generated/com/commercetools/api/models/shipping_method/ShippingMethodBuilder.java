@@ -23,6 +23,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .taxCategory(taxCategoryBuilder -> taxCategoryBuilder)
  *             .plusZoneRates(zoneRatesBuilder -> zoneRatesBuilder)
+ *             .active(true)
  *             .isDefault(true)
  *             .build()
  * </code></pre>
@@ -63,6 +64,8 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     private com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory;
 
     private java.util.List<com.commercetools.api.models.shipping_method.ZoneRate> zoneRates;
+
+    private Boolean active;
 
     private Boolean isDefault;
 
@@ -419,7 +422,19 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     }
 
     /**
-     *  <p>If <code>true</code> this ShippingMethod is the Project's default ShippingMethod.</p>
+     *  <p>Indicates if the ShippingMethod is active.</p>
+     *  <p>If <code>true</code>, the ShippingMethod can be used during the creation or update of a Cart or Order.</p>
+     * @param active value to be set
+     * @return Builder
+     */
+
+    public ShippingMethodBuilder active(final Boolean active) {
+        this.active = active;
+        return this;
+    }
+
+    /**
+     *  <p>If <code>true</code>, this ShippingMethod is the Project's default ShippingMethod.</p>
      * @param isDefault value to be set
      * @return Builder
      */
@@ -599,7 +614,17 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     }
 
     /**
-     *  <p>If <code>true</code> this ShippingMethod is the Project's default ShippingMethod.</p>
+     *  <p>Indicates if the ShippingMethod is active.</p>
+     *  <p>If <code>true</code>, the ShippingMethod can be used during the creation or update of a Cart or Order.</p>
+     * @return active
+     */
+
+    public Boolean getActive() {
+        return this.active;
+    }
+
+    /**
+     *  <p>If <code>true</code>, this ShippingMethod is the Project's default ShippingMethod.</p>
      * @return isDefault
      */
 
@@ -639,9 +664,11 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
         Objects.requireNonNull(name, ShippingMethod.class + ": name is missing");
         Objects.requireNonNull(taxCategory, ShippingMethod.class + ": taxCategory is missing");
         Objects.requireNonNull(zoneRates, ShippingMethod.class + ": zoneRates is missing");
+        Objects.requireNonNull(active, ShippingMethod.class + ": active is missing");
         Objects.requireNonNull(isDefault, ShippingMethod.class + ": isDefault is missing");
         return new ShippingMethodImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name,
-            localizedName, description, localizedDescription, taxCategory, zoneRates, isDefault, predicate, custom);
+            localizedName, description, localizedDescription, taxCategory, zoneRates, active, isDefault, predicate,
+            custom);
     }
 
     /**
@@ -650,7 +677,8 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
      */
     public ShippingMethod buildUnchecked() {
         return new ShippingMethodImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, name,
-            localizedName, description, localizedDescription, taxCategory, zoneRates, isDefault, predicate, custom);
+            localizedName, description, localizedDescription, taxCategory, zoneRates, active, isDefault, predicate,
+            custom);
     }
 
     /**
@@ -681,6 +709,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
         builder.localizedDescription = template.getLocalizedDescription();
         builder.taxCategory = template.getTaxCategory();
         builder.zoneRates = template.getZoneRates();
+        builder.active = template.getActive();
         builder.isDefault = template.getIsDefault();
         builder.predicate = template.getPredicate();
         builder.custom = template.getCustom();

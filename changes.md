@@ -174,6 +174,9 @@
 - :warning: removed query parameter `localeProjection` from method `get /{projectKey}/products/{ID}`
 - :warning: removed query parameter `localeProjection` from method `post /{projectKey}/products/{ID}`
 - :warning: removed query parameter `localeProjection` from method `delete /{projectKey}/products/{ID}`
+- :warning: removed query parameter `sort` from method `get /{projectKey}/product-projections/suggest`
+- :warning: removed query parameter `offset` from method `get /{projectKey}/product-projections/suggest`
+- :warning: removed query parameter `withTotal` from method `get /{projectKey}/product-projections/suggest`
 </details>
 
 

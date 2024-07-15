@@ -43,7 +43,7 @@ public class SearchKeywordImpl implements SearchKeyword, ModelBase {
     }
 
     /**
-     *  <p>Text to return in the result of a suggest query.</p>
+     *  <p>Text to return in the SuggestionResult.</p>
      */
 
     public String getText() {

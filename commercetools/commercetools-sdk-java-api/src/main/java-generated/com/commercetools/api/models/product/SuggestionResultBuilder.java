@@ -24,7 +24,7 @@ public class SuggestionResultBuilder implements Builder<SuggestionResult> {
     private Map<String, java.util.List<com.commercetools.api.models.product.Suggestion>> values = new HashMap<>();
 
     /**
-     * assign pattern properties to the builder
+     *  <p>The result may contain multiple Suggestions identified by their Locale. See Suggestions for two languages.</p>
      * @param values properties to be set
      * @return Builder
      */
@@ -36,7 +36,7 @@ public class SuggestionResultBuilder implements Builder<SuggestionResult> {
     }
 
     /**
-     * assign a pattern property to the builder
+     *  <p>The result may contain multiple Suggestions identified by their Locale. See Suggestions for two languages.</p>
      * @param key property name
      * @param value property value
      * @return Builder
@@ -52,7 +52,7 @@ public class SuggestionResultBuilder implements Builder<SuggestionResult> {
     }
 
     /**
-     * values of pattern properties
+     *  <p>The result may contain multiple Suggestions identified by their Locale. See Suggestions for two languages.</p>
      * @return pattern properties
      */
 

@@ -69,14 +69,6 @@ public class ByProjectKeyProductProjectionsSuggestTest {
                                 .productProjections()
                                 .suggest()
                                 .get()
-                                .withFuzzy(true)
-                                .createHttpRequest(),
-                        "get", "test_projectKey/product-projections/suggest?fuzzy=true", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .productProjections()
-                                .suggest()
-                                .get()
                                 .withSearchKeywords("locale", "searchKeywords.locale")
                                 .createHttpRequest(),
                         "get",
@@ -85,28 +77,16 @@ public class ByProjectKeyProductProjectionsSuggestTest {
                         .productProjections()
                         .suggest()
                         .get()
-                        .withSort("sort")
-                        .createHttpRequest(), "get", "test_projectKey/product-projections/suggest?sort=sort", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .productProjections()
-                        .suggest()
-                        .get()
                         .withLimit(7)
                         .createHttpRequest(), "get", "test_projectKey/product-projections/suggest?limit=7", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .productProjections()
-                        .suggest()
-                        .get()
-                        .withOffset(3)
-                        .createHttpRequest(), "get", "test_projectKey/product-projections/suggest?offset=3", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
                                 .suggest()
                                 .get()
-                                .withWithTotal(true)
+                                .withFuzzy(true)
                                 .createHttpRequest(),
-                        "get", "test_projectKey/product-projections/suggest?withTotal=true", },
+                        "get", "test_projectKey/product-projections/suggest?fuzzy=true", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .productProjections()
@@ -124,27 +104,19 @@ public class ByProjectKeyProductProjectionsSuggestTest {
 
     @DataProvider
     public static Object[][] executeMethodParameters() {
-        return new Object[][] { new Object[] {
-                apiRoot.withProjectKey("test_projectKey").productProjections().suggest().get().withFuzzy(true), },
+        return new Object[][] {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productProjections()
                         .suggest()
                         .get()
                         .withSearchKeywords("locale", "searchKeywords.locale"), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .productProjections()
-                        .suggest()
-                        .get()
-                        .withSort("sort"), },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").productProjections().suggest().get().withLimit(7), },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").productProjections().suggest().get().withOffset(3), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productProjections()
                         .suggest()
                         .get()
-                        .withWithTotal(true), },
+                        .withFuzzy(true), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productProjections()
                         .suggest()

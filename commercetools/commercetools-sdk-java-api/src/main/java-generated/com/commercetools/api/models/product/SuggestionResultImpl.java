@@ -40,7 +40,7 @@ public class SuggestionResultImpl implements SuggestionResult, ModelBase {
     }
 
     /**
-     *
+     *  <p>The result may contain multiple Suggestions identified by their Locale. See Suggestions for two languages.</p>
      */
 
     public Map<String, java.util.List<com.commercetools.api.models.product.Suggestion>> values() {

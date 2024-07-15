@@ -30,7 +30,7 @@ public class SearchKeywordBuilder implements Builder<SearchKeyword> {
     private com.commercetools.api.models.product.SuggestTokenizer suggestTokenizer;
 
     /**
-     *  <p>Text to return in the result of a suggest query.</p>
+     *  <p>Text to return in the SuggestionResult.</p>
      * @param text value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class SearchKeywordBuilder implements Builder<SearchKeyword> {
     }
 
     /**
-     *  <p>Text to return in the result of a suggest query.</p>
+     *  <p>Text to return in the SuggestionResult.</p>
      * @return text
      */
 

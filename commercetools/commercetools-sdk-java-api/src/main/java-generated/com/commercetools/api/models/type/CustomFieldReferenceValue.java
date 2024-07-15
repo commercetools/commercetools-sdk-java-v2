@@ -29,6 +29,9 @@ public interface CustomFieldReferenceValue extends JsonEnum {
     <p>Cart</p> */
     CustomFieldReferenceValue CART = CustomFieldReferenceValueEnum.CART;
     /**
+    <p>CartDiscount</p> */
+    CustomFieldReferenceValue CART_DISCOUNT = CustomFieldReferenceValueEnum.CART_DISCOUNT;
+    /**
     <p>Category</p> */
     CustomFieldReferenceValue CATEGORY = CustomFieldReferenceValueEnum.CATEGORY;
     /**
@@ -85,6 +88,11 @@ public interface CustomFieldReferenceValue extends JsonEnum {
          * cart
          */
         CART("cart"),
+
+        /**
+         * cart-discount
+         */
+        CART_DISCOUNT("cart-discount"),
 
         /**
          * category

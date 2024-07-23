@@ -26,7 +26,7 @@ public class OrderSearchFullTextValueImpl implements OrderSearchFullTextValue, M
 
     private Integer boost;
 
-    private String customType;
+    private com.commercetools.api.models.order.OrderSearchCustomType customType;
 
     private String value;
 
@@ -39,8 +39,8 @@ public class OrderSearchFullTextValueImpl implements OrderSearchFullTextValue, M
      */
     @JsonCreator
     OrderSearchFullTextValueImpl(@JsonProperty("field") final String field, @JsonProperty("boost") final Integer boost,
-            @JsonProperty("customType") final String customType, @JsonProperty("value") final String value,
-            @JsonProperty("language") final String language,
+            @JsonProperty("customType") final com.commercetools.api.models.order.OrderSearchCustomType customType,
+            @JsonProperty("value") final String value, @JsonProperty("language") final String language,
             @JsonProperty("mustMatch") final com.commercetools.api.models.order.OrderSearchMatchType mustMatch) {
         this.field = field;
         this.boost = boost;
@@ -73,10 +73,10 @@ public class OrderSearchFullTextValueImpl implements OrderSearchFullTextValue, M
     }
 
     /**
-     *
+     *  <p>Possible values for the <code>customType</code> property on query expressions indicating the data type of the <code>field</code>.</p>
      */
 
-    public String getCustomType() {
+    public com.commercetools.api.models.order.OrderSearchCustomType getCustomType() {
         return this.customType;
     }
 
@@ -112,7 +112,7 @@ public class OrderSearchFullTextValueImpl implements OrderSearchFullTextValue, M
         this.boost = boost;
     }
 
-    public void setCustomType(final String customType) {
+    public void setCustomType(final com.commercetools.api.models.order.OrderSearchCustomType customType) {
         this.customType = customType;
     }
 

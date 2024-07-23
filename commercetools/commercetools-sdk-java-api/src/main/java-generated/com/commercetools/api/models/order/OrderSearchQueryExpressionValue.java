@@ -48,12 +48,12 @@ public interface OrderSearchQueryExpressionValue {
     public Integer getBoost();
 
     /**
-     *
+     *  <p>Possible values for the <code>customType</code> property on query expressions indicating the data type of the <code>field</code>.</p>
      * @return customType
      */
 
     @JsonProperty("customType")
-    public String getCustomType();
+    public OrderSearchCustomType getCustomType();
 
     /**
      * set field
@@ -70,11 +70,11 @@ public interface OrderSearchQueryExpressionValue {
     public void setBoost(final Integer boost);
 
     /**
-     * set customType
+     *  <p>Possible values for the <code>customType</code> property on query expressions indicating the data type of the <code>field</code>.</p>
      * @param customType value to be set
      */
 
-    public void setCustomType(final String customType);
+    public void setCustomType(final OrderSearchCustomType customType);
 
     /**
      * factory method

@@ -29,7 +29,7 @@ public class OrderSearchNumberRangeValueBuilder implements Builder<OrderSearchNu
     private Integer boost;
 
     @Nullable
-    private String customType;
+    private com.commercetools.api.models.order.OrderSearchCustomType customType;
 
     @Nullable
     private Double gte;
@@ -60,12 +60,13 @@ public class OrderSearchNumberRangeValueBuilder implements Builder<OrderSearchNu
     }
 
     /**
-     * set the value to the customType
+     *  <p>Possible values for the <code>customType</code> property on query expressions indicating the data type of the <code>field</code>.</p>
      * @param customType value to be set
      * @return Builder
      */
 
-    public OrderSearchNumberRangeValueBuilder customType(@Nullable final String customType) {
+    public OrderSearchNumberRangeValueBuilder customType(
+            @Nullable final com.commercetools.api.models.order.OrderSearchCustomType customType) {
         this.customType = customType;
         return this;
     }
@@ -112,12 +113,12 @@ public class OrderSearchNumberRangeValueBuilder implements Builder<OrderSearchNu
     }
 
     /**
-     * value of customType}
+     *  <p>Possible values for the <code>customType</code> property on query expressions indicating the data type of the <code>field</code>.</p>
      * @return customType
      */
 
     @Nullable
-    public String getCustomType() {
+    public com.commercetools.api.models.order.OrderSearchCustomType getCustomType() {
         return this.customType;
     }
 

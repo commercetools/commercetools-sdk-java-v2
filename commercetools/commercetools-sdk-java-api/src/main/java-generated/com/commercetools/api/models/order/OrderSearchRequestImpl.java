@@ -66,7 +66,7 @@ public class OrderSearchRequestImpl implements OrderSearchRequest, ModelBase {
     }
 
     /**
-     *  <p>The maximum number of search results to be returned.</p>
+     *  <p>The maximum number of search results to be returned on one page.</p>
      */
 
     public Integer getLimit() {

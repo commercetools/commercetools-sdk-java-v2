@@ -26,7 +26,9 @@ public class OrderSearchQueryExpressionValueTest {
     public static Object[][] objectBuilder() {
         return new Object[][] { new Object[] { OrderSearchQueryExpressionValue.builder().field("field") },
                 new Object[] { OrderSearchQueryExpressionValue.builder().boost(7) },
-                new Object[] { OrderSearchQueryExpressionValue.builder().customType("customType") } };
+                new Object[] { OrderSearchQueryExpressionValue.builder()
+                        .customType(
+                            com.commercetools.api.models.order.OrderSearchCustomType.findEnum("BooleanType")) } };
     }
 
     @Test
@@ -46,7 +48,8 @@ public class OrderSearchQueryExpressionValueTest {
     @Test
     public void customType() {
         OrderSearchQueryExpressionValue value = OrderSearchQueryExpressionValue.of();
-        value.setCustomType("customType");
-        Assertions.assertThat(value.getCustomType()).isEqualTo("customType");
+        value.setCustomType(com.commercetools.api.models.order.OrderSearchCustomType.findEnum("BooleanType"));
+        Assertions.assertThat(value.getCustomType())
+                .isEqualTo(com.commercetools.api.models.order.OrderSearchCustomType.findEnum("BooleanType"));
     }
 }

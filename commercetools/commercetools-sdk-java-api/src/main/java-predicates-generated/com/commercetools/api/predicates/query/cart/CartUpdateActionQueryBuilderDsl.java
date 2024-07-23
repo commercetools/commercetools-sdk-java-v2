@@ -121,6 +121,13 @@ public class CartUpdateActionQueryBuilderDsl {
             CartUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl> asChangeLineItemsOrder(
+            Function<com.commercetools.api.predicates.query.cart.CartChangeLineItemsOrderActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.CartChangeLineItemsOrderActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.cart.CartChangeLineItemsOrderActionQueryBuilderDsl.of()),
+            CartUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl> asChangeTaxCalculationMode(
             Function<com.commercetools.api.predicates.query.cart.CartChangeTaxCalculationModeActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.CartChangeTaxCalculationModeActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

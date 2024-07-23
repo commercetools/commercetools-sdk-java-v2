@@ -1,5 +1,5 @@
 
-package com.commercetools.api.models.cart;
+package com.commercetools.api.models.me;
 
 import java.time.*;
 import java.util.*;
@@ -17,30 +17,29 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Setting the Cart's <code>customerId</code> can lead to updates on all its LineItem <code>prices</code>.</p>
- *  <p>If the Customer with the specified <code>id</code> cannot be found, this update action returns a ReferencedResourceNotFound error.</p>
+ * MyCartChangeLineItemsOrderAction
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class CartSetCustomerIdActionImpl implements CartSetCustomerIdAction, ModelBase {
+public class MyCartChangeLineItemsOrderActionImpl implements MyCartChangeLineItemsOrderAction, ModelBase {
 
     private String action;
 
-    private String customerId;
+    private java.util.List<String> lineItemOrder;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    CartSetCustomerIdActionImpl(@JsonProperty("customerId") final String customerId) {
-        this.customerId = customerId;
-        this.action = SET_CUSTOMER_ID;
+    MyCartChangeLineItemsOrderActionImpl(@JsonProperty("lineItemOrder") final java.util.List<String> lineItemOrder) {
+        this.lineItemOrder = lineItemOrder;
+        this.action = CHANGE_LINE_ITEMS_ORDER;
     }
 
     /**
      * create empty instance
      */
-    public CartSetCustomerIdActionImpl() {
-        this.action = SET_CUSTOMER_ID;
+    public MyCartChangeLineItemsOrderActionImpl() {
+        this.action = CHANGE_LINE_ITEMS_ORDER;
     }
 
     /**
@@ -52,15 +51,19 @@ public class CartSetCustomerIdActionImpl implements CartSetCustomerIdAction, Mod
     }
 
     /**
-     *  <p><code>id</code> of an existing Customer. If the Customer is assigned to a CustomerGroup, this update action also sets the value for the <code>customerGroup</code> field. If empty, the update action removes the value for both <code>customerId</code> and <code>customerGroup</code>.</p>
+     *  <p>All existing LineItem <code>id</code>s of the Cart in the desired new order.</p>
      */
 
-    public String getCustomerId() {
-        return this.customerId;
+    public java.util.List<String> getLineItemOrder() {
+        return this.lineItemOrder;
     }
 
-    public void setCustomerId(final String customerId) {
-        this.customerId = customerId;
+    public void setLineItemOrder(final String... lineItemOrder) {
+        this.lineItemOrder = new ArrayList<>(Arrays.asList(lineItemOrder));
+    }
+
+    public void setLineItemOrder(final java.util.List<String> lineItemOrder) {
+        this.lineItemOrder = lineItemOrder;
     }
 
     @Override
@@ -71,24 +74,24 @@ public class CartSetCustomerIdActionImpl implements CartSetCustomerIdAction, Mod
         if (o == null || getClass() != o.getClass())
             return false;
 
-        CartSetCustomerIdActionImpl that = (CartSetCustomerIdActionImpl) o;
+        MyCartChangeLineItemsOrderActionImpl that = (MyCartChangeLineItemsOrderActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
-                .append(customerId, that.customerId)
+                .append(lineItemOrder, that.lineItemOrder)
                 .append(action, that.action)
-                .append(customerId, that.customerId)
+                .append(lineItemOrder, that.lineItemOrder)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(customerId).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action).append(lineItemOrder).toHashCode();
     }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
-                .append("customerId", customerId)
+                .append("lineItemOrder", lineItemOrder)
                 .build();
     }
 

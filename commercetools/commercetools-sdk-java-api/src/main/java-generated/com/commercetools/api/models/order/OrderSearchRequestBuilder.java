@@ -160,7 +160,7 @@ public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
     }
 
     /**
-     *  <p>The maximum number of search results to be returned.</p>
+     *  <p>The maximum number of search results to be returned on one page.</p>
      * @param limit value to be set
      * @return Builder
      */
@@ -201,7 +201,7 @@ public class OrderSearchRequestBuilder implements Builder<OrderSearchRequest> {
     }
 
     /**
-     *  <p>The maximum number of search results to be returned.</p>
+     *  <p>The maximum number of search results to be returned on one page.</p>
      * @return limit
      */
 

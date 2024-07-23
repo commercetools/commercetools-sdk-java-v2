@@ -26,7 +26,7 @@ public class CartSetCustomerIdActionBuilder implements Builder<CartSetCustomerId
     private String customerId;
 
     /**
-     *  <p><code>id</code> of an existing Customer. If empty, any value is removed.</p>
+     *  <p><code>id</code> of an existing Customer. If the Customer is assigned to a CustomerGroup, this update action also sets the value for the <code>customerGroup</code> field. If empty, the update action removes the value for both <code>customerId</code> and <code>customerGroup</code>.</p>
      * @param customerId value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class CartSetCustomerIdActionBuilder implements Builder<CartSetCustomerId
     }
 
     /**
-     *  <p><code>id</code> of an existing Customer. If empty, any value is removed.</p>
+     *  <p><code>id</code> of an existing Customer. If the Customer is assigned to a CustomerGroup, this update action also sets the value for the <code>customerGroup</code> field. If empty, the update action removes the value for both <code>customerId</code> and <code>customerGroup</code>.</p>
      * @return customerId
      */
 

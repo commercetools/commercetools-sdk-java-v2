@@ -44,6 +44,7 @@ import jakarta.validation.constraints.NotNull;
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartChangeCustomLineItemPriceModeActionImpl.class, name = CartChangeCustomLineItemPriceModeAction.CHANGE_CUSTOM_LINE_ITEM_PRICE_MODE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartChangeCustomLineItemQuantityActionImpl.class, name = CartChangeCustomLineItemQuantityAction.CHANGE_CUSTOM_LINE_ITEM_QUANTITY),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartChangeLineItemQuantityActionImpl.class, name = CartChangeLineItemQuantityAction.CHANGE_LINE_ITEM_QUANTITY),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartChangeLineItemsOrderActionImpl.class, name = CartChangeLineItemsOrderAction.CHANGE_LINE_ITEMS_ORDER),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartChangeTaxCalculationModeActionImpl.class, name = CartChangeTaxCalculationModeAction.CHANGE_TAX_CALCULATION_MODE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartChangeTaxModeActionImpl.class, name = CartChangeTaxModeAction.CHANGE_TAX_MODE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart.CartChangeTaxRoundingModeActionImpl.class, name = CartChangeTaxRoundingModeAction.CHANGE_TAX_ROUNDING_MODE),
@@ -179,6 +180,10 @@ public interface CartUpdateAction extends com.commercetools.api.models.ResourceU
         if (template instanceof com.commercetools.api.models.cart.CartChangeLineItemQuantityAction) {
             return com.commercetools.api.models.cart.CartChangeLineItemQuantityAction
                     .deepCopy((com.commercetools.api.models.cart.CartChangeLineItemQuantityAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.cart.CartChangeLineItemsOrderAction) {
+            return com.commercetools.api.models.cart.CartChangeLineItemsOrderAction
+                    .deepCopy((com.commercetools.api.models.cart.CartChangeLineItemsOrderAction) template);
         }
         if (template instanceof com.commercetools.api.models.cart.CartChangeTaxCalculationModeAction) {
             return com.commercetools.api.models.cart.CartChangeTaxCalculationModeAction
@@ -518,6 +523,14 @@ public interface CartUpdateAction extends com.commercetools.api.models.ResourceU
      */
     public static com.commercetools.api.models.cart.CartChangeLineItemQuantityActionBuilder changeLineItemQuantityBuilder() {
         return com.commercetools.api.models.cart.CartChangeLineItemQuantityActionBuilder.of();
+    }
+
+    /**
+     * builder for changeLineItemsOrder subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.cart.CartChangeLineItemsOrderActionBuilder changeLineItemsOrderBuilder() {
+        return com.commercetools.api.models.cart.CartChangeLineItemsOrderActionBuilder.of();
     }
 
     /**

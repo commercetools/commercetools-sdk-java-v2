@@ -17,67 +17,67 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface SearchFieldType extends JsonEnum {
 
     /**
-    <p>For Boolean fields and AttributeBooleanType Attributes.</p> */
+    <p>For Boolean fields, AttributeBooleanType Attributes, and BooleanType Custom Fields.</p> */
     SearchFieldType BOOLEAN = SearchFieldTypeEnum.BOOLEAN;
     /**
-    <p>For string fields and AttributeTextType Attributes.</p> */
+    <p>For string fields, AttributeTextType Attributes, and StringType Custom Fields.</p> */
     SearchFieldType TEXT = SearchFieldTypeEnum.TEXT;
     /**
-    <p>For LocalizedString fields and AttributeLocalizableTextType Attributes.</p> */
+    <p>For LocalizedString fields, AttributeLocalizableTextType Attributes, and LocalizedStringType Custom Fields.</p> */
     SearchFieldType LTEXT = SearchFieldTypeEnum.LTEXT;
     /**
-    <p>For enum fields and AttributeEnumType Attributes.</p> */
+    <p>For enum fields, AttributeEnumType Attributes, and EnumType Custom Fields.</p> */
     SearchFieldType ENUM = SearchFieldTypeEnum.ENUM;
     /**
-    <p>For localized enum fields and AttributeLocalizedEnumType Attributes.</p> */
+    <p>For localized enum fields, AttributeLocalizedEnumType Attributes, and LocalizedEnumType Custom Fields.</p> */
     SearchFieldType LENUM = SearchFieldTypeEnum.LENUM;
     /**
-    <p>For number fields and AttributeNumberType Attributes.</p> */
+    <p>For number fields, AttributeNumberType Attributes, and NumberType Custom Fields.</p> */
     SearchFieldType NUMBER = SearchFieldTypeEnum.NUMBER;
     /**
     <p>For Money fields and AttributeMoneyType Attributes.</p> */
     SearchFieldType MONEY = SearchFieldTypeEnum.MONEY;
     /**
-    <p>For Date fields and AttributeDateType Attributes.</p> */
+    <p>For Date fields, AttributeDateType Attributes, and DateType Custom Fields.</p> */
     SearchFieldType DATE = SearchFieldTypeEnum.DATE;
     /**
-    <p>For DateTime fields and AttributeDateTimeType Attributes.</p> */
+    <p>For DateTime fields, AttributeDateTimeType Attributes, and DateTimeType Custom Fields.</p> */
     SearchFieldType DATETIME = SearchFieldTypeEnum.DATETIME;
     /**
-    <p>For Time fields and AttributeTimeType Attributes.</p> */
+    <p>For Time fields, AttributeTimeType Attributes, and TimeType Custom Fields.</p> */
     SearchFieldType TIME = SearchFieldTypeEnum.TIME;
     /**
     <p>For Reference fields and AttributeReferenceType Attributes.</p> */
     SearchFieldType REFERENCE = SearchFieldTypeEnum.REFERENCE;
     /**
-    <p>For Set of Boolean fields and AttributeSetType of <code>boolean</code> Attributes.</p> */
+    <p>For Set of Boolean fields, AttributeSetType of <code>boolean</code> Attributes, and SetType of <code>boolean</code> Custom Fields.</p> */
     SearchFieldType SET_BOOLEAN = SearchFieldTypeEnum.SET_BOOLEAN;
     /**
-    <p>For Set of string fields and AttributeSetType of <code>text</code> Attributes.</p> */
+    <p>For Set of string fields, AttributeSetType of <code>text</code> Attributes, and SetType of <code>text</code> Custom Fields.</p> */
     SearchFieldType SET_TEXT = SearchFieldTypeEnum.SET_TEXT;
     /**
-    <p>For Set of LocalizedString fields and AttributeSetType of <code>ltext</code> Attributes.</p> */
+    <p>For Set of LocalizedString fields, AttributeSetType of <code>ltext</code> Attributes, and SetType of <code>ltext</code> Custom Fields.</p> */
     SearchFieldType SET_LTEXT = SearchFieldTypeEnum.SET_LTEXT;
     /**
-    <p>For Set of enum fields and AttributeSetType of <code>enum</code> Attributes.</p> */
+    <p>For Set of enum fields, AttributeSetType of <code>enum</code> Attributes, and SetType of <code>enum</code> Custom Fields.</p> */
     SearchFieldType SET_ENUM = SearchFieldTypeEnum.SET_ENUM;
     /**
-    <p>For Set of localized enum fields and AttributeSetType of <code>lenum</code> Attributes.</p> */
+    <p>For Set of localized enum fields, AttributeSetType of <code>lenum</code> Attributes, and SetType of <code>lenum</code> Custom Fields.</p> */
     SearchFieldType SET_LENUM = SearchFieldTypeEnum.SET_LENUM;
     /**
-    <p>For Set of number fields and AttributeSetType of <code>number</code> Attributes.</p> */
+    <p>For Set of number fields, AttributeSetType of <code>number</code> Attributes, and SetType of <code>number</code> Custom Fields.</p> */
     SearchFieldType SET_NUMBER = SearchFieldTypeEnum.SET_NUMBER;
     /**
     <p>For Set of Money fields and AttributeSetType of <code>money</code> Attributes.</p> */
     SearchFieldType SET_MONEY = SearchFieldTypeEnum.SET_MONEY;
     /**
-    <p>For Set of Date fields and AttributeSetType of <code>date</code> Attributes.</p> */
+    <p>For Set of Date fields, AttributeSetType of <code>date</code> Attributes, and SetType of <code>date</code> Custom Fields.</p> */
     SearchFieldType SET_DATE = SearchFieldTypeEnum.SET_DATE;
     /**
-    <p>For Set of DateTime fields and AttributeSetType of <code>datetime</code> Attributes.</p> */
+    <p>For Set of DateTime fields, AttributeSetType of <code>datetime</code> Attributes, and SetType of <code>datetime</code> Custom Fields.</p> */
     SearchFieldType SET_DATETIME = SearchFieldTypeEnum.SET_DATETIME;
     /**
-    <p>For Set of Time fields and AttributeSetType of <code>time</code> Attributes.</p> */
+    <p>For Set of Time fields, AttributeSetType of <code>time</code> Attributes, and SetType of <code>time</code> Custom Fields.</p> */
     SearchFieldType SET_TIME = SearchFieldTypeEnum.SET_TIME;
     /**
     <p>For Set of Reference fields and AttributeSetType of <code>reference</code> Attributes.</p> */

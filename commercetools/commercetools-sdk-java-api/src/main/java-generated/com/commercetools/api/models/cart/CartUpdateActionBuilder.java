@@ -67,6 +67,10 @@ public class CartUpdateActionBuilder {
         return com.commercetools.api.models.cart.CartChangeLineItemQuantityActionBuilder.of();
     }
 
+    public com.commercetools.api.models.cart.CartChangeLineItemsOrderActionBuilder changeLineItemsOrderBuilder() {
+        return com.commercetools.api.models.cart.CartChangeLineItemsOrderActionBuilder.of();
+    }
+
     public com.commercetools.api.models.cart.CartChangeTaxCalculationModeActionBuilder changeTaxCalculationModeBuilder() {
         return com.commercetools.api.models.cart.CartChangeTaxCalculationModeActionBuilder.of();
     }

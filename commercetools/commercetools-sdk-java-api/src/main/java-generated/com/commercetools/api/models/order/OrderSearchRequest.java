@@ -51,7 +51,7 @@ public interface OrderSearchRequest {
     public List<OrderSearchSorting> getSort();
 
     /**
-     *  <p>The maximum number of search results to be returned.</p>
+     *  <p>The maximum number of search results to be returned on one page.</p>
      * @return limit
      */
 
@@ -89,7 +89,7 @@ public interface OrderSearchRequest {
     public void setSort(final List<OrderSearchSorting> sort);
 
     /**
-     *  <p>The maximum number of search results to be returned.</p>
+     *  <p>The maximum number of search results to be returned on one page.</p>
      * @param limit value to be set
      */
 

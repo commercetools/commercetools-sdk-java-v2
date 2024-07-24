@@ -35,7 +35,7 @@ public interface CartSetCustomerIdAction extends CartUpdateAction {
     String SET_CUSTOMER_ID = "setCustomerId";
 
     /**
-     *  <p><code>id</code> of an existing Customer. If empty, any value is removed.</p>
+     *  <p><code>id</code> of an existing Customer. If the Customer is assigned to a CustomerGroup, this update action also sets the value for the <code>customerGroup</code> field. If empty, the update action removes the value for both <code>customerId</code> and <code>customerGroup</code>.</p>
      * @return customerId
      */
 
@@ -43,7 +43,7 @@ public interface CartSetCustomerIdAction extends CartUpdateAction {
     public String getCustomerId();
 
     /**
-     *  <p><code>id</code> of an existing Customer. If empty, any value is removed.</p>
+     *  <p><code>id</code> of an existing Customer. If the Customer is assigned to a CustomerGroup, this update action also sets the value for the <code>customerGroup</code> field. If empty, the update action removes the value for both <code>customerId</code> and <code>customerGroup</code>.</p>
      * @param customerId value to be set
      */
 

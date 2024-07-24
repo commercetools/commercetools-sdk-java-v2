@@ -30,7 +30,6 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  *            .productProjections()
  *            .suggest()
  *            .get()
- *            .with/searchKeywords[aZ]{2}([AZ]{2})?/(/searchKeywords[aZ]{2}([AZ]{2})?/)
  *            .execute()
  * }</code></pre>
  * </div>

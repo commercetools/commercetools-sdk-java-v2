@@ -1,6 +1,7 @@
 
 package com.commercetools;
 
+import com.commercetools.api.models.order.OrderSearchCustomType;
 import com.commercetools.api.models.order.OrderSearchRequest;
 import com.commercetools.api.models.order.OrderSearchRequestBuilder;
 import com.commercetools.api.models.order.OrderSearchSortOrder;
@@ -98,8 +99,9 @@ public class OrderQueryBuilderTest {
                                    }
                                  }""" },
                 new Object[] { OrderSearchRequest.builder()
-                        .withQuery(q -> q.exact(
-                            t -> t.field("custom.myOrderField").value("special order").customType("StringType"))),
+                        .withQuery(q -> q.exact(t -> t.field("custom.myOrderField")
+                                .value("special order")
+                                .customType(OrderSearchCustomType.STRING_TYPE))),
                         """
                                 {
                                   "query": {

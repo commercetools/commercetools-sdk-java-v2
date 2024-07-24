@@ -26,7 +26,7 @@ public class OrderSearchDateRangeValueImpl implements OrderSearchDateRangeValue,
 
     private Integer boost;
 
-    private String customType;
+    private com.commercetools.api.models.order.OrderSearchCustomType customType;
 
     private java.time.ZonedDateTime gte;
 
@@ -37,7 +37,8 @@ public class OrderSearchDateRangeValueImpl implements OrderSearchDateRangeValue,
      */
     @JsonCreator
     OrderSearchDateRangeValueImpl(@JsonProperty("field") final String field, @JsonProperty("boost") final Integer boost,
-            @JsonProperty("customType") final String customType, @JsonProperty("gte") final java.time.ZonedDateTime gte,
+            @JsonProperty("customType") final com.commercetools.api.models.order.OrderSearchCustomType customType,
+            @JsonProperty("gte") final java.time.ZonedDateTime gte,
             @JsonProperty("lte") final java.time.ZonedDateTime lte) {
         this.field = field;
         this.boost = boost;
@@ -69,10 +70,10 @@ public class OrderSearchDateRangeValueImpl implements OrderSearchDateRangeValue,
     }
 
     /**
-     *
+     *  <p>Possible values for the <code>customType</code> property on query expressions indicating the data type of the <code>field</code>.</p>
      */
 
-    public String getCustomType() {
+    public com.commercetools.api.models.order.OrderSearchCustomType getCustomType() {
         return this.customType;
     }
 
@@ -100,7 +101,7 @@ public class OrderSearchDateRangeValueImpl implements OrderSearchDateRangeValue,
         this.boost = boost;
     }
 
-    public void setCustomType(final String customType) {
+    public void setCustomType(final com.commercetools.api.models.order.OrderSearchCustomType customType) {
         this.customType = customType;
     }
 

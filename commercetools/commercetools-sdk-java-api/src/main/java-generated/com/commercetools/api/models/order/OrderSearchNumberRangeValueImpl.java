@@ -26,7 +26,7 @@ public class OrderSearchNumberRangeValueImpl implements OrderSearchNumberRangeVa
 
     private Integer boost;
 
-    private String customType;
+    private com.commercetools.api.models.order.OrderSearchCustomType customType;
 
     private Double gte;
 
@@ -37,7 +37,8 @@ public class OrderSearchNumberRangeValueImpl implements OrderSearchNumberRangeVa
      */
     @JsonCreator
     OrderSearchNumberRangeValueImpl(@JsonProperty("field") final String field,
-            @JsonProperty("boost") final Integer boost, @JsonProperty("customType") final String customType,
+            @JsonProperty("boost") final Integer boost,
+            @JsonProperty("customType") final com.commercetools.api.models.order.OrderSearchCustomType customType,
             @JsonProperty("gte") final Double gte, @JsonProperty("lte") final Double lte) {
         this.field = field;
         this.boost = boost;
@@ -69,10 +70,10 @@ public class OrderSearchNumberRangeValueImpl implements OrderSearchNumberRangeVa
     }
 
     /**
-     *
+     *  <p>Possible values for the <code>customType</code> property on query expressions indicating the data type of the <code>field</code>.</p>
      */
 
-    public String getCustomType() {
+    public com.commercetools.api.models.order.OrderSearchCustomType getCustomType() {
         return this.customType;
     }
 
@@ -100,7 +101,7 @@ public class OrderSearchNumberRangeValueImpl implements OrderSearchNumberRangeVa
         this.boost = boost;
     }
 
-    public void setCustomType(final String customType) {
+    public void setCustomType(final com.commercetools.api.models.order.OrderSearchCustomType customType) {
         this.customType = customType;
     }
 

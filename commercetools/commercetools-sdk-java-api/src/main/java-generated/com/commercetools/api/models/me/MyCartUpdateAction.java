@@ -34,6 +34,7 @@ import jakarta.validation.constraints.NotNull;
         @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCartAddPaymentActionImpl.class, name = MyCartAddPaymentAction.ADD_PAYMENT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCartApplyDeltaToLineItemShippingDetailsTargetsActionImpl.class, name = MyCartApplyDeltaToLineItemShippingDetailsTargetsAction.APPLY_DELTA_TO_LINE_ITEM_SHIPPING_DETAILS_TARGETS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCartChangeLineItemQuantityActionImpl.class, name = MyCartChangeLineItemQuantityAction.CHANGE_LINE_ITEM_QUANTITY),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCartChangeLineItemsOrderActionImpl.class, name = MyCartChangeLineItemsOrderAction.CHANGE_LINE_ITEMS_ORDER),
         @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCartChangeTaxModeActionImpl.class, name = MyCartChangeTaxModeAction.CHANGE_TAX_MODE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCartRecalculateActionImpl.class, name = MyCartRecalculateAction.RECALCULATE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCartRemoveDiscountCodeActionImpl.class, name = MyCartRemoveDiscountCodeAction.REMOVE_DISCOUNT_CODE),
@@ -102,6 +103,10 @@ public interface MyCartUpdateAction extends com.commercetools.api.models.Resourc
         if (template instanceof com.commercetools.api.models.me.MyCartChangeLineItemQuantityAction) {
             return com.commercetools.api.models.me.MyCartChangeLineItemQuantityAction
                     .deepCopy((com.commercetools.api.models.me.MyCartChangeLineItemQuantityAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.me.MyCartChangeLineItemsOrderAction) {
+            return com.commercetools.api.models.me.MyCartChangeLineItemsOrderAction
+                    .deepCopy((com.commercetools.api.models.me.MyCartChangeLineItemsOrderAction) template);
         }
         if (template instanceof com.commercetools.api.models.me.MyCartChangeTaxModeAction) {
             return com.commercetools.api.models.me.MyCartChangeTaxModeAction
@@ -241,6 +246,14 @@ public interface MyCartUpdateAction extends com.commercetools.api.models.Resourc
      */
     public static com.commercetools.api.models.me.MyCartChangeLineItemQuantityActionBuilder changeLineItemQuantityBuilder() {
         return com.commercetools.api.models.me.MyCartChangeLineItemQuantityActionBuilder.of();
+    }
+
+    /**
+     * builder for changeLineItemsOrder subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.me.MyCartChangeLineItemsOrderActionBuilder changeLineItemsOrderBuilder() {
+        return com.commercetools.api.models.me.MyCartChangeLineItemsOrderActionBuilder.of();
     }
 
     /**

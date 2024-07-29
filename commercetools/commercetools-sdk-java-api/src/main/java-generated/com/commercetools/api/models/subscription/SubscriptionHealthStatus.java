@@ -11,25 +11,25 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>The health status of the Subscription that indicates whether messages are being delivered.</p>
+ *  <p>The health status of the Subscription that indicates whether notifications are being delivered.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface SubscriptionHealthStatus extends JsonEnum {
 
     /**
-    <p>Delivers messages as expected.</p> */
+    <p>Delivers notifications as expected.</p> */
     SubscriptionHealthStatus HEALTHY = SubscriptionHealthStatusEnum.HEALTHY;
     /**
-    <p>Messages cannot be delivered with the current configuration. Common causes are deleting the Destination queue, deleting access credentials, or removing the necessary permissions. The configuration can be fixed by re-creating the configuration on the Destination side, or by setting a new configuration with the Change Destination update action. If the configuration is fixed, undelivered messages will be delivered and the <code>status</code> will change to Healthy. <code>ConfigurationError</code> is automatically turned into <code>ConfigurationErrorDeliveryStopped</code> after some time. For more information, see Delivery Guarantees.</p> */
+    <p>Notifications cannot be delivered with the current configuration. Common causes are deleting the Destination queue, deleting access credentials, or removing necessary permissions. You can fix the configuration by re-creating the configuration on the Destination side, or by setting a new configuration with the Change Destination update action. After the configuration is fixed, undelivered notifications will be delivered and the <code>status</code> will change to Healthy. <code>ConfigurationError</code> is automatically turned into <code>ConfigurationErrorDeliveryStopped</code> after some time. For more information, see Delivery Guarantees.</p> */
     SubscriptionHealthStatus CONFIGURATION_ERROR = SubscriptionHealthStatusEnum.CONFIGURATION_ERROR;
     /**
-    <p>Does not deliver messages with the current configuration and the delivery of the messages is no longer attempted. If the configuration is fixed, undelivered messages are not retained and will not be delivered. The <code>status</code> will change to Healthy as soon as new messages can be delivered.</p> */
+    <p>Does not deliver notifications with the current configuration and the delivery of the notifications is no longer attempted. After the configuration is fixed, undelivered notifications are not retained and will not be delivered. The <code>status</code> will change to Healthy as soon as new notifications can be delivered.</p> */
     SubscriptionHealthStatus CONFIGURATION_ERROR_DELIVERY_STOPPED = SubscriptionHealthStatusEnum.CONFIGURATION_ERROR_DELIVERY_STOPPED;
     /**
-    <p>Does not deliver messages temporarily due to reasons other than a configuration error. For example, the Destination has a temporary outage.</p> */
+    <p>Does not deliver notifications temporarily due to reasons other than a configuration error. For example, the Destination has a temporary outage.</p> */
     SubscriptionHealthStatus TEMPORARY_ERROR = SubscriptionHealthStatusEnum.TEMPORARY_ERROR;
     /**
-    <p>Does not deliver messages with the current configuration and the delivery of the messages is no longer attempted. Undelivered messages are not retained and will not be delivered. The <code>status</code> will not automatically change to Healthy. To return your subscriptions to a Healthy status, contact the Composable Commerce support team.</p> */
+    <p>Does not deliver notifications with the current configuration and the delivery of the notifications is no longer attempted. Undelivered notifications are not retained and will not be delivered. The <code>status</code> will not automatically change to Healthy. To return your subscriptions to a Healthy status, contact the Composable Commerce support team.</p> */
     SubscriptionHealthStatus MANUALLY_SUSPENDED = SubscriptionHealthStatusEnum.MANUALLY_SUSPENDED;
 
     /**

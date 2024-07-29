@@ -86,7 +86,7 @@ public interface MessageDeliveryPayload extends DeliveryPayload, MessageDelivery
     public Long getSequenceNumber();
 
     /**
-     *  <p>Version of the resource on which the change was performed.</p>
+     *  <p>Version of the resource on which the update was performed.</p>
      * @return resourceVersion
      */
     @NotNull
@@ -137,7 +137,7 @@ public interface MessageDeliveryPayload extends DeliveryPayload, MessageDelivery
     public void setSequenceNumber(final Long sequenceNumber);
 
     /**
-     *  <p>Version of the resource on which the change was performed.</p>
+     *  <p>Version of the resource on which the update was performed.</p>
      * @param resourceVersion value to be set
      */
 

@@ -95,7 +95,7 @@ public interface Subscription extends BaseResource, com.commercetools.api.models
     public CreatedBy getCreatedBy();
 
     /**
-     *  <p>Change notifications subscribed to.</p>
+     *  <p>Changes subscribed to.</p>
      * @return changes
      */
     @NotNull
@@ -104,7 +104,7 @@ public interface Subscription extends BaseResource, com.commercetools.api.models
     public List<ChangeSubscription> getChanges();
 
     /**
-     *  <p>Messaging service to which the messages are to be sent.</p>
+     *  <p>Messaging service to which the notifications are sent.</p>
      * @return destination
      */
     @NotNull
@@ -189,7 +189,7 @@ public interface Subscription extends BaseResource, com.commercetools.api.models
     public void setCreatedBy(final CreatedBy createdBy);
 
     /**
-     *  <p>Change notifications subscribed to.</p>
+     *  <p>Changes subscribed to.</p>
      * @param changes values to be set
      */
 
@@ -197,14 +197,14 @@ public interface Subscription extends BaseResource, com.commercetools.api.models
     public void setChanges(final ChangeSubscription... changes);
 
     /**
-     *  <p>Change notifications subscribed to.</p>
+     *  <p>Changes subscribed to.</p>
      * @param changes values to be set
      */
 
     public void setChanges(final List<ChangeSubscription> changes);
 
     /**
-     *  <p>Messaging service to which the messages are to be sent.</p>
+     *  <p>Messaging service to which the notifications are sent.</p>
      * @param destination value to be set
      */
 

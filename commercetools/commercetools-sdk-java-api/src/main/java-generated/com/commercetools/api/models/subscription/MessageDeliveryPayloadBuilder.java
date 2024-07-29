@@ -54,7 +54,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
     private com.commercetools.api.models.subscription.PayloadNotIncluded payloadNotIncluded;
 
     /**
-     *  <p><code>key</code> of the Project. Useful in message processing if the Destination receives events from multiple Projects.</p>
+     *  <p><code>key</code> of the Project. Useful for processing notifications if the Destination receives them from multiple Projects.</p>
      * @param projectKey value to be set
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
     }
 
     /**
-     *  <p>Reference to the resource that triggered the message.</p>
+     *  <p>Reference to the resource that triggered the notification.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -76,7 +76,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
     }
 
     /**
-     *  <p>Reference to the resource that triggered the message.</p>
+     *  <p>Reference to the resource that triggered the notification.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -182,7 +182,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
     }
 
     /**
-     *  <p>Version of the resource on which the change was performed.</p>
+     *  <p>Version of the resource on which the update was performed.</p>
      * @param resourceVersion value to be set
      * @return Builder
      */
@@ -232,7 +232,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
     }
 
     /**
-     *  <p><code>key</code> of the Project. Useful in message processing if the Destination receives events from multiple Projects.</p>
+     *  <p><code>key</code> of the Project. Useful for processing notifications if the Destination receives them from multiple Projects.</p>
      * @return projectKey
      */
 
@@ -241,7 +241,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
     }
 
     /**
-     *  <p>Reference to the resource that triggered the message.</p>
+     *  <p>Reference to the resource that triggered the notification.</p>
      * @return resource
      */
 
@@ -305,7 +305,7 @@ public class MessageDeliveryPayloadBuilder implements Builder<MessageDeliveryPay
     }
 
     /**
-     *  <p>Version of the resource on which the change was performed.</p>
+     *  <p>Version of the resource on which the update was performed.</p>
      * @return resourceVersion
      */
 

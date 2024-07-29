@@ -78,7 +78,7 @@ public class MessageDeliveryPayloadImpl implements MessageDeliveryPayload, Model
     }
 
     /**
-     *  <p><code>key</code> of the Project. Useful in message processing if the Destination receives events from multiple Projects.</p>
+     *  <p><code>key</code> of the Project. Useful for processing notifications if the Destination receives them from multiple Projects.</p>
      */
 
     public String getProjectKey() {
@@ -94,7 +94,7 @@ public class MessageDeliveryPayloadImpl implements MessageDeliveryPayload, Model
     }
 
     /**
-     *  <p>Reference to the resource that triggered the message.</p>
+     *  <p>Reference to the resource that triggered the notification.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {
@@ -150,7 +150,7 @@ public class MessageDeliveryPayloadImpl implements MessageDeliveryPayload, Model
     }
 
     /**
-     *  <p>Version of the resource on which the change was performed.</p>
+     *  <p>Version of the resource on which the update was performed.</p>
      */
 
     public Long getResourceVersion() {

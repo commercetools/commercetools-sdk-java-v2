@@ -56,7 +56,7 @@ public class SubscriptionDraftImpl implements SubscriptionDraft, ModelBase {
     }
 
     /**
-     *  <p>Change notifications to be subscribed to.</p>
+     *  <p>Changes to be subscribed to.</p>
      */
 
     public java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> getChanges() {
@@ -64,7 +64,7 @@ public class SubscriptionDraftImpl implements SubscriptionDraft, ModelBase {
     }
 
     /**
-     *  <p>Messaging service to which the messages are sent.</p>
+     *  <p>Messaging service to which the notifications are sent.</p>
      */
 
     public com.commercetools.api.models.subscription.Destination getDestination() {

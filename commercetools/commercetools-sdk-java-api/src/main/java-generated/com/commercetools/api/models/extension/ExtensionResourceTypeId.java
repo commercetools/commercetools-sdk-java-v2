@@ -40,6 +40,9 @@ public interface ExtensionResourceTypeId extends JsonEnum {
     /**
     <p>Extension triggered for operations on BusinessUnits.</p> */
     ExtensionResourceTypeId BUSINESS_UNIT = ExtensionResourceTypeIdEnum.BUSINESS_UNIT;
+    /**
+    <p>Extension triggered for operations on ShoppingLists.</p> */
+    ExtensionResourceTypeId SHOPPING_LIST = ExtensionResourceTypeIdEnum.SHOPPING_LIST;
 
     /**
      * possible values of ExtensionResourceTypeId
@@ -83,7 +86,12 @@ public interface ExtensionResourceTypeId extends JsonEnum {
         /**
          * business-unit
          */
-        BUSINESS_UNIT("business-unit");
+        BUSINESS_UNIT("business-unit"),
+
+        /**
+         * shopping-list
+         */
+        SHOPPING_LIST("shopping-list");
         private final String jsonName;
 
         private ExtensionResourceTypeIdEnum(final String jsonName) {

@@ -62,7 +62,7 @@ public class ResourceUpdatedDeliveryPayloadImpl implements ResourceUpdatedDelive
     }
 
     /**
-     *  <p><code>key</code> of the Project. Useful in message processing if the Destination receives events from multiple Projects.</p>
+     *  <p><code>key</code> of the Project. Useful for processing notifications if the Destination receives them from multiple Projects.</p>
      */
 
     public String getProjectKey() {
@@ -78,7 +78,7 @@ public class ResourceUpdatedDeliveryPayloadImpl implements ResourceUpdatedDelive
     }
 
     /**
-     *  <p>Reference to the resource that triggered the message.</p>
+     *  <p>Reference to the resource that triggered the notification.</p>
      */
 
     public com.commercetools.api.models.common.Reference getResource() {

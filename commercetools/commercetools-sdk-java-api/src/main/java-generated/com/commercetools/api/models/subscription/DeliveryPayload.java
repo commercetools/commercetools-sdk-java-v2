@@ -48,7 +48,7 @@ import jakarta.validation.constraints.NotNull;
 public interface DeliveryPayload {
 
     /**
-     *  <p><code>key</code> of the Project. Useful in message processing if the Destination receives events from multiple Projects.</p>
+     *  <p><code>key</code> of the Project. Useful for processing notifications if the Destination receives them from multiple Projects.</p>
      * @return projectKey
      */
     @NotNull
@@ -64,7 +64,7 @@ public interface DeliveryPayload {
     public String getNotificationType();
 
     /**
-     *  <p>Reference to the resource that triggered the message.</p>
+     *  <p>Reference to the resource that triggered the notification.</p>
      * @return resource
      */
     @NotNull
@@ -81,14 +81,14 @@ public interface DeliveryPayload {
     public UserProvidedIdentifiers getResourceUserProvidedIdentifiers();
 
     /**
-     *  <p><code>key</code> of the Project. Useful in message processing if the Destination receives events from multiple Projects.</p>
+     *  <p><code>key</code> of the Project. Useful for processing notifications if the Destination receives them from multiple Projects.</p>
      * @param projectKey value to be set
      */
 
     public void setProjectKey(final String projectKey);
 
     /**
-     *  <p>Reference to the resource that triggered the message.</p>
+     *  <p>Reference to the resource that triggered the notification.</p>
      * @param resource value to be set
      */
 

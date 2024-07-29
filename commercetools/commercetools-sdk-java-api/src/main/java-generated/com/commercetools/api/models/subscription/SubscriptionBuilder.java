@@ -175,7 +175,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     }
 
     /**
-     *  <p>Change notifications subscribed to.</p>
+     *  <p>Changes subscribed to.</p>
      * @param changes value to be set
      * @return Builder
      */
@@ -186,7 +186,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     }
 
     /**
-     *  <p>Change notifications subscribed to.</p>
+     *  <p>Changes subscribed to.</p>
      * @param changes value to be set
      * @return Builder
      */
@@ -198,7 +198,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     }
 
     /**
-     *  <p>Change notifications subscribed to.</p>
+     *  <p>Changes subscribed to.</p>
      * @param changes value to be set
      * @return Builder
      */
@@ -213,7 +213,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     }
 
     /**
-     *  <p>Change notifications subscribed to.</p>
+     *  <p>Changes subscribed to.</p>
      * @param builder function to build the changes value
      * @return Builder
      */
@@ -229,7 +229,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     }
 
     /**
-     *  <p>Change notifications subscribed to.</p>
+     *  <p>Changes subscribed to.</p>
      * @param builder function to build the changes value
      * @return Builder
      */
@@ -243,7 +243,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     }
 
     /**
-     *  <p>Change notifications subscribed to.</p>
+     *  <p>Changes subscribed to.</p>
      * @param builder function to build the changes value
      * @return Builder
      */
@@ -254,7 +254,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     }
 
     /**
-     *  <p>Change notifications subscribed to.</p>
+     *  <p>Changes subscribed to.</p>
      * @param builder function to build the changes value
      * @return Builder
      */
@@ -265,7 +265,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     }
 
     /**
-     *  <p>Messaging service to which the messages are to be sent.</p>
+     *  <p>Messaging service to which the notifications are sent.</p>
      * @param destination value to be set
      * @return Builder
      */
@@ -276,7 +276,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     }
 
     /**
-     *  <p>Messaging service to which the messages are to be sent.</p>
+     *  <p>Messaging service to which the notifications are sent.</p>
      * @param builder function to build the destination value
      * @return Builder
      */
@@ -480,7 +480,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     }
 
     /**
-     *  <p>Change notifications subscribed to.</p>
+     *  <p>Changes subscribed to.</p>
      * @return changes
      */
 
@@ -489,7 +489,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     }
 
     /**
-     *  <p>Messaging service to which the messages are to be sent.</p>
+     *  <p>Messaging service to which the notifications are sent.</p>
      * @return destination
      */
 

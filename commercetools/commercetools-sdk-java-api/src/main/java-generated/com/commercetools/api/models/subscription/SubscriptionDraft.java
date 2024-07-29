@@ -35,7 +35,7 @@ public interface SubscriptionDraft
         extends com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<SubscriptionDraft> {
 
     /**
-     *  <p>Change notifications to be subscribed to.</p>
+     *  <p>Changes to be subscribed to.</p>
      * @return changes
      */
     @Valid
@@ -43,7 +43,7 @@ public interface SubscriptionDraft
     public List<ChangeSubscription> getChanges();
 
     /**
-     *  <p>Messaging service to which the messages are sent.</p>
+     *  <p>Messaging service to which the notifications are sent.</p>
      * @return destination
      */
     @NotNull
@@ -76,7 +76,7 @@ public interface SubscriptionDraft
     public DeliveryFormat getFormat();
 
     /**
-     *  <p>Change notifications to be subscribed to.</p>
+     *  <p>Changes to be subscribed to.</p>
      * @param changes values to be set
      */
 
@@ -84,14 +84,14 @@ public interface SubscriptionDraft
     public void setChanges(final ChangeSubscription... changes);
 
     /**
-     *  <p>Change notifications to be subscribed to.</p>
+     *  <p>Changes to be subscribed to.</p>
      * @param changes values to be set
      */
 
     public void setChanges(final List<ChangeSubscription> changes);
 
     /**
-     *  <p>Messaging service to which the messages are sent.</p>
+     *  <p>Messaging service to which the notifications are sent.</p>
      * @param destination value to be set
      */
 

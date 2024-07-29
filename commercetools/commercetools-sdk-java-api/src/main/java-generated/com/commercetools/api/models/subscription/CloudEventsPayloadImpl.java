@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>The CloudEventsFormat represents event data in a way that conforms to a common specification. The message payload can be found inside the <code>data</code> field.</p>
+ *  <p>The CloudEventsFormat represents event data in a way that conforms to a common specification. The payload can be found inside the <code>data</code> field.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CloudEventsPayloadImpl implements CloudEventsPayload, ModelBase {

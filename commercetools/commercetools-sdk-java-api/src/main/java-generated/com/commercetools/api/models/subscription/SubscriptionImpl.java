@@ -130,7 +130,7 @@ public class SubscriptionImpl implements Subscription, ModelBase {
     }
 
     /**
-     *  <p>Change notifications subscribed to.</p>
+     *  <p>Changes subscribed to.</p>
      */
 
     public java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> getChanges() {
@@ -138,7 +138,7 @@ public class SubscriptionImpl implements Subscription, ModelBase {
     }
 
     /**
-     *  <p>Messaging service to which the messages are to be sent.</p>
+     *  <p>Messaging service to which the notifications are sent.</p>
      */
 
     public com.commercetools.api.models.subscription.Destination getDestination() {

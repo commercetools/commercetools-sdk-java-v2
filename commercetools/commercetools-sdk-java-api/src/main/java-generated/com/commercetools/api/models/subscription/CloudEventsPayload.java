@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>The CloudEventsFormat represents event data in a way that conforms to a common specification. The message payload can be found inside the <code>data</code> field.</p>
+ *  <p>The CloudEventsFormat represents event data in a way that conforms to a common specification. The payload can be found inside the <code>data</code> field.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

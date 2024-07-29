@@ -42,7 +42,7 @@ public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDe
     private Boolean dataErasure;
 
     /**
-     *  <p><code>key</code> of the Project. Useful in message processing if the Destination receives events from multiple Projects.</p>
+     *  <p><code>key</code> of the Project. Useful for processing notifications if the Destination receives them from multiple Projects.</p>
      * @param projectKey value to be set
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDe
     }
 
     /**
-     *  <p>Reference to the resource that triggered the message.</p>
+     *  <p>Reference to the resource that triggered the notification.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDe
     }
 
     /**
-     *  <p>Reference to the resource that triggered the message.</p>
+     *  <p>Reference to the resource that triggered the notification.</p>
      * @param builder function to build the resource value
      * @return Builder
      */
@@ -149,7 +149,7 @@ public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDe
     }
 
     /**
-     *  <p><code>key</code> of the Project. Useful in message processing if the Destination receives events from multiple Projects.</p>
+     *  <p><code>key</code> of the Project. Useful for processing notifications if the Destination receives them from multiple Projects.</p>
      * @return projectKey
      */
 
@@ -158,7 +158,7 @@ public class ResourceDeletedDeliveryPayloadBuilder implements Builder<ResourceDe
     }
 
     /**
-     *  <p>Reference to the resource that triggered the message.</p>
+     *  <p>Reference to the resource that triggered the notification.</p>
      * @return resource
      */
 

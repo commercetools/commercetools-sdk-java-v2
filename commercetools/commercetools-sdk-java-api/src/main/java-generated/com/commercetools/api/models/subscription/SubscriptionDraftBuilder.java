@@ -39,7 +39,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
     private com.commercetools.api.models.subscription.DeliveryFormat format;
 
     /**
-     *  <p>Change notifications to be subscribed to.</p>
+     *  <p>Changes to be subscribed to.</p>
      * @param changes value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
     }
 
     /**
-     *  <p>Change notifications to be subscribed to.</p>
+     *  <p>Changes to be subscribed to.</p>
      * @param changes value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
     }
 
     /**
-     *  <p>Change notifications to be subscribed to.</p>
+     *  <p>Changes to be subscribed to.</p>
      * @param changes value to be set
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
     }
 
     /**
-     *  <p>Change notifications to be subscribed to.</p>
+     *  <p>Changes to be subscribed to.</p>
      * @param builder function to build the changes value
      * @return Builder
      */
@@ -94,7 +94,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
     }
 
     /**
-     *  <p>Change notifications to be subscribed to.</p>
+     *  <p>Changes to be subscribed to.</p>
      * @param builder function to build the changes value
      * @return Builder
      */
@@ -108,7 +108,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
     }
 
     /**
-     *  <p>Change notifications to be subscribed to.</p>
+     *  <p>Changes to be subscribed to.</p>
      * @param builder function to build the changes value
      * @return Builder
      */
@@ -119,7 +119,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
     }
 
     /**
-     *  <p>Change notifications to be subscribed to.</p>
+     *  <p>Changes to be subscribed to.</p>
      * @param builder function to build the changes value
      * @return Builder
      */
@@ -130,7 +130,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
     }
 
     /**
-     *  <p>Messaging service to which the messages are sent.</p>
+     *  <p>Messaging service to which the notifications are sent.</p>
      * @param destination value to be set
      * @return Builder
      */
@@ -142,7 +142,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
     }
 
     /**
-     *  <p>Messaging service to which the messages are sent.</p>
+     *  <p>Messaging service to which the notifications are sent.</p>
      * @param builder function to build the destination value
      * @return Builder
      */
@@ -280,7 +280,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
     }
 
     /**
-     *  <p>Change notifications to be subscribed to.</p>
+     *  <p>Changes to be subscribed to.</p>
      * @return changes
      */
 
@@ -290,7 +290,7 @@ public class SubscriptionDraftBuilder implements Builder<SubscriptionDraft> {
     }
 
     /**
-     *  <p>Messaging service to which the messages are sent.</p>
+     *  <p>Messaging service to which the notifications are sent.</p>
      * @return destination
      */
 

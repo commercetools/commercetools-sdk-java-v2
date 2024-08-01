@@ -39,7 +39,6 @@ public class PriceImportTest {
                         .channel(new com.commercetools.importapi.models.common.ChannelKeyReferenceImpl()) },
                 new Object[] { PriceImport.builder()
                         .discounted(new com.commercetools.importapi.models.common.DiscountedPriceImpl()) },
-                new Object[] { PriceImport.builder().publish(true) },
                 new Object[] { PriceImport.builder().staged(true) },
                 new Object[] {
                         PriceImport.builder()
@@ -112,13 +111,6 @@ public class PriceImportTest {
         value.setDiscounted(new com.commercetools.importapi.models.common.DiscountedPriceImpl());
         Assertions.assertThat(value.getDiscounted())
                 .isEqualTo(new com.commercetools.importapi.models.common.DiscountedPriceImpl());
-    }
-
-    @Test
-    public void publish() {
-        PriceImport value = PriceImport.of();
-        value.setPublish(true);
-        Assertions.assertThat(value.getPublish()).isEqualTo(true);
     }
 
     @Test

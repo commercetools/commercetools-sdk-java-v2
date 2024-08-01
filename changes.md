@@ -216,3 +216,12 @@
 - added type `ShippingMethodChangeActiveAction`
 </details>
 
+**Import changes**
+
+<details>
+<summary>Deprecated Property(s)</summary>
+
+- property `PriceImport::publish` is removed
+- property `ProductVariantImport::publish` is removed
+</details>
+

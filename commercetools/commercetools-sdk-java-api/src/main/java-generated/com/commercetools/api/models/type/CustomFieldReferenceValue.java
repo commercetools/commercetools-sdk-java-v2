@@ -41,6 +41,9 @@ public interface CustomFieldReferenceValue extends JsonEnum {
     <p>Customer</p> */
     CustomFieldReferenceValue CUSTOMER = CustomFieldReferenceValueEnum.CUSTOMER;
     /**
+    <p>CustomerGroup</p> */
+    CustomFieldReferenceValue CUSTOMER_GROUP = CustomFieldReferenceValueEnum.CUSTOMER_GROUP;
+    /**
     <p>CustomObject</p> */
     CustomFieldReferenceValue KEY_VALUE_DOCUMENT = CustomFieldReferenceValueEnum.KEY_VALUE_DOCUMENT;
     /**
@@ -108,6 +111,11 @@ public interface CustomFieldReferenceValue extends JsonEnum {
          * customer
          */
         CUSTOMER("customer"),
+
+        /**
+         * customer-group
+         */
+        CUSTOMER_GROUP("customer-group"),
 
         /**
          * key-value-document

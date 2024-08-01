@@ -38,6 +38,9 @@ public interface AttributeReferenceTypeId extends JsonEnum {
     <p>References a Customer.</p> */
     AttributeReferenceTypeId CUSTOMER = AttributeReferenceTypeIdEnum.CUSTOMER;
     /**
+    <p>References a CustomerGroup.</p> */
+    AttributeReferenceTypeId CUSTOMER_GROUP = AttributeReferenceTypeIdEnum.CUSTOMER_GROUP;
+    /**
     <p>References a CustomObject.</p> */
     AttributeReferenceTypeId KEY_VALUE_DOCUMENT = AttributeReferenceTypeIdEnum.KEY_VALUE_DOCUMENT;
     /**
@@ -100,6 +103,11 @@ public interface AttributeReferenceTypeId extends JsonEnum {
          * customer
          */
         CUSTOMER("customer"),
+
+        /**
+         * customer-group
+         */
+        CUSTOMER_GROUP("customer-group"),
 
         /**
          * key-value-document

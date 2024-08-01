@@ -34,9 +34,6 @@ public class ProductVariantImportImpl implements ProductVariantImport, ModelBase
 
     private java.util.List<com.commercetools.importapi.models.common.Asset> assets;
 
-    @Deprecated
-    private Boolean publish;
-
     private Boolean staged;
 
     private com.commercetools.importapi.models.common.ProductKeyReference product;
@@ -50,7 +47,7 @@ public class ProductVariantImportImpl implements ProductVariantImport, ModelBase
             @JsonProperty("attributes") final java.util.List<com.commercetools.importapi.models.productvariants.Attribute> attributes,
             @JsonProperty("images") final java.util.List<com.commercetools.importapi.models.common.Image> images,
             @JsonProperty("assets") final java.util.List<com.commercetools.importapi.models.common.Asset> assets,
-            @JsonProperty("publish") final Boolean publish, @JsonProperty("staged") final Boolean staged,
+            @JsonProperty("staged") final Boolean staged,
             @JsonProperty("product") final com.commercetools.importapi.models.common.ProductKeyReference product) {
         this.key = key;
         this.sku = sku;
@@ -58,7 +55,6 @@ public class ProductVariantImportImpl implements ProductVariantImport, ModelBase
         this.attributes = attributes;
         this.images = images;
         this.assets = assets;
-        this.publish = publish;
         this.staged = staged;
         this.product = product;
     }
@@ -118,14 +114,6 @@ public class ProductVariantImportImpl implements ProductVariantImport, ModelBase
     }
 
     /**
-     *  <p>If <code>publish</code> is set to either <code>true</code> or <code>false</code>, both staged and current projections are set to the same value provided by the import data. If <code>publish</code> is not set, the staged projection is set to the provided import data, but the current projection stays unchanged. However, if the import data contains no update, that is, if it matches the staged projection of the existing Product, the import induces no change in the existing Product whether <code>publish</code> is set or not.</p>
-     */
-    @Deprecated
-    public Boolean getPublish() {
-        return this.publish;
-    }
-
-    /**
      *  <ul>
      *   <li>Set to <code>false</code> to update both the current and staged projections of the Product with the new Product Variant data.</li>
      *   <li>Leave empty or set to <code>true</code> to only update the staged projection.</li>
@@ -181,11 +169,6 @@ public class ProductVariantImportImpl implements ProductVariantImport, ModelBase
         this.assets = assets;
     }
 
-    @Deprecated
-    public void setPublish(final Boolean publish) {
-        this.publish = publish;
-    }
-
     public void setStaged(final Boolean staged) {
         this.staged = staged;
     }
@@ -210,7 +193,6 @@ public class ProductVariantImportImpl implements ProductVariantImport, ModelBase
                 .append(attributes, that.attributes)
                 .append(images, that.images)
                 .append(assets, that.assets)
-                .append(publish, that.publish)
                 .append(staged, that.staged)
                 .append(product, that.product)
                 .append(key, that.key)
@@ -219,7 +201,6 @@ public class ProductVariantImportImpl implements ProductVariantImport, ModelBase
                 .append(attributes, that.attributes)
                 .append(images, that.images)
                 .append(assets, that.assets)
-                .append(publish, that.publish)
                 .append(staged, that.staged)
                 .append(product, that.product)
                 .isEquals();
@@ -233,7 +214,6 @@ public class ProductVariantImportImpl implements ProductVariantImport, ModelBase
                 .append(attributes)
                 .append(images)
                 .append(assets)
-                .append(publish)
                 .append(staged)
                 .append(product)
                 .toHashCode();
@@ -247,7 +227,6 @@ public class ProductVariantImportImpl implements ProductVariantImport, ModelBase
                 .append("attributes", attributes)
                 .append("images", images)
                 .append("assets", assets)
-                .append("publish", publish)
                 .append("staged", staged)
                 .append("product", product)
                 .build();

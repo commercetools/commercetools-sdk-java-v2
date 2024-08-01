@@ -112,14 +112,6 @@ public interface PriceImport extends ImportResource {
     public DiscountedPrice getDiscounted();
 
     /**
-     *  <p>Only the Embedded Price updates will be published to <code>staged</code> and <code>current</code> projection.</p>
-     * @return publish
-     */
-    @Deprecated
-    @JsonProperty("publish")
-    public Boolean getPublish();
-
-    /**
      *  <ul>
      *   <li>Set to <code>false</code> to update both the current and staged projections of the Product with the new Price data.</li>
      *   <li>Leave empty or set to <code>true</code> to only update the staged projection.</li>
@@ -221,13 +213,6 @@ public interface PriceImport extends ImportResource {
     public void setDiscounted(final DiscountedPrice discounted);
 
     /**
-     *  <p>Only the Embedded Price updates will be published to <code>staged</code> and <code>current</code> projection.</p>
-     * @param publish value to be set
-     */
-    @Deprecated
-    public void setPublish(final Boolean publish);
-
-    /**
      *  <ul>
      *   <li>Set to <code>false</code> to update both the current and staged projections of the Product with the new Price data.</li>
      *   <li>Leave empty or set to <code>true</code> to only update the staged projection.</li>
@@ -296,7 +281,6 @@ public interface PriceImport extends ImportResource {
         instance.setCustomerGroup(template.getCustomerGroup());
         instance.setChannel(template.getChannel());
         instance.setDiscounted(template.getDiscounted());
-        instance.setPublish(template.getPublish());
         instance.setStaged(template.getStaged());
         instance.setTiers(template.getTiers());
         instance.setCustom(template.getCustom());
@@ -327,7 +311,6 @@ public interface PriceImport extends ImportResource {
             com.commercetools.importapi.models.common.ChannelKeyReference.deepCopy(template.getChannel()));
         instance.setDiscounted(
             com.commercetools.importapi.models.common.DiscountedPrice.deepCopy(template.getDiscounted()));
-        instance.setPublish(template.getPublish());
         instance.setStaged(template.getStaged());
         instance.setTiers(Optional.ofNullable(template.getTiers())
                 .map(t -> t.stream()

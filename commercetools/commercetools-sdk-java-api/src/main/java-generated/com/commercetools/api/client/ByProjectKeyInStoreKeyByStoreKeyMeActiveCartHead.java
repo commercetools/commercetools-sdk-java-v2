@@ -16,7 +16,13 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Checks if an active Cart exists. Returns a <code>200 OK</code> status if an active Cart exists or a <code>404 Not Found</code> otherwise.</p>
+ *  <p>Checks if an active Cart exists in a Store. Returns <code>200 OK</code> status if successful.</p>
+ *  <p>A ResourceNotFound error is returned in the following scenarios:</p>
+ *  <ul>
+ *   <li>If no active Cart exists in a Store.</li>
+ *   <li>If an active Cart exists but does not have a <code>store</code> specified, or the <code>store</code> field references a different Store.</li>
+ *   <li>If an active Cart exists but does not contain a <code>customerId</code> that matches the customer:{id} scope, or <code>anonymousId</code> that matches the anonymous_id:{id} scope.</li>
+ *  </ul>
  *
  * <hr>
  * <div class=code-example>

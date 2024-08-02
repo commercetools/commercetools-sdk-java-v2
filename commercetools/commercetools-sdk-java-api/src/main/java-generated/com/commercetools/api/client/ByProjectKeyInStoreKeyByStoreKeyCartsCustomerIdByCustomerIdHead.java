@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Checks if a Cart of a Customer exists. Returns a <code>200 OK</code> status if the Cart exists or a <code>404 Not Found</code> otherwise.</p>
+ *  <p>Checks if a Cart of a Customer exists. Returns a <code>200 OK</code> status if the Cart exists or a ResourceNotFound error otherwise.</p>
  *
  * <hr>
  * <div class=code-example>

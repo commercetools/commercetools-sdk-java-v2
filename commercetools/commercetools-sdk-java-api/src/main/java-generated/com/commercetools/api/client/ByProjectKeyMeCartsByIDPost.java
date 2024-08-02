@@ -20,8 +20,12 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Updates the Cart for a given <code>id</code>. Returns a <code>200 OK</code> status if the Cart exists, or a <code>404 Not Found</code> otherwise.</p>
- *  <p>If the Cart exists in the Project but does not have a matching <code>customerId</code> or <code>anonymousId</code>, this method returns a ResourceNotFound error.</p>
+ *  <p>Updates the Cart for a given <code>id</code>. Returns a <code>200 OK</code> status if successful.</p>
+ *  <p>A ResourceNotFound error is returned in the following scenarios:</p>
+ *  <ul>
+ *   <li>If no Cart exists for a given <code>id</code>.</li>
+ *   <li>If the Cart exists but does not have a <code>customerId</code> that matches the customer:{id} scope, or <code>anonymousId</code> that matches the anonymous_id:{id} scope.</li>
+ *  </ul>
  *
  * <hr>
  * <div class=code-example>

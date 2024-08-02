@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *
+ *  <p>Returns all Orders in a Store that match a given Query Predicate and contain either a <code>customerId</code> that matches the customer_id:{id} scope, or an <code>anonymousId</code> that matches the anonymous_id:{id} scope.</p>
  *
  * <hr>
  * <div class=code-example>

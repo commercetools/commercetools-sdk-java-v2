@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Creates a Cart for a given <code>customerId</code> or <code>anonymousId</code>.</p>
+ *  <p>Creates a Cart for the Customer or anonymous user. The <code>customerId</code> or <code>anonymousId</code> field on the Cart is automatically set based on the customer:{id} or anonymous_id:{id} scope.</p>
  *  <p>Specific Error Codes:</p>
  *  <ul>
  *   <li>DiscountCodeNonApplicable</li>

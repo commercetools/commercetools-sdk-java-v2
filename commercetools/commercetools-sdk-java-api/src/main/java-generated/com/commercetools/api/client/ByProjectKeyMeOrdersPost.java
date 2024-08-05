@@ -20,8 +20,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>The Cart must have a shipping address set for taxes to be calculated. When creating B2B Orders, the Customer must have the <code>CreateMyOrdersFromMyCarts</code> Permission.</p>
- *  <p>Creating an Order produces the OrderCreated Message.</p>
+ *  <p>Creates an Order from a Cart for the Customer or anonymous user. The <code>customerId</code> or <code>anonymousId</code> field on the Order is automatically set based on the customer:{id} or anonymous_id:{id} scope.</p>
+ *  <p>The Cart must have a shipping address set for taxes to be calculated. When creating B2B Orders, the Customer must have the <code>CreateMyOrdersFromMyCarts</code> Permission. Creating an Order produces the OrderCreated Message.</p>
+ *  <p>If the Cart's <code>customerId</code> does not match the customer:{id} scope, or the <code>anonymousId</code> does not match the anonymous_id:{id} scope, a ResourceNotFound error is returned.</p>
  *  <p>If a server-side problem occurs, indicated by a 500 Internal Server Error HTTP response, the Order creation may still successfully complete after the error is returned. If you receive this error, you should verify the status of the Order by querying a unique identifier supplied during the creation request, such as the Order number.</p>
  *  <p>Specific Error Codes:</p>
  *  <ul>

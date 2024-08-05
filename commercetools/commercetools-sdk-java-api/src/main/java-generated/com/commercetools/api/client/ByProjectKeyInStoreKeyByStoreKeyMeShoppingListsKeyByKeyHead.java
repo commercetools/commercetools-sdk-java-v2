@@ -16,7 +16,13 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Checks if a ShoppingList exists for a given <code>key</code>. Returns a <code>200 OK</code> status if the ShoppingList exists or a <code>404 Not Found</code> otherwise.</p>
+ *  <p>Checks if a ShoppingList exists for a given <code>key</code> in a Store. Returns a <code>200 OK</code> status if successful.</p>
+ *  <p>A ResourceNotFound error is returned in the following scenarios:</p>
+ *  <ul>
+ *   <li>If no ShoppingList exists that matches the given <code>key</code> in a Store.</li>
+ *   <li>If a ShoppingList matches the given <code>key</code> but does not have a <code>store</code> specified, or the <code>store</code> field references a different Store.</li>
+ *   <li>If a ShoppingList matches the given <code>key</code> in a Store but does not contain either an <code>anonymousId</code> that matches the anonymous_id:{id} scope, or a <code>customer</code> with <code>id</code> value that matches the customer:{id} scope.</li>
+ *  </ul>
  *
  * <hr>
  * <div class=code-example>

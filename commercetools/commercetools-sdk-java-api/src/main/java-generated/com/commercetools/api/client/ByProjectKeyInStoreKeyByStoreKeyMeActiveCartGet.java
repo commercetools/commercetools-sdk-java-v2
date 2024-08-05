@@ -20,9 +20,14 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Retrieves the Customer's most recently modified active Cart in the Store specified by the <code>storeKey</code> path parameter.</p>
+ *  <p>Retrieves the Customer's most recently modified active Cart in a Store. Returns a <code>200 OK</code> status if successful.</p>
  *  <p>Carts with <code>Merchant</code> or <code>Quote</code> CartOrigin are ignored.</p>
- *  <p>If no active Cart exists, this method returns a ResourceNotFound error.</p>
+ *  <p>A ResourceNotFound error is returned in the following scenarios:</p>
+ *  <ul>
+ *   <li>If no active Cart exists.</li>
+ *   <li>If an active Cart exists but does not have a <code>store</code> specified, or the <code>store</code> field references a different Store.</li>
+ *   <li>If an active Cart exists but does not have a <code>customerId</code> that matches the customer:{id} scope, or <code>anonymousId</code> that matches the anonymous_id:{id} scope.</li>
+ *  </ul>
  *
  * <hr>
  * <div class=code-example>

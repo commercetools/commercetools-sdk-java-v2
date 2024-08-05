@@ -42,12 +42,4 @@ public class ByProjectKeyMeQuoteRequestsByIDRequestBuilder {
         return post(op.apply(com.commercetools.api.models.me.MyQuoteRequestUpdateBuilder.of()).build());
     }
 
-    public ByProjectKeyMeQuoteRequestsByIDDelete delete() {
-        return new ByProjectKeyMeQuoteRequestsByIDDelete(apiHttpClient, projectKey, ID);
-    }
-
-    public <TValue> ByProjectKeyMeQuoteRequestsByIDDelete delete(TValue version) {
-        return delete().withVersion(version);
-    }
-
 }

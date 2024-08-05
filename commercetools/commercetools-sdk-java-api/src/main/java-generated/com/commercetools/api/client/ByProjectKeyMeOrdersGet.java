@@ -20,7 +20,12 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *
+ *  <p>Returns all Orders that match a given Query Predicate.</p>
+ *  <p>A ResourceNotFound error is returned in the following scenarios:</p>
+ *  <ul>
+ *   <li>If no Orders exist for a given Query Predicate.</li>
+ *   <li>If the Order exists but does not have a <code>customerId</code> that matches the customer:{id} scope, or <code>anonymousId</code> that matches the anonymous_id:{id} scope.</li>
+ *  </ul>
  *
  * <hr>
  * <div class=code-example>

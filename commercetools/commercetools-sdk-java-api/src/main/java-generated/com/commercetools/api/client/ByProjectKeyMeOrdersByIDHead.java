@@ -16,7 +16,12 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Checks if an Order exists for a given <code>id</code>. Returns a <code>200 OK</code> status if the Order exists or a <code>404 Not Found</code> otherwise.</p>
+ *  <p>Checks if an Order exists for a given <code>id</code>. Returns a <code>200 OK</code> status if successful.</p>
+ *  <p>A ResourceNotFound error is returned in the following scenarios:</p>
+ *  <ul>
+ *   <li>If no Order exists for the given <code>id</code>.</li>
+ *   <li>If the Order exists but does not have either a <code>customerId</code> that matches the customer:{id} scope, or an <code>anonymousId</code> that matches the anonymous_id:{id} scope.</li>
+ *  </ul>
  *
  * <hr>
  * <div class=code-example>

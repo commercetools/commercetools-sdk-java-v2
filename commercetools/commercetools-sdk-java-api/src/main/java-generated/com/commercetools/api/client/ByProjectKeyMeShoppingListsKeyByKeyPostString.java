@@ -21,7 +21,12 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *
+ *  <p>Updates a ShoppingList for a given <code>key</code>. Returns a <code>200 OK</code> status if successful.</p>
+ *  <p>A ResourceNotFound error is returned in the following scenarios:</p>
+ *  <ul>
+ *   <li>If no ShoppingList exists for the given <code>key</code>.</li>
+ *   <li>If a ShoppingList exists but does not contain either an <code>anonymousId</code> that matches the anonymous_id:{id} scope, or a <code>customer</code> with <code>id</code> value that matches the customer:{id} scope.</li>
+ *  </ul>
  *
  * <hr>
  * <div class=code-example>

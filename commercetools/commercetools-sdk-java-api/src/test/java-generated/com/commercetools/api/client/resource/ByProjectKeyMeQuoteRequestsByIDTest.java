@@ -99,31 +99,7 @@ public class ByProjectKeyMeQuoteRequestsByIDTest {
                         .quoteRequests()
                         .withId("test_ID")
                         .post(com.commercetools.api.models.me.MyQuoteRequestUpdate.of())
-                        .createHttpRequest(), "post", "test_projectKey/me/quote-requests/test_ID", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .me()
-                                .quoteRequests()
-                                .withId("test_ID")
-                                .delete()
-                                .withVersion(2)
-                                .createHttpRequest(),
-                        "delete", "test_projectKey/me/quote-requests/test_ID?version=2", },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey")
-                                .me()
-                                .quoteRequests()
-                                .withId("test_ID")
-                                .delete()
-                                .withExpand("expand")
-                                .createHttpRequest(),
-                        "delete", "test_projectKey/me/quote-requests/test_ID?expand=expand", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .me()
-                        .quoteRequests()
-                        .withId("test_ID")
-                        .delete()
-                        .createHttpRequest(), "delete", "test_projectKey/me/quote-requests/test_ID", } };
+                        .createHttpRequest(), "post", "test_projectKey/me/quote-requests/test_ID", } };
     }
 
     @DataProvider
@@ -149,20 +125,6 @@ public class ByProjectKeyMeQuoteRequestsByIDTest {
                         .me()
                         .quoteRequests()
                         .withId("test_ID")
-                        .post(com.commercetools.api.models.me.MyQuoteRequestUpdate.of()), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .me()
-                        .quoteRequests()
-                        .withId("test_ID")
-                        .delete()
-                        .withVersion(2), },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .me()
-                        .quoteRequests()
-                        .withId("test_ID")
-                        .delete()
-                        .withExpand("expand"), },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").me().quoteRequests().withId("test_ID").delete(), } };
+                        .post(com.commercetools.api.models.me.MyQuoteRequestUpdate.of()), } };
     }
 }

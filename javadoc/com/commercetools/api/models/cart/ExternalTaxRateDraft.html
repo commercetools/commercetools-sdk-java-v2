@@ -99,8 +99,8 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <h2>Method Summary</h2>
 <div id="method-summary-table">
 <div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button><button id="method-summary-table-tab5" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab5', 3)" class="table-tab">Default Methods</button></div>
-<div id="method-summary-table.tabpanel" role="tabpanel">
-<div class="summary-table three-column-summary" aria-labelledby="method-summary-table-tab0">
+<div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
+<div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
@@ -150,7 +150,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../tax_category/SubRate.html" title="interface in com.commercetools.api.models.tax_category">SubRate</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSubRates()" class="member-name-link">getSubRates</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes).</div>
+<div class="block">Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes).</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ExternalTaxRateDraft.html" title="interface in com.commercetools.api.models.cart">ExternalTaxRateDraft</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -193,12 +193,12 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setSubRates(com.commercetools.api.models.tax_category.SubRate...)" class="member-name-link">setSubRates</a><wbr>(<a href="../tax_category/SubRate.html" title="interface in com.commercetools.api.models.tax_category">SubRate</a>...&nbsp;subRates)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes).</div>
+<div class="block">Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes).</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setSubRates(java.util.List)" class="member-name-link">setSubRates</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../tax_category/SubRate.html" title="interface in com.commercetools.api.models.tax_category">SubRate</a>&gt;&nbsp;subRates)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes).</div>
+<div class="block">Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes).</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ExternalTaxRateDraft.html" title="interface in com.commercetools.api.models.cart">ExternalTaxRateDraft</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -293,7 +293,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <h3>getSubRates</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../tax_category/SubRate.html" title="interface in com.commercetools.api.models.tax_category">SubRate</a>&gt;</span>&nbsp;<span class="element-name">getSubRates</span>()</div>
-<div class="block"><p>For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes). The total of all subrates must equal the TaxRate <code>amount</code>.</p></div>
+<div class="block"><p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). The total of all subrates must equal the TaxRate <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a Cart or Order and the <code>taxedPrice</code> field of LineItems, CustomLineItems, and ShippingInfos.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>subRates</dd>
@@ -366,7 +366,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <section class="detail" id="setSubRates(com.commercetools.api.models.tax_category.SubRate...)">
 <h3>setSubRates</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setSubRates</span><wbr><span class="parameters">(<a href="../tax_category/SubRate.html" title="interface in com.commercetools.api.models.tax_category">SubRate</a>...&nbsp;subRates)</span></div>
-<div class="block"><p>For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes). The total of all subrates must equal the TaxRate <code>amount</code>.</p></div>
+<div class="block"><p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). The total of all subrates must equal the TaxRate <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a Cart or Order and the <code>taxedPrice</code> field of LineItems, CustomLineItems, and ShippingInfos.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>subRates</code> - values to be set</dd>
@@ -377,7 +377,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <section class="detail" id="setSubRates(java.util.List)">
 <h3>setSubRates</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setSubRates</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../tax_category/SubRate.html" title="interface in com.commercetools.api.models.tax_category">SubRate</a>&gt;&nbsp;subRates)</span></div>
-<div class="block"><p>For countries (such as the US) where the total tax is a combination of multiple taxes (such as state and local taxes). The total of all subrates must equal the TaxRate <code>amount</code>.</p></div>
+<div class="block"><p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). The total of all subrates must equal the TaxRate <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a Cart or Order and the <code>taxedPrice</code> field of LineItems, CustomLineItems, and ShippingInfos.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>subRates</code> - values to be set</dd>

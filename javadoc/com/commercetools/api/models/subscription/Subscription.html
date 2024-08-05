@@ -106,8 +106,8 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <h2>Method Summary</h2>
 <div id="method-summary-table">
 <div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button><button id="method-summary-table-tab5" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab5', 3)" class="table-tab">Default Methods</button></div>
-<div id="method-summary-table.tabpanel" role="tabpanel">
-<div class="summary-table three-column-summary" aria-labelledby="method-summary-table-tab0">
+<div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
+<div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
@@ -129,7 +129,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ChangeSubscription.html" title="interface in com.commercetools.api.models.subscription">ChangeSubscription</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getChanges()" class="member-name-link">getChanges</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Change notifications subscribed to.</div>
+<div class="block">Changes subscribed to.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCreatedAt()" class="member-name-link">getCreatedAt</a>()</code></div>
@@ -144,7 +144,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="Destination.html" title="interface in com.commercetools.api.models.subscription">Destination</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDestination()" class="member-name-link">getDestination</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Messaging service to which the messages are to be sent.</div>
+<div class="block">Messaging service to which the notifications are sent.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="DeliveryFormat.html" title="interface in com.commercetools.api.models.subscription">DeliveryFormat</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getFormat()" class="member-name-link">getFormat</a>()</code></div>
@@ -199,12 +199,12 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setChanges(com.commercetools.api.models.subscription.ChangeSubscription...)" class="member-name-link">setChanges</a><wbr>(<a href="ChangeSubscription.html" title="interface in com.commercetools.api.models.subscription">ChangeSubscription</a>...&nbsp;changes)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Change notifications subscribed to.</div>
+<div class="block">Changes subscribed to.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setChanges(java.util.List)" class="member-name-link">setChanges</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ChangeSubscription.html" title="interface in com.commercetools.api.models.subscription">ChangeSubscription</a>&gt;&nbsp;changes)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Change notifications subscribed to.</div>
+<div class="block">Changes subscribed to.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCreatedAt(java.time.ZonedDateTime)" class="member-name-link">setCreatedAt</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</code></div>
@@ -219,7 +219,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setDestination(com.commercetools.api.models.subscription.Destination)" class="member-name-link">setDestination</a><wbr>(<a href="Destination.html" title="interface in com.commercetools.api.models.subscription">Destination</a>&nbsp;destination)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Messaging service to which the messages are to be sent.</div>
+<div class="block">Messaging service to which the notifications are sent.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setFormat(com.commercetools.api.models.subscription.DeliveryFormat)" class="member-name-link">setFormat</a><wbr>(<a href="DeliveryFormat.html" title="interface in com.commercetools.api.models.subscription">DeliveryFormat</a>&nbsp;format)</code></div>
@@ -392,7 +392,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
 </span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ChangeSubscription.html" title="interface in com.commercetools.api.models.subscription">ChangeSubscription</a>&gt;</span>&nbsp;<span class="element-name">getChanges</span>()</div>
-<div class="block"><p>Change notifications subscribed to.</p></div>
+<div class="block"><p>Changes subscribed to.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>changes</dd>
@@ -405,7 +405,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
 </span><span class="return-type">@NotNull @Valid <a href="Destination.html" title="interface in com.commercetools.api.models.subscription">Destination</a></span>&nbsp;<span class="element-name">getDestination</span>()</div>
-<div class="block"><p>Messaging service to which the messages are to be sent.</p></div>
+<div class="block"><p>Messaging service to which the notifications are sent.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>destination</dd>
@@ -541,7 +541,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <section class="detail" id="setChanges(com.commercetools.api.models.subscription.ChangeSubscription...)">
 <h3>setChanges</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setChanges</span><wbr><span class="parameters">(<a href="ChangeSubscription.html" title="interface in com.commercetools.api.models.subscription">ChangeSubscription</a>...&nbsp;changes)</span></div>
-<div class="block"><p>Change notifications subscribed to.</p></div>
+<div class="block"><p>Changes subscribed to.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>changes</code> - values to be set</dd>
@@ -552,7 +552,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <section class="detail" id="setChanges(java.util.List)">
 <h3>setChanges</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setChanges</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ChangeSubscription.html" title="interface in com.commercetools.api.models.subscription">ChangeSubscription</a>&gt;&nbsp;changes)</span></div>
-<div class="block"><p>Change notifications subscribed to.</p></div>
+<div class="block"><p>Changes subscribed to.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>changes</code> - values to be set</dd>
@@ -563,7 +563,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <section class="detail" id="setDestination(com.commercetools.api.models.subscription.Destination)">
 <h3>setDestination</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setDestination</span><wbr><span class="parameters">(<a href="Destination.html" title="interface in com.commercetools.api.models.subscription">Destination</a>&nbsp;destination)</span></div>
-<div class="block"><p>Messaging service to which the messages are to be sent.</p></div>
+<div class="block"><p>Messaging service to which the notifications are sent.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>destination</code> - value to be set</dd>

@@ -91,7 +91,12 @@ implements <a href="ErrorableTrait.html" title="interface in com.commercetools.a
 <div class="block"><p>Creates a new Cart by replicating an existing Cart or Order of the authenticated Customer. This can be useful in cases where a customer wants to cancel a recent order to make some changes or reorder a previous order.</p>
   <p>The replicated Cart preserves Customer information, Line Items and Custom Line Items, Custom Fields, Discount Codes, and other settings of the Cart or Order. If the Line Items become invalid, for example, due to removed Products or Prices, they are removed from the new Cart. If the Customer switches to another Customer Group, the new Cart is updated with the new value. It has up-to-date Tax Rates, Prices, and Line Item product data and is in <code>Active</code> CartState.</p>
   <p>The new Cart does not contain Payments or Deliveries. The State of Line Items and Custom Line Items is reset to <code>initial</code>.</p>
-  <p>In case the Cart or Order to be replicated does not belong to the authenticaed Customer, the API returns a ResourceNotFound error</p>
+  <p>If the Cart or Order to be replicated does not belong to the authenticated Customer, the API returns a ResourceNotFound error</p>
+  <p>Specific Error Codes:</p>
+  <ul>
+   <li>MatchingPriceNotFound</li>
+   <li>MissingTaxRateForCountry</li>
+  </ul>
 
  <hr>
  <div class=code-example>
@@ -140,8 +145,8 @@ implements <a href="ErrorableTrait.html" title="interface in com.commercetools.a
 <h2>Method Summary</h2>
 <div id="method-summary-table">
 <div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
-<div id="method-summary-table.tabpanel" role="tabpanel">
-<div class="summary-table three-column-summary" aria-labelledby="method-summary-table-tab0">
+<div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
+<div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>

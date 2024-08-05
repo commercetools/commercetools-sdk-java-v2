@@ -86,7 +86,7 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">ByProjectKeyInStoreKeyByStoreKeyCartsHead</span>
 <span class="extends-implements">extends <a href="../../../../io/vrap/rmf/base/client/TypeApiMethod.html" title="class in io.vrap.rmf.base.client">TypeApiMethod</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyCartsHead.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyCartsHead</a>,<wbr><a href="https://fasterxml.github.io/jackson-databind/javadoc/2.14/com/fasterxml/jackson/databind/JsonNode.html" title="class or interface in com.fasterxml.jackson.databind" class="external-link">JsonNode</a>&gt;
 implements <a href="ErrorableTrait.html" title="interface in com.commercetools.api.client">ErrorableTrait</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyCartsHead.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyCartsHead</a>&gt;, <a href="Deprecatable200Trait.html" title="interface in com.commercetools.api.client">Deprecatable200Trait</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyCartsHead.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyCartsHead</a>&gt;</span></div>
-<div class="block"><p>Checks if a Cart exists for a given Query Predicate. Returns a <code>200 OK</code> status if any Carts match the Query Predicate or a <code>404 Not Found</code> otherwise.</p>
+<div class="block"><p>Checks if a Cart exists for a given Query Predicate. Returns a <code>200 OK</code> status if any Carts match the Query Predicate or a ResourceNotFound error otherwise.</p>
 
  <hr>
  <div class=code-example>
@@ -134,8 +134,8 @@ implements <a href="ErrorableTrait.html" title="interface in com.commercetools.a
 <h2>Method Summary</h2>
 <div id="method-summary-table">
 <div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
-<div id="method-summary-table.tabpanel" role="tabpanel">
-<div class="summary-table three-column-summary" aria-labelledby="method-summary-table-tab0">
+<div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
+<div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>

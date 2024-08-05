@@ -104,8 +104,8 @@ loadScripts(document, 'script');</script>
 <h2>Method Summary</h2>
 <div id="method-summary-table">
 <div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button><button id="method-summary-table-tab5" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab5', 3)" class="table-tab">Default Methods</button></div>
-<div id="method-summary-table.tabpanel" role="tabpanel">
-<div class="summary-table three-column-summary" aria-labelledby="method-summary-table-tab0">
+<div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
+<div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
@@ -127,7 +127,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getResource()" class="member-name-link">getResource</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Reference to the resource that triggered the message.</div>
+<div class="block">Reference to the resource that triggered the notification.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../message/UserProvidedIdentifiers.html" title="interface in com.commercetools.api.models.message">UserProvidedIdentifiers</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getResourceUserProvidedIdentifiers()" class="member-name-link">getResourceUserProvidedIdentifiers</a>()</code></div>
@@ -162,7 +162,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setResource(com.commercetools.api.models.common.Reference)" class="member-name-link">setResource</a><wbr>(<a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&nbsp;resource)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Reference to the resource that triggered the message.</div>
+<div class="block">Reference to the resource that triggered the notification.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers)" class="member-name-link">setResourceUserProvidedIdentifiers</a><wbr>(<a href="../message/UserProvidedIdentifiers.html" title="interface in com.commercetools.api.models.message">UserProvidedIdentifiers</a>&nbsp;resourceUserProvidedIdentifiers)</code></div>
@@ -198,7 +198,7 @@ loadScripts(document, 'script');</script>
 <h3>getProjectKey</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getProjectKey</span>()</div>
-<div class="block"><p><code>key</code> of the Project. Useful in message processing if the Destination receives events from multiple Projects.</p></div>
+<div class="block"><p><code>key</code> of the Project. Useful for processing notifications if the Destination receives them from multiple Projects.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>projectKey</dd>
@@ -223,7 +223,7 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
 </span><span class="return-type">@NotNull @Valid <a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a></span>&nbsp;<span class="element-name">getResource</span>()</div>
-<div class="block"><p>Reference to the resource that triggered the message.</p></div>
+<div class="block"><p>Reference to the resource that triggered the notification.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>resource</dd>
@@ -246,7 +246,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setProjectKey(java.lang.String)">
 <h3>setProjectKey</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setProjectKey</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</span></div>
-<div class="block"><p><code>key</code> of the Project. Useful in message processing if the Destination receives events from multiple Projects.</p></div>
+<div class="block"><p><code>key</code> of the Project. Useful for processing notifications if the Destination receives them from multiple Projects.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>projectKey</code> - value to be set</dd>
@@ -257,7 +257,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setResource(com.commercetools.api.models.common.Reference)">
 <h3>setResource</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setResource</span><wbr><span class="parameters">(<a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&nbsp;resource)</span></div>
-<div class="block"><p>Reference to the resource that triggered the message.</p></div>
+<div class="block"><p>Reference to the resource that triggered the notification.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>resource</code> - value to be set</dd>

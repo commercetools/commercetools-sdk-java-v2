@@ -125,8 +125,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h2>Method Summary</h2>
 <div id="method-summary-table">
 <div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
-<div id="method-summary-table.tabpanel" role="tabpanel">
-<div class="summary-table three-column-summary" aria-labelledby="method-summary-table-tab0">
+<div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
+<div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
@@ -173,7 +173,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getResource()" class="member-name-link">getResource</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Reference to the resource that triggered the message.</div>
+<div class="block">Reference to the resource that triggered the notification.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../message/UserProvidedIdentifiers.html" title="interface in com.commercetools.api.models.message">UserProvidedIdentifiers</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getResourceUserProvidedIdentifiers()" class="member-name-link">getResourceUserProvidedIdentifiers</a>()</code></div>
@@ -183,7 +183,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getResourceVersion()" class="member-name-link">getResourceVersion</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Version of the resource on which the change was performed.</div>
+<div class="block">Version of the resource on which the update was performed.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSequenceNumber()" class="member-name-link">getSequenceNumber</a>()</code></div>
@@ -233,12 +233,12 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#resource(com.commercetools.api.models.common.Reference)" class="member-name-link">resource</a><wbr>(<a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&nbsp;resource)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Reference to the resource that triggered the message.</div>
+<div class="block">Reference to the resource that triggered the notification.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#resource(java.util.function.Function)" class="member-name-link">resource</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ReferenceBuilder.html" title="class in com.commercetools.api.models.common">ReferenceBuilder</a>,<wbr><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&gt;&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Reference to the resource that triggered the message.</div>
+<div class="block">Reference to the resource that triggered the notification.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#resourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers)" class="member-name-link">resourceUserProvidedIdentifiers</a><wbr>(<a href="../message/UserProvidedIdentifiers.html" title="interface in com.commercetools.api.models.message">UserProvidedIdentifiers</a>&nbsp;resourceUserProvidedIdentifiers)</code></div>
@@ -253,7 +253,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#resourceVersion(java.lang.Long)" class="member-name-link">resourceVersion</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;resourceVersion)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Version of the resource on which the change was performed.</div>
+<div class="block">Version of the resource on which the update was performed.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#sequenceNumber(java.lang.Long)" class="member-name-link">sequenceNumber</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;sequenceNumber)</code></div>
@@ -310,7 +310,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="projectKey(java.lang.String)">
 <h3>projectKey</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></span>&nbsp;<span class="element-name">projectKey</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</span></div>
-<div class="block"><p><code>key</code> of the Project. Useful in message processing if the Destination receives events from multiple Projects.</p></div>
+<div class="block"><p><code>key</code> of the Project. Useful for processing notifications if the Destination receives them from multiple Projects.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>projectKey</code> - value to be set</dd>
@@ -323,7 +323,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="resource(com.commercetools.api.models.common.Reference)">
 <h3>resource</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></span>&nbsp;<span class="element-name">resource</span><wbr><span class="parameters">(<a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&nbsp;resource)</span></div>
-<div class="block"><p>Reference to the resource that triggered the message.</p></div>
+<div class="block"><p>Reference to the resource that triggered the notification.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>resource</code> - value to be set</dd>
@@ -336,7 +336,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="resource(java.util.function.Function)">
 <h3>resource</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></span>&nbsp;<span class="element-name">resource</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ReferenceBuilder.html" title="class in com.commercetools.api.models.common">ReferenceBuilder</a>,<wbr><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&gt;&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Reference to the resource that triggered the message.</p></div>
+<div class="block"><p>Reference to the resource that triggered the notification.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the resource value</dd>
@@ -454,7 +454,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="resourceVersion(java.lang.Long)">
 <h3>resourceVersion</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></span>&nbsp;<span class="element-name">resourceVersion</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;resourceVersion)</span></div>
-<div class="block"><p>Version of the resource on which the change was performed.</p></div>
+<div class="block"><p>Version of the resource on which the update was performed.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>resourceVersion</code> - value to be set</dd>
@@ -507,7 +507,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getProjectKey()">
 <h3>getProjectKey</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getProjectKey</span>()</div>
-<div class="block"><p><code>key</code> of the Project. Useful in message processing if the Destination receives events from multiple Projects.</p></div>
+<div class="block"><p><code>key</code> of the Project. Useful for processing notifications if the Destination receives them from multiple Projects.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>projectKey</dd>
@@ -518,7 +518,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getResource()">
 <h3>getResource</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a></span>&nbsp;<span class="element-name">getResource</span>()</div>
-<div class="block"><p>Reference to the resource that triggered the message.</p></div>
+<div class="block"><p>Reference to the resource that triggered the notification.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>resource</dd>
@@ -596,7 +596,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getResourceVersion()">
 <h3>getResourceVersion</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">getResourceVersion</span>()</div>
-<div class="block"><p>Version of the resource on which the change was performed.</p></div>
+<div class="block"><p>Version of the resource on which the update was performed.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>resourceVersion</dd>

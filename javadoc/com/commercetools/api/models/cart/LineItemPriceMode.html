@@ -136,8 +136,8 @@ extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="in
 <h2>Method Summary</h2>
 <div id="method-summary-table">
 <div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button></div>
-<div id="method-summary-table.tabpanel" role="tabpanel">
-<div class="summary-table three-column-summary" aria-labelledby="method-summary-table-tab0">
+<div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
+<div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
@@ -204,7 +204,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="in
 <section class="detail" id="EXTERNAL_TOTAL">
 <h3>EXTERNAL_TOTAL</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="LineItemPriceMode.html" title="interface in com.commercetools.api.models.cart">LineItemPriceMode</a></span>&nbsp;<span class="element-name">EXTERNAL_TOTAL</span></div>
-<div class="block"><p>The Line Item price with the total is set externally. Cart Discounts are deactivated for Line Items with this price mode. Although a Line Item with this price mode has both <code>price</code> and <code>totalPrice</code> set externally, only <code>totalPrice</code> is used to calculate the total price of a Cart. All update actions that change the quantity of a Line Item with this price mode can set the new price with the <code>externalTotal</code> field. If the <code>externalTotal</code> field is not given in the update actions, the external price is unset and the price mode is set to <code>Platform</code>.</p></div>
+<div class="block"><p>The Line Item price with the total is set externally. Cart Discounts are deactivated for Line Items with this price mode, despite a matching CartDiscountLineItemsTarget or MultiBuyLineItemsTarget. Although a Line Item with this price mode has both <code>price</code> and <code>totalPrice</code> set externally, only <code>totalPrice</code> is used to calculate the total price of a Cart. All update actions that change the quantity of a Line Item with this price mode can set the new price with the <code>externalTotalPrice</code> field. If the <code>externalTotalPrice</code> field is not given in the update actions, the external price is unset and the price mode is set to <code>Platform</code>.</p></div>
 </section>
 </li>
 </ul>

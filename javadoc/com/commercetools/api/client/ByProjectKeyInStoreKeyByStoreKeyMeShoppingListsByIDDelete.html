@@ -86,7 +86,13 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete</span>
 <span class="extends-implements">extends <a href="../../../../io/vrap/rmf/base/client/TypeApiMethod.html" title="class in io.vrap.rmf.base.client">TypeApiMethod</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete</a>,<wbr><a href="../models/shopping_list/ShoppingList.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingList</a>&gt;
 implements <a href="DataerasureTrait.html" title="interface in com.commercetools.api.client">DataerasureTrait</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete</a>&gt;, <a href="VersionedTrait.html" title="interface in com.commercetools.api.client">VersionedTrait</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete</a>&gt;, <a href="ConflictingTrait.html" title="interface in com.commercetools.api.client">ConflictingTrait</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete</a>&gt;, <a href="ExpandableTrait.html" title="interface in com.commercetools.api.client">ExpandableTrait</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete</a>&gt;, <a href="ErrorableTrait.html" title="interface in com.commercetools.api.client">ErrorableTrait</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete</a>&gt;, <a href="Deprecatable200Trait.html" title="interface in com.commercetools.api.client">Deprecatable200Trait</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete</a>&gt;</span></div>
-<div class="block"><p>If a ShoppingList exists in a Project but does <em>not</em> have the <code>store</code> field, or the <code>store</code> field references a different Store, the ResourceNotFound error is returned.</p>
+<div class="block"><p>Deletes the ShoppingList for a given <code>id</code> in a Store. Returns a <code>200 OK</code> status if successful.</p>
+  <p>A ResourceNotFound error is returned in the following scenarios:</p>
+  <ul>
+   <li>If no ShoppingList matches the given <code>id</code> in a Store.</li>
+   <li>If a ShoppingList matches the given <code>id</code> but does not have a <code>store</code> specified, or the <code>store</code> field references a different Store.</li>
+   <li>If a ShoppingList matches the given <code>id</code> in a Store but does not contain either an <code>anonymousId</code> that matches the anonymous_id:{id} scope, or a <code>customer</code> with <code>id</code> value that matches the customer:{id} scope.</li>
+  </ul>
 
  <hr>
  <div class=code-example>
@@ -138,8 +144,8 @@ implements <a href="DataerasureTrait.html" title="interface in com.commercetools
 <h2>Method Summary</h2>
 <div id="method-summary-table">
 <div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
-<div id="method-summary-table.tabpanel" role="tabpanel">
-<div class="summary-table three-column-summary" aria-labelledby="method-summary-table-tab0">
+<div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
+<div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>

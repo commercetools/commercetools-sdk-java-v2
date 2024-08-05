@@ -120,8 +120,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h2>Method Summary</h2>
 <div id="method-summary-table">
 <div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
-<div id="method-summary-table.tabpanel" role="tabpanel">
-<div class="summary-table three-column-summary" aria-labelledby="method-summary-table-tab0">
+<div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
+<div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
@@ -1003,7 +1003,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="active(java.lang.Boolean)">
 <h3>active</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StandalonePriceBuilder.html" title="class in com.commercetools.api.models.standalone_price">StandalonePriceBuilder</a></span>&nbsp;<span class="element-name">active</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;active)</span></div>
-<div class="block"><p>If set to <code>true</code>, the StandalonePrice is considered during Product price selection. If set to <code>false</code>, the StandalonePrice is not considered during Product price selection.</p></div>
+<div class="block"><p>If set to <code>true</code>, the StandalonePrice is considered during Product price selection. If set to <code>false</code>, the StandalonePrice is not considered during Product price selection and any associated Line Items in a Cart cannot be ordered.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>active</code> - value to be set</dd>
@@ -1227,7 +1227,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getActive()">
 <h3>getActive</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name">getActive</span>()</div>
-<div class="block"><p>If set to <code>true</code>, the StandalonePrice is considered during Product price selection. If set to <code>false</code>, the StandalonePrice is not considered during Product price selection.</p></div>
+<div class="block"><p>If set to <code>true</code>, the StandalonePrice is considered during Product price selection. If set to <code>false</code>, the StandalonePrice is not considered during Product price selection and any associated Line Items in a Cart cannot be ordered.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>active</dd>

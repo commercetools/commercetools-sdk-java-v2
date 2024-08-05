@@ -91,8 +91,8 @@ loadScripts(document, 'script');</script>
 <li>
 <div id="class-summary">
 <div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="class-summary-tab0" role="tab" aria-selected="true" aria-controls="class-summary.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('class-summary', 'class-summary', 2)" class="active-table-tab">All Classes and Interfaces</button><button id="class-summary-tab1" role="tab" aria-selected="false" aria-controls="class-summary.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('class-summary', 'class-summary-tab1', 2)" class="table-tab">Interfaces</button><button id="class-summary-tab2" role="tab" aria-selected="false" aria-controls="class-summary.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('class-summary', 'class-summary-tab2', 2)" class="table-tab">Classes</button></div>
-<div id="class-summary.tabpanel" role="tabpanel">
-<div class="summary-table two-column-summary" aria-labelledby="class-summary-tab0">
+<div id="class-summary.tabpanel" role="tabpanel" aria-labelledby="class-summary-tab0">
+<div class="summary-table two-column-summary">
 <div class="table-header col-first">Class</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ApiCorrelationIdProvider.html" title="class in com.commercetools.api.client">ApiCorrelationIdProvider</a></div>
@@ -868,7 +868,7 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color class-summary class-summary-tab2">&nbsp;</div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyCartsCustomerIdByCustomerIdGet.html" title="class in com.commercetools.api.client">ByProjectKeyCartsCustomerIdByCustomerIdGet</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">Retrieves the recently modified active Cart of a Customer with CartOrigin <code>Customer</code>.</div>
+<div class="block">Retrieves the most recently modified active Cart of a Customer with CartOrigin <code>Customer</code>.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyCartsCustomerIdByCustomerIdHead.html" title="class in com.commercetools.api.client">ByProjectKeyCartsCustomerIdByCustomerIdHead</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
@@ -914,11 +914,11 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color class-summary class-summary-tab2">&nbsp;</div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyCartsPost.html" title="class in com.commercetools.api.client">ByProjectKeyCartsPost</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">Creating a Cart fails with an InvalidOperation error if the ShippingMethod referenced in the CartDraft has a <code>predicate</code> that does not match the Cart.</div>
+<div class="block">If the referenced ShippingMethod in the CartDraft has a predicate that does not match, or if the Shipping Method is not active, an InvalidOperation error is returned.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyCartsPostString.html" title="class in com.commercetools.api.client">ByProjectKeyCartsPostString</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">Creating a Cart fails with an InvalidOperation error if the ShippingMethod referenced in the CartDraft has a <code>predicate</code> that does not match the Cart.</div>
+<div class="block">If the referenced ShippingMethod in the CartDraft has a predicate that does not match, or if the Shipping Method is not active, an InvalidOperation error is returned.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyCartsReplicatePost.html" title="class in com.commercetools.api.client">ByProjectKeyCartsReplicatePost</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
@@ -1262,6 +1262,29 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
 <div class="col-first odd-row-color class-summary class-summary-tab1"><a href="ByProjectKeyCustomersRequestBuilderMixin.html" title="interface in com.commercetools.api.client">ByProjectKeyCustomersRequestBuilderMixin</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab1">&nbsp;</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyCustomersSearchHead.html" title="class in com.commercetools.api.client">ByProjectKeyCustomersSearchHead</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">Checks whether a search index for the Project's Customers exists.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyCustomersSearchIndexingStatusGet.html" title="class in com.commercetools.api.client">ByProjectKeyCustomersSearchIndexingStatusGet</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">
+ </div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyCustomersSearchIndexingStatusRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyCustomersSearchIndexingStatusRequestBuilder</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyCustomersSearchPost.html" title="class in com.commercetools.api.client">ByProjectKeyCustomersSearchPost</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">
+ </div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyCustomersSearchPostString.html" title="class in com.commercetools.api.client">ByProjectKeyCustomersSearchPostString</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">
+ </div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyCustomersSearchRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyCustomersSearchRequestBuilder</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">&nbsp;</div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyCustomObjectsByContainerByKeyDelete.html" title="class in com.commercetools.api.client">ByProjectKeyCustomObjectsByContainerByKeyDelete</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
 <div class="block">
@@ -1544,11 +1567,11 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyCartsByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyCartsByIDDelete</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">If the Cart exists in the Project but does not have the <code>store</code> field, or the <code>store</code> field references a different Store, this method returns a ResourceNotFound error.</div>
+<div class="block">If the Cart exists in the Project but does not have a <code>store</code> specified, or the <code>store</code> field references a different Store, this method returns a ResourceNotFound error.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyCartsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyCartsByIDGet</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">If the Cart exists in the Project but does not have the <code>store</code> field, or the <code>store</code> field references a different Store, this method returns a ResourceNotFound error.</div>
+<div class="block">If the Cart exists in the Project but does not have a <code>store</code> specified, or the <code>store</code> field references a different Store, this method returns a ResourceNotFound error.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyCartsByIDHead.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyCartsByIDHead</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
@@ -1566,7 +1589,7 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">Retrieves the recently modified active Cart of a Customer with CartOrigin <code>Customer</code>.</div>
+<div class="block">Retrieves the most recently modified active Cart of a Customer with CartOrigin <code>Customer</code>.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdHead.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdHead</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
@@ -1576,7 +1599,7 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color class-summary class-summary-tab2">&nbsp;</div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyCartsGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyCartsGet</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">Queries carts in a specific Store.</div>
+<div class="block">Queries Carts in a specific Store.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyCartsHead.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyCartsHead</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
@@ -1584,11 +1607,11 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyDelete.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyDelete</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">If the Cart exists in the Project but does not have the <code>store</code> field, or the <code>store</code> field references a different Store, this method returns a ResourceNotFound error.</div>
+<div class="block">If the Cart exists in the Project but does not have a <code>store</code> specified, or the <code>store</code> field references a different Store, this method returns a ResourceNotFound error.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyGet</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">If the Cart exists in the Project but does not have the <code>store</code> field, or the <code>store</code> field references a different Store, this method returns a ResourceNotFound error.</div>
+<div class="block">If the Cart exists in the Project but does not have a <code>store</code> specified, or the <code>store</code> field references a different Store, this method returns a ResourceNotFound error.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyHead.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyHead</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
@@ -1596,11 +1619,11 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPost</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">If the Cart exists in the Project but does not have the <code>store</code> field, or the <code>store</code> field references a different Store, this method returns a ResourceNotFound error.</div>
+<div class="block">If the Cart exists in the Project but does not have a <code>store</code> specified, or the <code>store</code> field references a different Store, this method returns a ResourceNotFound error.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPostString.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyPostString</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">If the Cart exists in the Project but does not have the <code>store</code> field, or the <code>store</code> field references a different Store, this method returns a ResourceNotFound error.</div>
+<div class="block">If the Cart exists in the Project but does not have a <code>store</code> specified, or the <code>store</code> field references a different Store, this method returns a ResourceNotFound error.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyCartsKeyByKeyRequestBuilder</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">&nbsp;</div>
@@ -1765,54 +1788,52 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyMeActiveCartGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeActiveCartGet</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">Retrieves the Customer's most recently modified active Cart in the Store specified by the <code>storeKey</code> path parameter.</div>
+<div class="block">Retrieves the Customer's most recently modified active Cart in a Store.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyMeActiveCartHead.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeActiveCartHead</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">Checks if an active Cart exists.</div>
+<div class="block">Checks if an active Cart exists in a Store.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyMeActiveCartRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeActiveCartRequestBuilder</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">&nbsp;</div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDDelete</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">
- </div>
+<div class="block">Deletes the Cart for a given <code>id</code> in a Store.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDGet</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">
- </div>
+<div class="block">Returns a Cart for a given <code>id</code> in a Store.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDHead.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDHead</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">Checks ifa My Cart exists for a given <code>id</code>.</div>
+<div class="block">
+ </div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPost.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPost</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">If the Cart exists in the Project but does not have the <code>store</code> field, or the <code>store</code> field references a different Store, this method returns a ResourceNotFound error.</div>
+<div class="block">Updates the Cart for a given <code>id</code> in a Store.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPostString.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDPostString</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">If the Cart exists in the Project but does not have the <code>store</code> field, or the <code>store</code> field references a different Store, this method returns a ResourceNotFound error.</div>
+<div class="block">Updates the Cart for a given <code>id</code> in a Store.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeCartsByIDRequestBuilder</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">&nbsp;</div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyMeCartsGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeCartsGet</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">
- </div>
+<div class="block">Returns all Carts that match a given Query Predicate and contain either a matching <code>customerId</code> or <code>anonymousId</code> in a Store.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyMeCartsHead.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeCartsHead</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">Checks if a Cart exists for a given Query Predicate.</div>
+<div class="block">Checks if a Cart exists for a Store that matches the given Query Predicate, and contains a matching <code>customerId</code> or <code>anonymousId</code>.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyMeCartsPost.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeCartsPost</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">The <code>store</code> field in the created Cart is set to the Store specified by the <code>storeKey</code> path parameter.</div>
+<div class="block">Creates a Cart in a Store for the Customer or anonymous user.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyMeCartsPostString.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeCartsPostString</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">The <code>store</code> field in the created Cart is set to the Store specified by the <code>storeKey</code> path parameter.</div>
+<div class="block">Creates a Cart in a Store for the Customer or anonymous user.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyMeCartsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeCartsRequestBuilder</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
@@ -1848,30 +1869,29 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyMeOrdersByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeOrdersByIDGet</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">If the Order exists in the Project but does not have the <code>store</code> field, or the <code>store</code> field references a different Store, this method returns a ResourceNotFound error.</div>
+<div class="block">Returns an Order for a given <code>id</code> in a Store.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyMeOrdersByIDHead.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeOrdersByIDHead</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">Checks if an Order exists for a given <code>id</code>.</div>
+<div class="block">Checks if an Order exists for a given <code>id</code> in a Store.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyMeOrdersByIDRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeOrdersByIDRequestBuilder</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">&nbsp;</div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyMeOrdersGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeOrdersGet</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">
- </div>
+<div class="block">Returns all Orders in a Store that match a given Query Predicate and contain either a <code>customerId</code> that matches the customer_id:{id} scope, or an <code>anonymousId</code> that matches the anonymous_id:{id} scope.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyMeOrdersHead.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeOrdersHead</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">Checks if an Order exists for a given Query Predicate.</div>
+<div class="block">Checks if an Order exists for a given Query Predicate in a Store.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyMeOrdersPost.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeOrdersPost</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">The Cart must have a shipping address set for taxes to be calculated.</div>
+<div class="block">Creates an Order in a Store from a Cart for the Customer or anonymous user.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyMeOrdersPostString.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeOrdersPostString</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">The Cart must have a shipping address set for taxes to be calculated.</div>
+<div class="block">Creates an Order in a Store from a Cart for the Customer or anonymous user.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyMeOrdersRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeOrdersRequestBuilder</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
@@ -1909,66 +1929,65 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color class-summary class-summary-tab2">&nbsp;</div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDDelete</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">If a ShoppingList exists in a Project but does <em>not</em> have the <code>store</code> field, or the <code>store</code> field references a different Store, the ResourceNotFound error is returned.</div>
+<div class="block">Deletes the ShoppingList for a given <code>id</code> in a Store.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDGet</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">If a ShoppingList exists in a Project but does <em>not</em> have the <code>store</code> field, or the <code>store</code> field references a different Store, the ResourceNotFound error is returned.</div>
+<div class="block">Returns a ShoppingList for a given <code>id</code> in a Store.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDHead.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDHead</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">Checks if a ShoppingList exists for a given <code>id</code>.</div>
+<div class="block">Checks if a ShoppingList exists for a given <code>id</code> in a Store.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPost.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPost</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">If a ShoppingList exists in a Project but does <em>not</em> have the <code>store</code> field, or the <code>store</code> field references a different Store, the ResourceNotFound error is returned.</div>
+<div class="block">Updates a ShoppingList for a given <code>id</code> in a Store.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPostString.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDPostString</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">If a ShoppingList exists in a Project but does <em>not</em> have the <code>store</code> field, or the <code>store</code> field references a different Store, the ResourceNotFound error is returned.</div>
+<div class="block">Updates a ShoppingList for a given <code>id</code> in a Store.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsByIDRequestBuilder</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">&nbsp;</div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsGet</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">
- </div>
+<div class="block">Returns ShoppingLists that match the given Query Predicate in a Store.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab1"><a href="ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsGetMixin.html" title="interface in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsGetMixin</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab1">&nbsp;</div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsHead.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsHead</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">Checks if a ShoppingList exists for a given Query Predicate.</div>
+<div class="block">Checks if a ShoppingList exists for the given Query Predicate in a Store.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsKeyByKeyDelete.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsKeyByKeyDelete</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">If a ShoppingList exists in a Project but does <em>not</em> have the <code>store</code> field, or the <code>store</code> field references a different Store, the ResourceNotFound error is returned.</div>
+<div class="block">Deletes the ShoppingList for a given <code>key</code> in a Store.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsKeyByKeyGet</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">If a ShoppingList exists in a Project but does <em>not</em> have the <code>store</code> field, or the <code>store</code> field references a different Store, the ResourceNotFound error is returned.</div>
+<div class="block">Returns a ShoppingList for a given <code>key</code> in a Store.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsKeyByKeyHead.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsKeyByKeyHead</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">Checks if a ShoppingList exists for a given <code>key</code>.</div>
+<div class="block">Checks if a ShoppingList exists for a given <code>key</code> in a Store.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsKeyByKeyPost.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsKeyByKeyPost</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">If a ShoppingList exists in a Project but does <em>not</em> have the <code>store</code> field, or the <code>store</code> field references a different Store, the ResourceNotFound error is returned.</div>
+<div class="block">Updates a ShoppingList for a given <code>key</code> in a Store.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsKeyByKeyPostString.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsKeyByKeyPostString</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">If a ShoppingList exists in a Project but does <em>not</em> have the <code>store</code> field, or the <code>store</code> field references a different Store, the ResourceNotFound error is returned.</div>
+<div class="block">Updates a ShoppingList for a given <code>key</code> in a Store.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsKeyByKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsKeyByKeyRequestBuilder</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsPost.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsPost</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">When using this endpoint, the <code>store</code> field of a ShoppingList is always set to the Store specified in the path parameter.</div>
+<div class="block">Creates a ShoppingList in a Store for a Customer or anonymous user.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsPostString.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsPostString</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">When using this endpoint, the <code>store</code> field of a ShoppingList is always set to the Store specified in the path parameter.</div>
+<div class="block">Creates a ShoppingList in a Store for a Customer or anonymous user.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMeShoppingListsRequestBuilder</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">&nbsp;</div>
@@ -1984,11 +2003,11 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyOrdersByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyOrdersByIDDelete</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">If the Order exists in the Project but does not have the <code>store</code> field, or the <code>store</code> field references a different Store, this method returns a ResourceNotFound error.</div>
+<div class="block">If the Order exists in the Project but does not have a <code>store</code> specified, or the <code>store</code> field references a different Store, this method returns a ResourceNotFound error.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyOrdersByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyOrdersByIDGet</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">If the Order exists in the Project but does not have the <code>store</code> field, or the <code>store</code> field references a different Store, this method returns a ResourceNotFound error.</div>
+<div class="block">If the Order exists in the Project but does not have a <code>store</code> specified, or the <code>store</code> field references a different Store, this method returns a ResourceNotFound error.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyOrdersByIDHead.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyOrdersByIDHead</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
@@ -1996,11 +2015,11 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyOrdersByIDPost.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyOrdersByIDPost</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">If the Order exists in the Project but does not have the <code>store</code> field, or the <code>store</code> field references a different Store, this method returns a ResourceNotFound error.</div>
+<div class="block">If the Order exists in the Project but does not have a <code>store</code> specified, or the <code>store</code> field references a different Store, this method returns a ResourceNotFound error.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyOrdersByIDPostString.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyOrdersByIDPostString</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">If the Order exists in the Project but does not have the <code>store</code> field, or the <code>store</code> field references a different Store, this method returns a ResourceNotFound error.</div>
+<div class="block">If the Order exists in the Project but does not have a <code>store</code> specified, or the <code>store</code> field references a different Store, this method returns a ResourceNotFound error.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyOrdersByIDRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyOrdersByIDRequestBuilder</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
@@ -2015,11 +2034,11 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberDelete.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberDelete</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">If the Order exists in the Project but does not have the <code>store</code> field, or the <code>store</code> field references a different Store, this method returns a ResourceNotFound error.</div>
+<div class="block">If the Order exists in the Project but does not have a <code>store</code> specified, or the <code>store</code> field references a different Store, this method returns a ResourceNotFound error.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberGet</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">If the Order exists in the Project but does not have the <code>store</code> field, or the <code>store</code> field references a different Store, this method returns a ResourceNotFound error.</div>
+<div class="block">If the Order exists in the Project but does not have a <code>store</code> specified, or the <code>store</code> field references a different Store, this method returns a ResourceNotFound error.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberHead.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberHead</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
@@ -2027,11 +2046,11 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPost.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPost</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">If the Order exists in the Project but does not have the <code>store</code> field, or the <code>store</code> field references a different Store, this method returns a ResourceNotFound error.</div>
+<div class="block">If the Order exists in the Project but does not have a <code>store</code> specified, or the <code>store</code> field references a different Store, this method returns a ResourceNotFound error.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPostString.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberPostString</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">If the Order exists in the Project but does not have the <code>store</code> field, or the <code>store</code> field references a different Store, this method returns a ResourceNotFound error.</div>
+<div class="block">If the Order exists in the Project but does not have a <code>store</code> specified, or the <code>store</code> field references a different Store, this method returns a ResourceNotFound error.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberRequestBuilder</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
@@ -2043,40 +2062,60 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color class-summary class-summary-tab2">
 <div class="block">Before you create an Order, the Cart must have a shipping address set.</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyOrdersRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyOrdersRequestBuilder</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab2">&nbsp;</div>
-<div class="col-first even-row-color class-summary class-summary-tab1"><a href="ByProjectKeyInStoreKeyByStoreKeyOrdersRequestMixin.html" title="interface in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyOrdersRequestMixin</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab1">&nbsp;</div>
-<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet</a></div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyOrdersQuotesPost.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyOrdersQuotesPost</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">Creating an Order produces the OrderCreated Message.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyOrdersQuotesPostString.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyOrdersQuotesPostString</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">Creating an Order produces the OrderCreated Message.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyOrdersQuotesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyOrdersQuotesRequestBuilder</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">&nbsp;</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyOrdersRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyOrdersRequestBuilder</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="ByProjectKeyInStoreKeyByStoreKeyOrdersRequestMixin.html" title="interface in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyOrdersRequestMixin</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">&nbsp;</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDGet</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
 <div class="block">Gets the current or staged representation of a Product by its ID in the specified Store.</div>
 </div>
-<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDHead.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDHead</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDHead.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDHead</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
 <div class="block">Checks if the current or staged representations of a Product exists for a given <code>id</code> in the specified Store.</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDRequestBuilder</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab2">&nbsp;</div>
-<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyProductProjectionsByIDRequestBuilder</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyGet</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
 <div class="block">Gets the current or staged representation of a Product by its key in the specified Store.</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyHead.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyHead</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyHead.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyHead</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
 <div class="block">Checks if the current or staged representations of a Product exists for a given <code>key</code> in the specified Store.</div>
 </div>
-<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyRequestBuilder</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
-<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyProductProjectionsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyProductProjectionsRequestBuilder</a></div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyRequestBuilder</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">&nbsp;</div>
-<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyProductsByProductIDProductTailoringDelete.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyProductsByProductIDProductTailoringDelete</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyProductProjectionsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyProductProjectionsRequestBuilder</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyProductsByProductIDProductTailoringDelete.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyProductsByProductIDProductTailoringDelete</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
 <div class="block">Generates the ProductTailoringDeleted Message.</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyProductsByProductIDProductTailoringGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyProductsByProductIDProductTailoringGet</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyProductsByProductIDProductTailoringGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyProductsByProductIDProductTailoringGet</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
 <div class="block">Gets the current or staged representation of a Product Tailoring by its Product ID in the specified Store.</div>
 </div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyProductsByProductIDProductTailoringImagesPost.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyProductsByProductIDProductTailoringImagesPost</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">Upload a JPEG, PNG and GIF file to a ProductTailoringVariant.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyProductsByProductIDProductTailoringImagesPostString.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyProductsByProductIDProductTailoringImagesPostString</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">Upload a JPEG, PNG and GIF file to a ProductTailoringVariant.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyProductsByProductIDProductTailoringImagesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyProductsByProductIDProductTailoringImagesRequestBuilder</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">&nbsp;</div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyProductsByProductIDProductTailoringPost.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyProductsByProductIDProductTailoringPost</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
 <div class="block">Updates the current or staged representation of a Product Tailoring by its Product ID in the specified Store.</div>
@@ -2103,115 +2142,344 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
 <div class="block">Gets the current or staged representation of a Product Tailoring by its Product key in the specified Store.</div>
 </div>
-<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyProductsKeyByProductKeyProductTailoringPost.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyProductsKeyByProductKeyProductTailoringPost</a></div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyProductsKeyByProductKeyProductTailoringImagesPost.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyProductsKeyByProductKeyProductTailoringImagesPost</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">Upload a JPEG, PNG and GIF file to a ProductTailoringVariant.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyProductsKeyByProductKeyProductTailoringImagesPostString.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyProductsKeyByProductKeyProductTailoringImagesPostString</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">Upload a JPEG, PNG and GIF file to a ProductTailoringVariant.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyProductsKeyByProductKeyProductTailoringImagesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyProductsKeyByProductKeyProductTailoringImagesRequestBuilder</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyProductsKeyByProductKeyProductTailoringPost.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyProductsKeyByProductKeyProductTailoringPost</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">Updates the current or staged representation of a Product Tailoring by its Product key in the specified Store.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyProductsKeyByProductKeyProductTailoringPostString.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyProductsKeyByProductKeyProductTailoringPostString</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
 <div class="block">Updates the current or staged representation of a Product Tailoring by its Product key in the specified Store.</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyProductsKeyByProductKeyProductTailoringPostString.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyProductsKeyByProductKeyProductTailoringPostString</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">Updates the current or staged representation of a Product Tailoring by its Product key in the specified Store.</div>
-</div>
-<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyProductsKeyByProductKeyProductTailoringRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyProductsKeyByProductKeyProductTailoringRequestBuilder</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
-<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyProductsKeyByProductKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyProductsKeyByProductKeyRequestBuilder</a></div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyProductsKeyByProductKeyProductTailoringRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyProductsKeyByProductKeyProductTailoringRequestBuilder</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">&nbsp;</div>
-<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyProductsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyProductsRequestBuilder</a></div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyProductsKeyByProductKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyProductsKeyByProductKeyRequestBuilder</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
-<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyProductTailoringGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyProductTailoringGet</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyProductsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyProductsRequestBuilder</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">&nbsp;</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyProductTailoringGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyProductTailoringGet</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
 <div class="block">Queries Product Tailoring in a specific Store.</div>
 </div>
-<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyProductTailoringPost.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyProductTailoringPost</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">Creates a ProductTailoring in the Store specified by <code>storeKey</code>.</div>
-</div>
-<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyProductTailoringPostString.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyProductTailoringPostString</a></div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyProductTailoringPost.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyProductTailoringPost</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
 <div class="block">Creates a ProductTailoring in the Store specified by <code>storeKey</code>.</div>
 </div>
-<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyProductTailoringRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyProductTailoringRequestBuilder</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
-<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyRequestBuilder</a></div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyProductTailoringPostString.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyProductTailoringPostString</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">Creates a ProductTailoring in the Store specified by <code>storeKey</code>.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyProductTailoringRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyProductTailoringRequestBuilder</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">&nbsp;</div>
-<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">Retrieves all the ShippingMethods that can ship to the shipping address of the given Cart in a given Store.</div>
-</div>
-<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartHead.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartHead</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">Checks if a ShippingMethod that can ship to the shipping address of the given Cart exists in the given Store.</div>
-</div>
-<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartRequestBuilder</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
-<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyShippingMethodsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShippingMethodsRequestBuilder</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab2">&nbsp;</div>
-<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDDelete</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">If a ShoppingList exists in a Project but does <em>not</em> have the <code>store</code> field, or the <code>store</code> field references a different Store, the ResourceNotFound error is returned.</div>
-</div>
-<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDGet</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">If a ShoppingList exists in a Project but does <em>not</em> have the <code>store</code> field, or the <code>store</code> field references a different Store, the ResourceNotFound error is returned.</div>
-</div>
-<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDHead.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDHead</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">Checks if a ShoppingList exists for a given <code>id</code>.</div>
-</div>
-<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDPost.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDPost</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">If a ShoppingList exists in a Project but does <em>not</em> have the <code>store</code> field, or the <code>store</code> field references a different Store, the ResourceNotFound error is returned.</div>
-</div>
-<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDPostString.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDPostString</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">If a ShoppingList exists in a Project but does <em>not</em> have the <code>store</code> field, or the <code>store</code> field references a different Store, the ResourceNotFound error is returned.</div>
-</div>
-<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDRequestBuilder</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab2">&nbsp;</div>
-<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsGet</a></div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyQuoteRequestsByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyQuoteRequestsByIDDelete</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
 <div class="block">
  </div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsGetMixin.html" title="interface in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsGetMixin</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab1">&nbsp;</div>
-<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsHead.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsHead</a></div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyQuoteRequestsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyQuoteRequestsByIDGet</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">
+ </div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyQuoteRequestsByIDHead.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyQuoteRequestsByIDHead</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">Checks if a QuoteRequest exists for a given <code>id</code>.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyQuoteRequestsByIDPost.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyQuoteRequestsByIDPost</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">
+ </div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyQuoteRequestsByIDPostString.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyQuoteRequestsByIDPostString</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">
+ </div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyQuoteRequestsByIDRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyQuoteRequestsByIDRequestBuilder</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">&nbsp;</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyQuoteRequestsGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyQuoteRequestsGet</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">
+ </div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyQuoteRequestsHead.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyQuoteRequestsHead</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">Checks if a QuoteRequest exists for a given Query Predicate.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyQuoteRequestsKeyByKeyDelete.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyQuoteRequestsKeyByKeyDelete</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">
+ </div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyQuoteRequestsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyQuoteRequestsKeyByKeyGet</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">
+ </div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyQuoteRequestsKeyByKeyHead.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyQuoteRequestsKeyByKeyHead</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">Checks if a QuoteRequest exists for a given <code>key</code>.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyQuoteRequestsKeyByKeyPost.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyQuoteRequestsKeyByKeyPost</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">
+ </div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyQuoteRequestsKeyByKeyPostString.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyQuoteRequestsKeyByKeyPostString</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">
+ </div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyQuoteRequestsKeyByKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyQuoteRequestsKeyByKeyRequestBuilder</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">&nbsp;</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyQuoteRequestsPost.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyQuoteRequestsPost</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">
+ </div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyQuoteRequestsPostString.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyQuoteRequestsPostString</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">
+ </div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyQuoteRequestsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyQuoteRequestsRequestBuilder</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyQuotesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyQuotesByIDDelete</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">
+ </div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyQuotesByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyQuotesByIDGet</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">
+ </div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyQuotesByIDHead.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyQuotesByIDHead</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">Checks if a Quote exists for a given <code>id</code>.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyQuotesByIDPost.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyQuotesByIDPost</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">
+ </div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyQuotesByIDPostString.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyQuotesByIDPostString</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">
+ </div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyQuotesByIDRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyQuotesByIDRequestBuilder</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyQuotesGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyQuotesGet</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">
+ </div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyQuotesHead.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyQuotesHead</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">Checks if a Quote exists for a given Query Predicate.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyQuotesKeyByKeyDelete.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyQuotesKeyByKeyDelete</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">
+ </div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyQuotesKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyQuotesKeyByKeyGet</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">
+ </div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyQuotesKeyByKeyHead.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyQuotesKeyByKeyHead</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">Checks if a Quote exists for a given <code>key</code>.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyQuotesKeyByKeyPost.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyQuotesKeyByKeyPost</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">
+ </div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyQuotesKeyByKeyPostString.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyQuotesKeyByKeyPostString</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">
+ </div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyQuotesKeyByKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyQuotesKeyByKeyRequestBuilder</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyQuotesPost.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyQuotesPost</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">
+ </div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyQuotesPostString.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyQuotesPostString</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">
+ </div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyQuotesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyQuotesRequestBuilder</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">&nbsp;</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyRequestBuilder</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">Retrieves all the active ShippingMethods that can ship to the shipping address of the given Cart in a given Store.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartHead.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartHead</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">Checks if an active ShippingMethod that can ship to the shipping address of the given Cart exists in the given Store.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartRequestBuilder</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">&nbsp;</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyShippingMethodsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShippingMethodsRequestBuilder</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDDelete</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">If a ShoppingList exists in a Project but does <em>not</em> have the <code>store</code> field, or the <code>store</code> field references a different Store, the ResourceNotFound error is returned.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDGet</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">If a ShoppingList exists in a Project but does <em>not</em> have the <code>store</code> field, or the <code>store</code> field references a different Store, the ResourceNotFound error is returned.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDHead.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDHead</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">Checks if a ShoppingList exists for a given <code>id</code>.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDPost.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDPost</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">If a ShoppingList exists in a Project but does <em>not</em> have the <code>store</code> field, or the <code>store</code> field references a different Store, the ResourceNotFound error is returned.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDPostString.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDPostString</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">If a ShoppingList exists in a Project but does <em>not</em> have the <code>store</code> field, or the <code>store</code> field references a different Store, the ResourceNotFound error is returned.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDRequestBuilder</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsGet</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">
+ </div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsGetMixin.html" title="interface in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsGetMixin</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab1">&nbsp;</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsHead.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsHead</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
 <div class="block">Checks if a ShoppingList exists for a given Query Predicate.</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsKeyByKeyDelete.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsKeyByKeyDelete</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">If a ShoppingList exists in a Project but does <em>not</em> have the <code>store</code> field, or the <code>store</code> field references a different Store, the ResourceNotFound error is returned.</div>
-</div>
-<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsKeyByKeyGet</a></div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsKeyByKeyDelete.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsKeyByKeyDelete</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
 <div class="block">If a ShoppingList exists in a Project but does <em>not</em> have the <code>store</code> field, or the <code>store</code> field references a different Store, the ResourceNotFound error is returned.</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsKeyByKeyHead.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsKeyByKeyHead</a></div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsKeyByKeyGet</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">If a ShoppingList exists in a Project but does <em>not</em> have the <code>store</code> field, or the <code>store</code> field references a different Store, the ResourceNotFound error is returned.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsKeyByKeyHead.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsKeyByKeyHead</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
 <div class="block">Checks if a ShoppingList exists for a given <code>key</code>.</div>
 </div>
-<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsKeyByKeyPost.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsKeyByKeyPost</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">If a ShoppingList exists in a Project but does <em>not</em> have the <code>store</code> field, or the <code>store</code> field references a different Store, the ResourceNotFound error is returned.</div>
-</div>
-<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsKeyByKeyPostString.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsKeyByKeyPostString</a></div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsKeyByKeyPost.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsKeyByKeyPost</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
 <div class="block">If a ShoppingList exists in a Project but does <em>not</em> have the <code>store</code> field, or the <code>store</code> field references a different Store, the ResourceNotFound error is returned.</div>
 </div>
-<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsKeyByKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsKeyByKeyRequestBuilder</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
-<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsPost.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsPost</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">When using this endpoint, the <code>store</code> field of a ShoppingList is always set to the Store specified in the path parameter.</div>
-</div>
-<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsPostString.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsPostString</a></div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsKeyByKeyPostString.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsKeyByKeyPostString</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">When using this endpoint, the <code>store</code> field of a ShoppingList is always set to the Store specified in the path parameter.</div>
+<div class="block">If a ShoppingList exists in a Project but does <em>not</em> have the <code>store</code> field, or the <code>store</code> field references a different Store, the ResourceNotFound error is returned.</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsRequestBuilder</a></div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsKeyByKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsKeyByKeyRequestBuilder</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">&nbsp;</div>
-<div class="col-first even-row-color class-summary class-summary-tab1"><a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsRequestMixin.html" title="interface in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsRequestMixin</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab1">&nbsp;</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsPost.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsPost</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">When using this endpoint, the <code>store</code> field of a ShoppingList is always set to the Store specified in the path parameter.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsPostString.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsPostString</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">When using this endpoint, the <code>store</code> field of a ShoppingList is always set to the Store specified in the path parameter.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsRequestBuilder</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
+<div class="col-first odd-row-color class-summary class-summary-tab1"><a href="ByProjectKeyInStoreKeyByStoreKeyShoppingListsRequestMixin.html" title="interface in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsRequestMixin</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab1">&nbsp;</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyStagedQuotesByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyStagedQuotesByIDDelete</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">
+ </div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyStagedQuotesByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyStagedQuotesByIDGet</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">
+ </div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyStagedQuotesByIDHead.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyStagedQuotesByIDHead</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">Checks if a StagedQuote exists for a given <code>id</code>.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyStagedQuotesByIDPost.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyStagedQuotesByIDPost</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">
+ </div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyStagedQuotesByIDPostString.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyStagedQuotesByIDPostString</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">
+ </div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyStagedQuotesByIDRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyStagedQuotesByIDRequestBuilder</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">&nbsp;</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyStagedQuotesGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyStagedQuotesGet</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">
+ </div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyStagedQuotesHead.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyStagedQuotesHead</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">Checks if a StagedQuote exists for a given Query Predicate.</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyStagedQuotesKeyByKeyDelete.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyStagedQuotesKeyByKeyDelete</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">
+ </div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyStagedQuotesKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyStagedQuotesKeyByKeyGet</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">
+ </div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyStagedQuotesKeyByKeyHead.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyStagedQuotesKeyByKeyHead</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">Checks if a StagedQuote exists for a given <code>key</code>.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyStagedQuotesKeyByKeyPost.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyStagedQuotesKeyByKeyPost</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">
+ </div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyStagedQuotesKeyByKeyPostString.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyStagedQuotesKeyByKeyPostString</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">
+ </div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyStagedQuotesKeyByKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyStagedQuotesKeyByKeyRequestBuilder</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">&nbsp;</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyStagedQuotesPost.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyStagedQuotesPost</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">
+ </div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyStagedQuotesPostString.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyStagedQuotesPostString</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">
+ </div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInStoreKeyByStoreKeyStagedQuotesRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyStagedQuotesRequestBuilder</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyInventoryByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyInventoryByIDDelete</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
 <div class="block">Produces the InventoryEntryDeleted Message.</div>
@@ -2378,13 +2646,11 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeCartsByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyMeCartsByIDDelete</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">
- </div>
+<div class="block">Deletes the Cart for a given <code>id</code>.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeCartsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyMeCartsByIDGet</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">
- </div>
+<div class="block">Returns a Cart for a given <code>id</code>.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeCartsByIDHead.html" title="class in com.commercetools.api.client">ByProjectKeyMeCartsByIDHead</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
@@ -2392,60 +2658,29 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeCartsByIDPost.html" title="class in com.commercetools.api.client">ByProjectKeyMeCartsByIDPost</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">
- </div>
+<div class="block">Updates the Cart for a given <code>id</code>.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeCartsByIDPostString.html" title="class in com.commercetools.api.client">ByProjectKeyMeCartsByIDPostString</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">
- </div>
+<div class="block">Updates the Cart for a given <code>id</code>.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeCartsByIDRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyMeCartsByIDRequestBuilder</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeCartsGet.html" title="class in com.commercetools.api.client">ByProjectKeyMeCartsGet</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">
- </div>
+<div class="block">Returns all Carts that match a given Query Predicate and contain either a matching <code>customerId</code> or <code>anonymousId</code>.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeCartsHead.html" title="class in com.commercetools.api.client">ByProjectKeyMeCartsHead</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">Checks if a Cart exists for a given Query Predicate.</div>
+<div class="block">Checks if a Cart exists that matches a given Query Predicate and contains either a matching <code>customerId</code> or <code>anonymousId</code>.</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeCartsKeyByKeyDelete.html" title="class in com.commercetools.api.client">ByProjectKeyMeCartsKeyByKeyDelete</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">
- </div>
-</div>
-<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeCartsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyMeCartsKeyByKeyGet</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">
- </div>
-</div>
-<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeCartsKeyByKeyHead.html" title="class in com.commercetools.api.client">ByProjectKeyMeCartsKeyByKeyHead</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">Checks if a Cart exists for a given <code>key</code>.</div>
-</div>
-<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeCartsKeyByKeyPost.html" title="class in com.commercetools.api.client">ByProjectKeyMeCartsKeyByKeyPost</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">
- </div>
-</div>
-<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeCartsKeyByKeyPostString.html" title="class in com.commercetools.api.client">ByProjectKeyMeCartsKeyByKeyPostString</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">
- </div>
-</div>
-<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeCartsKeyByKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyMeCartsKeyByKeyRequestBuilder</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeCartsPost.html" title="class in com.commercetools.api.client">ByProjectKeyMeCartsPost</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">
- </div>
+<div class="block">Creates a Cart for the Customer or anonymous user.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeCartsPostString.html" title="class in com.commercetools.api.client">ByProjectKeyMeCartsPostString</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">
- </div>
+<div class="block">Creates a Cart for the Customer or anonymous user.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeCartsReplicatePost.html" title="class in com.commercetools.api.client">ByProjectKeyMeCartsReplicatePost</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
@@ -2491,8 +2726,7 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeOrdersByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyMeOrdersByIDGet</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">
- </div>
+<div class="block">Returns an Order for a given <code>id</code>.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeOrdersByIDHead.html" title="class in com.commercetools.api.client">ByProjectKeyMeOrdersByIDHead</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
@@ -2502,8 +2736,7 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color class-summary class-summary-tab2">&nbsp;</div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeOrdersGet.html" title="class in com.commercetools.api.client">ByProjectKeyMeOrdersGet</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">
- </div>
+<div class="block">Returns all Orders that match a given Query Predicate.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeOrdersHead.html" title="class in com.commercetools.api.client">ByProjectKeyMeOrdersHead</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
@@ -2511,11 +2744,11 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeOrdersPost.html" title="class in com.commercetools.api.client">ByProjectKeyMeOrdersPost</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">The Cart must have a shipping address set for taxes to be calculated.</div>
+<div class="block">Creates an Order from a Cart for the Customer or anonymous user.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeOrdersPostString.html" title="class in com.commercetools.api.client">ByProjectKeyMeOrdersPostString</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">The Cart must have a shipping address set for taxes to be calculated.</div>
+<div class="block">Creates an Order from a Cart for the Customer or anonymous user.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeOrdersQuotesPost.html" title="class in com.commercetools.api.client">ByProjectKeyMeOrdersQuotesPost</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
@@ -2601,45 +2834,34 @@ loadScripts(document, 'script');</script>
 <div class="block">
  </div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeQuoteRequestsByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyMeQuoteRequestsByIDDelete</a></div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeQuoteRequestsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyMeQuoteRequestsByIDGet</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
 <div class="block">
  </div>
 </div>
-<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeQuoteRequestsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyMeQuoteRequestsByIDGet</a></div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeQuoteRequestsByIDHead.html" title="class in com.commercetools.api.client">ByProjectKeyMeQuoteRequestsByIDHead</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab2">
+<div class="block">Checks if a QuoteRequest exists for a given <code>id</code>.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeQuoteRequestsByIDPost.html" title="class in com.commercetools.api.client">ByProjectKeyMeQuoteRequestsByIDPost</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">
+ </div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeQuoteRequestsByIDPostString.html" title="class in com.commercetools.api.client">ByProjectKeyMeQuoteRequestsByIDPostString</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
 <div class="block">
  </div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeQuoteRequestsByIDHead.html" title="class in com.commercetools.api.client">ByProjectKeyMeQuoteRequestsByIDHead</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">Checks if my QuoteRequest exists for a given <code>id</code>.</div>
-</div>
-<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeQuoteRequestsByIDPost.html" title="class in com.commercetools.api.client">ByProjectKeyMeQuoteRequestsByIDPost</a></div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeQuoteRequestsByIDRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyMeQuoteRequestsByIDRequestBuilder</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">&nbsp;</div>
+<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeQuoteRequestsGet.html" title="class in com.commercetools.api.client">ByProjectKeyMeQuoteRequestsGet</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">
- </div>
+<div class="block">Returns all Quote Requests that match a given Query Predicate.</div>
 </div>
-<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeQuoteRequestsByIDPostString.html" title="class in com.commercetools.api.client">ByProjectKeyMeQuoteRequestsByIDPostString</a></div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeQuoteRequestsHead.html" title="class in com.commercetools.api.client">ByProjectKeyMeQuoteRequestsHead</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">
- </div>
-</div>
-<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeQuoteRequestsByIDRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyMeQuoteRequestsByIDRequestBuilder</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
-<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeQuoteRequestsGet.html" title="class in com.commercetools.api.client">ByProjectKeyMeQuoteRequestsGet</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">
- </div>
-</div>
-<div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeQuoteRequestsHead.html" title="class in com.commercetools.api.client">ByProjectKeyMeQuoteRequestsHead</a></div>
-<div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">Checks if my QuoteRequest exists for a given Query Predicate.</div>
-</div>
-<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeQuoteRequestsKeyByKeyDelete.html" title="class in com.commercetools.api.client">ByProjectKeyMeQuoteRequestsKeyByKeyDelete</a></div>
-<div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">
- </div>
+<div class="block">Checks if a QuoteRequest exists for a given Query Predicate.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeQuoteRequestsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyMeQuoteRequestsKeyByKeyGet</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
@@ -2648,7 +2870,7 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeQuoteRequestsKeyByKeyHead.html" title="class in com.commercetools.api.client">ByProjectKeyMeQuoteRequestsKeyByKeyHead</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">Checks if my QuoteRequest exists for a given <code>key</code>.</div>
+<div class="block">Checks if a QuoteRequest exists for a given <code>key</code>.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeQuoteRequestsKeyByKeyPost.html" title="class in com.commercetools.api.client">ByProjectKeyMeQuoteRequestsKeyByKeyPost</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
@@ -2731,13 +2953,11 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color class-summary class-summary-tab2">&nbsp;</div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeShoppingListsByIDDelete.html" title="class in com.commercetools.api.client">ByProjectKeyMeShoppingListsByIDDelete</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">
- </div>
+<div class="block">Deletes the ShoppingList for a given <code>id</code>.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeShoppingListsByIDGet.html" title="class in com.commercetools.api.client">ByProjectKeyMeShoppingListsByIDGet</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">
- </div>
+<div class="block">Returns a ShoppingList for a given <code>id</code>.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeShoppingListsByIDHead.html" title="class in com.commercetools.api.client">ByProjectKeyMeShoppingListsByIDHead</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
@@ -2745,34 +2965,29 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeShoppingListsByIDPost.html" title="class in com.commercetools.api.client">ByProjectKeyMeShoppingListsByIDPost</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">
- </div>
+<div class="block">Updates a ShoppingList for a given <code>id</code>.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeShoppingListsByIDPostString.html" title="class in com.commercetools.api.client">ByProjectKeyMeShoppingListsByIDPostString</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">
- </div>
+<div class="block">Updates a ShoppingList for a given <code>id</code>.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeShoppingListsByIDRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyMeShoppingListsByIDRequestBuilder</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">&nbsp;</div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeShoppingListsGet.html" title="class in com.commercetools.api.client">ByProjectKeyMeShoppingListsGet</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">
- </div>
+<div class="block">Returns all ShoppingLists that match the given Query Predicate.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeShoppingListsHead.html" title="class in com.commercetools.api.client">ByProjectKeyMeShoppingListsHead</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">Checks if a ShoppingList exists for a given Query Predicate.</div>
+<div class="block">Checks if a ShoppingList matches the given Query Predicate.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeShoppingListsKeyByKeyDelete.html" title="class in com.commercetools.api.client">ByProjectKeyMeShoppingListsKeyByKeyDelete</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">
- </div>
+<div class="block">Deletes the ShoppingList for a given <code>key</code>.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeShoppingListsKeyByKeyGet.html" title="class in com.commercetools.api.client">ByProjectKeyMeShoppingListsKeyByKeyGet</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">
- </div>
+<div class="block">Returns a ShoppingList for a given <code>key</code>.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeShoppingListsKeyByKeyHead.html" title="class in com.commercetools.api.client">ByProjectKeyMeShoppingListsKeyByKeyHead</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
@@ -2780,25 +2995,21 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeShoppingListsKeyByKeyPost.html" title="class in com.commercetools.api.client">ByProjectKeyMeShoppingListsKeyByKeyPost</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">
- </div>
+<div class="block">Updates a ShoppingList for a given <code>key</code>.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeShoppingListsKeyByKeyPostString.html" title="class in com.commercetools.api.client">ByProjectKeyMeShoppingListsKeyByKeyPostString</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">
- </div>
+<div class="block">Updates a ShoppingList for a given <code>key</code>.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeShoppingListsKeyByKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyMeShoppingListsKeyByKeyRequestBuilder</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">&nbsp;</div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeShoppingListsPost.html" title="class in com.commercetools.api.client">ByProjectKeyMeShoppingListsPost</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">
- </div>
+<div class="block">Creates a ShoppingList for the Customer or anonymous user.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeShoppingListsPostString.html" title="class in com.commercetools.api.client">ByProjectKeyMeShoppingListsPostString</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">
- </div>
+<div class="block">Creates a ShoppingList for the Customer or anonymous user.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyMeShoppingListsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyMeShoppingListsRequestBuilder</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
@@ -3870,19 +4081,19 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyShippingMethodsMatchingCartGet.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingCartGet</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">Retrieves all the ShippingMethods that can ship to the shipping address of the given Cart.</div>
+<div class="block">Retrieves all the active ShippingMethods that can ship to the shipping address of the given Cart.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyShippingMethodsMatchingCartHead.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingCartHead</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">Checks if a ShippingMethod exists for the given Cart.</div>
+<div class="block">Checks if an active ShippingMethod exists for the given Cart.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyShippingMethodsMatchingCartLocationGet.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingCartLocationGet</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">Retrieves all the ShippingMethods that can ship to the given Location with a <code>predicate</code> that matches the given Cart.</div>
+<div class="block">Retrieves all the active ShippingMethods that can ship to the given Location with a <code>predicate</code> that matches the given Cart.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyShippingMethodsMatchingCartLocationHead.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingCartLocationHead</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">Checks if a ShippingMethod that can ship to the given Location exists for the given Cart.</div>
+<div class="block">Checks if an active ShippingMethod that can ship to the given Location exists for the given Cart.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyShippingMethodsMatchingCartLocationRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingCartLocationRequestBuilder</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">&nbsp;</div>
@@ -3890,21 +4101,21 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyShippingMethodsMatchingLocationGet.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingLocationGet</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">Retrieves all the ShippingMethods that can ship to the given Location.</div>
+<div class="block">Retrieves all the active ShippingMethods that can ship to the given Location.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyShippingMethodsMatchingLocationHead.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingLocationHead</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">Checks if a ShippingMethod that can ship to the given Location exists.</div>
+<div class="block">Checks if an active ShippingMethod that can ship to the given Location exists.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyShippingMethodsMatchingLocationRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingLocationRequestBuilder</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">&nbsp;</div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyShippingMethodsMatchingOrdereditGet.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingOrdereditGet</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">Retrieves all the ShippingMethods that can ship to the given Location for an OrderEdit.</div>
+<div class="block">Retrieves all the active ShippingMethods that can ship to the given Location for an OrderEdit.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyShippingMethodsMatchingOrdereditHead.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingOrdereditHead</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">Checks if a ShippingMethod that can ship to the given Location exists for the given OrderEdit.</div>
+<div class="block">Checks if an active ShippingMethod that can ship to the given Location exists for the given OrderEdit.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyShippingMethodsMatchingOrdereditRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingOrdereditRequestBuilder</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>
@@ -4372,11 +4583,11 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color class-summary class-summary-tab2">&nbsp;</div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeySubscriptionsPost.html" title="class in com.commercetools.api.client">ByProjectKeySubscriptionsPost</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">A test message is sent to ensure the correct configuration of the Destination.</div>
+<div class="block">A test notification is sent to ensure the correct configuration of the Destination.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeySubscriptionsPostString.html" title="class in com.commercetools.api.client">ByProjectKeySubscriptionsPostString</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">A test message is sent to ensure the correct configuration of the Destination.</div>
+<div class="block">A test notification is sent to ensure the correct configuration of the Destination.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeySubscriptionsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeySubscriptionsRequestBuilder</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">&nbsp;</div>

@@ -79,8 +79,8 @@ loadScripts(document, 'script');</script>
 <li>
 <div id="class-summary">
 <div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="class-summary-tab0" role="tab" aria-selected="true" aria-controls="class-summary.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('class-summary', 'class-summary', 2)" class="active-table-tab">All Classes and Interfaces</button><button id="class-summary-tab1" role="tab" aria-selected="false" aria-controls="class-summary.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('class-summary', 'class-summary-tab1', 2)" class="table-tab">Interfaces</button><button id="class-summary-tab2" role="tab" aria-selected="false" aria-controls="class-summary.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('class-summary', 'class-summary-tab2', 2)" class="table-tab">Classes</button><button id="class-summary-tab3" role="tab" aria-selected="false" aria-controls="class-summary.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('class-summary', 'class-summary-tab3', 2)" class="table-tab">Enums</button></div>
-<div id="class-summary.tabpanel" role="tabpanel">
-<div class="summary-table two-column-summary" aria-labelledby="class-summary-tab0">
+<div id="class-summary.tabpanel" role="tabpanel" aria-labelledby="class-summary-tab0">
+<div class="summary-table two-column-summary">
 <div class="table-header col-first">Class</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color class-summary class-summary-tab1"><a href="BusinessUnitConfiguration.html" title="interface in com.commercetools.api.models.project">BusinessUnitConfiguration</a></div>
@@ -108,7 +108,7 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab1"><a href="CartClassificationType.html" title="interface in com.commercetools.api.models.project">CartClassificationType</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab1">
-<div class="block">Used when the ShippingRate maps to an abstract Cart categorization expressed by strings (for example, <code>Light</code>, <code>Medium</code>, or <code>Heavy</code>).</div>
+<div class="block">The ShippingRate maps to an abstract Cart categorization expressed by strings (for example, <code>Light</code>, <code>Medium</code>, or <code>Heavy</code>).</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="CartClassificationTypeBuilder.html" title="class in com.commercetools.api.models.project">CartClassificationTypeBuilder</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
@@ -134,7 +134,7 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab1"><a href="CartScoreType.html" title="interface in com.commercetools.api.models.project">CartScoreType</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab1">
-<div class="block">Used when the ShippingRate maps to an abstract Cart categorization expressed by integers (such as shipping scores or weight ranges).</div>
+<div class="block">The ShippingRate maps to an abstract Cart categorization expressed by integers (such as shipping scores or weight ranges).</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="CartScoreTypeBuilder.html" title="class in com.commercetools.api.models.project">CartScoreTypeBuilder</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
@@ -145,7 +145,7 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab1"><a href="CartValueType.html" title="interface in com.commercetools.api.models.project">CartValueType</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab1">
-<div class="block">Used when the ShippingRate maps to the sum of LineItem Prices.</div>
+<div class="block">The ShippingRate maps to the value of the Cart and is used to select a tier.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="CartValueTypeBuilder.html" title="class in com.commercetools.api.models.project">CartValueTypeBuilder</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
@@ -153,6 +153,22 @@ loadScripts(document, 'script');</script>
  
  Example to create an instance using the builder pattern
  </div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="CustomerIndexingStatus.html" title="interface in com.commercetools.api.models.project">CustomerIndexingStatus</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab1">
+<div class="block">The current indexing status of Customer Search.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab3"><a href="CustomerIndexingStatus.CustomerIndexingStatusEnum.html" title="enum in com.commercetools.api.models.project">CustomerIndexingStatus.CustomerIndexingStatusEnum</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab3">
+<div class="block">possible values of CustomerIndexingStatus</div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="CustomerSearchStatus.html" title="interface in com.commercetools.api.models.project">CustomerSearchStatus</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab1">
+<div class="block">Specifies the status of the Customer Search index.</div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab3"><a href="CustomerSearchStatus.CustomerSearchStatusEnum.html" title="enum in com.commercetools.api.models.project">CustomerSearchStatus.CustomerSearchStatusEnum</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab3">
+<div class="block">possible values of CustomerSearchStatus</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab1"><a href="ExternalOAuth.html" title="interface in com.commercetools.api.models.project">ExternalOAuth</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab1">
@@ -275,6 +291,21 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ProjectChangeCurrenciesActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectChangeCurrenciesActionBuilder</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
 <div class="block">ProjectChangeCurrenciesActionBuilder
+ 
+ Example to create an instance using the builder pattern
+ </div>
+</div>
+<div class="col-first even-row-color class-summary class-summary-tab1"><a href="ProjectChangeCustomerSearchStatusAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeCustomerSearchStatusAction</a></div>
+<div class="col-last even-row-color class-summary class-summary-tab1">
+<div class="block">ProjectChangeCustomerSearchStatusAction
+
+ 
+ Example to create an instance using the builder pattern
+ </div>
+</div>
+<div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ProjectChangeCustomerSearchStatusActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectChangeCustomerSearchStatusActionBuilder</a></div>
+<div class="col-last odd-row-color class-summary class-summary-tab2">
+<div class="block">ProjectChangeCustomerSearchStatusActionBuilder
  
  Example to create an instance using the builder pattern
  </div>

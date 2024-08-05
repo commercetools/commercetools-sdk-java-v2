@@ -117,15 +117,15 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h2>Method Summary</h2>
 <div id="method-summary-table">
 <div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
-<div id="method-summary-table.tabpanel" role="tabpanel">
-<div class="summary-table three-column-summary" aria-labelledby="method-summary-table-tab0">
+<div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
+<div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TaxRateBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxRateBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addSubRates(java.util.function.Function)" class="member-name-link">addSubRates</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SubRateBuilder.html" title="class in com.commercetools.api.models.tax_category">SubRateBuilder</a>,<wbr><a href="SubRate.html" title="interface in com.commercetools.api.models.tax_category">SubRate</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Used to calculate the taxPortions field in a Cart or Order.</div>
+<div class="block">Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes).</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TaxRateBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxRateBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#amount(java.lang.Double)" class="member-name-link">amount</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Double.html" title="class or interface in java.lang" class="external-link">Double</a>&nbsp;amount)</code></div>
@@ -185,7 +185,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="SubRate.html" title="interface in com.commercetools.api.models.tax_category">SubRate</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSubRates()" class="member-name-link">getSubRates</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Used to calculate the taxPortions field in a Cart or Order.</div>
+<div class="block">Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes).</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TaxRateBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxRateBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#id(java.lang.String)" class="member-name-link">id</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</code></div>
@@ -220,17 +220,17 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TaxRateBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxRateBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusSubRates(com.commercetools.api.models.tax_category.SubRate...)" class="member-name-link">plusSubRates</a><wbr>(<a href="SubRate.html" title="interface in com.commercetools.api.models.tax_category">SubRate</a>...&nbsp;subRates)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Used to calculate the taxPortions field in a Cart or Order.</div>
+<div class="block">Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes).</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TaxRateBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxRateBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusSubRates(java.util.function.Function)" class="member-name-link">plusSubRates</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SubRateBuilder.html" title="class in com.commercetools.api.models.tax_category">SubRateBuilder</a>,<wbr><a href="SubRateBuilder.html" title="class in com.commercetools.api.models.tax_category">SubRateBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Used to calculate the taxPortions field in a Cart or Order.</div>
+<div class="block">Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes).</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TaxRateBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxRateBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSubRates(java.util.function.Function)" class="member-name-link">setSubRates</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SubRateBuilder.html" title="class in com.commercetools.api.models.tax_category">SubRateBuilder</a>,<wbr><a href="SubRate.html" title="interface in com.commercetools.api.models.tax_category">SubRate</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Used to calculate the taxPortions field in a Cart or Order.</div>
+<div class="block">Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes).</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TaxRateBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxRateBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#state(java.lang.String)" class="member-name-link">state</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;state)</code></div>
@@ -240,17 +240,17 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TaxRateBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxRateBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#subRates(com.commercetools.api.models.tax_category.SubRate...)" class="member-name-link">subRates</a><wbr>(<a href="SubRate.html" title="interface in com.commercetools.api.models.tax_category">SubRate</a>...&nbsp;subRates)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Used to calculate the taxPortions field in a Cart or Order.</div>
+<div class="block">Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes).</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TaxRateBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxRateBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#subRates(java.util.List)" class="member-name-link">subRates</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="SubRate.html" title="interface in com.commercetools.api.models.tax_category">SubRate</a>&gt;&nbsp;subRates)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Used to calculate the taxPortions field in a Cart or Order.</div>
+<div class="block">Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes).</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TaxRateBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxRateBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withSubRates(java.util.function.Function)" class="member-name-link">withSubRates</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SubRateBuilder.html" title="class in com.commercetools.api.models.tax_category">SubRateBuilder</a>,<wbr><a href="SubRateBuilder.html" title="class in com.commercetools.api.models.tax_category">SubRateBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Used to calculate the taxPortions field in a Cart or Order.</div>
+<div class="block">Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes).</div>
 </div>
 </div>
 </div>
@@ -382,7 +382,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>subRates</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxRateBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxRateBuilder</a></span>&nbsp;<span class="element-name">subRates</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="SubRate.html" title="interface in com.commercetools.api.models.tax_category">SubRate</a>...&nbsp;subRates)</span></div>
-<div class="block"><p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes). The total of all subrates equals the TaxRate <code>amount</code>.</p></div>
+<div class="block"><p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). The total of all subrates must equal the TaxRate <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a Cart or Order and the <code>taxedPrice</code> field of LineItems, CustomLineItems, and ShippingInfos.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>subRates</code> - value to be set</dd>
@@ -396,7 +396,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>subRates</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxRateBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxRateBuilder</a></span>&nbsp;<span class="element-name">subRates</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="SubRate.html" title="interface in com.commercetools.api.models.tax_category">SubRate</a>&gt;&nbsp;subRates)</span></div>
-<div class="block"><p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes). The total of all subrates equals the TaxRate <code>amount</code>.</p></div>
+<div class="block"><p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). The total of all subrates must equal the TaxRate <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a Cart or Order and the <code>taxedPrice</code> field of LineItems, CustomLineItems, and ShippingInfos.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>subRates</code> - value to be set</dd>
@@ -410,7 +410,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>plusSubRates</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxRateBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxRateBuilder</a></span>&nbsp;<span class="element-name">plusSubRates</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="SubRate.html" title="interface in com.commercetools.api.models.tax_category">SubRate</a>...&nbsp;subRates)</span></div>
-<div class="block"><p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes). The total of all subrates equals the TaxRate <code>amount</code>.</p></div>
+<div class="block"><p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). The total of all subrates must equal the TaxRate <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a Cart or Order and the <code>taxedPrice</code> field of LineItems, CustomLineItems, and ShippingInfos.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>subRates</code> - value to be set</dd>
@@ -423,7 +423,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="plusSubRates(java.util.function.Function)">
 <h3>plusSubRates</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxRateBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxRateBuilder</a></span>&nbsp;<span class="element-name">plusSubRates</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SubRateBuilder.html" title="class in com.commercetools.api.models.tax_category">SubRateBuilder</a>,<wbr><a href="SubRateBuilder.html" title="class in com.commercetools.api.models.tax_category">SubRateBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes). The total of all subrates equals the TaxRate <code>amount</code>.</p></div>
+<div class="block"><p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). The total of all subrates must equal the TaxRate <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a Cart or Order and the <code>taxedPrice</code> field of LineItems, CustomLineItems, and ShippingInfos.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the subRates value</dd>
@@ -436,7 +436,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withSubRates(java.util.function.Function)">
 <h3>withSubRates</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxRateBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxRateBuilder</a></span>&nbsp;<span class="element-name">withSubRates</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SubRateBuilder.html" title="class in com.commercetools.api.models.tax_category">SubRateBuilder</a>,<wbr><a href="SubRateBuilder.html" title="class in com.commercetools.api.models.tax_category">SubRateBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes). The total of all subrates equals the TaxRate <code>amount</code>.</p></div>
+<div class="block"><p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). The total of all subrates must equal the TaxRate <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a Cart or Order and the <code>taxedPrice</code> field of LineItems, CustomLineItems, and ShippingInfos.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the subRates value</dd>
@@ -449,7 +449,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="addSubRates(java.util.function.Function)">
 <h3>addSubRates</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxRateBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxRateBuilder</a></span>&nbsp;<span class="element-name">addSubRates</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SubRateBuilder.html" title="class in com.commercetools.api.models.tax_category">SubRateBuilder</a>,<wbr><a href="SubRate.html" title="interface in com.commercetools.api.models.tax_category">SubRate</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes). The total of all subrates equals the TaxRate <code>amount</code>.</p></div>
+<div class="block"><p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). The total of all subrates must equal the TaxRate <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a Cart or Order and the <code>taxedPrice</code> field of LineItems, CustomLineItems, and ShippingInfos.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the subRates value</dd>
@@ -462,7 +462,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="setSubRates(java.util.function.Function)">
 <h3>setSubRates</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TaxRateBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxRateBuilder</a></span>&nbsp;<span class="element-name">setSubRates</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SubRateBuilder.html" title="class in com.commercetools.api.models.tax_category">SubRateBuilder</a>,<wbr><a href="SubRate.html" title="interface in com.commercetools.api.models.tax_category">SubRate</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes). The total of all subrates equals the TaxRate <code>amount</code>.</p></div>
+<div class="block"><p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). The total of all subrates must equal the TaxRate <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a Cart or Order and the <code>taxedPrice</code> field of LineItems, CustomLineItems, and ShippingInfos.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the subRates value</dd>
@@ -556,7 +556,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getSubRates</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="SubRate.html" title="interface in com.commercetools.api.models.tax_category">SubRate</a>&gt;</span>&nbsp;<span class="element-name">getSubRates</span>()</div>
-<div class="block"><p>Used to calculate the taxPortions field in a Cart or Order. It is useful if the total tax of a country (such as the US) is a combination of multiple taxes (such as state and local taxes). The total of all subrates equals the TaxRate <code>amount</code>.</p></div>
+<div class="block"><p>Used when the total tax is a combination of multiple taxes (for example, local, state/provincial, and/or federal taxes). The total of all subrates must equal the TaxRate <code>amount</code>. These subrates are used to calculate the <code>taxPortions</code> field of a Cart or Order and the <code>taxedPrice</code> field of LineItems, CustomLineItems, and ShippingInfos.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>subRates</dd>

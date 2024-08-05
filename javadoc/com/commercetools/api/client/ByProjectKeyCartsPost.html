@@ -88,7 +88,14 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">ByProjectKeyCartsPost</span>
 <span class="extends-implements">extends <a href="../../../../io/vrap/rmf/base/client/TypeBodyApiMethod.html" title="class in io.vrap.rmf.base.client">TypeBodyApiMethod</a>&lt;<a href="ByProjectKeyCartsPost.html" title="class in com.commercetools.api.client">ByProjectKeyCartsPost</a>,<wbr><a href="../models/cart/Cart.html" title="interface in com.commercetools.api.models.cart">Cart</a>,<wbr><a href="../models/cart/CartDraft.html" title="interface in com.commercetools.api.models.cart">CartDraft</a>&gt;
 implements <a href="ExpandableTrait.html" title="interface in com.commercetools.api.client">ExpandableTrait</a>&lt;<a href="ByProjectKeyCartsPost.html" title="class in com.commercetools.api.client">ByProjectKeyCartsPost</a>&gt;, <a href="Deprecatable201Trait.html" title="interface in com.commercetools.api.client">Deprecatable201Trait</a>&lt;<a href="ByProjectKeyCartsPost.html" title="class in com.commercetools.api.client">ByProjectKeyCartsPost</a>&gt;, <a href="ErrorableTrait.html" title="interface in com.commercetools.api.client">ErrorableTrait</a>&lt;<a href="ByProjectKeyCartsPost.html" title="class in com.commercetools.api.client">ByProjectKeyCartsPost</a>&gt;</span></div>
-<div class="block"><p>Creating a Cart fails with an InvalidOperation error if the ShippingMethod referenced in the CartDraft has a <code>predicate</code> that does not match the Cart.</p>
+<div class="block"><p>If the referenced ShippingMethod in the CartDraft has a predicate that does not match, or if the Shipping Method is not active, an InvalidOperation error is returned.</p>
+  <p>Specific Error Codes:</p>
+  <ul>
+   <li>DiscountCodeNonApplicable</li>
+   <li>InvalidItemShippingDetails</li>
+   <li>MatchingPriceNotFound</li>
+   <li>MissingTaxRateForCountry</li>
+  </ul>
 
  <hr>
  <div class=code-example>
@@ -135,8 +142,8 @@ implements <a href="ExpandableTrait.html" title="interface in com.commercetools.
 <h2>Method Summary</h2>
 <div id="method-summary-table">
 <div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab4" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab4', 3)" class="table-tab">Concrete Methods</button></div>
-<div id="method-summary-table.tabpanel" role="tabpanel">
-<div class="summary-table three-column-summary" aria-labelledby="method-summary-table-tab0">
+<div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
+<div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>

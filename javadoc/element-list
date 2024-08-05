@@ -18,6 +18,7 @@ com.commercetools.api.models.common
 com.commercetools.api.models.custom_object
 com.commercetools.api.models.customer
 com.commercetools.api.models.customer_group
+com.commercetools.api.models.customer_search
 com.commercetools.api.models.discount_code
 com.commercetools.api.models.error
 com.commercetools.api.models.extension

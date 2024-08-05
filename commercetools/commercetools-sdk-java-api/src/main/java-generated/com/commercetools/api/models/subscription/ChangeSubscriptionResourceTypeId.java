@@ -68,7 +68,7 @@ public interface ChangeSubscriptionResourceTypeId extends JsonEnum {
     <p>Changes to CustomObjects.</p> */
     ChangeSubscriptionResourceTypeId KEY_VALUE_DOCUMENT = ChangeSubscriptionResourceTypeIdEnum.KEY_VALUE_DOCUMENT;
     /**
-    <p>Changes to Orders. Changes to Orders via Order Edits do not trigger a Message. To achieve this, a MessageSubscription to OrderEditApplied Message is necessary.</p> */
+    <p>Changes to Orders. Modifying Orders via Order Edits does not trigger a notification. To achieve this, a MessageSubscription to the OrderEditApplied Message is necessary.</p> */
     ChangeSubscriptionResourceTypeId ORDER = ChangeSubscriptionResourceTypeIdEnum.ORDER;
     /**
     <p>Changes to OrderEdits.</p> */

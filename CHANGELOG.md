@@ -1,9 +1,307 @@
 
+# 17.13.0 (2024-08-05)
+
+**Api changes**
+
+<details>
+<summary>Changed Property(s)</summary>
+
+- :warning: changed property `customType` of type `OrderSearchAnyValue` from type `string` to `OrderSearchCustomType`
+- :warning: changed property `customType` of type `OrderSearchDateRangeValue` from type `string` to `OrderSearchCustomType`
+- :warning: changed property `customType` of type `OrderSearchFullTextValue` from type `string` to `OrderSearchCustomType`
+- :warning: changed property `customType` of type `OrderSearchLongRangeValue` from type `string` to `OrderSearchCustomType`
+- :warning: changed property `customType` of type `OrderSearchNumberRangeValue` from type `string` to `OrderSearchCustomType`
+- :warning: changed property `customType` of type `OrderSearchQueryExpressionValue` from type `string` to `OrderSearchCustomType`
+- :warning: changed property `customType` of type `OrderSearchStringValue` from type `string` to `OrderSearchCustomType`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `approvalRuleMode` to type `BusinessUnit`
+- added property `approvalRuleMode` to type `BusinessUnitDraft`
+- added property `approvalRuleMode` to type `Company`
+- added property `approvalRuleMode` to type `CompanyDraft`
+- added property `approvalRuleMode` to type `Division`
+- added property `approvalRuleMode` to type `DivisionDraft`
+- added property `addressId` to type `BusinessUnitAddressCustomFieldAddedMessage`
+- added property `addressId` to type `BusinessUnitAddressCustomFieldChangedMessage`
+- added property `addressId` to type `BusinessUnitAddressCustomFieldRemovedMessage`
+- added property `addressId` to type `BusinessUnitAddressCustomTypeRemovedMessage`
+- added property `addressId` to type `BusinessUnitAddressCustomTypeSetMessage`
+- added property `addressId` to type `CustomerAddressCustomFieldAddedMessage`
+- added property `addressId` to type `CustomerAddressCustomFieldChangedMessage`
+- added property `addressId` to type `CustomerAddressCustomFieldRemovedMessage`
+- added property `addressId` to type `CustomerAddressCustomTypeRemovedMessage`
+- added property `addressId` to type `CustomerAddressCustomTypeSetMessage`
+- added property `metaTitle` to type `ProductTailoringCreatedMessage`
+- added property `metaDescription` to type `ProductTailoringCreatedMessage`
+- added property `metaKeywords` to type `ProductTailoringCreatedMessage`
+- added property `variants` to type `ProductTailoringCreatedMessage`
+- added property `addressId` to type `BusinessUnitAddressCustomFieldAddedMessagePayload`
+- added property `addressId` to type `BusinessUnitAddressCustomFieldChangedMessagePayload`
+- added property `addressId` to type `BusinessUnitAddressCustomFieldRemovedMessagePayload`
+- added property `addressId` to type `BusinessUnitAddressCustomTypeRemovedMessagePayload`
+- added property `addressId` to type `BusinessUnitAddressCustomTypeSetMessagePayload`
+- added property `addressId` to type `CustomerAddressCustomFieldAddedMessagePayload`
+- added property `addressId` to type `CustomerAddressCustomFieldChangedMessagePayload`
+- added property `addressId` to type `CustomerAddressCustomFieldRemovedMessagePayload`
+- added property `addressId` to type `CustomerAddressCustomTypeRemovedMessagePayload`
+- added property `addressId` to type `CustomerAddressCustomTypeSetMessagePayload`
+- added property `metaTitle` to type `ProductTailoringCreatedMessagePayload`
+- added property `metaDescription` to type `ProductTailoringCreatedMessagePayload`
+- added property `metaKeywords` to type `ProductTailoringCreatedMessagePayload`
+- added property `variants` to type `ProductTailoringCreatedMessagePayload`
+- added property `variants` to type `ProductTailoringData`
+- added property `variants` to type `ProductTailoringDraft`
+- added property `variants` to type `ProductTailoringInStoreDraft`
+- added property `active` to type `ShippingMethod`
+- added property `active` to type `ShippingMethodDraft`
+- added property `store` to type `StagedQuote`
+</details>
+
+
+<details>
+<summary>Added Resource(s)</summary>
+
+- added resource `/{projectKey}/customers/search`
+- added resource `/{projectKey}/customers/search/indexing-status`
+- added resource `/{projectKey}/in-store/key={storeKey}/quote-requests`
+- added resource `/{projectKey}/in-store/key={storeKey}/staged-quotes`
+- added resource `/{projectKey}/in-store/key={storeKey}/quotes`
+- added resource `/{projectKey}/in-store/key={storeKey}/orders/quotes`
+- added resource `/{projectKey}/in-store/key={storeKey}/products/{productID}/product-tailoring/images`
+- added resource `/{projectKey}/in-store/key={storeKey}/products/key={productKey}/product-tailoring/images`
+- added resource `/{projectKey}/in-store/key={storeKey}/quote-requests/key={key}`
+- added resource `/{projectKey}/in-store/key={storeKey}/quote-requests/{ID}`
+- added resource `/{projectKey}/in-store/key={storeKey}/staged-quotes/key={key}`
+- added resource `/{projectKey}/in-store/key={storeKey}/staged-quotes/{ID}`
+- added resource `/{projectKey}/in-store/key={storeKey}/quotes/key={key}`
+- added resource `/{projectKey}/in-store/key={storeKey}/quotes/{ID}`
+</details>
+
+
+<details>
+<summary>Removed Resource(s)</summary>
+
+- :warning: removed resource `/{projectKey}/me/carts/key={key}`
+</details>
+
+
+<details>
+<summary>Removed QueryParameter(s)</summary>
+
+- :warning: removed query parameter `localeProjection` from method `get /{projectKey}/products`
+- :warning: removed query parameter `localeProjection` from method `post /{projectKey}/products`
+- :warning: removed query parameter `localeProjection` from method `get /{projectKey}/products/key={key}`
+- :warning: removed query parameter `localeProjection` from method `post /{projectKey}/products/key={key}`
+- :warning: removed query parameter `localeProjection` from method `delete /{projectKey}/products/key={key}`
+- :warning: removed query parameter `localeProjection` from method `get /{projectKey}/products/{ID}`
+- :warning: removed query parameter `localeProjection` from method `post /{projectKey}/products/{ID}`
+- :warning: removed query parameter `localeProjection` from method `delete /{projectKey}/products/{ID}`
+- :warning: removed query parameter `sort` from method `get /{projectKey}/product-projections/suggest`
+- :warning: removed query parameter `offset` from method `get /{projectKey}/product-projections/suggest`
+- :warning: removed query parameter `withTotal` from method `get /{projectKey}/product-projections/suggest`
+</details>
+
+
+<details>
+<summary>Added Method(s)</summary>
+
+- added method `apiRoot.withProjectKey().customers().search().post()`
+- added method `apiRoot.withProjectKey().customers().search().head()`
+- added method `apiRoot.withProjectKey().customers().searchIndexingStatus().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quoteRequests().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quoteRequests().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quoteRequests().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().stagedQuotes().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().stagedQuotes().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().stagedQuotes().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().orders().orderQuote().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().products().withProductId().productTailoring().images().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().products().withProductKey().productTailoring().images().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quoteRequests().withKey().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quoteRequests().withKey().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quoteRequests().withKey().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quoteRequests().withKey().delete()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quoteRequests().withId().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quoteRequests().withId().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quoteRequests().withId().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quoteRequests().withId().delete()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().stagedQuotes().withKey().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().stagedQuotes().withKey().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().stagedQuotes().withKey().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().stagedQuotes().withKey().delete()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().stagedQuotes().withId().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().stagedQuotes().withId().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().stagedQuotes().withId().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().stagedQuotes().withId().delete()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().withKey().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().withKey().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().withKey().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().withKey().delete()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().withId().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().withId().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().withId().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().quotes().withId().delete()`
+</details>
+
+
+<details>
+<summary>Removed Method(s)</summary>
+
+- :warning: removed method `apiRoot.withProjectKey().me().carts().withKey().get()`
+- :warning: removed method `apiRoot.withProjectKey().me().carts().withKey().head()`
+- :warning: removed method `apiRoot.withProjectKey().me().carts().withKey().post()`
+- :warning: removed method `apiRoot.withProjectKey().me().carts().withKey().delete()`
+- :warning: removed method `apiRoot.withProjectKey().me().quoteRequests().withId().delete()`
+- :warning: removed method `apiRoot.withProjectKey().me().quoteRequests().withKey().delete()`
+</details>
+
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `shopping-list` to type `ExtensionResourceTypeId`
+- added enum `customer-group` to type `AttributeReferenceTypeId`
+- added enum `attribute-group` to type `ChangeSubscriptionResourceTypeId`
+- added enum `product-tailoring` to type `ChangeSubscriptionResourceTypeId`
+- added enum `cart-discount` to type `CustomFieldReferenceValue`
+- added enum `customer-group` to type `CustomFieldReferenceValue`
+</details>
+
+
+<details>
+<summary>Removed Enum(s)</summary>
+
+- :warning: removed enum `product-price` from type `ChangeSubscriptionResourceTypeId`
+</details>
+
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `BusinessUnitApprovalRuleMode`
+- added type `BusinessUnitChangeApprovalRuleModeAction`
+- added type `CartChangeLineItemsOrderAction`
+- added type `CustomerIndexingProgress`
+- added type `CustomerIndexingStatus`
+- added type `CustomerPagedSearchResponse`
+- added type `CustomerSearchIndexingStatusResponse`
+- added type `CustomerSearchRequest`
+- added type `CustomerSearchResult`
+- added type `MyCartChangeLineItemsOrderAction`
+- added type `BusinessUnitApprovalRuleModeChangedMessage`
+- added type `ProductPriceCustomFieldAddedMessage`
+- added type `ProductPriceCustomFieldChangedMessage`
+- added type `ProductPriceCustomFieldRemovedMessage`
+- added type `ProductPriceCustomFieldsRemovedMessage`
+- added type `ProductPriceCustomFieldsSetMessage`
+- added type `ProductTailoringImageAddedMessage`
+- added type `ProductTailoringImagesSetMessage`
+- added type `ProductVariantTailoringAddedMessage`
+- added type `ProductVariantTailoringRemovedMessage`
+- added type `BusinessUnitApprovalRuleModeChangedMessagePayload`
+- added type `ProductPriceCustomFieldAddedMessagePayload`
+- added type `ProductPriceCustomFieldChangedMessagePayload`
+- added type `ProductPriceCustomFieldRemovedMessagePayload`
+- added type `ProductPriceCustomFieldsRemovedMessagePayload`
+- added type `ProductPriceCustomFieldsSetMessagePayload`
+- added type `ProductTailoringImageAddedMessagePayload`
+- added type `ProductTailoringImagesSetMessagePayload`
+- added type `ProductVariantTailoringAddedMessagePayload`
+- added type `ProductVariantTailoringRemovedMessagePayload`
+- added type `OrderSearchCustomType`
+- added type `ProductVariantTailoring`
+- added type `ProductVariantTailoringDraft`
+- added type `ProductTailoringAddAssetAction`
+- added type `ProductTailoringAddExternalImageAction`
+- added type `ProductTailoringAddVariantAction`
+- added type `ProductTailoringChangeAssetNameAction`
+- added type `ProductTailoringChangeAssetOrderAction`
+- added type `ProductTailoringMoveImageToPositionAction`
+- added type `ProductTailoringRemoveAssetAction`
+- added type `ProductTailoringRemoveImageAction`
+- added type `ProductTailoringRemoveVariantAction`
+- added type `ProductTailoringSetAssetCustomFieldAction`
+- added type `ProductTailoringSetAssetCustomTypeAction`
+- added type `ProductTailoringSetAssetDescriptionAction`
+- added type `ProductTailoringSetAssetKeyAction`
+- added type `ProductTailoringSetAssetSourcesAction`
+- added type `ProductTailoringSetAssetTagsAction`
+- added type `ProductTailoringSetExternalImagesAction`
+- added type `ProductTailoringSetImageLabelAction`
+- added type `CustomerSearchStatus`
+- added type `ProjectChangeCustomerSearchStatusAction`
+- added type `ShippingMethodChangeActiveAction`
+</details>
+
+**Import changes**
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `customer-group` to type `CustomFieldReferenceValue`
+</details>
+
+
+<details>
+<summary>Deprecated Property(s)</summary>
+
+- property `PriceImport::publish` is removed
+- property `ProductVariantImport::publish` is removed
+</details>
+
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/663
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/664
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/667
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/668
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/669
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/670
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/671
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/672
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/673
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/674
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/675
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/678
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/679
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/680
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/681
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/682
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/683
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/684
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/685
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/686
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/687
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/688
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/689
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/690
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/691
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/692
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/693
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/694
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/695
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/696
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/697
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/698
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/699
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/700
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/701
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.12.0...17.13.0
+
 # 17.12.0 (2024-06-07)
 
 ## Important information
 
-This release will be the last compatible with JDK version 8. The next release will be a major release and will have JDK version 11 as minimum requirement. The references to Java EE like bean validation will be updated to Jakarta EE.
+This release will be the last compatible with JDK version 8. The next release will be a major release and will have JDK version 11 as minimum requirement. The references to Java EE like bean validation will be updated to Jakarta EE. This will remove incompatibilities with newer frameworks and opens upgrade pathes.
 
 ## What's Changed
 * Update datadog example app to include traces and add to cart by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/617

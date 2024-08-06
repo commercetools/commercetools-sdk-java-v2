@@ -66,7 +66,8 @@ public class ByProjectKeyOrdersEditsByIDApplyPost extends
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/orders/edits/%s/apply", this.projectKey, this.ID);
+        String httpRequestPath = String.format("%s/orders/edits/%s/apply", encodePathParam(this.projectKey),
+            encodePathParam(this.ID));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

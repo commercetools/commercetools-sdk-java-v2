@@ -67,8 +67,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyOrdersOrderNumberByOrderNumberHead 
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/in-store/key=%s/orders/order-number=%s", this.projectKey,
-            this.storeKey, this.orderNumber);
+        String httpRequestPath = String.format("%s/in-store/key=%s/orders/order-number=%s",
+            encodePathParam(this.projectKey), encodePathParam(this.storeKey), encodePathParam(this.orderNumber));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

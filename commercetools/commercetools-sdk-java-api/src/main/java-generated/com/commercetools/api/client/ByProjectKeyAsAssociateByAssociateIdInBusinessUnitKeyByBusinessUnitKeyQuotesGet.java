@@ -76,8 +76,8 @@ public class ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnit
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/as-associate/%s/in-business-unit/key=%s/quotes", this.projectKey,
-            this.associateId, this.businessUnitKey);
+        String httpRequestPath = String.format("%s/as-associate/%s/in-business-unit/key=%s/quotes",
+            encodePathParam(this.projectKey), encodePathParam(this.associateId), encodePathParam(this.businessUnitKey));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

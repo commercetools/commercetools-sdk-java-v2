@@ -62,7 +62,8 @@ public class ByProjectKeyImportContainersByImportContainerKeyDelete extends
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/import-containers/%s", this.projectKey, this.importContainerKey);
+        String httpRequestPath = String.format("%s/import-containers/%s", encodePathParam(this.projectKey),
+            encodePathParam(this.importContainerKey));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

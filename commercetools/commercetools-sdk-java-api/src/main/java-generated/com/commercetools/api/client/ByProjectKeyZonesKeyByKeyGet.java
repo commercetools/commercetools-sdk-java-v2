@@ -65,7 +65,8 @@ public class ByProjectKeyZonesKeyByKeyGet
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/zones/key=%s", this.projectKey, this.key);
+        String httpRequestPath = String.format("%s/zones/key=%s", encodePathParam(this.projectKey),
+            encodePathParam(this.key));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

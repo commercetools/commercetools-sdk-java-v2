@@ -65,7 +65,8 @@ public class ByProjectKeyTaxCategoriesByIDGet
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/tax-categories/%s", this.projectKey, this.ID);
+        String httpRequestPath = String.format("%s/tax-categories/%s", encodePathParam(this.projectKey),
+            encodePathParam(this.ID));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

@@ -52,7 +52,7 @@ public class ByProjectKeyHead extends TypeApiMethod<ByProjectKeyHead, com.faster
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s", this.projectKey);
+        String httpRequestPath = String.format("%s", encodePathParam(this.projectKey));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

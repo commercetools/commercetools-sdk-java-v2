@@ -68,7 +68,8 @@ public class ByProjectKeyProductTailoringByIDDelete extends
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/product-tailoring/%s", this.projectKey, this.ID);
+        String httpRequestPath = String.format("%s/product-tailoring/%s", encodePathParam(this.projectKey),
+            encodePathParam(this.ID));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

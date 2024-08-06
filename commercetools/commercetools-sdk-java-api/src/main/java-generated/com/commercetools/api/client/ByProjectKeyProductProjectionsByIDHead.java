@@ -60,7 +60,8 @@ public class ByProjectKeyProductProjectionsByIDHead
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/product-projections/%s", this.projectKey, this.ID);
+        String httpRequestPath = String.format("%s/product-projections/%s", encodePathParam(this.projectKey),
+            encodePathParam(this.ID));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

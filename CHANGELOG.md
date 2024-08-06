@@ -1,4 +1,17 @@
 
+# 17.14.0 (2024-08-06)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/702
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/703
+
+### Fixes
+
+- fixes path traversal in requests when using unsanitized path parameters
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.13.0...17.14.0
+
 # 17.13.0 (2024-08-05)
 
 **Api changes**
@@ -301,7 +314,7 @@
 
 ## Important information
 
-This release will be the last compatible with JDK version 8. The next release will be a major release and will have JDK version 11 as minimum requirement. The references to Java EE like bean validation will be updated to Jakarta EE. This will remove incompatibilities with newer frameworks and opens upgrade pathes.
+This major release branch will be the last compatible with JDK version 8. The major release will have JDK version 11 as minimum requirement. The references to Java EE like bean validation will be updated to Jakarta EE. This will remove incompatibilities with newer frameworks and opens upgrade pathes.
 
 ## What's Changed
 * Update datadog example app to include traces and add to cart by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/617

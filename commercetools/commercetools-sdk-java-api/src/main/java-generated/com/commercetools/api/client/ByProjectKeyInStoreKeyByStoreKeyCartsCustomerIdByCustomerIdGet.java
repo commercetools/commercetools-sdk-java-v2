@@ -74,8 +74,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyCartsCustomerIdByCustomerIdGet exte
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/in-store/key=%s/carts/customer-id=%s", this.projectKey,
-            this.storeKey, this.customerId);
+        String httpRequestPath = String.format("%s/in-store/key=%s/carts/customer-id=%s",
+            encodePathParam(this.projectKey), encodePathParam(this.storeKey), encodePathParam(this.customerId));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

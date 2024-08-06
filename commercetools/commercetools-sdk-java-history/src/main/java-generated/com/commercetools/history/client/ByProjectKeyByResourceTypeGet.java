@@ -62,7 +62,8 @@ public class ByProjectKeyByResourceTypeGet extends
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/%s", this.projectKey, this.resourceType);
+        String httpRequestPath = String.format("%s/%s", encodePathParam(this.projectKey),
+            encodePathParam(this.resourceType));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

@@ -66,7 +66,7 @@ public class ByProjectKeyAttributeGroupsPost extends
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/attribute-groups", this.projectKey);
+        String httpRequestPath = String.format("%s/attribute-groups", encodePathParam(this.projectKey));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

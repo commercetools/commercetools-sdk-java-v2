@@ -79,8 +79,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductsByProductIDProductTailoring
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/in-store/key=%s/products/%s/product-tailoring", this.projectKey,
-            this.storeKey, this.productID);
+        String httpRequestPath = String.format("%s/in-store/key=%s/products/%s/product-tailoring",
+            encodePathParam(this.projectKey), encodePathParam(this.storeKey), encodePathParam(this.productID));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

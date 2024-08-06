@@ -69,7 +69,8 @@ public class ByProjectKeyStoresByIDDelete
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/stores/%s", this.projectKey, this.ID);
+        String httpRequestPath = String.format("%s/stores/%s", encodePathParam(this.projectKey),
+            encodePathParam(this.ID));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

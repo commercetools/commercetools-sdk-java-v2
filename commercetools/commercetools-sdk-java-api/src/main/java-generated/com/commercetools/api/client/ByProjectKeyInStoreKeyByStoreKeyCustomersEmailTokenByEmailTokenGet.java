@@ -72,8 +72,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyCustomersEmailTokenByEmailTokenGet 
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/in-store/key=%s/customers/email-token=%s", this.projectKey,
-            this.storeKey, this.emailToken);
+        String httpRequestPath = String.format("%s/in-store/key=%s/customers/email-token=%s",
+            encodePathParam(this.projectKey), encodePathParam(this.storeKey), encodePathParam(this.emailToken));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

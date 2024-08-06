@@ -68,7 +68,8 @@ public class ByProjectKeyAssociateRolesByIDDelete extends
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/associate-roles/%s", this.projectKey, this.ID);
+        String httpRequestPath = String.format("%s/associate-roles/%s", encodePathParam(this.projectKey),
+            encodePathParam(this.ID));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

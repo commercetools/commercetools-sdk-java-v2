@@ -65,8 +65,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyQuotesKeyByKeyHead extends
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/in-store/key=%s/quotes/key=%s", this.projectKey, this.storeKey,
-            this.key);
+        String httpRequestPath = String.format("%s/in-store/key=%s/quotes/key=%s", encodePathParam(this.projectKey),
+            encodePathParam(this.storeKey), encodePathParam(this.key));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

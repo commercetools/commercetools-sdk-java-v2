@@ -63,8 +63,8 @@ public class ByProjectKeyImportContainersByImportContainerKeyImportSummariesGet 
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/import-containers/%s/import-summaries", this.projectKey,
-            this.importContainerKey);
+        String httpRequestPath = String.format("%s/import-containers/%s/import-summaries",
+            encodePathParam(this.projectKey), encodePathParam(this.importContainerKey));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

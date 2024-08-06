@@ -60,7 +60,7 @@ public class ByProjectKeyDiscountCodesHead
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/discount-codes", this.projectKey);
+        String httpRequestPath = String.format("%s/discount-codes", encodePathParam(this.projectKey));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

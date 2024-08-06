@@ -60,7 +60,8 @@ public class ByProjectKeyImportOperationsByIdGet extends
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/import-operations/%s", this.projectKey, this.id);
+        String httpRequestPath = String.format("%s/import-operations/%s", encodePathParam(this.projectKey),
+            encodePathParam(this.id));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

@@ -70,8 +70,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyShippingMethodsMatchingCartGet exte
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/in-store/key=%s/shipping-methods/matching-cart", this.projectKey,
-            this.storeKey);
+        String httpRequestPath = String.format("%s/in-store/key=%s/shipping-methods/matching-cart",
+            encodePathParam(this.projectKey), encodePathParam(this.storeKey));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

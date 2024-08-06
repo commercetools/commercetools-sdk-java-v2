@@ -60,7 +60,7 @@ public class ByProjectKeyAssociateRolesHead
     @Override
     protected ApiHttpRequest buildHttpRequest() {
         List<String> params = new ArrayList<>(getQueryParamUriStrings());
-        String httpRequestPath = String.format("%s/associate-roles", this.projectKey);
+        String httpRequestPath = String.format("%s/associate-roles", encodePathParam(this.projectKey));
         if (!params.isEmpty()) {
             httpRequestPath += "?" + String.join("&", params);
         }

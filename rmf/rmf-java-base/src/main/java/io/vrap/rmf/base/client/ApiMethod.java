@@ -402,4 +402,13 @@ public abstract class ApiMethod<T extends ApiMethod<T, TResult>, TResult> extend
     public ApiHttpResponse<byte[]> sendBlocking(final Duration timeout) {
         return apiHttpClient.sendBlocking(this, timeout);
     }
+
+    protected static <V> String encodePathParam(V pathParameter) {
+        try {
+            return URLEncoder.encode(pathParameter.toString(), StandardCharsets.UTF_8.toString());
+        }
+        catch (UnsupportedEncodingException e) {
+            throw new EncodingException(e);
+        }
+    }
 }

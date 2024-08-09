@@ -42,12 +42,4 @@ public class ByProjectKeyMeBusinessUnitsKeyByKeyRequestBuilder {
         return post(op.apply(com.commercetools.api.models.me.MyBusinessUnitUpdateBuilder.of()).build());
     }
 
-    public ByProjectKeyMeBusinessUnitsKeyByKeyDelete delete() {
-        return new ByProjectKeyMeBusinessUnitsKeyByKeyDelete(apiHttpClient, projectKey, key);
-    }
-
-    public <TValue> ByProjectKeyMeBusinessUnitsKeyByKeyDelete delete(TValue version) {
-        return delete().withVersion(version);
-    }
-
 }

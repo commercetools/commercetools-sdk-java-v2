@@ -38,7 +38,7 @@ public interface QuoteRequestDraft
         extends com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<QuoteRequestDraft> {
 
     /**
-     *  <p>Cart for which a Quote is requested. Anonymous Carts, Carts with Discount Codes, or Carts with a <code>Multiple</code> ShippingMode are not supported.</p>
+     *  <p>Cart for which a Quote is requested. Anonymous Carts, Carts with Discount Codes, and Carts with <code>Multiple</code> ShippingMode are not supported. The Cart must have a <code>shippingAddress</code> defined, otherwise an InvalidOperation error is returned when creating a Quote Request.</p>
      * @return cart
      */
     @NotNull
@@ -95,7 +95,7 @@ public interface QuoteRequestDraft
     public String getPurchaseOrderNumber();
 
     /**
-     *  <p>Cart for which a Quote is requested. Anonymous Carts, Carts with Discount Codes, or Carts with a <code>Multiple</code> ShippingMode are not supported.</p>
+     *  <p>Cart for which a Quote is requested. Anonymous Carts, Carts with Discount Codes, and Carts with <code>Multiple</code> ShippingMode are not supported. The Cart must have a <code>shippingAddress</code> defined, otherwise an InvalidOperation error is returned when creating a Quote Request.</p>
      * @param cart value to be set
      */
 

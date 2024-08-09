@@ -45,7 +45,7 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
     private String purchaseOrderNumber;
 
     /**
-     *  <p>Cart for which a Quote is requested. Anonymous Carts, Carts with Discount Codes, or Carts with a <code>Multiple</code> ShippingMode are not supported.</p>
+     *  <p>Cart for which a Quote is requested. Anonymous Carts, Carts with Discount Codes, and Carts with <code>Multiple</code> ShippingMode are not supported. The Cart must have a <code>shippingAddress</code> defined, otherwise an InvalidOperation error is returned when creating a Quote Request.</p>
      * @param builder function to build the cart value
      * @return Builder
      */
@@ -57,7 +57,7 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
     }
 
     /**
-     *  <p>Cart for which a Quote is requested. Anonymous Carts, Carts with Discount Codes, or Carts with a <code>Multiple</code> ShippingMode are not supported.</p>
+     *  <p>Cart for which a Quote is requested. Anonymous Carts, Carts with Discount Codes, and Carts with <code>Multiple</code> ShippingMode are not supported. The Cart must have a <code>shippingAddress</code> defined, otherwise an InvalidOperation error is returned when creating a Quote Request.</p>
      * @param builder function to build the cart value
      * @return Builder
      */
@@ -69,7 +69,7 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
     }
 
     /**
-     *  <p>Cart for which a Quote is requested. Anonymous Carts, Carts with Discount Codes, or Carts with a <code>Multiple</code> ShippingMode are not supported.</p>
+     *  <p>Cart for which a Quote is requested. Anonymous Carts, Carts with Discount Codes, and Carts with <code>Multiple</code> ShippingMode are not supported. The Cart must have a <code>shippingAddress</code> defined, otherwise an InvalidOperation error is returned when creating a Quote Request.</p>
      * @param cart value to be set
      * @return Builder
      */
@@ -194,7 +194,7 @@ public class QuoteRequestDraftBuilder implements Builder<QuoteRequestDraft> {
     }
 
     /**
-     *  <p>Cart for which a Quote is requested. Anonymous Carts, Carts with Discount Codes, or Carts with a <code>Multiple</code> ShippingMode are not supported.</p>
+     *  <p>Cart for which a Quote is requested. Anonymous Carts, Carts with Discount Codes, and Carts with <code>Multiple</code> ShippingMode are not supported. The Cart must have a <code>shippingAddress</code> defined, otherwise an InvalidOperation error is returned when creating a Quote Request.</p>
      * @return cart
      */
 

@@ -33,7 +33,7 @@ import jakarta.validation.constraints.NotNull;
 public interface MyQuoteRequestDraft extends io.vrap.rmf.base.client.Draft<MyQuoteRequestDraft> {
 
     /**
-     *  <p><code>id</code> of the Cart from which the Quote Request is created.</p>
+     *  <p><code>id</code> of the Cart from which the Quote Request is created. Carts with Discount Codes and Carts with <code>Multiple</code> ShippingMode are not supported. The Cart must have a <code>shippingAddress</code> defined, otherwise an InvalidOperation error is returned when creating a Quote Request.</p>
      * @return cartId
      */
     @NotNull
@@ -57,7 +57,7 @@ public interface MyQuoteRequestDraft extends io.vrap.rmf.base.client.Draft<MyQuo
     public String getComment();
 
     /**
-     *  <p><code>id</code> of the Cart from which the Quote Request is created.</p>
+     *  <p><code>id</code> of the Cart from which the Quote Request is created. Carts with Discount Codes and Carts with <code>Multiple</code> ShippingMode are not supported. The Cart must have a <code>shippingAddress</code> defined, otherwise an InvalidOperation error is returned when creating a Quote Request.</p>
      * @param cartId value to be set
      */
 

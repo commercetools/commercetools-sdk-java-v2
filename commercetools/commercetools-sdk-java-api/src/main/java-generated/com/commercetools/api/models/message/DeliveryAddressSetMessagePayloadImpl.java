@@ -63,7 +63,7 @@ public class DeliveryAddressSetMessagePayloadImpl implements DeliveryAddressSetM
     }
 
     /**
-     *  <p>Unique identifier of the Parcel.</p>
+     *  <p>Unique identifier of the Delivery.</p>
      */
 
     public String getDeliveryId() {

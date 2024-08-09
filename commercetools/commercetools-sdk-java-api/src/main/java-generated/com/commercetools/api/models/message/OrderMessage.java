@@ -56,6 +56,26 @@ public interface OrderMessage extends Message {
             return com.commercetools.api.models.message.DeliveryAddressSetMessage
                     .deepCopy((com.commercetools.api.models.message.DeliveryAddressSetMessage) template);
         }
+        if (template instanceof com.commercetools.api.models.message.DeliveryCustomFieldAddedMessage) {
+            return com.commercetools.api.models.message.DeliveryCustomFieldAddedMessage
+                    .deepCopy((com.commercetools.api.models.message.DeliveryCustomFieldAddedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.DeliveryCustomFieldChangedMessage) {
+            return com.commercetools.api.models.message.DeliveryCustomFieldChangedMessage
+                    .deepCopy((com.commercetools.api.models.message.DeliveryCustomFieldChangedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.DeliveryCustomFieldRemovedMessage) {
+            return com.commercetools.api.models.message.DeliveryCustomFieldRemovedMessage
+                    .deepCopy((com.commercetools.api.models.message.DeliveryCustomFieldRemovedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.DeliveryCustomTypeRemovedMessage) {
+            return com.commercetools.api.models.message.DeliveryCustomTypeRemovedMessage
+                    .deepCopy((com.commercetools.api.models.message.DeliveryCustomTypeRemovedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.DeliveryCustomTypeSetMessage) {
+            return com.commercetools.api.models.message.DeliveryCustomTypeSetMessage
+                    .deepCopy((com.commercetools.api.models.message.DeliveryCustomTypeSetMessage) template);
+        }
         if (template instanceof com.commercetools.api.models.message.DeliveryItemsUpdatedMessage) {
             return com.commercetools.api.models.message.DeliveryItemsUpdatedMessage
                     .deepCopy((com.commercetools.api.models.message.DeliveryItemsUpdatedMessage) template);

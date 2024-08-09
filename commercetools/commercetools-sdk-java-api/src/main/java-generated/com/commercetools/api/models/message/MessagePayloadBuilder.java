@@ -391,6 +391,26 @@ public class MessagePayloadBuilder {
         return com.commercetools.api.models.message.DeliveryAddressSetMessagePayloadBuilder.of();
     }
 
+    public com.commercetools.api.models.message.DeliveryCustomFieldAddedMessagePayloadBuilder deliveryCustomFieldAddedBuilder() {
+        return com.commercetools.api.models.message.DeliveryCustomFieldAddedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.DeliveryCustomFieldChangedMessagePayloadBuilder deliveryCustomFieldChangedBuilder() {
+        return com.commercetools.api.models.message.DeliveryCustomFieldChangedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.DeliveryCustomFieldRemovedMessagePayloadBuilder deliveryCustomFieldRemovedBuilder() {
+        return com.commercetools.api.models.message.DeliveryCustomFieldRemovedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.DeliveryCustomTypeRemovedMessagePayloadBuilder deliveryCustomTypeRemovedBuilder() {
+        return com.commercetools.api.models.message.DeliveryCustomTypeRemovedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.DeliveryCustomTypeSetMessagePayloadBuilder deliveryCustomTypeSetBuilder() {
+        return com.commercetools.api.models.message.DeliveryCustomTypeSetMessagePayloadBuilder.of();
+    }
+
     public com.commercetools.api.models.message.DeliveryItemsUpdatedMessagePayloadBuilder deliveryItemsUpdatedBuilder() {
         return com.commercetools.api.models.message.DeliveryItemsUpdatedMessagePayloadBuilder.of();
     }

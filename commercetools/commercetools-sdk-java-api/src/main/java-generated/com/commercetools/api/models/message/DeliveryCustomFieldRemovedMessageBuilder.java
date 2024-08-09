@@ -10,12 +10,12 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * DeliveryAddressSetMessageBuilder
+ * DeliveryCustomFieldRemovedMessageBuilder
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     DeliveryAddressSetMessage deliveryAddressSetMessage = DeliveryAddressSetMessage.builder()
+ *     DeliveryCustomFieldRemovedMessage deliveryCustomFieldRemovedMessage = DeliveryCustomFieldRemovedMessage.builder()
  *             .id("{id}")
  *             .version(0.3)
  *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
@@ -23,13 +23,14 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .sequenceNumber(0.3)
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
+ *             .name("{name}")
  *             .deliveryId("{deliveryId}")
  *             .build()
  * </code></pre>
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddressSetMessage> {
+public class DeliveryCustomFieldRemovedMessageBuilder implements Builder<DeliveryCustomFieldRemovedMessage> {
 
     private String id;
 
@@ -54,16 +55,9 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
     @Nullable
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
+    private String name;
+
     private String deliveryId;
-
-    @Nullable
-    private com.commercetools.api.models.common.Address address;
-
-    @Nullable
-    private com.commercetools.api.models.common.Address oldAddress;
-
-    @Nullable
-    private String shippingKey;
 
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
@@ -71,7 +65,7 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
      * @return Builder
      */
 
-    public DeliveryAddressSetMessageBuilder id(final String id) {
+    public DeliveryCustomFieldRemovedMessageBuilder id(final String id) {
         this.id = id;
         return this;
     }
@@ -82,7 +76,7 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
      * @return Builder
      */
 
-    public DeliveryAddressSetMessageBuilder version(final Long version) {
+    public DeliveryCustomFieldRemovedMessageBuilder version(final Long version) {
         this.version = version;
         return this;
     }
@@ -93,7 +87,7 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
      * @return Builder
      */
 
-    public DeliveryAddressSetMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
+    public DeliveryCustomFieldRemovedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
@@ -104,7 +98,7 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
      * @return Builder
      */
 
-    public DeliveryAddressSetMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
+    public DeliveryCustomFieldRemovedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
@@ -115,7 +109,7 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
      * @return Builder
      */
 
-    public DeliveryAddressSetMessageBuilder lastModifiedBy(
+    public DeliveryCustomFieldRemovedMessageBuilder lastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
         this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
         return this;
@@ -127,7 +121,7 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
      * @return Builder
      */
 
-    public DeliveryAddressSetMessageBuilder withLastModifiedBy(
+    public DeliveryCustomFieldRemovedMessageBuilder withLastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
         this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
         return this;
@@ -139,7 +133,7 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
      * @return Builder
      */
 
-    public DeliveryAddressSetMessageBuilder lastModifiedBy(
+    public DeliveryCustomFieldRemovedMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
@@ -151,7 +145,7 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
      * @return Builder
      */
 
-    public DeliveryAddressSetMessageBuilder createdBy(
+    public DeliveryCustomFieldRemovedMessageBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
@@ -163,7 +157,7 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
      * @return Builder
      */
 
-    public DeliveryAddressSetMessageBuilder withCreatedBy(
+    public DeliveryCustomFieldRemovedMessageBuilder withCreatedBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
         return this;
@@ -175,7 +169,7 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
      * @return Builder
      */
 
-    public DeliveryAddressSetMessageBuilder createdBy(
+    public DeliveryCustomFieldRemovedMessageBuilder createdBy(
             @Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -187,7 +181,7 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
      * @return Builder
      */
 
-    public DeliveryAddressSetMessageBuilder sequenceNumber(final Long sequenceNumber) {
+    public DeliveryCustomFieldRemovedMessageBuilder sequenceNumber(final Long sequenceNumber) {
         this.sequenceNumber = sequenceNumber;
         return this;
     }
@@ -198,7 +192,8 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
      * @return Builder
      */
 
-    public DeliveryAddressSetMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
+    public DeliveryCustomFieldRemovedMessageBuilder resource(
+            final com.commercetools.api.models.common.Reference resource) {
         this.resource = resource;
         return this;
     }
@@ -209,7 +204,7 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
      * @return Builder
      */
 
-    public DeliveryAddressSetMessageBuilder resource(
+    public DeliveryCustomFieldRemovedMessageBuilder resource(
             Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
         this.resource = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
         return this;
@@ -221,7 +216,7 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
      * @return Builder
      */
 
-    public DeliveryAddressSetMessageBuilder resourceVersion(final Long resourceVersion) {
+    public DeliveryCustomFieldRemovedMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
     }
@@ -232,7 +227,7 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
      * @return Builder
      */
 
-    public DeliveryAddressSetMessageBuilder resourceUserProvidedIdentifiers(
+    public DeliveryCustomFieldRemovedMessageBuilder resourceUserProvidedIdentifiers(
             Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
         this.resourceUserProvidedIdentifiers = builder
                 .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
@@ -246,7 +241,7 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
      * @return Builder
      */
 
-    public DeliveryAddressSetMessageBuilder withResourceUserProvidedIdentifiers(
+    public DeliveryCustomFieldRemovedMessageBuilder withResourceUserProvidedIdentifiers(
             Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiers> builder) {
         this.resourceUserProvidedIdentifiers = builder
                 .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of());
@@ -259,9 +254,20 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
      * @return Builder
      */
 
-    public DeliveryAddressSetMessageBuilder resourceUserProvidedIdentifiers(
+    public DeliveryCustomFieldRemovedMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
+        return this;
+    }
+
+    /**
+     *  <p>Name of the Custom Field that was removed.</p>
+     * @param name value to be set
+     * @return Builder
+     */
+
+    public DeliveryCustomFieldRemovedMessageBuilder name(final String name) {
+        this.name = name;
         return this;
     }
 
@@ -271,91 +277,8 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
      * @return Builder
      */
 
-    public DeliveryAddressSetMessageBuilder deliveryId(final String deliveryId) {
+    public DeliveryCustomFieldRemovedMessageBuilder deliveryId(final String deliveryId) {
         this.deliveryId = deliveryId;
-        return this;
-    }
-
-    /**
-     *  <p>Address after the Set Delivery Address update action.</p>
-     * @param builder function to build the address value
-     * @return Builder
-     */
-
-    public DeliveryAddressSetMessageBuilder address(
-            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
-        this.address = builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>Address after the Set Delivery Address update action.</p>
-     * @param builder function to build the address value
-     * @return Builder
-     */
-
-    public DeliveryAddressSetMessageBuilder withAddress(
-            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.Address> builder) {
-        this.address = builder.apply(com.commercetools.api.models.common.AddressBuilder.of());
-        return this;
-    }
-
-    /**
-     *  <p>Address after the Set Delivery Address update action.</p>
-     * @param address value to be set
-     * @return Builder
-     */
-
-    public DeliveryAddressSetMessageBuilder address(
-            @Nullable final com.commercetools.api.models.common.Address address) {
-        this.address = address;
-        return this;
-    }
-
-    /**
-     *  <p>Address before the Set Delivery Address update action.</p>
-     * @param builder function to build the oldAddress value
-     * @return Builder
-     */
-
-    public DeliveryAddressSetMessageBuilder oldAddress(
-            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
-        this.oldAddress = builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build();
-        return this;
-    }
-
-    /**
-     *  <p>Address before the Set Delivery Address update action.</p>
-     * @param builder function to build the oldAddress value
-     * @return Builder
-     */
-
-    public DeliveryAddressSetMessageBuilder withOldAddress(
-            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.Address> builder) {
-        this.oldAddress = builder.apply(com.commercetools.api.models.common.AddressBuilder.of());
-        return this;
-    }
-
-    /**
-     *  <p>Address before the Set Delivery Address update action.</p>
-     * @param oldAddress value to be set
-     * @return Builder
-     */
-
-    public DeliveryAddressSetMessageBuilder oldAddress(
-            @Nullable final com.commercetools.api.models.common.Address oldAddress) {
-        this.oldAddress = oldAddress;
-        return this;
-    }
-
-    /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
-     * @param shippingKey value to be set
-     * @return Builder
-     */
-
-    public DeliveryAddressSetMessageBuilder shippingKey(@Nullable final String shippingKey) {
-        this.shippingKey = shippingKey;
         return this;
     }
 
@@ -453,6 +376,15 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
     }
 
     /**
+     *  <p>Name of the Custom Field that was removed.</p>
+     * @return name
+     */
+
+    public String getName() {
+        return this.name;
+    }
+
+    /**
      *  <p>Unique identifier of the Delivery.</p>
      * @return deliveryId
      */
@@ -462,78 +394,48 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
     }
 
     /**
-     *  <p>Address after the Set Delivery Address update action.</p>
-     * @return address
+     * builds DeliveryCustomFieldRemovedMessage with checking for non-null required values
+     * @return DeliveryCustomFieldRemovedMessage
      */
-
-    @Nullable
-    public com.commercetools.api.models.common.Address getAddress() {
-        return this.address;
+    public DeliveryCustomFieldRemovedMessage build() {
+        Objects.requireNonNull(id, DeliveryCustomFieldRemovedMessage.class + ": id is missing");
+        Objects.requireNonNull(version, DeliveryCustomFieldRemovedMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, DeliveryCustomFieldRemovedMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, DeliveryCustomFieldRemovedMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, DeliveryCustomFieldRemovedMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, DeliveryCustomFieldRemovedMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion,
+            DeliveryCustomFieldRemovedMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(name, DeliveryCustomFieldRemovedMessage.class + ": name is missing");
+        Objects.requireNonNull(deliveryId, DeliveryCustomFieldRemovedMessage.class + ": deliveryId is missing");
+        return new DeliveryCustomFieldRemovedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, name, deliveryId);
     }
 
     /**
-     *  <p>Address before the Set Delivery Address update action.</p>
-     * @return oldAddress
+     * builds DeliveryCustomFieldRemovedMessage without checking for non-null required values
+     * @return DeliveryCustomFieldRemovedMessage
      */
-
-    @Nullable
-    public com.commercetools.api.models.common.Address getOldAddress() {
-        return this.oldAddress;
+    public DeliveryCustomFieldRemovedMessage buildUnchecked() {
+        return new DeliveryCustomFieldRemovedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
+            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, name, deliveryId);
     }
 
     /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
-     * @return shippingKey
-     */
-
-    @Nullable
-    public String getShippingKey() {
-        return this.shippingKey;
-    }
-
-    /**
-     * builds DeliveryAddressSetMessage with checking for non-null required values
-     * @return DeliveryAddressSetMessage
-     */
-    public DeliveryAddressSetMessage build() {
-        Objects.requireNonNull(id, DeliveryAddressSetMessage.class + ": id is missing");
-        Objects.requireNonNull(version, DeliveryAddressSetMessage.class + ": version is missing");
-        Objects.requireNonNull(createdAt, DeliveryAddressSetMessage.class + ": createdAt is missing");
-        Objects.requireNonNull(lastModifiedAt, DeliveryAddressSetMessage.class + ": lastModifiedAt is missing");
-        Objects.requireNonNull(sequenceNumber, DeliveryAddressSetMessage.class + ": sequenceNumber is missing");
-        Objects.requireNonNull(resource, DeliveryAddressSetMessage.class + ": resource is missing");
-        Objects.requireNonNull(resourceVersion, DeliveryAddressSetMessage.class + ": resourceVersion is missing");
-        Objects.requireNonNull(deliveryId, DeliveryAddressSetMessage.class + ": deliveryId is missing");
-        return new DeliveryAddressSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, deliveryId, address, oldAddress,
-            shippingKey);
-    }
-
-    /**
-     * builds DeliveryAddressSetMessage without checking for non-null required values
-     * @return DeliveryAddressSetMessage
-     */
-    public DeliveryAddressSetMessage buildUnchecked() {
-        return new DeliveryAddressSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, deliveryId, address, oldAddress,
-            shippingKey);
-    }
-
-    /**
-     * factory method for an instance of DeliveryAddressSetMessageBuilder
+     * factory method for an instance of DeliveryCustomFieldRemovedMessageBuilder
      * @return builder
      */
-    public static DeliveryAddressSetMessageBuilder of() {
-        return new DeliveryAddressSetMessageBuilder();
+    public static DeliveryCustomFieldRemovedMessageBuilder of() {
+        return new DeliveryCustomFieldRemovedMessageBuilder();
     }
 
     /**
-     * create builder for DeliveryAddressSetMessage instance
+     * create builder for DeliveryCustomFieldRemovedMessage instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static DeliveryAddressSetMessageBuilder of(final DeliveryAddressSetMessage template) {
-        DeliveryAddressSetMessageBuilder builder = new DeliveryAddressSetMessageBuilder();
+    public static DeliveryCustomFieldRemovedMessageBuilder of(final DeliveryCustomFieldRemovedMessage template) {
+        DeliveryCustomFieldRemovedMessageBuilder builder = new DeliveryCustomFieldRemovedMessageBuilder();
         builder.id = template.getId();
         builder.version = template.getVersion();
         builder.createdAt = template.getCreatedAt();
@@ -544,10 +446,8 @@ public class DeliveryAddressSetMessageBuilder implements Builder<DeliveryAddress
         builder.resource = template.getResource();
         builder.resourceVersion = template.getResourceVersion();
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
+        builder.name = template.getName();
         builder.deliveryId = template.getDeliveryId();
-        builder.address = template.getAddress();
-        builder.oldAddress = template.getOldAddress();
-        builder.shippingKey = template.getShippingKey();
         return builder;
     }
 

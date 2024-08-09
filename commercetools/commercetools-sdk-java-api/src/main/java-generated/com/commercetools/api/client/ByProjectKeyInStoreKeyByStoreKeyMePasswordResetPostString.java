@@ -18,7 +18,12 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>This is the last step in the password reset process of the authenticated Customer.</p>
- *  <p>Resetting a password produces the of the Customer CustomerPasswordUpdated Message with <code>reset=true</code>.</p>
+ *  <p>Resetting a password produces the Customer CustomerPasswordUpdated Message with <code>reset=true</code>.</p>
+ *  <p>A ResourceNotFound error is returned in the following scenarios:</p>
+ *  <ul>
+ *   <li>If no Customer exists with the <code>id</code> specified in the customer:{id} scope.</li>
+ *   <li>If the Customer exists but is associated with a different Store than what is specified in the <code>manage_my_profile:{projectKey}:{storeKey}</code> scope.</li>
+ *  </ul>
  *
  * <hr>
  * <div class=code-example>

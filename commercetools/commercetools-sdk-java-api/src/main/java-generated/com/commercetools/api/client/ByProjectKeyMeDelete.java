@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *
+ *  <p>Deletes the Customer specified in the customer:{id} scope. Returns a <code>200 OK</code> status if successful.</p>
  *
  * <hr>
  * <div class=code-example>

@@ -15,3 +15,11 @@
 - added type `DeliveryCustomTypeSetMessagePayload`
 </details>
 
+
+<details>
+<summary>Removed Method(s)</summary>
+
+- :warning: removed method `apiRoot.withProjectKey().me().businessUnits().withId().delete()`
+- :warning: removed method `apiRoot.withProjectKey().me().businessUnits().withKey().delete()`
+</details>
+

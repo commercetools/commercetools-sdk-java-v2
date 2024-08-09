@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *
+ *  <p>Returns all of the authenticated Customer’s Business Units in a Project. Returns a <code>200 OK</code> status if successful, or a ResourceNotFound error otherwise.</p>
  *
  * <hr>
  * <div class=code-example>

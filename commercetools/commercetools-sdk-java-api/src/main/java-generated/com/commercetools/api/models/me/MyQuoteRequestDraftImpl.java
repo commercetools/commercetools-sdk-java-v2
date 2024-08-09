@@ -46,7 +46,7 @@ public class MyQuoteRequestDraftImpl implements MyQuoteRequestDraft, ModelBase {
     }
 
     /**
-     *  <p><code>id</code> of the Cart from which the Quote Request is created.</p>
+     *  <p><code>id</code> of the Cart from which the Quote Request is created. Carts with Discount Codes and Carts with <code>Multiple</code> ShippingMode are not supported. The Cart must have a <code>shippingAddress</code> defined, otherwise an InvalidOperation error is returned when creating a Quote Request.</p>
      */
 
     public String getCartId() {

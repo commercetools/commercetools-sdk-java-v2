@@ -62,7 +62,7 @@ public class QuoteRequestDraftImpl implements QuoteRequestDraft, ModelBase {
     }
 
     /**
-     *  <p>Cart for which a Quote is requested. Anonymous Carts, Carts with Discount Codes, or Carts with a <code>Multiple</code> ShippingMode are not supported.</p>
+     *  <p>Cart for which a Quote is requested. Anonymous Carts, Carts with Discount Codes, and Carts with <code>Multiple</code> ShippingMode are not supported. The Cart must have a <code>shippingAddress</code> defined, otherwise an InvalidOperation error is returned when creating a Quote Request.</p>
      */
 
     public com.commercetools.api.models.cart.CartResourceIdentifier getCart() {

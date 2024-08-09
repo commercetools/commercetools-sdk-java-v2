@@ -124,6 +124,11 @@ import jakarta.validation.constraints.NotNull;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerTitleSetMessagePayloadImpl.class, name = CustomerTitleSetMessagePayload.CUSTOMER_TITLE_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.DeliveryAddedMessagePayloadImpl.class, name = DeliveryAddedMessagePayload.DELIVERY_ADDED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.DeliveryAddressSetMessagePayloadImpl.class, name = DeliveryAddressSetMessagePayload.DELIVERY_ADDRESS_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.DeliveryCustomFieldAddedMessagePayloadImpl.class, name = DeliveryCustomFieldAddedMessagePayload.DELIVERY_CUSTOM_FIELD_ADDED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.DeliveryCustomFieldChangedMessagePayloadImpl.class, name = DeliveryCustomFieldChangedMessagePayload.DELIVERY_CUSTOM_FIELD_CHANGED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.DeliveryCustomFieldRemovedMessagePayloadImpl.class, name = DeliveryCustomFieldRemovedMessagePayload.DELIVERY_CUSTOM_FIELD_REMOVED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.DeliveryCustomTypeRemovedMessagePayloadImpl.class, name = DeliveryCustomTypeRemovedMessagePayload.DELIVERY_CUSTOM_TYPE_REMOVED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.DeliveryCustomTypeSetMessagePayloadImpl.class, name = DeliveryCustomTypeSetMessagePayload.DELIVERY_CUSTOM_TYPE_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.DeliveryItemsUpdatedMessagePayloadImpl.class, name = DeliveryItemsUpdatedMessagePayload.DELIVERY_ITEMS_UPDATED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.DeliveryRemovedMessagePayloadImpl.class, name = DeliveryRemovedMessagePayload.DELIVERY_REMOVED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.DiscountCodeCreatedMessagePayloadImpl.class, name = DiscountCodeCreatedMessagePayload.DISCOUNT_CODE_CREATED),
@@ -1825,6 +1830,46 @@ public interface MessagePayload extends MessagePayloadMixin {
      */
     public static com.commercetools.api.models.message.DeliveryAddressSetMessagePayloadBuilder deliveryAddressSetBuilder() {
         return com.commercetools.api.models.message.DeliveryAddressSetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for deliveryCustomFieldAdded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.DeliveryCustomFieldAddedMessagePayloadBuilder deliveryCustomFieldAddedBuilder() {
+        return com.commercetools.api.models.message.DeliveryCustomFieldAddedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for deliveryCustomFieldChanged subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.DeliveryCustomFieldChangedMessagePayloadBuilder deliveryCustomFieldChangedBuilder() {
+        return com.commercetools.api.models.message.DeliveryCustomFieldChangedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for deliveryCustomFieldRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.DeliveryCustomFieldRemovedMessagePayloadBuilder deliveryCustomFieldRemovedBuilder() {
+        return com.commercetools.api.models.message.DeliveryCustomFieldRemovedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for deliveryCustomTypeRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.DeliveryCustomTypeRemovedMessagePayloadBuilder deliveryCustomTypeRemovedBuilder() {
+        return com.commercetools.api.models.message.DeliveryCustomTypeRemovedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for deliveryCustomTypeSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.DeliveryCustomTypeSetMessagePayloadBuilder deliveryCustomTypeSetBuilder() {
+        return com.commercetools.api.models.message.DeliveryCustomTypeSetMessagePayloadBuilder.of();
     }
 
     /**

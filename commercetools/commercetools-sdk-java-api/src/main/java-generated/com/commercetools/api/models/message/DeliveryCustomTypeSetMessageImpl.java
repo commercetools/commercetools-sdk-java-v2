@@ -17,10 +17,10 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Set Delivery Address update action.</p>
+ *  <p>Generated after adding a Custom Type to a Delivery using the Set Custom Type update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class DeliveryAddressSetMessageImpl implements DeliveryAddressSetMessage, ModelBase {
+public class DeliveryCustomTypeSetMessageImpl implements DeliveryCustomTypeSetMessage, ModelBase {
 
     private String id;
 
@@ -44,19 +44,17 @@ public class DeliveryAddressSetMessageImpl implements DeliveryAddressSetMessage,
 
     private com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers;
 
+    private com.commercetools.api.models.type.CustomFields customFields;
+
+    private String previousTypeId;
+
     private String deliveryId;
-
-    private com.commercetools.api.models.common.Address address;
-
-    private com.commercetools.api.models.common.Address oldAddress;
-
-    private String shippingKey;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    DeliveryAddressSetMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
+    DeliveryCustomTypeSetMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
             @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt,
             @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy,
@@ -65,10 +63,9 @@ public class DeliveryAddressSetMessageImpl implements DeliveryAddressSetMessage,
             @JsonProperty("resource") final com.commercetools.api.models.common.Reference resource,
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
-            @JsonProperty("deliveryId") final String deliveryId,
-            @JsonProperty("address") final com.commercetools.api.models.common.Address address,
-            @JsonProperty("oldAddress") final com.commercetools.api.models.common.Address oldAddress,
-            @JsonProperty("shippingKey") final String shippingKey) {
+            @JsonProperty("customFields") final com.commercetools.api.models.type.CustomFields customFields,
+            @JsonProperty("previousTypeId") final String previousTypeId,
+            @JsonProperty("deliveryId") final String deliveryId) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -79,18 +76,17 @@ public class DeliveryAddressSetMessageImpl implements DeliveryAddressSetMessage,
         this.resource = resource;
         this.resourceVersion = resourceVersion;
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
+        this.customFields = customFields;
+        this.previousTypeId = previousTypeId;
         this.deliveryId = deliveryId;
-        this.address = address;
-        this.oldAddress = oldAddress;
-        this.shippingKey = shippingKey;
-        this.type = DELIVERY_ADDRESS_SET;
+        this.type = DELIVERY_CUSTOM_TYPE_SET;
     }
 
     /**
      * create empty instance
      */
-    public DeliveryAddressSetMessageImpl() {
-        this.type = DELIVERY_ADDRESS_SET;
+    public DeliveryCustomTypeSetMessageImpl() {
+        this.type = DELIVERY_CUSTOM_TYPE_SET;
     }
 
     /**
@@ -182,35 +178,27 @@ public class DeliveryAddressSetMessageImpl implements DeliveryAddressSetMessage,
     }
 
     /**
+     *  <p>The Custom Fields that have been set.</p>
+     */
+
+    public com.commercetools.api.models.type.CustomFields getCustomFields() {
+        return this.customFields;
+    }
+
+    /**
+     *  <p><code>id</code> of the previous Custom Type. Absent if there was no previous Custom Type present.</p>
+     */
+
+    public String getPreviousTypeId() {
+        return this.previousTypeId;
+    }
+
+    /**
      *  <p>Unique identifier of the Delivery.</p>
      */
 
     public String getDeliveryId() {
         return this.deliveryId;
-    }
-
-    /**
-     *  <p>Address after the Set Delivery Address update action.</p>
-     */
-
-    public com.commercetools.api.models.common.Address getAddress() {
-        return this.address;
-    }
-
-    /**
-     *  <p>Address before the Set Delivery Address update action.</p>
-     */
-
-    public com.commercetools.api.models.common.Address getOldAddress() {
-        return this.oldAddress;
-    }
-
-    /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
-     */
-
-    public String getShippingKey() {
-        return this.shippingKey;
     }
 
     public void setId(final String id) {
@@ -254,20 +242,16 @@ public class DeliveryAddressSetMessageImpl implements DeliveryAddressSetMessage,
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
     }
 
+    public void setCustomFields(final com.commercetools.api.models.type.CustomFields customFields) {
+        this.customFields = customFields;
+    }
+
+    public void setPreviousTypeId(final String previousTypeId) {
+        this.previousTypeId = previousTypeId;
+    }
+
     public void setDeliveryId(final String deliveryId) {
         this.deliveryId = deliveryId;
-    }
-
-    public void setAddress(final com.commercetools.api.models.common.Address address) {
-        this.address = address;
-    }
-
-    public void setOldAddress(final com.commercetools.api.models.common.Address oldAddress) {
-        this.oldAddress = oldAddress;
-    }
-
-    public void setShippingKey(final String shippingKey) {
-        this.shippingKey = shippingKey;
     }
 
     @Override
@@ -278,7 +262,7 @@ public class DeliveryAddressSetMessageImpl implements DeliveryAddressSetMessage,
         if (o == null || getClass() != o.getClass())
             return false;
 
-        DeliveryAddressSetMessageImpl that = (DeliveryAddressSetMessageImpl) o;
+        DeliveryCustomTypeSetMessageImpl that = (DeliveryCustomTypeSetMessageImpl) o;
 
         return new EqualsBuilder().append(id, that.id)
                 .append(version, that.version)
@@ -291,10 +275,9 @@ public class DeliveryAddressSetMessageImpl implements DeliveryAddressSetMessage,
                 .append(resourceVersion, that.resourceVersion)
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(customFields, that.customFields)
+                .append(previousTypeId, that.previousTypeId)
                 .append(deliveryId, that.deliveryId)
-                .append(address, that.address)
-                .append(oldAddress, that.oldAddress)
-                .append(shippingKey, that.shippingKey)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -306,10 +289,9 @@ public class DeliveryAddressSetMessageImpl implements DeliveryAddressSetMessage,
                 .append(resourceVersion, that.resourceVersion)
                 .append(type, that.type)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
+                .append(customFields, that.customFields)
+                .append(previousTypeId, that.previousTypeId)
                 .append(deliveryId, that.deliveryId)
-                .append(address, that.address)
-                .append(oldAddress, that.oldAddress)
-                .append(shippingKey, that.shippingKey)
                 .isEquals();
     }
 
@@ -326,10 +308,9 @@ public class DeliveryAddressSetMessageImpl implements DeliveryAddressSetMessage,
                 .append(resourceVersion)
                 .append(type)
                 .append(resourceUserProvidedIdentifiers)
+                .append(customFields)
+                .append(previousTypeId)
                 .append(deliveryId)
-                .append(address)
-                .append(oldAddress)
-                .append(shippingKey)
                 .toHashCode();
     }
 
@@ -346,10 +327,9 @@ public class DeliveryAddressSetMessageImpl implements DeliveryAddressSetMessage,
                 .append("resourceVersion", resourceVersion)
                 .append("type", type)
                 .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
+                .append("customFields", customFields)
+                .append("previousTypeId", previousTypeId)
                 .append("deliveryId", deliveryId)
-                .append("address", address)
-                .append("oldAddress", oldAddress)
-                .append("shippingKey", shippingKey)
                 .build();
     }
 

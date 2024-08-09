@@ -36,7 +36,7 @@ public class DeliveryAddressSetMessagePayloadBuilder implements Builder<Delivery
     private String shippingKey;
 
     /**
-     *  <p>Unique identifier of the Parcel.</p>
+     *  <p>Unique identifier of the Delivery.</p>
      * @param deliveryId value to be set
      * @return Builder
      */
@@ -130,7 +130,7 @@ public class DeliveryAddressSetMessagePayloadBuilder implements Builder<Delivery
     }
 
     /**
-     *  <p>Unique identifier of the Parcel.</p>
+     *  <p>Unique identifier of the Delivery.</p>
      * @return deliveryId
      */
 

@@ -39,7 +39,7 @@ public interface DeliveryAddressSetMessagePayload extends OrderMessagePayload {
     String DELIVERY_ADDRESS_SET = "DeliveryAddressSet";
 
     /**
-     *  <p>Unique identifier of the Parcel.</p>
+     *  <p>Unique identifier of the Delivery.</p>
      * @return deliveryId
      */
     @NotNull
@@ -71,7 +71,7 @@ public interface DeliveryAddressSetMessagePayload extends OrderMessagePayload {
     public String getShippingKey();
 
     /**
-     *  <p>Unique identifier of the Parcel.</p>
+     *  <p>Unique identifier of the Delivery.</p>
      * @param deliveryId value to be set
      */
 

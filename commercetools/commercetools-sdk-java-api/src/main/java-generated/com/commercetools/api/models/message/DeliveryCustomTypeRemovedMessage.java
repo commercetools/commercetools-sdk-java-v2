@@ -7,23 +7,21 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
-import com.commercetools.api.models.common.Address;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
-import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Set Delivery Address update action.</p>
+ *  <p>Generated after removing a Custom Type from a Delivery using the Set Custom Type update action with empty parameters.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     DeliveryAddressSetMessage deliveryAddressSetMessage = DeliveryAddressSetMessage.builder()
+ *     DeliveryCustomTypeRemovedMessage deliveryCustomTypeRemovedMessage = DeliveryCustomTypeRemovedMessage.builder()
  *             .id("{id}")
  *             .version(0.3)
  *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
@@ -37,13 +35,21 @@ import jakarta.validation.constraints.NotNull;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-@JsonDeserialize(as = DeliveryAddressSetMessageImpl.class)
-public interface DeliveryAddressSetMessage extends OrderMessage {
+@JsonDeserialize(as = DeliveryCustomTypeRemovedMessageImpl.class)
+public interface DeliveryCustomTypeRemovedMessage extends OrderMessage {
 
     /**
-     * discriminator value for DeliveryAddressSetMessage
+     * discriminator value for DeliveryCustomTypeRemovedMessage
      */
-    String DELIVERY_ADDRESS_SET = "DeliveryAddressSet";
+    String DELIVERY_CUSTOM_TYPE_REMOVED = "DeliveryCustomTypeRemoved";
+
+    /**
+     *  <p><code>id</code> of the Custom Type that was removed. Absent if there was no previous Custom Type present.</p>
+     * @return previousTypeId
+     */
+
+    @JsonProperty("previousTypeId")
+    public String getPreviousTypeId();
 
     /**
      *  <p>Unique identifier of the Delivery.</p>
@@ -54,28 +60,11 @@ public interface DeliveryAddressSetMessage extends OrderMessage {
     public String getDeliveryId();
 
     /**
-     *  <p>Address after the Set Delivery Address update action.</p>
-     * @return address
-     */
-    @Valid
-    @JsonProperty("address")
-    public Address getAddress();
-
-    /**
-     *  <p>Address before the Set Delivery Address update action.</p>
-     * @return oldAddress
-     */
-    @Valid
-    @JsonProperty("oldAddress")
-    public Address getOldAddress();
-
-    /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
-     * @return shippingKey
+     *  <p><code>id</code> of the Custom Type that was removed. Absent if there was no previous Custom Type present.</p>
+     * @param previousTypeId value to be set
      */
 
-    @JsonProperty("shippingKey")
-    public String getShippingKey();
+    public void setPreviousTypeId(final String previousTypeId);
 
     /**
      *  <p>Unique identifier of the Delivery.</p>
@@ -85,41 +74,20 @@ public interface DeliveryAddressSetMessage extends OrderMessage {
     public void setDeliveryId(final String deliveryId);
 
     /**
-     *  <p>Address after the Set Delivery Address update action.</p>
-     * @param address value to be set
-     */
-
-    public void setAddress(final Address address);
-
-    /**
-     *  <p>Address before the Set Delivery Address update action.</p>
-     * @param oldAddress value to be set
-     */
-
-    public void setOldAddress(final Address oldAddress);
-
-    /**
-     *  <p>User-defined unique identifier of the Shipping Method in a Cart with <code>Multiple</code> ShippingMode.</p>
-     * @param shippingKey value to be set
-     */
-
-    public void setShippingKey(final String shippingKey);
-
-    /**
      * factory method
-     * @return instance of DeliveryAddressSetMessage
+     * @return instance of DeliveryCustomTypeRemovedMessage
      */
-    public static DeliveryAddressSetMessage of() {
-        return new DeliveryAddressSetMessageImpl();
+    public static DeliveryCustomTypeRemovedMessage of() {
+        return new DeliveryCustomTypeRemovedMessageImpl();
     }
 
     /**
-     * factory method to create a shallow copy DeliveryAddressSetMessage
+     * factory method to create a shallow copy DeliveryCustomTypeRemovedMessage
      * @param template instance to be copied
      * @return copy instance
      */
-    public static DeliveryAddressSetMessage of(final DeliveryAddressSetMessage template) {
-        DeliveryAddressSetMessageImpl instance = new DeliveryAddressSetMessageImpl();
+    public static DeliveryCustomTypeRemovedMessage of(final DeliveryCustomTypeRemovedMessage template) {
+        DeliveryCustomTypeRemovedMessageImpl instance = new DeliveryCustomTypeRemovedMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
@@ -130,24 +98,22 @@ public interface DeliveryAddressSetMessage extends OrderMessage {
         instance.setResource(template.getResource());
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
+        instance.setPreviousTypeId(template.getPreviousTypeId());
         instance.setDeliveryId(template.getDeliveryId());
-        instance.setAddress(template.getAddress());
-        instance.setOldAddress(template.getOldAddress());
-        instance.setShippingKey(template.getShippingKey());
         return instance;
     }
 
     /**
-     * factory method to create a deep copy of DeliveryAddressSetMessage
+     * factory method to create a deep copy of DeliveryCustomTypeRemovedMessage
      * @param template instance to be copied
      * @return copy instance
      */
     @Nullable
-    public static DeliveryAddressSetMessage deepCopy(@Nullable final DeliveryAddressSetMessage template) {
+    public static DeliveryCustomTypeRemovedMessage deepCopy(@Nullable final DeliveryCustomTypeRemovedMessage template) {
         if (template == null) {
             return null;
         }
-        DeliveryAddressSetMessageImpl instance = new DeliveryAddressSetMessageImpl();
+        DeliveryCustomTypeRemovedMessageImpl instance = new DeliveryCustomTypeRemovedMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
@@ -160,28 +126,26 @@ public interface DeliveryAddressSetMessage extends OrderMessage {
         instance.setResourceVersion(template.getResourceVersion());
         instance.setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers
                 .deepCopy(template.getResourceUserProvidedIdentifiers()));
+        instance.setPreviousTypeId(template.getPreviousTypeId());
         instance.setDeliveryId(template.getDeliveryId());
-        instance.setAddress(com.commercetools.api.models.common.Address.deepCopy(template.getAddress()));
-        instance.setOldAddress(com.commercetools.api.models.common.Address.deepCopy(template.getOldAddress()));
-        instance.setShippingKey(template.getShippingKey());
         return instance;
     }
 
     /**
-     * builder factory method for DeliveryAddressSetMessage
+     * builder factory method for DeliveryCustomTypeRemovedMessage
      * @return builder
      */
-    public static DeliveryAddressSetMessageBuilder builder() {
-        return DeliveryAddressSetMessageBuilder.of();
+    public static DeliveryCustomTypeRemovedMessageBuilder builder() {
+        return DeliveryCustomTypeRemovedMessageBuilder.of();
     }
 
     /**
-     * create builder for DeliveryAddressSetMessage instance
+     * create builder for DeliveryCustomTypeRemovedMessage instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static DeliveryAddressSetMessageBuilder builder(final DeliveryAddressSetMessage template) {
-        return DeliveryAddressSetMessageBuilder.of(template);
+    public static DeliveryCustomTypeRemovedMessageBuilder builder(final DeliveryCustomTypeRemovedMessage template) {
+        return DeliveryCustomTypeRemovedMessageBuilder.of(template);
     }
 
     /**
@@ -190,7 +154,7 @@ public interface DeliveryAddressSetMessage extends OrderMessage {
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withDeliveryAddressSetMessage(Function<DeliveryAddressSetMessage, T> helper) {
+    default <T> T withDeliveryCustomTypeRemovedMessage(Function<DeliveryCustomTypeRemovedMessage, T> helper) {
         return helper.apply(this);
     }
 
@@ -198,11 +162,11 @@ public interface DeliveryAddressSetMessage extends OrderMessage {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<DeliveryAddressSetMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<DeliveryAddressSetMessage>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<DeliveryCustomTypeRemovedMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<DeliveryCustomTypeRemovedMessage>() {
             @Override
             public String toString() {
-                return "TypeReference<DeliveryAddressSetMessage>";
+                return "TypeReference<DeliveryCustomTypeRemovedMessage>";
             }
         };
     }

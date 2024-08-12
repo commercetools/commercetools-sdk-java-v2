@@ -74,7 +74,7 @@ public class ProductSearchRequestImpl implements ProductSearchRequest, ModelBase
     }
 
     /**
-     *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.</p>
+     *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance score in descending order.</p>
      */
 
     public java.util.List<com.commercetools.api.models.search.SearchSorting> getSort() {
@@ -82,7 +82,7 @@ public class ProductSearchRequestImpl implements ProductSearchRequest, ModelBase
     }
 
     /**
-     *  <p>The maximum number of search results to be returned.</p>
+     *  <p>The maximum number of search results to be returned in one page.</p>
      */
 
     public Integer getLimit() {
@@ -106,7 +106,7 @@ public class ProductSearchRequestImpl implements ProductSearchRequest, ModelBase
     }
 
     /**
-     *  <p>Set this field to <code>{}</code> to get the ProductProjection included in the ProductSearchResult. Include query parameters for controlling Reference Expansion or projections according to your needs. If not set, the result does not include the Product Projection.</p>
+     *  <p>Controls data integration with Product Projection parameters. If not set, the result does not include the Product Projection.</p>
      */
 
     public com.commercetools.api.models.product_search.ProductSearchProjectionParams getProductProjectionParameters() {

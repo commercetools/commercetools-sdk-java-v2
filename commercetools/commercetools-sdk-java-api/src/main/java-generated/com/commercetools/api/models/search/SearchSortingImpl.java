@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Sorting parameters provided with a Search request. Sorting allows you to control how results to your query are sorted. If no sorting is specified, the results are sorted by relevance in descending (<code>desc</code>) order.</p>
+ *  <p>Sorting parameters provided with a Search request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SearchSortingImpl implements SearchSorting, ModelBase {
@@ -58,7 +58,7 @@ public class SearchSortingImpl implements SearchSorting, ModelBase {
     }
 
     /**
-     *  <p>Use any searchable field of the resource as sort criterion.</p>
+     *  <p>Use any searchable field of the resource as sort criterion, or <code>"score"</code> to sort by relevance score calculated by the API.</p>
      */
 
     public String getField() {

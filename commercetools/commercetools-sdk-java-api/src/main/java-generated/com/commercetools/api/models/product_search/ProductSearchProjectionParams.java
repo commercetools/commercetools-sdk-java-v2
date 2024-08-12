@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ProductSearchProjectionParams
+ *  <p>The query parameters used for data integration with Product Projection parameters.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

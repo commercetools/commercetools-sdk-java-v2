@@ -16,7 +16,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Sorting parameters provided with a Search request. Sorting allows you to control how results to your query are sorted. If no sorting is specified, the results are sorted by relevance in descending (<code>desc</code>) order.</p>
+ *  <p>Sorting parameters provided with a Search request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,7 +34,7 @@ import jakarta.validation.constraints.NotNull;
 public interface SearchSorting {
 
     /**
-     *  <p>Use any searchable field of the resource as sort criterion.</p>
+     *  <p>Use any searchable field of the resource as sort criterion, or <code>"score"</code> to sort by relevance score calculated by the API.</p>
      * @return field
      */
     @NotNull
@@ -82,7 +82,7 @@ public interface SearchSorting {
     public SearchQueryExpression getFilter();
 
     /**
-     *  <p>Use any searchable field of the resource as sort criterion.</p>
+     *  <p>Use any searchable field of the resource as sort criterion, or <code>"score"</code> to sort by relevance score calculated by the API.</p>
      * @param field value to be set
      */
 

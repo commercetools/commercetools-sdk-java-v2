@@ -42,7 +42,7 @@ public interface ProductSearchRequest {
     public SearchQuery getQuery();
 
     /**
-     *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.</p>
+     *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance score in descending order.</p>
      * @return sort
      */
     @Valid
@@ -50,7 +50,7 @@ public interface ProductSearchRequest {
     public List<SearchSorting> getSort();
 
     /**
-     *  <p>The maximum number of search results to be returned.</p>
+     *  <p>The maximum number of search results to be returned in one page.</p>
      * @return limit
      */
 
@@ -74,7 +74,7 @@ public interface ProductSearchRequest {
     public Boolean getMarkMatchingVariants();
 
     /**
-     *  <p>Set this field to <code>{}</code> to get the ProductProjection included in the ProductSearchResult. Include query parameters for controlling Reference Expansion or projections according to your needs. If not set, the result does not include the Product Projection.</p>
+     *  <p>Controls data integration with Product Projection parameters. If not set, the result does not include the Product Projection.</p>
      * @return productProjectionParameters
      */
     @Valid
@@ -105,7 +105,7 @@ public interface ProductSearchRequest {
     public void setQuery(final SearchQuery query);
 
     /**
-     *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.</p>
+     *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance score in descending order.</p>
      * @param sort values to be set
      */
 
@@ -113,14 +113,14 @@ public interface ProductSearchRequest {
     public void setSort(final SearchSorting... sort);
 
     /**
-     *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance in descending order.</p>
+     *  <p>Controls how results to your query are sorted. If not provided, the results are sorted by relevance score in descending order.</p>
      * @param sort values to be set
      */
 
     public void setSort(final List<SearchSorting> sort);
 
     /**
-     *  <p>The maximum number of search results to be returned.</p>
+     *  <p>The maximum number of search results to be returned in one page.</p>
      * @param limit value to be set
      */
 
@@ -141,7 +141,7 @@ public interface ProductSearchRequest {
     public void setMarkMatchingVariants(final Boolean markMatchingVariants);
 
     /**
-     *  <p>Set this field to <code>{}</code> to get the ProductProjection included in the ProductSearchResult. Include query parameters for controlling Reference Expansion or projections according to your needs. If not set, the result does not include the Product Projection.</p>
+     *  <p>Controls data integration with Product Projection parameters. If not set, the result does not include the Product Projection.</p>
      * @param productProjectionParameters value to be set
      */
 

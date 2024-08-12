@@ -42,7 +42,7 @@ public class SearchSortingBuilder implements Builder<SearchSorting> {
     private com.commercetools.api.models.search.SearchQueryExpression filter;
 
     /**
-     *  <p>Use any searchable field of the resource as sort criterion.</p>
+     *  <p>Use any searchable field of the resource as sort criterion, or <code>"score"</code> to sort by relevance score calculated by the API.</p>
      * @param field value to be set
      * @return Builder
      */
@@ -134,7 +134,7 @@ public class SearchSortingBuilder implements Builder<SearchSorting> {
     }
 
     /**
-     *  <p>Use any searchable field of the resource as sort criterion.</p>
+     *  <p>Use any searchable field of the resource as sort criterion, or <code>"score"</code> to sort by relevance score calculated by the API.</p>
      * @return field
      */
 

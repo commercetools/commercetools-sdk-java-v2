@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *
+ *  <p>Returns a Payment for a given <code>id</code>.</p>
  *
  * <hr>
  * <div class=code-example>

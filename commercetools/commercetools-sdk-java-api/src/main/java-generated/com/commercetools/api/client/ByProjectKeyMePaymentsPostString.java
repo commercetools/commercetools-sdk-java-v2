@@ -21,7 +21,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Creating a Payment produces the PaymentCreated Message.</p>
+ *  <p>Creates a Payment for the Customer or an anonymous user. Creating a Payment produces the PaymentCreated Message.</p>
  *
  * <hr>
  * <div class=code-example>

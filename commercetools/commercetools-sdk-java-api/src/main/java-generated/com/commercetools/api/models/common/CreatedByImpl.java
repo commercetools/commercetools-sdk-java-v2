@@ -67,7 +67,7 @@ public class CreatedByImpl implements CreatedBy, ModelBase {
     }
 
     /**
-     *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header or <code>external_user_id:{externalUserId}</code> scope.</p>
+     *  <p>External user ID provided by the <code>X-External-User-ID</code> HTTP Header or <code>external_user_id:{externalUserId}</code> scope.</p>
      */
 
     public String getExternalUserId() {

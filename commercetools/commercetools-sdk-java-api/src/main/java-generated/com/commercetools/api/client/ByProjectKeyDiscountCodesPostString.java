@@ -22,7 +22,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>Creating a Discount Code produces the DiscountCodeCreated Message.</p>
- *  <p>Deprecated scope: <code>manage_orders:{projectKey}</code></p>
+ *  <p>Deprecated OAuth 2.0 Scope: <code>manage_orders:{projectKey}</code></p>
  *
  * <hr>
  * <div class=code-example>

@@ -53,7 +53,7 @@ public class CreatedByBuilder implements Builder<CreatedBy> {
     }
 
     /**
-     *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header or <code>external_user_id:{externalUserId}</code> scope.</p>
+     *  <p>External user ID provided by the <code>X-External-User-ID</code> HTTP Header or <code>external_user_id:{externalUserId}</code> scope.</p>
      * @param externalUserId value to be set
      * @return Builder
      */
@@ -191,7 +191,7 @@ public class CreatedByBuilder implements Builder<CreatedBy> {
     }
 
     /**
-     *  <p>External user ID provided by <code>X-External-User-ID</code> HTTP Header or <code>external_user_id:{externalUserId}</code> scope.</p>
+     *  <p>External user ID provided by the <code>X-External-User-ID</code> HTTP Header or <code>external_user_id:{externalUserId}</code> scope.</p>
      * @return externalUserId
      */
 

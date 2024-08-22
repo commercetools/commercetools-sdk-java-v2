@@ -33,4 +33,10 @@ public class CartDiscountValueAbsoluteDraftQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, CartDiscountValueAbsoluteDraftQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<CartDiscountValueAbsoluteDraftQueryBuilderDsl> applicationMode() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("applicationMode")),
+            p -> new CombinationQueryPredicate<>(p, CartDiscountValueAbsoluteDraftQueryBuilderDsl::of));
+    }
+
 }

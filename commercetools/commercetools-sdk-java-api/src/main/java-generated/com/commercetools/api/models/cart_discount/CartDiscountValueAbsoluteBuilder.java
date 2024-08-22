@@ -4,6 +4,8 @@ package com.commercetools.api.models.cart_discount;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -23,6 +25,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class CartDiscountValueAbsoluteBuilder implements Builder<CartDiscountValueAbsolute> {
 
     private java.util.List<com.commercetools.api.models.common.CentPrecisionMoney> money;
+
+    @Nullable
+    private com.commercetools.api.models.cart_discount.DiscountApplicationMode applicationMode;
 
     /**
      *  <p>Cent precision money values in different currencies.</p>
@@ -114,6 +119,18 @@ public class CartDiscountValueAbsoluteBuilder implements Builder<CartDiscountVal
     }
 
     /**
+     *  <p>Determines how the discount is applied on CartDiscountLineItemTarget and CartDiscountCustomLineItemTarget.</p>
+     * @param applicationMode value to be set
+     * @return Builder
+     */
+
+    public CartDiscountValueAbsoluteBuilder applicationMode(
+            @Nullable final com.commercetools.api.models.cart_discount.DiscountApplicationMode applicationMode) {
+        this.applicationMode = applicationMode;
+        return this;
+    }
+
+    /**
      *  <p>Cent precision money values in different currencies.</p>
      * @return money
      */
@@ -123,12 +140,22 @@ public class CartDiscountValueAbsoluteBuilder implements Builder<CartDiscountVal
     }
 
     /**
+     *  <p>Determines how the discount is applied on CartDiscountLineItemTarget and CartDiscountCustomLineItemTarget.</p>
+     * @return applicationMode
+     */
+
+    @Nullable
+    public com.commercetools.api.models.cart_discount.DiscountApplicationMode getApplicationMode() {
+        return this.applicationMode;
+    }
+
+    /**
      * builds CartDiscountValueAbsolute with checking for non-null required values
      * @return CartDiscountValueAbsolute
      */
     public CartDiscountValueAbsolute build() {
         Objects.requireNonNull(money, CartDiscountValueAbsolute.class + ": money is missing");
-        return new CartDiscountValueAbsoluteImpl(money);
+        return new CartDiscountValueAbsoluteImpl(money, applicationMode);
     }
 
     /**
@@ -136,7 +163,7 @@ public class CartDiscountValueAbsoluteBuilder implements Builder<CartDiscountVal
      * @return CartDiscountValueAbsolute
      */
     public CartDiscountValueAbsolute buildUnchecked() {
-        return new CartDiscountValueAbsoluteImpl(money);
+        return new CartDiscountValueAbsoluteImpl(money, applicationMode);
     }
 
     /**
@@ -155,6 +182,7 @@ public class CartDiscountValueAbsoluteBuilder implements Builder<CartDiscountVal
     public static CartDiscountValueAbsoluteBuilder of(final CartDiscountValueAbsolute template) {
         CartDiscountValueAbsoluteBuilder builder = new CartDiscountValueAbsoluteBuilder();
         builder.money = template.getMoney();
+        builder.applicationMode = template.getApplicationMode();
         return builder;
     }
 

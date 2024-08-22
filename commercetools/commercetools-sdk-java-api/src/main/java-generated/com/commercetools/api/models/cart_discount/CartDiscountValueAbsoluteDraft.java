@@ -51,6 +51,15 @@ public interface CartDiscountValueAbsoluteDraft
     public List<Money> getMoney();
 
     /**
+     *  <p>Determines how the discount applies on CartDiscountLineItemTarget and CartDiscountCustomLineItemTarget.</p>
+     *  <p>If not set, the default behavior is <code>ProportionateDistribution</code>.</p>
+     * @return applicationMode
+     */
+
+    @JsonProperty("applicationMode")
+    public DiscountApplicationMode getApplicationMode();
+
+    /**
      *  <p>Money values in different currencies. An absolute Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$. If the array has multiple values of the same currency, the API returns an InvalidOperation error.</p>
      *  <p>If the array is empty, the discount does not apply.</p>
      * @param money values to be set
@@ -68,6 +77,14 @@ public interface CartDiscountValueAbsoluteDraft
     public void setMoney(final List<Money> money);
 
     /**
+     *  <p>Determines how the discount applies on CartDiscountLineItemTarget and CartDiscountCustomLineItemTarget.</p>
+     *  <p>If not set, the default behavior is <code>ProportionateDistribution</code>.</p>
+     * @param applicationMode value to be set
+     */
+
+    public void setApplicationMode(final DiscountApplicationMode applicationMode);
+
+    /**
      * factory method
      * @return instance of CartDiscountValueAbsoluteDraft
      */
@@ -83,6 +100,7 @@ public interface CartDiscountValueAbsoluteDraft
     public static CartDiscountValueAbsoluteDraft of(final CartDiscountValueAbsoluteDraft template) {
         CartDiscountValueAbsoluteDraftImpl instance = new CartDiscountValueAbsoluteDraftImpl();
         instance.setMoney(template.getMoney());
+        instance.setApplicationMode(template.getApplicationMode());
         return instance;
     }
 
@@ -102,6 +120,7 @@ public interface CartDiscountValueAbsoluteDraft
                         .map(com.commercetools.api.models.common.Money::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setApplicationMode(template.getApplicationMode());
         return instance;
     }
 

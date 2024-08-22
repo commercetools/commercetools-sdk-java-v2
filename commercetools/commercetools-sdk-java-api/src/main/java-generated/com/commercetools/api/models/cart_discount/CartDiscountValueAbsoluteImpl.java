@@ -26,13 +26,17 @@ public class CartDiscountValueAbsoluteImpl implements CartDiscountValueAbsolute,
 
     private java.util.List<com.commercetools.api.models.common.CentPrecisionMoney> money;
 
+    private com.commercetools.api.models.cart_discount.DiscountApplicationMode applicationMode;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
     CartDiscountValueAbsoluteImpl(
-            @JsonProperty("money") final java.util.List<com.commercetools.api.models.common.CentPrecisionMoney> money) {
+            @JsonProperty("money") final java.util.List<com.commercetools.api.models.common.CentPrecisionMoney> money,
+            @JsonProperty("applicationMode") final com.commercetools.api.models.cart_discount.DiscountApplicationMode applicationMode) {
         this.money = money;
+        this.applicationMode = applicationMode;
         this.type = ABSOLUTE;
     }
 
@@ -59,12 +63,25 @@ public class CartDiscountValueAbsoluteImpl implements CartDiscountValueAbsolute,
         return this.money;
     }
 
+    /**
+     *  <p>Determines how the discount is applied on CartDiscountLineItemTarget and CartDiscountCustomLineItemTarget.</p>
+     */
+
+    public com.commercetools.api.models.cart_discount.DiscountApplicationMode getApplicationMode() {
+        return this.applicationMode;
+    }
+
     public void setMoney(final com.commercetools.api.models.common.CentPrecisionMoney... money) {
         this.money = new ArrayList<>(Arrays.asList(money));
     }
 
     public void setMoney(final java.util.List<com.commercetools.api.models.common.CentPrecisionMoney> money) {
         this.money = money;
+    }
+
+    public void setApplicationMode(
+            final com.commercetools.api.models.cart_discount.DiscountApplicationMode applicationMode) {
+        this.applicationMode = applicationMode;
     }
 
     @Override
@@ -79,20 +96,23 @@ public class CartDiscountValueAbsoluteImpl implements CartDiscountValueAbsolute,
 
         return new EqualsBuilder().append(type, that.type)
                 .append(money, that.money)
+                .append(applicationMode, that.applicationMode)
                 .append(type, that.type)
                 .append(money, that.money)
+                .append(applicationMode, that.applicationMode)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(money).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type).append(money).append(applicationMode).toHashCode();
     }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
                 .append("money", money)
+                .append("applicationMode", applicationMode)
                 .build();
     }
 

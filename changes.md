@@ -32,3 +32,11 @@
 - added property `applicationMode` to type `CartDiscountValueAbsoluteDraft`
 </details>
 
+**Import changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `ReferencedResourceNotFound`
+</details>
+

@@ -79,6 +79,10 @@ public class ErrorObjectBuilder {
         return com.commercetools.importapi.models.errors.InvalidTokenErrorBuilder.of();
     }
 
+    public com.commercetools.importapi.models.errors.ReferencedResourceNotFoundBuilder referencedResourceNotFoundBuilder() {
+        return com.commercetools.importapi.models.errors.ReferencedResourceNotFoundBuilder.of();
+    }
+
     public com.commercetools.importapi.models.errors.RequiredFieldErrorBuilder requiredFieldBuilder() {
         return com.commercetools.importapi.models.errors.RequiredFieldErrorBuilder.of();
     }

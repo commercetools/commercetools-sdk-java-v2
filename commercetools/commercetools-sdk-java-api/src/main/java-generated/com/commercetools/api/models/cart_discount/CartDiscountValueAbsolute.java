@@ -49,6 +49,14 @@ public interface CartDiscountValueAbsolute extends CartDiscountValue, CartDiscou
     public List<CentPrecisionMoney> getMoney();
 
     /**
+     *  <p>Determines how the discount is applied on CartDiscountLineItemTarget and CartDiscountCustomLineItemTarget.</p>
+     * @return applicationMode
+     */
+
+    @JsonProperty("applicationMode")
+    public DiscountApplicationMode getApplicationMode();
+
+    /**
      *  <p>Cent precision money values in different currencies.</p>
      * @param money values to be set
      */
@@ -62,6 +70,13 @@ public interface CartDiscountValueAbsolute extends CartDiscountValue, CartDiscou
      */
 
     public void setMoney(final List<CentPrecisionMoney> money);
+
+    /**
+     *  <p>Determines how the discount is applied on CartDiscountLineItemTarget and CartDiscountCustomLineItemTarget.</p>
+     * @param applicationMode value to be set
+     */
+
+    public void setApplicationMode(final DiscountApplicationMode applicationMode);
 
     /**
      * factory method
@@ -79,6 +94,7 @@ public interface CartDiscountValueAbsolute extends CartDiscountValue, CartDiscou
     public static CartDiscountValueAbsolute of(final CartDiscountValueAbsolute template) {
         CartDiscountValueAbsoluteImpl instance = new CartDiscountValueAbsoluteImpl();
         instance.setMoney(template.getMoney());
+        instance.setApplicationMode(template.getApplicationMode());
         return instance;
     }
 
@@ -98,6 +114,7 @@ public interface CartDiscountValueAbsolute extends CartDiscountValue, CartDiscou
                         .map(com.commercetools.api.models.common.CentPrecisionMoney::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setApplicationMode(template.getApplicationMode());
         return instance;
     }
 

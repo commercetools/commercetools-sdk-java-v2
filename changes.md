@@ -3,6 +3,7 @@
 <details>
 <summary>Added Type(s)</summary>
 
+- added type `DiscountApplicationMode`
 - added type `DeliveryCustomFieldAddedMessage`
 - added type `DeliveryCustomFieldChangedMessage`
 - added type `DeliveryCustomFieldRemovedMessage`
@@ -21,5 +22,13 @@
 
 - :warning: removed method `apiRoot.withProjectKey().me().businessUnits().withId().delete()`
 - :warning: removed method `apiRoot.withProjectKey().me().businessUnits().withKey().delete()`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `applicationMode` to type `CartDiscountValueAbsolute`
+- added property `applicationMode` to type `CartDiscountValueAbsoluteDraft`
 </details>
 

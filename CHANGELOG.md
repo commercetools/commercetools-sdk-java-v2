@@ -1,4 +1,22 @@
 
+# 17.15.0 (2024-09-02)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/704
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/705
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/706
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/707
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/708
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/711
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/713
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/714
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/715
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/716
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/717
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.14.0...17.15.0
+
 # 17.14.0 (2024-08-06)
 
 ## What's Changed

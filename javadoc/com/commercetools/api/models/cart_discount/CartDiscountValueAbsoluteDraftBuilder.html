@@ -124,15 +124,25 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Money values in different currencies.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CartDiscountValueAbsoluteDraft.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueAbsoluteDraft</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#build()" class="member-name-link">build</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CartDiscountValueAbsoluteDraftBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueAbsoluteDraftBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#applicationMode(com.commercetools.api.models.cart_discount.DiscountApplicationMode)" class="member-name-link">applicationMode</a><wbr>(<a href="DiscountApplicationMode.html" title="interface in com.commercetools.api.models.cart_discount">DiscountApplicationMode</a>&nbsp;applicationMode)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">builds CartDiscountValueAbsoluteDraft with checking for non-null required values</div>
+<div class="block">Determines how the discount applies on CartDiscountLineItemTarget and CartDiscountCustomLineItemTarget.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CartDiscountValueAbsoluteDraft.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueAbsoluteDraft</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#buildUnchecked()" class="member-name-link">buildUnchecked</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#build()" class="member-name-link">build</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">builds CartDiscountValueAbsoluteDraft with checking for non-null required values</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CartDiscountValueAbsoluteDraft.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountValueAbsoluteDraft</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#buildUnchecked()" class="member-name-link">buildUnchecked</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">builds CartDiscountValueAbsoluteDraft without checking for non-null required values</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DiscountApplicationMode.html" title="interface in com.commercetools.api.models.cart_discount">DiscountApplicationMode</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getApplicationMode()" class="member-name-link">getApplicationMode</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Determines how the discount applies on CartDiscountLineItemTarget and CartDiscountCustomLineItemTarget.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMoney()" class="member-name-link">getMoney</a>()</code></div>
@@ -309,6 +319,21 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
+<section class="detail" id="applicationMode(com.commercetools.api.models.cart_discount.DiscountApplicationMode)">
+<h3>applicationMode</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartDiscountValueAbsoluteDraftBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountValueAbsoluteDraftBuilder</a></span>&nbsp;<span class="element-name">applicationMode</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+ <a href="DiscountApplicationMode.html" title="interface in com.commercetools.api.models.cart_discount">DiscountApplicationMode</a>&nbsp;applicationMode)</span></div>
+<div class="block"><p>Determines how the discount applies on CartDiscountLineItemTarget and CartDiscountCustomLineItemTarget.</p>
+  <p>If not set, the default behavior is <code>ProportionateDistribution</code>.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>applicationMode</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getMoney()">
 <h3>getMoney</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&gt;</span>&nbsp;<span class="element-name">getMoney</span>()</div>
@@ -317,6 +342,19 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>money</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getApplicationMode()">
+<h3>getApplicationMode</h3>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountApplicationMode.html" title="interface in com.commercetools.api.models.cart_discount">DiscountApplicationMode</a></span>&nbsp;<span class="element-name">getApplicationMode</span>()</div>
+<div class="block"><p>Determines how the discount applies on CartDiscountLineItemTarget and CartDiscountCustomLineItemTarget.</p>
+  <p>If not set, the default behavior is <code>ProportionateDistribution</code>.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>applicationMode</dd>
 </dl>
 </section>
 </li>

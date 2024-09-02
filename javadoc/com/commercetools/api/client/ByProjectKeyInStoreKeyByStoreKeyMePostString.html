@@ -89,7 +89,14 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">ByProjectKeyInStoreKeyByStoreKeyMePostString</span>
 <span class="extends-implements">extends <a href="../../../../io/vrap/rmf/base/client/StringBodyApiMethod.html" title="class in io.vrap.rmf.base.client">StringBodyApiMethod</a>&lt;<a href="ByProjectKeyInStoreKeyByStoreKeyMePostString.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyMePostString</a>,<wbr><a href="../models/customer/Customer.html" title="interface in com.commercetools.api.models.customer">Customer</a>&gt;</span></div>
-<div class="block"><hr>
+<div class="block"><p>Updates the Customer in a Store. Returns a <code>200 OK</code> status if successful.</p>
+  <p>A ResourceNotFound error is returned in the following scenarios:</p>
+  <ul>
+   <li>If no Customer exists with the <code>id</code> specified in the customer:{id} scope.</li>
+   <li>If the Customer exists but is associated with a different Store than what is specified in the <code>manage_my_profile:{projectKey}:{storeKey}</code> scope.</li>
+  </ul>
+
+ <hr>
  <div class=code-example>
  <pre><code class='java'><code>
    CompletableFuture&lt;ApiHttpResponse&lt;com.commercetools.api.models.customer.Customer&gt;&gt; result = apiRoot

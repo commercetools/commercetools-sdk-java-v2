@@ -466,7 +466,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/search/SearchSortingBuilder.html#field(java.lang.String)" class="member-name-link">field(String)</a> - Method in class com.commercetools.api.models.search.<a href="../com/commercetools/api/models/search/SearchSortingBuilder.html" title="class in com.commercetools.api.models.search">SearchSortingBuilder</a></dt>
 <dd>
-<div class="block">Use any searchable field of the resource as sort criterion.</div>
+<div class="block">Use any searchable field of the resource as sort criterion, or <code>"score"</code> to sort by relevance score calculated by the API.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/search/SearchTimeRangeValueBuilder.html#field(java.lang.String)" class="member-name-link">field(String)</a> - Method in class com.commercetools.api.models.search.<a href="../com/commercetools/api/models/search/SearchTimeRangeValueBuilder.html" title="class in com.commercetools.api.models.search">SearchTimeRangeValueBuilder</a></dt>
 <dd>
@@ -1595,6 +1595,11 @@ loadScripts(document, 'script');</script>
 <div class="block">factory method for a enum value of BusinessUnitType
  if no enum has been found an anonymous instance will be created</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/cart_discount/DiscountApplicationMode.html#findEnum(java.lang.String)" class="member-name-link">findEnum(String)</a> - Static method in interface com.commercetools.api.models.cart_discount.<a href="../com/commercetools/api/models/cart_discount/DiscountApplicationMode.html" title="interface in com.commercetools.api.models.cart_discount">DiscountApplicationMode</a></dt>
+<dd>
+<div class="block">factory method for a enum value of DiscountApplicationMode
+ if no enum has been found an anonymous instance will be created</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/cart_discount/SelectionMode.html#findEnum(java.lang.String)" class="member-name-link">findEnum(String)</a> - Static method in interface com.commercetools.api.models.cart_discount.<a href="../com/commercetools/api/models/cart_discount/SelectionMode.html" title="interface in com.commercetools.api.models.cart_discount">SelectionMode</a></dt>
 <dd>
 <div class="block">factory method for a enum value of SelectionMode
@@ -2293,6 +2298,10 @@ loadScripts(document, 'script');</script>
 <div class="block">method to find enum using the JSON value</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/business_unit/BusinessUnitType.html#findEnumViaJsonName(java.lang.String)" class="member-name-link">findEnumViaJsonName(String)</a> - Static method in interface com.commercetools.api.models.business_unit.<a href="../com/commercetools/api/models/business_unit/BusinessUnitType.html" title="interface in com.commercetools.api.models.business_unit">BusinessUnitType</a></dt>
+<dd>
+<div class="block">method to find enum using the JSON value</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/cart_discount/DiscountApplicationMode.html#findEnumViaJsonName(java.lang.String)" class="member-name-link">findEnumViaJsonName(String)</a> - Static method in interface com.commercetools.api.models.cart_discount.<a href="../com/commercetools/api/models/cart_discount/DiscountApplicationMode.html" title="interface in com.commercetools.api.models.cart_discount">DiscountApplicationMode</a></dt>
 <dd>
 <div class="block">method to find enum using the JSON value</div>
 </dd>
@@ -3083,11 +3092,11 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/search/products/TermFormatter.html#format(javax.money.CurrencyUnit)" class="member-name-link">format(CurrencyUnit)</a> - Static method in class com.commercetools.api.search.products.<a href="../com/commercetools/api/search/products/TermFormatter.html" title="class in com.commercetools.api.search.products">TermFormatter</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="../com/commercetools/api/predicates/query/DateTimeCollectionPredicateBuilder.html#format(TValue)" class="member-name-link">format(ZonedDateTime)</a> - Method in class com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/DateTimeCollectionPredicateBuilder.html" title="class in com.commercetools.api.predicates.query">DateTimeCollectionPredicateBuilder</a></dt>
+<dt><a href="../com/commercetools/api/predicates/query/DateCollectionPredicateBuilder.html#format(TValue)" class="member-name-link">format(LocalDate)</a> - Method in class com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/DateCollectionPredicateBuilder.html" title="class in com.commercetools.api.predicates.query">DateCollectionPredicateBuilder</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="../com/commercetools/api/predicates/query/InequalityPredicateBuilder.html#format(TValue)" class="member-name-link">format(TValue)</a> - Method in interface com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/InequalityPredicateBuilder.html" title="interface in com.commercetools.api.predicates.query">InequalityPredicateBuilder</a></dt>
+<dt><a href="../com/commercetools/api/predicates/query/DateCollectionPredicateBuilder.html#format(TValue)" class="member-name-link">format(LocalDate)</a> - Method in class com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/DateCollectionPredicateBuilder.html" title="class in com.commercetools.api.predicates.query">DateCollectionPredicateBuilder</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="../com/commercetools/api/predicates/query/DateComparisonPredicateBuilder.html#format(TValue)" class="member-name-link">format(LocalDate)</a> - Method in class com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/DateComparisonPredicateBuilder.html" title="class in com.commercetools.api.predicates.query">DateComparisonPredicateBuilder</a></dt>
+<dt><a href="../com/commercetools/api/predicates/query/TimeComparisonPredicateBuilder.html#format(TValue)" class="member-name-link">format(LocalTime)</a> - Method in class com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/TimeComparisonPredicateBuilder.html" title="class in com.commercetools.api.predicates.query">TimeComparisonPredicateBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../io/vrap/rmf/base/client/http/LogFormatter.html#formatError(io.vrap.rmf.base.client.ApiHttpRequest,java.lang.Throwable,long)" class="member-name-link">formatError(ApiHttpRequest, Throwable, long)</a> - Static method in class io.vrap.rmf.base.client.http.<a href="../io/vrap/rmf/base/client/http/LogFormatter.html" title="class in io.vrap.rmf.base.client.http">LogFormatter</a></dt>
 <dd>&nbsp;</dd>

@@ -73,7 +73,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">SearchSorting</span></div>
-<div class="block"><p>Sorting parameters provided with a Search request. Sorting allows you to control how results to your query are sorted. If no sorting is specified, the results are sorted by relevance in descending (<code>desc</code>) order.</p>
+<div class="block"><p>Sorting parameters provided with a Search request.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -117,7 +117,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getField()" class="member-name-link">getField</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Use any searchable field of the resource as sort criterion.</div>
+<div class="block">Use any searchable field of the resource as sort criterion, or <code>"score"</code> to sort by relevance score calculated by the API.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="SearchFieldType.html" title="interface in com.commercetools.api.models.search">SearchFieldType</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getFieldType()" class="member-name-link">getFieldType</a>()</code></div>
@@ -157,7 +157,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setField(java.lang.String)" class="member-name-link">setField</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;field)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Use any searchable field of the resource as sort criterion.</div>
+<div class="block">Use any searchable field of the resource as sort criterion, or <code>"score"</code> to sort by relevance score calculated by the API.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setFieldType(com.commercetools.api.models.search.SearchFieldType)" class="member-name-link">setFieldType</a><wbr>(<a href="SearchFieldType.html" title="interface in com.commercetools.api.models.search">SearchFieldType</a>&nbsp;fieldType)</code></div>
@@ -213,7 +213,7 @@ loadScripts(document, 'script');</script>
 <h3>getField</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getField</span>()</div>
-<div class="block"><p>Use any searchable field of the resource as sort criterion.</p></div>
+<div class="block"><p>Use any searchable field of the resource as sort criterion, or <code>"score"</code> to sort by relevance score calculated by the API.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>field</dd>
@@ -281,7 +281,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setField(java.lang.String)">
 <h3>setField</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setField</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;field)</span></div>
-<div class="block"><p>Use any searchable field of the resource as sort criterion.</p></div>
+<div class="block"><p>Use any searchable field of the resource as sort criterion, or <code>"score"</code> to sort by relevance score calculated by the API.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>field</code> - value to be set</dd>

@@ -48,6 +48,8 @@ public class ProductVariantDeletedMessageImpl implements ProductVariantDeletedMe
 
     private java.util.List<String> removedImageUrls;
 
+    private Boolean staged;
+
     /**
      * create instance with all properties
      */
@@ -62,7 +64,8 @@ public class ProductVariantDeletedMessageImpl implements ProductVariantDeletedMe
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
             @JsonProperty("variant") final com.commercetools.api.models.product.ProductVariant variant,
-            @JsonProperty("removedImageUrls") final java.util.List<String> removedImageUrls) {
+            @JsonProperty("removedImageUrls") final java.util.List<String> removedImageUrls,
+            @JsonProperty("staged") final Boolean staged) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -75,6 +78,7 @@ public class ProductVariantDeletedMessageImpl implements ProductVariantDeletedMe
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.variant = variant;
         this.removedImageUrls = removedImageUrls;
+        this.staged = staged;
         this.type = PRODUCT_VARIANT_DELETED;
     }
 
@@ -189,6 +193,14 @@ public class ProductVariantDeletedMessageImpl implements ProductVariantDeletedMe
         return this.removedImageUrls;
     }
 
+    /**
+     *  <p>If <code>true</code>, this message informs that only the staged ProductVariant has been removed by the update action. If <code>false</code>, both the current and staged ProductVariant have been removed.</p>
+     */
+
+    public Boolean getStaged() {
+        return this.staged;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -242,6 +254,10 @@ public class ProductVariantDeletedMessageImpl implements ProductVariantDeletedMe
         this.removedImageUrls = removedImageUrls;
     }
 
+    public void setStaged(final Boolean staged) {
+        this.staged = staged;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -265,6 +281,7 @@ public class ProductVariantDeletedMessageImpl implements ProductVariantDeletedMe
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(variant, that.variant)
                 .append(removedImageUrls, that.removedImageUrls)
+                .append(staged, that.staged)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -278,6 +295,7 @@ public class ProductVariantDeletedMessageImpl implements ProductVariantDeletedMe
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(variant, that.variant)
                 .append(removedImageUrls, that.removedImageUrls)
+                .append(staged, that.staged)
                 .isEquals();
     }
 
@@ -296,6 +314,7 @@ public class ProductVariantDeletedMessageImpl implements ProductVariantDeletedMe
                 .append(resourceUserProvidedIdentifiers)
                 .append(variant)
                 .append(removedImageUrls)
+                .append(staged)
                 .toHashCode();
     }
 
@@ -314,6 +333,7 @@ public class ProductVariantDeletedMessageImpl implements ProductVariantDeletedMe
                 .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
                 .append("variant", variant)
                 .append("removedImageUrls", removedImageUrls)
+                .append("staged", staged)
                 .build();
     }
 

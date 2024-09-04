@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .resource(resourceBuilder -> resourceBuilder)
  *             .resourceVersion(0.3)
  *             .plusRemovedImageUrls(removedImageUrlsBuilder -> removedImageUrlsBuilder)
+ *             .staged(true)
  *             .build()
  * </code></pre>
  * </div>
@@ -58,6 +59,8 @@ public class ProductVariantDeletedMessageBuilder implements Builder<ProductVaria
     private com.commercetools.api.models.product.ProductVariant variant;
 
     private java.util.List<String> removedImageUrls;
+
+    private Boolean staged;
 
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
@@ -332,6 +335,17 @@ public class ProductVariantDeletedMessageBuilder implements Builder<ProductVaria
     }
 
     /**
+     *  <p>If <code>true</code>, this message informs that only the staged ProductVariant has been removed by the update action. If <code>false</code>, both the current and staged ProductVariant have been removed.</p>
+     * @param staged value to be set
+     * @return Builder
+     */
+
+    public ProductVariantDeletedMessageBuilder staged(final Boolean staged) {
+        this.staged = staged;
+        return this;
+    }
+
+    /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      * @return id
      */
@@ -444,6 +458,15 @@ public class ProductVariantDeletedMessageBuilder implements Builder<ProductVaria
     }
 
     /**
+     *  <p>If <code>true</code>, this message informs that only the staged ProductVariant has been removed by the update action. If <code>false</code>, both the current and staged ProductVariant have been removed.</p>
+     * @return staged
+     */
+
+    public Boolean getStaged() {
+        return this.staged;
+    }
+
+    /**
      * builds ProductVariantDeletedMessage with checking for non-null required values
      * @return ProductVariantDeletedMessage
      */
@@ -456,8 +479,10 @@ public class ProductVariantDeletedMessageBuilder implements Builder<ProductVaria
         Objects.requireNonNull(resource, ProductVariantDeletedMessage.class + ": resource is missing");
         Objects.requireNonNull(resourceVersion, ProductVariantDeletedMessage.class + ": resourceVersion is missing");
         Objects.requireNonNull(removedImageUrls, ProductVariantDeletedMessage.class + ": removedImageUrls is missing");
+        Objects.requireNonNull(staged, ProductVariantDeletedMessage.class + ": staged is missing");
         return new ProductVariantDeletedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, variant, removedImageUrls);
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, variant, removedImageUrls,
+            staged);
     }
 
     /**
@@ -466,7 +491,8 @@ public class ProductVariantDeletedMessageBuilder implements Builder<ProductVaria
      */
     public ProductVariantDeletedMessage buildUnchecked() {
         return new ProductVariantDeletedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
-            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, variant, removedImageUrls);
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, variant, removedImageUrls,
+            staged);
     }
 
     /**
@@ -496,6 +522,7 @@ public class ProductVariantDeletedMessageBuilder implements Builder<ProductVaria
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
         builder.variant = template.getVariant();
         builder.removedImageUrls = template.getRemovedImageUrls();
+        builder.staged = template.getStaged();
         return builder;
     }
 

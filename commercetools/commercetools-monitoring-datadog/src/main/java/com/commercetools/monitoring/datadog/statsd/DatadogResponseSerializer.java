@@ -34,7 +34,7 @@ public class DatadogResponseSerializer implements ResponseSerializer {
         Instant start = Instant.now();
         ApiHttpResponse<O> result = serializer.convertResponse(response, outputType);
         long durationInMillis = Duration.between(start, Instant.now()).toMillis();
-        this.statsDClient.recordHistogramValue(PREFIX + "." + JSON_SERIALIZATION, durationInMillis,
+        this.statsDClient.recordHistogramValue(PREFIX + "." + JSON_DESERIALIZATION, durationInMillis,
             format("%s:%s", RESPONSE_BODY_TYPE, outputType.getCanonicalName()));
         return result;
     }
@@ -44,7 +44,7 @@ public class DatadogResponseSerializer implements ResponseSerializer {
         Instant start = Instant.now();
         ApiHttpResponse<O> result = serializer.convertResponse(response, outputType);
         long durationInMillis = Duration.between(start, Instant.now()).toMillis();
-        this.statsDClient.recordHistogramValue(PREFIX + "." + JSON_SERIALIZATION, durationInMillis,
+        this.statsDClient.recordHistogramValue(PREFIX + "." + JSON_DESERIALIZATION, durationInMillis,
             format("%s:%s", RESPONSE_BODY_TYPE, outputType.toString()));
         return result;
     }
@@ -54,7 +54,7 @@ public class DatadogResponseSerializer implements ResponseSerializer {
         Instant start = Instant.now();
         ApiHttpResponse<O> result = serializer.convertResponse(response, outputType);
         long durationInMillis = Duration.between(start, Instant.now()).toMillis();
-        this.statsDClient.recordHistogramValue(PREFIX + "." + JSON_SERIALIZATION, durationInMillis,
+        this.statsDClient.recordHistogramValue(PREFIX + "." + JSON_DESERIALIZATION, durationInMillis,
             format("%s:%s", RESPONSE_BODY_TYPE, outputType.getType().getTypeName()));
         return result;
     }
@@ -64,7 +64,7 @@ public class DatadogResponseSerializer implements ResponseSerializer {
         Instant start = Instant.now();
         byte[] result = serializer.toJsonByteArray(value);
         long durationInMillis = Duration.between(start, Instant.now()).toMillis();
-        this.statsDClient.recordHistogramValue(PREFIX + "." + JSON_DESERIALIZATION, durationInMillis,
+        this.statsDClient.recordHistogramValue(PREFIX + "." + JSON_SERIALIZATION, durationInMillis,
             format("%s:%s", REQUEST_BODY_TYPE, value.getClass().getCanonicalName()));
         return result;
     }

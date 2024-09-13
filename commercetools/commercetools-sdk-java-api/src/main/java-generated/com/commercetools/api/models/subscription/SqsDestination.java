@@ -16,7 +16,7 @@ import jakarta.validation.constraints.NotNull;
 
 /**
  *  <p>AWS SQS is a pull-queue on AWS. The queue must be a Standard queue type with a <code>MaximumMessageSize</code> of <code>256 KB</code>.</p>
- *  <p>We recommend setting <code>authenticationMode</code> to <code>IAM</code>, to avoid unnecessary key management. For IAM authentication and before creating the Subscription, give permissions to the following user account: <code>arn:aws-cn:iam::417094354346:user/subscriptions</code> if the Project is hosted in the China (AWS, Ningxia) Region; <code>arn:aws:iam::362576667341:user/subscriptions</code> for all other Regions. Otherwise, a test message will not be sent.</p>
+ *  <p>We recommend setting <code>authenticationMode</code> to <code>IAM</code>, to avoid unnecessary key management. For IAM authentication and before creating the Subscription, give permissions to the following user account: <code>arn:aws:iam::362576667341:user/subscriptions</code>. Otherwise, a test message will not be sent.</p>
  *  <p>If you prefer to use <code>Credentials</code> for authentication, we recommend creating an IAM user with an <code>accessKey</code> and <code>accessSecret</code> pair specifically for each Subscription.</p>
  *  <p>The IAM user should only have the <code>sqs:SendMessage</code> permission on this queue.</p>
  *

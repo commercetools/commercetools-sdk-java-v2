@@ -44,7 +44,7 @@ public class ExternalOAuthImpl implements ExternalOAuth, ModelBase {
     }
 
     /**
-     *  <p>URL with authorization header. If the Project is hosted in the China (AWS, Ningxia) Region, verify that the URL is not blocked due to firewall restrictions.</p>
+     *  <p>URL with authorization header.</p>
      */
 
     public String getUrl() {

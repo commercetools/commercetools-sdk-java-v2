@@ -38,7 +38,7 @@ public interface HttpDestination extends ExtensionDestination {
     String HTTP = "HTTP";
 
     /**
-     *  <p>URL to the target destination. If the Project is hosted in the China (AWS, Ningxia) Region, verify that the URL is not blocked due to firewall restrictions.</p>
+     *  <p>URL to the target destination.</p>
      * @return url
      */
     @NotNull
@@ -54,7 +54,7 @@ public interface HttpDestination extends ExtensionDestination {
     public HttpDestinationAuthentication getAuthentication();
 
     /**
-     *  <p>URL to the target destination. If the Project is hosted in the China (AWS, Ningxia) Region, verify that the URL is not blocked due to firewall restrictions.</p>
+     *  <p>URL to the target destination.</p>
      * @param url value to be set
      */
 

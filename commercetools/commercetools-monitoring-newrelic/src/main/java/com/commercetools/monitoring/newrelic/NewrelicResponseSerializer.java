@@ -29,7 +29,7 @@ public class NewrelicResponseSerializer implements ResponseSerializer {
         Instant start = Instant.now();
         ApiHttpResponse<O> result = serializer.convertResponse(response, outputType);
         long durationInMillis = Duration.between(start, Instant.now()).toMillis();
-        NewRelic.recordResponseTimeMetric(PREFIX + JSON_SERIALIZATION, durationInMillis);
+        NewRelic.recordResponseTimeMetric(PREFIX + JSON_DESERIALIZATION, durationInMillis);
         return result;
     }
 
@@ -38,7 +38,7 @@ public class NewrelicResponseSerializer implements ResponseSerializer {
         Instant start = Instant.now();
         ApiHttpResponse<O> result = serializer.convertResponse(response, outputType);
         long durationInMillis = Duration.between(start, Instant.now()).toMillis();
-        NewRelic.recordResponseTimeMetric(PREFIX + JSON_SERIALIZATION, durationInMillis);
+        NewRelic.recordResponseTimeMetric(PREFIX + JSON_DESERIALIZATION, durationInMillis);
         return result;
     }
 
@@ -47,7 +47,7 @@ public class NewrelicResponseSerializer implements ResponseSerializer {
         Instant start = Instant.now();
         ApiHttpResponse<O> result = serializer.convertResponse(response, outputType);
         long durationInMillis = Duration.between(start, Instant.now()).toMillis();
-        NewRelic.recordResponseTimeMetric(PREFIX + JSON_SERIALIZATION, durationInMillis);
+        NewRelic.recordResponseTimeMetric(PREFIX + JSON_DESERIALIZATION, durationInMillis);
         return result;
     }
 
@@ -56,7 +56,7 @@ public class NewrelicResponseSerializer implements ResponseSerializer {
         Instant start = Instant.now();
         byte[] result = serializer.toJsonByteArray(value);
         long durationInMillis = Duration.between(start, Instant.now()).toMillis();
-        NewRelic.recordResponseTimeMetric(PREFIX + JSON_DESERIALIZATION, durationInMillis);
+        NewRelic.recordResponseTimeMetric(PREFIX + JSON_SERIALIZATION, durationInMillis);
         return result;
     }
 

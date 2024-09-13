@@ -35,7 +35,7 @@ public class DatadogResponseSerializer implements ResponseSerializer {
         Instant start = Instant.now();
         ApiHttpResponse<O> result = serializer.convertResponse(response, outputType);
         long durationInMillis = Duration.between(start, Instant.now()).toMillis();
-        submitJsonSerializationMetric(apiInstance, (double) durationInMillis, outputType.getCanonicalName());
+        submitJsonDeserializationMetric(apiInstance, (double) durationInMillis, outputType.getCanonicalName());
         return result;
     }
 
@@ -44,7 +44,7 @@ public class DatadogResponseSerializer implements ResponseSerializer {
         Instant start = Instant.now();
         ApiHttpResponse<O> result = serializer.convertResponse(response, outputType);
         long durationInMillis = Duration.between(start, Instant.now()).toMillis();
-        submitJsonSerializationMetric(apiInstance, (double) durationInMillis, outputType.toString());
+        submitJsonDeserializationMetric(apiInstance, (double) durationInMillis, outputType.toString());
         return result;
     }
 
@@ -53,7 +53,7 @@ public class DatadogResponseSerializer implements ResponseSerializer {
         Instant start = Instant.now();
         ApiHttpResponse<O> result = serializer.convertResponse(response, outputType);
         long durationInMillis = Duration.between(start, Instant.now()).toMillis();
-        submitJsonSerializationMetric(apiInstance, (double) durationInMillis, outputType.getType().getTypeName());
+        submitJsonDeserializationMetric(apiInstance, (double) durationInMillis, outputType.getType().getTypeName());
         return result;
     }
 
@@ -62,7 +62,7 @@ public class DatadogResponseSerializer implements ResponseSerializer {
         Instant start = Instant.now();
         byte[] result = serializer.toJsonByteArray(value);
         long durationInMillis = Duration.between(start, Instant.now()).toMillis();
-        submitJsonDeserializationMetric(apiInstance, (double) durationInMillis, value.getClass().getCanonicalName());
+        submitJsonSerializationMetric(apiInstance, (double) durationInMillis, value.getClass().getCanonicalName());
         return result;
     }
 

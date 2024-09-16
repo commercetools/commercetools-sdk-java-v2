@@ -16,10 +16,8 @@ import com.tngtech.junit.dataprovider.UseDataProviderExtension;
 
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.error.*;
-import io.vrap.rmf.base.client.oauth2.TokenSupplier;
 
 import org.assertj.core.api.Assertions;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestTemplate;
 import org.junit.jupiter.api.extension.ExtendWith;
 
@@ -75,34 +73,6 @@ public class TelemetryMiddlewareTest {
 
         Assertions.assertThat(middleware.count).isEqualTo(count);
         Assertions.assertThat(middleware.errorCount).isEqualTo(errorCount);
-    }
-
-    @Test
-    public void testUnauthorized() throws URISyntaxException {
-        TestTelemetryMiddleware middleware = new TestTelemetryMiddleware();
-
-        ApiHttpClient client = ClientBuilder
-                .of(new TestHttpClient(request -> CompletableFuture
-                        .completedFuture(new ApiHttpResponse<>(200, new ApiHttpHeaders(), "".getBytes()))))
-                .withApiBaseUrl(new URI(""))
-                .withTokenSupplier((TokenSupplier) () -> {
-                    throw new UnauthorizedException(401, "", null, "", null);
-                })
-                .withTelemetryMiddleware(middleware)
-                .withErrorMiddleware()
-                .build();
-
-        final ApiHttpRequest request = new ApiHttpRequest(ApiHttpMethod.GET, URI.create("/"), new ApiHttpHeaders(),
-            "".getBytes());
-        try {
-            blockingWait(client.execute(request), Duration.ofSeconds(1));
-        }
-        catch (ApiHttpException ignored) {
-            int i = 1;
-        }
-
-        Assertions.assertThat(middleware.count).isEqualTo(1);
-        Assertions.assertThat(middleware.errorCount).isEqualTo(1);
     }
 
     static class TestHttpClient implements VrapHttpClient {

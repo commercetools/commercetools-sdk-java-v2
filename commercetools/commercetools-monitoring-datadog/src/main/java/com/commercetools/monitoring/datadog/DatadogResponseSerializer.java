@@ -34,7 +34,7 @@ public class DatadogResponseSerializer implements ResponseSerializer {
     public <O> ApiHttpResponse<O> convertResponse(ApiHttpResponse<byte[]> response, Class<O> outputType) {
         Instant start = Instant.now();
         ApiHttpResponse<O> result = serializer.convertResponse(response, outputType);
-        long durationInMillis = Duration.between(start, Instant.now()).toMillis();
+        double durationInMillis = Duration.between(start, Instant.now()).toNanos() / 1_000_000.0;
         submitJsonDeserializationMetric(apiInstance, (double) durationInMillis, outputType.getCanonicalName());
         return result;
     }
@@ -43,8 +43,8 @@ public class DatadogResponseSerializer implements ResponseSerializer {
     public <O> ApiHttpResponse<O> convertResponse(ApiHttpResponse<byte[]> response, JavaType outputType) {
         Instant start = Instant.now();
         ApiHttpResponse<O> result = serializer.convertResponse(response, outputType);
-        long durationInMillis = Duration.between(start, Instant.now()).toMillis();
-        submitJsonDeserializationMetric(apiInstance, (double) durationInMillis, outputType.toString());
+        double durationInMillis = Duration.between(start, Instant.now()).toNanos() / 1_000_000.0;
+        submitJsonDeserializationMetric(apiInstance, durationInMillis, outputType.toString());
         return result;
     }
 
@@ -52,8 +52,8 @@ public class DatadogResponseSerializer implements ResponseSerializer {
     public <O> ApiHttpResponse<O> convertResponse(ApiHttpResponse<byte[]> response, TypeReference<O> outputType) {
         Instant start = Instant.now();
         ApiHttpResponse<O> result = serializer.convertResponse(response, outputType);
-        long durationInMillis = Duration.between(start, Instant.now()).toMillis();
-        submitJsonDeserializationMetric(apiInstance, (double) durationInMillis, outputType.getType().getTypeName());
+        double durationInMillis = Duration.between(start, Instant.now()).toNanos() / 1_000_000.0;
+        submitJsonDeserializationMetric(apiInstance, durationInMillis, outputType.getType().getTypeName());
         return result;
     }
 
@@ -61,8 +61,8 @@ public class DatadogResponseSerializer implements ResponseSerializer {
     public byte[] toJsonByteArray(Object value) throws JsonProcessingException {
         Instant start = Instant.now();
         byte[] result = serializer.toJsonByteArray(value);
-        long durationInMillis = Duration.between(start, Instant.now()).toMillis();
-        submitJsonSerializationMetric(apiInstance, (double) durationInMillis, value.getClass().getCanonicalName());
+        double durationInMillis = Duration.between(start, Instant.now()).toNanos() / 1_000_000.0;
+        submitJsonSerializationMetric(apiInstance, durationInMillis, value.getClass().getCanonicalName());
         return result;
     }
 

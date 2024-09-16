@@ -30,14 +30,14 @@ public class DatadogUtils {
             final double durationInMillis, final ApiHttpResponse<byte[]> response) throws ApiException {
         final String name = PREFIX + "." + CLIENT_DURATION;
         final MetricIntakeType type = MetricIntakeType.UNSPECIFIED;
-        submitMetricWithHttpTags(name, durationInMillis, type,"ms", request, apiInstance, response);
+        submitMetricWithHttpTags(name, durationInMillis, type, "ms", request, apiInstance, response);
     }
 
     protected static void submitErrorRequestsMetric(final ApiHttpRequest request, final MetricsApi apiInstance,
             final ApiHttpResponse<byte[]> response) throws ApiException {
         final String name = PREFIX + "." + CLIENT_REQUEST_ERROR;
         final MetricIntakeType count = MetricIntakeType.COUNT;
-        submitMetricWithHttpTags(name, 1.0, count,"count", request, apiInstance, response);
+        submitMetricWithHttpTags(name, 1.0, count, "count", request, apiInstance, response);
     }
 
     protected static void submitTotalRequestsMetric(final ApiHttpRequest request, final MetricsApi apiInstance,
@@ -47,9 +47,9 @@ public class DatadogUtils {
         submitMetricWithHttpTags(name, 1.0, count, "count", request, apiInstance, response);
     }
 
-    private static void submitMetricWithHttpTags(final String name, final double value, final MetricIntakeType type, final String unit,
-            final ApiHttpRequest request, final MetricsApi apiInstance, final ApiHttpResponse<byte[]> response)
-            throws ApiException {
+    private static void submitMetricWithHttpTags(final String name, final double value, final MetricIntakeType type,
+            final String unit, final ApiHttpRequest request, final MetricsApi apiInstance,
+            final ApiHttpResponse<byte[]> response) throws ApiException {
         final List<String> tags = Arrays.asList(format("%s:%s", HTTP_RESPONSE_STATUS_CODE, response.getStatusCode()),
             format("%s:%s", HTTP_REQUEST_METHOD, request.getMethod().name()),
             format("%s:%s", SERVER_ADDRESS, request.getUri().getHost()));
@@ -63,7 +63,7 @@ public class DatadogUtils {
             final String responseBodyType) {
         try {
             submitMetric(apiInstance, PREFIX + "." + JSON_SERIALIZATION, durationInMillis, MetricIntakeType.UNSPECIFIED,
-                    "ms", Arrays.asList(format("%s:%s", RESPONSE_BODY_TYPE, responseBodyType)));
+                "ms", Arrays.asList(format("%s:%s", RESPONSE_BODY_TYPE, responseBodyType)));
         }
         catch (ApiException exception) {
             logger.warn("Failed to submit commercetools json serialization metric", exception);
@@ -74,7 +74,7 @@ public class DatadogUtils {
             final String requestBodyType) {
         try {
             submitMetric(apiInstance, PREFIX + "." + JSON_DESERIALIZATION, durationInMillis,
-                MetricIntakeType.UNSPECIFIED,"ms", Arrays.asList(format("%s:%s", REQUEST_BODY_TYPE, requestBodyType)));
+                MetricIntakeType.UNSPECIFIED, "ms", Arrays.asList(format("%s:%s", REQUEST_BODY_TYPE, requestBodyType)));
         }
         catch (ApiException exception) {
             logger.warn("Failed to submit commercetools json deserialization metric", exception);

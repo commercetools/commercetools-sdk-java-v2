@@ -1,4 +1,20 @@
 
+# 17.15.1 (2024-09-17)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/719
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/720
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/721
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/722
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/723
+* Switch (de)serialization metrics to the correct meaning by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/724
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/725
+* add test for Datadog middleware by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/726
+* Send datadog metrics in double instead of long by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/727
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.15.0...17.15.1
+
 # 17.15.0 (2024-09-02)
 
 ## What's Changed

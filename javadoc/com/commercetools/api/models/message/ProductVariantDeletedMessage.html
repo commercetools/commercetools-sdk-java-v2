@@ -93,6 +93,7 @@ extends <a href="Message.html" title="interface in com.commercetools.api.models.
              .resource(resourceBuilder -> resourceBuilder)
              .resourceVersion(0.3)
              .plusRemovedImageUrls(removedImageUrlsBuilder -> removedImageUrlsBuilder)
+             .staged(true)
              .build()
  </code></pre>
  </div></div>
@@ -147,30 +148,40 @@ extends <a href="Message.html" title="interface in com.commercetools.api.models.
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">List of image URLs that were removed with the Remove Product Variant update action.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../product/ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getVariant()" class="member-name-link">getVariant</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getStaged()" class="member-name-link">getStaged</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">If <code>true</code>, this message informs that only the staged ProductVariant has been removed by the update action.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../product/ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getVariant()" class="member-name-link">getVariant</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Unique identifier of the Product Variant that was added.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProductVariantDeletedMessage.html" title="interface in com.commercetools.api.models.message">ProductVariantDeletedMessage</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProductVariantDeletedMessage.html" title="interface in com.commercetools.api.models.message">ProductVariantDeletedMessage</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProductVariantDeletedMessage.html" title="interface in com.commercetools.api.models.message">ProductVariantDeletedMessage</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(com.commercetools.api.models.message.ProductVariantDeletedMessage)" class="member-name-link">of</a><wbr>(<a href="ProductVariantDeletedMessage.html" title="interface in com.commercetools.api.models.message">ProductVariantDeletedMessage</a>&nbsp;template)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProductVariantDeletedMessage.html" title="interface in com.commercetools.api.models.message">ProductVariantDeletedMessage</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(com.commercetools.api.models.message.ProductVariantDeletedMessage)" class="member-name-link">of</a><wbr>(<a href="ProductVariantDeletedMessage.html" title="interface in com.commercetools.api.models.message">ProductVariantDeletedMessage</a>&nbsp;template)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a shallow copy ProductVariantDeletedMessage</div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setRemovedImageUrls(java.lang.String...)" class="member-name-link">setRemovedImageUrls</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;removedImageUrls)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">List of image URLs that were removed with the Remove Product Variant update action.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setRemovedImageUrls(java.lang.String...)" class="member-name-link">setRemovedImageUrls</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;removedImageUrls)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setRemovedImageUrls(java.util.List)" class="member-name-link">setRemovedImageUrls</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;removedImageUrls)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">List of image URLs that were removed with the Remove Product Variant update action.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setRemovedImageUrls(java.util.List)" class="member-name-link">setRemovedImageUrls</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;removedImageUrls)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setStaged(java.lang.Boolean)" class="member-name-link">setStaged</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;staged)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">List of image URLs that were removed with the Remove Product Variant update action.</div>
+<div class="block">If <code>true</code>, this message informs that only the staged ProductVariant has been removed by the update action.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setVariant(com.commercetools.api.models.product.ProductVariant)" class="member-name-link">setVariant</a><wbr>(<a href="../product/ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a>&nbsp;variant)</code></div>
@@ -258,6 +269,18 @@ extends <a href="Message.html" title="interface in com.commercetools.api.models.
 </section>
 </li>
 <li>
+<section class="detail" id="getStaged()">
+<h3>getStaged</h3>
+<div class="member-signature"><span class="annotations">@NotNull
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name">getStaged</span>()</div>
+<div class="block"><p>If <code>true</code>, this message informs that only the staged ProductVariant has been removed by the update action. If <code>false</code>, both the current and staged ProductVariant have been removed.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>staged</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="setVariant(com.commercetools.api.models.product.ProductVariant)">
 <h3>setVariant</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setVariant</span><wbr><span class="parameters">(<a href="../product/ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a>&nbsp;variant)</span></div>
@@ -287,6 +310,17 @@ extends <a href="Message.html" title="interface in com.commercetools.api.models.
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>removedImageUrls</code> - values to be set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setStaged(java.lang.Boolean)">
+<h3>setStaged</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setStaged</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;staged)</span></div>
+<div class="block"><p>If <code>true</code>, this message informs that only the staged ProductVariant has been removed by the update action. If <code>false</code>, both the current and staged ProductVariant have been removed.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>staged</code> - value to be set</dd>
 </dl>
 </section>
 </li>

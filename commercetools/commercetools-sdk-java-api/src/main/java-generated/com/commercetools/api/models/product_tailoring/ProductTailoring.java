@@ -5,6 +5,7 @@ import java.time.*;
 import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
 
@@ -13,6 +14,7 @@ import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.product.ProductReference;
 import com.commercetools.api.models.store.StoreKeyReference;
+import com.commercetools.api.models.warning.WarningObject;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -156,6 +158,14 @@ public interface ProductTailoring extends BaseResource {
     public Boolean getHasStagedChanges();
 
     /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @return warnings
+     */
+    @Valid
+    @JsonProperty("warnings")
+    public List<WarningObject> getWarnings();
+
+    /**
      *  <p>Unique identifier of the ProductTailoring.</p>
      * @param id value to be set
      */
@@ -247,6 +257,21 @@ public interface ProductTailoring extends BaseResource {
     public void setHasStagedChanges(final Boolean hasStagedChanges);
 
     /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @param warnings values to be set
+     */
+
+    @JsonIgnore
+    public void setWarnings(final WarningObject... warnings);
+
+    /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @param warnings values to be set
+     */
+
+    public void setWarnings(final List<WarningObject> warnings);
+
+    /**
      * factory method
      * @return instance of ProductTailoring
      */
@@ -274,6 +299,7 @@ public interface ProductTailoring extends BaseResource {
         instance.setCurrent(template.getCurrent());
         instance.setStaged(template.getStaged());
         instance.setHasStagedChanges(template.getHasStagedChanges());
+        instance.setWarnings(template.getWarnings());
         return instance;
     }
 
@@ -304,6 +330,11 @@ public interface ProductTailoring extends BaseResource {
         instance.setStaged(
             com.commercetools.api.models.product_tailoring.ProductTailoringData.deepCopy(template.getStaged()));
         instance.setHasStagedChanges(template.getHasStagedChanges());
+        instance.setWarnings(Optional.ofNullable(template.getWarnings())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.warning.WarningObject::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

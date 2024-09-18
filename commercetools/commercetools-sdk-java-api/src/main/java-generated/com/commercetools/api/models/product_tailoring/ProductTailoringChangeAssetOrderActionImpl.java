@@ -86,7 +86,7 @@ public class ProductTailoringChangeAssetOrderActionImpl implements ProductTailor
     }
 
     /**
-     *  <p>All existing Asset <code>id</code>s of the ProductTailoringVariant in the desired new order.</p>
+     *  <p>All existing Asset <code>id</code>s of the ProductVariantTailoring in the desired new order.</p>
      */
 
     public java.util.List<String> getAssetOrder() {

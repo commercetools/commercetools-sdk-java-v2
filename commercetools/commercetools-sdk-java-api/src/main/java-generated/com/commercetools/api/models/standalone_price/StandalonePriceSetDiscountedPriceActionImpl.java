@@ -17,7 +17,8 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Discounts a Standalone Price. The referenced ProductDiscount in the discounted field must be of type external, active, and its predicate must match the referenced Price. Produces the StandalonePriceExternalDiscountSet Message.</p>
+ *  <p>Discounts a Standalone Price of a Product Variant on a published Product. If the Product Variant does not exist or if it exists only in the staged representation of a Product, an InvalidOperationError error is returned.</p>
+ *  <p>Produces the StandalonePriceExternalDiscountSet Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StandalonePriceSetDiscountedPriceActionImpl implements StandalonePriceSetDiscountedPriceAction, ModelBase {
@@ -53,6 +54,7 @@ public class StandalonePriceSetDiscountedPriceActionImpl implements StandalonePr
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>The referenced ProductDiscount must be of type external, active, and its predicate must match the referenced Price.</p>
      */
 
     public com.commercetools.api.models.common.DiscountedPriceDraft getDiscounted() {

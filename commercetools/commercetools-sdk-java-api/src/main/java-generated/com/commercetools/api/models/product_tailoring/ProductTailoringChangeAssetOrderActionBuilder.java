@@ -68,7 +68,7 @@ public class ProductTailoringChangeAssetOrderActionBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>All existing Asset <code>id</code>s of the ProductTailoringVariant in the desired new order.</p>
+     *  <p>All existing Asset <code>id</code>s of the ProductVariantTailoring in the desired new order.</p>
      * @param assetOrder value to be set
      * @return Builder
      */
@@ -79,7 +79,7 @@ public class ProductTailoringChangeAssetOrderActionBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>All existing Asset <code>id</code>s of the ProductTailoringVariant in the desired new order.</p>
+     *  <p>All existing Asset <code>id</code>s of the ProductVariantTailoring in the desired new order.</p>
      * @param assetOrder value to be set
      * @return Builder
      */
@@ -90,7 +90,7 @@ public class ProductTailoringChangeAssetOrderActionBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>All existing Asset <code>id</code>s of the ProductTailoringVariant in the desired new order.</p>
+     *  <p>All existing Asset <code>id</code>s of the ProductVariantTailoring in the desired new order.</p>
      * @param assetOrder value to be set
      * @return Builder
      */
@@ -134,7 +134,7 @@ public class ProductTailoringChangeAssetOrderActionBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>All existing Asset <code>id</code>s of the ProductTailoringVariant in the desired new order.</p>
+     *  <p>All existing Asset <code>id</code>s of the ProductVariantTailoring in the desired new order.</p>
      * @return assetOrder
      */
 

@@ -9,16 +9,14 @@ public enum ServiceRegion implements ServiceRegionConfig {
         "https://auth.europe-west1.gcp.commercetools.com")),
     GCP_US_CENTRAL1(new RegionHosts("https://api.us-central1.gcp.commercetools.com/",
         "https://auth.us-central1.gcp.commercetools.com")),
+    GCP_AUSTRALIA_SOUTHEAST1(new RegionHosts("https://api.australia-southeast1.gcp.commercetools.com/",
+        "https://auth.australia-southeast1.gcp.commercetools.com")),
     AWS_US_EAST_2(new RegionHosts("https://api.us-east-2.aws.commercetools.com/",
         "https://auth.us-east-2.aws.commercetools.com")),
     AWS_EU_CENTRAL_1(new RegionHosts("https://api.eu-central-1.aws.commercetools.com/",
         "https://auth.eu-central-1.aws.commercetools.com")),
-    GCP_AUSTRALIA_SOUTHEAST1(new RegionHosts("https://api.australia-southeast1.gcp.commercetools.com/",
-        "https://auth.australia-southeast1.gcp.commercetools.com")),
-    AWS_CN_NORTHWEST_1(new RegionHosts("https://api.cn-northwest-1.aws.commercetools.cn/",
-        "https://auth.cn-northwest-1.aws.commercetools.cn/")),
-
-    ;
+    AZURE_EASTUS(new RegionHosts("https://api.eastus.azure.commercetools.com/",
+        "https://auth.eastus.azure.commercetools.com")),;
 
     public static class RegionHosts {
         private final String apiUrl;

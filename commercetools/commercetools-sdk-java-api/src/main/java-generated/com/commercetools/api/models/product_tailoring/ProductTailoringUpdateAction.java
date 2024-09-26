@@ -44,6 +44,8 @@ import jakarta.validation.constraints.NotNull;
         @JsonSubTypes.Type(value = com.commercetools.api.models.product_tailoring.ProductTailoringSetAssetKeyActionImpl.class, name = ProductTailoringSetAssetKeyAction.SET_ASSET_KEY),
         @JsonSubTypes.Type(value = com.commercetools.api.models.product_tailoring.ProductTailoringSetAssetSourcesActionImpl.class, name = ProductTailoringSetAssetSourcesAction.SET_ASSET_SOURCES),
         @JsonSubTypes.Type(value = com.commercetools.api.models.product_tailoring.ProductTailoringSetAssetTagsActionImpl.class, name = ProductTailoringSetAssetTagsAction.SET_ASSET_TAGS),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.product_tailoring.ProductTailoringSetAttributeActionImpl.class, name = ProductTailoringSetAttributeAction.SET_ATTRIBUTE),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.product_tailoring.ProductTailoringSetAttributeInAllVariantsActionImpl.class, name = ProductTailoringSetAttributeInAllVariantsAction.SET_ATTRIBUTE_IN_ALL_VARIANTS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.product_tailoring.ProductTailoringSetDescriptionActionImpl.class, name = ProductTailoringSetDescriptionAction.SET_DESCRIPTION),
         @JsonSubTypes.Type(value = com.commercetools.api.models.product_tailoring.ProductTailoringSetExternalImagesActionImpl.class, name = ProductTailoringSetExternalImagesAction.SET_IMAGES),
         @JsonSubTypes.Type(value = com.commercetools.api.models.product_tailoring.ProductTailoringSetImageLabelActionImpl.class, name = ProductTailoringSetImageLabelAction.SET_IMAGE_LABEL),
@@ -140,6 +142,15 @@ public interface ProductTailoringUpdateAction {
         if (template instanceof com.commercetools.api.models.product_tailoring.ProductTailoringSetAssetTagsAction) {
             return com.commercetools.api.models.product_tailoring.ProductTailoringSetAssetTagsAction.deepCopy(
                 (com.commercetools.api.models.product_tailoring.ProductTailoringSetAssetTagsAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.product_tailoring.ProductTailoringSetAttributeAction) {
+            return com.commercetools.api.models.product_tailoring.ProductTailoringSetAttributeAction.deepCopy(
+                (com.commercetools.api.models.product_tailoring.ProductTailoringSetAttributeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.product_tailoring.ProductTailoringSetAttributeInAllVariantsAction) {
+            return com.commercetools.api.models.product_tailoring.ProductTailoringSetAttributeInAllVariantsAction
+                    .deepCopy(
+                        (com.commercetools.api.models.product_tailoring.ProductTailoringSetAttributeInAllVariantsAction) template);
         }
         if (template instanceof com.commercetools.api.models.product_tailoring.ProductTailoringSetDescriptionAction) {
             return com.commercetools.api.models.product_tailoring.ProductTailoringSetDescriptionAction.deepCopy(
@@ -311,6 +322,23 @@ public interface ProductTailoringUpdateAction {
      */
     public static com.commercetools.api.models.product_tailoring.ProductTailoringSetAssetTagsActionBuilder setAssetTagsBuilder() {
         return com.commercetools.api.models.product_tailoring.ProductTailoringSetAssetTagsActionBuilder.of();
+    }
+
+    /**
+     * builder for setAttribute subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.product_tailoring.ProductTailoringSetAttributeActionBuilder setAttributeBuilder() {
+        return com.commercetools.api.models.product_tailoring.ProductTailoringSetAttributeActionBuilder.of();
+    }
+
+    /**
+     * builder for setAttributeInAllVariants subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.product_tailoring.ProductTailoringSetAttributeInAllVariantsActionBuilder setAttributeInAllVariantsBuilder() {
+        return com.commercetools.api.models.product_tailoring.ProductTailoringSetAttributeInAllVariantsActionBuilder
+                .of();
     }
 
     /**

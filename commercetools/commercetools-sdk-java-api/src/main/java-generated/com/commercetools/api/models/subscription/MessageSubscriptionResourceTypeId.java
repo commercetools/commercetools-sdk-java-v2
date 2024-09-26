@@ -59,6 +59,9 @@ public interface MessageSubscriptionResourceTypeId extends JsonEnum {
     <p>Messages related to ProductSelections.</p> */
     MessageSubscriptionResourceTypeId PRODUCT_SELECTION = MessageSubscriptionResourceTypeIdEnum.PRODUCT_SELECTION;
     /**
+    <p>Messages related to ProductTailoring.</p> */
+    MessageSubscriptionResourceTypeId PRODUCT_TAILORING = MessageSubscriptionResourceTypeIdEnum.PRODUCT_TAILORING;
+    /**
     <p>Messages related to Quotes.</p> */
     MessageSubscriptionResourceTypeId QUOTE = MessageSubscriptionResourceTypeIdEnum.QUOTE;
     /**
@@ -150,6 +153,11 @@ public interface MessageSubscriptionResourceTypeId extends JsonEnum {
          * product-selection
          */
         PRODUCT_SELECTION("product-selection"),
+
+        /**
+         * product-tailoring
+         */
+        PRODUCT_TAILORING("product-tailoring"),
 
         /**
          * quote

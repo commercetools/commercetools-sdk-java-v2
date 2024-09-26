@@ -146,6 +146,22 @@ public class ProductTailoringUpdateActionQueryBuilderDsl {
             ProductTailoringUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ProductTailoringUpdateActionQueryBuilderDsl> asSetAttribute(
+            Function<com.commercetools.api.predicates.query.product_tailoring.ProductTailoringSetAttributeActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product_tailoring.ProductTailoringSetAttributeActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.product_tailoring.ProductTailoringSetAttributeActionQueryBuilderDsl
+                    .of()),
+            ProductTailoringUpdateActionQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<ProductTailoringUpdateActionQueryBuilderDsl> asSetAttributeInAllVariants(
+            Function<com.commercetools.api.predicates.query.product_tailoring.ProductTailoringSetAttributeInAllVariantsActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product_tailoring.ProductTailoringSetAttributeInAllVariantsActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.product_tailoring.ProductTailoringSetAttributeInAllVariantsActionQueryBuilderDsl
+                    .of()),
+            ProductTailoringUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ProductTailoringUpdateActionQueryBuilderDsl> asSetDescription(
             Function<com.commercetools.api.predicates.query.product_tailoring.ProductTailoringSetDescriptionActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product_tailoring.ProductTailoringSetDescriptionActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(

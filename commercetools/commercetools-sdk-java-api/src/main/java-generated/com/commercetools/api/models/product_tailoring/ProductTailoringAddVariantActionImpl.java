@@ -32,6 +32,8 @@ public class ProductTailoringAddVariantActionImpl implements ProductTailoringAdd
 
     private java.util.List<com.commercetools.api.models.common.AssetDraft> assets;
 
+    private java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> attributes;
+
     private Boolean staged;
 
     /**
@@ -41,11 +43,13 @@ public class ProductTailoringAddVariantActionImpl implements ProductTailoringAdd
     ProductTailoringAddVariantActionImpl(@JsonProperty("id") final Long id, @JsonProperty("sku") final String sku,
             @JsonProperty("images") final java.util.List<com.commercetools.api.models.common.Image> images,
             @JsonProperty("assets") final java.util.List<com.commercetools.api.models.common.AssetDraft> assets,
+            @JsonProperty("attributes") final java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> attributes,
             @JsonProperty("staged") final Boolean staged) {
         this.id = id;
         this.sku = sku;
         this.images = images;
         this.assets = assets;
+        this.attributes = attributes;
         this.staged = staged;
         this.action = ADD_VARIANT;
     }
@@ -98,6 +102,14 @@ public class ProductTailoringAddVariantActionImpl implements ProductTailoringAdd
     }
 
     /**
+     *  <p>Attributes for the Product Variant Tailoring.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> getAttributes() {
+        return this.attributes;
+    }
+
+    /**
      *  <p>If <code>true</code> the new Product Variant Tailoring is only staged. If <code>false</code> the new Product Variant Tailoring is both current and staged.</p>
      */
 
@@ -129,6 +141,16 @@ public class ProductTailoringAddVariantActionImpl implements ProductTailoringAdd
         this.assets = assets;
     }
 
+    public void setAttributes(
+            final com.commercetools.api.models.product_tailoring.ProductTailoringAttribute... attributes) {
+        this.attributes = new ArrayList<>(Arrays.asList(attributes));
+    }
+
+    public void setAttributes(
+            final java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> attributes) {
+        this.attributes = attributes;
+    }
+
     public void setStaged(final Boolean staged) {
         this.staged = staged;
     }
@@ -148,12 +170,14 @@ public class ProductTailoringAddVariantActionImpl implements ProductTailoringAdd
                 .append(sku, that.sku)
                 .append(images, that.images)
                 .append(assets, that.assets)
+                .append(attributes, that.attributes)
                 .append(staged, that.staged)
                 .append(action, that.action)
                 .append(id, that.id)
                 .append(sku, that.sku)
                 .append(images, that.images)
                 .append(assets, that.assets)
+                .append(attributes, that.attributes)
                 .append(staged, that.staged)
                 .isEquals();
     }
@@ -165,6 +189,7 @@ public class ProductTailoringAddVariantActionImpl implements ProductTailoringAdd
                 .append(sku)
                 .append(images)
                 .append(assets)
+                .append(attributes)
                 .append(staged)
                 .toHashCode();
     }
@@ -176,6 +201,7 @@ public class ProductTailoringAddVariantActionImpl implements ProductTailoringAdd
                 .append("sku", sku)
                 .append("images", images)
                 .append("assets", assets)
+                .append("attributes", attributes)
                 .append("staged", staged)
                 .build();
     }

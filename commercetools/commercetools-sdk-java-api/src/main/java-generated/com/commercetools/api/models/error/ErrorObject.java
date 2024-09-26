@@ -101,6 +101,7 @@ import jakarta.validation.constraints.NotNull;
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.SearchExecutionFailureErrorImpl.class, name = SearchExecutionFailureError.SEARCH_EXECUTION_FAILURE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.SearchFacetPathNotFoundErrorImpl.class, name = SearchFacetPathNotFoundError.SEARCH_FACET_PATH_NOT_FOUND),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.SearchIndexingInProgressErrorImpl.class, name = SearchIndexingInProgressError.SEARCH_INDEXING_IN_PROGRESS),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.error.SearchNotReadyErrorImpl.class, name = SearchNotReadyError.SEARCH_NOT_READY),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.SemanticErrorErrorImpl.class, name = SemanticErrorError.SEMANTIC_ERROR),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.ShippingMethodDoesNotMatchCartErrorImpl.class, name = ShippingMethodDoesNotMatchCartError.SHIPPING_METHOD_DOES_NOT_MATCH_CART),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.StoreCartDiscountsLimitReachedErrorImpl.class, name = StoreCartDiscountsLimitReachedError.STORE_CART_DISCOUNTS_LIMIT_REACHED),
@@ -447,6 +448,10 @@ public interface ErrorObject {
         if (template instanceof com.commercetools.api.models.error.SearchIndexingInProgressError) {
             return com.commercetools.api.models.error.SearchIndexingInProgressError
                     .deepCopy((com.commercetools.api.models.error.SearchIndexingInProgressError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.SearchNotReadyError) {
+            return com.commercetools.api.models.error.SearchNotReadyError
+                    .deepCopy((com.commercetools.api.models.error.SearchNotReadyError) template);
         }
         if (template instanceof com.commercetools.api.models.error.SemanticErrorError) {
             return com.commercetools.api.models.error.SemanticErrorError
@@ -1044,6 +1049,14 @@ public interface ErrorObject {
      */
     public static com.commercetools.api.models.error.SearchIndexingInProgressErrorBuilder searchIndexingInProgressBuilder() {
         return com.commercetools.api.models.error.SearchIndexingInProgressErrorBuilder.of();
+    }
+
+    /**
+     * builder for searchNotReady subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.SearchNotReadyErrorBuilder searchNotReadyBuilder() {
+        return com.commercetools.api.models.error.SearchNotReadyErrorBuilder.of();
     }
 
     /**

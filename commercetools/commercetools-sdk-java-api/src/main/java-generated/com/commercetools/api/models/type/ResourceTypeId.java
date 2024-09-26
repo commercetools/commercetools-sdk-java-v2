@@ -86,6 +86,9 @@ public interface ResourceTypeId extends JsonEnum {
     <p>ProductSelection</p> */
     ResourceTypeId PRODUCT_SELECTION = ResourceTypeIdEnum.PRODUCT_SELECTION;
     /**
+    <p>ProductTailoring</p> */
+    ResourceTypeId PRODUCT_TAILORING = ResourceTypeIdEnum.PRODUCT_TAILORING;
+    /**
     <p>Quote, QuoteRequest and StagedQuote. When a StagedQuote is created, the CustomFields will be copied from the QuoteRequest and when a Quote is created, the CustomFields will be copied from the StagedQuote. For this reason, the Types for Quotes are also valid for QuoteRequests and StagedQuotes, and hence all have the same identifier: <code>quote</code>.</p> */
     ResourceTypeId QUOTE = ResourceTypeIdEnum.QUOTE;
     /**
@@ -231,6 +234,11 @@ public interface ResourceTypeId extends JsonEnum {
          * product-selection
          */
         PRODUCT_SELECTION("product-selection"),
+
+        /**
+         * product-tailoring
+         */
+        PRODUCT_TAILORING("product-tailoring"),
 
         /**
          * quote

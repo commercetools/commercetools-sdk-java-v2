@@ -46,4 +46,20 @@ public class ProductVariantTailoringQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, ProductVariantTailoringQueryBuilderDsl::of));
     }
 
+    public CombinationQueryPredicate<ProductVariantTailoringQueryBuilderDsl> attributes(
+            Function<com.commercetools.api.predicates.query.product_tailoring.ProductTailoringAttributeQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product_tailoring.ProductTailoringAttributeQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("attributes"))
+                .inner(fn.apply(
+                    com.commercetools.api.predicates.query.product_tailoring.ProductTailoringAttributeQueryBuilderDsl
+                            .of())),
+            ProductVariantTailoringQueryBuilderDsl::of);
+    }
+
+    public CollectionPredicateBuilder<ProductVariantTailoringQueryBuilderDsl> attributes() {
+        return new CollectionPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("attributes")),
+            p -> new CombinationQueryPredicate<>(p, ProductVariantTailoringQueryBuilderDsl::of));
+    }
+
 }

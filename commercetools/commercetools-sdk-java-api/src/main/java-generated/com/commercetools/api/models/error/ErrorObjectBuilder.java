@@ -299,6 +299,10 @@ public class ErrorObjectBuilder {
         return com.commercetools.api.models.error.SearchIndexingInProgressErrorBuilder.of();
     }
 
+    public com.commercetools.api.models.error.SearchNotReadyErrorBuilder searchNotReadyBuilder() {
+        return com.commercetools.api.models.error.SearchNotReadyErrorBuilder.of();
+    }
+
     public com.commercetools.api.models.error.SemanticErrorErrorBuilder semanticErrorBuilder() {
         return com.commercetools.api.models.error.SemanticErrorErrorBuilder.of();
     }

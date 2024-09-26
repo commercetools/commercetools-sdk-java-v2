@@ -36,6 +36,9 @@ public class ProductTailoringAddVariantActionBuilder implements Builder<ProductT
     private java.util.List<com.commercetools.api.models.common.AssetDraft> assets;
 
     @Nullable
+    private java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> attributes;
+
+    @Nullable
     private Boolean staged;
 
     /**
@@ -239,6 +242,101 @@ public class ProductTailoringAddVariantActionBuilder implements Builder<ProductT
     }
 
     /**
+     *  <p>Attributes for the Product Variant Tailoring.</p>
+     * @param attributes value to be set
+     * @return Builder
+     */
+
+    public ProductTailoringAddVariantActionBuilder attributes(
+            @Nullable final com.commercetools.api.models.product_tailoring.ProductTailoringAttribute... attributes) {
+        this.attributes = new ArrayList<>(Arrays.asList(attributes));
+        return this;
+    }
+
+    /**
+     *  <p>Attributes for the Product Variant Tailoring.</p>
+     * @param attributes value to be set
+     * @return Builder
+     */
+
+    public ProductTailoringAddVariantActionBuilder attributes(
+            @Nullable final java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> attributes) {
+        this.attributes = attributes;
+        return this;
+    }
+
+    /**
+     *  <p>Attributes for the Product Variant Tailoring.</p>
+     * @param attributes value to be set
+     * @return Builder
+     */
+
+    public ProductTailoringAddVariantActionBuilder plusAttributes(
+            @Nullable final com.commercetools.api.models.product_tailoring.ProductTailoringAttribute... attributes) {
+        if (this.attributes == null) {
+            this.attributes = new ArrayList<>();
+        }
+        this.attributes.addAll(Arrays.asList(attributes));
+        return this;
+    }
+
+    /**
+     *  <p>Attributes for the Product Variant Tailoring.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductTailoringAddVariantActionBuilder plusAttributes(
+            Function<com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder, com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder> builder) {
+        if (this.attributes == null) {
+            this.attributes = new ArrayList<>();
+        }
+        this.attributes
+                .add(builder.apply(com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder.of())
+                        .build());
+        return this;
+    }
+
+    /**
+     *  <p>Attributes for the Product Variant Tailoring.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductTailoringAddVariantActionBuilder withAttributes(
+            Function<com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder, com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder> builder) {
+        this.attributes = new ArrayList<>();
+        this.attributes
+                .add(builder.apply(com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder.of())
+                        .build());
+        return this;
+    }
+
+    /**
+     *  <p>Attributes for the Product Variant Tailoring.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductTailoringAddVariantActionBuilder addAttributes(
+            Function<com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder, com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> builder) {
+        return plusAttributes(
+            builder.apply(com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder.of()));
+    }
+
+    /**
+     *  <p>Attributes for the Product Variant Tailoring.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductTailoringAddVariantActionBuilder setAttributes(
+            Function<com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder, com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> builder) {
+        return attributes(
+            builder.apply(com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder.of()));
+    }
+
+    /**
      *  <p>If <code>true</code> the new Product Variant Tailoring is only staged. If <code>false</code> the new Product Variant Tailoring is both current and staged.</p>
      * @param staged value to be set
      * @return Builder
@@ -290,6 +388,16 @@ public class ProductTailoringAddVariantActionBuilder implements Builder<ProductT
     }
 
     /**
+     *  <p>Attributes for the Product Variant Tailoring.</p>
+     * @return attributes
+     */
+
+    @Nullable
+    public java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> getAttributes() {
+        return this.attributes;
+    }
+
+    /**
      *  <p>If <code>true</code> the new Product Variant Tailoring is only staged. If <code>false</code> the new Product Variant Tailoring is both current and staged.</p>
      * @return staged
      */
@@ -304,7 +412,7 @@ public class ProductTailoringAddVariantActionBuilder implements Builder<ProductT
      * @return ProductTailoringAddVariantAction
      */
     public ProductTailoringAddVariantAction build() {
-        return new ProductTailoringAddVariantActionImpl(id, sku, images, assets, staged);
+        return new ProductTailoringAddVariantActionImpl(id, sku, images, assets, attributes, staged);
     }
 
     /**
@@ -312,7 +420,7 @@ public class ProductTailoringAddVariantActionBuilder implements Builder<ProductT
      * @return ProductTailoringAddVariantAction
      */
     public ProductTailoringAddVariantAction buildUnchecked() {
-        return new ProductTailoringAddVariantActionImpl(id, sku, images, assets, staged);
+        return new ProductTailoringAddVariantActionImpl(id, sku, images, assets, attributes, staged);
     }
 
     /**
@@ -334,6 +442,7 @@ public class ProductTailoringAddVariantActionBuilder implements Builder<ProductT
         builder.sku = template.getSku();
         builder.images = template.getImages();
         builder.assets = template.getAssets();
+        builder.attributes = template.getAttributes();
         builder.staged = template.getStaged();
         return builder;
     }

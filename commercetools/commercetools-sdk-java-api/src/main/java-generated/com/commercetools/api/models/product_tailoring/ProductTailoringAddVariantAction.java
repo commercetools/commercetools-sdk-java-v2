@@ -71,6 +71,14 @@ public interface ProductTailoringAddVariantAction extends ProductTailoringUpdate
     public List<AssetDraft> getAssets();
 
     /**
+     *  <p>Attributes for the Product Variant Tailoring.</p>
+     * @return attributes
+     */
+    @Valid
+    @JsonProperty("attributes")
+    public List<ProductTailoringAttribute> getAttributes();
+
+    /**
      *  <p>If <code>true</code> the new Product Variant Tailoring is only staged. If <code>false</code> the new Product Variant Tailoring is both current and staged.</p>
      * @return staged
      */
@@ -123,6 +131,21 @@ public interface ProductTailoringAddVariantAction extends ProductTailoringUpdate
     public void setAssets(final List<AssetDraft> assets);
 
     /**
+     *  <p>Attributes for the Product Variant Tailoring.</p>
+     * @param attributes values to be set
+     */
+
+    @JsonIgnore
+    public void setAttributes(final ProductTailoringAttribute... attributes);
+
+    /**
+     *  <p>Attributes for the Product Variant Tailoring.</p>
+     * @param attributes values to be set
+     */
+
+    public void setAttributes(final List<ProductTailoringAttribute> attributes);
+
+    /**
      *  <p>If <code>true</code> the new Product Variant Tailoring is only staged. If <code>false</code> the new Product Variant Tailoring is both current and staged.</p>
      * @param staged value to be set
      */
@@ -148,6 +171,7 @@ public interface ProductTailoringAddVariantAction extends ProductTailoringUpdate
         instance.setSku(template.getSku());
         instance.setImages(template.getImages());
         instance.setAssets(template.getAssets());
+        instance.setAttributes(template.getAttributes());
         instance.setStaged(template.getStaged());
         return instance;
     }
@@ -173,6 +197,11 @@ public interface ProductTailoringAddVariantAction extends ProductTailoringUpdate
         instance.setAssets(Optional.ofNullable(template.getAssets())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.common.AssetDraft::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setAttributes(Optional.ofNullable(template.getAttributes())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.product_tailoring.ProductTailoringAttribute::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setStaged(template.getStaged());

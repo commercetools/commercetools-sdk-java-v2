@@ -28,6 +28,8 @@ public class SearchIndexingConfigurationImpl implements SearchIndexingConfigurat
 
     private com.commercetools.api.models.project.SearchIndexingConfigurationValues orders;
 
+    private com.commercetools.api.models.project.SearchIndexingConfigurationValues customers;
+
     /**
      * create instance with all properties
      */
@@ -35,10 +37,12 @@ public class SearchIndexingConfigurationImpl implements SearchIndexingConfigurat
     SearchIndexingConfigurationImpl(
             @JsonProperty("products") final com.commercetools.api.models.project.SearchIndexingConfigurationValues products,
             @JsonProperty("productsSearch") final com.commercetools.api.models.project.SearchIndexingConfigurationValues productsSearch,
-            @JsonProperty("orders") final com.commercetools.api.models.project.SearchIndexingConfigurationValues orders) {
+            @JsonProperty("orders") final com.commercetools.api.models.project.SearchIndexingConfigurationValues orders,
+            @JsonProperty("customers") final com.commercetools.api.models.project.SearchIndexingConfigurationValues customers) {
         this.products = products;
         this.productsSearch = productsSearch;
         this.orders = orders;
+        this.customers = customers;
     }
 
     /**
@@ -71,6 +75,14 @@ public class SearchIndexingConfigurationImpl implements SearchIndexingConfigurat
         return this.orders;
     }
 
+    /**
+     *  <p>Configuration for the Customer Search feature.</p>
+     */
+
+    public com.commercetools.api.models.project.SearchIndexingConfigurationValues getCustomers() {
+        return this.customers;
+    }
+
     public void setProducts(final com.commercetools.api.models.project.SearchIndexingConfigurationValues products) {
         this.products = products;
     }
@@ -82,6 +94,10 @@ public class SearchIndexingConfigurationImpl implements SearchIndexingConfigurat
 
     public void setOrders(final com.commercetools.api.models.project.SearchIndexingConfigurationValues orders) {
         this.orders = orders;
+    }
+
+    public void setCustomers(final com.commercetools.api.models.project.SearchIndexingConfigurationValues customers) {
+        this.customers = customers;
     }
 
     @Override
@@ -97,15 +113,21 @@ public class SearchIndexingConfigurationImpl implements SearchIndexingConfigurat
         return new EqualsBuilder().append(products, that.products)
                 .append(productsSearch, that.productsSearch)
                 .append(orders, that.orders)
+                .append(customers, that.customers)
                 .append(products, that.products)
                 .append(productsSearch, that.productsSearch)
                 .append(orders, that.orders)
+                .append(customers, that.customers)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(products).append(productsSearch).append(orders).toHashCode();
+        return new HashCodeBuilder(17, 37).append(products)
+                .append(productsSearch)
+                .append(orders)
+                .append(customers)
+                .toHashCode();
     }
 
     @Override
@@ -113,6 +135,7 @@ public class SearchIndexingConfigurationImpl implements SearchIndexingConfigurat
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("products", products)
                 .append("productsSearch", productsSearch)
                 .append("orders", orders)
+                .append("customers", customers)
                 .build();
     }
 

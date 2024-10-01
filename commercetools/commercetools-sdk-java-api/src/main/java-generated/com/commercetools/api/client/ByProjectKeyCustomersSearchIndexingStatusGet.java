@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *
+ *  <p>Returns the indexing status of the Customer Search for a Project.</p>
  *
  * <hr>
  * <div class=code-example>

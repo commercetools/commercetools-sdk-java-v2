@@ -8,6 +8,7 @@
 - added property `attributes` to type `ProductVariantTailoringDraft`
 - added property `attributes` to type `ProductTailoringAddVariantAction`
 - added property `warnings` to type `Product`
+- added property `customers` to type `SearchIndexingConfiguration`
 </details>
 
 

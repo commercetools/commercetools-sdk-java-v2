@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *
+ *  <p>A SearchNotReady error is returned if the indexing is in progress or the feature is deactivated. If deactivated, you can reactivate it.</p>
  *
  * <hr>
  * <div class=code-example>

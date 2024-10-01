@@ -34,6 +34,7 @@
 <details>
 <summary>Added Enum(s)</summary>
 
+- added enum `customer-group` to type `ExtensionResourceTypeId`
 - added enum `product-tailoring` to type `MessageSubscriptionResourceTypeId`
 - added enum `product-tailoring` to type `ResourceTypeId`
 </details>

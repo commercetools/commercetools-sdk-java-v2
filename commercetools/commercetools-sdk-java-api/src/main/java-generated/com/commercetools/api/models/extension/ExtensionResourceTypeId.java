@@ -29,6 +29,9 @@ public interface ExtensionResourceTypeId extends JsonEnum {
     <p>Extension triggered for operations on Customers.</p> */
     ExtensionResourceTypeId CUSTOMER = ExtensionResourceTypeIdEnum.CUSTOMER;
     /**
+    <p>Extension triggered for operations on CustomerGroups.</p> */
+    ExtensionResourceTypeId CUSTOMER_GROUP = ExtensionResourceTypeIdEnum.CUSTOMER_GROUP;
+    /**
     <p>Extension triggered for operations on QuoteRequests.</p> */
     ExtensionResourceTypeId QUOTE_REQUEST = ExtensionResourceTypeIdEnum.QUOTE_REQUEST;
     /**
@@ -67,6 +70,11 @@ public interface ExtensionResourceTypeId extends JsonEnum {
          * customer
          */
         CUSTOMER("customer"),
+
+        /**
+         * customer-group
+         */
+        CUSTOMER_GROUP("customer-group"),
 
         /**
          * quote-request

@@ -103,6 +103,7 @@ public class StandalonePriceImportImpl implements StandalonePriceImport, ModelBa
 
     /**
      *  <p>Sets the country for which this Price is valid.</p>
+     *  <p>The value cannot be updated. Attempting to update the value will result in an InvalidFieldsUpdate error.</p>
      */
 
     public String getCountry() {
@@ -111,6 +112,7 @@ public class StandalonePriceImportImpl implements StandalonePriceImport, ModelBa
 
     /**
      *  <p>Sets the CustomerGroup for which this Price is valid.</p>
+     *  <p>The value cannot be updated. Attempting to update the value will result in an InvalidFieldsUpdate error.</p>
      */
 
     public com.commercetools.importapi.models.common.CustomerGroupKeyReference getCustomerGroup() {
@@ -118,7 +120,8 @@ public class StandalonePriceImportImpl implements StandalonePriceImport, ModelBa
     }
 
     /**
-     *  <p>Sets the product distribution Channel for which this Price is valid</p>
+     *  <p>Sets the product distribution Channel for which this Price is valid.</p>
+     *  <p>The value cannot be updated. Attempting to update the value will result in an InvalidFieldsUpdate error.</p>
      */
 
     public com.commercetools.importapi.models.common.ChannelKeyReference getChannel() {

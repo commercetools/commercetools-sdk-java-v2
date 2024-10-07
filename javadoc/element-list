@@ -50,6 +50,7 @@ com.commercetools.api.models.store_country
 com.commercetools.api.models.subscription
 com.commercetools.api.models.tax_category
 com.commercetools.api.models.type
+com.commercetools.api.models.warning
 com.commercetools.api.models.zone
 com.commercetools.api.predicates
 com.commercetools.api.predicates.expansion

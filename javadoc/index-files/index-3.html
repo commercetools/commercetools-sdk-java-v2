@@ -10268,6 +10268,8 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/type/package-summary.html">com.commercetools.api.models.type</a> - package com.commercetools.api.models.type</dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/warning/package-summary.html">com.commercetools.api.models.warning</a> - package com.commercetools.api.models.warning</dt>
+<dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/zone/package-summary.html">com.commercetools.api.models.zone</a> - package com.commercetools.api.models.zone</dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/predicates/package-summary.html">com.commercetools.api.predicates</a> - package com.commercetools.api.predicates</dt>
@@ -10472,9 +10474,9 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/predicates/query/CollectionPredicateBuilder.html#combinationFn()" class="member-name-link">combinationFn()</a> - Method in class com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/CollectionPredicateBuilder.html" title="class in com.commercetools.api.predicates.query">CollectionPredicateBuilder</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="../com/commercetools/api/predicates/query/DateComparisonPredicateBuilder.html#combinationFn()" class="member-name-link">combinationFn()</a> - Method in class com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/DateComparisonPredicateBuilder.html" title="class in com.commercetools.api.predicates.query">DateComparisonPredicateBuilder</a></dt>
+<dt><a href="../com/commercetools/api/predicates/query/NotEqualPredicateBuilder.html#combinationFn()" class="member-name-link">combinationFn()</a> - Method in interface com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/NotEqualPredicateBuilder.html" title="interface in com.commercetools.api.predicates.query">NotEqualPredicateBuilder</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="../com/commercetools/api/predicates/query/DateComparisonPredicateBuilder.html#combinationFn()" class="member-name-link">combinationFn()</a> - Method in class com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/DateComparisonPredicateBuilder.html" title="class in com.commercetools.api.predicates.query">DateComparisonPredicateBuilder</a></dt>
+<dt><a href="../com/commercetools/api/predicates/query/LongComparisonPredicateBuilder.html#combinationFn()" class="member-name-link">combinationFn()</a> - Method in class com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/LongComparisonPredicateBuilder.html" title="class in com.commercetools.api.predicates.query">LongComparisonPredicateBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/predicates/query/EmptyPredicateBuilder.html#combinationFn()" class="member-name-link">combinationFn()</a> - Method in interface com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/EmptyPredicateBuilder.html" title="interface in com.commercetools.api.predicates.query">EmptyPredicateBuilder</a></dt>
 <dd>&nbsp;</dd>
@@ -18599,6 +18601,10 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <dd>
 <div class="block">customer-group</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/extension/ExtensionResourceTypeId.ExtensionResourceTypeIdEnum.html#CUSTOMER_GROUP" class="member-name-link">CUSTOMER_GROUP</a> - Enum constant in enum com.commercetools.api.models.extension.<a href="../com/commercetools/api/models/extension/ExtensionResourceTypeId.ExtensionResourceTypeIdEnum.html" title="enum in com.commercetools.api.models.extension">ExtensionResourceTypeId.ExtensionResourceTypeIdEnum</a></dt>
+<dd>
+<div class="block">customer-group</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/product_type/AttributeReferenceTypeId.AttributeReferenceTypeIdEnum.html#CUSTOMER_GROUP" class="member-name-link">CUSTOMER_GROUP</a> - Enum constant in enum com.commercetools.api.models.product_type.<a href="../com/commercetools/api/models/product_type/AttributeReferenceTypeId.AttributeReferenceTypeIdEnum.html" title="enum in com.commercetools.api.models.product_type">AttributeReferenceTypeId.AttributeReferenceTypeIdEnum</a></dt>
 <dd>
 <div class="block">customer-group</div>
@@ -18650,6 +18656,10 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <dt><a href="../com/commercetools/api/models/customer_group/CustomerGroupResourceIdentifier.html#CUSTOMER_GROUP" class="member-name-link">CUSTOMER_GROUP</a> - Static variable in interface com.commercetools.api.models.customer_group.<a href="../com/commercetools/api/models/customer_group/CustomerGroupResourceIdentifier.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupResourceIdentifier</a></dt>
 <dd>
 <div class="block">discriminator value for CustomerGroupResourceIdentifier</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/extension/ExtensionResourceTypeId.html#CUSTOMER_GROUP" class="member-name-link">CUSTOMER_GROUP</a> - Static variable in interface com.commercetools.api.models.extension.<a href="../com/commercetools/api/models/extension/ExtensionResourceTypeId.html" title="interface in com.commercetools.api.models.extension">ExtensionResourceTypeId</a></dt>
+<dd>
+<div class="block">Extension triggered for operations on CustomerGroups.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product_type/AttributeReferenceTypeId.html#CUSTOMER_GROUP" class="member-name-link">CUSTOMER_GROUP</a> - Static variable in interface com.commercetools.api.models.product_type.<a href="../com/commercetools/api/models/product_type/AttributeReferenceTypeId.html" title="interface in com.commercetools.api.models.product_type">AttributeReferenceTypeId</a></dt>
 <dd>
@@ -21183,6 +21193,14 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/importapi/client/ProjectScopedApiRoot.html#customers()" class="member-name-link">customers()</a> - Method in interface com.commercetools.importapi.client.<a href="../com/commercetools/importapi/client/ProjectScopedApiRoot.html" title="interface in com.commercetools.importapi.client">ProjectScopedApiRoot</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/project/SearchIndexingConfigurationBuilder.html#customers(com.commercetools.api.models.project.SearchIndexingConfigurationValues)" class="member-name-link">customers(SearchIndexingConfigurationValues)</a> - Method in class com.commercetools.api.models.project.<a href="../com/commercetools/api/models/project/SearchIndexingConfigurationBuilder.html" title="class in com.commercetools.api.models.project">SearchIndexingConfigurationBuilder</a></dt>
+<dd>
+<div class="block">Configuration for the Customer Search feature.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/project/SearchIndexingConfigurationBuilder.html#customers(java.util.function.Function)" class="member-name-link">customers(Function&lt;SearchIndexingConfigurationValuesBuilder, SearchIndexingConfigurationValuesBuilder&gt;)</a> - Method in class com.commercetools.api.models.project.<a href="../com/commercetools/api/models/project/SearchIndexingConfigurationBuilder.html" title="class in com.commercetools.api.models.project">SearchIndexingConfigurationBuilder</a></dt>
+<dd>
+<div class="block">Configuration for the Customer Search feature.</div>
+</dd>
 <dt><a href="../com/commercetools/graphql/api/GraphQL.html#customers(java.util.function.UnaryOperator)" class="member-name-link">customers(UnaryOperator&lt;CustomersGraphQLQuery.Builder&gt;)</a> - Static method in class com.commercetools.graphql.api.<a href="../com/commercetools/graphql/api/GraphQL.html" title="class in com.commercetools.graphql.api">GraphQL</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/customer_search/CustomerSearchIndexingStatusResponse.html" class="type-name-link" title="interface in com.commercetools.api.models.customer_search">CustomerSearchIndexingStatusResponse</a> - Interface in <a href="../com/commercetools/api/models/customer_search/package-summary.html">com.commercetools.api.models.customer_search</a></dt>

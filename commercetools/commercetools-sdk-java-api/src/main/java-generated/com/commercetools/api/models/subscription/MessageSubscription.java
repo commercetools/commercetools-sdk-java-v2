@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>For supported resources and message types, see Message Types. Messages will be delivered even if the Messages Query HTTP API is not enabled.</p>
+ *  <p>Messages will be delivered even if the Messages Query HTTP API is not enabled.</p>
  *  <p>For MessageSubscriptions, the format of the payload is MessageDeliveryPayload.</p>
  *
  * <hr>

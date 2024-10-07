@@ -39,6 +39,7 @@ import jakarta.validation.constraints.NotNull;
         @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.InsufficientScopeErrorImpl.class, name = InsufficientScopeError.INSUFFICIENT_SCOPE),
         @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.InvalidCredentialsErrorImpl.class, name = InvalidCredentialsError.INVALID_CREDENTIALS),
         @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.InvalidFieldErrorImpl.class, name = InvalidFieldError.INVALID_FIELD),
+        @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.InvalidFieldsUpdateErrorImpl.class, name = InvalidFieldsUpdateError.INVALID_FIELD_UPDATE),
         @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.InvalidInputImpl.class, name = InvalidInput.INVALID_INPUT),
         @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.InvalidJsonInputImpl.class, name = InvalidJsonInput.INVALID_JSON_INPUT),
         @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.InvalidOperationImpl.class, name = InvalidOperation.INVALID_OPERATION),
@@ -132,6 +133,10 @@ public interface ErrorObject {
         if (template instanceof com.commercetools.importapi.models.errors.InvalidFieldError) {
             return com.commercetools.importapi.models.errors.InvalidFieldError
                     .deepCopy((com.commercetools.importapi.models.errors.InvalidFieldError) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.errors.InvalidFieldsUpdateError) {
+            return com.commercetools.importapi.models.errors.InvalidFieldsUpdateError
+                    .deepCopy((com.commercetools.importapi.models.errors.InvalidFieldsUpdateError) template);
         }
         if (template instanceof com.commercetools.importapi.models.errors.InvalidInput) {
             return com.commercetools.importapi.models.errors.InvalidInput
@@ -272,6 +277,14 @@ public interface ErrorObject {
      */
     public static com.commercetools.importapi.models.errors.InvalidFieldErrorBuilder invalidFieldBuilder() {
         return com.commercetools.importapi.models.errors.InvalidFieldErrorBuilder.of();
+    }
+
+    /**
+     * builder for invalidFieldUpdate subtype
+     * @return builder
+     */
+    public static com.commercetools.importapi.models.errors.InvalidFieldsUpdateErrorBuilder invalidFieldUpdateBuilder() {
+        return com.commercetools.importapi.models.errors.InvalidFieldsUpdateErrorBuilder.of();
     }
 
     /**

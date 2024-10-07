@@ -103,6 +103,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
 
     /**
      *  <p>Sets the country for which this Price is valid.</p>
+     *  <p>The value cannot be updated. Attempting to update the value will result in an InvalidFieldsUpdate error.</p>
      * @param country value to be set
      * @return Builder
      */
@@ -114,6 +115,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
 
     /**
      *  <p>Sets the CustomerGroup for which this Price is valid.</p>
+     *  <p>The value cannot be updated. Attempting to update the value will result in an InvalidFieldsUpdate error.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -128,6 +130,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
 
     /**
      *  <p>Sets the CustomerGroup for which this Price is valid.</p>
+     *  <p>The value cannot be updated. Attempting to update the value will result in an InvalidFieldsUpdate error.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -141,6 +144,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
 
     /**
      *  <p>Sets the CustomerGroup for which this Price is valid.</p>
+     *  <p>The value cannot be updated. Attempting to update the value will result in an InvalidFieldsUpdate error.</p>
      * @param customerGroup value to be set
      * @return Builder
      */
@@ -152,7 +156,8 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>Sets the product distribution Channel for which this Price is valid</p>
+     *  <p>Sets the product distribution Channel for which this Price is valid.</p>
+     *  <p>The value cannot be updated. Attempting to update the value will result in an InvalidFieldsUpdate error.</p>
      * @param builder function to build the channel value
      * @return Builder
      */
@@ -164,7 +169,8 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>Sets the product distribution Channel for which this Price is valid</p>
+     *  <p>Sets the product distribution Channel for which this Price is valid.</p>
+     *  <p>The value cannot be updated. Attempting to update the value will result in an InvalidFieldsUpdate error.</p>
      * @param builder function to build the channel value
      * @return Builder
      */
@@ -176,7 +182,8 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>Sets the product distribution Channel for which this Price is valid</p>
+     *  <p>Sets the product distribution Channel for which this Price is valid.</p>
+     *  <p>The value cannot be updated. Attempting to update the value will result in an InvalidFieldsUpdate error.</p>
      * @param channel value to be set
      * @return Builder
      */
@@ -399,6 +406,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
 
     /**
      *  <p>Sets the country for which this Price is valid.</p>
+     *  <p>The value cannot be updated. Attempting to update the value will result in an InvalidFieldsUpdate error.</p>
      * @return country
      */
 
@@ -409,6 +417,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
 
     /**
      *  <p>Sets the CustomerGroup for which this Price is valid.</p>
+     *  <p>The value cannot be updated. Attempting to update the value will result in an InvalidFieldsUpdate error.</p>
      * @return customerGroup
      */
 
@@ -418,7 +427,8 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>Sets the product distribution Channel for which this Price is valid</p>
+     *  <p>Sets the product distribution Channel for which this Price is valid.</p>
+     *  <p>The value cannot be updated. Attempting to update the value will result in an InvalidFieldsUpdate error.</p>
      * @return channel
      */
 

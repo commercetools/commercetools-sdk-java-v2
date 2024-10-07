@@ -70,6 +70,7 @@ public interface StandalonePriceImport extends ImportResource {
 
     /**
      *  <p>Sets the country for which this Price is valid.</p>
+     *  <p>The value cannot be updated. Attempting to update the value will result in an InvalidFieldsUpdate error.</p>
      * @return country
      */
 
@@ -78,6 +79,7 @@ public interface StandalonePriceImport extends ImportResource {
 
     /**
      *  <p>Sets the CustomerGroup for which this Price is valid.</p>
+     *  <p>The value cannot be updated. Attempting to update the value will result in an InvalidFieldsUpdate error.</p>
      * @return customerGroup
      */
     @Valid
@@ -85,7 +87,8 @@ public interface StandalonePriceImport extends ImportResource {
     public CustomerGroupKeyReference getCustomerGroup();
 
     /**
-     *  <p>Sets the product distribution Channel for which this Price is valid</p>
+     *  <p>Sets the product distribution Channel for which this Price is valid.</p>
+     *  <p>The value cannot be updated. Attempting to update the value will result in an InvalidFieldsUpdate error.</p>
      * @return channel
      */
     @Valid
@@ -155,6 +158,7 @@ public interface StandalonePriceImport extends ImportResource {
 
     /**
      *  <p>Sets the country for which this Price is valid.</p>
+     *  <p>The value cannot be updated. Attempting to update the value will result in an InvalidFieldsUpdate error.</p>
      * @param country value to be set
      */
 
@@ -162,13 +166,15 @@ public interface StandalonePriceImport extends ImportResource {
 
     /**
      *  <p>Sets the CustomerGroup for which this Price is valid.</p>
+     *  <p>The value cannot be updated. Attempting to update the value will result in an InvalidFieldsUpdate error.</p>
      * @param customerGroup value to be set
      */
 
     public void setCustomerGroup(final CustomerGroupKeyReference customerGroup);
 
     /**
-     *  <p>Sets the product distribution Channel for which this Price is valid</p>
+     *  <p>Sets the product distribution Channel for which this Price is valid.</p>
+     *  <p>The value cannot be updated. Attempting to update the value will result in an InvalidFieldsUpdate error.</p>
      * @param channel value to be set
      */
 

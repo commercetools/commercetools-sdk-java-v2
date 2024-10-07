@@ -55,6 +55,10 @@ public class ErrorObjectBuilder {
         return com.commercetools.importapi.models.errors.InvalidFieldErrorBuilder.of();
     }
 
+    public com.commercetools.importapi.models.errors.InvalidFieldsUpdateErrorBuilder invalidFieldUpdateBuilder() {
+        return com.commercetools.importapi.models.errors.InvalidFieldsUpdateErrorBuilder.of();
+    }
+
     public com.commercetools.importapi.models.errors.InvalidInputBuilder invalidInputBuilder() {
         return com.commercetools.importapi.models.errors.InvalidInputBuilder.of();
     }

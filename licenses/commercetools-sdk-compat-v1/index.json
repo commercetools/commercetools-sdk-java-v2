@@ -1,6 +1,26 @@
 {
     "dependencies": [
         {
+            "moduleName": "com.commercetools.sdk.jvm.core:commercetools-java-client",
+            "moduleVersion": "2.14.0",
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "com.commercetools.sdk.jvm.core:commercetools-java-client-ahc-2_0",
+            "moduleVersion": "2.14.0",
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
             "moduleName": "com.commercetools.sdk.jvm.core:commercetools-java-client-core",
             "moduleVersion": "2.14.0",
             "moduleLicenses": [
@@ -32,6 +52,16 @@
         },
         {
             "moduleName": "com.commercetools.sdk.jvm.core:sdk-http",
+            "moduleVersion": "2.14.0",
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "com.commercetools.sdk.jvm.core:sdk-http-ahc-2_0",
             "moduleVersion": "2.14.0",
             "moduleLicenses": [
                 {
@@ -188,6 +218,16 @@
             ]
         },
         {
+            "moduleName": "com.typesafe.netty:netty-reactive-streams",
+            "moduleVersion": "1.0.8",
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
             "moduleName": "dev.failsafe:failsafe",
             "moduleVersion": "3.3.2",
             "moduleLicenses": [
@@ -195,6 +235,97 @@
                     "moduleLicense": null,
                     "moduleLicenseUrl": "http://apache.org/licenses/LICENSE-2.0"
                 },
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "io.netty:netty-buffer",
+            "moduleVersion": "4.0.54.Final",
+            "moduleUrls": [
+                "http://netty.io/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "io.netty:netty-codec",
+            "moduleVersion": "4.0.54.Final",
+            "moduleUrls": [
+                "http://netty.io/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "io.netty:netty-codec-http",
+            "moduleVersion": "4.0.54.Final",
+            "moduleUrls": [
+                "http://netty.io/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "io.netty:netty-common",
+            "moduleVersion": "4.0.54.Final",
+            "moduleUrls": [
+                "http://netty.io/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "io.netty:netty-handler",
+            "moduleVersion": "4.0.54.Final",
+            "moduleUrls": [
+                "http://netty.io/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "io.netty:netty-transport",
+            "moduleVersion": "4.0.54.Final",
+            "moduleUrls": [
+                "http://netty.io/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "io.netty:netty-transport-native-epoll",
+            "moduleVersion": "4.0.54.Final",
+            "moduleUrls": [
+                "http://netty.io/"
+            ],
+            "moduleLicenses": [
                 {
                     "moduleLicense": "Apache License, Version 2.0",
                     "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
@@ -310,6 +441,56 @@
                 "http://geronimo.apache.org/maven/${siteId}/${version}",
                 "http://geronimo.apache.org/maven/specs/geronimo-annotation_1.2_spec/1.0"
             ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "org.asynchttpclient:async-http-client",
+            "moduleVersion": "2.0.38",
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "org.asynchttpclient:async-http-client-netty-utils",
+            "moduleVersion": "2.0.38",
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "org.asynchttpclient:netty-codec-dns",
+            "moduleVersion": "2.0.38",
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "org.asynchttpclient:netty-resolver",
+            "moduleVersion": "2.0.38",
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "org.asynchttpclient:netty-resolver-dns",
+            "moduleVersion": "2.0.38",
             "moduleLicenses": [
                 {
                     "moduleLicense": "Apache License, Version 2.0",
@@ -445,6 +626,20 @@
                 {
                     "moduleLicense": "Apache License, Version 2.0",
                     "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "org.reactivestreams:reactive-streams",
+            "moduleVersion": "1.0.0",
+            "moduleUrls": [
+                "http://reactive-streams.org",
+                "http://www.reactive-streams.org/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Creative Commons Legal Code",
+                    "moduleLicenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/legalcode"
                 }
             ]
         },

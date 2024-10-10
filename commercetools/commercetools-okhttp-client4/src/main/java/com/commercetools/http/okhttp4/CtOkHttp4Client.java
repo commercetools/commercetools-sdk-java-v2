@@ -201,17 +201,15 @@ public class CtOkHttp4Client extends HttpClientBase {
             return unzip(response);
         }
 
-        private okhttp3.Response unzip(final okhttp3.Response response) throws IOException {
+        private okhttp3.Response unzip(final okhttp3.Response response) {
             if (!"gzip".equalsIgnoreCase(response.header("Content-Encoding"))) {
                 return response;
             }
 
-            okhttp3.ResponseBody responseBody = response.body();
-            if (responseBody == null) {
+            if (response.body() == null) {
                 return response;
             }
 
-            GzipSource gzipSource = new GzipSource(responseBody.source());
             okhttp3.Headers strippedHeaders = response.headers()
                     .newBuilder()
                     .removeAll("Content-Encoding")
@@ -220,7 +218,8 @@ public class CtOkHttp4Client extends HttpClientBase {
             String contentType = response.header("Content-Type");
             return response.newBuilder()
                     .headers(strippedHeaders)
-                    .body(okhttp3.ResponseBody.create(Okio.buffer(gzipSource), okhttp3.MediaType.get(contentType), -1L))
+                    .body(okhttp3.ResponseBody.create(Okio.buffer(new GzipSource(response.body().source())),
+                        okhttp3.MediaType.get(contentType), -1L))
                     .build();
         }
     }

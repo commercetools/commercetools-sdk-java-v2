@@ -1,6 +1,6 @@
 ext {
     ctsdkv1 = [
-            client: 'com.commercetools.sdk.jvm.core:commercetools-java-client-core:2.16.0',
+            client: 'com.commercetools.sdk.jvm.core:commercetools-java-client:2.16.0',
             models: 'com.commercetools.sdk.jvm.core:commercetools-models:2.16.0',
             convenience: 'com.commercetools.sdk.jvm.core:commercetools-convenience:2.16.0',
             version: {

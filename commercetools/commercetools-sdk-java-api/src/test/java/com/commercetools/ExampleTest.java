@@ -18,7 +18,7 @@ import com.commercetools.api.models.category.*;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.LocalizedStringBuilder;
 import com.commercetools.api.models.tax_category.TaxCategoryPagedQueryResponse;
-import com.commercetools.http.okhttp4.CtOkHttp4Client;
+import com.commercetools.http.okhttp3.CtOkHttp3Client;
 
 import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.VrapHttpClient;
@@ -169,7 +169,7 @@ public class ExampleTest {
 
     public void proxy() {
         Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("proxy", 8080));
-        VrapHttpClient httpClient = new CtOkHttp4Client(builder -> builder.proxy(proxy));
+        VrapHttpClient httpClient = new CtOkHttp3Client(builder -> builder.proxy(proxy));
 
         ApiRoot apiRoot = ApiRootBuilder.of(httpClient)
                 .defaultClient(ClientCredentials.of()

@@ -49,6 +49,7 @@ public class SupplierTest {
 
         Assertions.assertThat(gzipped.body().source().isOpen()).isTrue();
         Assertions.assertThat(unzipped.body().source().isOpen()).isTrue();
+        Assertions.assertThat(inputStream.available()).isEqualTo(31);
 
         ApiHttpResponse<byte[]> response = CtOkHttp3Client.toResponse(unzipped);
 

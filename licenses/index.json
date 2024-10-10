@@ -1784,10 +1784,6 @@
             ]
         },
         {
-            "moduleName": "org.jetbrains.kotlin:kotlin-stdlib-common",
-            "moduleVersion": "1.9.22"
-        },
-        {
             "moduleName": "org.jetbrains.kotlin:kotlin-stdlib-jdk7",
             "moduleVersion": "1.9.10",
             "moduleUrls": [

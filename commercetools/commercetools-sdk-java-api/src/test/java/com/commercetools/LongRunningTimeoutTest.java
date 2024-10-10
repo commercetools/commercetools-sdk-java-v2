@@ -13,7 +13,7 @@ import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.message.MessagePagedQueryResponse;
 import com.commercetools.http.apachehttp.CtApacheHttpClient;
-import com.commercetools.http.okhttp3.CtOkHttp3Client;
+import com.commercetools.http.okhttp4.CtOkHttp4Client;
 
 import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.AuthenticationToken;
@@ -35,7 +35,7 @@ public class LongRunningTimeoutTest {
      */
     public static void main(String[] args) throws InterruptedException, ExecutionException, IOException {
         final TokenSupplier tokenSupplier = new ClientCredentialsTokenSupplier(getClientId(), getClientSecret(), null,
-            ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), new CtOkHttp3Client());
+            ServiceRegion.GCP_EUROPE_WEST1.getOAuthTokenUrl(), new CtOkHttp4Client());
         final AuthenticationToken token = tokenSupplier.getToken().get();
         final ApiRoot client = ApiRootBuilder.of(new CtApacheHttpClient())
                 .defaultClient(

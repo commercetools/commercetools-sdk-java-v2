@@ -107,7 +107,7 @@ public class CtOkHttp4Client extends HttpClientBase {
 
     }
 
-    private static ApiHttpResponse<byte[]> toResponse(final okhttp3.Response response) {
+    static ApiHttpResponse<byte[]> toResponse(final okhttp3.Response response) {
         final ApiHttpHeaders apiHttpHeaders = new ApiHttpHeaders(response.headers()
                 .toMultimap()
                 .entrySet()
@@ -120,7 +120,7 @@ public class CtOkHttp4Client extends HttpClientBase {
                     .map(Utils.wrapToCompletionException(okhttp3.ResponseBody::bytes))
                     .orElse(null),
             response.message());
-        if (apiHttpResponse.getBody() != null) {
+        if (response.body() != null) {
             response.close();
         }
         return apiHttpResponse;
@@ -201,7 +201,7 @@ public class CtOkHttp4Client extends HttpClientBase {
             return unzip(response);
         }
 
-        private okhttp3.Response unzip(final okhttp3.Response response) {
+        okhttp3.Response unzip(final okhttp3.Response response) {
             if (!"gzip".equalsIgnoreCase(response.header("Content-Encoding"))) {
                 return response;
             }

@@ -120,7 +120,7 @@ public class CtOkHttp3Client extends HttpClientBase {
                     .map(Utils.wrapToCompletionException(okhttp3.ResponseBody::bytes))
                     .orElse(null),
             response.message());
-        if (apiHttpResponse.getBody() != null) {
+        if (response.body() != null) {
             response.body().close();
         }
         return apiHttpResponse;

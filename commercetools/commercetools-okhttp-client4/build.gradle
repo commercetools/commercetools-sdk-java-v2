@@ -1,3 +1,13 @@
+apply plugin: "me.champeau.jmh"
+
+jmh {
+    iterations = 5
+    benchmarkMode = ['thrpt']
+    threads = 25
+    fork = 3
+    timeOnIteration = '1s'
+    profilers = ['gc']
+}
 
 dependencies {
     api project(":rmf:rmf-java-base")

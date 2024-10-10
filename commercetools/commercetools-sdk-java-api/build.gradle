@@ -9,8 +9,8 @@ dependencies {
     api slf4j.api
     api commons.lang3
 
-    testImplementation project(':commercetools:commercetools-http-client')
-    testImplementation project(':commercetools:commercetools-okhttp-client4')
+//    testImplementation project(':commercetools:commercetools-http-client')
+    testImplementation project(':commercetools:commercetools-okhttp-client3')
     testImplementation project(':commercetools:commercetools-apachehttp-client')
     testImplementation commons.io version commons.io_version
 

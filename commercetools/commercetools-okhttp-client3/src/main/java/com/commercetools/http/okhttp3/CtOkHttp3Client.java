@@ -107,7 +107,7 @@ public class CtOkHttp3Client extends HttpClientBase {
 
     }
 
-    private static ApiHttpResponse<byte[]> toResponse(final okhttp3.Response response) {
+    static ApiHttpResponse<byte[]> toResponse(final okhttp3.Response response) {
         final ApiHttpHeaders apiHttpHeaders = new ApiHttpHeaders(response.headers()
                 .toMultimap()
                 .entrySet()
@@ -194,17 +194,15 @@ public class CtOkHttp3Client extends HttpClientBase {
             return unzip(response);
         }
 
-        private okhttp3.Response unzip(final okhttp3.Response response) throws IOException {
+        okhttp3.Response unzip(final okhttp3.Response response) {
             if (!"gzip".equalsIgnoreCase(response.header("Content-Encoding"))) {
                 return response;
             }
 
-            okhttp3.ResponseBody responseBody = response.body();
-            if (responseBody == null) {
+            if (response.body() == null) {
                 return response;
             }
 
-            GzipSource gzipSource = new GzipSource(responseBody.source());
             okhttp3.Headers strippedHeaders = response.headers()
                     .newBuilder()
                     .removeAll("Content-Encoding")
@@ -213,8 +211,8 @@ public class CtOkHttp3Client extends HttpClientBase {
             String contentType = response.header("Content-Type");
             return response.newBuilder()
                     .headers(strippedHeaders)
-                    .body(
-                        okhttp3.ResponseBody.create(okhttp3.MediaType.parse(contentType), -1L, Okio.buffer(gzipSource)))
+                    .body(okhttp3.ResponseBody.create(okhttp3.MediaType.parse(contentType), -1L,
+                        Okio.buffer(new GzipSource(response.body().source()))))
                     .build();
         }
     }

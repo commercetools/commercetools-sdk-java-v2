@@ -52,7 +52,7 @@ public class BusinessUnitSetAssociatesActionImpl implements BusinessUnitSetAssoc
     }
 
     /**
-     *  <p>The new list of Associates. If not provided, any existing list is removed.</p>
+     *  <p>The new list of Associates. If empty, existing values will be removed.</p>
      */
 
     public java.util.List<com.commercetools.api.models.business_unit.AssociateDraft> getAssociates() {

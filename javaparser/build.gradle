@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
+}
+
+group = 'com.commercetools.sdk'
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+shadowJar {
+    relocate 'com.github.javaparser', 'shadow.javaparser'
+}
+
+dependencies {
+    implementation 'com.github.javaparser:javaparser-core:3.26.2'
+}

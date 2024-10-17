@@ -5,7 +5,7 @@ ext {
             convenience: 'com.commercetools.sdk.jvm.core:commercetools-convenience:2.16.0',
             version: {
                 strictly '[1.62.0,)'
-                prefer '2.14.0'
+                prefer '2.16.0'
             }
     ]
 

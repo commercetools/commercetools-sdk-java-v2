@@ -54,17 +54,16 @@ public class JsonUtils {
         suppliers.iterator().forEachRemaining(moduleSupplier -> moduleList.add(moduleSupplier.getModule(options)));
 
         return JsonMapper.builder()
-                .configure(MapperFeature.REQUIRE_TYPE_ID_FOR_SUBTYPES, false)
-                .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
-                .configure(DeserializationFeature.FAIL_ON_MISSING_EXTERNAL_TYPE_ID_PROPERTY, false)
-                .configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false)
-                .serializationInclusion(JsonInclude.Include.NON_NULL)
-                .addModule(new JavaTimeModule())
+                .addModule(new JavaTimeModule()) //provides serialization and deserialization for LocalDate and LocalTime (JSR310 Jackson module)
                 .addModule(new ZonedDateTimeSerializationModule()) //custom serializer for LocalDate, LocalTime and ZonedDateTime
                 .addModule(new ZonedDateTimeDeserializationModule()) //custom deserializer for ZonedDateTime
                 .addModule(new LocalDateDeserializationModule()) //custom deserializer for LocalDate
                 .addModules(loader)
                 .addModules(moduleList)
+                .configure(MapperFeature.REQUIRE_TYPE_ID_FOR_SUBTYPES, false)
+                .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
+                .configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false)
+                .serializationInclusion(JsonInclude.Include.NON_NULL)
                 .build();
     }
 

@@ -19,6 +19,9 @@ plugins {
 
     id "me.champeau.jmh" version "0.6.8"
     id "jacoco"
+
+    id "versioning"
+    id "srcinfo"
 }
 
 import java.text.SimpleDateFormat
@@ -86,6 +89,10 @@ subprojects { project ->
     apply from: "$rootDir/gradle-scripts/subproject-plugins.gradle"
     apply from: "$rootDir/gradle-scripts/subproject-dependencies.gradle"
     apply from: "$rootDir/gradle-scripts/subproject-config.gradle"
+
+    if (project.file("build.gradle").exists()) {
+        apply from: "$rootDir/gradle-scripts/subproject-srcinfo-plugin.gradle"
+    }
 
     group='com.commercetools.sdk'
 

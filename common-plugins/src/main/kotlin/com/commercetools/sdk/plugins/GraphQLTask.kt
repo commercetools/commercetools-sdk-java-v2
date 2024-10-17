@@ -1,11 +1,11 @@
 package com.commercetools.sdk.plugins
 
-import com.github.javaparser.StaticJavaParser
-import com.github.javaparser.ast.CompilationUnit
-import com.github.javaparser.ast.body.ClassOrInterfaceDeclaration
-import com.github.javaparser.ast.body.ConstructorDeclaration
-import com.github.javaparser.ast.body.MethodDeclaration
-import com.github.javaparser.ast.body.TypeDeclaration
+import shadow.javaparser.StaticJavaParser
+import shadow.javaparser.ast.CompilationUnit
+import shadow.javaparser.ast.body.ClassOrInterfaceDeclaration
+import shadow.javaparser.ast.body.ConstructorDeclaration
+import shadow.javaparser.ast.body.MethodDeclaration
+import shadow.javaparser.ast.body.TypeDeclaration
 import com.squareup.javapoet.*
 import org.gradle.api.DefaultTask
 import org.gradle.api.plugins.JavaPluginExtension

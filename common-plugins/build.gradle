@@ -1,0 +1,36 @@
+plugins {
+    id 'java-gradle-plugin'
+    id 'idea'
+    id 'org.jetbrains.kotlin.jvm' version "2.0.0"
+}
+
+repositories {
+    mavenCentral()
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(11)
+    }
+}
+
+group = 'com.commercetools.sdk.plugins'
+version = '1.0'
+
+gradlePlugin {
+    plugins.register('srcinfo-plugin') {
+            id = 'srcinfo'
+            implementationClass = 'com.commercetools.sdk.plugins.SrcInfoPlugin'
+    }
+    plugins.register("versioning-plugin") {
+        id = 'versioning'
+        implementationClass = 'com.commercetools.sdk.plugins.VersioningPlugin'
+    }
+}
+
+dependencies {
+    implementation project(path: ':javaparser', configuration: 'shadow')
+    implementation "com.google.code.gson:gson:2.11.0"
+    implementation 'com.squareup:javapoet:1.13.0'
+    implementation 'com.google.guava:guava:33.3.1-jre'
+}

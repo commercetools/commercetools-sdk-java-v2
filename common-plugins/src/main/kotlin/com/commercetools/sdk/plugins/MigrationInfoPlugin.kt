@@ -1,12 +1,13 @@
 package com.commercetools.sdk.plugins
 
-import com.github.javaparser.StaticJavaParser
-import com.github.javaparser.ast.CompilationUnit
-import com.github.javaparser.ast.body.ClassOrInterfaceDeclaration
-import com.github.javaparser.ast.body.TypeDeclaration
+import shadow.javaparser.StaticJavaParser
+import shadow.javaparser.ast.CompilationUnit
+import shadow.javaparser.ast.body.ClassOrInterfaceDeclaration
+import shadow.javaparser.ast.body.TypeDeclaration
 import com.google.common.base.CaseFormat
 import org.gradle.api.Plugin
 import org.gradle.api.Project
+import shadow.javaparser.ast.body.MethodDeclaration
 import java.io.File
 import java.io.IOException
 import java.io.Writer
@@ -263,22 +264,22 @@ class MigrationInfoPlugin : Plugin<Project> {
 
 
 
-//    fun classInfo(file: File, info: ClassOrInterfaceDeclaration, hash: String): List<Pair<String, Map<String, String>>> {
-//        return info.methods.map { methodInfo ->
-//            "${info.fullyQualifiedName.get()}#${methodInfo.signature}" to mapOf(
-//                    "type" to "method",
-//                    "gitHash" to hash,
-//                    "methodName" to methodInfo.name.toString(),
-//                    "simpleName" to "${info.name}#${methodInfo.name}",
-//                    "name" to "${info.fullyQualifiedName.get()}#${methodInfo.name}",
-//                    "file" to file.toString(),
-//                    "start" to methodInfo.begin.get().line.toString(),
-//                    "end" to methodInfo.end.get().line.toString(),
-//                    "srcUrl" to "https://github.com/commercetools/commercetools-sdk-java-v2/blob/${hash}/${file}#L${methodInfo.begin.get().line}-L${methodInfo.end.get().line}",
-//                    "sdkV1Method" to methodInfo.methodBody()
-//            )
-//        }
-//    }
+    fun classInfo(file: File, info: ClassOrInterfaceDeclaration, hash: String): List<Pair<String, Map<String, String>>> {
+        return info.methods.map { methodInfo ->
+            "${info.fullyQualifiedName.get()}#${methodInfo.signature}" to mapOf(
+                    "type" to "method",
+                    "gitHash" to hash,
+                    "methodName" to methodInfo.name.toString(),
+                    "simpleName" to "${info.name}#${methodInfo.name}",
+                    "name" to "${info.fullyQualifiedName.get()}#${methodInfo.name}",
+                    "file" to file.toString(),
+                    "start" to methodInfo.begin.get().line.toString(),
+                    "end" to methodInfo.end.get().line.toString(),
+                    "srcUrl" to "https://github.com/commercetools/commercetools-sdk-java-v2/blob/${hash}/${file}#L${methodInfo.begin.get().line}-L${methodInfo.end.get().line}",
+                    "sdkV1Method" to methodInfo.methodBody()
+            )
+        }
+    }
 
     fun ClassOrInterfaceDeclaration.v2Class(v2BaseFolder: List<String>): String {
 
@@ -326,33 +327,33 @@ class MigrationInfoPlugin : Plugin<Project> {
         return v2Classes.joinToString(", ");
     }
 
-//    fun ClassOrInterfaceDeclaration.v1CreateCommandClassUsage(): Pair<String, String> {
-//
-//        if (commandClassUsageV1Mapping.containsKey(this.fullyQualifiedName.get())) {
-//            return commandClassUsageV1Mapping.get(this.fullyQualifiedName.get()) ?: Pair("", "")
-//        }
-//        val v1PackageName = this.fullyQualifiedName.map { it.replace("." + this.name.toString(), "") }.get()
-//        val v1ModelPackageName = v1PackageName.replace(".commands", "");
-//
-//        return this.getMethodsByName("of").map { "$v1ModelPackageName.${it.parameters.filter { it.nameAsString.contains("draft", true) }.map { it.typeAsString }.firstOrNull() ?: "" }" to "of(${it.parameters.joinToString(",") { it.typeAsString }})" }.first()
-//    }
-//
-//    fun ClassOrInterfaceDeclaration.v1UpdateCommandClassUsage(): Pair<String, String> {
-//
-//        if (commandClassUsageV1Mapping.containsKey(this.fullyQualifiedName.get())) {
-//            return commandClassUsageV1Mapping.get(this.fullyQualifiedName.get()) ?: Pair("", "")
-//        }
-//
-//        return this.getMethodsByName("of").filter { it.parameters.any { it.typeAsString.startsWith("UpdateAction") } }.map { "" to "of(${it.parameters.joinToString(",") { it.typeAsString.split("<").first() + if (it.isVarArgs) "..." else "" }})" }.first()
-//    }
-//
-//    fun ClassOrInterfaceDeclaration.v1DeleteCommandClassUsage(): Pair<String, String> {
-//
-//        if (commandClassUsageV1Mapping.containsKey(this.fullyQualifiedName.get())) {
-//            return commandClassUsageV1Mapping.get(this.fullyQualifiedName.get()) ?: Pair("", "")
-//        }
-//        return this.getMethodsByName("of").filter { it.parameters.any { it.typeAsString.startsWith("Versioned") } }.map { "" to "of(${it.parameters.joinToString(",") { it.typeAsString.split("<").first() }})" }.firstOrNull() ?: Pair("", "")
-//    }
+    fun ClassOrInterfaceDeclaration.v1CreateCommandClassUsage(): Pair<String, String> {
+
+        if (commandClassUsageV1Mapping.containsKey(this.fullyQualifiedName.get())) {
+            return commandClassUsageV1Mapping.get(this.fullyQualifiedName.get()) ?: Pair("", "")
+        }
+        val v1PackageName = this.fullyQualifiedName.map { it.replace("." + this.name.toString(), "") }.get()
+        val v1ModelPackageName = v1PackageName.replace(".commands", "");
+
+        return this.getMethodsByName("of").map { "$v1ModelPackageName.${it.parameters.filter { it.nameAsString.contains("draft", true) }.map { it.typeAsString }.firstOrNull() ?: "" }" to "of(${it.parameters.joinToString(",") { it.typeAsString }})" }.first()
+    }
+
+    fun ClassOrInterfaceDeclaration.v1UpdateCommandClassUsage(): Pair<String, String> {
+
+        if (commandClassUsageV1Mapping.containsKey(this.fullyQualifiedName.get())) {
+            return commandClassUsageV1Mapping.get(this.fullyQualifiedName.get()) ?: Pair("", "")
+        }
+
+        return this.getMethodsByName("of").filter { it.parameters.any { it.typeAsString.startsWith("UpdateAction") } }.map { "" to "of(${it.parameters.joinToString(",") { it.typeAsString.split("<").first() + if (it.isVarArgs) "..." else "" }})" }.first()
+    }
+
+    fun ClassOrInterfaceDeclaration.v1DeleteCommandClassUsage(): Pair<String, String> {
+
+        if (commandClassUsageV1Mapping.containsKey(this.fullyQualifiedName.get())) {
+            return commandClassUsageV1Mapping.get(this.fullyQualifiedName.get()) ?: Pair("", "")
+        }
+        return this.getMethodsByName("of").filter { it.parameters.any { it.typeAsString.startsWith("Versioned") } }.map { "" to "of(${it.parameters.joinToString(",") { it.typeAsString.split("<").first() }})" }.firstOrNull() ?: Pair("", "")
+    }
 
     fun ClassOrInterfaceDeclaration.v2CommandClassUsage(): String {
 
@@ -486,17 +487,18 @@ class MigrationInfoPlugin : Plugin<Project> {
             "io.sphere.sdk.projects.commands.updateactions.ChangeMessages" to "removed",
     )
 
-//    fun MethodDeclaration.methodBody(): String {
-//        val methodBody = this.body
-//        if (!methodBody.isPresent) {
-//            return ""
-//        }
-//        val bodyRange = methodBody.get().tokenRange.get().toString()
-//        return bodyRange.substring(1, bodyRange.length - 1).trimIndent()
-//    }
+    fun MethodDeclaration.methodBody(): String {
+        val methodBody = this.body
+        if (!methodBody.isPresent) {
+            return ""
+        }
+        val bodyRange = methodBody.get().tokenRange.get().toString()
+        return bodyRange.substring(1, bodyRange.length - 1).trimIndent()
+    }
 }
 
 fun String.packageName(): String {
+    CaseFormat.LOWER_CAMEL.to(CaseFormat.UPPER_CAMEL, this)
     if (this.isEmpty() or this.contains(".").not()) return ""
     val packageFolder = Paths.get(this.replace(".", "/"))
     return packageFolder.parent.toString().replace("/", ".");

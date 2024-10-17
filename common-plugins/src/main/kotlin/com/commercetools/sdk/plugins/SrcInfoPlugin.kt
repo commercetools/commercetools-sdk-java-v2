@@ -1,14 +1,16 @@
 package com.commercetools.sdk.plugins;
 
-import com.github.javaparser.StaticJavaParser
-import com.github.javaparser.ast.CompilationUnit
-import com.github.javaparser.ast.body.ClassOrInterfaceDeclaration
-import com.github.javaparser.ast.body.MethodDeclaration
-import com.github.javaparser.ast.body.TypeDeclaration
-import com.github.javaparser.ast.expr.NormalAnnotationExpr
+import shadow.javaparser.ParserConfiguration.LanguageLevel
+import shadow.javaparser.ast.CompilationUnit
+import shadow.javaparser.ast.body.ClassOrInterfaceDeclaration
+import shadow.javaparser.ast.body.MethodDeclaration
+import shadow.javaparser.ast.body.TypeDeclaration
+import shadow.javaparser.ast.expr.NormalAnnotationExpr
 import com.google.gson.stream.JsonWriter
 import org.gradle.api.Plugin
 import org.gradle.api.Project
+import shadow.javaparser.JavaParser
+import shadow.javaparser.ParserConfiguration
 import java.io.File
 import java.io.IOException
 import java.io.Writer
@@ -32,11 +34,14 @@ class SrcInfoPlugin : Plugin<Project> {
     private fun createExportTask(project: Project) {
         val extension = project.extensions.create("srcInfo", SrcInfoPluginExtension::class.java)
         val exportTask = project.task("exportSignatures")
+        val parserConfiguration = ParserConfiguration()
+        parserConfiguration.languageLevel = LanguageLevel.JAVA_17
+        val javaParser = JavaParser(parserConfiguration)
         exportTask.group = "documentation"
         exportTask.doLast {
             val outputFolder = extension.outputFolder.map { o -> Paths.get(o) }.getOrElse(project.buildDir.resolve("src-info").toPath())
             val docsUrnOnly = extension.docsUrnOnly.getOrElse(false)
-            outputFolder.toFile().mkdir()
+            outputFolder.toFile().mkdirs()
             val javaFiles = project.fileTree(mapOf("dir" to extension.baseFolder.getOrElse("src"), "include" to "**/*.java")).files
             val fileWriter: Writer = Files.newBufferedWriter(outputFolder.resolve(project.name + ".json"))
             val writer = JsonWriter(fileWriter)
@@ -46,7 +51,7 @@ class SrcInfoPlugin : Plugin<Project> {
             writer.beginObject()
             javaFiles.forEach { file ->
                 run {
-                    javaFileInfo(file, project, hash, extension.includePackages.orNull, docsUrnOnly).forEach { entry ->
+                    javaFileInfo(javaParser, file, project, hash, extension.includePackages.orNull, docsUrnOnly).forEach { entry ->
                         run {
                             writer.name(entry.key)
                             writer.beginObject()
@@ -65,8 +70,9 @@ class SrcInfoPlugin : Plugin<Project> {
         }
     }
 
-    private fun javaFileInfo(file: File, project: Project, hash: String, includePackages: List<String>?, docsUrnOnly: Boolean):  Map<String, Map<String, String>> {
-        val parse: CompilationUnit = StaticJavaParser.parse(file)
+    private fun javaFileInfo(javaParser: JavaParser, file: File, project: Project, hash: String, includePackages: List<String>?, docsUrnOnly: Boolean):  Map<String, Map<String, String>> {
+        val parse: CompilationUnit = javaParser.parse(file).result.get()
+
         val relativeFile = file.relativeTo(project.rootDir)
         if (includePackages != null && includePackages.firstOrNull { s: String -> parse.packageDeclaration.get().nameAsString.startsWith(s) } == null) {
             return emptyMap()

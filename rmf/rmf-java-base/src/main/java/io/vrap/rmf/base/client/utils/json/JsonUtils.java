@@ -60,7 +60,7 @@ public class JsonUtils {
                 .addModule(new LocalDateDeserializationModule()) //custom deserializer for LocalDate
                 .addModules(loader)
                 .addModules(moduleList)
-                .serializationInclusion(JsonInclude.Include.NON_NULL)
+                .serializationInclusion(JsonInclude.Include.NON_NULL) //ignore null fields
                 .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
                 .configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false)
                 .configure(MapperFeature.REQUIRE_TYPE_ID_FOR_SUBTYPES, false)

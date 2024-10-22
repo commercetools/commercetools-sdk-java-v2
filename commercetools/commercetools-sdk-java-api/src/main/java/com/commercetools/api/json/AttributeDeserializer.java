@@ -21,7 +21,7 @@ import com.fasterxml.jackson.databind.JsonDeserializer;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.JsonNodeType;
 
-public class AtrributeDeserializer extends JsonDeserializer<AttributeImpl> {
+public class AttributeDeserializer extends JsonDeserializer<AttributeImpl> {
 
     private static Pattern p = Pattern.compile("^[0-9]");
     private static Pattern dateTime = Pattern
@@ -33,17 +33,17 @@ public class AtrributeDeserializer extends JsonDeserializer<AttributeImpl> {
 
     private final boolean deserializeNumberAsDouble;
 
-    public AtrributeDeserializer(boolean deserializeAsDateString) {
+    public AttributeDeserializer(boolean deserializeAsDateString) {
         this.deserializeAsDate = !deserializeAsDateString;
         this.deserializeNumberAsDouble = false;
     }
 
-    public AtrributeDeserializer(boolean deserializeAsDateString, boolean deserializeNumberAsDouble) {
+    public AttributeDeserializer(boolean deserializeAsDateString, boolean deserializeNumberAsDouble) {
         this.deserializeAsDate = !deserializeAsDateString;
         this.deserializeNumberAsDouble = deserializeNumberAsDouble;
     }
 
-    public AtrributeDeserializer() {
+    public AttributeDeserializer() {
         this.deserializeAsDate = true;
         this.deserializeNumberAsDouble = false;
     }

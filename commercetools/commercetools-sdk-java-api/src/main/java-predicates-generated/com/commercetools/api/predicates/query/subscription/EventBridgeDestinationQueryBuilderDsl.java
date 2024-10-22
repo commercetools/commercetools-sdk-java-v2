@@ -29,4 +29,10 @@ public class EventBridgeDestinationQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, EventBridgeDestinationQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<EventBridgeDestinationQueryBuilderDsl> source() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("source")),
+            p -> new CombinationQueryPredicate<>(p, EventBridgeDestinationQueryBuilderDsl::of));
+    }
+
 }

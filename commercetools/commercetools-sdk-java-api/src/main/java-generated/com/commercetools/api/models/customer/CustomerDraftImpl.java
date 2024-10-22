@@ -139,6 +139,7 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
 
     /**
      *  <p>User-defined unique identifier for the Customer. The <code>key</code> field is preferred over <code>customerNumber</code> as it is mutable and provides more flexibility.</p>
+     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Customers with the Import API.</p>
      */
 
     public String getKey() {

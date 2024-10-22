@@ -42,7 +42,7 @@ public class ApiModule extends SimpleModule {
         }
         else {
             addDeserializer(AttributeImpl.class,
-                new AtrributeDeserializer(attributeAsDateString, attributeNumberAsDouble));
+                new AttributeDeserializer(attributeAsDateString, attributeNumberAsDouble));
         }
         if (customFieldAsJsonNode) {
             addDeserializer(FieldContainerImpl.class, new CustomFieldJsonNodeDeserializer());

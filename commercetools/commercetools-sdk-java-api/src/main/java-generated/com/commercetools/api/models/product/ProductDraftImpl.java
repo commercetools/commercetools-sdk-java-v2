@@ -162,7 +162,7 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
     }
 
     /**
-     *  <p>Title of the Product displayed in search results.</p>
+     *  <p>Title of the Product as displayed in search engine results.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaTitle() {
@@ -170,7 +170,7 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
     }
 
     /**
-     *  <p>Description of the Product displayed in search results.</p>
+     *  <p>Description of the Product as displayed in search engine results.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaDescription() {

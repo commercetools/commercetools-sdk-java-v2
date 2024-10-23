@@ -70,7 +70,8 @@ public interface ProductDraft
 
     /**
      *  <p>User-defined unique identifier for the Product.</p>
-     *  <p>To update a Product using the Import API, the Product <code>key</code> must match the pattern <code>^[A-Za-z0-9_-]{2,256}$</code>.</p>
+     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Products with the Import API and the Merchant Center.</p>
+     *  <p>To update a Product using the Import API or Merchant Center, the Product <code>key</code> must match the pattern <code>^[A-Za-z0-9_-]{2,256}$</code>.</p>
      * @return key
      */
 
@@ -102,7 +103,7 @@ public interface ProductDraft
     public CategoryOrderHints getCategoryOrderHints();
 
     /**
-     *  <p>Title of the Product displayed in search results.</p>
+     *  <p>Title of the Product as displayed in search engine results.</p>
      * @return metaTitle
      */
     @Valid
@@ -110,7 +111,7 @@ public interface ProductDraft
     public LocalizedString getMetaTitle();
 
     /**
-     *  <p>Description of the Product displayed in search results.</p>
+     *  <p>Description of the Product as displayed in search engine results.</p>
      * @return metaDescription
      */
     @Valid
@@ -204,7 +205,8 @@ public interface ProductDraft
 
     /**
      *  <p>User-defined unique identifier for the Product.</p>
-     *  <p>To update a Product using the Import API, the Product <code>key</code> must match the pattern <code>^[A-Za-z0-9_-]{2,256}$</code>.</p>
+     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Products with the Import API and the Merchant Center.</p>
+     *  <p>To update a Product using the Import API or Merchant Center, the Product <code>key</code> must match the pattern <code>^[A-Za-z0-9_-]{2,256}$</code>.</p>
      * @param key value to be set
      */
 
@@ -240,14 +242,14 @@ public interface ProductDraft
     public void setCategoryOrderHints(final CategoryOrderHints categoryOrderHints);
 
     /**
-     *  <p>Title of the Product displayed in search results.</p>
+     *  <p>Title of the Product as displayed in search engine results.</p>
      * @param metaTitle value to be set
      */
 
     public void setMetaTitle(final LocalizedString metaTitle);
 
     /**
-     *  <p>Description of the Product displayed in search results.</p>
+     *  <p>Description of the Product as displayed in search engine results.</p>
      * @param metaDescription value to be set
      */
 

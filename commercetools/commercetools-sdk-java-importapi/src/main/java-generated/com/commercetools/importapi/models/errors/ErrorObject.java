@@ -46,6 +46,7 @@ import jakarta.validation.constraints.NotNull;
         @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.InvalidScopeErrorImpl.class, name = InvalidScopeError.INVALID_SCOPE),
         @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.InvalidStateTransitionErrorImpl.class, name = InvalidStateTransitionError.INVALID_TRANSITION),
         @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.InvalidTokenErrorImpl.class, name = InvalidTokenError.INVALID_TOKEN),
+        @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.NewMasterVariantAdditionNotAllowedErrorImpl.class, name = NewMasterVariantAdditionNotAllowedError.NEW_MASTER_VARIANT_ADDITION_NOT_ALLOWED),
         @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.ReferencedResourceNotFoundImpl.class, name = ReferencedResourceNotFound.REFERENCED_RESOURCE_NOT_FOUND),
         @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.RequiredFieldErrorImpl.class, name = RequiredFieldError.REQUIRED_FIELD),
         @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.ResourceCreationErrorImpl.class, name = ResourceCreationError.RESOURCE_CREATION),
@@ -161,6 +162,10 @@ public interface ErrorObject {
         if (template instanceof com.commercetools.importapi.models.errors.InvalidTokenError) {
             return com.commercetools.importapi.models.errors.InvalidTokenError
                     .deepCopy((com.commercetools.importapi.models.errors.InvalidTokenError) template);
+        }
+        if (template instanceof com.commercetools.importapi.models.errors.NewMasterVariantAdditionNotAllowedError) {
+            return com.commercetools.importapi.models.errors.NewMasterVariantAdditionNotAllowedError.deepCopy(
+                (com.commercetools.importapi.models.errors.NewMasterVariantAdditionNotAllowedError) template);
         }
         if (template instanceof com.commercetools.importapi.models.errors.ReferencedResourceNotFound) {
             return com.commercetools.importapi.models.errors.ReferencedResourceNotFound
@@ -333,6 +338,14 @@ public interface ErrorObject {
      */
     public static com.commercetools.importapi.models.errors.InvalidTokenErrorBuilder invalidTokenBuilder() {
         return com.commercetools.importapi.models.errors.InvalidTokenErrorBuilder.of();
+    }
+
+    /**
+     * builder for newMasterVariantAdditionNotAllowed subtype
+     * @return builder
+     */
+    public static com.commercetools.importapi.models.errors.NewMasterVariantAdditionNotAllowedErrorBuilder newMasterVariantAdditionNotAllowedBuilder() {
+        return com.commercetools.importapi.models.errors.NewMasterVariantAdditionNotAllowedErrorBuilder.of();
     }
 
     /**

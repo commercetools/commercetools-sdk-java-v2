@@ -79,7 +79,7 @@ public interface ShoppingListAddLineItemAction extends ShoppingListUpdateAction,
     public Long getQuantity();
 
     /**
-     *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
+     *  <p>Date and time the ShoppingListLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
      * @return addedAt
      */
 
@@ -130,7 +130,7 @@ public interface ShoppingListAddLineItemAction extends ShoppingListUpdateAction,
     public void setQuantity(final Long quantity);
 
     /**
-     *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
+     *  <p>Date and time the ShoppingListLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
      * @param addedAt value to be set
      */
 

@@ -28,14 +28,17 @@ public class EventBridgeDestinationImpl implements EventBridgeDestination, Model
 
     private String accountId;
 
+    private String source;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
     EventBridgeDestinationImpl(@JsonProperty("region") final String region,
-            @JsonProperty("accountId") final String accountId) {
+            @JsonProperty("accountId") final String accountId, @JsonProperty("source") final String source) {
         this.region = region;
         this.accountId = accountId;
+        this.source = source;
         this.type = EVENT_BRIDGE;
     }
 
@@ -70,12 +73,24 @@ public class EventBridgeDestinationImpl implements EventBridgeDestination, Model
         return this.accountId;
     }
 
+    /**
+     *  <p>URN for the EventBridge destination.</p>
+     */
+
+    public String getSource() {
+        return this.source;
+    }
+
     public void setRegion(final String region) {
         this.region = region;
     }
 
     public void setAccountId(final String accountId) {
         this.accountId = accountId;
+    }
+
+    public void setSource(final String source) {
+        this.source = source;
     }
 
     @Override
@@ -91,15 +106,17 @@ public class EventBridgeDestinationImpl implements EventBridgeDestination, Model
         return new EqualsBuilder().append(type, that.type)
                 .append(region, that.region)
                 .append(accountId, that.accountId)
+                .append(source, that.source)
                 .append(type, that.type)
                 .append(region, that.region)
                 .append(accountId, that.accountId)
+                .append(source, that.source)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(region).append(accountId).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type).append(region).append(accountId).append(source).toHashCode();
     }
 
     @Override
@@ -107,6 +124,7 @@ public class EventBridgeDestinationImpl implements EventBridgeDestination, Model
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
                 .append("region", region)
                 .append("accountId", accountId)
+                .append("source", source)
                 .build();
     }
 

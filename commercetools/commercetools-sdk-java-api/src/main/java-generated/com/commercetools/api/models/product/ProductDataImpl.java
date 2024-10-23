@@ -119,7 +119,7 @@ public class ProductDataImpl implements ProductData, ModelBase {
     }
 
     /**
-     *  <p>Title of the Product displayed in search results.</p>
+     *  <p>Title of the Product as displayed in search engine results.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaTitle() {
@@ -127,7 +127,7 @@ public class ProductDataImpl implements ProductData, ModelBase {
     }
 
     /**
-     *  <p>Description of the Product displayed in search results below the meta title.</p>
+     *  <p>Description of the Product as displayed in search engine results below the meta title.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaDescription() {

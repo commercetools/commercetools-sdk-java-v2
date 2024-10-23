@@ -35,7 +35,7 @@ public interface ProductSetKeyAction extends ProductUpdateAction {
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     *  <p>To update a Product using the Import API, the Product <code>key</code> must match the pattern <code>^[A-Za-z0-9_-]{2,256}$</code>.</p>
+     *  <p>To update a Product using the Import API and the Merchant Center, the Product <code>key</code> must match the pattern <code>^[A-Za-z0-9_-]{2,256}$</code>.</p>
      * @return key
      */
 
@@ -44,7 +44,7 @@ public interface ProductSetKeyAction extends ProductUpdateAction {
 
     /**
      *  <p>Value to set. If empty, any existing value will be removed.</p>
-     *  <p>To update a Product using the Import API, the Product <code>key</code> must match the pattern <code>^[A-Za-z0-9_-]{2,256}$</code>.</p>
+     *  <p>To update a Product using the Import API and the Merchant Center, the Product <code>key</code> must match the pattern <code>^[A-Za-z0-9_-]{2,256}$</code>.</p>
      * @param key value to be set
      */
 

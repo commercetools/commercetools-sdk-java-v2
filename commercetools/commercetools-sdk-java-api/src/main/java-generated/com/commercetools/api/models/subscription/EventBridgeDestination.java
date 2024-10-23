@@ -24,6 +24,7 @@ import jakarta.validation.constraints.NotNull;
  *     EventBridgeDestination eventBridgeDestination = EventBridgeDestination.builder()
  *             .region("{region}")
  *             .accountId("{accountId}")
+ *             .source("{source}")
  *             .build()
  * </code></pre>
  * </div>
@@ -54,6 +55,14 @@ public interface EventBridgeDestination extends Destination {
     public String getAccountId();
 
     /**
+     *  <p>URN for the EventBridge destination.</p>
+     * @return source
+     */
+    @NotNull
+    @JsonProperty("source")
+    public String getSource();
+
+    /**
      *  <p>AWS region that receives the events.</p>
      * @param region value to be set
      */
@@ -66,6 +75,13 @@ public interface EventBridgeDestination extends Destination {
      */
 
     public void setAccountId(final String accountId);
+
+    /**
+     *  <p>URN for the EventBridge destination.</p>
+     * @param source value to be set
+     */
+
+    public void setSource(final String source);
 
     /**
      * factory method
@@ -84,6 +100,7 @@ public interface EventBridgeDestination extends Destination {
         EventBridgeDestinationImpl instance = new EventBridgeDestinationImpl();
         instance.setRegion(template.getRegion());
         instance.setAccountId(template.getAccountId());
+        instance.setSource(template.getSource());
         return instance;
     }
 
@@ -100,6 +117,7 @@ public interface EventBridgeDestination extends Destination {
         EventBridgeDestinationImpl instance = new EventBridgeDestinationImpl();
         instance.setRegion(template.getRegion());
         instance.setAccountId(template.getAccountId());
+        instance.setSource(template.getSource());
         return instance;
     }
 

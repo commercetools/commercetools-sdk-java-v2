@@ -41,6 +41,7 @@ public interface DiscountCodeDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>User-defined unique identifier for the DiscountCode.</p>
+     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Discount Codes with the Import API and the Merchant Center.</p>
      * @return key
      */
 
@@ -148,6 +149,7 @@ public interface DiscountCodeDraft extends com.commercetools.api.models.Customiz
 
     /**
      *  <p>User-defined unique identifier for the DiscountCode.</p>
+     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Discount Codes with the Import API and the Merchant Center.</p>
      * @param key value to be set
      */
 

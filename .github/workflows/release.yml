@@ -17,7 +17,7 @@ jobs:
     if: startsWith( github.ref, 'refs/tags/')
     steps:
       - name: Checkout
-        uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
 
       - uses: gradle/wrapper-validation-action@216d1ad2b3710bf005dc39237337b9673fd8fcd5 # v3.3.2
 
@@ -69,7 +69,7 @@ jobs:
           echo "email=${GH_APP_USER}+ct-sdks[bot]@users.noreply.github.com" >> "$GITHUB_OUTPUT"
 
       - name: Checkout
-        uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
         with:
             ref: main
             token: ${{ steps.generate_github_token.outputs.token }}
@@ -129,13 +129,13 @@ jobs:
           echo "email=${GH_APP_USER}+ct-sdks[bot]@users.noreply.github.com" >> "$GITHUB_OUTPUT"
 
       - name: Checkout
-        uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
         with:
           path: sdk
           token: ${{ steps.generate_github_token.outputs.token }}
 
       - name: Checkout
-        uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
         with:
           path: doc
           ref: gh-pages

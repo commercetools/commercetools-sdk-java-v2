@@ -13,6 +13,7 @@ import com.commercetools.api.models.business_unit.BusinessUnitKeyReference;
 import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
+import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -163,6 +164,14 @@ public interface ApprovalRule extends BaseResource {
     public BusinessUnitKeyReference getBusinessUnit();
 
     /**
+     *  <p>Custom Fields on the Approval Rule.</p>
+     * @return custom
+     */
+    @Valid
+    @JsonProperty("custom")
+    public CustomFields getCustom();
+
+    /**
      *  <p>Unique identifier of the Approval Rule.</p>
      * @param id value to be set
      */
@@ -269,6 +278,13 @@ public interface ApprovalRule extends BaseResource {
     public void setBusinessUnit(final BusinessUnitKeyReference businessUnit);
 
     /**
+     *  <p>Custom Fields on the Approval Rule.</p>
+     * @param custom value to be set
+     */
+
+    public void setCustom(final CustomFields custom);
+
+    /**
      * factory method
      * @return instance of ApprovalRule
      */
@@ -297,6 +313,7 @@ public interface ApprovalRule extends BaseResource {
         instance.setApprovers(template.getApprovers());
         instance.setRequesters(template.getRequesters());
         instance.setBusinessUnit(template.getBusinessUnit());
+        instance.setCustom(template.getCustom());
         return instance;
     }
 
@@ -332,6 +349,7 @@ public interface ApprovalRule extends BaseResource {
                 .orElse(null));
         instance.setBusinessUnit(
             com.commercetools.api.models.business_unit.BusinessUnitKeyReference.deepCopy(template.getBusinessUnit()));
+        instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         return instance;
     }
 

@@ -1,9 +1,26 @@
 **Api changes**
 
 <details>
+<summary>Added Type(s)</summary>
+
+- added type `ApprovalRuleSetCustomFieldAction`
+- added type `ApprovalRuleSetCustomTypeAction`
+</details>
+
+
+<details>
 <summary>Added Property(s)</summary>
 
+- added property `custom` to type `ApprovalRule`
 - added property `source` to type `EventBridgeDestination`
+</details>
+
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `approval-rule` to type `CustomFieldReferenceValue`
+- added enum `approval-rule` to type `ResourceTypeId`
 </details>
 
 

@@ -26,6 +26,9 @@ public interface ResourceTypeId extends JsonEnum {
     <p>ApprovalFlow</p> */
     ResourceTypeId APPROVAL_FLOW = ResourceTypeIdEnum.APPROVAL_FLOW;
     /**
+    <p>ApprovalRule</p> */
+    ResourceTypeId APPROVAL_RULE = ResourceTypeIdEnum.APPROVAL_RULE;
+    /**
     <p>AssociateRole</p> */
     ResourceTypeId ASSOCIATE_ROLE = ResourceTypeIdEnum.ASSOCIATE_ROLE;
     /**
@@ -134,6 +137,11 @@ public interface ResourceTypeId extends JsonEnum {
          * approval-flow
          */
         APPROVAL_FLOW("approval-flow"),
+
+        /**
+         * approval-rule
+         */
+        APPROVAL_RULE("approval-rule"),
 
         /**
          * associate-role

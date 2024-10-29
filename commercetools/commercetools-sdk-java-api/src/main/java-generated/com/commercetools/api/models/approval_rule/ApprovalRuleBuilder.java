@@ -65,6 +65,9 @@ public class ApprovalRuleBuilder implements Builder<ApprovalRule> {
 
     private com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit;
 
+    @Nullable
+    private com.commercetools.api.models.type.CustomFields custom;
+
     /**
      *  <p>Unique identifier of the Approval Rule.</p>
      * @param id value to be set
@@ -402,6 +405,41 @@ public class ApprovalRuleBuilder implements Builder<ApprovalRule> {
     }
 
     /**
+     *  <p>Custom Fields on the Approval Rule.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public ApprovalRuleBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields on the Approval Rule.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public ApprovalRuleBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields on the Approval Rule.</p>
+     * @param custom value to be set
+     * @return Builder
+     */
+
+    public ApprovalRuleBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
+        this.custom = custom;
+        return this;
+    }
+
+    /**
      *  <p>Unique identifier of the Approval Rule.</p>
      * @return id
      */
@@ -532,6 +570,16 @@ public class ApprovalRuleBuilder implements Builder<ApprovalRule> {
     }
 
     /**
+     *  <p>Custom Fields on the Approval Rule.</p>
+     * @return custom
+     */
+
+    @Nullable
+    public com.commercetools.api.models.type.CustomFields getCustom() {
+        return this.custom;
+    }
+
+    /**
      * builds ApprovalRule with checking for non-null required values
      * @return ApprovalRule
      */
@@ -547,7 +595,7 @@ public class ApprovalRuleBuilder implements Builder<ApprovalRule> {
         Objects.requireNonNull(requesters, ApprovalRule.class + ": requesters is missing");
         Objects.requireNonNull(businessUnit, ApprovalRule.class + ": businessUnit is missing");
         return new ApprovalRuleImpl(id, version, createdAt, lastModifiedAt, createdBy, lastModifiedBy, key, name,
-            description, status, predicate, approvers, requesters, businessUnit);
+            description, status, predicate, approvers, requesters, businessUnit, custom);
     }
 
     /**
@@ -556,7 +604,7 @@ public class ApprovalRuleBuilder implements Builder<ApprovalRule> {
      */
     public ApprovalRule buildUnchecked() {
         return new ApprovalRuleImpl(id, version, createdAt, lastModifiedAt, createdBy, lastModifiedBy, key, name,
-            description, status, predicate, approvers, requesters, businessUnit);
+            description, status, predicate, approvers, requesters, businessUnit, custom);
     }
 
     /**
@@ -588,6 +636,7 @@ public class ApprovalRuleBuilder implements Builder<ApprovalRule> {
         builder.approvers = template.getApprovers();
         builder.requesters = template.getRequesters();
         builder.businessUnit = template.getBusinessUnit();
+        builder.custom = template.getCustom();
         return builder;
     }
 

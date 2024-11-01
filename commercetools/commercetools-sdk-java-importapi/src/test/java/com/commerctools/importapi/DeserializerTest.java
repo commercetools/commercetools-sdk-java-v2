@@ -17,7 +17,7 @@ import io.vrap.rmf.base.client.utils.json.JsonUtils;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class SerializerTest {
+public class DeserializerTest {
 
     @Test
     public void shouldCorrectlyDeserializeErrorWithLocalizedTextAttribute() {
@@ -529,6 +529,54 @@ public class SerializerTest {
         Assertions.assertThat(value.getValue().get(0).getTypeId().getJsonName()).isEqualTo("state");
         Assertions.assertThat(value.getValue().get(1).getKey()).isEqualTo("xxx-123-456");
         Assertions.assertThat(value.getValue().get(1).getTypeId().getJsonName()).isEqualTo("state");
+    }
+
+    @Test
+    public void shouldCorrectlyDeserializeErrorWithSetOfMoneyAttribute() {
+        String t = """
+                {
+                    "version": 2,
+                    "importContainerKey": "product-index-all",
+                    "resourceKey": "5098_NZ",
+                    "id": "e3708a0b-18d3-4dd5-ba5d-4d59eaff48de",
+                    "state": "validationFailed",
+                    "errors": [
+                        {
+                            "code": "DuplicateAttributeValue",
+                            "message": "Attribute can't have the same value in a different variant.",
+                            "attribute": {
+                              "name": "money-set",
+                              "value": [
+                                  {
+                                      "type": "centPrecision",
+                                      "currencyCode": "EUR",
+                                      "centAmount": 6490,
+                                      "fractionDigits": 2
+                                  },
+                                  {
+                                      "type": "centPrecision",
+                                      "currencyCode": "USD",
+                                      "centAmount": 123,
+                                      "fractionDigits": 2
+                                  }
+                              ]
+                            }
+                        }
+                    ],
+                    "createdAt": "2024-10-02T06:39:12.614Z",
+                    "lastModifiedAt": "2024-10-02T06:39:52.840Z",
+                    "expiresAt": "2024-10-04T06:39:12.614Z"
+                }
+                """;
+        ErrorResponse errorResponse = JsonUtils.fromJsonString(t, ErrorResponse.class);
+        Assertions.assertThat(errorResponse.getErrors()).hasSize(1);
+        MoneySetAttribute value = (MoneySetAttribute) ((DuplicateAttributeValueError) errorResponse.getErrors().get(0))
+                .getAttribute();
+        Assertions.assertThat(value.getValue().size()).isEqualTo(2);
+        Assertions.assertThat(value.getValue().get(0).getCurrencyCode()).isEqualTo("EUR");
+        Assertions.assertThat(value.getValue().get(0).getCentAmount()).isEqualTo(6490);
+        Assertions.assertThat(value.getValue().get(1).getCurrencyCode()).isEqualTo("USD");
+        Assertions.assertThat(value.getValue().get(1).getCentAmount()).isEqualTo(123);
     }
 
     @Test

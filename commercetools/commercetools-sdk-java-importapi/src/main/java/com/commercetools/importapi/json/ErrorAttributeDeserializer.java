@@ -154,6 +154,18 @@ public class ErrorAttributeDeserializer extends JsonDeserializer<Attribute> {
                                     .value(keyReferences)
                                     .build();
                         }
+                        if (firstElement.has("currencyCode")) {
+                            List<TypedMoney> values = new ArrayList<>();
+                            valueNode.iterator().forEachRemaining(nodeEntry -> {
+                                values.add(MoneyBuilder.of()
+                                        .currencyCode(nodeEntry.get("currencyCode").asText())
+                                        .centAmount(nodeEntry.get("centAmount").asLong())
+                                        .fractionDigits(nodeEntry.get("fractionDigits").asInt())
+                                        .build());
+                            });
+                            return MoneySetAttributeBuilder.of().name(node.get("name").asText()).value(values).build();
+                        }
+
                         List<LocalizedString> values = new ArrayList<>();
                         valueNode.iterator().forEachRemaining(jsonNode -> {
                             LocalizedStringBuilder localizedStringBuilder = LocalizedStringBuilder.of();

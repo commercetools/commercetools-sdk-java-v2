@@ -26,6 +26,20 @@ public class ApprovalRuleUpdateActionQueryBuilderDsl {
             ApprovalRuleUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ApprovalRuleUpdateActionQueryBuilderDsl> asSetCustomField(
+            Function<com.commercetools.api.predicates.query.approval_rule.ApprovalRuleSetCustomFieldActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.approval_rule.ApprovalRuleSetCustomFieldActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.approval_rule.ApprovalRuleSetCustomFieldActionQueryBuilderDsl.of()),
+            ApprovalRuleUpdateActionQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<ApprovalRuleUpdateActionQueryBuilderDsl> asSetCustomType(
+            Function<com.commercetools.api.predicates.query.approval_rule.ApprovalRuleSetCustomTypeActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.approval_rule.ApprovalRuleSetCustomTypeActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.approval_rule.ApprovalRuleSetCustomTypeActionQueryBuilderDsl.of()),
+            ApprovalRuleUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ApprovalRuleUpdateActionQueryBuilderDsl> asSetDescription(
             Function<com.commercetools.api.predicates.query.approval_rule.ApprovalRuleSetDescriptionActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.approval_rule.ApprovalRuleSetDescriptionActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(

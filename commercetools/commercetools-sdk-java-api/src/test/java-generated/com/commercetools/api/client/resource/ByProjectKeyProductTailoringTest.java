@@ -105,6 +105,13 @@ public class ByProjectKeyProductTailoringTest {
                         "get", "test_projectKey/product-tailoring", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productTailoring()
+                        .head()
+                        .withWhere("where")
+                        .createHttpRequest(), "head", "test_projectKey/product-tailoring?where=where", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").productTailoring().head().createHttpRequest(),
+                        "head", "test_projectKey/product-tailoring", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productTailoring()
                         .post(com.commercetools.api.models.product_tailoring.ProductTailoringDraft.of())
                         .withExpand("expand")
                         .createHttpRequest(), "post", "test_projectKey/product-tailoring?expand=expand", },
@@ -130,6 +137,9 @@ public class ByProjectKeyProductTailoringTest {
                         .get()
                         .withPredicateVar("varName", "var.varName"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").productTailoring().get(), },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").productTailoring().head().withWhere("where"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey").productTailoring().head(), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productTailoring()
                         .post(com.commercetools.api.models.product_tailoring.ProductTailoringDraft.of())

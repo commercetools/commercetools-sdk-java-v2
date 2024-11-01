@@ -25,7 +25,8 @@ public class EventBridgeDestinationTest {
     @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] { new Object[] { EventBridgeDestination.builder().region("region") },
-                new Object[] { EventBridgeDestination.builder().accountId("accountId") } };
+                new Object[] { EventBridgeDestination.builder().accountId("accountId") },
+                new Object[] { EventBridgeDestination.builder().source("source") } };
     }
 
     @Test
@@ -40,5 +41,12 @@ public class EventBridgeDestinationTest {
         EventBridgeDestination value = EventBridgeDestination.of();
         value.setAccountId("accountId");
         Assertions.assertThat(value.getAccountId()).isEqualTo("accountId");
+    }
+
+    @Test
+    public void source() {
+        EventBridgeDestination value = EventBridgeDestination.of();
+        value.setSource("source");
+        Assertions.assertThat(value.getSource()).isEqualTo("source");
     }
 }

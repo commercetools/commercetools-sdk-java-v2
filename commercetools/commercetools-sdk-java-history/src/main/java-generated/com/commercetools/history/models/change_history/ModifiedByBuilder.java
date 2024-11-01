@@ -16,9 +16,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     ModifiedBy modifiedBy = ModifiedBy.builder()
- *             .id("{id}")
- *             .type("{type}")
  *             .isPlatformClient(true)
+ *             .type("{type}")
  *             .build()
  * </code></pre>
  * </div>
@@ -26,6 +25,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ModifiedByBuilder implements Builder<ModifiedBy> {
 
+    private Boolean isPlatformClient;
+
+    @Nullable
     private String id;
 
     private String type;
@@ -42,16 +44,25 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
     @Nullable
     private com.commercetools.history.models.common.Reference associate;
 
-    private Boolean isPlatformClient;
+    /**
+     *  <p><code>true</code> if the change was made using the Merchant Center or ImpEx.</p>
+     * @param isPlatformClient value to be set
+     * @return Builder
+     */
+
+    public ModifiedByBuilder isPlatformClient(final Boolean isPlatformClient) {
+        this.isPlatformClient = isPlatformClient;
+        return this;
+    }
 
     /**
      *  <p>ID of the Merchant Center user who made the change.</p>
-     *  <p>Present only if the change was made in the Merchant Center.</p>
+     *  <p>Present only if <code>isPlatformClient</code> is <code>true</code>.</p>
      * @param id value to be set
      * @return Builder
      */
 
-    public ModifiedByBuilder id(final String id) {
+    public ModifiedByBuilder id(@Nullable final String id) {
         this.id = id;
         return this;
     }
@@ -170,21 +181,20 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
 
     /**
      *  <p><code>true</code> if the change was made using the Merchant Center or ImpEx.</p>
-     * @param isPlatformClient value to be set
-     * @return Builder
+     * @return isPlatformClient
      */
 
-    public ModifiedByBuilder isPlatformClient(final Boolean isPlatformClient) {
-        this.isPlatformClient = isPlatformClient;
-        return this;
+    public Boolean getIsPlatformClient() {
+        return this.isPlatformClient;
     }
 
     /**
      *  <p>ID of the Merchant Center user who made the change.</p>
-     *  <p>Present only if the change was made in the Merchant Center.</p>
+     *  <p>Present only if <code>isPlatformClient</code> is <code>true</code>.</p>
      * @return id
      */
 
+    @Nullable
     public String getId() {
         return this.id;
     }
@@ -246,23 +256,13 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
     }
 
     /**
-     *  <p><code>true</code> if the change was made using the Merchant Center or ImpEx.</p>
-     * @return isPlatformClient
-     */
-
-    public Boolean getIsPlatformClient() {
-        return this.isPlatformClient;
-    }
-
-    /**
      * builds ModifiedBy with checking for non-null required values
      * @return ModifiedBy
      */
     public ModifiedBy build() {
-        Objects.requireNonNull(id, ModifiedBy.class + ": id is missing");
-        Objects.requireNonNull(type, ModifiedBy.class + ": type is missing");
         Objects.requireNonNull(isPlatformClient, ModifiedBy.class + ": isPlatformClient is missing");
-        return new ModifiedByImpl(id, type, clientId, anonymousId, customer, associate, isPlatformClient);
+        Objects.requireNonNull(type, ModifiedBy.class + ": type is missing");
+        return new ModifiedByImpl(isPlatformClient, id, type, clientId, anonymousId, customer, associate);
     }
 
     /**
@@ -270,7 +270,7 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
      * @return ModifiedBy
      */
     public ModifiedBy buildUnchecked() {
-        return new ModifiedByImpl(id, type, clientId, anonymousId, customer, associate, isPlatformClient);
+        return new ModifiedByImpl(isPlatformClient, id, type, clientId, anonymousId, customer, associate);
     }
 
     /**
@@ -288,13 +288,13 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
      */
     public static ModifiedByBuilder of(final ModifiedBy template) {
         ModifiedByBuilder builder = new ModifiedByBuilder();
+        builder.isPlatformClient = template.getIsPlatformClient();
         builder.id = template.getId();
         builder.type = template.getType();
         builder.clientId = template.getClientId();
         builder.anonymousId = template.getAnonymousId();
         builder.customer = template.getCustomer();
         builder.associate = template.getAssociate();
-        builder.isPlatformClient = template.getIsPlatformClient();
         return builder;
     }
 

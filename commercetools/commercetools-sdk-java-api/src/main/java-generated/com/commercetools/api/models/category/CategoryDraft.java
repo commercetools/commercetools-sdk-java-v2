@@ -130,6 +130,7 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>User-defined unique identifier for the Category.</p>
+     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Categories with the Import API and the Merchant Center.</p>
      * @return key
      */
 
@@ -223,6 +224,7 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>User-defined unique identifier for the Category.</p>
+     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Categories with the Import API and the Merchant Center.</p>
      * @param key value to be set
      */
 

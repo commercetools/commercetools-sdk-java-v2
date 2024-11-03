@@ -171,6 +171,7 @@ public class CategoryDraftImpl implements CategoryDraft, ModelBase {
 
     /**
      *  <p>User-defined unique identifier for the Category.</p>
+     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Categories with the Import API and the Merchant Center.</p>
      */
 
     public String getKey() {

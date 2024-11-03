@@ -24,15 +24,21 @@ public class ModifiedByTest {
 
     @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ModifiedBy.builder().id("id") },
-                new Object[] { ModifiedBy.builder().type("type") },
+        return new Object[][] { new Object[] { ModifiedBy.builder().isPlatformClient(true) },
+                new Object[] { ModifiedBy.builder().id("id") }, new Object[] { ModifiedBy.builder().type("type") },
                 new Object[] { ModifiedBy.builder().clientId("clientId") },
                 new Object[] { ModifiedBy.builder().anonymousId("anonymousId") },
                 new Object[] {
                         ModifiedBy.builder().customer(new com.commercetools.history.models.common.ReferenceImpl()) },
                 new Object[] {
-                        ModifiedBy.builder().associate(new com.commercetools.history.models.common.ReferenceImpl()) },
-                new Object[] { ModifiedBy.builder().isPlatformClient(true) } };
+                        ModifiedBy.builder().associate(new com.commercetools.history.models.common.ReferenceImpl()) } };
+    }
+
+    @Test
+    public void isPlatformClient() {
+        ModifiedBy value = ModifiedBy.of();
+        value.setIsPlatformClient(true);
+        Assertions.assertThat(value.getIsPlatformClient()).isEqualTo(true);
     }
 
     @Test
@@ -77,12 +83,5 @@ public class ModifiedByTest {
         value.setAssociate(new com.commercetools.history.models.common.ReferenceImpl());
         Assertions.assertThat(value.getAssociate())
                 .isEqualTo(new com.commercetools.history.models.common.ReferenceImpl());
-    }
-
-    @Test
-    public void isPlatformClient() {
-        ModifiedBy value = ModifiedBy.of();
-        value.setIsPlatformClient(true);
-        Assertions.assertThat(value.getIsPlatformClient()).isEqualTo(true);
     }
 }

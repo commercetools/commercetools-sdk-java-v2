@@ -29,6 +29,8 @@ import jakarta.validation.constraints.NotNull;
  */
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.approval_rule.ApprovalRuleSetApproversActionImpl.class, name = ApprovalRuleSetApproversAction.SET_APPROVERS),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.approval_rule.ApprovalRuleSetCustomFieldActionImpl.class, name = ApprovalRuleSetCustomFieldAction.SET_CUSTOM_FIELD),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.approval_rule.ApprovalRuleSetCustomTypeActionImpl.class, name = ApprovalRuleSetCustomTypeAction.SET_CUSTOM_TYPE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.approval_rule.ApprovalRuleSetDescriptionActionImpl.class, name = ApprovalRuleSetDescriptionAction.SET_DESCRIPTION),
         @JsonSubTypes.Type(value = com.commercetools.api.models.approval_rule.ApprovalRuleSetKeyActionImpl.class, name = ApprovalRuleSetKeyAction.SET_KEY),
         @JsonSubTypes.Type(value = com.commercetools.api.models.approval_rule.ApprovalRuleSetNameActionImpl.class, name = ApprovalRuleSetNameAction.SET_NAME),
@@ -61,6 +63,14 @@ public interface ApprovalRuleUpdateAction {
         if (template instanceof com.commercetools.api.models.approval_rule.ApprovalRuleSetApproversAction) {
             return com.commercetools.api.models.approval_rule.ApprovalRuleSetApproversAction
                     .deepCopy((com.commercetools.api.models.approval_rule.ApprovalRuleSetApproversAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.approval_rule.ApprovalRuleSetCustomFieldAction) {
+            return com.commercetools.api.models.approval_rule.ApprovalRuleSetCustomFieldAction
+                    .deepCopy((com.commercetools.api.models.approval_rule.ApprovalRuleSetCustomFieldAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.approval_rule.ApprovalRuleSetCustomTypeAction) {
+            return com.commercetools.api.models.approval_rule.ApprovalRuleSetCustomTypeAction
+                    .deepCopy((com.commercetools.api.models.approval_rule.ApprovalRuleSetCustomTypeAction) template);
         }
         if (template instanceof com.commercetools.api.models.approval_rule.ApprovalRuleSetDescriptionAction) {
             return com.commercetools.api.models.approval_rule.ApprovalRuleSetDescriptionAction
@@ -96,6 +106,22 @@ public interface ApprovalRuleUpdateAction {
      */
     public static com.commercetools.api.models.approval_rule.ApprovalRuleSetApproversActionBuilder setApproversBuilder() {
         return com.commercetools.api.models.approval_rule.ApprovalRuleSetApproversActionBuilder.of();
+    }
+
+    /**
+     * builder for setCustomField subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.approval_rule.ApprovalRuleSetCustomFieldActionBuilder setCustomFieldBuilder() {
+        return com.commercetools.api.models.approval_rule.ApprovalRuleSetCustomFieldActionBuilder.of();
+    }
+
+    /**
+     * builder for setCustomType subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.approval_rule.ApprovalRuleSetCustomTypeActionBuilder setCustomTypeBuilder() {
+        return com.commercetools.api.models.approval_rule.ApprovalRuleSetCustomTypeActionBuilder.of();
     }
 
     /**

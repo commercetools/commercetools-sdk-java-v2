@@ -113,7 +113,7 @@ public class ShoppingListAddLineItemActionImpl implements ShoppingListAddLineIte
     }
 
     /**
-     *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
+     *  <p>Date and time the ShoppingListLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
      */
 
     public java.time.ZonedDateTime getAddedAt() {

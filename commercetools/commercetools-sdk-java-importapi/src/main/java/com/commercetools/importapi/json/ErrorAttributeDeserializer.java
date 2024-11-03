@@ -108,15 +108,12 @@ public class ErrorAttributeDeserializer extends JsonDeserializer<Attribute> {
                     .value(createKeyReference(valueNode))
                     .build();
         }
-        return LocalizableTextAttributeBuilder.of()
-                .name(node.get("name").asText())
-                .value(localizedStringBuilder -> {
-                    valueNode.fields()
-                            .forEachRemaining(nodeEntry -> localizedStringBuilder.addValue(nodeEntry.getKey(),
-                                    nodeEntry.getValue().asText()));
-                    return localizedStringBuilder;
-                })
-                .build();
+        return LocalizableTextAttributeBuilder.of().name(node.get("name").asText()).value(localizedStringBuilder -> {
+            valueNode.fields()
+                    .forEachRemaining(nodeEntry -> localizedStringBuilder.addValue(nodeEntry.getKey(),
+                        nodeEntry.getValue().asText()));
+            return localizedStringBuilder;
+        }).build();
     }
 
     private Attribute createSetAttributeFromObject(JsonNode node) {
@@ -124,19 +121,15 @@ public class ErrorAttributeDeserializer extends JsonDeserializer<Attribute> {
         JsonNode firstElement = valueNode.get(0);
         if (firstElement.has("key") && firstElement.has("label")) {
             List<String> keys = new ArrayList<>();
-            valueNode.iterator()
-                    .forEachRemaining(jsonNode -> jsonNode.fields().forEachRemaining(nodeEntry -> {
-                        String key = nodeEntry.getKey();
-                        if (key.equals("key")) {
-                            keys.add(nodeEntry.getValue().asText());
-                        }
-                    }));
+            valueNode.iterator().forEachRemaining(jsonNode -> jsonNode.fields().forEachRemaining(nodeEntry -> {
+                String key = nodeEntry.getKey();
+                if (key.equals("key")) {
+                    keys.add(nodeEntry.getValue().asText());
+                }
+            }));
             JsonNode label = firstElement.get("label");
             if (label.getNodeType() == OBJECT) {
-                return LocalizableEnumSetAttributeBuilder.of()
-                        .name(node.get("name").asText())
-                        .value(keys)
-                        .build();
+                return LocalizableEnumSetAttributeBuilder.of().name(node.get("name").asText()).value(keys).build();
             }
             return EnumSetAttributeBuilder.of().name(node.get("name").asText()).value(keys).build();
         }
@@ -145,10 +138,7 @@ public class ErrorAttributeDeserializer extends JsonDeserializer<Attribute> {
             valueNode.iterator().forEachRemaining(nodeEntry -> {
                 keyReferences.add(createKeyReference(nodeEntry));
             });
-            return ReferenceSetAttributeBuilder.of()
-                    .name(node.get("name").asText())
-                    .value(keyReferences)
-                    .build();
+            return ReferenceSetAttributeBuilder.of().name(node.get("name").asText()).value(keyReferences).build();
         }
         if (firstElement.has("currencyCode")) {
             List<TypedMoney> values = new ArrayList<>();
@@ -167,13 +157,10 @@ public class ErrorAttributeDeserializer extends JsonDeserializer<Attribute> {
             LocalizedStringBuilder localizedStringBuilder = LocalizedStringBuilder.of();
             jsonNode.fields()
                     .forEachRemaining(nodeEntry -> localizedStringBuilder.addValue(nodeEntry.getKey(),
-                            nodeEntry.getValue().asText()));
+                        nodeEntry.getValue().asText()));
             values.add(localizedStringBuilder.build());
         });
-        return LocalizableTextSetAttributeBuilder.of()
-                .name(node.get("name").asText())
-                .value(values)
-                .build();
+        return LocalizableTextSetAttributeBuilder.of().name(node.get("name").asText()).value(values).build();
     }
 
     private KeyReference createKeyReference(JsonNode node) {

@@ -32,7 +32,7 @@ public class ExtensionTriggerBuilder implements Builder<ExtensionTrigger> {
     private String condition;
 
     /**
-     *  <p><code>cart</code>, <code>order</code>, <code>payment</code>, <code>customer</code>, <code>customer-group</code>, <code>quote-request</code>, <code>staged-quote</code>, <code>quote</code>, <code>business-unit</code>, and <code>shopping-list</code> are supported.</p>
+     *  <p>The resource that triggers the Extension.</p>
      * @param resourceTypeId value to be set
      * @return Builder
      */
@@ -93,7 +93,7 @@ public class ExtensionTriggerBuilder implements Builder<ExtensionTrigger> {
     }
 
     /**
-     *  <p><code>cart</code>, <code>order</code>, <code>payment</code>, <code>customer</code>, <code>customer-group</code>, <code>quote-request</code>, <code>staged-quote</code>, <code>quote</code>, <code>business-unit</code>, and <code>shopping-list</code> are supported.</p>
+     *  <p>The resource that triggers the Extension.</p>
      * @return resourceTypeId
      */
 

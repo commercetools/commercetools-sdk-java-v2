@@ -11,7 +11,7 @@
 <link rel="stylesheet" type="text/css" href="../../../../../script-dir/jquery-ui.min.css" title="Style">
 <link rel="stylesheet" type="text/css" href="../../../../../jquery-ui.overrides.css" title="Style">
 <script type="text/javascript" src="../../../../../script.js"></script>
-<script type="text/javascript" src="../../../../../script-dir/jquery-3.6.1.min.js"></script>
+<script type="text/javascript" src="../../../../../script-dir/jquery-3.7.1.min.js"></script>
 <script type="text/javascript" src="../../../../../script-dir/jquery-ui.min.js"></script>
 </head>
 <body class="class-declaration-page">
@@ -419,7 +419,8 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <section class="detail" id="getKey()">
 <h3>getKey</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getKey</span>()</div>
-<div class="block"><p>User-defined unique identifier for the Category.</p></div>
+<div class="block"><p>User-defined unique identifier for the Category.</p>
+  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Categories with the Import API and the Merchant Center.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../WithKey.html#getKey()">getKey</a></code>&nbsp;in interface&nbsp;<code><a href="../WithKey.html" title="interface in com.commercetools.api.models">WithKey</a></code></dd>
@@ -566,7 +567,8 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <section class="detail" id="setKey(java.lang.String)">
 <h3>setKey</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setKey</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
-<div class="block"><p>User-defined unique identifier for the Category.</p></div>
+<div class="block"><p>User-defined unique identifier for the Category.</p>
+  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Categories with the Import API and the Merchant Center.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>key</code> - value to be set</dd>

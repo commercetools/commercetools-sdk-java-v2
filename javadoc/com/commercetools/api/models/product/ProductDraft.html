@@ -11,7 +11,7 @@
 <link rel="stylesheet" type="text/css" href="../../../../../script-dir/jquery-ui.min.css" title="Style">
 <link rel="stylesheet" type="text/css" href="../../../../../jquery-ui.overrides.css" title="Style">
 <script type="text/javascript" src="../../../../../script.js"></script>
-<script type="text/javascript" src="../../../../../script-dir/jquery-3.6.1.min.js"></script>
+<script type="text/javascript" src="../../../../../script-dir/jquery-3.7.1.min.js"></script>
 <script type="text/javascript" src="../../../../../script-dir/jquery-ui.min.js"></script>
 </head>
 <body class="class-declaration-page">
@@ -148,7 +148,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMetaDescription()" class="member-name-link">getMetaDescription</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Description of the Product displayed in search results.</div>
+<div class="block">Description of the Product as displayed in search engine results.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMetaKeywords()" class="member-name-link">getMetaKeywords</a>()</code></div>
@@ -158,7 +158,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMetaTitle()" class="member-name-link">getMetaTitle</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Title of the Product displayed in search results.</div>
+<div class="block">Title of the Product as displayed in search engine results.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
@@ -248,7 +248,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setMetaDescription(com.commercetools.api.models.common.LocalizedString)" class="member-name-link">setMetaDescription</a><wbr>(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;metaDescription)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Description of the Product displayed in search results.</div>
+<div class="block">Description of the Product as displayed in search engine results.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setMetaKeywords(com.commercetools.api.models.common.LocalizedString)" class="member-name-link">setMetaKeywords</a><wbr>(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;metaKeywords)</code></div>
@@ -258,7 +258,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setMetaTitle(com.commercetools.api.models.common.LocalizedString)" class="member-name-link">setMetaTitle</a><wbr>(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;metaTitle)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Title of the Product displayed in search results.</div>
+<div class="block">Title of the Product as displayed in search engine results.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setName(com.commercetools.api.models.common.LocalizedString)" class="member-name-link">setName</a><wbr>(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;name)</code></div>
@@ -378,7 +378,8 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <h3>getKey</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getKey</span>()</div>
 <div class="block"><p>User-defined unique identifier for the Product.</p>
-  <p>To update a Product using the Import API, the Product <code>key</code> must match the pattern <code>^[A-Za-z0-9_-]{2,256}$</code>.</p></div>
+  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Products with the Import API and the Merchant Center.</p>
+  <p>To update a Product using the Import API or Merchant Center, the Product <code>key</code> must match the pattern <code>^[A-Za-z0-9_-]{2,256}$</code>.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../WithKey.html#getKey()">getKey</a></code>&nbsp;in interface&nbsp;<code><a href="../WithKey.html" title="interface in com.commercetools.api.models">WithKey</a></code></dd>
@@ -428,7 +429,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <h3>getMetaTitle</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name">getMetaTitle</span>()</div>
-<div class="block"><p>Title of the Product displayed in search results.</p></div>
+<div class="block"><p>Title of the Product as displayed in search engine results.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>metaTitle</dd>
@@ -440,7 +441,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <h3>getMetaDescription</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name">getMetaDescription</span>()</div>
-<div class="block"><p>Description of the Product displayed in search results.</p></div>
+<div class="block"><p>Description of the Product as displayed in search engine results.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>metaDescription</dd>
@@ -579,7 +580,8 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <h3>setKey</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setKey</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
 <div class="block"><p>User-defined unique identifier for the Product.</p>
-  <p>To update a Product using the Import API, the Product <code>key</code> must match the pattern <code>^[A-Za-z0-9_-]{2,256}$</code>.</p></div>
+  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Products with the Import API and the Merchant Center.</p>
+  <p>To update a Product using the Import API or Merchant Center, the Product <code>key</code> must match the pattern <code>^[A-Za-z0-9_-]{2,256}$</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>key</code> - value to be set</dd>
@@ -634,7 +636,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <section class="detail" id="setMetaTitle(com.commercetools.api.models.common.LocalizedString)">
 <h3>setMetaTitle</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setMetaTitle</span><wbr><span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;metaTitle)</span></div>
-<div class="block"><p>Title of the Product displayed in search results.</p></div>
+<div class="block"><p>Title of the Product as displayed in search engine results.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>metaTitle</code> - value to be set</dd>
@@ -645,7 +647,7 @@ extends <a href="../WithKey.html" title="interface in com.commercetools.api.mode
 <section class="detail" id="setMetaDescription(com.commercetools.api.models.common.LocalizedString)">
 <h3>setMetaDescription</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setMetaDescription</span><wbr><span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;metaDescription)</span></div>
-<div class="block"><p>Description of the Product displayed in search results.</p></div>
+<div class="block"><p>Description of the Product as displayed in search engine results.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>metaDescription</code> - value to be set</dd>

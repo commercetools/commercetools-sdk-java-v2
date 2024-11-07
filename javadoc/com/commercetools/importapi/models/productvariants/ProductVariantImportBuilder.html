@@ -11,7 +11,7 @@
 <link rel="stylesheet" type="text/css" href="../../../../../script-dir/jquery-ui.min.css" title="Style">
 <link rel="stylesheet" type="text/css" href="../../../../../jquery-ui.overrides.css" title="Style">
 <script type="text/javascript" src="../../../../../script.js"></script>
-<script type="text/javascript" src="../../../../../script-dir/jquery-3.6.1.min.js"></script>
+<script type="text/javascript" src="../../../../../script-dir/jquery-3.7.1.min.js"></script>
 <script type="text/javascript" src="../../../../../script-dir/jquery-ui.min.js"></script>
 </head>
 <body class="class-declaration-page">
@@ -179,7 +179,10 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getIsMasterVariant()" class="member-name-link">getIsMasterVariant</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Maps to <code>ProductVariant.isMasterVariant</code>.</div>
+<div class="block">
+   When creating a new ProductVariant, set to <code>false</code>; otherwise, the import operation will fail with a NewMasterVariantAdditionNotAllowed error.
+   Set to <code>true</code> if the ProductVariant exists and you want to set this ProductVariant as the Master Variant.
+  </div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getKey()" class="member-name-link">getKey</a>()</code></div>
@@ -217,7 +220,10 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductVariantImportBuilder.html" title="class in com.commercetools.importapi.models.productvariants">ProductVariantImportBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isMasterVariant(java.lang.Boolean)" class="member-name-link">isMasterVariant</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isMasterVariant)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Maps to <code>ProductVariant.isMasterVariant</code>.</div>
+<div class="block">
+   When creating a new ProductVariant, set to <code>false</code>; otherwise, the import operation will fail with a NewMasterVariantAdditionNotAllowed error.
+   Set to <code>true</code> if the ProductVariant exists and you want to set this ProductVariant as the Master Variant.
+  </div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductVariantImportBuilder.html" title="class in com.commercetools.importapi.models.productvariants">ProductVariantImportBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#key(java.lang.String)" class="member-name-link">key</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
@@ -379,7 +385,10 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="isMasterVariant(java.lang.Boolean)">
 <h3>isMasterVariant</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantImportBuilder.html" title="class in com.commercetools.importapi.models.productvariants">ProductVariantImportBuilder</a></span>&nbsp;<span class="element-name">isMasterVariant</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isMasterVariant)</span></div>
-<div class="block"><p>Maps to <code>ProductVariant.isMasterVariant</code>.</p></div>
+<div class="block"><ul>
+   <li>When creating a new ProductVariant, set to <code>false</code>; otherwise, the import operation will fail with a NewMasterVariantAdditionNotAllowed error.</li>
+   <li>Set to <code>true</code> if the ProductVariant exists and you want to set this ProductVariant as the Master Variant.</li>
+  </ul></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>isMasterVariant</code> - value to be set</dd>
@@ -727,7 +736,10 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getIsMasterVariant()">
 <h3>getIsMasterVariant</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name">getIsMasterVariant</span>()</div>
-<div class="block"><p>Maps to <code>ProductVariant.isMasterVariant</code>.</p></div>
+<div class="block"><ul>
+   <li>When creating a new ProductVariant, set to <code>false</code>; otherwise, the import operation will fail with a NewMasterVariantAdditionNotAllowed error.</li>
+   <li>Set to <code>true</code> if the ProductVariant exists and you want to set this ProductVariant as the Master Variant.</li>
+  </ul></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>isMasterVariant</dd>

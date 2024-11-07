@@ -11,7 +11,7 @@
 <link rel="stylesheet" type="text/css" href="../../../../../script-dir/jquery-ui.min.css" title="Style">
 <link rel="stylesheet" type="text/css" href="../../../../../jquery-ui.overrides.css" title="Style">
 <script type="text/javascript" src="../../../../../script.js"></script>
-<script type="text/javascript" src="../../../../../script-dir/jquery-3.6.1.min.js"></script>
+<script type="text/javascript" src="../../../../../script-dir/jquery-3.7.1.min.js"></script>
 <script type="text/javascript" src="../../../../../script-dir/jquery-ui.min.js"></script>
 </head>
 <body class="class-declaration-page">
@@ -123,7 +123,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getChannel()" class="member-name-link">getChannel</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Sets the product distribution Channel for which this Price is valid</div>
+<div class="block">Sets the product distribution Channel for which this Price is valid.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCountry()" class="member-name-link">getCountry</a>()</code></div>
@@ -188,7 +188,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setChannel(com.commercetools.importapi.models.common.ChannelKeyReference)" class="member-name-link">setChannel</a><wbr>(<a href="../common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a>&nbsp;channel)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Sets the product distribution Channel for which this Price is valid</div>
+<div class="block">Sets the product distribution Channel for which this Price is valid.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCountry(java.lang.String)" class="member-name-link">setCountry</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;country)</code></div>
@@ -315,7 +315,8 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="getCountry()">
 <h3>getCountry</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getCountry</span>()</div>
-<div class="block"><p>Sets the country for which this Price is valid.</p></div>
+<div class="block"><p>Sets the country for which this Price is valid.</p>
+  <p>The value cannot be updated. Attempting to update the value will result in an InvalidFieldsUpdate error.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>country</dd>
@@ -327,7 +328,8 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <h3>getCustomerGroup</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../common/CustomerGroupKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerGroupKeyReference</a></span>&nbsp;<span class="element-name">getCustomerGroup</span>()</div>
-<div class="block"><p>Sets the CustomerGroup for which this Price is valid.</p></div>
+<div class="block"><p>Sets the CustomerGroup for which this Price is valid.</p>
+  <p>The value cannot be updated. Attempting to update the value will result in an InvalidFieldsUpdate error.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>customerGroup</dd>
@@ -339,7 +341,8 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <h3>getChannel</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a></span>&nbsp;<span class="element-name">getChannel</span>()</div>
-<div class="block"><p>Sets the product distribution Channel for which this Price is valid</p></div>
+<div class="block"><p>Sets the product distribution Channel for which this Price is valid.</p>
+  <p>The value cannot be updated. Attempting to update the value will result in an InvalidFieldsUpdate error.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>channel</dd>
@@ -443,7 +446,8 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setCountry(java.lang.String)">
 <h3>setCountry</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCountry</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;country)</span></div>
-<div class="block"><p>Sets the country for which this Price is valid.</p></div>
+<div class="block"><p>Sets the country for which this Price is valid.</p>
+  <p>The value cannot be updated. Attempting to update the value will result in an InvalidFieldsUpdate error.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>country</code> - value to be set</dd>
@@ -454,7 +458,8 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setCustomerGroup(com.commercetools.importapi.models.common.CustomerGroupKeyReference)">
 <h3>setCustomerGroup</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCustomerGroup</span><wbr><span class="parameters">(<a href="../common/CustomerGroupKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerGroupKeyReference</a>&nbsp;customerGroup)</span></div>
-<div class="block"><p>Sets the CustomerGroup for which this Price is valid.</p></div>
+<div class="block"><p>Sets the CustomerGroup for which this Price is valid.</p>
+  <p>The value cannot be updated. Attempting to update the value will result in an InvalidFieldsUpdate error.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>customerGroup</code> - value to be set</dd>
@@ -465,7 +470,8 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setChannel(com.commercetools.importapi.models.common.ChannelKeyReference)">
 <h3>setChannel</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setChannel</span><wbr><span class="parameters">(<a href="../common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a>&nbsp;channel)</span></div>
-<div class="block"><p>Sets the product distribution Channel for which this Price is valid</p></div>
+<div class="block"><p>Sets the product distribution Channel for which this Price is valid.</p>
+  <p>The value cannot be updated. Attempting to update the value will result in an InvalidFieldsUpdate error.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>channel</code> - value to be set</dd>

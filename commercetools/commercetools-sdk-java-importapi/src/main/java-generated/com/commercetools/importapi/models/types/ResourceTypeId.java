@@ -11,7 +11,7 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>IDs indicating the customizable resources and data types. Maps to <code>Type.resourceTypeId</code>.</p>
+ *  <p>With Types, you can model your own Custom Fields on the following resources and data types. Maps to <code>Type.resourceTypeId</code>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ResourceTypeId extends JsonEnum {

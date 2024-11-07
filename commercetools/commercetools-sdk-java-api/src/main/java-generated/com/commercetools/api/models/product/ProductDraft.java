@@ -103,7 +103,7 @@ public interface ProductDraft
     public CategoryOrderHints getCategoryOrderHints();
 
     /**
-     *  <p>Title of the Product as displayed in search engine results.</p>
+     *  <p>Title of the Product as used by search engines.</p>
      * @return metaTitle
      */
     @Valid
@@ -111,7 +111,7 @@ public interface ProductDraft
     public LocalizedString getMetaTitle();
 
     /**
-     *  <p>Description of the Product as displayed in search engine results.</p>
+     *  <p>Description of the Product as used by search engines.</p>
      * @return metaDescription
      */
     @Valid
@@ -242,14 +242,14 @@ public interface ProductDraft
     public void setCategoryOrderHints(final CategoryOrderHints categoryOrderHints);
 
     /**
-     *  <p>Title of the Product as displayed in search engine results.</p>
+     *  <p>Title of the Product as used by search engines.</p>
      * @param metaTitle value to be set
      */
 
     public void setMetaTitle(final LocalizedString metaTitle);
 
     /**
-     *  <p>Description of the Product as displayed in search engine results.</p>
+     *  <p>Description of the Product as used by search engines.</p>
      * @param metaDescription value to be set
      */
 

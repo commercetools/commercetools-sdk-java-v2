@@ -288,7 +288,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-     *  <p>Title of the Product as displayed in search engine results.</p>
+     *  <p>Title of the Product as used by search engines.</p>
      * @param builder function to build the metaTitle value
      * @return Builder
      */
@@ -300,7 +300,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-     *  <p>Title of the Product as displayed in search engine results.</p>
+     *  <p>Title of the Product as used by search engines.</p>
      * @param builder function to build the metaTitle value
      * @return Builder
      */
@@ -312,7 +312,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-     *  <p>Title of the Product as displayed in search engine results.</p>
+     *  <p>Title of the Product as used by search engines.</p>
      * @param metaTitle value to be set
      * @return Builder
      */
@@ -323,7 +323,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-     *  <p>Description of the Product as displayed in search engine results below the meta title.</p>
+     *  <p>Description of the Product as used by search engines.</p>
      * @param builder function to build the metaDescription value
      * @return Builder
      */
@@ -335,7 +335,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-     *  <p>Description of the Product as displayed in search engine results below the meta title.</p>
+     *  <p>Description of the Product as used by search engines.</p>
      * @param builder function to build the metaDescription value
      * @return Builder
      */
@@ -347,7 +347,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-     *  <p>Description of the Product as displayed in search engine results below the meta title.</p>
+     *  <p>Description of the Product as used by search engines.</p>
      * @param metaDescription value to be set
      * @return Builder
      */
@@ -599,7 +599,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-     *  <p>Title of the Product as displayed in search engine results.</p>
+     *  <p>Title of the Product as used by search engines.</p>
      * @return metaTitle
      */
 
@@ -609,7 +609,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-     *  <p>Description of the Product as displayed in search engine results below the meta title.</p>
+     *  <p>Description of the Product as used by search engines.</p>
      * @return metaDescription
      */
 

@@ -49,7 +49,7 @@ public interface ProductTailoringData {
     public LocalizedString getDescription();
 
     /**
-     *  <p>Tailored title of the Product as displayed in search engine results.</p>
+     *  <p>Tailored title of the Product as used by search engines.</p>
      * @return metaTitle
      */
     @Valid
@@ -57,7 +57,7 @@ public interface ProductTailoringData {
     public LocalizedString getMetaTitle();
 
     /**
-     *  <p>Tailored description of the Product as displayed in search engine results.</p>
+     *  <p>Tailored description of the Product as used by search engines.</p>
      * @return metaDescription
      */
     @Valid
@@ -103,14 +103,14 @@ public interface ProductTailoringData {
     public void setDescription(final LocalizedString description);
 
     /**
-     *  <p>Tailored title of the Product as displayed in search engine results.</p>
+     *  <p>Tailored title of the Product as used by search engines.</p>
      * @param metaTitle value to be set
      */
 
     public void setMetaTitle(final LocalizedString metaTitle);
 
     /**
-     *  <p>Tailored description of the Product as displayed in search engine results.</p>
+     *  <p>Tailored description of the Product as used by search engines.</p>
      * @param metaDescription value to be set
      */
 

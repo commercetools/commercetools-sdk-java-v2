@@ -195,6 +195,9 @@ public class ConcurrentModificationTest {
                             .build())
                     .executeBlocking()
                     .getBody();
+
+            Assertions.assertThat(modCart.getId()).isEqualTo(cart.getId());
+            Assertions.assertThat(modCart.getVersion()).isGreaterThan(cart.getVersion());
             return modCart;
         });
     }
@@ -230,6 +233,11 @@ public class ConcurrentModificationTest {
                             .build())
                     .executeBlocking()
                     .getBody();
+
+            Assertions.assertThat(modCart.getId()).isEqualTo(cart.getId());
+            Assertions.assertThat(modCart.getVersion()).isGreaterThan(cart.getVersion());
+            Assertions.assertThat(modCart.getVersion()).isGreaterThan(deCart.getBody().getVersion());
+
             return modCart;
         });
     }

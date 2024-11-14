@@ -24,21 +24,21 @@ public class GraphQLErrorLocationTest {
 
     @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { GraphQLErrorLocation.builder().line(6) },
-                new Object[] { GraphQLErrorLocation.builder().column(2) } };
+        return new Object[][] { new Object[] { GraphQLErrorLocation.builder().line(6L) },
+                new Object[] { GraphQLErrorLocation.builder().column(2L) } };
     }
 
     @Test
     public void line() {
         GraphQLErrorLocation value = GraphQLErrorLocation.of();
-        value.setLine(6);
-        Assertions.assertThat(value.getLine()).isEqualTo(6);
+        value.setLine(6L);
+        Assertions.assertThat(value.getLine()).isEqualTo(6L);
     }
 
     @Test
     public void column() {
         GraphQLErrorLocation value = GraphQLErrorLocation.of();
-        value.setColumn(2);
-        Assertions.assertThat(value.getColumn()).isEqualTo(2);
+        value.setColumn(2L);
+        Assertions.assertThat(value.getColumn()).isEqualTo(2L);
     }
 }

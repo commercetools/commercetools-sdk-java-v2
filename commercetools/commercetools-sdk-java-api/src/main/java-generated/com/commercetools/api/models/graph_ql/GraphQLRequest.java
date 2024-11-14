@@ -16,7 +16,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- * GraphQLRequest
+ *  <p>The query, operation name, and variables that are sent to the GraphQL API.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,7 +33,7 @@ import jakarta.validation.constraints.NotNull;
 public interface GraphQLRequest {
 
     /**
-     *
+     *  <p>String representation of the <em>Source Text</em> of the <em>Document</em> that is specified in the Language section of the GraphQL specification.</p>
      * @return query
      */
     @NotNull
@@ -41,7 +41,7 @@ public interface GraphQLRequest {
     public String getQuery();
 
     /**
-     *
+     *  <p>Name of the operation, if you defined several operations in <code>query</code>.</p>
      * @return operationName
      */
 
@@ -49,7 +49,7 @@ public interface GraphQLRequest {
     public String getOperationName();
 
     /**
-     *
+     *  <p>JSON object that contains key-value pairs in which the keys are variable names and the values are variable values.</p>
      * @return variables
      */
     @Valid
@@ -57,21 +57,21 @@ public interface GraphQLRequest {
     public GraphQLVariablesMap getVariables();
 
     /**
-     * set query
+     *  <p>String representation of the <em>Source Text</em> of the <em>Document</em> that is specified in the Language section of the GraphQL specification.</p>
      * @param query value to be set
      */
 
     public void setQuery(final String query);
 
     /**
-     * set operationName
+     *  <p>Name of the operation, if you defined several operations in <code>query</code>.</p>
      * @param operationName value to be set
      */
 
     public void setOperationName(final String operationName);
 
     /**
-     * set variables
+     *  <p>JSON object that contains key-value pairs in which the keys are variable names and the values are variable values.</p>
      * @param variables value to be set
      */
 

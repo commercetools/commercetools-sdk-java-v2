@@ -33,7 +33,7 @@ public class GraphQLRequestBuilder implements Builder<GraphQLRequest> {
     private com.commercetools.api.models.graph_ql.GraphQLVariablesMap variables;
 
     /**
-     * set the value to the query
+     *  <p>String representation of the <em>Source Text</em> of the <em>Document</em> that is specified in the Language section of the GraphQL specification.</p>
      * @param query value to be set
      * @return Builder
      */
@@ -44,7 +44,7 @@ public class GraphQLRequestBuilder implements Builder<GraphQLRequest> {
     }
 
     /**
-     * set the value to the operationName
+     *  <p>Name of the operation, if you defined several operations in <code>query</code>.</p>
      * @param operationName value to be set
      * @return Builder
      */
@@ -55,7 +55,7 @@ public class GraphQLRequestBuilder implements Builder<GraphQLRequest> {
     }
 
     /**
-     * set the value to the variables using the builder function
+     *  <p>JSON object that contains key-value pairs in which the keys are variable names and the values are variable values.</p>
      * @param builder function to build the variables value
      * @return Builder
      */
@@ -67,7 +67,7 @@ public class GraphQLRequestBuilder implements Builder<GraphQLRequest> {
     }
 
     /**
-     * set the value to the variables using the builder function
+     *  <p>JSON object that contains key-value pairs in which the keys are variable names and the values are variable values.</p>
      * @param builder function to build the variables value
      * @return Builder
      */
@@ -79,7 +79,7 @@ public class GraphQLRequestBuilder implements Builder<GraphQLRequest> {
     }
 
     /**
-     * set the value to the variables
+     *  <p>JSON object that contains key-value pairs in which the keys are variable names and the values are variable values.</p>
      * @param variables value to be set
      * @return Builder
      */
@@ -91,7 +91,7 @@ public class GraphQLRequestBuilder implements Builder<GraphQLRequest> {
     }
 
     /**
-     * value of query}
+     *  <p>String representation of the <em>Source Text</em> of the <em>Document</em> that is specified in the Language section of the GraphQL specification.</p>
      * @return query
      */
 
@@ -100,7 +100,7 @@ public class GraphQLRequestBuilder implements Builder<GraphQLRequest> {
     }
 
     /**
-     * value of operationName}
+     *  <p>Name of the operation, if you defined several operations in <code>query</code>.</p>
      * @return operationName
      */
 
@@ -110,7 +110,7 @@ public class GraphQLRequestBuilder implements Builder<GraphQLRequest> {
     }
 
     /**
-     * value of variables}
+     *  <p>JSON object that contains key-value pairs in which the keys are variable names and the values are variable values.</p>
      * @return variables
      */
 

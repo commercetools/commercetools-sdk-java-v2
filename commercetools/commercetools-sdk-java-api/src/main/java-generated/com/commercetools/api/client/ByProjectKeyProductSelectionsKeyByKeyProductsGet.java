@@ -99,6 +99,10 @@ public class ByProjectKeyProductSelectionsKeyByKeyProductsGet extends
         return this.key;
     }
 
+    public List<String> getWhere() {
+        return this.getQueryParam("where");
+    }
+
     public List<String> getExpand() {
         return this.getQueryParam("expand");
     }
@@ -125,6 +129,85 @@ public class ByProjectKeyProductSelectionsKeyByKeyProductsGet extends
 
     public void setKey(final String key) {
         this.key = key;
+    }
+
+    /**
+     * set where with the specified value
+     * @param where value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductSelectionsKeyByKeyProductsGet
+     */
+    public <TValue> ByProjectKeyProductSelectionsKeyByKeyProductsGet withWhere(final TValue where) {
+        return copy().withQueryParam("where", where);
+    }
+
+    /**
+     * add additional where query parameter
+     * @param where value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductSelectionsKeyByKeyProductsGet
+     */
+    public <TValue> ByProjectKeyProductSelectionsKeyByKeyProductsGet addWhere(final TValue where) {
+        return copy().addQueryParam("where", where);
+    }
+
+    /**
+     * set where with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductSelectionsKeyByKeyProductsGet
+     */
+    public ByProjectKeyProductSelectionsKeyByKeyProductsGet withWhere(final Supplier<String> supplier) {
+        return copy().withQueryParam("where", supplier.get());
+    }
+
+    /**
+     * add additional where query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductSelectionsKeyByKeyProductsGet
+     */
+    public ByProjectKeyProductSelectionsKeyByKeyProductsGet addWhere(final Supplier<String> supplier) {
+        return copy().addQueryParam("where", supplier.get());
+    }
+
+    /**
+     * set where with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductSelectionsKeyByKeyProductsGet
+     */
+    public ByProjectKeyProductSelectionsKeyByKeyProductsGet withWhere(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("where", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional where query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductSelectionsKeyByKeyProductsGet
+     */
+    public ByProjectKeyProductSelectionsKeyByKeyProductsGet addWhere(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("where", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set where with the specified values
+     * @param where values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductSelectionsKeyByKeyProductsGet
+     */
+    public <TValue> ByProjectKeyProductSelectionsKeyByKeyProductsGet withWhere(final Collection<TValue> where) {
+        return copy().withoutQueryParam("where")
+                .addQueryParams(
+                    where.stream().map(s -> new ParamEntry<>("where", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional where query parameters
+     * @param where values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductSelectionsKeyByKeyProductsGet
+     */
+    public <TValue> ByProjectKeyProductSelectionsKeyByKeyProductsGet addWhere(final Collection<TValue> where) {
+        return copy().addQueryParams(
+            where.stream().map(s -> new ParamEntry<>("where", s.toString())).collect(Collectors.toList()));
     }
 
     /**

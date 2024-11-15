@@ -67,6 +67,12 @@ public class TypeFixtures {
                         .label(CommercetoolsTestUtils.randomLocalizedString())
                         .required(false)
                         .inputHint(TypeTextInputHint.SINGLE_LINE))
+                .plusFieldDefinitions(
+                    fieldDefinitionBuilder -> fieldDefinitionBuilder.type(FieldTypeBuilder::dateTimeBuilder)
+                            .name("ttl")
+                            .label(CommercetoolsTestUtils.randomLocalizedString())
+                            .required(false)
+                            .inputHint(TypeTextInputHint.SINGLE_LINE))
                 .build();
 
         Type type = CommercetoolsTestUtils.getProjectApiRoot().types().post(typeDraft).executeBlocking().getBody();

@@ -143,7 +143,7 @@ public class ByProjectKeyByResourceTypeByIDTest {
                                 .withResourceTypeValue("test_resourceType")
                                 .withIDValue("test_ID")
                                 .get()
-                                .withSource("source")
+                                .withSource(com.commercetools.history.models.change_history.Source.findEnum("source"))
                                 .createHttpRequest(),
                         "get", "test_projectKey/test_resourceType/test_ID?source=source", },
                 new Object[] {
@@ -243,7 +243,7 @@ public class ByProjectKeyByResourceTypeByIDTest {
                         .withResourceTypeValue("test_resourceType")
                         .withIDValue("test_ID")
                         .get()
-                        .withSource("source"), },
+                        .withSource(com.commercetools.history.models.change_history.Source.findEnum("source")), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
                         .withResourceTypeValue("test_resourceType")
                         .withIDValue("test_ID")

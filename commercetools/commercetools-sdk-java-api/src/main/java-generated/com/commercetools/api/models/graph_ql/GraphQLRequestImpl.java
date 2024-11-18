@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * GraphQLRequest
+ *  <p>The query, operation name, and variables that are sent to the GraphQL API.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GraphQLRequestImpl implements GraphQLRequest, ModelBase {
@@ -47,7 +47,7 @@ public class GraphQLRequestImpl implements GraphQLRequest, ModelBase {
     }
 
     /**
-     *
+     *  <p>String representation of the <em>Source Text</em> of the <em>Document</em> that is specified in the Language section of the GraphQL specification.</p>
      */
 
     public String getQuery() {
@@ -55,7 +55,7 @@ public class GraphQLRequestImpl implements GraphQLRequest, ModelBase {
     }
 
     /**
-     *
+     *  <p>Name of the operation, if you defined several operations in <code>query</code>.</p>
      */
 
     public String getOperationName() {
@@ -63,7 +63,7 @@ public class GraphQLRequestImpl implements GraphQLRequest, ModelBase {
     }
 
     /**
-     *
+     *  <p>JSON object that contains key-value pairs in which the keys are variable names and the values are variable values.</p>
      */
 
     public com.commercetools.api.models.graph_ql.GraphQLVariablesMap getVariables() {

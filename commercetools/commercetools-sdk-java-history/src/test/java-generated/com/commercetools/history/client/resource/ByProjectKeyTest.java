@@ -110,9 +110,10 @@ public class ByProjectKeyTest {
                         .get()
                         .withResourceKey("resourceKey")
                         .createHttpRequest(), "get", "test_projectKey?resourceKey=resourceKey", },
-                new Object[] {
-                        apiRoot.withProjectKeyValue("test_projectKey").get().withSource("source").createHttpRequest(),
-                        "get", "test_projectKey?source=source", },
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
+                        .get()
+                        .withSource(com.commercetools.history.models.change_history.Source.findEnum("source"))
+                        .createHttpRequest(), "get", "test_projectKey?source=source", },
                 new Object[] {
                         apiRoot.withProjectKeyValue("test_projectKey").get().withChanges("changes").createHttpRequest(),
                         "get", "test_projectKey?changes=changes", },
@@ -153,7 +154,9 @@ public class ByProjectKeyTest {
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withType("type"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withResourceId("resourceId"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withResourceKey("resourceKey"), },
-                new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withSource("source"), },
+                new Object[] { apiRoot.withProjectKeyValue("test_projectKey")
+                        .get()
+                        .withSource(com.commercetools.history.models.change_history.Source.findEnum("source")), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withChanges("changes"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey").get().withStores("stores"), },
                 new Object[] { apiRoot.withProjectKeyValue("test_projectKey")

@@ -17,20 +17,20 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * GraphQLErrorLocation
+ *  <p>Represents the location within your query where the error occurred.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GraphQLErrorLocationImpl implements GraphQLErrorLocation, ModelBase {
 
-    private Integer line;
+    private Long line;
 
-    private Integer column;
+    private Long column;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    GraphQLErrorLocationImpl(@JsonProperty("line") final Integer line, @JsonProperty("column") final Integer column) {
+    GraphQLErrorLocationImpl(@JsonProperty("line") final Long line, @JsonProperty("column") final Long column) {
         this.line = line;
         this.column = column;
     }
@@ -42,26 +42,26 @@ public class GraphQLErrorLocationImpl implements GraphQLErrorLocation, ModelBase
     }
 
     /**
-     *
+     *  <p>Line number of the query where the error occurred.</p>
      */
 
-    public Integer getLine() {
+    public Long getLine() {
         return this.line;
     }
 
     /**
-     *
+     *  <p>Position in <code>line</code> where the error occurred.</p>
      */
 
-    public Integer getColumn() {
+    public Long getColumn() {
         return this.column;
     }
 
-    public void setLine(final Integer line) {
+    public void setLine(final Long line) {
         this.line = line;
     }
 
-    public void setColumn(final Integer column) {
+    public void setColumn(final Long column) {
         this.column = column;
     }
 

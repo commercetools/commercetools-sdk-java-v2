@@ -43,7 +43,7 @@ public class GraphQLErrorObjectImpl implements GraphQLErrorObject, ModelBase {
     }
 
     /**
-     *  <p>Error identifier.</p>
+     *  <p>One of the error codes that is listed on the Errors page.</p>
      */
 
     public String getCode() {

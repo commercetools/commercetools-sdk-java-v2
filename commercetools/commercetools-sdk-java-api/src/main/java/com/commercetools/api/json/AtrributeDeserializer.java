@@ -1,3 +1,4 @@
+
 package com.commercetools.api.json;
 
 /**

@@ -34,7 +34,7 @@ public class ErrorObjectImpl implements ErrorObject, ModelBase {
      */
     @JsonCreator
     ErrorObjectImpl(@JsonProperty("code") final String code, @JsonProperty("message") final String message,
-            @JsonAnySetter final Map<String, java.lang.Object> values) {
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values) {
         this.code = code;
         this.message = message;
         this.values = values;

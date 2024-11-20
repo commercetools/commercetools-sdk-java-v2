@@ -6,6 +6,7 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
@@ -23,7 +24,7 @@ public class LocalizedStringImpl implements LocalizedString, ModelBase {
     private Map<String, String> values;
 
     @JsonCreator
-    LocalizedStringImpl(@JsonAnySetter final Map<String, String> values) {
+    LocalizedStringImpl(@JsonAnySetter @JsonProperty("values") final Map<String, String> values) {
         this.values = values;
     }
 

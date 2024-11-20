@@ -4,6 +4,7 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -36,7 +37,8 @@ public class GraphQLReferencedResourceNotFoundErrorImpl implements GraphQLRefere
      * create instance with all properties
      */
     @JsonCreator
-    GraphQLReferencedResourceNotFoundErrorImpl(@JsonProperty("values") final Map<String, java.lang.Object> values,
+    GraphQLReferencedResourceNotFoundErrorImpl(
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("typeId") final com.commercetools.api.models.common.ReferenceTypeId typeId,
             @JsonProperty("id") final String id, @JsonProperty("key") final String key) {
         this.values = values;

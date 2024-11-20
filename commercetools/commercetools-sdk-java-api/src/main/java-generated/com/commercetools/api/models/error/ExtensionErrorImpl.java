@@ -4,6 +4,7 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -39,7 +40,7 @@ public class ExtensionErrorImpl implements ExtensionError, ModelBase {
     ExtensionErrorImpl(@JsonProperty("code") final String code, @JsonProperty("message") final String message,
             @JsonProperty("extensionId") final String extensionId,
             @JsonProperty("extensionKey") final String extensionKey,
-            @JsonProperty("values") final Map<String, java.lang.Object> values) {
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values) {
         this.code = code;
         this.message = message;
         this.extensionId = extensionId;

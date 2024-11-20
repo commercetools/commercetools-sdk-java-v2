@@ -4,6 +4,7 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -51,7 +52,7 @@ public class MissingTaxRateForCountryErrorImpl implements MissingTaxRateForCount
      */
     @JsonCreator
     MissingTaxRateForCountryErrorImpl(@JsonProperty("message") final String message,
-            @JsonProperty("values") final Map<String, java.lang.Object> values,
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("taxCategoryId") final String taxCategoryId, @JsonProperty("country") final String country,
             @JsonProperty("state") final String state) {
         this.message = message;

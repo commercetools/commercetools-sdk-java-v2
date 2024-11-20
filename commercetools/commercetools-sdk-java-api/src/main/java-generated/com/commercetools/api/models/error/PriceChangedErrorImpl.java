@@ -4,6 +4,7 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -44,7 +45,7 @@ public class PriceChangedErrorImpl implements PriceChangedError, ModelBase {
      */
     @JsonCreator
     PriceChangedErrorImpl(@JsonProperty("message") final String message,
-            @JsonProperty("values") final Map<String, java.lang.Object> values,
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("lineItems") final java.util.List<String> lineItems,
             @JsonProperty("shipping") final Boolean shipping) {
         this.message = message;

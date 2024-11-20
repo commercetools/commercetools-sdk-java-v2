@@ -4,6 +4,7 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -33,7 +34,7 @@ public class GraphQLLockedFieldErrorImpl implements GraphQLLockedFieldError, Mod
      * create instance with all properties
      */
     @JsonCreator
-    GraphQLLockedFieldErrorImpl(@JsonProperty("values") final Map<String, java.lang.Object> values,
+    GraphQLLockedFieldErrorImpl(@JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("field") final String field) {
         this.values = values;
         this.field = field;

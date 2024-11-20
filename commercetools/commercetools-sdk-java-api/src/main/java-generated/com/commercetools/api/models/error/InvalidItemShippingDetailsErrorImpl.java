@@ -4,6 +4,7 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -48,7 +49,7 @@ public class InvalidItemShippingDetailsErrorImpl implements InvalidItemShippingD
      */
     @JsonCreator
     InvalidItemShippingDetailsErrorImpl(@JsonProperty("message") final String message,
-            @JsonProperty("values") final Map<String, java.lang.Object> values,
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("subject") final String subject, @JsonProperty("itemId") final String itemId) {
         this.message = message;
         this.values = values;

@@ -4,6 +4,7 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -31,7 +32,7 @@ public class GraphQLGeneralErrorImpl implements GraphQLGeneralError, ModelBase {
      * create instance with all properties
      */
     @JsonCreator
-    GraphQLGeneralErrorImpl(@JsonProperty("values") final Map<String, java.lang.Object> values) {
+    GraphQLGeneralErrorImpl(@JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values) {
         this.values = values;
         this.code = GENERAL;
     }

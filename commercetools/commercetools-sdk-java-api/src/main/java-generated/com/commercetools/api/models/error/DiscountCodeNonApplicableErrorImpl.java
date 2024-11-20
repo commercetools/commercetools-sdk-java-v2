@@ -4,6 +4,7 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -55,7 +56,7 @@ public class DiscountCodeNonApplicableErrorImpl implements DiscountCodeNonApplic
      */
     @JsonCreator
     DiscountCodeNonApplicableErrorImpl(@JsonProperty("message") final String message,
-            @JsonProperty("values") final Map<String, java.lang.Object> values,
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("discountCode") final String discountCode, @JsonProperty("reason") final String reason,
             @JsonProperty("discountCodeId") final String discountCodeId,
             @JsonProperty("validFrom") final java.time.ZonedDateTime validFrom,

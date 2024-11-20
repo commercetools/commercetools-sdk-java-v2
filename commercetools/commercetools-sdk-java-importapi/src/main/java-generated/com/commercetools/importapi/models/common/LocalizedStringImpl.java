@@ -4,6 +4,7 @@ package com.commercetools.importapi.models.common;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -33,7 +34,7 @@ public class LocalizedStringImpl implements LocalizedString, ModelBase {
      * create instance with all properties
      */
     @JsonCreator
-    LocalizedStringImpl(@JsonProperty("values") final Map<String, String> values) {
+    LocalizedStringImpl(@JsonAnySetter @JsonProperty("values") final Map<String, String> values) {
         this.values = values;
     }
 

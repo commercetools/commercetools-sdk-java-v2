@@ -116,6 +116,11 @@ subprojects { project ->
             languageVersion = JavaLanguageVersion.of(17)
         }
     }
+    compileIntegrationTestJava {
+        javaCompiler = javaToolchains.compilerFor {
+            languageVersion = JavaLanguageVersion.of(17)
+        }
+    }
     compileTestJava {
         javaCompiler = javaToolchains.compilerFor {
             languageVersion = JavaLanguageVersion.of(17)

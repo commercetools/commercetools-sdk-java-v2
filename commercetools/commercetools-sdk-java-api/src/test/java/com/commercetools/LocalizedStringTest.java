@@ -1,6 +1,7 @@
 
 package com.commercetools;
 
+import static com.commercetools.TestUtils.stringFromResource;
 import static java.lang.String.format;
 import static java.util.Arrays.asList;
 import static java.util.Collections.singletonList;
@@ -12,6 +13,7 @@ import java.util.stream.Stream;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.LocalizedStringEntry;
+import com.commercetools.api.models.product.ProductData;
 
 import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
@@ -369,5 +371,13 @@ public class LocalizedStringTest {
                 .plus(Locale.ENGLISH, "Jackets")
                 .plus(Locale.ITALIAN, "Giacche");
         assertThat(actual).isEqualTo(expected);
+    }
+
+    public static final String DEFAULT_LOCALE = "en-US";
+
+    @Test
+    public void getLocale() {
+        ProductData p = JsonUtils.fromJsonString(stringFromResource("product-data.json"), ProductData.class);
+        assertThat(p.getName().get(DEFAULT_LOCALE)).isEqualTo("Hoodie");
     }
 }

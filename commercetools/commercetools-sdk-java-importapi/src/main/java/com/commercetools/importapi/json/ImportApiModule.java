@@ -1,6 +1,7 @@
 
 package com.commercetools.importapi.json;
 
+import com.commercetools.importapi.models.productvariants.Attribute;
 import com.commercetools.importapi.models.productvariants.Attributes;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 
@@ -14,5 +15,6 @@ public class ImportApiModule extends SimpleModule {
 
     public ImportApiModule(ModuleOptions options) {
         setMixInAnnotation(Attributes.class, AttributesMixin.class);
+        setMixInAnnotation(Attribute.class, AttributeMixin.class);
     }
 }

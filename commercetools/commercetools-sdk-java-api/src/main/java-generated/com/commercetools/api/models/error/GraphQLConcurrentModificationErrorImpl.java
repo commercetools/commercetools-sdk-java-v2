@@ -4,6 +4,7 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -32,7 +33,8 @@ public class GraphQLConcurrentModificationErrorImpl implements GraphQLConcurrent
      * create instance with all properties
      */
     @JsonCreator
-    GraphQLConcurrentModificationErrorImpl(@JsonProperty("values") final Map<String, java.lang.Object> values,
+    GraphQLConcurrentModificationErrorImpl(
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("currentVersion") final Long currentVersion) {
         this.values = values;
         this.currentVersion = currentVersion;

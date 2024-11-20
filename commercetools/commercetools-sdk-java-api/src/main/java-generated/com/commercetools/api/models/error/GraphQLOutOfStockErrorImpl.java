@@ -4,6 +4,7 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -40,7 +41,7 @@ public class GraphQLOutOfStockErrorImpl implements GraphQLOutOfStockError, Model
      * create instance with all properties
      */
     @JsonCreator
-    GraphQLOutOfStockErrorImpl(@JsonProperty("values") final Map<String, java.lang.Object> values,
+    GraphQLOutOfStockErrorImpl(@JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("lineItems") final java.util.List<String> lineItems,
             @JsonProperty("skus") final java.util.List<String> skus) {
         this.values = values;

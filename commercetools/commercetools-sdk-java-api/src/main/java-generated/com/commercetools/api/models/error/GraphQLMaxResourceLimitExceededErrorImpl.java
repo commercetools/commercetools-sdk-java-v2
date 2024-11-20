@@ -4,6 +4,7 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -33,7 +34,8 @@ public class GraphQLMaxResourceLimitExceededErrorImpl implements GraphQLMaxResou
      * create instance with all properties
      */
     @JsonCreator
-    GraphQLMaxResourceLimitExceededErrorImpl(@JsonProperty("values") final Map<String, java.lang.Object> values,
+    GraphQLMaxResourceLimitExceededErrorImpl(
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("exceededResource") final com.commercetools.api.models.common.ReferenceTypeId exceededResource) {
         this.values = values;
         this.exceededResource = exceededResource;

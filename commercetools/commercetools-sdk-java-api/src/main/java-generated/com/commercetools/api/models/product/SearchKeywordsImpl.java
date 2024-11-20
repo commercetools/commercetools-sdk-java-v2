@@ -4,6 +4,7 @@ package com.commercetools.api.models.product;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -29,7 +30,7 @@ public class SearchKeywordsImpl implements SearchKeywords, ModelBase {
      */
     @JsonCreator
     SearchKeywordsImpl(
-            @JsonProperty("values") final Map<String, java.util.List<com.commercetools.api.models.product.SearchKeyword>> values) {
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.util.List<com.commercetools.api.models.product.SearchKeyword>> values) {
         this.values = values;
     }
 

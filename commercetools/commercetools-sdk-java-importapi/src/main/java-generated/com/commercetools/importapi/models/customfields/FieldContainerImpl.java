@@ -4,6 +4,7 @@ package com.commercetools.importapi.models.customfields;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -29,7 +30,7 @@ public class FieldContainerImpl implements FieldContainer, ModelBase {
      */
     @JsonCreator
     FieldContainerImpl(
-            @JsonProperty("values") final Map<String, com.commercetools.importapi.models.customfields.CustomField> values) {
+            @JsonAnySetter @JsonProperty("values") final Map<String, com.commercetools.importapi.models.customfields.CustomField> values) {
         this.values = values;
     }
 

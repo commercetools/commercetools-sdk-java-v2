@@ -4,6 +4,7 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -46,7 +47,7 @@ public class CountryNotConfiguredInStoreErrorImpl implements CountryNotConfigure
      */
     @JsonCreator
     CountryNotConfiguredInStoreErrorImpl(@JsonProperty("message") final String message,
-            @JsonProperty("values") final Map<String, java.lang.Object> values,
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("storeCountries") final java.util.List<String> storeCountries,
             @JsonProperty("country") final String country) {
         this.message = message;

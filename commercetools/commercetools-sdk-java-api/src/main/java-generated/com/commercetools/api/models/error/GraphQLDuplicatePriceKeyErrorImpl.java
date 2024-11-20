@@ -4,6 +4,7 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -33,7 +34,7 @@ public class GraphQLDuplicatePriceKeyErrorImpl implements GraphQLDuplicatePriceK
      * create instance with all properties
      */
     @JsonCreator
-    GraphQLDuplicatePriceKeyErrorImpl(@JsonProperty("values") final Map<String, java.lang.Object> values,
+    GraphQLDuplicatePriceKeyErrorImpl(@JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("conflictingPrice") final com.commercetools.api.models.common.Price conflictingPrice) {
         this.values = values;
         this.conflictingPrice = conflictingPrice;

@@ -4,6 +4,7 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -45,7 +46,8 @@ public class GraphQLInvalidItemShippingDetailsErrorImpl implements GraphQLInvali
      * create instance with all properties
      */
     @JsonCreator
-    GraphQLInvalidItemShippingDetailsErrorImpl(@JsonProperty("values") final Map<String, java.lang.Object> values,
+    GraphQLInvalidItemShippingDetailsErrorImpl(
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("subject") final String subject, @JsonProperty("itemId") final String itemId) {
         this.values = values;
         this.subject = subject;

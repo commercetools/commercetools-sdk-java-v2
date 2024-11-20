@@ -4,6 +4,7 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -41,7 +42,7 @@ public class AssociateMissingPermissionErrorImpl implements AssociateMissingPerm
      */
     @JsonCreator
     AssociateMissingPermissionErrorImpl(@JsonProperty("message") final String message,
-            @JsonProperty("values") final Map<String, java.lang.Object> values,
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("associate") final com.commercetools.api.models.customer.CustomerResourceIdentifier associate,
             @JsonProperty("businessUnit") final com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier businessUnit,
             @JsonProperty("associateOnBehalf") final com.commercetools.api.models.customer.CustomerResourceIdentifier associateOnBehalf,

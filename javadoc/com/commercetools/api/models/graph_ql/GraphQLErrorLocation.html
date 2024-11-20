@@ -73,15 +73,15 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">GraphQLErrorLocation</span></div>
-<div class="block">GraphQLErrorLocation
+<div class="block"><p>Represents the location within your query where the error occurred.</p>
 
  <hr>
  Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
      GraphQLErrorLocation graphQLErrorLocation = GraphQLErrorLocation.builder()
-             .line(1)
-             .column(1)
+             .line(0.3)
+             .column(0.3)
              .build()
  </code></pre>
  </div></div>
@@ -114,12 +114,16 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a deep copy of GraphQLErrorLocation</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getColumn()" class="member-name-link">getColumn</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Position in <code>line</code> where the error occurred.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getLine()" class="member-name-link">getLine</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Line number of the query where the error occurred.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="GraphQLErrorLocation.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLErrorLocation</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
@@ -131,14 +135,14 @@ loadScripts(document, 'script');</script>
 <div class="block">factory method to create a shallow copy GraphQLErrorLocation</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setColumn(java.lang.Integer)" class="member-name-link">setColumn</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;column)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setColumn(java.lang.Long)" class="member-name-link">setColumn</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;column)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set column</div>
+<div class="block">Position in <code>line</code> where the error occurred.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setLine(java.lang.Integer)" class="member-name-link">setLine</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;line)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setLine(java.lang.Long)" class="member-name-link">setLine</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;line)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set line</div>
+<div class="block">Line number of the query where the error occurred.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="GraphQLErrorLocation.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLErrorLocation</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -168,7 +172,8 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getLine()">
 <h3>getLine</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">getLine</span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">getLine</span>()</div>
+<div class="block"><p>Line number of the query where the error occurred.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>line</dd>
@@ -179,7 +184,8 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getColumn()">
 <h3>getColumn</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">getColumn</span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">getColumn</span>()</div>
+<div class="block"><p>Position in <code>line</code> where the error occurred.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>column</dd>
@@ -187,10 +193,10 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="setLine(java.lang.Integer)">
+<section class="detail" id="setLine(java.lang.Long)">
 <h3>setLine</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setLine</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;line)</span></div>
-<div class="block">set line</div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setLine</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;line)</span></div>
+<div class="block"><p>Line number of the query where the error occurred.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>line</code> - value to be set</dd>
@@ -198,10 +204,10 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="setColumn(java.lang.Integer)">
+<section class="detail" id="setColumn(java.lang.Long)">
 <h3>setColumn</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setColumn</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;column)</span></div>
-<div class="block">set column</div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setColumn</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;column)</span></div>
+<div class="block"><p>Position in <code>line</code> where the error occurred.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>column</code> - value to be set</dd>

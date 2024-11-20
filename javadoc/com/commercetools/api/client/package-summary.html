@@ -1471,11 +1471,11 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyGraphqlPost.html" title="class in com.commercetools.api.client">ByProjectKeyGraphqlPost</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
-<div class="block">Execute a GraphQL query</div>
+<div class="block">Execute a GraphQL request.</div>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab2"><a href="ByProjectKeyGraphqlPostString.html" title="class in com.commercetools.api.client">ByProjectKeyGraphqlPostString</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab2">
-<div class="block">Execute a GraphQL query</div>
+<div class="block">Execute a GraphQL request.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ByProjectKeyGraphqlRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyGraphqlRequestBuilder</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">&nbsp;</div>
@@ -4839,6 +4839,11 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
                     .build())
             .executeBlocking()
             .getBody();
+
+    Assertions.assertThat(modCart.getId()).isEqualTo(cart.getId());
+    Assertions.assertThat(modCart.getVersion()).isGreaterThan(cart.getVersion());
+    Assertions.assertThat(modCart.getVersion()).isGreaterThan(deCart.getBody().getVersion());
+
     return modCart;
 });
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/commercetools-sdk-java-api/src/integrationTest/java/commercetools/ConcurrentModificationTest.java" target="_blank">test code</a>.</pre></div></div>

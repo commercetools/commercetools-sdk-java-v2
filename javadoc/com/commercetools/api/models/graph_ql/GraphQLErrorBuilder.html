@@ -124,7 +124,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addLocations(java.util.function.Function)" class="member-name-link">addLocations</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="GraphQLErrorLocationBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorLocationBuilder</a>,<wbr><a href="GraphQLErrorLocation.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLErrorLocation</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">add the value to the locations using the builder function</div>
+<div class="block">Location within your query where the error occurred.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="GraphQLError.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLError</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#build()" class="member-name-link">build</a>()</code></div>
@@ -139,47 +139,47 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#extensions(com.commercetools.api.models.error.GraphQLErrorObject)" class="member-name-link">extensions</a><wbr>(<a href="../error/GraphQLErrorObject.html" title="interface in com.commercetools.api.models.error">GraphQLErrorObject</a>&nbsp;extensions)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Represents a single error.</div>
+<div class="block">Dictionary with additional information where applicable.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#extensions(java.util.function.Function)" class="member-name-link">extensions</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../error/GraphQLErrorObjectBuilder.html" title="class in com.commercetools.api.models.error">GraphQLErrorObjectBuilder</a>,<wbr><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../error/GraphQLErrorObject.html" title="interface in com.commercetools.api.models.error">GraphQLErrorObject</a>&gt;&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Represents a single error.</div>
+<div class="block">Dictionary with additional information where applicable.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../error/GraphQLErrorObject.html" title="interface in com.commercetools.api.models.error">GraphQLErrorObject</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getExtensions()" class="member-name-link">getExtensions</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Represents a single error.</div>
+<div class="block">Dictionary with additional information where applicable.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="GraphQLErrorLocation.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLErrorLocation</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLocations()" class="member-name-link">getLocations</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">value of locations}</div>
+<div class="block">Location within your query where the error occurred.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMessage()" class="member-name-link">getMessage</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">value of message}</div>
+<div class="block">Detailed description of the error explaining the root cause of the problem and suggesting how to correct the error.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPath()" class="member-name-link">getPath</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">value of path}</div>
+<div class="block">Query fields listed in order from the root of the query response up to the field in which the error occurred.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#locations(com.commercetools.api.models.graph_ql.GraphQLErrorLocation...)" class="member-name-link">locations</a><wbr>(<a href="GraphQLErrorLocation.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLErrorLocation</a>...&nbsp;locations)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set values to the locations</div>
+<div class="block">Location within your query where the error occurred.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#locations(java.util.List)" class="member-name-link">locations</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="GraphQLErrorLocation.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLErrorLocation</a>&gt;&nbsp;locations)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set value to the locations</div>
+<div class="block">Location within your query where the error occurred.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#message(java.lang.String)" class="member-name-link">message</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the message</div>
+<div class="block">Detailed description of the error explaining the root cause of the problem and suggesting how to correct the error.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -194,37 +194,37 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#path(java.lang.Object...)" class="member-name-link">path</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;path)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set values to the path</div>
+<div class="block">Query fields listed in order from the root of the query response up to the field in which the error occurred.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#path(java.util.List)" class="member-name-link">path</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;path)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set value to the path</div>
+<div class="block">Query fields listed in order from the root of the query response up to the field in which the error occurred.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusLocations(com.commercetools.api.models.graph_ql.GraphQLErrorLocation...)" class="member-name-link">plusLocations</a><wbr>(<a href="GraphQLErrorLocation.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLErrorLocation</a>...&nbsp;locations)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">add values to the locations</div>
+<div class="block">Location within your query where the error occurred.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusLocations(java.util.function.Function)" class="member-name-link">plusLocations</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="GraphQLErrorLocationBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorLocationBuilder</a>,<wbr><a href="GraphQLErrorLocationBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorLocationBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">add the value to the locations using the builder function</div>
+<div class="block">Location within your query where the error occurred.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusPath(java.lang.Object...)" class="member-name-link">plusPath</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;path)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">add values to the path</div>
+<div class="block">Query fields listed in order from the root of the query response up to the field in which the error occurred.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLocations(java.util.function.Function)" class="member-name-link">setLocations</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="GraphQLErrorLocationBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorLocationBuilder</a>,<wbr><a href="GraphQLErrorLocation.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLErrorLocation</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the locations using the builder function</div>
+<div class="block">Location within your query where the error occurred.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withLocations(java.util.function.Function)" class="member-name-link">withLocations</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="GraphQLErrorLocationBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorLocationBuilder</a>,<wbr><a href="GraphQLErrorLocationBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorLocationBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the locations using the builder function</div>
+<div class="block">Location within your query where the error occurred.</div>
 </div>
 </div>
 </div>
@@ -261,7 +261,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="message(java.lang.String)">
 <h3>message</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></span>&nbsp;<span class="element-name">message</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message)</span></div>
-<div class="block">set the value to the message</div>
+<div class="block"><p>Detailed description of the error explaining the root cause of the problem and suggesting how to correct the error.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>message</code> - value to be set</dd>
@@ -274,7 +274,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="locations(com.commercetools.api.models.graph_ql.GraphQLErrorLocation...)">
 <h3>locations</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></span>&nbsp;<span class="element-name">locations</span><wbr><span class="parameters">(<a href="GraphQLErrorLocation.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLErrorLocation</a>...&nbsp;locations)</span></div>
-<div class="block">set values to the locations</div>
+<div class="block"><p>Location within your query where the error occurred.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>locations</code> - value to be set</dd>
@@ -287,7 +287,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="locations(java.util.List)">
 <h3>locations</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></span>&nbsp;<span class="element-name">locations</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="GraphQLErrorLocation.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLErrorLocation</a>&gt;&nbsp;locations)</span></div>
-<div class="block">set value to the locations</div>
+<div class="block"><p>Location within your query where the error occurred.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>locations</code> - value to be set</dd>
@@ -300,7 +300,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="plusLocations(com.commercetools.api.models.graph_ql.GraphQLErrorLocation...)">
 <h3>plusLocations</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></span>&nbsp;<span class="element-name">plusLocations</span><wbr><span class="parameters">(<a href="GraphQLErrorLocation.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLErrorLocation</a>...&nbsp;locations)</span></div>
-<div class="block">add values to the locations</div>
+<div class="block"><p>Location within your query where the error occurred.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>locations</code> - value to be set</dd>
@@ -313,7 +313,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="plusLocations(java.util.function.Function)">
 <h3>plusLocations</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></span>&nbsp;<span class="element-name">plusLocations</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="GraphQLErrorLocationBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorLocationBuilder</a>,<wbr><a href="GraphQLErrorLocationBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorLocationBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block">add the value to the locations using the builder function</div>
+<div class="block"><p>Location within your query where the error occurred.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the locations value</dd>
@@ -326,7 +326,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withLocations(java.util.function.Function)">
 <h3>withLocations</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></span>&nbsp;<span class="element-name">withLocations</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="GraphQLErrorLocationBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorLocationBuilder</a>,<wbr><a href="GraphQLErrorLocationBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorLocationBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block">set the value to the locations using the builder function</div>
+<div class="block"><p>Location within your query where the error occurred.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the locations value</dd>
@@ -339,7 +339,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="addLocations(java.util.function.Function)">
 <h3>addLocations</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></span>&nbsp;<span class="element-name">addLocations</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="GraphQLErrorLocationBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorLocationBuilder</a>,<wbr><a href="GraphQLErrorLocation.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLErrorLocation</a>&gt;&nbsp;builder)</span></div>
-<div class="block">add the value to the locations using the builder function</div>
+<div class="block"><p>Location within your query where the error occurred.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the locations value</dd>
@@ -352,7 +352,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="setLocations(java.util.function.Function)">
 <h3>setLocations</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></span>&nbsp;<span class="element-name">setLocations</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="GraphQLErrorLocationBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorLocationBuilder</a>,<wbr><a href="GraphQLErrorLocation.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLErrorLocation</a>&gt;&nbsp;builder)</span></div>
-<div class="block">set the value to the locations using the builder function</div>
+<div class="block"><p>Location within your query where the error occurred.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the locations value</dd>
@@ -366,7 +366,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>path</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></span>&nbsp;<span class="element-name">path</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;path)</span></div>
-<div class="block">set values to the path</div>
+<div class="block"><p>Query fields listed in order from the root of the query response up to the field in which the error occurred. <code>path</code> is displayed in the response only if an error is associated with a particular field in the query result.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>path</code> - value to be set</dd>
@@ -380,7 +380,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>path</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></span>&nbsp;<span class="element-name">path</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;&nbsp;path)</span></div>
-<div class="block">set value to the path</div>
+<div class="block"><p>Query fields listed in order from the root of the query response up to the field in which the error occurred. <code>path</code> is displayed in the response only if an error is associated with a particular field in the query result.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>path</code> - value to be set</dd>
@@ -394,7 +394,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>plusPath</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></span>&nbsp;<span class="element-name">plusPath</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>...&nbsp;path)</span></div>
-<div class="block">add values to the path</div>
+<div class="block"><p>Query fields listed in order from the root of the query response up to the field in which the error occurred. <code>path</code> is displayed in the response only if an error is associated with a particular field in the query result.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>path</code> - value to be set</dd>
@@ -407,7 +407,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="extensions(com.commercetools.api.models.error.GraphQLErrorObject)">
 <h3>extensions</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></span>&nbsp;<span class="element-name">extensions</span><wbr><span class="parameters">(<a href="../error/GraphQLErrorObject.html" title="interface in com.commercetools.api.models.error">GraphQLErrorObject</a>&nbsp;extensions)</span></div>
-<div class="block"><p>Represents a single error.</p></div>
+<div class="block"><p>Dictionary with additional information where applicable.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>extensions</code> - value to be set</dd>
@@ -420,7 +420,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="extensions(java.util.function.Function)">
 <h3>extensions</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="GraphQLErrorBuilder.html" title="class in com.commercetools.api.models.graph_ql">GraphQLErrorBuilder</a></span>&nbsp;<span class="element-name">extensions</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../error/GraphQLErrorObjectBuilder.html" title="class in com.commercetools.api.models.error">GraphQLErrorObjectBuilder</a>,<wbr><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../error/GraphQLErrorObject.html" title="interface in com.commercetools.api.models.error">GraphQLErrorObject</a>&gt;&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Represents a single error.</p></div>
+<div class="block"><p>Dictionary with additional information where applicable.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the extensions value</dd>
@@ -433,7 +433,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getMessage()">
 <h3>getMessage</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getMessage</span>()</div>
-<div class="block">value of message}</div>
+<div class="block"><p>Detailed description of the error explaining the root cause of the problem and suggesting how to correct the error.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>message</dd>
@@ -444,7 +444,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getLocations()">
 <h3>getLocations</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="GraphQLErrorLocation.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLErrorLocation</a>&gt;</span>&nbsp;<span class="element-name">getLocations</span>()</div>
-<div class="block">value of locations}</div>
+<div class="block"><p>Location within your query where the error occurred.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>locations</dd>
@@ -456,7 +456,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getPath</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&gt;</span>&nbsp;<span class="element-name">getPath</span>()</div>
-<div class="block">value of path}</div>
+<div class="block"><p>Query fields listed in order from the root of the query response up to the field in which the error occurred. <code>path</code> is displayed in the response only if an error is associated with a particular field in the query result.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>path</dd>
@@ -467,7 +467,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getExtensions()">
 <h3>getExtensions</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../error/GraphQLErrorObject.html" title="interface in com.commercetools.api.models.error">GraphQLErrorObject</a></span>&nbsp;<span class="element-name">getExtensions</span>()</div>
-<div class="block"><p>Represents a single error.</p></div>
+<div class="block"><p>Dictionary with additional information where applicable.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>extensions</dd>

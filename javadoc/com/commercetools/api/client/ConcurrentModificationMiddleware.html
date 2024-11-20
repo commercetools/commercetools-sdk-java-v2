@@ -105,6 +105,11 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
                     .build())
             .executeBlocking()
             .getBody();
+
+    Assertions.assertThat(modCart.getId()).isEqualTo(cart.getId());
+    Assertions.assertThat(modCart.getVersion()).isGreaterThan(cart.getVersion());
+    Assertions.assertThat(modCart.getVersion()).isGreaterThan(deCart.getBody().getVersion());
+
     return modCart;
 });
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/commercetools-sdk-java-api/src/integrationTest/java/commercetools/ConcurrentModificationTest.java" target="_blank">test code</a>.</pre></div></div>

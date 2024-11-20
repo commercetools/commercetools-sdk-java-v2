@@ -148,7 +148,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getValue()" class="member-name-link">getValue</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">JSON standard types Number, String, Boolean, Array, Object, and common API data types.</div>
+<div class="block">Can be any JSON standard type, such as number, string, boolean, array, object, or a common API data type.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVersion()" class="member-name-link">getVersion</a>()</code></div>
@@ -173,7 +173,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomObjectDraftBuilder.html" title="class in com.commercetools.api.models.custom_object">CustomObjectDraftBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#value(java.lang.Object)" class="member-name-link">value</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">JSON standard types Number, String, Boolean, Array, Object, and common API data types.</div>
+<div class="block">Can be any JSON standard type, such as number, string, boolean, array, object, or a common API data type.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomObjectDraftBuilder.html" title="class in com.commercetools.api.models.custom_object">CustomObjectDraftBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#version(java.lang.Long)" class="member-name-link">version</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</code></div>
@@ -241,7 +241,11 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="value(java.lang.Object)">
 <h3>value</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomObjectDraftBuilder.html" title="class in com.commercetools.api.models.custom_object">CustomObjectDraftBuilder</a></span>&nbsp;<span class="element-name">value</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;value)</span></div>
-<div class="block"><p>JSON standard types Number, String, Boolean, Array, Object, and common API data types. For values of type Reference the integrity of the data is not guaranteed. If the referenced object is deleted, the API does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</p></div>
+<div class="block"><p>Can be any JSON standard type, such as number, string, boolean, array, object, or a common API data type.</p>
+  <ul>
+   <li>Fields within <code>value</code> that have <code>null</code> values <strong>are not saved</strong>.</li>
+   <li>For values of type Reference the integrity of the data is not guaranteed. If the referenced object is deleted, the API does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</li>
+  </ul></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>value</code> - value to be set</dd>
@@ -290,7 +294,11 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getValue()">
 <h3>getValue</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name">getValue</span>()</div>
-<div class="block"><p>JSON standard types Number, String, Boolean, Array, Object, and common API data types. For values of type Reference the integrity of the data is not guaranteed. If the referenced object is deleted, the API does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</p></div>
+<div class="block"><p>Can be any JSON standard type, such as number, string, boolean, array, object, or a common API data type.</p>
+  <ul>
+   <li>Fields within <code>value</code> that have <code>null</code> values <strong>are not saved</strong>.</li>
+   <li>For values of type Reference the integrity of the data is not guaranteed. If the referenced object is deleted, the API does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</li>
+  </ul></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>value</dd>

@@ -73,7 +73,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">GraphQLResponse</span></div>
-<div class="block">GraphQLResponse
+<div class="block"><p><code>error</code> is present in the response only if the GraphQL query was unsuccessful.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -114,10 +114,14 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getData()" class="member-name-link">getData</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">JSON object that contains the results of a GraphQL query.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="GraphQLError.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLError</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getErrors()" class="member-name-link">getErrors</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Errors that the GraphQL query returns.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="GraphQLResponse.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLResponse</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
@@ -131,17 +135,17 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setData(java.lang.Object)" class="member-name-link">setData</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;data)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set data</div>
+<div class="block">JSON object that contains the results of a GraphQL query.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setErrors(com.commercetools.api.models.graph_ql.GraphQLError...)" class="member-name-link">setErrors</a><wbr>(<a href="GraphQLError.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLError</a>...&nbsp;errors)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set errors</div>
+<div class="block">Errors that the GraphQL query returns.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setErrors(java.util.List)" class="member-name-link">setErrors</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="GraphQLError.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLError</a>&gt;&nbsp;errors)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set errors</div>
+<div class="block">Errors that the GraphQL query returns.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="GraphQLResponse.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLResponse</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -171,6 +175,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getData()">
 <h3>getData</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span>&nbsp;<span class="element-name">getData</span>()</div>
+<div class="block"><p>JSON object that contains the results of a GraphQL query.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>data</dd>
@@ -182,6 +187,7 @@ loadScripts(document, 'script');</script>
 <h3>getErrors</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="GraphQLError.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLError</a>&gt;</span>&nbsp;<span class="element-name">getErrors</span>()</div>
+<div class="block"><p>Errors that the GraphQL query returns.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>errors</dd>
@@ -192,7 +198,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setData(java.lang.Object)">
 <h3>setData</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setData</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>&nbsp;data)</span></div>
-<div class="block">set data</div>
+<div class="block"><p>JSON object that contains the results of a GraphQL query.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>data</code> - value to be set</dd>
@@ -203,7 +209,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setErrors(com.commercetools.api.models.graph_ql.GraphQLError...)">
 <h3>setErrors</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setErrors</span><wbr><span class="parameters">(<a href="GraphQLError.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLError</a>...&nbsp;errors)</span></div>
-<div class="block">set errors</div>
+<div class="block"><p>Errors that the GraphQL query returns.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>errors</code> - values to be set</dd>
@@ -214,7 +220,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setErrors(java.util.List)">
 <h3>setErrors</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setErrors</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="GraphQLError.html" title="interface in com.commercetools.api.models.graph_ql">GraphQLError</a>&gt;&nbsp;errors)</span></div>
-<div class="block">set errors</div>
+<div class="block"><p>Errors that the GraphQL query returns.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>errors</code> - values to be set</dd>

@@ -564,7 +564,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Indicates how monetary values are rounded when calculating taxes for <code>taxedPrice</code>.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/CentPrecisionMoney.html" title="interface in com.commercetools.api.models.common">CentPrecisionMoney</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTotalPrice()" class="member-name-link">getTotalPrice</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo.</div>
@@ -976,12 +976,12 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="block">Indicates how monetary values are rounded when calculating taxes for <code>taxedPrice</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="StagedOrderBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#totalPrice(com.commercetools.api.models.common.TypedMoney)" class="member-name-link">totalPrice</a><wbr>(<a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&nbsp;totalPrice)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#totalPrice(com.commercetools.api.models.common.CentPrecisionMoney)" class="member-name-link">totalPrice</a><wbr>(<a href="../common/CentPrecisionMoney.html" title="interface in com.commercetools.api.models.common">CentPrecisionMoney</a>&nbsp;totalPrice)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="StagedOrderBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#totalPrice(java.util.function.Function)" class="member-name-link">totalPrice</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/TypedMoneyBuilder.html" title="class in com.commercetools.api.models.common">TypedMoneyBuilder</a>,<wbr><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&gt;&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#totalPrice(java.util.function.Function)" class="member-name-link">totalPrice</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CentPrecisionMoneyBuilder.html" title="class in com.commercetools.api.models.common">CentPrecisionMoneyBuilder</a>,<wbr><a href="../common/CentPrecisionMoneyBuilder.html" title="class in com.commercetools.api.models.common">CentPrecisionMoneyBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo.</div>
 </div>
@@ -1122,6 +1122,11 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withTaxedShippingPrice(java.util.function.Function)" class="member-name-link">withTaxedShippingPrice</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart/TaxedPriceBuilder.html" title="class in com.commercetools.api.models.cart">TaxedPriceBuilder</a>,<wbr><a href="../cart/TaxedPrice.html" title="interface in com.commercetools.api.models.cart">TaxedPrice</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Sum of the <code>taxedPrice</code> field of ShippingInfo across all Shipping Methods.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="StagedOrderBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withTotalPrice(java.util.function.Function)" class="member-name-link">withTotalPrice</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CentPrecisionMoneyBuilder.html" title="class in com.commercetools.api.models.common">CentPrecisionMoneyBuilder</a>,<wbr><a href="../common/CentPrecisionMoney.html" title="interface in com.commercetools.api.models.common">CentPrecisionMoney</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo.</div>
 </div>
 </div>
 </div>
@@ -1580,28 +1585,42 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
-<section class="detail" id="totalPrice(com.commercetools.api.models.common.TypedMoney)">
+<section class="detail" id="totalPrice(java.util.function.Function)">
 <h3>totalPrice</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StagedOrderBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderBuilder</a></span>&nbsp;<span class="element-name">totalPrice</span><wbr><span class="parameters">(<a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&nbsp;totalPrice)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StagedOrderBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderBuilder</a></span>&nbsp;<span class="element-name">totalPrice</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CentPrecisionMoneyBuilder.html" title="class in com.commercetools.api.models.common">CentPrecisionMoneyBuilder</a>,<wbr><a href="../common/CentPrecisionMoneyBuilder.html" title="class in com.commercetools.api.models.common">CentPrecisionMoneyBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo. If a discount applies on <code>totalPrice</code>, this field holds the discounted value.</p>
   <p>Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
-<dd><code>totalPrice</code> - value to be set</dd>
+<dd><code>builder</code> - function to build the totalPrice value</dd>
 <dt>Returns:</dt>
 <dd>Builder</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="totalPrice(java.util.function.Function)">
-<h3>totalPrice</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StagedOrderBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderBuilder</a></span>&nbsp;<span class="element-name">totalPrice</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/TypedMoneyBuilder.html" title="class in com.commercetools.api.models.common">TypedMoneyBuilder</a>,<wbr><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&gt;&gt;&nbsp;builder)</span></div>
+<section class="detail" id="withTotalPrice(java.util.function.Function)">
+<h3>withTotalPrice</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StagedOrderBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderBuilder</a></span>&nbsp;<span class="element-name">withTotalPrice</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CentPrecisionMoneyBuilder.html" title="class in com.commercetools.api.models.common">CentPrecisionMoneyBuilder</a>,<wbr><a href="../common/CentPrecisionMoney.html" title="interface in com.commercetools.api.models.common">CentPrecisionMoney</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo. If a discount applies on <code>totalPrice</code>, this field holds the discounted value.</p>
   <p>Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the totalPrice value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="totalPrice(com.commercetools.api.models.common.CentPrecisionMoney)">
+<h3>totalPrice</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="StagedOrderBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderBuilder</a></span>&nbsp;<span class="element-name">totalPrice</span><wbr><span class="parameters">(<a href="../common/CentPrecisionMoney.html" title="interface in com.commercetools.api.models.common">CentPrecisionMoney</a>&nbsp;totalPrice)</span></div>
+<div class="block"><p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo. If a discount applies on <code>totalPrice</code>, this field holds the discounted value.</p>
+  <p>Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>totalPrice</code> - value to be set</dd>
 <dt>Returns:</dt>
 <dd>Builder</dd>
 </dl>
@@ -3226,7 +3245,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getTotalPrice()">
 <h3>getTotalPrice</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a></span>&nbsp;<span class="element-name">getTotalPrice</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/CentPrecisionMoney.html" title="interface in com.commercetools.api.models.common">CentPrecisionMoney</a></span>&nbsp;<span class="element-name">getTotalPrice</span>()</div>
 <div class="block"><p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo. If a discount applies on <code>totalPrice</code>, this field holds the discounted value.</p>
   <p>Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p></div>
 <dl class="notes">

@@ -291,7 +291,9 @@ loadScripts(document, 'script');</script>
 <div class="block">discriminator value for TaxCategoryResourceIdentifier</div>
 </dd>
 <dt><a href="../com/commercetools/history/models/change_history/ChangeHistoryResourceType.html#TAX_CATEGORY" class="member-name-link">TAX_CATEGORY</a> - Static variable in interface com.commercetools.history.models.change_history.<a href="../com/commercetools/history/models/change_history/ChangeHistoryResourceType.html" title="interface in com.commercetools.history.models.change_history">ChangeHistoryResourceType</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">for TaxCategory</div>
+</dd>
 <dt><a href="../com/commercetools/history/models/common/ReferenceTypeId.html#TAX_CATEGORY" class="member-name-link">TAX_CATEGORY</a> - Static variable in interface com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/ReferenceTypeId.html" title="interface in com.commercetools.history.models.common">ReferenceTypeId</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/importapi/models/common/ReferenceType.html#TAX_CATEGORY" class="member-name-link">TAX_CATEGORY</a> - Static variable in interface com.commercetools.importapi.models.common.<a href="../com/commercetools/importapi/models/common/ReferenceType.html" title="interface in com.commercetools.importapi.models.common">ReferenceType</a></dt>
@@ -4284,6 +4286,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Total Price of the Line Item after the Discount recalculation.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/order_edit/StagedOrderBuilder.html#totalPrice(com.commercetools.api.models.common.CentPrecisionMoney)" class="member-name-link">totalPrice(CentPrecisionMoney)</a> - Method in class com.commercetools.api.models.order_edit.<a href="../com/commercetools/api/models/order_edit/StagedOrderBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderBuilder</a></dt>
+<dd>
+<div class="block">Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/order/OrderBuilder.html#totalPrice(com.commercetools.api.models.common.CentPrecisionMoney)" class="member-name-link">totalPrice(CentPrecisionMoney)</a> - Method in class com.commercetools.api.models.order.<a href="../com/commercetools/api/models/order/OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></dt>
+<dd>
+<div class="block">Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/cart/ExternalLineItemTotalPriceBuilder.html#totalPrice(com.commercetools.api.models.common.Money)" class="member-name-link">totalPrice(Money)</a> - Method in class com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/ExternalLineItemTotalPriceBuilder.html" title="class in com.commercetools.api.models.cart">ExternalLineItemTotalPriceBuilder</a></dt>
 <dd>
 <div class="block">Total price of the Line Item.</div>
@@ -4295,14 +4305,6 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/models/order_edit/OrderExcerptBuilder.html#totalPrice(com.commercetools.api.models.common.TypedMoney)" class="member-name-link">totalPrice(TypedMoney)</a> - Method in class com.commercetools.api.models.order_edit.<a href="../com/commercetools/api/models/order_edit/OrderExcerptBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderExcerptBuilder</a></dt>
 <dd>
 <div class="block">Total price of the Order.</div>
-</dd>
-<dt><a href="../com/commercetools/api/models/order_edit/StagedOrderBuilder.html#totalPrice(com.commercetools.api.models.common.TypedMoney)" class="member-name-link">totalPrice(TypedMoney)</a> - Method in class com.commercetools.api.models.order_edit.<a href="../com/commercetools/api/models/order_edit/StagedOrderBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderBuilder</a></dt>
-<dd>
-<div class="block">Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo.</div>
-</dd>
-<dt><a href="../com/commercetools/api/models/order/OrderBuilder.html#totalPrice(com.commercetools.api.models.common.TypedMoney)" class="member-name-link">totalPrice(TypedMoney)</a> - Method in class com.commercetools.api.models.order.<a href="../com/commercetools/api/models/order/OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></dt>
-<dd>
-<div class="block">Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/quote_request/QuoteRequestBuilder.html#totalPrice(com.commercetools.api.models.common.TypedMoney)" class="member-name-link">totalPrice(TypedMoney)</a> - Method in class com.commercetools.api.models.quote_request.<a href="../com/commercetools/api/models/quote_request/QuoteRequestBuilder.html" title="class in com.commercetools.api.models.quote_request">QuoteRequestBuilder</a></dt>
 <dd>
@@ -4344,6 +4346,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Total Price of the Line Item after the Discount recalculation.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/order_edit/StagedOrderBuilder.html#totalPrice(java.util.function.Function)" class="member-name-link">totalPrice(Function&lt;CentPrecisionMoneyBuilder, CentPrecisionMoneyBuilder&gt;)</a> - Method in class com.commercetools.api.models.order_edit.<a href="../com/commercetools/api/models/order_edit/StagedOrderBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderBuilder</a></dt>
+<dd>
+<div class="block">Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/order/OrderBuilder.html#totalPrice(java.util.function.Function)" class="member-name-link">totalPrice(Function&lt;CentPrecisionMoneyBuilder, CentPrecisionMoneyBuilder&gt;)</a> - Method in class com.commercetools.api.models.order.<a href="../com/commercetools/api/models/order/OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></dt>
+<dd>
+<div class="block">Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/cart/ExternalLineItemTotalPriceBuilder.html#totalPrice(java.util.function.Function)" class="member-name-link">totalPrice(Function&lt;MoneyBuilder, MoneyBuilder&gt;)</a> - Method in class com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/ExternalLineItemTotalPriceBuilder.html" title="class in com.commercetools.api.models.cart">ExternalLineItemTotalPriceBuilder</a></dt>
 <dd>
 <div class="block">Total price of the Line Item.</div>
@@ -4355,14 +4365,6 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/models/order_edit/OrderExcerptBuilder.html#totalPrice(java.util.function.Function)" class="member-name-link">totalPrice(Function&lt;TypedMoneyBuilder, Builder&lt;? extends TypedMoney&gt;&gt;)</a> - Method in class com.commercetools.api.models.order_edit.<a href="../com/commercetools/api/models/order_edit/OrderExcerptBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderExcerptBuilder</a></dt>
 <dd>
 <div class="block">Total price of the Order.</div>
-</dd>
-<dt><a href="../com/commercetools/api/models/order_edit/StagedOrderBuilder.html#totalPrice(java.util.function.Function)" class="member-name-link">totalPrice(Function&lt;TypedMoneyBuilder, Builder&lt;? extends TypedMoney&gt;&gt;)</a> - Method in class com.commercetools.api.models.order_edit.<a href="../com/commercetools/api/models/order_edit/StagedOrderBuilder.html" title="class in com.commercetools.api.models.order_edit">StagedOrderBuilder</a></dt>
-<dd>
-<div class="block">Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo.</div>
-</dd>
-<dt><a href="../com/commercetools/api/models/order/OrderBuilder.html#totalPrice(java.util.function.Function)" class="member-name-link">totalPrice(Function&lt;TypedMoneyBuilder, Builder&lt;? extends TypedMoney&gt;&gt;)</a> - Method in class com.commercetools.api.models.order.<a href="../com/commercetools/api/models/order/OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></dt>
-<dd>
-<div class="block">Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/quote_request/QuoteRequestBuilder.html#totalPrice(java.util.function.Function)" class="member-name-link">totalPrice(Function&lt;TypedMoneyBuilder, Builder&lt;? extends TypedMoney&gt;&gt;)</a> - Method in class com.commercetools.api.models.quote_request.<a href="../com/commercetools/api/models/quote_request/QuoteRequestBuilder.html" title="class in com.commercetools.api.models.quote_request">QuoteRequestBuilder</a></dt>
 <dd>
@@ -5921,7 +5923,9 @@ loadScripts(document, 'script');</script>
 <div class="block">discriminator value for TypeResourceIdentifier</div>
 </dd>
 <dt><a href="../com/commercetools/history/models/change_history/ChangeHistoryResourceType.html#TYPE" class="member-name-link">TYPE</a> - Static variable in interface com.commercetools.history.models.change_history.<a href="../com/commercetools/history/models/change_history/ChangeHistoryResourceType.html" title="interface in com.commercetools.history.models.change_history">ChangeHistoryResourceType</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">for Type</div>
+</dd>
 <dt><a href="../com/commercetools/history/models/common/ReferenceTypeId.html#TYPE" class="member-name-link">TYPE</a> - Static variable in interface com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/ReferenceTypeId.html" title="interface in com.commercetools.history.models.common">ReferenceTypeId</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/importapi/models/common/ImportResourceType.html#TYPE" class="member-name-link">TYPE</a> - Static variable in interface com.commercetools.importapi.models.common.<a href="../com/commercetools/importapi/models/common/ImportResourceType.html" title="interface in com.commercetools.importapi.models.common">ImportResourceType</a></dt>

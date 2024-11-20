@@ -70,6 +70,15 @@ public class ByProjectKeyProductSelectionsKeyByKeyProductsTest {
                                 .withKey("test_key")
                                 .products()
                                 .get()
+                                .withWhere("where")
+                                .createHttpRequest(),
+                        "get", "test_projectKey/product-selections/key=test_key/products?where=where", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .productSelections()
+                                .withKey("test_key")
+                                .products()
+                                .get()
                                 .withExpand("expand")
                                 .createHttpRequest(),
                         "get", "test_projectKey/product-selections/key=test_key/products?expand=expand", },
@@ -122,6 +131,12 @@ public class ByProjectKeyProductSelectionsKeyByKeyProductsTest {
     @DataProvider
     public static Object[][] executeMethodParameters() {
         return new Object[][] {
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productSelections()
+                        .withKey("test_key")
+                        .products()
+                        .get()
+                        .withWhere("where"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productSelections()
                         .withKey("test_key")

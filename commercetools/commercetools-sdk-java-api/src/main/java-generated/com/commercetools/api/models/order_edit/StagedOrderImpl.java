@@ -50,7 +50,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
 
     private java.util.List<com.commercetools.api.models.cart.CustomLineItem> customLineItems;
 
-    private com.commercetools.api.models.common.TypedMoney totalPrice;
+    private com.commercetools.api.models.common.CentPrecisionMoney totalPrice;
 
     private com.commercetools.api.models.cart.TaxedPrice taxedPrice;
 
@@ -142,7 +142,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
             @JsonProperty("store") final com.commercetools.api.models.store.StoreKeyReference store,
             @JsonProperty("lineItems") final java.util.List<com.commercetools.api.models.cart.LineItem> lineItems,
             @JsonProperty("customLineItems") final java.util.List<com.commercetools.api.models.cart.CustomLineItem> customLineItems,
-            @JsonProperty("totalPrice") final com.commercetools.api.models.common.TypedMoney totalPrice,
+            @JsonProperty("totalPrice") final com.commercetools.api.models.common.CentPrecisionMoney totalPrice,
             @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedPrice taxedPrice,
             @JsonProperty("taxedShippingPrice") final com.commercetools.api.models.cart.TaxedPrice taxedShippingPrice,
             @JsonProperty("discountOnTotalPrice") final com.commercetools.api.models.cart.DiscountOnTotalPrice discountOnTotalPrice,
@@ -355,7 +355,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
      *  <p>Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
      */
 
-    public com.commercetools.api.models.common.TypedMoney getTotalPrice() {
+    public com.commercetools.api.models.common.CentPrecisionMoney getTotalPrice() {
         return this.totalPrice;
     }
 
@@ -723,7 +723,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
         this.customLineItems = customLineItems;
     }
 
-    public void setTotalPrice(final com.commercetools.api.models.common.TypedMoney totalPrice) {
+    public void setTotalPrice(final com.commercetools.api.models.common.CentPrecisionMoney totalPrice) {
         this.totalPrice = totalPrice;
     }
 

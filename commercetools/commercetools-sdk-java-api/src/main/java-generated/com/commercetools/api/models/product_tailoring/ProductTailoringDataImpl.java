@@ -79,7 +79,7 @@ public class ProductTailoringDataImpl implements ProductTailoringData, ModelBase
     }
 
     /**
-     *  <p>Tailored title of the Product as displayed in search engine results.</p>
+     *  <p>Tailored title of the Product that is used by search engines.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaTitle() {
@@ -87,7 +87,7 @@ public class ProductTailoringDataImpl implements ProductTailoringData, ModelBase
     }
 
     /**
-     *  <p>Tailored description of the Product as displayed in search engine results.</p>
+     *  <p>Tailored description of the Product that is used by search engines.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaDescription() {

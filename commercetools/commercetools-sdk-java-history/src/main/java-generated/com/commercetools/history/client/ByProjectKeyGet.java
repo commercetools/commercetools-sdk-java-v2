@@ -13,6 +13,7 @@ import java.util.stream.Collectors;
 
 import com.commercetools.history.models.change_history.ChangeHistoryResourceType;
 import com.commercetools.history.models.change_history.PlatformInitiatedChange;
+import com.commercetools.history.models.change_history.Source;
 import com.fasterxml.jackson.core.type.TypeReference;
 
 import io.vrap.rmf.base.client.*;
@@ -1221,7 +1222,7 @@ public class ByProjectKeyGet extends
      * @param supplier supplier for the value to be set
      * @return ByProjectKeyGet
      */
-    public ByProjectKeyGet withSource(final Supplier<String> supplier) {
+    public ByProjectKeyGet withSource(final Supplier<Source> supplier) {
         return copy().withQueryParam("source", supplier.get());
     }
 
@@ -1230,7 +1231,7 @@ public class ByProjectKeyGet extends
      * @param supplier supplier for the value to be added
      * @return ByProjectKeyGet
      */
-    public ByProjectKeyGet addSource(final Supplier<String> supplier) {
+    public ByProjectKeyGet addSource(final Supplier<Source> supplier) {
         return copy().addQueryParam("source", supplier.get());
     }
 

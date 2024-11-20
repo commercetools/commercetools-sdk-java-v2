@@ -69,7 +69,7 @@ public interface ProductTailoringInStoreDraft extends io.vrap.rmf.base.client.Dr
     public LocalizedString getDescription();
 
     /**
-     *  <p>Tailored title of the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored title of the Product that is used by search engines.</p>
      * @return metaTitle
      */
     @Valid
@@ -77,7 +77,7 @@ public interface ProductTailoringInStoreDraft extends io.vrap.rmf.base.client.Dr
     public LocalizedString getMetaTitle();
 
     /**
-     *  <p>Tailored description of the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored description of the Product that is used in search engine.</p>
      * @return metaDescription
      */
     @Valid
@@ -85,7 +85,7 @@ public interface ProductTailoringInStoreDraft extends io.vrap.rmf.base.client.Dr
     public LocalizedString getMetaDescription();
 
     /**
-     *  <p>Tailored keywords related to the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored keywords related to the Product that are used by search engines.</p>
      * @return metaKeywords
      */
     @Valid
@@ -145,21 +145,21 @@ public interface ProductTailoringInStoreDraft extends io.vrap.rmf.base.client.Dr
     public void setDescription(final LocalizedString description);
 
     /**
-     *  <p>Tailored title of the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored title of the Product that is used by search engines.</p>
      * @param metaTitle value to be set
      */
 
     public void setMetaTitle(final LocalizedString metaTitle);
 
     /**
-     *  <p>Tailored description of the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored description of the Product that is used in search engine.</p>
      * @param metaDescription value to be set
      */
 
     public void setMetaDescription(final LocalizedString metaDescription);
 
     /**
-     *  <p>Tailored keywords related to the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored keywords related to the Product that are used by search engines.</p>
      * @param metaKeywords value to be set
      */
 

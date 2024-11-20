@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Execute a GraphQL query</p>
+ *  <p>Execute a GraphQL request.</p>
  *
  * <hr>
  * <div class=code-example>

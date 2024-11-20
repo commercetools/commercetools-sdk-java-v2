@@ -1,48 +1,35 @@
 
+# 17.17.0 (2024-11-07)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/739
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/740
+* optimize OkHttp3 client by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/741
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/743
+* fix exportSignatures plugin by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/745
+* Fix deserialization if subtype discriminator is missing by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/746
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/747
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/749
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.16.0...17.17.0
+
 # 17.16.0 (2024-10-07)
 
-**Api changes**
-
-<details>
-<summary>Added Property(s)</summary>
-
-- added property `warnings` to type `ProductTailoring`
-- added property `attributes` to type `ProductVariantTailoring`
-- added property `attributes` to type `ProductVariantTailoringDraft`
-- added property `attributes` to type `ProductTailoringAddVariantAction`
-- added property `warnings` to type `Product`
-- added property `customers` to type `SearchIndexingConfiguration`
-</details>
-
-
-<details>
-<summary>Added Type(s)</summary>
-
-- added type `SearchNotReadyError`
-- added type `GraphQLSearchNotReadyError`
-- added type `ProductTailoringAttribute`
-- added type `ProductTailoringSetAttributeAction`
-- added type `ProductTailoringSetAttributeInAllVariantsAction`
-- added type `ImageProcessingOngoingWarning`
-- added type `WarningObject`
-</details>
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/728
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/729
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/730
+* update service regions by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/731
+* Create config.yml by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/732
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/733
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/735
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/736
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/737
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/738
 
 
-<details>
-<summary>Removed Type(s)</summary>
-
-- :warning: removed type `ProductSearchStatus`
-</details>
-
-
-<details>
-<summary>Added Enum(s)</summary>
-
-- added enum `customer-group` to type `ExtensionResourceTypeId`
-- added enum `product-tailoring` to type `MessageSubscriptionResourceTypeId`
-- added enum `product-tailoring` to type `ResourceTypeId`
-</details>
-
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.15.1...17.16.0
 
 # 17.15.1 (2024-09-17)
 

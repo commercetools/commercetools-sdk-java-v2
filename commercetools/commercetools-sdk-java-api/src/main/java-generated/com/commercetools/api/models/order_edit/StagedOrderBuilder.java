@@ -72,7 +72,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
 
     private java.util.List<com.commercetools.api.models.cart.CustomLineItem> customLineItems;
 
-    private com.commercetools.api.models.common.TypedMoney totalPrice;
+    private com.commercetools.api.models.common.CentPrecisionMoney totalPrice;
 
     @Nullable
     private com.commercetools.api.models.cart.TaxedPrice taxedPrice;
@@ -568,12 +568,13 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     /**
      *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo. If a discount applies on <code>totalPrice</code>, this field holds the discounted value.</p>
      *  <p>Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
-     * @param totalPrice value to be set
+     * @param builder function to build the totalPrice value
      * @return Builder
      */
 
-    public StagedOrderBuilder totalPrice(final com.commercetools.api.models.common.TypedMoney totalPrice) {
-        this.totalPrice = totalPrice;
+    public StagedOrderBuilder totalPrice(
+            Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoneyBuilder> builder) {
+        this.totalPrice = builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of()).build();
         return this;
     }
 
@@ -584,9 +585,21 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
      * @return Builder
      */
 
-    public StagedOrderBuilder totalPrice(
-            Function<com.commercetools.api.models.common.TypedMoneyBuilder, Builder<? extends com.commercetools.api.models.common.TypedMoney>> builder) {
-        this.totalPrice = builder.apply(com.commercetools.api.models.common.TypedMoneyBuilder.of()).build();
+    public StagedOrderBuilder withTotalPrice(
+            Function<com.commercetools.api.models.common.CentPrecisionMoneyBuilder, com.commercetools.api.models.common.CentPrecisionMoney> builder) {
+        this.totalPrice = builder.apply(com.commercetools.api.models.common.CentPrecisionMoneyBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo. If a discount applies on <code>totalPrice</code>, this field holds the discounted value.</p>
+     *  <p>Taxes are included if TaxRate <code>includedInPrice</code> is <code>true</code> for each price.</p>
+     * @param totalPrice value to be set
+     * @return Builder
+     */
+
+    public StagedOrderBuilder totalPrice(final com.commercetools.api.models.common.CentPrecisionMoney totalPrice) {
+        this.totalPrice = totalPrice;
         return this;
     }
 
@@ -2054,7 +2067,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
      * @return totalPrice
      */
 
-    public com.commercetools.api.models.common.TypedMoney getTotalPrice() {
+    public com.commercetools.api.models.common.CentPrecisionMoney getTotalPrice() {
         return this.totalPrice;
     }
 

@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.Valid;
 
 /**
- * GraphQLResponse
+ *  <p><code>error</code> is present in the response only if the GraphQL query was unsuccessful.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,7 +32,7 @@ import jakarta.validation.Valid;
 public interface GraphQLResponse {
 
     /**
-     *
+     *  <p>JSON object that contains the results of a GraphQL query.</p>
      * @return data
      */
 
@@ -40,7 +40,7 @@ public interface GraphQLResponse {
     public Object getData();
 
     /**
-     *
+     *  <p>Errors that the GraphQL query returns.</p>
      * @return errors
      */
     @Valid
@@ -48,14 +48,14 @@ public interface GraphQLResponse {
     public List<GraphQLError> getErrors();
 
     /**
-     * set data
+     *  <p>JSON object that contains the results of a GraphQL query.</p>
      * @param data value to be set
      */
 
     public void setData(final Object data);
 
     /**
-     * set errors
+     *  <p>Errors that the GraphQL query returns.</p>
      * @param errors values to be set
      */
 
@@ -63,7 +63,7 @@ public interface GraphQLResponse {
     public void setErrors(final GraphQLError... errors);
 
     /**
-     * set errors
+     *  <p>Errors that the GraphQL query returns.</p>
      * @param errors values to be set
      */
 

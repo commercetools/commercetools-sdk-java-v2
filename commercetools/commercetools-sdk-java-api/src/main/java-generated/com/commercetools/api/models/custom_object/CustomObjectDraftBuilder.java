@@ -56,7 +56,11 @@ public class CustomObjectDraftBuilder implements Builder<CustomObjectDraft> {
     }
 
     /**
-     *  <p>JSON standard types Number, String, Boolean, Array, Object, and common API data types. For values of type Reference the integrity of the data is not guaranteed. If the referenced object is deleted, the API does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</p>
+     *  <p>Can be any JSON standard type, such as number, string, boolean, array, object, or a common API data type.</p>
+     *  <ul>
+     *   <li>Fields within <code>value</code> that have <code>null</code> values <strong>are not saved</strong>.</li>
+     *   <li>For values of type Reference the integrity of the data is not guaranteed. If the referenced object is deleted, the API does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</li>
+     *  </ul>
      * @param value value to be set
      * @return Builder
      */
@@ -96,7 +100,11 @@ public class CustomObjectDraftBuilder implements Builder<CustomObjectDraft> {
     }
 
     /**
-     *  <p>JSON standard types Number, String, Boolean, Array, Object, and common API data types. For values of type Reference the integrity of the data is not guaranteed. If the referenced object is deleted, the API does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</p>
+     *  <p>Can be any JSON standard type, such as number, string, boolean, array, object, or a common API data type.</p>
+     *  <ul>
+     *   <li>Fields within <code>value</code> that have <code>null</code> values <strong>are not saved</strong>.</li>
+     *   <li>For values of type Reference the integrity of the data is not guaranteed. If the referenced object is deleted, the API does not delete the corresponding reference to it and the <code>value</code> points to a non-existing object in such case.</li>
+     *  </ul>
      * @return value
      */
 

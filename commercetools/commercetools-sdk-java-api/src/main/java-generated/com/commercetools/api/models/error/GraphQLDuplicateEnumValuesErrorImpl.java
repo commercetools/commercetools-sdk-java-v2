@@ -4,6 +4,7 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -32,7 +33,8 @@ public class GraphQLDuplicateEnumValuesErrorImpl implements GraphQLDuplicateEnum
      * create instance with all properties
      */
     @JsonCreator
-    GraphQLDuplicateEnumValuesErrorImpl(@JsonProperty("values") final Map<String, java.lang.Object> values,
+    GraphQLDuplicateEnumValuesErrorImpl(
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("duplicates") final java.util.List<String> duplicates) {
         this.values = values;
         this.duplicates = duplicates;

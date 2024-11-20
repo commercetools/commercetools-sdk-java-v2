@@ -4,6 +4,7 @@ package com.commercetools.api.models.product;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -29,7 +30,7 @@ public class FacetResultsImpl implements FacetResults, ModelBase {
      */
     @JsonCreator
     FacetResultsImpl(
-            @JsonProperty("values") final Map<String, com.commercetools.api.models.product.FacetResult> values) {
+            @JsonAnySetter @JsonProperty("values") final Map<String, com.commercetools.api.models.product.FacetResult> values) {
         this.values = values;
     }
 

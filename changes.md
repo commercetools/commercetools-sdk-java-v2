@@ -5,6 +5,8 @@
 
 - :warning: changed property `line` of type `GraphQLErrorLocation` from type `integer` to `number`
 - :warning: changed property `column` of type `GraphQLErrorLocation` from type `integer` to `number`
+- :warning: changed property `totalPrice` of type `StagedOrder` from type `TypedMoney` to `CentPrecisionMoney`
+- :warning: changed property `totalPrice` of type `Order` from type `TypedMoney` to `CentPrecisionMoney`
 </details>
 
 

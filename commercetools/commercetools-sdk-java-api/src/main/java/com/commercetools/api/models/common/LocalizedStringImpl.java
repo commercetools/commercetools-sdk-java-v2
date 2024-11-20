@@ -5,7 +5,6 @@ import java.time.*;
 import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.ModelBase;
@@ -23,7 +22,7 @@ public class LocalizedStringImpl implements LocalizedString, ModelBase {
     private Map<String, String> values;
 
     @JsonCreator
-    LocalizedStringImpl(@JsonProperty("values") final Map<String, String> values) {
+    LocalizedStringImpl(final Map<String, String> values) {
         this.values = values;
     }
 

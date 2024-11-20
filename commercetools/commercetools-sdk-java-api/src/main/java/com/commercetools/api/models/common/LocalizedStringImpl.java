@@ -4,6 +4,7 @@ package com.commercetools.api.models.common;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -22,7 +23,7 @@ public class LocalizedStringImpl implements LocalizedString, ModelBase {
     private Map<String, String> values;
 
     @JsonCreator
-    LocalizedStringImpl(final Map<String, String> values) {
+    LocalizedStringImpl(@JsonAnySetter final Map<String, String> values) {
         this.values = values;
     }
 

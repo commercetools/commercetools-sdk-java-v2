@@ -1,4 +1,26 @@
 
+# 17.19.0 (2024-11-21)
+
+## Important notice
+
+Due to a regression with regards to deserialization in Jackson 2.18.x we introduced the usage of `JsonAnySetter` at some constructors e.g. to `LocalizedString`. The usage of `JsonAnySetter` annotation is made available with Jackson 2.17.x. Any version prior to Jackson 2.17 is not compatible with the SDK.
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/761
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/762
+* [SUPPORT-29621] fix regression with jackson 2.18.x by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/760
+
+**Api changes**
+
+<details>
+<summary>Changed Property(s)</summary>
+
+- :warning: changed property `totalPrice` of type `StagedOrder` from type `TypedMoney` to `CentPrecisionMoney`
+- :warning: changed property `totalPrice` of type `Order` from type `TypedMoney` to `CentPrecisionMoney`
+</details>
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.18.0...17.19.0
+
 # 17.18.0 (2024-11-20)
 
 ## What's Changed

@@ -1,6 +1,8 @@
 
 package com.commercetools.sdk.examples.spring.config;
 
+import java.util.Map;
+
 import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import com.commercetools.api.defaultconfig.ServiceRegion;
@@ -18,8 +20,6 @@ import org.springframework.web.server.WebFilterChain;
 import org.springframework.web.server.WebSession;
 import reactor.core.publisher.Mono;
 
-import java.util.Map;
-
 @Component
 public class MeClientFilter implements WebFilter {
     private final ApiHttpClient client;
@@ -33,6 +33,12 @@ public class MeClientFilter implements WebFilter {
     @Value(value = "${ctp.project.key}")
     private String projectKey;
 
+    @Value(value = "${ctp.project.api.base.url:#{null}}")
+    private String apiBaseUrl;
+
+    @Value(value = "${ctp.project.auth.url:#{null}}")
+    private String authUrl;
+
     private ClientCredentials credentials() {
         return ClientCredentials.of().withClientId(clientId).withClientSecret(clientSecret).build();
     }
@@ -44,7 +50,8 @@ public class MeClientFilter implements WebFilter {
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, WebFilterChain chain) {
-        final ContextApiHttpClient contextClient = contextClient(client, new MDCContext(Map.of("requestId", exchange.getRequest().getId())));
+        final ContextApiHttpClient contextClient = contextClient(client,
+            new MDCContext(Map.of("requestId", exchange.getRequest().getId())));
         final ProjectApiRoot meClient = exchange.getAttributeOrDefault("meClient",
             meClient(contextClient, exchange.getSession()));
         exchange.getAttributes().put("meClient", meClient);
@@ -54,12 +61,18 @@ public class MeClientFilter implements WebFilter {
     }
 
     private ProjectApiRoot meClient(ApiHttpClient client, Mono<WebSession> session) {
-        TokenStorage storage = new SessionTokenStorage(session);
+        final TokenStorage storage = new SessionTokenStorage(session);
 
         ApiRootBuilder builder = ApiRootBuilder.of(client)
-                .withApiBaseUrl(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
-                .withProjectKey(projectKey)
-                .withAnonymousRefreshFlow(credentials(), ServiceRegion.GCP_EUROPE_WEST1, storage);
+                .withApiBaseUrl(apiBaseUrl != null ? apiBaseUrl: ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+                .withProjectKey(projectKey);
+
+        if (authUrl != null) {
+            builder = builder.withAnonymousRefreshFlow(credentials(), authUrl + "/oauth/" + projectKey + "/anonymous/token", authUrl +  "/oauth/token", storage);
+        } else {
+            builder = builder
+                    .withAnonymousRefreshFlow(credentials(), ServiceRegion.GCP_EUROPE_WEST1, storage);
+        }
 
         return builder.build(projectKey);
     }

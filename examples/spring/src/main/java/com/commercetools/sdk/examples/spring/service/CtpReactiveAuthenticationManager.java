@@ -9,7 +9,6 @@ import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.cart.CartReferenceBuilder;
 import com.commercetools.api.models.customer.CustomerSignInResult;
-import com.commercetools.api.models.customer.CustomerSigninBuilder;
 import com.commercetools.api.models.customer.MyCustomerSigninBuilder;
 import com.commercetools.sdk.examples.spring.config.CtpUserDetails;
 import com.commercetools.sdk.examples.spring.config.TokenGrantedAuthority;

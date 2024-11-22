@@ -129,14 +129,15 @@ public class CtpSecurityConfig {
             TokenStorage storage = new SessionTokenStorage(session);
 
             ApiRootBuilder builder = ApiRootBuilder.of(client)
-                    .withApiBaseUrl(apiBaseUrl != null ? apiBaseUrl: ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+                    .withApiBaseUrl(apiBaseUrl != null ? apiBaseUrl : ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
                     .withProjectKey(projectKey);
 
             if (authUrl != null) {
-                builder = builder.withAnonymousRefreshFlow(credentials(), authUrl + "/oauth/" + projectKey + "/anonymous/token", authUrl +  "/oauth/token", storage);
-            } else {
-                builder = builder
-                    .withAnonymousRefreshFlow(credentials(), ServiceRegion.GCP_EUROPE_WEST1, storage);
+                builder = builder.withAnonymousRefreshFlow(credentials(),
+                    authUrl + "/oauth/" + projectKey + "/anonymous/token", authUrl + "/oauth/token", storage);
+            }
+            else {
+                builder = builder.withAnonymousRefreshFlow(credentials(), ServiceRegion.GCP_EUROPE_WEST1, storage);
             }
 
             return builder.build(projectKey);

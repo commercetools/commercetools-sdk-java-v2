@@ -7,7 +7,6 @@ import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Bean;
@@ -41,7 +40,8 @@ public class CtpClientBeanService {
         ApiRootBuilder builder;
         if (authUrl != null) {
             builder = ApiRootBuilder.of().defaultClient(credentials(), authUrl + "/oauth/token", apiBaseUrl);
-        } else {
+        }
+        else {
             builder = ApiRootBuilder.of().defaultClient(credentials());
         }
 
@@ -49,7 +49,6 @@ public class CtpClientBeanService {
     }
 
     @Bean
-    @Autowired
     public ProjectApiRoot apiRoot(ApiHttpClient client) {
 
         final ProjectApiRoot build = ProjectApiRoot.fromClient(projectKey, client);

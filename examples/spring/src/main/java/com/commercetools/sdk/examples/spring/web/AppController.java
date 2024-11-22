@@ -9,9 +9,7 @@ import com.commercetools.api.models.customer.Customer;
 import com.commercetools.api.models.product.ProductProjection;
 import com.commercetools.sdk.examples.spring.service.MeRepository;
 import com.commercetools.sdk.examples.spring.service.ProductsRepository;
-import com.commercetools.sdk.examples.spring.service.ProjectRepository;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -49,9 +47,10 @@ public class AppController {
     }
 
     @GetMapping("/p")
-    public String pop(@RequestAttribute("contextRoot") ProjectApiRoot contextRoot, @RequestAttribute("meClient") ProjectApiRoot meClient, Model model, WebSession session) {
+    public String pop(@RequestAttribute("contextRoot") ProjectApiRoot contextRoot,
+            @RequestAttribute("meClient") ProjectApiRoot meClient, Model model, WebSession session) {
 
-        Mono<List<ProductProjection>> products =  new ProductsRepository(contextRoot).products();
+        Mono<List<ProductProjection>> products = new ProductsRepository(contextRoot).products();
         final Mono<Cart> cart = new MeRepository(meClient, session).meCart();
 
         model.addAttribute("products", products);

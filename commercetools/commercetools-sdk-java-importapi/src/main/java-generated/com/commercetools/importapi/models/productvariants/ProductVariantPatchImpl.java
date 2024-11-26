@@ -82,7 +82,8 @@ public class ProductVariantPatchImpl implements ProductVariantPatch, ModelBase {
     }
 
     /**
-     *  <p>Reference to the Product which contains the ProductVariant. Setting a value will batch process the import operations to minimize concurrency errors. If set, this field is required for every ProductVariantPatch in the ProductVariantPatchRequest.</p>
+     *  <p>Reference to the Product that contains the ProductVariant.</p>
+     *  <p>We recommend to set this value to minimize concurrency errors. If set, this field is required for every ProductVariantPatch in the ProductVariantPatchRequest.</p>
      */
 
     public com.commercetools.importapi.models.common.ProductKeyReference getProduct() {

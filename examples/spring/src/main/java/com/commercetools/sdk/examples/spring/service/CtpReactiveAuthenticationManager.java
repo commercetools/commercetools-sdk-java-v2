@@ -25,6 +25,7 @@ import org.springframework.security.core.GrantedAuthority;
 import reactor.core.publisher.Mono;
 
 public class CtpReactiveAuthenticationManager implements ReactiveAuthenticationManager {
+    private final String authUrl;
     VrapHttpClient client;
     ProjectApiRoot apiRoot;
 
@@ -33,11 +34,12 @@ public class CtpReactiveAuthenticationManager implements ReactiveAuthenticationM
     private final String projectKey;
 
     public CtpReactiveAuthenticationManager(final ProjectApiRoot apiRoot, final ClientCredentials credentials,
-            final String projectKey) {
+            final String projectKey, final String authUrl) {
         this.apiRoot = apiRoot;
         this.client = HttpClientSupplier.of().get();
         this.credentials = credentials;
         this.projectKey = projectKey;
+        this.authUrl = authUrl;
     }
 
     @Override
@@ -54,10 +56,12 @@ public class CtpReactiveAuthenticationManager implements ReactiveAuthenticationM
                     .fromFuture(
                         apiRoot.me().login().post(customerSignin.build()).execute().exceptionally(throwable -> null))
                     .flatMap(customerSignInResultApiHttpResponse -> {
+                        String passwordFlowTokenURL = this.authUrl != null
+                                ? this.authUrl + "/oauth/" + projectKey + "/customers/token"
+                                : ServiceRegion.GCP_EUROPE_WEST1.getPasswordFlowTokenURL(projectKey);
                         GlobalCustomerPasswordTokenSupplier supplier = new GlobalCustomerPasswordTokenSupplier(
                             credentials.getClientId(), credentials.getClientSecret(), authentication.getName(),
-                            authentication.getCredentials().toString(), null,
-                            ServiceRegion.GCP_EUROPE_WEST1.getPasswordFlowTokenURL(projectKey), client);
+                            authentication.getCredentials().toString(), null, passwordFlowTokenURL, client);
 
                         return Mono.zip(Mono.fromFuture(supplier.getToken().exceptionally(throwable -> null)),
                             Mono.just(customerSignInResultApiHttpResponse.getBody()));

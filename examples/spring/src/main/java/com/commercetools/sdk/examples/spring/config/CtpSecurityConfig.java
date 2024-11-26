@@ -122,7 +122,7 @@ public class CtpSecurityConfig {
         @Override
         public Mono<ReactiveAuthenticationManager> resolve(final ServerWebExchange context) {
             return Mono.just(new CtpReactiveAuthenticationManager(meClient(apiHttpClient, context.getSession()),
-                credentials(), projectKey));
+                credentials(), projectKey, authUrl));
         }
 
         private ProjectApiRoot meClient(final ApiHttpClient client, final Mono<WebSession> session) {

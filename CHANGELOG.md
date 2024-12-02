@@ -1,4 +1,14 @@
 
+# 17.20.0 (2024-12-02)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/763
+* Add option to provide custom auth and api url for spring example project by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/764
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/766
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.19.0...17.20.0
+
 # 17.19.0 (2024-11-21)
 
 ## Important notice

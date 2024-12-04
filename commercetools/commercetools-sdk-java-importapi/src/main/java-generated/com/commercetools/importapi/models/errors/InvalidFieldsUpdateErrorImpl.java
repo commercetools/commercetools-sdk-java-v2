@@ -47,7 +47,7 @@ public class InvalidFieldsUpdateErrorImpl implements InvalidFieldsUpdateError, M
     }
 
     /**
-     *
+     *  <p>An error identifier.</p>
      */
 
     public String getCode() {

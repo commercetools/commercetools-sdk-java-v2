@@ -25,7 +25,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>The data representation for a Standalone Price to be imported that is persisted as a Standalone Price in the Project.</p>
+ *  <p>The data representation for a Standalone Price to be imported that is persisted as a Standalone Price) in the Project.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -44,7 +44,7 @@ import jakarta.validation.constraints.NotNull;
 public interface StandalonePriceImport extends ImportResource {
 
     /**
-     *  <p>User-defined unique identifier for the Standalone Price. If a StandalonePrice with this <code>key</code> exists, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier for the Standalone Price. If a StandalonePrice) with this <code>key</code> exists, it will be updated with the imported data.</p>
      * @return key
      */
     @NotNull
@@ -136,7 +136,7 @@ public interface StandalonePriceImport extends ImportResource {
     public Custom getCustom();
 
     /**
-     *  <p>User-defined unique identifier for the Standalone Price. If a StandalonePrice with this <code>key</code> exists, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier for the Standalone Price. If a StandalonePrice) with this <code>key</code> exists, it will be updated with the imported data.</p>
      * @param key value to be set
      */
 

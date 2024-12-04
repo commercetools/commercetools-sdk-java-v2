@@ -15,7 +15,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- * ErrorObject
+ *  <p>Base representation of an error response containing common fields to all errors.</p>
+ *  <p>An error response may contain additional fields depending on the type of an error, for example, <code>attribute</code> in DuplicateAttributeValueError.</p>
  *
  * <hr>
  * Example to create a subtype instance using the builder pattern
@@ -59,7 +60,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ErrorObject {
 
     /**
-     *
+     *  <p>An error identifier.</p>
      * @return code
      */
     @NotNull
@@ -67,7 +68,7 @@ public interface ErrorObject {
     public String getCode();
 
     /**
-     *
+     *  <p>A plain language description of the cause of an error.</p>
      * @return message
      */
     @NotNull
@@ -75,7 +76,7 @@ public interface ErrorObject {
     public String getMessage();
 
     /**
-     * set message
+     *  <p>A plain language description of the cause of an error.</p>
      * @param message value to be set
      */
 

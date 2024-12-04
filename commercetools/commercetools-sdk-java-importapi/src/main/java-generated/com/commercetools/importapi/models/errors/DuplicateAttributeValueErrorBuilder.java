@@ -28,7 +28,7 @@ public class DuplicateAttributeValueErrorBuilder implements Builder<DuplicateAtt
     private com.commercetools.importapi.models.productvariants.Attribute attribute;
 
     /**
-     * set the value to the message
+     *  <p>A plain language description of the cause of an error.</p>
      * @param message value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class DuplicateAttributeValueErrorBuilder implements Builder<DuplicateAtt
     }
 
     /**
-     * value of message}
+     *  <p>A plain language description of the cause of an error.</p>
      * @return message
      */
 

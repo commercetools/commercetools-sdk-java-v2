@@ -43,7 +43,7 @@ public class NewMasterVariantAdditionNotAllowedErrorImpl implements NewMasterVar
     }
 
     /**
-     *
+     *  <p>An error identifier.</p>
      */
 
     public String getCode() {

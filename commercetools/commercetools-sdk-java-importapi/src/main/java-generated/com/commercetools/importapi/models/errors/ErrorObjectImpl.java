@@ -17,7 +17,8 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * ErrorObject
+ *  <p>Base representation of an error response containing common fields to all errors.</p>
+ *  <p>An error response may contain additional fields depending on the type of an error, for example, <code>attribute</code> in DuplicateAttributeValueError.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ErrorObjectImpl implements ErrorObject, ModelBase {
@@ -42,7 +43,7 @@ public class ErrorObjectImpl implements ErrorObject, ModelBase {
     }
 
     /**
-     *
+     *  <p>An error identifier.</p>
      */
 
     public String getCode() {
@@ -50,7 +51,7 @@ public class ErrorObjectImpl implements ErrorObject, ModelBase {
     }
 
     /**
-     *
+     *  <p>A plain language description of the cause of an error.</p>
      */
 
     public String getMessage() {

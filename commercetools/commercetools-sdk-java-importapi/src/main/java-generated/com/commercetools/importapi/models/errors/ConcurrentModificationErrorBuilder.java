@@ -35,7 +35,7 @@ public class ConcurrentModificationErrorBuilder implements Builder<ConcurrentMod
     private java.lang.Object conflictedResource;
 
     /**
-     * set the value to the message
+     *  <p>A plain language description of the cause of an error.</p>
      * @param message value to be set
      * @return Builder
      */
@@ -79,7 +79,7 @@ public class ConcurrentModificationErrorBuilder implements Builder<ConcurrentMod
     }
 
     /**
-     * value of message}
+     *  <p>A plain language description of the cause of an error.</p>
      * @return message
      */
 

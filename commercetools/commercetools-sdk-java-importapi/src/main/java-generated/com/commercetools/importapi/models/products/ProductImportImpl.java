@@ -227,7 +227,7 @@ public class ProductImportImpl implements ProductImport, ModelBase {
     }
 
     /**
-     *  <p>Determines the type of Prices the API uses. See ProductPriceMode for more details. If not provided, the existing <code>Product.priceMode</code> is not changed.</p>
+     *  <p>Determines the type of Prices the API uses. If not provided, the existing <code>Product.priceMode</code> is not changed.</p>
      */
 
     public com.commercetools.importapi.models.common.ProductPriceModeEnum getPriceMode() {

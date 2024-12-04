@@ -28,7 +28,7 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
     private com.commercetools.importapi.models.common.ProductDiscountKeyReference discount;
 
     /**
-     * set the value to the value
+     *  <p>Money value of the discounted price.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
     }
 
     /**
-     * set the value to the value using the builder function
+     *  <p>Money value of the discounted price.</p>
      * @param builder function to build the value value
      * @return Builder
      */
@@ -89,7 +89,7 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
     }
 
     /**
-     * value of value}
+     *  <p>Money value of the discounted price.</p>
      * @return value
      */
 

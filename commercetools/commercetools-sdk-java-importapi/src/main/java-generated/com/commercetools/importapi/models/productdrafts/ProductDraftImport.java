@@ -199,7 +199,7 @@ public interface ProductDraftImport extends ImportResource {
     public Boolean getPublish();
 
     /**
-     *  <p>Determines the type of Prices the API uses. See ProductPriceMode for more details. If not provided, the existing <code>Product.priceMode</code> is not changed.</p>
+     *  <p>Determines the type of Prices the API uses. If not provided, the existing <code>Product.priceMode</code> is not changed.</p>
      * @return priceMode
      */
 
@@ -359,7 +359,7 @@ public interface ProductDraftImport extends ImportResource {
     public void setPublish(final Boolean publish);
 
     /**
-     *  <p>Determines the type of Prices the API uses. See ProductPriceMode for more details. If not provided, the existing <code>Product.priceMode</code> is not changed.</p>
+     *  <p>Determines the type of Prices the API uses. If not provided, the existing <code>Product.priceMode</code> is not changed.</p>
      * @param priceMode value to be set
      */
 

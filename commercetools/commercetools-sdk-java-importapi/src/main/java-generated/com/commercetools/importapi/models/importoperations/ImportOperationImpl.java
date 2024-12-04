@@ -86,7 +86,7 @@ public class ImportOperationImpl implements ImportOperation, ModelBase {
     }
 
     /**
-     *  <p>The key of the importContainer.</p>
+     *  <p>The key of the ImportContainer.</p>
      */
 
     public String getImportContainerKey() {

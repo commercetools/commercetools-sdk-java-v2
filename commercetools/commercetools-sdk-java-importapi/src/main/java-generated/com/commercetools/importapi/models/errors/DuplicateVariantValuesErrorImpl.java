@@ -47,7 +47,7 @@ public class DuplicateVariantValuesErrorImpl implements DuplicateVariantValuesEr
     }
 
     /**
-     *
+     *  <p>An error identifier.</p>
      */
 
     public String getCode() {
@@ -55,7 +55,7 @@ public class DuplicateVariantValuesErrorImpl implements DuplicateVariantValuesEr
     }
 
     /**
-     *
+     *  <p>A plain language description of the cause of an error.</p>
      */
 
     public String getMessage() {

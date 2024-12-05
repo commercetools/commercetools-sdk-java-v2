@@ -30,7 +30,7 @@ public class InvalidStateTransitionErrorBuilder implements Builder<InvalidStateT
     private com.commercetools.importapi.models.common.ProcessingState newState;
 
     /**
-     * set the value to the message
+     *  <p>A plain language description of the cause of an error.</p>
      * @param message value to be set
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class InvalidStateTransitionErrorBuilder implements Builder<InvalidStateT
     }
 
     /**
-     * value of message}
+     *  <p>A plain language description of the cause of an error.</p>
      * @return message
      */
 

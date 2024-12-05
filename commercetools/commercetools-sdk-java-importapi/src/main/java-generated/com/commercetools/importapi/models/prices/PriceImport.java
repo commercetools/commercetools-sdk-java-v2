@@ -139,7 +139,7 @@ public interface PriceImport extends ImportResource {
     public Custom getCustom();
 
     /**
-     *  <p>The ProductVariant in which this Embedded Price is contained. The Reference to the ProductVariant with which the Price is associated. If referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
+     *  <p>The ProductVariant in which this Embedded Price is contained. The Reference to the ProductVariant with which the Price is associated. If the referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
      * @return productVariant
      */
     @NotNull
@@ -245,7 +245,7 @@ public interface PriceImport extends ImportResource {
     public void setCustom(final Custom custom);
 
     /**
-     *  <p>The ProductVariant in which this Embedded Price is contained. The Reference to the ProductVariant with which the Price is associated. If referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
+     *  <p>The ProductVariant in which this Embedded Price is contained. The Reference to the ProductVariant with which the Price is associated. If the referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
      * @param productVariant value to be set
      */
 

@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>The data representation for a Standalone Price to be imported that is persisted as a Standalone Price in the Project.</p>
+ *  <p>The data representation for a Standalone Price to be imported that is persisted as a Standalone Price) in the Project.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StandalonePriceImportImpl implements StandalonePriceImport, ModelBase {
@@ -78,7 +78,7 @@ public class StandalonePriceImportImpl implements StandalonePriceImport, ModelBa
     }
 
     /**
-     *  <p>User-defined unique identifier for the Standalone Price. If a StandalonePrice with this <code>key</code> exists, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier for the Standalone Price. If a StandalonePrice) with this <code>key</code> exists, it will be updated with the imported data.</p>
      */
 
     public String getKey() {

@@ -53,7 +53,7 @@ public interface ImportOperation {
     public Long getVersion();
 
     /**
-     *  <p>The key of the importContainer.</p>
+     *  <p>The key of the ImportContainer.</p>
      * @return importContainerKey
      */
     @NotNull
@@ -140,7 +140,7 @@ public interface ImportOperation {
     public void setVersion(final Long version);
 
     /**
-     *  <p>The key of the importContainer.</p>
+     *  <p>The key of the ImportContainer.</p>
      * @param importContainerKey value to be set
      */
 

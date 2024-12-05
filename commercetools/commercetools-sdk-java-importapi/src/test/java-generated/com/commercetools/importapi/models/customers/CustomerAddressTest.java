@@ -25,6 +25,7 @@ public class CustomerAddressTest {
     @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] { new Object[] { CustomerAddress.builder().key("key") },
+                new Object[] { CustomerAddress.builder().country("country") },
                 new Object[] { CustomerAddress.builder().title("title") },
                 new Object[] { CustomerAddress.builder().salutation("salutation") },
                 new Object[] { CustomerAddress.builder().firstName("firstName") },
@@ -36,7 +37,6 @@ public class CustomerAddressTest {
                 new Object[] { CustomerAddress.builder().city("city") },
                 new Object[] { CustomerAddress.builder().region("region") },
                 new Object[] { CustomerAddress.builder().state("state") },
-                new Object[] { CustomerAddress.builder().country("country") },
                 new Object[] { CustomerAddress.builder().company("company") },
                 new Object[] { CustomerAddress.builder().department("department") },
                 new Object[] { CustomerAddress.builder().building("building") },
@@ -57,6 +57,13 @@ public class CustomerAddressTest {
         CustomerAddress value = CustomerAddress.of();
         value.setKey("key");
         Assertions.assertThat(value.getKey()).isEqualTo("key");
+    }
+
+    @Test
+    public void country() {
+        CustomerAddress value = CustomerAddress.of();
+        value.setCountry("country");
+        Assertions.assertThat(value.getCountry()).isEqualTo("country");
     }
 
     @Test
@@ -134,13 +141,6 @@ public class CustomerAddressTest {
         CustomerAddress value = CustomerAddress.of();
         value.setState("state");
         Assertions.assertThat(value.getState()).isEqualTo("state");
-    }
-
-    @Test
-    public void country() {
-        CustomerAddress value = CustomerAddress.of();
-        value.setCountry("country");
-        Assertions.assertThat(value.getCountry()).isEqualTo("country");
     }
 
     @Test

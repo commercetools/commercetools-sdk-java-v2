@@ -43,95 +43,7 @@ public interface CustomerAddress {
     public String getKey();
 
     /**
-     *
-     * @return title
-     */
-
-    @JsonProperty("title")
-    public String getTitle();
-
-    /**
-     *
-     * @return salutation
-     */
-
-    @JsonProperty("salutation")
-    public String getSalutation();
-
-    /**
-     *
-     * @return firstName
-     */
-
-    @JsonProperty("firstName")
-    public String getFirstName();
-
-    /**
-     *
-     * @return lastName
-     */
-
-    @JsonProperty("lastName")
-    public String getLastName();
-
-    /**
-     *
-     * @return streetName
-     */
-
-    @JsonProperty("streetName")
-    public String getStreetName();
-
-    /**
-     *
-     * @return streetNumber
-     */
-
-    @JsonProperty("streetNumber")
-    public String getStreetNumber();
-
-    /**
-     *
-     * @return additionalStreetInfo
-     */
-
-    @JsonProperty("additionalStreetInfo")
-    public String getAdditionalStreetInfo();
-
-    /**
-     *
-     * @return postalCode
-     */
-
-    @JsonProperty("postalCode")
-    public String getPostalCode();
-
-    /**
-     *
-     * @return city
-     */
-
-    @JsonProperty("city")
-    public String getCity();
-
-    /**
-     *
-     * @return region
-     */
-
-    @JsonProperty("region")
-    public String getRegion();
-
-    /**
-     *
-     * @return state
-     */
-
-    @JsonProperty("state")
-    public String getState();
-
-    /**
-     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
+     *  <p>Name of the country.</p>
      * @return country
      */
     @NotNull
@@ -139,7 +51,95 @@ public interface CustomerAddress {
     public String getCountry();
 
     /**
-     *
+     *  <p>Title of the contact, for example 'Dr.'</p>
+     * @return title
+     */
+
+    @JsonProperty("title")
+    public String getTitle();
+
+    /**
+     *  <p>Salutation of the contact, for example 'Mr.' or 'Ms.'</p>
+     * @return salutation
+     */
+
+    @JsonProperty("salutation")
+    public String getSalutation();
+
+    /**
+     *  <p>Given name (first name) of the contact.</p>
+     * @return firstName
+     */
+
+    @JsonProperty("firstName")
+    public String getFirstName();
+
+    /**
+     *  <p>Family name (last name) of the contact.</p>
+     * @return lastName
+     */
+
+    @JsonProperty("lastName")
+    public String getLastName();
+
+    /**
+     *  <p>Name of the street.</p>
+     * @return streetName
+     */
+
+    @JsonProperty("streetName")
+    public String getStreetName();
+
+    /**
+     *  <p>Street number.</p>
+     * @return streetNumber
+     */
+
+    @JsonProperty("streetNumber")
+    public String getStreetNumber();
+
+    /**
+     *  <p>Further information on the street address.</p>
+     * @return additionalStreetInfo
+     */
+
+    @JsonProperty("additionalStreetInfo")
+    public String getAdditionalStreetInfo();
+
+    /**
+     *  <p>Postal code.</p>
+     * @return postalCode
+     */
+
+    @JsonProperty("postalCode")
+    public String getPostalCode();
+
+    /**
+     *  <p>Name of the city.</p>
+     * @return city
+     */
+
+    @JsonProperty("city")
+    public String getCity();
+
+    /**
+     *  <p>Name of the region.</p>
+     * @return region
+     */
+
+    @JsonProperty("region")
+    public String getRegion();
+
+    /**
+     *  <p>Name of the state, for example, Colorado.</p>
+     * @return state
+     */
+
+    @JsonProperty("state")
+    public String getState();
+
+    /**
+     *  <p>Name of the company.</p>
      * @return company
      */
 
@@ -147,7 +147,7 @@ public interface CustomerAddress {
     public String getCompany();
 
     /**
-     *
+     *  <p>Name of the department.</p>
      * @return department
      */
 
@@ -155,7 +155,7 @@ public interface CustomerAddress {
     public String getDepartment();
 
     /**
-     *
+     *  <p>Number or name of the building.</p>
      * @return building
      */
 
@@ -163,7 +163,7 @@ public interface CustomerAddress {
     public String getBuilding();
 
     /**
-     *
+     *  <p>Number or name of the apartment.</p>
      * @return apartment
      */
 
@@ -171,7 +171,7 @@ public interface CustomerAddress {
     public String getApartment();
 
     /**
-     *
+     *  <p>Post office box number.</p>
      * @return pOBox
      */
 
@@ -179,7 +179,7 @@ public interface CustomerAddress {
     public String getPOBox();
 
     /**
-     *
+     *  <p>Phone number of the contact.</p>
      * @return phone
      */
 
@@ -187,7 +187,7 @@ public interface CustomerAddress {
     public String getPhone();
 
     /**
-     *
+     *  <p>Mobile phone number of the contact.</p>
      * @return mobile
      */
 
@@ -195,7 +195,7 @@ public interface CustomerAddress {
     public String getMobile();
 
     /**
-     *
+     *  <p>Email address of the contact.</p>
      * @return email
      */
 
@@ -203,7 +203,7 @@ public interface CustomerAddress {
     public String getEmail();
 
     /**
-     *
+     *  <p>Fax number of the contact.</p>
      * @return fax
      */
 
@@ -211,7 +211,7 @@ public interface CustomerAddress {
     public String getFax();
 
     /**
-     *
+     *  <p>Further information on the Address.</p>
      * @return additionalAddressInfo
      */
 
@@ -219,7 +219,7 @@ public interface CustomerAddress {
     public String getAdditionalAddressInfo();
 
     /**
-     *
+     *  <p>ID for the contact used in an external system.</p>
      * @return externalId
      */
 
@@ -242,161 +242,161 @@ public interface CustomerAddress {
     public void setKey(final String key);
 
     /**
-     * set title
-     * @param title value to be set
-     */
-
-    public void setTitle(final String title);
-
-    /**
-     * set salutation
-     * @param salutation value to be set
-     */
-
-    public void setSalutation(final String salutation);
-
-    /**
-     * set firstName
-     * @param firstName value to be set
-     */
-
-    public void setFirstName(final String firstName);
-
-    /**
-     * set lastName
-     * @param lastName value to be set
-     */
-
-    public void setLastName(final String lastName);
-
-    /**
-     * set streetName
-     * @param streetName value to be set
-     */
-
-    public void setStreetName(final String streetName);
-
-    /**
-     * set streetNumber
-     * @param streetNumber value to be set
-     */
-
-    public void setStreetNumber(final String streetNumber);
-
-    /**
-     * set additionalStreetInfo
-     * @param additionalStreetInfo value to be set
-     */
-
-    public void setAdditionalStreetInfo(final String additionalStreetInfo);
-
-    /**
-     * set postalCode
-     * @param postalCode value to be set
-     */
-
-    public void setPostalCode(final String postalCode);
-
-    /**
-     * set city
-     * @param city value to be set
-     */
-
-    public void setCity(final String city);
-
-    /**
-     * set region
-     * @param region value to be set
-     */
-
-    public void setRegion(final String region);
-
-    /**
-     * set state
-     * @param state value to be set
-     */
-
-    public void setState(final String state);
-
-    /**
-     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
+     *  <p>Name of the country.</p>
      * @param country value to be set
      */
 
     public void setCountry(final String country);
 
     /**
-     * set company
+     *  <p>Title of the contact, for example 'Dr.'</p>
+     * @param title value to be set
+     */
+
+    public void setTitle(final String title);
+
+    /**
+     *  <p>Salutation of the contact, for example 'Mr.' or 'Ms.'</p>
+     * @param salutation value to be set
+     */
+
+    public void setSalutation(final String salutation);
+
+    /**
+     *  <p>Given name (first name) of the contact.</p>
+     * @param firstName value to be set
+     */
+
+    public void setFirstName(final String firstName);
+
+    /**
+     *  <p>Family name (last name) of the contact.</p>
+     * @param lastName value to be set
+     */
+
+    public void setLastName(final String lastName);
+
+    /**
+     *  <p>Name of the street.</p>
+     * @param streetName value to be set
+     */
+
+    public void setStreetName(final String streetName);
+
+    /**
+     *  <p>Street number.</p>
+     * @param streetNumber value to be set
+     */
+
+    public void setStreetNumber(final String streetNumber);
+
+    /**
+     *  <p>Further information on the street address.</p>
+     * @param additionalStreetInfo value to be set
+     */
+
+    public void setAdditionalStreetInfo(final String additionalStreetInfo);
+
+    /**
+     *  <p>Postal code.</p>
+     * @param postalCode value to be set
+     */
+
+    public void setPostalCode(final String postalCode);
+
+    /**
+     *  <p>Name of the city.</p>
+     * @param city value to be set
+     */
+
+    public void setCity(final String city);
+
+    /**
+     *  <p>Name of the region.</p>
+     * @param region value to be set
+     */
+
+    public void setRegion(final String region);
+
+    /**
+     *  <p>Name of the state, for example, Colorado.</p>
+     * @param state value to be set
+     */
+
+    public void setState(final String state);
+
+    /**
+     *  <p>Name of the company.</p>
      * @param company value to be set
      */
 
     public void setCompany(final String company);
 
     /**
-     * set department
+     *  <p>Name of the department.</p>
      * @param department value to be set
      */
 
     public void setDepartment(final String department);
 
     /**
-     * set building
+     *  <p>Number or name of the building.</p>
      * @param building value to be set
      */
 
     public void setBuilding(final String building);
 
     /**
-     * set apartment
+     *  <p>Number or name of the apartment.</p>
      * @param apartment value to be set
      */
 
     public void setApartment(final String apartment);
 
     /**
-     * set pOBox
+     *  <p>Post office box number.</p>
      * @param pOBox value to be set
      */
 
     public void setPOBox(final String pOBox);
 
     /**
-     * set phone
+     *  <p>Phone number of the contact.</p>
      * @param phone value to be set
      */
 
     public void setPhone(final String phone);
 
     /**
-     * set mobile
+     *  <p>Mobile phone number of the contact.</p>
      * @param mobile value to be set
      */
 
     public void setMobile(final String mobile);
 
     /**
-     * set email
+     *  <p>Email address of the contact.</p>
      * @param email value to be set
      */
 
     public void setEmail(final String email);
 
     /**
-     * set fax
+     *  <p>Fax number of the contact.</p>
      * @param fax value to be set
      */
 
     public void setFax(final String fax);
 
     /**
-     * set additionalAddressInfo
+     *  <p>Further information on the Address.</p>
      * @param additionalAddressInfo value to be set
      */
 
     public void setAdditionalAddressInfo(final String additionalAddressInfo);
 
     /**
-     * set externalId
+     *  <p>ID for the contact used in an external system.</p>
      * @param externalId value to be set
      */
 
@@ -425,6 +425,7 @@ public interface CustomerAddress {
     public static CustomerAddress of(final CustomerAddress template) {
         CustomerAddressImpl instance = new CustomerAddressImpl();
         instance.setKey(template.getKey());
+        instance.setCountry(template.getCountry());
         instance.setTitle(template.getTitle());
         instance.setSalutation(template.getSalutation());
         instance.setFirstName(template.getFirstName());
@@ -436,7 +437,6 @@ public interface CustomerAddress {
         instance.setCity(template.getCity());
         instance.setRegion(template.getRegion());
         instance.setState(template.getState());
-        instance.setCountry(template.getCountry());
         instance.setCompany(template.getCompany());
         instance.setDepartment(template.getDepartment());
         instance.setBuilding(template.getBuilding());
@@ -464,6 +464,7 @@ public interface CustomerAddress {
         }
         CustomerAddressImpl instance = new CustomerAddressImpl();
         instance.setKey(template.getKey());
+        instance.setCountry(template.getCountry());
         instance.setTitle(template.getTitle());
         instance.setSalutation(template.getSalutation());
         instance.setFirstName(template.getFirstName());
@@ -475,7 +476,6 @@ public interface CustomerAddress {
         instance.setCity(template.getCity());
         instance.setRegion(template.getRegion());
         instance.setState(template.getState());
-        instance.setCountry(template.getCountry());
         instance.setCompany(template.getCompany());
         instance.setDepartment(template.getDepartment());
         instance.setBuilding(template.getBuilding());

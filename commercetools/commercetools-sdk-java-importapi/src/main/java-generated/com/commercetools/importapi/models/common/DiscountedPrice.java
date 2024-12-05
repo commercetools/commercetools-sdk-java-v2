@@ -34,7 +34,7 @@ import jakarta.validation.constraints.NotNull;
 public interface DiscountedPrice {
 
     /**
-     *
+     *  <p>Money value of the discounted price.</p>
      * @return value
      */
     @NotNull
@@ -52,7 +52,7 @@ public interface DiscountedPrice {
     public ProductDiscountKeyReference getDiscount();
 
     /**
-     * set value
+     *  <p>Money value of the discounted price.</p>
      * @param value value to be set
      */
 

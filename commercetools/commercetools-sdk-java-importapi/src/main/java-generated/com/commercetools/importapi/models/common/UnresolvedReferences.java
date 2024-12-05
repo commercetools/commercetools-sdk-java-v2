@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- * UnresolvedReferences
+ *  <p>References a resource which could not be resolved.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,7 +33,7 @@ import jakarta.validation.constraints.NotNull;
 public interface UnresolvedReferences {
 
     /**
-     *
+     *  <p>The <code>key</code> of the resource.</p>
      * @return key
      */
     @NotNull
@@ -41,7 +41,7 @@ public interface UnresolvedReferences {
     public String getKey();
 
     /**
-     *  <p>The type of the referenced resource.</p>
+     *  <p>The type of resource.</p>
      * @return typeId
      */
     @NotNull
@@ -49,14 +49,14 @@ public interface UnresolvedReferences {
     public ReferenceType getTypeId();
 
     /**
-     * set key
+     *  <p>The <code>key</code> of the resource.</p>
      * @param key value to be set
      */
 
     public void setKey(final String key);
 
     /**
-     *  <p>The type of the referenced resource.</p>
+     *  <p>The type of resource.</p>
      * @param typeId value to be set
      */
 

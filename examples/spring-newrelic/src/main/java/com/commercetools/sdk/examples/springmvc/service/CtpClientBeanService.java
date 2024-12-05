@@ -46,7 +46,6 @@ public class CtpClientBeanService {
     }
 
     @Bean
-    @RequestScope
     @Trace(dispatcher = true)
     public ProjectScopedApiRoot apiRoot(ApiHttpClient client) {
         ContextApiHttpClient contextClient = ContextApiHttpClient.of(client, new MDCContext(), false)

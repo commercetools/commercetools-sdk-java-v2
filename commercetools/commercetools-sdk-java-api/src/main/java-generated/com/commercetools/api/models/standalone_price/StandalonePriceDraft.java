@@ -60,6 +60,7 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
 
     /**
      *  <p>Sets the money value of this Price.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @return value
      */
     @NotNull
@@ -164,6 +165,7 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
 
     /**
      *  <p>Sets the money value of this Price.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @param value value to be set
      */
 

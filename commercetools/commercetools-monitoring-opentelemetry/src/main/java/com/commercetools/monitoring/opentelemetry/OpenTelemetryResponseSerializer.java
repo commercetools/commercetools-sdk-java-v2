@@ -11,7 +11,7 @@ import com.fasterxml.jackson.databind.JavaType;
 import io.opentelemetry.api.OpenTelemetry;
 import io.opentelemetry.api.common.AttributeKey;
 import io.opentelemetry.api.common.Attributes;
-import io.opentelemetry.api.metrics.LongHistogram;
+import io.opentelemetry.api.metrics.DoubleHistogram;
 import io.opentelemetry.api.metrics.Meter;
 import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.ResponseSerializer;
@@ -29,8 +29,8 @@ import io.vrap.rmf.base.client.ResponseSerializer;
 public class OpenTelemetryResponseSerializer implements ResponseSerializer {
     private final ResponseSerializer serializer;
 
-    private final LongHistogram serializerHistogram;
-    private final LongHistogram deserializerHistogram;
+    private final DoubleHistogram serializerHistogram;
+    private final DoubleHistogram deserializerHistogram;
 
     public OpenTelemetryResponseSerializer(final ResponseSerializer serializer, final OpenTelemetry otel) {
         this(serializer, otel, OpenTelemetryInfo.PREFIX);
@@ -41,11 +41,9 @@ public class OpenTelemetryResponseSerializer implements ResponseSerializer {
         this.serializer = serializer;
         Meter meter = otel.meterBuilder(OpenTelemetryResponseSerializer.class.getPackage().getName()).build();
         serializerHistogram = meter.histogramBuilder(prefix + "." + OpenTelemetryInfo.JSON_SERIALIZATION)
-                .ofLongs()
                 .setUnit(OpenTelemetryInfo.UNIT_MS)
                 .build();
         deserializerHistogram = meter.histogramBuilder(prefix + "." + OpenTelemetryInfo.JSON_DESERIALIZATION)
-                .ofLongs()
                 .setUnit(OpenTelemetryInfo.UNIT_MS)
                 .build();
 
@@ -57,7 +55,8 @@ public class OpenTelemetryResponseSerializer implements ResponseSerializer {
         ApiHttpResponse<O> result = serializer.convertResponse(response, outputType);
         Attributes attributes = Attributes.of(AttributeKey.stringKey(OpenTelemetryInfo.RESPONSE_BODY_TYPE),
             outputType.getCanonicalName());
-        deserializerHistogram.record(Duration.between(start, Instant.now()).toMillis(), attributes);
+        double durationMs = Duration.between(start, Instant.now()).toNanos() / 1_000_000.0;
+        deserializerHistogram.record(durationMs, attributes);
         return result;
     }
 
@@ -67,7 +66,8 @@ public class OpenTelemetryResponseSerializer implements ResponseSerializer {
         ApiHttpResponse<O> result = serializer.convertResponse(response, outputType);
         Attributes attributes = Attributes.of(AttributeKey.stringKey(OpenTelemetryInfo.RESPONSE_BODY_TYPE),
             outputType.toString());
-        deserializerHistogram.record(Duration.between(start, Instant.now()).toMillis(), attributes);
+        double duration = Duration.between(start, Instant.now()).toNanos() / 1_000_000.0;
+        deserializerHistogram.record(duration, attributes);
         return result;
     }
 
@@ -77,7 +77,8 @@ public class OpenTelemetryResponseSerializer implements ResponseSerializer {
         ApiHttpResponse<O> result = serializer.convertResponse(response, outputType);
         Attributes attributes = Attributes.of(AttributeKey.stringKey(OpenTelemetryInfo.RESPONSE_BODY_TYPE),
             outputType.getType().getTypeName());
-        deserializerHistogram.record(Duration.between(start, Instant.now()).toMillis(), attributes);
+        double duration = Duration.between(start, Instant.now()).toNanos() / 1_000_000.0;
+        deserializerHistogram.record(duration, attributes);
         return result;
     }
 
@@ -87,7 +88,8 @@ public class OpenTelemetryResponseSerializer implements ResponseSerializer {
         byte[] result = serializer.toJsonByteArray(value);
         Attributes attributes = Attributes.of(AttributeKey.stringKey(OpenTelemetryInfo.REQUEST_BODY_TYPE),
             value.getClass().getCanonicalName());
-        serializerHistogram.record(Duration.between(start, Instant.now()).toMillis(), attributes);
+        double duration = Duration.between(start, Instant.now()).toNanos() / 1_000_000.0;
+        serializerHistogram.record(duration, attributes);
         return result;
 
     }

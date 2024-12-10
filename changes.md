@@ -1,9 +1,8 @@
-**Api changes**
+**Import changes**
 
 <details>
-<summary>Changed Property(s)</summary>
+<summary>Removed Type(s)</summary>
 
-- :warning: changed property `totalPrice` of type `StagedOrder` from type `TypedMoney` to `CentPrecisionMoney`
-- :warning: changed property `totalPrice` of type `Order` from type `TypedMoney` to `CentPrecisionMoney`
+- :warning: removed type `ReferencedResourceNotFound`
 </details>
 

@@ -40,6 +40,7 @@ public interface StandalonePriceChangeValueAction extends StandalonePriceUpdateA
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @return value
      */
     @NotNull
@@ -57,6 +58,7 @@ public interface StandalonePriceChangeValueAction extends StandalonePriceUpdateA
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @param value value to be set
      */
 

@@ -4,7 +4,7 @@ on:
 name: Benchmark
 
 # Declare default permissions as read only.
-permissions: read-all
+permissions: { }
 
 jobs:
     benchmark:

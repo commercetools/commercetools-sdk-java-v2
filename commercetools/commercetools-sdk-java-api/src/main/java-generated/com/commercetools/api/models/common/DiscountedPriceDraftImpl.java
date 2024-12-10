@@ -44,6 +44,7 @@ public class DiscountedPriceDraftImpl implements DiscountedPriceDraft, ModelBase
 
     /**
      *  <p>Sets the money value for the discounted price.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      */
 
     public com.commercetools.api.models.common.Money getValue() {

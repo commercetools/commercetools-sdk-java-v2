@@ -9137,7 +9137,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/importapi/models/standalone_prices/StandalonePriceImportBuilder.html#channel(com.commercetools.importapi.models.common.ChannelKeyReference)" class="member-name-link">channel(ChannelKeyReference)</a> - Method in class com.commercetools.importapi.models.standalone_prices.<a href="../com/commercetools/importapi/models/standalone_prices/StandalonePriceImportBuilder.html" title="class in com.commercetools.importapi.models.standalone_prices">StandalonePriceImportBuilder</a></dt>
 <dd>
-<div class="block">Sets the product distribution Channel for which this Price is valid.</div>
+<div class="block">Sets the product distribution Channel for this Price, if the Price does not yet have a Channel.</div>
 </dd>
 <dt><a href="../com/commercetools/compat/QueryBuilder.html#channel(io.sphere.sdk.channels.queries.ChannelQuery)" class="member-name-link">channel(ChannelQuery)</a> - Method in class com.commercetools.compat.<a href="../com/commercetools/compat/QueryBuilder.html" title="class in com.commercetools.compat">QueryBuilder</a></dt>
 <dd>
@@ -9247,7 +9247,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/importapi/models/standalone_prices/StandalonePriceImportBuilder.html#channel(java.util.function.Function)" class="member-name-link">channel(Function&lt;ChannelKeyReferenceBuilder, ChannelKeyReferenceBuilder&gt;)</a> - Method in class com.commercetools.importapi.models.standalone_prices.<a href="../com/commercetools/importapi/models/standalone_prices/StandalonePriceImportBuilder.html" title="class in com.commercetools.importapi.models.standalone_prices">StandalonePriceImportBuilder</a></dt>
 <dd>
-<div class="block">Sets the product distribution Channel for which this Price is valid.</div>
+<div class="block">Sets the product distribution Channel for this Price, if the Price does not yet have a Channel.</div>
 </dd>
 <dt><a href="../com/commercetools/compat/QueryBuilder.html#channel(java.util.function.Function)" class="member-name-link">channel(Function&lt;ChannelQuery, ChannelQuery&gt;)</a> - Method in class com.commercetools.compat.<a href="../com/commercetools/compat/QueryBuilder.html" title="class in com.commercetools.compat">QueryBuilder</a></dt>
 <dd>&nbsp;</dd>
@@ -9804,7 +9804,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/importapi/models/customers/CustomerAddressBuilder.html#city(java.lang.String)" class="member-name-link">city(String)</a> - Method in class com.commercetools.importapi.models.customers.<a href="../com/commercetools/importapi/models/customers/CustomerAddressBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerAddressBuilder</a></dt>
 <dd>
-<div class="block">set the value to the city</div>
+<div class="block">Name of the city.</div>
 </dd>
 <dt><a href="../com/commercetools/importapi/models/orders/ShippingRateInputType.ShippingRateInputTypeEnum.html#CLASSIFICATION" class="member-name-link">CLASSIFICATION</a> - Enum constant in enum com.commercetools.importapi.models.orders.<a href="../com/commercetools/importapi/models/orders/ShippingRateInputType.ShippingRateInputTypeEnum.html" title="enum in com.commercetools.importapi.models.orders">ShippingRateInputType.ShippingRateInputTypeEnum</a></dt>
 <dd>
@@ -10480,7 +10480,7 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/predicates/query/CollectionPredicateBuilder.html#combinationFn()" class="member-name-link">combinationFn()</a> - Method in class com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/CollectionPredicateBuilder.html" title="class in com.commercetools.api.predicates.query">CollectionPredicateBuilder</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="../com/commercetools/api/predicates/query/DateTimeCollectionPredicateBuilder.html#combinationFn()" class="member-name-link">combinationFn()</a> - Method in class com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/DateTimeCollectionPredicateBuilder.html" title="class in com.commercetools.api.predicates.query">DateTimeCollectionPredicateBuilder</a></dt>
+<dt><a href="../com/commercetools/api/predicates/query/TimeCollectionPredicateBuilder.html#combinationFn()" class="member-name-link">combinationFn()</a> - Method in class com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/TimeCollectionPredicateBuilder.html" title="class in com.commercetools.api.predicates.query">TimeCollectionPredicateBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/predicates/query/LongComparisonPredicateBuilder.html#combinationFn()" class="member-name-link">combinationFn()</a> - Method in class com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/LongComparisonPredicateBuilder.html" title="class in com.commercetools.api.predicates.query">LongComparisonPredicateBuilder</a></dt>
 <dd>&nbsp;</dd>
@@ -10560,7 +10560,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/importapi/models/customers/CustomerAddressBuilder.html#company(java.lang.String)" class="member-name-link">company(String)</a> - Method in class com.commercetools.importapi.models.customers.<a href="../com/commercetools/importapi/models/customers/CustomerAddressBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerAddressBuilder</a></dt>
 <dd>
-<div class="block">set the value to the company</div>
+<div class="block">Name of the company.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/business_unit/Company.html" class="type-name-link" title="interface in com.commercetools.api.models.business_unit">Company</a> - Interface in <a href="../com/commercetools/api/models/business_unit/package-summary.html">com.commercetools.api.models.business_unit</a></dt>
 <dd>
@@ -11899,7 +11899,7 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 </dd>
 <dt><a href="../com/commercetools/importapi/models/customers/CustomerAddressBuilder.html#country(java.lang.String)" class="member-name-link">country(String)</a> - Method in class com.commercetools.importapi.models.customers.<a href="../com/commercetools/importapi/models/customers/CustomerAddressBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerAddressBuilder</a></dt>
 <dd>
-<div class="block">A two-digit country code as per ISO 3166-1 alpha-2.</div>
+<div class="block">Name of the country.</div>
 </dd>
 <dt><a href="../com/commercetools/importapi/models/orders/ExternalTaxRateDraftBuilder.html#country(java.lang.String)" class="member-name-link">country(String)</a> - Method in class com.commercetools.importapi.models.orders.<a href="../com/commercetools/importapi/models/orders/ExternalTaxRateDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">ExternalTaxRateDraftBuilder</a></dt>
 <dd>
@@ -11927,7 +11927,7 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 </dd>
 <dt><a href="../com/commercetools/importapi/models/standalone_prices/StandalonePriceImportBuilder.html#country(java.lang.String)" class="member-name-link">country(String)</a> - Method in class com.commercetools.importapi.models.standalone_prices.<a href="../com/commercetools/importapi/models/standalone_prices/StandalonePriceImportBuilder.html" title="class in com.commercetools.importapi.models.standalone_prices">StandalonePriceImportBuilder</a></dt>
 <dd>
-<div class="block">Sets the country for which this Price is valid.</div>
+<div class="block">Sets the country for this Price, if the Price does not yet have a country.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/store/StoreAddCountryActionBuilder.html#country(java.util.function.Function)" class="member-name-link">country(Function&lt;StoreCountryBuilder, StoreCountryBuilder&gt;)</a> - Method in class com.commercetools.api.models.store.<a href="../com/commercetools/api/models/store/StoreAddCountryActionBuilder.html" title="class in com.commercetools.api.models.store">StoreAddCountryActionBuilder</a></dt>
 <dd>
@@ -20140,7 +20140,7 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 </dd>
 <dt><a href="../com/commercetools/importapi/models/standalone_prices/StandalonePriceImportBuilder.html#customerGroup(com.commercetools.importapi.models.common.CustomerGroupKeyReference)" class="member-name-link">customerGroup(CustomerGroupKeyReference)</a> - Method in class com.commercetools.importapi.models.standalone_prices.<a href="../com/commercetools/importapi/models/standalone_prices/StandalonePriceImportBuilder.html" title="class in com.commercetools.importapi.models.standalone_prices">StandalonePriceImportBuilder</a></dt>
 <dd>
-<div class="block">Sets the CustomerGroup for which this Price is valid.</div>
+<div class="block">Sets the CustomerGroup for this Price, if the Price does not yet have a CustomerGroup.</div>
 </dd>
 <dt><a href="../com/commercetools/compat/GetByIdBuilder.html#customerGroup(io.sphere.sdk.models.Identifiable,java.util.function.Function)" class="member-name-link">customerGroup(Identifiable&lt;CustomerGroup&gt;, Function&lt;CustomerGroupByIdGet, CustomerGroupByIdGet&gt;)</a> - Method in class com.commercetools.compat.<a href="../com/commercetools/compat/GetByIdBuilder.html" title="class in com.commercetools.compat">GetByIdBuilder</a></dt>
 <dd>&nbsp;</dd>
@@ -20296,7 +20296,7 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 </dd>
 <dt><a href="../com/commercetools/importapi/models/standalone_prices/StandalonePriceImportBuilder.html#customerGroup(java.util.function.Function)" class="member-name-link">customerGroup(Function&lt;CustomerGroupKeyReferenceBuilder, CustomerGroupKeyReferenceBuilder&gt;)</a> - Method in class com.commercetools.importapi.models.standalone_prices.<a href="../com/commercetools/importapi/models/standalone_prices/StandalonePriceImportBuilder.html" title="class in com.commercetools.importapi.models.standalone_prices">StandalonePriceImportBuilder</a></dt>
 <dd>
-<div class="block">Sets the CustomerGroup for which this Price is valid.</div>
+<div class="block">Sets the CustomerGroup for this Price, if the Price does not yet have a CustomerGroup.</div>
 </dd>
 <dt><a href="../com/commercetools/graphql/api/GraphQL.html#customerGroup(java.util.function.UnaryOperator)" class="member-name-link">customerGroup(UnaryOperator&lt;CustomerGroupGraphQLQuery.Builder&gt;)</a> - Static method in class com.commercetools.graphql.api.<a href="../com/commercetools/graphql/api/GraphQL.html" title="class in com.commercetools.graphql.api">GraphQL</a></dt>
 <dd>&nbsp;</dd>

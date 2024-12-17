@@ -26,8 +26,12 @@ public class CartDiscountValueFixedDraftTest {
 
     @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { CartDiscountValueFixedDraft.builder()
-                .money(Collections.singletonList(new com.commercetools.api.models.common.MoneyImpl())) } };
+        return new Object[][] {
+                new Object[] { CartDiscountValueFixedDraft.builder()
+                        .money(Collections.singletonList(new com.commercetools.api.models.common.MoneyImpl())) },
+                new Object[] { CartDiscountValueFixedDraft.builder()
+                        .applicationMode(com.commercetools.api.models.cart_discount.DiscountApplicationMode
+                                .findEnum("ProportionateDistribution")) } };
     }
 
     @Test
@@ -36,5 +40,15 @@ public class CartDiscountValueFixedDraftTest {
         value.setMoney(Collections.singletonList(new com.commercetools.api.models.common.MoneyImpl()));
         Assertions.assertThat(value.getMoney())
                 .isEqualTo(Collections.singletonList(new com.commercetools.api.models.common.MoneyImpl()));
+    }
+
+    @Test
+    public void applicationMode() {
+        CartDiscountValueFixedDraft value = CartDiscountValueFixedDraft.of();
+        value.setApplicationMode(
+            com.commercetools.api.models.cart_discount.DiscountApplicationMode.findEnum("ProportionateDistribution"));
+        Assertions.assertThat(value.getApplicationMode())
+                .isEqualTo(com.commercetools.api.models.cart_discount.DiscountApplicationMode
+                        .findEnum("ProportionateDistribution"));
     }
 }

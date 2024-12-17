@@ -32,6 +32,7 @@ import jakarta.validation.constraints.NotNull;
         @JsonSubTypes.Type(value = com.commercetools.history.models.change_value.ChangeTargetLineItemsChangeValueImpl.class, name = ChangeTargetLineItemsChangeValue.LINE_ITEMS),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change_value.ChangeTargetMultiBuyCustomLineItemsChangeValueImpl.class, name = ChangeTargetMultiBuyCustomLineItemsChangeValue.MULTI_BUY_CUSTOM_LINE_ITEMS),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change_value.ChangeTargetMultiBuyLineItemsChangeValueImpl.class, name = ChangeTargetMultiBuyLineItemsChangeValue.MULTI_BUY_LINE_ITEMS),
+        @JsonSubTypes.Type(value = com.commercetools.history.models.change_value.ChangeTargetPatternChangeValueImpl.class, name = ChangeTargetPatternChangeValue.PATTERN),
         @JsonSubTypes.Type(value = com.commercetools.history.models.change_value.ChangeTargetShippingChangeValueImpl.class, name = ChangeTargetShippingChangeValue.SHIPPING) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = ChangeTargetChangeValueImpl.class, visible = true)
 @JsonDeserialize(as = ChangeTargetChangeValueImpl.class)
@@ -73,6 +74,10 @@ public interface ChangeTargetChangeValue {
             return com.commercetools.history.models.change_value.ChangeTargetMultiBuyLineItemsChangeValue.deepCopy(
                 (com.commercetools.history.models.change_value.ChangeTargetMultiBuyLineItemsChangeValue) template);
         }
+        if (template instanceof com.commercetools.history.models.change_value.ChangeTargetPatternChangeValue) {
+            return com.commercetools.history.models.change_value.ChangeTargetPatternChangeValue
+                    .deepCopy((com.commercetools.history.models.change_value.ChangeTargetPatternChangeValue) template);
+        }
         if (template instanceof com.commercetools.history.models.change_value.ChangeTargetShippingChangeValue) {
             return com.commercetools.history.models.change_value.ChangeTargetShippingChangeValue
                     .deepCopy((com.commercetools.history.models.change_value.ChangeTargetShippingChangeValue) template);
@@ -111,6 +116,14 @@ public interface ChangeTargetChangeValue {
      */
     public static com.commercetools.history.models.change_value.ChangeTargetMultiBuyLineItemsChangeValueBuilder multiBuyLineItemsBuilder() {
         return com.commercetools.history.models.change_value.ChangeTargetMultiBuyLineItemsChangeValueBuilder.of();
+    }
+
+    /**
+     * builder for pattern subtype
+     * @return builder
+     */
+    public static com.commercetools.history.models.change_value.ChangeTargetPatternChangeValueBuilder patternBuilder() {
+        return com.commercetools.history.models.change_value.ChangeTargetPatternChangeValueBuilder.of();
     }
 
     /**

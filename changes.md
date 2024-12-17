@@ -28,6 +28,13 @@
 
 
 <details>
+<summary>Added Enum(s)</summary>
+
+- added enum `Canceled` to type `ShipmentState`
+</details>
+
+
+<details>
 <summary>Added Property(s)</summary>
 
 - added property `applicationMode` to type `CartDiscountValueFixed`

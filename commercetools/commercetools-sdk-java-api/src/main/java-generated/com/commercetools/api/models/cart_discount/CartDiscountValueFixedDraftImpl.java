@@ -26,13 +26,17 @@ public class CartDiscountValueFixedDraftImpl implements CartDiscountValueFixedDr
 
     private java.util.List<com.commercetools.api.models.common.Money> money;
 
+    private com.commercetools.api.models.cart_discount.DiscountApplicationMode applicationMode;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
     CartDiscountValueFixedDraftImpl(
-            @JsonProperty("money") final java.util.List<com.commercetools.api.models.common.Money> money) {
+            @JsonProperty("money") final java.util.List<com.commercetools.api.models.common.Money> money,
+            @JsonProperty("applicationMode") final com.commercetools.api.models.cart_discount.DiscountApplicationMode applicationMode) {
         this.money = money;
+        this.applicationMode = applicationMode;
         this.type = FIXED;
     }
 
@@ -60,12 +64,26 @@ public class CartDiscountValueFixedDraftImpl implements CartDiscountValueFixedDr
         return this.money;
     }
 
+    /**
+     *  <p>Determines how the discount applies on CartDiscountLineItemTarget or CartDiscountCustomLineItemTarget.</p>
+     *  <p>For CartDiscountPatternTarget, you can also set the mode to <code>ProportionateDistribution</code> or <code>EvenDistribution</code>.</p>
+     */
+
+    public com.commercetools.api.models.cart_discount.DiscountApplicationMode getApplicationMode() {
+        return this.applicationMode;
+    }
+
     public void setMoney(final com.commercetools.api.models.common.Money... money) {
         this.money = new ArrayList<>(Arrays.asList(money));
     }
 
     public void setMoney(final java.util.List<com.commercetools.api.models.common.Money> money) {
         this.money = money;
+    }
+
+    public void setApplicationMode(
+            final com.commercetools.api.models.cart_discount.DiscountApplicationMode applicationMode) {
+        this.applicationMode = applicationMode;
     }
 
     @Override
@@ -80,20 +98,23 @@ public class CartDiscountValueFixedDraftImpl implements CartDiscountValueFixedDr
 
         return new EqualsBuilder().append(type, that.type)
                 .append(money, that.money)
+                .append(applicationMode, that.applicationMode)
                 .append(type, that.type)
                 .append(money, that.money)
+                .append(applicationMode, that.applicationMode)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(type).append(money).toHashCode();
+        return new HashCodeBuilder(17, 37).append(type).append(money).append(applicationMode).toHashCode();
     }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type)
                 .append("money", money)
+                .append("applicationMode", applicationMode)
                 .build();
     }
 

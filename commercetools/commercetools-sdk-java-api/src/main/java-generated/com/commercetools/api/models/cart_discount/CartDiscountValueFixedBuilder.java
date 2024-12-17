@@ -4,6 +4,8 @@ package com.commercetools.api.models.cart_discount;
 import java.util.*;
 import java.util.function.Function;
 
+import javax.annotation.Nullable;
+
 import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
@@ -23,6 +25,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class CartDiscountValueFixedBuilder implements Builder<CartDiscountValueFixed> {
 
     private java.util.List<com.commercetools.api.models.common.TypedMoney> money;
+
+    @Nullable
+    private com.commercetools.api.models.cart_discount.DiscountApplicationMode applicationMode;
 
     /**
      *  <p>Money values in cent precision or high precision of different currencies.</p>
@@ -90,6 +95,19 @@ public class CartDiscountValueFixedBuilder implements Builder<CartDiscountValueF
     }
 
     /**
+     *  <p>Indicates how the discount is applied on CartDiscountLineItemTarget or CartDiscountCustomLineItemTarget.</p>
+     *  <p>For CartDiscountPatternTarget, the mode can also be <code>ProportionateDistribution</code> or <code>EvenDistribution</code>.</p>
+     * @param applicationMode value to be set
+     * @return Builder
+     */
+
+    public CartDiscountValueFixedBuilder applicationMode(
+            @Nullable final com.commercetools.api.models.cart_discount.DiscountApplicationMode applicationMode) {
+        this.applicationMode = applicationMode;
+        return this;
+    }
+
+    /**
      *  <p>Money values in cent precision or high precision of different currencies.</p>
      * @return money
      */
@@ -99,12 +117,23 @@ public class CartDiscountValueFixedBuilder implements Builder<CartDiscountValueF
     }
 
     /**
+     *  <p>Indicates how the discount is applied on CartDiscountLineItemTarget or CartDiscountCustomLineItemTarget.</p>
+     *  <p>For CartDiscountPatternTarget, the mode can also be <code>ProportionateDistribution</code> or <code>EvenDistribution</code>.</p>
+     * @return applicationMode
+     */
+
+    @Nullable
+    public com.commercetools.api.models.cart_discount.DiscountApplicationMode getApplicationMode() {
+        return this.applicationMode;
+    }
+
+    /**
      * builds CartDiscountValueFixed with checking for non-null required values
      * @return CartDiscountValueFixed
      */
     public CartDiscountValueFixed build() {
         Objects.requireNonNull(money, CartDiscountValueFixed.class + ": money is missing");
-        return new CartDiscountValueFixedImpl(money);
+        return new CartDiscountValueFixedImpl(money, applicationMode);
     }
 
     /**
@@ -112,7 +141,7 @@ public class CartDiscountValueFixedBuilder implements Builder<CartDiscountValueF
      * @return CartDiscountValueFixed
      */
     public CartDiscountValueFixed buildUnchecked() {
-        return new CartDiscountValueFixedImpl(money);
+        return new CartDiscountValueFixedImpl(money, applicationMode);
     }
 
     /**
@@ -131,6 +160,7 @@ public class CartDiscountValueFixedBuilder implements Builder<CartDiscountValueF
     public static CartDiscountValueFixedBuilder of(final CartDiscountValueFixed template) {
         CartDiscountValueFixedBuilder builder = new CartDiscountValueFixedBuilder();
         builder.money = template.getMoney();
+        builder.applicationMode = template.getApplicationMode();
         return builder;
     }
 

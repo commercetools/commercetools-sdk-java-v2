@@ -51,6 +51,15 @@ public interface CartDiscountValueFixedDraft
     public List<Money> getMoney();
 
     /**
+     *  <p>Determines how the discount applies on CartDiscountLineItemTarget or CartDiscountCustomLineItemTarget.</p>
+     *  <p>For CartDiscountPatternTarget, you can also set the mode to <code>ProportionateDistribution</code> or <code>EvenDistribution</code>.</p>
+     * @return applicationMode
+     */
+
+    @JsonProperty("applicationMode")
+    public DiscountApplicationMode getApplicationMode();
+
+    /**
      *  <p>Money values provided either in cent precision or high precision for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$. If the array has multiple values of the same currency, the API returns an InvalidOperation error.</p>
      *  <p>If the array is empty, the discount does not apply.</p>
      * @param money values to be set
@@ -68,6 +77,14 @@ public interface CartDiscountValueFixedDraft
     public void setMoney(final List<Money> money);
 
     /**
+     *  <p>Determines how the discount applies on CartDiscountLineItemTarget or CartDiscountCustomLineItemTarget.</p>
+     *  <p>For CartDiscountPatternTarget, you can also set the mode to <code>ProportionateDistribution</code> or <code>EvenDistribution</code>.</p>
+     * @param applicationMode value to be set
+     */
+
+    public void setApplicationMode(final DiscountApplicationMode applicationMode);
+
+    /**
      * factory method
      * @return instance of CartDiscountValueFixedDraft
      */
@@ -83,6 +100,7 @@ public interface CartDiscountValueFixedDraft
     public static CartDiscountValueFixedDraft of(final CartDiscountValueFixedDraft template) {
         CartDiscountValueFixedDraftImpl instance = new CartDiscountValueFixedDraftImpl();
         instance.setMoney(template.getMoney());
+        instance.setApplicationMode(template.getApplicationMode());
         return instance;
     }
 
@@ -102,6 +120,7 @@ public interface CartDiscountValueFixedDraft
                         .map(com.commercetools.api.models.common.Money::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setApplicationMode(template.getApplicationMode());
         return instance;
     }
 

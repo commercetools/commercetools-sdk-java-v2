@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Checks whether a search index of Customers exists for a Project. If an index exists, a <code>200 OK</code> is returned; otherwise, a <code>409 Conflict</code>.</p>
+ *  <p>Checks whether a search index of Customers exists for a Project. Returns a <code>200 OK</code> if an index exists; otherwise, returns a <code>409 Conflict</code>.</p>
  *
  * <hr>
  * <div class=code-example>

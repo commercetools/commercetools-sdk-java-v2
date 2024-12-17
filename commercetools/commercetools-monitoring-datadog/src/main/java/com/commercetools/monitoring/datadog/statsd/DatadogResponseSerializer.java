@@ -33,7 +33,7 @@ public class DatadogResponseSerializer implements ResponseSerializer {
     public <O> ApiHttpResponse<O> convertResponse(ApiHttpResponse<byte[]> response, Class<O> outputType) {
         Instant start = Instant.now();
         ApiHttpResponse<O> result = serializer.convertResponse(response, outputType);
-        long durationInMillis = Duration.between(start, Instant.now()).toMillis();
+        double durationInMillis = Duration.between(start, Instant.now()).toNanos() / 1_000_000.0;
         this.statsDClient.recordHistogramValue(PREFIX + "." + JSON_DESERIALIZATION, durationInMillis,
             format("%s:%s", RESPONSE_BODY_TYPE, outputType.getCanonicalName()));
         return result;
@@ -43,7 +43,7 @@ public class DatadogResponseSerializer implements ResponseSerializer {
     public <O> ApiHttpResponse<O> convertResponse(ApiHttpResponse<byte[]> response, JavaType outputType) {
         Instant start = Instant.now();
         ApiHttpResponse<O> result = serializer.convertResponse(response, outputType);
-        long durationInMillis = Duration.between(start, Instant.now()).toMillis();
+        double durationInMillis = Duration.between(start, Instant.now()).toNanos() / 1_000_000.0;
         this.statsDClient.recordHistogramValue(PREFIX + "." + JSON_DESERIALIZATION, durationInMillis,
             format("%s:%s", RESPONSE_BODY_TYPE, outputType.toString()));
         return result;
@@ -53,7 +53,7 @@ public class DatadogResponseSerializer implements ResponseSerializer {
     public <O> ApiHttpResponse<O> convertResponse(ApiHttpResponse<byte[]> response, TypeReference<O> outputType) {
         Instant start = Instant.now();
         ApiHttpResponse<O> result = serializer.convertResponse(response, outputType);
-        long durationInMillis = Duration.between(start, Instant.now()).toMillis();
+        double durationInMillis = Duration.between(start, Instant.now()).toNanos() / 1_000_000.0;
         this.statsDClient.recordHistogramValue(PREFIX + "." + JSON_DESERIALIZATION, durationInMillis,
             format("%s:%s", RESPONSE_BODY_TYPE, outputType.getType().getTypeName()));
         return result;
@@ -63,7 +63,7 @@ public class DatadogResponseSerializer implements ResponseSerializer {
     public byte[] toJsonByteArray(Object value) throws JsonProcessingException {
         Instant start = Instant.now();
         byte[] result = serializer.toJsonByteArray(value);
-        long durationInMillis = Duration.between(start, Instant.now()).toMillis();
+        double durationInMillis = Duration.between(start, Instant.now()).toNanos() / 1_000_000.0;
         this.statsDClient.recordHistogramValue(PREFIX + "." + JSON_SERIALIZATION, durationInMillis,
             format("%s:%s", REQUEST_BODY_TYPE, value.getClass().getCanonicalName()));
         return result;

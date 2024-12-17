@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Returned when the requested resource was not found.</p>
+ *  <p>Returned if the requested resource was not found or the Product Search index is inactive.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ObjectNotFoundErrorImpl implements ObjectNotFoundError, ModelBase {
@@ -56,7 +56,8 @@ public class ObjectNotFoundErrorImpl implements ObjectNotFoundError, ModelBase {
     }
 
     /**
-     *  <p><code>"A $resourceType with identifier $id was unexpectedly not found."</code></p>
+     *  <p><code>"A $resourceType with identifier $id was unexpectedly not found."</code> or</p>
+     *  <p><code>"No index found for project"</code></p>
      */
 
     public String getMessage() {

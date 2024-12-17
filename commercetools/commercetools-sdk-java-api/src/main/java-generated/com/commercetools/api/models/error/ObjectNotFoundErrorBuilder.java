@@ -26,7 +26,8 @@ public class ObjectNotFoundErrorBuilder implements Builder<ObjectNotFoundError> 
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     *  <p><code>"A $resourceType with identifier $id was unexpectedly not found."</code></p>
+     *  <p><code>"A $resourceType with identifier $id was unexpectedly not found."</code> or</p>
+     *  <p><code>"No index found for project"</code></p>
      * @param message value to be set
      * @return Builder
      */
@@ -63,7 +64,8 @@ public class ObjectNotFoundErrorBuilder implements Builder<ObjectNotFoundError> 
     }
 
     /**
-     *  <p><code>"A $resourceType with identifier $id was unexpectedly not found."</code></p>
+     *  <p><code>"A $resourceType with identifier $id was unexpectedly not found."</code> or</p>
+     *  <p><code>"No index found for project"</code></p>
      * @return message
      */
 

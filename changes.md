@@ -46,6 +46,9 @@
 
 - added property `applicationMode` to type `CartDiscountValueFixed`
 - added property `applicationMode` to type `CartDiscountValueFixedDraft`
+- added property `custom` to type `CartSetCustomShippingMethodAction`
+- added property `custom` to type `StagedOrderSetCustomShippingMethodAction`
+- added property `custom` to type `StagedOrderSetShippingAddressAndCustomShippingMethodAction`
 </details>
 
 **History changes**

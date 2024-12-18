@@ -39,6 +39,9 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder
     @Nullable
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
+    @Nullable
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
+
     /**
      *  <p>Value to set for <code>shippingAddress</code>.</p>
      * @param builder function to build the address value
@@ -201,6 +204,42 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder
     }
 
     /**
+     *  <p>Custom Fields for the custom Shipping Method.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraftBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the custom Shipping Method.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsDraftBuilder, com.commercetools.api.models.type.CustomFieldsDraft> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields for the custom Shipping Method.</p>
+     * @param custom value to be set
+     * @return Builder
+     */
+
+    public StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder custom(
+            @Nullable final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+        this.custom = custom;
+        return this;
+    }
+
+    /**
      *  <p>Value to set for <code>shippingAddress</code>.</p>
      * @return address
      */
@@ -248,6 +287,16 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder
     }
 
     /**
+     *  <p>Custom Fields for the custom Shipping Method.</p>
+     * @return custom
+     */
+
+    @Nullable
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+        return this.custom;
+    }
+
+    /**
      * builds StagedOrderSetShippingAddressAndCustomShippingMethodAction with checking for non-null required values
      * @return StagedOrderSetShippingAddressAndCustomShippingMethodAction
      */
@@ -259,7 +308,7 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder
         Objects.requireNonNull(shippingRate,
             StagedOrderSetShippingAddressAndCustomShippingMethodAction.class + ": shippingRate is missing");
         return new StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl(address, shippingMethodName,
-            shippingRate, taxCategory, externalTaxRate);
+            shippingRate, taxCategory, externalTaxRate, custom);
     }
 
     /**
@@ -268,7 +317,7 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder
      */
     public StagedOrderSetShippingAddressAndCustomShippingMethodAction buildUnchecked() {
         return new StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl(address, shippingMethodName,
-            shippingRate, taxCategory, externalTaxRate);
+            shippingRate, taxCategory, externalTaxRate, custom);
     }
 
     /**
@@ -292,6 +341,7 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder
         builder.shippingRate = template.getShippingRate();
         builder.taxCategory = template.getTaxCategory();
         builder.externalTaxRate = template.getExternalTaxRate();
+        builder.custom = template.getCustom();
         return builder;
     }
 

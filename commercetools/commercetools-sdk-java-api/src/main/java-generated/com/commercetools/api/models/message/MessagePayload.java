@@ -243,6 +243,8 @@ import jakarta.validation.constraints.NotNull;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ReviewCreatedMessagePayloadImpl.class, name = ReviewCreatedMessagePayload.REVIEW_CREATED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ReviewRatingSetMessagePayloadImpl.class, name = ReviewRatingSetMessagePayload.REVIEW_RATING_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ReviewStateTransitionMessagePayloadImpl.class, name = ReviewStateTransitionMessagePayload.REVIEW_STATE_TRANSITION),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ShoppingListLineItemAddedMessagePayloadImpl.class, name = ShoppingListLineItemAddedMessagePayload.SHOPPING_LIST_LINE_ITEM_ADDED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ShoppingListLineItemRemovedMessagePayloadImpl.class, name = ShoppingListLineItemRemovedMessagePayload.SHOPPING_LIST_LINE_ITEM_REMOVED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ShoppingListStoreSetMessagePayloadImpl.class, name = ShoppingListStoreSetMessagePayload.SHOPPING_LIST_STORE_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StagedQuoteCreatedMessagePayloadImpl.class, name = StagedQuoteCreatedMessagePayload.STAGED_QUOTE_CREATED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StagedQuoteDeletedMessagePayloadImpl.class, name = StagedQuoteDeletedMessagePayload.STAGED_QUOTE_DELETED),
@@ -947,6 +949,10 @@ public interface MessagePayload extends MessagePayloadMixin {
         if (template instanceof com.commercetools.api.models.message.ReviewStateTransitionMessagePayload) {
             return com.commercetools.api.models.message.ReviewStateTransitionMessagePayload
                     .deepCopy((com.commercetools.api.models.message.ReviewStateTransitionMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ShoppingListMessagePayload) {
+            return com.commercetools.api.models.message.ShoppingListMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.ShoppingListMessagePayload) template);
         }
         if (template instanceof com.commercetools.api.models.message.ShoppingListStoreSetMessagePayload) {
             return com.commercetools.api.models.message.ShoppingListStoreSetMessagePayload
@@ -2782,6 +2788,22 @@ public interface MessagePayload extends MessagePayloadMixin {
      */
     public static com.commercetools.api.models.message.ReviewStateTransitionMessagePayloadBuilder reviewStateTransitionBuilder() {
         return com.commercetools.api.models.message.ReviewStateTransitionMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for shoppingListLineItemAdded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ShoppingListLineItemAddedMessagePayloadBuilder shoppingListLineItemAddedBuilder() {
+        return com.commercetools.api.models.message.ShoppingListLineItemAddedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for shoppingListLineItemRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ShoppingListLineItemRemovedMessagePayloadBuilder shoppingListLineItemRemovedBuilder() {
+        return com.commercetools.api.models.message.ShoppingListLineItemRemovedMessagePayloadBuilder.of();
     }
 
     /**

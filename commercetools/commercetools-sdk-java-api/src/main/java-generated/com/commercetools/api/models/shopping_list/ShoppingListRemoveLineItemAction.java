@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ShoppingListRemoveLineItemAction
+ *  <p>Produces the Shopping List Line Item Removed Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

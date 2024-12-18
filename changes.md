@@ -24,6 +24,12 @@
 - added type `CountOnCustomLineItemUnits`
 - added type `CountOnLineItemUnits`
 - added type `PatternComponent`
+- added type `ShoppingListLineItemAddedMessage`
+- added type `ShoppingListLineItemRemovedMessage`
+- added type `ShoppingListMessage`
+- added type `ShoppingListLineItemAddedMessagePayload`
+- added type `ShoppingListLineItemRemovedMessagePayload`
+- added type `ShoppingListMessagePayload`
 </details>
 
 
@@ -31,6 +37,7 @@
 <summary>Added Enum(s)</summary>
 
 - added enum `Canceled` to type `ShipmentState`
+- added enum `shopping-list` to type `MessageSubscriptionResourceTypeId`
 </details>
 
 

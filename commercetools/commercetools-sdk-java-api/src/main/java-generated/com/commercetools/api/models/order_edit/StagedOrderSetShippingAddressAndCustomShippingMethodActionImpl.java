@@ -35,6 +35,8 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl
 
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate;
 
+    private com.commercetools.api.models.type.CustomFieldsDraft custom;
+
     /**
      * create instance with all properties
      */
@@ -44,12 +46,14 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl
             @JsonProperty("shippingMethodName") final String shippingMethodName,
             @JsonProperty("shippingRate") final com.commercetools.api.models.shipping_method.ShippingRateDraft shippingRate,
             @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier taxCategory,
-            @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate) {
+            @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate,
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.address = address;
         this.shippingMethodName = shippingMethodName;
         this.shippingRate = shippingRate;
         this.taxCategory = taxCategory;
         this.externalTaxRate = externalTaxRate;
+        this.custom = custom;
         this.action = SET_SHIPPING_ADDRESS_AND_CUSTOM_SHIPPING_METHOD;
     }
 
@@ -108,6 +112,14 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl
         return this.externalTaxRate;
     }
 
+    /**
+     *  <p>Custom Fields for the custom Shipping Method.</p>
+     */
+
+    public com.commercetools.api.models.type.CustomFieldsDraft getCustom() {
+        return this.custom;
+    }
+
     public void setAddress(final com.commercetools.api.models.common.BaseAddress address) {
         this.address = address;
     }
@@ -129,6 +141,10 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl
         this.externalTaxRate = externalTaxRate;
     }
 
+    public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+        this.custom = custom;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -145,12 +161,14 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl
                 .append(shippingRate, that.shippingRate)
                 .append(taxCategory, that.taxCategory)
                 .append(externalTaxRate, that.externalTaxRate)
+                .append(custom, that.custom)
                 .append(action, that.action)
                 .append(address, that.address)
                 .append(shippingMethodName, that.shippingMethodName)
                 .append(shippingRate, that.shippingRate)
                 .append(taxCategory, that.taxCategory)
                 .append(externalTaxRate, that.externalTaxRate)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
@@ -162,6 +180,7 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl
                 .append(shippingRate)
                 .append(taxCategory)
                 .append(externalTaxRate)
+                .append(custom)
                 .toHashCode();
     }
 
@@ -173,6 +192,7 @@ public class StagedOrderSetShippingAddressAndCustomShippingMethodActionImpl
                 .append("shippingRate", shippingRate)
                 .append("taxCategory", taxCategory)
                 .append("externalTaxRate", externalTaxRate)
+                .append("custom", custom)
                 .build();
     }
 

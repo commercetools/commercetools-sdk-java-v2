@@ -9,6 +9,7 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.shipping_method.ShippingRateDraft;
 import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier;
+import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -75,6 +76,14 @@ public interface CartSetCustomShippingMethodAction extends CartUpdateAction {
     public ExternalTaxRateDraft getExternalTaxRate();
 
     /**
+     *  <p>Custom Fields for the custom Shipping Method.</p>
+     * @return custom
+     */
+    @Valid
+    @JsonProperty("custom")
+    public CustomFieldsDraft getCustom();
+
+    /**
      *  <p>Name of the custom Shipping Method.</p>
      * @param shippingMethodName value to be set
      */
@@ -103,6 +112,13 @@ public interface CartSetCustomShippingMethodAction extends CartUpdateAction {
     public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
 
     /**
+     *  <p>Custom Fields for the custom Shipping Method.</p>
+     * @param custom value to be set
+     */
+
+    public void setCustom(final CustomFieldsDraft custom);
+
+    /**
      * factory method
      * @return instance of CartSetCustomShippingMethodAction
      */
@@ -121,6 +137,7 @@ public interface CartSetCustomShippingMethodAction extends CartUpdateAction {
         instance.setShippingRate(template.getShippingRate());
         instance.setTaxCategory(template.getTaxCategory());
         instance.setExternalTaxRate(template.getExternalTaxRate());
+        instance.setCustom(template.getCustom());
         return instance;
     }
 
@@ -143,6 +160,7 @@ public interface CartSetCustomShippingMethodAction extends CartUpdateAction {
                 .deepCopy(template.getTaxCategory()));
         instance.setExternalTaxRate(
             com.commercetools.api.models.cart.ExternalTaxRateDraft.deepCopy(template.getExternalTaxRate()));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         return instance;
     }
 

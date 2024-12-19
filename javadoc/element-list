@@ -103,6 +103,7 @@ com.commercetools.docs.meta
 com.commercetools.graphql.api
 com.commercetools.history.client
 com.commercetools.history.defaultconfig
+com.commercetools.history.models.cart_discount
 com.commercetools.history.models.change
 com.commercetools.history.models.change_history
 com.commercetools.history.models.change_value

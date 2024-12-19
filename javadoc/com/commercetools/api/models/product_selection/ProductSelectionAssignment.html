@@ -131,12 +131,12 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="ProductVariantExclusion.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantExclusion</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getVariantExclusion()" class="member-name-link">getVariantExclusion</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Defines which Variants of the Product will be excluded from the Product Selection.</div>
+<div class="block">Defines which particular Variants of the Product are excluded from the Product Selection.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="ProductVariantSelection.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantSelection</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getVariantSelection()" class="member-name-link">getVariantSelection</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Define which Variants of the added Product will be included in the Product Selection.</div>
+<div class="block">Defines which particular Variants of the Product are included in the Product Selection.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProductSelectionAssignment.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionAssignment</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -161,12 +161,12 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setVariantExclusion(com.commercetools.api.models.product_selection.ProductVariantExclusion)" class="member-name-link">setVariantExclusion</a><wbr>(<a href="ProductVariantExclusion.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantExclusion</a>&nbsp;variantExclusion)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Defines which Variants of the Product will be excluded from the Product Selection.</div>
+<div class="block">Defines which particular Variants of the Product are excluded from the Product Selection.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setVariantSelection(com.commercetools.api.models.product_selection.ProductVariantSelection)" class="member-name-link">setVariantSelection</a><wbr>(<a href="ProductVariantSelection.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantSelection</a>&nbsp;variantSelection)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Define which Variants of the added Product will be included in the Product Selection.</div>
+<div class="block">Defines which particular Variants of the Product are included in the Product Selection.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProductSelectionAssignment.html" title="interface in com.commercetools.api.models.product_selection">ProductSelectionAssignment</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -223,7 +223,7 @@ loadScripts(document, 'script');</script>
 <h3>getVariantSelection</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="ProductVariantSelection.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantSelection</a></span>&nbsp;<span class="element-name">getVariantSelection</span>()</div>
-<div class="block"><p>Define which Variants of the added Product will be included in the Product Selection.</p>
+<div class="block"><p>Defines which particular Variants of the Product are included in the Product Selection. If undefined all Variants of the referenced Product are included.</p>
   <p>This field is only available for assignments to a Product Selection with <code>Individual</code> ProductSelectionMode. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -236,7 +236,7 @@ loadScripts(document, 'script');</script>
 <h3>getVariantExclusion</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="ProductVariantExclusion.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantExclusion</a></span>&nbsp;<span class="element-name">getVariantExclusion</span>()</div>
-<div class="block"><p>Defines which Variants of the Product will be excluded from the Product Selection.</p>
+<div class="block"><p>Defines which particular Variants of the Product are excluded from the Product Selection. If undefined all Variants of the referenced Product are excluded.</p>
   <p>This field is only available for assignments to a Product Selection with <code>IndividualExclusion</code> ProductSelectionMode. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -270,7 +270,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setVariantSelection(com.commercetools.api.models.product_selection.ProductVariantSelection)">
 <h3>setVariantSelection</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setVariantSelection</span><wbr><span class="parameters">(<a href="ProductVariantSelection.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantSelection</a>&nbsp;variantSelection)</span></div>
-<div class="block"><p>Define which Variants of the added Product will be included in the Product Selection.</p>
+<div class="block"><p>Defines which particular Variants of the Product are included in the Product Selection. If undefined all Variants of the referenced Product are included.</p>
   <p>This field is only available for assignments to a Product Selection with <code>Individual</code> ProductSelectionMode. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -282,7 +282,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setVariantExclusion(com.commercetools.api.models.product_selection.ProductVariantExclusion)">
 <h3>setVariantExclusion</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setVariantExclusion</span><wbr><span class="parameters">(<a href="ProductVariantExclusion.html" title="interface in com.commercetools.api.models.product_selection">ProductVariantExclusion</a>&nbsp;variantExclusion)</span></div>
-<div class="block"><p>Defines which Variants of the Product will be excluded from the Product Selection.</p>
+<div class="block"><p>Defines which particular Variants of the Product are excluded from the Product Selection. If undefined all Variants of the referenced Product are excluded.</p>
   <p>This field is only available for assignments to a Product Selection with <code>IndividualExclusion</code> ProductSelectionMode. The list of SKUs will be updated automatically on any change of those performed on the respective Product itself.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>

@@ -78,7 +78,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">ObjectNotFoundError</span><span class="extends-implements">
 extends <a href="ErrorObject.html" title="interface in com.commercetools.api.models.error">ErrorObject</a></span></div>
-<div class="block"><p>Returned when the requested resource was not found.</p>
+<div class="block"><p>Returned if the requested resource was not found or the Product Search index is inactive.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -143,7 +143,7 @@ extends <a href="ErrorObject.html" title="interface in com.commercetools.api.mod
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMessage()" class="member-name-link">getMessage</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>"A $resourceType with identifier $id was unexpectedly not found."</code></div>
+<div class="block"><code>"A $resourceType with identifier $id was unexpectedly not found."</code> or</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ObjectNotFoundError.html" title="interface in com.commercetools.api.models.error">ObjectNotFoundError</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -158,7 +158,7 @@ extends <a href="ErrorObject.html" title="interface in com.commercetools.api.mod
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setMessage(java.lang.String)" class="member-name-link">setMessage</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>"A $resourceType with identifier $id was unexpectedly not found."</code></div>
+<div class="block"><code>"A $resourceType with identifier $id was unexpectedly not found."</code> or</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ObjectNotFoundError.html" title="interface in com.commercetools.api.models.error">ObjectNotFoundError</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -230,7 +230,8 @@ extends <a href="ErrorObject.html" title="interface in com.commercetools.api.mod
 <h3>getMessage</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getMessage</span>()</div>
-<div class="block"><p><code>"A $resourceType with identifier $id was unexpectedly not found."</code></p></div>
+<div class="block"><p><code>"A $resourceType with identifier $id was unexpectedly not found."</code> or</p>
+  <p><code>"No index found for project"</code></p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ErrorObject.html#getMessage()">getMessage</a></code>&nbsp;in interface&nbsp;<code><a href="ErrorObject.html" title="interface in com.commercetools.api.models.error">ErrorObject</a></code></dd>
@@ -243,7 +244,8 @@ extends <a href="ErrorObject.html" title="interface in com.commercetools.api.mod
 <section class="detail" id="setMessage(java.lang.String)">
 <h3>setMessage</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setMessage</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;message)</span></div>
-<div class="block"><p><code>"A $resourceType with identifier $id was unexpectedly not found."</code></p></div>
+<div class="block"><p><code>"A $resourceType with identifier $id was unexpectedly not found."</code> or</p>
+  <p><code>"No index found for project"</code></p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="ErrorObject.html#setMessage(java.lang.String)">setMessage</a></code>&nbsp;in interface&nbsp;<code><a href="ErrorObject.html" title="interface in com.commercetools.api.models.error">ErrorObject</a></code></dd>

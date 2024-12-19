@@ -73,7 +73,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Known Subinterfaces:</dt>
-<dd><code><a href="ChangeTargetCustomLineItemsChangeValue.html" title="interface in com.commercetools.history.models.change_value">ChangeTargetCustomLineItemsChangeValue</a></code>, <code><a href="ChangeTargetLineItemsChangeValue.html" title="interface in com.commercetools.history.models.change_value">ChangeTargetLineItemsChangeValue</a></code>, <code><a href="ChangeTargetMultiBuyCustomLineItemsChangeValue.html" title="interface in com.commercetools.history.models.change_value">ChangeTargetMultiBuyCustomLineItemsChangeValue</a></code>, <code><a href="ChangeTargetMultiBuyLineItemsChangeValue.html" title="interface in com.commercetools.history.models.change_value">ChangeTargetMultiBuyLineItemsChangeValue</a></code>, <code><a href="ChangeTargetShippingChangeValue.html" title="interface in com.commercetools.history.models.change_value">ChangeTargetShippingChangeValue</a></code></dd>
+<dd><code><a href="ChangeTargetCustomLineItemsChangeValue.html" title="interface in com.commercetools.history.models.change_value">ChangeTargetCustomLineItemsChangeValue</a></code>, <code><a href="ChangeTargetLineItemsChangeValue.html" title="interface in com.commercetools.history.models.change_value">ChangeTargetLineItemsChangeValue</a></code>, <code><a href="ChangeTargetMultiBuyCustomLineItemsChangeValue.html" title="interface in com.commercetools.history.models.change_value">ChangeTargetMultiBuyCustomLineItemsChangeValue</a></code>, <code><a href="ChangeTargetMultiBuyLineItemsChangeValue.html" title="interface in com.commercetools.history.models.change_value">ChangeTargetMultiBuyLineItemsChangeValue</a></code>, <code><a href="ChangeTargetPatternChangeValue.html" title="interface in com.commercetools.history.models.change_value">ChangeTargetPatternChangeValue</a></code>, <code><a href="ChangeTargetShippingChangeValue.html" title="interface in com.commercetools.history.models.change_value">ChangeTargetShippingChangeValue</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">ChangeTargetChangeValue</span></div>
@@ -130,19 +130,24 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">builder for multiBuyLineItems subtype</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ChangeTargetShippingChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeTargetShippingChangeValueBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#shippingBuilder()" class="member-name-link">shippingBuilder</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ChangeTargetPatternChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeTargetPatternChangeValueBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#patternBuilder()" class="member-name-link">patternBuilder</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="block">builder for pattern subtype</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ChangeTargetShippingChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeTargetShippingChangeValueBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#shippingBuilder()" class="member-name-link">shippingBuilder</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">builder for shipping subtype</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ChangeTargetChangeValue.html" title="interface in com.commercetools.history.models.change_value">ChangeTargetChangeValue</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ChangeTargetChangeValue.html" title="interface in com.commercetools.history.models.change_value">ChangeTargetChangeValue</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;T&gt;&nbsp;T</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#withChangeTargetChangeValue(java.util.function.Function)" class="member-name-link">withChangeTargetChangeValue</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ChangeTargetChangeValue.html" title="interface in com.commercetools.history.models.change_value">ChangeTargetChangeValue</a>,<wbr>T&gt;&nbsp;helper)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;T&gt;&nbsp;T</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#withChangeTargetChangeValue(java.util.function.Function)" class="member-name-link">withChangeTargetChangeValue</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ChangeTargetChangeValue.html" title="interface in com.commercetools.history.models.change_value">ChangeTargetChangeValue</a>,<wbr>T&gt;&nbsp;helper)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">accessor map function</div>
 </div>
 </div>
@@ -223,6 +228,17 @@ loadScripts(document, 'script');</script>
 <h3>multiBuyLineItemsBuilder</h3>
 <div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ChangeTargetMultiBuyLineItemsChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeTargetMultiBuyLineItemsChangeValueBuilder</a></span>&nbsp;<span class="element-name">multiBuyLineItemsBuilder</span>()</div>
 <div class="block">builder for multiBuyLineItems subtype</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="patternBuilder()">
+<h3>patternBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ChangeTargetPatternChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeTargetPatternChangeValueBuilder</a></span>&nbsp;<span class="element-name">patternBuilder</span>()</div>
+<div class="block">builder for pattern subtype</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>builder</dd>

@@ -19,6 +19,7 @@ import org.apache.commons.io.input.AutoCloseInputStream;
 import org.apache.hc.client5.http.async.methods.SimpleBody;
 import org.apache.hc.client5.http.async.methods.SimpleHttpResponse;
 import org.apache.hc.client5.http.async.methods.SimpleResponseConsumer;
+import org.apache.hc.client5.http.config.TlsConfig;
 import org.apache.hc.client5.http.impl.async.CloseableHttpAsyncClient;
 import org.apache.hc.client5.http.impl.async.HttpAsyncClientBuilder;
 import org.apache.hc.client5.http.impl.nio.PoolingAsyncClientConnectionManagerBuilder;
@@ -32,7 +33,6 @@ import org.apache.hc.core5.http.nio.ssl.TlsStrategy;
 import org.apache.hc.core5.http.nio.support.AsyncRequestBuilder;
 import org.apache.hc.core5.http2.HttpVersionPolicy;
 import org.apache.hc.core5.reactor.IOReactorStatus;
-import org.apache.hc.core5.reactor.ssl.TlsDetails;
 
 public class CtApacheHttpClient extends HttpClientBase {
     public static final int MAX_REQUESTS = 64;
@@ -46,19 +46,19 @@ public class CtApacheHttpClient extends HttpClientBase {
     }
 
     public static HttpAsyncClientBuilder createClientBuilder(AsyncClientConnectionManager cm) {
-        return HttpAsyncClientBuilder.create().setVersionPolicy(HttpVersionPolicy.NEGOTIATE).setConnectionManager(cm);
+        return HttpAsyncClientBuilder.create().setConnectionManager(cm);
     }
 
     public static PoolingAsyncClientConnectionManagerBuilder createConnectionManager(final int maxConnTotal,
             final int maxConnPerRoute) {
-        final TlsStrategy tlsStrategy = ClientTlsStrategyBuilder.create()
-                .useSystemProperties()
-                .setTlsDetailsFactory(
-                    sslEngine -> new TlsDetails(sslEngine.getSession(), sslEngine.getApplicationProtocol()))
+        final TlsStrategy tlsStrategy = ClientTlsStrategyBuilder.create().useSystemProperties().build();
+        final TlsConfig tlsConfig = TlsConfig.copy(TlsConfig.DEFAULT)
+                .setVersionPolicy(HttpVersionPolicy.NEGOTIATE)
                 .build();
         return PoolingAsyncClientConnectionManagerBuilder.create()
                 .setMaxConnPerRoute(maxConnPerRoute)
                 .setMaxConnTotal(maxConnTotal)
+                .setDefaultTlsConfig(tlsConfig)
                 .setTlsStrategy(tlsStrategy);
     }
 

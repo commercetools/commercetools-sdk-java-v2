@@ -1,4 +1,89 @@
 
+# 17.21.0 (2024-12-19)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/767
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/768
+* DEVX-496 update spring boot version by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/765
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/769
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/770
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/771
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/774
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/775
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/776
+* DEVX-460 make metrics more precise for values below 0 ms by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/772
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/777
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/778
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/779
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/780
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/781
+* Update Apache AsyncHttpClient by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/773
+
+**Api changes**
+
+<details>
+<summary>Added Resource(s)</summary>
+
+- added resource `/{projectKey}/channels/key={key}`
+</details>
+
+
+<details>
+<summary>Added Method(s)</summary>
+
+- added method `apiRoot.withProjectKey().channels().withKey().get()`
+- added method `apiRoot.withProjectKey().channels().withKey().head()`
+- added method `apiRoot.withProjectKey().channels().withKey().post()`
+- added method `apiRoot.withProjectKey().channels().withKey().delete()`
+</details>
+
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `CartDiscountPatternTarget`
+- added type `CountOnCustomLineItemUnits`
+- added type `CountOnLineItemUnits`
+- added type `PatternComponent`
+- added type `ShoppingListLineItemAddedMessage`
+- added type `ShoppingListLineItemRemovedMessage`
+- added type `ShoppingListMessage`
+- added type `ShoppingListLineItemAddedMessagePayload`
+- added type `ShoppingListLineItemRemovedMessagePayload`
+- added type `ShoppingListMessagePayload`
+</details>
+
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `Canceled` to type `ShipmentState`
+- added enum `shopping-list` to type `MessageSubscriptionResourceTypeId`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `applicationMode` to type `CartDiscountValueFixed`
+- added property `applicationMode` to type `CartDiscountValueFixedDraft`
+- added property `custom` to type `CartSetCustomShippingMethodAction`
+- added property `custom` to type `StagedOrderSetCustomShippingMethodAction`
+- added property `custom` to type `StagedOrderSetShippingAddressAndCustomShippingMethodAction`
+</details>
+
+**History changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `ChangeTargetPatternChangeValue`
+- added type `PatternComponent`
+</details>
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.20.0...17.21.0
+
 # 17.20.0 (2024-12-02)
 
 ## What's Changed

@@ -33,7 +33,9 @@ public class SearchIndexingConfigurationTest {
                 new Object[] { SearchIndexingConfiguration.builder()
                         .orders(new com.commercetools.api.models.project.SearchIndexingConfigurationValuesImpl()) },
                 new Object[] { SearchIndexingConfiguration.builder()
-                        .customers(
+                        .customers(new com.commercetools.api.models.project.SearchIndexingConfigurationValuesImpl()) },
+                new Object[] { SearchIndexingConfiguration.builder()
+                        .businessUnits(
                             new com.commercetools.api.models.project.SearchIndexingConfigurationValuesImpl()) } };
     }
 
@@ -66,6 +68,14 @@ public class SearchIndexingConfigurationTest {
         SearchIndexingConfiguration value = SearchIndexingConfiguration.of();
         value.setCustomers(new com.commercetools.api.models.project.SearchIndexingConfigurationValuesImpl());
         Assertions.assertThat(value.getCustomers())
+                .isEqualTo(new com.commercetools.api.models.project.SearchIndexingConfigurationValuesImpl());
+    }
+
+    @Test
+    public void businessUnits() {
+        SearchIndexingConfiguration value = SearchIndexingConfiguration.of();
+        value.setBusinessUnits(new com.commercetools.api.models.project.SearchIndexingConfigurationValuesImpl());
+        Assertions.assertThat(value.getBusinessUnits())
                 .isEqualTo(new com.commercetools.api.models.project.SearchIndexingConfigurationValuesImpl());
     }
 }

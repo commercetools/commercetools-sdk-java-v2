@@ -1,62 +1,47 @@
 **Api changes**
 
 <details>
-<summary>Added Resource(s)</summary>
+<summary>Changed Property(s)</summary>
 
-- added resource `/{projectKey}/channels/key={key}`
-</details>
-
-
-<details>
-<summary>Added Method(s)</summary>
-
-- added method `apiRoot.withProjectKey().channels().withKey().get()`
-- added method `apiRoot.withProjectKey().channels().withKey().head()`
-- added method `apiRoot.withProjectKey().channels().withKey().post()`
-- added method `apiRoot.withProjectKey().channels().withKey().delete()`
-</details>
-
-
-<details>
-<summary>Added Type(s)</summary>
-
-- added type `CartDiscountPatternTarget`
-- added type `CountOnCustomLineItemUnits`
-- added type `CountOnLineItemUnits`
-- added type `PatternComponent`
-- added type `ShoppingListLineItemAddedMessage`
-- added type `ShoppingListLineItemRemovedMessage`
-- added type `ShoppingListMessage`
-- added type `ShoppingListLineItemAddedMessagePayload`
-- added type `ShoppingListLineItemRemovedMessagePayload`
-- added type `ShoppingListMessagePayload`
-</details>
-
-
-<details>
-<summary>Added Enum(s)</summary>
-
-- added enum `Canceled` to type `ShipmentState`
-- added enum `shopping-list` to type `MessageSubscriptionResourceTypeId`
+- :warning: changed property `exact` of type `SearchExactExpression` from type `SearchAnyValue` to `SearchExactValue`
 </details>
 
 
 <details>
 <summary>Added Property(s)</summary>
 
-- added property `applicationMode` to type `CartDiscountValueFixed`
-- added property `applicationMode` to type `CartDiscountValueFixedDraft`
-- added property `custom` to type `CartSetCustomShippingMethodAction`
-- added property `custom` to type `StagedOrderSetCustomShippingMethodAction`
-- added property `custom` to type `StagedOrderSetShippingAddressAndCustomShippingMethodAction`
+- added property `businessUnits` to type `SearchIndexingConfiguration`
 </details>
 
-**History changes**
+
+<details>
+<summary>Added Resource(s)</summary>
+
+- added resource `/{projectKey}/business-units/search`
+- added resource `/{projectKey}/business-units/search/indexing-status`
+</details>
+
+
+<details>
+<summary>Added Method(s)</summary>
+
+- added method `apiRoot.withProjectKey().businessUnits().search().post()`
+- added method `apiRoot.withProjectKey().businessUnits().search().head()`
+- added method `apiRoot.withProjectKey().businessUnits().searchIndexingStatus().get()`
+</details>
+
 
 <details>
 <summary>Added Type(s)</summary>
 
-- added type `ChangeTargetPatternChangeValue`
-- added type `PatternComponent`
+- added type `BusinessUnitIndexingProgress`
+- added type `BusinessUnitIndexingStatus`
+- added type `BusinessUnitPagedSearchResponse`
+- added type `BusinessUnitSearchIndexingStatusResponse`
+- added type `BusinessUnitSearchRequest`
+- added type `BusinessUnitSearchResult`
+- added type `BusinessUnitSearchStatus`
+- added type `ProjectChangeBusinessUnitSearchStatusAction`
+- added type `SearchExactValue`
 </details>
 

@@ -52,6 +52,13 @@ public class SearchQueryExpressionValueQueryBuilderDsl {
             SearchQueryExpressionValueQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<SearchQueryExpressionValueQueryBuilderDsl> asSearchExactValue(
+            Function<com.commercetools.api.predicates.query.search.SearchExactValueQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.search.SearchExactValueQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.search.SearchExactValueQueryBuilderDsl.of()),
+            SearchQueryExpressionValueQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<SearchQueryExpressionValueQueryBuilderDsl> asSearchExistsValue(
             Function<com.commercetools.api.predicates.query.search.SearchExistsValueQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.search.SearchExistsValueQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

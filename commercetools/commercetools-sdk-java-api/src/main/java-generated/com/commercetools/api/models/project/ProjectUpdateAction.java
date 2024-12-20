@@ -21,13 +21,14 @@ import jakarta.validation.constraints.NotNull;
  * Example to create a subtype instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     ProjectUpdateAction projectUpdateAction = ProjectUpdateAction.changeMyBusinessUnitStatusOnCreationBuilder()
- *             status(BusinessUnitConfigurationStatus.ACTIVE)
+ *     ProjectUpdateAction projectUpdateAction = ProjectUpdateAction.changeBusinessUnitSearchStatusBuilder()
+ *             status(BusinessUnitSearchStatus.ACTIVATED)
  *             .build()
  * </code></pre>
  * </div>
  */
 @JsonSubTypes({
+        @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeBusinessUnitSearchStatusActionImpl.class, name = ProjectChangeBusinessUnitSearchStatusAction.CHANGE_BUSINESS_UNIT_SEARCH_STATUS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeBusinessUnitStatusOnCreationActionImpl.class, name = ProjectChangeBusinessUnitStatusOnCreationAction.CHANGE_MY_BUSINESS_UNIT_STATUS_ON_CREATION),
         @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeCartsConfigurationActionImpl.class, name = ProjectChangeCartsConfigurationAction.CHANGE_CARTS_CONFIGURATION),
         @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeCountriesActionImpl.class, name = ProjectChangeCountriesAction.CHANGE_COUNTRIES),
@@ -65,6 +66,10 @@ public interface ProjectUpdateAction extends com.commercetools.api.models.Resour
     public static ProjectUpdateAction deepCopy(@Nullable final ProjectUpdateAction template) {
         if (template == null) {
             return null;
+        }
+        if (template instanceof com.commercetools.api.models.project.ProjectChangeBusinessUnitSearchStatusAction) {
+            return com.commercetools.api.models.project.ProjectChangeBusinessUnitSearchStatusAction.deepCopy(
+                (com.commercetools.api.models.project.ProjectChangeBusinessUnitSearchStatusAction) template);
         }
         if (template instanceof com.commercetools.api.models.project.ProjectChangeBusinessUnitStatusOnCreationAction) {
             return com.commercetools.api.models.project.ProjectChangeBusinessUnitStatusOnCreationAction.deepCopy(
@@ -128,6 +133,14 @@ public interface ProjectUpdateAction extends com.commercetools.api.models.Resour
         }
         ProjectUpdateActionImpl instance = new ProjectUpdateActionImpl();
         return instance;
+    }
+
+    /**
+     * builder for changeBusinessUnitSearchStatus subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.project.ProjectChangeBusinessUnitSearchStatusActionBuilder changeBusinessUnitSearchStatusBuilder() {
+        return com.commercetools.api.models.project.ProjectChangeBusinessUnitSearchStatusActionBuilder.of();
     }
 
     /**

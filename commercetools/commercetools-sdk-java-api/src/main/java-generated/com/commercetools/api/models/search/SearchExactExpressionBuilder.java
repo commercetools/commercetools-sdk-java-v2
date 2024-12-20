@@ -22,7 +22,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SearchExactExpressionBuilder implements Builder<SearchExactExpression> {
 
-    private com.commercetools.api.models.search.SearchAnyValue exact;
+    private com.commercetools.api.models.search.SearchExactValue exact;
 
     /**
      * set the value to the exact using the builder function
@@ -31,8 +31,8 @@ public class SearchExactExpressionBuilder implements Builder<SearchExactExpressi
      */
 
     public SearchExactExpressionBuilder exact(
-            Function<com.commercetools.api.models.search.SearchAnyValueBuilder, com.commercetools.api.models.search.SearchAnyValueBuilder> builder) {
-        this.exact = builder.apply(com.commercetools.api.models.search.SearchAnyValueBuilder.of()).build();
+            Function<com.commercetools.api.models.search.SearchExactValueBuilder, com.commercetools.api.models.search.SearchExactValueBuilder> builder) {
+        this.exact = builder.apply(com.commercetools.api.models.search.SearchExactValueBuilder.of()).build();
         return this;
     }
 
@@ -43,8 +43,8 @@ public class SearchExactExpressionBuilder implements Builder<SearchExactExpressi
      */
 
     public SearchExactExpressionBuilder withExact(
-            Function<com.commercetools.api.models.search.SearchAnyValueBuilder, com.commercetools.api.models.search.SearchAnyValue> builder) {
-        this.exact = builder.apply(com.commercetools.api.models.search.SearchAnyValueBuilder.of());
+            Function<com.commercetools.api.models.search.SearchExactValueBuilder, com.commercetools.api.models.search.SearchExactValue> builder) {
+        this.exact = builder.apply(com.commercetools.api.models.search.SearchExactValueBuilder.of());
         return this;
     }
 
@@ -54,7 +54,7 @@ public class SearchExactExpressionBuilder implements Builder<SearchExactExpressi
      * @return Builder
      */
 
-    public SearchExactExpressionBuilder exact(final com.commercetools.api.models.search.SearchAnyValue exact) {
+    public SearchExactExpressionBuilder exact(final com.commercetools.api.models.search.SearchExactValue exact) {
         this.exact = exact;
         return this;
     }
@@ -64,7 +64,7 @@ public class SearchExactExpressionBuilder implements Builder<SearchExactExpressi
      * @return exact
      */
 
-    public com.commercetools.api.models.search.SearchAnyValue getExact() {
+    public com.commercetools.api.models.search.SearchExactValue getExact() {
         return this.exact;
     }
 

@@ -14,11 +14,10 @@ public class SearchExactExpressionQueryBuilderDsl {
     }
 
     public CombinationQueryPredicate<SearchExactExpressionQueryBuilderDsl> exact(
-            Function<com.commercetools.api.predicates.query.search.SearchAnyValueQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.search.SearchAnyValueQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            ContainerQueryPredicate.of()
-                    .parent(ConstantQueryPredicate.of().constant("exact"))
-                    .inner(fn.apply(com.commercetools.api.predicates.query.search.SearchAnyValueQueryBuilderDsl.of())),
+            Function<com.commercetools.api.predicates.query.search.SearchExactValueQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.search.SearchExactValueQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("exact"))
+                .inner(fn.apply(com.commercetools.api.predicates.query.search.SearchExactValueQueryBuilderDsl.of())),
             SearchExactExpressionQueryBuilderDsl::of);
     }
 

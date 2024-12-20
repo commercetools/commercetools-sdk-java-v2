@@ -39,14 +39,14 @@ public interface SearchExactExpression extends SearchQueryExpression {
     @NotNull
     @Valid
     @JsonProperty("exact")
-    public SearchAnyValue getExact();
+    public SearchExactValue getExact();
 
     /**
      * set exact
      * @param exact value to be set
      */
 
-    public void setExact(final SearchAnyValue exact);
+    public void setExact(final SearchExactValue exact);
 
     /**
      * factory method
@@ -78,7 +78,7 @@ public interface SearchExactExpression extends SearchQueryExpression {
             return null;
         }
         SearchExactExpressionImpl instance = new SearchExactExpressionImpl();
-        instance.setExact(com.commercetools.api.models.search.SearchAnyValue.deepCopy(template.getExact()));
+        instance.setExact(com.commercetools.api.models.search.SearchExactValue.deepCopy(template.getExact()));
         return instance;
     }
 

@@ -1,6 +1,20 @@
 **Api changes**
 
 <details>
+<summary>Changed Property(s)</summary>
+
+- :warning: changed property `exact` of type `SearchExactExpression` from type `SearchAnyValue` to `SearchExactValue`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `businessUnits` to type `SearchIndexingConfiguration`
+</details>
+
+
+<details>
 <summary>Added Resource(s)</summary>
 
 - added resource `/{projectKey}/business-units/search`
@@ -28,12 +42,6 @@
 - added type `BusinessUnitSearchResult`
 - added type `BusinessUnitSearchStatus`
 - added type `ProjectChangeBusinessUnitSearchStatusAction`
-</details>
-
-
-<details>
-<summary>Added Property(s)</summary>
-
-- added property `businessUnits` to type `SearchIndexingConfiguration`
+- added type `SearchExactValue`
 </details>
 

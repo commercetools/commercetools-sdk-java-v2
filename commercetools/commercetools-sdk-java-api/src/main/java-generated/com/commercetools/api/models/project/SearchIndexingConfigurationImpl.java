@@ -30,6 +30,8 @@ public class SearchIndexingConfigurationImpl implements SearchIndexingConfigurat
 
     private com.commercetools.api.models.project.SearchIndexingConfigurationValues customers;
 
+    private com.commercetools.api.models.project.SearchIndexingConfigurationValues businessUnits;
+
     /**
      * create instance with all properties
      */
@@ -38,11 +40,13 @@ public class SearchIndexingConfigurationImpl implements SearchIndexingConfigurat
             @JsonProperty("products") final com.commercetools.api.models.project.SearchIndexingConfigurationValues products,
             @JsonProperty("productsSearch") final com.commercetools.api.models.project.SearchIndexingConfigurationValues productsSearch,
             @JsonProperty("orders") final com.commercetools.api.models.project.SearchIndexingConfigurationValues orders,
-            @JsonProperty("customers") final com.commercetools.api.models.project.SearchIndexingConfigurationValues customers) {
+            @JsonProperty("customers") final com.commercetools.api.models.project.SearchIndexingConfigurationValues customers,
+            @JsonProperty("businessUnits") final com.commercetools.api.models.project.SearchIndexingConfigurationValues businessUnits) {
         this.products = products;
         this.productsSearch = productsSearch;
         this.orders = orders;
         this.customers = customers;
+        this.businessUnits = businessUnits;
     }
 
     /**
@@ -83,6 +87,14 @@ public class SearchIndexingConfigurationImpl implements SearchIndexingConfigurat
         return this.customers;
     }
 
+    /**
+     *  <p>Configuration for the Business Unit Search feature.</p>
+     */
+
+    public com.commercetools.api.models.project.SearchIndexingConfigurationValues getBusinessUnits() {
+        return this.businessUnits;
+    }
+
     public void setProducts(final com.commercetools.api.models.project.SearchIndexingConfigurationValues products) {
         this.products = products;
     }
@@ -100,6 +112,11 @@ public class SearchIndexingConfigurationImpl implements SearchIndexingConfigurat
         this.customers = customers;
     }
 
+    public void setBusinessUnits(
+            final com.commercetools.api.models.project.SearchIndexingConfigurationValues businessUnits) {
+        this.businessUnits = businessUnits;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -114,10 +131,12 @@ public class SearchIndexingConfigurationImpl implements SearchIndexingConfigurat
                 .append(productsSearch, that.productsSearch)
                 .append(orders, that.orders)
                 .append(customers, that.customers)
+                .append(businessUnits, that.businessUnits)
                 .append(products, that.products)
                 .append(productsSearch, that.productsSearch)
                 .append(orders, that.orders)
                 .append(customers, that.customers)
+                .append(businessUnits, that.businessUnits)
                 .isEquals();
     }
 
@@ -127,6 +146,7 @@ public class SearchIndexingConfigurationImpl implements SearchIndexingConfigurat
                 .append(productsSearch)
                 .append(orders)
                 .append(customers)
+                .append(businessUnits)
                 .toHashCode();
     }
 
@@ -136,6 +156,7 @@ public class SearchIndexingConfigurationImpl implements SearchIndexingConfigurat
                 .append("productsSearch", productsSearch)
                 .append("orders", orders)
                 .append("customers", customers)
+                .append("businessUnits", businessUnits)
                 .build();
     }
 

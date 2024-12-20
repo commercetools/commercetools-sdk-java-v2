@@ -55,7 +55,10 @@ final class UserAgentUtils {
 
     public static String format(final SolutionInfo solutionInfo) {
         final StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append(solutionInfo.getName()).append("/").append(solutionInfo.getVersion());
+        stringBuilder.append(solutionInfo.getName());
+        if (isNotEmpty(solutionInfo.getVersion())) {
+            stringBuilder.append("/").append(solutionInfo.getVersion());
+        }
         if (isNotEmpty(solutionInfo.getWebsite()) && isNotEmpty(solutionInfo.getEmergencyContact())) {
             stringBuilder.append(" (");
             final String details = Stream.of(solutionInfo.getWebsite(), solutionInfo.getEmergencyContact())

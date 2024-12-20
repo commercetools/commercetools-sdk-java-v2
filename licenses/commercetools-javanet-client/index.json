@@ -80,7 +80,7 @@
         },
         {
             "moduleName": "commons-io:commons-io",
-            "moduleVersion": "2.11.0",
+            "moduleVersion": "2.16.1",
             "moduleUrls": [
                 "https://commons.apache.org/proper/commons-io/"
             ],

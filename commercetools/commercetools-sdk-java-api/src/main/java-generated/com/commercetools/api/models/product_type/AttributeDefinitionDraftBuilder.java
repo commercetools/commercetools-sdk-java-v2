@@ -73,7 +73,7 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
     }
 
     /**
-     *  <p>User-defined name of the Attribute that is unique with the Project.</p>
+     *  <p>User-defined name of the Attribute that is unique to the Project.</p>
      *  <p>When using the same <code>name</code> for an Attribute in multiple ProductTypes, all fields of the AttributeDefinition of this Attribute must be the same across the ProductTypes, else an AttributeDefinitionAlreadyExists error is returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> Type and sets thereof.</p>
      * @param name value to be set
      * @return Builder
@@ -191,7 +191,7 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
     }
 
     /**
-     *  <p>Set to <code>true</code> if the Attribute's values should be available in the Product Projections Search API and can be used in full-text search queries, filters, and facets. Which exact features are available with this flag depends on the specific AttributeType. The maximum size of a searchable field is <strong>restricted</strong> by the Field content size limit. This constraint is enforced at both Product creation and Product update. If the length of the input exceeds the maximum size, an InvalidField error is returned.</p>
+     *  <p>Set to <code>true</code> if the Attribute's values should be available in the Product Projection Search or the Product Search API and can be used in full-text search queries, filters, and facets. Which exact features are available with this flag depends on the specific AttributeType. The maximum size of a searchable field is <strong>restricted</strong> by the Field content size limit. This constraint is enforced at both Product creation and Product update. If the length of the input exceeds the maximum size, an InvalidField error is returned.</p>
      * @param isSearchable value to be set
      * @return Builder
      */
@@ -212,7 +212,7 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
     }
 
     /**
-     *  <p>User-defined name of the Attribute that is unique with the Project.</p>
+     *  <p>User-defined name of the Attribute that is unique to the Project.</p>
      *  <p>When using the same <code>name</code> for an Attribute in multiple ProductTypes, all fields of the AttributeDefinition of this Attribute must be the same across the ProductTypes, else an AttributeDefinitionAlreadyExists error is returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> Type and sets thereof.</p>
      * @return name
      */
@@ -270,7 +270,7 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
     }
 
     /**
-     *  <p>Set to <code>true</code> if the Attribute's values should be available in the Product Projections Search API and can be used in full-text search queries, filters, and facets. Which exact features are available with this flag depends on the specific AttributeType. The maximum size of a searchable field is <strong>restricted</strong> by the Field content size limit. This constraint is enforced at both Product creation and Product update. If the length of the input exceeds the maximum size, an InvalidField error is returned.</p>
+     *  <p>Set to <code>true</code> if the Attribute's values should be available in the Product Projection Search or the Product Search API and can be used in full-text search queries, filters, and facets. Which exact features are available with this flag depends on the specific AttributeType. The maximum size of a searchable field is <strong>restricted</strong> by the Field content size limit. This constraint is enforced at both Product creation and Product update. If the length of the input exceeds the maximum size, an InvalidField error is returned.</p>
      * @return isSearchable
      */
 

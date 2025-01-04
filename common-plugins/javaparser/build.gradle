@@ -15,5 +15,5 @@ shadowJar {
 }
 
 dependencies {
-    implementation 'com.github.javaparser:javaparser-core:3.26.2'
+    implementation 'com.github.javaparser:javaparser-core:3.26.3'
 }

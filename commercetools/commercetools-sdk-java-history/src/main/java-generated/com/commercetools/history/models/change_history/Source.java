@@ -20,7 +20,7 @@ public interface Source extends JsonEnum {
     <p>The change was made through the Merchant Center.</p> */
     Source MERCHANT_CENTER = SourceEnum.MERCHANT_CENTER;
     /**
-    <p>The change was made through ImpEx.</p> */
+    <p>The change was made through the now-decommissioned ImpEx tool.</p> */
     Source IMP_EX = SourceEnum.IMP_EX;
     /**
     <p>The change was made through an API Client.</p> */

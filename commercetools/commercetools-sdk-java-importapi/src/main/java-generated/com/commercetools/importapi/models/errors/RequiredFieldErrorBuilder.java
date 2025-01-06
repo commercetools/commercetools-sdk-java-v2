@@ -27,7 +27,7 @@ public class RequiredFieldErrorBuilder implements Builder<RequiredFieldError> {
     private String field;
 
     /**
-     * set the value to the message
+     *  <p>A plain language description of the cause of an error.</p>
      * @param message value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class RequiredFieldErrorBuilder implements Builder<RequiredFieldError> {
     }
 
     /**
-     * value of message}
+     *  <p>A plain language description of the cause of an error.</p>
      * @return message
      */
 

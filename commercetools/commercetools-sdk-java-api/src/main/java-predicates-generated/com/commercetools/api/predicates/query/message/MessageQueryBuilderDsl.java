@@ -1293,6 +1293,13 @@ public class MessageQueryBuilderDsl {
             MessageQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<MessageQueryBuilderDsl> asShoppingListMessage(
+            Function<com.commercetools.api.predicates.query.message.ShoppingListMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.ShoppingListMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.message.ShoppingListMessageQueryBuilderDsl.of()),
+            MessageQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<MessageQueryBuilderDsl> asStagedQuoteCreated(
             Function<com.commercetools.api.predicates.query.message.StagedQuoteCreatedMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.StagedQuoteCreatedMessageQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

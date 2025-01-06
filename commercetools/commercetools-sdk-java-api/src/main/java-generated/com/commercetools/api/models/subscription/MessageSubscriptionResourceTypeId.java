@@ -71,6 +71,9 @@ public interface MessageSubscriptionResourceTypeId extends JsonEnum {
     <p>Messages related to Reviews.</p> */
     MessageSubscriptionResourceTypeId REVIEW = MessageSubscriptionResourceTypeIdEnum.REVIEW;
     /**
+    <p>Messages related to Shopping Lists.</p> */
+    MessageSubscriptionResourceTypeId SHOPPING_LIST = MessageSubscriptionResourceTypeIdEnum.SHOPPING_LIST;
+    /**
     <p>Messages related to Staged Quotes.</p> */
     MessageSubscriptionResourceTypeId STAGED_QUOTE = MessageSubscriptionResourceTypeIdEnum.STAGED_QUOTE;
     /**
@@ -173,6 +176,11 @@ public interface MessageSubscriptionResourceTypeId extends JsonEnum {
          * review
          */
         REVIEW("review"),
+
+        /**
+         * shopping-list
+         */
+        SHOPPING_LIST("shopping-list"),
 
         /**
          * staged-quote

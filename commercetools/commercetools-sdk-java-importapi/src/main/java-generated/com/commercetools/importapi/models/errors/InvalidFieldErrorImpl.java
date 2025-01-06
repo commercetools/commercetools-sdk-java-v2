@@ -58,7 +58,7 @@ public class InvalidFieldErrorImpl implements InvalidFieldError, ModelBase {
     }
 
     /**
-     *
+     *  <p>An error identifier.</p>
      */
 
     public String getCode() {
@@ -66,7 +66,7 @@ public class InvalidFieldErrorImpl implements InvalidFieldError, ModelBase {
     }
 
     /**
-     *
+     *  <p>A plain language description of the cause of an error.</p>
      */
 
     public String getMessage() {

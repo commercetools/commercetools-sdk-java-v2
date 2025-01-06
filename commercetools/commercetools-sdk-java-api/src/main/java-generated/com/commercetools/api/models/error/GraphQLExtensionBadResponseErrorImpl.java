@@ -4,6 +4,7 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -44,7 +45,8 @@ public class GraphQLExtensionBadResponseErrorImpl implements GraphQLExtensionBad
      * create instance with all properties
      */
     @JsonCreator
-    GraphQLExtensionBadResponseErrorImpl(@JsonProperty("values") final Map<String, java.lang.Object> values,
+    GraphQLExtensionBadResponseErrorImpl(
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("localizedMessage") final com.commercetools.api.models.common.LocalizedString localizedMessage,
             @JsonProperty("extensionExtraInfo") final java.lang.Object extensionExtraInfo,
             @JsonProperty("extensionErrors") final java.util.List<com.commercetools.api.models.error.ExtensionError> extensionErrors,

@@ -11,6 +11,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProjectUpdateActionBuilder {
 
+    public com.commercetools.api.models.project.ProjectChangeBusinessUnitSearchStatusActionBuilder changeBusinessUnitSearchStatusBuilder() {
+        return com.commercetools.api.models.project.ProjectChangeBusinessUnitSearchStatusActionBuilder.of();
+    }
+
     public com.commercetools.api.models.project.ProjectChangeBusinessUnitStatusOnCreationActionBuilder changeMyBusinessUnitStatusOnCreationBuilder() {
         return com.commercetools.api.models.project.ProjectChangeBusinessUnitStatusOnCreationActionBuilder.of();
     }

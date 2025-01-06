@@ -63,6 +63,14 @@ public interface SearchIndexingConfiguration {
     public SearchIndexingConfigurationValues getCustomers();
 
     /**
+     *  <p>Configuration for the Business Unit Search feature.</p>
+     * @return businessUnits
+     */
+    @Valid
+    @JsonProperty("businessUnits")
+    public SearchIndexingConfigurationValues getBusinessUnits();
+
+    /**
      *  <p>Configuration for the Product Projection Search and Product Suggestions endpoints.</p>
      * @param products value to be set
      */
@@ -91,6 +99,13 @@ public interface SearchIndexingConfiguration {
     public void setCustomers(final SearchIndexingConfigurationValues customers);
 
     /**
+     *  <p>Configuration for the Business Unit Search feature.</p>
+     * @param businessUnits value to be set
+     */
+
+    public void setBusinessUnits(final SearchIndexingConfigurationValues businessUnits);
+
+    /**
      * factory method
      * @return instance of SearchIndexingConfiguration
      */
@@ -109,6 +124,7 @@ public interface SearchIndexingConfiguration {
         instance.setProductsSearch(template.getProductsSearch());
         instance.setOrders(template.getOrders());
         instance.setCustomers(template.getCustomers());
+        instance.setBusinessUnits(template.getBusinessUnits());
         return instance;
     }
 
@@ -131,6 +147,8 @@ public interface SearchIndexingConfiguration {
             com.commercetools.api.models.project.SearchIndexingConfigurationValues.deepCopy(template.getOrders()));
         instance.setCustomers(
             com.commercetools.api.models.project.SearchIndexingConfigurationValues.deepCopy(template.getCustomers()));
+        instance.setBusinessUnits(com.commercetools.api.models.project.SearchIndexingConfigurationValues
+                .deepCopy(template.getBusinessUnits()));
         return instance;
     }
 

@@ -190,7 +190,7 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     public ItemShippingDetails getShippingDetails();
 
     /**
-     *  <p>Indicates whether Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</p>
+     *  <p>Indicates whether Cart Discounts with a matching CartDiscountCustomLineItemsTarget, MultiBuyCustomLineItemsTarget, or CartDiscountPatternTarget are applied to the Custom Line Item.</p>
      * @return priceMode
      */
     @NotNull
@@ -347,7 +347,7 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     public void setShippingDetails(final ItemShippingDetails shippingDetails);
 
     /**
-     *  <p>Indicates whether Cart Discounts with a matching CartDiscountCustomLineItemsTarget are applied to the Custom Line Item.</p>
+     *  <p>Indicates whether Cart Discounts with a matching CartDiscountCustomLineItemsTarget, MultiBuyCustomLineItemsTarget, or CartDiscountPatternTarget are applied to the Custom Line Item.</p>
      * @param priceMode value to be set
      */
 

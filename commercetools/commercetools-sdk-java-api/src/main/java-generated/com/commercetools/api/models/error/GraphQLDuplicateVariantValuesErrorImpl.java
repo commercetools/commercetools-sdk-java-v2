@@ -4,6 +4,7 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -32,7 +33,8 @@ public class GraphQLDuplicateVariantValuesErrorImpl implements GraphQLDuplicateV
      * create instance with all properties
      */
     @JsonCreator
-    GraphQLDuplicateVariantValuesErrorImpl(@JsonProperty("values") final Map<String, java.lang.Object> values,
+    GraphQLDuplicateVariantValuesErrorImpl(
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("variantValues") final com.commercetools.api.models.error.VariantValues variantValues) {
         this.values = values;
         this.variantValues = variantValues;

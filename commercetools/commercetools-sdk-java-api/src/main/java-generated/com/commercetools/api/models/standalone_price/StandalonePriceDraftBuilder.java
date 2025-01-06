@@ -86,6 +86,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
 
     /**
      *  <p>Sets the money value of this Price.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @param builder function to build the value value
      * @return Builder
      */
@@ -98,6 +99,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
 
     /**
      *  <p>Sets the money value of this Price.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @param builder function to build the value value
      * @return Builder
      */
@@ -110,6 +112,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
 
     /**
      *  <p>Sets the money value of this Price.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -464,6 +467,7 @@ public class StandalonePriceDraftBuilder implements Builder<StandalonePriceDraft
 
     /**
      *  <p>Sets the money value of this Price.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @return value
      */
 

@@ -1,4 +1,136 @@
 
+# 17.21.0 (2024-12-19)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/767
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/768
+* DEVX-496 update spring boot version by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/765
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/769
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/770
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/771
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/774
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/775
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/776
+* DEVX-460 make metrics more precise for values below 0 ms by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/772
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/777
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/778
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/779
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/780
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/781
+* Update Apache AsyncHttpClient by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/773
+
+**Api changes**
+
+<details>
+<summary>Added Resource(s)</summary>
+
+- added resource `/{projectKey}/channels/key={key}`
+</details>
+
+
+<details>
+<summary>Added Method(s)</summary>
+
+- added method `apiRoot.withProjectKey().channels().withKey().get()`
+- added method `apiRoot.withProjectKey().channels().withKey().head()`
+- added method `apiRoot.withProjectKey().channels().withKey().post()`
+- added method `apiRoot.withProjectKey().channels().withKey().delete()`
+</details>
+
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `CartDiscountPatternTarget`
+- added type `CountOnCustomLineItemUnits`
+- added type `CountOnLineItemUnits`
+- added type `PatternComponent`
+- added type `ShoppingListLineItemAddedMessage`
+- added type `ShoppingListLineItemRemovedMessage`
+- added type `ShoppingListMessage`
+- added type `ShoppingListLineItemAddedMessagePayload`
+- added type `ShoppingListLineItemRemovedMessagePayload`
+- added type `ShoppingListMessagePayload`
+</details>
+
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `Canceled` to type `ShipmentState`
+- added enum `shopping-list` to type `MessageSubscriptionResourceTypeId`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `applicationMode` to type `CartDiscountValueFixed`
+- added property `applicationMode` to type `CartDiscountValueFixedDraft`
+- added property `custom` to type `CartSetCustomShippingMethodAction`
+- added property `custom` to type `StagedOrderSetCustomShippingMethodAction`
+- added property `custom` to type `StagedOrderSetShippingAddressAndCustomShippingMethodAction`
+</details>
+
+**History changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `ChangeTargetPatternChangeValue`
+- added type `PatternComponent`
+</details>
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.20.0...17.21.0
+
+# 17.20.0 (2024-12-02)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/763
+* Add option to provide custom auth and api url for spring example project by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/764
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/766
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.19.0...17.20.0
+
+# 17.19.0 (2024-11-21)
+
+## Important notice
+
+Due to a regression with regards to deserialization in Jackson 2.18.x we introduced the usage of `JsonAnySetter` at some constructors e.g. to `LocalizedString`. The usage of `JsonAnySetter` annotation is made available with Jackson 2.17.x. Any version prior to Jackson 2.17 is not compatible with the SDK.
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/761
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/762
+* [SUPPORT-29621] fix regression with jackson 2.18.x by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/760
+
+**Api changes**
+
+<details>
+<summary>Changed Property(s)</summary>
+
+- :warning: changed property `totalPrice` of type `StagedOrder` from type `TypedMoney` to `CentPrecisionMoney`
+- :warning: changed property `totalPrice` of type `Order` from type `TypedMoney` to `CentPrecisionMoney`
+</details>
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.18.0...17.19.0
+
+# 17.18.0 (2024-11-20)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/750
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/751
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/752
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/753
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/754
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/756
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/759
+* SUPPORT-28804 add custom deserializer for attrs in import api by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/748
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.17.0...17.18.0
+
 # 17.17.0 (2024-11-07)
 
 ## What's Changed

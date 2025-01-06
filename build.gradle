@@ -116,6 +116,11 @@ subprojects { project ->
             languageVersion = JavaLanguageVersion.of(17)
         }
     }
+    compileIntegrationTestJava {
+        javaCompiler = javaToolchains.compilerFor {
+            languageVersion = JavaLanguageVersion.of(17)
+        }
+    }
     compileTestJava {
         javaCompiler = javaToolchains.compilerFor {
             languageVersion = JavaLanguageVersion.of(17)
@@ -366,6 +371,7 @@ tasks.register("writeVersionToExamples") {
                 include(name: 'examples/spring-otel/build.gradle')
                 include(name: 'examples/spring-datadog/build.gradle')
                 include(name: 'examples/spring-datadog-statsd/build.gradle')
+                include(name: 'examples/spring-dynatrace-oneagent/build.gradle')
             }
         }
         ant.replaceregexp(match: '<commercetools.version>.+</commercetools.version>', replace: "<commercetools.version>${globalVersion}</commercetools.version>", flags:'g', byline:true) {

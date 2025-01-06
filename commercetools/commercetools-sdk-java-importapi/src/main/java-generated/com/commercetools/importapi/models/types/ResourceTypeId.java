@@ -11,7 +11,7 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>With Types, you can model your own Custom Fields on the following resources and data types. Maps to <code>Type.resourceTypeId</code>.</p>
+ *  <p>IDs indicating the type of resource. Maps to <code>Type.resourceTypeIds</code>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ResourceTypeId extends JsonEnum {
@@ -50,7 +50,7 @@ public interface ResourceTypeId extends JsonEnum {
     <p>InventoryEntry</p> */
     ResourceTypeId INVENTORY_ENTRY = ResourceTypeIdEnum.INVENTORY_ENTRY;
     /**
-    <p>LineItem on Cart and Order, and LineItem on ShoppingList</p> */
+    <p>LineItem on Cart and Order, and on ShoppingListLineItem.</p> */
     ResourceTypeId LINE_ITEM = ResourceTypeIdEnum.LINE_ITEM;
     /**
     <p>Cart and Order. When a Cart is ordered, the CustomFields need to be copied to the Order. For this reason, the Types for Carts are also valid for Orders, and hence both have the same identifier: <code>order</code>.</p> */
@@ -98,7 +98,7 @@ public interface ResourceTypeId extends JsonEnum {
     <p>TextLineItem on ShoppingList</p> */
     ResourceTypeId SHOPPING_LIST_TEXT_LINE_ITEM = ResourceTypeIdEnum.SHOPPING_LIST_TEXT_LINE_ITEM;
     /**
-    <p>StandalonePrice</p> */
+    <p>StandalonePrice)</p> */
     ResourceTypeId STANDALONE_PRICE = ResourceTypeIdEnum.STANDALONE_PRICE;
     /**
     <p>Store</p> */

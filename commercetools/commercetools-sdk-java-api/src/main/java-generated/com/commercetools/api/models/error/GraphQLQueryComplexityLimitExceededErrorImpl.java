@@ -4,6 +4,7 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -31,7 +32,8 @@ public class GraphQLQueryComplexityLimitExceededErrorImpl
      * create instance with all properties
      */
     @JsonCreator
-    GraphQLQueryComplexityLimitExceededErrorImpl(@JsonProperty("values") final Map<String, java.lang.Object> values) {
+    GraphQLQueryComplexityLimitExceededErrorImpl(
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values) {
         this.values = values;
         this.code = QUERY_COMPLEXITY_LIMIT_EXCEEDED;
     }

@@ -4,6 +4,7 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -54,7 +55,8 @@ public class GraphQLMatchingPriceNotFoundErrorImpl implements GraphQLMatchingPri
      * create instance with all properties
      */
     @JsonCreator
-    GraphQLMatchingPriceNotFoundErrorImpl(@JsonProperty("values") final Map<String, java.lang.Object> values,
+    GraphQLMatchingPriceNotFoundErrorImpl(
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("productId") final String productId, @JsonProperty("variantId") final Integer variantId,
             @JsonProperty("currency") final String currency, @JsonProperty("country") final String country,
             @JsonProperty("customerGroup") final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup,

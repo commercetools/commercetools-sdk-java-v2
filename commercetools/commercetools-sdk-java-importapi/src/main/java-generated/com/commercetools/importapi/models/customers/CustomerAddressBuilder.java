@@ -27,6 +27,8 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
 
     private String key;
 
+    private String country;
+
     @Nullable
     private String title;
 
@@ -59,8 +61,6 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
 
     @Nullable
     private String state;
-
-    private String country;
 
     @Nullable
     private String company;
@@ -110,128 +110,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     * set the value to the title
-     * @param title value to be set
-     * @return Builder
-     */
-
-    public CustomerAddressBuilder title(@Nullable final String title) {
-        this.title = title;
-        return this;
-    }
-
-    /**
-     * set the value to the salutation
-     * @param salutation value to be set
-     * @return Builder
-     */
-
-    public CustomerAddressBuilder salutation(@Nullable final String salutation) {
-        this.salutation = salutation;
-        return this;
-    }
-
-    /**
-     * set the value to the firstName
-     * @param firstName value to be set
-     * @return Builder
-     */
-
-    public CustomerAddressBuilder firstName(@Nullable final String firstName) {
-        this.firstName = firstName;
-        return this;
-    }
-
-    /**
-     * set the value to the lastName
-     * @param lastName value to be set
-     * @return Builder
-     */
-
-    public CustomerAddressBuilder lastName(@Nullable final String lastName) {
-        this.lastName = lastName;
-        return this;
-    }
-
-    /**
-     * set the value to the streetName
-     * @param streetName value to be set
-     * @return Builder
-     */
-
-    public CustomerAddressBuilder streetName(@Nullable final String streetName) {
-        this.streetName = streetName;
-        return this;
-    }
-
-    /**
-     * set the value to the streetNumber
-     * @param streetNumber value to be set
-     * @return Builder
-     */
-
-    public CustomerAddressBuilder streetNumber(@Nullable final String streetNumber) {
-        this.streetNumber = streetNumber;
-        return this;
-    }
-
-    /**
-     * set the value to the additionalStreetInfo
-     * @param additionalStreetInfo value to be set
-     * @return Builder
-     */
-
-    public CustomerAddressBuilder additionalStreetInfo(@Nullable final String additionalStreetInfo) {
-        this.additionalStreetInfo = additionalStreetInfo;
-        return this;
-    }
-
-    /**
-     * set the value to the postalCode
-     * @param postalCode value to be set
-     * @return Builder
-     */
-
-    public CustomerAddressBuilder postalCode(@Nullable final String postalCode) {
-        this.postalCode = postalCode;
-        return this;
-    }
-
-    /**
-     * set the value to the city
-     * @param city value to be set
-     * @return Builder
-     */
-
-    public CustomerAddressBuilder city(@Nullable final String city) {
-        this.city = city;
-        return this;
-    }
-
-    /**
-     * set the value to the region
-     * @param region value to be set
-     * @return Builder
-     */
-
-    public CustomerAddressBuilder region(@Nullable final String region) {
-        this.region = region;
-        return this;
-    }
-
-    /**
-     * set the value to the state
-     * @param state value to be set
-     * @return Builder
-     */
-
-    public CustomerAddressBuilder state(@Nullable final String state) {
-        this.state = state;
-        return this;
-    }
-
-    /**
-     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
+     *  <p>Name of the country.</p>
      * @param country value to be set
      * @return Builder
      */
@@ -242,7 +121,128 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     * set the value to the company
+     *  <p>Title of the contact, for example 'Dr.'</p>
+     * @param title value to be set
+     * @return Builder
+     */
+
+    public CustomerAddressBuilder title(@Nullable final String title) {
+        this.title = title;
+        return this;
+    }
+
+    /**
+     *  <p>Salutation of the contact, for example 'Mr.' or 'Ms.'</p>
+     * @param salutation value to be set
+     * @return Builder
+     */
+
+    public CustomerAddressBuilder salutation(@Nullable final String salutation) {
+        this.salutation = salutation;
+        return this;
+    }
+
+    /**
+     *  <p>Given name (first name) of the contact.</p>
+     * @param firstName value to be set
+     * @return Builder
+     */
+
+    public CustomerAddressBuilder firstName(@Nullable final String firstName) {
+        this.firstName = firstName;
+        return this;
+    }
+
+    /**
+     *  <p>Family name (last name) of the contact.</p>
+     * @param lastName value to be set
+     * @return Builder
+     */
+
+    public CustomerAddressBuilder lastName(@Nullable final String lastName) {
+        this.lastName = lastName;
+        return this;
+    }
+
+    /**
+     *  <p>Name of the street.</p>
+     * @param streetName value to be set
+     * @return Builder
+     */
+
+    public CustomerAddressBuilder streetName(@Nullable final String streetName) {
+        this.streetName = streetName;
+        return this;
+    }
+
+    /**
+     *  <p>Street number.</p>
+     * @param streetNumber value to be set
+     * @return Builder
+     */
+
+    public CustomerAddressBuilder streetNumber(@Nullable final String streetNumber) {
+        this.streetNumber = streetNumber;
+        return this;
+    }
+
+    /**
+     *  <p>Further information on the street address.</p>
+     * @param additionalStreetInfo value to be set
+     * @return Builder
+     */
+
+    public CustomerAddressBuilder additionalStreetInfo(@Nullable final String additionalStreetInfo) {
+        this.additionalStreetInfo = additionalStreetInfo;
+        return this;
+    }
+
+    /**
+     *  <p>Postal code.</p>
+     * @param postalCode value to be set
+     * @return Builder
+     */
+
+    public CustomerAddressBuilder postalCode(@Nullable final String postalCode) {
+        this.postalCode = postalCode;
+        return this;
+    }
+
+    /**
+     *  <p>Name of the city.</p>
+     * @param city value to be set
+     * @return Builder
+     */
+
+    public CustomerAddressBuilder city(@Nullable final String city) {
+        this.city = city;
+        return this;
+    }
+
+    /**
+     *  <p>Name of the region.</p>
+     * @param region value to be set
+     * @return Builder
+     */
+
+    public CustomerAddressBuilder region(@Nullable final String region) {
+        this.region = region;
+        return this;
+    }
+
+    /**
+     *  <p>Name of the state, for example, Colorado.</p>
+     * @param state value to be set
+     * @return Builder
+     */
+
+    public CustomerAddressBuilder state(@Nullable final String state) {
+        this.state = state;
+        return this;
+    }
+
+    /**
+     *  <p>Name of the company.</p>
      * @param company value to be set
      * @return Builder
      */
@@ -253,7 +253,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     * set the value to the department
+     *  <p>Name of the department.</p>
      * @param department value to be set
      * @return Builder
      */
@@ -264,7 +264,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     * set the value to the building
+     *  <p>Number or name of the building.</p>
      * @param building value to be set
      * @return Builder
      */
@@ -275,7 +275,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     * set the value to the apartment
+     *  <p>Number or name of the apartment.</p>
      * @param apartment value to be set
      * @return Builder
      */
@@ -286,7 +286,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     * set the value to the pOBox
+     *  <p>Post office box number.</p>
      * @param pOBox value to be set
      * @return Builder
      */
@@ -297,7 +297,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     * set the value to the phone
+     *  <p>Phone number of the contact.</p>
      * @param phone value to be set
      * @return Builder
      */
@@ -308,7 +308,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     * set the value to the mobile
+     *  <p>Mobile phone number of the contact.</p>
      * @param mobile value to be set
      * @return Builder
      */
@@ -319,7 +319,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     * set the value to the email
+     *  <p>Email address of the contact.</p>
      * @param email value to be set
      * @return Builder
      */
@@ -330,7 +330,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     * set the value to the fax
+     *  <p>Fax number of the contact.</p>
      * @param fax value to be set
      * @return Builder
      */
@@ -341,7 +341,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     * set the value to the additionalAddressInfo
+     *  <p>Further information on the Address.</p>
      * @param additionalAddressInfo value to be set
      * @return Builder
      */
@@ -352,7 +352,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     * set the value to the externalId
+     *  <p>ID for the contact used in an external system.</p>
      * @param externalId value to be set
      * @return Builder
      */
@@ -408,7 +408,16 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     * value of title}
+     *  <p>Name of the country.</p>
+     * @return country
+     */
+
+    public String getCountry() {
+        return this.country;
+    }
+
+    /**
+     *  <p>Title of the contact, for example 'Dr.'</p>
      * @return title
      */
 
@@ -418,7 +427,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     * value of salutation}
+     *  <p>Salutation of the contact, for example 'Mr.' or 'Ms.'</p>
      * @return salutation
      */
 
@@ -428,7 +437,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     * value of firstName}
+     *  <p>Given name (first name) of the contact.</p>
      * @return firstName
      */
 
@@ -438,7 +447,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     * value of lastName}
+     *  <p>Family name (last name) of the contact.</p>
      * @return lastName
      */
 
@@ -448,7 +457,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     * value of streetName}
+     *  <p>Name of the street.</p>
      * @return streetName
      */
 
@@ -458,7 +467,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     * value of streetNumber}
+     *  <p>Street number.</p>
      * @return streetNumber
      */
 
@@ -468,7 +477,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     * value of additionalStreetInfo}
+     *  <p>Further information on the street address.</p>
      * @return additionalStreetInfo
      */
 
@@ -478,7 +487,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     * value of postalCode}
+     *  <p>Postal code.</p>
      * @return postalCode
      */
 
@@ -488,7 +497,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     * value of city}
+     *  <p>Name of the city.</p>
      * @return city
      */
 
@@ -498,7 +507,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     * value of region}
+     *  <p>Name of the region.</p>
      * @return region
      */
 
@@ -508,7 +517,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     * value of state}
+     *  <p>Name of the state, for example, Colorado.</p>
      * @return state
      */
 
@@ -518,16 +527,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
-     * @return country
-     */
-
-    public String getCountry() {
-        return this.country;
-    }
-
-    /**
-     * value of company}
+     *  <p>Name of the company.</p>
      * @return company
      */
 
@@ -537,7 +537,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     * value of department}
+     *  <p>Name of the department.</p>
      * @return department
      */
 
@@ -547,7 +547,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     * value of building}
+     *  <p>Number or name of the building.</p>
      * @return building
      */
 
@@ -557,7 +557,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     * value of apartment}
+     *  <p>Number or name of the apartment.</p>
      * @return apartment
      */
 
@@ -567,7 +567,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     * value of pOBox}
+     *  <p>Post office box number.</p>
      * @return pOBox
      */
 
@@ -577,7 +577,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     * value of phone}
+     *  <p>Phone number of the contact.</p>
      * @return phone
      */
 
@@ -587,7 +587,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     * value of mobile}
+     *  <p>Mobile phone number of the contact.</p>
      * @return mobile
      */
 
@@ -597,7 +597,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     * value of email}
+     *  <p>Email address of the contact.</p>
      * @return email
      */
 
@@ -607,7 +607,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     * value of fax}
+     *  <p>Fax number of the contact.</p>
      * @return fax
      */
 
@@ -617,7 +617,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     * value of additionalAddressInfo}
+     *  <p>Further information on the Address.</p>
      * @return additionalAddressInfo
      */
 
@@ -627,7 +627,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     * value of externalId}
+     *  <p>ID for the contact used in an external system.</p>
      * @return externalId
      */
 
@@ -653,9 +653,9 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     public CustomerAddress build() {
         Objects.requireNonNull(key, CustomerAddress.class + ": key is missing");
         Objects.requireNonNull(country, CustomerAddress.class + ": country is missing");
-        return new CustomerAddressImpl(key, title, salutation, firstName, lastName, streetName, streetNumber,
-            additionalStreetInfo, postalCode, city, region, state, country, company, department, building, apartment,
-            pOBox, phone, mobile, email, fax, additionalAddressInfo, externalId, custom);
+        return new CustomerAddressImpl(key, country, title, salutation, firstName, lastName, streetName, streetNumber,
+            additionalStreetInfo, postalCode, city, region, state, company, department, building, apartment, pOBox,
+            phone, mobile, email, fax, additionalAddressInfo, externalId, custom);
     }
 
     /**
@@ -663,9 +663,9 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
      * @return CustomerAddress
      */
     public CustomerAddress buildUnchecked() {
-        return new CustomerAddressImpl(key, title, salutation, firstName, lastName, streetName, streetNumber,
-            additionalStreetInfo, postalCode, city, region, state, country, company, department, building, apartment,
-            pOBox, phone, mobile, email, fax, additionalAddressInfo, externalId, custom);
+        return new CustomerAddressImpl(key, country, title, salutation, firstName, lastName, streetName, streetNumber,
+            additionalStreetInfo, postalCode, city, region, state, company, department, building, apartment, pOBox,
+            phone, mobile, email, fax, additionalAddressInfo, externalId, custom);
     }
 
     /**
@@ -684,6 +684,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     public static CustomerAddressBuilder of(final CustomerAddress template) {
         CustomerAddressBuilder builder = new CustomerAddressBuilder();
         builder.key = template.getKey();
+        builder.country = template.getCountry();
         builder.title = template.getTitle();
         builder.salutation = template.getSalutation();
         builder.firstName = template.getFirstName();
@@ -695,7 +696,6 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
         builder.city = template.getCity();
         builder.region = template.getRegion();
         builder.state = template.getState();
-        builder.country = template.getCountry();
         builder.company = template.getCompany();
         builder.department = template.getDepartment();
         builder.building = template.getBuilding();

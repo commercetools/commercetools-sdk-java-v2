@@ -867,6 +867,14 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.ReviewStateTransitionMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.ShoppingListLineItemAddedMessageBuilder shoppingListLineItemAddedBuilder() {
+        return com.commercetools.api.models.message.ShoppingListLineItemAddedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.ShoppingListLineItemRemovedMessageBuilder shoppingListLineItemRemovedBuilder() {
+        return com.commercetools.api.models.message.ShoppingListLineItemRemovedMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.StagedQuoteCreatedMessageBuilder stagedQuoteCreatedBuilder() {
         return com.commercetools.api.models.message.StagedQuoteCreatedMessageBuilder.of();
     }

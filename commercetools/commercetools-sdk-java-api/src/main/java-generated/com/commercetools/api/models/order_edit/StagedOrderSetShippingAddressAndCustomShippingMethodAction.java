@@ -12,6 +12,7 @@ import com.commercetools.api.models.common.BaseAddress;
 import com.commercetools.api.models.order.StagedOrderUpdateAction;
 import com.commercetools.api.models.shipping_method.ShippingRateDraft;
 import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier;
+import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -87,6 +88,14 @@ public interface StagedOrderSetShippingAddressAndCustomShippingMethodAction exte
     public ExternalTaxRateDraft getExternalTaxRate();
 
     /**
+     *  <p>Custom Fields for the custom Shipping Method.</p>
+     * @return custom
+     */
+    @Valid
+    @JsonProperty("custom")
+    public CustomFieldsDraft getCustom();
+
+    /**
      *  <p>Value to set for <code>shippingAddress</code>.</p>
      * @param address value to be set
      */
@@ -122,6 +131,13 @@ public interface StagedOrderSetShippingAddressAndCustomShippingMethodAction exte
     public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
 
     /**
+     *  <p>Custom Fields for the custom Shipping Method.</p>
+     * @param custom value to be set
+     */
+
+    public void setCustom(final CustomFieldsDraft custom);
+
+    /**
      * factory method
      * @return instance of StagedOrderSetShippingAddressAndCustomShippingMethodAction
      */
@@ -142,6 +158,7 @@ public interface StagedOrderSetShippingAddressAndCustomShippingMethodAction exte
         instance.setShippingRate(template.getShippingRate());
         instance.setTaxCategory(template.getTaxCategory());
         instance.setExternalTaxRate(template.getExternalTaxRate());
+        instance.setCustom(template.getCustom());
         return instance;
     }
 
@@ -165,6 +182,7 @@ public interface StagedOrderSetShippingAddressAndCustomShippingMethodAction exte
                 .deepCopy(template.getTaxCategory()));
         instance.setExternalTaxRate(
             com.commercetools.api.models.cart.ExternalTaxRateDraft.deepCopy(template.getExternalTaxRate()));
+        instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         return instance;
     }
 

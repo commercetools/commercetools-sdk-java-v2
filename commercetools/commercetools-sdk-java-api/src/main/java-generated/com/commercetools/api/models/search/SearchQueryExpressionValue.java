@@ -119,6 +119,10 @@ public interface SearchQueryExpressionValue {
             return com.commercetools.api.models.search.SearchDateTimeRangeValue
                     .deepCopy((com.commercetools.api.models.search.SearchDateTimeRangeValue) template);
         }
+        if (template instanceof com.commercetools.api.models.search.SearchExactValue) {
+            return com.commercetools.api.models.search.SearchExactValue
+                    .deepCopy((com.commercetools.api.models.search.SearchExactValue) template);
+        }
         if (template instanceof com.commercetools.api.models.search.SearchExistsValue) {
             return com.commercetools.api.models.search.SearchExistsValue
                     .deepCopy((com.commercetools.api.models.search.SearchExistsValue) template);

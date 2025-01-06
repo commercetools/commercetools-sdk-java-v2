@@ -42,7 +42,6 @@ public class CtpClientBeanService {
     }
 
     @Bean
-    @Autowired
     public ProjectApiRoot apiRoot(ApiHttpClient client) {
 
         final ProjectApiRoot build = ProjectApiRoot.fromClient(projectKey, client);

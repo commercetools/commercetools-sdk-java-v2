@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountCustomLineItemsTargetImpl.class, name = CartDiscountCustomLineItemsTarget.CUSTOM_LINE_ITEMS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountLineItemsTargetImpl.class, name = CartDiscountLineItemsTarget.LINE_ITEMS),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountPatternTargetImpl.class, name = CartDiscountPatternTarget.PATTERN),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountShippingCostTargetImpl.class, name = CartDiscountShippingCostTarget.SHIPPING),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountTotalPriceTargetImpl.class, name = CartDiscountTotalPriceTarget.TOTAL_PRICE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.MultiBuyCustomLineItemsTargetImpl.class, name = MultiBuyCustomLineItemsTarget.MULTI_BUY_CUSTOM_LINE_ITEMS),
@@ -65,6 +66,10 @@ public interface CartDiscountTarget {
             return com.commercetools.api.models.cart_discount.CartDiscountLineItemsTarget
                     .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountLineItemsTarget) template);
         }
+        if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountPatternTarget) {
+            return com.commercetools.api.models.cart_discount.CartDiscountPatternTarget
+                    .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountPatternTarget) template);
+        }
         if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountShippingCostTarget) {
             return com.commercetools.api.models.cart_discount.CartDiscountShippingCostTarget
                     .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountShippingCostTarget) template);
@@ -99,6 +104,14 @@ public interface CartDiscountTarget {
      */
     public static com.commercetools.api.models.cart_discount.CartDiscountLineItemsTargetBuilder lineItemsBuilder() {
         return com.commercetools.api.models.cart_discount.CartDiscountLineItemsTargetBuilder.of();
+    }
+
+    /**
+     * builder for pattern subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.cart_discount.CartDiscountPatternTargetBuilder patternBuilder() {
+        return com.commercetools.api.models.cart_discount.CartDiscountPatternTargetBuilder.of();
     }
 
     /**

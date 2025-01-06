@@ -29,9 +29,9 @@ import com.commercetools.api.models.cart.TaxedPrice;
 import com.commercetools.api.models.cart_discount.CartDiscountReference;
 import com.commercetools.api.models.common.Address;
 import com.commercetools.api.models.common.BaseResource;
+import com.commercetools.api.models.common.CentPrecisionMoney;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
-import com.commercetools.api.models.common.TypedMoney;
 import com.commercetools.api.models.customer_group.CustomerGroupReference;
 import com.commercetools.api.models.quote.QuoteReference;
 import com.commercetools.api.models.state.StateReference;
@@ -183,7 +183,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     @NotNull
     @Valid
     @JsonProperty("totalPrice")
-    public TypedMoney getTotalPrice();
+    public CentPrecisionMoney getTotalPrice();
 
     /**
      *  <ul>
@@ -608,7 +608,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
      * @param totalPrice value to be set
      */
 
-    public void setTotalPrice(final TypedMoney totalPrice);
+    public void setTotalPrice(final CentPrecisionMoney totalPrice);
 
     /**
      *  <ul>
@@ -1049,7 +1049,8 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
                         .map(com.commercetools.api.models.cart.CustomLineItem::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
-        instance.setTotalPrice(com.commercetools.api.models.common.TypedMoney.deepCopy(template.getTotalPrice()));
+        instance.setTotalPrice(
+            com.commercetools.api.models.common.CentPrecisionMoney.deepCopy(template.getTotalPrice()));
         instance.setTaxedPrice(com.commercetools.api.models.cart.TaxedPrice.deepCopy(template.getTaxedPrice()));
         instance.setTaxedShippingPrice(
             com.commercetools.api.models.cart.TaxedPrice.deepCopy(template.getTaxedShippingPrice()));

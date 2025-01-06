@@ -345,7 +345,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     * set values to the assets
+     *  <p>Maps to <code>Category.assets</code>.</p>
      * @param assets value to be set
      * @return Builder
      */
@@ -356,7 +356,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     * set value to the assets
+     *  <p>Maps to <code>Category.assets</code>.</p>
      * @param assets value to be set
      * @return Builder
      */
@@ -368,7 +368,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     * add values to the assets
+     *  <p>Maps to <code>Category.assets</code>.</p>
      * @param assets value to be set
      * @return Builder
      */
@@ -382,7 +382,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     * add the value to the assets using the builder function
+     *  <p>Maps to <code>Category.assets</code>.</p>
      * @param builder function to build the assets value
      * @return Builder
      */
@@ -397,7 +397,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     * set the value to the assets using the builder function
+     *  <p>Maps to <code>Category.assets</code>.</p>
      * @param builder function to build the assets value
      * @return Builder
      */
@@ -410,7 +410,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     * add the value to the assets using the builder function
+     *  <p>Maps to <code>Category.assets</code>.</p>
      * @param builder function to build the assets value
      * @return Builder
      */
@@ -421,7 +421,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     * set the value to the assets using the builder function
+     *  <p>Maps to <code>Category.assets</code>.</p>
      * @param builder function to build the assets value
      * @return Builder
      */
@@ -564,7 +564,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     * value of assets}
+     *  <p>Maps to <code>Category.assets</code>.</p>
      * @return assets
      */
 

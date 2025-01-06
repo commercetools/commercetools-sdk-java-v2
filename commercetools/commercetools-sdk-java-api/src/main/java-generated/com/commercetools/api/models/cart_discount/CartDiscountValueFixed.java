@@ -49,6 +49,15 @@ public interface CartDiscountValueFixed extends CartDiscountValue, CartDiscountV
     public List<TypedMoney> getMoney();
 
     /**
+     *  <p>Indicates how the discount is applied on CartDiscountLineItemTarget or CartDiscountCustomLineItemTarget.</p>
+     *  <p>For CartDiscountPatternTarget, the mode can also be <code>ProportionateDistribution</code> or <code>EvenDistribution</code>.</p>
+     * @return applicationMode
+     */
+
+    @JsonProperty("applicationMode")
+    public DiscountApplicationMode getApplicationMode();
+
+    /**
      *  <p>Money values in cent precision or high precision of different currencies.</p>
      * @param money values to be set
      */
@@ -62,6 +71,14 @@ public interface CartDiscountValueFixed extends CartDiscountValue, CartDiscountV
      */
 
     public void setMoney(final List<TypedMoney> money);
+
+    /**
+     *  <p>Indicates how the discount is applied on CartDiscountLineItemTarget or CartDiscountCustomLineItemTarget.</p>
+     *  <p>For CartDiscountPatternTarget, the mode can also be <code>ProportionateDistribution</code> or <code>EvenDistribution</code>.</p>
+     * @param applicationMode value to be set
+     */
+
+    public void setApplicationMode(final DiscountApplicationMode applicationMode);
 
     /**
      * factory method
@@ -79,6 +96,7 @@ public interface CartDiscountValueFixed extends CartDiscountValue, CartDiscountV
     public static CartDiscountValueFixed of(final CartDiscountValueFixed template) {
         CartDiscountValueFixedImpl instance = new CartDiscountValueFixedImpl();
         instance.setMoney(template.getMoney());
+        instance.setApplicationMode(template.getApplicationMode());
         return instance;
     }
 
@@ -98,6 +116,7 @@ public interface CartDiscountValueFixed extends CartDiscountValue, CartDiscountV
                         .map(com.commercetools.api.models.common.TypedMoney::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setApplicationMode(template.getApplicationMode());
         return instance;
     }
 

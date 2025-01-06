@@ -34,7 +34,9 @@ public class StagedOrderSetCustomShippingMethodActionTest {
                         .taxCategory(
                             new com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierImpl()) },
                 new Object[] { StagedOrderSetCustomShippingMethodAction.builder()
-                        .externalTaxRate(new com.commercetools.api.models.cart.ExternalTaxRateDraftImpl()) } };
+                        .externalTaxRate(new com.commercetools.api.models.cart.ExternalTaxRateDraftImpl()) },
+                new Object[] { StagedOrderSetCustomShippingMethodAction.builder()
+                        .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) } };
     }
 
     @Test
@@ -66,5 +68,13 @@ public class StagedOrderSetCustomShippingMethodActionTest {
         value.setExternalTaxRate(new com.commercetools.api.models.cart.ExternalTaxRateDraftImpl());
         Assertions.assertThat(value.getExternalTaxRate())
                 .isEqualTo(new com.commercetools.api.models.cart.ExternalTaxRateDraftImpl());
+    }
+
+    @Test
+    public void custom() {
+        StagedOrderSetCustomShippingMethodAction value = StagedOrderSetCustomShippingMethodAction.of();
+        value.setCustom(new com.commercetools.api.models.type.CustomFieldsDraftImpl());
+        Assertions.assertThat(value.getCustom())
+                .isEqualTo(new com.commercetools.api.models.type.CustomFieldsDraftImpl());
     }
 }

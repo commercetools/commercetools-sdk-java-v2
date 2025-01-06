@@ -43,7 +43,7 @@ public class InvalidCredentialsErrorImpl implements InvalidCredentialsError, Mod
     }
 
     /**
-     *
+     *  <p>An error identifier.</p>
      */
 
     public String getCode() {
@@ -51,7 +51,7 @@ public class InvalidCredentialsErrorImpl implements InvalidCredentialsError, Mod
     }
 
     /**
-     *
+     *  <p>A plain language description of the cause of an error.</p>
      */
 
     public String getMessage() {

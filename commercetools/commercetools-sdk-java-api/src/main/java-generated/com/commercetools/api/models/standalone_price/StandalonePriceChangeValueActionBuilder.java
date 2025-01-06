@@ -31,6 +31,7 @@ public class StandalonePriceChangeValueActionBuilder implements Builder<Standalo
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @param builder function to build the value value
      * @return Builder
      */
@@ -43,6 +44,7 @@ public class StandalonePriceChangeValueActionBuilder implements Builder<Standalo
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @param builder function to build the value value
      * @return Builder
      */
@@ -55,6 +57,7 @@ public class StandalonePriceChangeValueActionBuilder implements Builder<Standalo
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -77,6 +80,7 @@ public class StandalonePriceChangeValueActionBuilder implements Builder<Standalo
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @return value
      */
 

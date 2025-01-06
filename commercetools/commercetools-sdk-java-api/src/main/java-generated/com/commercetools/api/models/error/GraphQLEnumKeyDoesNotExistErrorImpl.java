@@ -4,6 +4,7 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -35,7 +36,8 @@ public class GraphQLEnumKeyDoesNotExistErrorImpl implements GraphQLEnumKeyDoesNo
      * create instance with all properties
      */
     @JsonCreator
-    GraphQLEnumKeyDoesNotExistErrorImpl(@JsonProperty("values") final Map<String, java.lang.Object> values,
+    GraphQLEnumKeyDoesNotExistErrorImpl(
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("conflictingEnumKey") final String conflictingEnumKey,
             @JsonProperty("conflictingAttributeName") final String conflictingAttributeName) {
         this.values = values;

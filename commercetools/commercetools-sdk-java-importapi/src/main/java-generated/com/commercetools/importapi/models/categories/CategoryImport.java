@@ -123,7 +123,7 @@ public interface CategoryImport extends ImportResource {
     public LocalizedString getMetaKeywords();
 
     /**
-     *
+     *  <p>Maps to <code>Category.assets</code>.</p>
      * @return assets
      */
     @Valid
@@ -209,7 +209,7 @@ public interface CategoryImport extends ImportResource {
     public void setMetaKeywords(final LocalizedString metaKeywords);
 
     /**
-     * set assets
+     *  <p>Maps to <code>Category.assets</code>.</p>
      * @param assets values to be set
      */
 
@@ -217,7 +217,7 @@ public interface CategoryImport extends ImportResource {
     public void setAssets(final Asset... assets);
 
     /**
-     * set assets
+     *  <p>Maps to <code>Category.assets</code>.</p>
      * @param assets values to be set
      */
 

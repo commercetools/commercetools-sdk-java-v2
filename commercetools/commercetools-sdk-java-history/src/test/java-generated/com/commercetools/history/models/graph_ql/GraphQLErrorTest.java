@@ -31,8 +31,7 @@ public class GraphQLErrorTest {
                         .locations(Collections.singletonList(
                             new com.commercetools.history.models.graph_ql.GraphQLErrorLocationImpl())) },
                 new Object[] { GraphQLError.builder().path(Collections.singletonList("path")) },
-                new Object[] { GraphQLError.builder()
-                        .extensions(new com.commercetools.history.models.error.GraphQLErrorObjectImpl()) } };
+                new Object[] { GraphQLError.builder().extensions("extensions") } };
     }
 
     @Test
@@ -62,8 +61,7 @@ public class GraphQLErrorTest {
     @Test
     public void extensions() {
         GraphQLError value = GraphQLError.of();
-        value.setExtensions(new com.commercetools.history.models.error.GraphQLErrorObjectImpl());
-        Assertions.assertThat(value.getExtensions())
-                .isEqualTo(new com.commercetools.history.models.error.GraphQLErrorObjectImpl());
+        value.setExtensions("extensions");
+        Assertions.assertThat(value.getExtensions()).isEqualTo("extensions");
     }
 }

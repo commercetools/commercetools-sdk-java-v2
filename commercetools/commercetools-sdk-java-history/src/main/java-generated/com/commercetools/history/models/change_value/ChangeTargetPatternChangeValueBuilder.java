@@ -81,7 +81,7 @@ public class ChangeTargetPatternChangeValueBuilder implements Builder<ChangeTarg
      */
 
     public ChangeTargetPatternChangeValueBuilder plusTriggerPattern(
-            Function<com.commercetools.history.models.cart_discount.PatternComponentBuilder, Builder<? extends com.commercetools.history.models.cart_discount.PatternComponent>> builder) {
+            Function<com.commercetools.history.models.cart_discount.PatternComponentBuilder, com.commercetools.history.models.cart_discount.PatternComponentBuilder> builder) {
         if (this.triggerPattern == null) {
             this.triggerPattern = new ArrayList<>();
         }
@@ -97,11 +97,35 @@ public class ChangeTargetPatternChangeValueBuilder implements Builder<ChangeTarg
      */
 
     public ChangeTargetPatternChangeValueBuilder withTriggerPattern(
-            Function<com.commercetools.history.models.cart_discount.PatternComponentBuilder, Builder<? extends com.commercetools.history.models.cart_discount.PatternComponent>> builder) {
+            Function<com.commercetools.history.models.cart_discount.PatternComponentBuilder, com.commercetools.history.models.cart_discount.PatternComponentBuilder> builder) {
         this.triggerPattern = new ArrayList<>();
         this.triggerPattern.add(
             builder.apply(com.commercetools.history.models.cart_discount.PatternComponentBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Units of a (Custom) Line Item that triggered the discount application.</p>
+     * @param builder function to build the triggerPattern value
+     * @return Builder
+     */
+
+    public ChangeTargetPatternChangeValueBuilder addTriggerPattern(
+            Function<com.commercetools.history.models.cart_discount.PatternComponentBuilder, com.commercetools.history.models.cart_discount.PatternComponent> builder) {
+        return plusTriggerPattern(
+            builder.apply(com.commercetools.history.models.cart_discount.PatternComponentBuilder.of()));
+    }
+
+    /**
+     *  <p>Units of a (Custom) Line Item that triggered the discount application.</p>
+     * @param builder function to build the triggerPattern value
+     * @return Builder
+     */
+
+    public ChangeTargetPatternChangeValueBuilder setTriggerPattern(
+            Function<com.commercetools.history.models.cart_discount.PatternComponentBuilder, com.commercetools.history.models.cart_discount.PatternComponent> builder) {
+        return triggerPattern(
+            builder.apply(com.commercetools.history.models.cart_discount.PatternComponentBuilder.of()));
     }
 
     /**
@@ -150,7 +174,7 @@ public class ChangeTargetPatternChangeValueBuilder implements Builder<ChangeTarg
      */
 
     public ChangeTargetPatternChangeValueBuilder plusTargetPattern(
-            Function<com.commercetools.history.models.cart_discount.PatternComponentBuilder, Builder<? extends com.commercetools.history.models.cart_discount.PatternComponent>> builder) {
+            Function<com.commercetools.history.models.cart_discount.PatternComponentBuilder, com.commercetools.history.models.cart_discount.PatternComponentBuilder> builder) {
         if (this.targetPattern == null) {
             this.targetPattern = new ArrayList<>();
         }
@@ -166,11 +190,35 @@ public class ChangeTargetPatternChangeValueBuilder implements Builder<ChangeTarg
      */
 
     public ChangeTargetPatternChangeValueBuilder withTargetPattern(
-            Function<com.commercetools.history.models.cart_discount.PatternComponentBuilder, Builder<? extends com.commercetools.history.models.cart_discount.PatternComponent>> builder) {
+            Function<com.commercetools.history.models.cart_discount.PatternComponentBuilder, com.commercetools.history.models.cart_discount.PatternComponentBuilder> builder) {
         this.targetPattern = new ArrayList<>();
         this.targetPattern.add(
             builder.apply(com.commercetools.history.models.cart_discount.PatternComponentBuilder.of()).build());
         return this;
+    }
+
+    /**
+     *  <p>Units of (Custom) Line Items on which the Discount is applied.</p>
+     * @param builder function to build the targetPattern value
+     * @return Builder
+     */
+
+    public ChangeTargetPatternChangeValueBuilder addTargetPattern(
+            Function<com.commercetools.history.models.cart_discount.PatternComponentBuilder, com.commercetools.history.models.cart_discount.PatternComponent> builder) {
+        return plusTargetPattern(
+            builder.apply(com.commercetools.history.models.cart_discount.PatternComponentBuilder.of()));
+    }
+
+    /**
+     *  <p>Units of (Custom) Line Items on which the Discount is applied.</p>
+     * @param builder function to build the targetPattern value
+     * @return Builder
+     */
+
+    public ChangeTargetPatternChangeValueBuilder setTargetPattern(
+            Function<com.commercetools.history.models.cart_discount.PatternComponentBuilder, com.commercetools.history.models.cart_discount.PatternComponent> builder) {
+        return targetPattern(
+            builder.apply(com.commercetools.history.models.cart_discount.PatternComponentBuilder.of()));
     }
 
     /**

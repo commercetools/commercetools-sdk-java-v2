@@ -22,11 +22,13 @@ import jakarta.validation.constraints.NotNull;
  * <div class=code-example>
  * <pre><code class='java'>
  *     PatternComponent patternComponent = PatternComponent.builder()
+ *             .type("{type}")
  *             .build()
  * </code></pre>
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@JsonDeserialize(as = PatternComponentImpl.class)
 public interface PatternComponent {
 
     /**
@@ -36,6 +38,32 @@ public interface PatternComponent {
     @NotNull
     @JsonProperty("type")
     public String getType();
+
+    /**
+     * set type
+     * @param type value to be set
+     */
+
+    public void setType(final String type);
+
+    /**
+     * factory method
+     * @return instance of PatternComponent
+     */
+    public static PatternComponent of() {
+        return new PatternComponentImpl();
+    }
+
+    /**
+     * factory method to create a shallow copy PatternComponent
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    public static PatternComponent of(final PatternComponent template) {
+        PatternComponentImpl instance = new PatternComponentImpl();
+        instance.setType(template.getType());
+        return instance;
+    }
 
     /**
      * factory method to create a deep copy of PatternComponent
@@ -48,7 +76,25 @@ public interface PatternComponent {
             return null;
         }
         PatternComponentImpl instance = new PatternComponentImpl();
+        instance.setType(template.getType());
         return instance;
+    }
+
+    /**
+     * builder factory method for PatternComponent
+     * @return builder
+     */
+    public static PatternComponentBuilder builder() {
+        return PatternComponentBuilder.of();
+    }
+
+    /**
+     * create builder for PatternComponent instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
+    public static PatternComponentBuilder builder(final PatternComponent template) {
+        return PatternComponentBuilder.of(template);
     }
 
     /**

@@ -66,7 +66,8 @@ public interface ProductVariantPatch {
     public Boolean getStaged();
 
     /**
-     *  <p>Reference to the Product which contains the ProductVariant. Setting a value will batch process the import operations to minimize concurrency errors. If set, this field is required for every ProductVariantPatch in the ProductVariantPatchRequest.</p>
+     *  <p>Reference to the Product that contains the ProductVariant.</p>
+     *  <p>We recommend to set this value to minimize concurrency errors. If set, this field is required for every ProductVariantPatch in the ProductVariantPatchRequest.</p>
      * @return product
      */
     @Valid
@@ -101,7 +102,8 @@ public interface ProductVariantPatch {
     public void setStaged(final Boolean staged);
 
     /**
-     *  <p>Reference to the Product which contains the ProductVariant. Setting a value will batch process the import operations to minimize concurrency errors. If set, this field is required for every ProductVariantPatch in the ProductVariantPatchRequest.</p>
+     *  <p>Reference to the Product that contains the ProductVariant.</p>
+     *  <p>We recommend to set this value to minimize concurrency errors. If set, this field is required for every ProductVariantPatch in the ProductVariantPatchRequest.</p>
      * @param product value to be set
      */
 

@@ -45,10 +45,10 @@ public class AppController {
     }
 
     @GetMapping("/cart")
-    public String cart(Model model, HttpSession session) {
+    public String cart(Model model, HttpSession session) throws ExecutionException, InterruptedException {
         final CompletableFuture<Cart> cart = new CartRepository(apiRoot, session).meCart();
 
-        model.addAttribute("cart", cart);
+        model.addAttribute("cart", cart.get());
         return "mycart/index";
     }
 

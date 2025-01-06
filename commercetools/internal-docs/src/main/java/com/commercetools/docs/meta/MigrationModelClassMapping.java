@@ -265,6 +265,10 @@ package com.commercetools.docs.meta;
  *   <td>{@link com.commercetools.api.models.cart.CartChangeTaxRoundingModeAction}</td>
  * </tr>
  * <tr>
+ *   <td>{@link io.sphere.sdk.carts.commands.updateactions.FreezeCart}</td>
+ *   <td>{@link com.commercetools.api.models.cart.CartFreezeCartAction}</td>
+ * </tr>
+ * <tr>
  *   <td>{@link io.sphere.sdk.carts.commands.updateactions.Recalculate}</td>
  *   <td>{@link com.commercetools.api.models.cart.CartRecalculateAction}</td>
  * </tr>
@@ -439,6 +443,10 @@ package com.commercetools.docs.meta;
  * <tr>
  *   <td>{@link io.sphere.sdk.carts.commands.updateactions.SetShippingRateInput}</td>
  *   <td>{@link com.commercetools.api.models.cart.CartSetShippingRateInputAction}</td>
+ * </tr>
+ * <tr>
+ *   <td>{@link io.sphere.sdk.carts.commands.updateactions.UnfreezeCart}</td>
+ *   <td>{@link com.commercetools.api.models.cart.CartUnfreezeCartAction}</td>
  * </tr>
  * <tr>
  *   <td>{@link io.sphere.sdk.carts.commands.updateactions.UpdateItemShippingAddress}</td>

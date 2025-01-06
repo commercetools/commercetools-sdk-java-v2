@@ -107,7 +107,7 @@ public class ProductTailoringInStoreDraftImpl implements ProductTailoringInStore
     }
 
     /**
-     *  <p>Tailored title of the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored title of the Product that is used by search engines.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaTitle() {
@@ -115,7 +115,7 @@ public class ProductTailoringInStoreDraftImpl implements ProductTailoringInStore
     }
 
     /**
-     *  <p>Tailored description of the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored description of the Product that is used in search engine.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaDescription() {
@@ -123,7 +123,7 @@ public class ProductTailoringInStoreDraftImpl implements ProductTailoringInStore
     }
 
     /**
-     *  <p>Tailored keywords related to the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored keywords related to the Product that are used by search engines.</p>
      */
 
     public com.commercetools.api.models.common.LocalizedString getMetaKeywords() {

@@ -33,7 +33,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ExtensionTrigger {
 
     /**
-     *  <p><code>cart</code>, <code>order</code>, <code>payment</code>, <code>customer</code>, <code>quote-request</code>, <code>staged-quote</code>, <code>quote</code>, <code>business-unit</code>, and <code>shopping-list</code> are supported.</p>
+     *  <p>The resource that triggers the Extension.</p>
      * @return resourceTypeId
      */
     @NotNull
@@ -57,7 +57,7 @@ public interface ExtensionTrigger {
     public String getCondition();
 
     /**
-     *  <p><code>cart</code>, <code>order</code>, <code>payment</code>, <code>customer</code>, <code>quote-request</code>, <code>staged-quote</code>, <code>quote</code>, <code>business-unit</code>, and <code>shopping-list</code> are supported.</p>
+     *  <p>The resource that triggers the Extension.</p>
      * @param resourceTypeId value to be set
      */
 

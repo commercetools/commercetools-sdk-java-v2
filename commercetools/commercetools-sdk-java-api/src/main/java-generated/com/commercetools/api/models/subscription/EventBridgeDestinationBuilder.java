@@ -15,6 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     EventBridgeDestination eventBridgeDestination = EventBridgeDestination.builder()
  *             .region("{region}")
  *             .accountId("{accountId}")
+ *             .source("{source}")
  *             .build()
  * </code></pre>
  * </div>
@@ -25,6 +26,8 @@ public class EventBridgeDestinationBuilder implements Builder<EventBridgeDestina
     private String region;
 
     private String accountId;
+
+    private String source;
 
     /**
      *  <p>AWS region that receives the events.</p>
@@ -49,6 +52,17 @@ public class EventBridgeDestinationBuilder implements Builder<EventBridgeDestina
     }
 
     /**
+     *  <p>URN for the EventBridge destination.</p>
+     * @param source value to be set
+     * @return Builder
+     */
+
+    public EventBridgeDestinationBuilder source(final String source) {
+        this.source = source;
+        return this;
+    }
+
+    /**
      *  <p>AWS region that receives the events.</p>
      * @return region
      */
@@ -67,13 +81,23 @@ public class EventBridgeDestinationBuilder implements Builder<EventBridgeDestina
     }
 
     /**
+     *  <p>URN for the EventBridge destination.</p>
+     * @return source
+     */
+
+    public String getSource() {
+        return this.source;
+    }
+
+    /**
      * builds EventBridgeDestination with checking for non-null required values
      * @return EventBridgeDestination
      */
     public EventBridgeDestination build() {
         Objects.requireNonNull(region, EventBridgeDestination.class + ": region is missing");
         Objects.requireNonNull(accountId, EventBridgeDestination.class + ": accountId is missing");
-        return new EventBridgeDestinationImpl(region, accountId);
+        Objects.requireNonNull(source, EventBridgeDestination.class + ": source is missing");
+        return new EventBridgeDestinationImpl(region, accountId, source);
     }
 
     /**
@@ -81,7 +105,7 @@ public class EventBridgeDestinationBuilder implements Builder<EventBridgeDestina
      * @return EventBridgeDestination
      */
     public EventBridgeDestination buildUnchecked() {
-        return new EventBridgeDestinationImpl(region, accountId);
+        return new EventBridgeDestinationImpl(region, accountId, source);
     }
 
     /**
@@ -101,6 +125,7 @@ public class EventBridgeDestinationBuilder implements Builder<EventBridgeDestina
         EventBridgeDestinationBuilder builder = new EventBridgeDestinationBuilder();
         builder.region = template.getRegion();
         builder.accountId = template.getAccountId();
+        builder.source = template.getSource();
         return builder;
     }
 

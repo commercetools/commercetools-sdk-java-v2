@@ -18,7 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- * GraphQLError
+ *  <p>Contains an error message, the location of the code that caused the error, and other information to help you correct the error.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -37,7 +37,7 @@ import jakarta.validation.constraints.NotNull;
 public interface GraphQLError {
 
     /**
-     *
+     *  <p>Detailed description of the error explaining the root cause of the problem and suggesting how to correct the error.</p>
      * @return message
      */
     @NotNull
@@ -45,7 +45,7 @@ public interface GraphQLError {
     public String getMessage();
 
     /**
-     *
+     *  <p>Location within your query where the error occurred.</p>
      * @return locations
      */
     @NotNull
@@ -54,7 +54,7 @@ public interface GraphQLError {
     public List<GraphQLErrorLocation> getLocations();
 
     /**
-     *
+     *  <p>Query fields listed in order from the root of the query response up to the field in which the error occurred. <code>path</code> is displayed in the response only if an error is associated with a particular field in the query result.</p>
      * @return path
      */
 
@@ -62,7 +62,7 @@ public interface GraphQLError {
     public List<Object> getPath();
 
     /**
-     *  <p>Represents a single error.</p>
+     *  <p>Dictionary with additional information where applicable.</p>
      * @return extensions
      */
     @NotNull
@@ -71,14 +71,14 @@ public interface GraphQLError {
     public GraphQLErrorObject getExtensions();
 
     /**
-     * set message
+     *  <p>Detailed description of the error explaining the root cause of the problem and suggesting how to correct the error.</p>
      * @param message value to be set
      */
 
     public void setMessage(final String message);
 
     /**
-     * set locations
+     *  <p>Location within your query where the error occurred.</p>
      * @param locations values to be set
      */
 
@@ -86,14 +86,14 @@ public interface GraphQLError {
     public void setLocations(final GraphQLErrorLocation... locations);
 
     /**
-     * set locations
+     *  <p>Location within your query where the error occurred.</p>
      * @param locations values to be set
      */
 
     public void setLocations(final List<GraphQLErrorLocation> locations);
 
     /**
-     * set path
+     *  <p>Query fields listed in order from the root of the query response up to the field in which the error occurred. <code>path</code> is displayed in the response only if an error is associated with a particular field in the query result.</p>
      * @param path values to be set
      */
 
@@ -101,14 +101,14 @@ public interface GraphQLError {
     public void setPath(final Object... path);
 
     /**
-     * set path
+     *  <p>Query fields listed in order from the root of the query response up to the field in which the error occurred. <code>path</code> is displayed in the response only if an error is associated with a particular field in the query result.</p>
      * @param path values to be set
      */
 
     public void setPath(final List<Object> path);
 
     /**
-     *  <p>Represents a single error.</p>
+     *  <p>Dictionary with additional information where applicable.</p>
      * @param extensions value to be set
      */
 

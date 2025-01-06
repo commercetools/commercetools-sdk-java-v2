@@ -19,6 +19,9 @@ plugins {
 
     id "me.champeau.jmh" version "0.6.8"
     id "jacoco"
+
+    id "versioning"
+    id "srcinfo"
 }
 
 import java.text.SimpleDateFormat
@@ -87,6 +90,10 @@ subprojects { project ->
     apply from: "$rootDir/gradle-scripts/subproject-dependencies.gradle"
     apply from: "$rootDir/gradle-scripts/subproject-config.gradle"
 
+    if (project.file("build.gradle").exists()) {
+        apply from: "$rootDir/gradle-scripts/subproject-srcinfo-plugin.gradle"
+    }
+
     group='com.commercetools.sdk'
 
     version = globalVersion
@@ -106,6 +113,11 @@ subprojects { project ->
     }
     tasks.withType(Javadoc).configureEach {
         javadocTool = javaToolchains.javadocToolFor {
+            languageVersion = JavaLanguageVersion.of(17)
+        }
+    }
+    compileIntegrationTestJava {
+        javaCompiler = javaToolchains.compilerFor {
             languageVersion = JavaLanguageVersion.of(17)
         }
     }
@@ -359,6 +371,7 @@ tasks.register("writeVersionToExamples") {
                 include(name: 'examples/spring-otel/build.gradle')
                 include(name: 'examples/spring-datadog/build.gradle')
                 include(name: 'examples/spring-datadog-statsd/build.gradle')
+                include(name: 'examples/spring-dynatrace-oneagent/build.gradle')
             }
         }
         ant.replaceregexp(match: '<commercetools.version>.+</commercetools.version>', replace: "<commercetools.version>${globalVersion}</commercetools.version>", flags:'g', byline:true) {

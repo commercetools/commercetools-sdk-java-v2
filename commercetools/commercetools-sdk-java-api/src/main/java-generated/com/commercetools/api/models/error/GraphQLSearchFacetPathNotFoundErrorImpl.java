@@ -4,6 +4,7 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -30,7 +31,8 @@ public class GraphQLSearchFacetPathNotFoundErrorImpl implements GraphQLSearchFac
      * create instance with all properties
      */
     @JsonCreator
-    GraphQLSearchFacetPathNotFoundErrorImpl(@JsonProperty("values") final Map<String, java.lang.Object> values) {
+    GraphQLSearchFacetPathNotFoundErrorImpl(
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values) {
         this.values = values;
         this.code = SEARCH_FACET_PATH_NOT_FOUND;
     }

@@ -4,6 +4,7 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -31,7 +32,7 @@ public class GraphQLErrorObjectImpl implements GraphQLErrorObject, ModelBase {
      */
     @JsonCreator
     GraphQLErrorObjectImpl(@JsonProperty("code") final String code,
-            @JsonProperty("values") final Map<String, java.lang.Object> values) {
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values) {
         this.code = code;
         this.values = values;
     }
@@ -43,7 +44,7 @@ public class GraphQLErrorObjectImpl implements GraphQLErrorObject, ModelBase {
     }
 
     /**
-     *  <p>Error identifier.</p>
+     *  <p>One of the error codes that is listed on the Errors page.</p>
      */
 
     public String getCode() {

@@ -15,6 +15,14 @@ public class ApprovalRuleUpdateActionBuilder {
         return com.commercetools.api.models.approval_rule.ApprovalRuleSetApproversActionBuilder.of();
     }
 
+    public com.commercetools.api.models.approval_rule.ApprovalRuleSetCustomFieldActionBuilder setCustomFieldBuilder() {
+        return com.commercetools.api.models.approval_rule.ApprovalRuleSetCustomFieldActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.approval_rule.ApprovalRuleSetCustomTypeActionBuilder setCustomTypeBuilder() {
+        return com.commercetools.api.models.approval_rule.ApprovalRuleSetCustomTypeActionBuilder.of();
+    }
+
     public com.commercetools.api.models.approval_rule.ApprovalRuleSetDescriptionActionBuilder setDescriptionBuilder() {
         return com.commercetools.api.models.approval_rule.ApprovalRuleSetDescriptionActionBuilder.of();
     }

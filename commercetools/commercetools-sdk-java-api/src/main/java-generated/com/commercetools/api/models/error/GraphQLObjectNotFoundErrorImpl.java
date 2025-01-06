@@ -4,6 +4,7 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -17,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Returned when the requested resource was not found.</p>
+ *  <p>Returned if the requested resource was not found or the Product Search index is inactive.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GraphQLObjectNotFoundErrorImpl implements GraphQLObjectNotFoundError, ModelBase {
@@ -30,7 +31,7 @@ public class GraphQLObjectNotFoundErrorImpl implements GraphQLObjectNotFoundErro
      * create instance with all properties
      */
     @JsonCreator
-    GraphQLObjectNotFoundErrorImpl(@JsonProperty("values") final Map<String, java.lang.Object> values) {
+    GraphQLObjectNotFoundErrorImpl(@JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values) {
         this.values = values;
         this.code = OBJECT_NOT_FOUND;
     }

@@ -4,6 +4,7 @@ package com.commercetools.api.models.product;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -28,7 +29,7 @@ public class CategoryOrderHintsImpl implements CategoryOrderHints, ModelBase {
      * create instance with all properties
      */
     @JsonCreator
-    CategoryOrderHintsImpl(@JsonProperty("values") final Map<String, String> values) {
+    CategoryOrderHintsImpl(@JsonAnySetter @JsonProperty("values") final Map<String, String> values) {
         this.values = values;
     }
 

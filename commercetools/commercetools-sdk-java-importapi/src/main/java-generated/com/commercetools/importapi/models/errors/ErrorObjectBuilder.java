@@ -83,8 +83,8 @@ public class ErrorObjectBuilder {
         return com.commercetools.importapi.models.errors.InvalidTokenErrorBuilder.of();
     }
 
-    public com.commercetools.importapi.models.errors.ReferencedResourceNotFoundBuilder referencedResourceNotFoundBuilder() {
-        return com.commercetools.importapi.models.errors.ReferencedResourceNotFoundBuilder.of();
+    public com.commercetools.importapi.models.errors.NewMasterVariantAdditionNotAllowedErrorBuilder newMasterVariantAdditionNotAllowedBuilder() {
+        return com.commercetools.importapi.models.errors.NewMasterVariantAdditionNotAllowedErrorBuilder.of();
     }
 
     public com.commercetools.importapi.models.errors.RequiredFieldErrorBuilder requiredFieldBuilder() {

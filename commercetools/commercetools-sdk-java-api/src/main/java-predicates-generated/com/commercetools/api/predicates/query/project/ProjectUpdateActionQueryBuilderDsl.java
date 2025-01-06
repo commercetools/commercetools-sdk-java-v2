@@ -19,6 +19,14 @@ public class ProjectUpdateActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, ProjectUpdateActionQueryBuilderDsl::of));
     }
 
+    public CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl> asChangeBusinessUnitSearchStatus(
+            Function<com.commercetools.api.predicates.query.project.ProjectChangeBusinessUnitSearchStatusActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.project.ProjectChangeBusinessUnitSearchStatusActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.project.ProjectChangeBusinessUnitSearchStatusActionQueryBuilderDsl
+                    .of()),
+            ProjectUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl> asChangeMyBusinessUnitStatusOnCreation(
             Function<com.commercetools.api.predicates.query.project.ProjectChangeBusinessUnitStatusOnCreationActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.project.ProjectChangeBusinessUnitStatusOnCreationActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(

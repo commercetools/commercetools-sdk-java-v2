@@ -51,7 +51,7 @@ public class InvalidStateTransitionErrorImpl implements InvalidStateTransitionEr
     }
 
     /**
-     *
+     *  <p>An error identifier.</p>
      */
 
     public String getCode() {
@@ -59,7 +59,7 @@ public class InvalidStateTransitionErrorImpl implements InvalidStateTransitionEr
     }
 
     /**
-     *
+     *  <p>A plain language description of the cause of an error.</p>
      */
 
     public String getMessage() {

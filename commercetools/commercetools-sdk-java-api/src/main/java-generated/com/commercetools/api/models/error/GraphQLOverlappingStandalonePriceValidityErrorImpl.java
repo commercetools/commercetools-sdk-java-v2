@@ -4,6 +4,7 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -53,7 +54,7 @@ public class GraphQLOverlappingStandalonePriceValidityErrorImpl
      */
     @JsonCreator
     GraphQLOverlappingStandalonePriceValidityErrorImpl(
-            @JsonProperty("values") final Map<String, java.lang.Object> values,
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values,
             @JsonProperty("conflictingStandalonePrice") final com.commercetools.api.models.standalone_price.StandalonePriceReference conflictingStandalonePrice,
             @JsonProperty("sku") final String sku, @JsonProperty("currency") final String currency,
             @JsonProperty("country") final String country,

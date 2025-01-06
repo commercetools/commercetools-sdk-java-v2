@@ -22,13 +22,13 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SearchExactExpressionImpl implements SearchExactExpression, ModelBase {
 
-    private com.commercetools.api.models.search.SearchAnyValue exact;
+    private com.commercetools.api.models.search.SearchExactValue exact;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
-    SearchExactExpressionImpl(@JsonProperty("exact") final com.commercetools.api.models.search.SearchAnyValue exact) {
+    SearchExactExpressionImpl(@JsonProperty("exact") final com.commercetools.api.models.search.SearchExactValue exact) {
         this.exact = exact;
     }
 
@@ -42,11 +42,11 @@ public class SearchExactExpressionImpl implements SearchExactExpression, ModelBa
      *
      */
 
-    public com.commercetools.api.models.search.SearchAnyValue getExact() {
+    public com.commercetools.api.models.search.SearchExactValue getExact() {
         return this.exact;
     }
 
-    public void setExact(final com.commercetools.api.models.search.SearchAnyValue exact) {
+    public void setExact(final com.commercetools.api.models.search.SearchExactValue exact) {
         this.exact = exact;
     }
 

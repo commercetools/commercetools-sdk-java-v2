@@ -103,6 +103,7 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
 
     /**
      *  <p>Sets the money value of this Price.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      */
 
     public com.commercetools.api.models.common.Money getValue() {

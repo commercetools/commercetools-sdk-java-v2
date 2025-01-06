@@ -36,6 +36,7 @@ public interface DiscountedPriceDraft extends io.vrap.rmf.base.client.Draft<Disc
 
     /**
      *  <p>Sets the money value for the discounted price.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @return value
      */
     @NotNull
@@ -54,6 +55,7 @@ public interface DiscountedPriceDraft extends io.vrap.rmf.base.client.Draft<Disc
 
     /**
      *  <p>Sets the money value for the discounted price.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @param value value to be set
      */
 

@@ -84,7 +84,7 @@ public interface ProductData extends ProductDataLike {
     public LocalizedString getSlug();
 
     /**
-     *  <p>Title of the Product displayed in search results.</p>
+     *  <p>Title of the Product as used by search engines.</p>
      * @return metaTitle
      */
     @Valid
@@ -92,7 +92,7 @@ public interface ProductData extends ProductDataLike {
     public LocalizedString getMetaTitle();
 
     /**
-     *  <p>Description of the Product displayed in search results below the meta title.</p>
+     *  <p>Description of the Product as used by search engines.</p>
      * @return metaDescription
      */
     @Valid
@@ -178,14 +178,14 @@ public interface ProductData extends ProductDataLike {
     public void setSlug(final LocalizedString slug);
 
     /**
-     *  <p>Title of the Product displayed in search results.</p>
+     *  <p>Title of the Product as used by search engines.</p>
      * @param metaTitle value to be set
      */
 
     public void setMetaTitle(final LocalizedString metaTitle);
 
     /**
-     *  <p>Description of the Product displayed in search results below the meta title.</p>
+     *  <p>Description of the Product as used by search engines.</p>
      * @param metaDescription value to be set
      */
 

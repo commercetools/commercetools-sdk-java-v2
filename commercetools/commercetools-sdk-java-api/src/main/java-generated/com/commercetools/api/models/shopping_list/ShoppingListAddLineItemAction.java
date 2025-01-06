@@ -18,6 +18,7 @@ import jakarta.validation.Valid;
 
 /**
  *  <p>The ProductVariant to be included in the ShoppingListLineItem must be specified using the <code>productID</code> and <code>variantID</code>, or by the <code>sku</code>. If the ShoppingList already contains a ShoppingListLineItem for the same Product Variant with the same Custom Fields, then only the quantity of the existing ShoppingListLineItem is increased. A ShoppingListLineItem with an empty <code>variantId</code> is not considered the same as a ShoppingListLineItem with a <code>variantId</code> currently referring to the Master Variant.</p>
+ *  <p>Produces the Shopping List Line Item Added Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -79,7 +80,7 @@ public interface ShoppingListAddLineItemAction extends ShoppingListUpdateAction,
     public Long getQuantity();
 
     /**
-     *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
+     *  <p>Date and time the ShoppingListLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
      * @return addedAt
      */
 
@@ -130,7 +131,7 @@ public interface ShoppingListAddLineItemAction extends ShoppingListUpdateAction,
     public void setQuantity(final Long quantity);
 
     /**
-     *  <p>Date and time the TextLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
+     *  <p>Date and time the ShoppingListLineItem is added to the ShoppingList. If not set, the current date and time (UTC) is used.</p>
      * @param addedAt value to be set
      */
 

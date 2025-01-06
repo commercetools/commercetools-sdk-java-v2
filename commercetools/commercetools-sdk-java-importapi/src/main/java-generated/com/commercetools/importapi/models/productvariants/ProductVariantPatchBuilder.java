@@ -141,7 +141,8 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
     }
 
     /**
-     *  <p>Reference to the Product which contains the ProductVariant. Setting a value will batch process the import operations to minimize concurrency errors. If set, this field is required for every ProductVariantPatch in the ProductVariantPatchRequest.</p>
+     *  <p>Reference to the Product that contains the ProductVariant.</p>
+     *  <p>We recommend to set this value to minimize concurrency errors. If set, this field is required for every ProductVariantPatch in the ProductVariantPatchRequest.</p>
      * @param builder function to build the product value
      * @return Builder
      */
@@ -153,7 +154,8 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
     }
 
     /**
-     *  <p>Reference to the Product which contains the ProductVariant. Setting a value will batch process the import operations to minimize concurrency errors. If set, this field is required for every ProductVariantPatch in the ProductVariantPatchRequest.</p>
+     *  <p>Reference to the Product that contains the ProductVariant.</p>
+     *  <p>We recommend to set this value to minimize concurrency errors. If set, this field is required for every ProductVariantPatch in the ProductVariantPatchRequest.</p>
      * @param builder function to build the product value
      * @return Builder
      */
@@ -165,7 +167,8 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
     }
 
     /**
-     *  <p>Reference to the Product which contains the ProductVariant. Setting a value will batch process the import operations to minimize concurrency errors. If set, this field is required for every ProductVariantPatch in the ProductVariantPatchRequest.</p>
+     *  <p>Reference to the Product that contains the ProductVariant.</p>
+     *  <p>We recommend to set this value to minimize concurrency errors. If set, this field is required for every ProductVariantPatch in the ProductVariantPatchRequest.</p>
      * @param product value to be set
      * @return Builder
      */
@@ -212,7 +215,8 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
     }
 
     /**
-     *  <p>Reference to the Product which contains the ProductVariant. Setting a value will batch process the import operations to minimize concurrency errors. If set, this field is required for every ProductVariantPatch in the ProductVariantPatchRequest.</p>
+     *  <p>Reference to the Product that contains the ProductVariant.</p>
+     *  <p>We recommend to set this value to minimize concurrency errors. If set, this field is required for every ProductVariantPatch in the ProductVariantPatchRequest.</p>
      * @return product
      */
 

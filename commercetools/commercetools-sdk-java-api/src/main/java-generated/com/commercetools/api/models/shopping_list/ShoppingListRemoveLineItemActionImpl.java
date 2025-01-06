@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * ShoppingListRemoveLineItemAction
+ *  <p>Produces the Shopping List Line Item Removed Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListRemoveLineItemActionImpl implements ShoppingListRemoveLineItemAction, ModelBase {

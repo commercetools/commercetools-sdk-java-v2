@@ -24,14 +24,15 @@ public class SearchExactExpressionTest {
 
     @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] {
-                SearchExactExpression.builder().exact(new com.commercetools.api.models.search.SearchAnyValueImpl()) } };
+        return new Object[][] { new Object[] { SearchExactExpression.builder()
+                .exact(new com.commercetools.api.models.search.SearchExactValueImpl()) } };
     }
 
     @Test
     public void exact() {
         SearchExactExpression value = SearchExactExpression.of();
-        value.setExact(new com.commercetools.api.models.search.SearchAnyValueImpl());
-        Assertions.assertThat(value.getExact()).isEqualTo(new com.commercetools.api.models.search.SearchAnyValueImpl());
+        value.setExact(new com.commercetools.api.models.search.SearchExactValueImpl());
+        Assertions.assertThat(value.getExact())
+                .isEqualTo(new com.commercetools.api.models.search.SearchExactValueImpl());
     }
 }

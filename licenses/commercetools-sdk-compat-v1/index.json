@@ -2,7 +2,7 @@
     "dependencies": [
         {
             "moduleName": "com.commercetools.sdk.jvm.core:commercetools-java-client",
-            "moduleVersion": "2.14.0",
+            "moduleVersion": "2.16.0",
             "moduleLicenses": [
                 {
                     "moduleLicense": "Apache License, Version 2.0",
@@ -12,7 +12,7 @@
         },
         {
             "moduleName": "com.commercetools.sdk.jvm.core:commercetools-java-client-ahc-2_0",
-            "moduleVersion": "2.14.0",
+            "moduleVersion": "2.16.0",
             "moduleLicenses": [
                 {
                     "moduleLicense": "Apache License, Version 2.0",
@@ -22,7 +22,7 @@
         },
         {
             "moduleName": "com.commercetools.sdk.jvm.core:commercetools-java-client-core",
-            "moduleVersion": "2.14.0",
+            "moduleVersion": "2.16.0",
             "moduleLicenses": [
                 {
                     "moduleLicense": "Apache License, Version 2.0",
@@ -32,7 +32,7 @@
         },
         {
             "moduleName": "com.commercetools.sdk.jvm.core:commercetools-models",
-            "moduleVersion": "2.14.0",
+            "moduleVersion": "2.16.0",
             "moduleLicenses": [
                 {
                     "moduleLicense": "Apache License, Version 2.0",
@@ -42,7 +42,7 @@
         },
         {
             "moduleName": "com.commercetools.sdk.jvm.core:commercetools-sdk-base",
-            "moduleVersion": "2.14.0",
+            "moduleVersion": "2.16.0",
             "moduleLicenses": [
                 {
                     "moduleLicense": "Apache License, Version 2.0",
@@ -52,7 +52,7 @@
         },
         {
             "moduleName": "com.commercetools.sdk.jvm.core:sdk-http",
-            "moduleVersion": "2.14.0",
+            "moduleVersion": "2.16.0",
             "moduleLicenses": [
                 {
                     "moduleLicense": "Apache License, Version 2.0",
@@ -62,7 +62,7 @@
         },
         {
             "moduleName": "com.commercetools.sdk.jvm.core:sdk-http-ahc-2_0",
-            "moduleVersion": "2.14.0",
+            "moduleVersion": "2.16.0",
             "moduleLicenses": [
                 {
                     "moduleLicense": "Apache License, Version 2.0",
@@ -72,7 +72,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-annotations",
-            "moduleVersion": "2.17.1",
+            "moduleVersion": "2.18.1",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson"
             ],
@@ -85,7 +85,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-core",
-            "moduleVersion": "2.17.1",
+            "moduleVersion": "2.18.1",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-core"
             ],
@@ -98,7 +98,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-databind",
-            "moduleVersion": "2.17.1",
+            "moduleVersion": "2.18.1",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson"
             ],
@@ -111,7 +111,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.dataformat:jackson-dataformat-cbor",
-            "moduleVersion": "2.17.1",
+            "moduleVersion": "2.18.1",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-dataformats-binary"
             ],
@@ -124,7 +124,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.datatype:jackson-datatype-jsr310",
-            "moduleVersion": "2.17.1",
+            "moduleVersion": "2.18.1",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-modules-java8/jackson-datatype-jsr310"
             ],
@@ -137,7 +137,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.module:jackson-module-parameter-names",
-            "moduleVersion": "2.17.1",
+            "moduleVersion": "2.18.1",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-modules-java8/jackson-module-parameter-names"
             ],

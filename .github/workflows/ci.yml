@@ -9,7 +9,7 @@ on:
 name: CI
 
 # Declare default permissions as read only.
-permissions: read-all
+permissions: {}
 
 concurrency:
     group: ${{ github.workflow }}-${{ github.ref }}
@@ -71,7 +71,9 @@ jobs:
 
       - name: "Run if style changes have been detected"
         if: steps.commit_style_fix.outputs.changes_detected == 'true'
-        run: echo "${{steps.commit_style_fix.outputs.commit_hash}}" >> .git-blame-ignore-revs
+        run: echo "$HASH" >> .git-blame-ignore-revs
+        env:
+            HASH: ${{steps.commit_style_fix.outputs.commit_hash}}
 
       - uses: stefanzweifel/git-auto-commit-action@8621497c8c39c72f3e2a999a26b4ca1b5058a842 # v5.0.1
         id: commit_rev_ignore

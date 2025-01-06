@@ -1271,6 +1271,13 @@ public class MessagePayloadQueryBuilderDsl {
             MessagePayloadQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asShoppingListMessagePayload(
+            Function<com.commercetools.api.predicates.query.message.ShoppingListMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.ShoppingListMessagePayloadQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.message.ShoppingListMessagePayloadQueryBuilderDsl.of()),
+            MessagePayloadQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asShoppingListStoreSet(
             Function<com.commercetools.api.predicates.query.message.ShoppingListStoreSetMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.ShoppingListStoreSetMessagePayloadQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

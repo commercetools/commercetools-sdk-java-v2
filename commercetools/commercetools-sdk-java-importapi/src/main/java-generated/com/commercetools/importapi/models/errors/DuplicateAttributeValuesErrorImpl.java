@@ -47,7 +47,7 @@ public class DuplicateAttributeValuesErrorImpl implements DuplicateAttributeValu
     }
 
     /**
-     *
+     *  <p>An error identifier.</p>
      */
 
     public String getCode() {
@@ -55,7 +55,7 @@ public class DuplicateAttributeValuesErrorImpl implements DuplicateAttributeValu
     }
 
     /**
-     *
+     *  <p>A plain language description of the cause of an error.</p>
      */
 
     public String getMessage() {

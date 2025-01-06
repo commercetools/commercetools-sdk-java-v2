@@ -40,7 +40,7 @@ public class ApproverConjunctionDraftImpl implements ApproverConjunctionDraft, M
     }
 
     /**
-     *  <p>All of the nested disjunctions must be approved in order for the conjunction to be considered approved. The total count of approvers across the nested disjunctions must not exceed 10.</p>
+     *  <p>All of the nested disjunctions must be approved in order for the conjunction to be considered approved.</p>
      */
 
     public java.util.List<com.commercetools.api.models.approval_rule.ApproverDisjunctionDraft> getAnd() {

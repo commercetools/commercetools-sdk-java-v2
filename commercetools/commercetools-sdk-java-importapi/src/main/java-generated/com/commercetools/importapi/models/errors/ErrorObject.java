@@ -15,7 +15,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- * ErrorObject
+ *  <p>Base representation of an error response containing common fields to all errors.</p>
+ *  <p>An error response may contain additional fields depending on the type of an error, for example, <code>attribute</code> in DuplicateAttributeValueError.</p>
  *
  * <hr>
  * Example to create a subtype instance using the builder pattern
@@ -46,7 +47,7 @@ import jakarta.validation.constraints.NotNull;
         @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.InvalidScopeErrorImpl.class, name = InvalidScopeError.INVALID_SCOPE),
         @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.InvalidStateTransitionErrorImpl.class, name = InvalidStateTransitionError.INVALID_TRANSITION),
         @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.InvalidTokenErrorImpl.class, name = InvalidTokenError.INVALID_TOKEN),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.ReferencedResourceNotFoundImpl.class, name = ReferencedResourceNotFound.REFERENCED_RESOURCE_NOT_FOUND),
+        @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.NewMasterVariantAdditionNotAllowedErrorImpl.class, name = NewMasterVariantAdditionNotAllowedError.NEW_MASTER_VARIANT_ADDITION_NOT_ALLOWED),
         @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.RequiredFieldErrorImpl.class, name = RequiredFieldError.REQUIRED_FIELD),
         @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.ResourceCreationErrorImpl.class, name = ResourceCreationError.RESOURCE_CREATION),
         @JsonSubTypes.Type(value = com.commercetools.importapi.models.errors.ResourceDeletionErrorImpl.class, name = ResourceDeletionError.RESOURCE_DELETION),
@@ -58,7 +59,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ErrorObject {
 
     /**
-     *
+     *  <p>An error identifier.</p>
      * @return code
      */
     @NotNull
@@ -66,7 +67,7 @@ public interface ErrorObject {
     public String getCode();
 
     /**
-     *
+     *  <p>A plain language description of the cause of an error.</p>
      * @return message
      */
     @NotNull
@@ -74,7 +75,7 @@ public interface ErrorObject {
     public String getMessage();
 
     /**
-     * set message
+     *  <p>A plain language description of the cause of an error.</p>
      * @param message value to be set
      */
 
@@ -162,9 +163,9 @@ public interface ErrorObject {
             return com.commercetools.importapi.models.errors.InvalidTokenError
                     .deepCopy((com.commercetools.importapi.models.errors.InvalidTokenError) template);
         }
-        if (template instanceof com.commercetools.importapi.models.errors.ReferencedResourceNotFound) {
-            return com.commercetools.importapi.models.errors.ReferencedResourceNotFound
-                    .deepCopy((com.commercetools.importapi.models.errors.ReferencedResourceNotFound) template);
+        if (template instanceof com.commercetools.importapi.models.errors.NewMasterVariantAdditionNotAllowedError) {
+            return com.commercetools.importapi.models.errors.NewMasterVariantAdditionNotAllowedError.deepCopy(
+                (com.commercetools.importapi.models.errors.NewMasterVariantAdditionNotAllowedError) template);
         }
         if (template instanceof com.commercetools.importapi.models.errors.RequiredFieldError) {
             return com.commercetools.importapi.models.errors.RequiredFieldError
@@ -336,11 +337,11 @@ public interface ErrorObject {
     }
 
     /**
-     * builder for referencedResourceNotFound subtype
+     * builder for newMasterVariantAdditionNotAllowed subtype
      * @return builder
      */
-    public static com.commercetools.importapi.models.errors.ReferencedResourceNotFoundBuilder referencedResourceNotFoundBuilder() {
-        return com.commercetools.importapi.models.errors.ReferencedResourceNotFoundBuilder.of();
+    public static com.commercetools.importapi.models.errors.NewMasterVariantAdditionNotAllowedErrorBuilder newMasterVariantAdditionNotAllowedBuilder() {
+        return com.commercetools.importapi.models.errors.NewMasterVariantAdditionNotAllowedErrorBuilder.of();
     }
 
     /**

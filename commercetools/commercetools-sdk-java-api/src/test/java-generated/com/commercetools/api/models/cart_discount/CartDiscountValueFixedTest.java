@@ -26,8 +26,12 @@ public class CartDiscountValueFixedTest {
 
     @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { CartDiscountValueFixed.builder()
-                .money(Collections.singletonList(new com.commercetools.api.models.common.TypedMoneyImpl())) } };
+        return new Object[][] {
+                new Object[] { CartDiscountValueFixed.builder()
+                        .money(Collections.singletonList(new com.commercetools.api.models.common.TypedMoneyImpl())) },
+                new Object[] { CartDiscountValueFixed.builder()
+                        .applicationMode(com.commercetools.api.models.cart_discount.DiscountApplicationMode
+                                .findEnum("ProportionateDistribution")) } };
     }
 
     @Test
@@ -36,5 +40,15 @@ public class CartDiscountValueFixedTest {
         value.setMoney(Collections.singletonList(new com.commercetools.api.models.common.TypedMoneyImpl()));
         Assertions.assertThat(value.getMoney())
                 .isEqualTo(Collections.singletonList(new com.commercetools.api.models.common.TypedMoneyImpl()));
+    }
+
+    @Test
+    public void applicationMode() {
+        CartDiscountValueFixed value = CartDiscountValueFixed.of();
+        value.setApplicationMode(
+            com.commercetools.api.models.cart_discount.DiscountApplicationMode.findEnum("ProportionateDistribution"));
+        Assertions.assertThat(value.getApplicationMode())
+                .isEqualTo(com.commercetools.api.models.cart_discount.DiscountApplicationMode
+                        .findEnum("ProportionateDistribution"));
     }
 }

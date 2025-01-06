@@ -41,4 +41,8 @@ public class ByProjectKeyChannelsRequestBuilder implements ByProjectKeyChannelsR
         return new ByProjectKeyChannelsByIDRequestBuilder(apiHttpClient, projectKey, ID);
     }
 
+    public ByProjectKeyChannelsKeyByKeyRequestBuilder withKey(String key) {
+        return new ByProjectKeyChannelsKeyByKeyRequestBuilder(apiHttpClient, projectKey, key);
+    }
+
 }

@@ -4,6 +4,7 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -38,7 +39,8 @@ public class GraphQLShippingMethodDoesNotMatchCartErrorImpl
      * create instance with all properties
      */
     @JsonCreator
-    GraphQLShippingMethodDoesNotMatchCartErrorImpl(@JsonProperty("values") final Map<String, java.lang.Object> values) {
+    GraphQLShippingMethodDoesNotMatchCartErrorImpl(
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values) {
         this.values = values;
         this.code = SHIPPING_METHOD_DOES_NOT_MATCH_CART;
     }

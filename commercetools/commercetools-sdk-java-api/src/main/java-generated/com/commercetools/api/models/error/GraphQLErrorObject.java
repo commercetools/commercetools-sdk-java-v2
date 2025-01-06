@@ -110,7 +110,7 @@ import jakarta.validation.constraints.NotNull;
 public interface GraphQLErrorObject {
 
     /**
-     *  <p>Error identifier.</p>
+     *  <p>One of the error codes that is listed on the Errors page.</p>
      * @return code
      */
     @NotNull

@@ -20,6 +20,9 @@ public interface CustomFieldReferenceValue extends JsonEnum {
     <p>ApprovalFlow</p> */
     CustomFieldReferenceValue APPROVAL_FLOW = CustomFieldReferenceValueEnum.APPROVAL_FLOW;
     /**
+    <p>ApprovalRule</p> */
+    CustomFieldReferenceValue APPROVAL_RULE = CustomFieldReferenceValueEnum.APPROVAL_RULE;
+    /**
     <p>AssociateRole</p> */
     CustomFieldReferenceValue ASSOCIATE_ROLE = CustomFieldReferenceValueEnum.ASSOCIATE_ROLE;
     /**
@@ -76,6 +79,11 @@ public interface CustomFieldReferenceValue extends JsonEnum {
          * approval-flow
          */
         APPROVAL_FLOW("approval-flow"),
+
+        /**
+         * approval-rule
+         */
+        APPROVAL_RULE("approval-rule"),
 
         /**
          * associate-role

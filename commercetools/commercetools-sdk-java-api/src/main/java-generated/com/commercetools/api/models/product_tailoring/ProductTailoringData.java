@@ -49,7 +49,7 @@ public interface ProductTailoringData {
     public LocalizedString getDescription();
 
     /**
-     *  <p>Tailored title of the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored title of the Product that is used by search engines.</p>
      * @return metaTitle
      */
     @Valid
@@ -57,7 +57,7 @@ public interface ProductTailoringData {
     public LocalizedString getMetaTitle();
 
     /**
-     *  <p>Tailored description of the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored description of the Product that is used by search engines.</p>
      * @return metaDescription
      */
     @Valid
@@ -65,7 +65,7 @@ public interface ProductTailoringData {
     public LocalizedString getMetaDescription();
 
     /**
-     *  <p>Tailored keywords related to the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored keywords related to the Product that are used by search engines.</p>
      * @return metaKeywords
      */
     @Valid
@@ -103,21 +103,21 @@ public interface ProductTailoringData {
     public void setDescription(final LocalizedString description);
 
     /**
-     *  <p>Tailored title of the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored title of the Product that is used by search engines.</p>
      * @param metaTitle value to be set
      */
 
     public void setMetaTitle(final LocalizedString metaTitle);
 
     /**
-     *  <p>Tailored description of the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored description of the Product that is used by search engines.</p>
      * @param metaDescription value to be set
      */
 
     public void setMetaDescription(final LocalizedString metaDescription);
 
     /**
-     *  <p>Tailored keywords related to the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored keywords related to the Product that are used by search engines.</p>
      * @param metaKeywords value to be set
      */
 

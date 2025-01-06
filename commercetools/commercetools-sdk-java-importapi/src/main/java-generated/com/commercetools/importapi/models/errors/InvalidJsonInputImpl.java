@@ -43,7 +43,7 @@ public class InvalidJsonInputImpl implements InvalidJsonInput, ModelBase {
     }
 
     /**
-     *
+     *  <p>An error identifier.</p>
      */
 
     public String getCode() {
@@ -51,7 +51,7 @@ public class InvalidJsonInputImpl implements InvalidJsonInput, ModelBase {
     }
 
     /**
-     *
+     *  <p>A plain language description of the cause of an error.</p>
      */
 
     public String getMessage() {

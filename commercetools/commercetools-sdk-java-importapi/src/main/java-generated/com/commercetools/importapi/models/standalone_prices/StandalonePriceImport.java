@@ -25,7 +25,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>The data representation for a Standalone Price to be imported that is persisted as a Standalone Price in the Project.</p>
+ *  <p>The data representation for a Standalone Price to be imported that is persisted as a Standalone Price) in the Project.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -44,7 +44,7 @@ import jakarta.validation.constraints.NotNull;
 public interface StandalonePriceImport extends ImportResource {
 
     /**
-     *  <p>User-defined unique identifier for the Standalone Price. If a StandalonePrice with this <code>key</code> exists, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier for the Standalone Price. If a StandalonePrice) with this <code>key</code> exists, it will be updated with the imported data.</p>
      * @return key
      */
     @NotNull
@@ -69,8 +69,8 @@ public interface StandalonePriceImport extends ImportResource {
     public TypedMoney getValue();
 
     /**
-     *  <p>Sets the country for which this Price is valid.</p>
-     *  <p>The value cannot be updated. Attempting to update the value will result in an InvalidFieldsUpdate error.</p>
+     *  <p>Sets the country for this Price, if the Price does not yet have a country.</p>
+     *  <p>The country cannot be updated. Attempting to update the an existing country will result in an InvalidFieldsUpdate error.</p>
      * @return country
      */
 
@@ -78,8 +78,8 @@ public interface StandalonePriceImport extends ImportResource {
     public String getCountry();
 
     /**
-     *  <p>Sets the CustomerGroup for which this Price is valid.</p>
-     *  <p>The value cannot be updated. Attempting to update the value will result in an InvalidFieldsUpdate error.</p>
+     *  <p>Sets the CustomerGroup for this Price, if the Price does not yet have a CustomerGroup.</p>
+     *  <p>The CustomerGroup cannot be updated. Attempting to update an existing CustomerGroup will result in an InvalidFieldsUpdate error.</p>
      * @return customerGroup
      */
     @Valid
@@ -87,8 +87,8 @@ public interface StandalonePriceImport extends ImportResource {
     public CustomerGroupKeyReference getCustomerGroup();
 
     /**
-     *  <p>Sets the product distribution Channel for which this Price is valid.</p>
-     *  <p>The value cannot be updated. Attempting to update the value will result in an InvalidFieldsUpdate error.</p>
+     *  <p>Sets the product distribution Channel for this Price, if the Price does not yet have a Channel.</p>
+     *  <p>The Channel cannot be updated. Attempting to update an existing Channel will result in an InvalidFieldsUpdate error.</p>
      * @return channel
      */
     @Valid
@@ -136,7 +136,7 @@ public interface StandalonePriceImport extends ImportResource {
     public Custom getCustom();
 
     /**
-     *  <p>User-defined unique identifier for the Standalone Price. If a StandalonePrice with this <code>key</code> exists, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier for the Standalone Price. If a StandalonePrice) with this <code>key</code> exists, it will be updated with the imported data.</p>
      * @param key value to be set
      */
 
@@ -157,24 +157,24 @@ public interface StandalonePriceImport extends ImportResource {
     public void setValue(final TypedMoney value);
 
     /**
-     *  <p>Sets the country for which this Price is valid.</p>
-     *  <p>The value cannot be updated. Attempting to update the value will result in an InvalidFieldsUpdate error.</p>
+     *  <p>Sets the country for this Price, if the Price does not yet have a country.</p>
+     *  <p>The country cannot be updated. Attempting to update the an existing country will result in an InvalidFieldsUpdate error.</p>
      * @param country value to be set
      */
 
     public void setCountry(final String country);
 
     /**
-     *  <p>Sets the CustomerGroup for which this Price is valid.</p>
-     *  <p>The value cannot be updated. Attempting to update the value will result in an InvalidFieldsUpdate error.</p>
+     *  <p>Sets the CustomerGroup for this Price, if the Price does not yet have a CustomerGroup.</p>
+     *  <p>The CustomerGroup cannot be updated. Attempting to update an existing CustomerGroup will result in an InvalidFieldsUpdate error.</p>
      * @param customerGroup value to be set
      */
 
     public void setCustomerGroup(final CustomerGroupKeyReference customerGroup);
 
     /**
-     *  <p>Sets the product distribution Channel for which this Price is valid.</p>
-     *  <p>The value cannot be updated. Attempting to update the value will result in an InvalidFieldsUpdate error.</p>
+     *  <p>Sets the product distribution Channel for this Price, if the Price does not yet have a Channel.</p>
+     *  <p>The Channel cannot be updated. Attempting to update an existing Channel will result in an InvalidFieldsUpdate error.</p>
      * @param channel value to be set
      */
 

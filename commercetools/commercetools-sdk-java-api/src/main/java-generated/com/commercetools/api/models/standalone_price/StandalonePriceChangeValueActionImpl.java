@@ -56,6 +56,7 @@ public class StandalonePriceChangeValueActionImpl implements StandalonePriceChan
 
     /**
      *  <p>New value to set. Must not be empty.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      */
 
     public com.commercetools.api.models.common.Money getValue() {

@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- * GraphQLVariablesMap
+ *  <p>The variables that the GraphQL query uses.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -31,7 +31,7 @@ import jakarta.validation.constraints.NotNull;
 public interface GraphQLVariablesMap {
 
     /**
-     *
+     *  <p>JSON object that contains key-value pairs in which the keys are variable names and the values are variable values.</p>
      * @return map of the pattern property values
      */
     @NotNull
@@ -39,7 +39,7 @@ public interface GraphQLVariablesMap {
     public Map<String, Object> values();
 
     /**
-     * set pattern property
+     *  <p>JSON object that contains key-value pairs in which the keys are variable names and the values are variable values.</p>
      * @param key property name
      * @param value property value
      */

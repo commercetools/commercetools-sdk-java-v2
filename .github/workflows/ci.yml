@@ -111,6 +111,7 @@ jobs:
         run: git push origin
 
       - name: Run integration tests for PR
+#       ignore renovate branches as they are retriggered with every new commit to main branch
         if: (github.event_name == 'pull_request' && !startsWith(github.head_ref, 'renovate/')) || github.event_name == 'merge_group'
         run: ./gradlew clean build publishMavenPublicationToMavenLocal runMainMethodThreadLeakTest runMainMethodMemoryLeakTest writeVersionToExamples
         env:

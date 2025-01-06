@@ -1,4 +1,21 @@
 
+# 17.22.0 (2025-01-06)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/782
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/783
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/785
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/786
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/787
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/788
+* Bump cross-spawn from 7.0.3 to 7.0.6 by @dependabot in https://github.com/commercetools/commercetools-sdk-java-v2/pull/758
+* fix(deps): update all dependencies by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/666
+
+## New Contributors
+* @dependabot made their first contribution in https://github.com/commercetools/commercetools-sdk-java-v2/pull/758
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.21.0...17.22.0
+
 # 17.21.0 (2024-12-19)
 
 ## What's Changed

@@ -4,6 +4,7 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -34,7 +35,7 @@ public class EnumValuesMustMatchErrorImpl implements EnumValuesMustMatchError, M
      */
     @JsonCreator
     EnumValuesMustMatchErrorImpl(@JsonProperty("message") final String message,
-            @JsonProperty("values") final Map<String, java.lang.Object> values) {
+            @JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values) {
         this.message = message;
         this.values = values;
         this.code = ENUM_VALUES_MUST_MATCH;

@@ -32,6 +32,12 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     @Nullable
     private com.commercetools.api.models.project.SearchIndexingConfigurationValues orders;
 
+    @Nullable
+    private com.commercetools.api.models.project.SearchIndexingConfigurationValues customers;
+
+    @Nullable
+    private com.commercetools.api.models.project.SearchIndexingConfigurationValues businessUnits;
+
     /**
      *  <p>Configuration for the Product Projection Search and Product Suggestions endpoints.</p>
      * @param builder function to build the products value
@@ -148,6 +154,84 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     }
 
     /**
+     *  <p>Configuration for the Customer Search feature.</p>
+     * @param builder function to build the customers value
+     * @return Builder
+     */
+
+    public SearchIndexingConfigurationBuilder customers(
+            Function<com.commercetools.api.models.project.SearchIndexingConfigurationValuesBuilder, com.commercetools.api.models.project.SearchIndexingConfigurationValuesBuilder> builder) {
+        this.customers = builder
+                .apply(com.commercetools.api.models.project.SearchIndexingConfigurationValuesBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>Configuration for the Customer Search feature.</p>
+     * @param builder function to build the customers value
+     * @return Builder
+     */
+
+    public SearchIndexingConfigurationBuilder withCustomers(
+            Function<com.commercetools.api.models.project.SearchIndexingConfigurationValuesBuilder, com.commercetools.api.models.project.SearchIndexingConfigurationValues> builder) {
+        this.customers = builder
+                .apply(com.commercetools.api.models.project.SearchIndexingConfigurationValuesBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Configuration for the Customer Search feature.</p>
+     * @param customers value to be set
+     * @return Builder
+     */
+
+    public SearchIndexingConfigurationBuilder customers(
+            @Nullable final com.commercetools.api.models.project.SearchIndexingConfigurationValues customers) {
+        this.customers = customers;
+        return this;
+    }
+
+    /**
+     *  <p>Configuration for the Business Unit Search feature.</p>
+     * @param builder function to build the businessUnits value
+     * @return Builder
+     */
+
+    public SearchIndexingConfigurationBuilder businessUnits(
+            Function<com.commercetools.api.models.project.SearchIndexingConfigurationValuesBuilder, com.commercetools.api.models.project.SearchIndexingConfigurationValuesBuilder> builder) {
+        this.businessUnits = builder
+                .apply(com.commercetools.api.models.project.SearchIndexingConfigurationValuesBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>Configuration for the Business Unit Search feature.</p>
+     * @param builder function to build the businessUnits value
+     * @return Builder
+     */
+
+    public SearchIndexingConfigurationBuilder withBusinessUnits(
+            Function<com.commercetools.api.models.project.SearchIndexingConfigurationValuesBuilder, com.commercetools.api.models.project.SearchIndexingConfigurationValues> builder) {
+        this.businessUnits = builder
+                .apply(com.commercetools.api.models.project.SearchIndexingConfigurationValuesBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Configuration for the Business Unit Search feature.</p>
+     * @param businessUnits value to be set
+     * @return Builder
+     */
+
+    public SearchIndexingConfigurationBuilder businessUnits(
+            @Nullable final com.commercetools.api.models.project.SearchIndexingConfigurationValues businessUnits) {
+        this.businessUnits = businessUnits;
+        return this;
+    }
+
+    /**
      *  <p>Configuration for the Product Projection Search and Product Suggestions endpoints.</p>
      * @return products
      */
@@ -178,11 +262,31 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     }
 
     /**
+     *  <p>Configuration for the Customer Search feature.</p>
+     * @return customers
+     */
+
+    @Nullable
+    public com.commercetools.api.models.project.SearchIndexingConfigurationValues getCustomers() {
+        return this.customers;
+    }
+
+    /**
+     *  <p>Configuration for the Business Unit Search feature.</p>
+     * @return businessUnits
+     */
+
+    @Nullable
+    public com.commercetools.api.models.project.SearchIndexingConfigurationValues getBusinessUnits() {
+        return this.businessUnits;
+    }
+
+    /**
      * builds SearchIndexingConfiguration with checking for non-null required values
      * @return SearchIndexingConfiguration
      */
     public SearchIndexingConfiguration build() {
-        return new SearchIndexingConfigurationImpl(products, productsSearch, orders);
+        return new SearchIndexingConfigurationImpl(products, productsSearch, orders, customers, businessUnits);
     }
 
     /**
@@ -190,7 +294,7 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
      * @return SearchIndexingConfiguration
      */
     public SearchIndexingConfiguration buildUnchecked() {
-        return new SearchIndexingConfigurationImpl(products, productsSearch, orders);
+        return new SearchIndexingConfigurationImpl(products, productsSearch, orders, customers, businessUnits);
     }
 
     /**
@@ -211,6 +315,8 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
         builder.products = template.getProducts();
         builder.productsSearch = template.getProductsSearch();
         builder.orders = template.getOrders();
+        builder.customers = template.getCustomers();
+        builder.businessUnits = template.getBusinessUnits();
         return builder;
     }
 

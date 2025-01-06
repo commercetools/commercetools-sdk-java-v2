@@ -13,8 +13,8 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     GraphQLErrorLocation graphQLErrorLocation = GraphQLErrorLocation.builder()
- *             .line(1)
- *             .column(1)
+ *             .line(0.3)
+ *             .column(0.3)
  *             .build()
  * </code></pre>
  * </div>
@@ -22,47 +22,47 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GraphQLErrorLocationBuilder implements Builder<GraphQLErrorLocation> {
 
-    private Integer line;
+    private Long line;
 
-    private Integer column;
+    private Long column;
 
     /**
-     * set the value to the line
+     *  <p>Line number of the query where the error occurred.</p>
      * @param line value to be set
      * @return Builder
      */
 
-    public GraphQLErrorLocationBuilder line(final Integer line) {
+    public GraphQLErrorLocationBuilder line(final Long line) {
         this.line = line;
         return this;
     }
 
     /**
-     * set the value to the column
+     *  <p>Position in <code>line</code> where the error occurred.</p>
      * @param column value to be set
      * @return Builder
      */
 
-    public GraphQLErrorLocationBuilder column(final Integer column) {
+    public GraphQLErrorLocationBuilder column(final Long column) {
         this.column = column;
         return this;
     }
 
     /**
-     * value of line}
+     *  <p>Line number of the query where the error occurred.</p>
      * @return line
      */
 
-    public Integer getLine() {
+    public Long getLine() {
         return this.line;
     }
 
     /**
-     * value of column}
+     *  <p>Position in <code>line</code> where the error occurred.</p>
      * @return column
      */
 
-    public Integer getColumn() {
+    public Long getColumn() {
         return this.column;
     }
 

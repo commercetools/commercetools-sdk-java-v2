@@ -2,6 +2,7 @@
 package com.commercetools.api.models.product_tailoring;
 
 import java.time.ZonedDateTime;
+import java.util.Collections;
 
 import com.tngtech.junit.dataprovider.DataProvider;
 import com.tngtech.junit.dataprovider.DataProviderExtension;
@@ -44,7 +45,10 @@ public class ProductTailoringTest {
                         .current(new com.commercetools.api.models.product_tailoring.ProductTailoringDataImpl()) },
                 new Object[] { ProductTailoring.builder()
                         .staged(new com.commercetools.api.models.product_tailoring.ProductTailoringDataImpl()) },
-                new Object[] { ProductTailoring.builder().hasStagedChanges(true) } };
+                new Object[] { ProductTailoring.builder().hasStagedChanges(true) },
+                new Object[] { ProductTailoring.builder()
+                        .warnings(Collections
+                                .singletonList(new com.commercetools.api.models.warning.WarningObjectImpl())) } };
     }
 
     @Test
@@ -141,5 +145,13 @@ public class ProductTailoringTest {
         ProductTailoring value = ProductTailoring.of();
         value.setHasStagedChanges(true);
         Assertions.assertThat(value.getHasStagedChanges()).isEqualTo(true);
+    }
+
+    @Test
+    public void warnings() {
+        ProductTailoring value = ProductTailoring.of();
+        value.setWarnings(Collections.singletonList(new com.commercetools.api.models.warning.WarningObjectImpl()));
+        Assertions.assertThat(value.getWarnings())
+                .isEqualTo(Collections.singletonList(new com.commercetools.api.models.warning.WarningObjectImpl()));
     }
 }

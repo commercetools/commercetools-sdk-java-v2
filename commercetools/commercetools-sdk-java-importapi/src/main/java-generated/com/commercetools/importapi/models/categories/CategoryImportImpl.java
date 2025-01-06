@@ -162,7 +162,7 @@ public class CategoryImportImpl implements CategoryImport, ModelBase {
     }
 
     /**
-     *
+     *  <p>Maps to <code>Category.assets</code>.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.common.Asset> getAssets() {

@@ -15,15 +15,15 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- * GraphQLErrorLocation
+ *  <p>Represents the location within your query where the error occurred.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
  *     GraphQLErrorLocation graphQLErrorLocation = GraphQLErrorLocation.builder()
- *             .line(1)
- *             .column(1)
+ *             .line(0.3)
+ *             .column(0.3)
  *             .build()
  * </code></pre>
  * </div>
@@ -33,34 +33,34 @@ import jakarta.validation.constraints.NotNull;
 public interface GraphQLErrorLocation {
 
     /**
-     *
+     *  <p>Line number of the query where the error occurred.</p>
      * @return line
      */
     @NotNull
     @JsonProperty("line")
-    public Integer getLine();
+    public Long getLine();
 
     /**
-     *
+     *  <p>Position in <code>line</code> where the error occurred.</p>
      * @return column
      */
     @NotNull
     @JsonProperty("column")
-    public Integer getColumn();
+    public Long getColumn();
 
     /**
-     * set line
+     *  <p>Line number of the query where the error occurred.</p>
      * @param line value to be set
      */
 
-    public void setLine(final Integer line);
+    public void setLine(final Long line);
 
     /**
-     * set column
+     *  <p>Position in <code>line</code> where the error occurred.</p>
      * @param column value to be set
      */
 
-    public void setColumn(final Integer column);
+    public void setColumn(final Long column);
 
     /**
      * factory method

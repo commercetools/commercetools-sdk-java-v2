@@ -99,6 +99,7 @@ import jakarta.validation.constraints.NotNull;
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLSearchExecutionFailureErrorImpl.class, name = GraphQLSearchExecutionFailureError.SEARCH_EXECUTION_FAILURE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLSearchFacetPathNotFoundErrorImpl.class, name = GraphQLSearchFacetPathNotFoundError.SEARCH_FACET_PATH_NOT_FOUND),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLSearchIndexingInProgressErrorImpl.class, name = GraphQLSearchIndexingInProgressError.SEARCH_INDEXING_IN_PROGRESS),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLSearchNotReadyErrorImpl.class, name = GraphQLSearchNotReadyError.SEARCH_NOT_READY),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLSemanticErrorErrorImpl.class, name = GraphQLSemanticErrorError.SEMANTIC_ERROR),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLShippingMethodDoesNotMatchCartErrorImpl.class, name = GraphQLShippingMethodDoesNotMatchCartError.SHIPPING_METHOD_DOES_NOT_MATCH_CART),
         @JsonSubTypes.Type(value = com.commercetools.api.models.error.GraphQLStoreCartDiscountsLimitReachedErrorImpl.class, name = GraphQLStoreCartDiscountsLimitReachedError.STORE_CART_DISCOUNTS_LIMIT_REACHED),
@@ -109,7 +110,7 @@ import jakarta.validation.constraints.NotNull;
 public interface GraphQLErrorObject {
 
     /**
-     *  <p>Error identifier.</p>
+     *  <p>One of the error codes that is listed on the Errors page.</p>
      * @return code
      */
     @NotNull
@@ -430,6 +431,10 @@ public interface GraphQLErrorObject {
         if (template instanceof com.commercetools.api.models.error.GraphQLSearchIndexingInProgressError) {
             return com.commercetools.api.models.error.GraphQLSearchIndexingInProgressError
                     .deepCopy((com.commercetools.api.models.error.GraphQLSearchIndexingInProgressError) template);
+        }
+        if (template instanceof com.commercetools.api.models.error.GraphQLSearchNotReadyError) {
+            return com.commercetools.api.models.error.GraphQLSearchNotReadyError
+                    .deepCopy((com.commercetools.api.models.error.GraphQLSearchNotReadyError) template);
         }
         if (template instanceof com.commercetools.api.models.error.GraphQLSemanticErrorError) {
             return com.commercetools.api.models.error.GraphQLSemanticErrorError
@@ -1026,6 +1031,14 @@ public interface GraphQLErrorObject {
      */
     public static com.commercetools.api.models.error.GraphQLSearchIndexingInProgressErrorBuilder searchIndexingInProgressBuilder() {
         return com.commercetools.api.models.error.GraphQLSearchIndexingInProgressErrorBuilder.of();
+    }
+
+    /**
+     * builder for searchNotReady subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.GraphQLSearchNotReadyErrorBuilder searchNotReadyBuilder() {
+        return com.commercetools.api.models.error.GraphQLSearchNotReadyErrorBuilder.of();
     }
 
     /**

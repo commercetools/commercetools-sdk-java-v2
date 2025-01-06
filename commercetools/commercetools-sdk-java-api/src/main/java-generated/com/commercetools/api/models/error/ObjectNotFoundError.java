@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Returned when the requested resource was not found.</p>
+ *  <p>Returned if the requested resource was not found or the Product Search index is inactive.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -45,7 +45,8 @@ public interface ObjectNotFoundError extends ErrorObject {
     public String getCode();
 
     /**
-     *  <p><code>"A $resourceType with identifier $id was unexpectedly not found."</code></p>
+     *  <p><code>"A $resourceType with identifier $id was unexpectedly not found."</code> or</p>
+     *  <p><code>"No index found for project"</code></p>
      * @return message
      */
     @NotNull
@@ -53,7 +54,8 @@ public interface ObjectNotFoundError extends ErrorObject {
     public String getMessage();
 
     /**
-     *  <p><code>"A $resourceType with identifier $id was unexpectedly not found."</code></p>
+     *  <p><code>"A $resourceType with identifier $id was unexpectedly not found."</code> or</p>
+     *  <p><code>"No index found for project"</code></p>
      * @param message value to be set
      */
 

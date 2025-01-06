@@ -1,42 +1,74 @@
 **Api changes**
 
 <details>
-<summary>Removed Method(s)</summary>
+<summary>Changed Property(s)</summary>
 
-- :warning: removed method `apiRoot.withProjectKey().me().businessUnits().withId().delete()`
-- :warning: removed method `apiRoot.withProjectKey().me().businessUnits().withKey().delete()`
+- :warning: changed property `exact` of type `SearchExactExpression` from type `SearchAnyValue` to `SearchExactValue`
 </details>
 
 
 <details>
 <summary>Added Property(s)</summary>
 
-- added property `applicationMode` to type `CartDiscountValueAbsolute`
-- added property `applicationMode` to type `CartDiscountValueAbsoluteDraft`
+- added property `businessUnits` to type `SearchIndexingConfiguration`
+</details>
+
+
+<details>
+<summary>Added Resource(s)</summary>
+
+- added resource `/{projectKey}/business-units/search`
+- added resource `/{projectKey}/business-units/search/indexing-status`
+</details>
+
+
+<details>
+<summary>Added Method(s)</summary>
+
+- added method `apiRoot.withProjectKey().businessUnits().search().post()`
+- added method `apiRoot.withProjectKey().businessUnits().search().head()`
+- added method `apiRoot.withProjectKey().businessUnits().searchIndexingStatus().get()`
 </details>
 
 
 <details>
 <summary>Added Type(s)</summary>
 
-- added type `DiscountApplicationMode`
-- added type `DeliveryCustomFieldAddedMessage`
-- added type `DeliveryCustomFieldChangedMessage`
-- added type `DeliveryCustomFieldRemovedMessage`
-- added type `DeliveryCustomTypeRemovedMessage`
-- added type `DeliveryCustomTypeSetMessage`
-- added type `DeliveryCustomFieldAddedMessagePayload`
-- added type `DeliveryCustomFieldChangedMessagePayload`
-- added type `DeliveryCustomFieldRemovedMessagePayload`
-- added type `DeliveryCustomTypeRemovedMessagePayload`
-- added type `DeliveryCustomTypeSetMessagePayload`
+- added type `BusinessUnitIndexingProgress`
+- added type `BusinessUnitIndexingStatus`
+- added type `BusinessUnitPagedSearchResponse`
+- added type `BusinessUnitSearchIndexingStatusResponse`
+- added type `BusinessUnitSearchRequest`
+- added type `BusinessUnitSearchResult`
+- added type `BusinessUnitSearchStatus`
+- added type `ProjectChangeBusinessUnitSearchStatusAction`
+- added type `SearchExactValue`
 </details>
 
-**Import changes**
+**History changes**
+
+<details>
+<summary>Added Resource(s)</summary>
+
+- added resource `/{projectKey}/graphql`
+</details>
+
+
+<details>
+<summary>Added Method(s)</summary>
+
+- added method `apiRoot.withProjectKeyValue().graphql().post()`
+</details>
+
 
 <details>
 <summary>Added Type(s)</summary>
 
-- added type `ReferencedResourceNotFound`
+- added type `GraphQLRequest`
+- added type `GraphQLResponse`
+- added type `GraphQLError`
+- added type `GraphQLErrorLocation`
+- added type `GraphQLVariablesMap`
+- added type `GraphQLErrorObject`
 </details>
 

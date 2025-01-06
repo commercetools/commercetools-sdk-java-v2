@@ -4,6 +4,7 @@ package com.commercetools.api.models.error;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -30,7 +31,7 @@ public class GraphQLContentTooLargeErrorImpl implements GraphQLContentTooLargeEr
      * create instance with all properties
      */
     @JsonCreator
-    GraphQLContentTooLargeErrorImpl(@JsonProperty("values") final Map<String, java.lang.Object> values) {
+    GraphQLContentTooLargeErrorImpl(@JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values) {
         this.values = values;
         this.code = CONTENT_TOO_LARGE;
     }

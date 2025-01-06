@@ -66,6 +66,18 @@ public interface ProductVariantTailoringDraft extends io.vrap.rmf.base.client.Dr
     public List<Asset> getAssets();
 
     /**
+     *  <p>Attributes of the tailored Product Variant according to the respective AttributeDefinition. If provided, these Attributes are selectively merged into the <code>attributes</code> of the corresponding ProductVariant:</p>
+     *  <ul>
+     *   <li>If the ProductVariant contains an Attribute with the same <code>name</code>, its <code>value</code> is overwritten,</li>
+     *   <li>otherwise the Attribute and its value are added to the ProductVariant.</li>
+     *  </ul>
+     * @return attributes
+     */
+    @Valid
+    @JsonProperty("attributes")
+    public List<ProductTailoringAttribute> getAttributes();
+
+    /**
      *  <p>The <code>id</code> of the ProductVariant to be tailored.</p>
      * @param id value to be set
      */
@@ -110,6 +122,29 @@ public interface ProductVariantTailoringDraft extends io.vrap.rmf.base.client.Dr
     public void setAssets(final List<Asset> assets);
 
     /**
+     *  <p>Attributes of the tailored Product Variant according to the respective AttributeDefinition. If provided, these Attributes are selectively merged into the <code>attributes</code> of the corresponding ProductVariant:</p>
+     *  <ul>
+     *   <li>If the ProductVariant contains an Attribute with the same <code>name</code>, its <code>value</code> is overwritten,</li>
+     *   <li>otherwise the Attribute and its value are added to the ProductVariant.</li>
+     *  </ul>
+     * @param attributes values to be set
+     */
+
+    @JsonIgnore
+    public void setAttributes(final ProductTailoringAttribute... attributes);
+
+    /**
+     *  <p>Attributes of the tailored Product Variant according to the respective AttributeDefinition. If provided, these Attributes are selectively merged into the <code>attributes</code> of the corresponding ProductVariant:</p>
+     *  <ul>
+     *   <li>If the ProductVariant contains an Attribute with the same <code>name</code>, its <code>value</code> is overwritten,</li>
+     *   <li>otherwise the Attribute and its value are added to the ProductVariant.</li>
+     *  </ul>
+     * @param attributes values to be set
+     */
+
+    public void setAttributes(final List<ProductTailoringAttribute> attributes);
+
+    /**
      * factory method
      * @return instance of ProductVariantTailoringDraft
      */
@@ -128,6 +163,7 @@ public interface ProductVariantTailoringDraft extends io.vrap.rmf.base.client.Dr
         instance.setSku(template.getSku());
         instance.setImages(template.getImages());
         instance.setAssets(template.getAssets());
+        instance.setAttributes(template.getAttributes());
         return instance;
     }
 
@@ -152,6 +188,11 @@ public interface ProductVariantTailoringDraft extends io.vrap.rmf.base.client.Dr
         instance.setAssets(Optional.ofNullable(template.getAssets())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.common.Asset::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setAttributes(Optional.ofNullable(template.getAttributes())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.product_tailoring.ProductTailoringAttribute::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
         return instance;

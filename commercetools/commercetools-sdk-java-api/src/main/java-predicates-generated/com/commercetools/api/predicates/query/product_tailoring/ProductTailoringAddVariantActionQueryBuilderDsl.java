@@ -57,6 +57,22 @@ public class ProductTailoringAddVariantActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, ProductTailoringAddVariantActionQueryBuilderDsl::of));
     }
 
+    public CombinationQueryPredicate<ProductTailoringAddVariantActionQueryBuilderDsl> attributes(
+            Function<com.commercetools.api.predicates.query.product_tailoring.ProductTailoringAttributeQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product_tailoring.ProductTailoringAttributeQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("attributes"))
+                .inner(fn.apply(
+                    com.commercetools.api.predicates.query.product_tailoring.ProductTailoringAttributeQueryBuilderDsl
+                            .of())),
+            ProductTailoringAddVariantActionQueryBuilderDsl::of);
+    }
+
+    public CollectionPredicateBuilder<ProductTailoringAddVariantActionQueryBuilderDsl> attributes() {
+        return new CollectionPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("attributes")),
+            p -> new CombinationQueryPredicate<>(p, ProductTailoringAddVariantActionQueryBuilderDsl::of));
+    }
+
     public BooleanComparisonPredicateBuilder<ProductTailoringAddVariantActionQueryBuilderDsl> staged() {
         return new BooleanComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("staged")),

@@ -59,6 +59,9 @@ public interface MessageSubscriptionResourceTypeId extends JsonEnum {
     <p>Messages related to ProductSelections.</p> */
     MessageSubscriptionResourceTypeId PRODUCT_SELECTION = MessageSubscriptionResourceTypeIdEnum.PRODUCT_SELECTION;
     /**
+    <p>Messages related to ProductTailoring.</p> */
+    MessageSubscriptionResourceTypeId PRODUCT_TAILORING = MessageSubscriptionResourceTypeIdEnum.PRODUCT_TAILORING;
+    /**
     <p>Messages related to Quotes.</p> */
     MessageSubscriptionResourceTypeId QUOTE = MessageSubscriptionResourceTypeIdEnum.QUOTE;
     /**
@@ -67,6 +70,9 @@ public interface MessageSubscriptionResourceTypeId extends JsonEnum {
     /**
     <p>Messages related to Reviews.</p> */
     MessageSubscriptionResourceTypeId REVIEW = MessageSubscriptionResourceTypeIdEnum.REVIEW;
+    /**
+    <p>Messages related to Shopping Lists.</p> */
+    MessageSubscriptionResourceTypeId SHOPPING_LIST = MessageSubscriptionResourceTypeIdEnum.SHOPPING_LIST;
     /**
     <p>Messages related to Staged Quotes.</p> */
     MessageSubscriptionResourceTypeId STAGED_QUOTE = MessageSubscriptionResourceTypeIdEnum.STAGED_QUOTE;
@@ -152,6 +158,11 @@ public interface MessageSubscriptionResourceTypeId extends JsonEnum {
         PRODUCT_SELECTION("product-selection"),
 
         /**
+         * product-tailoring
+         */
+        PRODUCT_TAILORING("product-tailoring"),
+
+        /**
          * quote
          */
         QUOTE("quote"),
@@ -165,6 +176,11 @@ public interface MessageSubscriptionResourceTypeId extends JsonEnum {
          * review
          */
         REVIEW("review"),
+
+        /**
+         * shopping-list
+         */
+        SHOPPING_LIST("shopping-list"),
 
         /**
          * staged-quote

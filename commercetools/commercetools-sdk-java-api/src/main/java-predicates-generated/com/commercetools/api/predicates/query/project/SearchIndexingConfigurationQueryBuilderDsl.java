@@ -43,4 +43,24 @@ public class SearchIndexingConfigurationQueryBuilderDsl {
             SearchIndexingConfigurationQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<SearchIndexingConfigurationQueryBuilderDsl> customers(
+            Function<com.commercetools.api.predicates.query.project.SearchIndexingConfigurationValuesQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.project.SearchIndexingConfigurationValuesQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("customers"))
+                .inner(fn.apply(
+                    com.commercetools.api.predicates.query.project.SearchIndexingConfigurationValuesQueryBuilderDsl
+                            .of())),
+            SearchIndexingConfigurationQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<SearchIndexingConfigurationQueryBuilderDsl> businessUnits(
+            Function<com.commercetools.api.predicates.query.project.SearchIndexingConfigurationValuesQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.project.SearchIndexingConfigurationValuesQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("businessUnits"))
+                .inner(fn.apply(
+                    com.commercetools.api.predicates.query.project.SearchIndexingConfigurationValuesQueryBuilderDsl
+                            .of())),
+            SearchIndexingConfigurationQueryBuilderDsl::of);
+    }
+
 }

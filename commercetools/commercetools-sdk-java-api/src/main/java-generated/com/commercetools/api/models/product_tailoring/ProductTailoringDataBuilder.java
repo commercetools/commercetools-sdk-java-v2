@@ -116,7 +116,7 @@ public class ProductTailoringDataBuilder implements Builder<ProductTailoringData
     }
 
     /**
-     *  <p>Tailored title of the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored title of the Product that is used by search engines.</p>
      * @param builder function to build the metaTitle value
      * @return Builder
      */
@@ -128,7 +128,7 @@ public class ProductTailoringDataBuilder implements Builder<ProductTailoringData
     }
 
     /**
-     *  <p>Tailored title of the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored title of the Product that is used by search engines.</p>
      * @param builder function to build the metaTitle value
      * @return Builder
      */
@@ -140,7 +140,7 @@ public class ProductTailoringDataBuilder implements Builder<ProductTailoringData
     }
 
     /**
-     *  <p>Tailored title of the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored title of the Product that is used by search engines.</p>
      * @param metaTitle value to be set
      * @return Builder
      */
@@ -152,7 +152,7 @@ public class ProductTailoringDataBuilder implements Builder<ProductTailoringData
     }
 
     /**
-     *  <p>Tailored description of the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored description of the Product that is used by search engines.</p>
      * @param builder function to build the metaDescription value
      * @return Builder
      */
@@ -164,7 +164,7 @@ public class ProductTailoringDataBuilder implements Builder<ProductTailoringData
     }
 
     /**
-     *  <p>Tailored description of the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored description of the Product that is used by search engines.</p>
      * @param builder function to build the metaDescription value
      * @return Builder
      */
@@ -176,7 +176,7 @@ public class ProductTailoringDataBuilder implements Builder<ProductTailoringData
     }
 
     /**
-     *  <p>Tailored description of the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored description of the Product that is used by search engines.</p>
      * @param metaDescription value to be set
      * @return Builder
      */
@@ -188,7 +188,7 @@ public class ProductTailoringDataBuilder implements Builder<ProductTailoringData
     }
 
     /**
-     *  <p>Tailored keywords related to the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored keywords related to the Product that are used by search engines.</p>
      * @param builder function to build the metaKeywords value
      * @return Builder
      */
@@ -200,7 +200,7 @@ public class ProductTailoringDataBuilder implements Builder<ProductTailoringData
     }
 
     /**
-     *  <p>Tailored keywords related to the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored keywords related to the Product that are used by search engines.</p>
      * @param builder function to build the metaKeywords value
      * @return Builder
      */
@@ -212,7 +212,7 @@ public class ProductTailoringDataBuilder implements Builder<ProductTailoringData
     }
 
     /**
-     *  <p>Tailored keywords related to the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored keywords related to the Product that are used by search engines.</p>
      * @param metaKeywords value to be set
      * @return Builder
      */
@@ -372,7 +372,7 @@ public class ProductTailoringDataBuilder implements Builder<ProductTailoringData
     }
 
     /**
-     *  <p>Tailored title of the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored title of the Product that is used by search engines.</p>
      * @return metaTitle
      */
 
@@ -382,7 +382,7 @@ public class ProductTailoringDataBuilder implements Builder<ProductTailoringData
     }
 
     /**
-     *  <p>Tailored description of the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored description of the Product that is used by search engines.</p>
      * @return metaDescription
      */
 
@@ -392,7 +392,7 @@ public class ProductTailoringDataBuilder implements Builder<ProductTailoringData
     }
 
     /**
-     *  <p>Tailored keywords related to the Product used by external search engines for improved search engine performance.</p>
+     *  <p>Tailored keywords related to the Product that are used by search engines.</p>
      * @return metaKeywords
      */
 

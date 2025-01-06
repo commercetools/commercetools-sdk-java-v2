@@ -11,15 +11,19 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Values for the Source enumeration.</p>
+ *  <p>Source of change for the resource.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface Source extends JsonEnum {
 
+    /**
+    <p>The change was made through the Merchant Center.</p> */
     Source MERCHANT_CENTER = SourceEnum.MERCHANT_CENTER;
-
+    /**
+    <p>The change was made through the now-decommissioned ImpEx tool.</p> */
     Source IMP_EX = SourceEnum.IMP_EX;
-
+    /**
+    <p>The change was made through an API Client.</p> */
     Source API_CLIENT = SourceEnum.API_CLIENT;
 
     /**

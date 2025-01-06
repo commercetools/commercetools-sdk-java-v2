@@ -75,6 +75,15 @@ public class ProductTailoringUpdateActionBuilder {
         return com.commercetools.api.models.product_tailoring.ProductTailoringSetAssetTagsActionBuilder.of();
     }
 
+    public com.commercetools.api.models.product_tailoring.ProductTailoringSetAttributeActionBuilder setAttributeBuilder() {
+        return com.commercetools.api.models.product_tailoring.ProductTailoringSetAttributeActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.product_tailoring.ProductTailoringSetAttributeInAllVariantsActionBuilder setAttributeInAllVariantsBuilder() {
+        return com.commercetools.api.models.product_tailoring.ProductTailoringSetAttributeInAllVariantsActionBuilder
+                .of();
+    }
+
     public com.commercetools.api.models.product_tailoring.ProductTailoringSetDescriptionActionBuilder setDescriptionBuilder() {
         return com.commercetools.api.models.product_tailoring.ProductTailoringSetDescriptionActionBuilder.of();
     }

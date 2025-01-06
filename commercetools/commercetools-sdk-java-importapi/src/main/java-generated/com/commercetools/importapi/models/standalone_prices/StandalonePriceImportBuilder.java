@@ -57,7 +57,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     private com.commercetools.importapi.models.customfields.Custom custom;
 
     /**
-     *  <p>User-defined unique identifier for the Standalone Price. If a StandalonePrice with this <code>key</code> exists, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier for the Standalone Price. If a StandalonePrice) with this <code>key</code> exists, it will be updated with the imported data.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -102,7 +102,8 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>Sets the country for which this Price is valid.</p>
+     *  <p>Sets the country for this Price, if the Price does not yet have a country.</p>
+     *  <p>The country cannot be updated. Attempting to update the an existing country will result in an InvalidFieldsUpdate error.</p>
      * @param country value to be set
      * @return Builder
      */
@@ -113,7 +114,8 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>Sets the CustomerGroup for which this Price is valid.</p>
+     *  <p>Sets the CustomerGroup for this Price, if the Price does not yet have a CustomerGroup.</p>
+     *  <p>The CustomerGroup cannot be updated. Attempting to update an existing CustomerGroup will result in an InvalidFieldsUpdate error.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -127,7 +129,8 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>Sets the CustomerGroup for which this Price is valid.</p>
+     *  <p>Sets the CustomerGroup for this Price, if the Price does not yet have a CustomerGroup.</p>
+     *  <p>The CustomerGroup cannot be updated. Attempting to update an existing CustomerGroup will result in an InvalidFieldsUpdate error.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -140,7 +143,8 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>Sets the CustomerGroup for which this Price is valid.</p>
+     *  <p>Sets the CustomerGroup for this Price, if the Price does not yet have a CustomerGroup.</p>
+     *  <p>The CustomerGroup cannot be updated. Attempting to update an existing CustomerGroup will result in an InvalidFieldsUpdate error.</p>
      * @param customerGroup value to be set
      * @return Builder
      */
@@ -152,7 +156,8 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>Sets the product distribution Channel for which this Price is valid</p>
+     *  <p>Sets the product distribution Channel for this Price, if the Price does not yet have a Channel.</p>
+     *  <p>The Channel cannot be updated. Attempting to update an existing Channel will result in an InvalidFieldsUpdate error.</p>
      * @param builder function to build the channel value
      * @return Builder
      */
@@ -164,7 +169,8 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>Sets the product distribution Channel for which this Price is valid</p>
+     *  <p>Sets the product distribution Channel for this Price, if the Price does not yet have a Channel.</p>
+     *  <p>The Channel cannot be updated. Attempting to update an existing Channel will result in an InvalidFieldsUpdate error.</p>
      * @param builder function to build the channel value
      * @return Builder
      */
@@ -176,7 +182,8 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>Sets the product distribution Channel for which this Price is valid</p>
+     *  <p>Sets the product distribution Channel for this Price, if the Price does not yet have a Channel.</p>
+     *  <p>The Channel cannot be updated. Attempting to update an existing Channel will result in an InvalidFieldsUpdate error.</p>
      * @param channel value to be set
      * @return Builder
      */
@@ -371,7 +378,7 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>User-defined unique identifier for the Standalone Price. If a StandalonePrice with this <code>key</code> exists, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier for the Standalone Price. If a StandalonePrice) with this <code>key</code> exists, it will be updated with the imported data.</p>
      * @return key
      */
 
@@ -398,7 +405,8 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>Sets the country for which this Price is valid.</p>
+     *  <p>Sets the country for this Price, if the Price does not yet have a country.</p>
+     *  <p>The country cannot be updated. Attempting to update the an existing country will result in an InvalidFieldsUpdate error.</p>
      * @return country
      */
 
@@ -408,7 +416,8 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>Sets the CustomerGroup for which this Price is valid.</p>
+     *  <p>Sets the CustomerGroup for this Price, if the Price does not yet have a CustomerGroup.</p>
+     *  <p>The CustomerGroup cannot be updated. Attempting to update an existing CustomerGroup will result in an InvalidFieldsUpdate error.</p>
      * @return customerGroup
      */
 
@@ -418,7 +427,8 @@ public class StandalonePriceImportBuilder implements Builder<StandalonePriceImpo
     }
 
     /**
-     *  <p>Sets the product distribution Channel for which this Price is valid</p>
+     *  <p>Sets the product distribution Channel for this Price, if the Price does not yet have a Channel.</p>
+     *  <p>The Channel cannot be updated. Attempting to update an existing Channel will result in an InvalidFieldsUpdate error.</p>
      * @return channel
      */
 

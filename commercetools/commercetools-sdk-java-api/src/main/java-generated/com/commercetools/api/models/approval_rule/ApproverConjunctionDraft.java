@@ -34,7 +34,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ApproverConjunctionDraft extends io.vrap.rmf.base.client.Draft<ApproverConjunctionDraft> {
 
     /**
-     *  <p>All of the nested disjunctions must be approved in order for the conjunction to be considered approved. The total count of approvers across the nested disjunctions must not exceed 10.</p>
+     *  <p>All of the nested disjunctions must be approved in order for the conjunction to be considered approved.</p>
      * @return and
      */
     @NotNull
@@ -43,7 +43,7 @@ public interface ApproverConjunctionDraft extends io.vrap.rmf.base.client.Draft<
     public List<ApproverDisjunctionDraft> getAnd();
 
     /**
-     *  <p>All of the nested disjunctions must be approved in order for the conjunction to be considered approved. The total count of approvers across the nested disjunctions must not exceed 10.</p>
+     *  <p>All of the nested disjunctions must be approved in order for the conjunction to be considered approved.</p>
      * @param and values to be set
      */
 
@@ -51,7 +51,7 @@ public interface ApproverConjunctionDraft extends io.vrap.rmf.base.client.Draft<
     public void setAnd(final ApproverDisjunctionDraft... and);
 
     /**
-     *  <p>All of the nested disjunctions must be approved in order for the conjunction to be considered approved. The total count of approvers across the nested disjunctions must not exceed 10.</p>
+     *  <p>All of the nested disjunctions must be approved in order for the conjunction to be considered approved.</p>
      * @param and values to be set
      */
 

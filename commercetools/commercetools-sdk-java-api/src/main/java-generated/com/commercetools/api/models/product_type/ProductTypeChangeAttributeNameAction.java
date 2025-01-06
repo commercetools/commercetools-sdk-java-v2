@@ -47,7 +47,7 @@ public interface ProductTypeChangeAttributeNameAction extends ProductTypeUpdateA
     public String getAttributeName();
 
     /**
-     *  <p>New user-defined name of the Attribute that is unique with the Project.</p>
+     *  <p>New user-defined name of the Attribute that is unique to the Project.</p>
      *  <p>When using the same <code>name</code> for an Attribute in two or more ProductTypes, all fields of the AttributeDefinition of this Attribute must be the same across the ProductTypes. If not, an AttributeDefinitionAlreadyExists error is returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> type and sets thereof.</p>
      * @return newAttributeName
      */
@@ -63,7 +63,7 @@ public interface ProductTypeChangeAttributeNameAction extends ProductTypeUpdateA
     public void setAttributeName(final String attributeName);
 
     /**
-     *  <p>New user-defined name of the Attribute that is unique with the Project.</p>
+     *  <p>New user-defined name of the Attribute that is unique to the Project.</p>
      *  <p>When using the same <code>name</code> for an Attribute in two or more ProductTypes, all fields of the AttributeDefinition of this Attribute must be the same across the ProductTypes. If not, an AttributeDefinitionAlreadyExists error is returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> type and sets thereof.</p>
      * @param newAttributeName value to be set
      */

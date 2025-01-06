@@ -111,6 +111,7 @@ public class DiscountCodeImportImpl implements DiscountCodeImport, ModelBase {
 
     /**
      *  <p>User-defined unique identifier of the DiscountCode that is used by the customer to apply the discount.</p>
+     *  <p>The value cannot be updated. Attempting to update the value will result in an InvalidFieldsUpdate error.</p>
      */
 
     public String getCode() {

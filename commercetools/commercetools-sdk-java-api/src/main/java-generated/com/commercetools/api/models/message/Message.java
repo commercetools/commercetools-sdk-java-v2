@@ -256,6 +256,8 @@ import jakarta.validation.constraints.NotNull;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ReviewCreatedMessageImpl.class, name = ReviewCreatedMessage.REVIEW_CREATED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ReviewRatingSetMessageImpl.class, name = ReviewRatingSetMessage.REVIEW_RATING_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.ReviewStateTransitionMessageImpl.class, name = ReviewStateTransitionMessage.REVIEW_STATE_TRANSITION),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ShoppingListLineItemAddedMessageImpl.class, name = ShoppingListLineItemAddedMessage.SHOPPING_LIST_LINE_ITEM_ADDED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.ShoppingListLineItemRemovedMessageImpl.class, name = ShoppingListLineItemRemovedMessage.SHOPPING_LIST_LINE_ITEM_REMOVED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StagedQuoteCreatedMessageImpl.class, name = StagedQuoteCreatedMessage.STAGED_QUOTE_CREATED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StagedQuoteDeletedMessageImpl.class, name = StagedQuoteDeletedMessage.STAGED_QUOTE_DELETED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.StagedQuoteSellerCommentSetMessageImpl.class, name = StagedQuoteSellerCommentSetMessage.STAGED_QUOTE_SELLER_COMMENT_SET),
@@ -1110,6 +1112,10 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
         if (template instanceof com.commercetools.api.models.message.ReviewStateTransitionMessage) {
             return com.commercetools.api.models.message.ReviewStateTransitionMessage
                     .deepCopy((com.commercetools.api.models.message.ReviewStateTransitionMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.ShoppingListMessage) {
+            return com.commercetools.api.models.message.ShoppingListMessage
+                    .deepCopy((com.commercetools.api.models.message.ShoppingListMessage) template);
         }
         if (template instanceof com.commercetools.api.models.message.StagedQuoteCreatedMessage) {
             return com.commercetools.api.models.message.StagedQuoteCreatedMessage
@@ -2953,6 +2959,22 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
      */
     public static com.commercetools.api.models.message.ReviewStateTransitionMessageBuilder reviewStateTransitionBuilder() {
         return com.commercetools.api.models.message.ReviewStateTransitionMessageBuilder.of();
+    }
+
+    /**
+     * builder for shoppingListLineItemAdded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ShoppingListLineItemAddedMessageBuilder shoppingListLineItemAddedBuilder() {
+        return com.commercetools.api.models.message.ShoppingListLineItemAddedMessageBuilder.of();
+    }
+
+    /**
+     * builder for shoppingListLineItemRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.ShoppingListLineItemRemovedMessageBuilder shoppingListLineItemRemovedBuilder() {
+        return com.commercetools.api.models.message.ShoppingListLineItemRemovedMessageBuilder.of();
     }
 
     /**

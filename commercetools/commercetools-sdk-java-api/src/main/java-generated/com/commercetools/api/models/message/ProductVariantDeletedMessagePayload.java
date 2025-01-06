@@ -25,6 +25,7 @@ import jakarta.validation.constraints.NotNull;
  * <pre><code class='java'>
  *     ProductVariantDeletedMessagePayload productVariantDeletedMessagePayload = ProductVariantDeletedMessagePayload.builder()
  *             .plusRemovedImageUrls(removedImageUrlsBuilder -> removedImageUrlsBuilder)
+ *             .staged(true)
  *             .build()
  * </code></pre>
  * </div>
@@ -55,6 +56,14 @@ public interface ProductVariantDeletedMessagePayload extends MessagePayload {
     public List<String> getRemovedImageUrls();
 
     /**
+     *  <p>If <code>true</code>, this message informs that only the staged ProductVariant has been removed by the update action. If <code>false</code>, both the current and staged ProductVariant have been removed.</p>
+     * @return staged
+     */
+    @NotNull
+    @JsonProperty("staged")
+    public Boolean getStaged();
+
+    /**
      *  <p>Unique identifier of the Product Variant that was added.</p>
      * @param variant value to be set
      */
@@ -77,6 +86,13 @@ public interface ProductVariantDeletedMessagePayload extends MessagePayload {
     public void setRemovedImageUrls(final List<String> removedImageUrls);
 
     /**
+     *  <p>If <code>true</code>, this message informs that only the staged ProductVariant has been removed by the update action. If <code>false</code>, both the current and staged ProductVariant have been removed.</p>
+     * @param staged value to be set
+     */
+
+    public void setStaged(final Boolean staged);
+
+    /**
      * factory method
      * @return instance of ProductVariantDeletedMessagePayload
      */
@@ -93,6 +109,7 @@ public interface ProductVariantDeletedMessagePayload extends MessagePayload {
         ProductVariantDeletedMessagePayloadImpl instance = new ProductVariantDeletedMessagePayloadImpl();
         instance.setVariant(template.getVariant());
         instance.setRemovedImageUrls(template.getRemovedImageUrls());
+        instance.setStaged(template.getStaged());
         return instance;
     }
 
@@ -111,6 +128,7 @@ public interface ProductVariantDeletedMessagePayload extends MessagePayload {
         instance.setVariant(com.commercetools.api.models.product.ProductVariant.deepCopy(template.getVariant()));
         instance.setRemovedImageUrls(
             Optional.ofNullable(template.getRemovedImageUrls()).map(ArrayList::new).orElse(null));
+        instance.setStaged(template.getStaged());
         return instance;
     }
 

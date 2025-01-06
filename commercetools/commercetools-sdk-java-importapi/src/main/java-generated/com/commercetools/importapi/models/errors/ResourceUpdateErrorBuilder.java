@@ -29,7 +29,7 @@ public class ResourceUpdateErrorBuilder implements Builder<ResourceUpdateError> 
     private java.lang.Object resource;
 
     /**
-     * set the value to the message
+     *  <p>A plain language description of the cause of an error.</p>
      * @param message value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class ResourceUpdateErrorBuilder implements Builder<ResourceUpdateError> 
     }
 
     /**
-     * value of message}
+     *  <p>A plain language description of the cause of an error.</p>
      * @return message
      */
 

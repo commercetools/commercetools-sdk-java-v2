@@ -17,10 +17,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CustomerSearchStatus extends JsonEnum {
 
     /**
-    <p>indicates that the Customer Search endpoint is fully operational.</p> */
+    <p>indicates that the Customer Search feature is fully operational.</p> */
     CustomerSearchStatus ACTIVATED = CustomerSearchStatusEnum.ACTIVATED;
     /**
-    <p>indicates that the Customer Search enpoint is currently not active.</p> */
+    <p>indicates that the Customer Search feature is currently not active.</p> */
     CustomerSearchStatus DEACTIVATED = CustomerSearchStatusEnum.DEACTIVATED;
 
     /**

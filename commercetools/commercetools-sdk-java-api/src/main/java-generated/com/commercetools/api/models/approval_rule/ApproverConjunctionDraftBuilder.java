@@ -25,7 +25,7 @@ public class ApproverConjunctionDraftBuilder implements Builder<ApproverConjunct
     private java.util.List<com.commercetools.api.models.approval_rule.ApproverDisjunctionDraft> and;
 
     /**
-     *  <p>All of the nested disjunctions must be approved in order for the conjunction to be considered approved. The total count of approvers across the nested disjunctions must not exceed 10.</p>
+     *  <p>All of the nested disjunctions must be approved in order for the conjunction to be considered approved.</p>
      * @param and value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class ApproverConjunctionDraftBuilder implements Builder<ApproverConjunct
     }
 
     /**
-     *  <p>All of the nested disjunctions must be approved in order for the conjunction to be considered approved. The total count of approvers across the nested disjunctions must not exceed 10.</p>
+     *  <p>All of the nested disjunctions must be approved in order for the conjunction to be considered approved.</p>
      * @param and value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class ApproverConjunctionDraftBuilder implements Builder<ApproverConjunct
     }
 
     /**
-     *  <p>All of the nested disjunctions must be approved in order for the conjunction to be considered approved. The total count of approvers across the nested disjunctions must not exceed 10.</p>
+     *  <p>All of the nested disjunctions must be approved in order for the conjunction to be considered approved.</p>
      * @param and value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class ApproverConjunctionDraftBuilder implements Builder<ApproverConjunct
     }
 
     /**
-     *  <p>All of the nested disjunctions must be approved in order for the conjunction to be considered approved. The total count of approvers across the nested disjunctions must not exceed 10.</p>
+     *  <p>All of the nested disjunctions must be approved in order for the conjunction to be considered approved.</p>
      * @param builder function to build the and value
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class ApproverConjunctionDraftBuilder implements Builder<ApproverConjunct
     }
 
     /**
-     *  <p>All of the nested disjunctions must be approved in order for the conjunction to be considered approved. The total count of approvers across the nested disjunctions must not exceed 10.</p>
+     *  <p>All of the nested disjunctions must be approved in order for the conjunction to be considered approved.</p>
      * @param builder function to build the and value
      * @return Builder
      */
@@ -94,7 +94,7 @@ public class ApproverConjunctionDraftBuilder implements Builder<ApproverConjunct
     }
 
     /**
-     *  <p>All of the nested disjunctions must be approved in order for the conjunction to be considered approved. The total count of approvers across the nested disjunctions must not exceed 10.</p>
+     *  <p>All of the nested disjunctions must be approved in order for the conjunction to be considered approved.</p>
      * @param builder function to build the and value
      * @return Builder
      */
@@ -105,7 +105,7 @@ public class ApproverConjunctionDraftBuilder implements Builder<ApproverConjunct
     }
 
     /**
-     *  <p>All of the nested disjunctions must be approved in order for the conjunction to be considered approved. The total count of approvers across the nested disjunctions must not exceed 10.</p>
+     *  <p>All of the nested disjunctions must be approved in order for the conjunction to be considered approved.</p>
      * @param builder function to build the and value
      * @return Builder
      */
@@ -116,7 +116,7 @@ public class ApproverConjunctionDraftBuilder implements Builder<ApproverConjunct
     }
 
     /**
-     *  <p>All of the nested disjunctions must be approved in order for the conjunction to be considered approved. The total count of approvers across the nested disjunctions must not exceed 10.</p>
+     *  <p>All of the nested disjunctions must be approved in order for the conjunction to be considered approved.</p>
      * @return and
      */
 

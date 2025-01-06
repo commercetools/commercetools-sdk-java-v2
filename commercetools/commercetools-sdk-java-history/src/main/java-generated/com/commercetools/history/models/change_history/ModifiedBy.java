@@ -24,9 +24,8 @@ import jakarta.validation.constraints.NotNull;
  * <div class=code-example>
  * <pre><code class='java'>
  *     ModifiedBy modifiedBy = ModifiedBy.builder()
- *             .id("{id}")
- *             .type("{type}")
  *             .isPlatformClient(true)
+ *             .type("{type}")
  *             .build()
  * </code></pre>
  * </div>
@@ -36,11 +35,19 @@ import jakarta.validation.constraints.NotNull;
 public interface ModifiedBy {
 
     /**
-     *  <p>ID of the Merchant Center user who made the change.</p>
-     *  <p>Present only if the change was made in the Merchant Center.</p>
-     * @return id
+     *  <p><code>true</code> if the change was made using the Merchant Center.</p>
+     * @return isPlatformClient
      */
     @NotNull
+    @JsonProperty("isPlatformClient")
+    public Boolean getIsPlatformClient();
+
+    /**
+     *  <p>ID of the Merchant Center user who made the change.</p>
+     *  <p>Present only if <code>isPlatformClient</code> is <code>true</code>.</p>
+     * @return id
+     */
+
     @JsonProperty("id")
     public String getId();
 
@@ -92,16 +99,15 @@ public interface ModifiedBy {
     public Reference getAssociate();
 
     /**
-     *  <p><code>true</code> if the change was made using the Merchant Center or ImpEx.</p>
-     * @return isPlatformClient
+     *  <p><code>true</code> if the change was made using the Merchant Center.</p>
+     * @param isPlatformClient value to be set
      */
-    @NotNull
-    @JsonProperty("isPlatformClient")
-    public Boolean getIsPlatformClient();
+
+    public void setIsPlatformClient(final Boolean isPlatformClient);
 
     /**
      *  <p>ID of the Merchant Center user who made the change.</p>
-     *  <p>Present only if the change was made in the Merchant Center.</p>
+     *  <p>Present only if <code>isPlatformClient</code> is <code>true</code>.</p>
      * @param id value to be set
      */
 
@@ -150,13 +156,6 @@ public interface ModifiedBy {
     public void setAssociate(final Reference associate);
 
     /**
-     *  <p><code>true</code> if the change was made using the Merchant Center or ImpEx.</p>
-     * @param isPlatformClient value to be set
-     */
-
-    public void setIsPlatformClient(final Boolean isPlatformClient);
-
-    /**
      * factory method
      * @return instance of ModifiedBy
      */
@@ -171,13 +170,13 @@ public interface ModifiedBy {
      */
     public static ModifiedBy of(final ModifiedBy template) {
         ModifiedByImpl instance = new ModifiedByImpl();
+        instance.setIsPlatformClient(template.getIsPlatformClient());
         instance.setId(template.getId());
         instance.setType(template.getType());
         instance.setClientId(template.getClientId());
         instance.setAnonymousId(template.getAnonymousId());
         instance.setCustomer(template.getCustomer());
         instance.setAssociate(template.getAssociate());
-        instance.setIsPlatformClient(template.getIsPlatformClient());
         return instance;
     }
 
@@ -192,13 +191,13 @@ public interface ModifiedBy {
             return null;
         }
         ModifiedByImpl instance = new ModifiedByImpl();
+        instance.setIsPlatformClient(template.getIsPlatformClient());
         instance.setId(template.getId());
         instance.setType(template.getType());
         instance.setClientId(template.getClientId());
         instance.setAnonymousId(template.getAnonymousId());
         instance.setCustomer(com.commercetools.history.models.common.Reference.deepCopy(template.getCustomer()));
         instance.setAssociate(com.commercetools.history.models.common.Reference.deepCopy(template.getAssociate()));
-        instance.setIsPlatformClient(template.getIsPlatformClient());
         return instance;
     }
 

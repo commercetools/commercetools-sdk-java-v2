@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Creates a new import request for product variant patches</p>
+ *  <p>Creates a new import request for Product Variant Patches. Returns an InvalidField error if the ProductVariantPatchRequest contains patches with and without the <code>product</code> field set.</p>
  *
  * <hr>
  * <div class=code-example>

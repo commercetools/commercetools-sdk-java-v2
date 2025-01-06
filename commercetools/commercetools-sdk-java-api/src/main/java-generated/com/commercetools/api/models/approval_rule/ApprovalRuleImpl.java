@@ -50,6 +50,8 @@ public class ApprovalRuleImpl implements ApprovalRule, ModelBase {
 
     private com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit;
 
+    private com.commercetools.api.models.type.CustomFields custom;
+
     /**
      * create instance with all properties
      */
@@ -65,7 +67,8 @@ public class ApprovalRuleImpl implements ApprovalRule, ModelBase {
             @JsonProperty("predicate") final String predicate,
             @JsonProperty("approvers") final com.commercetools.api.models.approval_rule.ApproverHierarchy approvers,
             @JsonProperty("requesters") final java.util.List<com.commercetools.api.models.approval_rule.RuleRequester> requesters,
-            @JsonProperty("businessUnit") final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit) {
+            @JsonProperty("businessUnit") final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit,
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -80,6 +83,7 @@ public class ApprovalRuleImpl implements ApprovalRule, ModelBase {
         this.approvers = approvers;
         this.requesters = requesters;
         this.businessUnit = businessUnit;
+        this.custom = custom;
     }
 
     /**
@@ -200,6 +204,14 @@ public class ApprovalRuleImpl implements ApprovalRule, ModelBase {
         return this.businessUnit;
     }
 
+    /**
+     *  <p>Custom Fields on the Approval Rule.</p>
+     */
+
+    public com.commercetools.api.models.type.CustomFields getCustom() {
+        return this.custom;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -262,6 +274,10 @@ public class ApprovalRuleImpl implements ApprovalRule, ModelBase {
         this.businessUnit = businessUnit;
     }
 
+    public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
+        this.custom = custom;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -286,6 +302,7 @@ public class ApprovalRuleImpl implements ApprovalRule, ModelBase {
                 .append(approvers, that.approvers)
                 .append(requesters, that.requesters)
                 .append(businessUnit, that.businessUnit)
+                .append(custom, that.custom)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -300,6 +317,7 @@ public class ApprovalRuleImpl implements ApprovalRule, ModelBase {
                 .append(approvers, that.approvers)
                 .append(requesters, that.requesters)
                 .append(businessUnit, that.businessUnit)
+                .append(custom, that.custom)
                 .isEquals();
     }
 
@@ -319,6 +337,7 @@ public class ApprovalRuleImpl implements ApprovalRule, ModelBase {
                 .append(approvers)
                 .append(requesters)
                 .append(businessUnit)
+                .append(custom)
                 .toHashCode();
     }
 
@@ -338,6 +357,7 @@ public class ApprovalRuleImpl implements ApprovalRule, ModelBase {
                 .append("approvers", approvers)
                 .append("requesters", requesters)
                 .append("businessUnit", businessUnit)
+                .append("custom", custom)
                 .build();
     }
 

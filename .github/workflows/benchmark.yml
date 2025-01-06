@@ -4,7 +4,7 @@ on:
 name: Benchmark
 
 # Declare default permissions as read only.
-permissions: read-all
+permissions: { }
 
 jobs:
     benchmark:
@@ -16,7 +16,7 @@ jobs:
             - name: Checkout
               uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4
 
-            - uses: gradle/wrapper-validation-action@216d1ad2b3710bf005dc39237337b9673fd8fcd5 # v3.3.2
+            - uses: gradle/wrapper-validation-action@f9c9c575b8b21b6485636a91ffecd10e558c62f6 # v3.5.0
 
             - name: Setup Java
               uses: actions/setup-java@99b8673ff64fbf99d8d325f52d9a5bdedb8483e9 # v4

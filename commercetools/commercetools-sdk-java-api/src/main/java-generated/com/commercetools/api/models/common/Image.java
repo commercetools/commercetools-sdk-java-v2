@@ -34,7 +34,7 @@ import jakarta.validation.constraints.NotNull;
 public interface Image {
 
     /**
-     *  <p>URL of the image in its original size that must be unique within a single ProductVariant. If the Project is hosted in the China (AWS, Ningxia) Region, verify that the URL is not blocked due to firewall restrictions.</p>
+     *  <p>URL of the image in its original size that must be unique within a single ProductVariant.</p>
      * @return url
      */
     @NotNull
@@ -59,7 +59,7 @@ public interface Image {
     public String getLabel();
 
     /**
-     *  <p>URL of the image in its original size that must be unique within a single ProductVariant. If the Project is hosted in the China (AWS, Ningxia) Region, verify that the URL is not blocked due to firewall restrictions.</p>
+     *  <p>URL of the image in its original size that must be unique within a single ProductVariant.</p>
      * @param url value to be set
      */
 

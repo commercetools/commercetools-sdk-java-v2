@@ -299,6 +299,10 @@ public class GraphQLErrorObjectBuilder {
         return com.commercetools.api.models.error.GraphQLSearchIndexingInProgressErrorBuilder.of();
     }
 
+    public com.commercetools.api.models.error.GraphQLSearchNotReadyErrorBuilder searchNotReadyBuilder() {
+        return com.commercetools.api.models.error.GraphQLSearchNotReadyErrorBuilder.of();
+    }
+
     public com.commercetools.api.models.error.GraphQLSemanticErrorErrorBuilder semanticErrorBuilder() {
         return com.commercetools.api.models.error.GraphQLSemanticErrorErrorBuilder.of();
     }

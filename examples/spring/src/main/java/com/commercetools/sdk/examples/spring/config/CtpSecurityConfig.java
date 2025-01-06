@@ -104,6 +104,12 @@ public class CtpSecurityConfig {
         @Value(value = "${ctp.project.key}")
         private String projectKey;
 
+        @Value(value = "${ctp.project.api.base.url:#{null}}")
+        private String apiBaseUrl;
+
+        @Value(value = "${ctp.project.auth.url:#{null}}")
+        private String authUrl;
+
         private ClientCredentials credentials() {
             return ClientCredentials.of().withClientId(clientId).withClientSecret(clientSecret).build();
         }
@@ -116,16 +122,23 @@ public class CtpSecurityConfig {
         @Override
         public Mono<ReactiveAuthenticationManager> resolve(final ServerWebExchange context) {
             return Mono.just(new CtpReactiveAuthenticationManager(meClient(apiHttpClient, context.getSession()),
-                credentials(), projectKey));
+                credentials(), projectKey, authUrl));
         }
 
         private ProjectApiRoot meClient(final ApiHttpClient client, final Mono<WebSession> session) {
             TokenStorage storage = new SessionTokenStorage(session);
 
             ApiRootBuilder builder = ApiRootBuilder.of(client)
-                    .withApiBaseUrl(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
-                    .withProjectKey(projectKey)
-                    .withAnonymousRefreshFlow(credentials(), ServiceRegion.GCP_EUROPE_WEST1, storage);
+                    .withApiBaseUrl(apiBaseUrl != null ? apiBaseUrl : ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+                    .withProjectKey(projectKey);
+
+            if (authUrl != null) {
+                builder = builder.withAnonymousRefreshFlow(credentials(),
+                    authUrl + "/oauth/" + projectKey + "/anonymous/token", authUrl + "/oauth/token", storage);
+            }
+            else {
+                builder = builder.withAnonymousRefreshFlow(credentials(), ServiceRegion.GCP_EUROPE_WEST1, storage);
+            }
 
             return builder.build(projectKey);
         }

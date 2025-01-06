@@ -47,7 +47,7 @@ public class ImageImpl implements Image, ModelBase {
     }
 
     /**
-     *  <p>URL of the image in its original size that must be unique within a single ProductVariant. If the Project is hosted in the China (AWS, Ningxia) Region, verify that the URL is not blocked due to firewall restrictions.</p>
+     *  <p>URL of the image in its original size that must be unique within a single ProductVariant.</p>
      */
 
     public String getUrl() {

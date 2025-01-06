@@ -5,6 +5,7 @@ import java.time.*;
 import java.time.ZonedDateTime;
 import java.util.*;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
 
@@ -15,6 +16,7 @@ import com.commercetools.api.models.product_type.ProductTypeReference;
 import com.commercetools.api.models.review.ReviewRatingStatistics;
 import com.commercetools.api.models.state.StateReference;
 import com.commercetools.api.models.tax_category.TaxCategoryReference;
+import com.commercetools.api.models.warning.WarningObject;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -155,6 +157,14 @@ public interface Product extends BaseResource, ProductMixin, com.commercetools.a
     public ProductPriceModeEnum getPriceMode();
 
     /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @return warnings
+     */
+    @Valid
+    @JsonProperty("warnings")
+    public List<WarningObject> getWarnings();
+
+    /**
      *  <p>Unique identifier of the Product.</p>
      * @param id value to be set
      */
@@ -247,6 +257,21 @@ public interface Product extends BaseResource, ProductMixin, com.commercetools.a
     public void setPriceMode(final ProductPriceModeEnum priceMode);
 
     /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @param warnings values to be set
+     */
+
+    @JsonIgnore
+    public void setWarnings(final WarningObject... warnings);
+
+    /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @param warnings values to be set
+     */
+
+    public void setWarnings(final List<WarningObject> warnings);
+
+    /**
      * factory method
      * @return instance of Product
      */
@@ -274,6 +299,7 @@ public interface Product extends BaseResource, ProductMixin, com.commercetools.a
         instance.setState(template.getState());
         instance.setReviewRatingStatistics(template.getReviewRatingStatistics());
         instance.setPriceMode(template.getPriceMode());
+        instance.setWarnings(template.getWarnings());
         return instance;
     }
 
@@ -306,6 +332,11 @@ public interface Product extends BaseResource, ProductMixin, com.commercetools.a
         instance.setReviewRatingStatistics(
             com.commercetools.api.models.review.ReviewRatingStatistics.deepCopy(template.getReviewRatingStatistics()));
         instance.setPriceMode(template.getPriceMode());
+        instance.setWarnings(Optional.ofNullable(template.getWarnings())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.warning.WarningObject::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

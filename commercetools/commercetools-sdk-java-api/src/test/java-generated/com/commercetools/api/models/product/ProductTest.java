@@ -2,6 +2,7 @@
 package com.commercetools.api.models.product;
 
 import java.time.ZonedDateTime;
+import java.util.Collections;
 
 import com.tngtech.junit.dataprovider.DataProvider;
 import com.tngtech.junit.dataprovider.DataProviderExtension;
@@ -44,7 +45,10 @@ public class ProductTest {
                 new Object[] { Product.builder()
                         .reviewRatingStatistics(new com.commercetools.api.models.review.ReviewRatingStatisticsImpl()) },
                 new Object[] { Product.builder()
-                        .priceMode(com.commercetools.api.models.product.ProductPriceModeEnum.findEnum("Embedded")) } };
+                        .priceMode(com.commercetools.api.models.product.ProductPriceModeEnum.findEnum("Embedded")) },
+                new Object[] { Product.builder()
+                        .warnings(Collections
+                                .singletonList(new com.commercetools.api.models.warning.WarningObjectImpl())) } };
     }
 
     @Test
@@ -142,5 +146,13 @@ public class ProductTest {
         value.setPriceMode(com.commercetools.api.models.product.ProductPriceModeEnum.findEnum("Embedded"));
         Assertions.assertThat(value.getPriceMode())
                 .isEqualTo(com.commercetools.api.models.product.ProductPriceModeEnum.findEnum("Embedded"));
+    }
+
+    @Test
+    public void warnings() {
+        Product value = Product.of();
+        value.setWarnings(Collections.singletonList(new com.commercetools.api.models.warning.WarningObjectImpl()));
+        Assertions.assertThat(value.getWarnings())
+                .isEqualTo(Collections.singletonList(new com.commercetools.api.models.warning.WarningObjectImpl()));
     }
 }

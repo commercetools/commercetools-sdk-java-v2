@@ -147,6 +147,7 @@ public class DiscountCodeImportBuilder implements Builder<DiscountCodeImport> {
 
     /**
      *  <p>User-defined unique identifier of the DiscountCode that is used by the customer to apply the discount.</p>
+     *  <p>The value cannot be updated. Attempting to update the value will result in an InvalidFieldsUpdate error.</p>
      * @param code value to be set
      * @return Builder
      */
@@ -418,6 +419,7 @@ public class DiscountCodeImportBuilder implements Builder<DiscountCodeImport> {
 
     /**
      *  <p>User-defined unique identifier of the DiscountCode that is used by the customer to apply the discount.</p>
+     *  <p>The value cannot be updated. Attempting to update the value will result in an InvalidFieldsUpdate error.</p>
      * @return code
      */
 

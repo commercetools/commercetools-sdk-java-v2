@@ -24,7 +24,7 @@ public class InvalidInputBuilder implements Builder<InvalidInput> {
     private String message;
 
     /**
-     * set the value to the message
+     *  <p>A plain language description of the cause of an error.</p>
      * @param message value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class InvalidInputBuilder implements Builder<InvalidInput> {
     }
 
     /**
-     * value of message}
+     *  <p>A plain language description of the cause of an error.</p>
      * @return message
      */
 

@@ -62,6 +62,9 @@ public class ProductTailoringBuilder implements Builder<ProductTailoring> {
 
     private Boolean hasStagedChanges;
 
+    @Nullable
+    private java.util.List<com.commercetools.api.models.warning.WarningObject> warnings;
+
     /**
      *  <p>Unique identifier of the ProductTailoring.</p>
      * @param id value to be set
@@ -355,6 +358,73 @@ public class ProductTailoringBuilder implements Builder<ProductTailoring> {
     }
 
     /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @param warnings value to be set
+     * @return Builder
+     */
+
+    public ProductTailoringBuilder warnings(
+            @Nullable final com.commercetools.api.models.warning.WarningObject... warnings) {
+        this.warnings = new ArrayList<>(Arrays.asList(warnings));
+        return this;
+    }
+
+    /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @param warnings value to be set
+     * @return Builder
+     */
+
+    public ProductTailoringBuilder warnings(
+            @Nullable final java.util.List<com.commercetools.api.models.warning.WarningObject> warnings) {
+        this.warnings = warnings;
+        return this;
+    }
+
+    /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @param warnings value to be set
+     * @return Builder
+     */
+
+    public ProductTailoringBuilder plusWarnings(
+            @Nullable final com.commercetools.api.models.warning.WarningObject... warnings) {
+        if (this.warnings == null) {
+            this.warnings = new ArrayList<>();
+        }
+        this.warnings.addAll(Arrays.asList(warnings));
+        return this;
+    }
+
+    /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @param builder function to build the warnings value
+     * @return Builder
+     */
+
+    public ProductTailoringBuilder plusWarnings(
+            Function<com.commercetools.api.models.warning.WarningObjectBuilder, Builder<? extends com.commercetools.api.models.warning.WarningObject>> builder) {
+        if (this.warnings == null) {
+            this.warnings = new ArrayList<>();
+        }
+        this.warnings.add(builder.apply(com.commercetools.api.models.warning.WarningObjectBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @param builder function to build the warnings value
+     * @return Builder
+     */
+
+    public ProductTailoringBuilder withWarnings(
+            Function<com.commercetools.api.models.warning.WarningObjectBuilder, Builder<? extends com.commercetools.api.models.warning.WarningObject>> builder) {
+        this.warnings = new ArrayList<>();
+        this.warnings.add(builder.apply(com.commercetools.api.models.warning.WarningObjectBuilder.of()).build());
+        return this;
+    }
+
+    /**
      *  <p>Unique identifier of the ProductTailoring.</p>
      * @return id
      */
@@ -475,6 +545,16 @@ public class ProductTailoringBuilder implements Builder<ProductTailoring> {
     }
 
     /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     * @return warnings
+     */
+
+    @Nullable
+    public java.util.List<com.commercetools.api.models.warning.WarningObject> getWarnings() {
+        return this.warnings;
+    }
+
+    /**
      * builds ProductTailoring with checking for non-null required values
      * @return ProductTailoring
      */
@@ -490,7 +570,7 @@ public class ProductTailoringBuilder implements Builder<ProductTailoring> {
         Objects.requireNonNull(staged, ProductTailoring.class + ": staged is missing");
         Objects.requireNonNull(hasStagedChanges, ProductTailoring.class + ": hasStagedChanges is missing");
         return new ProductTailoringImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, store,
-            product, published, current, staged, hasStagedChanges);
+            product, published, current, staged, hasStagedChanges, warnings);
     }
 
     /**
@@ -499,7 +579,7 @@ public class ProductTailoringBuilder implements Builder<ProductTailoring> {
      */
     public ProductTailoring buildUnchecked() {
         return new ProductTailoringImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, store,
-            product, published, current, staged, hasStagedChanges);
+            product, published, current, staged, hasStagedChanges, warnings);
     }
 
     /**
@@ -530,6 +610,7 @@ public class ProductTailoringBuilder implements Builder<ProductTailoring> {
         builder.current = template.getCurrent();
         builder.staged = template.getStaged();
         builder.hasStagedChanges = template.getHasStagedChanges();
+        builder.warnings = template.getWarnings();
         return builder;
     }
 

@@ -47,8 +47,9 @@ public class ApprovalRuleTest {
                         .requesters(Collections
                                 .singletonList(new com.commercetools.api.models.approval_rule.RuleRequesterImpl())) },
                 new Object[] { ApprovalRule.builder()
-                        .businessUnit(
-                            new com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceImpl()) } };
+                        .businessUnit(new com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceImpl()) },
+                new Object[] {
+                        ApprovalRule.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) } };
     }
 
     @Test
@@ -154,5 +155,12 @@ public class ApprovalRuleTest {
         value.setBusinessUnit(new com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceImpl());
         Assertions.assertThat(value.getBusinessUnit())
                 .isEqualTo(new com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceImpl());
+    }
+
+    @Test
+    public void custom() {
+        ApprovalRule value = ApprovalRule.of();
+        value.setCustom(new com.commercetools.api.models.type.CustomFieldsImpl());
+        Assertions.assertThat(value.getCustom()).isEqualTo(new com.commercetools.api.models.type.CustomFieldsImpl());
     }
 }

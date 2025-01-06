@@ -456,6 +456,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>User-defined unique identifier for the Category.</p>
+     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Categories with the Import API and the Merchant Center.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -575,6 +576,7 @@ public class CategoryDraftBuilder implements Builder<CategoryDraft> {
 
     /**
      *  <p>User-defined unique identifier for the Category.</p>
+     *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Categories with the Import API and the Merchant Center.</p>
      * @return key
      */
 

@@ -43,6 +43,10 @@ public class DatadogMiddleware implements TelemetryMiddleware {
         this.apiInstance = new MetricsApi(ddApiClient);
     }
 
+    public DatadogMiddleware(final MetricsApi apiInstance) {
+        this.apiInstance = apiInstance;
+    }
+
     @Override
     public CompletableFuture<ApiHttpResponse<byte[]>> invoke(ApiHttpRequest request,
             Function<ApiHttpRequest, CompletableFuture<ApiHttpResponse<byte[]>>> next) {

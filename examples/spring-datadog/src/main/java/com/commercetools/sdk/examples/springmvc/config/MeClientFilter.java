@@ -4,6 +4,9 @@ import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import com.commercetools.api.defaultconfig.ServiceRegion;
 
+import com.commercetools.monitoring.datadog.DatadogMiddleware;
+import com.commercetools.monitoring.datadog.DatadogResponseSerializer;
+import com.datadog.api.client.ApiClient;
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 import io.vrap.rmf.base.client.oauth2.TokenStorage;
@@ -58,7 +61,9 @@ public class MeClientFilter implements WebFilter {
         ApiRootBuilder builder = ApiRootBuilder.of(client)
                 .withApiBaseUrl(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
                 .withProjectKey(projectKey)
-                .withAnonymousRefreshFlow(credentials(), ServiceRegion.GCP_EUROPE_WEST1, storage);
+                .withAnonymousRefreshFlow(credentials(), ServiceRegion.GCP_EUROPE_WEST1, storage)
+                .withTelemetryMiddleware(new DatadogMiddleware(ApiClient.getDefaultApiClient()))
+                .withSerializer(new DatadogResponseSerializer(ResponseSerializer.of(), ApiClient.getDefaultApiClient()));
 
         return builder.build(projectKey);
     }

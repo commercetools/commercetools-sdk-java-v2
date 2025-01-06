@@ -549,6 +549,13 @@ public class GraphQLErrorObjectQueryBuilderDsl {
             GraphQLErrorObjectQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asSearchNotReady(
+            Function<com.commercetools.api.predicates.query.error.GraphQLSearchNotReadyErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.GraphQLSearchNotReadyErrorQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.error.GraphQLSearchNotReadyErrorQueryBuilderDsl.of()),
+            GraphQLErrorObjectQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<GraphQLErrorObjectQueryBuilderDsl> asSemanticError(
             Function<com.commercetools.api.predicates.query.error.GraphQLSemanticErrorErrorQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.error.GraphQLSemanticErrorErrorQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

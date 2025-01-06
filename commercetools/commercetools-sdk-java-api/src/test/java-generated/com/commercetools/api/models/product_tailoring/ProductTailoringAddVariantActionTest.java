@@ -32,6 +32,9 @@ public class ProductTailoringAddVariantActionTest {
                         .images(Collections.singletonList(new com.commercetools.api.models.common.ImageImpl())) },
                 new Object[] { ProductTailoringAddVariantAction.builder()
                         .assets(Collections.singletonList(new com.commercetools.api.models.common.AssetDraftImpl())) },
+                new Object[] { ProductTailoringAddVariantAction.builder()
+                        .attributes(Collections.singletonList(
+                            new com.commercetools.api.models.product_tailoring.ProductTailoringAttributeImpl())) },
                 new Object[] { ProductTailoringAddVariantAction.builder().staged(true) } };
     }
 
@@ -63,6 +66,16 @@ public class ProductTailoringAddVariantActionTest {
         value.setAssets(Collections.singletonList(new com.commercetools.api.models.common.AssetDraftImpl()));
         Assertions.assertThat(value.getAssets())
                 .isEqualTo(Collections.singletonList(new com.commercetools.api.models.common.AssetDraftImpl()));
+    }
+
+    @Test
+    public void attributes() {
+        ProductTailoringAddVariantAction value = ProductTailoringAddVariantAction.of();
+        value.setAttributes(Collections
+                .singletonList(new com.commercetools.api.models.product_tailoring.ProductTailoringAttributeImpl()));
+        Assertions.assertThat(value.getAttributes())
+                .isEqualTo(Collections.singletonList(
+                    new com.commercetools.api.models.product_tailoring.ProductTailoringAttributeImpl()));
     }
 
     @Test

@@ -34,7 +34,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ExternalOAuth {
 
     /**
-     *  <p>URL with authorization header. If the Project is hosted in the China (AWS, Ningxia) Region, verify that the URL is not blocked due to firewall restrictions.</p>
+     *  <p>URL with authorization header.</p>
      * @return url
      */
     @NotNull
@@ -50,7 +50,7 @@ public interface ExternalOAuth {
     public String getAuthorizationHeader();
 
     /**
-     *  <p>URL with authorization header. If the Project is hosted in the China (AWS, Ningxia) Region, verify that the URL is not blocked due to firewall restrictions.</p>
+     *  <p>URL with authorization header.</p>
      * @param url value to be set
      */
 

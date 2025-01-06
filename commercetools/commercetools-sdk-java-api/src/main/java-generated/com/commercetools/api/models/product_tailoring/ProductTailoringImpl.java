@@ -48,6 +48,8 @@ public class ProductTailoringImpl implements ProductTailoring, ModelBase {
 
     private Boolean hasStagedChanges;
 
+    private java.util.List<com.commercetools.api.models.warning.WarningObject> warnings;
+
     /**
      * create instance with all properties
      */
@@ -63,7 +65,8 @@ public class ProductTailoringImpl implements ProductTailoring, ModelBase {
             @JsonProperty("published") final Boolean published,
             @JsonProperty("current") final com.commercetools.api.models.product_tailoring.ProductTailoringData current,
             @JsonProperty("staged") final com.commercetools.api.models.product_tailoring.ProductTailoringData staged,
-            @JsonProperty("hasStagedChanges") final Boolean hasStagedChanges) {
+            @JsonProperty("hasStagedChanges") final Boolean hasStagedChanges,
+            @JsonProperty("warnings") final java.util.List<com.commercetools.api.models.warning.WarningObject> warnings) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -77,6 +80,7 @@ public class ProductTailoringImpl implements ProductTailoring, ModelBase {
         this.current = current;
         this.staged = staged;
         this.hasStagedChanges = hasStagedChanges;
+        this.warnings = warnings;
     }
 
     /**
@@ -189,6 +193,14 @@ public class ProductTailoringImpl implements ProductTailoring, ModelBase {
         return this.hasStagedChanges;
     }
 
+    /**
+     *  <p>Warnings about processing of a request. Appears in response to requests with response status code <code>202 Accepted</code>.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.warning.WarningObject> getWarnings() {
+        return this.warnings;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -241,6 +253,14 @@ public class ProductTailoringImpl implements ProductTailoring, ModelBase {
         this.hasStagedChanges = hasStagedChanges;
     }
 
+    public void setWarnings(final com.commercetools.api.models.warning.WarningObject... warnings) {
+        this.warnings = new ArrayList<>(Arrays.asList(warnings));
+    }
+
+    public void setWarnings(final java.util.List<com.commercetools.api.models.warning.WarningObject> warnings) {
+        this.warnings = warnings;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -264,6 +284,7 @@ public class ProductTailoringImpl implements ProductTailoring, ModelBase {
                 .append(current, that.current)
                 .append(staged, that.staged)
                 .append(hasStagedChanges, that.hasStagedChanges)
+                .append(warnings, that.warnings)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -277,6 +298,7 @@ public class ProductTailoringImpl implements ProductTailoring, ModelBase {
                 .append(current, that.current)
                 .append(staged, that.staged)
                 .append(hasStagedChanges, that.hasStagedChanges)
+                .append(warnings, that.warnings)
                 .isEquals();
     }
 
@@ -295,6 +317,7 @@ public class ProductTailoringImpl implements ProductTailoring, ModelBase {
                 .append(current)
                 .append(staged)
                 .append(hasStagedChanges)
+                .append(warnings)
                 .toHashCode();
     }
 
@@ -313,6 +336,7 @@ public class ProductTailoringImpl implements ProductTailoring, ModelBase {
                 .append("current", current)
                 .append("staged", staged)
                 .append("hasStagedChanges", hasStagedChanges)
+                .append("warnings", warnings)
                 .build();
     }
 

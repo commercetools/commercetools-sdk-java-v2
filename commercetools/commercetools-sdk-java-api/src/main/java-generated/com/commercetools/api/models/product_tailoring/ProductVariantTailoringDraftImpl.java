@@ -30,17 +30,21 @@ public class ProductVariantTailoringDraftImpl implements ProductVariantTailoring
 
     private java.util.List<com.commercetools.api.models.common.Asset> assets;
 
+    private java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> attributes;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
     ProductVariantTailoringDraftImpl(@JsonProperty("id") final Long id, @JsonProperty("sku") final String sku,
             @JsonProperty("images") final java.util.List<com.commercetools.api.models.common.Image> images,
-            @JsonProperty("assets") final java.util.List<com.commercetools.api.models.common.Asset> assets) {
+            @JsonProperty("assets") final java.util.List<com.commercetools.api.models.common.Asset> assets,
+            @JsonProperty("attributes") final java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> attributes) {
         this.id = id;
         this.sku = sku;
         this.images = images;
         this.assets = assets;
+        this.attributes = attributes;
     }
 
     /**
@@ -81,6 +85,18 @@ public class ProductVariantTailoringDraftImpl implements ProductVariantTailoring
         return this.assets;
     }
 
+    /**
+     *  <p>Attributes of the tailored Product Variant according to the respective AttributeDefinition. If provided, these Attributes are selectively merged into the <code>attributes</code> of the corresponding ProductVariant:</p>
+     *  <ul>
+     *   <li>If the ProductVariant contains an Attribute with the same <code>name</code>, its <code>value</code> is overwritten,</li>
+     *   <li>otherwise the Attribute and its value are added to the ProductVariant.</li>
+     *  </ul>
+     */
+
+    public java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> getAttributes() {
+        return this.attributes;
+    }
+
     public void setId(final Long id) {
         this.id = id;
     }
@@ -105,6 +121,16 @@ public class ProductVariantTailoringDraftImpl implements ProductVariantTailoring
         this.assets = assets;
     }
 
+    public void setAttributes(
+            final com.commercetools.api.models.product_tailoring.ProductTailoringAttribute... attributes) {
+        this.attributes = new ArrayList<>(Arrays.asList(attributes));
+    }
+
+    public void setAttributes(
+            final java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> attributes) {
+        this.attributes = attributes;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -119,16 +145,23 @@ public class ProductVariantTailoringDraftImpl implements ProductVariantTailoring
                 .append(sku, that.sku)
                 .append(images, that.images)
                 .append(assets, that.assets)
+                .append(attributes, that.attributes)
                 .append(id, that.id)
                 .append(sku, that.sku)
                 .append(images, that.images)
                 .append(assets, that.assets)
+                .append(attributes, that.attributes)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id).append(sku).append(images).append(assets).toHashCode();
+        return new HashCodeBuilder(17, 37).append(id)
+                .append(sku)
+                .append(images)
+                .append(assets)
+                .append(attributes)
+                .toHashCode();
     }
 
     @Override
@@ -137,6 +170,7 @@ public class ProductVariantTailoringDraftImpl implements ProductVariantTailoring
                 .append("sku", sku)
                 .append("images", images)
                 .append("assets", assets)
+                .append("attributes", attributes)
                 .build();
     }
 

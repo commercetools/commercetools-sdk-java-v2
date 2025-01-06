@@ -105,4 +105,18 @@ public class ProductTailoringQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, ProductTailoringQueryBuilderDsl::of));
     }
 
+    public CombinationQueryPredicate<ProductTailoringQueryBuilderDsl> warnings(
+            Function<com.commercetools.api.predicates.query.warning.WarningObjectQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.warning.WarningObjectQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("warnings"))
+                    .inner(fn.apply(com.commercetools.api.predicates.query.warning.WarningObjectQueryBuilderDsl.of())),
+            ProductTailoringQueryBuilderDsl::of);
+    }
+
+    public CollectionPredicateBuilder<ProductTailoringQueryBuilderDsl> warnings() {
+        return new CollectionPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("warnings")),
+            p -> new CombinationQueryPredicate<>(p, ProductTailoringQueryBuilderDsl::of));
+    }
+
 }

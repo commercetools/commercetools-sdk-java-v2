@@ -54,13 +54,15 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - uses: gradle/wrapper-validation-action@216d1ad2b3710bf005dc39237337b9673fd8fcd5 # v3.3.2
+      - uses: gradle/wrapper-validation-action@f9c9c575b8b21b6485636a91ffecd10e558c62f6 # v3.5.0
 
       - name: Setup Graphviz
         uses: ts-graphviz/setup-graphviz@b1de5da23ed0a6d14e0aeee8ed52fdd87af2363c # v2.0.2
 
-      - run: ./gradlew -Pversion=${{ github.event.inputs.version }} alljavadoc
+      - run: ./gradlew -Pversion=$VERSION alljavadoc
         working-directory: sdk
+        env:
+          VERSION: ${{ github.event.inputs.version }}
 
       - run: rsync -r sdk/build/docs/javadoc/ doc/javadoc
 

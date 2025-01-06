@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * UnresolvedReferences
+ *  <p>References a resource which could not be resolved.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class UnresolvedReferencesImpl implements UnresolvedReferences, ModelBase {
@@ -43,7 +43,7 @@ public class UnresolvedReferencesImpl implements UnresolvedReferences, ModelBase
     }
 
     /**
-     *
+     *  <p>The <code>key</code> of the resource.</p>
      */
 
     public String getKey() {
@@ -51,7 +51,7 @@ public class UnresolvedReferencesImpl implements UnresolvedReferences, ModelBase
     }
 
     /**
-     *  <p>The type of the referenced resource.</p>
+     *  <p>The type of resource.</p>
      */
 
     public com.commercetools.importapi.models.common.ReferenceType getTypeId() {

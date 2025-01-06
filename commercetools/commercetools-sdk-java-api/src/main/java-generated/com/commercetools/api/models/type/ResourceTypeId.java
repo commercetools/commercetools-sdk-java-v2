@@ -11,7 +11,7 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>IDs indicating the customizable resources and data types.</p>
+ *  <p>With Types, you can model your own Custom Fields on the following resources and data types.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ResourceTypeId extends JsonEnum {
@@ -25,6 +25,9 @@ public interface ResourceTypeId extends JsonEnum {
     /**
     <p>ApprovalFlow</p> */
     ResourceTypeId APPROVAL_FLOW = ResourceTypeIdEnum.APPROVAL_FLOW;
+    /**
+    <p>ApprovalRule</p> */
+    ResourceTypeId APPROVAL_RULE = ResourceTypeIdEnum.APPROVAL_RULE;
     /**
     <p>AssociateRole</p> */
     ResourceTypeId ASSOCIATE_ROLE = ResourceTypeIdEnum.ASSOCIATE_ROLE;
@@ -86,6 +89,9 @@ public interface ResourceTypeId extends JsonEnum {
     <p>ProductSelection</p> */
     ResourceTypeId PRODUCT_SELECTION = ResourceTypeIdEnum.PRODUCT_SELECTION;
     /**
+    <p>ProductTailoring</p> */
+    ResourceTypeId PRODUCT_TAILORING = ResourceTypeIdEnum.PRODUCT_TAILORING;
+    /**
     <p>Quote, QuoteRequest and StagedQuote. When a StagedQuote is created, the CustomFields will be copied from the QuoteRequest and when a Quote is created, the CustomFields will be copied from the StagedQuote. For this reason, the Types for Quotes are also valid for QuoteRequests and StagedQuotes, and hence all have the same identifier: <code>quote</code>.</p> */
     ResourceTypeId QUOTE = ResourceTypeIdEnum.QUOTE;
     /**
@@ -131,6 +137,11 @@ public interface ResourceTypeId extends JsonEnum {
          * approval-flow
          */
         APPROVAL_FLOW("approval-flow"),
+
+        /**
+         * approval-rule
+         */
+        APPROVAL_RULE("approval-rule"),
 
         /**
          * associate-role
@@ -231,6 +242,11 @@ public interface ResourceTypeId extends JsonEnum {
          * product-selection
          */
         PRODUCT_SELECTION("product-selection"),
+
+        /**
+         * product-tailoring
+         */
+        PRODUCT_TAILORING("product-tailoring"),
 
         /**
          * quote

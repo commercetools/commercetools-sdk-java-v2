@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.Valid;
 
 /**
- *  <p>The InventoryEntry information of the Product Variant. If there is a supply Channel for the InventoryEntry, then <code>channels</code> is returned. If not, then <code>isOnStock</code>, <code>restockableInDays</code>, and <code>quantityOnStock</code> are returned.</p>
+ *  <p>The InventoryEntry information of the Product Variant. If there is a supply Channel for the InventoryEntry, then <code>channels</code> is returned. If not, then <code>isOnStock</code>, <code>restockableInDays</code>, and <code>availableQuantity</code> are returned.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

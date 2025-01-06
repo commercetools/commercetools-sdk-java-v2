@@ -28,8 +28,9 @@ public class NewrelicResponseSerializer implements ResponseSerializer {
     public <O> ApiHttpResponse<O> convertResponse(ApiHttpResponse<byte[]> response, Class<O> outputType) {
         Instant start = Instant.now();
         ApiHttpResponse<O> result = serializer.convertResponse(response, outputType);
-        long durationInMillis = Duration.between(start, Instant.now()).toMillis();
-        NewRelic.recordResponseTimeMetric(PREFIX + JSON_SERIALIZATION, durationInMillis);
+        double durationInMillis = Duration.between(start, Instant.now()).toNanos() / 1_000_000.0;
+        ;
+        NewRelic.recordMetric(PREFIX + JSON_DESERIALIZATION, (float) durationInMillis);
         return result;
     }
 
@@ -37,8 +38,9 @@ public class NewrelicResponseSerializer implements ResponseSerializer {
     public <O> ApiHttpResponse<O> convertResponse(ApiHttpResponse<byte[]> response, JavaType outputType) {
         Instant start = Instant.now();
         ApiHttpResponse<O> result = serializer.convertResponse(response, outputType);
-        long durationInMillis = Duration.between(start, Instant.now()).toMillis();
-        NewRelic.recordResponseTimeMetric(PREFIX + JSON_SERIALIZATION, durationInMillis);
+        double durationInMillis = Duration.between(start, Instant.now()).toNanos() / 1_000_000.0;
+        ;
+        NewRelic.recordMetric(PREFIX + JSON_DESERIALIZATION, (float) durationInMillis);
         return result;
     }
 
@@ -46,8 +48,9 @@ public class NewrelicResponseSerializer implements ResponseSerializer {
     public <O> ApiHttpResponse<O> convertResponse(ApiHttpResponse<byte[]> response, TypeReference<O> outputType) {
         Instant start = Instant.now();
         ApiHttpResponse<O> result = serializer.convertResponse(response, outputType);
-        long durationInMillis = Duration.between(start, Instant.now()).toMillis();
-        NewRelic.recordResponseTimeMetric(PREFIX + JSON_SERIALIZATION, durationInMillis);
+        double durationInMillis = Duration.between(start, Instant.now()).toNanos() / 1_000_000.0;
+        ;
+        NewRelic.recordMetric(PREFIX + JSON_DESERIALIZATION, (float) durationInMillis);
         return result;
     }
 
@@ -55,8 +58,9 @@ public class NewrelicResponseSerializer implements ResponseSerializer {
     public byte[] toJsonByteArray(Object value) throws JsonProcessingException {
         Instant start = Instant.now();
         byte[] result = serializer.toJsonByteArray(value);
-        long durationInMillis = Duration.between(start, Instant.now()).toMillis();
-        NewRelic.recordResponseTimeMetric(PREFIX + JSON_DESERIALIZATION, durationInMillis);
+        double durationInMillis = Duration.between(start, Instant.now()).toNanos() / 1_000_000.0;
+        ;
+        NewRelic.recordMetric(PREFIX + JSON_SERIALIZATION, (float) durationInMillis);
         return result;
     }
 

@@ -30,7 +30,8 @@ public class ProductVariantDeletedMessageTest {
                 new Object[] { ProductVariantDeletedMessage.builder()
                         .variant(new com.commercetools.api.models.product.ProductVariantImpl()) },
                 new Object[] { ProductVariantDeletedMessage.builder()
-                        .removedImageUrls(Collections.singletonList("removedImageUrls")) } };
+                        .removedImageUrls(Collections.singletonList("removedImageUrls")) },
+                new Object[] { ProductVariantDeletedMessage.builder().staged(true) } };
     }
 
     @Test
@@ -46,5 +47,12 @@ public class ProductVariantDeletedMessageTest {
         ProductVariantDeletedMessage value = ProductVariantDeletedMessage.of();
         value.setRemovedImageUrls(Collections.singletonList("removedImageUrls"));
         Assertions.assertThat(value.getRemovedImageUrls()).isEqualTo(Collections.singletonList("removedImageUrls"));
+    }
+
+    @Test
+    public void staged() {
+        ProductVariantDeletedMessage value = ProductVariantDeletedMessage.of();
+        value.setStaged(true);
+        Assertions.assertThat(value.getStaged()).isEqualTo(true);
     }
 }

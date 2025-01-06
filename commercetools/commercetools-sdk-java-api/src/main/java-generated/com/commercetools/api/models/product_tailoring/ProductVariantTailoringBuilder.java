@@ -32,6 +32,9 @@ public class ProductVariantTailoringBuilder implements Builder<ProductVariantTai
     @Nullable
     private java.util.List<com.commercetools.api.models.common.Asset> assets;
 
+    @Nullable
+    private java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> attributes;
+
     /**
      *  <p>The <code>id</code> of the tailored ProductVariant.</p>
      * @param id value to be set
@@ -220,6 +223,129 @@ public class ProductVariantTailoringBuilder implements Builder<ProductVariantTai
     }
 
     /**
+     *  <p>Attributes of the tailored Product Variant. If present, these Attributes are selectively merged into the <code>attributes</code> of the corresponding ProductVariant:</p>
+     *  <ul>
+     *   <li>If the ProductVariant contains an Attribute with the same <code>name</code>, its <code>value</code> is overwritten,</li>
+     *   <li>otherwise the Attribute and its value are added to the ProductVariant.</li>
+     *  </ul>
+     * @param attributes value to be set
+     * @return Builder
+     */
+
+    public ProductVariantTailoringBuilder attributes(
+            @Nullable final com.commercetools.api.models.product_tailoring.ProductTailoringAttribute... attributes) {
+        this.attributes = new ArrayList<>(Arrays.asList(attributes));
+        return this;
+    }
+
+    /**
+     *  <p>Attributes of the tailored Product Variant. If present, these Attributes are selectively merged into the <code>attributes</code> of the corresponding ProductVariant:</p>
+     *  <ul>
+     *   <li>If the ProductVariant contains an Attribute with the same <code>name</code>, its <code>value</code> is overwritten,</li>
+     *   <li>otherwise the Attribute and its value are added to the ProductVariant.</li>
+     *  </ul>
+     * @param attributes value to be set
+     * @return Builder
+     */
+
+    public ProductVariantTailoringBuilder attributes(
+            @Nullable final java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> attributes) {
+        this.attributes = attributes;
+        return this;
+    }
+
+    /**
+     *  <p>Attributes of the tailored Product Variant. If present, these Attributes are selectively merged into the <code>attributes</code> of the corresponding ProductVariant:</p>
+     *  <ul>
+     *   <li>If the ProductVariant contains an Attribute with the same <code>name</code>, its <code>value</code> is overwritten,</li>
+     *   <li>otherwise the Attribute and its value are added to the ProductVariant.</li>
+     *  </ul>
+     * @param attributes value to be set
+     * @return Builder
+     */
+
+    public ProductVariantTailoringBuilder plusAttributes(
+            @Nullable final com.commercetools.api.models.product_tailoring.ProductTailoringAttribute... attributes) {
+        if (this.attributes == null) {
+            this.attributes = new ArrayList<>();
+        }
+        this.attributes.addAll(Arrays.asList(attributes));
+        return this;
+    }
+
+    /**
+     *  <p>Attributes of the tailored Product Variant. If present, these Attributes are selectively merged into the <code>attributes</code> of the corresponding ProductVariant:</p>
+     *  <ul>
+     *   <li>If the ProductVariant contains an Attribute with the same <code>name</code>, its <code>value</code> is overwritten,</li>
+     *   <li>otherwise the Attribute and its value are added to the ProductVariant.</li>
+     *  </ul>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductVariantTailoringBuilder plusAttributes(
+            Function<com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder, com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder> builder) {
+        if (this.attributes == null) {
+            this.attributes = new ArrayList<>();
+        }
+        this.attributes
+                .add(builder.apply(com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder.of())
+                        .build());
+        return this;
+    }
+
+    /**
+     *  <p>Attributes of the tailored Product Variant. If present, these Attributes are selectively merged into the <code>attributes</code> of the corresponding ProductVariant:</p>
+     *  <ul>
+     *   <li>If the ProductVariant contains an Attribute with the same <code>name</code>, its <code>value</code> is overwritten,</li>
+     *   <li>otherwise the Attribute and its value are added to the ProductVariant.</li>
+     *  </ul>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductVariantTailoringBuilder withAttributes(
+            Function<com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder, com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder> builder) {
+        this.attributes = new ArrayList<>();
+        this.attributes
+                .add(builder.apply(com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder.of())
+                        .build());
+        return this;
+    }
+
+    /**
+     *  <p>Attributes of the tailored Product Variant. If present, these Attributes are selectively merged into the <code>attributes</code> of the corresponding ProductVariant:</p>
+     *  <ul>
+     *   <li>If the ProductVariant contains an Attribute with the same <code>name</code>, its <code>value</code> is overwritten,</li>
+     *   <li>otherwise the Attribute and its value are added to the ProductVariant.</li>
+     *  </ul>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductVariantTailoringBuilder addAttributes(
+            Function<com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder, com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> builder) {
+        return plusAttributes(
+            builder.apply(com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder.of()));
+    }
+
+    /**
+     *  <p>Attributes of the tailored Product Variant. If present, these Attributes are selectively merged into the <code>attributes</code> of the corresponding ProductVariant:</p>
+     *  <ul>
+     *   <li>If the ProductVariant contains an Attribute with the same <code>name</code>, its <code>value</code> is overwritten,</li>
+     *   <li>otherwise the Attribute and its value are added to the ProductVariant.</li>
+     *  </ul>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductVariantTailoringBuilder setAttributes(
+            Function<com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder, com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> builder) {
+        return attributes(
+            builder.apply(com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder.of()));
+    }
+
+    /**
      *  <p>The <code>id</code> of the tailored ProductVariant.</p>
      * @return id
      */
@@ -249,12 +375,26 @@ public class ProductVariantTailoringBuilder implements Builder<ProductVariantTai
     }
 
     /**
+     *  <p>Attributes of the tailored Product Variant. If present, these Attributes are selectively merged into the <code>attributes</code> of the corresponding ProductVariant:</p>
+     *  <ul>
+     *   <li>If the ProductVariant contains an Attribute with the same <code>name</code>, its <code>value</code> is overwritten,</li>
+     *   <li>otherwise the Attribute and its value are added to the ProductVariant.</li>
+     *  </ul>
+     * @return attributes
+     */
+
+    @Nullable
+    public java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> getAttributes() {
+        return this.attributes;
+    }
+
+    /**
      * builds ProductVariantTailoring with checking for non-null required values
      * @return ProductVariantTailoring
      */
     public ProductVariantTailoring build() {
         Objects.requireNonNull(id, ProductVariantTailoring.class + ": id is missing");
-        return new ProductVariantTailoringImpl(id, images, assets);
+        return new ProductVariantTailoringImpl(id, images, assets, attributes);
     }
 
     /**
@@ -262,7 +402,7 @@ public class ProductVariantTailoringBuilder implements Builder<ProductVariantTai
      * @return ProductVariantTailoring
      */
     public ProductVariantTailoring buildUnchecked() {
-        return new ProductVariantTailoringImpl(id, images, assets);
+        return new ProductVariantTailoringImpl(id, images, assets, attributes);
     }
 
     /**
@@ -283,6 +423,7 @@ public class ProductVariantTailoringBuilder implements Builder<ProductVariantTai
         builder.id = template.getId();
         builder.images = template.getImages();
         builder.assets = template.getAssets();
+        builder.attributes = template.getAttributes();
         return builder;
     }
 

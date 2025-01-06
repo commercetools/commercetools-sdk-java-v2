@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * GraphQLResponse
+ *  <p><code>error</code> is present in the response only if the GraphQL query was unsuccessful.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GraphQLResponseImpl implements GraphQLResponse, ModelBase {
@@ -43,7 +43,7 @@ public class GraphQLResponseImpl implements GraphQLResponse, ModelBase {
     }
 
     /**
-     *
+     *  <p>JSON object that contains the results of a GraphQL query.</p>
      */
 
     public java.lang.Object getData() {
@@ -51,7 +51,7 @@ public class GraphQLResponseImpl implements GraphQLResponse, ModelBase {
     }
 
     /**
-     *
+     *  <p>Errors that the GraphQL query returns.</p>
      */
 
     public java.util.List<com.commercetools.api.models.graph_ql.GraphQLError> getErrors() {

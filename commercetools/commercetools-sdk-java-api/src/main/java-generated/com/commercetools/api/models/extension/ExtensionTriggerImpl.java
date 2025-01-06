@@ -48,7 +48,7 @@ public class ExtensionTriggerImpl implements ExtensionTrigger, ModelBase {
     }
 
     /**
-     *  <p><code>cart</code>, <code>order</code>, <code>payment</code>, <code>customer</code>, <code>quote-request</code>, <code>staged-quote</code>, <code>quote</code>, and <code>business-unit</code> are supported.</p>
+     *  <p>The resource that triggers the Extension.</p>
      */
 
     public com.commercetools.api.models.extension.ExtensionResourceTypeId getResourceTypeId() {

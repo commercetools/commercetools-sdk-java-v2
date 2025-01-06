@@ -44,7 +44,8 @@ public class OrderTest {
                         Order.builder()
                                 .customLineItems(Collections
                                         .singletonList(new com.commercetools.api.models.cart.CustomLineItemImpl())) },
-                new Object[] { Order.builder().totalPrice(new com.commercetools.api.models.common.TypedMoneyImpl()) },
+                new Object[] {
+                        Order.builder().totalPrice(new com.commercetools.api.models.common.CentPrecisionMoneyImpl()) },
                 new Object[] { Order.builder().taxedPrice(new com.commercetools.api.models.cart.TaxedPriceImpl()) },
                 new Object[] {
                         Order.builder().taxedShippingPrice(new com.commercetools.api.models.cart.TaxedPriceImpl()) },
@@ -206,9 +207,9 @@ public class OrderTest {
     @Test
     public void totalPrice() {
         Order value = Order.of();
-        value.setTotalPrice(new com.commercetools.api.models.common.TypedMoneyImpl());
+        value.setTotalPrice(new com.commercetools.api.models.common.CentPrecisionMoneyImpl());
         Assertions.assertThat(value.getTotalPrice())
-                .isEqualTo(new com.commercetools.api.models.common.TypedMoneyImpl());
+                .isEqualTo(new com.commercetools.api.models.common.CentPrecisionMoneyImpl());
     }
 
     @Test

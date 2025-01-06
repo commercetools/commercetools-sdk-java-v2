@@ -61,7 +61,7 @@ public interface ProductTailoringChangeAssetOrderAction extends ProductTailoring
     public Boolean getStaged();
 
     /**
-     *  <p>All existing Asset <code>id</code>s of the ProductTailoringVariant in the desired new order.</p>
+     *  <p>All existing Asset <code>id</code>s of the ProductVariantTailoring in the desired new order.</p>
      * @return assetOrder
      */
     @NotNull
@@ -90,7 +90,7 @@ public interface ProductTailoringChangeAssetOrderAction extends ProductTailoring
     public void setStaged(final Boolean staged);
 
     /**
-     *  <p>All existing Asset <code>id</code>s of the ProductTailoringVariant in the desired new order.</p>
+     *  <p>All existing Asset <code>id</code>s of the ProductVariantTailoring in the desired new order.</p>
      * @param assetOrder values to be set
      */
 
@@ -98,7 +98,7 @@ public interface ProductTailoringChangeAssetOrderAction extends ProductTailoring
     public void setAssetOrder(final String... assetOrder);
 
     /**
-     *  <p>All existing Asset <code>id</code>s of the ProductTailoringVariant in the desired new order.</p>
+     *  <p>All existing Asset <code>id</code>s of the ProductVariantTailoring in the desired new order.</p>
      * @param assetOrder values to be set
      */
 

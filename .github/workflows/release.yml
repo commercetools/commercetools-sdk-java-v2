@@ -19,7 +19,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4
 
-      - uses: gradle/wrapper-validation-action@216d1ad2b3710bf005dc39237337b9673fd8fcd5 # v3.3.2
+      - uses: gradle/wrapper-validation-action@f9c9c575b8b21b6485636a91ffecd10e558c62f6 # v3.5.0
 
       - name: Setup Java
         uses: actions/setup-java@99b8673ff64fbf99d8d325f52d9a5bdedb8483e9 # v4
@@ -36,8 +36,9 @@ jobs:
           SIGNING_KEY: ${{ secrets.SIGNING_KEY }}
           PASSPHRASE: ${{ secrets.PASSPHRASE }}
 
-      - run: ./gradlew -Pversion=${{ github.ref_name }} clean test javadoc publishToSonatype closeAndReleaseSonatypeStagingRepository
+      - run: ./gradlew -Pversion=$REF_NAME clean test javadoc publishToSonatype closeAndReleaseSonatypeStagingRepository
         env:
+          REF_NAME: ${{ github.ref_name }}
           CTP_OSS_USER: ${{ secrets.OSS_USER }}
           CTP_OSS_SECRET: ${{ secrets.OSS_SECRET }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -74,9 +75,11 @@ jobs:
             ref: main
             token: ${{ steps.generate_github_token.outputs.token }}
 
-      - uses: gradle/wrapper-validation-action@216d1ad2b3710bf005dc39237337b9673fd8fcd5 # v3.3.2
+      - uses: gradle/wrapper-validation-action@f9c9c575b8b21b6485636a91ffecd10e558c62f6 # v3.5.0
 
-      - run: ./gradlew -Pversion=${{ github.ref_name }} writeVersionToExamples writeVersionToReadme setVersion nextMinorVersion snapshotVersion
+      - run: ./gradlew -Pversion=$REF_NAME writeVersionToExamples writeVersionToReadme setVersion nextMinorVersion snapshotVersion
+        env:
+          REF_NAME: ${{ github.ref_name }}
 
       - name: "Switch SDK to after release branch"
         run: |
@@ -150,8 +153,11 @@ jobs:
       - name: Setup Graphviz
         uses: ts-graphviz/setup-graphviz@b1de5da23ed0a6d14e0aeee8ed52fdd87af2363c # v2.0.2
 
-      - run: ./gradlew -Pversion=${{ github.ref_name }} alljavadoc
+      - run: ./gradlew -Pversion=$REF_NAME alljavadoc
         working-directory: sdk
+        env:
+            REF_NAME: ${{ github.ref_name }}
+
 
       - run: rsync -r sdk/build/docs/javadoc/ doc/javadoc
 

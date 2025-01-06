@@ -55,6 +55,10 @@ public class ErrorObjectBuilder {
         return com.commercetools.importapi.models.errors.InvalidFieldErrorBuilder.of();
     }
 
+    public com.commercetools.importapi.models.errors.InvalidFieldsUpdateErrorBuilder invalidFieldUpdateBuilder() {
+        return com.commercetools.importapi.models.errors.InvalidFieldsUpdateErrorBuilder.of();
+    }
+
     public com.commercetools.importapi.models.errors.InvalidInputBuilder invalidInputBuilder() {
         return com.commercetools.importapi.models.errors.InvalidInputBuilder.of();
     }
@@ -79,8 +83,8 @@ public class ErrorObjectBuilder {
         return com.commercetools.importapi.models.errors.InvalidTokenErrorBuilder.of();
     }
 
-    public com.commercetools.importapi.models.errors.ReferencedResourceNotFoundBuilder referencedResourceNotFoundBuilder() {
-        return com.commercetools.importapi.models.errors.ReferencedResourceNotFoundBuilder.of();
+    public com.commercetools.importapi.models.errors.NewMasterVariantAdditionNotAllowedErrorBuilder newMasterVariantAdditionNotAllowedBuilder() {
+        return com.commercetools.importapi.models.errors.NewMasterVariantAdditionNotAllowedErrorBuilder.of();
     }
 
     public com.commercetools.importapi.models.errors.RequiredFieldErrorBuilder requiredFieldBuilder() {

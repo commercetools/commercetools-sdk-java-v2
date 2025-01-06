@@ -21,7 +21,9 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Upload a JPEG, PNG and GIF file to a ProductTailoringVariant. The maximum file size of the image is 10MB. <code>variant</code> or <code>sku</code> is required to update a specific ProductVariant. Produces the ProductTailoringImageAdded Message when the <code>Small</code> version of the image has been uploaded to the CDN.</p>
+ *  <p>Uploads a JPEG, PNG and GIF file to a ProductVariantTailoring. The maximum file size of the image is <strong>10MB</strong>. Either <code>variant</code> or <code>sku</code> is required to update a specific ProductVariant. If neither is provided, the image is uploaded to the Master Variant of the Product.</p>
+ *  <p>The response status code depends on the size of the original image. If the image is small, the API responds with <code>200 OK</code>, and if the image is larger, it responds with <code>202 Accepted</code>. The Product returned with a <code>202 Accepted</code> status code contains a <code>warnings</code> field with an ImageProcessingOngoing Warning.</p>
+ *  <p>Produces the ProductTailoringImageAdded Message.</p>
  *
  * <hr>
  * <div class=code-example>

@@ -30,40 +30,40 @@ public class DatadogUtils {
             final double durationInMillis, final ApiHttpResponse<byte[]> response) throws ApiException {
         final String name = PREFIX + "." + CLIENT_DURATION;
         final MetricIntakeType type = MetricIntakeType.UNSPECIFIED;
-        submitMetricWithHttpTags(name, durationInMillis, type, request, apiInstance, response);
+        submitMetricWithHttpTags(name, durationInMillis, type, "ms", request, apiInstance, response);
     }
 
     protected static void submitErrorRequestsMetric(final ApiHttpRequest request, final MetricsApi apiInstance,
             final ApiHttpResponse<byte[]> response) throws ApiException {
         final String name = PREFIX + "." + CLIENT_REQUEST_ERROR;
         final MetricIntakeType count = MetricIntakeType.COUNT;
-        submitMetricWithHttpTags(name, 1.0, count, request, apiInstance, response);
+        submitMetricWithHttpTags(name, 1.0, count, "count", request, apiInstance, response);
     }
 
     protected static void submitTotalRequestsMetric(final ApiHttpRequest request, final MetricsApi apiInstance,
             final ApiHttpResponse<byte[]> response) throws ApiException {
         final String name = PREFIX + "." + CLIENT_REQUEST_TOTAL;
         final MetricIntakeType count = MetricIntakeType.COUNT;
-        submitMetricWithHttpTags(name, 1.0, count, request, apiInstance, response);
+        submitMetricWithHttpTags(name, 1.0, count, "count", request, apiInstance, response);
     }
 
     private static void submitMetricWithHttpTags(final String name, final double value, final MetricIntakeType type,
-            final ApiHttpRequest request, final MetricsApi apiInstance, final ApiHttpResponse<byte[]> response)
-            throws ApiException {
+            final String unit, final ApiHttpRequest request, final MetricsApi apiInstance,
+            final ApiHttpResponse<byte[]> response) throws ApiException {
         final List<String> tags = Arrays.asList(format("%s:%s", HTTP_RESPONSE_STATUS_CODE, response.getStatusCode()),
             format("%s:%s", HTTP_REQUEST_METHOD, request.getMethod().name()),
             format("%s:%s", SERVER_ADDRESS, request.getUri().getHost()));
         if (request.getUri().getPort() > 0) {
             tags.add(format("%s:%s", SERVER_PORT, request.getUri().getPort()));
         }
-        submitMetric(apiInstance, name, value, type, tags);
+        submitMetric(apiInstance, name, value, type, unit, tags);
     }
 
     protected static void submitJsonSerializationMetric(final MetricsApi apiInstance, final double durationInMillis,
             final String responseBodyType) {
         try {
             submitMetric(apiInstance, PREFIX + "." + JSON_SERIALIZATION, durationInMillis, MetricIntakeType.UNSPECIFIED,
-                Arrays.asList(format("%s:%s", RESPONSE_BODY_TYPE, responseBodyType)));
+                "ms", Arrays.asList(format("%s:%s", RESPONSE_BODY_TYPE, responseBodyType)));
         }
         catch (ApiException exception) {
             logger.warn("Failed to submit commercetools json serialization metric", exception);
@@ -74,7 +74,7 @@ public class DatadogUtils {
             final String requestBodyType) {
         try {
             submitMetric(apiInstance, PREFIX + "." + JSON_DESERIALIZATION, durationInMillis,
-                MetricIntakeType.UNSPECIFIED, Arrays.asList(format("%s:%s", REQUEST_BODY_TYPE, requestBodyType)));
+                MetricIntakeType.UNSPECIFIED, "ms", Arrays.asList(format("%s:%s", REQUEST_BODY_TYPE, requestBodyType)));
         }
         catch (ApiException exception) {
             logger.warn("Failed to submit commercetools json deserialization metric", exception);
@@ -82,9 +82,10 @@ public class DatadogUtils {
     }
 
     private static void submitMetric(final MetricsApi apiInstance, final String name, final double value,
-            final MetricIntakeType type, final List<String> tags) throws ApiException {
+            final MetricIntakeType type, final String unit, final List<String> tags) throws ApiException {
         MetricPayload totalMetric = new MetricPayload().series(Collections.singletonList(new MetricSeries().metric(name)
                 .type(type)
+                .unit(unit)
                 .points(Collections.singletonList(
                     new MetricPoint().timestamp(OffsetDateTime.now().toInstant().getEpochSecond()).value(value)))
                 .tags(tags)));

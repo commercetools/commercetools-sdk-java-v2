@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>The data representation for a Standalone Price to be imported that is persisted as a Standalone Price in the Project.</p>
+ *  <p>The data representation for a Standalone Price to be imported that is persisted as a Standalone Price) in the Project.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StandalonePriceImportImpl implements StandalonePriceImport, ModelBase {
@@ -78,7 +78,7 @@ public class StandalonePriceImportImpl implements StandalonePriceImport, ModelBa
     }
 
     /**
-     *  <p>User-defined unique identifier for the Standalone Price. If a StandalonePrice with this <code>key</code> exists, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier for the Standalone Price. If a StandalonePrice) with this <code>key</code> exists, it will be updated with the imported data.</p>
      */
 
     public String getKey() {
@@ -102,7 +102,8 @@ public class StandalonePriceImportImpl implements StandalonePriceImport, ModelBa
     }
 
     /**
-     *  <p>Sets the country for which this Price is valid.</p>
+     *  <p>Sets the country for this Price, if the Price does not yet have a country.</p>
+     *  <p>The country cannot be updated. Attempting to update the an existing country will result in an InvalidFieldsUpdate error.</p>
      */
 
     public String getCountry() {
@@ -110,7 +111,8 @@ public class StandalonePriceImportImpl implements StandalonePriceImport, ModelBa
     }
 
     /**
-     *  <p>Sets the CustomerGroup for which this Price is valid.</p>
+     *  <p>Sets the CustomerGroup for this Price, if the Price does not yet have a CustomerGroup.</p>
+     *  <p>The CustomerGroup cannot be updated. Attempting to update an existing CustomerGroup will result in an InvalidFieldsUpdate error.</p>
      */
 
     public com.commercetools.importapi.models.common.CustomerGroupKeyReference getCustomerGroup() {
@@ -118,7 +120,8 @@ public class StandalonePriceImportImpl implements StandalonePriceImport, ModelBa
     }
 
     /**
-     *  <p>Sets the product distribution Channel for which this Price is valid</p>
+     *  <p>Sets the product distribution Channel for this Price, if the Price does not yet have a Channel.</p>
+     *  <p>The Channel cannot be updated. Attempting to update an existing Channel will result in an InvalidFieldsUpdate error.</p>
      */
 
     public com.commercetools.importapi.models.common.ChannelKeyReference getChannel() {

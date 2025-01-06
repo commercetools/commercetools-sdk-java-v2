@@ -58,4 +58,39 @@ public class TimeoutTest {
                     .getBody();
         });
     }
+
+    @Test
+    public void timeoutWithRetryTimeout() {
+        String projectKey = CommercetoolsTestUtils.getProjectKey();
+
+        ProjectApiRoot b = ApiRootBuilder.of()
+                .defaultClient(ClientCredentials.of()
+                        .withClientId(CommercetoolsTestUtils.getClientId())
+                        .withClientSecret(CommercetoolsTestUtils.getClientSecret())
+                        .build(),
+                    ServiceRegion.GCP_EUROPE_WEST1)
+                .withTelemetryMiddleware((request, next) -> next.apply(request).thenApply((response) -> {
+                    try {
+                        Thread.sleep(15000); // ensure timeout
+                    }
+                    catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
+                    return response;
+                }))
+                .withPolicies(policyBuilder -> policyBuilder.withTimeout(Duration.ofSeconds(7))
+                        .withRetry(builder -> builder.maxRetries(3)
+                                .statusCodes(singletonList(HttpStatusCode.NOT_FOUND_404))
+                                .failures(singletonList(TimeoutExceededException.class)))
+                        .withTimeout(Duration.ofSeconds(3)))
+                .build(projectKey);
+
+        Assertions.assertThatExceptionOfType(TimeoutExceededException.class).isThrownBy(() -> {
+            Category category = b.categories()
+                    .withId("fdbaf4ea-fbc9-4fea-bac4-1d7e6c1995b3")
+                    .get()
+                    .executeBlocking()
+                    .getBody();
+        });
+    }
 }

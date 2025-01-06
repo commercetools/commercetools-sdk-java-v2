@@ -68,7 +68,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     *  <p>The key of the importContainer.</p>
+     *  <p>The key of the ImportContainer.</p>
      * @param importContainerKey value to be set
      * @return Builder
      */
@@ -325,7 +325,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     *  <p>The key of the importContainer.</p>
+     *  <p>The key of the ImportContainer.</p>
      * @return importContainerKey
      */
 

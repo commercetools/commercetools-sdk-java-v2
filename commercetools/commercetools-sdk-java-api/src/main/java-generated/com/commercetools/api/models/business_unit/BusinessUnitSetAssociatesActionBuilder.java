@@ -25,7 +25,7 @@ public class BusinessUnitSetAssociatesActionBuilder implements Builder<BusinessU
     private java.util.List<com.commercetools.api.models.business_unit.AssociateDraft> associates;
 
     /**
-     *  <p>The new list of Associates. If not provided, any existing list is removed.</p>
+     *  <p>The new list of Associates. If empty, existing values will be removed.</p>
      * @param associates value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class BusinessUnitSetAssociatesActionBuilder implements Builder<BusinessU
     }
 
     /**
-     *  <p>The new list of Associates. If not provided, any existing list is removed.</p>
+     *  <p>The new list of Associates. If empty, existing values will be removed.</p>
      * @param associates value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class BusinessUnitSetAssociatesActionBuilder implements Builder<BusinessU
     }
 
     /**
-     *  <p>The new list of Associates. If not provided, any existing list is removed.</p>
+     *  <p>The new list of Associates. If empty, existing values will be removed.</p>
      * @param associates value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class BusinessUnitSetAssociatesActionBuilder implements Builder<BusinessU
     }
 
     /**
-     *  <p>The new list of Associates. If not provided, any existing list is removed.</p>
+     *  <p>The new list of Associates. If empty, existing values will be removed.</p>
      * @param builder function to build the associates value
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class BusinessUnitSetAssociatesActionBuilder implements Builder<BusinessU
     }
 
     /**
-     *  <p>The new list of Associates. If not provided, any existing list is removed.</p>
+     *  <p>The new list of Associates. If empty, existing values will be removed.</p>
      * @param builder function to build the associates value
      * @return Builder
      */
@@ -94,7 +94,7 @@ public class BusinessUnitSetAssociatesActionBuilder implements Builder<BusinessU
     }
 
     /**
-     *  <p>The new list of Associates. If not provided, any existing list is removed.</p>
+     *  <p>The new list of Associates. If empty, existing values will be removed.</p>
      * @param builder function to build the associates value
      * @return Builder
      */
@@ -105,7 +105,7 @@ public class BusinessUnitSetAssociatesActionBuilder implements Builder<BusinessU
     }
 
     /**
-     *  <p>The new list of Associates. If not provided, any existing list is removed.</p>
+     *  <p>The new list of Associates. If empty, existing values will be removed.</p>
      * @param builder function to build the associates value
      * @return Builder
      */
@@ -116,7 +116,7 @@ public class BusinessUnitSetAssociatesActionBuilder implements Builder<BusinessU
     }
 
     /**
-     *  <p>The new list of Associates. If not provided, any existing list is removed.</p>
+     *  <p>The new list of Associates. If empty, existing values will be removed.</p>
      * @return associates
      */
 

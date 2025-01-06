@@ -55,6 +55,22 @@ public interface SearchIndexingConfiguration {
     public SearchIndexingConfigurationValues getOrders();
 
     /**
+     *  <p>Configuration for the Customer Search feature.</p>
+     * @return customers
+     */
+    @Valid
+    @JsonProperty("customers")
+    public SearchIndexingConfigurationValues getCustomers();
+
+    /**
+     *  <p>Configuration for the Business Unit Search feature.</p>
+     * @return businessUnits
+     */
+    @Valid
+    @JsonProperty("businessUnits")
+    public SearchIndexingConfigurationValues getBusinessUnits();
+
+    /**
      *  <p>Configuration for the Product Projection Search and Product Suggestions endpoints.</p>
      * @param products value to be set
      */
@@ -76,6 +92,20 @@ public interface SearchIndexingConfiguration {
     public void setOrders(final SearchIndexingConfigurationValues orders);
 
     /**
+     *  <p>Configuration for the Customer Search feature.</p>
+     * @param customers value to be set
+     */
+
+    public void setCustomers(final SearchIndexingConfigurationValues customers);
+
+    /**
+     *  <p>Configuration for the Business Unit Search feature.</p>
+     * @param businessUnits value to be set
+     */
+
+    public void setBusinessUnits(final SearchIndexingConfigurationValues businessUnits);
+
+    /**
      * factory method
      * @return instance of SearchIndexingConfiguration
      */
@@ -93,6 +123,8 @@ public interface SearchIndexingConfiguration {
         instance.setProducts(template.getProducts());
         instance.setProductsSearch(template.getProductsSearch());
         instance.setOrders(template.getOrders());
+        instance.setCustomers(template.getCustomers());
+        instance.setBusinessUnits(template.getBusinessUnits());
         return instance;
     }
 
@@ -113,6 +145,10 @@ public interface SearchIndexingConfiguration {
                 .deepCopy(template.getProductsSearch()));
         instance.setOrders(
             com.commercetools.api.models.project.SearchIndexingConfigurationValues.deepCopy(template.getOrders()));
+        instance.setCustomers(
+            com.commercetools.api.models.project.SearchIndexingConfigurationValues.deepCopy(template.getCustomers()));
+        instance.setBusinessUnits(com.commercetools.api.models.project.SearchIndexingConfigurationValues
+                .deepCopy(template.getBusinessUnits()));
         return instance;
     }
 

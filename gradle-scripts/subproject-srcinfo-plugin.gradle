@@ -1,0 +1,9 @@
+apply plugin: 'srcinfo'
+
+srcInfo {
+    includePackages = [
+            "example",
+            "commercetools"
+    ]
+    docsUrnOnly = true
+}

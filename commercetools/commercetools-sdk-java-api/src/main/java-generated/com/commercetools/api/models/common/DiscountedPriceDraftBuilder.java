@@ -29,6 +29,7 @@ public class DiscountedPriceDraftBuilder implements Builder<DiscountedPriceDraft
 
     /**
      *  <p>Sets the money value for the discounted price.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @param builder function to build the value value
      * @return Builder
      */
@@ -41,6 +42,7 @@ public class DiscountedPriceDraftBuilder implements Builder<DiscountedPriceDraft
 
     /**
      *  <p>Sets the money value for the discounted price.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @param builder function to build the value value
      * @return Builder
      */
@@ -53,6 +55,7 @@ public class DiscountedPriceDraftBuilder implements Builder<DiscountedPriceDraft
 
     /**
      *  <p>Sets the money value for the discounted price.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -103,6 +106,7 @@ public class DiscountedPriceDraftBuilder implements Builder<DiscountedPriceDraft
 
     /**
      *  <p>Sets the money value for the discounted price.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @return value
      */
 

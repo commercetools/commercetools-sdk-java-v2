@@ -39,7 +39,7 @@ public interface BusinessUnitSetAssociatesAction extends BusinessUnitUpdateActio
     String SET_ASSOCIATES = "setAssociates";
 
     /**
-     *  <p>The new list of Associates. If not provided, any existing list is removed.</p>
+     *  <p>The new list of Associates. If empty, existing values will be removed.</p>
      * @return associates
      */
     @NotNull
@@ -48,7 +48,7 @@ public interface BusinessUnitSetAssociatesAction extends BusinessUnitUpdateActio
     public List<AssociateDraft> getAssociates();
 
     /**
-     *  <p>The new list of Associates. If not provided, any existing list is removed.</p>
+     *  <p>The new list of Associates. If empty, existing values will be removed.</p>
      * @param associates values to be set
      */
 
@@ -56,7 +56,7 @@ public interface BusinessUnitSetAssociatesAction extends BusinessUnitUpdateActio
     public void setAssociates(final AssociateDraft... associates);
 
     /**
-     *  <p>The new list of Associates. If not provided, any existing list is removed.</p>
+     *  <p>The new list of Associates. If empty, existing values will be removed.</p>
      * @param associates values to be set
      */
 

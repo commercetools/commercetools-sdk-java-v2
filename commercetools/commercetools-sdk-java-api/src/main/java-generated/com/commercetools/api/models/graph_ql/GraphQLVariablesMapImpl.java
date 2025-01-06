@@ -4,6 +4,7 @@ package com.commercetools.api.models.graph_ql;
 import java.time.*;
 import java.util.*;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -17,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * GraphQLVariablesMap
+ *  <p>The variables that the GraphQL query uses.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class GraphQLVariablesMapImpl implements GraphQLVariablesMap, ModelBase {
@@ -28,7 +29,7 @@ public class GraphQLVariablesMapImpl implements GraphQLVariablesMap, ModelBase {
      * create instance with all properties
      */
     @JsonCreator
-    GraphQLVariablesMapImpl(@JsonProperty("values") final Map<String, java.lang.Object> values) {
+    GraphQLVariablesMapImpl(@JsonAnySetter @JsonProperty("values") final Map<String, java.lang.Object> values) {
         this.values = values;
     }
 
@@ -39,7 +40,7 @@ public class GraphQLVariablesMapImpl implements GraphQLVariablesMap, ModelBase {
     }
 
     /**
-     *
+     *  <p>JSON object that contains key-value pairs in which the keys are variable names and the values are variable values.</p>
      */
 
     public Map<String, java.lang.Object> values() {

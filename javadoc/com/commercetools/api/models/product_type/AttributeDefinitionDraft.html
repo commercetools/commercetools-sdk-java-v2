@@ -144,7 +144,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getIsSearchable()" class="member-name-link">getIsSearchable</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Set to <code>true</code> if the Attribute's values should be available in the Product Projections Search API and can be used in full-text search queries, filters, and facets.</div>
+<div class="block">Set to <code>true</code> if the Attribute's values should be available in the Product Projection Search or the Product Search API and can be used in full-text search queries, filters, and facets.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getLabel()" class="member-name-link">getLabel</a>()</code></div>
@@ -154,7 +154,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">User-defined name of the Attribute that is unique with the Project.</div>
+<div class="block">User-defined name of the Attribute that is unique to the Project.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="AttributeType.html" title="interface in com.commercetools.api.models.product_type">AttributeType</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getType()" class="member-name-link">getType</a>()</code></div>
@@ -194,7 +194,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setIsSearchable(java.lang.Boolean)" class="member-name-link">setIsSearchable</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isSearchable)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Set to <code>true</code> if the Attribute's values should be available in the Product Projections Search API and can be used in full-text search queries, filters, and facets.</div>
+<div class="block">Set to <code>true</code> if the Attribute's values should be available in the Product Projection Search or the Product Search API and can be used in full-text search queries, filters, and facets.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setLabel(com.commercetools.api.models.common.LocalizedString)" class="member-name-link">setLabel</a><wbr>(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;label)</code></div>
@@ -204,7 +204,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setName(java.lang.String)" class="member-name-link">setName</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">User-defined name of the Attribute that is unique with the Project.</div>
+<div class="block">User-defined name of the Attribute that is unique to the Project.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setType(com.commercetools.api.models.product_type.AttributeType)" class="member-name-link">setType</a><wbr>(<a href="AttributeType.html" title="interface in com.commercetools.api.models.product_type">AttributeType</a>&nbsp;type)</code></div>
@@ -254,7 +254,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <h3>getName</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getName</span>()</div>
-<div class="block"><p>User-defined name of the Attribute that is unique with the Project.</p>
+<div class="block"><p>User-defined name of the Attribute that is unique to the Project.</p>
   <p>When using the same <code>name</code> for an Attribute in multiple ProductTypes, all fields of the AttributeDefinition of this Attribute must be the same across the ProductTypes, else an AttributeDefinitionAlreadyExists error is returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> Type and sets thereof.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -325,7 +325,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <section class="detail" id="getIsSearchable()">
 <h3>getIsSearchable</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name">getIsSearchable</span>()</div>
-<div class="block"><p>Set to <code>true</code> if the Attribute's values should be available in the Product Projections Search API and can be used in full-text search queries, filters, and facets. Which exact features are available with this flag depends on the specific AttributeType. The maximum size of a searchable field is <strong>restricted</strong> by the Field content size limit. This constraint is enforced at both Product creation and Product update. If the length of the input exceeds the maximum size, an InvalidField error is returned.</p></div>
+<div class="block"><p>Set to <code>true</code> if the Attribute's values should be available in the Product Projection Search or the Product Search API and can be used in full-text search queries, filters, and facets. Which exact features are available with this flag depends on the specific AttributeType. The maximum size of a searchable field is <strong>restricted</strong> by the Field content size limit. This constraint is enforced at both Product creation and Product update. If the length of the input exceeds the maximum size, an InvalidField error is returned.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>isSearchable</dd>
@@ -348,7 +348,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <section class="detail" id="setName(java.lang.String)">
 <h3>setName</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setName</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
-<div class="block"><p>User-defined name of the Attribute that is unique with the Project.</p>
+<div class="block"><p>User-defined name of the Attribute that is unique to the Project.</p>
   <p>When using the same <code>name</code> for an Attribute in multiple ProductTypes, all fields of the AttributeDefinition of this Attribute must be the same across the ProductTypes, else an AttributeDefinitionAlreadyExists error is returned. An exception to this are the values of an <code>enum</code> or <code>lenum</code> Type and sets thereof.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -415,7 +415,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <section class="detail" id="setIsSearchable(java.lang.Boolean)">
 <h3>setIsSearchable</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setIsSearchable</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isSearchable)</span></div>
-<div class="block"><p>Set to <code>true</code> if the Attribute's values should be available in the Product Projections Search API and can be used in full-text search queries, filters, and facets. Which exact features are available with this flag depends on the specific AttributeType. The maximum size of a searchable field is <strong>restricted</strong> by the Field content size limit. This constraint is enforced at both Product creation and Product update. If the length of the input exceeds the maximum size, an InvalidField error is returned.</p></div>
+<div class="block"><p>Set to <code>true</code> if the Attribute's values should be available in the Product Projection Search or the Product Search API and can be used in full-text search queries, filters, and facets. Which exact features are available with this flag depends on the specific AttributeType. The maximum size of a searchable field is <strong>restricted</strong> by the Field content size limit. This constraint is enforced at both Product creation and Product update. If the length of the input exceeds the maximum size, an InvalidField error is returned.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>isSearchable</code> - value to be set</dd>

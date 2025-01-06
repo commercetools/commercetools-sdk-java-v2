@@ -10,6 +10,7 @@ com.commercetools.api.models.approval_rule
 com.commercetools.api.models.associate_role
 com.commercetools.api.models.attribute_group
 com.commercetools.api.models.business_unit
+com.commercetools.api.models.business_unit_search
 com.commercetools.api.models.cart
 com.commercetools.api.models.cart_discount
 com.commercetools.api.models.category
@@ -108,6 +109,8 @@ com.commercetools.history.models.change
 com.commercetools.history.models.change_history
 com.commercetools.history.models.change_value
 com.commercetools.history.models.common
+com.commercetools.history.models.error
+com.commercetools.history.models.graph_ql
 com.commercetools.history.models.label
 com.commercetools.http.apachehttp
 com.commercetools.http.asynchttp

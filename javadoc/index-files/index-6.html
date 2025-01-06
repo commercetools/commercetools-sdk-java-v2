@@ -209,6 +209,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">possible values of FacetTypes</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/business_unit_search/BusinessUnitIndexingProgressBuilder.html#failed(java.lang.Integer)" class="member-name-link">failed(Integer)</a> - Method in class com.commercetools.api.models.business_unit_search.<a href="../com/commercetools/api/models/business_unit_search/BusinessUnitIndexingProgressBuilder.html" title="class in com.commercetools.api.models.business_unit_search">BusinessUnitIndexingProgressBuilder</a></dt>
+<dd>
+<div class="block">The number of Business Units that failed to be indexed.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/customer_search/CustomerIndexingProgressBuilder.html#failed(java.lang.Integer)" class="member-name-link">failed(Integer)</a> - Method in class com.commercetools.api.models.customer_search.<a href="../com/commercetools/api/models/customer_search/CustomerIndexingProgressBuilder.html" title="class in com.commercetools.api.models.customer_search">CustomerIndexingProgressBuilder</a></dt>
 <dd>
 <div class="block">The number of Customers that failed to be indexed.</div>
@@ -218,6 +222,10 @@ loadScripts(document, 'script');</script>
 <div class="block">Creates a <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link"><code>CompletableFuture</code></a> which is completed exceptionally with the given Exception.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/order/PaymentState.PaymentStateEnum.html#FAILED" class="member-name-link">FAILED</a> - Enum constant in enum com.commercetools.api.models.order.<a href="../com/commercetools/api/models/order/PaymentState.PaymentStateEnum.html" title="enum in com.commercetools.api.models.order">PaymentState.PaymentStateEnum</a></dt>
+<dd>
+<div class="block">Failed</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/project/BusinessUnitIndexingStatus.BusinessUnitIndexingStatusEnum.html#FAILED" class="member-name-link">FAILED</a> - Enum constant in enum com.commercetools.api.models.project.<a href="../com/commercetools/api/models/project/BusinessUnitIndexingStatus.BusinessUnitIndexingStatusEnum.html" title="enum in com.commercetools.api.models.project">BusinessUnitIndexingStatus.BusinessUnitIndexingStatusEnum</a></dt>
 <dd>
 <div class="block">Failed</div>
 </dd>
@@ -240,6 +248,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/models/order/PaymentState.html#FAILED" class="member-name-link">FAILED</a> - Static variable in interface com.commercetools.api.models.order.<a href="../com/commercetools/api/models/order/PaymentState.html" title="interface in com.commercetools.api.models.order">PaymentState</a></dt>
 <dd>
 <div class="block">Indicates that payment for the Order has failed.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/project/BusinessUnitIndexingStatus.html#FAILED" class="member-name-link">FAILED</a> - Static variable in interface com.commercetools.api.models.project.<a href="../com/commercetools/api/models/project/BusinessUnitIndexingStatus.html" title="interface in com.commercetools.api.models.project">BusinessUnitIndexingStatus</a></dt>
+<dd>
+<div class="block">Indexing failed due to an internal error.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/project/CustomerIndexingStatus.html#FAILED" class="member-name-link">FAILED</a> - Static variable in interface com.commercetools.api.models.project.<a href="../com/commercetools/api/models/project/CustomerIndexingStatus.html" title="interface in com.commercetools.api.models.project">CustomerIndexingStatus</a></dt>
 <dd>
@@ -437,6 +449,10 @@ loadScripts(document, 'script');</script>
 <div class="block">set the value to the field</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/search/SearchDateTimeRangeValueBuilder.html#field(java.lang.String)" class="member-name-link">field(String)</a> - Method in class com.commercetools.api.models.search.<a href="../com/commercetools/api/models/search/SearchDateTimeRangeValueBuilder.html" title="class in com.commercetools.api.models.search">SearchDateTimeRangeValueBuilder</a></dt>
+<dd>
+<div class="block">set the value to the field</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/search/SearchExactValueBuilder.html#field(java.lang.String)" class="member-name-link">field(String)</a> - Method in class com.commercetools.api.models.search.<a href="../com/commercetools/api/models/search/SearchExactValueBuilder.html" title="class in com.commercetools.api.models.search">SearchExactValueBuilder</a></dt>
 <dd>
 <div class="block">set the value to the field</div>
 </dd>
@@ -1320,6 +1336,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Possible values for the <code>fieldType</code> property on query expressions indicating the data type of the <code>field</code>.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/search/SearchExactValueBuilder.html#fieldType(com.commercetools.api.models.search.SearchFieldType)" class="member-name-link">fieldType(SearchFieldType)</a> - Method in class com.commercetools.api.models.search.<a href="../com/commercetools/api/models/search/SearchExactValueBuilder.html" title="class in com.commercetools.api.models.search">SearchExactValueBuilder</a></dt>
+<dd>
+<div class="block">Possible values for the <code>fieldType</code> property on query expressions indicating the data type of the <code>field</code>.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/search/SearchExistsValueBuilder.html#fieldType(com.commercetools.api.models.search.SearchFieldType)" class="member-name-link">fieldType(SearchFieldType)</a> - Method in class com.commercetools.api.models.search.<a href="../com/commercetools/api/models/search/SearchExistsValueBuilder.html" title="class in com.commercetools.api.models.search">SearchExistsValueBuilder</a></dt>
 <dd>
 <div class="block">Possible values for the <code>fieldType</code> property on query expressions indicating the data type of the <code>field</code>.</div>
@@ -1859,6 +1879,16 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/models/project/BusinessUnitConfigurationStatus.html#findEnum(java.lang.String)" class="member-name-link">findEnum(String)</a> - Static method in interface com.commercetools.api.models.project.<a href="../com/commercetools/api/models/project/BusinessUnitConfigurationStatus.html" title="interface in com.commercetools.api.models.project">BusinessUnitConfigurationStatus</a></dt>
 <dd>
 <div class="block">factory method for a enum value of BusinessUnitConfigurationStatus
+ if no enum has been found an anonymous instance will be created</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/project/BusinessUnitIndexingStatus.html#findEnum(java.lang.String)" class="member-name-link">findEnum(String)</a> - Static method in interface com.commercetools.api.models.project.<a href="../com/commercetools/api/models/project/BusinessUnitIndexingStatus.html" title="interface in com.commercetools.api.models.project">BusinessUnitIndexingStatus</a></dt>
+<dd>
+<div class="block">factory method for a enum value of BusinessUnitIndexingStatus
+ if no enum has been found an anonymous instance will be created</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/project/BusinessUnitSearchStatus.html#findEnum(java.lang.String)" class="member-name-link">findEnum(String)</a> - Static method in interface com.commercetools.api.models.project.<a href="../com/commercetools/api/models/project/BusinessUnitSearchStatus.html" title="interface in com.commercetools.api.models.project">BusinessUnitSearchStatus</a></dt>
+<dd>
+<div class="block">factory method for a enum value of BusinessUnitSearchStatus
  if no enum has been found an anonymous instance will be created</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/project/CustomerIndexingStatus.html#findEnum(java.lang.String)" class="member-name-link">findEnum(String)</a> - Static method in interface com.commercetools.api.models.project.<a href="../com/commercetools/api/models/project/CustomerIndexingStatus.html" title="interface in com.commercetools.api.models.project">CustomerIndexingStatus</a></dt>
@@ -2509,6 +2539,14 @@ loadScripts(document, 'script');</script>
 <div class="block">method to find enum using the JSON value</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/project/BusinessUnitConfigurationStatus.html#findEnumViaJsonName(java.lang.String)" class="member-name-link">findEnumViaJsonName(String)</a> - Static method in interface com.commercetools.api.models.project.<a href="../com/commercetools/api/models/project/BusinessUnitConfigurationStatus.html" title="interface in com.commercetools.api.models.project">BusinessUnitConfigurationStatus</a></dt>
+<dd>
+<div class="block">method to find enum using the JSON value</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/project/BusinessUnitIndexingStatus.html#findEnumViaJsonName(java.lang.String)" class="member-name-link">findEnumViaJsonName(String)</a> - Static method in interface com.commercetools.api.models.project.<a href="../com/commercetools/api/models/project/BusinessUnitIndexingStatus.html" title="interface in com.commercetools.api.models.project">BusinessUnitIndexingStatus</a></dt>
+<dd>
+<div class="block">method to find enum using the JSON value</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/project/BusinessUnitSearchStatus.html#findEnumViaJsonName(java.lang.String)" class="member-name-link">findEnumViaJsonName(String)</a> - Static method in interface com.commercetools.api.models.project.<a href="../com/commercetools/api/models/project/BusinessUnitSearchStatus.html" title="interface in com.commercetools.api.models.project">BusinessUnitSearchStatus</a></dt>
 <dd>
 <div class="block">method to find enum using the JSON value</div>
 </dd>

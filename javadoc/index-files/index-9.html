@@ -144,6 +144,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Platform-generated unique identifier of the referenced AttributeGroup.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/business_unit_search/BusinessUnitSearchResultBuilder.html#id(java.lang.String)" class="member-name-link">id(String)</a> - Method in class com.commercetools.api.models.business_unit_search.<a href="../com/commercetools/api/models/business_unit_search/BusinessUnitSearchResultBuilder.html" title="class in com.commercetools.api.models.business_unit_search">BusinessUnitSearchResultBuilder</a></dt>
+<dd>
+<div class="block"><code>id</code> of the BusinessUnit matching the search query.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/business_unit/BusinessUnitReferenceBuilder.html#id(java.lang.String)" class="member-name-link">id(String)</a> - Method in class com.commercetools.api.models.business_unit.<a href="../com/commercetools/api/models/business_unit/BusinessUnitReferenceBuilder.html" title="class in com.commercetools.api.models.business_unit">BusinessUnitReferenceBuilder</a></dt>
 <dd>
 <div class="block">Unique identifier of the referenced BusinessUnit.</div>
@@ -2073,7 +2077,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/history/models/change_history/Source.html#IMP_EX" class="member-name-link">IMP_EX</a> - Static variable in interface com.commercetools.history.models.change_history.<a href="../com/commercetools/history/models/change_history/Source.html" title="interface in com.commercetools.history.models.change_history">Source</a></dt>
 <dd>
-<div class="block">The change was made through ImpEx.</div>
+<div class="block">The change was made through the now-decommissioned ImpEx tool.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/common/AttributionSource.AttributionSourceEnum.html#IMPORT" class="member-name-link">IMPORT</a> - Enum constant in enum com.commercetools.api.models.common.<a href="../com/commercetools/api/models/common/AttributionSource.AttributionSourceEnum.html" title="enum in com.commercetools.api.models.common">AttributionSource.AttributionSourceEnum</a></dt>
 <dd>
@@ -2548,9 +2552,17 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/history/models/common/ProductVariantSelectionTypeEnum.html#INCLUSION" class="member-name-link">INCLUSION</a> - Static variable in interface com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/ProductVariantSelectionTypeEnum.html" title="interface in com.commercetools.history.models.common">ProductVariantSelectionTypeEnum</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/business_unit_search/BusinessUnitIndexingProgressBuilder.html#indexed(java.lang.Integer)" class="member-name-link">indexed(Integer)</a> - Method in class com.commercetools.api.models.business_unit_search.<a href="../com/commercetools/api/models/business_unit_search/BusinessUnitIndexingProgressBuilder.html" title="class in com.commercetools.api.models.business_unit_search">BusinessUnitIndexingProgressBuilder</a></dt>
+<dd>
+<div class="block">The number of Business Units successfully indexed.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/customer_search/CustomerIndexingProgressBuilder.html#indexed(java.lang.Integer)" class="member-name-link">indexed(Integer)</a> - Method in class com.commercetools.api.models.customer_search.<a href="../com/commercetools/api/models/customer_search/CustomerIndexingProgressBuilder.html" title="class in com.commercetools.api.models.customer_search">CustomerIndexingProgressBuilder</a></dt>
 <dd>
 <div class="block">The number of Customers successfully indexed.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/project/BusinessUnitIndexingStatus.BusinessUnitIndexingStatusEnum.html#INDEXING" class="member-name-link">INDEXING</a> - Enum constant in enum com.commercetools.api.models.project.<a href="../com/commercetools/api/models/project/BusinessUnitIndexingStatus.BusinessUnitIndexingStatusEnum.html" title="enum in com.commercetools.api.models.project">BusinessUnitIndexingStatus.BusinessUnitIndexingStatusEnum</a></dt>
+<dd>
+<div class="block">Indexing</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/project/CustomerIndexingStatus.CustomerIndexingStatusEnum.html#INDEXING" class="member-name-link">INDEXING</a> - Enum constant in enum com.commercetools.api.models.project.<a href="../com/commercetools/api/models/project/CustomerIndexingStatus.CustomerIndexingStatusEnum.html" title="enum in com.commercetools.api.models.project">CustomerIndexingStatus.CustomerIndexingStatusEnum</a></dt>
 <dd>
@@ -2559,6 +2571,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/models/project/SearchIndexingConfigurationStatus.SearchIndexingConfigurationStatusEnum.html#INDEXING" class="member-name-link">INDEXING</a> - Enum constant in enum com.commercetools.api.models.project.<a href="../com/commercetools/api/models/project/SearchIndexingConfigurationStatus.SearchIndexingConfigurationStatusEnum.html" title="enum in com.commercetools.api.models.project">SearchIndexingConfigurationStatus.SearchIndexingConfigurationStatusEnum</a></dt>
 <dd>
 <div class="block">Indexing</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/project/BusinessUnitIndexingStatus.html#INDEXING" class="member-name-link">INDEXING</a> - Static variable in interface com.commercetools.api.models.project.<a href="../com/commercetools/api/models/project/BusinessUnitIndexingStatus.html" title="interface in com.commercetools.api.models.project">BusinessUnitIndexingStatus</a></dt>
+<dd>
+<div class="block">Indexing is in progress.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/project/CustomerIndexingStatus.html#INDEXING" class="member-name-link">INDEXING</a> - Static variable in interface com.commercetools.api.models.project.<a href="../com/commercetools/api/models/project/CustomerIndexingStatus.html" title="interface in com.commercetools.api.models.project">CustomerIndexingStatus</a></dt>
 <dd>
@@ -4656,7 +4672,7 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/history/models/change_history/ModifiedByBuilder.html#isPlatformClient(java.lang.Boolean)" class="member-name-link">isPlatformClient(Boolean)</a> - Method in class com.commercetools.history.models.change_history.<a href="../com/commercetools/history/models/change_history/ModifiedByBuilder.html" title="class in com.commercetools.history.models.change_history">ModifiedByBuilder</a></dt>
 <dd>
-<div class="block"><code>true</code> if the change was made using the Merchant Center or ImpEx.</div>
+<div class="block"><code>true</code> if the change was made using the Merchant Center.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product_type/AttributeDefinitionBuilder.html#isRequired(java.lang.Boolean)" class="member-name-link">isRequired(Boolean)</a> - Method in class com.commercetools.api.models.product_type.<a href="../com/commercetools/api/models/product_type/AttributeDefinitionBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionBuilder</a></dt>
 <dd>
@@ -4691,11 +4707,11 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/product_type/AttributeDefinitionBuilder.html#isSearchable(java.lang.Boolean)" class="member-name-link">isSearchable(Boolean)</a> - Method in class com.commercetools.api.models.product_type.<a href="../com/commercetools/api/models/product_type/AttributeDefinitionBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionBuilder</a></dt>
 <dd>
-<div class="block">If <code>true</code>, the Attribute's values are available for the Product Projections Search API for use in full-text search queries, filters, and facets.</div>
+<div class="block">If <code>true</code>, the Attribute's values are available in the Product Projection Search or the Product Search API for use in full-text search queries, filters, and facets.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html#isSearchable(java.lang.Boolean)" class="member-name-link">isSearchable(Boolean)</a> - Method in class com.commercetools.api.models.product_type.<a href="../com/commercetools/api/models/product_type/AttributeDefinitionDraftBuilder.html" title="class in com.commercetools.api.models.product_type">AttributeDefinitionDraftBuilder</a></dt>
 <dd>
-<div class="block">Set to <code>true</code> if the Attribute's values should be available in the Product Projections Search API and can be used in full-text search queries, filters, and facets.</div>
+<div class="block">Set to <code>true</code> if the Attribute's values should be available in the Product Projection Search or the Product Search API and can be used in full-text search queries, filters, and facets.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product_type/ProductTypeChangeIsSearchableActionBuilder.html#isSearchable(java.lang.Boolean)" class="member-name-link">isSearchable(Boolean)</a> - Method in class com.commercetools.api.models.product_type.<a href="../com/commercetools/api/models/product_type/ProductTypeChangeIsSearchableActionBuilder.html" title="class in com.commercetools.api.models.product_type">ProductTypeChangeIsSearchableActionBuilder</a></dt>
 <dd>

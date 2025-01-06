@@ -77,7 +77,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <dl class="notes">
 <dt>All Known Subinterfaces:</dt>
-<dd><code><a href="ProjectChangeBusinessUnitStatusOnCreationAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeBusinessUnitStatusOnCreationAction</a></code>, <code><a href="ProjectChangeCartsConfigurationAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeCartsConfigurationAction</a></code>, <code><a href="ProjectChangeCountriesAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeCountriesAction</a></code>, <code><a href="ProjectChangeCountryTaxRateFallbackEnabledAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeCountryTaxRateFallbackEnabledAction</a></code>, <code><a href="ProjectChangeCurrenciesAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeCurrenciesAction</a></code>, <code><a href="ProjectChangeCustomerSearchStatusAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeCustomerSearchStatusAction</a></code>, <code><a href="ProjectChangeLanguagesAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeLanguagesAction</a></code>, <code><a href="ProjectChangeMessagesConfigurationAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeMessagesConfigurationAction</a></code>, <code><a href="ProjectChangeNameAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeNameAction</a></code>, <code><a href="ProjectChangeOrderSearchStatusAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeOrderSearchStatusAction</a></code>, <code><a href="ProjectChangeProductSearchIndexingEnabledAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeProductSearchIndexingEnabledAction</a></code>, <code><a href="ProjectChangeShoppingListsConfigurationAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeShoppingListsConfigurationAction</a></code>, <code><a href="ProjectSetBusinessUnitAssociateRoleOnCreationAction.html" title="interface in com.commercetools.api.models.project">ProjectSetBusinessUnitAssociateRoleOnCreationAction</a></code>, <code><a href="ProjectSetExternalOAuthAction.html" title="interface in com.commercetools.api.models.project">ProjectSetExternalOAuthAction</a></code>, <code><a href="ProjectSetShippingRateInputTypeAction.html" title="interface in com.commercetools.api.models.project">ProjectSetShippingRateInputTypeAction</a></code></dd>
+<dd><code><a href="ProjectChangeBusinessUnitSearchStatusAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeBusinessUnitSearchStatusAction</a></code>, <code><a href="ProjectChangeBusinessUnitStatusOnCreationAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeBusinessUnitStatusOnCreationAction</a></code>, <code><a href="ProjectChangeCartsConfigurationAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeCartsConfigurationAction</a></code>, <code><a href="ProjectChangeCountriesAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeCountriesAction</a></code>, <code><a href="ProjectChangeCountryTaxRateFallbackEnabledAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeCountryTaxRateFallbackEnabledAction</a></code>, <code><a href="ProjectChangeCurrenciesAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeCurrenciesAction</a></code>, <code><a href="ProjectChangeCustomerSearchStatusAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeCustomerSearchStatusAction</a></code>, <code><a href="ProjectChangeLanguagesAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeLanguagesAction</a></code>, <code><a href="ProjectChangeMessagesConfigurationAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeMessagesConfigurationAction</a></code>, <code><a href="ProjectChangeNameAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeNameAction</a></code>, <code><a href="ProjectChangeOrderSearchStatusAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeOrderSearchStatusAction</a></code>, <code><a href="ProjectChangeProductSearchIndexingEnabledAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeProductSearchIndexingEnabledAction</a></code>, <code><a href="ProjectChangeShoppingListsConfigurationAction.html" title="interface in com.commercetools.api.models.project">ProjectChangeShoppingListsConfigurationAction</a></code>, <code><a href="ProjectSetBusinessUnitAssociateRoleOnCreationAction.html" title="interface in com.commercetools.api.models.project">ProjectSetBusinessUnitAssociateRoleOnCreationAction</a></code>, <code><a href="ProjectSetExternalOAuthAction.html" title="interface in com.commercetools.api.models.project">ProjectSetExternalOAuthAction</a></code>, <code><a href="ProjectSetShippingRateInputTypeAction.html" title="interface in com.commercetools.api.models.project">ProjectSetShippingRateInputTypeAction</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">ProjectUpdateAction</span><span class="extends-implements">
@@ -88,8 +88,8 @@ extends <a href="../ResourceUpdateAction.html" title="interface in com.commercet
  Example to create a subtype instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-     ProjectUpdateAction projectUpdateAction = ProjectUpdateAction.changeMyBusinessUnitStatusOnCreationBuilder()
-             status(BusinessUnitConfigurationStatus.ACTIVE)
+     ProjectUpdateAction projectUpdateAction = ProjectUpdateAction.changeBusinessUnitSearchStatusBuilder()
+             status(BusinessUnitSearchStatus.ACTIVATED)
              .build()
  </code></pre>
  </div></div>
@@ -107,97 +107,102 @@ extends <a href="../ResourceUpdateAction.html" title="interface in com.commercet
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProjectChangeCartsConfigurationActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectChangeCartsConfigurationActionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#changeCartsConfigurationBuilder()" class="member-name-link">changeCartsConfigurationBuilder</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProjectChangeBusinessUnitSearchStatusActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectChangeBusinessUnitSearchStatusActionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#changeBusinessUnitSearchStatusBuilder()" class="member-name-link">changeBusinessUnitSearchStatusBuilder</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="block">builder for changeBusinessUnitSearchStatus subtype</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProjectChangeCartsConfigurationActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectChangeCartsConfigurationActionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#changeCartsConfigurationBuilder()" class="member-name-link">changeCartsConfigurationBuilder</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">builder for changeCartsConfiguration subtype</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProjectChangeCountriesActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectChangeCountriesActionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#changeCountriesBuilder()" class="member-name-link">changeCountriesBuilder</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProjectChangeCountriesActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectChangeCountriesActionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#changeCountriesBuilder()" class="member-name-link">changeCountriesBuilder</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">builder for changeCountries subtype</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProjectChangeCountryTaxRateFallbackEnabledActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectChangeCountryTaxRateFallbackEnabledActionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#changeCountryTaxRateFallbackEnabledBuilder()" class="member-name-link">changeCountryTaxRateFallbackEnabledBuilder</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProjectChangeCountryTaxRateFallbackEnabledActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectChangeCountryTaxRateFallbackEnabledActionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#changeCountryTaxRateFallbackEnabledBuilder()" class="member-name-link">changeCountryTaxRateFallbackEnabledBuilder</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">builder for changeCountryTaxRateFallbackEnabled subtype</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProjectChangeCurrenciesActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectChangeCurrenciesActionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#changeCurrenciesBuilder()" class="member-name-link">changeCurrenciesBuilder</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProjectChangeCurrenciesActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectChangeCurrenciesActionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#changeCurrenciesBuilder()" class="member-name-link">changeCurrenciesBuilder</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">builder for changeCurrencies subtype</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProjectChangeCustomerSearchStatusActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectChangeCustomerSearchStatusActionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#changeCustomerSearchStatusBuilder()" class="member-name-link">changeCustomerSearchStatusBuilder</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProjectChangeCustomerSearchStatusActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectChangeCustomerSearchStatusActionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#changeCustomerSearchStatusBuilder()" class="member-name-link">changeCustomerSearchStatusBuilder</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">builder for changeCustomerSearchStatus subtype</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProjectChangeLanguagesActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectChangeLanguagesActionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#changeLanguagesBuilder()" class="member-name-link">changeLanguagesBuilder</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProjectChangeLanguagesActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectChangeLanguagesActionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#changeLanguagesBuilder()" class="member-name-link">changeLanguagesBuilder</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">builder for changeLanguages subtype</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProjectChangeMessagesConfigurationActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectChangeMessagesConfigurationActionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#changeMessagesConfigurationBuilder()" class="member-name-link">changeMessagesConfigurationBuilder</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProjectChangeMessagesConfigurationActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectChangeMessagesConfigurationActionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#changeMessagesConfigurationBuilder()" class="member-name-link">changeMessagesConfigurationBuilder</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">builder for changeMessagesConfiguration subtype</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProjectChangeBusinessUnitStatusOnCreationActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectChangeBusinessUnitStatusOnCreationActionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#changeMyBusinessUnitStatusOnCreationBuilder()" class="member-name-link">changeMyBusinessUnitStatusOnCreationBuilder</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProjectChangeBusinessUnitStatusOnCreationActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectChangeBusinessUnitStatusOnCreationActionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#changeMyBusinessUnitStatusOnCreationBuilder()" class="member-name-link">changeMyBusinessUnitStatusOnCreationBuilder</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">builder for changeMyBusinessUnitStatusOnCreation subtype</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProjectChangeNameActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectChangeNameActionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#changeNameBuilder()" class="member-name-link">changeNameBuilder</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProjectChangeNameActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectChangeNameActionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#changeNameBuilder()" class="member-name-link">changeNameBuilder</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">builder for changeName subtype</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProjectChangeOrderSearchStatusActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectChangeOrderSearchStatusActionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#changeOrderSearchStatusBuilder()" class="member-name-link">changeOrderSearchStatusBuilder</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProjectChangeOrderSearchStatusActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectChangeOrderSearchStatusActionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#changeOrderSearchStatusBuilder()" class="member-name-link">changeOrderSearchStatusBuilder</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">builder for changeOrderSearchStatus subtype</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProjectChangeProductSearchIndexingEnabledActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectChangeProductSearchIndexingEnabledActionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#changeProductSearchIndexingEnabledBuilder()" class="member-name-link">changeProductSearchIndexingEnabledBuilder</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProjectChangeProductSearchIndexingEnabledActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectChangeProductSearchIndexingEnabledActionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#changeProductSearchIndexingEnabledBuilder()" class="member-name-link">changeProductSearchIndexingEnabledBuilder</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">builder for changeProductSearchIndexingEnabled subtype</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProjectChangeShoppingListsConfigurationActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectChangeShoppingListsConfigurationActionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#changeShoppingListsConfigurationBuilder()" class="member-name-link">changeShoppingListsConfigurationBuilder</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProjectChangeShoppingListsConfigurationActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectChangeShoppingListsConfigurationActionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#changeShoppingListsConfigurationBuilder()" class="member-name-link">changeShoppingListsConfigurationBuilder</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">builder for changeShoppingListsConfiguration subtype</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProjectUpdateAction.html" title="interface in com.commercetools.api.models.project">ProjectUpdateAction</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#deepCopy(com.commercetools.api.models.project.ProjectUpdateAction)" class="member-name-link">deepCopy</a><wbr>(<a href="ProjectUpdateAction.html" title="interface in com.commercetools.api.models.project">ProjectUpdateAction</a>&nbsp;template)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProjectUpdateAction.html" title="interface in com.commercetools.api.models.project">ProjectUpdateAction</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#deepCopy(com.commercetools.api.models.project.ProjectUpdateAction)" class="member-name-link">deepCopy</a><wbr>(<a href="ProjectUpdateAction.html" title="interface in com.commercetools.api.models.project">ProjectUpdateAction</a>&nbsp;template)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a deep copy of ProjectUpdateAction</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getAction()" class="member-name-link">getAction</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProjectSetExternalOAuthActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectSetExternalOAuthActionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#setExternalOAuthBuilder()" class="member-name-link">setExternalOAuthBuilder</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getAction()" class="member-name-link">getAction</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProjectSetExternalOAuthActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectSetExternalOAuthActionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#setExternalOAuthBuilder()" class="member-name-link">setExternalOAuthBuilder</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">builder for setExternalOAuth subtype</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProjectSetBusinessUnitAssociateRoleOnCreationActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectSetBusinessUnitAssociateRoleOnCreationActionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#setMyBusinessUnitAssociateRoleOnCreationBuilder()" class="member-name-link">setMyBusinessUnitAssociateRoleOnCreationBuilder</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProjectSetBusinessUnitAssociateRoleOnCreationActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectSetBusinessUnitAssociateRoleOnCreationActionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#setMyBusinessUnitAssociateRoleOnCreationBuilder()" class="member-name-link">setMyBusinessUnitAssociateRoleOnCreationBuilder</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">builder for setMyBusinessUnitAssociateRoleOnCreation subtype</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProjectSetShippingRateInputTypeActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectSetShippingRateInputTypeActionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#setShippingRateInputTypeBuilder()" class="member-name-link">setShippingRateInputTypeBuilder</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProjectSetShippingRateInputTypeActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectSetShippingRateInputTypeActionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#setShippingRateInputTypeBuilder()" class="member-name-link">setShippingRateInputTypeBuilder</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">builder for setShippingRateInputType subtype</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProjectUpdateAction.html" title="interface in com.commercetools.api.models.project">ProjectUpdateAction</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProjectUpdateAction.html" title="interface in com.commercetools.api.models.project">ProjectUpdateAction</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;T&gt;&nbsp;T</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#withProjectUpdateAction(java.util.function.Function)" class="member-name-link">withProjectUpdateAction</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProjectUpdateAction.html" title="interface in com.commercetools.api.models.project">ProjectUpdateAction</a>,<wbr>T&gt;&nbsp;helper)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;T&gt;&nbsp;T</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#withProjectUpdateAction(java.util.function.Function)" class="member-name-link">withProjectUpdateAction</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProjectUpdateAction.html" title="interface in com.commercetools.api.models.project">ProjectUpdateAction</a>,<wbr>T&gt;&nbsp;helper)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">accessor map function</div>
 </div>
 </div>
@@ -242,6 +247,17 @@ extends <a href="../ResourceUpdateAction.html" title="interface in com.commercet
 <dd><code>template</code> - instance to be copied</dd>
 <dt>Returns:</dt>
 <dd>copy instance</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="changeBusinessUnitSearchStatusBuilder()">
+<h3>changeBusinessUnitSearchStatusBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ProjectChangeBusinessUnitSearchStatusActionBuilder.html" title="class in com.commercetools.api.models.project">ProjectChangeBusinessUnitSearchStatusActionBuilder</a></span>&nbsp;<span class="element-name">changeBusinessUnitSearchStatusBuilder</span>()</div>
+<div class="block">builder for changeBusinessUnitSearchStatus subtype</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>builder</dd>
 </dl>
 </section>
 </li>

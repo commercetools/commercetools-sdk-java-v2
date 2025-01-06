@@ -1,7 +1,7 @@
 
 dependencies {
     api project(":rmf:rmf-java-base")
-    api "org.asynchttpclient:async-http-client:2.12.4"
+    api "org.asynchttpclient:async-http-client:3.0.1"
     api commons.io version commons.io_version
     api "io.netty:netty-codec-http:${netty.version}"
     api "io.netty:netty-codec-socks:${netty.version}"

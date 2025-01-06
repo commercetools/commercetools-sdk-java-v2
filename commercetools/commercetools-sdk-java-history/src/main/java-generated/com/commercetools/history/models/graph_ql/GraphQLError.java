@@ -8,7 +8,6 @@ import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
 
-import com.commercetools.history.models.error.GraphQLErrorObject;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -68,7 +67,7 @@ public interface GraphQLError {
     @NotNull
     @Valid
     @JsonProperty("extensions")
-    public GraphQLErrorObject getExtensions();
+    public Object getExtensions();
 
     /**
      *  <p>Detailed description of the error explaining the root cause of the problem and suggesting how to correct the error.</p>
@@ -112,7 +111,7 @@ public interface GraphQLError {
      * @param extensions value to be set
      */
 
-    public void setExtensions(final GraphQLErrorObject extensions);
+    public void setExtensions(final Object extensions);
 
     /**
      * factory method
@@ -154,8 +153,7 @@ public interface GraphQLError {
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setPath(Optional.ofNullable(template.getPath()).map(ArrayList::new).orElse(null));
-        instance.setExtensions(
-            com.commercetools.history.models.error.GraphQLErrorObject.deepCopy(template.getExtensions()));
+        instance.setExtensions(template.getExtensions());
         return instance;
     }
 

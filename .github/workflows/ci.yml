@@ -24,7 +24,7 @@ jobs:
         # Get GitHub token via the CT SDKs App
       - name: Generate GitHub token (via CT SDKs App)
         id: generate_github_token
-        uses: actions/create-github-app-token@a0de6af83968303c8c955486bf9739a57d23c7f1 # v1
+        uses: actions/create-github-app-token@c1a285145b9d317df6ced56c09f525b5c2b6f755 # v1
         with:
           app-id: ${{ secrets.CT_SDKS_APP_ID }}
           private-key: ${{ secrets.CT_SDKS_APP_PEM }}
@@ -38,16 +38,16 @@ jobs:
           echo "email=${GH_APP_USER}+ct-sdks[bot]@users.noreply.github.com" >> "$GITHUB_OUTPUT"
 
       - name: Checkout
-        uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
         with:
           # Pass a personal access token (using our CT SDKs App) to be able to trigger other workflows
           # https://help.github.com/en/actions/reference/events-that-trigger-workflows#triggering-new-workflows-using-a-personal-access-token
           # https://github.community/t/action-does-not-trigger-another-on-push-tag-action/17148/8
           token: ${{ steps.generate_github_token.outputs.token }}
-      - uses: gradle/wrapper-validation-action@216d1ad2b3710bf005dc39237337b9673fd8fcd5 # v3.3.2
+      - uses: gradle/wrapper-validation-action@f9c9c575b8b21b6485636a91ffecd10e558c62f6 # v3.5.0
 
       - name: Setup Java
-        uses: actions/setup-java@99b8673ff64fbf99d8d325f52d9a5bdedb8483e9 # v4
+        uses: actions/setup-java@7a6d8a8234af8eb26422e24e3006232cccaa061b # v4
         with:
           distribution: 'temurin'
           java-version: '17'
@@ -111,6 +111,7 @@ jobs:
         run: git push origin
 
       - name: Run integration tests for PR
+#       ignore renovate branches as they are retriggered with every new commit to main branch
         if: (github.event_name == 'pull_request' && !startsWith(github.head_ref, 'renovate/')) || github.event_name == 'merge_group'
         run: ./gradlew clean build publishMavenPublicationToMavenLocal runMainMethodThreadLeakTest runMainMethodMemoryLeakTest writeVersionToExamples
         env:
@@ -139,7 +140,7 @@ jobs:
         run: ./gradlew codeCoverageReport
 
       - name: Send code coverage report to Codecov.io
-        uses: codecov/codecov-action@125fc84a9a348dbcf27191600683ec096ec9021c # v4.4.1
+        uses: codecov/codecov-action@b9fd7d16f6d7d1b5d2bec1a2887e65ceed900238 # v4.6.0
         with:
             token: ${{ secrets.CODECOV_TOKEN }}
   docs:
@@ -151,20 +152,20 @@ jobs:
         # Get GitHub token via the CT SDKs App
       - name: Generate GitHub token (via CT SDKs App)
         id: generate_github_token
-        uses: actions/create-github-app-token@a0de6af83968303c8c955486bf9739a57d23c7f1 # v1
+        uses: actions/create-github-app-token@c1a285145b9d317df6ced56c09f525b5c2b6f755 # v1
         with:
           app-id: ${{ secrets.CT_SDKS_APP_ID }}
           private-key: ${{ secrets.CT_SDKS_APP_PEM }}
 
       - name: Checkout
-        uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
         with:
           token: ${{ steps.generate_github_token.outputs.token }}
 
-      - uses: gradle/wrapper-validation-action@216d1ad2b3710bf005dc39237337b9673fd8fcd5 # v3.3.2
+      - uses: gradle/wrapper-validation-action@f9c9c575b8b21b6485636a91ffecd10e558c62f6 # v3.5.0
 
       - name: Setup Java
-        uses: actions/setup-java@99b8673ff64fbf99d8d325f52d9a5bdedb8483e9 # v4
+        uses: actions/setup-java@7a6d8a8234af8eb26422e24e3006232cccaa061b # v4
         with:
           distribution: 'temurin'
           java-version: '17'
@@ -181,14 +182,14 @@ jobs:
       # Get GitHub token via the CT SDKs App
       - name: Generate GitHub token (via CT SDKs App)
         id: generate_github_token
-        uses: actions/create-github-app-token@a0de6af83968303c8c955486bf9739a57d23c7f1 # v1
+        uses: actions/create-github-app-token@c1a285145b9d317df6ced56c09f525b5c2b6f755 # v1
         with:
           app-id: ${{ secrets.CT_SDKS_APP_ID }}
           private-key: ${{ secrets.CT_SDKS_APP_PEM }}
       - name: Checkout sources
-        uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29 # v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
       - name: Generate and submit dependency graph
         if: github.event_name == 'workflow_dispatch' || github.event_name == 'push' && github.ref == 'refs/heads/main'
-        uses: gradle/actions/dependency-submission@db19848a5fa7950289d3668fb053140cf3028d43 # v3.3.2
+        uses: gradle/actions/dependency-submission@0bdd871935719febd78681f197cd39af5b6e16a6 # v4.2.2
         with:
           github-token: ${{ steps.generate_github_token.outputs.token }}

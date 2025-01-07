@@ -48,4 +48,12 @@ public class ByProjectKeyBusinessUnitsRequestBuilder {
         return new ByProjectKeyBusinessUnitsByIDRequestBuilder(apiHttpClient, projectKey, ID);
     }
 
+    public ByProjectKeyBusinessUnitsSearchRequestBuilder search() {
+        return new ByProjectKeyBusinessUnitsSearchRequestBuilder(apiHttpClient, projectKey);
+    }
+
+    public ByProjectKeyBusinessUnitsSearchIndexingStatusRequestBuilder searchIndexingStatus() {
+        return new ByProjectKeyBusinessUnitsSearchIndexingStatusRequestBuilder(apiHttpClient, projectKey);
+    }
+
 }

@@ -112,6 +112,9 @@ import jakarta.validation.constraints.NotNull;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerEmailTokenCreatedMessagePayloadImpl.class, name = CustomerEmailTokenCreatedMessagePayload.CUSTOMER_EMAIL_TOKEN_CREATED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerEmailVerifiedMessagePayloadImpl.class, name = CustomerEmailVerifiedMessagePayload.CUSTOMER_EMAIL_VERIFIED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerFirstNameSetMessagePayloadImpl.class, name = CustomerFirstNameSetMessagePayload.CUSTOMER_FIRST_NAME_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerGroupAssignmentAddedMessagePayloadImpl.class, name = CustomerGroupAssignmentAddedMessagePayload.CUSTOMER_GROUP_ASSIGNMENT_ADDED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerGroupAssignmentRemovedMessagePayloadImpl.class, name = CustomerGroupAssignmentRemovedMessagePayload.CUSTOMER_GROUP_ASSIGNMENT_REMOVED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerGroupAssignmentsSetMessagePayloadImpl.class, name = CustomerGroupAssignmentsSetMessagePayload.CUSTOMER_GROUP_ASSIGNMENTS_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerGroupCustomFieldAddedMessagePayloadImpl.class, name = CustomerGroupCustomFieldAddedMessagePayload.CUSTOMER_GROUP_CUSTOM_FIELD_ADDED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerGroupCustomFieldChangedMessagePayloadImpl.class, name = CustomerGroupCustomFieldChangedMessagePayload.CUSTOMER_GROUP_CUSTOM_FIELD_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerGroupCustomFieldRemovedMessagePayloadImpl.class, name = CustomerGroupCustomFieldRemovedMessagePayload.CUSTOMER_GROUP_CUSTOM_FIELD_REMOVED),
@@ -625,6 +628,18 @@ public interface MessagePayload extends MessagePayloadMixin {
         if (template instanceof com.commercetools.api.models.message.CustomerFirstNameSetMessagePayload) {
             return com.commercetools.api.models.message.CustomerFirstNameSetMessagePayload
                     .deepCopy((com.commercetools.api.models.message.CustomerFirstNameSetMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CustomerGroupAssignmentAddedMessagePayload) {
+            return com.commercetools.api.models.message.CustomerGroupAssignmentAddedMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.CustomerGroupAssignmentAddedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CustomerGroupAssignmentRemovedMessagePayload) {
+            return com.commercetools.api.models.message.CustomerGroupAssignmentRemovedMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.CustomerGroupAssignmentRemovedMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CustomerGroupAssignmentsSetMessagePayload) {
+            return com.commercetools.api.models.message.CustomerGroupAssignmentsSetMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.CustomerGroupAssignmentsSetMessagePayload) template);
         }
         if (template instanceof com.commercetools.api.models.message.CustomerGroupCustomFieldAddedMessagePayload) {
             return com.commercetools.api.models.message.CustomerGroupCustomFieldAddedMessagePayload.deepCopy(
@@ -1740,6 +1755,30 @@ public interface MessagePayload extends MessagePayloadMixin {
      */
     public static com.commercetools.api.models.message.CustomerFirstNameSetMessagePayloadBuilder customerFirstNameSetBuilder() {
         return com.commercetools.api.models.message.CustomerFirstNameSetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for customerGroupAssignmentAdded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerGroupAssignmentAddedMessagePayloadBuilder customerGroupAssignmentAddedBuilder() {
+        return com.commercetools.api.models.message.CustomerGroupAssignmentAddedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for customerGroupAssignmentRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerGroupAssignmentRemovedMessagePayloadBuilder customerGroupAssignmentRemovedBuilder() {
+        return com.commercetools.api.models.message.CustomerGroupAssignmentRemovedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for customerGroupAssignmentsSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerGroupAssignmentsSetMessagePayloadBuilder customerGroupAssignmentsSetBuilder() {
+        return com.commercetools.api.models.message.CustomerGroupAssignmentsSetMessagePayloadBuilder.of();
     }
 
     /**

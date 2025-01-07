@@ -83,6 +83,14 @@ public class ByProjectKeyProductsTest {
                                 .withPriceCustomerGroup("priceCustomerGroup")
                                 .createHttpRequest(),
                         "get", "test_projectKey/products?priceCustomerGroup=priceCustomerGroup", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .products()
+                                .get()
+                                .withPriceCustomerGroupAssignments("priceCustomerGroupAssignments")
+                                .createHttpRequest(),
+                        "get",
+                        "test_projectKey/products?priceCustomerGroupAssignments=priceCustomerGroupAssignments", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .get()
@@ -138,6 +146,14 @@ public class ByProjectKeyProductsTest {
                                 .withPriceCustomerGroup("priceCustomerGroup")
                                 .createHttpRequest(),
                         "post", "test_projectKey/products?priceCustomerGroup=priceCustomerGroup", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .products()
+                                .post(com.commercetools.api.models.product.ProductDraft.of())
+                                .withPriceCustomerGroupAssignments("priceCustomerGroupAssignments")
+                                .createHttpRequest(),
+                        "post",
+                        "test_projectKey/products?priceCustomerGroupAssignments=priceCustomerGroupAssignments", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .post(com.commercetools.api.models.product.ProductDraft.of())
@@ -168,6 +184,10 @@ public class ByProjectKeyProductsTest {
                         .products()
                         .get()
                         .withPriceCustomerGroup("priceCustomerGroup"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .products()
+                        .get()
+                        .withPriceCustomerGroupAssignments("priceCustomerGroupAssignments"), },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").products().get().withPriceChannel("priceChannel"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").products().get().withExpand("expand"), },
@@ -194,6 +214,10 @@ public class ByProjectKeyProductsTest {
                         .products()
                         .post(com.commercetools.api.models.product.ProductDraft.of())
                         .withPriceCustomerGroup("priceCustomerGroup"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .products()
+                        .post(com.commercetools.api.models.product.ProductDraft.of())
+                        .withPriceCustomerGroupAssignments("priceCustomerGroupAssignments"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .post(com.commercetools.api.models.product.ProductDraft.of())

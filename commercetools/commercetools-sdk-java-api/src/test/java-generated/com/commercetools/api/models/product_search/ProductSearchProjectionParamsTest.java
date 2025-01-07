@@ -32,6 +32,8 @@ public class ProductSearchProjectionParamsTest {
                 new Object[] { ProductSearchProjectionParams.builder().priceCurrency("priceCurrency") },
                 new Object[] { ProductSearchProjectionParams.builder().priceCountry("priceCountry") },
                 new Object[] { ProductSearchProjectionParams.builder().priceCustomerGroup("priceCustomerGroup") },
+                new Object[] { ProductSearchProjectionParams.builder()
+                        .priceCustomerGroupAssignments(Collections.singletonList("priceCustomerGroupAssignments")) },
                 new Object[] { ProductSearchProjectionParams.builder().priceChannel("priceChannel") },
                 new Object[] { ProductSearchProjectionParams.builder()
                         .localeProjection(Collections.singletonList("localeProjection")) },
@@ -71,6 +73,14 @@ public class ProductSearchProjectionParamsTest {
         ProductSearchProjectionParams value = ProductSearchProjectionParams.of();
         value.setPriceCustomerGroup("priceCustomerGroup");
         Assertions.assertThat(value.getPriceCustomerGroup()).isEqualTo("priceCustomerGroup");
+    }
+
+    @Test
+    public void priceCustomerGroupAssignments() {
+        ProductSearchProjectionParams value = ProductSearchProjectionParams.of();
+        value.setPriceCustomerGroupAssignments(Collections.singletonList("priceCustomerGroupAssignments"));
+        Assertions.assertThat(value.getPriceCustomerGroupAssignments())
+                .isEqualTo(Collections.singletonList("priceCustomerGroupAssignments"));
     }
 
     @Test

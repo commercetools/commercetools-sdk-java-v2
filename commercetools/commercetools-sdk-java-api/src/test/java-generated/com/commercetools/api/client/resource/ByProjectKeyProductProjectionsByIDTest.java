@@ -101,6 +101,15 @@ public class ByProjectKeyProductProjectionsByIDTest {
                                 .productProjections()
                                 .withId("test_ID")
                                 .get()
+                                .withPriceCustomerGroupAssignments("priceCustomerGroupAssignments")
+                                .createHttpRequest(),
+                        "get",
+                        "test_projectKey/product-projections/test_ID?priceCustomerGroupAssignments=priceCustomerGroupAssignments", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .productProjections()
+                                .withId("test_ID")
+                                .get()
                                 .withPriceChannel("priceChannel")
                                 .createHttpRequest(),
                         "get", "test_projectKey/product-projections/test_ID?priceChannel=priceChannel", },
@@ -163,6 +172,11 @@ public class ByProjectKeyProductProjectionsByIDTest {
                         .withId("test_ID")
                         .get()
                         .withPriceCustomerGroup("priceCustomerGroup"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productProjections()
+                        .withId("test_ID")
+                        .get()
+                        .withPriceCustomerGroupAssignments("priceCustomerGroupAssignments"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productProjections()
                         .withId("test_ID")

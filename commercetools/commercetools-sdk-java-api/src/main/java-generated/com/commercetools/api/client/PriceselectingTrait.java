@@ -17,6 +17,8 @@ public interface PriceselectingTrait<T extends PriceselectingTrait<T>> {
 
     List<String> getPriceCustomerGroup();
 
+    List<String> getPriceCustomerGroupAssignments();
+
     List<String> getPriceChannel();
 
     /**
@@ -66,6 +68,22 @@ public interface PriceselectingTrait<T extends PriceselectingTrait<T>> {
      * @return PriceselectingTrait
      */
     <TValue> PriceselectingTrait<T> addPriceCustomerGroup(final TValue priceCustomerGroup);
+
+    /**
+     * set priceCustomerGroupAssignments with the specificied value
+     * @param priceCustomerGroupAssignments value to be set
+     * @param <TValue> value type
+     * @return PriceselectingTrait
+     */
+    <TValue> PriceselectingTrait<T> withPriceCustomerGroupAssignments(final TValue priceCustomerGroupAssignments);
+
+    /**
+     * add additional priceCustomerGroupAssignments query parameter
+     * @param priceCustomerGroupAssignments value to be added
+     * @param <TValue> value type
+     * @return PriceselectingTrait
+     */
+    <TValue> PriceselectingTrait<T> addPriceCustomerGroupAssignments(final TValue priceCustomerGroupAssignments);
 
     /**
      * set priceChannel with the specificied value

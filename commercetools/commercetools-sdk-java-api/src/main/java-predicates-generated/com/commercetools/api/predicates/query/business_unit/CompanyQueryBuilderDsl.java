@@ -78,6 +78,20 @@ public class CompanyQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, CompanyQueryBuilderDsl::of));
     }
 
+    public CombinationQueryPredicate<CompanyQueryBuilderDsl> inheritedStores(
+            Function<com.commercetools.api.predicates.query.store.StoreKeyReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.store.StoreKeyReferenceQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("inheritedStores"))
+                .inner(fn.apply(com.commercetools.api.predicates.query.store.StoreKeyReferenceQueryBuilderDsl.of())),
+            CompanyQueryBuilderDsl::of);
+    }
+
+    public CollectionPredicateBuilder<CompanyQueryBuilderDsl> inheritedStores() {
+        return new CollectionPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("inheritedStores")),
+            p -> new CombinationQueryPredicate<>(p, CompanyQueryBuilderDsl::of));
+    }
+
     public StringComparisonPredicateBuilder<CompanyQueryBuilderDsl> storeMode() {
         return new StringComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("storeMode")),

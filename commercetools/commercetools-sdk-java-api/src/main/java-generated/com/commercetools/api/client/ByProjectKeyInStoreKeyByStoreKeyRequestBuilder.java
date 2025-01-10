@@ -80,4 +80,8 @@ public class ByProjectKeyInStoreKeyByStoreKeyRequestBuilder {
         return new ByProjectKeyInStoreKeyByStoreKeyQuotesRequestBuilder(apiHttpClient, projectKey, storeKey);
     }
 
+    public ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsRequestBuilder businessUnits() {
+        return new ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsRequestBuilder(apiHttpClient, projectKey, storeKey);
+    }
+
 }

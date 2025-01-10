@@ -58,6 +58,9 @@ public class DivisionBuilder implements Builder<Division> {
     @Nullable
     private java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores;
 
+    @Nullable
+    private java.util.List<com.commercetools.api.models.store.StoreKeyReference> inheritedStores;
+
     private com.commercetools.api.models.business_unit.BusinessUnitStoreMode storeMode;
 
     private String name;
@@ -331,6 +334,97 @@ public class DivisionBuilder implements Builder<Division> {
     public DivisionBuilder setStores(
             Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReference> builder) {
         return stores(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()));
+    }
+
+    /**
+     *  <p>Stores that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>storeMode</code> is set to <code>FromParent</code>.</p>
+     * @param inheritedStores value to be set
+     * @return Builder
+     */
+
+    public DivisionBuilder inheritedStores(
+            @Nullable final com.commercetools.api.models.store.StoreKeyReference... inheritedStores) {
+        this.inheritedStores = new ArrayList<>(Arrays.asList(inheritedStores));
+        return this;
+    }
+
+    /**
+     *  <p>Stores that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>storeMode</code> is set to <code>FromParent</code>.</p>
+     * @param inheritedStores value to be set
+     * @return Builder
+     */
+
+    public DivisionBuilder inheritedStores(
+            @Nullable final java.util.List<com.commercetools.api.models.store.StoreKeyReference> inheritedStores) {
+        this.inheritedStores = inheritedStores;
+        return this;
+    }
+
+    /**
+     *  <p>Stores that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>storeMode</code> is set to <code>FromParent</code>.</p>
+     * @param inheritedStores value to be set
+     * @return Builder
+     */
+
+    public DivisionBuilder plusInheritedStores(
+            @Nullable final com.commercetools.api.models.store.StoreKeyReference... inheritedStores) {
+        if (this.inheritedStores == null) {
+            this.inheritedStores = new ArrayList<>();
+        }
+        this.inheritedStores.addAll(Arrays.asList(inheritedStores));
+        return this;
+    }
+
+    /**
+     *  <p>Stores that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>storeMode</code> is set to <code>FromParent</code>.</p>
+     * @param builder function to build the inheritedStores value
+     * @return Builder
+     */
+
+    public DivisionBuilder plusInheritedStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReferenceBuilder> builder) {
+        if (this.inheritedStores == null) {
+            this.inheritedStores = new ArrayList<>();
+        }
+        this.inheritedStores
+                .add(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Stores that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>storeMode</code> is set to <code>FromParent</code>.</p>
+     * @param builder function to build the inheritedStores value
+     * @return Builder
+     */
+
+    public DivisionBuilder withInheritedStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReferenceBuilder> builder) {
+        this.inheritedStores = new ArrayList<>();
+        this.inheritedStores
+                .add(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Stores that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>storeMode</code> is set to <code>FromParent</code>.</p>
+     * @param builder function to build the inheritedStores value
+     * @return Builder
+     */
+
+    public DivisionBuilder addInheritedStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReference> builder) {
+        return plusInheritedStores(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()));
+    }
+
+    /**
+     *  <p>Stores that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>storeMode</code> is set to <code>FromParent</code>.</p>
+     * @param builder function to build the inheritedStores value
+     * @return Builder
+     */
+
+    public DivisionBuilder setInheritedStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReference> builder) {
+        return inheritedStores(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()));
     }
 
     /**
@@ -949,6 +1043,16 @@ public class DivisionBuilder implements Builder<Division> {
     }
 
     /**
+     *  <p>Stores that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>storeMode</code> is set to <code>FromParent</code>.</p>
+     * @return inheritedStores
+     */
+
+    @Nullable
+    public java.util.List<com.commercetools.api.models.store.StoreKeyReference> getInheritedStores() {
+        return this.inheritedStores;
+    }
+
+    /**
      *  <p>Defines whether the Stores of the Division are set explicitly or inherited from a parent Business Unit.</p>
      * @return storeMode
      */
@@ -1110,9 +1214,9 @@ public class DivisionBuilder implements Builder<Division> {
         Objects.requireNonNull(topLevelUnit, Division.class + ": topLevelUnit is missing");
         Objects.requireNonNull(approvalRuleMode, Division.class + ": approvalRuleMode is missing");
         return new DivisionImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, status, stores,
-            storeMode, name, contactEmail, custom, addresses, shippingAddressIds, defaultShippingAddressId,
-            billingAddressIds, defaultBillingAddressId, associateMode, associates, inheritedAssociates, parentUnit,
-            topLevelUnit, approvalRuleMode);
+            inheritedStores, storeMode, name, contactEmail, custom, addresses, shippingAddressIds,
+            defaultShippingAddressId, billingAddressIds, defaultBillingAddressId, associateMode, associates,
+            inheritedAssociates, parentUnit, topLevelUnit, approvalRuleMode);
     }
 
     /**
@@ -1121,9 +1225,9 @@ public class DivisionBuilder implements Builder<Division> {
      */
     public Division buildUnchecked() {
         return new DivisionImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, status, stores,
-            storeMode, name, contactEmail, custom, addresses, shippingAddressIds, defaultShippingAddressId,
-            billingAddressIds, defaultBillingAddressId, associateMode, associates, inheritedAssociates, parentUnit,
-            topLevelUnit, approvalRuleMode);
+            inheritedStores, storeMode, name, contactEmail, custom, addresses, shippingAddressIds,
+            defaultShippingAddressId, billingAddressIds, defaultBillingAddressId, associateMode, associates,
+            inheritedAssociates, parentUnit, topLevelUnit, approvalRuleMode);
     }
 
     /**
@@ -1150,6 +1254,7 @@ public class DivisionBuilder implements Builder<Division> {
         builder.key = template.getKey();
         builder.status = template.getStatus();
         builder.stores = template.getStores();
+        builder.inheritedStores = template.getInheritedStores();
         builder.storeMode = template.getStoreMode();
         builder.name = template.getName();
         builder.contactEmail = template.getContactEmail();

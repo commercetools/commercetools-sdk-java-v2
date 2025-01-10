@@ -40,6 +40,8 @@ public class BusinessUnitImpl implements BusinessUnit, ModelBase {
 
     private java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores;
 
+    private java.util.List<com.commercetools.api.models.store.StoreKeyReference> inheritedStores;
+
     private com.commercetools.api.models.business_unit.BusinessUnitStoreMode storeMode;
 
     private com.commercetools.api.models.business_unit.BusinessUnitType unitType;
@@ -84,6 +86,7 @@ public class BusinessUnitImpl implements BusinessUnit, ModelBase {
             @JsonProperty("key") final String key,
             @JsonProperty("status") final com.commercetools.api.models.business_unit.BusinessUnitStatus status,
             @JsonProperty("stores") final java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores,
+            @JsonProperty("inheritedStores") final java.util.List<com.commercetools.api.models.store.StoreKeyReference> inheritedStores,
             @JsonProperty("storeMode") final com.commercetools.api.models.business_unit.BusinessUnitStoreMode storeMode,
             @JsonProperty("unitType") final com.commercetools.api.models.business_unit.BusinessUnitType unitType,
             @JsonProperty("name") final String name, @JsonProperty("contactEmail") final String contactEmail,
@@ -108,6 +111,7 @@ public class BusinessUnitImpl implements BusinessUnit, ModelBase {
         this.key = key;
         this.status = status;
         this.stores = stores;
+        this.inheritedStores = inheritedStores;
         this.storeMode = storeMode;
         this.unitType = unitType;
         this.name = name;
@@ -204,6 +208,14 @@ public class BusinessUnitImpl implements BusinessUnit, ModelBase {
 
     public java.util.List<com.commercetools.api.models.store.StoreKeyReference> getStores() {
         return this.stores;
+    }
+
+    /**
+     *  <p>Stores that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>storeMode</code> is set to <code>FromParent</code>.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.store.StoreKeyReference> getInheritedStores() {
+        return this.inheritedStores;
     }
 
     /**
@@ -374,6 +386,15 @@ public class BusinessUnitImpl implements BusinessUnit, ModelBase {
         this.stores = stores;
     }
 
+    public void setInheritedStores(final com.commercetools.api.models.store.StoreKeyReference... inheritedStores) {
+        this.inheritedStores = new ArrayList<>(Arrays.asList(inheritedStores));
+    }
+
+    public void setInheritedStores(
+            final java.util.List<com.commercetools.api.models.store.StoreKeyReference> inheritedStores) {
+        this.inheritedStores = inheritedStores;
+    }
+
     public void setStoreMode(final com.commercetools.api.models.business_unit.BusinessUnitStoreMode storeMode) {
         this.storeMode = storeMode;
     }
@@ -478,6 +499,7 @@ public class BusinessUnitImpl implements BusinessUnit, ModelBase {
                 .append(key, that.key)
                 .append(status, that.status)
                 .append(stores, that.stores)
+                .append(inheritedStores, that.inheritedStores)
                 .append(storeMode, that.storeMode)
                 .append(unitType, that.unitType)
                 .append(name, that.name)
@@ -503,6 +525,7 @@ public class BusinessUnitImpl implements BusinessUnit, ModelBase {
                 .append(key, that.key)
                 .append(status, that.status)
                 .append(stores, that.stores)
+                .append(inheritedStores, that.inheritedStores)
                 .append(storeMode, that.storeMode)
                 .append(unitType, that.unitType)
                 .append(name, that.name)
@@ -533,6 +556,7 @@ public class BusinessUnitImpl implements BusinessUnit, ModelBase {
                 .append(key)
                 .append(status)
                 .append(stores)
+                .append(inheritedStores)
                 .append(storeMode)
                 .append(unitType)
                 .append(name)
@@ -563,6 +587,7 @@ public class BusinessUnitImpl implements BusinessUnit, ModelBase {
                 .append("key", key)
                 .append("status", status)
                 .append("stores", stores)
+                .append("inheritedStores", inheritedStores)
                 .append("storeMode", storeMode)
                 .append("unitType", unitType)
                 .append("name", name)

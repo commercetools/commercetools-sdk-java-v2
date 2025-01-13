@@ -25,6 +25,7 @@ import jakarta.validation.constraints.NotNull;
  * <div class=code-example>
  * <pre><code class='java'>
  *     CartDiscountPatternTarget cartDiscountPatternTarget = CartDiscountPatternTarget.builder()
+ *             .plusTriggerPattern(triggerPatternBuilder -> triggerPatternBuilder)
  *             .plusTargetPattern(targetPatternBuilder -> targetPatternBuilder)
  *             .selectionMode(SelectionMode.CHEAPEST)
  *             .build()
@@ -41,18 +42,20 @@ public interface CartDiscountPatternTarget extends CartDiscountTarget {
     String PATTERN = "pattern";
 
     /**
-     *  <p>Units of a (Custom) Line Item that trigger a discount application.</p>
-     *  <p>Based on the availability of matching units, the <code>triggerPattern</code> can match multiple times, effecting the number of times the discount will be applied. To further limit the discount application, set the <code>maxOccurrence</code>.</p>
-     *  <p>If empty or not set, the Discount will apply indefinitely.</p>
+     *  <p>Defines the set of units of (Custom) Line Items in a Cart that trigger a discount application.</p>
+     *  <p>Based on the availability of matching units, the <code>triggerPattern</code> can match multiple times, limiting the number of maximum times the discount will be applied. To further limit the discount application, set the <code>maxOccurrence</code>.</p>
+     *  <p>If empty, the Discount will apply indefinitely.</p>
      * @return triggerPattern
      */
+    @NotNull
     @Valid
     @JsonProperty("triggerPattern")
     public List<PatternComponent> getTriggerPattern();
 
     /**
-     *  <p>Units of (Custom) Line Items on which the Discount is applied.</p>
+     *  <p>Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</p>
      *  <p>Based on the availability of matching units and the limits from the <code>triggerPattern</code> or <code>maxOccurence</code>, the <code>targetPattern</code> can match multiple times.</p>
+     *  <p>This array cannot be empty.</p>
      * @return targetPattern
      */
     @NotNull
@@ -78,9 +81,9 @@ public interface CartDiscountPatternTarget extends CartDiscountTarget {
     public SelectionMode getSelectionMode();
 
     /**
-     *  <p>Units of a (Custom) Line Item that trigger a discount application.</p>
-     *  <p>Based on the availability of matching units, the <code>triggerPattern</code> can match multiple times, effecting the number of times the discount will be applied. To further limit the discount application, set the <code>maxOccurrence</code>.</p>
-     *  <p>If empty or not set, the Discount will apply indefinitely.</p>
+     *  <p>Defines the set of units of (Custom) Line Items in a Cart that trigger a discount application.</p>
+     *  <p>Based on the availability of matching units, the <code>triggerPattern</code> can match multiple times, limiting the number of maximum times the discount will be applied. To further limit the discount application, set the <code>maxOccurrence</code>.</p>
+     *  <p>If empty, the Discount will apply indefinitely.</p>
      * @param triggerPattern values to be set
      */
 
@@ -88,17 +91,18 @@ public interface CartDiscountPatternTarget extends CartDiscountTarget {
     public void setTriggerPattern(final PatternComponent... triggerPattern);
 
     /**
-     *  <p>Units of a (Custom) Line Item that trigger a discount application.</p>
-     *  <p>Based on the availability of matching units, the <code>triggerPattern</code> can match multiple times, effecting the number of times the discount will be applied. To further limit the discount application, set the <code>maxOccurrence</code>.</p>
-     *  <p>If empty or not set, the Discount will apply indefinitely.</p>
+     *  <p>Defines the set of units of (Custom) Line Items in a Cart that trigger a discount application.</p>
+     *  <p>Based on the availability of matching units, the <code>triggerPattern</code> can match multiple times, limiting the number of maximum times the discount will be applied. To further limit the discount application, set the <code>maxOccurrence</code>.</p>
+     *  <p>If empty, the Discount will apply indefinitely.</p>
      * @param triggerPattern values to be set
      */
 
     public void setTriggerPattern(final List<PatternComponent> triggerPattern);
 
     /**
-     *  <p>Units of (Custom) Line Items on which the Discount is applied.</p>
+     *  <p>Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</p>
      *  <p>Based on the availability of matching units and the limits from the <code>triggerPattern</code> or <code>maxOccurence</code>, the <code>targetPattern</code> can match multiple times.</p>
+     *  <p>This array cannot be empty.</p>
      * @param targetPattern values to be set
      */
 
@@ -106,8 +110,9 @@ public interface CartDiscountPatternTarget extends CartDiscountTarget {
     public void setTargetPattern(final PatternComponent... targetPattern);
 
     /**
-     *  <p>Units of (Custom) Line Items on which the Discount is applied.</p>
+     *  <p>Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</p>
      *  <p>Based on the availability of matching units and the limits from the <code>triggerPattern</code> or <code>maxOccurence</code>, the <code>targetPattern</code> can match multiple times.</p>
+     *  <p>This array cannot be empty.</p>
      * @param targetPattern values to be set
      */
 

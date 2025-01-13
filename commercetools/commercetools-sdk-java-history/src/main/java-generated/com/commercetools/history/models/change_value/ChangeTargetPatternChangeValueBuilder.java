@@ -16,6 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     ChangeTargetPatternChangeValue changeTargetPatternChangeValue = ChangeTargetPatternChangeValue.builder()
+ *             .plusTriggerPattern(triggerPatternBuilder -> triggerPatternBuilder)
  *             .plusTargetPattern(targetPatternBuilder -> targetPatternBuilder)
  *             .selectionMode(SelectionMode.CHEAPEST)
  *             .build()
@@ -25,7 +26,6 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChangeTargetPatternChangeValueBuilder implements Builder<ChangeTargetPatternChangeValue> {
 
-    @Nullable
     private java.util.List<com.commercetools.history.models.cart_discount.PatternComponent> triggerPattern;
 
     private java.util.List<com.commercetools.history.models.cart_discount.PatternComponent> targetPattern;
@@ -36,37 +36,37 @@ public class ChangeTargetPatternChangeValueBuilder implements Builder<ChangeTarg
     private com.commercetools.history.models.common.SelectionMode selectionMode;
 
     /**
-     *  <p>Units of a (Custom) Line Item that triggered the discount application.</p>
+     *  <p>Defines the set of units of (Custom) Line Items in a Cart that triggered the discount application.</p>
      * @param triggerPattern value to be set
      * @return Builder
      */
 
     public ChangeTargetPatternChangeValueBuilder triggerPattern(
-            @Nullable final com.commercetools.history.models.cart_discount.PatternComponent... triggerPattern) {
+            final com.commercetools.history.models.cart_discount.PatternComponent... triggerPattern) {
         this.triggerPattern = new ArrayList<>(Arrays.asList(triggerPattern));
         return this;
     }
 
     /**
-     *  <p>Units of a (Custom) Line Item that triggered the discount application.</p>
+     *  <p>Defines the set of units of (Custom) Line Items in a Cart that triggered the discount application.</p>
      * @param triggerPattern value to be set
      * @return Builder
      */
 
     public ChangeTargetPatternChangeValueBuilder triggerPattern(
-            @Nullable final java.util.List<com.commercetools.history.models.cart_discount.PatternComponent> triggerPattern) {
+            final java.util.List<com.commercetools.history.models.cart_discount.PatternComponent> triggerPattern) {
         this.triggerPattern = triggerPattern;
         return this;
     }
 
     /**
-     *  <p>Units of a (Custom) Line Item that triggered the discount application.</p>
+     *  <p>Defines the set of units of (Custom) Line Items in a Cart that triggered the discount application.</p>
      * @param triggerPattern value to be set
      * @return Builder
      */
 
     public ChangeTargetPatternChangeValueBuilder plusTriggerPattern(
-            @Nullable final com.commercetools.history.models.cart_discount.PatternComponent... triggerPattern) {
+            final com.commercetools.history.models.cart_discount.PatternComponent... triggerPattern) {
         if (this.triggerPattern == null) {
             this.triggerPattern = new ArrayList<>();
         }
@@ -75,7 +75,7 @@ public class ChangeTargetPatternChangeValueBuilder implements Builder<ChangeTarg
     }
 
     /**
-     *  <p>Units of a (Custom) Line Item that triggered the discount application.</p>
+     *  <p>Defines the set of units of (Custom) Line Items in a Cart that triggered the discount application.</p>
      * @param builder function to build the triggerPattern value
      * @return Builder
      */
@@ -91,7 +91,7 @@ public class ChangeTargetPatternChangeValueBuilder implements Builder<ChangeTarg
     }
 
     /**
-     *  <p>Units of a (Custom) Line Item that triggered the discount application.</p>
+     *  <p>Defines the set of units of (Custom) Line Items in a Cart that triggered the discount application.</p>
      * @param builder function to build the triggerPattern value
      * @return Builder
      */
@@ -105,7 +105,7 @@ public class ChangeTargetPatternChangeValueBuilder implements Builder<ChangeTarg
     }
 
     /**
-     *  <p>Units of a (Custom) Line Item that triggered the discount application.</p>
+     *  <p>Defines the set of units of (Custom) Line Items in a Cart that triggered the discount application.</p>
      * @param builder function to build the triggerPattern value
      * @return Builder
      */
@@ -117,7 +117,7 @@ public class ChangeTargetPatternChangeValueBuilder implements Builder<ChangeTarg
     }
 
     /**
-     *  <p>Units of a (Custom) Line Item that triggered the discount application.</p>
+     *  <p>Defines the set of units of (Custom) Line Items in a Cart that triggered the discount application.</p>
      * @param builder function to build the triggerPattern value
      * @return Builder
      */
@@ -129,7 +129,7 @@ public class ChangeTargetPatternChangeValueBuilder implements Builder<ChangeTarg
     }
 
     /**
-     *  <p>Units of (Custom) Line Items on which the Discount is applied.</p>
+     *  <p>Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</p>
      * @param targetPattern value to be set
      * @return Builder
      */
@@ -141,7 +141,7 @@ public class ChangeTargetPatternChangeValueBuilder implements Builder<ChangeTarg
     }
 
     /**
-     *  <p>Units of (Custom) Line Items on which the Discount is applied.</p>
+     *  <p>Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</p>
      * @param targetPattern value to be set
      * @return Builder
      */
@@ -153,7 +153,7 @@ public class ChangeTargetPatternChangeValueBuilder implements Builder<ChangeTarg
     }
 
     /**
-     *  <p>Units of (Custom) Line Items on which the Discount is applied.</p>
+     *  <p>Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</p>
      * @param targetPattern value to be set
      * @return Builder
      */
@@ -168,7 +168,7 @@ public class ChangeTargetPatternChangeValueBuilder implements Builder<ChangeTarg
     }
 
     /**
-     *  <p>Units of (Custom) Line Items on which the Discount is applied.</p>
+     *  <p>Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</p>
      * @param builder function to build the targetPattern value
      * @return Builder
      */
@@ -184,7 +184,7 @@ public class ChangeTargetPatternChangeValueBuilder implements Builder<ChangeTarg
     }
 
     /**
-     *  <p>Units of (Custom) Line Items on which the Discount is applied.</p>
+     *  <p>Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</p>
      * @param builder function to build the targetPattern value
      * @return Builder
      */
@@ -198,7 +198,7 @@ public class ChangeTargetPatternChangeValueBuilder implements Builder<ChangeTarg
     }
 
     /**
-     *  <p>Units of (Custom) Line Items on which the Discount is applied.</p>
+     *  <p>Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</p>
      * @param builder function to build the targetPattern value
      * @return Builder
      */
@@ -210,7 +210,7 @@ public class ChangeTargetPatternChangeValueBuilder implements Builder<ChangeTarg
     }
 
     /**
-     *  <p>Units of (Custom) Line Items on which the Discount is applied.</p>
+     *  <p>Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</p>
      * @param builder function to build the targetPattern value
      * @return Builder
      */
@@ -246,17 +246,16 @@ public class ChangeTargetPatternChangeValueBuilder implements Builder<ChangeTarg
     }
 
     /**
-     *  <p>Units of a (Custom) Line Item that triggered the discount application.</p>
+     *  <p>Defines the set of units of (Custom) Line Items in a Cart that triggered the discount application.</p>
      * @return triggerPattern
      */
 
-    @Nullable
     public java.util.List<com.commercetools.history.models.cart_discount.PatternComponent> getTriggerPattern() {
         return this.triggerPattern;
     }
 
     /**
-     *  <p>Units of (Custom) Line Items on which the Discount is applied.</p>
+     *  <p>Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</p>
      * @return targetPattern
      */
 
@@ -289,6 +288,7 @@ public class ChangeTargetPatternChangeValueBuilder implements Builder<ChangeTarg
      * @return ChangeTargetPatternChangeValue
      */
     public ChangeTargetPatternChangeValue build() {
+        Objects.requireNonNull(triggerPattern, ChangeTargetPatternChangeValue.class + ": triggerPattern is missing");
         Objects.requireNonNull(targetPattern, ChangeTargetPatternChangeValue.class + ": targetPattern is missing");
         Objects.requireNonNull(selectionMode, ChangeTargetPatternChangeValue.class + ": selectionMode is missing");
         return new ChangeTargetPatternChangeValueImpl(triggerPattern, targetPattern, maxOccurrence, selectionMode);

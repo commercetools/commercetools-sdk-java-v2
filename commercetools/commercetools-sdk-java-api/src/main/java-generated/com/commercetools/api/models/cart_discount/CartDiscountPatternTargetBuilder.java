@@ -16,6 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     CartDiscountPatternTarget cartDiscountPatternTarget = CartDiscountPatternTarget.builder()
+ *             .plusTriggerPattern(triggerPatternBuilder -> triggerPatternBuilder)
  *             .plusTargetPattern(targetPatternBuilder -> targetPatternBuilder)
  *             .selectionMode(SelectionMode.CHEAPEST)
  *             .build()
@@ -25,7 +26,6 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountPatternTargetBuilder implements Builder<CartDiscountPatternTarget> {
 
-    @Nullable
     private java.util.List<com.commercetools.api.models.cart_discount.PatternComponent> triggerPattern;
 
     private java.util.List<com.commercetools.api.models.cart_discount.PatternComponent> targetPattern;
@@ -36,43 +36,43 @@ public class CartDiscountPatternTargetBuilder implements Builder<CartDiscountPat
     private com.commercetools.api.models.cart_discount.SelectionMode selectionMode;
 
     /**
-     *  <p>Units of a (Custom) Line Item that trigger a discount application.</p>
-     *  <p>Based on the availability of matching units, the <code>triggerPattern</code> can match multiple times, effecting the number of times the discount will be applied. To further limit the discount application, set the <code>maxOccurrence</code>.</p>
-     *  <p>If empty or not set, the Discount will apply indefinitely.</p>
+     *  <p>Defines the set of units of (Custom) Line Items in a Cart that trigger a discount application.</p>
+     *  <p>Based on the availability of matching units, the <code>triggerPattern</code> can match multiple times, limiting the number of maximum times the discount will be applied. To further limit the discount application, set the <code>maxOccurrence</code>.</p>
+     *  <p>If empty, the Discount will apply indefinitely.</p>
      * @param triggerPattern value to be set
      * @return Builder
      */
 
     public CartDiscountPatternTargetBuilder triggerPattern(
-            @Nullable final com.commercetools.api.models.cart_discount.PatternComponent... triggerPattern) {
+            final com.commercetools.api.models.cart_discount.PatternComponent... triggerPattern) {
         this.triggerPattern = new ArrayList<>(Arrays.asList(triggerPattern));
         return this;
     }
 
     /**
-     *  <p>Units of a (Custom) Line Item that trigger a discount application.</p>
-     *  <p>Based on the availability of matching units, the <code>triggerPattern</code> can match multiple times, effecting the number of times the discount will be applied. To further limit the discount application, set the <code>maxOccurrence</code>.</p>
-     *  <p>If empty or not set, the Discount will apply indefinitely.</p>
+     *  <p>Defines the set of units of (Custom) Line Items in a Cart that trigger a discount application.</p>
+     *  <p>Based on the availability of matching units, the <code>triggerPattern</code> can match multiple times, limiting the number of maximum times the discount will be applied. To further limit the discount application, set the <code>maxOccurrence</code>.</p>
+     *  <p>If empty, the Discount will apply indefinitely.</p>
      * @param triggerPattern value to be set
      * @return Builder
      */
 
     public CartDiscountPatternTargetBuilder triggerPattern(
-            @Nullable final java.util.List<com.commercetools.api.models.cart_discount.PatternComponent> triggerPattern) {
+            final java.util.List<com.commercetools.api.models.cart_discount.PatternComponent> triggerPattern) {
         this.triggerPattern = triggerPattern;
         return this;
     }
 
     /**
-     *  <p>Units of a (Custom) Line Item that trigger a discount application.</p>
-     *  <p>Based on the availability of matching units, the <code>triggerPattern</code> can match multiple times, effecting the number of times the discount will be applied. To further limit the discount application, set the <code>maxOccurrence</code>.</p>
-     *  <p>If empty or not set, the Discount will apply indefinitely.</p>
+     *  <p>Defines the set of units of (Custom) Line Items in a Cart that trigger a discount application.</p>
+     *  <p>Based on the availability of matching units, the <code>triggerPattern</code> can match multiple times, limiting the number of maximum times the discount will be applied. To further limit the discount application, set the <code>maxOccurrence</code>.</p>
+     *  <p>If empty, the Discount will apply indefinitely.</p>
      * @param triggerPattern value to be set
      * @return Builder
      */
 
     public CartDiscountPatternTargetBuilder plusTriggerPattern(
-            @Nullable final com.commercetools.api.models.cart_discount.PatternComponent... triggerPattern) {
+            final com.commercetools.api.models.cart_discount.PatternComponent... triggerPattern) {
         if (this.triggerPattern == null) {
             this.triggerPattern = new ArrayList<>();
         }
@@ -81,9 +81,9 @@ public class CartDiscountPatternTargetBuilder implements Builder<CartDiscountPat
     }
 
     /**
-     *  <p>Units of a (Custom) Line Item that trigger a discount application.</p>
-     *  <p>Based on the availability of matching units, the <code>triggerPattern</code> can match multiple times, effecting the number of times the discount will be applied. To further limit the discount application, set the <code>maxOccurrence</code>.</p>
-     *  <p>If empty or not set, the Discount will apply indefinitely.</p>
+     *  <p>Defines the set of units of (Custom) Line Items in a Cart that trigger a discount application.</p>
+     *  <p>Based on the availability of matching units, the <code>triggerPattern</code> can match multiple times, limiting the number of maximum times the discount will be applied. To further limit the discount application, set the <code>maxOccurrence</code>.</p>
+     *  <p>If empty, the Discount will apply indefinitely.</p>
      * @param builder function to build the triggerPattern value
      * @return Builder
      */
@@ -99,9 +99,9 @@ public class CartDiscountPatternTargetBuilder implements Builder<CartDiscountPat
     }
 
     /**
-     *  <p>Units of a (Custom) Line Item that trigger a discount application.</p>
-     *  <p>Based on the availability of matching units, the <code>triggerPattern</code> can match multiple times, effecting the number of times the discount will be applied. To further limit the discount application, set the <code>maxOccurrence</code>.</p>
-     *  <p>If empty or not set, the Discount will apply indefinitely.</p>
+     *  <p>Defines the set of units of (Custom) Line Items in a Cart that trigger a discount application.</p>
+     *  <p>Based on the availability of matching units, the <code>triggerPattern</code> can match multiple times, limiting the number of maximum times the discount will be applied. To further limit the discount application, set the <code>maxOccurrence</code>.</p>
+     *  <p>If empty, the Discount will apply indefinitely.</p>
      * @param builder function to build the triggerPattern value
      * @return Builder
      */
@@ -115,8 +115,9 @@ public class CartDiscountPatternTargetBuilder implements Builder<CartDiscountPat
     }
 
     /**
-     *  <p>Units of (Custom) Line Items on which the Discount is applied.</p>
+     *  <p>Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</p>
      *  <p>Based on the availability of matching units and the limits from the <code>triggerPattern</code> or <code>maxOccurence</code>, the <code>targetPattern</code> can match multiple times.</p>
+     *  <p>This array cannot be empty.</p>
      * @param targetPattern value to be set
      * @return Builder
      */
@@ -128,8 +129,9 @@ public class CartDiscountPatternTargetBuilder implements Builder<CartDiscountPat
     }
 
     /**
-     *  <p>Units of (Custom) Line Items on which the Discount is applied.</p>
+     *  <p>Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</p>
      *  <p>Based on the availability of matching units and the limits from the <code>triggerPattern</code> or <code>maxOccurence</code>, the <code>targetPattern</code> can match multiple times.</p>
+     *  <p>This array cannot be empty.</p>
      * @param targetPattern value to be set
      * @return Builder
      */
@@ -141,8 +143,9 @@ public class CartDiscountPatternTargetBuilder implements Builder<CartDiscountPat
     }
 
     /**
-     *  <p>Units of (Custom) Line Items on which the Discount is applied.</p>
+     *  <p>Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</p>
      *  <p>Based on the availability of matching units and the limits from the <code>triggerPattern</code> or <code>maxOccurence</code>, the <code>targetPattern</code> can match multiple times.</p>
+     *  <p>This array cannot be empty.</p>
      * @param targetPattern value to be set
      * @return Builder
      */
@@ -157,8 +160,9 @@ public class CartDiscountPatternTargetBuilder implements Builder<CartDiscountPat
     }
 
     /**
-     *  <p>Units of (Custom) Line Items on which the Discount is applied.</p>
+     *  <p>Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</p>
      *  <p>Based on the availability of matching units and the limits from the <code>triggerPattern</code> or <code>maxOccurence</code>, the <code>targetPattern</code> can match multiple times.</p>
+     *  <p>This array cannot be empty.</p>
      * @param builder function to build the targetPattern value
      * @return Builder
      */
@@ -174,8 +178,9 @@ public class CartDiscountPatternTargetBuilder implements Builder<CartDiscountPat
     }
 
     /**
-     *  <p>Units of (Custom) Line Items on which the Discount is applied.</p>
+     *  <p>Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</p>
      *  <p>Based on the availability of matching units and the limits from the <code>triggerPattern</code> or <code>maxOccurence</code>, the <code>targetPattern</code> can match multiple times.</p>
+     *  <p>This array cannot be empty.</p>
      * @param builder function to build the targetPattern value
      * @return Builder
      */
@@ -213,20 +218,20 @@ public class CartDiscountPatternTargetBuilder implements Builder<CartDiscountPat
     }
 
     /**
-     *  <p>Units of a (Custom) Line Item that trigger a discount application.</p>
-     *  <p>Based on the availability of matching units, the <code>triggerPattern</code> can match multiple times, effecting the number of times the discount will be applied. To further limit the discount application, set the <code>maxOccurrence</code>.</p>
-     *  <p>If empty or not set, the Discount will apply indefinitely.</p>
+     *  <p>Defines the set of units of (Custom) Line Items in a Cart that trigger a discount application.</p>
+     *  <p>Based on the availability of matching units, the <code>triggerPattern</code> can match multiple times, limiting the number of maximum times the discount will be applied. To further limit the discount application, set the <code>maxOccurrence</code>.</p>
+     *  <p>If empty, the Discount will apply indefinitely.</p>
      * @return triggerPattern
      */
 
-    @Nullable
     public java.util.List<com.commercetools.api.models.cart_discount.PatternComponent> getTriggerPattern() {
         return this.triggerPattern;
     }
 
     /**
-     *  <p>Units of (Custom) Line Items on which the Discount is applied.</p>
+     *  <p>Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</p>
      *  <p>Based on the availability of matching units and the limits from the <code>triggerPattern</code> or <code>maxOccurence</code>, the <code>targetPattern</code> can match multiple times.</p>
+     *  <p>This array cannot be empty.</p>
      * @return targetPattern
      */
 
@@ -259,6 +264,7 @@ public class CartDiscountPatternTargetBuilder implements Builder<CartDiscountPat
      * @return CartDiscountPatternTarget
      */
     public CartDiscountPatternTarget build() {
+        Objects.requireNonNull(triggerPattern, CartDiscountPatternTarget.class + ": triggerPattern is missing");
         Objects.requireNonNull(targetPattern, CartDiscountPatternTarget.class + ": targetPattern is missing");
         Objects.requireNonNull(selectionMode, CartDiscountPatternTarget.class + ": selectionMode is missing");
         return new CartDiscountPatternTargetImpl(triggerPattern, targetPattern, maxOccurrence, selectionMode);

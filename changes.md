@@ -10,6 +10,22 @@
 
 
 <details>
+<summary>Required Property(s)</summary>
+
+- :warning: changed property `triggerPattern` of type `CartDiscountPatternTarget` to be required
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `inheritedStores` to type `BusinessUnit`
+- added property `inheritedStores` to type `Company`
+- added property `inheritedStores` to type `Division`
+</details>
+
+
+<details>
 <summary>Added Method(s)</summary>
 
 - added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().businessUnits().get()`
@@ -25,21 +41,19 @@
 - added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().businessUnits().withId().delete()`
 </details>
 
-
-<details>
-<summary>Added Property(s)</summary>
-
-- added property `inheritedStores` to type `BusinessUnit`
-- added property `inheritedStores` to type `Company`
-- added property `inheritedStores` to type `Division`
-</details>
-
 **History changes**
 
 <details>
 <summary>Changed Property(s)</summary>
 
 - :warning: changed property `extensions` of type `GraphQLError` from type `GraphQLErrorObject` to `object`
+</details>
+
+
+<details>
+<summary>Required Property(s)</summary>
+
+- :warning: changed property `triggerPattern` of type `ChangeTargetPatternChangeValue` to be required
 </details>
 
 

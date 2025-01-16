@@ -16,7 +16,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     ProductTailoringSetExternalImagesAction productTailoringSetExternalImagesAction = ProductTailoringSetExternalImagesAction.builder()
- *             .plusImages(imagesBuilder -> imagesBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -31,6 +30,7 @@ public class ProductTailoringSetExternalImagesActionBuilder
     @Nullable
     private String sku;
 
+    @Nullable
     private java.util.List<com.commercetools.api.models.common.Image> images;
 
     @Nullable
@@ -59,37 +59,40 @@ public class ProductTailoringSetExternalImagesActionBuilder
     }
 
     /**
-     *  <p>Value to set to <code>images</code>.</p>
+     *  <p>Images of the tailored ProductVariant.</p>
+     *  <p>Don't provide this field if you want to remove all images from the tailored Product Variant. Set to <code>[]</code> (empty) if you want to hide all images of the original ProductVariant on the tailored ProductVariant.</p>
      * @param images value to be set
      * @return Builder
      */
 
     public ProductTailoringSetExternalImagesActionBuilder images(
-            final com.commercetools.api.models.common.Image... images) {
+            @Nullable final com.commercetools.api.models.common.Image... images) {
         this.images = new ArrayList<>(Arrays.asList(images));
         return this;
     }
 
     /**
-     *  <p>Value to set to <code>images</code>.</p>
+     *  <p>Images of the tailored ProductVariant.</p>
+     *  <p>Don't provide this field if you want to remove all images from the tailored Product Variant. Set to <code>[]</code> (empty) if you want to hide all images of the original ProductVariant on the tailored ProductVariant.</p>
      * @param images value to be set
      * @return Builder
      */
 
     public ProductTailoringSetExternalImagesActionBuilder images(
-            final java.util.List<com.commercetools.api.models.common.Image> images) {
+            @Nullable final java.util.List<com.commercetools.api.models.common.Image> images) {
         this.images = images;
         return this;
     }
 
     /**
-     *  <p>Value to set to <code>images</code>.</p>
+     *  <p>Images of the tailored ProductVariant.</p>
+     *  <p>Don't provide this field if you want to remove all images from the tailored Product Variant. Set to <code>[]</code> (empty) if you want to hide all images of the original ProductVariant on the tailored ProductVariant.</p>
      * @param images value to be set
      * @return Builder
      */
 
     public ProductTailoringSetExternalImagesActionBuilder plusImages(
-            final com.commercetools.api.models.common.Image... images) {
+            @Nullable final com.commercetools.api.models.common.Image... images) {
         if (this.images == null) {
             this.images = new ArrayList<>();
         }
@@ -98,7 +101,8 @@ public class ProductTailoringSetExternalImagesActionBuilder
     }
 
     /**
-     *  <p>Value to set to <code>images</code>.</p>
+     *  <p>Images of the tailored ProductVariant.</p>
+     *  <p>Don't provide this field if you want to remove all images from the tailored Product Variant. Set to <code>[]</code> (empty) if you want to hide all images of the original ProductVariant on the tailored ProductVariant.</p>
      * @param builder function to build the images value
      * @return Builder
      */
@@ -113,7 +117,8 @@ public class ProductTailoringSetExternalImagesActionBuilder
     }
 
     /**
-     *  <p>Value to set to <code>images</code>.</p>
+     *  <p>Images of the tailored ProductVariant.</p>
+     *  <p>Don't provide this field if you want to remove all images from the tailored Product Variant. Set to <code>[]</code> (empty) if you want to hide all images of the original ProductVariant on the tailored ProductVariant.</p>
      * @param builder function to build the images value
      * @return Builder
      */
@@ -126,7 +131,8 @@ public class ProductTailoringSetExternalImagesActionBuilder
     }
 
     /**
-     *  <p>Value to set to <code>images</code>.</p>
+     *  <p>Images of the tailored ProductVariant.</p>
+     *  <p>Don't provide this field if you want to remove all images from the tailored Product Variant. Set to <code>[]</code> (empty) if you want to hide all images of the original ProductVariant on the tailored ProductVariant.</p>
      * @param builder function to build the images value
      * @return Builder
      */
@@ -137,7 +143,8 @@ public class ProductTailoringSetExternalImagesActionBuilder
     }
 
     /**
-     *  <p>Value to set to <code>images</code>.</p>
+     *  <p>Images of the tailored ProductVariant.</p>
+     *  <p>Don't provide this field if you want to remove all images from the tailored Product Variant. Set to <code>[]</code> (empty) if you want to hide all images of the original ProductVariant on the tailored ProductVariant.</p>
      * @param builder function to build the images value
      * @return Builder
      */
@@ -179,10 +186,12 @@ public class ProductTailoringSetExternalImagesActionBuilder
     }
 
     /**
-     *  <p>Value to set to <code>images</code>.</p>
+     *  <p>Images of the tailored ProductVariant.</p>
+     *  <p>Don't provide this field if you want to remove all images from the tailored Product Variant. Set to <code>[]</code> (empty) if you want to hide all images of the original ProductVariant on the tailored ProductVariant.</p>
      * @return images
      */
 
+    @Nullable
     public java.util.List<com.commercetools.api.models.common.Image> getImages() {
         return this.images;
     }
@@ -202,7 +211,6 @@ public class ProductTailoringSetExternalImagesActionBuilder
      * @return ProductTailoringSetExternalImagesAction
      */
     public ProductTailoringSetExternalImagesAction build() {
-        Objects.requireNonNull(images, ProductTailoringSetExternalImagesAction.class + ": images is missing");
         return new ProductTailoringSetExternalImagesActionImpl(variantId, sku, images, staged);
     }
 

@@ -21,6 +21,8 @@ dependencies {
     api project(':commercetools:commercetools-sdk-java-api')
     api ctsdkv1.client version ctsdkv1.version
     api ctsdkv1.models version ctsdkv1.version
+    api "io.netty:netty-codec:4.1.116.Final"
+    api "io.netty:netty-codec-http:4.1.116.Final"
 
     jmhImplementation project(':commercetools:commercetools-async-http-client')
     jmhImplementation project(':commercetools:commercetools-apachehttp-client')

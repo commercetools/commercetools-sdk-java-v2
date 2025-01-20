@@ -1,21 +1,22 @@
 {
-    "name": "commercetools-sdk-java-v2",
-    "version": "0.0.0",
-    "repository": "https://jenschude@github.com/commercetools/commercetools-sdk-java-v2.git",
-    "author": "Jens Schulze <jens.schulze@commercetools.com>",
-    "license": "Proprietary",
-    "private": true,
-    "engines": {
-        "node": ">=14.15",
-        "npm": ">=5"
-    },
-    "packageManager": "yarn@4.6.0",
-    "dependencies": {
-        "husky": "9.1.7",
-        "lint-staged": "15.3.0"
-    },
-    "scripts": {
-        "postinstall": "husky install",
-        "format": "./gradlew spotlessApply"
-    }
+  "name": "commercetools-sdk-java-v2",
+  "version": "0.0.0",
+  "repository": "https://jenschude@github.com/commercetools/commercetools-sdk-java-v2.git",
+  "author": "Jens Schulze <jens.schulze@commercetools.com>",
+  "license": "Proprietary",
+  "private": true,
+  "engines": {
+    "node": ">=14.15",
+    "npm": ">=5"
+  },
+  "packageManager": "yarn@4.6.0",
+  "dependencies": {
+    "husky": "9.1.7",
+    "lint-staged": "15.3.0"
+  },
+  "scripts": {
+    "postinstall": "husky install",
+    "format": "./gradlew spotlessApply",
+    "prepare": "husky"
+  }
 }

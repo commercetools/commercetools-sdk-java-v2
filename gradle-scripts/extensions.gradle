@@ -9,16 +9,13 @@ ext {
             }
     ]
 
-    netty = [
-            version: '4.1.109.Final'
-    ]
     commons = [
             text: 'org.apache.commons:commons-text:1.13.0',
             lang3: 'org.apache.commons:commons-lang3:3.17.0',
             io: 'commons-io:commons-io:2.18.0',
             io_version: {
                     strictly '[2.8.0,)'
-                    prefer '2.11.0'
+                    prefer '2.16.1'
                 }
     ]
 

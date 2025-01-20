@@ -57,6 +57,9 @@ public class CompanyBuilder implements Builder<Company> {
     @Nullable
     private java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores;
 
+    @Nullable
+    private java.util.List<com.commercetools.api.models.store.StoreKeyReference> inheritedStores;
+
     private com.commercetools.api.models.business_unit.BusinessUnitStoreMode storeMode;
 
     private String name;
@@ -331,6 +334,97 @@ public class CompanyBuilder implements Builder<Company> {
     public CompanyBuilder setStores(
             Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReference> builder) {
         return stores(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()));
+    }
+
+    /**
+     *  <p>Stores that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>storeMode</code> is set to <code>FromParent</code>.</p>
+     * @param inheritedStores value to be set
+     * @return Builder
+     */
+
+    public CompanyBuilder inheritedStores(
+            @Nullable final com.commercetools.api.models.store.StoreKeyReference... inheritedStores) {
+        this.inheritedStores = new ArrayList<>(Arrays.asList(inheritedStores));
+        return this;
+    }
+
+    /**
+     *  <p>Stores that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>storeMode</code> is set to <code>FromParent</code>.</p>
+     * @param inheritedStores value to be set
+     * @return Builder
+     */
+
+    public CompanyBuilder inheritedStores(
+            @Nullable final java.util.List<com.commercetools.api.models.store.StoreKeyReference> inheritedStores) {
+        this.inheritedStores = inheritedStores;
+        return this;
+    }
+
+    /**
+     *  <p>Stores that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>storeMode</code> is set to <code>FromParent</code>.</p>
+     * @param inheritedStores value to be set
+     * @return Builder
+     */
+
+    public CompanyBuilder plusInheritedStores(
+            @Nullable final com.commercetools.api.models.store.StoreKeyReference... inheritedStores) {
+        if (this.inheritedStores == null) {
+            this.inheritedStores = new ArrayList<>();
+        }
+        this.inheritedStores.addAll(Arrays.asList(inheritedStores));
+        return this;
+    }
+
+    /**
+     *  <p>Stores that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>storeMode</code> is set to <code>FromParent</code>.</p>
+     * @param builder function to build the inheritedStores value
+     * @return Builder
+     */
+
+    public CompanyBuilder plusInheritedStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReferenceBuilder> builder) {
+        if (this.inheritedStores == null) {
+            this.inheritedStores = new ArrayList<>();
+        }
+        this.inheritedStores
+                .add(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Stores that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>storeMode</code> is set to <code>FromParent</code>.</p>
+     * @param builder function to build the inheritedStores value
+     * @return Builder
+     */
+
+    public CompanyBuilder withInheritedStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReferenceBuilder> builder) {
+        this.inheritedStores = new ArrayList<>();
+        this.inheritedStores
+                .add(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Stores that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>storeMode</code> is set to <code>FromParent</code>.</p>
+     * @param builder function to build the inheritedStores value
+     * @return Builder
+     */
+
+    public CompanyBuilder addInheritedStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReference> builder) {
+        return plusInheritedStores(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()));
+    }
+
+    /**
+     *  <p>Stores that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>storeMode</code> is set to <code>FromParent</code>.</p>
+     * @param builder function to build the inheritedStores value
+     * @return Builder
+     */
+
+    public CompanyBuilder setInheritedStores(
+            Function<com.commercetools.api.models.store.StoreKeyReferenceBuilder, com.commercetools.api.models.store.StoreKeyReference> builder) {
+        return inheritedStores(builder.apply(com.commercetools.api.models.store.StoreKeyReferenceBuilder.of()));
     }
 
     /**
@@ -949,6 +1043,16 @@ public class CompanyBuilder implements Builder<Company> {
     }
 
     /**
+     *  <p>Stores that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>storeMode</code> is set to <code>FromParent</code>.</p>
+     * @return inheritedStores
+     */
+
+    @Nullable
+    public java.util.List<com.commercetools.api.models.store.StoreKeyReference> getInheritedStores() {
+        return this.inheritedStores;
+    }
+
+    /**
      *  <p>The value of this field is always <code>Explicit</code> because a Company cannot have a parent Business Unit that Stores can be inherited from.</p>
      * @return storeMode
      */
@@ -1110,9 +1214,9 @@ public class CompanyBuilder implements Builder<Company> {
         Objects.requireNonNull(topLevelUnit, Company.class + ": topLevelUnit is missing");
         Objects.requireNonNull(approvalRuleMode, Company.class + ": approvalRuleMode is missing");
         return new CompanyImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, status, stores,
-            storeMode, name, contactEmail, custom, addresses, shippingAddressIds, defaultShippingAddressId,
-            billingAddressIds, defaultBillingAddressId, associateMode, associates, inheritedAssociates, parentUnit,
-            topLevelUnit, approvalRuleMode);
+            inheritedStores, storeMode, name, contactEmail, custom, addresses, shippingAddressIds,
+            defaultShippingAddressId, billingAddressIds, defaultBillingAddressId, associateMode, associates,
+            inheritedAssociates, parentUnit, topLevelUnit, approvalRuleMode);
     }
 
     /**
@@ -1121,9 +1225,9 @@ public class CompanyBuilder implements Builder<Company> {
      */
     public Company buildUnchecked() {
         return new CompanyImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, status, stores,
-            storeMode, name, contactEmail, custom, addresses, shippingAddressIds, defaultShippingAddressId,
-            billingAddressIds, defaultBillingAddressId, associateMode, associates, inheritedAssociates, parentUnit,
-            topLevelUnit, approvalRuleMode);
+            inheritedStores, storeMode, name, contactEmail, custom, addresses, shippingAddressIds,
+            defaultShippingAddressId, billingAddressIds, defaultBillingAddressId, associateMode, associates,
+            inheritedAssociates, parentUnit, topLevelUnit, approvalRuleMode);
     }
 
     /**
@@ -1150,6 +1254,7 @@ public class CompanyBuilder implements Builder<Company> {
         builder.key = template.getKey();
         builder.status = template.getStatus();
         builder.stores = template.getStores();
+        builder.inheritedStores = template.getInheritedStores();
         builder.storeMode = template.getStoreMode();
         builder.name = template.getName();
         builder.contactEmail = template.getContactEmail();

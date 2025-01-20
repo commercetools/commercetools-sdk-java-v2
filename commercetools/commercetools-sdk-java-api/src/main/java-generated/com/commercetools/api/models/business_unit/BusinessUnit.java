@@ -131,6 +131,14 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
     public List<StoreKeyReference> getStores();
 
     /**
+     *  <p>Stores that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>storeMode</code> is set to <code>FromParent</code>.</p>
+     * @return inheritedStores
+     */
+    @Valid
+    @JsonProperty("inheritedStores")
+    public List<StoreKeyReference> getInheritedStores();
+
+    /**
      *  <p>Defines whether the Stores of the Business Unit are set directly on the Business Unit or are inherited from a parent.</p>
      * @return storeMode
      */
@@ -337,6 +345,21 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
     public void setStores(final List<StoreKeyReference> stores);
 
     /**
+     *  <p>Stores that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>storeMode</code> is set to <code>FromParent</code>.</p>
+     * @param inheritedStores values to be set
+     */
+
+    @JsonIgnore
+    public void setInheritedStores(final StoreKeyReference... inheritedStores);
+
+    /**
+     *  <p>Stores that are inherited from a parent Business Unit. The value of this field is eventually consistent and is only present when the <code>storeMode</code> is set to <code>FromParent</code>.</p>
+     * @param inheritedStores values to be set
+     */
+
+    public void setInheritedStores(final List<StoreKeyReference> inheritedStores);
+
+    /**
      *  <p>Defines whether the Stores of the Business Unit are set directly on the Business Unit or are inherited from a parent.</p>
      * @param storeMode value to be set
      */
@@ -510,6 +533,11 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
         instance.setKey(template.getKey());
         instance.setStatus(template.getStatus());
         instance.setStores(Optional.ofNullable(template.getStores())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.store.StoreKeyReference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setInheritedStores(Optional.ofNullable(template.getInheritedStores())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.store.StoreKeyReference::deepCopy)
                         .collect(Collectors.toList()))

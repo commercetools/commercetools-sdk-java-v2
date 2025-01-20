@@ -136,6 +136,7 @@ public interface Division extends BusinessUnit {
         instance.setKey(template.getKey());
         instance.setStatus(template.getStatus());
         instance.setStores(template.getStores());
+        instance.setInheritedStores(template.getInheritedStores());
         instance.setStoreMode(template.getStoreMode());
         instance.setName(template.getName());
         instance.setContactEmail(template.getContactEmail());
@@ -175,6 +176,11 @@ public interface Division extends BusinessUnit {
         instance.setKey(template.getKey());
         instance.setStatus(template.getStatus());
         instance.setStores(Optional.ofNullable(template.getStores())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.store.StoreKeyReference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setInheritedStores(Optional.ofNullable(template.getInheritedStores())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.store.StoreKeyReference::deepCopy)
                         .collect(Collectors.toList()))

@@ -26,6 +26,7 @@ import jakarta.validation.constraints.NotNull;
  * <div class=code-example>
  * <pre><code class='java'>
  *     ChangeTargetPatternChangeValue changeTargetPatternChangeValue = ChangeTargetPatternChangeValue.builder()
+ *             .plusTriggerPattern(triggerPatternBuilder -> triggerPatternBuilder)
  *             .plusTargetPattern(targetPatternBuilder -> targetPatternBuilder)
  *             .selectionMode(SelectionMode.CHEAPEST)
  *             .build()
@@ -50,15 +51,16 @@ public interface ChangeTargetPatternChangeValue extends ChangeTargetChangeValue 
     public String getType();
 
     /**
-     *  <p>Units of a (Custom) Line Item that triggered the discount application.</p>
+     *  <p>Defines the set of units of (Custom) Line Items in a Cart that triggered the discount application.</p>
      * @return triggerPattern
      */
+    @NotNull
     @Valid
     @JsonProperty("triggerPattern")
     public List<PatternComponent> getTriggerPattern();
 
     /**
-     *  <p>Units of (Custom) Line Items on which the Discount is applied.</p>
+     *  <p>Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</p>
      * @return targetPattern
      */
     @NotNull
@@ -84,7 +86,7 @@ public interface ChangeTargetPatternChangeValue extends ChangeTargetChangeValue 
     public SelectionMode getSelectionMode();
 
     /**
-     *  <p>Units of a (Custom) Line Item that triggered the discount application.</p>
+     *  <p>Defines the set of units of (Custom) Line Items in a Cart that triggered the discount application.</p>
      * @param triggerPattern values to be set
      */
 
@@ -92,14 +94,14 @@ public interface ChangeTargetPatternChangeValue extends ChangeTargetChangeValue 
     public void setTriggerPattern(final PatternComponent... triggerPattern);
 
     /**
-     *  <p>Units of a (Custom) Line Item that triggered the discount application.</p>
+     *  <p>Defines the set of units of (Custom) Line Items in a Cart that triggered the discount application.</p>
      * @param triggerPattern values to be set
      */
 
     public void setTriggerPattern(final List<PatternComponent> triggerPattern);
 
     /**
-     *  <p>Units of (Custom) Line Items on which the Discount is applied.</p>
+     *  <p>Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</p>
      * @param targetPattern values to be set
      */
 
@@ -107,7 +109,7 @@ public interface ChangeTargetPatternChangeValue extends ChangeTargetChangeValue 
     public void setTargetPattern(final PatternComponent... targetPattern);
 
     /**
-     *  <p>Units of (Custom) Line Items on which the Discount is applied.</p>
+     *  <p>Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</p>
      * @param targetPattern values to be set
      */
 

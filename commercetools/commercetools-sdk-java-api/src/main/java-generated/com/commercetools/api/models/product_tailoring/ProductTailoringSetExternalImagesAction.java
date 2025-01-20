@@ -15,7 +15,6 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 import jakarta.validation.Valid;
-import jakarta.validation.constraints.NotNull;
 
 /**
  *  <p>Either <code>variantId</code> or <code>sku</code> is required to reference a ProductVariant that exists. Produces the ProductTailoringImagesSet Message.</p>
@@ -25,7 +24,6 @@ import jakarta.validation.constraints.NotNull;
  * <div class=code-example>
  * <pre><code class='java'>
  *     ProductTailoringSetExternalImagesAction productTailoringSetExternalImagesAction = ProductTailoringSetExternalImagesAction.builder()
- *             .plusImages(imagesBuilder -> imagesBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -56,10 +54,10 @@ public interface ProductTailoringSetExternalImagesAction extends ProductTailorin
     public String getSku();
 
     /**
-     *  <p>Value to set to <code>images</code>.</p>
+     *  <p>Images of the tailored ProductVariant.</p>
+     *  <p>Don't provide this field if you want to remove all images from the tailored Product Variant. Set to <code>[]</code> (empty) if you want to hide all images of the original ProductVariant on the tailored ProductVariant.</p>
      * @return images
      */
-    @NotNull
     @Valid
     @JsonProperty("images")
     public List<Image> getImages();
@@ -87,7 +85,8 @@ public interface ProductTailoringSetExternalImagesAction extends ProductTailorin
     public void setSku(final String sku);
 
     /**
-     *  <p>Value to set to <code>images</code>.</p>
+     *  <p>Images of the tailored ProductVariant.</p>
+     *  <p>Don't provide this field if you want to remove all images from the tailored Product Variant. Set to <code>[]</code> (empty) if you want to hide all images of the original ProductVariant on the tailored ProductVariant.</p>
      * @param images values to be set
      */
 
@@ -95,7 +94,8 @@ public interface ProductTailoringSetExternalImagesAction extends ProductTailorin
     public void setImages(final Image... images);
 
     /**
-     *  <p>Value to set to <code>images</code>.</p>
+     *  <p>Images of the tailored ProductVariant.</p>
+     *  <p>Don't provide this field if you want to remove all images from the tailored Product Variant. Set to <code>[]</code> (empty) if you want to hide all images of the original ProductVariant on the tailored ProductVariant.</p>
      * @param images values to be set
      */
 

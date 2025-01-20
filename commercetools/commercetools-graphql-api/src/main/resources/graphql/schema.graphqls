@@ -4845,6 +4845,13 @@ type InStore implements CartDiscountQueryInterface & CartQueryInterface & Custom
     "Queries with specified key"
     key: String): Quote
   quotes(where: String, sort: [String!], limit: Int, offset: Int): QuoteQueryResult!
+  businessUnit(
+    "Queries with specified ID"
+    id: String,
+
+    "Queries with specified key"
+    key: String): BusinessUnit
+  businessUnits(where: String, sort: [String!], limit: Int, offset: Int): BusinessUnitQueryResult!
 }
 
 type InStoreMe implements MeQueryInterface & CartQueryInterface & ActiveCartInterface & OrderQueryInterface & ShoppingListQueryInterface {
@@ -6449,11 +6456,17 @@ type Mutation {
   createBusinessUnit(draft: BusinessUnitDraft!,
 
     "Create/modify entity as an associate in business-unit."
-    asAssociate: AsAssociateArgument): BusinessUnit
+    asAssociate: AsAssociateArgument,
+
+    "The mutation is only performed if the resource is part of the store. Can be used with store-specific OAuth permissions."
+    storeKey: KeyReferenceInput): BusinessUnit
   updateBusinessUnit(version: Long!, actions: [BusinessUnitUpdateAction!]!,
 
     "Create/modify entity as an associate in business-unit."
     asAssociate: AsAssociateArgument,
+
+    "The mutation is only performed if the resource is part of the store. Can be used with store-specific OAuth permissions."
+    storeKey: KeyReferenceInput,
 
     "Queries with specified ID"
     id: String,
@@ -6461,6 +6474,9 @@ type Mutation {
     "Queries with specified key"
     key: String): BusinessUnit
   deleteBusinessUnit(version: Long!, personalDataErasure: Boolean = false,
+
+    "The mutation is only performed if the resource is part of the store. Can be used with store-specific OAuth permissions."
+    storeKey: KeyReferenceInput,
 
     "Queries with specified ID"
     id: String,
@@ -7171,6 +7187,11 @@ type OrderShipmentStateChanged implements MessagePayload & OrderMessagePayload {
 type OrderShippingAddressSet implements MessagePayload & OrderMessagePayload {
   address: Address
   oldAddress: Address
+  type: String!
+}
+
+type OrderShippingContainerSet implements MessagePayload & OrderMessagePayload {
+  shippingContainer: ShippingContainer
   type: String!
 }
 
@@ -8184,10 +8205,12 @@ type ProductProjection {
   hasStagedChanges: Boolean!
   published: Boolean!
   masterVariant: ProductSearchVariant!
-  variants: [ProductSearchVariant!]!
 
-  "Fetch all variants, including the master variant in first position."
-  allVariants: [ProductSearchVariant!]!
+  "Fetch all variants, excluding the master variant. If `onlyMatching` is used, filter this list based on the the search query."
+  variants(onlyMatching: Boolean): [ProductSearchVariant!]!
+
+  "Fetch all variants, including the master variant in first position. If `onlyMatching` is used, filter this list based on the the search query."
+  allVariants(onlyMatching: Boolean): [ProductSearchVariant!]!
   taxCategoryRef: Reference
   taxCategory: TaxCategory
   stateRef: Reference
@@ -8688,8 +8711,8 @@ type ProductTailoringImagesSet implements MessagePayload {
   storeRef: KeyReference!
   productRef: Reference!
   productKey: String
-  oldImages: [Image!]!
-  images: [Image!]!
+  oldImages: [Image!]
+  images: [Image!]
   type: String!
 }
 
@@ -9047,8 +9070,8 @@ type ProductVariantSelectionIncludeOnly implements ProductVariantSelection {
 
 type ProductVariantTailoring {
   id: Int!
-  images: [Image!]!
-  assets: [Asset!]!
+  images: [Image!]
+  assets: [Asset!]
   attributesRaw: [RawProductAttribute!]!
 }
 
@@ -12053,7 +12076,7 @@ input SetProductTailoringImageLabel {
 input SetProductTailoringImages {
   variantId: Int
   sku: String
-  images: [ImageInput!]!
+  images: [ImageInput!]
   staged: Boolean = true
 }
 
@@ -13183,6 +13206,12 @@ type Shipping {
   shippingAddress: Address
   shippingRateInput: ShippingRateInput
   shippingCustomFields: CustomFieldsType
+}
+
+type ShippingContainer {
+  shippingMode: ShippingMode!
+  singleShipping: Shipping!
+  multiShipping: [Shipping!]!
 }
 
 input ShippingDraft {
@@ -14864,8 +14893,8 @@ input ValueFilterInput {
 }
 
 type VariantTailoring {
-  images: [Image!]!
-  assets: [Asset!]!
+  images: [Image!]
+  assets: [Asset!]
 }
 
 "Versioned object have an ID and version and modification. Every update of this object changes it's version."

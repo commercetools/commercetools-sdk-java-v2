@@ -22,7 +22,7 @@ public class CtAsyncHttpClient extends HttpClientBase implements VrapHttpClient,
     private final Supplier<DefaultAsyncHttpClientConfig.Builder> clientBuilder = CtAsyncHttpClient::createClientBuilder;
 
     public static DefaultAsyncHttpClientConfig.Builder createClientBuilder() {
-        return new DefaultAsyncHttpClientConfig.Builder().setEnabledProtocols(new String[] { "TLSv1.1", "TLSv1.2" })
+        return new DefaultAsyncHttpClientConfig.Builder().setEnabledProtocols(new String[] { "TLSv1.3", "TLSv1.2" })
                 .setReadTimeout(121000)
                 .setRequestTimeout(121000);
     }

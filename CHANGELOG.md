@@ -1,4 +1,92 @@
 
+# 17.23.0 (2025-01-21)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/790
+* Bump micromatch from 4.0.7 to 4.0.8 by @dependabot in https://github.com/commercetools/commercetools-sdk-java-v2/pull/718
+* chore(deps): update gradle/actions action to v4 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/710
+* chore(deps): update actions/setup-java digest to 7a6d8a8 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/709
+* chore(deps): lock file maintenance by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/677
+* chore(deps): update actions/checkout digest to 11bd719 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/676
+* chore(deps): update actions/create-github-app-token digest to c1a2851 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/665
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/791
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/792
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/793
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/794
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/797
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/798
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/799
+* [DEVX-516] add HttpClient info to UserAgent by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/784
+
+**Api changes**
+
+<details>
+<summary>Added Resource(s)</summary>
+
+- added resource `/{projectKey}/in-store/key={storeKey}/business-units`
+- added resource `/{projectKey}/in-store/key={storeKey}/business-units/key={key}`
+- added resource `/{projectKey}/in-store/key={storeKey}/business-units/{ID}`
+</details>
+
+
+<details>
+<summary>Required Property(s)</summary>
+
+- :warning: changed property `triggerPattern` of type `CartDiscountPatternTarget` to be required
+- changed property `images` of type `ProductTailoringSetExternalImagesAction` to be optional
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `inheritedStores` to type `BusinessUnit`
+- added property `inheritedStores` to type `Company`
+- added property `inheritedStores` to type `Division`
+</details>
+
+
+<details>
+<summary>Added Method(s)</summary>
+
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().businessUnits().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().businessUnits().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().businessUnits().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().businessUnits().withKey().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().businessUnits().withKey().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().businessUnits().withKey().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().businessUnits().withKey().delete()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().businessUnits().withId().get()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().businessUnits().withId().head()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().businessUnits().withId().post()`
+- added method `apiRoot.withProjectKey().inStoreKeyWithStoreKeyValue().businessUnits().withId().delete()`
+</details>
+
+**History changes**
+
+<details>
+<summary>Changed Property(s)</summary>
+
+- :warning: changed property `extensions` of type `GraphQLError` from type `GraphQLErrorObject` to `object`
+</details>
+
+
+<details>
+<summary>Required Property(s)</summary>
+
+- :warning: changed property `triggerPattern` of type `ChangeTargetPatternChangeValue` to be required
+</details>
+
+
+<details>
+<summary>Removed Type(s)</summary>
+
+- :warning: removed type `GraphQLErrorObject`
+</details>
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.22.0...17.23.0
+
 # 17.22.0 (2025-01-06)
 
 ## What's Changed

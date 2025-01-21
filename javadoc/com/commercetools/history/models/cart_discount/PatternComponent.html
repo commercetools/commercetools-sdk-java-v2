@@ -80,6 +80,7 @@ loadScripts(document, 'script');</script>
  <div class=code-example>
  <pre><code class='java'>
      PatternComponent patternComponent = PatternComponent.builder()
+             .type("{type}")
              .build()
  </code></pre>
  </div></div>
@@ -97,6 +98,16 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="PatternComponentBuilder.html" title="class in com.commercetools.history.models.cart_discount">PatternComponentBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#builder()" class="member-name-link">builder</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="block">builder factory method for PatternComponent</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="PatternComponentBuilder.html" title="class in com.commercetools.history.models.cart_discount">PatternComponentBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#builder(com.commercetools.history.models.cart_discount.PatternComponent)" class="member-name-link">builder</a><wbr>(<a href="PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>&nbsp;template)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="block">create builder for PatternComponent instance</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#deepCopy(com.commercetools.history.models.cart_discount.PatternComponent)" class="member-name-link">deepCopy</a><wbr>(<a href="PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>&nbsp;template)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1">
@@ -105,14 +116,29 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getType()" class="member-name-link">getType</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="block">factory method</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(com.commercetools.history.models.cart_discount.PatternComponent)" class="member-name-link">of</a><wbr>(<a href="PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>&nbsp;template)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="block">factory method to create a shallow copy PatternComponent</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setType(java.lang.String)" class="member-name-link">setType</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;type)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">set type</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;T&gt;&nbsp;T</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#withPatternComponent(java.util.function.Function)" class="member-name-link">withPatternComponent</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>,<wbr>T&gt;&nbsp;helper)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;T&gt;&nbsp;T</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#withPatternComponent(java.util.function.Function)" class="member-name-link">withPatternComponent</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>,<wbr>T&gt;&nbsp;helper)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">accessor map function</div>
 </div>
 </div>
@@ -141,6 +167,41 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="setType(java.lang.String)">
+<h3>setType</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setType</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;type)</span></div>
+<div class="block">set type</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>type</code> - value to be set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="of()">
+<h3>of</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a></span>&nbsp;<span class="element-name">of</span>()</div>
+<div class="block">factory method</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>instance of PatternComponent</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="of(com.commercetools.history.models.cart_discount.PatternComponent)">
+<h3>of</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a></span>&nbsp;<span class="element-name">of</span><wbr><span class="parameters">(<a href="PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>&nbsp;template)</span></div>
+<div class="block">factory method to create a shallow copy PatternComponent</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>template</code> - instance to be copied</dd>
+<dt>Returns:</dt>
+<dd>copy instance</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="deepCopy(com.commercetools.history.models.cart_discount.PatternComponent)">
 <h3>deepCopy</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
@@ -152,6 +213,30 @@ loadScripts(document, 'script');</script>
 <dd><code>template</code> - instance to be copied</dd>
 <dt>Returns:</dt>
 <dd>copy instance</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="builder()">
+<h3>builder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PatternComponentBuilder.html" title="class in com.commercetools.history.models.cart_discount">PatternComponentBuilder</a></span>&nbsp;<span class="element-name">builder</span>()</div>
+<div class="block">builder factory method for PatternComponent</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="builder(com.commercetools.history.models.cart_discount.PatternComponent)">
+<h3>builder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="PatternComponentBuilder.html" title="class in com.commercetools.history.models.cart_discount">PatternComponentBuilder</a></span>&nbsp;<span class="element-name">builder</span><wbr><span class="parameters">(<a href="PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>&nbsp;template)</span></div>
+<div class="block">create builder for PatternComponent instance</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>template</code> - instance with prefilled values for the builder</dd>
+<dt>Returns:</dt>
+<dd>builder</dd>
 </dl>
 </section>
 </li>

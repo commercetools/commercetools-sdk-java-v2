@@ -85,7 +85,6 @@ extends <a href="ProductTailoringUpdateAction.html" title="interface in com.comm
  <div class=code-example>
  <pre><code class='java'>
      ProductTailoringSetExternalImagesAction productTailoringSetExternalImagesAction = ProductTailoringSetExternalImagesAction.builder()
-             .plusImages(imagesBuilder -> imagesBuilder)
              .build()
  </code></pre>
  </div></div>
@@ -135,10 +134,10 @@ extends <a href="ProductTailoringUpdateAction.html" title="interface in com.comm
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a deep copy of ProductTailoringSetExternalImagesAction</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Image.html" title="interface in com.commercetools.api.models.common">Image</a>&gt;</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Image.html" title="interface in com.commercetools.api.models.common">Image</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getImages()" class="member-name-link">getImages</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Value to set to <code>images</code>.</div>
+<div class="block">Images of the tailored ProductVariant.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSku()" class="member-name-link">getSku</a>()</code></div>
@@ -168,12 +167,12 @@ extends <a href="ProductTailoringUpdateAction.html" title="interface in com.comm
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setImages(com.commercetools.api.models.common.Image...)" class="member-name-link">setImages</a><wbr>(<a href="../common/Image.html" title="interface in com.commercetools.api.models.common">Image</a>...&nbsp;images)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Value to set to <code>images</code>.</div>
+<div class="block">Images of the tailored ProductVariant.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setImages(java.util.List)" class="member-name-link">setImages</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Image.html" title="interface in com.commercetools.api.models.common">Image</a>&gt;&nbsp;images)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Value to set to <code>images</code>.</div>
+<div class="block">Images of the tailored ProductVariant.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setSku(java.lang.String)" class="member-name-link">setSku</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sku)</code></div>
@@ -265,10 +264,10 @@ extends <a href="ProductTailoringUpdateAction.html" title="interface in com.comm
 <li>
 <section class="detail" id="getImages()">
 <h3>getImages</h3>
-<div class="member-signature"><span class="annotations">@NotNull
-@Valid
-</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Image.html" title="interface in com.commercetools.api.models.common">Image</a>&gt;</span>&nbsp;<span class="element-name">getImages</span>()</div>
-<div class="block"><p>Value to set to <code>images</code>.</p></div>
+<div class="member-signature"><span class="annotations">@Valid
+</span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Image.html" title="interface in com.commercetools.api.models.common">Image</a>&gt;</span>&nbsp;<span class="element-name">getImages</span>()</div>
+<div class="block"><p>Images of the tailored ProductVariant.</p>
+  <p>Don't provide this field if you want to remove all images from the tailored Product Variant. Set to <code>[]</code> (empty) if you want to hide all images of the original ProductVariant on the tailored ProductVariant.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>images</dd>
@@ -312,7 +311,8 @@ extends <a href="ProductTailoringUpdateAction.html" title="interface in com.comm
 <section class="detail" id="setImages(com.commercetools.api.models.common.Image...)">
 <h3>setImages</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setImages</span><wbr><span class="parameters">(<a href="../common/Image.html" title="interface in com.commercetools.api.models.common">Image</a>...&nbsp;images)</span></div>
-<div class="block"><p>Value to set to <code>images</code>.</p></div>
+<div class="block"><p>Images of the tailored ProductVariant.</p>
+  <p>Don't provide this field if you want to remove all images from the tailored Product Variant. Set to <code>[]</code> (empty) if you want to hide all images of the original ProductVariant on the tailored ProductVariant.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>images</code> - values to be set</dd>
@@ -323,7 +323,8 @@ extends <a href="ProductTailoringUpdateAction.html" title="interface in com.comm
 <section class="detail" id="setImages(java.util.List)">
 <h3>setImages</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setImages</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/Image.html" title="interface in com.commercetools.api.models.common">Image</a>&gt;&nbsp;images)</span></div>
-<div class="block"><p>Value to set to <code>images</code>.</p></div>
+<div class="block"><p>Images of the tailored ProductVariant.</p>
+  <p>Don't provide this field if you want to remove all images from the tailored Product Variant. Set to <code>[]</code> (empty) if you want to hide all images of the original ProductVariant on the tailored ProductVariant.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>images</code> - values to be set</dd>

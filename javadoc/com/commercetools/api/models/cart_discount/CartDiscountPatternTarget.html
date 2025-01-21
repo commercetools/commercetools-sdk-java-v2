@@ -86,6 +86,7 @@ extends <a href="CartDiscountTarget.html" title="interface in com.commercetools.
  <div class=code-example>
  <pre><code class='java'>
      CartDiscountPatternTarget cartDiscountPatternTarget = CartDiscountPatternTarget.builder()
+             .plusTriggerPattern(triggerPatternBuilder -> triggerPatternBuilder)
              .plusTargetPattern(targetPatternBuilder -> targetPatternBuilder)
              .selectionMode(SelectionMode.CHEAPEST)
              .build()
@@ -150,12 +151,12 @@ extends <a href="CartDiscountTarget.html" title="interface in com.commercetools.
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="PatternComponent.html" title="interface in com.commercetools.api.models.cart_discount">PatternComponent</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTargetPattern()" class="member-name-link">getTargetPattern</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Units of (Custom) Line Items on which the Discount is applied.</div>
+<div class="block">Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="PatternComponent.html" title="interface in com.commercetools.api.models.cart_discount">PatternComponent</a>&gt;</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="PatternComponent.html" title="interface in com.commercetools.api.models.cart_discount">PatternComponent</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTriggerPattern()" class="member-name-link">getTriggerPattern</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Units of a (Custom) Line Item that trigger a discount application.</div>
+<div class="block">Defines the set of units of (Custom) Line Items in a Cart that trigger a discount application.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="CartDiscountPatternTarget.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountPatternTarget</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -180,22 +181,22 @@ extends <a href="CartDiscountTarget.html" title="interface in com.commercetools.
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTargetPattern(com.commercetools.api.models.cart_discount.PatternComponent...)" class="member-name-link">setTargetPattern</a><wbr>(<a href="PatternComponent.html" title="interface in com.commercetools.api.models.cart_discount">PatternComponent</a>...&nbsp;targetPattern)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Units of (Custom) Line Items on which the Discount is applied.</div>
+<div class="block">Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTargetPattern(java.util.List)" class="member-name-link">setTargetPattern</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="PatternComponent.html" title="interface in com.commercetools.api.models.cart_discount">PatternComponent</a>&gt;&nbsp;targetPattern)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Units of (Custom) Line Items on which the Discount is applied.</div>
+<div class="block">Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTriggerPattern(com.commercetools.api.models.cart_discount.PatternComponent...)" class="member-name-link">setTriggerPattern</a><wbr>(<a href="PatternComponent.html" title="interface in com.commercetools.api.models.cart_discount">PatternComponent</a>...&nbsp;triggerPattern)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Units of a (Custom) Line Item that trigger a discount application.</div>
+<div class="block">Defines the set of units of (Custom) Line Items in a Cart that trigger a discount application.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTriggerPattern(java.util.List)" class="member-name-link">setTriggerPattern</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="PatternComponent.html" title="interface in com.commercetools.api.models.cart_discount">PatternComponent</a>&gt;&nbsp;triggerPattern)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Units of a (Custom) Line Item that trigger a discount application.</div>
+<div class="block">Defines the set of units of (Custom) Line Items in a Cart that trigger a discount application.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CartDiscountPatternTarget.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountPatternTarget</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -250,11 +251,12 @@ extends <a href="CartDiscountTarget.html" title="interface in com.commercetools.
 <li>
 <section class="detail" id="getTriggerPattern()">
 <h3>getTriggerPattern</h3>
-<div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="PatternComponent.html" title="interface in com.commercetools.api.models.cart_discount">PatternComponent</a>&gt;</span>&nbsp;<span class="element-name">getTriggerPattern</span>()</div>
-<div class="block"><p>Units of a (Custom) Line Item that trigger a discount application.</p>
-  <p>Based on the availability of matching units, the <code>triggerPattern</code> can match multiple times, effecting the number of times the discount will be applied. To further limit the discount application, set the <code>maxOccurrence</code>.</p>
-  <p>If empty or not set, the Discount will apply indefinitely.</p></div>
+<div class="member-signature"><span class="annotations">@NotNull
+@Valid
+</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="PatternComponent.html" title="interface in com.commercetools.api.models.cart_discount">PatternComponent</a>&gt;</span>&nbsp;<span class="element-name">getTriggerPattern</span>()</div>
+<div class="block"><p>Defines the set of units of (Custom) Line Items in a Cart that trigger a discount application.</p>
+  <p>Based on the availability of matching units, the <code>triggerPattern</code> can match multiple times, limiting the number of maximum times the discount will be applied. To further limit the discount application, set the <code>maxOccurrence</code>.</p>
+  <p>If empty, the Discount will apply indefinitely.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>triggerPattern</dd>
@@ -267,8 +269,9 @@ extends <a href="CartDiscountTarget.html" title="interface in com.commercetools.
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
 </span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="PatternComponent.html" title="interface in com.commercetools.api.models.cart_discount">PatternComponent</a>&gt;</span>&nbsp;<span class="element-name">getTargetPattern</span>()</div>
-<div class="block"><p>Units of (Custom) Line Items on which the Discount is applied.</p>
-  <p>Based on the availability of matching units and the limits from the <code>triggerPattern</code> or <code>maxOccurence</code>, the <code>targetPattern</code> can match multiple times.</p></div>
+<div class="block"><p>Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</p>
+  <p>Based on the availability of matching units and the limits from the <code>triggerPattern</code> or <code>maxOccurence</code>, the <code>targetPattern</code> can match multiple times.</p>
+  <p>This array cannot be empty.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>targetPattern</dd>
@@ -303,9 +306,9 @@ extends <a href="CartDiscountTarget.html" title="interface in com.commercetools.
 <section class="detail" id="setTriggerPattern(com.commercetools.api.models.cart_discount.PatternComponent...)">
 <h3>setTriggerPattern</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setTriggerPattern</span><wbr><span class="parameters">(<a href="PatternComponent.html" title="interface in com.commercetools.api.models.cart_discount">PatternComponent</a>...&nbsp;triggerPattern)</span></div>
-<div class="block"><p>Units of a (Custom) Line Item that trigger a discount application.</p>
-  <p>Based on the availability of matching units, the <code>triggerPattern</code> can match multiple times, effecting the number of times the discount will be applied. To further limit the discount application, set the <code>maxOccurrence</code>.</p>
-  <p>If empty or not set, the Discount will apply indefinitely.</p></div>
+<div class="block"><p>Defines the set of units of (Custom) Line Items in a Cart that trigger a discount application.</p>
+  <p>Based on the availability of matching units, the <code>triggerPattern</code> can match multiple times, limiting the number of maximum times the discount will be applied. To further limit the discount application, set the <code>maxOccurrence</code>.</p>
+  <p>If empty, the Discount will apply indefinitely.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>triggerPattern</code> - values to be set</dd>
@@ -316,9 +319,9 @@ extends <a href="CartDiscountTarget.html" title="interface in com.commercetools.
 <section class="detail" id="setTriggerPattern(java.util.List)">
 <h3>setTriggerPattern</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setTriggerPattern</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="PatternComponent.html" title="interface in com.commercetools.api.models.cart_discount">PatternComponent</a>&gt;&nbsp;triggerPattern)</span></div>
-<div class="block"><p>Units of a (Custom) Line Item that trigger a discount application.</p>
-  <p>Based on the availability of matching units, the <code>triggerPattern</code> can match multiple times, effecting the number of times the discount will be applied. To further limit the discount application, set the <code>maxOccurrence</code>.</p>
-  <p>If empty or not set, the Discount will apply indefinitely.</p></div>
+<div class="block"><p>Defines the set of units of (Custom) Line Items in a Cart that trigger a discount application.</p>
+  <p>Based on the availability of matching units, the <code>triggerPattern</code> can match multiple times, limiting the number of maximum times the discount will be applied. To further limit the discount application, set the <code>maxOccurrence</code>.</p>
+  <p>If empty, the Discount will apply indefinitely.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>triggerPattern</code> - values to be set</dd>
@@ -329,8 +332,9 @@ extends <a href="CartDiscountTarget.html" title="interface in com.commercetools.
 <section class="detail" id="setTargetPattern(com.commercetools.api.models.cart_discount.PatternComponent...)">
 <h3>setTargetPattern</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setTargetPattern</span><wbr><span class="parameters">(<a href="PatternComponent.html" title="interface in com.commercetools.api.models.cart_discount">PatternComponent</a>...&nbsp;targetPattern)</span></div>
-<div class="block"><p>Units of (Custom) Line Items on which the Discount is applied.</p>
-  <p>Based on the availability of matching units and the limits from the <code>triggerPattern</code> or <code>maxOccurence</code>, the <code>targetPattern</code> can match multiple times.</p></div>
+<div class="block"><p>Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</p>
+  <p>Based on the availability of matching units and the limits from the <code>triggerPattern</code> or <code>maxOccurence</code>, the <code>targetPattern</code> can match multiple times.</p>
+  <p>This array cannot be empty.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>targetPattern</code> - values to be set</dd>
@@ -341,8 +345,9 @@ extends <a href="CartDiscountTarget.html" title="interface in com.commercetools.
 <section class="detail" id="setTargetPattern(java.util.List)">
 <h3>setTargetPattern</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setTargetPattern</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="PatternComponent.html" title="interface in com.commercetools.api.models.cart_discount">PatternComponent</a>&gt;&nbsp;targetPattern)</span></div>
-<div class="block"><p>Units of (Custom) Line Items on which the Discount is applied.</p>
-  <p>Based on the availability of matching units and the limits from the <code>triggerPattern</code> or <code>maxOccurence</code>, the <code>targetPattern</code> can match multiple times.</p></div>
+<div class="block"><p>Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</p>
+  <p>Based on the availability of matching units and the limits from the <code>triggerPattern</code> or <code>maxOccurence</code>, the <code>targetPattern</code> can match multiple times.</p>
+  <p>This array cannot be empty.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>targetPattern</code> - values to be set</dd>

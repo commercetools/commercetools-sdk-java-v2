@@ -88,6 +88,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
  <div class=code-example>
  <pre><code class='java'>
      ChangeTargetPatternChangeValue changeTargetPatternChangeValue = ChangeTargetPatternChangeValue.builder()
+             .plusTriggerPattern(triggerPatternBuilder -> triggerPatternBuilder)
              .plusTargetPattern(targetPatternBuilder -> targetPatternBuilder)
              .selectionMode(SelectionMode.CHEAPEST)
              .build()
@@ -120,6 +121,16 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ChangeTargetPatternChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeTargetPatternChangeValueBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addTargetPattern(java.util.function.Function)" class="member-name-link">addTargetPattern</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart_discount/PatternComponentBuilder.html" title="class in com.commercetools.history.models.cart_discount">PatternComponentBuilder</a>,<wbr><a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ChangeTargetPatternChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeTargetPatternChangeValueBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addTriggerPattern(java.util.function.Function)" class="member-name-link">addTriggerPattern</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart_discount/PatternComponentBuilder.html" title="class in com.commercetools.history.models.cart_discount">PatternComponentBuilder</a>,<wbr><a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Defines the set of units of (Custom) Line Items in a Cart that triggered the discount application.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ChangeTargetPatternChangeValue.html" title="interface in com.commercetools.history.models.change_value">ChangeTargetPatternChangeValue</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#build()" class="member-name-link">build</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -143,12 +154,12 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTargetPattern()" class="member-name-link">getTargetPattern</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Units of (Custom) Line Items on which the Discount is applied.</div>
+<div class="block">Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTriggerPattern()" class="member-name-link">getTriggerPattern</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Units of a (Custom) Line Item that triggered the discount application.</div>
+<div class="block">Defines the set of units of (Custom) Line Items in a Cart that triggered the discount application.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ChangeTargetPatternChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeTargetPatternChangeValueBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#maxOccurrence(java.lang.Integer)" class="member-name-link">maxOccurrence</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;maxOccurrence)</code></div>
@@ -168,22 +179,22 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ChangeTargetPatternChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeTargetPatternChangeValueBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusTargetPattern(com.commercetools.history.models.cart_discount.PatternComponent...)" class="member-name-link">plusTargetPattern</a><wbr>(<a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>...&nbsp;targetPattern)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Units of (Custom) Line Items on which the Discount is applied.</div>
+<div class="block">Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ChangeTargetPatternChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeTargetPatternChangeValueBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusTargetPattern(java.util.function.Function)" class="member-name-link">plusTargetPattern</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart_discount/PatternComponentBuilder.html" title="class in com.commercetools.history.models.cart_discount">PatternComponentBuilder</a>,<wbr><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>&gt;&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusTargetPattern(java.util.function.Function)" class="member-name-link">plusTargetPattern</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart_discount/PatternComponentBuilder.html" title="class in com.commercetools.history.models.cart_discount">PatternComponentBuilder</a>,<wbr><a href="../cart_discount/PatternComponentBuilder.html" title="class in com.commercetools.history.models.cart_discount">PatternComponentBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Units of (Custom) Line Items on which the Discount is applied.</div>
+<div class="block">Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ChangeTargetPatternChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeTargetPatternChangeValueBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusTriggerPattern(com.commercetools.history.models.cart_discount.PatternComponent...)" class="member-name-link">plusTriggerPattern</a><wbr>(<a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>...&nbsp;triggerPattern)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Units of a (Custom) Line Item that triggered the discount application.</div>
+<div class="block">Defines the set of units of (Custom) Line Items in a Cart that triggered the discount application.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ChangeTargetPatternChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeTargetPatternChangeValueBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusTriggerPattern(java.util.function.Function)" class="member-name-link">plusTriggerPattern</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart_discount/PatternComponentBuilder.html" title="class in com.commercetools.history.models.cart_discount">PatternComponentBuilder</a>,<wbr><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>&gt;&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusTriggerPattern(java.util.function.Function)" class="member-name-link">plusTriggerPattern</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart_discount/PatternComponentBuilder.html" title="class in com.commercetools.history.models.cart_discount">PatternComponentBuilder</a>,<wbr><a href="../cart_discount/PatternComponentBuilder.html" title="class in com.commercetools.history.models.cart_discount">PatternComponentBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Units of a (Custom) Line Item that triggered the discount application.</div>
+<div class="block">Defines the set of units of (Custom) Line Items in a Cart that triggered the discount application.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ChangeTargetPatternChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeTargetPatternChangeValueBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#selectionMode(com.commercetools.history.models.common.SelectionMode)" class="member-name-link">selectionMode</a><wbr>(<a href="../common/SelectionMode.html" title="interface in com.commercetools.history.models.common">SelectionMode</a>&nbsp;selectionMode)</code></div>
@@ -191,34 +202,44 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="block">Indicates which of the matching units of (Custom) Line Items were discounted.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ChangeTargetPatternChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeTargetPatternChangeValueBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setTargetPattern(java.util.function.Function)" class="member-name-link">setTargetPattern</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart_discount/PatternComponentBuilder.html" title="class in com.commercetools.history.models.cart_discount">PatternComponentBuilder</a>,<wbr><a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ChangeTargetPatternChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeTargetPatternChangeValueBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setTriggerPattern(java.util.function.Function)" class="member-name-link">setTriggerPattern</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart_discount/PatternComponentBuilder.html" title="class in com.commercetools.history.models.cart_discount">PatternComponentBuilder</a>,<wbr><a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Defines the set of units of (Custom) Line Items in a Cart that triggered the discount application.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ChangeTargetPatternChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeTargetPatternChangeValueBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#targetPattern(com.commercetools.history.models.cart_discount.PatternComponent...)" class="member-name-link">targetPattern</a><wbr>(<a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>...&nbsp;targetPattern)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Units of (Custom) Line Items on which the Discount is applied.</div>
+<div class="block">Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ChangeTargetPatternChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeTargetPatternChangeValueBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#targetPattern(java.util.List)" class="member-name-link">targetPattern</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>&gt;&nbsp;targetPattern)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Units of (Custom) Line Items on which the Discount is applied.</div>
+<div class="block">Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ChangeTargetPatternChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeTargetPatternChangeValueBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#triggerPattern(com.commercetools.history.models.cart_discount.PatternComponent...)" class="member-name-link">triggerPattern</a><wbr>(<a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>...&nbsp;triggerPattern)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Units of a (Custom) Line Item that triggered the discount application.</div>
+<div class="block">Defines the set of units of (Custom) Line Items in a Cart that triggered the discount application.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ChangeTargetPatternChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeTargetPatternChangeValueBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#triggerPattern(java.util.List)" class="member-name-link">triggerPattern</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>&gt;&nbsp;triggerPattern)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Units of a (Custom) Line Item that triggered the discount application.</div>
+<div class="block">Defines the set of units of (Custom) Line Items in a Cart that triggered the discount application.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ChangeTargetPatternChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeTargetPatternChangeValueBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withTargetPattern(java.util.function.Function)" class="member-name-link">withTargetPattern</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart_discount/PatternComponentBuilder.html" title="class in com.commercetools.history.models.cart_discount">PatternComponentBuilder</a>,<wbr><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>&gt;&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withTargetPattern(java.util.function.Function)" class="member-name-link">withTargetPattern</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart_discount/PatternComponentBuilder.html" title="class in com.commercetools.history.models.cart_discount">PatternComponentBuilder</a>,<wbr><a href="../cart_discount/PatternComponentBuilder.html" title="class in com.commercetools.history.models.cart_discount">PatternComponentBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Units of (Custom) Line Items on which the Discount is applied.</div>
+<div class="block">Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ChangeTargetPatternChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeTargetPatternChangeValueBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withTriggerPattern(java.util.function.Function)" class="member-name-link">withTriggerPattern</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart_discount/PatternComponentBuilder.html" title="class in com.commercetools.history.models.cart_discount">PatternComponentBuilder</a>,<wbr><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>&gt;&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withTriggerPattern(java.util.function.Function)" class="member-name-link">withTriggerPattern</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart_discount/PatternComponentBuilder.html" title="class in com.commercetools.history.models.cart_discount">PatternComponentBuilder</a>,<wbr><a href="../cart_discount/PatternComponentBuilder.html" title="class in com.commercetools.history.models.cart_discount">PatternComponentBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Units of a (Custom) Line Item that triggered the discount application.</div>
+<div class="block">Defines the set of units of (Custom) Line Items in a Cart that triggered the discount application.</div>
 </div>
 </div>
 </div>
@@ -254,9 +275,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="triggerPattern(com.commercetools.history.models.cart_discount.PatternComponent...)">
 <h3>triggerPattern</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeTargetPatternChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeTargetPatternChangeValueBuilder</a></span>&nbsp;<span class="element-name">triggerPattern</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
- <a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>...&nbsp;triggerPattern)</span></div>
-<div class="block"><p>Units of a (Custom) Line Item that triggered the discount application.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeTargetPatternChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeTargetPatternChangeValueBuilder</a></span>&nbsp;<span class="element-name">triggerPattern</span><wbr><span class="parameters">(<a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>...&nbsp;triggerPattern)</span></div>
+<div class="block"><p>Defines the set of units of (Custom) Line Items in a Cart that triggered the discount application.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>triggerPattern</code> - value to be set</dd>
@@ -268,9 +288,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="triggerPattern(java.util.List)">
 <h3>triggerPattern</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeTargetPatternChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeTargetPatternChangeValueBuilder</a></span>&nbsp;<span class="element-name">triggerPattern</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
- <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>&gt;&nbsp;triggerPattern)</span></div>
-<div class="block"><p>Units of a (Custom) Line Item that triggered the discount application.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeTargetPatternChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeTargetPatternChangeValueBuilder</a></span>&nbsp;<span class="element-name">triggerPattern</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>&gt;&nbsp;triggerPattern)</span></div>
+<div class="block"><p>Defines the set of units of (Custom) Line Items in a Cart that triggered the discount application.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>triggerPattern</code> - value to be set</dd>
@@ -282,9 +301,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="plusTriggerPattern(com.commercetools.history.models.cart_discount.PatternComponent...)">
 <h3>plusTriggerPattern</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeTargetPatternChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeTargetPatternChangeValueBuilder</a></span>&nbsp;<span class="element-name">plusTriggerPattern</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
- <a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>...&nbsp;triggerPattern)</span></div>
-<div class="block"><p>Units of a (Custom) Line Item that triggered the discount application.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeTargetPatternChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeTargetPatternChangeValueBuilder</a></span>&nbsp;<span class="element-name">plusTriggerPattern</span><wbr><span class="parameters">(<a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>...&nbsp;triggerPattern)</span></div>
+<div class="block"><p>Defines the set of units of (Custom) Line Items in a Cart that triggered the discount application.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>triggerPattern</code> - value to be set</dd>
@@ -296,8 +314,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="plusTriggerPattern(java.util.function.Function)">
 <h3>plusTriggerPattern</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeTargetPatternChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeTargetPatternChangeValueBuilder</a></span>&nbsp;<span class="element-name">plusTriggerPattern</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart_discount/PatternComponentBuilder.html" title="class in com.commercetools.history.models.cart_discount">PatternComponentBuilder</a>,<wbr><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>&gt;&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Units of a (Custom) Line Item that triggered the discount application.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeTargetPatternChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeTargetPatternChangeValueBuilder</a></span>&nbsp;<span class="element-name">plusTriggerPattern</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart_discount/PatternComponentBuilder.html" title="class in com.commercetools.history.models.cart_discount">PatternComponentBuilder</a>,<wbr><a href="../cart_discount/PatternComponentBuilder.html" title="class in com.commercetools.history.models.cart_discount">PatternComponentBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Defines the set of units of (Custom) Line Items in a Cart that triggered the discount application.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the triggerPattern value</dd>
@@ -309,8 +327,34 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="withTriggerPattern(java.util.function.Function)">
 <h3>withTriggerPattern</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeTargetPatternChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeTargetPatternChangeValueBuilder</a></span>&nbsp;<span class="element-name">withTriggerPattern</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart_discount/PatternComponentBuilder.html" title="class in com.commercetools.history.models.cart_discount">PatternComponentBuilder</a>,<wbr><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>&gt;&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Units of a (Custom) Line Item that triggered the discount application.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeTargetPatternChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeTargetPatternChangeValueBuilder</a></span>&nbsp;<span class="element-name">withTriggerPattern</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart_discount/PatternComponentBuilder.html" title="class in com.commercetools.history.models.cart_discount">PatternComponentBuilder</a>,<wbr><a href="../cart_discount/PatternComponentBuilder.html" title="class in com.commercetools.history.models.cart_discount">PatternComponentBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Defines the set of units of (Custom) Line Items in a Cart that triggered the discount application.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the triggerPattern value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="addTriggerPattern(java.util.function.Function)">
+<h3>addTriggerPattern</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeTargetPatternChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeTargetPatternChangeValueBuilder</a></span>&nbsp;<span class="element-name">addTriggerPattern</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart_discount/PatternComponentBuilder.html" title="class in com.commercetools.history.models.cart_discount">PatternComponentBuilder</a>,<wbr><a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Defines the set of units of (Custom) Line Items in a Cart that triggered the discount application.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the triggerPattern value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setTriggerPattern(java.util.function.Function)">
+<h3>setTriggerPattern</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeTargetPatternChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeTargetPatternChangeValueBuilder</a></span>&nbsp;<span class="element-name">setTriggerPattern</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart_discount/PatternComponentBuilder.html" title="class in com.commercetools.history.models.cart_discount">PatternComponentBuilder</a>,<wbr><a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Defines the set of units of (Custom) Line Items in a Cart that triggered the discount application.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the triggerPattern value</dd>
@@ -323,7 +367,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="targetPattern(com.commercetools.history.models.cart_discount.PatternComponent...)">
 <h3>targetPattern</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeTargetPatternChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeTargetPatternChangeValueBuilder</a></span>&nbsp;<span class="element-name">targetPattern</span><wbr><span class="parameters">(<a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>...&nbsp;targetPattern)</span></div>
-<div class="block"><p>Units of (Custom) Line Items on which the Discount is applied.</p></div>
+<div class="block"><p>Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>targetPattern</code> - value to be set</dd>
@@ -336,7 +380,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="targetPattern(java.util.List)">
 <h3>targetPattern</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeTargetPatternChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeTargetPatternChangeValueBuilder</a></span>&nbsp;<span class="element-name">targetPattern</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>&gt;&nbsp;targetPattern)</span></div>
-<div class="block"><p>Units of (Custom) Line Items on which the Discount is applied.</p></div>
+<div class="block"><p>Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>targetPattern</code> - value to be set</dd>
@@ -349,7 +393,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="plusTargetPattern(com.commercetools.history.models.cart_discount.PatternComponent...)">
 <h3>plusTargetPattern</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeTargetPatternChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeTargetPatternChangeValueBuilder</a></span>&nbsp;<span class="element-name">plusTargetPattern</span><wbr><span class="parameters">(<a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>...&nbsp;targetPattern)</span></div>
-<div class="block"><p>Units of (Custom) Line Items on which the Discount is applied.</p></div>
+<div class="block"><p>Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>targetPattern</code> - value to be set</dd>
@@ -361,8 +405,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="plusTargetPattern(java.util.function.Function)">
 <h3>plusTargetPattern</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeTargetPatternChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeTargetPatternChangeValueBuilder</a></span>&nbsp;<span class="element-name">plusTargetPattern</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart_discount/PatternComponentBuilder.html" title="class in com.commercetools.history.models.cart_discount">PatternComponentBuilder</a>,<wbr><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>&gt;&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Units of (Custom) Line Items on which the Discount is applied.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeTargetPatternChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeTargetPatternChangeValueBuilder</a></span>&nbsp;<span class="element-name">plusTargetPattern</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart_discount/PatternComponentBuilder.html" title="class in com.commercetools.history.models.cart_discount">PatternComponentBuilder</a>,<wbr><a href="../cart_discount/PatternComponentBuilder.html" title="class in com.commercetools.history.models.cart_discount">PatternComponentBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the targetPattern value</dd>
@@ -374,8 +418,34 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="withTargetPattern(java.util.function.Function)">
 <h3>withTargetPattern</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeTargetPatternChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeTargetPatternChangeValueBuilder</a></span>&nbsp;<span class="element-name">withTargetPattern</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart_discount/PatternComponentBuilder.html" title="class in com.commercetools.history.models.cart_discount">PatternComponentBuilder</a>,<wbr><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>&gt;&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Units of (Custom) Line Items on which the Discount is applied.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeTargetPatternChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeTargetPatternChangeValueBuilder</a></span>&nbsp;<span class="element-name">withTargetPattern</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart_discount/PatternComponentBuilder.html" title="class in com.commercetools.history.models.cart_discount">PatternComponentBuilder</a>,<wbr><a href="../cart_discount/PatternComponentBuilder.html" title="class in com.commercetools.history.models.cart_discount">PatternComponentBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the targetPattern value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="addTargetPattern(java.util.function.Function)">
+<h3>addTargetPattern</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeTargetPatternChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeTargetPatternChangeValueBuilder</a></span>&nbsp;<span class="element-name">addTargetPattern</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart_discount/PatternComponentBuilder.html" title="class in com.commercetools.history.models.cart_discount">PatternComponentBuilder</a>,<wbr><a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the targetPattern value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setTargetPattern(java.util.function.Function)">
+<h3>setTargetPattern</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ChangeTargetPatternChangeValueBuilder.html" title="class in com.commercetools.history.models.change_value">ChangeTargetPatternChangeValueBuilder</a></span>&nbsp;<span class="element-name">setTargetPattern</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart_discount/PatternComponentBuilder.html" title="class in com.commercetools.history.models.cart_discount">PatternComponentBuilder</a>,<wbr><a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the targetPattern value</dd>
@@ -415,9 +485,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getTriggerPattern()">
 <h3>getTriggerPattern</h3>
-<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>&gt;</span>&nbsp;<span class="element-name">getTriggerPattern</span>()</div>
-<div class="block"><p>Units of a (Custom) Line Item that triggered the discount application.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>&gt;</span>&nbsp;<span class="element-name">getTriggerPattern</span>()</div>
+<div class="block"><p>Defines the set of units of (Custom) Line Items in a Cart that triggered the discount application.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>triggerPattern</dd>
@@ -428,7 +497,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getTargetPattern()">
 <h3>getTargetPattern</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>&gt;</span>&nbsp;<span class="element-name">getTargetPattern</span>()</div>
-<div class="block"><p>Units of (Custom) Line Items on which the Discount is applied.</p></div>
+<div class="block"><p>Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>targetPattern</dd>

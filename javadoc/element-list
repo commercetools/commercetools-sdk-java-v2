@@ -109,7 +109,6 @@ com.commercetools.history.models.change
 com.commercetools.history.models.change_history
 com.commercetools.history.models.change_value
 com.commercetools.history.models.common
-com.commercetools.history.models.error
 com.commercetools.history.models.graph_ql
 com.commercetools.history.models.label
 com.commercetools.http.apachehttp

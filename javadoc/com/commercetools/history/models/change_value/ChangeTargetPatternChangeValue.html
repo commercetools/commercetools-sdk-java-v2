@@ -85,6 +85,7 @@ extends <a href="ChangeTargetChangeValue.html" title="interface in com.commercet
  <div class=code-example>
  <pre><code class='java'>
      ChangeTargetPatternChangeValue changeTargetPatternChangeValue = ChangeTargetPatternChangeValue.builder()
+             .plusTriggerPattern(triggerPatternBuilder -> triggerPatternBuilder)
              .plusTargetPattern(targetPatternBuilder -> targetPatternBuilder)
              .selectionMode(SelectionMode.CHEAPEST)
              .build()
@@ -149,12 +150,12 @@ extends <a href="ChangeTargetChangeValue.html" title="interface in com.commercet
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTargetPattern()" class="member-name-link">getTargetPattern</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Units of (Custom) Line Items on which the Discount is applied.</div>
+<div class="block">Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>&gt;</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTriggerPattern()" class="member-name-link">getTriggerPattern</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Units of a (Custom) Line Item that triggered the discount application.</div>
+<div class="block">Defines the set of units of (Custom) Line Items in a Cart that triggered the discount application.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getType()" class="member-name-link">getType</a>()</code></div>
@@ -182,22 +183,22 @@ extends <a href="ChangeTargetChangeValue.html" title="interface in com.commercet
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTargetPattern(com.commercetools.history.models.cart_discount.PatternComponent...)" class="member-name-link">setTargetPattern</a><wbr>(<a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>...&nbsp;targetPattern)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Units of (Custom) Line Items on which the Discount is applied.</div>
+<div class="block">Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTargetPattern(java.util.List)" class="member-name-link">setTargetPattern</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>&gt;&nbsp;targetPattern)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Units of (Custom) Line Items on which the Discount is applied.</div>
+<div class="block">Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTriggerPattern(com.commercetools.history.models.cart_discount.PatternComponent...)" class="member-name-link">setTriggerPattern</a><wbr>(<a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>...&nbsp;triggerPattern)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Units of a (Custom) Line Item that triggered the discount application.</div>
+<div class="block">Defines the set of units of (Custom) Line Items in a Cart that triggered the discount application.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTriggerPattern(java.util.List)" class="member-name-link">setTriggerPattern</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>&gt;&nbsp;triggerPattern)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Units of a (Custom) Line Item that triggered the discount application.</div>
+<div class="block">Defines the set of units of (Custom) Line Items in a Cart that triggered the discount application.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ChangeTargetPatternChangeValue.html" title="interface in com.commercetools.history.models.change_value">ChangeTargetPatternChangeValue</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -265,9 +266,10 @@ extends <a href="ChangeTargetChangeValue.html" title="interface in com.commercet
 <li>
 <section class="detail" id="getTriggerPattern()">
 <h3>getTriggerPattern</h3>
-<div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>&gt;</span>&nbsp;<span class="element-name">getTriggerPattern</span>()</div>
-<div class="block"><p>Units of a (Custom) Line Item that triggered the discount application.</p></div>
+<div class="member-signature"><span class="annotations">@NotNull
+@Valid
+</span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>&gt;</span>&nbsp;<span class="element-name">getTriggerPattern</span>()</div>
+<div class="block"><p>Defines the set of units of (Custom) Line Items in a Cart that triggered the discount application.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>triggerPattern</dd>
@@ -280,7 +282,7 @@ extends <a href="ChangeTargetChangeValue.html" title="interface in com.commercet
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
 </span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>&gt;</span>&nbsp;<span class="element-name">getTargetPattern</span>()</div>
-<div class="block"><p>Units of (Custom) Line Items on which the Discount is applied.</p></div>
+<div class="block"><p>Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>targetPattern</dd>
@@ -315,7 +317,7 @@ extends <a href="ChangeTargetChangeValue.html" title="interface in com.commercet
 <section class="detail" id="setTriggerPattern(com.commercetools.history.models.cart_discount.PatternComponent...)">
 <h3>setTriggerPattern</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setTriggerPattern</span><wbr><span class="parameters">(<a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>...&nbsp;triggerPattern)</span></div>
-<div class="block"><p>Units of a (Custom) Line Item that triggered the discount application.</p></div>
+<div class="block"><p>Defines the set of units of (Custom) Line Items in a Cart that triggered the discount application.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>triggerPattern</code> - values to be set</dd>
@@ -326,7 +328,7 @@ extends <a href="ChangeTargetChangeValue.html" title="interface in com.commercet
 <section class="detail" id="setTriggerPattern(java.util.List)">
 <h3>setTriggerPattern</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setTriggerPattern</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>&gt;&nbsp;triggerPattern)</span></div>
-<div class="block"><p>Units of a (Custom) Line Item that triggered the discount application.</p></div>
+<div class="block"><p>Defines the set of units of (Custom) Line Items in a Cart that triggered the discount application.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>triggerPattern</code> - values to be set</dd>
@@ -337,7 +339,7 @@ extends <a href="ChangeTargetChangeValue.html" title="interface in com.commercet
 <section class="detail" id="setTargetPattern(com.commercetools.history.models.cart_discount.PatternComponent...)">
 <h3>setTargetPattern</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setTargetPattern</span><wbr><span class="parameters">(<a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>...&nbsp;targetPattern)</span></div>
-<div class="block"><p>Units of (Custom) Line Items on which the Discount is applied.</p></div>
+<div class="block"><p>Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>targetPattern</code> - values to be set</dd>
@@ -348,7 +350,7 @@ extends <a href="ChangeTargetChangeValue.html" title="interface in com.commercet
 <section class="detail" id="setTargetPattern(java.util.List)">
 <h3>setTargetPattern</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setTargetPattern</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a>&gt;&nbsp;targetPattern)</span></div>
-<div class="block"><p>Units of (Custom) Line Items on which the Discount is applied.</p></div>
+<div class="block"><p>Defines the set of units of (Custom) Line Items in a Cart on which the Discount is applied.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>targetPattern</code> - values to be set</dd>

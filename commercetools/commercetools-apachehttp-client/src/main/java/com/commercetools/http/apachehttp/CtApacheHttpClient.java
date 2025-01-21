@@ -51,10 +51,13 @@ public class CtApacheHttpClient extends HttpClientBase {
 
     public static PoolingAsyncClientConnectionManagerBuilder createConnectionManager(final int maxConnTotal,
             final int maxConnPerRoute) {
+        return createConnectionManager(HttpVersionPolicy.NEGOTIATE, maxConnTotal, maxConnPerRoute);
+    }
+
+    public static PoolingAsyncClientConnectionManagerBuilder createConnectionManager(
+            final HttpVersionPolicy httpVersionPolicy, final int maxConnTotal, final int maxConnPerRoute) {
         final TlsStrategy tlsStrategy = ClientTlsStrategyBuilder.create().useSystemProperties().build();
-        final TlsConfig tlsConfig = TlsConfig.copy(TlsConfig.DEFAULT)
-                .setVersionPolicy(HttpVersionPolicy.NEGOTIATE)
-                .build();
+        final TlsConfig tlsConfig = TlsConfig.copy(TlsConfig.DEFAULT).setVersionPolicy(httpVersionPolicy).build();
         return PoolingAsyncClientConnectionManagerBuilder.create()
                 .setMaxConnPerRoute(maxConnPerRoute)
                 .setMaxConnTotal(maxConnTotal)
@@ -74,9 +77,24 @@ public class CtApacheHttpClient extends HttpClientBase {
         init();
     }
 
+    public CtApacheHttpClient(final HttpVersionPolicy versionPolicy) {
+        super();
+        apacheHttpClient = createClientBuilder(
+            createConnectionManager(versionPolicy, MAX_REQUESTS, MAX_REQUESTS).build()).build();
+        init();
+    }
+
     public CtApacheHttpClient(final int maxConnTotal, final int maxConnPerRoute) {
         super();
         apacheHttpClient = createClientBuilder(createConnectionManager(maxConnTotal, maxConnPerRoute).build()).build();
+        init();
+    }
+
+    public CtApacheHttpClient(final HttpVersionPolicy versionPolicy, final int maxConnTotal,
+            final int maxConnPerRoute) {
+        super();
+        apacheHttpClient = createClientBuilder(
+            createConnectionManager(versionPolicy, maxConnTotal, maxConnPerRoute).build()).build();
         init();
     }
 
@@ -90,6 +108,16 @@ public class CtApacheHttpClient extends HttpClientBase {
         super();
         apacheHttpClient = options
                 .plus(createClientBuilder(createConnectionManager(maxConnTotal, maxConnPerRoute).build()))
+                .build();
+        init();
+    }
+
+    public CtApacheHttpClient(final HttpVersionPolicy versionPolicy, final int maxConnTotal, final int maxConnPerRoute,
+            final BuilderOptions options) {
+        super();
+        apacheHttpClient = options
+                .plus(
+                    createClientBuilder(createConnectionManager(versionPolicy, maxConnTotal, maxConnPerRoute).build()))
                 .build();
         init();
     }
@@ -112,6 +140,14 @@ public class CtApacheHttpClient extends HttpClientBase {
         init();
     }
 
+    public CtApacheHttpClient(final ExecutorService executor, final HttpVersionPolicy versionPolicy,
+            final int maxConnTotal, final int maxConnPerRoute) {
+        super(executor);
+        apacheHttpClient = createClientBuilder(
+            createConnectionManager(versionPolicy, maxConnTotal, maxConnPerRoute).build()).build();
+        init();
+    }
+
     public CtApacheHttpClient(final ExecutorService executor, final BuilderOptions options) {
         super(executor);
         apacheHttpClient = options.plus(clientBuilder.get()).build();
@@ -123,6 +159,16 @@ public class CtApacheHttpClient extends HttpClientBase {
         super(executor);
         apacheHttpClient = options
                 .plus(createClientBuilder(createConnectionManager(maxConnTotal, maxConnPerRoute).build()))
+                .build();
+        init();
+    }
+
+    public CtApacheHttpClient(final ExecutorService executor, final HttpVersionPolicy versionPolicy,
+            final int maxConnTotal, final int maxConnPerRoute, final BuilderOptions options) {
+        super(executor);
+        apacheHttpClient = options
+                .plus(
+                    createClientBuilder(createConnectionManager(versionPolicy, maxConnTotal, maxConnPerRoute).build()))
                 .build();
         init();
     }

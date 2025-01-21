@@ -25,6 +25,7 @@ import jakarta.validation.constraints.NotNull;
 import reactor.core.publisher.Mono;
 import reactor.netty.ByteBufMono;
 import reactor.netty.NettyOutbound;
+import reactor.netty.http.HttpProtocol;
 import reactor.netty.http.client.HttpClient;
 import reactor.netty.http.client.HttpClientRequest;
 import reactor.netty.http.client.HttpClientResponse;
@@ -41,9 +42,19 @@ public class CtNettyHttpClient extends HttpClientBase {
         this(MAX_REQUESTS);
     }
 
-    public CtNettyHttpClient(int maxConnections) {
+    public CtNettyHttpClient(HttpProtocol protocol) {
+        this(protocol, MAX_REQUESTS);
+    }
+
+    public CtNettyHttpClient(final int maxConnections) {
         super();
         this.nettyClient = createDefaultClient(maxConnections);
+        this.nettyClient.warmup();
+    }
+
+    public CtNettyHttpClient(final HttpProtocol protocol, final int maxConnections) {
+        super();
+        this.nettyClient = createDefaultClient(protocol, maxConnections);
         this.nettyClient.warmup();
     }
 
@@ -73,6 +84,12 @@ public class CtNettyHttpClient extends HttpClientBase {
         this.nettyClient.warmup();
     }
 
+    public CtNettyHttpClient(final ExecutorService executor, final HttpProtocol protocol, final int maxConnections) {
+        super(executor);
+        this.nettyClient = createDefaultClient(protocol, maxConnections);
+        this.nettyClient.warmup();
+    }
+
     public CtNettyHttpClient(final ExecutorService executor, final BuilderOptions options) {
         this(executor, MAX_REQUESTS, options);
     }
@@ -80,6 +97,13 @@ public class CtNettyHttpClient extends HttpClientBase {
     public CtNettyHttpClient(final ExecutorService executor, final int maxConnections, final BuilderOptions options) {
         super(executor);
         this.nettyClient = options.plus(createDefaultClient(maxConnections));
+        this.nettyClient.warmup();
+    }
+
+    public CtNettyHttpClient(final ExecutorService executor, final HttpProtocol protocol, final int maxConnections,
+            final BuilderOptions options) {
+        super(executor);
+        this.nettyClient = options.plus(createDefaultClient(protocol, maxConnections));
         this.nettyClient.warmup();
     }
 
@@ -95,6 +119,10 @@ public class CtNettyHttpClient extends HttpClientBase {
                 .compress(true)
                 .resolver(DefaultAddressResolverGroup.INSTANCE)
                 .option(ChannelOption.CONNECT_TIMEOUT_MILLIS, 10000);
+    }
+
+    public static HttpClient createDefaultClient(final HttpProtocol httpProtocol, final int maxConnections) {
+        return createDefaultClient(maxConnections).protocol(httpProtocol);
     }
 
     @Override

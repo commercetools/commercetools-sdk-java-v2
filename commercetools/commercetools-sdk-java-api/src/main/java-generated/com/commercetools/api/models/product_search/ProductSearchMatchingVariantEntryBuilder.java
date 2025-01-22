@@ -29,7 +29,7 @@ public class ProductSearchMatchingVariantEntryBuilder implements Builder<Product
     private String sku;
 
     /**
-     *  <p>Unique identifier of the variant.</p>
+     *  <p><code>id</code> of the ProductVariant that matches the search query.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -40,7 +40,7 @@ public class ProductSearchMatchingVariantEntryBuilder implements Builder<Product
     }
 
     /**
-     *  <p>SKU of the matching variant.</p>
+     *  <p><code>sku</code> of the ProductVariant that matches the search query.</p>
      * @param sku value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class ProductSearchMatchingVariantEntryBuilder implements Builder<Product
     }
 
     /**
-     *  <p>Unique identifier of the variant.</p>
+     *  <p><code>id</code> of the ProductVariant that matches the search query.</p>
      * @return id
      */
 
@@ -60,7 +60,7 @@ public class ProductSearchMatchingVariantEntryBuilder implements Builder<Product
     }
 
     /**
-     *  <p>SKU of the matching variant.</p>
+     *  <p><code>sku</code> of the ProductVariant that matches the search query.</p>
      * @return sku
      */
 

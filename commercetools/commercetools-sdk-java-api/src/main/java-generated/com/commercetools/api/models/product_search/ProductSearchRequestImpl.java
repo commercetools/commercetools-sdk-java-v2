@@ -98,7 +98,7 @@ public class ProductSearchRequestImpl implements ProductSearchRequest, ModelBase
     }
 
     /**
-     *  <p>The search can return Products where not all Product Variants match the search criteria. If <code>true</code>, the response will include a field called <code>matchingVariants</code> that contains the <code>sku</code> of Product Variants that match the search query. If the query does not specify any variant-level criteria, <code>matchingVariants</code> will be null signifying that all Product Variants are a match.</p>
+     *  <p>If <code>query</code> specifies an expression for a Product Variant field, set this to <code>true</code> to get additional information for each returned Product about which Product Variants match the search query. For details, see matching variants.</p>
      */
 
     public Boolean getMarkMatchingVariants() {

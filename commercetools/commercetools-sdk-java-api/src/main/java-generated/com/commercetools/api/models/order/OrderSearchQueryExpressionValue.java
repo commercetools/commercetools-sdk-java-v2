@@ -48,7 +48,7 @@ public interface OrderSearchQueryExpressionValue {
     public Integer getBoost();
 
     /**
-     *  <p>Possible values for the <code>customType</code> property on query expressions indicating the data type of the <code>field</code>.</p>
+     *  <p>Possible values for the <code>customType</code> property on simple expressions indicating the data type of the <code>field</code>.</p>
      * @return customType
      */
 
@@ -70,7 +70,7 @@ public interface OrderSearchQueryExpressionValue {
     public void setBoost(final Integer boost);
 
     /**
-     *  <p>Possible values for the <code>customType</code> property on query expressions indicating the data type of the <code>field</code>.</p>
+     *  <p>Possible values for the <code>customType</code> property on simple expressions indicating the data type of the <code>field</code>.</p>
      * @param customType value to be set
      */
 

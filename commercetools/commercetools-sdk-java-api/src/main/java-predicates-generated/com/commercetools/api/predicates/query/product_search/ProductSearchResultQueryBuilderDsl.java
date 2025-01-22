@@ -18,14 +18,6 @@ public class ProductSearchResultQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, ProductSearchResultQueryBuilderDsl::of));
     }
 
-    public CombinationQueryPredicate<ProductSearchResultQueryBuilderDsl> productProjection(
-            Function<com.commercetools.api.predicates.query.product.ProductProjectionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product.ProductProjectionQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
-                .parent(ConstantQueryPredicate.of().constant("productProjection"))
-                .inner(fn.apply(com.commercetools.api.predicates.query.product.ProductProjectionQueryBuilderDsl.of())),
-            ProductSearchResultQueryBuilderDsl::of);
-    }
-
     public CombinationQueryPredicate<ProductSearchResultQueryBuilderDsl> matchingVariants(
             Function<com.commercetools.api.predicates.query.product_search.ProductSearchMatchingVariantsQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product_search.ProductSearchMatchingVariantsQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
@@ -33,6 +25,14 @@ public class ProductSearchResultQueryBuilderDsl {
                 .inner(fn.apply(
                     com.commercetools.api.predicates.query.product_search.ProductSearchMatchingVariantsQueryBuilderDsl
                             .of())),
+            ProductSearchResultQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<ProductSearchResultQueryBuilderDsl> productProjection(
+            Function<com.commercetools.api.predicates.query.product.ProductProjectionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product.ProductProjectionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("productProjection"))
+                .inner(fn.apply(com.commercetools.api.predicates.query.product.ProductProjectionQueryBuilderDsl.of())),
             ProductSearchResultQueryBuilderDsl::of);
     }
 

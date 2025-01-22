@@ -32,7 +32,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ProductSearchMatchingVariantEntry {
 
     /**
-     *  <p>Unique identifier of the variant.</p>
+     *  <p><code>id</code> of the ProductVariant that matches the search query.</p>
      * @return id
      */
     @NotNull
@@ -40,7 +40,7 @@ public interface ProductSearchMatchingVariantEntry {
     public Integer getId();
 
     /**
-     *  <p>SKU of the matching variant.</p>
+     *  <p><code>sku</code> of the ProductVariant that matches the search query.</p>
      * @return sku
      */
 
@@ -48,14 +48,14 @@ public interface ProductSearchMatchingVariantEntry {
     public String getSku();
 
     /**
-     *  <p>Unique identifier of the variant.</p>
+     *  <p><code>id</code> of the ProductVariant that matches the search query.</p>
      * @param id value to be set
      */
 
     public void setId(final Integer id);
 
     /**
-     *  <p>SKU of the matching variant.</p>
+     *  <p><code>sku</code> of the ProductVariant that matches the search query.</p>
      * @param sku value to be set
      */
 

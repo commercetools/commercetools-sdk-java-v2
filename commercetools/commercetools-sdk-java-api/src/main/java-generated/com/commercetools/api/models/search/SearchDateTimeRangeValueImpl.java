@@ -78,7 +78,7 @@ public class SearchDateTimeRangeValueImpl implements SearchDateTimeRangeValue, M
     }
 
     /**
-     *  <p>Possible values for the <code>fieldType</code> property on query expressions indicating the data type of the <code>field</code>.</p>
+     *  <p>Possible values for the <code>fieldType</code> property on simple expressions indicating the data type of the <code>field</code>.</p>
      */
 
     public com.commercetools.api.models.search.SearchFieldType getFieldType() {

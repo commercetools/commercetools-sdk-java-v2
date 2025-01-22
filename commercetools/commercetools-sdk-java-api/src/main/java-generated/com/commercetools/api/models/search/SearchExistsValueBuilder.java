@@ -57,7 +57,7 @@ public class SearchExistsValueBuilder implements Builder<SearchExistsValue> {
     }
 
     /**
-     *  <p>Possible values for the <code>fieldType</code> property on query expressions indicating the data type of the <code>field</code>.</p>
+     *  <p>Possible values for the <code>fieldType</code> property on simple expressions indicating the data type of the <code>field</code>.</p>
      * @param fieldType value to be set
      * @return Builder
      */
@@ -99,7 +99,7 @@ public class SearchExistsValueBuilder implements Builder<SearchExistsValue> {
     }
 
     /**
-     *  <p>Possible values for the <code>fieldType</code> property on query expressions indicating the data type of the <code>field</code>.</p>
+     *  <p>Possible values for the <code>fieldType</code> property on simple expressions indicating the data type of the <code>field</code>.</p>
      * @return fieldType
      */
 

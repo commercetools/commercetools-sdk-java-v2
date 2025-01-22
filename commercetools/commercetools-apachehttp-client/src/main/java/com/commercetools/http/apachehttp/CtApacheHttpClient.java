@@ -20,7 +20,6 @@ import org.apache.hc.client5.http.async.HttpAsyncClient;
 import org.apache.hc.client5.http.async.methods.SimpleBody;
 import org.apache.hc.client5.http.async.methods.SimpleHttpResponse;
 import org.apache.hc.client5.http.async.methods.SimpleResponseConsumer;
-import org.apache.hc.client5.http.classic.HttpClient;
 import org.apache.hc.client5.http.impl.async.CloseableHttpAsyncClient;
 import org.apache.hc.client5.http.impl.async.HttpAsyncClientBuilder;
 import org.apache.hc.client5.http.impl.nio.PoolingAsyncClientConnectionManagerBuilder;
@@ -72,7 +71,9 @@ public class CtApacheHttpClient extends HttpClientBase {
     }
 
     public static String clientVersion() {
-        return "ApacheHttpAsyncClient/" + VersionInfo.loadVersionInfo("org.apache.hc.client5", HttpAsyncClient.class.getClassLoader()).getRelease();
+        return "ApacheHttpAsyncClient/"
+                + VersionInfo.loadVersionInfo("org.apache.hc.client5", HttpAsyncClient.class.getClassLoader())
+                        .getRelease();
     }
 
     public CtApacheHttpClient() {

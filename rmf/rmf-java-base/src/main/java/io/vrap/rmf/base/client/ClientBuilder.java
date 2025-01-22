@@ -745,8 +745,10 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
             Method method = clazz.getMethod("clientVersion");
             httpClient = " " + method.invoke(null).toString();
         }
-        catch (ClassNotFoundException | NoSuchMethodException | InvocationTargetException | IllegalAccessException ignored) {
+        catch (ClassNotFoundException | NoSuchMethodException | InvocationTargetException
+                | IllegalAccessException ignored) {
         }
-        return userAgent + sdkVersion + " " + " Java/" + runtimeVersion + " (" + osName + "; " + osArch + ")" + httpClient;
+        return userAgent + sdkVersion + " " + " Java/" + runtimeVersion + " (" + osName + "; " + osArch + ")"
+                + httpClient;
     }
 }

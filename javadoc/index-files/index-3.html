@@ -10034,7 +10034,7 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/docs/meta/ClientTuning.html" class="type-name-link" title="class in com.commercetools.docs.meta">ClientTuning</a> - Class in <a href="../com/commercetools/docs/meta/package-summary.html">com.commercetools.docs.meta</a></dt>
 <dd>
-<div class="block"><b>Table of content</b><ul><li><a href="#client-tuning">Tuning the client</a></li><ul><li><a href="#blocking-execution">Blocking execution</a></li><li><a href="#policy-middleware">PolicyMiddleware</a></li><li><a href="#configure-http-client">Configure the underlying http client</a></li><li><a href="#limit-requests">Limit concurrent requests</a></li><li><a href="#timeouts">Timeouts</a></li></ul></ul></div>
+<div class="block"><b>Table of content</b><ul><li><a href="#client-tuning">Tuning the client</a></li><ul><li><a href="#blocking-execution">Blocking execution</a></li><li><a href="#policy-middleware">PolicyMiddleware</a></li><li><a href="#configure-http-client">Configure the underlying http client</a></li><li><a href="#limit-requests">Limit concurrent requests</a></li><li><a href="#timeouts">Timeouts</a></li><li><a href="#http-version">HTTP protocol version</a></li></ul></ul></div>
 </dd>
 <dt><a href="../com/commercetools/docs/meta/ClientTuning.html#%3Cinit%3E()" class="member-name-link">ClientTuning()</a> - Constructor for class com.commercetools.docs.meta.<a href="../com/commercetools/docs/meta/ClientTuning.html" title="class in com.commercetools.docs.meta">ClientTuning</a></dt>
 <dd>&nbsp;</dd>
@@ -12379,6 +12379,8 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <dt><a href="../io/vrap/rmf/base/client/error/HttpExceptionFactory.html#createClientException(io.vrap.rmf.base.client.ApiHttpRequest,io.vrap.rmf.base.client.ApiHttpResponse)" class="member-name-link">createClientException(ApiHttpRequest, ApiHttpResponse&lt;byte[]&gt;)</a> - Method in interface io.vrap.rmf.base.client.error.<a href="../io/vrap/rmf/base/client/error/HttpExceptionFactory.html" title="interface in io.vrap.rmf.base.client.error">HttpExceptionFactory</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/http/apachehttp/CtApacheHttpClient.html#createConnectionManager(int,int)" class="member-name-link">createConnectionManager(int, int)</a> - Static method in class com.commercetools.http.apachehttp.<a href="../com/commercetools/http/apachehttp/CtApacheHttpClient.html" title="class in com.commercetools.http.apachehttp">CtApacheHttpClient</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/http/apachehttp/CtApacheHttpClient.html#createConnectionManager(org.apache.hc.core5.http2.HttpVersionPolicy,int,int)" class="member-name-link">createConnectionManager(HttpVersionPolicy, int, int)</a> - Static method in class com.commercetools.http.apachehttp.<a href="../com/commercetools/http/apachehttp/CtApacheHttpClient.html" title="class in com.commercetools.http.apachehttp">CtApacheHttpClient</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/graphql/api/GraphQL.html#createCustomerGroup(java.util.function.UnaryOperator)" class="member-name-link">createCustomerGroup(UnaryOperator&lt;CreateCustomerGroupGraphQLQuery.Builder&gt;)</a> - Static method in class com.commercetools.graphql.api.<a href="../com/commercetools/graphql/api/GraphQL.html" title="class in com.commercetools.graphql.api">GraphQL</a></dt>
 <dd>&nbsp;</dd>
@@ -16455,6 +16457,8 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/http/netty/CtNettyHttpClient.html#createDefaultClient(int)" class="member-name-link">createDefaultClient(int)</a> - Static method in class com.commercetools.http.netty.<a href="../com/commercetools/http/netty/CtNettyHttpClient.html" title="class in com.commercetools.http.netty">CtNettyHttpClient</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/http/netty/CtNettyHttpClient.html#createDefaultClient(reactor.netty.http.HttpProtocol,int)" class="member-name-link">createDefaultClient(HttpProtocol, int)</a> - Static method in class com.commercetools.http.netty.<a href="../com/commercetools/http/netty/CtNettyHttpClient.html" title="class in com.commercetools.http.netty">CtNettyHttpClient</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/graphql/api/GraphQL.html#createDiscountCode(java.util.function.UnaryOperator)" class="member-name-link">createDiscountCode(UnaryOperator&lt;CreateDiscountCodeGraphQLQuery.Builder&gt;)</a> - Static method in class com.commercetools.graphql.api.<a href="../com/commercetools/graphql/api/GraphQL.html" title="class in com.commercetools.graphql.api">GraphQL</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/http/okhttp3/CtOkHttp3Client.html#createDispatcher(int,int)" class="member-name-link">createDispatcher(int, int)</a> - Method in class com.commercetools.http.okhttp3.<a href="../com/commercetools/http/okhttp3/CtOkHttp3Client.html" title="class in com.commercetools.http.okhttp3">CtOkHttp3Client</a></dt>
@@ -16609,7 +16613,17 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/http/apachehttp/CtApacheHttpClient.html#%3Cinit%3E(java.util.concurrent.ExecutorService,java.util.function.Supplier)" class="member-name-link">CtApacheHttpClient(ExecutorService, Supplier&lt;HttpAsyncClientBuilder&gt;)</a> - Constructor for class com.commercetools.http.apachehttp.<a href="../com/commercetools/http/apachehttp/CtApacheHttpClient.html" title="class in com.commercetools.http.apachehttp">CtApacheHttpClient</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/http/apachehttp/CtApacheHttpClient.html#%3Cinit%3E(java.util.concurrent.ExecutorService,org.apache.hc.core5.http2.HttpVersionPolicy,int,int)" class="member-name-link">CtApacheHttpClient(ExecutorService, HttpVersionPolicy, int, int)</a> - Constructor for class com.commercetools.http.apachehttp.<a href="../com/commercetools/http/apachehttp/CtApacheHttpClient.html" title="class in com.commercetools.http.apachehttp">CtApacheHttpClient</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/http/apachehttp/CtApacheHttpClient.html#%3Cinit%3E(java.util.concurrent.ExecutorService,org.apache.hc.core5.http2.HttpVersionPolicy,int,int,com.commercetools.http.apachehttp.BuilderOptions)" class="member-name-link">CtApacheHttpClient(ExecutorService, HttpVersionPolicy, int, int, BuilderOptions)</a> - Constructor for class com.commercetools.http.apachehttp.<a href="../com/commercetools/http/apachehttp/CtApacheHttpClient.html" title="class in com.commercetools.http.apachehttp">CtApacheHttpClient</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/http/apachehttp/CtApacheHttpClient.html#%3Cinit%3E(java.util.function.Supplier)" class="member-name-link">CtApacheHttpClient(Supplier&lt;HttpAsyncClientBuilder&gt;)</a> - Constructor for class com.commercetools.http.apachehttp.<a href="../com/commercetools/http/apachehttp/CtApacheHttpClient.html" title="class in com.commercetools.http.apachehttp">CtApacheHttpClient</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/http/apachehttp/CtApacheHttpClient.html#%3Cinit%3E(org.apache.hc.core5.http2.HttpVersionPolicy)" class="member-name-link">CtApacheHttpClient(HttpVersionPolicy)</a> - Constructor for class com.commercetools.http.apachehttp.<a href="../com/commercetools/http/apachehttp/CtApacheHttpClient.html" title="class in com.commercetools.http.apachehttp">CtApacheHttpClient</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/http/apachehttp/CtApacheHttpClient.html#%3Cinit%3E(org.apache.hc.core5.http2.HttpVersionPolicy,int,int)" class="member-name-link">CtApacheHttpClient(HttpVersionPolicy, int, int)</a> - Constructor for class com.commercetools.http.apachehttp.<a href="../com/commercetools/http/apachehttp/CtApacheHttpClient.html" title="class in com.commercetools.http.apachehttp">CtApacheHttpClient</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/http/apachehttp/CtApacheHttpClient.html#%3Cinit%3E(org.apache.hc.core5.http2.HttpVersionPolicy,int,int,com.commercetools.http.apachehttp.BuilderOptions)" class="member-name-link">CtApacheHttpClient(HttpVersionPolicy, int, int, BuilderOptions)</a> - Constructor for class com.commercetools.http.apachehttp.<a href="../com/commercetools/http/apachehttp/CtApacheHttpClient.html" title="class in com.commercetools.http.apachehttp">CtApacheHttpClient</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/http/asynchttp/CtAsyncHttpClient.html" class="type-name-link" title="class in com.commercetools.http.asynchttp">CtAsyncHttpClient</a> - Class in <a href="../com/commercetools/http/asynchttp/package-summary.html">com.commercetools.http.asynchttp</a></dt>
 <dd>&nbsp;</dd>
@@ -16659,6 +16673,8 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/http/javanet/CtJavaNetHttpClient.html#%3Cinit%3E(com.commercetools.http.javanet.BuilderOptions)" class="member-name-link">CtJavaNetHttpClient(BuilderOptions)</a> - Constructor for class com.commercetools.http.javanet.<a href="../com/commercetools/http/javanet/CtJavaNetHttpClient.html" title="class in com.commercetools.http.javanet">CtJavaNetHttpClient</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/http/javanet/CtJavaNetHttpClient.html#%3Cinit%3E(java.net.http.HttpClient.Version)" class="member-name-link">CtJavaNetHttpClient(HttpClient.Version)</a> - Constructor for class com.commercetools.http.javanet.<a href="../com/commercetools/http/javanet/CtJavaNetHttpClient.html" title="class in com.commercetools.http.javanet">CtJavaNetHttpClient</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/http/javanet/CtJavaNetHttpClient.html#%3Cinit%3E(java.util.concurrent.ExecutorService)" class="member-name-link">CtJavaNetHttpClient(ExecutorService)</a> - Constructor for class com.commercetools.http.javanet.<a href="../com/commercetools/http/javanet/CtJavaNetHttpClient.html" title="class in com.commercetools.http.javanet">CtJavaNetHttpClient</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/http/javanet/CtJavaNetHttpClient.html#%3Cinit%3E(java.util.concurrent.ExecutorService,com.commercetools.http.javanet.BuilderOptions)" class="member-name-link">CtJavaNetHttpClient(ExecutorService, BuilderOptions)</a> - Constructor for class com.commercetools.http.javanet.<a href="../com/commercetools/http/javanet/CtJavaNetHttpClient.html" title="class in com.commercetools.http.javanet">CtJavaNetHttpClient</a></dt>
@@ -16687,7 +16703,15 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/http/netty/CtNettyHttpClient.html#%3Cinit%3E(java.util.concurrent.ExecutorService,java.util.function.Supplier)" class="member-name-link">CtNettyHttpClient(ExecutorService, Supplier&lt;HttpClient&gt;)</a> - Constructor for class com.commercetools.http.netty.<a href="../com/commercetools/http/netty/CtNettyHttpClient.html" title="class in com.commercetools.http.netty">CtNettyHttpClient</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/http/netty/CtNettyHttpClient.html#%3Cinit%3E(java.util.concurrent.ExecutorService,reactor.netty.http.HttpProtocol,int)" class="member-name-link">CtNettyHttpClient(ExecutorService, HttpProtocol, int)</a> - Constructor for class com.commercetools.http.netty.<a href="../com/commercetools/http/netty/CtNettyHttpClient.html" title="class in com.commercetools.http.netty">CtNettyHttpClient</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/http/netty/CtNettyHttpClient.html#%3Cinit%3E(java.util.concurrent.ExecutorService,reactor.netty.http.HttpProtocol,int,com.commercetools.http.netty.BuilderOptions)" class="member-name-link">CtNettyHttpClient(ExecutorService, HttpProtocol, int, BuilderOptions)</a> - Constructor for class com.commercetools.http.netty.<a href="../com/commercetools/http/netty/CtNettyHttpClient.html" title="class in com.commercetools.http.netty">CtNettyHttpClient</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/http/netty/CtNettyHttpClient.html#%3Cinit%3E(java.util.function.Supplier)" class="member-name-link">CtNettyHttpClient(Supplier&lt;HttpClient&gt;)</a> - Constructor for class com.commercetools.http.netty.<a href="../com/commercetools/http/netty/CtNettyHttpClient.html" title="class in com.commercetools.http.netty">CtNettyHttpClient</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/http/netty/CtNettyHttpClient.html#%3Cinit%3E(reactor.netty.http.HttpProtocol)" class="member-name-link">CtNettyHttpClient(HttpProtocol)</a> - Constructor for class com.commercetools.http.netty.<a href="../com/commercetools/http/netty/CtNettyHttpClient.html" title="class in com.commercetools.http.netty">CtNettyHttpClient</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/http/netty/CtNettyHttpClient.html#%3Cinit%3E(reactor.netty.http.HttpProtocol,int)" class="member-name-link">CtNettyHttpClient(HttpProtocol, int)</a> - Constructor for class com.commercetools.http.netty.<a href="../com/commercetools/http/netty/CtNettyHttpClient.html" title="class in com.commercetools.http.netty">CtNettyHttpClient</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/http/okhttp3/CtOkHttp3Client.html" class="type-name-link" title="class in com.commercetools.http.okhttp3">CtOkHttp3Client</a> - Class in <a href="../com/commercetools/http/okhttp3/package-summary.html">com.commercetools.http.okhttp3</a></dt>
 <dd>&nbsp;</dd>

@@ -137,8 +137,30 @@ loadScripts(document, 'script');</script>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.util.concurrent.ExecutorService,java.util.function.Supplier)" class="member-name-link">CtApacheHttpClient</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executor,
  <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;org.apache.hc.client5.http.impl.async.HttpAsyncClientBuilder&gt;&nbsp;builderSupplier)</code></div>
 <div class="col-last even-row-color">&nbsp;</div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(java.util.concurrent.ExecutorService,org.apache.hc.core5.http2.HttpVersionPolicy,int,int)" class="member-name-link">CtApacheHttpClient</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executor,
+ org.apache.hc.core5.http2.HttpVersionPolicy&nbsp;versionPolicy,
+ int&nbsp;maxConnTotal,
+ int&nbsp;maxConnPerRoute)</code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.util.concurrent.ExecutorService,org.apache.hc.core5.http2.HttpVersionPolicy,int,int,com.commercetools.http.apachehttp.BuilderOptions)" class="member-name-link">CtApacheHttpClient</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executor,
+ org.apache.hc.core5.http2.HttpVersionPolicy&nbsp;versionPolicy,
+ int&nbsp;maxConnTotal,
+ int&nbsp;maxConnPerRoute,
+ <a href="BuilderOptions.html" title="interface in com.commercetools.http.apachehttp">BuilderOptions</a>&nbsp;options)</code></div>
+<div class="col-last even-row-color">&nbsp;</div>
 <div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(java.util.function.Supplier)" class="member-name-link">CtApacheHttpClient</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html" title="class or interface in java.util.function" class="external-link">Supplier</a>&lt;org.apache.hc.client5.http.impl.async.HttpAsyncClientBuilder&gt;&nbsp;builderSupplier)</code></div>
 <div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(org.apache.hc.core5.http2.HttpVersionPolicy)" class="member-name-link">CtApacheHttpClient</a><wbr>(org.apache.hc.core5.http2.HttpVersionPolicy&nbsp;versionPolicy)</code></div>
+<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-constructor-name odd-row-color"><code><a href="#%3Cinit%3E(org.apache.hc.core5.http2.HttpVersionPolicy,int,int)" class="member-name-link">CtApacheHttpClient</a><wbr>(org.apache.hc.core5.http2.HttpVersionPolicy&nbsp;versionPolicy,
+ int&nbsp;maxConnTotal,
+ int&nbsp;maxConnPerRoute)</code></div>
+<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(org.apache.hc.core5.http2.HttpVersionPolicy,int,int,com.commercetools.http.apachehttp.BuilderOptions)" class="member-name-link">CtApacheHttpClient</a><wbr>(org.apache.hc.core5.http2.HttpVersionPolicy&nbsp;versionPolicy,
+ int&nbsp;maxConnTotal,
+ int&nbsp;maxConnPerRoute,
+ <a href="BuilderOptions.html" title="interface in com.commercetools.http.apachehttp">BuilderOptions</a>&nbsp;options)</code></div>
+<div class="col-last even-row-color">&nbsp;</div>
 </div>
 </section>
 </li>
@@ -166,9 +188,14 @@ loadScripts(document, 'script');</script>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createConnectionManager(int,int)" class="member-name-link">createConnectionManager</a><wbr>(int&nbsp;maxConnTotal,
  int&nbsp;maxConnPerRoute)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;byte[]&gt;&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#execute(io.vrap.rmf.base.client.ApiHttpRequest)" class="member-name-link">execute</a><wbr>(<a href="../../../../io/vrap/rmf/base/client/ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a>&nbsp;request)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static org.apache.hc.client5.http.impl.nio.PoolingAsyncClientConnectionManagerBuilder</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#createConnectionManager(org.apache.hc.core5.http2.HttpVersionPolicy,int,int)" class="member-name-link">createConnectionManager</a><wbr>(org.apache.hc.core5.http2.HttpVersionPolicy&nbsp;httpVersionPolicy,
+ int&nbsp;maxConnTotal,
+ int&nbsp;maxConnPerRoute)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link">CompletableFuture</a>&lt;<a href="../../../../io/vrap/rmf/base/client/ApiHttpResponse.html" title="class in io.vrap.rmf.base.client">ApiHttpResponse</a>&lt;byte[]&gt;&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#execute(io.vrap.rmf.base.client.ApiHttpRequest)" class="member-name-link">execute</a><wbr>(<a href="../../../../io/vrap/rmf/base/client/ApiHttpRequest.html" title="class in io.vrap.rmf.base.client">ApiHttpRequest</a>&nbsp;request)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -218,9 +245,23 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="&lt;init&gt;(org.apache.hc.core5.http2.HttpVersionPolicy)">
+<h3>CtApacheHttpClient</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">CtApacheHttpClient</span><wbr><span class="parameters">(org.apache.hc.core5.http2.HttpVersionPolicy&nbsp;versionPolicy)</span></div>
+</section>
+</li>
+<li>
 <section class="detail" id="&lt;init&gt;(int,int)">
 <h3>CtApacheHttpClient</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">CtApacheHttpClient</span><wbr><span class="parameters">(int&nbsp;maxConnTotal,
+ int&nbsp;maxConnPerRoute)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="&lt;init&gt;(org.apache.hc.core5.http2.HttpVersionPolicy,int,int)">
+<h3>CtApacheHttpClient</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">CtApacheHttpClient</span><wbr><span class="parameters">(org.apache.hc.core5.http2.HttpVersionPolicy&nbsp;versionPolicy,
+ int&nbsp;maxConnTotal,
  int&nbsp;maxConnPerRoute)</span></div>
 </section>
 </li>
@@ -234,6 +275,15 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="&lt;init&gt;(int,int,com.commercetools.http.apachehttp.BuilderOptions)">
 <h3>CtApacheHttpClient</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">CtApacheHttpClient</span><wbr><span class="parameters">(int&nbsp;maxConnTotal,
+ int&nbsp;maxConnPerRoute,
+ <a href="BuilderOptions.html" title="interface in com.commercetools.http.apachehttp">BuilderOptions</a>&nbsp;options)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="&lt;init&gt;(org.apache.hc.core5.http2.HttpVersionPolicy,int,int,com.commercetools.http.apachehttp.BuilderOptions)">
+<h3>CtApacheHttpClient</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">CtApacheHttpClient</span><wbr><span class="parameters">(org.apache.hc.core5.http2.HttpVersionPolicy&nbsp;versionPolicy,
+ int&nbsp;maxConnTotal,
  int&nbsp;maxConnPerRoute,
  <a href="BuilderOptions.html" title="interface in com.commercetools.http.apachehttp">BuilderOptions</a>&nbsp;options)</span></div>
 </section>
@@ -259,6 +309,15 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="&lt;init&gt;(java.util.concurrent.ExecutorService,org.apache.hc.core5.http2.HttpVersionPolicy,int,int)">
+<h3>CtApacheHttpClient</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">CtApacheHttpClient</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executor,
+ org.apache.hc.core5.http2.HttpVersionPolicy&nbsp;versionPolicy,
+ int&nbsp;maxConnTotal,
+ int&nbsp;maxConnPerRoute)</span></div>
+</section>
+</li>
+<li>
 <section class="detail" id="&lt;init&gt;(java.util.concurrent.ExecutorService,com.commercetools.http.apachehttp.BuilderOptions)">
 <h3>CtApacheHttpClient</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">CtApacheHttpClient</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executor,
@@ -269,6 +328,16 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="&lt;init&gt;(java.util.concurrent.ExecutorService,int,int,com.commercetools.http.apachehttp.BuilderOptions)">
 <h3>CtApacheHttpClient</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">CtApacheHttpClient</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executor,
+ int&nbsp;maxConnTotal,
+ int&nbsp;maxConnPerRoute,
+ <a href="BuilderOptions.html" title="interface in com.commercetools.http.apachehttp">BuilderOptions</a>&nbsp;options)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="&lt;init&gt;(java.util.concurrent.ExecutorService,org.apache.hc.core5.http2.HttpVersionPolicy,int,int,com.commercetools.http.apachehttp.BuilderOptions)">
+<h3>CtApacheHttpClient</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">CtApacheHttpClient</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html" title="class or interface in java.util.concurrent" class="external-link">ExecutorService</a>&nbsp;executor,
+ org.apache.hc.core5.http2.HttpVersionPolicy&nbsp;versionPolicy,
  int&nbsp;maxConnTotal,
  int&nbsp;maxConnPerRoute,
  <a href="BuilderOptions.html" title="interface in com.commercetools.http.apachehttp">BuilderOptions</a>&nbsp;options)</span></div>
@@ -305,6 +374,14 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="createConnectionManager(int,int)">
 <h3>createConnectionManager</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">org.apache.hc.client5.http.impl.nio.PoolingAsyncClientConnectionManagerBuilder</span>&nbsp;<span class="element-name">createConnectionManager</span><wbr><span class="parameters">(int&nbsp;maxConnTotal,
+ int&nbsp;maxConnPerRoute)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="createConnectionManager(org.apache.hc.core5.http2.HttpVersionPolicy,int,int)">
+<h3>createConnectionManager</h3>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">org.apache.hc.client5.http.impl.nio.PoolingAsyncClientConnectionManagerBuilder</span>&nbsp;<span class="element-name">createConnectionManager</span><wbr><span class="parameters">(org.apache.hc.core5.http2.HttpVersionPolicy&nbsp;httpVersionPolicy,
+ int&nbsp;maxConnTotal,
  int&nbsp;maxConnPerRoute)</span></div>
 </section>
 </li>

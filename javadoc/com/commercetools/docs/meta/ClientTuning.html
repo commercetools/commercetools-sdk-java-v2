@@ -73,7 +73,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">ClientTuning</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
-<div class="block"><b>Table of content</b><ul><li><a href="#client-tuning">Tuning the client</a></li><ul><li><a href="#blocking-execution">Blocking execution</a></li><li><a href="#policy-middleware">PolicyMiddleware</a></li><li><a href="#configure-http-client">Configure the underlying http client</a></li><li><a href="#limit-requests">Limit concurrent requests</a></li><li><a href="#timeouts">Timeouts</a></li></ul></ul>
+<div class="block"><b>Table of content</b><ul><li><a href="#client-tuning">Tuning the client</a></li><ul><li><a href="#blocking-execution">Blocking execution</a></li><li><a href="#policy-middleware">PolicyMiddleware</a></li><li><a href="#configure-http-client">Configure the underlying http client</a></li><li><a href="#limit-requests">Limit concurrent requests</a></li><li><a href="#timeouts">Timeouts</a></li><li><a href="#http-version">HTTP protocol version</a></li></ul></ul>
  <h2 id=client-tuning>Tuning the client</h2>
 
  <h3 id=blocking-execution>Blocking execution</h3>
@@ -197,7 +197,18 @@ ProjectApiRoot apiRoot = ApiRootBuilder
 
 apiRoot.get().execute().get(10, TimeUnit.SECONDS);
 apiRoot.get().executeBlocking(Duration.ofSeconds(10));
-</code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/ExamplesTest.java" target="_blank">test code</a>.</pre></div></div>
+</code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/ExamplesTest.java" target="_blank">test code</a>.</pre></div>
+
+ <h3 id=http-version>HTTP protocol version</h3>
+
+ <p>In case it's needed so specify a specific HTTP protocol version this can be done through the HTTP client package itself.</p>
+
+ <div id="example-ExamplesTest-httpVersion--%s" class=code-example><pre><code class='java'>CtApacheHttpClient apacheHttpClient = new CtApacheHttpClient(HttpVersionPolicy.FORCE_HTTP_1);
+CtNettyHttpClient nettyHttpClient = new CtNettyHttpClient(HttpProtocol.HTTP11);
+CtJavaNetHttpClient javaNetHttpClient = new CtJavaNetHttpClient(HttpClient.Version.HTTP_1_1);
+</code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/ExamplesTest.java" target="_blank">test code</a>.</pre></div>
+
+ <p>The AsyncHttpClient and OkHttp packages use HTTP1.1 by default.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">

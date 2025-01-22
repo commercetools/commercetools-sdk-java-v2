@@ -131,14 +131,14 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="block">builds DiscountedTotalPricePortion without checking for non-null required values</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DiscountedTotalPricePortionBuilder.html" title="class in com.commercetools.api.models.cart">DiscountedTotalPricePortionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#discount(com.commercetools.api.models.cart_discount.CartDiscountReference)" class="member-name-link">discount</a><wbr>(<a href="../cart_discount/CartDiscountReference.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountReference</a>&nbsp;discount)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#discount(com.commercetools.api.models.common.Reference)" class="member-name-link">discount</a><wbr>(<a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&nbsp;discount)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Cart Discount related to the discounted price.</div>
+<div class="block">A CartDiscountReference or DirectDiscountReference to the discount applied on the Cart <code>totalPrice</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DiscountedTotalPricePortionBuilder.html" title="class in com.commercetools.api.models.cart">DiscountedTotalPricePortionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#discount(java.util.function.Function)" class="member-name-link">discount</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart_discount/CartDiscountReferenceBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountReferenceBuilder</a>,<wbr><a href="../cart_discount/CartDiscountReferenceBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#discount(java.util.function.Function)" class="member-name-link">discount</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ReferenceBuilder.html" title="class in com.commercetools.api.models.common">ReferenceBuilder</a>,<wbr><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&gt;&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Cart Discount related to the discounted price.</div>
+<div class="block">A CartDiscountReference or DirectDiscountReference to the discount applied on the Cart <code>totalPrice</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DiscountedTotalPricePortionBuilder.html" title="class in com.commercetools.api.models.cart">DiscountedTotalPricePortionBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#discountedAmount(com.commercetools.api.models.common.TypedMoney)" class="member-name-link">discountedAmount</a><wbr>(<a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a>&nbsp;discountedAmount)</code></div>
@@ -150,10 +150,10 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Money value of the discount.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../cart_discount/CartDiscountReference.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountReference</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDiscount()" class="member-name-link">getDiscount</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Cart Discount related to the discounted price.</div>
+<div class="block">A CartDiscountReference or DirectDiscountReference to the discount applied on the Cart <code>totalPrice</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/TypedMoney.html" title="interface in com.commercetools.api.models.common">TypedMoney</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDiscountedAmount()" class="member-name-link">getDiscountedAmount</a>()</code></div>
@@ -169,11 +169,6 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of(com.commercetools.api.models.cart.DiscountedTotalPricePortion)" class="member-name-link">of</a><wbr>(<a href="DiscountedTotalPricePortion.html" title="interface in com.commercetools.api.models.cart">DiscountedTotalPricePortion</a>&nbsp;template)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">create builder for DiscountedTotalPricePortion instance</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DiscountedTotalPricePortionBuilder.html" title="class in com.commercetools.api.models.cart">DiscountedTotalPricePortionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withDiscount(java.util.function.Function)" class="member-name-link">withDiscount</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart_discount/CartDiscountReferenceBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountReferenceBuilder</a>,<wbr><a href="../cart_discount/CartDiscountReference.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountReference</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Cart Discount related to the discounted price.</div>
 </div>
 </div>
 </div>
@@ -207,39 +202,26 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="discount(java.util.function.Function)">
+<section class="detail" id="discount(com.commercetools.api.models.common.Reference)">
 <h3>discount</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedTotalPricePortionBuilder.html" title="class in com.commercetools.api.models.cart">DiscountedTotalPricePortionBuilder</a></span>&nbsp;<span class="element-name">discount</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart_discount/CartDiscountReferenceBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountReferenceBuilder</a>,<wbr><a href="../cart_discount/CartDiscountReferenceBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Cart Discount related to the discounted price.</p></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>builder</code> - function to build the discount value</dd>
-<dt>Returns:</dt>
-<dd>Builder</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="withDiscount(java.util.function.Function)">
-<h3>withDiscount</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedTotalPricePortionBuilder.html" title="class in com.commercetools.api.models.cart">DiscountedTotalPricePortionBuilder</a></span>&nbsp;<span class="element-name">withDiscount</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart_discount/CartDiscountReferenceBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountReferenceBuilder</a>,<wbr><a href="../cart_discount/CartDiscountReference.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountReference</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Cart Discount related to the discounted price.</p></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>builder</code> - function to build the discount value</dd>
-<dt>Returns:</dt>
-<dd>Builder</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="discount(com.commercetools.api.models.cart_discount.CartDiscountReference)">
-<h3>discount</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedTotalPricePortionBuilder.html" title="class in com.commercetools.api.models.cart">DiscountedTotalPricePortionBuilder</a></span>&nbsp;<span class="element-name">discount</span><wbr><span class="parameters">(<a href="../cart_discount/CartDiscountReference.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountReference</a>&nbsp;discount)</span></div>
-<div class="block"><p>Cart Discount related to the discounted price.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedTotalPricePortionBuilder.html" title="class in com.commercetools.api.models.cart">DiscountedTotalPricePortionBuilder</a></span>&nbsp;<span class="element-name">discount</span><wbr><span class="parameters">(<a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&nbsp;discount)</span></div>
+<div class="block"><p>A CartDiscountReference or DirectDiscountReference to the discount applied on the Cart <code>totalPrice</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>discount</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="discount(java.util.function.Function)">
+<h3>discount</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountedTotalPricePortionBuilder.html" title="class in com.commercetools.api.models.cart">DiscountedTotalPricePortionBuilder</a></span>&nbsp;<span class="element-name">discount</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ReferenceBuilder.html" title="class in com.commercetools.api.models.common">ReferenceBuilder</a>,<wbr><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&gt;&gt;&nbsp;builder)</span></div>
+<div class="block"><p>A CartDiscountReference or DirectDiscountReference to the discount applied on the Cart <code>totalPrice</code>.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the discount value</dd>
 <dt>Returns:</dt>
 <dd>Builder</dd>
 </dl>
@@ -274,8 +256,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getDiscount()">
 <h3>getDiscount</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../cart_discount/CartDiscountReference.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountReference</a></span>&nbsp;<span class="element-name">getDiscount</span>()</div>
-<div class="block"><p>Cart Discount related to the discounted price.</p></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a></span>&nbsp;<span class="element-name">getDiscount</span>()</div>
+<div class="block"><p>A CartDiscountReference or DirectDiscountReference to the discount applied on the Cart <code>totalPrice</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>discount</dd>

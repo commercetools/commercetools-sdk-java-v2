@@ -45,81 +45,81 @@ jobs:
 
       - run: rm -rf ~/.gradle/gradle.properties
 
-  update_readme:
-    runs-on: ubuntu-latest
-
-    needs: [release_tag]
-    if: startsWith( github.ref, 'refs/tags/')
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-            ref: main
-
-      - name: Retrieve branch name
-        id: branch_name
-        run: |
-            echo ::set-output name=SOURCE_NAME::${GITHUB_REF#refs/*/}
-            echo ::set-output name=SOURCE_BRANCH::${GITHUB_REF#refs/heads/}
-            echo ::set-output name=SOURCE_TAG::${GITHUB_REF#refs/tags/}
-
-      - run: ./gradlew -Pversion=$SOURCE_TAG writeVersionToReadme setVersion nextMinorVersion snapshotVersion
-        env:
-          SOURCE_TAG: ${{ steps.branch_name.outputs.SOURCE_TAG }}
-
-      - run: ./gradlew writeVersionToExamples
-
-      - uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: "TASK: Updating version in README"
-          commit_user_name: automation-commercetools
-          commit_user_email: automation@commercetools.com
-          commit_author: Auto Mation <automation@commercetools.com>
-
-  docs:
-    name: Build and release docs
-
-    runs-on: ubuntu-latest
-    needs: [release_tag]
-    if: startsWith( github.ref, 'refs/tags/')
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          path: sdk
-
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          path: doc
-          ref: gh-pages
-
-      - name: Setup Java
-        uses: actions/setup-java@v3
-        with:
-          distribution: 'temurin'
-          java-version: '16'
-
-      - name: Setup Graphviz
-        uses: ts-graphviz/setup-graphviz@v1
-
-      - name: Retrieve branch name
-        id: branch_name
-        run: |
-            echo ::set-output name=SOURCE_NAME::${GITHUB_REF#refs/*/}
-            echo ::set-output name=SOURCE_BRANCH::${GITHUB_REF#refs/heads/}
-            echo ::set-output name=SOURCE_TAG::${GITHUB_REF#refs/tags/}
-
-      - run: ./gradlew -Pversion=$SOURCE_TAG alljavadoc
-        working-directory: sdk
-
-      - run: rm -rf doc/javadoc && mv sdk/build/docs/javadoc doc
-
-      - uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          repository: doc
-          commit_message: "Update javadoc"
-          commit_user_name: automation-commercetools
-          commit_user_email: automation@commercetools.com
-          commit_author: Auto Mation <automation@commercetools.com>
+#  update_readme:
+#    runs-on: ubuntu-latest
+#
+#    needs: [release_tag]
+#    if: startsWith( github.ref, 'refs/tags/')
+#
+#    steps:
+#      - name: Checkout
+#        uses: actions/checkout@v3
+#        with:
+#            ref: main
+#
+#      - name: Retrieve branch name
+#        id: branch_name
+#        run: |
+#            echo ::set-output name=SOURCE_NAME::${GITHUB_REF#refs/*/}
+#            echo ::set-output name=SOURCE_BRANCH::${GITHUB_REF#refs/heads/}
+#            echo ::set-output name=SOURCE_TAG::${GITHUB_REF#refs/tags/}
+#
+#      - run: ./gradlew -Pversion=$SOURCE_TAG writeVersionToReadme setVersion nextMinorVersion snapshotVersion
+#        env:
+#          SOURCE_TAG: ${{ steps.branch_name.outputs.SOURCE_TAG }}
+#
+#      - run: ./gradlew writeVersionToExamples
+#
+#      - uses: stefanzweifel/git-auto-commit-action@v4
+#        with:
+#          commit_message: "TASK: Updating version in README"
+#          commit_user_name: automation-commercetools
+#          commit_user_email: automation@commercetools.com
+#          commit_author: Auto Mation <automation@commercetools.com>
+#
+#  docs:
+#    name: Build and release docs
+#
+#    runs-on: ubuntu-latest
+#    needs: [release_tag]
+#    if: startsWith( github.ref, 'refs/tags/')
+#    steps:
+#      - name: Checkout
+#        uses: actions/checkout@v3
+#        with:
+#          path: sdk
+#
+#      - name: Checkout
+#        uses: actions/checkout@v3
+#        with:
+#          path: doc
+#          ref: gh-pages
+#
+#      - name: Setup Java
+#        uses: actions/setup-java@v3
+#        with:
+#          distribution: 'temurin'
+#          java-version: '16'
+#
+#      - name: Setup Graphviz
+#        uses: ts-graphviz/setup-graphviz@v1
+#
+#      - name: Retrieve branch name
+#        id: branch_name
+#        run: |
+#            echo ::set-output name=SOURCE_NAME::${GITHUB_REF#refs/*/}
+#            echo ::set-output name=SOURCE_BRANCH::${GITHUB_REF#refs/heads/}
+#            echo ::set-output name=SOURCE_TAG::${GITHUB_REF#refs/tags/}
+#
+#      - run: ./gradlew -Pversion=$SOURCE_TAG alljavadoc
+#        working-directory: sdk
+#
+#      - run: rm -rf doc/javadoc && mv sdk/build/docs/javadoc doc
+#
+#      - uses: stefanzweifel/git-auto-commit-action@v4
+#        with:
+#          repository: doc
+#          commit_message: "Update javadoc"
+#          commit_user_name: automation-commercetools
+#          commit_user_email: automation@commercetools.com
+#          commit_author: Auto Mation <automation@commercetools.com>

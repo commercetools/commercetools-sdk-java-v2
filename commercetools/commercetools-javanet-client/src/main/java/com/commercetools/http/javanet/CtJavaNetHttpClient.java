@@ -30,6 +30,11 @@ public class CtJavaNetHttpClient extends HttpClientBase {
         javaHttpClient = clientBuilder.get().build();
     }
 
+    public CtJavaNetHttpClient(HttpClient.Version version) {
+        super();
+        javaHttpClient = clientBuilder.get().version(version).build();
+    }
+
     public CtJavaNetHttpClient(final BuilderOptions options) {
         super();
         javaHttpClient = options.plus(clientBuilder.get()).build();

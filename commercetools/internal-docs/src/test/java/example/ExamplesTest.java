@@ -8,6 +8,7 @@ import static io.vrap.rmf.base.client.http.HttpStatusCode.SERVICE_UNAVAILABLE_50
 
 import java.net.InetSocketAddress;
 import java.net.Proxy;
+import java.net.http.HttpClient;
 import java.time.Duration;
 import java.util.Arrays;
 import java.util.Collections;
@@ -35,6 +36,8 @@ import com.commercetools.api.models.product_type.AttributeLocalizedEnumValue;
 import com.commercetools.api.models.project.Project;
 import com.commercetools.api.models.tax_category.TaxCategoryPagedQueryResponse;
 import com.commercetools.http.apachehttp.CtApacheHttpClient;
+import com.commercetools.http.javanet.CtJavaNetHttpClient;
+import com.commercetools.http.netty.CtNettyHttpClient;
 import com.commercetools.http.okhttp4.CtOkHttp4Client;
 
 import io.vrap.rmf.base.client.*;
@@ -43,6 +46,7 @@ import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 
 import org.apache.commons.lang3.tuple.Pair;
 import org.apache.hc.client5.http.config.RequestConfig;
+import org.apache.hc.core5.http2.HttpVersionPolicy;
 import org.apache.hc.core5.util.Timeout;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -50,6 +54,7 @@ import org.slf4j.event.Level;
 
 import dev.failsafe.Failsafe;
 import dev.failsafe.FailsafeExecutor;
+import reactor.netty.http.HttpProtocol;
 
 public class ExamplesTest {
 
@@ -622,5 +627,11 @@ public class ExamplesTest {
     public void mdcProjectApiRoot() {
         ProjectApiRoot globalRoot = ProjectApiRoot.of("test");
         ProjectApiRoot apiRoot = ProjectApiRoot.withContext(globalRoot, new MDCContext());
+    }
+
+    public void httpVersion() {
+        CtApacheHttpClient apacheHttpClient = new CtApacheHttpClient(HttpVersionPolicy.FORCE_HTTP_1);
+        CtNettyHttpClient nettyHttpClient = new CtNettyHttpClient(HttpProtocol.HTTP11);
+        CtJavaNetHttpClient javaNetHttpClient = new CtJavaNetHttpClient(HttpClient.Version.HTTP_1_1);
     }
 }

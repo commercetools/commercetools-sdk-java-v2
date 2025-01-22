@@ -65,6 +65,14 @@ import io.vrap.rmf.base.client.ApiMethod;
  * <p>The third option is to use the timeout functionality of the futures</p>
  *
  * {@include.example example.ExamplesTest#timeoutFuture()}
+ *
+ * <h3 id=http-version>HTTP protocol version</h3>
+ *
+ * <p>In case it's needed so specify a specific HTTP protocol version this can be done through the HTTP client package itself.</p>
+ *
+ * {@include.example example.ExamplesTest#httpVersion()}
+ *
+ * <p>The AsyncHttpClient and OkHttp packages use HTTP1.1 by default.</p>
  */
 public class ClientTuning {
 }

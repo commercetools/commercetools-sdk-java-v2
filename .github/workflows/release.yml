@@ -42,84 +42,84 @@ jobs:
 
       - run: rm -rf ~/.gradle/gradle.properties
 
-  update_readme:
-    runs-on: ubuntu-latest
-
-    permissions:
-        contents: write  # for stefanzweifel/git-auto-commit-action to push code in repo
-
-    needs: [release_tag]
-    if: startsWith( github.ref, 'refs/tags/')
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-            ref: main
-
-      - uses: gradle/wrapper-validation-action@56b90f209b02bf6d1deae490e9ef18b21a389cd4
-
-      - run: ./gradlew -Pversion=${{ github.ref_name }} writeVersionToExamples writeVersionToReadme setVersion nextMinorVersion snapshotVersion
-
-      - name: "update changelog"
-        run: |
-            gh api /repos/commercetools/commercetools-sdk-java-v2/releases --paginate > releases.json
-            node scripts/changelog.js > CHANGELOG.md
-            rm -rf releases.json
-        env:
-          GH_TOKEN: ${{ github.token }}
-
-      - name: "remove API reference commit SHA"
-        run: rm -rf reference.txt
-        continue-on-error: true
-
-
-      - uses: stefanzweifel/git-auto-commit-action@3d1b5e078a85df99db0cb2441cd4309b09d86253
-        with:
-          commit_message: "TASK: Updating version in README"
-          commit_user_name: automation-commercetools
-          commit_user_email: automation@commercetools.com
-          commit_author: Auto Mation <automation@commercetools.com>
-
-  docs:
-    name: Build and release docs
-
-    permissions:
-        contents: write  # for stefanzweifel/git-auto-commit-action to push code in repo
-
-    runs-on: ubuntu-latest
-    needs: [release_tag]
-    if: startsWith( github.ref, 'refs/tags/')
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          path: sdk
-
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          path: doc
-          ref: gh-pages
-
-      - name: Setup Java
-        uses: actions/setup-java@v3
-        with:
-          distribution: 'temurin'
-          java-version: '17'
-
-      - name: Setup Graphviz
-        uses: ts-graphviz/setup-graphviz@c001ccfb5aff62e28bda6a6c39b59a7e061be5b9
-
-      - run: ./gradlew -Pversion=${{ github.ref_name }} alljavadoc
-        working-directory: sdk
-
-      - run: rsync -r sdk/build/docs/javadoc/ doc/javadoc
-
-      - uses: stefanzweifel/git-auto-commit-action@3d1b5e078a85df99db0cb2441cd4309b09d86253
-        with:
-          repository: doc
-          commit_message: "Update javadoc"
-          commit_user_name: automation-commercetools
-          commit_user_email: automation@commercetools.com
-          commit_author: Auto Mation <automation@commercetools.com>
+#  update_readme:
+#    runs-on: ubuntu-latest
+#
+#    permissions:
+#        contents: write  # for stefanzweifel/git-auto-commit-action to push code in repo
+#
+#    needs: [release_tag]
+#    if: startsWith( github.ref, 'refs/tags/')
+#
+#    steps:
+#      - name: Checkout
+#        uses: actions/checkout@v4
+#        with:
+#            ref: main
+#
+#      - uses: gradle/wrapper-validation-action@56b90f209b02bf6d1deae490e9ef18b21a389cd4
+#
+#      - run: ./gradlew -Pversion=${{ github.ref_name }} writeVersionToExamples writeVersionToReadme setVersion nextMinorVersion snapshotVersion
+#
+#      - name: "update changelog"
+#        run: |
+#            gh api /repos/commercetools/commercetools-sdk-java-v2/releases --paginate > releases.json
+#            node scripts/changelog.js > CHANGELOG.md
+#            rm -rf releases.json
+#        env:
+#          GH_TOKEN: ${{ github.token }}
+#
+#      - name: "remove API reference commit SHA"
+#        run: rm -rf reference.txt
+#        continue-on-error: true
+#
+#
+#      - uses: stefanzweifel/git-auto-commit-action@3d1b5e078a85df99db0cb2441cd4309b09d86253
+#        with:
+#          commit_message: "TASK: Updating version in README"
+#          commit_user_name: automation-commercetools
+#          commit_user_email: automation@commercetools.com
+#          commit_author: Auto Mation <automation@commercetools.com>
+#
+#  docs:
+#    name: Build and release docs
+#
+#    permissions:
+#        contents: write  # for stefanzweifel/git-auto-commit-action to push code in repo
+#
+#    runs-on: ubuntu-latest
+#    needs: [release_tag]
+#    if: startsWith( github.ref, 'refs/tags/')
+#    steps:
+#      - name: Checkout
+#        uses: actions/checkout@v4
+#        with:
+#          path: sdk
+#
+#      - name: Checkout
+#        uses: actions/checkout@v4
+#        with:
+#          path: doc
+#          ref: gh-pages
+#
+#      - name: Setup Java
+#        uses: actions/setup-java@v3
+#        with:
+#          distribution: 'temurin'
+#          java-version: '17'
+#
+#      - name: Setup Graphviz
+#        uses: ts-graphviz/setup-graphviz@c001ccfb5aff62e28bda6a6c39b59a7e061be5b9
+#
+#      - run: ./gradlew -Pversion=${{ github.ref_name }} alljavadoc
+#        working-directory: sdk
+#
+#      - run: rsync -r sdk/build/docs/javadoc/ doc/javadoc
+#
+#      - uses: stefanzweifel/git-auto-commit-action@3d1b5e078a85df99db0cb2441cd4309b09d86253
+#        with:
+#          repository: doc
+#          commit_message: "Update javadoc"
+#          commit_user_name: automation-commercetools
+#          commit_user_email: automation@commercetools.com
+#          commit_author: Auto Mation <automation@commercetools.com>

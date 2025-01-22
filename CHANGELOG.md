@@ -1,4 +1,26 @@
 
+# 17.24.0 (2025-01-22)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/802
+* Update AHC TLS config by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/803
+* [DEVX-513] configurable protocol version for HTTP clients by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/804
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/805
+
+**Api changes**
+
+<details>
+<summary>Changed Property(s)</summary>
+
+- :warning: changed property `discount` of type `DiscountedTotalPricePortion` from type `CartDiscountReference` to `Reference`
+</details>
+
+### Fixes
+
+- fix deserialization issue of `DiscountedTotalPricePortion` with a direct discount reference
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.23.0...17.24.0
+
 # 17.23.0 (2025-01-21)
 
 ## What's Changed

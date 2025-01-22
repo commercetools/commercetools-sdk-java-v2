@@ -26,10 +26,10 @@ public class ProductSearchResultTest {
     public static Object[][] objectBuilder() {
         return new Object[][] { new Object[] { ProductSearchResult.builder().id("id") },
                 new Object[] { ProductSearchResult.builder()
-                        .productProjection(new com.commercetools.api.models.product.ProductProjectionImpl()) },
-                new Object[] { ProductSearchResult.builder()
                         .matchingVariants(
-                            new com.commercetools.api.models.product_search.ProductSearchMatchingVariantsImpl()) } };
+                            new com.commercetools.api.models.product_search.ProductSearchMatchingVariantsImpl()) },
+                new Object[] { ProductSearchResult.builder()
+                        .productProjection(new com.commercetools.api.models.product.ProductProjectionImpl()) } };
     }
 
     @Test
@@ -40,18 +40,18 @@ public class ProductSearchResultTest {
     }
 
     @Test
-    public void productProjection() {
-        ProductSearchResult value = ProductSearchResult.of();
-        value.setProductProjection(new com.commercetools.api.models.product.ProductProjectionImpl());
-        Assertions.assertThat(value.getProductProjection())
-                .isEqualTo(new com.commercetools.api.models.product.ProductProjectionImpl());
-    }
-
-    @Test
     public void matchingVariants() {
         ProductSearchResult value = ProductSearchResult.of();
         value.setMatchingVariants(new com.commercetools.api.models.product_search.ProductSearchMatchingVariantsImpl());
         Assertions.assertThat(value.getMatchingVariants())
                 .isEqualTo(new com.commercetools.api.models.product_search.ProductSearchMatchingVariantsImpl());
+    }
+
+    @Test
+    public void productProjection() {
+        ProductSearchResult value = ProductSearchResult.of();
+        value.setProductProjection(new com.commercetools.api.models.product.ProductProjectionImpl());
+        Assertions.assertThat(value.getProductProjection())
+                .isEqualTo(new com.commercetools.api.models.product.ProductProjectionImpl());
     }
 }

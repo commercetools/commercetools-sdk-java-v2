@@ -35,7 +35,9 @@ import jakarta.validation.constraints.NotNull;
 public interface ProductSearchMatchingVariants {
 
     /**
-     *  <p>Whether the search criteria definitely matches all Variants of the returned Product, like for Product-level fields. Is always <code>false</code> for search expressions on Variant-level fields.</p>
+     *  <p><code>true</code> if all Variants of the returned Product match the search query, or if search query does not specify any expression for a Product Variant field.</p>
+     *  <p><code>false</code> if only a subset of the Product Variants match the search query.</p>
+     *  <p>Is always <code>false</code> for query expressions on Product Variant fields.</p>
      * @return allMatched
      */
     @NotNull
@@ -43,7 +45,8 @@ public interface ProductSearchMatchingVariants {
     public Boolean getAllMatched();
 
     /**
-     *  <p>The variants matching the search criteria or empty if all matched.</p>
+     *  <p>Identifiers of the Product Variants that match the search query.</p>
+     *  <p>Empty if all Product Variants of the returned Product match.</p>
      * @return matchedVariants
      */
     @NotNull
@@ -52,14 +55,17 @@ public interface ProductSearchMatchingVariants {
     public List<ProductSearchMatchingVariantEntry> getMatchedVariants();
 
     /**
-     *  <p>Whether the search criteria definitely matches all Variants of the returned Product, like for Product-level fields. Is always <code>false</code> for search expressions on Variant-level fields.</p>
+     *  <p><code>true</code> if all Variants of the returned Product match the search query, or if search query does not specify any expression for a Product Variant field.</p>
+     *  <p><code>false</code> if only a subset of the Product Variants match the search query.</p>
+     *  <p>Is always <code>false</code> for query expressions on Product Variant fields.</p>
      * @param allMatched value to be set
      */
 
     public void setAllMatched(final Boolean allMatched);
 
     /**
-     *  <p>The variants matching the search criteria or empty if all matched.</p>
+     *  <p>Identifiers of the Product Variants that match the search query.</p>
+     *  <p>Empty if all Product Variants of the returned Product match.</p>
      * @param matchedVariants values to be set
      */
 
@@ -67,7 +73,8 @@ public interface ProductSearchMatchingVariants {
     public void setMatchedVariants(final ProductSearchMatchingVariantEntry... matchedVariants);
 
     /**
-     *  <p>The variants matching the search criteria or empty if all matched.</p>
+     *  <p>Identifiers of the Product Variants that match the search query.</p>
+     *  <p>Empty if all Product Variants of the returned Product match.</p>
      * @param matchedVariants values to be set
      */
 

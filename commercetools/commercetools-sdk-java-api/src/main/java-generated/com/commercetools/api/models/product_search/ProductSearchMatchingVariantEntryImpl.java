@@ -42,7 +42,7 @@ public class ProductSearchMatchingVariantEntryImpl implements ProductSearchMatch
     }
 
     /**
-     *  <p>Unique identifier of the variant.</p>
+     *  <p><code>id</code> of the ProductVariant that matches the search query.</p>
      */
 
     public Integer getId() {
@@ -50,7 +50,7 @@ public class ProductSearchMatchingVariantEntryImpl implements ProductSearchMatch
     }
 
     /**
-     *  <p>SKU of the matching variant.</p>
+     *  <p><code>sku</code> of the ProductVariant that matches the search query.</p>
      */
 
     public String getSku() {

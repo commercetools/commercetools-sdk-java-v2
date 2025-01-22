@@ -34,7 +34,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ProductSearchResult {
 
     /**
-     *  <p>Unique identifier of the Product.</p>
+     *  <p><code>id</code> of the Product that matches the search query.</p>
      * @return id
      */
     @NotNull
@@ -42,15 +42,7 @@ public interface ProductSearchResult {
     public String getId();
 
     /**
-     *  <p>Contains Product Projection data for Products matching the <code>projection</code> field in the Search Products request.</p>
-     * @return productProjection
-     */
-    @Valid
-    @JsonProperty("productProjection")
-    public ProductProjection getProductProjection();
-
-    /**
-     *  <p>Describes the variants that matched the search criteria.</p>
+     *  <p>Information about which Product Variants match the search query. Only present if <code>markMatchingVariants</code> is set to <code>true</code> in the ProductSearchRequest.</p>
      * @return matchingVariants
      */
     @Valid
@@ -58,25 +50,33 @@ public interface ProductSearchResult {
     public ProductSearchMatchingVariants getMatchingVariants();
 
     /**
-     *  <p>Unique identifier of the Product.</p>
+     *  <p>Projected data of the Product with <code>id</code>. Only present if data integration with Product Projection parameters is requested.</p>
+     * @return productProjection
+     */
+    @Valid
+    @JsonProperty("productProjection")
+    public ProductProjection getProductProjection();
+
+    /**
+     *  <p><code>id</code> of the Product that matches the search query.</p>
      * @param id value to be set
      */
 
     public void setId(final String id);
 
     /**
-     *  <p>Contains Product Projection data for Products matching the <code>projection</code> field in the Search Products request.</p>
-     * @param productProjection value to be set
-     */
-
-    public void setProductProjection(final ProductProjection productProjection);
-
-    /**
-     *  <p>Describes the variants that matched the search criteria.</p>
+     *  <p>Information about which Product Variants match the search query. Only present if <code>markMatchingVariants</code> is set to <code>true</code> in the ProductSearchRequest.</p>
      * @param matchingVariants value to be set
      */
 
     public void setMatchingVariants(final ProductSearchMatchingVariants matchingVariants);
+
+    /**
+     *  <p>Projected data of the Product with <code>id</code>. Only present if data integration with Product Projection parameters is requested.</p>
+     * @param productProjection value to be set
+     */
+
+    public void setProductProjection(final ProductProjection productProjection);
 
     /**
      * factory method
@@ -94,8 +94,8 @@ public interface ProductSearchResult {
     public static ProductSearchResult of(final ProductSearchResult template) {
         ProductSearchResultImpl instance = new ProductSearchResultImpl();
         instance.setId(template.getId());
-        instance.setProductProjection(template.getProductProjection());
         instance.setMatchingVariants(template.getMatchingVariants());
+        instance.setProductProjection(template.getProductProjection());
         return instance;
     }
 
@@ -111,10 +111,10 @@ public interface ProductSearchResult {
         }
         ProductSearchResultImpl instance = new ProductSearchResultImpl();
         instance.setId(template.getId());
-        instance.setProductProjection(
-            com.commercetools.api.models.product.ProductProjection.deepCopy(template.getProductProjection()));
         instance.setMatchingVariants(com.commercetools.api.models.product_search.ProductSearchMatchingVariants
                 .deepCopy(template.getMatchingVariants()));
+        instance.setProductProjection(
+            com.commercetools.api.models.product.ProductProjection.deepCopy(template.getProductProjection()));
         return instance;
     }
 

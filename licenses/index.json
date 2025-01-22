@@ -238,19 +238,6 @@
             ]
         },
         {
-            "moduleName": "commons-codec:commons-codec",
-            "moduleVersion": "1.15",
-            "moduleUrls": [
-                "https://commons.apache.org/proper/commons-codec/"
-            ],
-            "moduleLicenses": [
-                {
-                    "moduleLicense": "Apache License, Version 2.0",
-                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
-                }
-            ]
-        },
-        {
             "moduleName": "commons-io:commons-io",
             "moduleVersion": "2.11.0",
             "moduleUrls": [
@@ -527,7 +514,7 @@
         },
         {
             "moduleName": "org.apache.httpcomponents.client5:httpclient5",
-            "moduleVersion": "5.1",
+            "moduleVersion": "5.4.1",
             "moduleLicenses": [
                 {
                     "moduleLicense": "Apache License, Version 2.0",
@@ -537,7 +524,7 @@
         },
         {
             "moduleName": "org.apache.httpcomponents.core5:httpcore5",
-            "moduleVersion": "5.1.1",
+            "moduleVersion": "5.3.1",
             "moduleLicenses": [
                 {
                     "moduleLicense": "Apache License, Version 2.0",
@@ -547,7 +534,7 @@
         },
         {
             "moduleName": "org.apache.httpcomponents.core5:httpcore5-h2",
-            "moduleVersion": "5.1.1",
+            "moduleVersion": "5.3.1",
             "moduleLicenses": [
                 {
                     "moduleLicense": "Apache License, Version 2.0",
@@ -697,6 +684,19 @@
         {
             "moduleName": "org.slf4j:slf4j-api",
             "moduleVersion": "1.7.32",
+            "moduleUrls": [
+                "http://www.slf4j.org"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "MIT License",
+                    "moduleLicenseUrl": "https://opensource.org/licenses/MIT"
+                }
+            ]
+        },
+        {
+            "moduleName": "org.slf4j:slf4j-api",
+            "moduleVersion": "1.7.36",
             "moduleUrls": [
                 "http://www.slf4j.org"
             ],

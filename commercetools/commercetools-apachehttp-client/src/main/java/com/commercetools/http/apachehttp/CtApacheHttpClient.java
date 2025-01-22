@@ -16,9 +16,11 @@ import io.vrap.rmf.base.client.*;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.io.input.AutoCloseInputStream;
+import org.apache.hc.client5.http.async.HttpAsyncClient;
 import org.apache.hc.client5.http.async.methods.SimpleBody;
 import org.apache.hc.client5.http.async.methods.SimpleHttpResponse;
 import org.apache.hc.client5.http.async.methods.SimpleResponseConsumer;
+import org.apache.hc.client5.http.classic.HttpClient;
 import org.apache.hc.client5.http.impl.async.CloseableHttpAsyncClient;
 import org.apache.hc.client5.http.impl.async.HttpAsyncClientBuilder;
 import org.apache.hc.client5.http.impl.nio.PoolingAsyncClientConnectionManagerBuilder;
@@ -33,6 +35,7 @@ import org.apache.hc.core5.http.nio.support.AsyncRequestBuilder;
 import org.apache.hc.core5.http2.HttpVersionPolicy;
 import org.apache.hc.core5.reactor.IOReactorStatus;
 import org.apache.hc.core5.reactor.ssl.TlsDetails;
+import org.apache.hc.core5.util.VersionInfo;
 
 public class CtApacheHttpClient extends HttpClientBase {
     public static final int MAX_REQUESTS = 64;
@@ -66,6 +69,10 @@ public class CtApacheHttpClient extends HttpClientBase {
         if (!(apacheHttpClient.getStatus() == IOReactorStatus.ACTIVE)) {
             apacheHttpClient.start();
         }
+    }
+
+    public static String clientVersion() {
+        return "ApacheHttpAsyncClient/" + VersionInfo.loadVersionInfo("org.apache.hc.client5", HttpAsyncClient.class.getClassLoader()).getRelease();
     }
 
     public CtApacheHttpClient() {

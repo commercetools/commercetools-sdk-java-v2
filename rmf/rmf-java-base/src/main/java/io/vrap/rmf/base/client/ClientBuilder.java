@@ -3,6 +3,8 @@ package io.vrap.rmf.base.client;
 
 import static java.util.Objects.requireNonNull;
 
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.net.URI;
 import java.util.*;
 import java.util.concurrent.ExecutorService;
@@ -737,6 +739,14 @@ public class ClientBuilder implements Builder<ApiHttpClient> {
         String osName = SystemUtils.OS_NAME;
         String osArch = SystemUtils.OS_ARCH;
         String sdkVersion = BuildInfo.VERSION;
-        return userAgent + sdkVersion + " " + " Java/" + runtimeVersion + " (" + osName + "; " + osArch + ")";
+        String httpClient = "";
+        try {
+            Class<?> clazz = Class.forName("com.commercetools.http.apachehttp.CtApacheHttpClient");
+            Method method = clazz.getMethod("clientVersion");
+            httpClient = " " + method.invoke(null).toString();
+        }
+        catch (ClassNotFoundException | NoSuchMethodException | InvocationTargetException | IllegalAccessException ignored) {
+        }
+        return userAgent + sdkVersion + " " + " Java/" + runtimeVersion + " (" + osName + "; " + osArch + ")" + httpClient;
     }
 }

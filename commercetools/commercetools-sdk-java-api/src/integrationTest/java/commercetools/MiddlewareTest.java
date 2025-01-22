@@ -8,12 +8,14 @@ import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import com.commercetools.api.client.ApiRoot;
 import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.category.Category;
 import com.commercetools.api.models.category.CategoryDraftBuilder;
 import com.commercetools.api.models.project.Project;
+import com.commercetools.http.apachehttp.CtApacheHttpClient;
 import commercetools.utils.CommercetoolsTestUtils;
 
 import io.vrap.rmf.base.client.*;
@@ -110,5 +112,17 @@ public class MiddlewareTest {
             URI.create("/" + CommercetoolsTestUtils.getProjectKey() + "/"), new ApiHttpHeaders(), null);
         ApiHttpResponse<Project> response = client.execute(request, Project.class).get();
         Assertions.assertThat(response).isNotNull();
+    }
+
+    @Test
+    public void testApacheUserAgent() {
+        ClientCredentials credentials = ClientCredentials.of()
+                .withClientId(CommercetoolsTestUtils.getClientId())
+                .withClientSecret(CommercetoolsTestUtils.getClientSecret())
+                .build();
+        ProjectApiRoot root = ApiRootBuilder.of(new CtApacheHttpClient())
+                .defaultClient(credentials, ServiceRegion.GCP_EUROPE_WEST1)
+                .build(CommercetoolsTestUtils.getProjectKey());
+        root.get().executeBlocking();
     }
 }

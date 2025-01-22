@@ -26,7 +26,7 @@ public class DiscountedTotalPricePortionTest {
     public static Object[][] objectBuilder() {
         return new Object[][] {
                 new Object[] { DiscountedTotalPricePortion.builder()
-                        .discount(new com.commercetools.api.models.cart_discount.CartDiscountReferenceImpl()) },
+                        .discount(new com.commercetools.api.models.common.ReferenceImpl()) },
                 new Object[] { DiscountedTotalPricePortion.builder()
                         .discountedAmount(new com.commercetools.api.models.common.TypedMoneyImpl()) } };
     }
@@ -34,9 +34,8 @@ public class DiscountedTotalPricePortionTest {
     @Test
     public void discount() {
         DiscountedTotalPricePortion value = DiscountedTotalPricePortion.of();
-        value.setDiscount(new com.commercetools.api.models.cart_discount.CartDiscountReferenceImpl());
-        Assertions.assertThat(value.getDiscount())
-                .isEqualTo(new com.commercetools.api.models.cart_discount.CartDiscountReferenceImpl());
+        value.setDiscount(new com.commercetools.api.models.common.ReferenceImpl());
+        Assertions.assertThat(value.getDiscount()).isEqualTo(new com.commercetools.api.models.common.ReferenceImpl());
     }
 
     @Test

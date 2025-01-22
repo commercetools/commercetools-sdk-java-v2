@@ -22,7 +22,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountedTotalPricePortionImpl implements DiscountedTotalPricePortion, ModelBase {
 
-    private com.commercetools.api.models.cart_discount.CartDiscountReference discount;
+    private com.commercetools.api.models.common.Reference discount;
 
     private com.commercetools.api.models.common.TypedMoney discountedAmount;
 
@@ -31,7 +31,7 @@ public class DiscountedTotalPricePortionImpl implements DiscountedTotalPricePort
      */
     @JsonCreator
     DiscountedTotalPricePortionImpl(
-            @JsonProperty("discount") final com.commercetools.api.models.cart_discount.CartDiscountReference discount,
+            @JsonProperty("discount") final com.commercetools.api.models.common.Reference discount,
             @JsonProperty("discountedAmount") final com.commercetools.api.models.common.TypedMoney discountedAmount) {
         this.discount = discount;
         this.discountedAmount = discountedAmount;
@@ -44,10 +44,10 @@ public class DiscountedTotalPricePortionImpl implements DiscountedTotalPricePort
     }
 
     /**
-     *  <p>Cart Discount related to the discounted price.</p>
+     *  <p>A CartDiscountReference or DirectDiscountReference to the discount applied on the Cart <code>totalPrice</code>.</p>
      */
 
-    public com.commercetools.api.models.cart_discount.CartDiscountReference getDiscount() {
+    public com.commercetools.api.models.common.Reference getDiscount() {
         return this.discount;
     }
 
@@ -59,7 +59,7 @@ public class DiscountedTotalPricePortionImpl implements DiscountedTotalPricePort
         return this.discountedAmount;
     }
 
-    public void setDiscount(final com.commercetools.api.models.cart_discount.CartDiscountReference discount) {
+    public void setDiscount(final com.commercetools.api.models.common.Reference discount) {
         this.discount = discount;
     }
 

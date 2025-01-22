@@ -7,7 +7,7 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
-import com.commercetools.api.models.cart_discount.CartDiscountReference;
+import com.commercetools.api.models.common.Reference;
 import com.commercetools.api.models.common.TypedMoney;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -36,13 +36,13 @@ import jakarta.validation.constraints.NotNull;
 public interface DiscountedTotalPricePortion {
 
     /**
-     *  <p>Cart Discount related to the discounted price.</p>
+     *  <p>A CartDiscountReference or DirectDiscountReference to the discount applied on the Cart <code>totalPrice</code>.</p>
      * @return discount
      */
     @NotNull
     @Valid
     @JsonProperty("discount")
-    public CartDiscountReference getDiscount();
+    public Reference getDiscount();
 
     /**
      *  <p>Money value of the discount.</p>
@@ -54,11 +54,11 @@ public interface DiscountedTotalPricePortion {
     public TypedMoney getDiscountedAmount();
 
     /**
-     *  <p>Cart Discount related to the discounted price.</p>
+     *  <p>A CartDiscountReference or DirectDiscountReference to the discount applied on the Cart <code>totalPrice</code>.</p>
      * @param discount value to be set
      */
 
-    public void setDiscount(final CartDiscountReference discount);
+    public void setDiscount(final Reference discount);
 
     /**
      *  <p>Money value of the discount.</p>
@@ -98,8 +98,7 @@ public interface DiscountedTotalPricePortion {
             return null;
         }
         DiscountedTotalPricePortionImpl instance = new DiscountedTotalPricePortionImpl();
-        instance.setDiscount(
-            com.commercetools.api.models.cart_discount.CartDiscountReference.deepCopy(template.getDiscount()));
+        instance.setDiscount(com.commercetools.api.models.common.Reference.deepCopy(template.getDiscount()));
         instance.setDiscountedAmount(
             com.commercetools.api.models.common.TypedMoney.deepCopy(template.getDiscountedAmount()));
         return instance;

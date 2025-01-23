@@ -161,7 +161,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMarkMatchingVariants()" class="member-name-link">getMarkMatchingVariants</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The search can return Products where not all Product Variants match the search criteria.</div>
+<div class="block">If <code>query</code> specifies an expression for a Product Variant field, set this to <code>true</code> to get additional information for each returned Product about which Product Variants match the search query.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOffset()" class="member-name-link">getOffset</a>()</code></div>
@@ -196,7 +196,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductSearchRequestBuilder.html" title="class in com.commercetools.api.models.product_search">ProductSearchRequestBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#markMatchingVariants(java.lang.Boolean)" class="member-name-link">markMatchingVariants</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;markMatchingVariants)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The search can return Products where not all Product Variants match the search criteria.</div>
+<div class="block">If <code>query</code> specifies an expression for a Product Variant field, set this to <code>true</code> to get additional information for each returned Product about which Product Variants match the search query.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="ProductSearchRequestBuilder.html" title="class in com.commercetools.api.models.product_search">ProductSearchRequestBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -506,7 +506,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>markMatchingVariants</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSearchRequestBuilder.html" title="class in com.commercetools.api.models.product_search">ProductSearchRequestBuilder</a></span>&nbsp;<span class="element-name">markMatchingVariants</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;markMatchingVariants)</span></div>
-<div class="block"><p>The search can return Products where not all Product Variants match the search criteria. If <code>true</code>, the response will include a field called <code>matchingVariants</code> that contains the <code>sku</code> of Product Variants that match the search query. If the query does not specify any variant-level criteria, <code>matchingVariants</code> will be null signifying that all Product Variants are a match.</p></div>
+<div class="block"><p>If <code>query</code> specifies an expression for a Product Variant field, set this to <code>true</code> to get additional information for each returned Product about which Product Variants match the search query. For details, see matching variants.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>markMatchingVariants</code> - value to be set</dd>
@@ -742,7 +742,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getMarkMatchingVariants</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name">getMarkMatchingVariants</span>()</div>
-<div class="block"><p>The search can return Products where not all Product Variants match the search criteria. If <code>true</code>, the response will include a field called <code>matchingVariants</code> that contains the <code>sku</code> of Product Variants that match the search query. If the query does not specify any variant-level criteria, <code>matchingVariants</code> will be null signifying that all Product Variants are a match.</p></div>
+<div class="block"><p>If <code>query</code> specifies an expression for a Product Variant field, set this to <code>true</code> to get additional information for each returned Product about which Product Variants match the search query. For details, see matching variants.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>markMatchingVariants</dd>

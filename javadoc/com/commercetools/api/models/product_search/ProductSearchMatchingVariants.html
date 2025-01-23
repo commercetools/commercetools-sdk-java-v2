@@ -117,12 +117,12 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getAllMatched()" class="member-name-link">getAllMatched</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Whether the search criteria definitely matches all Variants of the returned Product, like for Product-level fields.</div>
+<div class="block"><code>true</code> if all Variants of the returned Product match the search query, or if search query does not specify any expression for a Product Variant field.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductSearchMatchingVariantEntry.html" title="interface in com.commercetools.api.models.product_search">ProductSearchMatchingVariantEntry</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMatchedVariants()" class="member-name-link">getMatchedVariants</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The variants matching the search criteria or empty if all matched.</div>
+<div class="block">Identifiers of the Product Variants that match the search query.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ProductSearchMatchingVariants.html" title="interface in com.commercetools.api.models.product_search">ProductSearchMatchingVariants</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -137,17 +137,17 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setAllMatched(java.lang.Boolean)" class="member-name-link">setAllMatched</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;allMatched)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Whether the search criteria definitely matches all Variants of the returned Product, like for Product-level fields.</div>
+<div class="block"><code>true</code> if all Variants of the returned Product match the search query, or if search query does not specify any expression for a Product Variant field.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setMatchedVariants(com.commercetools.api.models.product_search.ProductSearchMatchingVariantEntry...)" class="member-name-link">setMatchedVariants</a><wbr>(<a href="ProductSearchMatchingVariantEntry.html" title="interface in com.commercetools.api.models.product_search">ProductSearchMatchingVariantEntry</a>...&nbsp;matchedVariants)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The variants matching the search criteria or empty if all matched.</div>
+<div class="block">Identifiers of the Product Variants that match the search query.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setMatchedVariants(java.util.List)" class="member-name-link">setMatchedVariants</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductSearchMatchingVariantEntry.html" title="interface in com.commercetools.api.models.product_search">ProductSearchMatchingVariantEntry</a>&gt;&nbsp;matchedVariants)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The variants matching the search criteria or empty if all matched.</div>
+<div class="block">Identifiers of the Product Variants that match the search query.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ProductSearchMatchingVariants.html" title="interface in com.commercetools.api.models.product_search">ProductSearchMatchingVariants</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -178,7 +178,9 @@ loadScripts(document, 'script');</script>
 <h3>getAllMatched</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name">getAllMatched</span>()</div>
-<div class="block"><p>Whether the search criteria definitely matches all Variants of the returned Product, like for Product-level fields. Is always <code>false</code> for search expressions on Variant-level fields.</p></div>
+<div class="block"><p><code>true</code> if all Variants of the returned Product match the search query, or if search query does not specify any expression for a Product Variant field.</p>
+  <p><code>false</code> if only a subset of the Product Variants match the search query.</p>
+  <p>Is always <code>false</code> for query expressions on Product Variant fields.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>allMatched</dd>
@@ -191,7 +193,8 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
 </span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductSearchMatchingVariantEntry.html" title="interface in com.commercetools.api.models.product_search">ProductSearchMatchingVariantEntry</a>&gt;</span>&nbsp;<span class="element-name">getMatchedVariants</span>()</div>
-<div class="block"><p>The variants matching the search criteria or empty if all matched.</p></div>
+<div class="block"><p>Identifiers of the Product Variants that match the search query.</p>
+  <p>Empty if all Product Variants of the returned Product match.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>matchedVariants</dd>
@@ -202,7 +205,9 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setAllMatched(java.lang.Boolean)">
 <h3>setAllMatched</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setAllMatched</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;allMatched)</span></div>
-<div class="block"><p>Whether the search criteria definitely matches all Variants of the returned Product, like for Product-level fields. Is always <code>false</code> for search expressions on Variant-level fields.</p></div>
+<div class="block"><p><code>true</code> if all Variants of the returned Product match the search query, or if search query does not specify any expression for a Product Variant field.</p>
+  <p><code>false</code> if only a subset of the Product Variants match the search query.</p>
+  <p>Is always <code>false</code> for query expressions on Product Variant fields.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>allMatched</code> - value to be set</dd>
@@ -213,7 +218,8 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setMatchedVariants(com.commercetools.api.models.product_search.ProductSearchMatchingVariantEntry...)">
 <h3>setMatchedVariants</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setMatchedVariants</span><wbr><span class="parameters">(<a href="ProductSearchMatchingVariantEntry.html" title="interface in com.commercetools.api.models.product_search">ProductSearchMatchingVariantEntry</a>...&nbsp;matchedVariants)</span></div>
-<div class="block"><p>The variants matching the search criteria or empty if all matched.</p></div>
+<div class="block"><p>Identifiers of the Product Variants that match the search query.</p>
+  <p>Empty if all Product Variants of the returned Product match.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>matchedVariants</code> - values to be set</dd>
@@ -224,7 +230,8 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setMatchedVariants(java.util.List)">
 <h3>setMatchedVariants</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setMatchedVariants</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductSearchMatchingVariantEntry.html" title="interface in com.commercetools.api.models.product_search">ProductSearchMatchingVariantEntry</a>&gt;&nbsp;matchedVariants)</span></div>
-<div class="block"><p>The variants matching the search criteria or empty if all matched.</p></div>
+<div class="block"><p>Identifiers of the Product Variants that match the search query.</p>
+  <p>Empty if all Product Variants of the returned Product match.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>matchedVariants</code> - values to be set</dd>

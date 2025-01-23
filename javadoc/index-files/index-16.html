@@ -5296,11 +5296,11 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/product_search/ProductSearchMatchingVariantsBuilder.html#plusMatchedVariants(com.commercetools.api.models.product_search.ProductSearchMatchingVariantEntry...)" class="member-name-link">plusMatchedVariants(ProductSearchMatchingVariantEntry...)</a> - Method in class com.commercetools.api.models.product_search.<a href="../com/commercetools/api/models/product_search/ProductSearchMatchingVariantsBuilder.html" title="class in com.commercetools.api.models.product_search">ProductSearchMatchingVariantsBuilder</a></dt>
 <dd>
-<div class="block">The variants matching the search criteria or empty if all matched.</div>
+<div class="block">Identifiers of the Product Variants that match the search query.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product_search/ProductSearchMatchingVariantsBuilder.html#plusMatchedVariants(java.util.function.Function)" class="member-name-link">plusMatchedVariants(Function&lt;ProductSearchMatchingVariantEntryBuilder, ProductSearchMatchingVariantEntryBuilder&gt;)</a> - Method in class com.commercetools.api.models.product_search.<a href="../com/commercetools/api/models/product_search/ProductSearchMatchingVariantsBuilder.html" title="class in com.commercetools.api.models.product_search">ProductSearchMatchingVariantsBuilder</a></dt>
 <dd>
-<div class="block">The variants matching the search criteria or empty if all matched.</div>
+<div class="block">Identifiers of the Product Variants that match the search query.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/order_edit/OrderEditPreviewSuccessBuilder.html#plusMessagePayloads(com.commercetools.api.models.message.MessagePayload...)" class="member-name-link">plusMessagePayloads(MessagePayload...)</a> - Method in class com.commercetools.api.models.order_edit.<a href="../com/commercetools/api/models/order_edit/OrderEditPreviewSuccessBuilder.html" title="class in com.commercetools.api.models.order_edit">OrderEditPreviewSuccessBuilder</a></dt>
 <dd>
@@ -10202,9 +10202,9 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/predicates/query/CollectionPredicateBuilder.html#predicate()" class="member-name-link">predicate()</a> - Method in class com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/CollectionPredicateBuilder.html" title="class in com.commercetools.api.predicates.query">CollectionPredicateBuilder</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="../com/commercetools/api/predicates/query/TimeCollectionPredicateBuilder.html#predicate()" class="member-name-link">predicate()</a> - Method in class com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/TimeCollectionPredicateBuilder.html" title="class in com.commercetools.api.predicates.query">TimeCollectionPredicateBuilder</a></dt>
+<dt><a href="../com/commercetools/api/predicates/query/ContainsPredicateBuilder.html#predicate()" class="member-name-link">predicate()</a> - Method in interface com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/ContainsPredicateBuilder.html" title="interface in com.commercetools.api.predicates.query">ContainsPredicateBuilder</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="../com/commercetools/api/predicates/query/LongComparisonPredicateBuilder.html#predicate()" class="member-name-link">predicate()</a> - Method in class com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/LongComparisonPredicateBuilder.html" title="class in com.commercetools.api.predicates.query">LongComparisonPredicateBuilder</a></dt>
+<dt><a href="../com/commercetools/api/predicates/query/DateComparisonPredicateBuilder.html#predicate()" class="member-name-link">predicate()</a> - Method in class com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/DateComparisonPredicateBuilder.html" title="class in com.commercetools.api.predicates.query">DateComparisonPredicateBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/predicates/query/EmptyPredicateBuilder.html#predicate()" class="member-name-link">predicate()</a> - Method in interface com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/EmptyPredicateBuilder.html" title="interface in com.commercetools.api.predicates.query">EmptyPredicateBuilder</a></dt>
 <dd>&nbsp;</dd>
@@ -16228,7 +16228,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/product_search/ProductSearchResultBuilder.html#productProjection(com.commercetools.api.models.product.ProductProjection)" class="member-name-link">productProjection(ProductProjection)</a> - Method in class com.commercetools.api.models.product_search.<a href="../com/commercetools/api/models/product_search/ProductSearchResultBuilder.html" title="class in com.commercetools.api.models.product_search">ProductSearchResultBuilder</a></dt>
 <dd>
-<div class="block">Contains Product Projection data for Products matching the <code>projection</code> field in the Search Products request.</div>
+<div class="block">Projected data of the Product with <code>id</code>.</div>
 </dd>
 <dt><a href="../com/commercetools/compat/GetByKeyBuilder.html#productProjection(com.commercetools.api.models.product.ProductResourceIdentifier,io.sphere.sdk.products.ProductProjectionType,java.util.function.Function)" class="member-name-link">productProjection(ProductResourceIdentifier, ProductProjectionType, Function&lt;ProductProjectionByKeyGet, ProductProjectionByKeyGet&gt;)</a> - Method in class com.commercetools.compat.<a href="../com/commercetools/compat/GetByKeyBuilder.html" title="class in com.commercetools.compat">GetByKeyBuilder</a></dt>
 <dd>&nbsp;</dd>
@@ -16268,7 +16268,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/product_search/ProductSearchResultBuilder.html#productProjection(java.util.function.Function)" class="member-name-link">productProjection(Function&lt;ProductProjectionBuilder, ProductProjectionBuilder&gt;)</a> - Method in class com.commercetools.api.models.product_search.<a href="../com/commercetools/api/models/product_search/ProductSearchResultBuilder.html" title="class in com.commercetools.api.models.product_search">ProductSearchResultBuilder</a></dt>
 <dd>
-<div class="block">Contains Product Projection data for Products matching the <code>projection</code> field in the Search Products request.</div>
+<div class="block">Projected data of the Product with <code>id</code>.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/ProductProjection.html" class="type-name-link" title="interface in com.commercetools.api.models.product">ProductProjection</a> - Interface in <a href="../com/commercetools/api/models/product/package-summary.html">com.commercetools.api.models.product</a></dt>
 <dd>

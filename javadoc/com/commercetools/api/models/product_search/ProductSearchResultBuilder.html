@@ -132,32 +132,32 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getId()" class="member-name-link">getId</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Unique identifier of the Product.</div>
+<div class="block"><code>id</code> of the Product that matches the search query.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductSearchMatchingVariants.html" title="interface in com.commercetools.api.models.product_search">ProductSearchMatchingVariants</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMatchingVariants()" class="member-name-link">getMatchingVariants</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Describes the variants that matched the search criteria.</div>
+<div class="block">Information about which Product Variants match the search query.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../product/ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getProductProjection()" class="member-name-link">getProductProjection</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Contains Product Projection data for Products matching the <code>projection</code> field in the Search Products request.</div>
+<div class="block">Projected data of the Product with <code>id</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductSearchResultBuilder.html" title="class in com.commercetools.api.models.product_search">ProductSearchResultBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#id(java.lang.String)" class="member-name-link">id</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Unique identifier of the Product.</div>
+<div class="block"><code>id</code> of the Product that matches the search query.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductSearchResultBuilder.html" title="class in com.commercetools.api.models.product_search">ProductSearchResultBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#matchingVariants(com.commercetools.api.models.product_search.ProductSearchMatchingVariants)" class="member-name-link">matchingVariants</a><wbr>(<a href="ProductSearchMatchingVariants.html" title="interface in com.commercetools.api.models.product_search">ProductSearchMatchingVariants</a>&nbsp;matchingVariants)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Describes the variants that matched the search criteria.</div>
+<div class="block">Information about which Product Variants match the search query.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductSearchResultBuilder.html" title="class in com.commercetools.api.models.product_search">ProductSearchResultBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#matchingVariants(java.util.function.Function)" class="member-name-link">matchingVariants</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductSearchMatchingVariantsBuilder.html" title="class in com.commercetools.api.models.product_search">ProductSearchMatchingVariantsBuilder</a>,<wbr><a href="ProductSearchMatchingVariantsBuilder.html" title="class in com.commercetools.api.models.product_search">ProductSearchMatchingVariantsBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Describes the variants that matched the search criteria.</div>
+<div class="block">Information about which Product Variants match the search query.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="ProductSearchResultBuilder.html" title="class in com.commercetools.api.models.product_search">ProductSearchResultBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -172,22 +172,22 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductSearchResultBuilder.html" title="class in com.commercetools.api.models.product_search">ProductSearchResultBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#productProjection(com.commercetools.api.models.product.ProductProjection)" class="member-name-link">productProjection</a><wbr>(<a href="../product/ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>&nbsp;productProjection)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Contains Product Projection data for Products matching the <code>projection</code> field in the Search Products request.</div>
+<div class="block">Projected data of the Product with <code>id</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductSearchResultBuilder.html" title="class in com.commercetools.api.models.product_search">ProductSearchResultBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#productProjection(java.util.function.Function)" class="member-name-link">productProjection</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../product/ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a>,<wbr><a href="../product/ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Contains Product Projection data for Products matching the <code>projection</code> field in the Search Products request.</div>
+<div class="block">Projected data of the Product with <code>id</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductSearchResultBuilder.html" title="class in com.commercetools.api.models.product_search">ProductSearchResultBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withMatchingVariants(java.util.function.Function)" class="member-name-link">withMatchingVariants</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductSearchMatchingVariantsBuilder.html" title="class in com.commercetools.api.models.product_search">ProductSearchMatchingVariantsBuilder</a>,<wbr><a href="ProductSearchMatchingVariants.html" title="interface in com.commercetools.api.models.product_search">ProductSearchMatchingVariants</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Describes the variants that matched the search criteria.</div>
+<div class="block">Information about which Product Variants match the search query.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductSearchResultBuilder.html" title="class in com.commercetools.api.models.product_search">ProductSearchResultBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withProductProjection(java.util.function.Function)" class="member-name-link">withProductProjection</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../product/ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a>,<wbr><a href="../product/ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Contains Product Projection data for Products matching the <code>projection</code> field in the Search Products request.</div>
+<div class="block">Projected data of the Product with <code>id</code>.</div>
 </div>
 </div>
 </div>
@@ -224,7 +224,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="id(java.lang.String)">
 <h3>id</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSearchResultBuilder.html" title="class in com.commercetools.api.models.product_search">ProductSearchResultBuilder</a></span>&nbsp;<span class="element-name">id</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
-<div class="block"><p>Unique identifier of the Product.</p></div>
+<div class="block"><p><code>id</code> of the Product that matches the search query.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>id</code> - value to be set</dd>
@@ -234,50 +234,10 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
-<section class="detail" id="productProjection(java.util.function.Function)">
-<h3>productProjection</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSearchResultBuilder.html" title="class in com.commercetools.api.models.product_search">ProductSearchResultBuilder</a></span>&nbsp;<span class="element-name">productProjection</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../product/ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a>,<wbr><a href="../product/ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Contains Product Projection data for Products matching the <code>projection</code> field in the Search Products request.</p></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>builder</code> - function to build the productProjection value</dd>
-<dt>Returns:</dt>
-<dd>Builder</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="withProductProjection(java.util.function.Function)">
-<h3>withProductProjection</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSearchResultBuilder.html" title="class in com.commercetools.api.models.product_search">ProductSearchResultBuilder</a></span>&nbsp;<span class="element-name">withProductProjection</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../product/ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a>,<wbr><a href="../product/ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Contains Product Projection data for Products matching the <code>projection</code> field in the Search Products request.</p></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>builder</code> - function to build the productProjection value</dd>
-<dt>Returns:</dt>
-<dd>Builder</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="productProjection(com.commercetools.api.models.product.ProductProjection)">
-<h3>productProjection</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSearchResultBuilder.html" title="class in com.commercetools.api.models.product_search">ProductSearchResultBuilder</a></span>&nbsp;<span class="element-name">productProjection</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
- <a href="../product/ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>&nbsp;productProjection)</span></div>
-<div class="block"><p>Contains Product Projection data for Products matching the <code>projection</code> field in the Search Products request.</p></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>productProjection</code> - value to be set</dd>
-<dt>Returns:</dt>
-<dd>Builder</dd>
-</dl>
-</section>
-</li>
-<li>
 <section class="detail" id="matchingVariants(java.util.function.Function)">
 <h3>matchingVariants</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSearchResultBuilder.html" title="class in com.commercetools.api.models.product_search">ProductSearchResultBuilder</a></span>&nbsp;<span class="element-name">matchingVariants</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductSearchMatchingVariantsBuilder.html" title="class in com.commercetools.api.models.product_search">ProductSearchMatchingVariantsBuilder</a>,<wbr><a href="ProductSearchMatchingVariantsBuilder.html" title="class in com.commercetools.api.models.product_search">ProductSearchMatchingVariantsBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Describes the variants that matched the search criteria.</p></div>
+<div class="block"><p>Information about which Product Variants match the search query. Only present if <code>markMatchingVariants</code> is set to <code>true</code> in the ProductSearchRequest.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the matchingVariants value</dd>
@@ -290,7 +250,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withMatchingVariants(java.util.function.Function)">
 <h3>withMatchingVariants</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSearchResultBuilder.html" title="class in com.commercetools.api.models.product_search">ProductSearchResultBuilder</a></span>&nbsp;<span class="element-name">withMatchingVariants</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductSearchMatchingVariantsBuilder.html" title="class in com.commercetools.api.models.product_search">ProductSearchMatchingVariantsBuilder</a>,<wbr><a href="ProductSearchMatchingVariants.html" title="interface in com.commercetools.api.models.product_search">ProductSearchMatchingVariants</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Describes the variants that matched the search criteria.</p></div>
+<div class="block"><p>Information about which Product Variants match the search query. Only present if <code>markMatchingVariants</code> is set to <code>true</code> in the ProductSearchRequest.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the matchingVariants value</dd>
@@ -304,7 +264,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>matchingVariants</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSearchResultBuilder.html" title="class in com.commercetools.api.models.product_search">ProductSearchResultBuilder</a></span>&nbsp;<span class="element-name">matchingVariants</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="ProductSearchMatchingVariants.html" title="interface in com.commercetools.api.models.product_search">ProductSearchMatchingVariants</a>&nbsp;matchingVariants)</span></div>
-<div class="block"><p>Describes the variants that matched the search criteria.</p></div>
+<div class="block"><p>Information about which Product Variants match the search query. Only present if <code>markMatchingVariants</code> is set to <code>true</code> in the ProductSearchRequest.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>matchingVariants</code> - value to be set</dd>
@@ -314,25 +274,53 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
-<section class="detail" id="getId()">
-<h3>getId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getId</span>()</div>
-<div class="block"><p>Unique identifier of the Product.</p></div>
+<section class="detail" id="productProjection(java.util.function.Function)">
+<h3>productProjection</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSearchResultBuilder.html" title="class in com.commercetools.api.models.product_search">ProductSearchResultBuilder</a></span>&nbsp;<span class="element-name">productProjection</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../product/ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a>,<wbr><a href="../product/ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Projected data of the Product with <code>id</code>. Only present if data integration with Product Projection parameters is requested.</p></div>
 <dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the productProjection value</dd>
 <dt>Returns:</dt>
-<dd>id</dd>
+<dd>Builder</dd>
 </dl>
 </section>
 </li>
 <li>
-<section class="detail" id="getProductProjection()">
-<h3>getProductProjection</h3>
-<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../product/ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a></span>&nbsp;<span class="element-name">getProductProjection</span>()</div>
-<div class="block"><p>Contains Product Projection data for Products matching the <code>projection</code> field in the Search Products request.</p></div>
+<section class="detail" id="withProductProjection(java.util.function.Function)">
+<h3>withProductProjection</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSearchResultBuilder.html" title="class in com.commercetools.api.models.product_search">ProductSearchResultBuilder</a></span>&nbsp;<span class="element-name">withProductProjection</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../product/ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a>,<wbr><a href="../product/ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Projected data of the Product with <code>id</code>. Only present if data integration with Product Projection parameters is requested.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the productProjection value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="productProjection(com.commercetools.api.models.product.ProductProjection)">
+<h3>productProjection</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSearchResultBuilder.html" title="class in com.commercetools.api.models.product_search">ProductSearchResultBuilder</a></span>&nbsp;<span class="element-name">productProjection</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+ <a href="../product/ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>&nbsp;productProjection)</span></div>
+<div class="block"><p>Projected data of the Product with <code>id</code>. Only present if data integration with Product Projection parameters is requested.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>productProjection</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getId()">
+<h3>getId</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getId</span>()</div>
+<div class="block"><p><code>id</code> of the Product that matches the search query.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>productProjection</dd>
+<dd>id</dd>
 </dl>
 </section>
 </li>
@@ -341,10 +329,22 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getMatchingVariants</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSearchMatchingVariants.html" title="interface in com.commercetools.api.models.product_search">ProductSearchMatchingVariants</a></span>&nbsp;<span class="element-name">getMatchingVariants</span>()</div>
-<div class="block"><p>Describes the variants that matched the search criteria.</p></div>
+<div class="block"><p>Information about which Product Variants match the search query. Only present if <code>markMatchingVariants</code> is set to <code>true</code> in the ProductSearchRequest.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>matchingVariants</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getProductProjection()">
+<h3>getProductProjection</h3>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../product/ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a></span>&nbsp;<span class="element-name">getProductProjection</span>()</div>
+<div class="block"><p>Projected data of the Product with <code>id</code>. Only present if data integration with Product Projection parameters is requested.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>productProjection</dd>
 </dl>
 </section>
 </li>

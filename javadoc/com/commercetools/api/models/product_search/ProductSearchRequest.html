@@ -125,7 +125,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMarkMatchingVariants()" class="member-name-link">getMarkMatchingVariants</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The search can return Products where not all Product Variants match the search criteria.</div>
+<div class="block">If <code>query</code> specifies an expression for a Product Variant field, set this to <code>true</code> to get additional information for each returned Product about which Product Variants match the search query.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getOffset()" class="member-name-link">getOffset</a>()</code></div>
@@ -180,7 +180,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setMarkMatchingVariants(java.lang.Boolean)" class="member-name-link">setMarkMatchingVariants</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;markMatchingVariants)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The search can return Products where not all Product Variants match the search criteria.</div>
+<div class="block">If <code>query</code> specifies an expression for a Product Variant field, set this to <code>true</code> to get additional information for each returned Product about which Product Variants match the search query.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setOffset(java.lang.Integer)" class="member-name-link">setOffset</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;offset)</code></div>
@@ -286,7 +286,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getMarkMatchingVariants()">
 <h3>getMarkMatchingVariants</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name">getMarkMatchingVariants</span>()</div>
-<div class="block"><p>The search can return Products where not all Product Variants match the search criteria. If <code>true</code>, the response will include a field called <code>matchingVariants</code> that contains the <code>sku</code> of Product Variants that match the search query. If the query does not specify any variant-level criteria, <code>matchingVariants</code> will be null signifying that all Product Variants are a match.</p></div>
+<div class="block"><p>If <code>query</code> specifies an expression for a Product Variant field, set this to <code>true</code> to get additional information for each returned Product about which Product Variants match the search query. For details, see matching variants.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>markMatchingVariants</dd>
@@ -388,7 +388,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setMarkMatchingVariants(java.lang.Boolean)">
 <h3>setMarkMatchingVariants</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setMarkMatchingVariants</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;markMatchingVariants)</span></div>
-<div class="block"><p>The search can return Products where not all Product Variants match the search criteria. If <code>true</code>, the response will include a field called <code>matchingVariants</code> that contains the <code>sku</code> of Product Variants that match the search query. If the query does not specify any variant-level criteria, <code>matchingVariants</code> will be null signifying that all Product Variants are a match.</p></div>
+<div class="block"><p>If <code>query</code> specifies an expression for a Product Variant field, set this to <code>true</code> to get additional information for each returned Product about which Product Variants match the search query. For details, see matching variants.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>markMatchingVariants</code> - value to be set</dd>

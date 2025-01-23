@@ -1,4 +1,47 @@
 
+# 17.25.0 (2025-01-23)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/806
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/808
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/809
+* fix NPE when server response has no body by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/810
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.24.0...17.24.1
+
+# 17.16.2 (2025-01-23)
+
+## What's Changed
+
+* Update Apache HTTP client dependency with version with fix to HTTP/2 protocol to version 5.4.1
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.16.1...17.16.2
+
+# 17.15.3 (2025-01-23)
+
+## What's Changed
+
+* Update Apache HTTP client dependency with version with fix to HTTP/2 protocol to version 5.4.1
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.15.2...17.15.3
+
+# 17.3.2 (2025-01-23)
+
+## What's Changed
+
+* Update Apache HTTP client dependency with version with fix to HTTP/2 protocol to version 5.4.1
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.3.1...17.3.2
+
+# 16.2.2 (2025-01-23)
+
+## What's Changed
+
+* Update Apache HTTP client dependency with version with fix to HTTP/2 protocol to version 5.4.1
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/16.2.1...16.2.2
+
 # 17.24.0 (2025-01-22)
 
 ## What's Changed
@@ -20,6 +63,54 @@
 - fix deserialization issue of `DiscountedTotalPricePortion` with a direct discount reference
 
 **Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.23.0...17.24.0
+
+# 17.16.1 (2025-01-22)
+
+## What's Changed
+
+* Update Apache HTTP client dependency to 5.3.1
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.16.0...17.16.1
+
+# 17.15.2 (2025-01-22)
+
+## What's Changed
+
+* Update Apache HTTP client dependency  to 5.3.1
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.15.1...17.15.2
+
+# 17.3.1 (2025-01-22)
+
+## What's Changed
+
+* Update Apache HTTP client dependency  to 5.3.1
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.3.0...17.3.1
+
+# 16.2.1 (2025-01-22)
+
+## What's Changed
+
+* Update Apache HTTP client dependency  to 5.3.1
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/16.2.0...16.2.1
+
+# 9.4.2 (2025-01-22)
+
+## What's Changed
+
+* Update Apache HTTP client dependency with version with fix to HTTP/2 protocol to version 5.4.1
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/9.4.1...9.4.2
+
+# 9.4.1 (2025-01-22)
+
+## What's Changed
+
+* Update Apache HTTP client dependency  to 5.3.1
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/9.4.0...9.4.1
 
 # 17.23.0 (2025-01-21)
 

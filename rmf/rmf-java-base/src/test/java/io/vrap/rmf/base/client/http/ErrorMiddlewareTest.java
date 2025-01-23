@@ -49,4 +49,19 @@ public class ErrorMiddlewareTest {
                 Duration.ofSeconds(1));
         }).matches(e -> e.getStatusCode() == statusCode);
     }
+
+    @TestTemplate
+    @UseDataProvider("exceptions")
+    public void testErrorInvalidResponse(int statusCode, Class<ApiHttpException> exceptionClass) {
+        ErrorMiddleware middleware = ErrorMiddleware.of(HttpExceptionFactory.of(ResponseSerializer.of()));
+
+        final ApiHttpRequest request = new ApiHttpRequest(ApiHttpMethod.GET, URI.create("/"), new ApiHttpHeaders(),
+            "".getBytes());
+        final ApiHttpResponse<byte[]> response = new ApiHttpResponse<>(statusCode, null, null);
+
+        Assertions.assertThatExceptionOfType(exceptionClass).isThrownBy(() -> {
+            blockingWait(middleware.invoke(request, request1 -> CompletableFuture.completedFuture(response)),
+                Duration.ofSeconds(1));
+        }).matches(e -> e.getStatusCode() == statusCode);
+    }
 }

@@ -36,7 +36,7 @@ ext {
 
     google = [
             findbugs: 'com.google.code.findbugs:jsr305:3.0.2',
-            gson: 'com.google.code.gson:gson:2.11.0',
+            gson: 'com.google.code.gson:gson:2.12.1',
     ]
 
     graphql = [
@@ -47,14 +47,14 @@ ext {
     ]
 
     javax = [
-            validation: 'jakarta.validation:jakarta.validation-api:3.1.0',
+            validation: 'jakarta.validation:jakarta.validation-api:3.1.1',
     ]
 
     junit = [
             junit: 'org.junit.jupiter:junit-jupiter:5.11.4',
             dataprovider: 'com.tngtech.junit.dataprovider:junit-jupiter-dataprovider:2.10',
             jsonassert: 'org.skyscreamer:jsonassert:1.5.3',
-            assertj: 'org.assertj:assertj-core:3.27.2'
+            assertj: 'org.assertj:assertj-core:3.27.3'
     ]
 
     mockito = [

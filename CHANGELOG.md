@@ -1,4 +1,13 @@
 
+# 17.26.0 (2025-02-03)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/811
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/814
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.25.0...17.26.0
+
 # 17.25.0 (2025-01-23)
 
 ## What's Changed

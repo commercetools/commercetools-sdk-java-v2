@@ -71,17 +71,16 @@ public class NewRelicTelemetryMiddleware implements TelemetryMiddleware {
                 statusCode = response.getStatusCode();
                 message = response.getMessage();
             }
-            else {
-                if (throwable instanceof ApiHttpException && ((ApiHttpException) throwable).getResponse() != null) {
-                    ApiHttpResponse<byte[]> errorResponse = ((ApiHttpException) throwable).getResponse();
-                    statusCode = errorResponse.getStatusCode();
-                    message = errorResponse.getMessage();
-                }
-                else {
-                    statusCode = 0;
-                    message = throwable.getMessage();
-                }
+            else if (throwable instanceof ApiHttpException && ((ApiHttpException) throwable).getResponse() != null) {
+                ApiHttpResponse<byte[]> errorResponse = ((ApiHttpException) throwable).getResponse();
+                statusCode = errorResponse.getStatusCode();
+                message = errorResponse.getMessage();
             }
+            else {
+                statusCode = 0;
+                message = throwable.getMessage();
+            }
+
             segment.ifPresent(s -> s.reportAsExternal(HttpParameters.library("commercetools-sdk-java-v2")
                     .uri(request.getUri())
                     .procedure(request.getMethod().name())

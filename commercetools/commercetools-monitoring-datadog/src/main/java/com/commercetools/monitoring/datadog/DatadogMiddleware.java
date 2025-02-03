@@ -57,13 +57,11 @@ public class DatadogMiddleware implements TelemetryMiddleware {
             if (response != null) {
                 statusCode = response.getStatusCode();
             }
+            else if (throwable instanceof ApiHttpException && ((ApiHttpException) throwable).getResponse() != null) {
+                statusCode = ((ApiHttpException) throwable).getResponse().getStatusCode();
+            }
             else {
-                if (throwable instanceof ApiHttpException && ((ApiHttpException) throwable).getResponse() != null) {
-                    statusCode = ((ApiHttpException) throwable).getResponse().getStatusCode();
-                }
-                else {
-                    statusCode = 0;
-                }
+                statusCode = 0;
             }
             try {
                 submitClientDurationMetric(request, apiInstance, Duration.between(start, Instant.now()).toMillis(),

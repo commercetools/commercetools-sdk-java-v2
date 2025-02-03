@@ -12,6 +12,7 @@ import com.datadog.api.client.ApiClient;
 import com.datadog.api.client.ApiException;
 import com.datadog.api.client.v2.api.MetricsApi;
 
+import io.vrap.rmf.base.client.ApiHttpException;
 import io.vrap.rmf.base.client.ApiHttpRequest;
 import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.http.TelemetryMiddleware;
@@ -51,14 +52,25 @@ public class DatadogMiddleware implements TelemetryMiddleware {
     public CompletableFuture<ApiHttpResponse<byte[]>> invoke(ApiHttpRequest request,
             Function<ApiHttpRequest, CompletableFuture<ApiHttpResponse<byte[]>>> next) {
         final Instant start = Instant.now();
-        return next.apply(request).thenApply(response -> {
+        return next.apply(request).handle((response, throwable) -> {
+            final int statusCode;
+            if (response != null) {
+                statusCode = response.getStatusCode();
+            }
+            else {
+                if (throwable instanceof ApiHttpException && ((ApiHttpException) throwable).getResponse() != null) {
+                    statusCode = ((ApiHttpException) throwable).getResponse().getStatusCode();
+                }
+                else {
+                    statusCode = 0;
+                }
+            }
             try {
                 submitClientDurationMetric(request, apiInstance, Duration.between(start, Instant.now()).toMillis(),
-                    response);
-                submitTotalRequestsMetric(request, apiInstance, response);
-
-                if (response.getStatusCode() >= 400) {
-                    submitErrorRequestsMetric(request, apiInstance, response);
+                    statusCode);
+                submitTotalRequestsMetric(request, apiInstance, statusCode);
+                if (statusCode >= 400 || throwable != null) {
+                    submitErrorRequestsMetric(request, apiInstance, statusCode);
                 }
             }
             catch (ApiException e) {

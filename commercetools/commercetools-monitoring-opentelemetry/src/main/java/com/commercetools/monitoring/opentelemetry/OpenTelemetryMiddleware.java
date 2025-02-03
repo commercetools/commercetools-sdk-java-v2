@@ -13,6 +13,7 @@ import io.opentelemetry.api.common.AttributesBuilder;
 import io.opentelemetry.api.metrics.LongCounter;
 import io.opentelemetry.api.metrics.LongHistogram;
 import io.opentelemetry.api.metrics.Meter;
+import io.vrap.rmf.base.client.ApiHttpException;
 import io.vrap.rmf.base.client.ApiHttpRequest;
 import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.http.TelemetryMiddleware;
@@ -67,9 +68,19 @@ public class OpenTelemetryMiddleware implements TelemetryMiddleware {
     public CompletableFuture<ApiHttpResponse<byte[]>> invoke(ApiHttpRequest request,
             Function<ApiHttpRequest, CompletableFuture<ApiHttpResponse<byte[]>>> next) {
         Instant start = Instant.now();
-        return next.apply(request).thenApply(response -> {
+        return next.apply(request).handle((response, throwable) -> {
+            final int statusCode;
+            if (response != null) {
+                statusCode = response.getStatusCode();
+            }
+            else if (throwable instanceof ApiHttpException && ((ApiHttpException) throwable).getResponse() != null) {
+                statusCode = ((ApiHttpException) throwable).getResponse().getStatusCode();
+            }
+            else {
+                statusCode = 0;
+            }
             AttributesBuilder builder = Attributes.builder()
-                    .put(OpenTelemetryInfo.HTTP_RESPONSE_STATUS_CODE, response.getStatusCode())
+                    .put(OpenTelemetryInfo.HTTP_RESPONSE_STATUS_CODE, statusCode)
                     .put(OpenTelemetryInfo.HTTP_REQUEST_METHOD, request.getMethod().name())
                     .put(OpenTelemetryInfo.SERVER_ADDRESS, request.getUri().getHost());
             if (request.getUri().getPort() > 0) {
@@ -79,7 +90,7 @@ public class OpenTelemetryMiddleware implements TelemetryMiddleware {
             Optional.ofNullable(histogram)
                     .ifPresent(h -> h.record(Duration.between(start, Instant.now()).toMillis(), attributes));
             requestCounter.add(1, attributes);
-            if (response.getStatusCode() >= 400) {
+            if (statusCode >= 400 || throwable != null) {
                 errorCounter.add(1, attributes);
             }
             return response;

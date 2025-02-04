@@ -468,4 +468,18 @@ public class AttributesTest {
         assertThat(nested.get(0).asEnum("set-nested-enum")).isInstanceOf(AttributePlainEnumValue.class);
         assertThat(nested.get(0).asString("set-nested-string")).isInstanceOf(String.class);
     }
+
+    @Test
+    public void dateDeserialization() throws IOException {
+        ProductVariant variant = JsonUtils.fromJsonString(stringFromResource("date-attributes.json"),
+            ProductVariant.class);
+        assertThat(variant.getAttributes()).isNotEmpty();
+        AttributesAccessor attributes = variant.withProductVariant(AttributesAccessor::of);
+        assertThat(attributes.get("datetime").getValue()).isInstanceOf(ZonedDateTime.class);
+        assertThat(attributes.get("datetime-simple").getValue()).isInstanceOf(ZonedDateTime.class);
+        assertThat(attributes.get("datetime-max").getValue()).isInstanceOf(ZonedDateTime.class);
+        assertThat(attributes.get("time").getValue()).isInstanceOf(LocalTime.class);
+        assertThat(attributes.get("time-simple").getValue()).isInstanceOf(LocalTime.class);
+        assertThat(attributes.get("time-max").getValue()).isInstanceOf(LocalTime.class);
+    }
 }

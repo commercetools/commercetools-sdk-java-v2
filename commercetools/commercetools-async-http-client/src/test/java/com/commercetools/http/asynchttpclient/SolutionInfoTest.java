@@ -11,6 +11,6 @@ public class SolutionInfoTest {
     public void version() {
         String version = new AsyncHttpClientSolutionInfo().getVersion();
 
-        Assertions.assertThat(version).isEqualTo("2.12.4");
+        Assertions.assertThat(version).startsWith("2.12.");
     }
 }

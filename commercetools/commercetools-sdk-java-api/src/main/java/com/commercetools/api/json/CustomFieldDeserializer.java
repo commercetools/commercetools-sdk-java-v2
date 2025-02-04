@@ -22,10 +22,10 @@ import com.fasterxml.jackson.databind.node.JsonNodeType;
 public class CustomFieldDeserializer extends JsonDeserializer<FieldContainerImpl> {
 
     private static Pattern p = Pattern.compile("^[0-9]");
-    private static Pattern dateTime = Pattern.compile(
-        "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}([.][0-9]{1,10})?(Z|[+-][0-9]{2}:[0-9]{2})");
+    private static Pattern dateTime = Pattern
+            .compile("^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}([.][0-9]{1,9})?(Z|[+-][0-9]{2}:[0-9]{2})");
     private static Pattern date = Pattern.compile("^[0-9]{4}-[0-9]{2}-[0-9]{2}");
-    private static Pattern time = Pattern.compile("^[0-9]{2}:[0-9]{2}:[0-9]{2}([.][0-9]{1,10})?");
+    private static Pattern time = Pattern.compile("^[0-9]{2}:[0-9]{2}:[0-9]{2}([.][0-9]{1,9})?");
 
     private final boolean deserializeAsDate;
     private final boolean deserializeNumberAsDouble;

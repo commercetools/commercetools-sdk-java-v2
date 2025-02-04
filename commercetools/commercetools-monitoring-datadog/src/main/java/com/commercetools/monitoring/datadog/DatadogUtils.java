@@ -28,29 +28,50 @@ public class DatadogUtils {
 
     protected static void submitClientDurationMetric(final ApiHttpRequest request, final MetricsApi apiInstance,
             final double durationInMillis, final ApiHttpResponse<byte[]> response) throws ApiException {
+        submitClientDurationMetric(request, apiInstance, durationInMillis, response.getStatusCode());
+    }
+
+    protected static void submitClientDurationMetric(final ApiHttpRequest request, final MetricsApi apiInstance,
+            final double durationInMillis, final int statusCode) throws ApiException {
         final String name = PREFIX + "." + CLIENT_DURATION;
         final MetricIntakeType type = MetricIntakeType.UNSPECIFIED;
-        submitMetricWithHttpTags(name, durationInMillis, type, "ms", request, apiInstance, response);
+        submitMetricWithHttpTags(name, durationInMillis, type, "ms", request, apiInstance, statusCode);
     }
 
     protected static void submitErrorRequestsMetric(final ApiHttpRequest request, final MetricsApi apiInstance,
             final ApiHttpResponse<byte[]> response) throws ApiException {
+        submitErrorRequestsMetric(request, apiInstance, response.getStatusCode());
+    }
+
+    protected static void submitErrorRequestsMetric(final ApiHttpRequest request, final MetricsApi apiInstance,
+            final int statusCode) throws ApiException {
         final String name = PREFIX + "." + CLIENT_REQUEST_ERROR;
         final MetricIntakeType count = MetricIntakeType.COUNT;
-        submitMetricWithHttpTags(name, 1.0, count, "count", request, apiInstance, response);
+        submitMetricWithHttpTags(name, 1.0, count, "count", request, apiInstance, statusCode);
     }
 
     protected static void submitTotalRequestsMetric(final ApiHttpRequest request, final MetricsApi apiInstance,
             final ApiHttpResponse<byte[]> response) throws ApiException {
+        submitTotalRequestsMetric(request, apiInstance, response.getStatusCode());
+    }
+
+    protected static void submitTotalRequestsMetric(final ApiHttpRequest request, final MetricsApi apiInstance,
+            final int statusCode) throws ApiException {
         final String name = PREFIX + "." + CLIENT_REQUEST_TOTAL;
         final MetricIntakeType count = MetricIntakeType.COUNT;
-        submitMetricWithHttpTags(name, 1.0, count, "count", request, apiInstance, response);
+        submitMetricWithHttpTags(name, 1.0, count, "count", request, apiInstance, statusCode);
     }
 
     private static void submitMetricWithHttpTags(final String name, final double value, final MetricIntakeType type,
             final String unit, final ApiHttpRequest request, final MetricsApi apiInstance,
             final ApiHttpResponse<byte[]> response) throws ApiException {
-        final List<String> tags = Arrays.asList(format("%s:%s", HTTP_RESPONSE_STATUS_CODE, response.getStatusCode()),
+        submitMetricWithHttpTags(name, value, type, unit, request, apiInstance, response.getStatusCode());
+    }
+
+    private static void submitMetricWithHttpTags(final String name, final double value, final MetricIntakeType type,
+            final String unit, final ApiHttpRequest request, final MetricsApi apiInstance, final int statusCode)
+            throws ApiException {
+        final List<String> tags = Arrays.asList(format("%s:%s", HTTP_RESPONSE_STATUS_CODE, statusCode),
             format("%s:%s", HTTP_REQUEST_METHOD, request.getMethod().name()),
             format("%s:%s", SERVER_ADDRESS, request.getUri().getHost()));
         if (request.getUri().getPort() > 0) {

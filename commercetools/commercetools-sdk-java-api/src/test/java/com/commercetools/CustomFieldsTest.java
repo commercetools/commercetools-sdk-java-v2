@@ -345,4 +345,17 @@ public class CustomFieldsTest {
                 .isEqualTo(
                     "{\"bool\":true,\"string\":\"foo\",\"double\":13.0,\"double2\":13.1,\"int\":13,\"enum\":{\"key\":\"foo\",\"label\":\"foo\"},\"setNumber\":[13.0,13,13.1],\"setText\":[\"foo\",\"bar\"]}");
     }
+
+    @Test
+    public void dateDeserialization() throws IOException {
+        String dateFields = stringFromResource("date-customfields.json");
+        CustomFields customFields = JsonUtils.fromJsonString(dateFields, CustomFields.class);
+        Map<String, Object> fields = customFields.getFields().values();
+        assertThat(fields.get("datetime")).isInstanceOf(ZonedDateTime.class);
+        assertThat(fields.get("datetime-simple")).isInstanceOf(ZonedDateTime.class);
+        assertThat(fields.get("datetime-max")).isInstanceOf(ZonedDateTime.class);
+        assertThat(fields.get("time")).isInstanceOf(LocalTime.class);
+        assertThat(fields.get("time-simple")).isInstanceOf(LocalTime.class);
+        assertThat(fields.get("time-max")).isInstanceOf(LocalTime.class);
+    }
 }

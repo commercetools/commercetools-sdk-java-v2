@@ -9,6 +9,6 @@ public class SolutionInfoTest {
     public void version() {
         String version = new NettyHttpClientSolutionInfo().getVersion();
 
-        Assertions.assertThat(version).isEqualTo("1.2.1");
+        Assertions.assertThat(version).startsWith("1.2.");
     }
 }

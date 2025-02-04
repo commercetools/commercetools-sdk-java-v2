@@ -1,7 +1,7 @@
 plugins {
     id 'java-gradle-plugin'
     id 'idea'
-    id 'org.jetbrains.kotlin.jvm' version "2.1.0"
+    id 'org.jetbrains.kotlin.jvm' version "2.1.10"
 }
 
 repositories {
@@ -30,7 +30,7 @@ gradlePlugin {
 
 dependencies {
     implementation project(path: ':javaparser', configuration: 'shadow')
-    implementation "com.google.code.gson:gson:2.11.0"
+    implementation "com.google.code.gson:gson:2.12.1"
     implementation 'com.squareup:javapoet:1.13.0'
     implementation 'com.google.guava:guava:33.4.0-jre'
 }

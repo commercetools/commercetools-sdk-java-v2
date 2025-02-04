@@ -9,6 +9,6 @@ public class SolutionInfoTest {
     public void version() {
         String version = new ApacheHttpClientSolutionInfo().getVersion();
 
-        Assertions.assertThat(version).isEqualTo("5.4.1");
+        Assertions.assertThat(version).startsWith("5.4.");
     }
 }

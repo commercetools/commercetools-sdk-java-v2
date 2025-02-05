@@ -42,6 +42,8 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
 
     private com.commercetools.api.models.store.StoreResourceIdentifier store;
 
+    private com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier businessUnit;
+
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
@@ -58,6 +60,7 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
             @JsonProperty("lineItems") final java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft> lineItems,
             @JsonProperty("textLineItems") final java.util.List<com.commercetools.api.models.shopping_list.TextLineItemDraft> textLineItems,
             @JsonProperty("store") final com.commercetools.api.models.store.StoreResourceIdentifier store,
+            @JsonProperty("businessUnit") final com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier businessUnit,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.name = name;
         this.slug = slug;
@@ -69,6 +72,7 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
         this.lineItems = lineItems;
         this.textLineItems = textLineItems;
         this.store = store;
+        this.businessUnit = businessUnit;
         this.custom = custom;
     }
 
@@ -159,6 +163,14 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
     }
 
     /**
+     *  <p>ResourceIdentifier of the Business Unit the Shopping List should belong to. When the <code>customer</code> of the Shopping List is set, the Customer must be an Associate of the Business Unit.</p>
+     */
+
+    public com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier getBusinessUnit() {
+        return this.businessUnit;
+    }
+
+    /**
      *  <p>Custom Fields defined for the ShoppingList.</p>
      */
 
@@ -216,6 +228,11 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
         this.store = store;
     }
 
+    public void setBusinessUnit(
+            final com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier businessUnit) {
+        this.businessUnit = businessUnit;
+    }
+
     public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
     }
@@ -240,6 +257,7 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
                 .append(lineItems, that.lineItems)
                 .append(textLineItems, that.textLineItems)
                 .append(store, that.store)
+                .append(businessUnit, that.businessUnit)
                 .append(custom, that.custom)
                 .append(name, that.name)
                 .append(slug, that.slug)
@@ -251,6 +269,7 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
                 .append(lineItems, that.lineItems)
                 .append(textLineItems, that.textLineItems)
                 .append(store, that.store)
+                .append(businessUnit, that.businessUnit)
                 .append(custom, that.custom)
                 .isEquals();
     }
@@ -267,6 +286,7 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
                 .append(lineItems)
                 .append(textLineItems)
                 .append(store)
+                .append(businessUnit)
                 .append(custom)
                 .toHashCode();
     }
@@ -283,6 +303,7 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
                 .append("lineItems", lineItems)
                 .append("textLineItems", textLineItems)
                 .append("store", store)
+                .append("businessUnit", businessUnit)
                 .append("custom", custom)
                 .build();
     }

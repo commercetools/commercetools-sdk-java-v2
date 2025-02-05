@@ -107,6 +107,16 @@ public class ShoppingListDraftQueryBuilderDsl {
             ShoppingListDraftQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ShoppingListDraftQueryBuilderDsl> businessUnit(
+            Function<com.commercetools.api.predicates.query.business_unit.BusinessUnitResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.business_unit.BusinessUnitResourceIdentifierQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("businessUnit"))
+                .inner(fn.apply(
+                    com.commercetools.api.predicates.query.business_unit.BusinessUnitResourceIdentifierQueryBuilderDsl
+                            .of())),
+            ShoppingListDraftQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ShoppingListDraftQueryBuilderDsl> custom(
             Function<com.commercetools.api.predicates.query.type.CustomFieldsDraftQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.type.CustomFieldsDraftQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

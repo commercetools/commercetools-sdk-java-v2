@@ -38,6 +38,7 @@ import jakarta.validation.constraints.NotNull;
         @JsonSubTypes.Type(value = com.commercetools.api.models.shopping_list.ShoppingListRemoveLineItemActionImpl.class, name = ShoppingListRemoveLineItemAction.REMOVE_LINE_ITEM),
         @JsonSubTypes.Type(value = com.commercetools.api.models.shopping_list.ShoppingListRemoveTextLineItemActionImpl.class, name = ShoppingListRemoveTextLineItemAction.REMOVE_TEXT_LINE_ITEM),
         @JsonSubTypes.Type(value = com.commercetools.api.models.shopping_list.ShoppingListSetAnonymousIdActionImpl.class, name = ShoppingListSetAnonymousIdAction.SET_ANONYMOUS_ID),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.shopping_list.ShoppingListSetBusinessUnitActionImpl.class, name = ShoppingListSetBusinessUnitAction.SET_BUSINESS_UNIT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.shopping_list.ShoppingListSetCustomFieldActionImpl.class, name = ShoppingListSetCustomFieldAction.SET_CUSTOM_FIELD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.shopping_list.ShoppingListSetCustomTypeActionImpl.class, name = ShoppingListSetCustomTypeAction.SET_CUSTOM_TYPE),
         @JsonSubTypes.Type(value = com.commercetools.api.models.shopping_list.ShoppingListSetCustomerActionImpl.class, name = ShoppingListSetCustomerAction.SET_CUSTOMER),
@@ -118,6 +119,10 @@ public interface ShoppingListUpdateAction
         if (template instanceof com.commercetools.api.models.shopping_list.ShoppingListSetAnonymousIdAction) {
             return com.commercetools.api.models.shopping_list.ShoppingListSetAnonymousIdAction
                     .deepCopy((com.commercetools.api.models.shopping_list.ShoppingListSetAnonymousIdAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.shopping_list.ShoppingListSetBusinessUnitAction) {
+            return com.commercetools.api.models.shopping_list.ShoppingListSetBusinessUnitAction
+                    .deepCopy((com.commercetools.api.models.shopping_list.ShoppingListSetBusinessUnitAction) template);
         }
         if (template instanceof com.commercetools.api.models.shopping_list.ShoppingListSetCustomFieldAction) {
             return com.commercetools.api.models.shopping_list.ShoppingListSetCustomFieldAction
@@ -262,6 +267,14 @@ public interface ShoppingListUpdateAction
      */
     public static com.commercetools.api.models.shopping_list.ShoppingListSetAnonymousIdActionBuilder setAnonymousIdBuilder() {
         return com.commercetools.api.models.shopping_list.ShoppingListSetAnonymousIdActionBuilder.of();
+    }
+
+    /**
+     * builder for setBusinessUnit subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.shopping_list.ShoppingListSetBusinessUnitActionBuilder setBusinessUnitBuilder() {
+        return com.commercetools.api.models.shopping_list.ShoppingListSetBusinessUnitActionBuilder.of();
     }
 
     /**

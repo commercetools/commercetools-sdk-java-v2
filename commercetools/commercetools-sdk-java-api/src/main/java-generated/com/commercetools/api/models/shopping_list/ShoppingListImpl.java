@@ -50,6 +50,8 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
 
     private com.commercetools.api.models.store.StoreKeyReference store;
 
+    private com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit;
+
     private com.commercetools.api.models.type.CustomFields custom;
 
     private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
@@ -73,6 +75,7 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
             @JsonProperty("deleteDaysAfterLastModification") final Long deleteDaysAfterLastModification,
             @JsonProperty("anonymousId") final String anonymousId,
             @JsonProperty("store") final com.commercetools.api.models.store.StoreKeyReference store,
+            @JsonProperty("businessUnit") final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
             @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy,
             @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy) {
@@ -90,6 +93,7 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
         this.anonymousId = anonymousId;
         this.store = store;
+        this.businessUnit = businessUnit;
         this.custom = custom;
         this.lastModifiedBy = lastModifiedBy;
         this.createdBy = createdBy;
@@ -214,6 +218,14 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
     }
 
     /**
+     *  <p>Reference to the Business Unit the Shopping List belongs to.</p>
+     */
+
+    public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getBusinessUnit() {
+        return this.businessUnit;
+    }
+
+    /**
      *  <p>Custom Fields defined for the ShoppingList.</p>
      */
 
@@ -303,6 +315,11 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
         this.store = store;
     }
 
+    public void setBusinessUnit(
+            final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit) {
+        this.businessUnit = businessUnit;
+    }
+
     public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
     }
@@ -339,6 +356,7 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
                 .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
                 .append(anonymousId, that.anonymousId)
                 .append(store, that.store)
+                .append(businessUnit, that.businessUnit)
                 .append(custom, that.custom)
                 .append(lastModifiedBy, that.lastModifiedBy)
                 .append(createdBy, that.createdBy)
@@ -356,6 +374,7 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
                 .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
                 .append(anonymousId, that.anonymousId)
                 .append(store, that.store)
+                .append(businessUnit, that.businessUnit)
                 .append(custom, that.custom)
                 .append(lastModifiedBy, that.lastModifiedBy)
                 .append(createdBy, that.createdBy)
@@ -378,6 +397,7 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
                 .append(deleteDaysAfterLastModification)
                 .append(anonymousId)
                 .append(store)
+                .append(businessUnit)
                 .append(custom)
                 .append(lastModifiedBy)
                 .append(createdBy)
@@ -400,6 +420,7 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
                 .append("deleteDaysAfterLastModification", deleteDaysAfterLastModification)
                 .append("anonymousId", anonymousId)
                 .append("store", store)
+                .append("businessUnit", businessUnit)
                 .append("custom", custom)
                 .append("lastModifiedBy", lastModifiedBy)
                 .append("createdBy", createdBy)

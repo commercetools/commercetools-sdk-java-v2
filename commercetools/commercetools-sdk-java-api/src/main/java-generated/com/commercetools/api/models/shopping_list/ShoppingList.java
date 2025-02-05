@@ -9,6 +9,7 @@ import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
 
+import com.commercetools.api.models.business_unit.BusinessUnitKeyReference;
 import com.commercetools.api.models.common.BaseResource;
 import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
@@ -151,6 +152,14 @@ public interface ShoppingList
     public StoreKeyReference getStore();
 
     /**
+     *  <p>Reference to the Business Unit the Shopping List belongs to.</p>
+     * @return businessUnit
+     */
+    @Valid
+    @JsonProperty("businessUnit")
+    public BusinessUnitKeyReference getBusinessUnit();
+
+    /**
      *  <p>Custom Fields defined for the ShoppingList.</p>
      * @return custom
      */
@@ -291,6 +300,13 @@ public interface ShoppingList
     public void setStore(final StoreKeyReference store);
 
     /**
+     *  <p>Reference to the Business Unit the Shopping List belongs to.</p>
+     * @param businessUnit value to be set
+     */
+
+    public void setBusinessUnit(final BusinessUnitKeyReference businessUnit);
+
+    /**
      *  <p>Custom Fields defined for the ShoppingList.</p>
      * @param custom value to be set
      */
@@ -354,6 +370,7 @@ public interface ShoppingList
         instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
         instance.setAnonymousId(template.getAnonymousId());
         instance.setStore(template.getStore());
+        instance.setBusinessUnit(template.getBusinessUnit());
         instance.setCustom(template.getCustom());
         instance.setLastModifiedBy(template.getLastModifiedBy());
         instance.setCreatedBy(template.getCreatedBy());
@@ -394,6 +411,8 @@ public interface ShoppingList
         instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
         instance.setAnonymousId(template.getAnonymousId());
         instance.setStore(com.commercetools.api.models.store.StoreKeyReference.deepCopy(template.getStore()));
+        instance.setBusinessUnit(
+            com.commercetools.api.models.business_unit.BusinessUnitKeyReference.deepCopy(template.getBusinessUnit()));
         instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         instance.setLastModifiedBy(
             com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));

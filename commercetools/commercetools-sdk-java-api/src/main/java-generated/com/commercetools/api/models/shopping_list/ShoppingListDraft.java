@@ -8,6 +8,7 @@ import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
 
+import com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.customer.CustomerResourceIdentifier;
 import com.commercetools.api.models.store.StoreResourceIdentifier;
@@ -120,6 +121,14 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
     public StoreResourceIdentifier getStore();
 
     /**
+     *  <p>ResourceIdentifier of the Business Unit the Shopping List should belong to. When the <code>customer</code> of the Shopping List is set, the Customer must be an Associate of the Business Unit.</p>
+     * @return businessUnit
+     */
+    @Valid
+    @JsonProperty("businessUnit")
+    public BusinessUnitResourceIdentifier getBusinessUnit();
+
+    /**
      *  <p>Custom Fields defined for the ShoppingList.</p>
      * @return custom
      */
@@ -214,6 +223,13 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
     public void setStore(final StoreResourceIdentifier store);
 
     /**
+     *  <p>ResourceIdentifier of the Business Unit the Shopping List should belong to. When the <code>customer</code> of the Shopping List is set, the Customer must be an Associate of the Business Unit.</p>
+     * @param businessUnit value to be set
+     */
+
+    public void setBusinessUnit(final BusinessUnitResourceIdentifier businessUnit);
+
+    /**
      *  <p>Custom Fields defined for the ShoppingList.</p>
      * @param custom value to be set
      */
@@ -245,6 +261,7 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
         instance.setLineItems(template.getLineItems());
         instance.setTextLineItems(template.getTextLineItems());
         instance.setStore(template.getStore());
+        instance.setBusinessUnit(template.getBusinessUnit());
         instance.setCustom(template.getCustom());
         return instance;
     }
@@ -280,6 +297,8 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setStore(com.commercetools.api.models.store.StoreResourceIdentifier.deepCopy(template.getStore()));
+        instance.setBusinessUnit(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier
+                .deepCopy(template.getBusinessUnit()));
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         return instance;
     }

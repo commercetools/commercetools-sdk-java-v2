@@ -104,6 +104,13 @@ public class ShoppingListUpdateActionQueryBuilderDsl {
             ShoppingListUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ShoppingListUpdateActionQueryBuilderDsl> asSetBusinessUnit(
+            Function<com.commercetools.api.predicates.query.shopping_list.ShoppingListSetBusinessUnitActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.shopping_list.ShoppingListSetBusinessUnitActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.shopping_list.ShoppingListSetBusinessUnitActionQueryBuilderDsl.of()),
+            ShoppingListUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ShoppingListUpdateActionQueryBuilderDsl> asSetCustomField(
             Function<com.commercetools.api.predicates.query.shopping_list.ShoppingListSetCustomFieldActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.shopping_list.ShoppingListSetCustomFieldActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(

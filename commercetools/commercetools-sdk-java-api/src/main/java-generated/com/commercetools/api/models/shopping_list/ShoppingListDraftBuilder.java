@@ -54,6 +54,9 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     private com.commercetools.api.models.store.StoreResourceIdentifier store;
 
     @Nullable
+    private com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier businessUnit;
+
+    @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
@@ -455,6 +458,45 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     }
 
     /**
+     *  <p>ResourceIdentifier of the Business Unit the Shopping List should belong to. When the <code>customer</code> of the Shopping List is set, the Customer must be an Associate of the Business Unit.</p>
+     * @param builder function to build the businessUnit value
+     * @return Builder
+     */
+
+    public ShoppingListDraftBuilder businessUnit(
+            Function<com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder, com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder> builder) {
+        this.businessUnit = builder
+                .apply(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>ResourceIdentifier of the Business Unit the Shopping List should belong to. When the <code>customer</code> of the Shopping List is set, the Customer must be an Associate of the Business Unit.</p>
+     * @param builder function to build the businessUnit value
+     * @return Builder
+     */
+
+    public ShoppingListDraftBuilder withBusinessUnit(
+            Function<com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder, com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier> builder) {
+        this.businessUnit = builder
+                .apply(com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>ResourceIdentifier of the Business Unit the Shopping List should belong to. When the <code>customer</code> of the Shopping List is set, the Customer must be an Associate of the Business Unit.</p>
+     * @param businessUnit value to be set
+     * @return Builder
+     */
+
+    public ShoppingListDraftBuilder businessUnit(
+            @Nullable final com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier businessUnit) {
+        this.businessUnit = businessUnit;
+        return this;
+    }
+
+    /**
      *  <p>Custom Fields defined for the ShoppingList.</p>
      * @param builder function to build the custom value
      * @return Builder
@@ -589,6 +631,16 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     }
 
     /**
+     *  <p>ResourceIdentifier of the Business Unit the Shopping List should belong to. When the <code>customer</code> of the Shopping List is set, the Customer must be an Associate of the Business Unit.</p>
+     * @return businessUnit
+     */
+
+    @Nullable
+    public com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier getBusinessUnit() {
+        return this.businessUnit;
+    }
+
+    /**
      *  <p>Custom Fields defined for the ShoppingList.</p>
      * @return custom
      */
@@ -605,7 +657,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     public ShoppingListDraft build() {
         Objects.requireNonNull(name, ShoppingListDraft.class + ": name is missing");
         return new ShoppingListDraftImpl(name, slug, customer, key, description, anonymousId,
-            deleteDaysAfterLastModification, lineItems, textLineItems, store, custom);
+            deleteDaysAfterLastModification, lineItems, textLineItems, store, businessUnit, custom);
     }
 
     /**
@@ -614,7 +666,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
      */
     public ShoppingListDraft buildUnchecked() {
         return new ShoppingListDraftImpl(name, slug, customer, key, description, anonymousId,
-            deleteDaysAfterLastModification, lineItems, textLineItems, store, custom);
+            deleteDaysAfterLastModification, lineItems, textLineItems, store, businessUnit, custom);
     }
 
     /**
@@ -642,6 +694,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
         builder.lineItems = template.getLineItems();
         builder.textLineItems = template.getTextLineItems();
         builder.store = template.getStore();
+        builder.businessUnit = template.getBusinessUnit();
         builder.custom = template.getCustom();
         return builder;
     }

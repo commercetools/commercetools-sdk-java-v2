@@ -66,6 +66,9 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     private com.commercetools.api.models.store.StoreKeyReference store;
 
     @Nullable
+    private com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit;
+
+    @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
 
     @Nullable
@@ -512,6 +515,45 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
+     *  <p>Reference to the Business Unit the Shopping List belongs to.</p>
+     * @param builder function to build the businessUnit value
+     * @return Builder
+     */
+
+    public ShoppingListBuilder businessUnit(
+            Function<com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder, com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder> builder) {
+        this.businessUnit = builder
+                .apply(com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>Reference to the Business Unit the Shopping List belongs to.</p>
+     * @param builder function to build the businessUnit value
+     * @return Builder
+     */
+
+    public ShoppingListBuilder withBusinessUnit(
+            Function<com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder, com.commercetools.api.models.business_unit.BusinessUnitKeyReference> builder) {
+        this.businessUnit = builder
+                .apply(com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Reference to the Business Unit the Shopping List belongs to.</p>
+     * @param businessUnit value to be set
+     * @return Builder
+     */
+
+    public ShoppingListBuilder businessUnit(
+            @Nullable final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit) {
+        this.businessUnit = businessUnit;
+        return this;
+    }
+
+    /**
      *  <p>Custom Fields defined for the ShoppingList.</p>
      * @param builder function to build the custom value
      * @return Builder
@@ -751,6 +793,16 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
+     *  <p>Reference to the Business Unit the Shopping List belongs to.</p>
+     * @return businessUnit
+     */
+
+    @Nullable
+    public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getBusinessUnit() {
+        return this.businessUnit;
+    }
+
+    /**
      *  <p>Custom Fields defined for the ShoppingList.</p>
      * @return custom
      */
@@ -793,8 +845,8 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
         Objects.requireNonNull(lineItems, ShoppingList.class + ": lineItems is missing");
         Objects.requireNonNull(textLineItems, ShoppingList.class + ": textLineItems is missing");
         return new ShoppingListImpl(id, version, createdAt, lastModifiedAt, name, key, customer, slug, description,
-            lineItems, textLineItems, deleteDaysAfterLastModification, anonymousId, store, custom, lastModifiedBy,
-            createdBy);
+            lineItems, textLineItems, deleteDaysAfterLastModification, anonymousId, store, businessUnit, custom,
+            lastModifiedBy, createdBy);
     }
 
     /**
@@ -803,8 +855,8 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
      */
     public ShoppingList buildUnchecked() {
         return new ShoppingListImpl(id, version, createdAt, lastModifiedAt, name, key, customer, slug, description,
-            lineItems, textLineItems, deleteDaysAfterLastModification, anonymousId, store, custom, lastModifiedBy,
-            createdBy);
+            lineItems, textLineItems, deleteDaysAfterLastModification, anonymousId, store, businessUnit, custom,
+            lastModifiedBy, createdBy);
     }
 
     /**
@@ -836,6 +888,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
         builder.deleteDaysAfterLastModification = template.getDeleteDaysAfterLastModification();
         builder.anonymousId = template.getAnonymousId();
         builder.store = template.getStore();
+        builder.businessUnit = template.getBusinessUnit();
         builder.custom = template.getCustom();
         builder.lastModifiedBy = template.getLastModifiedBy();
         builder.createdBy = template.getCreatedBy();

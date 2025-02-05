@@ -47,6 +47,9 @@ public class ShoppingListDraftTest {
                 new Object[] { ShoppingListDraft.builder()
                         .store(new com.commercetools.api.models.store.StoreResourceIdentifierImpl()) },
                 new Object[] { ShoppingListDraft.builder()
+                        .businessUnit(
+                            new com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierImpl()) },
+                new Object[] { ShoppingListDraft.builder()
                         .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) } };
     }
 
@@ -127,6 +130,14 @@ public class ShoppingListDraftTest {
         value.setStore(new com.commercetools.api.models.store.StoreResourceIdentifierImpl());
         Assertions.assertThat(value.getStore())
                 .isEqualTo(new com.commercetools.api.models.store.StoreResourceIdentifierImpl());
+    }
+
+    @Test
+    public void businessUnit() {
+        ShoppingListDraft value = ShoppingListDraft.of();
+        value.setBusinessUnit(new com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierImpl());
+        Assertions.assertThat(value.getBusinessUnit())
+                .isEqualTo(new com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierImpl());
     }
 
     @Test

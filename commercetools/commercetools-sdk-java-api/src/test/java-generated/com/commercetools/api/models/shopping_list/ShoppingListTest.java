@@ -48,6 +48,8 @@ public class ShoppingListTest {
                 new Object[] { ShoppingList.builder().anonymousId("anonymousId") },
                 new Object[] {
                         ShoppingList.builder().store(new com.commercetools.api.models.store.StoreKeyReferenceImpl()) },
+                new Object[] { ShoppingList.builder()
+                        .businessUnit(new com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceImpl()) },
                 new Object[] {
                         ShoppingList.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) },
                 new Object[] { ShoppingList.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
@@ -149,6 +151,14 @@ public class ShoppingListTest {
         value.setStore(new com.commercetools.api.models.store.StoreKeyReferenceImpl());
         Assertions.assertThat(value.getStore())
                 .isEqualTo(new com.commercetools.api.models.store.StoreKeyReferenceImpl());
+    }
+
+    @Test
+    public void businessUnit() {
+        ShoppingList value = ShoppingList.of();
+        value.setBusinessUnit(new com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceImpl());
+        Assertions.assertThat(value.getBusinessUnit())
+                .isEqualTo(new com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceImpl());
     }
 
     @Test

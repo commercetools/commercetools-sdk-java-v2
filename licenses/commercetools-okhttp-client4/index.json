@@ -93,11 +93,11 @@
         },
         {
             "moduleName": "com.squareup.okio:okio",
-            "moduleVersion": "3.9.1"
+            "moduleVersion": "3.10.2"
         },
         {
             "moduleName": "com.squareup.okio:okio-jvm",
-            "moduleVersion": "3.9.1",
+            "moduleVersion": "3.10.2",
             "moduleUrls": [
                 "https://github.com/square/okio/"
             ],
@@ -124,7 +124,7 @@
         },
         {
             "moduleName": "jakarta.validation:jakarta.validation-api",
-            "moduleVersion": "3.1.0",
+            "moduleVersion": "3.1.1",
             "moduleUrls": [
                 "https://beanvalidation.org",
                 "https://www.eclipse.org"
@@ -159,7 +159,7 @@
         },
         {
             "moduleName": "org.jetbrains.kotlin:kotlin-stdlib",
-            "moduleVersion": "1.9.25",
+            "moduleVersion": "2.1.0",
             "moduleUrls": [
                 "https://kotlinlang.org/"
             ],

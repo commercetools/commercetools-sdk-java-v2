@@ -67,7 +67,7 @@
         },
         {
             "moduleName": "com.newrelic.agent.java:newrelic-api",
-            "moduleVersion": "8.17.0",
+            "moduleVersion": "8.18.0",
             "moduleUrls": [
                 "https://github.com/newrelic/newrelic-java-agent"
             ],

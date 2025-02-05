@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Removes a Product image and deletes it from the Content Delivery Network (external images are not deleted). Deletion from the CDN is not instant, which means the image file itself will stay available for some time after the deletion. Either <code>variantId</code> or <code>sku</code> is required.</p>
+ *  <p>Removes a Product image and deletes it from the Content Delivery Network (CDN) if it had been uploaded to our CDN. External images will not be deleted. The API deletes the removed image from the CDN in an eventual consistent way. Either <code>variantId</code> or <code>sku</code> is required.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductRemoveImageActionImpl implements ProductRemoveImageAction, ModelBase {

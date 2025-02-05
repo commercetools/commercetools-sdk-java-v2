@@ -94,7 +94,7 @@
         },
         {
             "moduleName": "jakarta.validation:jakarta.validation-api",
-            "moduleVersion": "3.1.0",
+            "moduleVersion": "3.1.1",
             "moduleUrls": [
                 "https://beanvalidation.org",
                 "https://www.eclipse.org"

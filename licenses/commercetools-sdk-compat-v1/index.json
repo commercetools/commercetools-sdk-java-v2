@@ -243,7 +243,7 @@
         },
         {
             "moduleName": "io.netty:netty-buffer",
-            "moduleVersion": "4.1.116.Final",
+            "moduleVersion": "4.1.117.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -256,7 +256,7 @@
         },
         {
             "moduleName": "io.netty:netty-codec",
-            "moduleVersion": "4.1.116.Final",
+            "moduleVersion": "4.1.117.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -269,7 +269,7 @@
         },
         {
             "moduleName": "io.netty:netty-codec-http",
-            "moduleVersion": "4.1.116.Final",
+            "moduleVersion": "4.1.117.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -282,7 +282,7 @@
         },
         {
             "moduleName": "io.netty:netty-common",
-            "moduleVersion": "4.1.116.Final",
+            "moduleVersion": "4.1.117.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -295,7 +295,7 @@
         },
         {
             "moduleName": "io.netty:netty-handler",
-            "moduleVersion": "4.1.116.Final",
+            "moduleVersion": "4.1.117.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -308,7 +308,7 @@
         },
         {
             "moduleName": "io.netty:netty-resolver",
-            "moduleVersion": "4.1.116.Final",
+            "moduleVersion": "4.1.117.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -321,7 +321,7 @@
         },
         {
             "moduleName": "io.netty:netty-transport",
-            "moduleVersion": "4.1.116.Final",
+            "moduleVersion": "4.1.117.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -347,7 +347,7 @@
         },
         {
             "moduleName": "io.netty:netty-transport-native-unix-common",
-            "moduleVersion": "4.1.116.Final",
+            "moduleVersion": "4.1.117.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -378,7 +378,7 @@
         },
         {
             "moduleName": "jakarta.validation:jakarta.validation-api",
-            "moduleVersion": "3.1.0",
+            "moduleVersion": "3.1.1",
             "moduleUrls": [
                 "https://beanvalidation.org",
                 "https://www.eclipse.org"

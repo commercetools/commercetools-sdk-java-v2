@@ -225,6 +225,7 @@ public class LineItemImpl implements LineItem, ModelBase {
 
     /**
      *  <p>Total price of this Line Item equalling <code>price</code> multiplied by <code>quantity</code>. If the Line Item is discounted, the total price is the <code>discountedPricePerQuantity</code> multiplied by <code>quantity</code>. Includes taxes if the TaxRate <code>includedInPrice</code> is <code>true</code>.</p>
+     *  <p>If <code>ExternalPrice</code> LineItemPriceMode is used with high-precision money, then the total price is rounded by using the <code>HalfEven</code> rounding mode.</p>
      */
 
     public com.commercetools.api.models.common.CentPrecisionMoney getTotalPrice() {

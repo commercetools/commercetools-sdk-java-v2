@@ -67,7 +67,7 @@ public class ProductSearchFacetCountValueImpl implements ProductSearchFacetCount
     }
 
     /**
-     *  <p>Additional filtering expression to apply to the search result before calculating the facet.</p>
+     *  <p>Additional filtering expression to apply to the facet result before calculating the facet.</p>
      */
 
     public com.commercetools.api.models.search.SearchQuery getFilter() {

@@ -80,7 +80,7 @@ public class ProductSearchFacetDistinctValueBuilder implements Builder<ProductSe
     }
 
     /**
-     *  <p>Additional filtering expression to apply to the search result before calculating the facet.</p>
+     *  <p>Additional filtering expression to apply to the facet result before calculating the facet.</p>
      * @param builder function to build the filter value
      * @return Builder
      */
@@ -92,7 +92,7 @@ public class ProductSearchFacetDistinctValueBuilder implements Builder<ProductSe
     }
 
     /**
-     *  <p>Additional filtering expression to apply to the search result before calculating the facet.</p>
+     *  <p>Additional filtering expression to apply to the facet result before calculating the facet.</p>
      * @param builder function to build the filter value
      * @return Builder
      */
@@ -104,7 +104,7 @@ public class ProductSearchFacetDistinctValueBuilder implements Builder<ProductSe
     }
 
     /**
-     *  <p>Additional filtering expression to apply to the search result before calculating the facet.</p>
+     *  <p>Additional filtering expression to apply to the facet result before calculating the facet.</p>
      * @param filter value to be set
      * @return Builder
      */
@@ -279,7 +279,7 @@ public class ProductSearchFacetDistinctValueBuilder implements Builder<ProductSe
     }
 
     /**
-     *  <p>Additional filtering expression to apply to the search result before calculating the facet.</p>
+     *  <p>Additional filtering expression to apply to the facet result before calculating the facet.</p>
      * @return filter
      */
 

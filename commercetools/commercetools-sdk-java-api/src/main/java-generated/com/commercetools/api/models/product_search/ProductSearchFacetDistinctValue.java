@@ -52,7 +52,7 @@ public interface ProductSearchFacetDistinctValue {
     public ProductSearchFacetScopeEnum getScope();
 
     /**
-     *  <p>Additional filtering expression to apply to the search result before calculating the facet.</p>
+     *  <p>Additional filtering expression to apply to the facet result before calculating the facet.</p>
      * @return filter
      */
     @Valid
@@ -138,7 +138,7 @@ public interface ProductSearchFacetDistinctValue {
     public void setScope(final ProductSearchFacetScopeEnum scope);
 
     /**
-     *  <p>Additional filtering expression to apply to the search result before calculating the facet.</p>
+     *  <p>Additional filtering expression to apply to the facet result before calculating the facet.</p>
      * @param filter value to be set
      */
 

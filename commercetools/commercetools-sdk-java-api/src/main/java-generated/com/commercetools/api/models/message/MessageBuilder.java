@@ -343,6 +343,18 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.CustomerFirstNameSetMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.CustomerGroupAssignmentAddedMessageBuilder customerGroupAssignmentAddedBuilder() {
+        return com.commercetools.api.models.message.CustomerGroupAssignmentAddedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CustomerGroupAssignmentRemovedMessageBuilder customerGroupAssignmentRemovedBuilder() {
+        return com.commercetools.api.models.message.CustomerGroupAssignmentRemovedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CustomerGroupAssignmentsSetMessageBuilder customerGroupAssignmentsSetBuilder() {
+        return com.commercetools.api.models.message.CustomerGroupAssignmentsSetMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.CustomerGroupCustomFieldAddedMessageBuilder customerGroupCustomFieldAddedBuilder() {
         return com.commercetools.api.models.message.CustomerGroupCustomFieldAddedMessageBuilder.of();
     }

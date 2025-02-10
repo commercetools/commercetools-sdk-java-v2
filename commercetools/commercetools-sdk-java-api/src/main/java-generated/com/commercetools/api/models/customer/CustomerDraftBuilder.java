@@ -105,6 +105,9 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     @Nullable
     private com.commercetools.api.models.customer.AuthenticationMode authenticationMode;
 
+    @Nullable
+    private java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignmentDraft> customerGroupAssignments;
+
     /**
      *  <p>User-defined unique identifier for the Customer. The <code>key</code> field is preferred over <code>customerNumber</code> as it is mutable and provides more flexibility.</p>
      *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Customers with the Import API.</p>
@@ -721,6 +724,99 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
+     *  <p>Customer Groups to assign to the Customer.</p>
+     * @param customerGroupAssignments value to be set
+     * @return Builder
+     */
+
+    public CustomerDraftBuilder customerGroupAssignments(
+            @Nullable final com.commercetools.api.models.customer.CustomerGroupAssignmentDraft... customerGroupAssignments) {
+        this.customerGroupAssignments = new ArrayList<>(Arrays.asList(customerGroupAssignments));
+        return this;
+    }
+
+    /**
+     *  <p>Customer Groups to assign to the Customer.</p>
+     * @param customerGroupAssignments value to be set
+     * @return Builder
+     */
+
+    public CustomerDraftBuilder customerGroupAssignments(
+            @Nullable final java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignmentDraft> customerGroupAssignments) {
+        this.customerGroupAssignments = customerGroupAssignments;
+        return this;
+    }
+
+    /**
+     *  <p>Customer Groups to assign to the Customer.</p>
+     * @param customerGroupAssignments value to be set
+     * @return Builder
+     */
+
+    public CustomerDraftBuilder plusCustomerGroupAssignments(
+            @Nullable final com.commercetools.api.models.customer.CustomerGroupAssignmentDraft... customerGroupAssignments) {
+        if (this.customerGroupAssignments == null) {
+            this.customerGroupAssignments = new ArrayList<>();
+        }
+        this.customerGroupAssignments.addAll(Arrays.asList(customerGroupAssignments));
+        return this;
+    }
+
+    /**
+     *  <p>Customer Groups to assign to the Customer.</p>
+     * @param builder function to build the customerGroupAssignments value
+     * @return Builder
+     */
+
+    public CustomerDraftBuilder plusCustomerGroupAssignments(
+            Function<com.commercetools.api.models.customer.CustomerGroupAssignmentDraftBuilder, com.commercetools.api.models.customer.CustomerGroupAssignmentDraftBuilder> builder) {
+        if (this.customerGroupAssignments == null) {
+            this.customerGroupAssignments = new ArrayList<>();
+        }
+        this.customerGroupAssignments.add(
+            builder.apply(com.commercetools.api.models.customer.CustomerGroupAssignmentDraftBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Customer Groups to assign to the Customer.</p>
+     * @param builder function to build the customerGroupAssignments value
+     * @return Builder
+     */
+
+    public CustomerDraftBuilder withCustomerGroupAssignments(
+            Function<com.commercetools.api.models.customer.CustomerGroupAssignmentDraftBuilder, com.commercetools.api.models.customer.CustomerGroupAssignmentDraftBuilder> builder) {
+        this.customerGroupAssignments = new ArrayList<>();
+        this.customerGroupAssignments.add(
+            builder.apply(com.commercetools.api.models.customer.CustomerGroupAssignmentDraftBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Customer Groups to assign to the Customer.</p>
+     * @param builder function to build the customerGroupAssignments value
+     * @return Builder
+     */
+
+    public CustomerDraftBuilder addCustomerGroupAssignments(
+            Function<com.commercetools.api.models.customer.CustomerGroupAssignmentDraftBuilder, com.commercetools.api.models.customer.CustomerGroupAssignmentDraft> builder) {
+        return plusCustomerGroupAssignments(
+            builder.apply(com.commercetools.api.models.customer.CustomerGroupAssignmentDraftBuilder.of()));
+    }
+
+    /**
+     *  <p>Customer Groups to assign to the Customer.</p>
+     * @param builder function to build the customerGroupAssignments value
+     * @return Builder
+     */
+
+    public CustomerDraftBuilder setCustomerGroupAssignments(
+            Function<com.commercetools.api.models.customer.CustomerGroupAssignmentDraftBuilder, com.commercetools.api.models.customer.CustomerGroupAssignmentDraft> builder) {
+        return customerGroupAssignments(
+            builder.apply(com.commercetools.api.models.customer.CustomerGroupAssignmentDraftBuilder.of()));
+    }
+
+    /**
      *  <p>User-defined unique identifier for the Customer. The <code>key</code> field is preferred over <code>customerNumber</code> as it is mutable and provides more flexibility.</p>
      *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Customers with the Import API.</p>
      * @return key
@@ -999,6 +1095,16 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
+     *  <p>Customer Groups to assign to the Customer.</p>
+     * @return customerGroupAssignments
+     */
+
+    @Nullable
+    public java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignmentDraft> getCustomerGroupAssignments() {
+        return this.customerGroupAssignments;
+    }
+
+    /**
      * builds CustomerDraft with checking for non-null required values
      * @return CustomerDraft
      */
@@ -1007,7 +1113,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
         return new CustomerDraftImpl(key, customerNumber, externalId, email, password, firstName, lastName, middleName,
             title, anonymousCartId, anonymousCart, anonymousId, dateOfBirth, companyName, vatId, addresses,
             defaultShippingAddress, shippingAddresses, defaultBillingAddress, billingAddresses, isEmailVerified,
-            customerGroup, custom, locale, salutation, stores, authenticationMode);
+            customerGroup, custom, locale, salutation, stores, authenticationMode, customerGroupAssignments);
     }
 
     /**
@@ -1018,7 +1124,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
         return new CustomerDraftImpl(key, customerNumber, externalId, email, password, firstName, lastName, middleName,
             title, anonymousCartId, anonymousCart, anonymousId, dateOfBirth, companyName, vatId, addresses,
             defaultShippingAddress, shippingAddresses, defaultBillingAddress, billingAddresses, isEmailVerified,
-            customerGroup, custom, locale, salutation, stores, authenticationMode);
+            customerGroup, custom, locale, salutation, stores, authenticationMode, customerGroupAssignments);
     }
 
     /**
@@ -1063,6 +1169,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
         builder.salutation = template.getSalutation();
         builder.stores = template.getStores();
         builder.authenticationMode = template.getAuthenticationMode();
+        builder.customerGroupAssignments = template.getCustomerGroupAssignments();
         return builder;
     }
 

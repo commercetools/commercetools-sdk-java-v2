@@ -110,6 +110,10 @@ public class ByProjectKeyProductsKeyByKeyDelete extends
         return this.getQueryParam("priceCustomerGroup");
     }
 
+    public List<String> getPriceCustomerGroupAssignments() {
+        return this.getQueryParam("priceCustomerGroupAssignments");
+    }
+
     public List<String> getPriceChannel() {
         return this.getQueryParam("priceChannel");
     }
@@ -372,6 +376,93 @@ public class ByProjectKeyProductsKeyByKeyDelete extends
             final Collection<TValue> priceCustomerGroup) {
         return copy().addQueryParams(priceCustomerGroup.stream()
                 .map(s -> new ParamEntry<>("priceCustomerGroup", s.toString()))
+                .collect(Collectors.toList()));
+    }
+
+    /**
+     * set priceCustomerGroupAssignments with the specified value
+     * @param priceCustomerGroupAssignments value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsKeyByKeyDelete
+     */
+    public <TValue> ByProjectKeyProductsKeyByKeyDelete withPriceCustomerGroupAssignments(
+            final TValue priceCustomerGroupAssignments) {
+        return copy().withQueryParam("priceCustomerGroupAssignments", priceCustomerGroupAssignments);
+    }
+
+    /**
+     * add additional priceCustomerGroupAssignments query parameter
+     * @param priceCustomerGroupAssignments value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsKeyByKeyDelete
+     */
+    public <TValue> ByProjectKeyProductsKeyByKeyDelete addPriceCustomerGroupAssignments(
+            final TValue priceCustomerGroupAssignments) {
+        return copy().addQueryParam("priceCustomerGroupAssignments", priceCustomerGroupAssignments);
+    }
+
+    /**
+     * set priceCustomerGroupAssignments with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductsKeyByKeyDelete
+     */
+    public ByProjectKeyProductsKeyByKeyDelete withPriceCustomerGroupAssignments(final Supplier<String> supplier) {
+        return copy().withQueryParam("priceCustomerGroupAssignments", supplier.get());
+    }
+
+    /**
+     * add additional priceCustomerGroupAssignments query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductsKeyByKeyDelete
+     */
+    public ByProjectKeyProductsKeyByKeyDelete addPriceCustomerGroupAssignments(final Supplier<String> supplier) {
+        return copy().addQueryParam("priceCustomerGroupAssignments", supplier.get());
+    }
+
+    /**
+     * set priceCustomerGroupAssignments with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductsKeyByKeyDelete
+     */
+    public ByProjectKeyProductsKeyByKeyDelete withPriceCustomerGroupAssignments(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("priceCustomerGroupAssignments", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional priceCustomerGroupAssignments query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductsKeyByKeyDelete
+     */
+    public ByProjectKeyProductsKeyByKeyDelete addPriceCustomerGroupAssignments(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("priceCustomerGroupAssignments", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set priceCustomerGroupAssignments with the specified values
+     * @param priceCustomerGroupAssignments values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsKeyByKeyDelete
+     */
+    public <TValue> ByProjectKeyProductsKeyByKeyDelete withPriceCustomerGroupAssignments(
+            final Collection<TValue> priceCustomerGroupAssignments) {
+        return copy().withoutQueryParam("priceCustomerGroupAssignments")
+                .addQueryParams(priceCustomerGroupAssignments.stream()
+                        .map(s -> new ParamEntry<>("priceCustomerGroupAssignments", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional priceCustomerGroupAssignments query parameters
+     * @param priceCustomerGroupAssignments values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsKeyByKeyDelete
+     */
+    public <TValue> ByProjectKeyProductsKeyByKeyDelete addPriceCustomerGroupAssignments(
+            final Collection<TValue> priceCustomerGroupAssignments) {
+        return copy().addQueryParams(priceCustomerGroupAssignments.stream()
+                .map(s -> new ParamEntry<>("priceCustomerGroupAssignments", s.toString()))
                 .collect(Collectors.toList()));
     }
 

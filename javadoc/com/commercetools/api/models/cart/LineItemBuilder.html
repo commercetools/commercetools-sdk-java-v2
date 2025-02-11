@@ -963,7 +963,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="totalPrice(java.util.function.Function)">
 <h3>totalPrice</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemBuilder.html" title="class in com.commercetools.api.models.cart">LineItemBuilder</a></span>&nbsp;<span class="element-name">totalPrice</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CentPrecisionMoneyBuilder.html" title="class in com.commercetools.api.models.common">CentPrecisionMoneyBuilder</a>,<wbr><a href="../common/CentPrecisionMoneyBuilder.html" title="class in com.commercetools.api.models.common">CentPrecisionMoneyBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Total price of this Line Item equalling <code>price</code> multiplied by <code>quantity</code>. If the Line Item is discounted, the total price is the <code>discountedPricePerQuantity</code> multiplied by <code>quantity</code>. Includes taxes if the TaxRate <code>includedInPrice</code> is <code>true</code>.</p></div>
+<div class="block"><p>Total price of this Line Item equalling <code>price</code> multiplied by <code>quantity</code>. If the Line Item is discounted, the total price is the <code>discountedPricePerQuantity</code> multiplied by <code>quantity</code>. Includes taxes if the TaxRate <code>includedInPrice</code> is <code>true</code>.</p>
+  <p>If <code>ExternalPrice</code> LineItemPriceMode is used with high-precision money, then the total price is rounded by using the <code>HalfEven</code> rounding mode.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the totalPrice value</dd>
@@ -976,7 +977,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withTotalPrice(java.util.function.Function)">
 <h3>withTotalPrice</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemBuilder.html" title="class in com.commercetools.api.models.cart">LineItemBuilder</a></span>&nbsp;<span class="element-name">withTotalPrice</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CentPrecisionMoneyBuilder.html" title="class in com.commercetools.api.models.common">CentPrecisionMoneyBuilder</a>,<wbr><a href="../common/CentPrecisionMoney.html" title="interface in com.commercetools.api.models.common">CentPrecisionMoney</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Total price of this Line Item equalling <code>price</code> multiplied by <code>quantity</code>. If the Line Item is discounted, the total price is the <code>discountedPricePerQuantity</code> multiplied by <code>quantity</code>. Includes taxes if the TaxRate <code>includedInPrice</code> is <code>true</code>.</p></div>
+<div class="block"><p>Total price of this Line Item equalling <code>price</code> multiplied by <code>quantity</code>. If the Line Item is discounted, the total price is the <code>discountedPricePerQuantity</code> multiplied by <code>quantity</code>. Includes taxes if the TaxRate <code>includedInPrice</code> is <code>true</code>.</p>
+  <p>If <code>ExternalPrice</code> LineItemPriceMode is used with high-precision money, then the total price is rounded by using the <code>HalfEven</code> rounding mode.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the totalPrice value</dd>
@@ -989,7 +991,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="totalPrice(com.commercetools.api.models.common.CentPrecisionMoney)">
 <h3>totalPrice</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="LineItemBuilder.html" title="class in com.commercetools.api.models.cart">LineItemBuilder</a></span>&nbsp;<span class="element-name">totalPrice</span><wbr><span class="parameters">(<a href="../common/CentPrecisionMoney.html" title="interface in com.commercetools.api.models.common">CentPrecisionMoney</a>&nbsp;totalPrice)</span></div>
-<div class="block"><p>Total price of this Line Item equalling <code>price</code> multiplied by <code>quantity</code>. If the Line Item is discounted, the total price is the <code>discountedPricePerQuantity</code> multiplied by <code>quantity</code>. Includes taxes if the TaxRate <code>includedInPrice</code> is <code>true</code>.</p></div>
+<div class="block"><p>Total price of this Line Item equalling <code>price</code> multiplied by <code>quantity</code>. If the Line Item is discounted, the total price is the <code>discountedPricePerQuantity</code> multiplied by <code>quantity</code>. Includes taxes if the TaxRate <code>includedInPrice</code> is <code>true</code>.</p>
+  <p>If <code>ExternalPrice</code> LineItemPriceMode is used with high-precision money, then the total price is rounded by using the <code>HalfEven</code> rounding mode.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>totalPrice</code> - value to be set</dd>
@@ -1803,7 +1806,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getTotalPrice()">
 <h3>getTotalPrice</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/CentPrecisionMoney.html" title="interface in com.commercetools.api.models.common">CentPrecisionMoney</a></span>&nbsp;<span class="element-name">getTotalPrice</span>()</div>
-<div class="block"><p>Total price of this Line Item equalling <code>price</code> multiplied by <code>quantity</code>. If the Line Item is discounted, the total price is the <code>discountedPricePerQuantity</code> multiplied by <code>quantity</code>. Includes taxes if the TaxRate <code>includedInPrice</code> is <code>true</code>.</p></div>
+<div class="block"><p>Total price of this Line Item equalling <code>price</code> multiplied by <code>quantity</code>. If the Line Item is discounted, the total price is the <code>discountedPricePerQuantity</code> multiplied by <code>quantity</code>. Includes taxes if the TaxRate <code>includedInPrice</code> is <code>true</code>.</p>
+  <p>If <code>ExternalPrice</code> LineItemPriceMode is used with high-precision money, then the total price is rounded by using the <code>HalfEven</code> rounding mode.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>totalPrice</dd>

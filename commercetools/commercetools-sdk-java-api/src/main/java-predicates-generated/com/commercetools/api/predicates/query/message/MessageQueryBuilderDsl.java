@@ -202,10 +202,9 @@ public class MessageQueryBuilderDsl {
     }
 
     public CombinationQueryPredicate<MessageQueryBuilderDsl> asAssociateRoleNameSet(
-            Function<com.commercetools.api.predicates.query.message.AssociateRoleNameChangedMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.AssociateRoleNameChangedMessageQueryBuilderDsl>> fn) {
+            Function<com.commercetools.api.predicates.query.message.AssociateRoleNameSetMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.AssociateRoleNameSetMessageQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
-            fn.apply(
-                com.commercetools.api.predicates.query.message.AssociateRoleNameChangedMessageQueryBuilderDsl.of()),
+            fn.apply(com.commercetools.api.predicates.query.message.AssociateRoleNameSetMessageQueryBuilderDsl.of()),
             MessageQueryBuilderDsl::of);
     }
 

@@ -266,7 +266,7 @@ public class QuoteImpl implements Quote, ModelBase {
     }
 
     /**
-     *  <p>Expiration date for the Quote.</p>
+     *  <p>Expiration date for the Quote. Once a Quote expires, it cannot be ordered.</p>
      */
 
     public java.time.ZonedDateTime getValidTo() {

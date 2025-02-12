@@ -48,7 +48,8 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
     private com.commercetools.api.models.state.StateResourceIdentifier state;
 
     /**
-     *  <p>ResourceIdentifier to the Quote from which the Order is created. If the referenced Quote has expired (<code>validTo</code> check) or its <code>quoteState</code> is <code>Accepted</code>, <code>Declined</code>, or <code>Withdrawn</code>, the Order creation will fail.</p>
+     *  <p>ResourceIdentifier to the Quote from which the Order is created.</p>
+     *  <p>The Quote must have the <code>Pending</code> state and must be valid (not past the <code>validTo</code> date).</p>
      * @param builder function to build the quote value
      * @return Builder
      */
@@ -60,7 +61,8 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
     }
 
     /**
-     *  <p>ResourceIdentifier to the Quote from which the Order is created. If the referenced Quote has expired (<code>validTo</code> check) or its <code>quoteState</code> is <code>Accepted</code>, <code>Declined</code>, or <code>Withdrawn</code>, the Order creation will fail.</p>
+     *  <p>ResourceIdentifier to the Quote from which the Order is created.</p>
+     *  <p>The Quote must have the <code>Pending</code> state and must be valid (not past the <code>validTo</code> date).</p>
      * @param builder function to build the quote value
      * @return Builder
      */
@@ -72,7 +74,8 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
     }
 
     /**
-     *  <p>ResourceIdentifier to the Quote from which the Order is created. If the referenced Quote has expired (<code>validTo</code> check) or its <code>quoteState</code> is <code>Accepted</code>, <code>Declined</code>, or <code>Withdrawn</code>, the Order creation will fail.</p>
+     *  <p>ResourceIdentifier to the Quote from which the Order is created.</p>
+     *  <p>The Quote must have the <code>Pending</code> state and must be valid (not past the <code>validTo</code> date).</p>
      * @param quote value to be set
      * @return Builder
      */
@@ -188,7 +191,8 @@ public class OrderFromQuoteDraftBuilder implements Builder<OrderFromQuoteDraft> 
     }
 
     /**
-     *  <p>ResourceIdentifier to the Quote from which the Order is created. If the referenced Quote has expired (<code>validTo</code> check) or its <code>quoteState</code> is <code>Accepted</code>, <code>Declined</code>, or <code>Withdrawn</code>, the Order creation will fail.</p>
+     *  <p>ResourceIdentifier to the Quote from which the Order is created.</p>
+     *  <p>The Quote must have the <code>Pending</code> state and must be valid (not past the <code>validTo</code> date).</p>
      * @return quote
      */
 

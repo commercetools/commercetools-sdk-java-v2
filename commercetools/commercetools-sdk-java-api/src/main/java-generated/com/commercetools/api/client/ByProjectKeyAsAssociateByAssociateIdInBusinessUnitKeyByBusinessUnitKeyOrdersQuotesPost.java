@@ -16,7 +16,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Creates an Order from a Quote in a BusinessUnit. Creating an Order fails with an InvalidOperation if the Quote does not reference the same BusinessUnit as the <code>businessUnitKey</code> path parameter.</p>
+ *  <p>Creates an Order from a Quote in a BusinessUnit.</p>
+ *  <p>The Quote must reference the same Business Unit as the <code>businessUnitKey</code> path parameter, must have the <code>Pending</code> state, and must be valid (not past the <code>validTo</code> date). If these criteria are not met, an InvalidOperation error is returned.</p>
  *  <p>Specific Error Codes:</p>
  *  <ul>
  *   <li>InvalidItemShippingDetails</li>

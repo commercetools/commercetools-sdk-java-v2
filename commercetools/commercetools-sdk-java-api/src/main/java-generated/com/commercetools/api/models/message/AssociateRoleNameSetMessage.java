@@ -21,7 +21,7 @@ import jakarta.validation.constraints.NotNull;
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     AssociateRoleNameChangedMessage associateRoleNameChangedMessage = AssociateRoleNameChangedMessage.builder()
+ *     AssociateRoleNameSetMessage associateRoleNameSetMessage = AssociateRoleNameSetMessage.builder()
  *             .id("{id}")
  *             .version(0.3)
  *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
@@ -35,11 +35,11 @@ import jakarta.validation.constraints.NotNull;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-@JsonDeserialize(as = AssociateRoleNameChangedMessageImpl.class)
-public interface AssociateRoleNameChangedMessage extends Message {
+@JsonDeserialize(as = AssociateRoleNameSetMessageImpl.class)
+public interface AssociateRoleNameSetMessage extends Message {
 
     /**
-     * discriminator value for AssociateRoleNameChangedMessage
+     * discriminator value for AssociateRoleNameSetMessage
      */
     String ASSOCIATE_ROLE_NAME_SET = "AssociateRoleNameSet";
 
@@ -60,19 +60,19 @@ public interface AssociateRoleNameChangedMessage extends Message {
 
     /**
      * factory method
-     * @return instance of AssociateRoleNameChangedMessage
+     * @return instance of AssociateRoleNameSetMessage
      */
-    public static AssociateRoleNameChangedMessage of() {
-        return new AssociateRoleNameChangedMessageImpl();
+    public static AssociateRoleNameSetMessage of() {
+        return new AssociateRoleNameSetMessageImpl();
     }
 
     /**
-     * factory method to create a shallow copy AssociateRoleNameChangedMessage
+     * factory method to create a shallow copy AssociateRoleNameSetMessage
      * @param template instance to be copied
      * @return copy instance
      */
-    public static AssociateRoleNameChangedMessage of(final AssociateRoleNameChangedMessage template) {
-        AssociateRoleNameChangedMessageImpl instance = new AssociateRoleNameChangedMessageImpl();
+    public static AssociateRoleNameSetMessage of(final AssociateRoleNameSetMessage template) {
+        AssociateRoleNameSetMessageImpl instance = new AssociateRoleNameSetMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
@@ -88,16 +88,16 @@ public interface AssociateRoleNameChangedMessage extends Message {
     }
 
     /**
-     * factory method to create a deep copy of AssociateRoleNameChangedMessage
+     * factory method to create a deep copy of AssociateRoleNameSetMessage
      * @param template instance to be copied
      * @return copy instance
      */
     @Nullable
-    public static AssociateRoleNameChangedMessage deepCopy(@Nullable final AssociateRoleNameChangedMessage template) {
+    public static AssociateRoleNameSetMessage deepCopy(@Nullable final AssociateRoleNameSetMessage template) {
         if (template == null) {
             return null;
         }
-        AssociateRoleNameChangedMessageImpl instance = new AssociateRoleNameChangedMessageImpl();
+        AssociateRoleNameSetMessageImpl instance = new AssociateRoleNameSetMessageImpl();
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
         instance.setCreatedAt(template.getCreatedAt());
@@ -115,20 +115,20 @@ public interface AssociateRoleNameChangedMessage extends Message {
     }
 
     /**
-     * builder factory method for AssociateRoleNameChangedMessage
+     * builder factory method for AssociateRoleNameSetMessage
      * @return builder
      */
-    public static AssociateRoleNameChangedMessageBuilder builder() {
-        return AssociateRoleNameChangedMessageBuilder.of();
+    public static AssociateRoleNameSetMessageBuilder builder() {
+        return AssociateRoleNameSetMessageBuilder.of();
     }
 
     /**
-     * create builder for AssociateRoleNameChangedMessage instance
+     * create builder for AssociateRoleNameSetMessage instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static AssociateRoleNameChangedMessageBuilder builder(final AssociateRoleNameChangedMessage template) {
-        return AssociateRoleNameChangedMessageBuilder.of(template);
+    public static AssociateRoleNameSetMessageBuilder builder(final AssociateRoleNameSetMessage template) {
+        return AssociateRoleNameSetMessageBuilder.of(template);
     }
 
     /**
@@ -137,7 +137,7 @@ public interface AssociateRoleNameChangedMessage extends Message {
      * @param helper function to map the object
      * @return mapped value
      */
-    default <T> T withAssociateRoleNameChangedMessage(Function<AssociateRoleNameChangedMessage, T> helper) {
+    default <T> T withAssociateRoleNameSetMessage(Function<AssociateRoleNameSetMessage, T> helper) {
         return helper.apply(this);
     }
 
@@ -145,11 +145,11 @@ public interface AssociateRoleNameChangedMessage extends Message {
      * gives a TypeReference for usage with Jackson DataBind
      * @return TypeReference
      */
-    public static com.fasterxml.jackson.core.type.TypeReference<AssociateRoleNameChangedMessage> typeReference() {
-        return new com.fasterxml.jackson.core.type.TypeReference<AssociateRoleNameChangedMessage>() {
+    public static com.fasterxml.jackson.core.type.TypeReference<AssociateRoleNameSetMessage> typeReference() {
+        return new com.fasterxml.jackson.core.type.TypeReference<AssociateRoleNameSetMessage>() {
             @Override
             public String toString() {
-                return "TypeReference<AssociateRoleNameChangedMessage>";
+                return "TypeReference<AssociateRoleNameSetMessage>";
             }
         };
     }

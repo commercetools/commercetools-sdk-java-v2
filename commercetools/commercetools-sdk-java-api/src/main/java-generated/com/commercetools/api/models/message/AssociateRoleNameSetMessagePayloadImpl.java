@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
  *  <p>Generated after a successful Set Name update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class AssociateRoleNameChangedMessagePayloadImpl implements AssociateRoleNameChangedMessagePayload, ModelBase {
+public class AssociateRoleNameSetMessagePayloadImpl implements AssociateRoleNameSetMessagePayload, ModelBase {
 
     private String type;
 
@@ -30,7 +30,7 @@ public class AssociateRoleNameChangedMessagePayloadImpl implements AssociateRole
      * create instance with all properties
      */
     @JsonCreator
-    AssociateRoleNameChangedMessagePayloadImpl(@JsonProperty("name") final String name) {
+    AssociateRoleNameSetMessagePayloadImpl(@JsonProperty("name") final String name) {
         this.name = name;
         this.type = ASSOCIATE_ROLE_NAME_SET;
     }
@@ -38,7 +38,7 @@ public class AssociateRoleNameChangedMessagePayloadImpl implements AssociateRole
     /**
      * create empty instance
      */
-    public AssociateRoleNameChangedMessagePayloadImpl() {
+    public AssociateRoleNameSetMessagePayloadImpl() {
         this.type = ASSOCIATE_ROLE_NAME_SET;
     }
 
@@ -70,7 +70,7 @@ public class AssociateRoleNameChangedMessagePayloadImpl implements AssociateRole
         if (o == null || getClass() != o.getClass())
             return false;
 
-        AssociateRoleNameChangedMessagePayloadImpl that = (AssociateRoleNameChangedMessagePayloadImpl) o;
+        AssociateRoleNameSetMessagePayloadImpl that = (AssociateRoleNameSetMessagePayloadImpl) o;
 
         return new EqualsBuilder().append(type, that.type)
                 .append(name, that.name)

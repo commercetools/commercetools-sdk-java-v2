@@ -57,7 +57,7 @@ import jakarta.validation.constraints.NotNull;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.AssociateRoleBuyerAssignableChangedMessageImpl.class, name = AssociateRoleBuyerAssignableChangedMessage.ASSOCIATE_ROLE_BUYER_ASSIGNABLE_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.AssociateRoleCreatedMessageImpl.class, name = AssociateRoleCreatedMessage.ASSOCIATE_ROLE_CREATED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.AssociateRoleDeletedMessageImpl.class, name = AssociateRoleDeletedMessage.ASSOCIATE_ROLE_DELETED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.AssociateRoleNameChangedMessageImpl.class, name = AssociateRoleNameChangedMessage.ASSOCIATE_ROLE_NAME_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.AssociateRoleNameSetMessageImpl.class, name = AssociateRoleNameSetMessage.ASSOCIATE_ROLE_NAME_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.AssociateRolePermissionAddedMessageImpl.class, name = AssociateRolePermissionAddedMessage.ASSOCIATE_ROLE_PERMISSION_ADDED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.AssociateRolePermissionRemovedMessageImpl.class, name = AssociateRolePermissionRemovedMessage.ASSOCIATE_ROLE_PERMISSION_REMOVED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.AssociateRolePermissionsSetMessageImpl.class, name = AssociateRolePermissionsSetMessage.ASSOCIATE_ROLE_PERMISSIONS_SET),
@@ -521,9 +521,9 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
             return com.commercetools.api.models.message.AssociateRoleDeletedMessage
                     .deepCopy((com.commercetools.api.models.message.AssociateRoleDeletedMessage) template);
         }
-        if (template instanceof com.commercetools.api.models.message.AssociateRoleNameChangedMessage) {
-            return com.commercetools.api.models.message.AssociateRoleNameChangedMessage
-                    .deepCopy((com.commercetools.api.models.message.AssociateRoleNameChangedMessage) template);
+        if (template instanceof com.commercetools.api.models.message.AssociateRoleNameSetMessage) {
+            return com.commercetools.api.models.message.AssociateRoleNameSetMessage
+                    .deepCopy((com.commercetools.api.models.message.AssociateRoleNameSetMessage) template);
         }
         if (template instanceof com.commercetools.api.models.message.AssociateRolePermissionAddedMessage) {
             return com.commercetools.api.models.message.AssociateRolePermissionAddedMessage
@@ -1373,8 +1373,8 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
      * builder for associateRoleNameSet subtype
      * @return builder
      */
-    public static com.commercetools.api.models.message.AssociateRoleNameChangedMessageBuilder associateRoleNameSetBuilder() {
-        return com.commercetools.api.models.message.AssociateRoleNameChangedMessageBuilder.of();
+    public static com.commercetools.api.models.message.AssociateRoleNameSetMessageBuilder associateRoleNameSetBuilder() {
+        return com.commercetools.api.models.message.AssociateRoleNameSetMessageBuilder.of();
     }
 
     /**

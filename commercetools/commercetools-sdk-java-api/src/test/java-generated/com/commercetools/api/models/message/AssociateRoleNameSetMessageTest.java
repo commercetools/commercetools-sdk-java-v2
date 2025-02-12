@@ -13,24 +13,23 @@ import org.junit.jupiter.api.extension.ExtendWith;
 
 @ExtendWith(UseDataProviderExtension.class)
 @ExtendWith(DataProviderExtension.class)
-public class AssociateRoleNameChangedMessagePayloadTest {
+public class AssociateRoleNameSetMessageTest {
 
     @TestTemplate
     @UseDataProvider("objectBuilder")
-    public void buildUnchecked(AssociateRoleNameChangedMessagePayloadBuilder builder) {
-        AssociateRoleNameChangedMessagePayload associateRoleNameChangedMessagePayload = builder.buildUnchecked();
-        Assertions.assertThat(associateRoleNameChangedMessagePayload)
-                .isInstanceOf(AssociateRoleNameChangedMessagePayload.class);
+    public void buildUnchecked(AssociateRoleNameSetMessageBuilder builder) {
+        AssociateRoleNameSetMessage associateRoleNameSetMessage = builder.buildUnchecked();
+        Assertions.assertThat(associateRoleNameSetMessage).isInstanceOf(AssociateRoleNameSetMessage.class);
     }
 
     @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { AssociateRoleNameChangedMessagePayload.builder().name("name") } };
+        return new Object[][] { new Object[] { AssociateRoleNameSetMessage.builder().name("name") } };
     }
 
     @Test
     public void name() {
-        AssociateRoleNameChangedMessagePayload value = AssociateRoleNameChangedMessagePayload.of();
+        AssociateRoleNameSetMessage value = AssociateRoleNameSetMessage.of();
         value.setName("name");
         Assertions.assertThat(value.getName()).isEqualTo("name");
     }

@@ -10,12 +10,12 @@ import io.vrap.rmf.base.client.Builder;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * AssociateRoleNameChangedMessageBuilder
+ * AssociateRoleNameSetMessageBuilder
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     AssociateRoleNameChangedMessage associateRoleNameChangedMessage = AssociateRoleNameChangedMessage.builder()
+ *     AssociateRoleNameSetMessage associateRoleNameSetMessage = AssociateRoleNameSetMessage.builder()
  *             .id("{id}")
  *             .version(0.3)
  *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
@@ -29,7 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class AssociateRoleNameChangedMessageBuilder implements Builder<AssociateRoleNameChangedMessage> {
+public class AssociateRoleNameSetMessageBuilder implements Builder<AssociateRoleNameSetMessage> {
 
     private String id;
 
@@ -62,7 +62,7 @@ public class AssociateRoleNameChangedMessageBuilder implements Builder<Associate
      * @return Builder
      */
 
-    public AssociateRoleNameChangedMessageBuilder id(final String id) {
+    public AssociateRoleNameSetMessageBuilder id(final String id) {
         this.id = id;
         return this;
     }
@@ -73,7 +73,7 @@ public class AssociateRoleNameChangedMessageBuilder implements Builder<Associate
      * @return Builder
      */
 
-    public AssociateRoleNameChangedMessageBuilder version(final Long version) {
+    public AssociateRoleNameSetMessageBuilder version(final Long version) {
         this.version = version;
         return this;
     }
@@ -84,7 +84,7 @@ public class AssociateRoleNameChangedMessageBuilder implements Builder<Associate
      * @return Builder
      */
 
-    public AssociateRoleNameChangedMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
+    public AssociateRoleNameSetMessageBuilder createdAt(final java.time.ZonedDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
@@ -95,7 +95,7 @@ public class AssociateRoleNameChangedMessageBuilder implements Builder<Associate
      * @return Builder
      */
 
-    public AssociateRoleNameChangedMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
+    public AssociateRoleNameSetMessageBuilder lastModifiedAt(final java.time.ZonedDateTime lastModifiedAt) {
         this.lastModifiedAt = lastModifiedAt;
         return this;
     }
@@ -106,7 +106,7 @@ public class AssociateRoleNameChangedMessageBuilder implements Builder<Associate
      * @return Builder
      */
 
-    public AssociateRoleNameChangedMessageBuilder lastModifiedBy(
+    public AssociateRoleNameSetMessageBuilder lastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedByBuilder> builder) {
         this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of()).build();
         return this;
@@ -118,7 +118,7 @@ public class AssociateRoleNameChangedMessageBuilder implements Builder<Associate
      * @return Builder
      */
 
-    public AssociateRoleNameChangedMessageBuilder withLastModifiedBy(
+    public AssociateRoleNameSetMessageBuilder withLastModifiedBy(
             Function<com.commercetools.api.models.common.LastModifiedByBuilder, com.commercetools.api.models.common.LastModifiedBy> builder) {
         this.lastModifiedBy = builder.apply(com.commercetools.api.models.common.LastModifiedByBuilder.of());
         return this;
@@ -130,7 +130,7 @@ public class AssociateRoleNameChangedMessageBuilder implements Builder<Associate
      * @return Builder
      */
 
-    public AssociateRoleNameChangedMessageBuilder lastModifiedBy(
+    public AssociateRoleNameSetMessageBuilder lastModifiedBy(
             @Nullable final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy) {
         this.lastModifiedBy = lastModifiedBy;
         return this;
@@ -142,7 +142,7 @@ public class AssociateRoleNameChangedMessageBuilder implements Builder<Associate
      * @return Builder
      */
 
-    public AssociateRoleNameChangedMessageBuilder createdBy(
+    public AssociateRoleNameSetMessageBuilder createdBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedByBuilder> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of()).build();
         return this;
@@ -154,7 +154,7 @@ public class AssociateRoleNameChangedMessageBuilder implements Builder<Associate
      * @return Builder
      */
 
-    public AssociateRoleNameChangedMessageBuilder withCreatedBy(
+    public AssociateRoleNameSetMessageBuilder withCreatedBy(
             Function<com.commercetools.api.models.common.CreatedByBuilder, com.commercetools.api.models.common.CreatedBy> builder) {
         this.createdBy = builder.apply(com.commercetools.api.models.common.CreatedByBuilder.of());
         return this;
@@ -166,7 +166,7 @@ public class AssociateRoleNameChangedMessageBuilder implements Builder<Associate
      * @return Builder
      */
 
-    public AssociateRoleNameChangedMessageBuilder createdBy(
+    public AssociateRoleNameSetMessageBuilder createdBy(
             @Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
@@ -178,7 +178,7 @@ public class AssociateRoleNameChangedMessageBuilder implements Builder<Associate
      * @return Builder
      */
 
-    public AssociateRoleNameChangedMessageBuilder sequenceNumber(final Long sequenceNumber) {
+    public AssociateRoleNameSetMessageBuilder sequenceNumber(final Long sequenceNumber) {
         this.sequenceNumber = sequenceNumber;
         return this;
     }
@@ -189,8 +189,7 @@ public class AssociateRoleNameChangedMessageBuilder implements Builder<Associate
      * @return Builder
      */
 
-    public AssociateRoleNameChangedMessageBuilder resource(
-            final com.commercetools.api.models.common.Reference resource) {
+    public AssociateRoleNameSetMessageBuilder resource(final com.commercetools.api.models.common.Reference resource) {
         this.resource = resource;
         return this;
     }
@@ -201,7 +200,7 @@ public class AssociateRoleNameChangedMessageBuilder implements Builder<Associate
      * @return Builder
      */
 
-    public AssociateRoleNameChangedMessageBuilder resource(
+    public AssociateRoleNameSetMessageBuilder resource(
             Function<com.commercetools.api.models.common.ReferenceBuilder, Builder<? extends com.commercetools.api.models.common.Reference>> builder) {
         this.resource = builder.apply(com.commercetools.api.models.common.ReferenceBuilder.of()).build();
         return this;
@@ -213,7 +212,7 @@ public class AssociateRoleNameChangedMessageBuilder implements Builder<Associate
      * @return Builder
      */
 
-    public AssociateRoleNameChangedMessageBuilder resourceVersion(final Long resourceVersion) {
+    public AssociateRoleNameSetMessageBuilder resourceVersion(final Long resourceVersion) {
         this.resourceVersion = resourceVersion;
         return this;
     }
@@ -224,7 +223,7 @@ public class AssociateRoleNameChangedMessageBuilder implements Builder<Associate
      * @return Builder
      */
 
-    public AssociateRoleNameChangedMessageBuilder resourceUserProvidedIdentifiers(
+    public AssociateRoleNameSetMessageBuilder resourceUserProvidedIdentifiers(
             Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiersBuilder> builder) {
         this.resourceUserProvidedIdentifiers = builder
                 .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of())
@@ -238,7 +237,7 @@ public class AssociateRoleNameChangedMessageBuilder implements Builder<Associate
      * @return Builder
      */
 
-    public AssociateRoleNameChangedMessageBuilder withResourceUserProvidedIdentifiers(
+    public AssociateRoleNameSetMessageBuilder withResourceUserProvidedIdentifiers(
             Function<com.commercetools.api.models.message.UserProvidedIdentifiersBuilder, com.commercetools.api.models.message.UserProvidedIdentifiers> builder) {
         this.resourceUserProvidedIdentifiers = builder
                 .apply(com.commercetools.api.models.message.UserProvidedIdentifiersBuilder.of());
@@ -251,7 +250,7 @@ public class AssociateRoleNameChangedMessageBuilder implements Builder<Associate
      * @return Builder
      */
 
-    public AssociateRoleNameChangedMessageBuilder resourceUserProvidedIdentifiers(
+    public AssociateRoleNameSetMessageBuilder resourceUserProvidedIdentifiers(
             @Nullable final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers) {
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         return this;
@@ -263,7 +262,7 @@ public class AssociateRoleNameChangedMessageBuilder implements Builder<Associate
      * @return Builder
      */
 
-    public AssociateRoleNameChangedMessageBuilder name(final String name) {
+    public AssociateRoleNameSetMessageBuilder name(final String name) {
         this.name = name;
         return this;
     }
@@ -371,46 +370,46 @@ public class AssociateRoleNameChangedMessageBuilder implements Builder<Associate
     }
 
     /**
-     * builds AssociateRoleNameChangedMessage with checking for non-null required values
-     * @return AssociateRoleNameChangedMessage
+     * builds AssociateRoleNameSetMessage with checking for non-null required values
+     * @return AssociateRoleNameSetMessage
      */
-    public AssociateRoleNameChangedMessage build() {
-        Objects.requireNonNull(id, AssociateRoleNameChangedMessage.class + ": id is missing");
-        Objects.requireNonNull(version, AssociateRoleNameChangedMessage.class + ": version is missing");
-        Objects.requireNonNull(createdAt, AssociateRoleNameChangedMessage.class + ": createdAt is missing");
-        Objects.requireNonNull(lastModifiedAt, AssociateRoleNameChangedMessage.class + ": lastModifiedAt is missing");
-        Objects.requireNonNull(sequenceNumber, AssociateRoleNameChangedMessage.class + ": sequenceNumber is missing");
-        Objects.requireNonNull(resource, AssociateRoleNameChangedMessage.class + ": resource is missing");
-        Objects.requireNonNull(resourceVersion, AssociateRoleNameChangedMessage.class + ": resourceVersion is missing");
-        Objects.requireNonNull(name, AssociateRoleNameChangedMessage.class + ": name is missing");
-        return new AssociateRoleNameChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
-            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, name);
+    public AssociateRoleNameSetMessage build() {
+        Objects.requireNonNull(id, AssociateRoleNameSetMessage.class + ": id is missing");
+        Objects.requireNonNull(version, AssociateRoleNameSetMessage.class + ": version is missing");
+        Objects.requireNonNull(createdAt, AssociateRoleNameSetMessage.class + ": createdAt is missing");
+        Objects.requireNonNull(lastModifiedAt, AssociateRoleNameSetMessage.class + ": lastModifiedAt is missing");
+        Objects.requireNonNull(sequenceNumber, AssociateRoleNameSetMessage.class + ": sequenceNumber is missing");
+        Objects.requireNonNull(resource, AssociateRoleNameSetMessage.class + ": resource is missing");
+        Objects.requireNonNull(resourceVersion, AssociateRoleNameSetMessage.class + ": resourceVersion is missing");
+        Objects.requireNonNull(name, AssociateRoleNameSetMessage.class + ": name is missing");
+        return new AssociateRoleNameSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, name);
     }
 
     /**
-     * builds AssociateRoleNameChangedMessage without checking for non-null required values
-     * @return AssociateRoleNameChangedMessage
+     * builds AssociateRoleNameSetMessage without checking for non-null required values
+     * @return AssociateRoleNameSetMessage
      */
-    public AssociateRoleNameChangedMessage buildUnchecked() {
-        return new AssociateRoleNameChangedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
-            createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, name);
+    public AssociateRoleNameSetMessage buildUnchecked() {
+        return new AssociateRoleNameSetMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy,
+            sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, name);
     }
 
     /**
-     * factory method for an instance of AssociateRoleNameChangedMessageBuilder
+     * factory method for an instance of AssociateRoleNameSetMessageBuilder
      * @return builder
      */
-    public static AssociateRoleNameChangedMessageBuilder of() {
-        return new AssociateRoleNameChangedMessageBuilder();
+    public static AssociateRoleNameSetMessageBuilder of() {
+        return new AssociateRoleNameSetMessageBuilder();
     }
 
     /**
-     * create builder for AssociateRoleNameChangedMessage instance
+     * create builder for AssociateRoleNameSetMessage instance
      * @param template instance with prefilled values for the builder
      * @return builder
      */
-    public static AssociateRoleNameChangedMessageBuilder of(final AssociateRoleNameChangedMessage template) {
-        AssociateRoleNameChangedMessageBuilder builder = new AssociateRoleNameChangedMessageBuilder();
+    public static AssociateRoleNameSetMessageBuilder of(final AssociateRoleNameSetMessage template) {
+        AssociateRoleNameSetMessageBuilder builder = new AssociateRoleNameSetMessageBuilder();
         builder.id = template.getId();
         builder.version = template.getVersion();
         builder.createdAt = template.getCreatedAt();

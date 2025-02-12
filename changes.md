@@ -3,21 +3,15 @@
 <details>
 <summary>Removed Type(s)</summary>
 
-- :warning: removed type `ProductSearchFacetScope`
+- :warning: removed type `AssociateRoleNameChangedMessage`
+- :warning: removed type `AssociateRoleNameChangedMessagePayload`
 </details>
 
 
 <details>
 <summary>Added Type(s)</summary>
 
-- added type `ShoppingListSetBusinessUnitAction`
-</details>
-
-
-<details>
-<summary>Added Property(s)</summary>
-
-- added property `businessUnit` to type `ShoppingList`
-- added property `businessUnit` to type `ShoppingListDraft`
+- added type `AssociateRoleNameSetMessage`
+- added type `AssociateRoleNameSetMessagePayload`
 </details>
 

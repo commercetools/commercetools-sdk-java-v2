@@ -137,9 +137,10 @@ public class MessagePayloadQueryBuilderDsl {
     }
 
     public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asAssociateRoleNameSet(
-            Function<com.commercetools.api.predicates.query.message.AssociateRoleNameChangedMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.AssociateRoleNameChangedMessagePayloadQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(fn.apply(
-            com.commercetools.api.predicates.query.message.AssociateRoleNameChangedMessagePayloadQueryBuilderDsl.of()),
+            Function<com.commercetools.api.predicates.query.message.AssociateRoleNameSetMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.AssociateRoleNameSetMessagePayloadQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.message.AssociateRoleNameSetMessagePayloadQueryBuilderDsl.of()),
             MessagePayloadQueryBuilderDsl::of);
     }
 

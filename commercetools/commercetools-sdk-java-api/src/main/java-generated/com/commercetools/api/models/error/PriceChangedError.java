@@ -19,8 +19,8 @@ import jakarta.validation.constraints.NotNull;
  *  <p>When a Cart is frozen, the error can be returned as a failed response to all update actions on Carts and My Carts.</p>
  *  <p>The error is also returned as a failed response to:</p>
  *  <ul>
- *   <li>Create Order from Cart, Create Order in Store from Cart, and Create Order from Quote requests on Orders.</li>
- *   <li>Create Order from Cart, Create Order in Store from Cart, and Create Order from Quote requests on My Orders.</li>
+ *   <li>Create Order from Cart and Create Order in Store from Cart requests on Orders.</li>
+ *   <li>Create Order from Cart and Create Order in Store from Cart requests on My Orders.</li>
  *   <li>Create Order from Cart in BusinessUnit request on Associate Orders.</li>
  *  </ul>
  *

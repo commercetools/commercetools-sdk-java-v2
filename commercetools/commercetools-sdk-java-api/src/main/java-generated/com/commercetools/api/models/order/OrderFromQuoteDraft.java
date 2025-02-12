@@ -36,7 +36,8 @@ import jakarta.validation.constraints.NotNull;
 public interface OrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<OrderFromQuoteDraft> {
 
     /**
-     *  <p>ResourceIdentifier to the Quote from which the Order is created. If the referenced Quote has expired (<code>validTo</code> check) or its <code>quoteState</code> is <code>Accepted</code>, <code>Declined</code>, or <code>Withdrawn</code>, the Order creation will fail.</p>
+     *  <p>ResourceIdentifier to the Quote from which the Order is created.</p>
+     *  <p>The Quote must have the <code>Pending</code> state and must be valid (not past the <code>validTo</code> date).</p>
      * @return quote
      */
     @NotNull
@@ -101,7 +102,8 @@ public interface OrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<Order
     public StateResourceIdentifier getState();
 
     /**
-     *  <p>ResourceIdentifier to the Quote from which the Order is created. If the referenced Quote has expired (<code>validTo</code> check) or its <code>quoteState</code> is <code>Accepted</code>, <code>Declined</code>, or <code>Withdrawn</code>, the Order creation will fail.</p>
+     *  <p>ResourceIdentifier to the Quote from which the Order is created.</p>
+     *  <p>The Quote must have the <code>Pending</code> state and must be valid (not past the <code>validTo</code> date).</p>
      * @param quote value to be set
      */
 

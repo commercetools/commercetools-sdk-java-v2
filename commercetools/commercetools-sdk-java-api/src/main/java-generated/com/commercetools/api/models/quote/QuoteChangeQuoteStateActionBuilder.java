@@ -24,7 +24,7 @@ public class QuoteChangeQuoteStateActionBuilder implements Builder<QuoteChangeQu
     private com.commercetools.api.models.quote.QuoteState quoteState;
 
     /**
-     *  <p>New state to be set for the Quote.</p>
+     *  <p>New state to be set for the Quote, except <code>DeclinedForRenegotiation</code>. The <code>DeclinedForRenegotiation</code> state can be set only when performing a renegotiation request.</p>
      * @param quoteState value to be set
      * @return Builder
      */
@@ -36,7 +36,7 @@ public class QuoteChangeQuoteStateActionBuilder implements Builder<QuoteChangeQu
     }
 
     /**
-     *  <p>New state to be set for the Quote.</p>
+     *  <p>New state to be set for the Quote, except <code>DeclinedForRenegotiation</code>. The <code>DeclinedForRenegotiation</code> state can be set only when performing a renegotiation request.</p>
      * @return quoteState
      */
 

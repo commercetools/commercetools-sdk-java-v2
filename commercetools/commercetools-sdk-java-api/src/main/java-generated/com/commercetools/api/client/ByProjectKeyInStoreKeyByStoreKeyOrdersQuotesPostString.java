@@ -17,11 +17,11 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Creating an Order produces the OrderCreated Message.</p>
+ *  <p>Creates an Order from a Quote in a Store. The referenced Quote must have the <code>Pending</code> state and must be valid (not past the <code>validTo</code> date); otherwise, an InvalidOperation error is returned.</p>
+ *  <p>Produces the OrderCreated Message.</p>
  *  <p>Specific Error Codes:</p>
  *  <ul>
  *   <li>OutOfStock</li>
- *   <li>PriceChanged</li>
  *   <li>InvalidItemShippingDetails</li>
  *   <li>InvalidOperation</li>
  *   <li>CountryNotConfiguredInStore</li>

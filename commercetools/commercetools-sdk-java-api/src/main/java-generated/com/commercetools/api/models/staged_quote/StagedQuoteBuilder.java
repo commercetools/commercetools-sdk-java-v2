@@ -324,7 +324,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     *  <p>Expiration date for the Quote.</p>
+     *  <p>Expiration date for the Quote. Once a Quote expires, it cannot be ordered.</p>
      * @param validTo value to be set
      * @return Builder
      */
@@ -604,7 +604,7 @@ public class StagedQuoteBuilder implements Builder<StagedQuote> {
     }
 
     /**
-     *  <p>Expiration date for the Quote.</p>
+     *  <p>Expiration date for the Quote. Once a Quote expires, it cannot be ordered.</p>
      * @return validTo
      */
 

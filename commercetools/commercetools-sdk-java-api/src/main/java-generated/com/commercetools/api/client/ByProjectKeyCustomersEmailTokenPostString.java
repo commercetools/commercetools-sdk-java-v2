@@ -17,7 +17,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Produces the CustomerEmailTokenCreated Message.</p>
+ *  <p>Use this method to create an email token for a global Customer during their email verification process.</p>
+ *  <p>Creating an email token for the Customer produces the CustomerEmailTokenCreated Message.</p>
  *
  * <hr>
  * <div class=code-example>

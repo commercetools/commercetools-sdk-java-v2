@@ -16,7 +16,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *
+ *  <p>Use this method to create a password reset token for a global Customer during their password reset process.</p>
+ *  <p>Creating a password reset token does not invalidate existing tokens.</p>
  *
  * <hr>
  * <div class=code-example>

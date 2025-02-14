@@ -53,7 +53,7 @@ public class MyCartAddItemShippingAddressActionImpl implements MyCartAddItemShip
 
     /**
      *  <p>Address to append to <code>itemShippingAddresses</code>.</p>
-     *  <p>The new address must have a key that is unique accross this Cart.</p>
+     *  <p>The new address must have a key that is unique across this Cart.</p>
      */
 
     public com.commercetools.api.models.common.BaseAddress getAddress() {

@@ -155,8 +155,8 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
      *  <p>Controls availability of Products for this Store via Product Selections:</p>
      *  <ul>
      *   <li>Leave empty if all Products in the Project should be available in this Store.</li>
-     *   <li>If only <code>inactive</code> Product Selections with <code>IndividualExclusion</code> ProductSelectionMode are provided, all the Products are availlable in this Store.</li>
-     *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of mode <code>Individual</code>, no Product is availlable in this Store.</li>
+     *   <li>If only <code>inactive</code> Product Selections with <code>IndividualExclusion</code> ProductSelectionMode are provided, all the Products are available in this Store.</li>
+     *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of mode <code>Individual</code>, no Product is available in this Store.</li>
      *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availlability in this Store.</li>
      *  </ul>
      * @return productSelections
@@ -294,8 +294,8 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
      *  <p>Controls availability of Products for this Store via Product Selections:</p>
      *  <ul>
      *   <li>Leave empty if all Products in the Project should be available in this Store.</li>
-     *   <li>If only <code>inactive</code> Product Selections with <code>IndividualExclusion</code> ProductSelectionMode are provided, all the Products are availlable in this Store.</li>
-     *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of mode <code>Individual</code>, no Product is availlable in this Store.</li>
+     *   <li>If only <code>inactive</code> Product Selections with <code>IndividualExclusion</code> ProductSelectionMode are provided, all the Products are available in this Store.</li>
+     *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of mode <code>Individual</code>, no Product is available in this Store.</li>
      *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availlability in this Store.</li>
      *  </ul>
      * @param productSelections values to be set
@@ -308,8 +308,8 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
      *  <p>Controls availability of Products for this Store via Product Selections:</p>
      *  <ul>
      *   <li>Leave empty if all Products in the Project should be available in this Store.</li>
-     *   <li>If only <code>inactive</code> Product Selections with <code>IndividualExclusion</code> ProductSelectionMode are provided, all the Products are availlable in this Store.</li>
-     *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of mode <code>Individual</code>, no Product is availlable in this Store.</li>
+     *   <li>If only <code>inactive</code> Product Selections with <code>IndividualExclusion</code> ProductSelectionMode are provided, all the Products are available in this Store.</li>
+     *   <li>If all the Product Selections provided are <code>inactive</code> and there's at least a Product Selection of mode <code>Individual</code>, no Product is available in this Store.</li>
      *   <li>If at least an <code>active</code> Product Selection is provided, only <code>active</code> Product Selections are considered to compute the availlability in this Store.</li>
      *  </ul>
      * @param productSelections values to be set

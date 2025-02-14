@@ -56,7 +56,7 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
     }
 
     /**
-     *  <p>RecourceIdentifier to a ShippingMethod to add to the Cart with <code>Multiple</code> ShippingMode. If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
+     *  <p>ResourceIdentifier to a ShippingMethod to add to the Cart with <code>Multiple</code> ShippingMode. If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
      * @param builder function to build the shippingMethod value
      * @return Builder
      */
@@ -70,7 +70,7 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
     }
 
     /**
-     *  <p>RecourceIdentifier to a ShippingMethod to add to the Cart with <code>Multiple</code> ShippingMode. If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
+     *  <p>ResourceIdentifier to a ShippingMethod to add to the Cart with <code>Multiple</code> ShippingMode. If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
      * @param builder function to build the shippingMethod value
      * @return Builder
      */
@@ -83,7 +83,7 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
     }
 
     /**
-     *  <p>RecourceIdentifier to a ShippingMethod to add to the Cart with <code>Multiple</code> ShippingMode. If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
+     *  <p>ResourceIdentifier to a ShippingMethod to add to the Cart with <code>Multiple</code> ShippingMode. If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
      * @param shippingMethod value to be set
      * @return Builder
      */
@@ -337,7 +337,7 @@ public class CartAddShippingMethodActionBuilder implements Builder<CartAddShippi
     }
 
     /**
-     *  <p>RecourceIdentifier to a ShippingMethod to add to the Cart with <code>Multiple</code> ShippingMode. If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
+     *  <p>ResourceIdentifier to a ShippingMethod to add to the Cart with <code>Multiple</code> ShippingMode. If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
      * @return shippingMethod
      */
 

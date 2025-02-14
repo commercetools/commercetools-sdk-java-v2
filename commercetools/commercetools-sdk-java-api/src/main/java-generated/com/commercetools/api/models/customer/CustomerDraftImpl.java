@@ -244,7 +244,7 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
     }
 
     /**
-     *  <p>Company name of the Customer. When representing a company as a Customer, Business Units provide extended funtionality.</p>
+     *  <p>Company name of the Customer. When representing a company as a Customer, Business Units provide extended functionality.</p>
      */
 
     public String getCompanyName() {

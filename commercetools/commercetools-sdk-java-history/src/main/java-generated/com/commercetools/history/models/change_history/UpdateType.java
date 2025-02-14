@@ -286,7 +286,7 @@ public interface UpdateType extends JsonEnum {
 
     UpdateType SET_ASSET_TAGS = UpdateTypeEnum.SET_ASSET_TAGS;
 
-    UpdateType SET_ASSSET_KEY = UpdateTypeEnum.SET_ASSSET_KEY;
+    UpdateType SET_ASSET_KEY = UpdateTypeEnum.SET_ASSET_KEY;
 
     UpdateType SET_ATTRIBUTE = UpdateTypeEnum.SET_ATTRIBUTE;
 
@@ -1242,9 +1242,9 @@ public interface UpdateType extends JsonEnum {
         SET_ASSET_TAGS("setAssetTags"),
 
         /**
-         * setAsssetKey
+         * setAssetKey
          */
-        SET_ASSSET_KEY("setAsssetKey"),
+        SET_ASSET_KEY("setAssetKey"),
 
         /**
          * setAttribute

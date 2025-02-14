@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generic type holding specifc ShippingRateInputDraft types.</p>
+ *  <p>Generic type holding specific ShippingRateInputDraft types.</p>
  *
  * <hr>
  * Example to create a subtype instance using the builder pattern

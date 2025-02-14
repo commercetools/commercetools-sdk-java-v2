@@ -149,7 +149,7 @@ public class StateDraftBuilder implements Builder<StateDraft> {
     }
 
     /**
-     *  <p>If suitable, assign predifined roles the State can fulfill in case the State's <code>type</code> is <code>LineItemState</code> or <code>ReviewState</code>.</p>
+     *  <p>If suitable, assign predefined roles the State can fulfill in case the State's <code>type</code> is <code>LineItemState</code> or <code>ReviewState</code>.</p>
      * @param roles value to be set
      * @return Builder
      */
@@ -160,7 +160,7 @@ public class StateDraftBuilder implements Builder<StateDraft> {
     }
 
     /**
-     *  <p>If suitable, assign predifined roles the State can fulfill in case the State's <code>type</code> is <code>LineItemState</code> or <code>ReviewState</code>.</p>
+     *  <p>If suitable, assign predefined roles the State can fulfill in case the State's <code>type</code> is <code>LineItemState</code> or <code>ReviewState</code>.</p>
      * @param roles value to be set
      * @return Builder
      */
@@ -172,7 +172,7 @@ public class StateDraftBuilder implements Builder<StateDraft> {
     }
 
     /**
-     *  <p>If suitable, assign predifined roles the State can fulfill in case the State's <code>type</code> is <code>LineItemState</code> or <code>ReviewState</code>.</p>
+     *  <p>If suitable, assign predefined roles the State can fulfill in case the State's <code>type</code> is <code>LineItemState</code> or <code>ReviewState</code>.</p>
      * @param roles value to be set
      * @return Builder
      */
@@ -360,7 +360,7 @@ public class StateDraftBuilder implements Builder<StateDraft> {
     }
 
     /**
-     *  <p>If suitable, assign predifined roles the State can fulfill in case the State's <code>type</code> is <code>LineItemState</code> or <code>ReviewState</code>.</p>
+     *  <p>If suitable, assign predefined roles the State can fulfill in case the State's <code>type</code> is <code>LineItemState</code> or <code>ReviewState</code>.</p>
      * @return roles
      */
 

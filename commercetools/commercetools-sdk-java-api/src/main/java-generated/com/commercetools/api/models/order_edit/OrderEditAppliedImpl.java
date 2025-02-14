@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Result of a succesful application of <code>stagedActions</code> to the Order.</p>
+ *  <p>Result of a successful application of <code>stagedActions</code> to the Order.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderEditAppliedImpl implements OrderEditApplied, ModelBase {

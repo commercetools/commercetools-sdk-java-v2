@@ -277,7 +277,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     *  <p>Company name of the Customer. When representing a company as a Customer, Business Units provide extended funtionality.</p>
+     *  <p>Company name of the Customer. When representing a company as a Customer, Business Units provide extended functionality.</p>
      * @param companyName value to be set
      * @return Builder
      */
@@ -852,7 +852,7 @@ public class CustomerDraftBuilder implements Builder<CustomerDraft> {
     }
 
     /**
-     *  <p>Company name of the Customer. When representing a company as a Customer, Business Units provide extended funtionality.</p>
+     *  <p>Company name of the Customer. When representing a company as a Customer, Business Units provide extended functionality.</p>
      * @return companyName
      */
 

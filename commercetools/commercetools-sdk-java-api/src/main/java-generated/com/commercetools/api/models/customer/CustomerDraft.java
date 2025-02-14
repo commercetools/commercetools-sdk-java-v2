@@ -147,7 +147,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
     public LocalDate getDateOfBirth();
 
     /**
-     *  <p>Company name of the Customer. When representing a company as a Customer, Business Units provide extended funtionality.</p>
+     *  <p>Company name of the Customer. When representing a company as a Customer, Business Units provide extended functionality.</p>
      * @return companyName
      */
 
@@ -359,7 +359,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
     public void setDateOfBirth(final LocalDate dateOfBirth);
 
     /**
-     *  <p>Company name of the Customer. When representing a company as a Customer, Business Units provide extended funtionality.</p>
+     *  <p>Company name of the Customer. When representing a company as a Customer, Business Units provide extended functionality.</p>
      * @param companyName value to be set
      */
 

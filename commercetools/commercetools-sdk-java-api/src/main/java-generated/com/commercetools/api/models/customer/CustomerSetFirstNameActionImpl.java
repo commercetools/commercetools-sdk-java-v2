@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Setting the first name of the Customer produces the CustomeFirstNameSet Message.</p>
+ *  <p>Setting the first name of the Customer produces the CustomerFirstNameSet Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerSetFirstNameActionImpl implements CustomerSetFirstNameAction, ModelBase {

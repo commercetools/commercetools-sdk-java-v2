@@ -27,7 +27,7 @@
         </plugins>
     </build>
     <properties>
-        <commercetools.version>17.27.0-alpha.1-mcg</commercetools.version>
+        <commercetools.version>17.27.0</commercetools.version>
     </properties>
     <dependencies>
         <dependency>

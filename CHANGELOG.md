@@ -1,4 +1,31 @@
 
+# 17.27.0 (2025-02-19)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/816
+* [DEVX-468] Capture errors in telemetry middleware by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/817
+* chore(deps): update actions/create-github-app-token digest to 67e27a7 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/815
+* Fix deserialization of time attributes/custom-fields by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/818
+* fix(deps): update all dependencies by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/795
+* chore(deps): pin gradle/actions action to 94baf22 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/812
+* chore(deps): update codecov/codecov-action action to v5 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/796
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/819
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/820
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/821
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/822
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/823
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/824
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/826
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/827
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/828
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/829
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/832
+* Bump io.netty:netty-handler from 4.1.117.Final to 4.1.118.Final by @dependabot in https://github.com/commercetools/commercetools-sdk-java-v2/pull/825
+* chore(deps): update plugin io.github.gradle-nexus.publish-plugin to v2 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/620
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.26.0...17.27.0
+
 # 17.26.0 (2025-02-03)
 
 ## What's Changed

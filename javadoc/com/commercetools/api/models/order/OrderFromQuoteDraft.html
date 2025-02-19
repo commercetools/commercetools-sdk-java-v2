@@ -239,7 +239,8 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
 </span><span class="return-type">@NotNull @Valid <a href="../quote/QuoteResourceIdentifier.html" title="interface in com.commercetools.api.models.quote">QuoteResourceIdentifier</a></span>&nbsp;<span class="element-name">getQuote</span>()</div>
-<div class="block"><p>ResourceIdentifier to the Quote from which the Order is created. If the referenced Quote has expired (<code>validTo</code> check) or its <code>quoteState</code> is <code>Accepted</code>, <code>Declined</code>, or <code>Withdrawn</code>, the Order creation will fail.</p></div>
+<div class="block"><p>ResourceIdentifier to the Quote from which the Order is created.</p>
+  <p>The Quote must have the <code>Pending</code> state and must be valid (not past the <code>validTo</code> date).</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>quote</dd>
@@ -329,7 +330,8 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <section class="detail" id="setQuote(com.commercetools.api.models.quote.QuoteResourceIdentifier)">
 <h3>setQuote</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setQuote</span><wbr><span class="parameters">(<a href="../quote/QuoteResourceIdentifier.html" title="interface in com.commercetools.api.models.quote">QuoteResourceIdentifier</a>&nbsp;quote)</span></div>
-<div class="block"><p>ResourceIdentifier to the Quote from which the Order is created. If the referenced Quote has expired (<code>validTo</code> check) or its <code>quoteState</code> is <code>Accepted</code>, <code>Declined</code>, or <code>Withdrawn</code>, the Order creation will fail.</p></div>
+<div class="block"><p>ResourceIdentifier to the Quote from which the Order is created.</p>
+  <p>The Quote must have the <code>Pending</code> state and must be valid (not past the <code>validTo</code> date).</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>quote</code> - value to be set</dd>

@@ -78,7 +78,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">ShippingInfoImportDraft</span><span class="extends-implements">
 extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="interface in io.vrap.rmf.base.client">Draft</a>&lt;<a href="ShippingInfoImportDraft.html" title="interface in com.commercetools.importapi.models.orders">ShippingInfoImportDraft</a>&gt;</span></div>
-<div class="block"><p>Maps to an order's <code>shippingInfo</code> property. This field is usually populated by the cart assosciated with the order, but when importing orders you must provide a draft representation as a part of the OrderImport.</p>
+<div class="block"><p>Maps to an order's <code>shippingInfo</code> property. This field is usually populated by the cart associated with the order, but when importing orders you must provide a draft representation as a part of the OrderImport.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -123,7 +123,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Delivery.html" title="interface in com.commercetools.importapi.models.orders">Delivery</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDeliveries()" class="member-name-link">getDeliveries</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</div>
+<div class="block">Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referenceable by an <code>id</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="DiscountedLineItemPriceDraft.html" title="interface in com.commercetools.importapi.models.orders">DiscountedLineItemPriceDraft</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDiscountedPrice()" class="member-name-link">getDiscountedPrice</a>()</code></div>
@@ -166,12 +166,12 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setDeliveries(com.commercetools.importapi.models.orders.Delivery...)" class="member-name-link">setDeliveries</a><wbr>(<a href="Delivery.html" title="interface in com.commercetools.importapi.models.orders">Delivery</a>...&nbsp;deliveries)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</div>
+<div class="block">Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referenceable by an <code>id</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setDeliveries(java.util.List)" class="member-name-link">setDeliveries</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Delivery.html" title="interface in com.commercetools.importapi.models.orders">Delivery</a>&gt;&nbsp;deliveries)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</div>
+<div class="block">Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referenceable by an <code>id</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setDiscountedPrice(com.commercetools.importapi.models.orders.DiscountedLineItemPriceDraft)" class="member-name-link">setDiscountedPrice</a><wbr>(<a href="DiscountedLineItemPriceDraft.html" title="interface in com.commercetools.importapi.models.orders">DiscountedLineItemPriceDraft</a>&nbsp;discountedPrice)</code></div>
@@ -312,7 +312,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <h3>getDeliveries</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Delivery.html" title="interface in com.commercetools.importapi.models.orders">Delivery</a>&gt;</span>&nbsp;<span class="element-name">getDeliveries</span>()</div>
-<div class="block"><p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</p></div>
+<div class="block"><p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referenceable by an <code>id</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>deliveries</dd>
@@ -410,7 +410,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <section class="detail" id="setDeliveries(com.commercetools.importapi.models.orders.Delivery...)">
 <h3>setDeliveries</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setDeliveries</span><wbr><span class="parameters">(<a href="Delivery.html" title="interface in com.commercetools.importapi.models.orders">Delivery</a>...&nbsp;deliveries)</span></div>
-<div class="block"><p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</p></div>
+<div class="block"><p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referenceable by an <code>id</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>deliveries</code> - values to be set</dd>
@@ -421,7 +421,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <section class="detail" id="setDeliveries(java.util.List)">
 <h3>setDeliveries</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setDeliveries</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Delivery.html" title="interface in com.commercetools.importapi.models.orders">Delivery</a>&gt;&nbsp;deliveries)</span></div>
-<div class="block"><p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</p></div>
+<div class="block"><p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referenceable by an <code>id</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>deliveries</code> - values to be set</dd>

@@ -138,7 +138,7 @@ extends <a href="QuoteUpdateAction.html" title="interface in com.commercetools.a
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="QuoteState.html" title="interface in com.commercetools.api.models.quote">QuoteState</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getQuoteState()" class="member-name-link">getQuoteState</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">New state to be set for the Quote.</div>
+<div class="block">New state to be set for the Quote, except <code>DeclinedForRenegotiation</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="QuoteChangeQuoteStateAction.html" title="interface in com.commercetools.api.models.quote">QuoteChangeQuoteStateAction</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -153,7 +153,7 @@ extends <a href="QuoteUpdateAction.html" title="interface in com.commercetools.a
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setQuoteState(com.commercetools.api.models.quote.QuoteState)" class="member-name-link">setQuoteState</a><wbr>(<a href="QuoteState.html" title="interface in com.commercetools.api.models.quote">QuoteState</a>&nbsp;quoteState)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">New state to be set for the Quote.</div>
+<div class="block">New state to be set for the Quote, except <code>DeclinedForRenegotiation</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="QuoteChangeQuoteStateAction.html" title="interface in com.commercetools.api.models.quote">QuoteChangeQuoteStateAction</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -213,7 +213,7 @@ extends <a href="QuoteUpdateAction.html" title="interface in com.commercetools.a
 <h3>getQuoteState</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="QuoteState.html" title="interface in com.commercetools.api.models.quote">QuoteState</a></span>&nbsp;<span class="element-name">getQuoteState</span>()</div>
-<div class="block"><p>New state to be set for the Quote.</p></div>
+<div class="block"><p>New state to be set for the Quote, except <code>DeclinedForRenegotiation</code>. The <code>DeclinedForRenegotiation</code> state can be set only when performing a renegotiation request.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>quoteState</dd>
@@ -224,7 +224,7 @@ extends <a href="QuoteUpdateAction.html" title="interface in com.commercetools.a
 <section class="detail" id="setQuoteState(com.commercetools.api.models.quote.QuoteState)">
 <h3>setQuoteState</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setQuoteState</span><wbr><span class="parameters">(<a href="QuoteState.html" title="interface in com.commercetools.api.models.quote">QuoteState</a>&nbsp;quoteState)</span></div>
-<div class="block"><p>New state to be set for the Quote.</p></div>
+<div class="block"><p>New state to be set for the Quote, except <code>DeclinedForRenegotiation</code>. The <code>DeclinedForRenegotiation</code> state can be set only when performing a renegotiation request.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>quoteState</code> - value to be set</dd>

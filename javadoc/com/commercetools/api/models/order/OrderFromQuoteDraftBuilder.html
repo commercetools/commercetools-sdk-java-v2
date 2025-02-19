@@ -275,7 +275,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="quote(java.util.function.Function)">
 <h3>quote</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFromQuoteDraftBuilder.html" title="class in com.commercetools.api.models.order">OrderFromQuoteDraftBuilder</a></span>&nbsp;<span class="element-name">quote</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../quote/QuoteResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.quote">QuoteResourceIdentifierBuilder</a>,<wbr><a href="../quote/QuoteResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.quote">QuoteResourceIdentifierBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>ResourceIdentifier to the Quote from which the Order is created. If the referenced Quote has expired (<code>validTo</code> check) or its <code>quoteState</code> is <code>Accepted</code>, <code>Declined</code>, or <code>Withdrawn</code>, the Order creation will fail.</p></div>
+<div class="block"><p>ResourceIdentifier to the Quote from which the Order is created.</p>
+  <p>The Quote must have the <code>Pending</code> state and must be valid (not past the <code>validTo</code> date).</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the quote value</dd>
@@ -288,7 +289,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withQuote(java.util.function.Function)">
 <h3>withQuote</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFromQuoteDraftBuilder.html" title="class in com.commercetools.api.models.order">OrderFromQuoteDraftBuilder</a></span>&nbsp;<span class="element-name">withQuote</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../quote/QuoteResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.quote">QuoteResourceIdentifierBuilder</a>,<wbr><a href="../quote/QuoteResourceIdentifier.html" title="interface in com.commercetools.api.models.quote">QuoteResourceIdentifier</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>ResourceIdentifier to the Quote from which the Order is created. If the referenced Quote has expired (<code>validTo</code> check) or its <code>quoteState</code> is <code>Accepted</code>, <code>Declined</code>, or <code>Withdrawn</code>, the Order creation will fail.</p></div>
+<div class="block"><p>ResourceIdentifier to the Quote from which the Order is created.</p>
+  <p>The Quote must have the <code>Pending</code> state and must be valid (not past the <code>validTo</code> date).</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the quote value</dd>
@@ -301,7 +303,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="quote(com.commercetools.api.models.quote.QuoteResourceIdentifier)">
 <h3>quote</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderFromQuoteDraftBuilder.html" title="class in com.commercetools.api.models.order">OrderFromQuoteDraftBuilder</a></span>&nbsp;<span class="element-name">quote</span><wbr><span class="parameters">(<a href="../quote/QuoteResourceIdentifier.html" title="interface in com.commercetools.api.models.quote">QuoteResourceIdentifier</a>&nbsp;quote)</span></div>
-<div class="block"><p>ResourceIdentifier to the Quote from which the Order is created. If the referenced Quote has expired (<code>validTo</code> check) or its <code>quoteState</code> is <code>Accepted</code>, <code>Declined</code>, or <code>Withdrawn</code>, the Order creation will fail.</p></div>
+<div class="block"><p>ResourceIdentifier to the Quote from which the Order is created.</p>
+  <p>The Quote must have the <code>Pending</code> state and must be valid (not past the <code>validTo</code> date).</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>quote</code> - value to be set</dd>
@@ -437,7 +440,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getQuote()">
 <h3>getQuote</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../quote/QuoteResourceIdentifier.html" title="interface in com.commercetools.api.models.quote">QuoteResourceIdentifier</a></span>&nbsp;<span class="element-name">getQuote</span>()</div>
-<div class="block"><p>ResourceIdentifier to the Quote from which the Order is created. If the referenced Quote has expired (<code>validTo</code> check) or its <code>quoteState</code> is <code>Accepted</code>, <code>Declined</code>, or <code>Withdrawn</code>, the Order creation will fail.</p></div>
+<div class="block"><p>ResourceIdentifier to the Quote from which the Order is created.</p>
+  <p>The Quote must have the <code>Pending</code> state and must be valid (not past the <code>validTo</code> date).</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>quote</dd>

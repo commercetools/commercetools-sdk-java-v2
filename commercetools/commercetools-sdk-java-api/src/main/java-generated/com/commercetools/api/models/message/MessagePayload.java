@@ -44,7 +44,7 @@ import jakarta.validation.constraints.NotNull;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.AssociateRoleBuyerAssignableChangedMessagePayloadImpl.class, name = AssociateRoleBuyerAssignableChangedMessagePayload.ASSOCIATE_ROLE_BUYER_ASSIGNABLE_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.AssociateRoleCreatedMessagePayloadImpl.class, name = AssociateRoleCreatedMessagePayload.ASSOCIATE_ROLE_CREATED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.AssociateRoleDeletedMessagePayloadImpl.class, name = AssociateRoleDeletedMessagePayload.ASSOCIATE_ROLE_DELETED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.message.AssociateRoleNameChangedMessagePayloadImpl.class, name = AssociateRoleNameChangedMessagePayload.ASSOCIATE_ROLE_NAME_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.AssociateRoleNameSetMessagePayloadImpl.class, name = AssociateRoleNameSetMessagePayload.ASSOCIATE_ROLE_NAME_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.AssociateRolePermissionAddedMessagePayloadImpl.class, name = AssociateRolePermissionAddedMessagePayload.ASSOCIATE_ROLE_PERMISSION_ADDED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.AssociateRolePermissionRemovedMessagePayloadImpl.class, name = AssociateRolePermissionRemovedMessagePayload.ASSOCIATE_ROLE_PERMISSION_REMOVED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.AssociateRolePermissionsSetMessagePayloadImpl.class, name = AssociateRolePermissionsSetMessagePayload.ASSOCIATE_ROLE_PERMISSIONS_SET),
@@ -358,9 +358,9 @@ public interface MessagePayload extends MessagePayloadMixin {
             return com.commercetools.api.models.message.AssociateRoleDeletedMessagePayload
                     .deepCopy((com.commercetools.api.models.message.AssociateRoleDeletedMessagePayload) template);
         }
-        if (template instanceof com.commercetools.api.models.message.AssociateRoleNameChangedMessagePayload) {
-            return com.commercetools.api.models.message.AssociateRoleNameChangedMessagePayload
-                    .deepCopy((com.commercetools.api.models.message.AssociateRoleNameChangedMessagePayload) template);
+        if (template instanceof com.commercetools.api.models.message.AssociateRoleNameSetMessagePayload) {
+            return com.commercetools.api.models.message.AssociateRoleNameSetMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.AssociateRoleNameSetMessagePayload) template);
         }
         if (template instanceof com.commercetools.api.models.message.AssociateRolePermissionAddedMessagePayload) {
             return com.commercetools.api.models.message.AssociateRolePermissionAddedMessagePayload.deepCopy(
@@ -1202,8 +1202,8 @@ public interface MessagePayload extends MessagePayloadMixin {
      * builder for associateRoleNameSet subtype
      * @return builder
      */
-    public static com.commercetools.api.models.message.AssociateRoleNameChangedMessagePayloadBuilder associateRoleNameSetBuilder() {
-        return com.commercetools.api.models.message.AssociateRoleNameChangedMessagePayloadBuilder.of();
+    public static com.commercetools.api.models.message.AssociateRoleNameSetMessagePayloadBuilder associateRoleNameSetBuilder() {
+        return com.commercetools.api.models.message.AssociateRoleNameSetMessagePayloadBuilder.of();
     }
 
     /**

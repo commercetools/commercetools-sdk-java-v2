@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Maps to an order's <code>shippingInfo</code> property. This field is usually populated by the cart assosciated with the order, but when importing orders you must provide a draft representation as a part of the OrderImport.</p>
+ *  <p>Maps to an order's <code>shippingInfo</code> property. This field is usually populated by the cart associated with the order, but when importing orders you must provide a draft representation as a part of the OrderImport.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, ModelBase {
@@ -119,7 +119,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
     }
 
     /**
-     *  <p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referencable by an <code>id</code>.</p>
+     *  <p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referenceable by an <code>id</code>.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.orders.Delivery> getDeliveries() {

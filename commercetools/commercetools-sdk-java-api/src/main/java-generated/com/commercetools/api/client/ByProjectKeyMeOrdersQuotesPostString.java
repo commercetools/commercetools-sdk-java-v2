@@ -17,12 +17,12 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>When creating B2B Orders, the Customer must have the <code>CreateMyOrdersFromMyQuotes</code> Permission.</p>
- *  <p>Creating an Order produces the OrderCreated Message.</p>
+ *  <p>Creates an Order from a Quote. To create B2B Orders, the Customer must have the <code>CreateMyOrdersFromMyQuotes</code> Permission.</p>
+ *  <p>The referenced Quote must have the <code>Pending</code> state and must be valid (not past the <code>validTo</code> date); otherwise, an InvalidOperation error is returned.</p>
+ *  <p>Produces the OrderCreated Message.</p>
  *  <p>Specific Error Codes:</p>
  *  <ul>
  *   <li>OutOfStock</li>
- *   <li>PriceChanged</li>
  *   <li>InvalidItemShippingDetails</li>
  *   <li>CountryNotConfiguredInStore</li>
  *   <li>AssociateMissingPermission</li>

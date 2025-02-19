@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
  *  <p>Generated after a successful Set Name update action.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class AssociateRoleNameChangedMessageImpl implements AssociateRoleNameChangedMessage, ModelBase {
+public class AssociateRoleNameSetMessageImpl implements AssociateRoleNameSetMessage, ModelBase {
 
     private String id;
 
@@ -50,8 +50,7 @@ public class AssociateRoleNameChangedMessageImpl implements AssociateRoleNameCha
      * create instance with all properties
      */
     @JsonCreator
-    AssociateRoleNameChangedMessageImpl(@JsonProperty("id") final String id,
-            @JsonProperty("version") final Long version,
+    AssociateRoleNameSetMessageImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
             @JsonProperty("createdAt") final java.time.ZonedDateTime createdAt,
             @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt,
             @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy,
@@ -78,7 +77,7 @@ public class AssociateRoleNameChangedMessageImpl implements AssociateRoleNameCha
     /**
      * create empty instance
      */
-    public AssociateRoleNameChangedMessageImpl() {
+    public AssociateRoleNameSetMessageImpl() {
         this.type = ASSOCIATE_ROLE_NAME_SET;
     }
 
@@ -231,7 +230,7 @@ public class AssociateRoleNameChangedMessageImpl implements AssociateRoleNameCha
         if (o == null || getClass() != o.getClass())
             return false;
 
-        AssociateRoleNameChangedMessageImpl that = (AssociateRoleNameChangedMessageImpl) o;
+        AssociateRoleNameSetMessageImpl that = (AssociateRoleNameSetMessageImpl) o;
 
         return new EqualsBuilder().append(id, that.id)
                 .append(version, that.version)

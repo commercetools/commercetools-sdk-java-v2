@@ -17,8 +17,10 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
+ *  <p>Use this method to reset a Store-specific Customer's password during their password reset process.</p>
+ *  <p>After the password is reset, any previously issued access and/or refresh tokens created through the password flow or refresh token flow are invalidated.</p>
  *  <p>Resetting the password of the Customer produces the CustomerPasswordUpdated Message with <code>reset=true</code>.</p>
- *  <p>If the Customer exists in the Project but the <code>stores</code> field references a different Store, this method returns a ResourceNotFound error.</p>
+ *  <p>If the Customer exists in the Project but the <code>stores</code> field references a different Store, then this method returns a ResourceNotFound error.</p>
  *
  * <hr>
  * <div class=code-example>

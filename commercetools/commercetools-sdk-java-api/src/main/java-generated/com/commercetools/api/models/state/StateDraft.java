@@ -76,7 +76,7 @@ public interface StateDraft extends com.commercetools.api.models.WithKey, io.vra
     public Boolean getInitial();
 
     /**
-     *  <p>If suitable, assign predifined roles the State can fulfill in case the State's <code>type</code> is <code>LineItemState</code> or <code>ReviewState</code>.</p>
+     *  <p>If suitable, assign predefined roles the State can fulfill in case the State's <code>type</code> is <code>LineItemState</code> or <code>ReviewState</code>.</p>
      * @return roles
      */
 
@@ -132,7 +132,7 @@ public interface StateDraft extends com.commercetools.api.models.WithKey, io.vra
     public void setInitial(final Boolean initial);
 
     /**
-     *  <p>If suitable, assign predifined roles the State can fulfill in case the State's <code>type</code> is <code>LineItemState</code> or <code>ReviewState</code>.</p>
+     *  <p>If suitable, assign predefined roles the State can fulfill in case the State's <code>type</code> is <code>LineItemState</code> or <code>ReviewState</code>.</p>
      * @param roles values to be set
      */
 
@@ -140,7 +140,7 @@ public interface StateDraft extends com.commercetools.api.models.WithKey, io.vra
     public void setRoles(final StateRoleEnum... roles);
 
     /**
-     *  <p>If suitable, assign predifined roles the State can fulfill in case the State's <code>type</code> is <code>LineItemState</code> or <code>ReviewState</code>.</p>
+     *  <p>If suitable, assign predefined roles the State can fulfill in case the State's <code>type</code> is <code>LineItemState</code> or <code>ReviewState</code>.</p>
      * @param roles values to be set
      */
 

@@ -71,8 +71,8 @@ public class MessagePayloadBuilder {
         return com.commercetools.api.models.message.AssociateRoleDeletedMessagePayloadBuilder.of();
     }
 
-    public com.commercetools.api.models.message.AssociateRoleNameChangedMessagePayloadBuilder associateRoleNameSetBuilder() {
-        return com.commercetools.api.models.message.AssociateRoleNameChangedMessagePayloadBuilder.of();
+    public com.commercetools.api.models.message.AssociateRoleNameSetMessagePayloadBuilder associateRoleNameSetBuilder() {
+        return com.commercetools.api.models.message.AssociateRoleNameSetMessagePayloadBuilder.of();
     }
 
     public com.commercetools.api.models.message.AssociateRolePermissionAddedMessagePayloadBuilder associateRolePermissionAddedBuilder() {

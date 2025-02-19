@@ -8,20 +8,20 @@ import java.util.List;
 
 import com.commercetools.api.predicates.expansion.ExpansionDsl;
 
-public class AssociateRoleNameChangedMessageExpansionBuilderDsl implements ExpansionDsl {
+public class AssociateRoleNameSetMessageExpansionBuilderDsl implements ExpansionDsl {
 
     private final List<String> path;
 
-    private AssociateRoleNameChangedMessageExpansionBuilderDsl(final List<String> path) {
+    private AssociateRoleNameSetMessageExpansionBuilderDsl(final List<String> path) {
         this.path = path;
     }
 
-    public static AssociateRoleNameChangedMessageExpansionBuilderDsl of() {
-        return new AssociateRoleNameChangedMessageExpansionBuilderDsl(Collections.emptyList());
+    public static AssociateRoleNameSetMessageExpansionBuilderDsl of() {
+        return new AssociateRoleNameSetMessageExpansionBuilderDsl(Collections.emptyList());
     }
 
-    public static AssociateRoleNameChangedMessageExpansionBuilderDsl of(final List<String> path) {
-        return new AssociateRoleNameChangedMessageExpansionBuilderDsl(path);
+    public static AssociateRoleNameSetMessageExpansionBuilderDsl of(final List<String> path) {
+        return new AssociateRoleNameSetMessageExpansionBuilderDsl(path);
     }
 
     @Override

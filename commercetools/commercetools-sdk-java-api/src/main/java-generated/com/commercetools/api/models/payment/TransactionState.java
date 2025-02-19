@@ -23,7 +23,7 @@ public interface TransactionState extends JsonEnum {
     <p>The payment service has accepted the Transaction, but it is not completed yet.</p> */
     TransactionState PENDING = TransactionStateEnum.PENDING;
     /**
-    <p>The payment service has confirmed the successful completion of the Transation.</p> */
+    <p>The payment service has confirmed the successful completion of the Transaction.</p> */
     TransactionState SUCCESS = TransactionStateEnum.SUCCESS;
     /**
     <p>Transaction has unrecoverably failed.</p> */

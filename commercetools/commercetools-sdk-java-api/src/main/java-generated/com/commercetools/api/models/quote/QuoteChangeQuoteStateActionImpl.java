@@ -52,7 +52,7 @@ public class QuoteChangeQuoteStateActionImpl implements QuoteChangeQuoteStateAct
     }
 
     /**
-     *  <p>New state to be set for the Quote.</p>
+     *  <p>New state to be set for the Quote, except <code>DeclinedForRenegotiation</code>. The <code>DeclinedForRenegotiation</code> state can be set only when performing a renegotiation request.</p>
      */
 
     public com.commercetools.api.models.quote.QuoteState getQuoteState() {

@@ -163,7 +163,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
     public CustomerGroupReference getCustomerGroup();
 
     /**
-     *  <p>Expiration date for the Quote.</p>
+     *  <p>Expiration date for the Quote. Once a Quote expires, it cannot be ordered.</p>
      * @return validTo
      */
 
@@ -443,7 +443,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
     public void setCustomerGroup(final CustomerGroupReference customerGroup);
 
     /**
-     *  <p>Expiration date for the Quote.</p>
+     *  <p>Expiration date for the Quote. Once a Quote expires, it cannot be ordered.</p>
      * @param validTo value to be set
      */
 

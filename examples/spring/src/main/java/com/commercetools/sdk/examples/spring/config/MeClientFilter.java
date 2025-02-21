@@ -2,6 +2,7 @@
 package com.commercetools.sdk.examples.spring.config;
 
 import java.util.Map;
+import java.util.Optional;
 
 import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
@@ -39,13 +40,16 @@ public class MeClientFilter implements WebFilter {
     @Value(value = "${ctp.project.auth.url:#{null}}")
     private String authUrl;
 
+    private final ServiceRegion serviceRegion;
+
     private ClientCredentials credentials() {
         return ClientCredentials.of().withClientId(clientId).withClientSecret(clientSecret).build();
     }
 
     @Autowired
-    public MeClientFilter(ApiHttpClient client) {
+    public MeClientFilter(ApiHttpClient client, ServiceRegion serviceRegion) {
         this.client = client;
+        this.serviceRegion = serviceRegion;
     }
 
     @Override
@@ -62,9 +66,8 @@ public class MeClientFilter implements WebFilter {
 
     private ProjectApiRoot meClient(ApiHttpClient client, Mono<WebSession> session) {
         final TokenStorage storage = new SessionTokenStorage(session);
-
         ApiRootBuilder builder = ApiRootBuilder.of(client)
-                .withApiBaseUrl(apiBaseUrl != null ? apiBaseUrl : ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+                .withApiBaseUrl(apiBaseUrl != null ? apiBaseUrl : serviceRegion.getApiUrl())
                 .withProjectKey(projectKey);
 
         if (authUrl != null) {
@@ -72,7 +75,7 @@ public class MeClientFilter implements WebFilter {
                 authUrl + "/oauth/" + projectKey + "/anonymous/token", authUrl + "/oauth/token", storage);
         }
         else {
-            builder = builder.withAnonymousRefreshFlow(credentials(), ServiceRegion.GCP_EUROPE_WEST1, storage);
+            builder = builder.withAnonymousRefreshFlow(credentials(), serviceRegion, storage);
         }
 
         return builder.build(projectKey);

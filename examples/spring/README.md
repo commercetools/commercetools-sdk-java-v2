@@ -15,7 +15,11 @@ Example to show how the ME endpoints can be used with the Java SDK in a Spring B
 2. Navigate to the path `spring/`.
 3. Register the client credentials in environment variables:
    `CTP_CLIENT_ID`, `CTP_CLIENT_SECRET` and `CTP_PROJECT_KEY`
-4. If your [project region](https://docs.commercetools.com/api/general-concepts#regions) is not GCP Europe, then register [API URL](https://docs.commercetools.com/api/general-concepts#hosts) and [Auth URL](https://docs.commercetools.com/api/authorization#requesting-an-access-token-using-the-composable-commerce-oauth-20-service) in environment variables: `CTP_PROJECT_API_BASE_URL`, `CTP_PROJECT_AUTH_URL`
+4. If your [project region](https://docs.commercetools.com/api/general-concepts#regions) is not GCP Europe, then register
+   [API URL](https://docs.commercetools.com/api/general-concepts#hosts) and [Auth URL](https://docs.commercetools.com/api/authorization#requesting-an-access-token-using-the-composable-commerce-oauth-20-service)
+   in environment variables: `CTP_PROJECT_API_BASE_URL`, `CTP_PROJECT_AUTH_URL`
+   **or**
+   register the service region in the environment variable `CTP_SERVICE_REGION`
 
 ## Using the ME Endpoint Checkout App
 

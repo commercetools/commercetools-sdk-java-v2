@@ -94,6 +94,8 @@ public class CtpSecurityConfig {
             implements ReactiveAuthenticationManagerResolver<ServerWebExchange> {
         private final ApiHttpClient apiHttpClient;
 
+        private final ServiceRegion serviceRegion;
+
         @Value(value = "${ctp.client.id}")
         private String clientId;
 
@@ -108,23 +110,24 @@ public class CtpSecurityConfig {
         }
 
         @Autowired
-        public CtpReactiveAuthenticationManagerResolver(final ApiHttpClient apiHttpClient) {
+        public CtpReactiveAuthenticationManagerResolver(final ApiHttpClient apiHttpClient, final ServiceRegion serviceRegion) {
             this.apiHttpClient = apiHttpClient;
+            this.serviceRegion = serviceRegion;
         }
 
         @Override
         public Mono<ReactiveAuthenticationManager> resolve(final ServerWebExchange context) {
             return Mono.just(new CtpReactiveAuthenticationManager(meClient(apiHttpClient, context.getSession()),
-                credentials(), projectKey));
+                credentials(), projectKey, serviceRegion));
         }
 
         private ProjectApiRoot meClient(final ApiHttpClient client, final Mono<WebSession> session) {
             TokenStorage storage = new SessionTokenStorage(session);
 
             ApiRootBuilder builder = ApiRootBuilder.of(client)
-                    .withApiBaseUrl(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+                    .withApiBaseUrl(serviceRegion.getApiUrl())
                     .withProjectKey(projectKey)
-                    .withAnonymousRefreshFlow(credentials(), ServiceRegion.GCP_EUROPE_WEST1, storage);
+                    .withAnonymousRefreshFlow(credentials(), serviceRegion, storage);
 
             return builder.build(projectKey);
         }

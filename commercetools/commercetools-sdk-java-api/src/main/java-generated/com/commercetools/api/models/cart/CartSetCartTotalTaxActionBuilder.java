@@ -30,7 +30,7 @@ public class CartSetCartTotalTaxActionBuilder implements Builder<CartSetCartTota
     private java.util.List<com.commercetools.api.models.cart.TaxPortionDraft> externalTaxPortions;
 
     /**
-     *  <p>The Cart's total gross price becoming the <code>totalGross</code> field (<code>totalNet</code> + taxes) on the Cart's <code>taxedPrice</code>.</p>
+     *  <p>The total gross amount of the Cart, including tax. This value is used to calculate the <code>totalNet</code> and <code>totalTax</code> fields of the Cart's <code>taxedPrice</code>.</p>
      * @param builder function to build the externalTotalGross value
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class CartSetCartTotalTaxActionBuilder implements Builder<CartSetCartTota
     }
 
     /**
-     *  <p>The Cart's total gross price becoming the <code>totalGross</code> field (<code>totalNet</code> + taxes) on the Cart's <code>taxedPrice</code>.</p>
+     *  <p>The total gross amount of the Cart, including tax. This value is used to calculate the <code>totalNet</code> and <code>totalTax</code> fields of the Cart's <code>taxedPrice</code>.</p>
      * @param builder function to build the externalTotalGross value
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class CartSetCartTotalTaxActionBuilder implements Builder<CartSetCartTota
     }
 
     /**
-     *  <p>The Cart's total gross price becoming the <code>totalGross</code> field (<code>totalNet</code> + taxes) on the Cart's <code>taxedPrice</code>.</p>
+     *  <p>The total gross amount of the Cart, including tax. This value is used to calculate the <code>totalNet</code> and <code>totalTax</code> fields of the Cart's <code>taxedPrice</code>.</p>
      * @param externalTotalGross value to be set
      * @return Builder
      */
@@ -157,7 +157,7 @@ public class CartSetCartTotalTaxActionBuilder implements Builder<CartSetCartTota
     }
 
     /**
-     *  <p>The Cart's total gross price becoming the <code>totalGross</code> field (<code>totalNet</code> + taxes) on the Cart's <code>taxedPrice</code>.</p>
+     *  <p>The total gross amount of the Cart, including tax. This value is used to calculate the <code>totalNet</code> and <code>totalTax</code> fields of the Cart's <code>taxedPrice</code>.</p>
      * @return externalTotalGross
      */
 

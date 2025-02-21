@@ -16,7 +16,7 @@ jobs:
       # Get GitHub token via the CT SDKs App
       - name: Generate GitHub token (via CT SDKs App)
         id: generate_github_token
-        uses: actions/create-github-app-token@67e27a7eb7db372a1c61a7f9bdab8699e9ee57f7 # v1
+        uses: actions/create-github-app-token@0d564482f06ca65fa9e77e2510873638c82206f2 # v1
         with:
           app-id: ${{ secrets.CT_SDKS_APP_ID }}
           private-key: ${{ secrets.CT_SDKS_APP_PEM }}

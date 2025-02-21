@@ -8,6 +8,8 @@ import io.vrap.rmf.base.client.oauth2.ClientCredentials;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.util.Optional;
+
 public class GettingStarted {
 
     @Test
@@ -16,7 +18,7 @@ public class GettingStarted {
                 ClientCredentials.of().withClientId(System.getenv("CTP_CLIENT_ID"))
                         .withClientSecret(System.getenv("CTP_CLIENT_SECRET"))
                         .build(),
-                ServiceRegion.GCP_EUROPE_WEST1).build(System.getenv("CTP_PROJECT_KEY"));
+                ServiceRegion.valueOf(Optional.ofNullable(System.getenv("CTP_SERVICE_REGION")).orElse("GCP_EUROPE_WEST1"))).build(System.getenv("CTP_PROJECT_KEY"));
 
         Project response = apiRoot
                 .get()

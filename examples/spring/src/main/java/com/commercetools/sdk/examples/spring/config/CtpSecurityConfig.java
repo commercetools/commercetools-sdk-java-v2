@@ -110,26 +110,29 @@ public class CtpSecurityConfig {
         @Value(value = "${ctp.project.auth.url:#{null}}")
         private String authUrl;
 
+        private final ServiceRegion serviceRegion;
+
         private ClientCredentials credentials() {
             return ClientCredentials.of().withClientId(clientId).withClientSecret(clientSecret).build();
         }
 
         @Autowired
-        public CtpReactiveAuthenticationManagerResolver(final ApiHttpClient apiHttpClient) {
+        public CtpReactiveAuthenticationManagerResolver(final ApiHttpClient apiHttpClient, final ServiceRegion serviceRegion) {
             this.apiHttpClient = apiHttpClient;
+            this.serviceRegion = serviceRegion;
         }
 
         @Override
         public Mono<ReactiveAuthenticationManager> resolve(final ServerWebExchange context) {
             return Mono.just(new CtpReactiveAuthenticationManager(meClient(apiHttpClient, context.getSession()),
-                credentials(), projectKey, authUrl));
+                credentials(), projectKey, authUrl, serviceRegion));
         }
 
         private ProjectApiRoot meClient(final ApiHttpClient client, final Mono<WebSession> session) {
             TokenStorage storage = new SessionTokenStorage(session);
 
             ApiRootBuilder builder = ApiRootBuilder.of(client)
-                    .withApiBaseUrl(apiBaseUrl != null ? apiBaseUrl : ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+                    .withApiBaseUrl(apiBaseUrl != null ? apiBaseUrl : serviceRegion.getApiUrl())
                     .withProjectKey(projectKey);
 
             if (authUrl != null) {
@@ -137,7 +140,7 @@ public class CtpSecurityConfig {
                     authUrl + "/oauth/" + projectKey + "/anonymous/token", authUrl + "/oauth/token", storage);
             }
             else {
-                builder = builder.withAnonymousRefreshFlow(credentials(), ServiceRegion.GCP_EUROPE_WEST1, storage);
+                builder = builder.withAnonymousRefreshFlow(credentials(), serviceRegion, storage);
             }
 
             return builder.build(projectKey);

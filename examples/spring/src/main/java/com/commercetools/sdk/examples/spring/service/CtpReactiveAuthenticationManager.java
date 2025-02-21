@@ -26,6 +26,7 @@ import reactor.core.publisher.Mono;
 
 public class CtpReactiveAuthenticationManager implements ReactiveAuthenticationManager {
     private final String authUrl;
+    private final ServiceRegion serviceRegion;
     VrapHttpClient client;
     ProjectApiRoot apiRoot;
 
@@ -34,12 +35,13 @@ public class CtpReactiveAuthenticationManager implements ReactiveAuthenticationM
     private final String projectKey;
 
     public CtpReactiveAuthenticationManager(final ProjectApiRoot apiRoot, final ClientCredentials credentials,
-            final String projectKey, final String authUrl) {
+            final String projectKey, final String authUrl, final ServiceRegion serviceRegion) {
         this.apiRoot = apiRoot;
         this.client = HttpClientSupplier.of().get();
         this.credentials = credentials;
         this.projectKey = projectKey;
         this.authUrl = authUrl;
+        this.serviceRegion = serviceRegion;
     }
 
     @Override
@@ -58,7 +60,7 @@ public class CtpReactiveAuthenticationManager implements ReactiveAuthenticationM
                     .flatMap(customerSignInResultApiHttpResponse -> {
                         String passwordFlowTokenURL = this.authUrl != null
                                 ? this.authUrl + "/oauth/" + projectKey + "/customers/token"
-                                : ServiceRegion.GCP_EUROPE_WEST1.getPasswordFlowTokenURL(projectKey);
+                                : serviceRegion.getPasswordFlowTokenURL(projectKey);
                         GlobalCustomerPasswordTokenSupplier supplier = new GlobalCustomerPasswordTokenSupplier(
                             credentials.getClientId(), credentials.getClientSecret(), authentication.getName(),
                             authentication.getCredentials().toString(), null, passwordFlowTokenURL, client);

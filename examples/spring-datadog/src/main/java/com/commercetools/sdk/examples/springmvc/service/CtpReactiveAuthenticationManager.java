@@ -24,6 +24,7 @@ import org.springframework.security.core.GrantedAuthority;
 import reactor.core.publisher.Mono;
 
 public class CtpReactiveAuthenticationManager implements ReactiveAuthenticationManager {
+    private final ServiceRegion serviceRegion;
     VrapHttpClient client;
     ProjectApiRoot apiRoot;
 
@@ -32,11 +33,12 @@ public class CtpReactiveAuthenticationManager implements ReactiveAuthenticationM
     private final String projectKey;
 
     public CtpReactiveAuthenticationManager(final ProjectApiRoot apiRoot, final ClientCredentials credentials,
-            final String projectKey) {
+            final String projectKey, final ServiceRegion serviceRegion) {
         this.apiRoot = apiRoot;
         this.client = HttpClientSupplier.of().get();
         this.credentials = credentials;
         this.projectKey = projectKey;
+        this.serviceRegion = serviceRegion;
     }
 
     @Override
@@ -56,7 +58,7 @@ public class CtpReactiveAuthenticationManager implements ReactiveAuthenticationM
                         GlobalCustomerPasswordTokenSupplier supplier = new GlobalCustomerPasswordTokenSupplier(
                             credentials.getClientId(), credentials.getClientSecret(), authentication.getName(),
                             authentication.getCredentials().toString(), null,
-                            ServiceRegion.GCP_EUROPE_WEST1.getPasswordFlowTokenURL(projectKey), client);
+                            serviceRegion.getPasswordFlowTokenURL(projectKey), client);
 
                         return Mono.zip(Mono.fromFuture(supplier.getToken().exceptionally(throwable -> null)),
                             Mono.just(customerSignInResultApiHttpResponse.getBody()));

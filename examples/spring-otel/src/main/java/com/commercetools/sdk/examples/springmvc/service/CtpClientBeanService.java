@@ -5,6 +5,7 @@ import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.client.ProjectScopedApiRoot;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
 
+import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.monitoring.opentelemetry.OpenTelemetryMiddleware;
 import com.commercetools.monitoring.opentelemetry.OpenTelemetryResponseSerializer;
 import io.opentelemetry.api.GlobalOpenTelemetry;
@@ -16,6 +17,8 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.context.annotation.RequestScope;
+
+import java.util.Optional;
 
 @Configuration
 @EnableAutoConfiguration
@@ -33,14 +36,22 @@ public class CtpClientBeanService {
     @Value(value = "${otel.provider:local}")
     private OtelProvider otelProvider;
 
+    @Value(value = "${ctp.service.region:#{null}}")
+    private String serviceRegion;
+
     private ClientCredentials credentials() {
         return ClientCredentials.of().withClientId(clientId).withClientSecret(clientSecret).build();
     }
 
     @Bean
+    public ServiceRegion serviceRegion() {
+        return ServiceRegion.valueOf(Optional.ofNullable(this.serviceRegion).orElse("GCP_EUROPE_WEST1"));
+    }
+
+    @Bean
     public ProjectScopedApiRoot apiRoot() {
         ApiRootBuilder builder = ApiRootBuilder.of()
-                .defaultClient(credentials())
+                .defaultClient(credentials(), serviceRegion())
                 .withTelemetryMiddleware(new OpenTelemetryMiddleware(GlobalOpenTelemetry.get(),
                         otelProvider.supportsHistogram()));
         if (otelProvider.useOtelSerializer()) {

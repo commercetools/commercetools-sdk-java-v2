@@ -25,28 +25,48 @@ final class QueryAll<TMethod extends SimplePagedQueryResourceRequest<TMethod, TR
 
     private Consumer<List<TElement>> pageConsumer;
 
-    private QueryAll(@Nonnull final SimplePagedQueryResourceRequest<TMethod, TResult, ?> baseQuery,
-            final int pageSize) {
+    private final String sortField;
 
-        this.baseQuery = withDefaults(baseQuery, pageSize);
+    private final QueryUtils.SortOrder sortOrder;
+
+    private final Function<TElement, String> elementIdentifier;
+
+    private QueryAll(@Nonnull final SimplePagedQueryResourceRequest<TMethod, TResult, ?> baseQuery, final int pageSize,
+            final String sortField, final QueryUtils.SortOrder sortOrder,
+            final Function<TElement, String> elementIdentifier) {
+
+        this.sortField = sortField;
+        this.sortOrder = sortOrder;
+        this.baseQuery = withDefaults(baseQuery, pageSize, sortField, sortOrder);
         this.pageSize = pageSize;
         this.mappedResultsTillNow = new ArrayList<>();
+        this.elementIdentifier = elementIdentifier;
     }
 
     @Nonnull
     private static <TMethod extends SimplePagedQueryResourceRequest<TMethod, TResult, ?>, TResult extends ResourcePagedQueryResponse<TElement>, TElement extends DomainResource<TElement>> SimplePagedQueryResourceRequest<TMethod, TResult, ?> withDefaults(
-            @Nonnull final SimplePagedQueryResourceRequest<TMethod, TResult, ?> request, final int pageSize) {
+            @Nonnull final SimplePagedQueryResourceRequest<TMethod, TResult, ?> request, final int pageSize,
+            final String sortField, final QueryUtils.SortOrder sortOrder) {
 
         final SimplePagedQueryResourceRequest<TMethod, TResult, ?> withLimit = request.withLimit(pageSize)
                 .withWithTotal(false);
-        return !withLimit.getQueryParam("sort").isEmpty() ? withLimit : withLimit.withSort("id asc");
+        return !withLimit.getQueryParam("sort").isEmpty() ? withLimit
+                : withLimit.withSort(sortField + " " + sortOrder.getValue());
     }
 
     @Nonnull
     static <TMethod extends SimplePagedQueryResourceRequest<TMethod, TResult, ?>, TResult extends ResourcePagedQueryResponse<TElement>, TElement extends DomainResource<TElement>, S> QueryAll<TMethod, TResult, TElement, S> of(
             @Nonnull final SimplePagedQueryResourceRequest<TMethod, TResult, ?> baseQuery, final int pageSize) {
+        return of(baseQuery, pageSize, "id", QueryUtils.SortOrder.ASCENDING, DomainResource::getId);
+    }
 
-        return new QueryAll<>(baseQuery, pageSize);
+    @Nonnull
+    static <TMethod extends SimplePagedQueryResourceRequest<TMethod, TResult, ?>, TResult extends ResourcePagedQueryResponse<TElement>, TElement extends DomainResource<TElement>, S> QueryAll<TMethod, TResult, TElement, S> of(
+            @Nonnull final SimplePagedQueryResourceRequest<TMethod, TResult, ?> baseQuery, final int pageSize,
+            final String sortField, final QueryUtils.SortOrder sortOrder,
+            final Function<TElement, String> elementIdentifier) {
+
+        return new QueryAll<>(baseQuery, pageSize, sortField, sortOrder, elementIdentifier);
     }
 
     /**
@@ -157,8 +177,14 @@ final class QueryAll<TMethod extends SimplePagedQueryResourceRequest<TMethod, TR
     @Nonnull
     private CompletionStage<ApiHttpResponse<TResult>> getNextPageStage(@Nonnull final List<TElement> pageElements) {
         if (pageElements.size() == pageSize) {
-            final String lastElementId = pageElements.get(pageElements.size() - 1).getId();
-            return baseQuery.addWhere("id > :lastId", "lastId", lastElementId).execute();
+            final String lastElementId = elementIdentifier.apply(pageElements.get(pageElements.size() - 1));
+            if (sortOrder == QueryUtils.SortOrder.ASCENDING) {
+                return baseQuery.addWhere(sortField + " > :lastValue", "lastValue", lastElementId).execute();
+            }
+            else {
+                return baseQuery.addWhere(sortField + " < :lastValue", "lastValue", lastElementId).execute();
+
+            }
         }
         return completedFuture(null);
     }

@@ -35,13 +35,16 @@ public class MeClientFilter implements WebFilter {
     @Value(value = "${ctp.project.key}")
     private String projectKey;
 
+    private final ServiceRegion serviceRegion;
+
     private ClientCredentials credentials() {
         return ClientCredentials.of().withClientId(clientId).withClientSecret(clientSecret).build();
     }
 
     @Autowired
-    public MeClientFilter(ApiHttpClient client) {
+    public MeClientFilter(final ApiHttpClient client, final ServiceRegion serviceRegion) {
         this.client = client;
+        this.serviceRegion = serviceRegion;
     }
 
     @Override
@@ -59,9 +62,9 @@ public class MeClientFilter implements WebFilter {
         TokenStorage storage = new SessionTokenStorage(session);
 
         ApiRootBuilder builder = ApiRootBuilder.of(client)
-                .withApiBaseUrl(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl())
+                .withApiBaseUrl(serviceRegion.getApiUrl())
                 .withProjectKey(projectKey)
-                .withAnonymousRefreshFlow(credentials(), ServiceRegion.GCP_EUROPE_WEST1, storage)
+                .withAnonymousRefreshFlow(credentials(), serviceRegion, storage)
                 .withTelemetryMiddleware(new DatadogMiddleware(ApiClient.getDefaultApiClient()))
                 .withSerializer(new DatadogResponseSerializer(ResponseSerializer.of(), ApiClient.getDefaultApiClient()));
 

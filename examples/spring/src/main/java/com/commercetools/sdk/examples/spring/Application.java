@@ -16,7 +16,6 @@ import org.springframework.web.server.adapter.WebHttpHandlerBuilder;
 import reactor.netty.http.server.HttpServer;
 
 @SpringBootApplication
-@ComponentScan
 @PropertySource(value = "classpath:application.properties", ignoreResourceNotFound = true)
 public class Application {
     @Value("${server.port:8080}")

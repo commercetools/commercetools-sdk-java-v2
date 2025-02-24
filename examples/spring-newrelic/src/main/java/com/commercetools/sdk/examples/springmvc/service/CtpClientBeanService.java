@@ -5,6 +5,7 @@ import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.client.ProjectScopedApiRoot;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
 
+import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.monitoring.newrelic.NewRelicContext;
 import com.commercetools.monitoring.newrelic.NewRelicTelemetryMiddleware;
 import com.commercetools.monitoring.newrelic.NewrelicResponseSerializer;
@@ -19,6 +20,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.context.annotation.RequestScope;
 
+import java.util.Optional;
+
 @Configuration
 @EnableAutoConfiguration
 public class CtpClientBeanService {
@@ -32,14 +35,22 @@ public class CtpClientBeanService {
     @Value(value = "${ctp.project.key}")
     private String projectKey;
 
+    @Value(value = "${ctp.service.region:#{null}}")
+    private String serviceRegion;
+
     private ClientCredentials credentials() {
         return ClientCredentials.of().withClientId(clientId).withClientSecret(clientSecret).build();
     }
 
     @Bean
+    public ServiceRegion serviceRegion() {
+        return ServiceRegion.valueOf(Optional.ofNullable(this.serviceRegion).orElse("GCP_EUROPE_WEST1"));
+    }
+
+    @Bean
     public ApiHttpClient client() {
         return ApiRootBuilder.of()
-                .defaultClient(credentials())
+                .defaultClient(credentials(), serviceRegion())
                 .withTelemetryMiddleware(new NewRelicTelemetryMiddleware())
                 .withSerializer(new NewrelicResponseSerializer(ResponseSerializer.of()))
                 .buildClient();

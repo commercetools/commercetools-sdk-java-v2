@@ -19,8 +19,7 @@ public class CtpSecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-                .anonymous()
-                .and()
+                .anonymous(anonymous -> anonymous.authorities("ROLE_ANON"))
                 .authorizeHttpRequests((requests) -> requests
                         .requestMatchers("**").permitAll()
                         .requestMatchers("/resources/**").permitAll()

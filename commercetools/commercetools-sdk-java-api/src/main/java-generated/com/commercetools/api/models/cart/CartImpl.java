@@ -102,6 +102,8 @@ public class CartImpl implements Cart, ModelBase {
 
     private com.commercetools.api.models.type.CustomFields custom;
 
+    private com.commercetools.api.models.cart.DiscountTypeCombination discountTypeCombination;
+
     private Integer deleteDaysAfterLastModification;
 
     private com.commercetools.api.models.common.LastModifiedBy lastModifiedBy;
@@ -149,6 +151,7 @@ public class CartImpl implements Cart, ModelBase {
             @JsonProperty("country") final String country, @JsonProperty("locale") final String locale,
             @JsonProperty("origin") final com.commercetools.api.models.cart.CartOrigin origin,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
+            @JsonProperty("discountTypeCombination") final com.commercetools.api.models.cart.DiscountTypeCombination discountTypeCombination,
             @JsonProperty("deleteDaysAfterLastModification") final Integer deleteDaysAfterLastModification,
             @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy,
             @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy) {
@@ -192,6 +195,7 @@ public class CartImpl implements Cart, ModelBase {
         this.locale = locale;
         this.origin = origin;
         this.custom = custom;
+        this.discountTypeCombination = discountTypeCombination;
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
         this.lastModifiedBy = lastModifiedBy;
         this.createdBy = createdBy;
@@ -535,6 +539,14 @@ public class CartImpl implements Cart, ModelBase {
     }
 
     /**
+     *  <p>Indicates if a combination of discount types can apply on a Cart.</p>
+     */
+
+    public com.commercetools.api.models.cart.DiscountTypeCombination getDiscountTypeCombination() {
+        return this.discountTypeCombination;
+    }
+
+    /**
      *  <p>Number of days after which an active Cart is deleted since its last modification. Configured in Project settings.</p>
      */
 
@@ -755,6 +767,11 @@ public class CartImpl implements Cart, ModelBase {
         this.custom = custom;
     }
 
+    public void setDiscountTypeCombination(
+            final com.commercetools.api.models.cart.DiscountTypeCombination discountTypeCombination) {
+        this.discountTypeCombination = discountTypeCombination;
+    }
+
     public void setDeleteDaysAfterLastModification(final Integer deleteDaysAfterLastModification) {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
     }
@@ -817,6 +834,7 @@ public class CartImpl implements Cart, ModelBase {
                 .append(locale, that.locale)
                 .append(origin, that.origin)
                 .append(custom, that.custom)
+                .append(discountTypeCombination, that.discountTypeCombination)
                 .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
                 .append(lastModifiedBy, that.lastModifiedBy)
                 .append(createdBy, that.createdBy)
@@ -860,6 +878,7 @@ public class CartImpl implements Cart, ModelBase {
                 .append(locale, that.locale)
                 .append(origin, that.origin)
                 .append(custom, that.custom)
+                .append(discountTypeCombination, that.discountTypeCombination)
                 .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
                 .append(lastModifiedBy, that.lastModifiedBy)
                 .append(createdBy, that.createdBy)
@@ -908,6 +927,7 @@ public class CartImpl implements Cart, ModelBase {
                 .append(locale)
                 .append(origin)
                 .append(custom)
+                .append(discountTypeCombination)
                 .append(deleteDaysAfterLastModification)
                 .append(lastModifiedBy)
                 .append(createdBy)
@@ -956,6 +976,7 @@ public class CartImpl implements Cart, ModelBase {
                 .append("locale", locale)
                 .append("origin", origin)
                 .append("custom", custom)
+                .append("discountTypeCombination", discountTypeCombination)
                 .append("deleteDaysAfterLastModification", deleteDaysAfterLastModification)
                 .append("lastModifiedBy", lastModifiedBy)
                 .append("createdBy", createdBy)

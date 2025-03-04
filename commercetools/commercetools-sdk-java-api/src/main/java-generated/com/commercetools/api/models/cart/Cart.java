@@ -390,6 +390,14 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public CustomFields getCustom();
 
     /**
+     *  <p>Indicates if a combination of discount types can apply on a Cart.</p>
+     * @return discountTypeCombination
+     */
+    @Valid
+    @JsonProperty("discountTypeCombination")
+    public DiscountTypeCombination getDiscountTypeCombination();
+
+    /**
      *  <p>Number of days after which an active Cart is deleted since its last modification. Configured in Project settings.</p>
      * @return deleteDaysAfterLastModification
      */
@@ -764,6 +772,13 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public void setCustom(final CustomFields custom);
 
     /**
+     *  <p>Indicates if a combination of discount types can apply on a Cart.</p>
+     * @param discountTypeCombination value to be set
+     */
+
+    public void setDiscountTypeCombination(final DiscountTypeCombination discountTypeCombination);
+
+    /**
      *  <p>Number of days after which an active Cart is deleted since its last modification. Configured in Project settings.</p>
      * @param deleteDaysAfterLastModification value to be set
      */
@@ -853,6 +868,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
         instance.setLocale(template.getLocale());
         instance.setOrigin(template.getOrigin());
         instance.setCustom(template.getCustom());
+        instance.setDiscountTypeCombination(template.getDiscountTypeCombination());
         instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
         instance.setLastModifiedBy(template.getLastModifiedBy());
         instance.setCreatedBy(template.getCreatedBy());
@@ -946,6 +962,8 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
         instance.setLocale(template.getLocale());
         instance.setOrigin(template.getOrigin());
         instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
+        instance.setDiscountTypeCombination(
+            com.commercetools.api.models.cart.DiscountTypeCombination.deepCopy(template.getDiscountTypeCombination()));
         instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
         instance.setLastModifiedBy(
             com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));

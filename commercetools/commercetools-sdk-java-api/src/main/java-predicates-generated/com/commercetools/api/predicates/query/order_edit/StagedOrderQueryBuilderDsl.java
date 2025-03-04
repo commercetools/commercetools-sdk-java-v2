@@ -411,6 +411,16 @@ public class StagedOrderQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, StagedOrderQueryBuilderDsl::of));
     }
 
+    public CombinationQueryPredicate<StagedOrderQueryBuilderDsl> discountTypeCombination(
+            Function<com.commercetools.api.predicates.query.cart.DiscountTypeCombinationQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.DiscountTypeCombinationQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("discountTypeCombination"))
+                    .inner(fn.apply(
+                        com.commercetools.api.predicates.query.cart.DiscountTypeCombinationQueryBuilderDsl.of())),
+            StagedOrderQueryBuilderDsl::of);
+    }
+
     public LongComparisonPredicateBuilder<StagedOrderQueryBuilderDsl> lastMessageSequenceNumber() {
         return new LongComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("lastMessageSequenceNumber")),

@@ -16,6 +16,7 @@ import com.commercetools.api.models.cart.CustomLineItem;
 import com.commercetools.api.models.cart.DirectDiscount;
 import com.commercetools.api.models.cart.DiscountCodeInfo;
 import com.commercetools.api.models.cart.DiscountOnTotalPrice;
+import com.commercetools.api.models.cart.DiscountTypeCombination;
 import com.commercetools.api.models.cart.InventoryMode;
 import com.commercetools.api.models.cart.LineItem;
 import com.commercetools.api.models.cart.RoundingMode;
@@ -444,6 +445,14 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     @Valid
     @JsonProperty("returnInfo")
     public List<ReturnInfo> getReturnInfo();
+
+    /**
+     *  <p>Indicates if a combination of discount types can apply on an Order.</p>
+     * @return discountTypeCombination
+     */
+    @Valid
+    @JsonProperty("discountTypeCombination")
+    public DiscountTypeCombination getDiscountTypeCombination();
 
     /**
      *  <p>Internal-only field.</p>
@@ -893,6 +902,13 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public void setReturnInfo(final List<ReturnInfo> returnInfo);
 
     /**
+     *  <p>Indicates if a combination of discount types can apply on an Order.</p>
+     * @param discountTypeCombination value to be set
+     */
+
+    public void setDiscountTypeCombination(final DiscountTypeCombination discountTypeCombination);
+
+    /**
      *  <p>Internal-only field.</p>
      * @param lastMessageSequenceNumber value to be set
      */
@@ -1002,6 +1018,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
         instance.setState(template.getState());
         instance.setSyncInfo(template.getSyncInfo());
         instance.setReturnInfo(template.getReturnInfo());
+        instance.setDiscountTypeCombination(template.getDiscountTypeCombination());
         instance.setLastMessageSequenceNumber(template.getLastMessageSequenceNumber());
         instance.setCustom(template.getCustom());
         instance.setCompletedAt(template.getCompletedAt());
@@ -1115,6 +1132,8 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
                         .map(com.commercetools.api.models.order.ReturnInfo::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setDiscountTypeCombination(
+            com.commercetools.api.models.cart.DiscountTypeCombination.deepCopy(template.getDiscountTypeCombination()));
         instance.setLastMessageSequenceNumber(template.getLastMessageSequenceNumber());
         instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         instance.setCompletedAt(template.getCompletedAt());

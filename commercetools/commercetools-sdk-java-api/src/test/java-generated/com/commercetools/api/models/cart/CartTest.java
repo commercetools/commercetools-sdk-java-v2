@@ -91,6 +91,8 @@ public class CartTest {
                 new Object[] {
                         Cart.builder().origin(com.commercetools.api.models.cart.CartOrigin.findEnum("Customer")) },
                 new Object[] { Cart.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) },
+                new Object[] { Cart.builder()
+                        .discountTypeCombination(new com.commercetools.api.models.cart.DiscountTypeCombinationImpl()) },
                 new Object[] { Cart.builder().deleteDaysAfterLastModification(3) },
                 new Object[] { Cart.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
                 new Object[] { Cart.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
@@ -392,6 +394,14 @@ public class CartTest {
         Cart value = Cart.of();
         value.setCustom(new com.commercetools.api.models.type.CustomFieldsImpl());
         Assertions.assertThat(value.getCustom()).isEqualTo(new com.commercetools.api.models.type.CustomFieldsImpl());
+    }
+
+    @Test
+    public void discountTypeCombination() {
+        Cart value = Cart.of();
+        value.setDiscountTypeCombination(new com.commercetools.api.models.cart.DiscountTypeCombinationImpl());
+        Assertions.assertThat(value.getDiscountTypeCombination())
+                .isEqualTo(new com.commercetools.api.models.cart.DiscountTypeCombinationImpl());
     }
 
     @Test

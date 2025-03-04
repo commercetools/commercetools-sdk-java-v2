@@ -104,6 +104,7 @@ public interface StagedOrder extends Order {
         instance.setState(template.getState());
         instance.setSyncInfo(template.getSyncInfo());
         instance.setReturnInfo(template.getReturnInfo());
+        instance.setDiscountTypeCombination(template.getDiscountTypeCombination());
         instance.setLastMessageSequenceNumber(template.getLastMessageSequenceNumber());
         instance.setCustom(template.getCustom());
         instance.setCompletedAt(template.getCompletedAt());
@@ -213,6 +214,8 @@ public interface StagedOrder extends Order {
                         .map(com.commercetools.api.models.order.ReturnInfo::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
+        instance.setDiscountTypeCombination(
+            com.commercetools.api.models.cart.DiscountTypeCombination.deepCopy(template.getDiscountTypeCombination()));
         instance.setLastMessageSequenceNumber(template.getLastMessageSequenceNumber());
         instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         instance.setCompletedAt(template.getCompletedAt());

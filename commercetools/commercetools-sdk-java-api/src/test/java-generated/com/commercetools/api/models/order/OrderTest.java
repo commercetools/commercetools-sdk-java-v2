@@ -105,6 +105,8 @@ public class OrderTest {
                         Order.builder()
                                 .returnInfo(Collections
                                         .singletonList(new com.commercetools.api.models.order.ReturnInfoImpl())) },
+                new Object[] { Order.builder()
+                        .discountTypeCombination(new com.commercetools.api.models.cart.DiscountTypeCombinationImpl()) },
                 new Object[] { Order.builder().lastMessageSequenceNumber(8L) },
                 new Object[] { Order.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) },
                 new Object[] { Order.builder().completedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
@@ -454,6 +456,14 @@ public class OrderTest {
         value.setReturnInfo(Collections.singletonList(new com.commercetools.api.models.order.ReturnInfoImpl()));
         Assertions.assertThat(value.getReturnInfo())
                 .isEqualTo(Collections.singletonList(new com.commercetools.api.models.order.ReturnInfoImpl()));
+    }
+
+    @Test
+    public void discountTypeCombination() {
+        Order value = Order.of();
+        value.setDiscountTypeCombination(new com.commercetools.api.models.cart.DiscountTypeCombinationImpl());
+        Assertions.assertThat(value.getDiscountTypeCombination())
+                .isEqualTo(new com.commercetools.api.models.cart.DiscountTypeCombinationImpl());
     }
 
     @Test

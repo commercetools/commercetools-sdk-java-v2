@@ -161,6 +161,9 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     @Nullable
     private java.util.List<com.commercetools.api.models.order.ReturnInfo> returnInfo;
 
+    @Nullable
+    private com.commercetools.api.models.cart.DiscountTypeCombination discountTypeCombination;
+
     @Deprecated
     @Nullable
     private Long lastMessageSequenceNumber;
@@ -1799,6 +1802,32 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
+     *  <p>Indicates if a combination of discount types can apply on an Order.</p>
+     * @param discountTypeCombination value to be set
+     * @return Builder
+     */
+
+    public StagedOrderBuilder discountTypeCombination(
+            @Nullable final com.commercetools.api.models.cart.DiscountTypeCombination discountTypeCombination) {
+        this.discountTypeCombination = discountTypeCombination;
+        return this;
+    }
+
+    /**
+     *  <p>Indicates if a combination of discount types can apply on an Order.</p>
+     * @param builder function to build the discountTypeCombination value
+     * @return Builder
+     */
+
+    public StagedOrderBuilder discountTypeCombination(
+            Function<com.commercetools.api.models.cart.DiscountTypeCombinationBuilder, Builder<? extends com.commercetools.api.models.cart.DiscountTypeCombination>> builder) {
+        this.discountTypeCombination = builder
+                .apply(com.commercetools.api.models.cart.DiscountTypeCombinationBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
      *  <p>Internal-only field.</p>
      * @param lastMessageSequenceNumber value to be set
      * @return Builder
@@ -2385,6 +2414,16 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
     }
 
     /**
+     *  <p>Indicates if a combination of discount types can apply on an Order.</p>
+     * @return discountTypeCombination
+     */
+
+    @Nullable
+    public com.commercetools.api.models.cart.DiscountTypeCombination getDiscountTypeCombination() {
+        return this.discountTypeCombination;
+    }
+
+    /**
      *  <p>Internal-only field.</p>
      * @return lastMessageSequenceNumber
      */
@@ -2458,7 +2497,8 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
             inventoryMode, billingAddress, shippingAddress, shippingMode, shippingKey, shippingInfo, shippingRateInput,
             shippingCustomFields, shipping, itemShippingAddresses, discountCodes, directDiscounts, refusedGifts,
             paymentInfo, country, locale, origin, cart, quote, orderState, shipmentState, paymentState, state, syncInfo,
-            returnInfo, lastMessageSequenceNumber, custom, completedAt, lastModifiedBy, createdBy);
+            returnInfo, discountTypeCombination, lastMessageSequenceNumber, custom, completedAt, lastModifiedBy,
+            createdBy);
     }
 
     /**
@@ -2472,7 +2512,8 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
             inventoryMode, billingAddress, shippingAddress, shippingMode, shippingKey, shippingInfo, shippingRateInput,
             shippingCustomFields, shipping, itemShippingAddresses, discountCodes, directDiscounts, refusedGifts,
             paymentInfo, country, locale, origin, cart, quote, orderState, shipmentState, paymentState, state, syncInfo,
-            returnInfo, lastMessageSequenceNumber, custom, completedAt, lastModifiedBy, createdBy);
+            returnInfo, discountTypeCombination, lastMessageSequenceNumber, custom, completedAt, lastModifiedBy,
+            createdBy);
     }
 
     /**
@@ -2536,6 +2577,7 @@ public class StagedOrderBuilder implements Builder<StagedOrder> {
         builder.state = template.getState();
         builder.syncInfo = template.getSyncInfo();
         builder.returnInfo = template.getReturnInfo();
+        builder.discountTypeCombination = template.getDiscountTypeCombination();
         builder.lastMessageSequenceNumber = template.getLastMessageSequenceNumber();
         builder.custom = template.getCustom();
         builder.completedAt = template.getCompletedAt();

@@ -114,6 +114,8 @@ public class OrderImpl implements Order, ModelBase {
 
     private java.util.List<com.commercetools.api.models.order.ReturnInfo> returnInfo;
 
+    private com.commercetools.api.models.cart.DiscountTypeCombination discountTypeCombination;
+
     @Deprecated
     private Long lastMessageSequenceNumber;
 
@@ -173,6 +175,7 @@ public class OrderImpl implements Order, ModelBase {
             @JsonProperty("state") final com.commercetools.api.models.state.StateReference state,
             @JsonProperty("syncInfo") final java.util.List<com.commercetools.api.models.order.SyncInfo> syncInfo,
             @JsonProperty("returnInfo") final java.util.List<com.commercetools.api.models.order.ReturnInfo> returnInfo,
+            @JsonProperty("discountTypeCombination") final com.commercetools.api.models.cart.DiscountTypeCombination discountTypeCombination,
             @JsonProperty("lastMessageSequenceNumber") final Long lastMessageSequenceNumber,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
             @JsonProperty("completedAt") final java.time.ZonedDateTime completedAt,
@@ -224,6 +227,7 @@ public class OrderImpl implements Order, ModelBase {
         this.state = state;
         this.syncInfo = syncInfo;
         this.returnInfo = returnInfo;
+        this.discountTypeCombination = discountTypeCombination;
         this.lastMessageSequenceNumber = lastMessageSequenceNumber;
         this.custom = custom;
         this.completedAt = completedAt;
@@ -617,6 +621,14 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
+     *  <p>Indicates if a combination of discount types can apply on an Order.</p>
+     */
+
+    public com.commercetools.api.models.cart.DiscountTypeCombination getDiscountTypeCombination() {
+        return this.discountTypeCombination;
+    }
+
+    /**
      *  <p>Internal-only field.</p>
      */
     @Deprecated
@@ -885,6 +897,11 @@ public class OrderImpl implements Order, ModelBase {
         this.returnInfo = returnInfo;
     }
 
+    public void setDiscountTypeCombination(
+            final com.commercetools.api.models.cart.DiscountTypeCombination discountTypeCombination) {
+        this.discountTypeCombination = discountTypeCombination;
+    }
+
     @Deprecated
     public void setLastMessageSequenceNumber(final Long lastMessageSequenceNumber) {
         this.lastMessageSequenceNumber = lastMessageSequenceNumber;
@@ -962,6 +979,7 @@ public class OrderImpl implements Order, ModelBase {
                 .append(state, that.state)
                 .append(syncInfo, that.syncInfo)
                 .append(returnInfo, that.returnInfo)
+                .append(discountTypeCombination, that.discountTypeCombination)
                 .append(lastMessageSequenceNumber, that.lastMessageSequenceNumber)
                 .append(custom, that.custom)
                 .append(completedAt, that.completedAt)
@@ -1013,6 +1031,7 @@ public class OrderImpl implements Order, ModelBase {
                 .append(state, that.state)
                 .append(syncInfo, that.syncInfo)
                 .append(returnInfo, that.returnInfo)
+                .append(discountTypeCombination, that.discountTypeCombination)
                 .append(lastMessageSequenceNumber, that.lastMessageSequenceNumber)
                 .append(custom, that.custom)
                 .append(completedAt, that.completedAt)
@@ -1069,6 +1088,7 @@ public class OrderImpl implements Order, ModelBase {
                 .append(state)
                 .append(syncInfo)
                 .append(returnInfo)
+                .append(discountTypeCombination)
                 .append(lastMessageSequenceNumber)
                 .append(custom)
                 .append(completedAt)
@@ -1125,6 +1145,7 @@ public class OrderImpl implements Order, ModelBase {
                 .append("state", state)
                 .append("syncInfo", syncInfo)
                 .append("returnInfo", returnInfo)
+                .append("discountTypeCombination", discountTypeCombination)
                 .append("lastMessageSequenceNumber", lastMessageSequenceNumber)
                 .append("custom", custom)
                 .append("completedAt", completedAt)

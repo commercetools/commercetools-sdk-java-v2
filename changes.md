@@ -3,30 +3,17 @@
 <details>
 <summary>Added Type(s)</summary>
 
-- added type `AssociateRoleNameSetMessage`
-- added type `AssociateRoleNameSetMessagePayload`
+- added type `BestDeal`
+- added type `DiscountTypeCombination`
+- added type `Stacking`
 </details>
 
 
 <details>
-<summary>Removed Type(s)</summary>
+<summary>Added Property(s)</summary>
 
-- :warning: removed type `AssociateRoleNameChangedMessage`
-- :warning: removed type `AssociateRoleNameChangedMessagePayload`
-</details>
-
-**History changes**
-
-<details>
-<summary>Removed Enum(s)</summary>
-
-- :warning: removed enum `setAsssetKey` from type `UpdateType`
-</details>
-
-
-<details>
-<summary>Added Enum(s)</summary>
-
-- added enum `setAssetKey` to type `UpdateType`
+- added property `discountTypeCombination` to type `Cart`
+- added property `discountTypeCombination` to type `StagedOrder`
+- added property `discountTypeCombination` to type `Order`
 </details>
 

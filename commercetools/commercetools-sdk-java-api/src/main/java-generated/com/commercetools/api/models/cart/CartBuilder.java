@@ -144,6 +144,9 @@ public class CartBuilder implements Builder<Cart> {
     private com.commercetools.api.models.type.CustomFields custom;
 
     @Nullable
+    private com.commercetools.api.models.cart.DiscountTypeCombination discountTypeCombination;
+
+    @Nullable
     private Integer deleteDaysAfterLastModification;
 
     @Nullable
@@ -1501,6 +1504,32 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
+     *  <p>Indicates if a combination of discount types can apply on a Cart.</p>
+     * @param discountTypeCombination value to be set
+     * @return Builder
+     */
+
+    public CartBuilder discountTypeCombination(
+            @Nullable final com.commercetools.api.models.cart.DiscountTypeCombination discountTypeCombination) {
+        this.discountTypeCombination = discountTypeCombination;
+        return this;
+    }
+
+    /**
+     *  <p>Indicates if a combination of discount types can apply on a Cart.</p>
+     * @param builder function to build the discountTypeCombination value
+     * @return Builder
+     */
+
+    public CartBuilder discountTypeCombination(
+            Function<com.commercetools.api.models.cart.DiscountTypeCombinationBuilder, Builder<? extends com.commercetools.api.models.cart.DiscountTypeCombination>> builder) {
+        this.discountTypeCombination = builder
+                .apply(com.commercetools.api.models.cart.DiscountTypeCombinationBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
      *  <p>Number of days after which an active Cart is deleted since its last modification. Configured in Project settings.</p>
      * @param deleteDaysAfterLastModification value to be set
      * @return Builder
@@ -1975,6 +2004,16 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
+     *  <p>Indicates if a combination of discount types can apply on a Cart.</p>
+     * @return discountTypeCombination
+     */
+
+    @Nullable
+    public com.commercetools.api.models.cart.DiscountTypeCombination getDiscountTypeCombination() {
+        return this.discountTypeCombination;
+    }
+
+    /**
      *  <p>Number of days after which an active Cart is deleted since its last modification. Configured in Project settings.</p>
      * @return deleteDaysAfterLastModification
      */
@@ -2033,7 +2072,8 @@ public class CartBuilder implements Builder<Cart> {
             taxedShippingPrice, discountOnTotalPrice, taxMode, taxRoundingMode, taxCalculationMode, inventoryMode,
             cartState, billingAddress, shippingAddress, shippingMode, shippingKey, shippingInfo, shippingRateInput,
             shippingCustomFields, shipping, itemShippingAddresses, discountCodes, directDiscounts, refusedGifts,
-            paymentInfo, country, locale, origin, custom, deleteDaysAfterLastModification, lastModifiedBy, createdBy);
+            paymentInfo, country, locale, origin, custom, discountTypeCombination, deleteDaysAfterLastModification,
+            lastModifiedBy, createdBy);
     }
 
     /**
@@ -2046,7 +2086,8 @@ public class CartBuilder implements Builder<Cart> {
             taxedShippingPrice, discountOnTotalPrice, taxMode, taxRoundingMode, taxCalculationMode, inventoryMode,
             cartState, billingAddress, shippingAddress, shippingMode, shippingKey, shippingInfo, shippingRateInput,
             shippingCustomFields, shipping, itemShippingAddresses, discountCodes, directDiscounts, refusedGifts,
-            paymentInfo, country, locale, origin, custom, deleteDaysAfterLastModification, lastModifiedBy, createdBy);
+            paymentInfo, country, locale, origin, custom, discountTypeCombination, deleteDaysAfterLastModification,
+            lastModifiedBy, createdBy);
     }
 
     /**
@@ -2104,6 +2145,7 @@ public class CartBuilder implements Builder<Cart> {
         builder.locale = template.getLocale();
         builder.origin = template.getOrigin();
         builder.custom = template.getCustom();
+        builder.discountTypeCombination = template.getDiscountTypeCombination();
         builder.deleteDaysAfterLastModification = template.getDeleteDaysAfterLastModification();
         builder.lastModifiedBy = template.getLastModifiedBy();
         builder.createdBy = template.getCreatedBy();

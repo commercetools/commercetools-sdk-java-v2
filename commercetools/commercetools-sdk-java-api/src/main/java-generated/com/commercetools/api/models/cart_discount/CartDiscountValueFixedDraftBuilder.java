@@ -30,8 +30,8 @@ public class CartDiscountValueFixedDraftBuilder implements Builder<CartDiscountV
     private com.commercetools.api.models.cart_discount.DiscountApplicationMode applicationMode;
 
     /**
-     *  <p>Money values provided either in cent precision or high precision for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$. If the array has multiple values of the same currency, the API returns an InvalidOperation error.</p>
-     *  <p>If the array is empty, the discount does not apply.</p>
+     *  <p>Money values provided either in cent precision or high precision for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
+     *  <p>If the array is empty or has multiple values of the same currency, the API returns an InvalidOperation error.</p>
      * @param money value to be set
      * @return Builder
      */
@@ -42,8 +42,8 @@ public class CartDiscountValueFixedDraftBuilder implements Builder<CartDiscountV
     }
 
     /**
-     *  <p>Money values provided either in cent precision or high precision for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$. If the array has multiple values of the same currency, the API returns an InvalidOperation error.</p>
-     *  <p>If the array is empty, the discount does not apply.</p>
+     *  <p>Money values provided either in cent precision or high precision for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
+     *  <p>If the array is empty or has multiple values of the same currency, the API returns an InvalidOperation error.</p>
      * @param money value to be set
      * @return Builder
      */
@@ -55,8 +55,8 @@ public class CartDiscountValueFixedDraftBuilder implements Builder<CartDiscountV
     }
 
     /**
-     *  <p>Money values provided either in cent precision or high precision for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$. If the array has multiple values of the same currency, the API returns an InvalidOperation error.</p>
-     *  <p>If the array is empty, the discount does not apply.</p>
+     *  <p>Money values provided either in cent precision or high precision for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
+     *  <p>If the array is empty or has multiple values of the same currency, the API returns an InvalidOperation error.</p>
      * @param money value to be set
      * @return Builder
      */
@@ -70,8 +70,8 @@ public class CartDiscountValueFixedDraftBuilder implements Builder<CartDiscountV
     }
 
     /**
-     *  <p>Money values provided either in cent precision or high precision for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$. If the array has multiple values of the same currency, the API returns an InvalidOperation error.</p>
-     *  <p>If the array is empty, the discount does not apply.</p>
+     *  <p>Money values provided either in cent precision or high precision for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
+     *  <p>If the array is empty or has multiple values of the same currency, the API returns an InvalidOperation error.</p>
      * @param builder function to build the money value
      * @return Builder
      */
@@ -86,8 +86,8 @@ public class CartDiscountValueFixedDraftBuilder implements Builder<CartDiscountV
     }
 
     /**
-     *  <p>Money values provided either in cent precision or high precision for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$. If the array has multiple values of the same currency, the API returns an InvalidOperation error.</p>
-     *  <p>If the array is empty, the discount does not apply.</p>
+     *  <p>Money values provided either in cent precision or high precision for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
+     *  <p>If the array is empty or has multiple values of the same currency, the API returns an InvalidOperation error.</p>
      * @param builder function to build the money value
      * @return Builder
      */
@@ -100,8 +100,8 @@ public class CartDiscountValueFixedDraftBuilder implements Builder<CartDiscountV
     }
 
     /**
-     *  <p>Money values provided either in cent precision or high precision for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$. If the array has multiple values of the same currency, the API returns an InvalidOperation error.</p>
-     *  <p>If the array is empty, the discount does not apply.</p>
+     *  <p>Money values provided either in cent precision or high precision for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
+     *  <p>If the array is empty or has multiple values of the same currency, the API returns an InvalidOperation error.</p>
      * @param builder function to build the money value
      * @return Builder
      */
@@ -112,8 +112,8 @@ public class CartDiscountValueFixedDraftBuilder implements Builder<CartDiscountV
     }
 
     /**
-     *  <p>Money values provided either in cent precision or high precision for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$. If the array has multiple values of the same currency, the API returns an InvalidOperation error.</p>
-     *  <p>If the array is empty, the discount does not apply.</p>
+     *  <p>Money values provided either in cent precision or high precision for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
+     *  <p>If the array is empty or has multiple values of the same currency, the API returns an InvalidOperation error.</p>
      * @param builder function to build the money value
      * @return Builder
      */
@@ -137,8 +137,8 @@ public class CartDiscountValueFixedDraftBuilder implements Builder<CartDiscountV
     }
 
     /**
-     *  <p>Money values provided either in cent precision or high precision for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$. If the array has multiple values of the same currency, the API returns an InvalidOperation error.</p>
-     *  <p>If the array is empty, the discount does not apply.</p>
+     *  <p>Money values provided either in cent precision or high precision for different currencies. A fixed Cart Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be discounted by 10&euro; and the matching $ price will be discounted to 15$.</p>
+     *  <p>If the array is empty or has multiple values of the same currency, the API returns an InvalidOperation error.</p>
      * @return money
      */
 

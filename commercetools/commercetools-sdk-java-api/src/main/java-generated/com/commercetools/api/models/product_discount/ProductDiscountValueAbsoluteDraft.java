@@ -41,8 +41,8 @@ public interface ProductDiscountValueAbsoluteDraft
     String ABSOLUTE = "absolute";
 
     /**
-     *  <p>Money values in different currencies. An absolute Product Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$. If the array has multiple values of the same currency, the API returns an InvalidOperation error.</p>
-     *  <p>If the array is empty, the discount does not apply.</p>
+     *  <p>Money values in different currencies. An absolute Product Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
+     *  <p>If the array is empty or has multiple values of the same currency, the API returns an InvalidOperation error.</p>
      * @return money
      */
     @NotNull
@@ -51,8 +51,8 @@ public interface ProductDiscountValueAbsoluteDraft
     public List<Money> getMoney();
 
     /**
-     *  <p>Money values in different currencies. An absolute Product Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$. If the array has multiple values of the same currency, the API returns an InvalidOperation error.</p>
-     *  <p>If the array is empty, the discount does not apply.</p>
+     *  <p>Money values in different currencies. An absolute Product Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
+     *  <p>If the array is empty or has multiple values of the same currency, the API returns an InvalidOperation error.</p>
      * @param money values to be set
      */
 
@@ -60,8 +60,8 @@ public interface ProductDiscountValueAbsoluteDraft
     public void setMoney(final Money... money);
 
     /**
-     *  <p>Money values in different currencies. An absolute Product Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$. If the array has multiple values of the same currency, the API returns an InvalidOperation error.</p>
-     *  <p>If the array is empty, the discount does not apply.</p>
+     *  <p>Money values in different currencies. An absolute Product Discount will match a price only if the array contains a value with the same currency. For example, if it contains 10&euro; and 15$, the matching &euro; price will be decreased by 10&euro; and the matching $ price will be decreased by 15$.</p>
+     *  <p>If the array is empty or has multiple values of the same currency, the API returns an InvalidOperation error.</p>
      * @param money values to be set
      */
 

@@ -37,8 +37,8 @@ public class CartDiscountPatternTargetBuilder implements Builder<CartDiscountPat
 
     /**
      *  <p>Defines the set of units of (Custom) Line Items in a Cart that trigger a discount application.</p>
-     *  <p>Based on the availability of matching units, the <code>triggerPattern</code> can match multiple times, limiting the number of maximum times the discount will be applied. To further limit the discount application, set the <code>maxOccurrence</code>.</p>
-     *  <p>If empty, the Discount will apply indefinitely.</p>
+     *  <p>Based on the availability of matching units, the <code>triggerPattern</code> can match multiple times, limiting the number of maximum times the discount will be applied. The units matched in the <code>triggerPattern</code> are excluded and not considered for the <code>targetPattern</code>.</p>
+     *  <p>To further limit the discount application, set the <code>maxOccurrence</code>.</p>
      * @param triggerPattern value to be set
      * @return Builder
      */
@@ -51,8 +51,8 @@ public class CartDiscountPatternTargetBuilder implements Builder<CartDiscountPat
 
     /**
      *  <p>Defines the set of units of (Custom) Line Items in a Cart that trigger a discount application.</p>
-     *  <p>Based on the availability of matching units, the <code>triggerPattern</code> can match multiple times, limiting the number of maximum times the discount will be applied. To further limit the discount application, set the <code>maxOccurrence</code>.</p>
-     *  <p>If empty, the Discount will apply indefinitely.</p>
+     *  <p>Based on the availability of matching units, the <code>triggerPattern</code> can match multiple times, limiting the number of maximum times the discount will be applied. The units matched in the <code>triggerPattern</code> are excluded and not considered for the <code>targetPattern</code>.</p>
+     *  <p>To further limit the discount application, set the <code>maxOccurrence</code>.</p>
      * @param triggerPattern value to be set
      * @return Builder
      */
@@ -65,8 +65,8 @@ public class CartDiscountPatternTargetBuilder implements Builder<CartDiscountPat
 
     /**
      *  <p>Defines the set of units of (Custom) Line Items in a Cart that trigger a discount application.</p>
-     *  <p>Based on the availability of matching units, the <code>triggerPattern</code> can match multiple times, limiting the number of maximum times the discount will be applied. To further limit the discount application, set the <code>maxOccurrence</code>.</p>
-     *  <p>If empty, the Discount will apply indefinitely.</p>
+     *  <p>Based on the availability of matching units, the <code>triggerPattern</code> can match multiple times, limiting the number of maximum times the discount will be applied. The units matched in the <code>triggerPattern</code> are excluded and not considered for the <code>targetPattern</code>.</p>
+     *  <p>To further limit the discount application, set the <code>maxOccurrence</code>.</p>
      * @param triggerPattern value to be set
      * @return Builder
      */
@@ -82,8 +82,8 @@ public class CartDiscountPatternTargetBuilder implements Builder<CartDiscountPat
 
     /**
      *  <p>Defines the set of units of (Custom) Line Items in a Cart that trigger a discount application.</p>
-     *  <p>Based on the availability of matching units, the <code>triggerPattern</code> can match multiple times, limiting the number of maximum times the discount will be applied. To further limit the discount application, set the <code>maxOccurrence</code>.</p>
-     *  <p>If empty, the Discount will apply indefinitely.</p>
+     *  <p>Based on the availability of matching units, the <code>triggerPattern</code> can match multiple times, limiting the number of maximum times the discount will be applied. The units matched in the <code>triggerPattern</code> are excluded and not considered for the <code>targetPattern</code>.</p>
+     *  <p>To further limit the discount application, set the <code>maxOccurrence</code>.</p>
      * @param builder function to build the triggerPattern value
      * @return Builder
      */
@@ -100,8 +100,8 @@ public class CartDiscountPatternTargetBuilder implements Builder<CartDiscountPat
 
     /**
      *  <p>Defines the set of units of (Custom) Line Items in a Cart that trigger a discount application.</p>
-     *  <p>Based on the availability of matching units, the <code>triggerPattern</code> can match multiple times, limiting the number of maximum times the discount will be applied. To further limit the discount application, set the <code>maxOccurrence</code>.</p>
-     *  <p>If empty, the Discount will apply indefinitely.</p>
+     *  <p>Based on the availability of matching units, the <code>triggerPattern</code> can match multiple times, limiting the number of maximum times the discount will be applied. The units matched in the <code>triggerPattern</code> are excluded and not considered for the <code>targetPattern</code>.</p>
+     *  <p>To further limit the discount application, set the <code>maxOccurrence</code>.</p>
      * @param builder function to build the triggerPattern value
      * @return Builder
      */
@@ -219,8 +219,8 @@ public class CartDiscountPatternTargetBuilder implements Builder<CartDiscountPat
 
     /**
      *  <p>Defines the set of units of (Custom) Line Items in a Cart that trigger a discount application.</p>
-     *  <p>Based on the availability of matching units, the <code>triggerPattern</code> can match multiple times, limiting the number of maximum times the discount will be applied. To further limit the discount application, set the <code>maxOccurrence</code>.</p>
-     *  <p>If empty, the Discount will apply indefinitely.</p>
+     *  <p>Based on the availability of matching units, the <code>triggerPattern</code> can match multiple times, limiting the number of maximum times the discount will be applied. The units matched in the <code>triggerPattern</code> are excluded and not considered for the <code>targetPattern</code>.</p>
+     *  <p>To further limit the discount application, set the <code>maxOccurrence</code>.</p>
      * @return triggerPattern
      */
 

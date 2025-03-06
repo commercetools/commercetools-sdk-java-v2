@@ -31,6 +31,7 @@ public class CountOnLineItemUnitsBuilder implements Builder<CountOnLineItemUnits
     @Nullable
     private Integer maxCount;
 
+    @Deprecated
     @Nullable
     private Integer excludeCount;
 
@@ -75,7 +76,7 @@ public class CountOnLineItemUnitsBuilder implements Builder<CountOnLineItemUnits
      * @param excludeCount value to be set
      * @return Builder
      */
-
+    @Deprecated
     public CountOnLineItemUnitsBuilder excludeCount(@Nullable final Integer excludeCount) {
         this.excludeCount = excludeCount;
         return this;
@@ -117,7 +118,7 @@ public class CountOnLineItemUnitsBuilder implements Builder<CountOnLineItemUnits
      *  <p>The units matched first (satisfying the pattern component) will be excluded from the resulting set. The <code>minCount</code>and <code>maxCount</code> are considered only after the exclusion. Pattern components are matched only if any further units satisfying the pattern component exist. For example, if 5 jeans are required but only 3 should be discounted, the <code>excludeCount</code> value must be 2.</p>
      * @return excludeCount
      */
-
+    @Deprecated
     @Nullable
     public Integer getExcludeCount() {
         return this.excludeCount;

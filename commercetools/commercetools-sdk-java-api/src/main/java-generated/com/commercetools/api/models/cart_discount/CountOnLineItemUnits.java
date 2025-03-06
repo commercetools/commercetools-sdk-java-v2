@@ -67,7 +67,7 @@ public interface CountOnLineItemUnits extends PatternComponent {
      *  <p>The units matched first (satisfying the pattern component) will be excluded from the resulting set. The <code>minCount</code>and <code>maxCount</code> are considered only after the exclusion. Pattern components are matched only if any further units satisfying the pattern component exist. For example, if 5 jeans are required but only 3 should be discounted, the <code>excludeCount</code> value must be 2.</p>
      * @return excludeCount
      */
-
+    @Deprecated
     @JsonProperty("excludeCount")
     public Integer getExcludeCount();
 
@@ -99,7 +99,7 @@ public interface CountOnLineItemUnits extends PatternComponent {
      *  <p>The units matched first (satisfying the pattern component) will be excluded from the resulting set. The <code>minCount</code>and <code>maxCount</code> are considered only after the exclusion. Pattern components are matched only if any further units satisfying the pattern component exist. For example, if 5 jeans are required but only 3 should be discounted, the <code>excludeCount</code> value must be 2.</p>
      * @param excludeCount value to be set
      */
-
+    @Deprecated
     public void setExcludeCount(final Integer excludeCount);
 
     /**

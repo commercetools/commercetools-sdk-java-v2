@@ -55,4 +55,16 @@ public class ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsRequestBuilder {
             ID);
     }
 
+    public ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsKeyByKeyAssociatesByAssociateIdRequestBuilder keyWithKeyValueAssociatesWithAssociateIdValue(
+            String key, String associateId) {
+        return new ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsKeyByKeyAssociatesByAssociateIdRequestBuilder(
+            apiHttpClient, projectKey, storeKey, key, associateId);
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsByBusinessUnitIdAssociatesByAssociateIdRequestBuilder withBusinessUnitIdValueAssociatesWithAssociateIdValue(
+            String businessUnitId, String associateId) {
+        return new ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsByBusinessUnitIdAssociatesByAssociateIdRequestBuilder(
+            apiHttpClient, projectKey, storeKey, businessUnitId, associateId);
+    }
+
 }

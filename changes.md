@@ -38,3 +38,11 @@
 - added property `discountTypeCombination` to type `Order`
 </details>
 
+
+<details>
+<summary>MarkDeprecated Property(s)</summary>
+
+- marked property `CountOnCustomLineItemUnits::excludeCount` as deprecated
+- marked property `CountOnLineItemUnits::excludeCount` as deprecated
+</details>
+

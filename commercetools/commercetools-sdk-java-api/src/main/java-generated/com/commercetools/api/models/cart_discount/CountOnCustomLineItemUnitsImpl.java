@@ -30,6 +30,7 @@ public class CountOnCustomLineItemUnitsImpl implements CountOnCustomLineItemUnit
 
     private Integer maxCount;
 
+    @Deprecated
     private Integer excludeCount;
 
     /**
@@ -91,7 +92,7 @@ public class CountOnCustomLineItemUnitsImpl implements CountOnCustomLineItemUnit
      *  <p>Set only when configuring the <code>targetPattern</code>.</p>
      *  <p>The units matched first (satisfying the pattern component) will be excluded from the resulting set. The <code>minCount</code>and <code>maxCount</code> are considered only after the exclusion. Pattern components are matched only if any further units satisfying the pattern component exist. For example, if 5 jeans are required but only 3 should be discounted, the <code>excludeCount</code> value must be 2.</p>
      */
-
+    @Deprecated
     public Integer getExcludeCount() {
         return this.excludeCount;
     }
@@ -108,6 +109,7 @@ public class CountOnCustomLineItemUnitsImpl implements CountOnCustomLineItemUnit
         this.maxCount = maxCount;
     }
 
+    @Deprecated
     public void setExcludeCount(final Integer excludeCount) {
         this.excludeCount = excludeCount;
     }

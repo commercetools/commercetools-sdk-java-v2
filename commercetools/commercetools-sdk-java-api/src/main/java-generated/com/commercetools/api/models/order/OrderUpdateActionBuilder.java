@@ -79,6 +79,10 @@ public class OrderUpdateActionBuilder {
         return com.commercetools.api.models.order.OrderSetBillingAddressCustomTypeActionBuilder.of();
     }
 
+    public com.commercetools.api.models.order.OrderSetBusinessUnitActionBuilder setBusinessUnitBuilder() {
+        return com.commercetools.api.models.order.OrderSetBusinessUnitActionBuilder.of();
+    }
+
     public com.commercetools.api.models.order.OrderSetCustomFieldActionBuilder setCustomFieldBuilder() {
         return com.commercetools.api.models.order.OrderSetCustomFieldActionBuilder.of();
     }

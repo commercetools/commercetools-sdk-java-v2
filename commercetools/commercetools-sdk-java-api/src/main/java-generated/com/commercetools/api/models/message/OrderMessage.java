@@ -92,6 +92,10 @@ public interface OrderMessage extends Message {
             return com.commercetools.api.models.message.OrderBillingAddressSetMessage
                     .deepCopy((com.commercetools.api.models.message.OrderBillingAddressSetMessage) template);
         }
+        if (template instanceof com.commercetools.api.models.message.OrderBusinessUnitSetMessage) {
+            return com.commercetools.api.models.message.OrderBusinessUnitSetMessage
+                    .deepCopy((com.commercetools.api.models.message.OrderBusinessUnitSetMessage) template);
+        }
         if (template instanceof com.commercetools.api.models.message.OrderCreatedMessage) {
             return com.commercetools.api.models.message.OrderCreatedMessage
                     .deepCopy((com.commercetools.api.models.message.OrderCreatedMessage) template);

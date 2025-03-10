@@ -250,6 +250,14 @@ public class StagedOrderUpdateActionQueryBuilderDsl {
             StagedOrderUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<StagedOrderUpdateActionQueryBuilderDsl> asSetBusinessUnit(
+            Function<com.commercetools.api.predicates.query.order_edit.StagedOrderSetBusinessUnitActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.order_edit.StagedOrderSetBusinessUnitActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.order_edit.StagedOrderSetBusinessUnitActionQueryBuilderDsl.of()),
+            StagedOrderUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<StagedOrderUpdateActionQueryBuilderDsl> asSetCountry(
             Function<com.commercetools.api.predicates.query.order_edit.StagedOrderSetCountryActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.order_edit.StagedOrderSetCountryActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

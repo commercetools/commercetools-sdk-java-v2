@@ -7,6 +7,10 @@
 - added type `BestDeal`
 - added type `DiscountTypeCombination`
 - added type `Stacking`
+- added type `OrderBusinessUnitSetMessage`
+- added type `OrderBusinessUnitSetMessagePayload`
+- added type `StagedOrderSetBusinessUnitAction`
+- added type `OrderSetBusinessUnitAction`
 </details>
 
 

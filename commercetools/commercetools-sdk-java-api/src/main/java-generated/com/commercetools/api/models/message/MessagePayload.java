@@ -139,6 +139,7 @@ import jakarta.validation.constraints.NotNull;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.InventoryEntryQuantitySetMessagePayloadImpl.class, name = InventoryEntryQuantitySetMessagePayload.INVENTORY_ENTRY_QUANTITY_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.LineItemStateTransitionMessagePayloadImpl.class, name = LineItemStateTransitionMessagePayload.LINE_ITEM_STATE_TRANSITION),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderBillingAddressSetMessagePayloadImpl.class, name = OrderBillingAddressSetMessagePayload.ORDER_BILLING_ADDRESS_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderBusinessUnitSetMessagePayloadImpl.class, name = OrderBusinessUnitSetMessagePayload.ORDER_BUSINESS_UNIT_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCreatedMessagePayloadImpl.class, name = OrderCreatedMessagePayload.ORDER_CREATED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomFieldAddedMessagePayloadImpl.class, name = OrderCustomFieldAddedMessagePayload.ORDER_CUSTOM_FIELD_ADDED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomFieldChangedMessagePayloadImpl.class, name = OrderCustomFieldChangedMessagePayload.ORDER_CUSTOM_FIELD_CHANGED),
@@ -1956,6 +1957,14 @@ public interface MessagePayload extends MessagePayloadMixin {
      */
     public static com.commercetools.api.models.message.OrderBillingAddressSetMessagePayloadBuilder orderBillingAddressSetBuilder() {
         return com.commercetools.api.models.message.OrderBillingAddressSetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for orderBusinessUnitSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.OrderBusinessUnitSetMessagePayloadBuilder orderBusinessUnitSetBuilder() {
+        return com.commercetools.api.models.message.OrderBusinessUnitSetMessagePayloadBuilder.of();
     }
 
     /**

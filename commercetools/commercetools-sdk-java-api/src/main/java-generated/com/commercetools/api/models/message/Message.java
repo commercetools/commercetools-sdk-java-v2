@@ -152,6 +152,7 @@ import jakarta.validation.constraints.NotNull;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.InventoryEntryQuantitySetMessageImpl.class, name = InventoryEntryQuantitySetMessage.INVENTORY_ENTRY_QUANTITY_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.LineItemStateTransitionMessageImpl.class, name = LineItemStateTransitionMessage.LINE_ITEM_STATE_TRANSITION),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderBillingAddressSetMessageImpl.class, name = OrderBillingAddressSetMessage.ORDER_BILLING_ADDRESS_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderBusinessUnitSetMessageImpl.class, name = OrderBusinessUnitSetMessage.ORDER_BUSINESS_UNIT_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCreatedMessageImpl.class, name = OrderCreatedMessage.ORDER_CREATED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomFieldAddedMessageImpl.class, name = OrderCustomFieldAddedMessage.ORDER_CUSTOM_FIELD_ADDED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.OrderCustomFieldChangedMessageImpl.class, name = OrderCustomFieldChangedMessage.ORDER_CUSTOM_FIELD_CHANGED),
@@ -2127,6 +2128,14 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
      */
     public static com.commercetools.api.models.message.OrderBillingAddressSetMessageBuilder orderBillingAddressSetBuilder() {
         return com.commercetools.api.models.message.OrderBillingAddressSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for orderBusinessUnitSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.OrderBusinessUnitSetMessageBuilder orderBusinessUnitSetBuilder() {
+        return com.commercetools.api.models.message.OrderBusinessUnitSetMessageBuilder.of();
     }
 
     /**

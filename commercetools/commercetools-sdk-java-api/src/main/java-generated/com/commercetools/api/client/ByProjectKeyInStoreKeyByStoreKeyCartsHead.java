@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Checks if a Cart exists for a given Query Predicate. Returns a <code>200 OK</code> status if any Carts match the Query Predicate or a ResourceNotFound error otherwise.</p>
+ *  <p>Checks if one or more Carts exist for the provided query predicate in a Store. Returns a <code>200 OK</code> status if any Carts match the query predicate or a ResourceNotFound error otherwise.</p>
  *
  * <hr>
  * <div class=code-example>

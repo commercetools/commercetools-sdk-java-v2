@@ -44,6 +44,7 @@ import jakarta.validation.constraints.NotNull;
         @JsonSubTypes.Type(value = com.commercetools.api.models.order.OrderSetBillingAddressActionImpl.class, name = OrderSetBillingAddressAction.SET_BILLING_ADDRESS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order.OrderSetBillingAddressCustomFieldActionImpl.class, name = OrderSetBillingAddressCustomFieldAction.SET_BILLING_ADDRESS_CUSTOM_FIELD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order.OrderSetBillingAddressCustomTypeActionImpl.class, name = OrderSetBillingAddressCustomTypeAction.SET_BILLING_ADDRESS_CUSTOM_TYPE),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.order.OrderSetBusinessUnitActionImpl.class, name = OrderSetBusinessUnitAction.SET_BUSINESS_UNIT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order.OrderSetCustomFieldActionImpl.class, name = OrderSetCustomFieldAction.SET_CUSTOM_FIELD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order.OrderSetCustomLineItemCustomFieldActionImpl.class, name = OrderSetCustomLineItemCustomFieldAction.SET_CUSTOM_LINE_ITEM_CUSTOM_FIELD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order.OrderSetCustomLineItemCustomTypeActionImpl.class, name = OrderSetCustomLineItemCustomTypeAction.SET_CUSTOM_LINE_ITEM_CUSTOM_TYPE),
@@ -176,6 +177,10 @@ public interface OrderUpdateAction extends com.commercetools.api.models.Resource
         if (template instanceof com.commercetools.api.models.order.OrderSetBillingAddressCustomTypeAction) {
             return com.commercetools.api.models.order.OrderSetBillingAddressCustomTypeAction
                     .deepCopy((com.commercetools.api.models.order.OrderSetBillingAddressCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order.OrderSetBusinessUnitAction) {
+            return com.commercetools.api.models.order.OrderSetBusinessUnitAction
+                    .deepCopy((com.commercetools.api.models.order.OrderSetBusinessUnitAction) template);
         }
         if (template instanceof com.commercetools.api.models.order.OrderSetCustomFieldAction) {
             return com.commercetools.api.models.order.OrderSetCustomFieldAction
@@ -483,6 +488,14 @@ public interface OrderUpdateAction extends com.commercetools.api.models.Resource
      */
     public static com.commercetools.api.models.order.OrderSetBillingAddressCustomTypeActionBuilder setBillingAddressCustomTypeBuilder() {
         return com.commercetools.api.models.order.OrderSetBillingAddressCustomTypeActionBuilder.of();
+    }
+
+    /**
+     * builder for setBusinessUnit subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.order.OrderSetBusinessUnitActionBuilder setBusinessUnitBuilder() {
+        return com.commercetools.api.models.order.OrderSetBusinessUnitActionBuilder.of();
     }
 
     /**

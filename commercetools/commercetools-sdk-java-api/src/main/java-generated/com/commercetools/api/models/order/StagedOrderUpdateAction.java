@@ -37,6 +37,7 @@ import com.commercetools.api.models.order_edit.StagedOrderRemovePaymentAction;
 import com.commercetools.api.models.order_edit.StagedOrderSetBillingAddressAction;
 import com.commercetools.api.models.order_edit.StagedOrderSetBillingAddressCustomFieldAction;
 import com.commercetools.api.models.order_edit.StagedOrderSetBillingAddressCustomTypeAction;
+import com.commercetools.api.models.order_edit.StagedOrderSetBusinessUnitAction;
 import com.commercetools.api.models.order_edit.StagedOrderSetCountryAction;
 import com.commercetools.api.models.order_edit.StagedOrderSetCustomFieldAction;
 import com.commercetools.api.models.order_edit.StagedOrderSetCustomLineItemCustomFieldAction;
@@ -150,6 +151,7 @@ import jakarta.validation.constraints.NotNull;
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetBillingAddressActionImpl.class, name = StagedOrderSetBillingAddressAction.SET_BILLING_ADDRESS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetBillingAddressCustomFieldActionImpl.class, name = StagedOrderSetBillingAddressCustomFieldAction.SET_BILLING_ADDRESS_CUSTOM_FIELD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetBillingAddressCustomTypeActionImpl.class, name = StagedOrderSetBillingAddressCustomTypeAction.SET_BILLING_ADDRESS_CUSTOM_TYPE),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetBusinessUnitActionImpl.class, name = StagedOrderSetBusinessUnitAction.SET_BUSINESS_UNIT),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetCountryActionImpl.class, name = StagedOrderSetCountryAction.SET_COUNTRY),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetCustomFieldActionImpl.class, name = StagedOrderSetCustomFieldAction.SET_CUSTOM_FIELD),
         @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.StagedOrderSetCustomLineItemCustomFieldActionImpl.class, name = StagedOrderSetCustomLineItemCustomFieldAction.SET_CUSTOM_LINE_ITEM_CUSTOM_FIELD),
@@ -353,6 +355,10 @@ public interface StagedOrderUpdateAction
         if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetBillingAddressCustomTypeAction) {
             return com.commercetools.api.models.order_edit.StagedOrderSetBillingAddressCustomTypeAction.deepCopy(
                 (com.commercetools.api.models.order_edit.StagedOrderSetBillingAddressCustomTypeAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetBusinessUnitAction) {
+            return com.commercetools.api.models.order_edit.StagedOrderSetBusinessUnitAction
+                    .deepCopy((com.commercetools.api.models.order_edit.StagedOrderSetBusinessUnitAction) template);
         }
         if (template instanceof com.commercetools.api.models.order_edit.StagedOrderSetCountryAction) {
             return com.commercetools.api.models.order_edit.StagedOrderSetCountryAction
@@ -838,6 +844,14 @@ public interface StagedOrderUpdateAction
      */
     public static com.commercetools.api.models.order_edit.StagedOrderSetBillingAddressCustomTypeActionBuilder setBillingAddressCustomTypeBuilder() {
         return com.commercetools.api.models.order_edit.StagedOrderSetBillingAddressCustomTypeActionBuilder.of();
+    }
+
+    /**
+     * builder for setBusinessUnit subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.order_edit.StagedOrderSetBusinessUnitActionBuilder setBusinessUnitBuilder() {
+        return com.commercetools.api.models.order_edit.StagedOrderSetBusinessUnitActionBuilder.of();
     }
 
     /**

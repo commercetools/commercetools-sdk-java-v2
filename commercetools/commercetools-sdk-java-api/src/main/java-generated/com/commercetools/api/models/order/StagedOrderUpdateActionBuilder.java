@@ -131,6 +131,10 @@ public class StagedOrderUpdateActionBuilder {
         return com.commercetools.api.models.order_edit.StagedOrderSetBillingAddressCustomTypeActionBuilder.of();
     }
 
+    public com.commercetools.api.models.order_edit.StagedOrderSetBusinessUnitActionBuilder setBusinessUnitBuilder() {
+        return com.commercetools.api.models.order_edit.StagedOrderSetBusinessUnitActionBuilder.of();
+    }
+
     public com.commercetools.api.models.order_edit.StagedOrderSetCountryActionBuilder setCountryBuilder() {
         return com.commercetools.api.models.order_edit.StagedOrderSetCountryActionBuilder.of();
     }

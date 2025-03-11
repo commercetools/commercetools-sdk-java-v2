@@ -451,6 +451,10 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.OrderBillingAddressSetMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.OrderBusinessUnitSetMessageBuilder orderBusinessUnitSetBuilder() {
+        return com.commercetools.api.models.message.OrderBusinessUnitSetMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.OrderCreatedMessageBuilder orderCreatedBuilder() {
         return com.commercetools.api.models.message.OrderCreatedMessageBuilder.of();
     }

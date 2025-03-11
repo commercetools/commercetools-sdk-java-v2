@@ -85,6 +85,10 @@ public interface OrderMessagePayload extends MessagePayload {
             return com.commercetools.api.models.message.OrderBillingAddressSetMessagePayload
                     .deepCopy((com.commercetools.api.models.message.OrderBillingAddressSetMessagePayload) template);
         }
+        if (template instanceof com.commercetools.api.models.message.OrderBusinessUnitSetMessagePayload) {
+            return com.commercetools.api.models.message.OrderBusinessUnitSetMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.OrderBusinessUnitSetMessagePayload) template);
+        }
         if (template instanceof com.commercetools.api.models.message.OrderCreatedMessagePayload) {
             return com.commercetools.api.models.message.OrderCreatedMessagePayload
                     .deepCopy((com.commercetools.api.models.message.OrderCreatedMessagePayload) template);

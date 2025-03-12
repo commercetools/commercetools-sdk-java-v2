@@ -262,7 +262,7 @@ public class ProductTailoringBuilder implements Builder<ProductTailoring> {
     }
 
     /**
-     *  <p><code>true</code> if the ProductTailoring is published.</p>
+     *  <p>If <code>true</code>, the tailored information contained in the <code>current</code> ProductTailoringData is provided when retrieving the ProductProjection in Store. For information not part of the ProductTailoringData, the original information contained in the ProductData is provided. If <code>false</code>, only the original information contained in the ProductData is provided.</p>
      * @param published value to be set
      * @return Builder
      */
@@ -509,7 +509,7 @@ public class ProductTailoringBuilder implements Builder<ProductTailoring> {
     }
 
     /**
-     *  <p><code>true</code> if the ProductTailoring is published.</p>
+     *  <p>If <code>true</code>, the tailored information contained in the <code>current</code> ProductTailoringData is provided when retrieving the ProductProjection in Store. For information not part of the ProductTailoringData, the original information contained in the ProductData is provided. If <code>false</code>, only the original information contained in the ProductData is provided.</p>
      * @return published
      */
 

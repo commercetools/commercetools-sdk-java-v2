@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Contains all the tailored data of a Product for a specific Store.</p>
+ *  <p>Contains all the tailored information of a Product for a specific Store.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTailoringInStoreDraftImpl implements ProductTailoringInStoreDraft, ModelBase {

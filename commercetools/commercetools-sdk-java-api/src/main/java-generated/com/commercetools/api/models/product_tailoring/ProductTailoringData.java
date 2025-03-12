@@ -17,7 +17,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.Valid;
 
 /**
- *  <p>Contains all the tailored data of a Product.</p>
+ *  <p>Contains all the tailored information of a Product.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

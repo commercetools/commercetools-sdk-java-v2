@@ -11,7 +11,7 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Permissions grant granular access to Approval Rules, Approval Flows, Business Units, Carts, Orders, Quotes, and Quote Requests.</p>
+ *  <p>Permissions grant granular access to Approval Rules, Approval Flows, Business Units, Carts, Orders, Quotes, Quote Requests, and Shopping Lists.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface Permission extends JsonEnum {
@@ -133,6 +133,30 @@ public interface Permission extends JsonEnum {
     /**
     <p>An Associate can update Approval Flows.</p> */
     Permission UPDATE_APPROVAL_FLOWS = PermissionEnum.UPDATE_APPROVAL_FLOWS;
+    /**
+    <p>An Associate can view their own B2B Shopping Lists.</p> */
+    Permission VIEW_MY_SHOPPING_LISTS = PermissionEnum.VIEW_MY_SHOPPING_LISTS;
+    /**
+    <p>An Associate can view B2B Shopping Lists that belong to other Associates.</p> */
+    Permission VIEW_OTHERS_SHOPPING_LISTS = PermissionEnum.VIEW_OTHERS_SHOPPING_LISTS;
+    /**
+    <p>An Associate can update their own B2B Shopping Lists.</p> */
+    Permission UPDATE_MY_SHOPPING_LISTS = PermissionEnum.UPDATE_MY_SHOPPING_LISTS;
+    /**
+    <p>An Associate can update B2B Shopping Lists that belong to other Associates.</p> */
+    Permission UPDATE_OTHERS_SHOPPING_LISTS = PermissionEnum.UPDATE_OTHERS_SHOPPING_LISTS;
+    /**
+    <p>An Associate can create their own B2B Shopping Lists.</p> */
+    Permission CREATE_MY_SHOPPING_LISTS = PermissionEnum.CREATE_MY_SHOPPING_LISTS;
+    /**
+    <p>An Associate can create B2B Shopping Lists that belong to other Associates.</p> */
+    Permission CREATE_OTHERS_SHOPPING_LISTS = PermissionEnum.CREATE_OTHERS_SHOPPING_LISTS;
+    /**
+    <p>An Associate can delete their own B2B Shopping Lists.</p> */
+    Permission DELETE_MY_SHOPPING_LISTS = PermissionEnum.DELETE_MY_SHOPPING_LISTS;
+    /**
+    <p>An Associate can delete B2B Shopping Lists that belong to other Associates.</p> */
+    Permission DELETE_OTHERS_SHOPPING_LISTS = PermissionEnum.DELETE_OTHERS_SHOPPING_LISTS;
 
     /**
      * possible values of Permission
@@ -331,7 +355,47 @@ public interface Permission extends JsonEnum {
         /**
          * UpdateApprovalFlows
          */
-        UPDATE_APPROVAL_FLOWS("UpdateApprovalFlows");
+        UPDATE_APPROVAL_FLOWS("UpdateApprovalFlows"),
+
+        /**
+         * ViewMyShoppingLists
+         */
+        VIEW_MY_SHOPPING_LISTS("ViewMyShoppingLists"),
+
+        /**
+         * ViewOthersShoppingLists
+         */
+        VIEW_OTHERS_SHOPPING_LISTS("ViewOthersShoppingLists"),
+
+        /**
+         * UpdateMyShoppingLists
+         */
+        UPDATE_MY_SHOPPING_LISTS("UpdateMyShoppingLists"),
+
+        /**
+         * UpdateOthersShoppingLists
+         */
+        UPDATE_OTHERS_SHOPPING_LISTS("UpdateOthersShoppingLists"),
+
+        /**
+         * CreateMyShoppingLists
+         */
+        CREATE_MY_SHOPPING_LISTS("CreateMyShoppingLists"),
+
+        /**
+         * CreateOthersShoppingLists
+         */
+        CREATE_OTHERS_SHOPPING_LISTS("CreateOthersShoppingLists"),
+
+        /**
+         * DeleteMyShoppingLists
+         */
+        DELETE_MY_SHOPPING_LISTS("DeleteMyShoppingLists"),
+
+        /**
+         * DeleteOthersShoppingLists
+         */
+        DELETE_OTHERS_SHOPPING_LISTS("DeleteOthersShoppingLists");
         private final String jsonName;
 
         private PermissionEnum(final String jsonName) {

@@ -354,7 +354,7 @@ public class ProductTailoringDraftBuilder implements Builder<ProductTailoringDra
     }
 
     /**
-     *  <p>If <code>true</code>, the ProductTailoring is published immediately.</p>
+     *  <p>Set to <code>true</code> to publish the ProductTailoring immediately. Otherwise, the tailored product information is just staged.</p>
      * @param publish value to be set
      * @return Builder
      */
@@ -548,7 +548,7 @@ public class ProductTailoringDraftBuilder implements Builder<ProductTailoringDra
     }
 
     /**
-     *  <p>If <code>true</code>, the ProductTailoring is published immediately.</p>
+     *  <p>Set to <code>true</code> to publish the ProductTailoring immediately. Otherwise, the tailored product information is just staged.</p>
      * @return publish
      */
 

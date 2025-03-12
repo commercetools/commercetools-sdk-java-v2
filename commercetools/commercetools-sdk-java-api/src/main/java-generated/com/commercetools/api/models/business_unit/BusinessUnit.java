@@ -122,8 +122,8 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>References to Stores the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
-     *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
-     *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
+     *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, Quote Requests, or Shopping Lists must belong to one of the Business Unit's Stores.</p>
+     *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, Quote Requests, or Shopping Lists must not belong to any Store.</p>
      * @return stores
      */
     @Valid
@@ -327,8 +327,8 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>References to Stores the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
-     *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
-     *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
+     *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, Quote Requests, or Shopping Lists must belong to one of the Business Unit's Stores.</p>
+     *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, Quote Requests, or Shopping Lists must not belong to any Store.</p>
      * @param stores values to be set
      */
 
@@ -337,8 +337,8 @@ public interface BusinessUnit extends BaseResource, com.commercetools.api.models
 
     /**
      *  <p>References to Stores the Business Unit is associated with. Only present when <code>storeMode</code> is <code>Explicit</code>.</p>
-     *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, or Quote Requests must belong to one of the Business Unit's Stores.</p>
-     *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, or Quote Requests must not belong to any Store.</p>
+     *  <p>If the Business Unit has Stores defined, then all of its Carts, Orders, Quotes, Quote Requests, or Shopping Lists must belong to one of the Business Unit's Stores.</p>
+     *  <p>If the Business Unit has no Stores, then all of its Carts, Orders, Quotes, Quote Requests, or Shopping Lists must not belong to any Store.</p>
      * @param stores values to be set
      */
 

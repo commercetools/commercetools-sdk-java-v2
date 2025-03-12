@@ -41,7 +41,7 @@ public class ByProjectKeyProductProjectionsByIDGet extends
         com.commercetools.api.client.ProjectionselectingTrait<ByProjectKeyProductProjectionsByIDGet>,
         com.commercetools.api.client.PriceselectingTrait<ByProjectKeyProductProjectionsByIDGet>,
         com.commercetools.api.client.LocaleprojectingTrait<ByProjectKeyProductProjectionsByIDGet>,
-        com.commercetools.api.client.StoreprojectingTrait<ByProjectKeyProductProjectionsByIDGet>,
+        com.commercetools.api.client.StoreprojectingtailoringTrait<ByProjectKeyProductProjectionsByIDGet>,
         com.commercetools.api.client.ExpandableTrait<ByProjectKeyProductProjectionsByIDGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductProjectionsByIDGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyProductProjectionsByIDGet> {

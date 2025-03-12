@@ -24,7 +24,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>A single ProductTailoring representation contains the <em>current</em> and the <em>staged</em> representation of its product data tailored per Store.</p>
+ *  <p>A single ProductTailoring representation contains the <em>current</em> and the <em>staged</em> representation of its product information tailored per Store.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -124,7 +124,7 @@ public interface ProductTailoring extends BaseResource {
     public ProductReference getProduct();
 
     /**
-     *  <p><code>true</code> if the ProductTailoring is published.</p>
+     *  <p>If <code>true</code>, the tailored information contained in the <code>current</code> ProductTailoringData is provided when retrieving the ProductProjection in Store. For information not part of the ProductTailoringData, the original information contained in the ProductData is provided. If <code>false</code>, only the original information contained in the ProductData is provided.</p>
      * @return published
      */
     @NotNull
@@ -229,7 +229,7 @@ public interface ProductTailoring extends BaseResource {
     public void setProduct(final ProductReference product);
 
     /**
-     *  <p><code>true</code> if the ProductTailoring is published.</p>
+     *  <p>If <code>true</code>, the tailored information contained in the <code>current</code> ProductTailoringData is provided when retrieving the ProductProjection in Store. For information not part of the ProductTailoringData, the original information contained in the ProductData is provided. If <code>false</code>, only the original information contained in the ProductData is provided.</p>
      * @param published value to be set
      */
 

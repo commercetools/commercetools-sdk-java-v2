@@ -20,7 +20,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Contains all the tailored data of a Product.</p>
+ *  <p>Contains the information to be tailored for a Product.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -112,7 +112,7 @@ public interface ProductTailoringDraft extends io.vrap.rmf.base.client.Draft<Pro
     public LocalizedString getSlug();
 
     /**
-     *  <p>If <code>true</code>, the ProductTailoring is published immediately.</p>
+     *  <p>Set to <code>true</code> to publish the ProductTailoring immediately. Otherwise, the tailored product information is just staged.</p>
      * @return publish
      */
 
@@ -191,7 +191,7 @@ public interface ProductTailoringDraft extends io.vrap.rmf.base.client.Draft<Pro
     public void setSlug(final LocalizedString slug);
 
     /**
-     *  <p>If <code>true</code>, the ProductTailoring is published immediately.</p>
+     *  <p>Set to <code>true</code> to publish the ProductTailoring immediately. Otherwise, the tailored product information is just staged.</p>
      * @param publish value to be set
      */
 

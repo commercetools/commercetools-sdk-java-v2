@@ -175,7 +175,7 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p><code>key</code> of an existing Store. If the Store has defined some languages, countries, distribution or supply Channels, they are used for projections based on locale, price, and inventory. If the Store has defined Product Selections or Product Tailoring, they have no effect on the results of this query.</p>
+     *  <p><code>key</code> of an existing Store. If the Store has defined <code>languages</code>, <code>countries</code>, <code>distributionChannels</code>, or <code>supplyChannels</code>, they are used for projections based on locale, price, and inventory. For Projects with active Product Selections, the API does not take the availability of the Product in the specified Store into account. Product Tailoring modifies the product information returned in API responses, but evaluating query expressions is restricted to the original product information.</p>
      * @param storeProjection value to be set
      * @return Builder
      */
@@ -256,7 +256,7 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p><code>key</code> of an existing Store. If the Store has defined some languages, countries, distribution or supply Channels, they are used for projections based on locale, price, and inventory. If the Store has defined Product Selections or Product Tailoring, they have no effect on the results of this query.</p>
+     *  <p><code>key</code> of an existing Store. If the Store has defined <code>languages</code>, <code>countries</code>, <code>distributionChannels</code>, or <code>supplyChannels</code>, they are used for projections based on locale, price, and inventory. For Projects with active Product Selections, the API does not take the availability of the Product in the specified Store into account. Product Tailoring modifies the product information returned in API responses, but evaluating query expressions is restricted to the original product information.</p>
      * @return storeProjection
      */
 

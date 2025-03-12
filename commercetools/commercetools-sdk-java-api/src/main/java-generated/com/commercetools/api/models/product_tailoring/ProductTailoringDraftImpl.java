@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Contains all the tailored data of a Product.</p>
+ *  <p>Contains the information to be tailored for a Product.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTailoringDraftImpl implements ProductTailoringDraft, ModelBase {
@@ -151,7 +151,7 @@ public class ProductTailoringDraftImpl implements ProductTailoringDraft, ModelBa
     }
 
     /**
-     *  <p>If <code>true</code>, the ProductTailoring is published immediately.</p>
+     *  <p>Set to <code>true</code> to publish the ProductTailoring immediately. Otherwise, the tailored product information is just staged.</p>
      */
 
     public Boolean getPublish() {

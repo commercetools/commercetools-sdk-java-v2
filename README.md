@@ -25,7 +25,7 @@ ext {
     ]
 }
 
-sourceCompatibility = 1.8
+sourceCompatibility = 11
 
 repositories {
     mavenCentral()

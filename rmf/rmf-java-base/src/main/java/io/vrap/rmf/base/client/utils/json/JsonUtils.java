@@ -63,6 +63,7 @@ public class JsonUtils {
                 .serializationInclusion(JsonInclude.Include.NON_NULL) //ignore null fields
                 .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false)
                 .configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false)
+                .configure(DeserializationFeature.USE_LONG_FOR_INTS, true)
                 .configure(MapperFeature.REQUIRE_TYPE_ID_FOR_SUBTYPES, false)
                 .build();
     }

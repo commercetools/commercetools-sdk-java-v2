@@ -1,4 +1,22 @@
 
+# 17.28.0 (2025-03-19)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/833
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/834
+* [DEVX-495] make serviceregion configurable in examples by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/835
+* [DEVX-322] QueryAll allows different field than id to be used by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/837
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/838
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/839
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/840
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/841
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/842
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/843
+* feat: always deserialize to long for jsonutils by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/845
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.27.0...17.27.1
+
 # 17.27.0 (2025-02-19)
 
 ## What's Changed

@@ -78,7 +78,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">CustomerSetCustomerGroupAssignmentsAction</span><span class="extends-implements">
 extends <a href="CustomerUpdateAction.html" title="interface in com.commercetools.api.models.customer">CustomerUpdateAction</a></span></div>
-<div class="block"><p>Assigns multiple Customer Groups to a Customer. Assigning Customer Groups generates the CustomerGroupAssignmentsSetMessage Message.</p>
+<div class="block"><p>Assigns multiple Customer Groups to a Customer. This action generates the CustomerGroupAssignmentsSetMessage Message.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -138,7 +138,7 @@ extends <a href="CustomerUpdateAction.html" title="interface in com.commercetool
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CustomerGroupAssignmentDraft.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignmentDraft</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCustomerGroupAssignments()" class="member-name-link">getCustomerGroupAssignments</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Customer Groups to assign to the Customer.</div>
+<div class="block">Customer Groups to assign the Customer to.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="CustomerSetCustomerGroupAssignmentsAction.html" title="interface in com.commercetools.api.models.customer">CustomerSetCustomerGroupAssignmentsAction</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -153,12 +153,12 @@ extends <a href="CustomerUpdateAction.html" title="interface in com.commercetool
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCustomerGroupAssignments(com.commercetools.api.models.customer.CustomerGroupAssignmentDraft...)" class="member-name-link">setCustomerGroupAssignments</a><wbr>(<a href="CustomerGroupAssignmentDraft.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignmentDraft</a>...&nbsp;customerGroupAssignments)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Customer Groups to assign to the Customer.</div>
+<div class="block">Customer Groups to assign the Customer to.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCustomerGroupAssignments(java.util.List)" class="member-name-link">setCustomerGroupAssignments</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CustomerGroupAssignmentDraft.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignmentDraft</a>&gt;&nbsp;customerGroupAssignments)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Customer Groups to assign to the Customer.</div>
+<div class="block">Customer Groups to assign the Customer to.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CustomerSetCustomerGroupAssignmentsAction.html" title="interface in com.commercetools.api.models.customer">CustomerSetCustomerGroupAssignmentsAction</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -219,7 +219,7 @@ extends <a href="CustomerUpdateAction.html" title="interface in com.commercetool
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
 </span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CustomerGroupAssignmentDraft.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignmentDraft</a>&gt;</span>&nbsp;<span class="element-name">getCustomerGroupAssignments</span>()</div>
-<div class="block"><p>Customer Groups to assign to the Customer.</p></div>
+<div class="block"><p>Customer Groups to assign the Customer to.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>customerGroupAssignments</dd>
@@ -230,7 +230,7 @@ extends <a href="CustomerUpdateAction.html" title="interface in com.commercetool
 <section class="detail" id="setCustomerGroupAssignments(com.commercetools.api.models.customer.CustomerGroupAssignmentDraft...)">
 <h3>setCustomerGroupAssignments</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCustomerGroupAssignments</span><wbr><span class="parameters">(<a href="CustomerGroupAssignmentDraft.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignmentDraft</a>...&nbsp;customerGroupAssignments)</span></div>
-<div class="block"><p>Customer Groups to assign to the Customer.</p></div>
+<div class="block"><p>Customer Groups to assign the Customer to.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>customerGroupAssignments</code> - values to be set</dd>
@@ -241,7 +241,7 @@ extends <a href="CustomerUpdateAction.html" title="interface in com.commercetool
 <section class="detail" id="setCustomerGroupAssignments(java.util.List)">
 <h3>setCustomerGroupAssignments</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCustomerGroupAssignments</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CustomerGroupAssignmentDraft.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignmentDraft</a>&gt;&nbsp;customerGroupAssignments)</span></div>
-<div class="block"><p>Customer Groups to assign to the Customer.</p></div>
+<div class="block"><p>Customer Groups to assign the Customer to.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>customerGroupAssignments</code> - values to be set</dd>

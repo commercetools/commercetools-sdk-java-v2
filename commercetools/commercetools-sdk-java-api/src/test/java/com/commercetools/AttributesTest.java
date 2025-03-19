@@ -19,6 +19,7 @@ import com.commercetools.api.models.product_type.AttributeLocalizedEnumValue;
 import com.commercetools.api.models.product_type.AttributePlainEnumValue;
 import com.commercetools.api.models.product_type.AttributePlainEnumValueBuilder;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -26,6 +27,7 @@ import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 import org.assertj.core.api.Assertions;
 import org.assertj.core.util.Lists;
+import org.assertj.core.util.Maps;
 import org.junit.jupiter.api.Test;
 
 public class AttributesTest {
@@ -187,6 +189,29 @@ public class AttributesTest {
         ProductVariant variant = mapper.readValue(stringFromResource("attributes.json"), ProductVariant.class);
 
         assertThat(variant.getAttribute("integer").getValue()).isEqualTo(10.0);
+    }
+
+    @Test
+    public void attributeTypeByName() throws JsonProcessingException {
+        ApiModuleOptions options = ApiModuleOptions.of()
+                .withAttributeTypes(Maps.newHashMap("test", new TypeReference<String>() {
+                }));
+        ObjectMapper mapper = JsonUtils.createObjectMapper(options);
+
+        Attribute attribute = mapper.readValue("{\"name\":\"test\", \"value\": \"2025-01-01\"}", Attribute.class);
+
+        assertThat(attribute.getValue()).isEqualTo("2025-01-01");
+
+        Attribute attributeDate = mapper.readValue("{\"name\":\"date\", \"value\": \"2025-01-01\"}", Attribute.class);
+        assertThat(attributeDate.getValue()).isEqualTo(LocalDate.parse("2025-01-01"));
+
+        Attribute attributeInvalidMonth = mapper.readValue("{\"name\":\"invalid\", \"value\": \"2025-13-01\"}",
+            Attribute.class);
+        assertThat(attributeInvalidMonth.getValue()).isEqualTo("2025-13-01");
+
+        Attribute attributeInvalidDay = mapper.readValue("{\"name\":\"invalid\", \"value\": \"2025-12-32\"}",
+            Attribute.class);
+        assertThat(attributeInvalidDay.getValue()).isEqualTo("2025-12-32");
     }
 
     @Test

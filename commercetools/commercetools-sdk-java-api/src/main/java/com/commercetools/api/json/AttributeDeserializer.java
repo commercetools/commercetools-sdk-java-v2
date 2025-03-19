@@ -6,6 +6,7 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.ZonedDateTime;
 import java.util.List;
+import java.util.Map;
 import java.util.regex.Pattern;
 
 import com.commercetools.api.models.common.LocalizedString;
@@ -24,28 +25,40 @@ import com.fasterxml.jackson.databind.node.JsonNodeType;
 public class AttributeDeserializer extends JsonDeserializer<AttributeImpl> {
 
     private static Pattern p = Pattern.compile("^[0-9]");
-    private static Pattern dateTime = Pattern
-            .compile("^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}([.][0-9]{1,9})?(Z|[+-][0-9]{2}:[0-9]{2})");
-    private static Pattern date = Pattern.compile("^[0-9]{4}-[0-9]{2}-[0-9]{2}");
+    private static Pattern dateTime = Pattern.compile(
+        "^[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T[0-9]{2}:[0-9]{2}:[0-9]{2}([.][0-9]{1,9})?(Z|[+-][0-9]{2}:[0-9]{2})");
+    private static Pattern date = Pattern.compile("^[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])");
     private static Pattern time = Pattern.compile("^[0-9]{2}:[0-9]{2}:[0-9]{2}([.][0-9]{1,9})?");
 
     private final boolean deserializeAsDate;
 
     private final boolean deserializeNumberAsDouble;
 
+    private final Map<String, TypeReference<?>> attributeTypes;
+
+    public AttributeDeserializer(boolean deserializeAsDateString, boolean deserializeNumberAsDouble,
+            final Map<String, TypeReference<?>> attributeTypes) {
+        this.deserializeAsDate = !deserializeAsDateString;
+        this.deserializeNumberAsDouble = deserializeNumberAsDouble;
+        this.attributeTypes = attributeTypes;
+    }
+
     public AttributeDeserializer(boolean deserializeAsDateString) {
         this.deserializeAsDate = !deserializeAsDateString;
         this.deserializeNumberAsDouble = false;
+        this.attributeTypes = null;
     }
 
     public AttributeDeserializer(boolean deserializeAsDateString, boolean deserializeNumberAsDouble) {
         this.deserializeAsDate = !deserializeAsDateString;
         this.deserializeNumberAsDouble = deserializeNumberAsDouble;
+        this.attributeTypes = null;
     }
 
     public AttributeDeserializer() {
         this.deserializeAsDate = true;
         this.deserializeNumberAsDouble = false;
+        this.attributeTypes = null;
     }
 
     @Override
@@ -54,9 +67,15 @@ public class AttributeDeserializer extends JsonDeserializer<AttributeImpl> {
         JsonNode node = p.readValueAsTree();
         JsonNode valueNode = node.get("value");
 
+        String name = node.get("name").asText();
         AttributeBuilder builder = Attribute.builder();
-        builder.name(node.get("name").asText());
+        builder.name(name);
 
+        if (attributeTypes != null && attributeTypes.containsKey(name)) {
+            return (AttributeImpl) builder
+                    .value(p.getCodec().treeAsTokens(valueNode).readValueAs(attributeTypes.get(name)))
+                    .build();
+        }
         return (AttributeImpl) builder.value(p.getCodec().treeAsTokens(valueNode).readValueAs(typeRef(valueNode)))
                 .build();
     }

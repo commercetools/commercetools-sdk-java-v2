@@ -1,11 +1,13 @@
 
 package com.commercetools.api.json;
 
+import java.util.Map;
 import java.util.Optional;
 
 import com.commercetools.api.models.product.AttributeImpl;
 import com.commercetools.api.models.product_search.ProductSearchFacetResult;
 import com.commercetools.api.models.type.FieldContainerImpl;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 
 import io.vrap.rmf.base.client.utils.json.modules.ModuleOptions;
@@ -36,20 +38,30 @@ public class ApiModule extends SimpleModule {
             Optional.ofNullable(options.getOption(ApiModuleOptions.DESERIALIZE_CUSTOM_FIELD_NUMBER_AS_DOUBLE))
                     .orElse(System.getProperty(ApiModuleOptions.DESERIALIZE_CUSTOM_FIELD_NUMBER_AS_DOUBLE)));
 
+        final Map<String, TypeReference<?>> attributeTypes;
+        final Map<String, TypeReference<?>> customFieldTypes;
+        if (options instanceof ApiModuleOptions) {
+            attributeTypes = ((ApiModuleOptions) options).getAttributeTypes();
+            customFieldTypes = ((ApiModuleOptions) options).getCustomFieldTypes();
+        }
+        else {
+            attributeTypes = null;
+            customFieldTypes = null;
+        }
         setMixInAnnotation(ProductSearchFacetResult.class, ProductSearchFacetResultMixin.class);
         if (attributeAsJsonNode) {
             setMixInAnnotation(AttributeImpl.class, AttributeJsonNodeMixin.class);
         }
         else {
             addDeserializer(AttributeImpl.class,
-                new AttributeDeserializer(attributeAsDateString, attributeNumberAsDouble));
+                new AttributeDeserializer(attributeAsDateString, attributeNumberAsDouble, attributeTypes));
         }
         if (customFieldAsJsonNode) {
             addDeserializer(FieldContainerImpl.class, new CustomFieldJsonNodeDeserializer());
         }
         else {
             addDeserializer(FieldContainerImpl.class,
-                new CustomFieldDeserializer(customFieldAsDateString, customFieldNumberAsDouble));
+                new CustomFieldDeserializer(customFieldAsDateString, customFieldNumberAsDouble, customFieldTypes));
         }
     }
 }

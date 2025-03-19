@@ -18,6 +18,7 @@ import com.commercetools.api.models.order.Order;
 import com.commercetools.api.models.product.ProductReference;
 import com.commercetools.api.models.type.*;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -25,6 +26,7 @@ import io.vrap.rmf.base.client.utils.json.JsonUtils;
 
 import org.assertj.core.api.Assertions;
 import org.assertj.core.util.Lists;
+import org.assertj.core.util.Maps;
 import org.junit.jupiter.api.Test;
 
 public class CustomFieldsTest {
@@ -327,6 +329,33 @@ public class CustomFieldsTest {
         FieldContainer fieldContainer = JsonUtils.fromJsonString(numberAttributes, FieldContainer.class);
         String serializedNumberAttributes = JsonUtils.toJsonString(fieldContainer);
         Assertions.assertThat(serializedNumberAttributes).isEqualTo("{\"double\":13.0,\"decimal\":13.1,\"int\":13}");
+    }
+
+    @Test
+    public void customFieldTypeByName() throws JsonProcessingException {
+        ApiModuleOptions options = ApiModuleOptions.of()
+                .withCustomFieldTypes(Maps.newHashMap("test", new TypeReference<String>() {
+                }));
+        ObjectMapper mapper = JsonUtils.createObjectMapper(options);
+
+        CustomFields customFields = mapper.readValue(stringFromResource("customfields-dates.json"), CustomFields.class);
+
+        assertThat(customFields.getFields().values()).isNotEmpty();
+
+        CustomFieldsAccessor fields = customFields.withCustomFields(CustomFieldsAccessor::new);
+
+        assertThat(fields.get("test")).isInstanceOf(String.class);
+        assertThat(fields.asString("test")).isEqualTo("2025-01-01");
+        assertThat(fields.asDate("test")).isEqualTo(LocalDate.of(2025, 1, 1));
+
+        assertThat(fields.get("date")).isInstanceOf(LocalDate.class);
+        assertThat(fields.asDate("date")).isEqualTo(LocalDate.of(2025, 1, 1));
+
+        assertThat(fields.get("invalidMonth")).isInstanceOf(String.class);
+        assertThat(fields.asString("invalidMonth")).isEqualTo("2025-13-01");
+
+        assertThat(fields.get("invalidDay")).isInstanceOf(String.class);
+        assertThat(fields.asString("invalidDay")).isEqualTo("2025-12-32");
     }
 
     @Test

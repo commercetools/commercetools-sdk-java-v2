@@ -19,6 +19,10 @@ public class CustomerUpdateActionBuilder {
         return com.commercetools.api.models.customer.CustomerAddBillingAddressIdActionBuilder.of();
     }
 
+    public com.commercetools.api.models.customer.CustomerAddCustomerGroupAssignmentActionBuilder addCustomerGroupAssignmentBuilder() {
+        return com.commercetools.api.models.customer.CustomerAddCustomerGroupAssignmentActionBuilder.of();
+    }
+
     public com.commercetools.api.models.customer.CustomerAddShippingAddressIdActionBuilder addShippingAddressIdBuilder() {
         return com.commercetools.api.models.customer.CustomerAddShippingAddressIdActionBuilder.of();
     }
@@ -41,6 +45,10 @@ public class CustomerUpdateActionBuilder {
 
     public com.commercetools.api.models.customer.CustomerRemoveBillingAddressIdActionBuilder removeBillingAddressIdBuilder() {
         return com.commercetools.api.models.customer.CustomerRemoveBillingAddressIdActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.customer.CustomerRemoveCustomerGroupAssignmentActionBuilder removeCustomerGroupAssignmentBuilder() {
+        return com.commercetools.api.models.customer.CustomerRemoveCustomerGroupAssignmentActionBuilder.of();
     }
 
     public com.commercetools.api.models.customer.CustomerRemoveShippingAddressIdActionBuilder removeShippingAddressIdBuilder() {
@@ -77,6 +85,10 @@ public class CustomerUpdateActionBuilder {
 
     public com.commercetools.api.models.customer.CustomerSetCustomerGroupActionBuilder setCustomerGroupBuilder() {
         return com.commercetools.api.models.customer.CustomerSetCustomerGroupActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.customer.CustomerSetCustomerGroupAssignmentsActionBuilder setCustomerGroupAssignmentsBuilder() {
+        return com.commercetools.api.models.customer.CustomerSetCustomerGroupAssignmentsActionBuilder.of();
     }
 
     public com.commercetools.api.models.customer.CustomerSetCustomerNumberActionBuilder setCustomerNumberBuilder() {

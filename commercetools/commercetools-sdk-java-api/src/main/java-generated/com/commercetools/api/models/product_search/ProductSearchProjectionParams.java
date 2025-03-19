@@ -53,7 +53,7 @@ public interface ProductSearchProjectionParams {
     public String getPriceCurrency();
 
     /**
-     *  <p>The country used for Product price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
+     *  <p>The country used for Product price selection. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
      * @return priceCountry
      */
 
@@ -61,7 +61,7 @@ public interface ProductSearchProjectionParams {
     public String getPriceCountry();
 
     /**
-     *  <p><code>id</code> of an existing CustomerGroup used for Product price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
+     *  <p><code>id</code> of an existing CustomerGroup used for Product price selection. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
      * @return priceCustomerGroup
      */
 
@@ -69,7 +69,15 @@ public interface ProductSearchProjectionParams {
     public String getPriceCustomerGroup();
 
     /**
-     *  <p><code>id</code> of an existing Channel used for Product price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
+     *  <p>IDs of existing CustomerGroups used for Product price selection, when using multiple Customer Groups. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
+     * @return priceCustomerGroupAssignments
+     */
+
+    @JsonProperty("priceCustomerGroupAssignments")
+    public List<String> getPriceCustomerGroupAssignments();
+
+    /**
+     *  <p><code>id</code> of an existing Channel used for Product price selection. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
      * @return priceChannel
      */
 
@@ -122,21 +130,36 @@ public interface ProductSearchProjectionParams {
     public void setPriceCurrency(final String priceCurrency);
 
     /**
-     *  <p>The country used for Product price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
+     *  <p>The country used for Product price selection. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
      * @param priceCountry value to be set
      */
 
     public void setPriceCountry(final String priceCountry);
 
     /**
-     *  <p><code>id</code> of an existing CustomerGroup used for Product price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
+     *  <p><code>id</code> of an existing CustomerGroup used for Product price selection. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
      * @param priceCustomerGroup value to be set
      */
 
     public void setPriceCustomerGroup(final String priceCustomerGroup);
 
     /**
-     *  <p><code>id</code> of an existing Channel used for Product price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
+     *  <p>IDs of existing CustomerGroups used for Product price selection, when using multiple Customer Groups. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
+     * @param priceCustomerGroupAssignments values to be set
+     */
+
+    @JsonIgnore
+    public void setPriceCustomerGroupAssignments(final String... priceCustomerGroupAssignments);
+
+    /**
+     *  <p>IDs of existing CustomerGroups used for Product price selection, when using multiple Customer Groups. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
+     * @param priceCustomerGroupAssignments values to be set
+     */
+
+    public void setPriceCustomerGroupAssignments(final List<String> priceCustomerGroupAssignments);
+
+    /**
+     *  <p><code>id</code> of an existing Channel used for Product price selection. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
      * @param priceChannel value to be set
      */
 
@@ -184,6 +207,7 @@ public interface ProductSearchProjectionParams {
         instance.setPriceCurrency(template.getPriceCurrency());
         instance.setPriceCountry(template.getPriceCountry());
         instance.setPriceCustomerGroup(template.getPriceCustomerGroup());
+        instance.setPriceCustomerGroupAssignments(template.getPriceCustomerGroupAssignments());
         instance.setPriceChannel(template.getPriceChannel());
         instance.setLocaleProjection(template.getLocaleProjection());
         instance.setStoreProjection(template.getStoreProjection());
@@ -206,6 +230,8 @@ public interface ProductSearchProjectionParams {
         instance.setPriceCurrency(template.getPriceCurrency());
         instance.setPriceCountry(template.getPriceCountry());
         instance.setPriceCustomerGroup(template.getPriceCustomerGroup());
+        instance.setPriceCustomerGroupAssignments(
+            Optional.ofNullable(template.getPriceCustomerGroupAssignments()).map(ArrayList::new).orElse(null));
         instance.setPriceChannel(template.getPriceChannel());
         instance.setLocaleProjection(
             Optional.ofNullable(template.getLocaleProjection()).map(ArrayList::new).orElse(null));

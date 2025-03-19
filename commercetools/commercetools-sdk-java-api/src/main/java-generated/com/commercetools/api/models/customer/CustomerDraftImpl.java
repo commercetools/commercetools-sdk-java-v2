@@ -77,6 +77,8 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
 
     private com.commercetools.api.models.customer.AuthenticationMode authenticationMode;
 
+    private java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignmentDraft> customerGroupAssignments;
+
     /**
      * create instance with all properties
      */
@@ -101,7 +103,8 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
             @JsonProperty("locale") final String locale, @JsonProperty("salutation") final String salutation,
             @JsonProperty("stores") final java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores,
-            @JsonProperty("authenticationMode") final com.commercetools.api.models.customer.AuthenticationMode authenticationMode) {
+            @JsonProperty("authenticationMode") final com.commercetools.api.models.customer.AuthenticationMode authenticationMode,
+            @JsonProperty("customerGroupAssignments") final java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignmentDraft> customerGroupAssignments) {
         this.key = key;
         this.customerNumber = customerNumber;
         this.externalId = externalId;
@@ -129,6 +132,7 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
         this.salutation = salutation;
         this.stores = stores;
         this.authenticationMode = authenticationMode;
+        this.customerGroupAssignments = customerGroupAssignments;
     }
 
     /**
@@ -362,6 +366,14 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
         return this.authenticationMode;
     }
 
+    /**
+     *  <p>Customer Groups to assign the Customer to.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignmentDraft> getCustomerGroupAssignments() {
+        return this.customerGroupAssignments;
+    }
+
     public void setKey(final String key) {
         this.key = key;
     }
@@ -489,6 +501,16 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
         this.authenticationMode = authenticationMode;
     }
 
+    public void setCustomerGroupAssignments(
+            final com.commercetools.api.models.customer.CustomerGroupAssignmentDraft... customerGroupAssignments) {
+        this.customerGroupAssignments = new ArrayList<>(Arrays.asList(customerGroupAssignments));
+    }
+
+    public void setCustomerGroupAssignments(
+            final java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignmentDraft> customerGroupAssignments) {
+        this.customerGroupAssignments = customerGroupAssignments;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -526,6 +548,7 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
                 .append(salutation, that.salutation)
                 .append(stores, that.stores)
                 .append(authenticationMode, that.authenticationMode)
+                .append(customerGroupAssignments, that.customerGroupAssignments)
                 .append(key, that.key)
                 .append(customerNumber, that.customerNumber)
                 .append(externalId, that.externalId)
@@ -553,6 +576,7 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
                 .append(salutation, that.salutation)
                 .append(stores, that.stores)
                 .append(authenticationMode, that.authenticationMode)
+                .append(customerGroupAssignments, that.customerGroupAssignments)
                 .isEquals();
     }
 
@@ -585,6 +609,7 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
                 .append(salutation)
                 .append(stores)
                 .append(authenticationMode)
+                .append(customerGroupAssignments)
                 .toHashCode();
     }
 
@@ -617,6 +642,7 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
                 .append("salutation", salutation)
                 .append("stores", stores)
                 .append("authenticationMode", authenticationMode)
+                .append("customerGroupAssignments", customerGroupAssignments)
                 .build();
     }
 

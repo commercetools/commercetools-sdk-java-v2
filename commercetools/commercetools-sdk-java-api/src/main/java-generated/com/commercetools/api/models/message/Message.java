@@ -125,6 +125,9 @@ import jakarta.validation.constraints.NotNull;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerEmailTokenCreatedMessageImpl.class, name = CustomerEmailTokenCreatedMessage.CUSTOMER_EMAIL_TOKEN_CREATED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerEmailVerifiedMessageImpl.class, name = CustomerEmailVerifiedMessage.CUSTOMER_EMAIL_VERIFIED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerFirstNameSetMessageImpl.class, name = CustomerFirstNameSetMessage.CUSTOMER_FIRST_NAME_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerGroupAssignmentAddedMessageImpl.class, name = CustomerGroupAssignmentAddedMessage.CUSTOMER_GROUP_ASSIGNMENT_ADDED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerGroupAssignmentRemovedMessageImpl.class, name = CustomerGroupAssignmentRemovedMessage.CUSTOMER_GROUP_ASSIGNMENT_REMOVED),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerGroupAssignmentsSetMessageImpl.class, name = CustomerGroupAssignmentsSetMessage.CUSTOMER_GROUP_ASSIGNMENTS_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerGroupCustomFieldAddedMessageImpl.class, name = CustomerGroupCustomFieldAddedMessage.CUSTOMER_GROUP_CUSTOM_FIELD_ADDED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerGroupCustomFieldChangedMessageImpl.class, name = CustomerGroupCustomFieldChangedMessage.CUSTOMER_GROUP_CUSTOM_FIELD_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CustomerGroupCustomFieldRemovedMessageImpl.class, name = CustomerGroupCustomFieldRemovedMessage.CUSTOMER_GROUP_CUSTOM_FIELD_REMOVED),
@@ -789,6 +792,18 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
         if (template instanceof com.commercetools.api.models.message.CustomerFirstNameSetMessage) {
             return com.commercetools.api.models.message.CustomerFirstNameSetMessage
                     .deepCopy((com.commercetools.api.models.message.CustomerFirstNameSetMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CustomerGroupAssignmentAddedMessage) {
+            return com.commercetools.api.models.message.CustomerGroupAssignmentAddedMessage
+                    .deepCopy((com.commercetools.api.models.message.CustomerGroupAssignmentAddedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CustomerGroupAssignmentRemovedMessage) {
+            return com.commercetools.api.models.message.CustomerGroupAssignmentRemovedMessage
+                    .deepCopy((com.commercetools.api.models.message.CustomerGroupAssignmentRemovedMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.CustomerGroupAssignmentsSetMessage) {
+            return com.commercetools.api.models.message.CustomerGroupAssignmentsSetMessage
+                    .deepCopy((com.commercetools.api.models.message.CustomerGroupAssignmentsSetMessage) template);
         }
         if (template instanceof com.commercetools.api.models.message.CustomerGroupCustomFieldAddedMessage) {
             return com.commercetools.api.models.message.CustomerGroupCustomFieldAddedMessage
@@ -1912,6 +1927,30 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
      */
     public static com.commercetools.api.models.message.CustomerFirstNameSetMessageBuilder customerFirstNameSetBuilder() {
         return com.commercetools.api.models.message.CustomerFirstNameSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for customerGroupAssignmentAdded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerGroupAssignmentAddedMessageBuilder customerGroupAssignmentAddedBuilder() {
+        return com.commercetools.api.models.message.CustomerGroupAssignmentAddedMessageBuilder.of();
+    }
+
+    /**
+     * builder for customerGroupAssignmentRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerGroupAssignmentRemovedMessageBuilder customerGroupAssignmentRemovedBuilder() {
+        return com.commercetools.api.models.message.CustomerGroupAssignmentRemovedMessageBuilder.of();
+    }
+
+    /**
+     * builder for customerGroupAssignmentsSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerGroupAssignmentsSetMessageBuilder customerGroupAssignmentsSetBuilder() {
+        return com.commercetools.api.models.message.CustomerGroupAssignmentsSetMessageBuilder.of();
     }
 
     /**

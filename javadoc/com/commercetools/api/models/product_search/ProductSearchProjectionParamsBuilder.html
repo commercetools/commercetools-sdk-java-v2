@@ -428,7 +428,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>storeProjection</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductSearchProjectionParamsBuilder.html" title="class in com.commercetools.api.models.product_search">ProductSearchProjectionParamsBuilder</a></span>&nbsp;<span class="element-name">storeProjection</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;storeProjection)</span></div>
-<div class="block"><p><code>key</code> of an existing Store. If the Store has defined some languages, countries, distribution or supply Channels, they are used for projections based on locale, price, and inventory. If the Store has defined Product Selections or Product Tailoring, they have no effect on the results of this query.</p></div>
+<div class="block"><p><code>key</code> of an existing Store. If the Store has defined <code>languages</code>, <code>countries</code>, <code>distributionChannels</code>, or <code>supplyChannels</code>, they are used for projections based on locale, price, and inventory. For Projects with active Product Selections, the API does not take the availability of the Product in the specified Store into account. Product Tailoring modifies the product information returned in API responses, but evaluating query expressions is restricted to the original product information.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>storeProjection</code> - value to be set</dd>
@@ -526,7 +526,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getStoreProjection</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getStoreProjection</span>()</div>
-<div class="block"><p><code>key</code> of an existing Store. If the Store has defined some languages, countries, distribution or supply Channels, they are used for projections based on locale, price, and inventory. If the Store has defined Product Selections or Product Tailoring, they have no effect on the results of this query.</p></div>
+<div class="block"><p><code>key</code> of an existing Store. If the Store has defined <code>languages</code>, <code>countries</code>, <code>distributionChannels</code>, or <code>supplyChannels</code>, they are used for projections based on locale, price, and inventory. For Projects with active Product Selections, the API does not take the availability of the Product in the specified Store into account. Product Tailoring modifies the product information returned in API responses, but evaluating query expressions is restricted to the original product information.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>storeProjection</dd>

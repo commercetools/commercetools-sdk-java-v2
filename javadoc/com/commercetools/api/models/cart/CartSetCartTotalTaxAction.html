@@ -78,7 +78,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">CartSetCartTotalTaxAction</span><span class="extends-implements">
 extends <a href="CartUpdateAction.html" title="interface in com.commercetools.api.models.cart">CartUpdateAction</a></span></div>
-<div class="block"><p>Can be used if the Cart has the <code>ExternalAmount</code> TaxMode. This update action adds the <code>taxedPrice</code> field to the Cart and must be used after any price-affecting change occurs within the Cart.</p>
+<div class="block"><p>Can be used if the Cart has the <code>ExternalAmount</code> TaxMode. This update action adds the <code>taxedPrice</code> field to the Cart. It sets the <code>totalGross</code> amount, and Composable Commerce calculates the <code>totalNet</code> and <code>totalTax</code> values based on the provided <code>externalTotalGross</code>. You must use this update action after any price-affecting change occurs within the Cart.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -143,7 +143,7 @@ extends <a href="CartUpdateAction.html" title="interface in com.commercetools.ap
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getExternalTotalGross()" class="member-name-link">getExternalTotalGross</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The Cart's total gross price becoming the <code>totalGross</code> field (<code>totalNet</code> + taxes) on the Cart's <code>taxedPrice</code>.</div>
+<div class="block">The total gross amount of the Cart, including tax.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="CartSetCartTotalTaxAction.html" title="interface in com.commercetools.api.models.cart">CartSetCartTotalTaxAction</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -168,7 +168,7 @@ extends <a href="CartUpdateAction.html" title="interface in com.commercetools.ap
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setExternalTotalGross(com.commercetools.api.models.common.Money)" class="member-name-link">setExternalTotalGross</a><wbr>(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;externalTotalGross)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The Cart's total gross price becoming the <code>totalGross</code> field (<code>totalNet</code> + taxes) on the Cart's <code>taxedPrice</code>.</div>
+<div class="block">The total gross amount of the Cart, including tax.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CartSetCartTotalTaxAction.html" title="interface in com.commercetools.api.models.cart">CartSetCartTotalTaxAction</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -229,7 +229,7 @@ extends <a href="CartUpdateAction.html" title="interface in com.commercetools.ap
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
 </span><span class="return-type">@NotNull @Valid <a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name">getExternalTotalGross</span>()</div>
-<div class="block"><p>The Cart's total gross price becoming the <code>totalGross</code> field (<code>totalNet</code> + taxes) on the Cart's <code>taxedPrice</code>.</p></div>
+<div class="block"><p>The total gross amount of the Cart, including tax. This value is used to calculate the <code>totalNet</code> and <code>totalTax</code> fields of the Cart's <code>taxedPrice</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>externalTotalGross</dd>
@@ -252,7 +252,7 @@ extends <a href="CartUpdateAction.html" title="interface in com.commercetools.ap
 <section class="detail" id="setExternalTotalGross(com.commercetools.api.models.common.Money)">
 <h3>setExternalTotalGross</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setExternalTotalGross</span><wbr><span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;externalTotalGross)</span></div>
-<div class="block"><p>The Cart's total gross price becoming the <code>totalGross</code> field (<code>totalNet</code> + taxes) on the Cart's <code>taxedPrice</code>.</p></div>
+<div class="block"><p>The total gross amount of the Cart, including tax. This value is used to calculate the <code>totalNet</code> and <code>totalTax</code> fields of the Cart's <code>taxedPrice</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>externalTotalGross</code> - value to be set</dd>

@@ -147,12 +147,12 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CartSetCartTotalTaxActionBuilder.html" title="class in com.commercetools.api.models.cart">CartSetCartTotalTaxActionBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#externalTotalGross(com.commercetools.api.models.common.Money)" class="member-name-link">externalTotalGross</a><wbr>(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;externalTotalGross)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The Cart's total gross price becoming the <code>totalGross</code> field (<code>totalNet</code> + taxes) on the Cart's <code>taxedPrice</code>.</div>
+<div class="block">The total gross amount of the Cart, including tax.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CartSetCartTotalTaxActionBuilder.html" title="class in com.commercetools.api.models.cart">CartSetCartTotalTaxActionBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#externalTotalGross(java.util.function.Function)" class="member-name-link">externalTotalGross</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a>,<wbr><a href="../common/MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The Cart's total gross price becoming the <code>totalGross</code> field (<code>totalNet</code> + taxes) on the Cart's <code>taxedPrice</code>.</div>
+<div class="block">The total gross amount of the Cart, including tax.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="TaxPortionDraft.html" title="interface in com.commercetools.api.models.cart">TaxPortionDraft</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getExternalTaxPortions()" class="member-name-link">getExternalTaxPortions</a>()</code></div>
@@ -162,7 +162,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getExternalTotalGross()" class="member-name-link">getExternalTotalGross</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The Cart's total gross price becoming the <code>totalGross</code> field (<code>totalNet</code> + taxes) on the Cart's <code>taxedPrice</code>.</div>
+<div class="block">The total gross amount of the Cart, including tax.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CartSetCartTotalTaxActionBuilder.html" title="class in com.commercetools.api.models.cart">CartSetCartTotalTaxActionBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -197,7 +197,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CartSetCartTotalTaxActionBuilder.html" title="class in com.commercetools.api.models.cart">CartSetCartTotalTaxActionBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withExternalTotalGross(java.util.function.Function)" class="member-name-link">withExternalTotalGross</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a>,<wbr><a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The Cart's total gross price becoming the <code>totalGross</code> field (<code>totalNet</code> + taxes) on the Cart's <code>taxedPrice</code>.</div>
+<div class="block">The total gross amount of the Cart, including tax.</div>
 </div>
 </div>
 </div>
@@ -234,7 +234,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="externalTotalGross(java.util.function.Function)">
 <h3>externalTotalGross</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartSetCartTotalTaxActionBuilder.html" title="class in com.commercetools.api.models.cart">CartSetCartTotalTaxActionBuilder</a></span>&nbsp;<span class="element-name">externalTotalGross</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a>,<wbr><a href="../common/MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>The Cart's total gross price becoming the <code>totalGross</code> field (<code>totalNet</code> + taxes) on the Cart's <code>taxedPrice</code>.</p></div>
+<div class="block"><p>The total gross amount of the Cart, including tax. This value is used to calculate the <code>totalNet</code> and <code>totalTax</code> fields of the Cart's <code>taxedPrice</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the externalTotalGross value</dd>
@@ -247,7 +247,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withExternalTotalGross(java.util.function.Function)">
 <h3>withExternalTotalGross</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartSetCartTotalTaxActionBuilder.html" title="class in com.commercetools.api.models.cart">CartSetCartTotalTaxActionBuilder</a></span>&nbsp;<span class="element-name">withExternalTotalGross</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/MoneyBuilder.html" title="class in com.commercetools.api.models.common">MoneyBuilder</a>,<wbr><a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>The Cart's total gross price becoming the <code>totalGross</code> field (<code>totalNet</code> + taxes) on the Cart's <code>taxedPrice</code>.</p></div>
+<div class="block"><p>The total gross amount of the Cart, including tax. This value is used to calculate the <code>totalNet</code> and <code>totalTax</code> fields of the Cart's <code>taxedPrice</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the externalTotalGross value</dd>
@@ -260,7 +260,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="externalTotalGross(com.commercetools.api.models.common.Money)">
 <h3>externalTotalGross</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartSetCartTotalTaxActionBuilder.html" title="class in com.commercetools.api.models.cart">CartSetCartTotalTaxActionBuilder</a></span>&nbsp;<span class="element-name">externalTotalGross</span><wbr><span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;externalTotalGross)</span></div>
-<div class="block"><p>The Cart's total gross price becoming the <code>totalGross</code> field (<code>totalNet</code> + taxes) on the Cart's <code>taxedPrice</code>.</p></div>
+<div class="block"><p>The total gross amount of the Cart, including tax. This value is used to calculate the <code>totalNet</code> and <code>totalTax</code> fields of the Cart's <code>taxedPrice</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>externalTotalGross</code> - value to be set</dd>
@@ -367,7 +367,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getExternalTotalGross()">
 <h3>getExternalTotalGross</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name">getExternalTotalGross</span>()</div>
-<div class="block"><p>The Cart's total gross price becoming the <code>totalGross</code> field (<code>totalNet</code> + taxes) on the Cart's <code>taxedPrice</code>.</p></div>
+<div class="block"><p>The total gross amount of the Cart, including tax. This value is used to calculate the <code>totalNet</code> and <code>totalTax</code> fields of the Cart's <code>taxedPrice</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>externalTotalGross</dd>

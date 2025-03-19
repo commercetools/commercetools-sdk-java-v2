@@ -78,7 +78,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">ProductTailoringDraft</span><span class="extends-implements">
 extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="interface in io.vrap.rmf.base.client">Draft</a>&lt;<a href="ProductTailoringDraft.html" title="interface in com.commercetools.api.models.product_tailoring">ProductTailoringDraft</a>&gt;</span></div>
-<div class="block"><p>Contains all the tailored data of a Product.</p>
+<div class="block"><p>Contains the information to be tailored for a Product.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -157,7 +157,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPublish()" class="member-name-link">getPublish</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">If <code>true</code>, the ProductTailoring is published immediately.</div>
+<div class="block">Set to <code>true</code> to publish the ProductTailoring immediately.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSlug()" class="member-name-link">getSlug</a>()</code></div>
@@ -222,7 +222,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setPublish(java.lang.Boolean)" class="member-name-link">setPublish</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;publish)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">If <code>true</code>, the ProductTailoring is published immediately.</div>
+<div class="block">Set to <code>true</code> to publish the ProductTailoring immediately.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setSlug(com.commercetools.api.models.common.LocalizedString)" class="member-name-link">setSlug</a><wbr>(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;slug)</code></div>
@@ -381,7 +381,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <section class="detail" id="getPublish()">
 <h3>getPublish</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name">getPublish</span>()</div>
-<div class="block"><p>If <code>true</code>, the ProductTailoring is published immediately.</p></div>
+<div class="block"><p>Set to <code>true</code> to publish the ProductTailoring immediately. Otherwise, the tailored product information is just staged.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>publish</dd>
@@ -503,7 +503,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <section class="detail" id="setPublish(java.lang.Boolean)">
 <h3>setPublish</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setPublish</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;publish)</span></div>
-<div class="block"><p>If <code>true</code>, the ProductTailoring is published immediately.</p></div>
+<div class="block"><p>Set to <code>true</code> to publish the ProductTailoring immediately. Otherwise, the tailored product information is just staged.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>publish</code> - value to be set</dd>

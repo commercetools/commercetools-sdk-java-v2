@@ -2608,7 +2608,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/associate_role/Permission.html" class="type-name-link" title="interface in com.commercetools.api.models.associate_role">Permission</a> - Interface in <a href="../com/commercetools/api/models/associate_role/package-summary.html">com.commercetools.api.models.associate_role</a></dt>
 <dd>
-<div class="block">Permissions grant granular access to Approval Rules, Approval Flows, Business Units, Carts, Orders, Quotes, and Quote Requests.</div>
+<div class="block">Permissions grant granular access to Approval Rules, Approval Flows, Business Units, Carts, Orders, Quotes, Quote Requests, and Shopping Lists.</div>
 </dd>
 <dt><a href="../com/commercetools/history/models/common/Permission.html" class="type-name-link" title="interface in com.commercetools.history.models.common">Permission</a> - Interface in <a href="../com/commercetools/history/models/common/package-summary.html">com.commercetools.history.models.common</a></dt>
 <dd>
@@ -2633,6 +2633,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/models/associate_role/AssociateRoleSetPermissionsActionBuilder.html#permissions(com.commercetools.api.models.associate_role.Permission...)" class="member-name-link">permissions(Permission...)</a> - Method in class com.commercetools.api.models.associate_role.<a href="../com/commercetools/api/models/associate_role/AssociateRoleSetPermissionsActionBuilder.html" title="class in com.commercetools.api.models.associate_role">AssociateRoleSetPermissionsActionBuilder</a></dt>
 <dd>
 <div class="block">Overrides the current list of Permissions for the AssociateRole.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/business_unit/BusinessUnitAssociateResponseBuilder.html#permissions(com.commercetools.api.models.associate_role.Permission...)" class="member-name-link">permissions(Permission...)</a> - Method in class com.commercetools.api.models.business_unit.<a href="../com/commercetools/api/models/business_unit/BusinessUnitAssociateResponseBuilder.html" title="class in com.commercetools.api.models.business_unit">BusinessUnitAssociateResponseBuilder</a></dt>
+<dd>
+<div class="block">Permissions the Associate has in the Business Unit.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/error/AssociateMissingPermissionErrorBuilder.html#permissions(com.commercetools.api.models.associate_role.Permission...)" class="member-name-link">permissions(Permission...)</a> - Method in class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/AssociateMissingPermissionErrorBuilder.html" title="class in com.commercetools.api.models.error">AssociateMissingPermissionErrorBuilder</a></dt>
 <dd>
@@ -2661,6 +2665,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/models/associate_role/AssociateRoleSetPermissionsActionBuilder.html#permissions(java.util.List)" class="member-name-link">permissions(List&lt;Permission&gt;)</a> - Method in class com.commercetools.api.models.associate_role.<a href="../com/commercetools/api/models/associate_role/AssociateRoleSetPermissionsActionBuilder.html" title="class in com.commercetools.api.models.associate_role">AssociateRoleSetPermissionsActionBuilder</a></dt>
 <dd>
 <div class="block">Overrides the current list of Permissions for the AssociateRole.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/business_unit/BusinessUnitAssociateResponseBuilder.html#permissions(java.util.List)" class="member-name-link">permissions(List&lt;Permission&gt;)</a> - Method in class com.commercetools.api.models.business_unit.<a href="../com/commercetools/api/models/business_unit/BusinessUnitAssociateResponseBuilder.html" title="class in com.commercetools.api.models.business_unit">BusinessUnitAssociateResponseBuilder</a></dt>
+<dd>
+<div class="block">Permissions the Associate has in the Business Unit.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/error/AssociateMissingPermissionErrorBuilder.html#permissions(java.util.List)" class="member-name-link">permissions(List&lt;Permission&gt;)</a> - Method in class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/AssociateMissingPermissionErrorBuilder.html" title="class in com.commercetools.api.models.error">AssociateMissingPermissionErrorBuilder</a></dt>
 <dd>
@@ -3533,6 +3541,14 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/history/models/common/InheritedAssociateBuilder.html#plusAssociateRoleAssignments(java.util.function.Function)" class="member-name-link">plusAssociateRoleAssignments(Function&lt;InheritedAssociateRoleAssignmentBuilder, InheritedAssociateRoleAssignmentBuilder&gt;)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/InheritedAssociateBuilder.html" title="class in com.commercetools.history.models.common">InheritedAssociateBuilder</a></dt>
 <dd>
 <div class="block">add the value to the associateRoleAssignments using the builder function</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/business_unit/BusinessUnitAssociateResponseBuilder.html#plusAssociateRoles(com.commercetools.api.models.associate_role.AssociateRole...)" class="member-name-link">plusAssociateRoles(AssociateRole...)</a> - Method in class com.commercetools.api.models.business_unit.<a href="../com/commercetools/api/models/business_unit/BusinessUnitAssociateResponseBuilder.html" title="class in com.commercetools.api.models.business_unit">BusinessUnitAssociateResponseBuilder</a></dt>
+<dd>
+<div class="block">Roles assigned to Associates in the Business Unit.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/business_unit/BusinessUnitAssociateResponseBuilder.html#plusAssociateRoles(java.util.function.Function)" class="member-name-link">plusAssociateRoles(Function&lt;AssociateRoleBuilder, AssociateRoleBuilder&gt;)</a> - Method in class com.commercetools.api.models.business_unit.<a href="../com/commercetools/api/models/business_unit/BusinessUnitAssociateResponseBuilder.html" title="class in com.commercetools.api.models.business_unit">BusinessUnitAssociateResponseBuilder</a></dt>
+<dd>
+<div class="block">Roles assigned to Associates in the Business Unit.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/business_unit/CompanyBuilder.html#plusAssociates(com.commercetools.api.models.business_unit.Associate...)" class="member-name-link">plusAssociates(Associate...)</a> - Method in class com.commercetools.api.models.business_unit.<a href="../com/commercetools/api/models/business_unit/CompanyBuilder.html" title="class in com.commercetools.api.models.business_unit">CompanyBuilder</a></dt>
 <dd>
@@ -4689,6 +4705,14 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/models/product_search/ProductSearchFacetDistinctValueBuilder.html#plusIncludes(java.lang.String...)" class="member-name-link">plusIncludes(String...)</a> - Method in class com.commercetools.api.models.product_search.<a href="../com/commercetools/api/models/product_search/ProductSearchFacetDistinctValueBuilder.html" title="class in com.commercetools.api.models.product_search">ProductSearchFacetDistinctValueBuilder</a></dt>
 <dd>
 <div class="block">Specify which bucket keys the facets results should include.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/business_unit/BusinessUnitAssociateResponseBuilder.html#plusInheritedAssociateRoles(com.commercetools.api.models.associate_role.AssociateRole...)" class="member-name-link">plusInheritedAssociateRoles(AssociateRole...)</a> - Method in class com.commercetools.api.models.business_unit.<a href="../com/commercetools/api/models/business_unit/BusinessUnitAssociateResponseBuilder.html" title="class in com.commercetools.api.models.business_unit">BusinessUnitAssociateResponseBuilder</a></dt>
+<dd>
+<div class="block">Roles inherited by Associates from the parent Business Unit.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/business_unit/BusinessUnitAssociateResponseBuilder.html#plusInheritedAssociateRoles(java.util.function.Function)" class="member-name-link">plusInheritedAssociateRoles(Function&lt;AssociateRoleBuilder, AssociateRoleBuilder&gt;)</a> - Method in class com.commercetools.api.models.business_unit.<a href="../com/commercetools/api/models/business_unit/BusinessUnitAssociateResponseBuilder.html" title="class in com.commercetools.api.models.business_unit">BusinessUnitAssociateResponseBuilder</a></dt>
+<dd>
+<div class="block">Roles inherited by Associates from the parent Business Unit.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/business_unit/CompanyBuilder.html#plusInheritedAssociates(com.commercetools.api.models.business_unit.InheritedAssociate...)" class="member-name-link">plusInheritedAssociates(InheritedAssociate...)</a> - Method in class com.commercetools.api.models.business_unit.<a href="../com/commercetools/api/models/business_unit/CompanyBuilder.html" title="class in com.commercetools.api.models.business_unit">CompanyBuilder</a></dt>
 <dd>
@@ -5981,6 +6005,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/models/associate_role/AssociateRoleSetPermissionsActionBuilder.html#plusPermissions(com.commercetools.api.models.associate_role.Permission...)" class="member-name-link">plusPermissions(Permission...)</a> - Method in class com.commercetools.api.models.associate_role.<a href="../com/commercetools/api/models/associate_role/AssociateRoleSetPermissionsActionBuilder.html" title="class in com.commercetools.api.models.associate_role">AssociateRoleSetPermissionsActionBuilder</a></dt>
 <dd>
 <div class="block">Overrides the current list of Permissions for the AssociateRole.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/business_unit/BusinessUnitAssociateResponseBuilder.html#plusPermissions(com.commercetools.api.models.associate_role.Permission...)" class="member-name-link">plusPermissions(Permission...)</a> - Method in class com.commercetools.api.models.business_unit.<a href="../com/commercetools/api/models/business_unit/BusinessUnitAssociateResponseBuilder.html" title="class in com.commercetools.api.models.business_unit">BusinessUnitAssociateResponseBuilder</a></dt>
+<dd>
+<div class="block">Permissions the Associate has in the Business Unit.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/error/AssociateMissingPermissionErrorBuilder.html#plusPermissions(com.commercetools.api.models.associate_role.Permission...)" class="member-name-link">plusPermissions(Permission...)</a> - Method in class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/AssociateMissingPermissionErrorBuilder.html" title="class in com.commercetools.api.models.error">AssociateMissingPermissionErrorBuilder</a></dt>
 <dd>
@@ -9112,6 +9140,8 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyShippingMethodsKeyByKeyRequestBuilder.html#post(com.commercetools.api.models.shipping_method.ShippingMethodUpdate)" class="member-name-link">post(ShippingMethodUpdate)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyShippingMethodsKeyByKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsKeyByKeyRequestBuilder</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyShoppingListsRequestBuilder.html#post(com.commercetools.api.models.shopping_list.ShoppingListDraft)" class="member-name-link">post(ShoppingListDraft)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyShoppingListsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyShoppingListsRequestBuilder</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyShoppingListsRequestBuilder.html#post(com.commercetools.api.models.shopping_list.ShoppingListDraft)" class="member-name-link">post(ShoppingListDraft)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyShoppingListsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsRequestBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyShoppingListsRequestMixin.html#post(com.commercetools.api.models.shopping_list.ShoppingListDraft)" class="member-name-link">post(ShoppingListDraft)</a> - Method in interface com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyShoppingListsRequestMixin.html" title="interface in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsRequestMixin</a></dt>
@@ -9119,6 +9149,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyShoppingListsRequestBuilder.html#post(com.commercetools.api.models.shopping_list.ShoppingListDraft)" class="member-name-link">post(ShoppingListDraft)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyShoppingListsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyShoppingListsRequestBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyShoppingListsRequestBuilderMixin.html#post(com.commercetools.api.models.shopping_list.ShoppingListDraft)" class="member-name-link">post(ShoppingListDraft)</a> - Method in interface com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyShoppingListsRequestBuilderMixin.html" title="interface in com.commercetools.api.client">ByProjectKeyShoppingListsRequestBuilderMixin</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyShoppingListsByIDRequestBuilder.html#post(com.commercetools.api.models.shopping_list.ShoppingListUpdate)" class="member-name-link">post(ShoppingListUpdate)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyShoppingListsByIDRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyShoppingListsByIDRequestBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyShoppingListsKeyByKeyRequestBuilder.html#post(com.commercetools.api.models.shopping_list.ShoppingListUpdate)" class="member-name-link">post(ShoppingListUpdate)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyShoppingListsKeyByKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyShoppingListsKeyByKeyRequestBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDRequestBuilder.html#post(com.commercetools.api.models.shopping_list.ShoppingListUpdate)" class="member-name-link">post(ShoppingListUpdate)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDRequestBuilder</a></dt>
 <dd>&nbsp;</dd>
@@ -9277,6 +9311,12 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyQuotesByIDRequestBuilder.html#post(java.lang.String)" class="member-name-link">post(String)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyQuotesByIDRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyQuotesByIDRequestBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyQuotesKeyByKeyRequestBuilder.html#post(java.lang.String)" class="member-name-link">post(String)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyQuotesKeyByKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyQuotesKeyByKeyRequestBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyShoppingListsByIDRequestBuilder.html#post(java.lang.String)" class="member-name-link">post(String)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyShoppingListsByIDRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyShoppingListsByIDRequestBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyShoppingListsKeyByKeyRequestBuilder.html#post(java.lang.String)" class="member-name-link">post(String)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyShoppingListsKeyByKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyShoppingListsKeyByKeyRequestBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyShoppingListsRequestBuilder.html#post(java.lang.String)" class="member-name-link">post(String)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyShoppingListsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyShoppingListsRequestBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyAssociateRolesByIDRequestBuilder.html#post(java.lang.String)" class="member-name-link">post(String)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyAssociateRolesByIDRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyAssociateRolesByIDRequestBuilder</a></dt>
 <dd>&nbsp;</dd>
@@ -10054,9 +10094,15 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyShippingMethodsKeyByKeyRequestBuilder.html#post(java.util.function.UnaryOperator)" class="member-name-link">post(UnaryOperator&lt;ShippingMethodUpdateBuilder&gt;)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyShippingMethodsKeyByKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsKeyByKeyRequestBuilder</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyShoppingListsRequestBuilder.html#post(java.util.function.UnaryOperator)" class="member-name-link">post(UnaryOperator&lt;ShoppingListDraftBuilder&gt;)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyShoppingListsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyShoppingListsRequestBuilder</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyShoppingListsRequestBuilder.html#post(java.util.function.UnaryOperator)" class="member-name-link">post(UnaryOperator&lt;ShoppingListDraftBuilder&gt;)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyShoppingListsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsRequestBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyShoppingListsRequestBuilder.html#post(java.util.function.UnaryOperator)" class="member-name-link">post(UnaryOperator&lt;ShoppingListDraftBuilder&gt;)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyShoppingListsRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyShoppingListsRequestBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyShoppingListsByIDRequestBuilder.html#post(java.util.function.UnaryOperator)" class="member-name-link">post(UnaryOperator&lt;ShoppingListUpdateBuilder&gt;)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyShoppingListsByIDRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyShoppingListsByIDRequestBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyShoppingListsKeyByKeyRequestBuilder.html#post(java.util.function.UnaryOperator)" class="member-name-link">post(UnaryOperator&lt;ShoppingListUpdateBuilder&gt;)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyShoppingListsKeyByKeyRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyAsAssociateByAssociateIdInBusinessUnitKeyByBusinessUnitKeyShoppingListsKeyByKeyRequestBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDRequestBuilder.html#post(java.util.function.UnaryOperator)" class="member-name-link">post(UnaryOperator&lt;ShoppingListUpdateBuilder&gt;)</a> - Method in class com.commercetools.api.client.<a href="../com/commercetools/api/client/ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDRequestBuilder.html" title="class in com.commercetools.api.client">ByProjectKeyInStoreKeyByStoreKeyShoppingListsByIDRequestBuilder</a></dt>
 <dd>&nbsp;</dd>
@@ -10202,7 +10248,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/predicates/query/CollectionPredicateBuilder.html#predicate()" class="member-name-link">predicate()</a> - Method in class com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/CollectionPredicateBuilder.html" title="class in com.commercetools.api.predicates.query">CollectionPredicateBuilder</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="../com/commercetools/api/predicates/query/TimeCollectionPredicateBuilder.html#predicate()" class="member-name-link">predicate()</a> - Method in class com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/TimeCollectionPredicateBuilder.html" title="class in com.commercetools.api.predicates.query">TimeCollectionPredicateBuilder</a></dt>
+<dt><a href="../com/commercetools/api/predicates/query/DateTimeCollectionPredicateBuilder.html#predicate()" class="member-name-link">predicate()</a> - Method in class com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/DateTimeCollectionPredicateBuilder.html" title="class in com.commercetools.api.predicates.query">DateTimeCollectionPredicateBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/predicates/query/TimeComparisonPredicateBuilder.html#predicate()" class="member-name-link">predicate()</a> - Method in class com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/TimeComparisonPredicateBuilder.html" title="class in com.commercetools.api.predicates.query">TimeComparisonPredicateBuilder</a></dt>
 <dd>&nbsp;</dd>
@@ -18338,7 +18384,7 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/product_tailoring/ProductTailoring.html" class="type-name-link" title="interface in com.commercetools.api.models.product_tailoring">ProductTailoring</a> - Interface in <a href="../com/commercetools/api/models/product_tailoring/package-summary.html">com.commercetools.api.models.product_tailoring</a></dt>
 <dd>
-<div class="block">A single ProductTailoring representation contains the <em>current</em> and the <em>staged</em> representation of its product data tailored per Store.</div>
+<div class="block">A single ProductTailoring representation contains the <em>current</em> and the <em>staged</em> representation of its product information tailored per Store.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product_tailoring/ProductTailoringAddAssetAction.html" class="type-name-link" title="interface in com.commercetools.api.models.product_tailoring">ProductTailoringAddAssetAction</a> - Interface in <a href="../com/commercetools/api/models/product_tailoring/package-summary.html">com.commercetools.api.models.product_tailoring</a></dt>
 <dd>
@@ -18481,7 +18527,7 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/product_tailoring/ProductTailoringData.html" class="type-name-link" title="interface in com.commercetools.api.models.product_tailoring">ProductTailoringData</a> - Interface in <a href="../com/commercetools/api/models/product_tailoring/package-summary.html">com.commercetools.api.models.product_tailoring</a></dt>
 <dd>
-<div class="block">Contains all the tailored data of a Product.</div>
+<div class="block">Contains all the tailored information of a Product.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product_tailoring/ProductTailoringDataBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.product_tailoring">ProductTailoringDataBuilder</a> - Class in <a href="../com/commercetools/api/models/product_tailoring/package-summary.html">com.commercetools.api.models.product_tailoring</a></dt>
 <dd>
@@ -18574,7 +18620,7 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/product_tailoring/ProductTailoringDraft.html" class="type-name-link" title="interface in com.commercetools.api.models.product_tailoring">ProductTailoringDraft</a> - Interface in <a href="../com/commercetools/api/models/product_tailoring/package-summary.html">com.commercetools.api.models.product_tailoring</a></dt>
 <dd>
-<div class="block">Contains all the tailored data of a Product.</div>
+<div class="block">Contains the information to be tailored for a Product.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product_tailoring/ProductTailoringDraftBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.product_tailoring">ProductTailoringDraftBuilder</a> - Class in <a href="../com/commercetools/api/models/product_tailoring/package-summary.html">com.commercetools.api.models.product_tailoring</a></dt>
 <dd>
@@ -18669,7 +18715,7 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/product_tailoring/ProductTailoringInStoreDraft.html" class="type-name-link" title="interface in com.commercetools.api.models.product_tailoring">ProductTailoringInStoreDraft</a> - Interface in <a href="../com/commercetools/api/models/product_tailoring/package-summary.html">com.commercetools.api.models.product_tailoring</a></dt>
 <dd>
-<div class="block">Contains all the tailored data of a Product for a specific Store.</div>
+<div class="block">Contains all the tailored information of a Product for a specific Store.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product_tailoring/ProductTailoringInStoreDraftBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.product_tailoring">ProductTailoringInStoreDraftBuilder</a> - Class in <a href="../com/commercetools/api/models/product_tailoring/package-summary.html">com.commercetools.api.models.product_tailoring</a></dt>
 <dd>
@@ -20702,6 +20748,10 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/graphql/api/GraphQLQueryRequestBuilder.html#projection(java.util.function.Function)" class="member-name-link">projection(Function&lt;T, BaseProjectionNode&gt;)</a> - Method in class com.commercetools.graphql.api.<a href="../com/commercetools/graphql/api/GraphQLQueryRequestBuilder.html" title="class in com.commercetools.graphql.api">GraphQLQueryRequestBuilder</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/client/ProjectionselectingtailoringTrait.html" class="type-name-link" title="interface in com.commercetools.api.client">ProjectionselectingtailoringTrait</a>&lt;<a href="../com/commercetools/api/client/ProjectionselectingtailoringTrait.html" title="type parameter in ProjectionselectingtailoringTrait">T</a> extends <a href="../com/commercetools/api/client/ProjectionselectingtailoringTrait.html" title="interface in com.commercetools.api.client">ProjectionselectingtailoringTrait</a>&lt;<a href="../com/commercetools/api/client/ProjectionselectingtailoringTrait.html" title="type parameter in ProjectionselectingtailoringTrait">T</a>&gt;&gt; - Interface in <a href="../com/commercetools/api/client/package-summary.html">com.commercetools.api.client</a></dt>
+<dd>
+<div class="block">ProjectionselectingtailoringTrait</div>
+</dd>
 <dt><a href="../com/commercetools/api/client/ProjectionselectingTrait.html" class="type-name-link" title="interface in com.commercetools.api.client">ProjectionselectingTrait</a>&lt;<a href="../com/commercetools/api/client/ProjectionselectingTrait.html" title="type parameter in ProjectionselectingTrait">T</a> extends <a href="../com/commercetools/api/client/ProjectionselectingTrait.html" title="interface in com.commercetools.api.client">ProjectionselectingTrait</a>&lt;<a href="../com/commercetools/api/client/ProjectionselectingTrait.html" title="type parameter in ProjectionselectingTrait">T</a>&gt;&gt; - Interface in <a href="../com/commercetools/api/client/package-summary.html">com.commercetools.api.client</a></dt>
 <dd>
 <div class="block">ProjectionselectingTrait</div>
@@ -20885,7 +20935,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/product_tailoring/ProductTailoringDraftBuilder.html#publish(java.lang.Boolean)" class="member-name-link">publish(Boolean)</a> - Method in class com.commercetools.api.models.product_tailoring.<a href="../com/commercetools/api/models/product_tailoring/ProductTailoringDraftBuilder.html" title="class in com.commercetools.api.models.product_tailoring">ProductTailoringDraftBuilder</a></dt>
 <dd>
-<div class="block">If <code>true</code>, the ProductTailoring is published immediately.</div>
+<div class="block">Set to <code>true</code> to publish the ProductTailoring immediately.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product_tailoring/ProductTailoringInStoreDraftBuilder.html#publish(java.lang.Boolean)" class="member-name-link">publish(Boolean)</a> - Method in class com.commercetools.api.models.product_tailoring.<a href="../com/commercetools/api/models/product_tailoring/ProductTailoringInStoreDraftBuilder.html" title="class in com.commercetools.api.models.product_tailoring">ProductTailoringInStoreDraftBuilder</a></dt>
 <dd>
@@ -20962,7 +21012,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/product_tailoring/ProductTailoringBuilder.html#published(java.lang.Boolean)" class="member-name-link">published(Boolean)</a> - Method in class com.commercetools.api.models.product_tailoring.<a href="../com/commercetools/api/models/product_tailoring/ProductTailoringBuilder.html" title="class in com.commercetools.api.models.product_tailoring">ProductTailoringBuilder</a></dt>
 <dd>
-<div class="block"><code>true</code> if the ProductTailoring is published.</div>
+<div class="block">If <code>true</code>, the tailored information contained in the <code>current</code> ProductTailoringData is provided when retrieving the ProductProjection in Store.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/ProductCatalogDataBuilder.html#published(java.lang.Boolean)" class="member-name-link">published(Boolean)</a> - Method in class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/ProductCatalogDataBuilder.html" title="class in com.commercetools.api.models.product">ProductCatalogDataBuilder</a></dt>
 <dd>

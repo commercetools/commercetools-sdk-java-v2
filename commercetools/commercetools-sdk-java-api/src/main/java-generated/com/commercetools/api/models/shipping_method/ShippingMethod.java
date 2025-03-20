@@ -168,7 +168,7 @@ public interface ShippingMethod
     public Boolean getActive();
 
     /**
-     *  <p>If <code>true</code>, this ShippingMethod is the Project's default ShippingMethod.</p>
+     *  <p>If <code>true</code>, this ShippingMethod is the Project's default ShippingMethod. When retrieving matching Shipping Methods, it is returned as the first item in the array. This flag does not automatically apply the Shipping Method to Carts.</p>
      * @return isDefault
      */
     @NotNull
@@ -299,7 +299,7 @@ public interface ShippingMethod
     public void setActive(final Boolean active);
 
     /**
-     *  <p>If <code>true</code>, this ShippingMethod is the Project's default ShippingMethod.</p>
+     *  <p>If <code>true</code>, this ShippingMethod is the Project's default ShippingMethod. When retrieving matching Shipping Methods, it is returned as the first item in the array. This flag does not automatically apply the Shipping Method to Carts.</p>
      * @param isDefault value to be set
      */
 

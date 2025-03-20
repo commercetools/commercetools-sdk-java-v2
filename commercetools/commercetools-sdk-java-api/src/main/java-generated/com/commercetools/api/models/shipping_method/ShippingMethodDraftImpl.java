@@ -142,7 +142,7 @@ public class ShippingMethodDraftImpl implements ShippingMethodDraft, ModelBase {
     }
 
     /**
-     *  <p>If set to <code>true</code>, the ShippingMethod will be the Project's default ShippingMethod.</p>
+     *  <p>If set to <code>true</code>, the ShippingMethod will be the Project's default ShippingMethod. When retrieving matching Shipping Methods, it is returned as the first item in the array. This flag does not automatically apply the Shipping Method to Carts.</p>
      */
 
     public Boolean getIsDefault() {

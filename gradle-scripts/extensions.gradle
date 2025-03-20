@@ -20,7 +20,7 @@ ext {
     ]
 
     slf4j = [
-            api: 'org.slf4j:slf4j-api:2.0.16',
+            api: 'org.slf4j:slf4j-api:2.0.17',
     ]
 
     logback = [
@@ -28,10 +28,10 @@ ext {
     ]
 
     jackson_core = [
-            annotations: 'com.fasterxml.jackson.core:jackson-annotations:2.18.2',
-            databind: 'com.fasterxml.jackson.core:jackson-databind:2.18.2',
-            core: 'com.fasterxml.jackson.core:jackson-core:2.18.2',
-            datatype: 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.18.2',
+            annotations: 'com.fasterxml.jackson.core:jackson-annotations:2.18.3',
+            databind: 'com.fasterxml.jackson.core:jackson-databind:2.18.3',
+            core: 'com.fasterxml.jackson.core:jackson-core:2.18.3',
+            datatype: 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.18.3',
     ]
 
     google = [
@@ -43,7 +43,7 @@ ext {
             java: 'com.graphql-java:graphql-java:19.11'
     ]
     awaitility = [
-            awaitility: 'org.awaitility:awaitility:4.2.2',
+            awaitility: 'org.awaitility:awaitility:4.3.0',
     ]
 
     javax = [
@@ -59,7 +59,7 @@ ext {
 
     mockito = [
             inline: 'org.mockito:mockito-inline:5.2.0',
-            junit: 'org.mockito:mockito-junit-jupiter:5.15.2',
+            junit: 'org.mockito:mockito-junit-jupiter:5.16.1',
     ]
 
     failsafe = [

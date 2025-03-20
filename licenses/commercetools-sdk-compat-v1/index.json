@@ -72,7 +72,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-annotations",
-            "moduleVersion": "2.18.2",
+            "moduleVersion": "2.18.3",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson"
             ],
@@ -85,7 +85,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-core",
-            "moduleVersion": "2.18.2",
+            "moduleVersion": "2.18.3",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-core"
             ],
@@ -98,7 +98,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-databind",
-            "moduleVersion": "2.18.2",
+            "moduleVersion": "2.18.3",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson"
             ],
@@ -111,7 +111,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.dataformat:jackson-dataformat-cbor",
-            "moduleVersion": "2.18.2",
+            "moduleVersion": "2.18.3",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-dataformats-binary"
             ],
@@ -124,7 +124,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.datatype:jackson-datatype-jsr310",
-            "moduleVersion": "2.18.2",
+            "moduleVersion": "2.18.3",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-modules-java8/jackson-datatype-jsr310"
             ],
@@ -137,7 +137,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.module:jackson-module-parameter-names",
-            "moduleVersion": "2.18.2",
+            "moduleVersion": "2.18.3",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-modules-java8/jackson-module-parameter-names"
             ],
@@ -243,7 +243,7 @@
         },
         {
             "moduleName": "io.netty:netty-buffer",
-            "moduleVersion": "4.1.117.Final",
+            "moduleVersion": "4.1.119.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -256,7 +256,7 @@
         },
         {
             "moduleName": "io.netty:netty-codec",
-            "moduleVersion": "4.1.117.Final",
+            "moduleVersion": "4.1.119.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -269,7 +269,7 @@
         },
         {
             "moduleName": "io.netty:netty-codec-http",
-            "moduleVersion": "4.1.117.Final",
+            "moduleVersion": "4.1.119.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -282,7 +282,7 @@
         },
         {
             "moduleName": "io.netty:netty-common",
-            "moduleVersion": "4.1.117.Final",
+            "moduleVersion": "4.1.119.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -295,7 +295,7 @@
         },
         {
             "moduleName": "io.netty:netty-handler",
-            "moduleVersion": "4.1.117.Final",
+            "moduleVersion": "4.1.119.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -308,7 +308,7 @@
         },
         {
             "moduleName": "io.netty:netty-resolver",
-            "moduleVersion": "4.1.117.Final",
+            "moduleVersion": "4.1.119.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -321,7 +321,7 @@
         },
         {
             "moduleName": "io.netty:netty-transport",
-            "moduleVersion": "4.1.117.Final",
+            "moduleVersion": "4.1.119.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -347,7 +347,7 @@
         },
         {
             "moduleName": "io.netty:netty-transport-native-unix-common",
-            "moduleVersion": "4.1.117.Final",
+            "moduleVersion": "4.1.119.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -671,14 +671,14 @@
         },
         {
             "moduleName": "org.slf4j:slf4j-api",
-            "moduleVersion": "2.0.16",
+            "moduleVersion": "2.0.17",
             "moduleUrls": [
                 "http://www.slf4j.org"
             ],
             "moduleLicenses": [
                 {
                     "moduleLicense": null,
-                    "moduleLicenseUrl": "http://www.opensource.org/licenses/mit-license.php"
+                    "moduleLicenseUrl": "https://opensource.org/license/mit"
                 },
                 {
                     "moduleLicense": "MIT License",

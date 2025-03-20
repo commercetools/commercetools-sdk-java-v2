@@ -51,7 +51,7 @@ ext {
     ]
 
     junit = [
-            junit: 'org.junit.jupiter:junit-jupiter:5.12.1',
+            junit: 'org.junit.jupiter:junit-jupiter:5.11.4',
             dataprovider: 'com.tngtech.junit.dataprovider:junit-jupiter-dataprovider:2.10',
             jsonassert: 'org.skyscreamer:jsonassert:1.5.3',
             assertj: 'org.assertj:assertj-core:3.27.3'

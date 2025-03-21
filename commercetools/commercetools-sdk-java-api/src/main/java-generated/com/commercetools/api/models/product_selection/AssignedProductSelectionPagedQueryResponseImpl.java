@@ -79,7 +79,7 @@ public class AssignedProductSelectionPagedQueryResponseImpl
     }
 
     /**
-     *  <p>Total number of results matching the query. This number is an estimation that is not strongly consistent. Unlike other endpoints, the Product Selection endpoint does not return this field by default. To get <code>total</code>, pass the query parameter <code>withTotal</code> set to <code>true</code>. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
+     *  <p>Total number of results matching the query. Present only when the <code>withTotal</code> query parameter is set to <code>true</code>. This number is an estimation that is not strongly consistent. When the results are filtered with a Query Predicate, <code>total</code> is subject to a limit.</p>
      */
 
     public Long getTotal() {

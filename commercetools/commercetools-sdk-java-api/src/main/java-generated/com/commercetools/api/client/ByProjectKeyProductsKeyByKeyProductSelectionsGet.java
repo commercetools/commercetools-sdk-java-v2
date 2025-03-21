@@ -100,6 +100,10 @@ public class ByProjectKeyProductsKeyByKeyProductSelectionsGet extends
         return this.key;
     }
 
+    public List<String> getWithTotal() {
+        return this.getQueryParam("withTotal");
+    }
+
     public List<String> getExpand() {
         return this.getQueryParam("expand");
     }
@@ -116,10 +120,6 @@ public class ByProjectKeyProductsKeyByKeyProductSelectionsGet extends
         return this.getQueryParam("offset");
     }
 
-    public List<String> getWithTotal() {
-        return this.getQueryParam("withTotal");
-    }
-
     public List<String> getWhere() {
         return this.getQueryParam("where");
     }
@@ -130,6 +130,88 @@ public class ByProjectKeyProductsKeyByKeyProductSelectionsGet extends
 
     public void setKey(final String key) {
         this.key = key;
+    }
+
+    /**
+     * set withTotal with the specified value
+     * @param withTotal value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsKeyByKeyProductSelectionsGet
+     */
+    public <TValue> ByProjectKeyProductsKeyByKeyProductSelectionsGet withWithTotal(final TValue withTotal) {
+        return copy().withQueryParam("withTotal", withTotal);
+    }
+
+    /**
+     * add additional withTotal query parameter
+     * @param withTotal value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsKeyByKeyProductSelectionsGet
+     */
+    public <TValue> ByProjectKeyProductsKeyByKeyProductSelectionsGet addWithTotal(final TValue withTotal) {
+        return copy().addQueryParam("withTotal", withTotal);
+    }
+
+    /**
+     * set withTotal with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductsKeyByKeyProductSelectionsGet
+     */
+    public ByProjectKeyProductsKeyByKeyProductSelectionsGet withWithTotal(final Supplier<Boolean> supplier) {
+        return copy().withQueryParam("withTotal", supplier.get());
+    }
+
+    /**
+     * add additional withTotal query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductsKeyByKeyProductSelectionsGet
+     */
+    public ByProjectKeyProductsKeyByKeyProductSelectionsGet addWithTotal(final Supplier<Boolean> supplier) {
+        return copy().addQueryParam("withTotal", supplier.get());
+    }
+
+    /**
+     * set withTotal with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductsKeyByKeyProductSelectionsGet
+     */
+    public ByProjectKeyProductsKeyByKeyProductSelectionsGet withWithTotal(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("withTotal", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional withTotal query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductsKeyByKeyProductSelectionsGet
+     */
+    public ByProjectKeyProductsKeyByKeyProductSelectionsGet addWithTotal(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("withTotal", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set withTotal with the specified values
+     * @param withTotal values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsKeyByKeyProductSelectionsGet
+     */
+    public <TValue> ByProjectKeyProductsKeyByKeyProductSelectionsGet withWithTotal(final Collection<TValue> withTotal) {
+        return copy().withoutQueryParam("withTotal")
+                .addQueryParams(withTotal.stream()
+                        .map(s -> new ParamEntry<>("withTotal", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional withTotal query parameters
+     * @param withTotal values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsKeyByKeyProductSelectionsGet
+     */
+    public <TValue> ByProjectKeyProductsKeyByKeyProductSelectionsGet addWithTotal(final Collection<TValue> withTotal) {
+        return copy().addQueryParams(
+            withTotal.stream().map(s -> new ParamEntry<>("withTotal", s.toString())).collect(Collectors.toList()));
     }
 
     /**
@@ -448,88 +530,6 @@ public class ByProjectKeyProductsKeyByKeyProductSelectionsGet extends
     public <TValue> ByProjectKeyProductsKeyByKeyProductSelectionsGet addOffset(final Collection<TValue> offset) {
         return copy().addQueryParams(
             offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList()));
-    }
-
-    /**
-     * set withTotal with the specified value
-     * @param withTotal value to be set
-     * @param <TValue> value type
-     * @return ByProjectKeyProductsKeyByKeyProductSelectionsGet
-     */
-    public <TValue> ByProjectKeyProductsKeyByKeyProductSelectionsGet withWithTotal(final TValue withTotal) {
-        return copy().withQueryParam("withTotal", withTotal);
-    }
-
-    /**
-     * add additional withTotal query parameter
-     * @param withTotal value to be added
-     * @param <TValue> value type
-     * @return ByProjectKeyProductsKeyByKeyProductSelectionsGet
-     */
-    public <TValue> ByProjectKeyProductsKeyByKeyProductSelectionsGet addWithTotal(final TValue withTotal) {
-        return copy().addQueryParam("withTotal", withTotal);
-    }
-
-    /**
-     * set withTotal with the specified value
-     * @param supplier supplier for the value to be set
-     * @return ByProjectKeyProductsKeyByKeyProductSelectionsGet
-     */
-    public ByProjectKeyProductsKeyByKeyProductSelectionsGet withWithTotal(final Supplier<Boolean> supplier) {
-        return copy().withQueryParam("withTotal", supplier.get());
-    }
-
-    /**
-     * add additional withTotal query parameter
-     * @param supplier supplier for the value to be added
-     * @return ByProjectKeyProductsKeyByKeyProductSelectionsGet
-     */
-    public ByProjectKeyProductsKeyByKeyProductSelectionsGet addWithTotal(final Supplier<Boolean> supplier) {
-        return copy().addQueryParam("withTotal", supplier.get());
-    }
-
-    /**
-     * set withTotal with the specified value
-     * @param op builder for the value to be set
-     * @return ByProjectKeyProductsKeyByKeyProductSelectionsGet
-     */
-    public ByProjectKeyProductsKeyByKeyProductSelectionsGet withWithTotal(
-            final Function<StringBuilder, StringBuilder> op) {
-        return copy().withQueryParam("withTotal", op.apply(new StringBuilder()));
-    }
-
-    /**
-     * add additional withTotal query parameter
-     * @param op builder for the value to be added
-     * @return ByProjectKeyProductsKeyByKeyProductSelectionsGet
-     */
-    public ByProjectKeyProductsKeyByKeyProductSelectionsGet addWithTotal(
-            final Function<StringBuilder, StringBuilder> op) {
-        return copy().addQueryParam("withTotal", op.apply(new StringBuilder()));
-    }
-
-    /**
-     * set withTotal with the specified values
-     * @param withTotal values to be set
-     * @param <TValue> value type
-     * @return ByProjectKeyProductsKeyByKeyProductSelectionsGet
-     */
-    public <TValue> ByProjectKeyProductsKeyByKeyProductSelectionsGet withWithTotal(final Collection<TValue> withTotal) {
-        return copy().withoutQueryParam("withTotal")
-                .addQueryParams(withTotal.stream()
-                        .map(s -> new ParamEntry<>("withTotal", s.toString()))
-                        .collect(Collectors.toList()));
-    }
-
-    /**
-     * add additional withTotal query parameters
-     * @param withTotal values to be added
-     * @param <TValue> value type
-     * @return ByProjectKeyProductsKeyByKeyProductSelectionsGet
-     */
-    public <TValue> ByProjectKeyProductsKeyByKeyProductSelectionsGet addWithTotal(final Collection<TValue> withTotal) {
-        return copy().addQueryParams(
-            withTotal.stream().map(s -> new ParamEntry<>("withTotal", s.toString())).collect(Collectors.toList()));
     }
 
     /**

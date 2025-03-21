@@ -67,6 +67,11 @@ public class ByProjectKeyProductTailoringTest {
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productTailoring()
                         .get()
+                        .withWithTotal(true)
+                        .createHttpRequest(), "get", "test_projectKey/product-tailoring?withTotal=true", },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productTailoring()
+                        .get()
                         .withExpand("expand")
                         .createHttpRequest(), "get", "test_projectKey/product-tailoring?expand=expand", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
@@ -84,11 +89,6 @@ public class ByProjectKeyProductTailoringTest {
                         .get()
                         .withOffset(3)
                         .createHttpRequest(), "get", "test_projectKey/product-tailoring?offset=3", },
-                new Object[] { apiRoot.withProjectKey("test_projectKey")
-                        .productTailoring()
-                        .get()
-                        .withWithTotal(true)
-                        .createHttpRequest(), "get", "test_projectKey/product-tailoring?withTotal=true", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productTailoring()
                         .get()
@@ -125,12 +125,12 @@ public class ByProjectKeyProductTailoringTest {
     public static Object[][] executeMethodParameters() {
         return new Object[][] {
                 new Object[] {
+                        apiRoot.withProjectKey("test_projectKey").productTailoring().get().withWithTotal(true), },
+                new Object[] {
                         apiRoot.withProjectKey("test_projectKey").productTailoring().get().withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").productTailoring().get().withSort("sort"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").productTailoring().get().withLimit(7), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").productTailoring().get().withOffset(3), },
-                new Object[] {
-                        apiRoot.withProjectKey("test_projectKey").productTailoring().get().withWithTotal(true), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").productTailoring().get().withWhere("where"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productTailoring()

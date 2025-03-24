@@ -24,7 +24,7 @@ jobs:
         # Get GitHub token via the CT SDKs App
       - name: Generate GitHub token (via CT SDKs App)
         id: generate_github_token
-        uses: actions/create-github-app-token@67e27a7eb7db372a1c61a7f9bdab8699e9ee57f7 # v1
+        uses: actions/create-github-app-token@af35edadc00be37caa72ed9f3e6d5f7801bfdf09 # v1
         with:
           app-id: ${{ secrets.CT_SDKS_APP_ID }}
           private-key: ${{ secrets.CT_SDKS_APP_PEM }}
@@ -47,7 +47,7 @@ jobs:
       - uses: gradle/actions/wrapper-validation@94baf225fe0a508e581a564467443d0e2379123b # v4
 
       - name: Setup Java
-        uses: actions/setup-java@7a6d8a8234af8eb26422e24e3006232cccaa061b # v4
+        uses: actions/setup-java@3a4f6e1af504cf6a31855fa899c6aa5355ba6c12 # v4
         with:
           distribution: 'temurin'
           java-version: '17'
@@ -140,7 +140,7 @@ jobs:
         run: ./gradlew codeCoverageReport
 
       - name: Send code coverage report to Codecov.io
-        uses: codecov/codecov-action@13ce06bfc6bbe3ecf90edbbf1bc32fe5978ca1d3 # v5.3.1
+        uses: codecov/codecov-action@0565863a31f2c772f9f0395002a31e3f06189574 # v5.4.0
         with:
             token: ${{ secrets.CODECOV_TOKEN }}
   docs:
@@ -152,7 +152,7 @@ jobs:
         # Get GitHub token via the CT SDKs App
       - name: Generate GitHub token (via CT SDKs App)
         id: generate_github_token
-        uses: actions/create-github-app-token@67e27a7eb7db372a1c61a7f9bdab8699e9ee57f7 # v1
+        uses: actions/create-github-app-token@af35edadc00be37caa72ed9f3e6d5f7801bfdf09 # v1
         with:
           app-id: ${{ secrets.CT_SDKS_APP_ID }}
           private-key: ${{ secrets.CT_SDKS_APP_PEM }}
@@ -165,7 +165,7 @@ jobs:
       - uses: gradle/actions/wrapper-validation@94baf225fe0a508e581a564467443d0e2379123b # v4
 
       - name: Setup Java
-        uses: actions/setup-java@7a6d8a8234af8eb26422e24e3006232cccaa061b # v4
+        uses: actions/setup-java@3a4f6e1af504cf6a31855fa899c6aa5355ba6c12 # v4
         with:
           distribution: 'temurin'
           java-version: '17'
@@ -182,7 +182,7 @@ jobs:
       # Get GitHub token via the CT SDKs App
       - name: Generate GitHub token (via CT SDKs App)
         id: generate_github_token
-        uses: actions/create-github-app-token@67e27a7eb7db372a1c61a7f9bdab8699e9ee57f7 # v1
+        uses: actions/create-github-app-token@af35edadc00be37caa72ed9f3e6d5f7801bfdf09 # v1
         with:
           app-id: ${{ secrets.CT_SDKS_APP_ID }}
           private-key: ${{ secrets.CT_SDKS_APP_PEM }}

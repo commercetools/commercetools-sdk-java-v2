@@ -434,7 +434,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     }
 
     /**
-     *  <p>If <code>true</code>, this ShippingMethod is the Project's default ShippingMethod.</p>
+     *  <p>If <code>true</code>, this ShippingMethod is the Project's default ShippingMethod. When retrieving matching Shipping Methods, it is returned as the first item in the array. This flag does not automatically apply the Shipping Method to Carts.</p>
      * @param isDefault value to be set
      * @return Builder
      */
@@ -624,7 +624,7 @@ public class ShippingMethodBuilder implements Builder<ShippingMethod> {
     }
 
     /**
-     *  <p>If <code>true</code>, this ShippingMethod is the Project's default ShippingMethod.</p>
+     *  <p>If <code>true</code>, this ShippingMethod is the Project's default ShippingMethod. When retrieving matching Shipping Methods, it is returned as the first item in the array. This flag does not automatically apply the Shipping Method to Carts.</p>
      * @return isDefault
      */
 

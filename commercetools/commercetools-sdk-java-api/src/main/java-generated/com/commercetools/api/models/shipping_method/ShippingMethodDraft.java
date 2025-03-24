@@ -107,7 +107,7 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
     public Boolean getActive();
 
     /**
-     *  <p>If set to <code>true</code>, the ShippingMethod will be the Project's default ShippingMethod.</p>
+     *  <p>If set to <code>true</code>, the ShippingMethod will be the Project's default ShippingMethod. When retrieving matching Shipping Methods, it is returned as the first item in the array. This flag does not automatically apply the Shipping Method to Carts.</p>
      * @return isDefault
      */
     @NotNull
@@ -195,7 +195,7 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
     public void setActive(final Boolean active);
 
     /**
-     *  <p>If set to <code>true</code>, the ShippingMethod will be the Project's default ShippingMethod.</p>
+     *  <p>If set to <code>true</code>, the ShippingMethod will be the Project's default ShippingMethod. When retrieving matching Shipping Methods, it is returned as the first item in the array. This flag does not automatically apply the Shipping Method to Carts.</p>
      * @param isDefault value to be set
      */
 

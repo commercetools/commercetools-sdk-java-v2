@@ -32,6 +32,8 @@ public class ProductSearchProjectionParamsImpl implements ProductSearchProjectio
 
     private String priceCustomerGroup;
 
+    private java.util.List<String> priceCustomerGroupAssignments;
+
     private String priceChannel;
 
     private java.util.List<String> localeProjection;
@@ -46,6 +48,7 @@ public class ProductSearchProjectionParamsImpl implements ProductSearchProjectio
             @JsonProperty("staged") final Boolean staged, @JsonProperty("priceCurrency") final String priceCurrency,
             @JsonProperty("priceCountry") final String priceCountry,
             @JsonProperty("priceCustomerGroup") final String priceCustomerGroup,
+            @JsonProperty("priceCustomerGroupAssignments") final java.util.List<String> priceCustomerGroupAssignments,
             @JsonProperty("priceChannel") final String priceChannel,
             @JsonProperty("localeProjection") final java.util.List<String> localeProjection,
             @JsonProperty("storeProjection") final String storeProjection) {
@@ -54,6 +57,7 @@ public class ProductSearchProjectionParamsImpl implements ProductSearchProjectio
         this.priceCurrency = priceCurrency;
         this.priceCountry = priceCountry;
         this.priceCustomerGroup = priceCustomerGroup;
+        this.priceCustomerGroupAssignments = priceCustomerGroupAssignments;
         this.priceChannel = priceChannel;
         this.localeProjection = localeProjection;
         this.storeProjection = storeProjection;
@@ -90,7 +94,7 @@ public class ProductSearchProjectionParamsImpl implements ProductSearchProjectio
     }
 
     /**
-     *  <p>The country used for Product price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
+     *  <p>The country used for Product price selection. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
      */
 
     public String getPriceCountry() {
@@ -98,7 +102,7 @@ public class ProductSearchProjectionParamsImpl implements ProductSearchProjectio
     }
 
     /**
-     *  <p><code>id</code> of an existing CustomerGroup used for Product price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
+     *  <p><code>id</code> of an existing CustomerGroup used for Product price selection. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
      */
 
     public String getPriceCustomerGroup() {
@@ -106,7 +110,15 @@ public class ProductSearchProjectionParamsImpl implements ProductSearchProjectio
     }
 
     /**
-     *  <p><code>id</code> of an existing Channel used for Product price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
+     *  <p>IDs of existing CustomerGroups used for Product price selection, when using multiple Customer Groups. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
+     */
+
+    public java.util.List<String> getPriceCustomerGroupAssignments() {
+        return this.priceCustomerGroupAssignments;
+    }
+
+    /**
+     *  <p><code>id</code> of an existing Channel used for Product price selection. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
      */
 
     public String getPriceChannel() {
@@ -153,6 +165,14 @@ public class ProductSearchProjectionParamsImpl implements ProductSearchProjectio
         this.priceCustomerGroup = priceCustomerGroup;
     }
 
+    public void setPriceCustomerGroupAssignments(final String... priceCustomerGroupAssignments) {
+        this.priceCustomerGroupAssignments = new ArrayList<>(Arrays.asList(priceCustomerGroupAssignments));
+    }
+
+    public void setPriceCustomerGroupAssignments(final java.util.List<String> priceCustomerGroupAssignments) {
+        this.priceCustomerGroupAssignments = priceCustomerGroupAssignments;
+    }
+
     public void setPriceChannel(final String priceChannel) {
         this.priceChannel = priceChannel;
     }
@@ -184,6 +204,7 @@ public class ProductSearchProjectionParamsImpl implements ProductSearchProjectio
                 .append(priceCurrency, that.priceCurrency)
                 .append(priceCountry, that.priceCountry)
                 .append(priceCustomerGroup, that.priceCustomerGroup)
+                .append(priceCustomerGroupAssignments, that.priceCustomerGroupAssignments)
                 .append(priceChannel, that.priceChannel)
                 .append(localeProjection, that.localeProjection)
                 .append(storeProjection, that.storeProjection)
@@ -192,6 +213,7 @@ public class ProductSearchProjectionParamsImpl implements ProductSearchProjectio
                 .append(priceCurrency, that.priceCurrency)
                 .append(priceCountry, that.priceCountry)
                 .append(priceCustomerGroup, that.priceCustomerGroup)
+                .append(priceCustomerGroupAssignments, that.priceCustomerGroupAssignments)
                 .append(priceChannel, that.priceChannel)
                 .append(localeProjection, that.localeProjection)
                 .append(storeProjection, that.storeProjection)
@@ -205,6 +227,7 @@ public class ProductSearchProjectionParamsImpl implements ProductSearchProjectio
                 .append(priceCurrency)
                 .append(priceCountry)
                 .append(priceCustomerGroup)
+                .append(priceCustomerGroupAssignments)
                 .append(priceChannel)
                 .append(localeProjection)
                 .append(storeProjection)
@@ -218,6 +241,7 @@ public class ProductSearchProjectionParamsImpl implements ProductSearchProjectio
                 .append("priceCurrency", priceCurrency)
                 .append("priceCountry", priceCountry)
                 .append("priceCustomerGroup", priceCustomerGroup)
+                .append("priceCustomerGroupAssignments", priceCustomerGroupAssignments)
                 .append("priceChannel", priceChannel)
                 .append("localeProjection", localeProjection)
                 .append("storeProjection", storeProjection)

@@ -38,6 +38,9 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
     private String priceCustomerGroup;
 
     @Nullable
+    private java.util.List<String> priceCustomerGroupAssignments;
+
+    @Nullable
     private String priceChannel;
 
     @Nullable
@@ -105,7 +108,7 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p>The country used for Product price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
+     *  <p>The country used for Product price selection. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
      * @param priceCountry value to be set
      * @return Builder
      */
@@ -116,7 +119,7 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p><code>id</code> of an existing CustomerGroup used for Product price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
+     *  <p><code>id</code> of an existing CustomerGroup used for Product price selection. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
      * @param priceCustomerGroup value to be set
      * @return Builder
      */
@@ -127,7 +130,46 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p><code>id</code> of an existing Channel used for Product price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
+     *  <p>IDs of existing CustomerGroups used for Product price selection, when using multiple Customer Groups. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
+     * @param priceCustomerGroupAssignments value to be set
+     * @return Builder
+     */
+
+    public ProductSearchProjectionParamsBuilder priceCustomerGroupAssignments(
+            @Nullable final String... priceCustomerGroupAssignments) {
+        this.priceCustomerGroupAssignments = new ArrayList<>(Arrays.asList(priceCustomerGroupAssignments));
+        return this;
+    }
+
+    /**
+     *  <p>IDs of existing CustomerGroups used for Product price selection, when using multiple Customer Groups. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
+     * @param priceCustomerGroupAssignments value to be set
+     * @return Builder
+     */
+
+    public ProductSearchProjectionParamsBuilder priceCustomerGroupAssignments(
+            @Nullable final java.util.List<String> priceCustomerGroupAssignments) {
+        this.priceCustomerGroupAssignments = priceCustomerGroupAssignments;
+        return this;
+    }
+
+    /**
+     *  <p>IDs of existing CustomerGroups used for Product price selection, when using multiple Customer Groups. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
+     * @param priceCustomerGroupAssignments value to be set
+     * @return Builder
+     */
+
+    public ProductSearchProjectionParamsBuilder plusPriceCustomerGroupAssignments(
+            @Nullable final String... priceCustomerGroupAssignments) {
+        if (this.priceCustomerGroupAssignments == null) {
+            this.priceCustomerGroupAssignments = new ArrayList<>();
+        }
+        this.priceCustomerGroupAssignments.addAll(Arrays.asList(priceCustomerGroupAssignments));
+        return this;
+    }
+
+    /**
+     *  <p><code>id</code> of an existing Channel used for Product price selection. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
      * @param priceChannel value to be set
      * @return Builder
      */
@@ -216,7 +258,7 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p>The country used for Product price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
+     *  <p>The country used for Product price selection. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
      * @return priceCountry
      */
 
@@ -226,7 +268,7 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p><code>id</code> of an existing CustomerGroup used for Product price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
+     *  <p><code>id</code> of an existing CustomerGroup used for Product price selection. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
      * @return priceCustomerGroup
      */
 
@@ -236,7 +278,17 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
     }
 
     /**
-     *  <p><code>id</code> of an existing Channel used for Product price selection. Can only be used <strong>in conjunction with</strong> the <code>priceCurrency</code> parameter.</p>
+     *  <p>IDs of existing CustomerGroups used for Product price selection, when using multiple Customer Groups. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
+     * @return priceCustomerGroupAssignments
+     */
+
+    @Nullable
+    public java.util.List<String> getPriceCustomerGroupAssignments() {
+        return this.priceCustomerGroupAssignments;
+    }
+
+    /**
+     *  <p><code>id</code> of an existing Channel used for Product price selection. It can be used only <em>in conjunction with</em> the <code>priceCurrency</code> parameter.</p>
      * @return priceChannel
      */
 
@@ -271,7 +323,7 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
      */
     public ProductSearchProjectionParams build() {
         return new ProductSearchProjectionParamsImpl(expand, staged, priceCurrency, priceCountry, priceCustomerGroup,
-            priceChannel, localeProjection, storeProjection);
+            priceCustomerGroupAssignments, priceChannel, localeProjection, storeProjection);
     }
 
     /**
@@ -280,7 +332,7 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
      */
     public ProductSearchProjectionParams buildUnchecked() {
         return new ProductSearchProjectionParamsImpl(expand, staged, priceCurrency, priceCountry, priceCustomerGroup,
-            priceChannel, localeProjection, storeProjection);
+            priceCustomerGroupAssignments, priceChannel, localeProjection, storeProjection);
     }
 
     /**
@@ -303,6 +355,7 @@ public class ProductSearchProjectionParamsBuilder implements Builder<ProductSear
         builder.priceCurrency = template.getPriceCurrency();
         builder.priceCountry = template.getPriceCountry();
         builder.priceCustomerGroup = template.getPriceCustomerGroup();
+        builder.priceCustomerGroupAssignments = template.getPriceCustomerGroupAssignments();
         builder.priceChannel = template.getPriceChannel();
         builder.localeProjection = template.getLocaleProjection();
         builder.storeProjection = template.getStoreProjection();

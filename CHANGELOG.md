@@ -1,4 +1,79 @@
 
+# 17.29.0 (2025-03-19)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/846
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/847
+* fix exception with invalid date deserialization by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/849
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/850
+
+**Api changes**
+
+<details>
+<summary>Added QueryParameter(s)</summary>
+
+- added query parameter `priceCustomerGroupAssignments` to method `get /{projectKey}/products`
+- added query parameter `priceCustomerGroupAssignments` to method `post /{projectKey}/products`
+- added query parameter `priceCustomerGroupAssignments` to method `get /{projectKey}/product-projections`
+- added query parameter `priceCustomerGroupAssignments` to method `get /{projectKey}/products/key={key}`
+- added query parameter `priceCustomerGroupAssignments` to method `post /{projectKey}/products/key={key}`
+- added query parameter `priceCustomerGroupAssignments` to method `delete /{projectKey}/products/key={key}`
+- added query parameter `priceCustomerGroupAssignments` to method `get /{projectKey}/products/{ID}`
+- added query parameter `priceCustomerGroupAssignments` to method `post /{projectKey}/products/{ID}`
+- added query parameter `priceCustomerGroupAssignments` to method `delete /{projectKey}/products/{ID}`
+- added query parameter `priceCustomerGroupAssignments` to method `get /{projectKey}/product-projections/search`
+- added query parameter `priceCustomerGroupAssignments` to method `get /{projectKey}/product-projections/key={key}`
+- added query parameter `priceCustomerGroupAssignments` to method `get /{projectKey}/product-projections/{ID}`
+- added query parameter `priceCustomerGroupAssignments` to method `get /{projectKey}/in-store/key={storeKey}/product-projections/key={key}`
+- added query parameter `priceCustomerGroupAssignments` to method `get /{projectKey}/in-store/key={storeKey}/product-projections/{ID}`
+</details>
+
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `CustomerGroupAssignment`
+- added type `CustomerGroupAssignmentDraft`
+- added type `CustomerAddCustomerGroupAssignmentAction`
+- added type `CustomerRemoveCustomerGroupAssignmentAction`
+- added type `CustomerSetCustomerGroupAssignmentsAction`
+- added type `CustomerGroupAssignmentAddedMessage`
+- added type `CustomerGroupAssignmentRemovedMessage`
+- added type `CustomerGroupAssignmentsSetMessage`
+- added type `CustomerGroupAssignmentAddedMessagePayload`
+- added type `CustomerGroupAssignmentRemovedMessagePayload`
+- added type `CustomerGroupAssignmentsSetMessagePayload`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `customerGroupAssignments` to type `Customer`
+- added property `customerGroupAssignments` to type `CustomerDraft`
+- added property `priceCustomerGroupAssignments` to type `ProductSearchProjectionParams`
+</details>
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.28.0...17.29.0
+
+# 17.28.0 (2025-03-19)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/833
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/834
+* [DEVX-495] make serviceregion configurable in examples by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/835
+* [DEVX-322] QueryAll allows different field than id to be used by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/837
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/838
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/839
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/840
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/841
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/842
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/843
+* feat: always deserialize to long for jsonutils by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/845
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.27.0...17.28.0
+
 # 17.27.0 (2025-02-19)
 
 ## What's Changed

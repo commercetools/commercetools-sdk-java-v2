@@ -93,6 +93,15 @@ public class ByProjectKeyProductsKeyByKeyTest {
                                 .products()
                                 .withKey("test_key")
                                 .get()
+                                .withPriceCustomerGroupAssignments("priceCustomerGroupAssignments")
+                                .createHttpRequest(),
+                        "get",
+                        "test_projectKey/products/key=test_key?priceCustomerGroupAssignments=priceCustomerGroupAssignments", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .products()
+                                .withKey("test_key")
+                                .get()
                                 .withPriceChannel("priceChannel")
                                 .createHttpRequest(),
                         "get", "test_projectKey/products/key=test_key?priceChannel=priceChannel", },
@@ -141,6 +150,15 @@ public class ByProjectKeyProductsKeyByKeyTest {
                                 .products()
                                 .withKey("test_key")
                                 .post(com.commercetools.api.models.product.ProductUpdate.of())
+                                .withPriceCustomerGroupAssignments("priceCustomerGroupAssignments")
+                                .createHttpRequest(),
+                        "post",
+                        "test_projectKey/products/key=test_key?priceCustomerGroupAssignments=priceCustomerGroupAssignments", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .products()
+                                .withKey("test_key")
+                                .post(com.commercetools.api.models.product.ProductUpdate.of())
                                 .withPriceChannel("priceChannel")
                                 .createHttpRequest(),
                         "post", "test_projectKey/products/key=test_key?priceChannel=priceChannel", },
@@ -179,6 +197,15 @@ public class ByProjectKeyProductsKeyByKeyTest {
                                 .withPriceCustomerGroup("priceCustomerGroup")
                                 .createHttpRequest(),
                         "delete", "test_projectKey/products/key=test_key?priceCustomerGroup=priceCustomerGroup", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .products()
+                                .withKey("test_key")
+                                .delete()
+                                .withPriceCustomerGroupAssignments("priceCustomerGroupAssignments")
+                                .createHttpRequest(),
+                        "delete",
+                        "test_projectKey/products/key=test_key?priceCustomerGroupAssignments=priceCustomerGroupAssignments", },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey")
                                 .products()
@@ -230,6 +257,11 @@ public class ByProjectKeyProductsKeyByKeyTest {
                         .products()
                         .withKey("test_key")
                         .get()
+                        .withPriceCustomerGroupAssignments("priceCustomerGroupAssignments"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .products()
+                        .withKey("test_key")
+                        .get()
                         .withPriceChannel("priceChannel"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
@@ -253,6 +285,11 @@ public class ByProjectKeyProductsKeyByKeyTest {
                         .withKey("test_key")
                         .post(com.commercetools.api.models.product.ProductUpdate.of())
                         .withPriceCustomerGroup("priceCustomerGroup"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .products()
+                        .withKey("test_key")
+                        .post(com.commercetools.api.models.product.ProductUpdate.of())
+                        .withPriceCustomerGroupAssignments("priceCustomerGroupAssignments"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .withKey("test_key")
@@ -282,6 +319,11 @@ public class ByProjectKeyProductsKeyByKeyTest {
                         .withKey("test_key")
                         .delete()
                         .withPriceCustomerGroup("priceCustomerGroup"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .products()
+                        .withKey("test_key")
+                        .delete()
+                        .withPriceCustomerGroupAssignments("priceCustomerGroupAssignments"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .withKey("test_key")

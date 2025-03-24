@@ -41,6 +41,12 @@ public class ProductSearchProjectionParamsQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, ProductSearchProjectionParamsQueryBuilderDsl::of));
     }
 
+    public StringCollectionPredicateBuilder<ProductSearchProjectionParamsQueryBuilderDsl> priceCustomerGroupAssignments() {
+        return new StringCollectionPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("priceCustomerGroupAssignments")),
+            p -> new CombinationQueryPredicate<>(p, ProductSearchProjectionParamsQueryBuilderDsl::of));
+    }
+
     public StringComparisonPredicateBuilder<ProductSearchProjectionParamsQueryBuilderDsl> priceChannel() {
         return new StringComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("priceChannel")),

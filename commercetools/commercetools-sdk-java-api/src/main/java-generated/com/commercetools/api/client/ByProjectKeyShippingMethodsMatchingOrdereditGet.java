@@ -20,8 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Retrieves all the active ShippingMethods that can ship to the given Location for an OrderEdit.</p>
- *  <p>If the OrderEdit preview cannot be generated, an EditPreviewFailed error is returned.</p>
+ *  <p>Retrieves all the active ShippingMethods that can ship to the given Location for an OrderEdit. If a matching ShippingMethod has <code>isDefault</code> set to <code>true</code>, it is returned as the first item in the array. If the OrderEdit preview cannot be generated, an EditPreviewFailed error is returned.</p>
  *
  * <hr>
  * <div class=code-example>

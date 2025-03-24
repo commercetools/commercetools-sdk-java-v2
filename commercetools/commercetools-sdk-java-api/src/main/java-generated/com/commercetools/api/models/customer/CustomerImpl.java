@@ -82,6 +82,8 @@ public class CustomerImpl implements Customer, ModelBase {
 
     private com.commercetools.api.models.customer.AuthenticationMode authenticationMode;
 
+    private java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> customerGroupAssignments;
+
     /**
      * create instance with all properties
      */
@@ -108,7 +110,8 @@ public class CustomerImpl implements Customer, ModelBase {
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
             @JsonProperty("locale") final String locale, @JsonProperty("salutation") final String salutation,
             @JsonProperty("stores") final java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores,
-            @JsonProperty("authenticationMode") final com.commercetools.api.models.customer.AuthenticationMode authenticationMode) {
+            @JsonProperty("authenticationMode") final com.commercetools.api.models.customer.AuthenticationMode authenticationMode,
+            @JsonProperty("customerGroupAssignments") final java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> customerGroupAssignments) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -139,6 +142,7 @@ public class CustomerImpl implements Customer, ModelBase {
         this.salutation = salutation;
         this.stores = stores;
         this.authenticationMode = authenticationMode;
+        this.customerGroupAssignments = customerGroupAssignments;
     }
 
     /**
@@ -392,6 +396,14 @@ public class CustomerImpl implements Customer, ModelBase {
         return this.authenticationMode;
     }
 
+    /**
+     *  <p>Customer Groups that the Customer belongs to.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> getCustomerGroupAssignments() {
+        return this.customerGroupAssignments;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -530,6 +542,16 @@ public class CustomerImpl implements Customer, ModelBase {
         this.authenticationMode = authenticationMode;
     }
 
+    public void setCustomerGroupAssignments(
+            final com.commercetools.api.models.customer.CustomerGroupAssignment... customerGroupAssignments) {
+        this.customerGroupAssignments = new ArrayList<>(Arrays.asList(customerGroupAssignments));
+    }
+
+    public void setCustomerGroupAssignments(
+            final java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> customerGroupAssignments) {
+        this.customerGroupAssignments = customerGroupAssignments;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -570,6 +592,7 @@ public class CustomerImpl implements Customer, ModelBase {
                 .append(salutation, that.salutation)
                 .append(stores, that.stores)
                 .append(authenticationMode, that.authenticationMode)
+                .append(customerGroupAssignments, that.customerGroupAssignments)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -600,6 +623,7 @@ public class CustomerImpl implements Customer, ModelBase {
                 .append(salutation, that.salutation)
                 .append(stores, that.stores)
                 .append(authenticationMode, that.authenticationMode)
+                .append(customerGroupAssignments, that.customerGroupAssignments)
                 .isEquals();
     }
 
@@ -635,6 +659,7 @@ public class CustomerImpl implements Customer, ModelBase {
                 .append(salutation)
                 .append(stores)
                 .append(authenticationMode)
+                .append(customerGroupAssignments)
                 .toHashCode();
     }
 
@@ -670,6 +695,7 @@ public class CustomerImpl implements Customer, ModelBase {
                 .append("salutation", salutation)
                 .append("stores", stores)
                 .append("authenticationMode", authenticationMode)
+                .append("customerGroupAssignments", customerGroupAssignments)
                 .build();
     }
 

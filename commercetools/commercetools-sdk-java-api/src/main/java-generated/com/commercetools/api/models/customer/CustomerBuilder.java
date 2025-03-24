@@ -113,6 +113,9 @@ public class CustomerBuilder implements Builder<Customer> {
 
     private com.commercetools.api.models.customer.AuthenticationMode authenticationMode;
 
+    @Nullable
+    private java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> customerGroupAssignments;
+
     /**
      *  <p>Unique identifier of the Customer.</p>
      * @param id value to be set
@@ -775,6 +778,99 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
+     *  <p>Customer Groups that the Customer belongs to.</p>
+     * @param customerGroupAssignments value to be set
+     * @return Builder
+     */
+
+    public CustomerBuilder customerGroupAssignments(
+            @Nullable final com.commercetools.api.models.customer.CustomerGroupAssignment... customerGroupAssignments) {
+        this.customerGroupAssignments = new ArrayList<>(Arrays.asList(customerGroupAssignments));
+        return this;
+    }
+
+    /**
+     *  <p>Customer Groups that the Customer belongs to.</p>
+     * @param customerGroupAssignments value to be set
+     * @return Builder
+     */
+
+    public CustomerBuilder customerGroupAssignments(
+            @Nullable final java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> customerGroupAssignments) {
+        this.customerGroupAssignments = customerGroupAssignments;
+        return this;
+    }
+
+    /**
+     *  <p>Customer Groups that the Customer belongs to.</p>
+     * @param customerGroupAssignments value to be set
+     * @return Builder
+     */
+
+    public CustomerBuilder plusCustomerGroupAssignments(
+            @Nullable final com.commercetools.api.models.customer.CustomerGroupAssignment... customerGroupAssignments) {
+        if (this.customerGroupAssignments == null) {
+            this.customerGroupAssignments = new ArrayList<>();
+        }
+        this.customerGroupAssignments.addAll(Arrays.asList(customerGroupAssignments));
+        return this;
+    }
+
+    /**
+     *  <p>Customer Groups that the Customer belongs to.</p>
+     * @param builder function to build the customerGroupAssignments value
+     * @return Builder
+     */
+
+    public CustomerBuilder plusCustomerGroupAssignments(
+            Function<com.commercetools.api.models.customer.CustomerGroupAssignmentBuilder, com.commercetools.api.models.customer.CustomerGroupAssignmentBuilder> builder) {
+        if (this.customerGroupAssignments == null) {
+            this.customerGroupAssignments = new ArrayList<>();
+        }
+        this.customerGroupAssignments
+                .add(builder.apply(com.commercetools.api.models.customer.CustomerGroupAssignmentBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Customer Groups that the Customer belongs to.</p>
+     * @param builder function to build the customerGroupAssignments value
+     * @return Builder
+     */
+
+    public CustomerBuilder withCustomerGroupAssignments(
+            Function<com.commercetools.api.models.customer.CustomerGroupAssignmentBuilder, com.commercetools.api.models.customer.CustomerGroupAssignmentBuilder> builder) {
+        this.customerGroupAssignments = new ArrayList<>();
+        this.customerGroupAssignments
+                .add(builder.apply(com.commercetools.api.models.customer.CustomerGroupAssignmentBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Customer Groups that the Customer belongs to.</p>
+     * @param builder function to build the customerGroupAssignments value
+     * @return Builder
+     */
+
+    public CustomerBuilder addCustomerGroupAssignments(
+            Function<com.commercetools.api.models.customer.CustomerGroupAssignmentBuilder, com.commercetools.api.models.customer.CustomerGroupAssignment> builder) {
+        return plusCustomerGroupAssignments(
+            builder.apply(com.commercetools.api.models.customer.CustomerGroupAssignmentBuilder.of()));
+    }
+
+    /**
+     *  <p>Customer Groups that the Customer belongs to.</p>
+     * @param builder function to build the customerGroupAssignments value
+     * @return Builder
+     */
+
+    public CustomerBuilder setCustomerGroupAssignments(
+            Function<com.commercetools.api.models.customer.CustomerGroupAssignmentBuilder, com.commercetools.api.models.customer.CustomerGroupAssignment> builder) {
+        return customerGroupAssignments(
+            builder.apply(com.commercetools.api.models.customer.CustomerGroupAssignmentBuilder.of()));
+    }
+
+    /**
      *  <p>Unique identifier of the Customer.</p>
      * @return id
      */
@@ -1071,6 +1167,16 @@ public class CustomerBuilder implements Builder<Customer> {
     }
 
     /**
+     *  <p>Customer Groups that the Customer belongs to.</p>
+     * @return customerGroupAssignments
+     */
+
+    @Nullable
+    public java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> getCustomerGroupAssignments() {
+        return this.customerGroupAssignments;
+    }
+
+    /**
      * builds Customer with checking for non-null required values
      * @return Customer
      */
@@ -1087,7 +1193,8 @@ public class CustomerBuilder implements Builder<Customer> {
         return new CustomerImpl(id, version, createdAt, lastModifiedAt, key, customerNumber, externalId, lastModifiedBy,
             createdBy, email, password, firstName, lastName, middleName, title, dateOfBirth, companyName, vatId,
             addresses, defaultShippingAddressId, shippingAddressIds, defaultBillingAddressId, billingAddressIds,
-            isEmailVerified, customerGroup, custom, locale, salutation, stores, authenticationMode);
+            isEmailVerified, customerGroup, custom, locale, salutation, stores, authenticationMode,
+            customerGroupAssignments);
     }
 
     /**
@@ -1098,7 +1205,8 @@ public class CustomerBuilder implements Builder<Customer> {
         return new CustomerImpl(id, version, createdAt, lastModifiedAt, key, customerNumber, externalId, lastModifiedBy,
             createdBy, email, password, firstName, lastName, middleName, title, dateOfBirth, companyName, vatId,
             addresses, defaultShippingAddressId, shippingAddressIds, defaultBillingAddressId, billingAddressIds,
-            isEmailVerified, customerGroup, custom, locale, salutation, stores, authenticationMode);
+            isEmailVerified, customerGroup, custom, locale, salutation, stores, authenticationMode,
+            customerGroupAssignments);
     }
 
     /**
@@ -1146,6 +1254,7 @@ public class CustomerBuilder implements Builder<Customer> {
         builder.salutation = template.getSalutation();
         builder.stores = template.getStores();
         builder.authenticationMode = template.getAuthenticationMode();
+        builder.customerGroupAssignments = template.getCustomerGroupAssignments();
         return builder;
     }
 

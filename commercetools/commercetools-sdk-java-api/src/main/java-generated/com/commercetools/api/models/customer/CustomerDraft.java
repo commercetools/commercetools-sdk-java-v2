@@ -266,6 +266,14 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
     public AuthenticationMode getAuthenticationMode();
 
     /**
+     *  <p>Customer Groups to assign the Customer to.</p>
+     * @return customerGroupAssignments
+     */
+    @Valid
+    @JsonProperty("customerGroupAssignments")
+    public List<CustomerGroupAssignmentDraft> getCustomerGroupAssignments();
+
+    /**
      *  <p>User-defined unique identifier for the Customer. The <code>key</code> field is preferred over <code>customerNumber</code> as it is mutable and provides more flexibility.</p>
      *  <p>This field is optional for backwards compatibility reasons, but we strongly recommend setting it. Keys are mandatory for importing Customers with the Import API.</p>
      * @param key value to be set
@@ -500,6 +508,21 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
     public void setAuthenticationMode(final AuthenticationMode authenticationMode);
 
     /**
+     *  <p>Customer Groups to assign the Customer to.</p>
+     * @param customerGroupAssignments values to be set
+     */
+
+    @JsonIgnore
+    public void setCustomerGroupAssignments(final CustomerGroupAssignmentDraft... customerGroupAssignments);
+
+    /**
+     *  <p>Customer Groups to assign the Customer to.</p>
+     * @param customerGroupAssignments values to be set
+     */
+
+    public void setCustomerGroupAssignments(final List<CustomerGroupAssignmentDraft> customerGroupAssignments);
+
+    /**
      * factory method
      * @return instance of CustomerDraft
      */
@@ -541,6 +564,7 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
         instance.setSalutation(template.getSalutation());
         instance.setStores(template.getStores());
         instance.setAuthenticationMode(template.getAuthenticationMode());
+        instance.setCustomerGroupAssignments(template.getCustomerGroupAssignments());
         return instance;
     }
 
@@ -594,6 +618,11 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setAuthenticationMode(template.getAuthenticationMode());
+        instance.setCustomerGroupAssignments(Optional.ofNullable(template.getCustomerGroupAssignments())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.customer.CustomerGroupAssignmentDraft::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

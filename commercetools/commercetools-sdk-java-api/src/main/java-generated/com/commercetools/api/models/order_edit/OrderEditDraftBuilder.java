@@ -203,7 +203,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     }
 
     /**
-     *  <p>Set to <code>true</code> if you want to peview the edited Order first without persisting it (dry run). A dry run allows checking for potential errors when trying to apply the <code>stagedActions</code>.</p>
+     *  <p>Set to <code>true</code> if you want to preview the edited Order first without persisting it (dry run). A dry run allows checking for potential errors when trying to apply the <code>stagedActions</code>.</p>
      *  <p>Order API Extensions, if any, are also called in dry runs.</p>
      * @param dryRun value to be set
      * @return Builder
@@ -264,7 +264,7 @@ public class OrderEditDraftBuilder implements Builder<OrderEditDraft> {
     }
 
     /**
-     *  <p>Set to <code>true</code> if you want to peview the edited Order first without persisting it (dry run). A dry run allows checking for potential errors when trying to apply the <code>stagedActions</code>.</p>
+     *  <p>Set to <code>true</code> if you want to preview the edited Order first without persisting it (dry run). A dry run allows checking for potential errors when trying to apply the <code>stagedActions</code>.</p>
      *  <p>Order API Extensions, if any, are also called in dry runs.</p>
      * @return dryRun
      */

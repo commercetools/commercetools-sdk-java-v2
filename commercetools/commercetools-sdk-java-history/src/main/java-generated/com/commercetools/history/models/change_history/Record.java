@@ -137,7 +137,7 @@ public interface Record {
     public List<KeyReference> getStores();
 
     /**
-     *  <p>Reference to the Business Unit associated with the Change.</p>
+     *  <p>Reference to the Business Unit associated with the Change. Only available for B2B-enabled Projects.</p>
      * @return businessUnit
      */
     @Valid
@@ -243,7 +243,7 @@ public interface Record {
     public void setStores(final List<KeyReference> stores);
 
     /**
-     *  <p>Reference to the Business Unit associated with the Change.</p>
+     *  <p>Reference to the Business Unit associated with the Change. Only available for B2B-enabled Projects.</p>
      * @param businessUnit value to be set
      */
 

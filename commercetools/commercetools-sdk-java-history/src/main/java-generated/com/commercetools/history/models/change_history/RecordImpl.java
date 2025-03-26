@@ -165,7 +165,7 @@ public class RecordImpl implements Record, ModelBase {
     }
 
     /**
-     *  <p>Reference to the Business Unit associated with the Change.</p>
+     *  <p>Reference to the Business Unit associated with the Change. Only available for B2B-enabled Projects.</p>
      */
 
     public com.commercetools.history.models.common.KeyReference getBusinessUnit() {

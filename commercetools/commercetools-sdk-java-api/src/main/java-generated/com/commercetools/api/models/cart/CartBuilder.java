@@ -283,7 +283,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Reference to a Business Unit the Cart belongs to.</p>
+     *  <p>Reference to a Business Unit the Cart belongs to. Only available for B2B-enabled Projects.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -297,7 +297,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Reference to a Business Unit the Cart belongs to.</p>
+     *  <p>Reference to a Business Unit the Cart belongs to. Only available for B2B-enabled Projects.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -310,7 +310,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Reference to a Business Unit the Cart belongs to.</p>
+     *  <p>Reference to a Business Unit the Cart belongs to. Only available for B2B-enabled Projects.</p>
      * @param businessUnit value to be set
      * @return Builder
      */
@@ -1698,7 +1698,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Reference to a Business Unit the Cart belongs to.</p>
+     *  <p>Reference to a Business Unit the Cart belongs to. Only available for B2B-enabled Projects.</p>
      * @return businessUnit
      */
 

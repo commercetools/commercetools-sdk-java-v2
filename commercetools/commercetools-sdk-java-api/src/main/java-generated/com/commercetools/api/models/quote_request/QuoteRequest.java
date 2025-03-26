@@ -329,7 +329,7 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
     public CartReference getCart();
 
     /**
-     *  <p>The BusinessUnit for the Quote Request.</p>
+     *  <p>The BusinessUnit for the Quote Request. Only available for B2B-enabled Projects.</p>
      * @return businessUnit
      */
     @Valid
@@ -593,7 +593,7 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
     public void setCart(final CartReference cart);
 
     /**
-     *  <p>The BusinessUnit for the Quote Request.</p>
+     *  <p>The BusinessUnit for the Quote Request. Only available for B2B-enabled Projects.</p>
      * @param businessUnit value to be set
      */
 

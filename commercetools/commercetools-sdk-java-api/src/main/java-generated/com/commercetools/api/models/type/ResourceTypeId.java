@@ -23,16 +23,16 @@ public interface ResourceTypeId extends JsonEnum {
     <p>Asset on Category and ProductVariant</p> */
     ResourceTypeId ASSET = ResourceTypeIdEnum.ASSET;
     /**
-    <p>ApprovalFlow</p> */
+    <p>ApprovalFlow - Only available for B2B-enabled Projects.</p> */
     ResourceTypeId APPROVAL_FLOW = ResourceTypeIdEnum.APPROVAL_FLOW;
     /**
-    <p>ApprovalRule</p> */
+    <p>ApprovalRule - Only available for B2B-enabled Projects.</p> */
     ResourceTypeId APPROVAL_RULE = ResourceTypeIdEnum.APPROVAL_RULE;
     /**
-    <p>AssociateRole</p> */
+    <p>AssociateRole - Only available for B2B-enabled Projects.</p> */
     ResourceTypeId ASSOCIATE_ROLE = ResourceTypeIdEnum.ASSOCIATE_ROLE;
     /**
-    <p>BusinessUnit</p> */
+    <p>BusinessUnit - Only available for B2B-enabled Projects.</p> */
     ResourceTypeId BUSINESS_UNIT = ResourceTypeIdEnum.BUSINESS_UNIT;
     /**
     <p>CartDiscount</p> */

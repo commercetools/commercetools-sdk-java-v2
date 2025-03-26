@@ -234,7 +234,7 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
     }
 
     /**
-     *  <p>The BusinessUnit for the Staged Quote.</p>
+     *  <p>The BusinessUnit for the Staged Quote. Only available for B2B-enabled Projects.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getBusinessUnit() {

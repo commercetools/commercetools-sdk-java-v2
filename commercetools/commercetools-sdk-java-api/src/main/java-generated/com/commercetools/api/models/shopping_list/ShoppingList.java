@@ -152,7 +152,7 @@ public interface ShoppingList
     public StoreKeyReference getStore();
 
     /**
-     *  <p>Reference to the Business Unit the Shopping List belongs to.</p>
+     *  <p>Reference to the Business Unit the Shopping List belongs to. Only available for B2B-enabled Projects.</p>
      * @return businessUnit
      */
     @Valid
@@ -300,7 +300,7 @@ public interface ShoppingList
     public void setStore(final StoreKeyReference store);
 
     /**
-     *  <p>Reference to the Business Unit the Shopping List belongs to.</p>
+     *  <p>Reference to the Business Unit the Shopping List belongs to. Only available for B2B-enabled Projects.</p>
      * @param businessUnit value to be set
      */
 

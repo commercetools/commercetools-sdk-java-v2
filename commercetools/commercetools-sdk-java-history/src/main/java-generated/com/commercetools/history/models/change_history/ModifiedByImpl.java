@@ -117,7 +117,7 @@ public class ModifiedByImpl implements ModifiedBy, ModelBase {
     }
 
     /**
-     *  <p>The Associate who made the change in the context of a Business Unit. Present only if the Associate acts on behalf of a company using the associate endpoints.</p>
+     *  <p>The Associate who made the change in the context of a Business Unit. Only available for B2B-enabled Projects when an Associate acts on behalf of a company using the associate endpoints.</p>
      */
 
     public com.commercetools.history.models.common.Reference getAssociate() {

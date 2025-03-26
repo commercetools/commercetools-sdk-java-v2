@@ -123,7 +123,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public String getAnonymousId();
 
     /**
-     *  <p>Reference to a Business Unit the Cart belongs to.</p>
+     *  <p>Reference to a Business Unit the Cart belongs to. Only available for B2B-enabled Projects.</p>
      * @return businessUnit
      */
     @Valid
@@ -487,7 +487,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public void setAnonymousId(final String anonymousId);
 
     /**
-     *  <p>Reference to a Business Unit the Cart belongs to.</p>
+     *  <p>Reference to a Business Unit the Cart belongs to. Only available for B2B-enabled Projects.</p>
      * @param businessUnit value to be set
      */
 

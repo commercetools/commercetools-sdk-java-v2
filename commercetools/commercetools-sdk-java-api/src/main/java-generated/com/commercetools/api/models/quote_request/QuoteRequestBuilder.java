@@ -1132,7 +1132,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The BusinessUnit for the Quote Request.</p>
+     *  <p>The BusinessUnit for the Quote Request. Only available for B2B-enabled Projects.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -1146,7 +1146,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The BusinessUnit for the Quote Request.</p>
+     *  <p>The BusinessUnit for the Quote Request. Only available for B2B-enabled Projects.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -1159,7 +1159,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The BusinessUnit for the Quote Request.</p>
+     *  <p>The BusinessUnit for the Quote Request. Only available for B2B-enabled Projects.</p>
      * @param businessUnit value to be set
      * @return Builder
      */
@@ -1479,7 +1479,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
-     *  <p>The BusinessUnit for the Quote Request.</p>
+     *  <p>The BusinessUnit for the Quote Request. Only available for B2B-enabled Projects.</p>
      * @return businessUnit
      */
 

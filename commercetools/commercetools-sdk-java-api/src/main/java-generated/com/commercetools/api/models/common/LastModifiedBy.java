@@ -72,7 +72,7 @@ public interface LastModifiedBy extends ClientLogging {
     public Attribution getAttributedTo();
 
     /**
-     *  <p>Indicates the Customer who modified the resource in the context of a Business Unit. Only present when an Associate acts on behalf of a company using the associate endpoints.</p>
+     *  <p>Indicates the Customer who modified the resource in the context of a Business Unit. Only available for B2B-enabled Projects when an Associate acts on behalf of a company using the associate endpoints.</p>
      * @return associate
      */
     @Valid
@@ -115,7 +115,7 @@ public interface LastModifiedBy extends ClientLogging {
     public void setAttributedTo(final Attribution attributedTo);
 
     /**
-     *  <p>Indicates the Customer who modified the resource in the context of a Business Unit. Only present when an Associate acts on behalf of a company using the associate endpoints.</p>
+     *  <p>Indicates the Customer who modified the resource in the context of a Business Unit. Only available for B2B-enabled Projects when an Associate acts on behalf of a company using the associate endpoints.</p>
      * @param associate value to be set
      */
 

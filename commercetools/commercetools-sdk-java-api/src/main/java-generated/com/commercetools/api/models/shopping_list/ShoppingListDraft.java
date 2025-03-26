@@ -121,7 +121,7 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
     public StoreResourceIdentifier getStore();
 
     /**
-     *  <p>ResourceIdentifier of the Business Unit the Shopping List should belong to. When the <code>customer</code> of the Shopping List is set, the Customer must be an Associate of the Business Unit.</p>
+     *  <p>ResourceIdentifier of the Business Unit the Shopping List should belong to. When the <code>customer</code> of the Shopping List is set, the Customer must be an Associate of the Business Unit. Only available for B2B-enabled Projects.</p>
      * @return businessUnit
      */
     @Valid
@@ -223,7 +223,7 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
     public void setStore(final StoreResourceIdentifier store);
 
     /**
-     *  <p>ResourceIdentifier of the Business Unit the Shopping List should belong to. When the <code>customer</code> of the Shopping List is set, the Customer must be an Associate of the Business Unit.</p>
+     *  <p>ResourceIdentifier of the Business Unit the Shopping List should belong to. When the <code>customer</code> of the Shopping List is set, the Customer must be an Associate of the Business Unit. Only available for B2B-enabled Projects.</p>
      * @param businessUnit value to be set
      */
 

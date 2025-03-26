@@ -218,7 +218,7 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
     }
 
     /**
-     *  <p>Reference to the Business Unit the Shopping List belongs to.</p>
+     *  <p>Reference to the Business Unit the Shopping List belongs to. Only available for B2B-enabled Projects.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getBusinessUnit() {

@@ -90,7 +90,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public String getAnonymousId();
 
     /**
-     *  <p>ResourceIdentifier to the Business Unit the Cart should belong to. When the <code>customerId</code> of the Cart is also set, the Customer must be an Associate of the Business Unit.</p>
+     *  <p>ResourceIdentifier to the Business Unit the Cart should belong to. When the <code>customerId</code> of the Cart is also set, the Customer must be an Associate of the Business Unit. Only available for B2B-enabled Projects.</p>
      * @return businessUnit
      */
     @Valid
@@ -327,7 +327,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public void setAnonymousId(final String anonymousId);
 
     /**
-     *  <p>ResourceIdentifier to the Business Unit the Cart should belong to. When the <code>customerId</code> of the Cart is also set, the Customer must be an Associate of the Business Unit.</p>
+     *  <p>ResourceIdentifier to the Business Unit the Cart should belong to. When the <code>customerId</code> of the Cart is also set, the Customer must be an Associate of the Business Unit. Only available for B2B-enabled Projects.</p>
      * @param businessUnit value to be set
      */
 

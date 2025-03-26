@@ -358,7 +358,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
     public String getPurchaseOrderNumber();
 
     /**
-     *  <p>The BusinessUnit for the Quote.</p>
+     *  <p>The BusinessUnit for the Quote. Only available for B2B-enabled Projects.</p>
      * @return businessUnit
      */
     @Valid
@@ -643,7 +643,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
     public void setPurchaseOrderNumber(final String purchaseOrderNumber);
 
     /**
-     *  <p>The BusinessUnit for the Quote.</p>
+     *  <p>The BusinessUnit for the Quote. Only available for B2B-enabled Projects.</p>
      * @param businessUnit value to be set
      */
 

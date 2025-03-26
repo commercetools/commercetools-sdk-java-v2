@@ -17,16 +17,16 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface MessageSubscriptionResourceTypeId extends JsonEnum {
 
     /**
-    <p>Messages related to ApprovalFlows.</p> */
+    <p>Messages related to ApprovalFlows. Only available for B2B-enabled Projects.</p> */
     MessageSubscriptionResourceTypeId APPROVAL_FLOW = MessageSubscriptionResourceTypeIdEnum.APPROVAL_FLOW;
     /**
-    <p>Messages related to ApprovalRules.</p> */
+    <p>Messages related to ApprovalRules. Only available for B2B-enabled Projects.</p> */
     MessageSubscriptionResourceTypeId APPROVAL_RULE = MessageSubscriptionResourceTypeIdEnum.APPROVAL_RULE;
     /**
-    <p>Messages related to AssociateRoles.</p> */
+    <p>Messages related to AssociateRoles. Only available for B2B-enabled Projects.</p> */
     MessageSubscriptionResourceTypeId ASSOCIATE_ROLE = MessageSubscriptionResourceTypeIdEnum.ASSOCIATE_ROLE;
     /**
-    <p>Messages related to BusinessUnits.</p> */
+    <p>Messages related to BusinessUnits. Only available for B2B-enabled Projects.</p> */
     MessageSubscriptionResourceTypeId BUSINESS_UNIT = MessageSubscriptionResourceTypeIdEnum.BUSINESS_UNIT;
     /**
     <p>Messages related to Categories.</p> */

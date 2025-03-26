@@ -17,10 +17,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ChangeHistoryResourceType extends JsonEnum {
 
     /**
-    <p>for AssociateRole</p> */
+    <p>for AssociateRole - Only available for B2B-enabled Projects.</p> */
     ChangeHistoryResourceType ASSOCIATE_ROLE = ChangeHistoryResourceTypeEnum.ASSOCIATE_ROLE;
     /**
-    <p>for BusinessUnit</p> */
+    <p>for BusinessUnit - Only available for B2B-enabled Projects.</p> */
     ChangeHistoryResourceType BUSINESS_UNIT = ChangeHistoryResourceTypeEnum.BUSINESS_UNIT;
     /**
     <p>for CartDiscount</p> */

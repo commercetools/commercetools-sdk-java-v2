@@ -17,19 +17,19 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ReferenceTypeId extends JsonEnum {
 
     /**
-    <p>References an ApprovalFlow.</p> */
+    <p>References an ApprovalFlow. Only available for B2B-enabled Projects.</p> */
     ReferenceTypeId APPROVAL_FLOW = ReferenceTypeIdEnum.APPROVAL_FLOW;
     /**
-    <p>References an ApprovalRule.</p> */
+    <p>References an ApprovalRule. Only available for B2B-enabled Projects.</p> */
     ReferenceTypeId APPROVAL_RULE = ReferenceTypeIdEnum.APPROVAL_RULE;
     /**
-    <p>References an AssociateRole.</p> */
+    <p>References an AssociateRole. Only available for B2B-enabled Projects.</p> */
     ReferenceTypeId ASSOCIATE_ROLE = ReferenceTypeIdEnum.ASSOCIATE_ROLE;
     /**
     <p>References an AttributeGroup.</p> */
     ReferenceTypeId ATTRIBUTE_GROUP = ReferenceTypeIdEnum.ATTRIBUTE_GROUP;
     /**
-    <p>References a BusinessUnit.</p> */
+    <p>References a BusinessUnit. Only available for B2B-enabled Projects.</p> */
     ReferenceTypeId BUSINESS_UNIT = ReferenceTypeIdEnum.BUSINESS_UNIT;
     /**
     <p>References a Cart.</p> */

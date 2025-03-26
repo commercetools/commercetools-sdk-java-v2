@@ -1194,7 +1194,7 @@ public class QuoteBuilder implements Builder<Quote> {
     }
 
     /**
-     *  <p>The BusinessUnit for the Quote.</p>
+     *  <p>The BusinessUnit for the Quote. Only available for B2B-enabled Projects.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -1208,7 +1208,7 @@ public class QuoteBuilder implements Builder<Quote> {
     }
 
     /**
-     *  <p>The BusinessUnit for the Quote.</p>
+     *  <p>The BusinessUnit for the Quote. Only available for B2B-enabled Projects.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -1221,7 +1221,7 @@ public class QuoteBuilder implements Builder<Quote> {
     }
 
     /**
-     *  <p>The BusinessUnit for the Quote.</p>
+     *  <p>The BusinessUnit for the Quote. Only available for B2B-enabled Projects.</p>
      * @param businessUnit value to be set
      * @return Builder
      */
@@ -1570,7 +1570,7 @@ public class QuoteBuilder implements Builder<Quote> {
     }
 
     /**
-     *  <p>The BusinessUnit for the Quote.</p>
+     *  <p>The BusinessUnit for the Quote. Only available for B2B-enabled Projects.</p>
      * @return businessUnit
      */
 

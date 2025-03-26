@@ -118,7 +118,7 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
     }
 
     /**
-     *  <p>ResourceIdentifier to the Business Unit the Cart should belong to. The Customer must be an Associate of the Business Unit.</p>
+     *  <p>ResourceIdentifier to the Business Unit the Cart should belong to. The Customer must be an Associate of the Business Unit. Only available for B2B-enabled Projects.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier getBusinessUnit() {

@@ -17,10 +17,10 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface AttributeReferenceTypeId extends JsonEnum {
 
     /**
-    <p>References a AssociateRole.</p> */
+    <p>References a AssociateRole. Only available for B2B-enabled Projects.</p> */
     AttributeReferenceTypeId ASSOCIATE_ROLE = AttributeReferenceTypeIdEnum.ASSOCIATE_ROLE;
     /**
-    <p>References a BusinessUnit.</p> */
+    <p>References a BusinessUnit. Only available for B2B-enabled Projects.</p> */
     AttributeReferenceTypeId BUSINESS_UNIT = AttributeReferenceTypeIdEnum.BUSINESS_UNIT;
     /**
     <p>References a Cart.</p> */

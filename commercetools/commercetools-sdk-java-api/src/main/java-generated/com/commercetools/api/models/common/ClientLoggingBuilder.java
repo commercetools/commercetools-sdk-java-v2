@@ -108,7 +108,7 @@ public class ClientLoggingBuilder implements Builder<ClientLogging> {
     }
 
     /**
-     *  <p>Indicates the Customer who created or modified the resource in the context of a Business Unit. Only present when an Associate acts on behalf of a company using the associate endpoints.</p>
+     *  <p>Indicates the Customer who created or modified the resource in the context of a Business Unit. Only available for B2B-enabled Projects when an Associate acts on behalf of a company using the associate endpoints.</p>
      * @param builder function to build the associate value
      * @return Builder
      */
@@ -120,7 +120,7 @@ public class ClientLoggingBuilder implements Builder<ClientLogging> {
     }
 
     /**
-     *  <p>Indicates the Customer who created or modified the resource in the context of a Business Unit. Only present when an Associate acts on behalf of a company using the associate endpoints.</p>
+     *  <p>Indicates the Customer who created or modified the resource in the context of a Business Unit. Only available for B2B-enabled Projects when an Associate acts on behalf of a company using the associate endpoints.</p>
      * @param builder function to build the associate value
      * @return Builder
      */
@@ -132,7 +132,7 @@ public class ClientLoggingBuilder implements Builder<ClientLogging> {
     }
 
     /**
-     *  <p>Indicates the Customer who created or modified the resource in the context of a Business Unit. Only present when an Associate acts on behalf of a company using the associate endpoints.</p>
+     *  <p>Indicates the Customer who created or modified the resource in the context of a Business Unit. Only available for B2B-enabled Projects when an Associate acts on behalf of a company using the associate endpoints.</p>
      * @param associate value to be set
      * @return Builder
      */
@@ -184,7 +184,7 @@ public class ClientLoggingBuilder implements Builder<ClientLogging> {
     }
 
     /**
-     *  <p>Indicates the Customer who created or modified the resource in the context of a Business Unit. Only present when an Associate acts on behalf of a company using the associate endpoints.</p>
+     *  <p>Indicates the Customer who created or modified the resource in the context of a Business Unit. Only available for B2B-enabled Projects when an Associate acts on behalf of a company using the associate endpoints.</p>
      * @return associate
      */
 

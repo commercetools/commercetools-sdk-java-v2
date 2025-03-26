@@ -180,7 +180,7 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
     public String getPurchaseOrderNumber();
 
     /**
-     *  <p>The BusinessUnit for the Staged Quote.</p>
+     *  <p>The BusinessUnit for the Staged Quote. Only available for B2B-enabled Projects.</p>
      * @return businessUnit
      */
     @Valid
@@ -308,7 +308,7 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
     public void setPurchaseOrderNumber(final String purchaseOrderNumber);
 
     /**
-     *  <p>The BusinessUnit for the Staged Quote.</p>
+     *  <p>The BusinessUnit for the Staged Quote. Only available for B2B-enabled Projects.</p>
      * @param businessUnit value to be set
      */
 

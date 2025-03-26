@@ -280,7 +280,7 @@ public class CartImpl implements Cart, ModelBase {
     }
 
     /**
-     *  <p>Reference to a Business Unit the Cart belongs to.</p>
+     *  <p>Reference to a Business Unit the Cart belongs to. Only available for B2B-enabled Projects.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getBusinessUnit() {

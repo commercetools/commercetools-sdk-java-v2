@@ -17,19 +17,19 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ChangeSubscriptionResourceTypeId extends JsonEnum {
 
     /**
-    <p>Changes related to ApprovalFlows.</p> */
+    <p>Changes related to ApprovalFlows. Only available for B2B-enabled Projects.</p> */
     ChangeSubscriptionResourceTypeId APPROVAL_FLOW = ChangeSubscriptionResourceTypeIdEnum.APPROVAL_FLOW;
     /**
-    <p>Changes related to ApprovalRules.</p> */
+    <p>Changes related to ApprovalRules. Only available for B2B-enabled Projects.</p> */
     ChangeSubscriptionResourceTypeId APPROVAL_RULE = ChangeSubscriptionResourceTypeIdEnum.APPROVAL_RULE;
     /**
-    <p>Changes related to AssociateRoles.</p> */
+    <p>Changes related to AssociateRoles. Only available for B2B-enabled Projects.</p> */
     ChangeSubscriptionResourceTypeId ASSOCIATE_ROLE = ChangeSubscriptionResourceTypeIdEnum.ASSOCIATE_ROLE;
     /**
     <p>Changes related to AttributeGroups.</p> */
     ChangeSubscriptionResourceTypeId ATTRIBUTE_GROUP = ChangeSubscriptionResourceTypeIdEnum.ATTRIBUTE_GROUP;
     /**
-    <p>Changes to BusinessUnits.</p> */
+    <p>Changes to BusinessUnits. Only available for B2B-enabled Projects.</p> */
     ChangeSubscriptionResourceTypeId BUSINESS_UNIT = ChangeSubscriptionResourceTypeIdEnum.BUSINESS_UNIT;
     /**
     <p>Changes to Carts.</p> */

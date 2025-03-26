@@ -145,7 +145,7 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
     }
 
     /**
-     *  <p>The Associate who made the change in the context of a Business Unit. Present only if the Associate acts on behalf of a company using the associate endpoints.</p>
+     *  <p>The Associate who made the change in the context of a Business Unit. Only available for B2B-enabled Projects when an Associate acts on behalf of a company using the associate endpoints.</p>
      * @param builder function to build the associate value
      * @return Builder
      */
@@ -157,7 +157,7 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
     }
 
     /**
-     *  <p>The Associate who made the change in the context of a Business Unit. Present only if the Associate acts on behalf of a company using the associate endpoints.</p>
+     *  <p>The Associate who made the change in the context of a Business Unit. Only available for B2B-enabled Projects when an Associate acts on behalf of a company using the associate endpoints.</p>
      * @param builder function to build the associate value
      * @return Builder
      */
@@ -169,7 +169,7 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
     }
 
     /**
-     *  <p>The Associate who made the change in the context of a Business Unit. Present only if the Associate acts on behalf of a company using the associate endpoints.</p>
+     *  <p>The Associate who made the change in the context of a Business Unit. Only available for B2B-enabled Projects when an Associate acts on behalf of a company using the associate endpoints.</p>
      * @param associate value to be set
      * @return Builder
      */
@@ -246,7 +246,7 @@ public class ModifiedByBuilder implements Builder<ModifiedBy> {
     }
 
     /**
-     *  <p>The Associate who made the change in the context of a Business Unit. Present only if the Associate acts on behalf of a company using the associate endpoints.</p>
+     *  <p>The Associate who made the change in the context of a Business Unit. Only available for B2B-enabled Projects when an Associate acts on behalf of a company using the associate endpoints.</p>
      * @return associate
      */
 

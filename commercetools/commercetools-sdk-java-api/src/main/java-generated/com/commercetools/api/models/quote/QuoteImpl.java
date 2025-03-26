@@ -458,7 +458,7 @@ public class QuoteImpl implements Quote, ModelBase {
     }
 
     /**
-     *  <p>The BusinessUnit for the Quote.</p>
+     *  <p>The BusinessUnit for the Quote. Only available for B2B-enabled Projects.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getBusinessUnit() {

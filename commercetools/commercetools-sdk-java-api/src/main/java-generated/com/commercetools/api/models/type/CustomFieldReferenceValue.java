@@ -17,16 +17,16 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface CustomFieldReferenceValue extends JsonEnum {
 
     /**
-    <p>ApprovalFlow</p> */
+    <p>ApprovalFlow - Only available for B2B-enabled Projects.</p> */
     CustomFieldReferenceValue APPROVAL_FLOW = CustomFieldReferenceValueEnum.APPROVAL_FLOW;
     /**
-    <p>ApprovalRule</p> */
+    <p>ApprovalRule - Only available for B2B-enabled Projects.</p> */
     CustomFieldReferenceValue APPROVAL_RULE = CustomFieldReferenceValueEnum.APPROVAL_RULE;
     /**
-    <p>AssociateRole</p> */
+    <p>AssociateRole - Only available for B2B-enabled Projects.</p> */
     CustomFieldReferenceValue ASSOCIATE_ROLE = CustomFieldReferenceValueEnum.ASSOCIATE_ROLE;
     /**
-    <p>BusinessUnit</p> */
+    <p>BusinessUnit - Only available for B2B-enabled Projects.</p> */
     CustomFieldReferenceValue BUSINESS_UNIT = CustomFieldReferenceValueEnum.BUSINESS_UNIT;
     /**
     <p>Cart</p> */

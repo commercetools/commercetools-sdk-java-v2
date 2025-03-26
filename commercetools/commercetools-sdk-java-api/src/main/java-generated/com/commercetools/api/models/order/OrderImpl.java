@@ -323,7 +323,7 @@ public class OrderImpl implements Order, ModelBase {
     }
 
     /**
-     *  <p>Reference to a Business Unit the Order belongs to.</p>
+     *  <p>Reference to a Business Unit the Order belongs to. Only available for B2B-enabled Projects.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getBusinessUnit() {

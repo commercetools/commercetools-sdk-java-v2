@@ -143,7 +143,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public String getAnonymousId();
 
     /**
-     *  <p>Reference to a Business Unit the Order belongs to.</p>
+     *  <p>Reference to a Business Unit the Order belongs to. Only available for B2B-enabled Projects.</p>
      * @return businessUnit
      */
     @Valid
@@ -568,7 +568,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public void setAnonymousId(final String anonymousId);
 
     /**
-     *  <p>Reference to a Business Unit the Order belongs to.</p>
+     *  <p>Reference to a Business Unit the Order belongs to. Only available for B2B-enabled Projects.</p>
      * @param businessUnit value to be set
      */
 

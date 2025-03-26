@@ -422,7 +422,7 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
     }
 
     /**
-     *  <p>The BusinessUnit for the Quote Request.</p>
+     *  <p>The BusinessUnit for the Quote Request. Only available for B2B-enabled Projects.</p>
      */
 
     public com.commercetools.api.models.business_unit.BusinessUnitKeyReference getBusinessUnit() {

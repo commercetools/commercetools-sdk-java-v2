@@ -458,7 +458,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier of the Business Unit the Shopping List should belong to. When the <code>customer</code> of the Shopping List is set, the Customer must be an Associate of the Business Unit.</p>
+     *  <p>ResourceIdentifier of the Business Unit the Shopping List should belong to. When the <code>customer</code> of the Shopping List is set, the Customer must be an Associate of the Business Unit. Only available for B2B-enabled Projects.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -472,7 +472,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier of the Business Unit the Shopping List should belong to. When the <code>customer</code> of the Shopping List is set, the Customer must be an Associate of the Business Unit.</p>
+     *  <p>ResourceIdentifier of the Business Unit the Shopping List should belong to. When the <code>customer</code> of the Shopping List is set, the Customer must be an Associate of the Business Unit. Only available for B2B-enabled Projects.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -485,7 +485,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier of the Business Unit the Shopping List should belong to. When the <code>customer</code> of the Shopping List is set, the Customer must be an Associate of the Business Unit.</p>
+     *  <p>ResourceIdentifier of the Business Unit the Shopping List should belong to. When the <code>customer</code> of the Shopping List is set, the Customer must be an Associate of the Business Unit. Only available for B2B-enabled Projects.</p>
      * @param businessUnit value to be set
      * @return Builder
      */
@@ -631,7 +631,7 @@ public class ShoppingListDraftBuilder implements Builder<ShoppingListDraft> {
     }
 
     /**
-     *  <p>ResourceIdentifier of the Business Unit the Shopping List should belong to. When the <code>customer</code> of the Shopping List is set, the Customer must be an Associate of the Business Unit.</p>
+     *  <p>ResourceIdentifier of the Business Unit the Shopping List should belong to. When the <code>customer</code> of the Shopping List is set, the Customer must be an Associate of the Business Unit. Only available for B2B-enabled Projects.</p>
      * @return businessUnit
      */
 

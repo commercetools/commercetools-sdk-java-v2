@@ -376,7 +376,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>Reference to the Business Unit associated with the Change.</p>
+     *  <p>Reference to the Business Unit associated with the Change. Only available for B2B-enabled Projects.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -388,7 +388,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>Reference to the Business Unit associated with the Change.</p>
+     *  <p>Reference to the Business Unit associated with the Change. Only available for B2B-enabled Projects.</p>
      * @param builder function to build the businessUnit value
      * @return Builder
      */
@@ -400,7 +400,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>Reference to the Business Unit associated with the Change.</p>
+     *  <p>Reference to the Business Unit associated with the Change. Only available for B2B-enabled Projects.</p>
      * @param businessUnit value to be set
      * @return Builder
      */
@@ -516,7 +516,7 @@ public class RecordBuilder implements Builder<Record> {
     }
 
     /**
-     *  <p>Reference to the Business Unit associated with the Change.</p>
+     *  <p>Reference to the Business Unit associated with the Change. Only available for B2B-enabled Projects.</p>
      * @return businessUnit
      */
 

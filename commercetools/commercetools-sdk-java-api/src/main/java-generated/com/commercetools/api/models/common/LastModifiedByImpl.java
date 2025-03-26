@@ -91,7 +91,7 @@ public class LastModifiedByImpl implements LastModifiedBy, ModelBase {
     }
 
     /**
-     *  <p>Indicates the Customer who modified the resource in the context of a Business Unit. Only present when an Associate acts on behalf of a company using the associate endpoints.</p>
+     *  <p>Indicates the Customer who modified the resource in the context of a Business Unit. Only available for B2B-enabled Projects when an Associate acts on behalf of a company using the associate endpoints.</p>
      */
 
     public com.commercetools.api.models.customer.CustomerReference getAssociate() {

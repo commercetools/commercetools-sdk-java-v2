@@ -9,7 +9,7 @@
     "node": ">=14.15",
     "npm": ">=5"
   },
-  "packageManager": "yarn@4.7.0",
+  "packageManager": "yarn@4.8.0",
   "dependencies": {
     "husky": "9.1.7",
     "lint-staged": "15.5.0"

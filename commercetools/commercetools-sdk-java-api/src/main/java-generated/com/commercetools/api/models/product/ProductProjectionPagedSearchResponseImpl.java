@@ -17,18 +17,18 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * ProductProjectionPagedSearchResponse
+ *  <p>The response returned to a Product Projection Search request. The object contains the query results with Product Projections where at least one ProductVariant matches the search query, as well as the facet results, if requested.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductProjectionPagedSearchResponseImpl implements ProductProjectionPagedSearchResponse, ModelBase {
 
     private Long limit;
 
+    private Long offset;
+
     private Long count;
 
     private Long total;
-
-    private Long offset;
 
     private java.util.List<com.commercetools.api.models.product.ProductProjection> results;
 
@@ -39,14 +39,14 @@ public class ProductProjectionPagedSearchResponseImpl implements ProductProjecti
      */
     @JsonCreator
     ProductProjectionPagedSearchResponseImpl(@JsonProperty("limit") final Long limit,
-            @JsonProperty("count") final Long count, @JsonProperty("total") final Long total,
-            @JsonProperty("offset") final Long offset,
+            @JsonProperty("offset") final Long offset, @JsonProperty("count") final Long count,
+            @JsonProperty("total") final Long total,
             @JsonProperty("results") final java.util.List<com.commercetools.api.models.product.ProductProjection> results,
             @JsonProperty("facets") final com.commercetools.api.models.product.FacetResults facets) {
         this.limit = limit;
+        this.offset = offset;
         this.count = count;
         this.total = total;
-        this.offset = offset;
         this.results = results;
         this.facets = facets;
     }
@@ -58,7 +58,7 @@ public class ProductProjectionPagedSearchResponseImpl implements ProductProjecti
     }
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>The maximum number of results returned on a page.</p>
      */
 
     public Long getLimit() {
@@ -66,23 +66,7 @@ public class ProductProjectionPagedSearchResponseImpl implements ProductProjecti
     }
 
     /**
-     *
-     */
-
-    public Long getCount() {
-        return this.count;
-    }
-
-    /**
-     *
-     */
-
-    public Long getTotal() {
-        return this.total;
-    }
-
-    /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>The starting point for the retrieved paginated result.</p>
      */
 
     public Long getOffset() {
@@ -90,7 +74,23 @@ public class ProductProjectionPagedSearchResponseImpl implements ProductProjecti
     }
 
     /**
-     *
+     *  <p>Actual number of results returned.</p>
+     */
+
+    public Long getCount() {
+        return this.count;
+    }
+
+    /**
+     *  <p>Total number of results matching the query.</p>
+     */
+
+    public Long getTotal() {
+        return this.total;
+    }
+
+    /**
+     *  <p>ProductProjections where at least one ProductVariant matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter. If the query parameter <code>markMatchingVariants=true</code> was provided with the request, the matching variants are marked as such.</p>
      */
 
     public java.util.List<com.commercetools.api.models.product.ProductProjection> getResults() {
@@ -98,7 +98,8 @@ public class ProductProjectionPagedSearchResponseImpl implements ProductProjecti
     }
 
     /**
-     *
+     *  <p>Facet results for each facet expression specified in the search request.</p>
+     *  <p>Only present if at least one <code>facet</code> parameter was provided with the search request.</p>
      */
 
     public com.commercetools.api.models.product.FacetResults getFacets() {
@@ -109,16 +110,16 @@ public class ProductProjectionPagedSearchResponseImpl implements ProductProjecti
         this.limit = limit;
     }
 
+    public void setOffset(final Long offset) {
+        this.offset = offset;
+    }
+
     public void setCount(final Long count) {
         this.count = count;
     }
 
     public void setTotal(final Long total) {
         this.total = total;
-    }
-
-    public void setOffset(final Long offset) {
-        this.offset = offset;
     }
 
     public void setResults(final com.commercetools.api.models.product.ProductProjection... results) {
@@ -144,15 +145,15 @@ public class ProductProjectionPagedSearchResponseImpl implements ProductProjecti
         ProductProjectionPagedSearchResponseImpl that = (ProductProjectionPagedSearchResponseImpl) o;
 
         return new EqualsBuilder().append(limit, that.limit)
+                .append(offset, that.offset)
                 .append(count, that.count)
                 .append(total, that.total)
-                .append(offset, that.offset)
                 .append(results, that.results)
                 .append(facets, that.facets)
                 .append(limit, that.limit)
+                .append(offset, that.offset)
                 .append(count, that.count)
                 .append(total, that.total)
-                .append(offset, that.offset)
                 .append(results, that.results)
                 .append(facets, that.facets)
                 .isEquals();
@@ -161,9 +162,9 @@ public class ProductProjectionPagedSearchResponseImpl implements ProductProjecti
     @Override
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(limit)
+                .append(offset)
                 .append(count)
                 .append(total)
-                .append(offset)
                 .append(results)
                 .append(facets)
                 .toHashCode();
@@ -172,9 +173,9 @@ public class ProductProjectionPagedSearchResponseImpl implements ProductProjecti
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("limit", limit)
+                .append("offset", offset)
                 .append("count", count)
                 .append("total", total)
-                .append("offset", offset)
                 .append("results", results)
                 .append("facets", facets)
                 .build();

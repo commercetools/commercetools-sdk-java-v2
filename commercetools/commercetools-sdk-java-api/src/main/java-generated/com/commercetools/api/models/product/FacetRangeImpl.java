@@ -70,7 +70,8 @@ public class FacetRangeImpl implements FacetRange, ModelBase {
     }
 
     /**
-     *
+     *  <p>The range's lower endpoint.</p>
+     *  <p><code>0</code> represents -∞.</p>
      */
 
     public Double getFrom() {
@@ -78,7 +79,8 @@ public class FacetRangeImpl implements FacetRange, ModelBase {
     }
 
     /**
-     *
+     *  <p>The range's lower endpoint.</p>
+     *  <p>An empty string represents -∞.</p>
      */
 
     public String getFromStr() {
@@ -86,7 +88,8 @@ public class FacetRangeImpl implements FacetRange, ModelBase {
     }
 
     /**
-     *
+     *  <p>The range's upper endpoint.</p>
+     *  <p><code>0</code> represents +∞.</p>
      */
 
     public Double getTo() {
@@ -94,7 +97,8 @@ public class FacetRangeImpl implements FacetRange, ModelBase {
     }
 
     /**
-     *
+     *  <p>The range's upper endpoint.</p>
+     *  <p>An empty string represents +∞.</p>
      */
 
     public String getToStr() {
@@ -102,7 +106,7 @@ public class FacetRangeImpl implements FacetRange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Number of ProductVariants for which the values in a field fall into the specified range.</p>
      */
 
     public Long getCount() {
@@ -110,7 +114,8 @@ public class FacetRangeImpl implements FacetRange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Number of Products for which the values in a field fall into the specified range.</p>
+     *  <p>Present only if the <code>counting products</code> extension is enabled.</p>
      */
 
     public Long getProductCount() {
@@ -118,7 +123,7 @@ public class FacetRangeImpl implements FacetRange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Sum of all values contained in the range.</p>
      */
 
     public Double getTotal() {
@@ -126,7 +131,7 @@ public class FacetRangeImpl implements FacetRange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Minimum value within the range.</p>
      */
 
     public Double getMin() {
@@ -134,7 +139,7 @@ public class FacetRangeImpl implements FacetRange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Maximum value within the range.</p>
      */
 
     public Double getMax() {
@@ -142,7 +147,7 @@ public class FacetRangeImpl implements FacetRange, ModelBase {
     }
 
     /**
-     *
+     *  <p>Arithmetic mean of the values within the range.</p>
      */
 
     public Double getMean() {

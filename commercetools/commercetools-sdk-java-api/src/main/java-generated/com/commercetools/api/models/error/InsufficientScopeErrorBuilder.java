@@ -26,7 +26,7 @@ public class InsufficientScopeErrorBuilder implements Builder<InsufficientScopeE
     private Map<String, java.lang.Object> values = new HashMap<>();
 
     /**
-     *  <p>Plain text description of the cause of the error.</p>
+     *  <p><code>"Insufficient scope. One of the following scopes is missing:"</code></p>
      * @param message value to be set
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class InsufficientScopeErrorBuilder implements Builder<InsufficientScopeE
     }
 
     /**
-     *  <p>Plain text description of the cause of the error.</p>
+     *  <p><code>"Insufficient scope. One of the following scopes is missing:"</code></p>
      * @return message
      */
 

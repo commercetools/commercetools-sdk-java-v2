@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * AttributeNumberType
+ *  <p>Attribute type for numeric values.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

@@ -39,7 +39,7 @@ public interface RangeFacetResult extends FacetResult {
     String RANGE = "range";
 
     /**
-     *
+     *  <p>Statistical data over values for <code>date</code>, <code>time</code>, <code>datetime</code>, <code>number</code>, and <code>money</code> type fields.</p>
      * @return ranges
      */
     @NotNull
@@ -48,7 +48,7 @@ public interface RangeFacetResult extends FacetResult {
     public List<FacetRange> getRanges();
 
     /**
-     * set ranges
+     *  <p>Statistical data over values for <code>date</code>, <code>time</code>, <code>datetime</code>, <code>number</code>, and <code>money</code> type fields.</p>
      * @param ranges values to be set
      */
 
@@ -56,7 +56,7 @@ public interface RangeFacetResult extends FacetResult {
     public void setRanges(final FacetRange... ranges);
 
     /**
-     * set ranges
+     *  <p>Statistical data over values for <code>date</code>, <code>time</code>, <code>datetime</code>, <code>number</code>, and <code>money</code> type fields.</p>
      * @param ranges values to be set
      */
 

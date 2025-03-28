@@ -31,7 +31,7 @@ public class FacetTermBuilder implements Builder<FacetTerm> {
     private Long productCount;
 
     /**
-     * set the value to the term
+     *  <p>Value for the field specified in the term facet expression for which at least one ProductVariant could be found.</p>
      * @param term value to be set
      * @return Builder
      */
@@ -42,7 +42,7 @@ public class FacetTermBuilder implements Builder<FacetTerm> {
     }
 
     /**
-     * set the value to the count
+     *  <p>Number of ProductVariants for which the <code>term</code> applies.</p>
      * @param count value to be set
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class FacetTermBuilder implements Builder<FacetTerm> {
     }
 
     /**
-     * set the value to the productCount
+     *  <p>Number of Products for which the <code>term</code> applies. Only available if the <code>counting products</code> extension is enabled.</p>
      * @param productCount value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class FacetTermBuilder implements Builder<FacetTerm> {
     }
 
     /**
-     * value of term}
+     *  <p>Value for the field specified in the term facet expression for which at least one ProductVariant could be found.</p>
      * @return term
      */
 
@@ -73,7 +73,7 @@ public class FacetTermBuilder implements Builder<FacetTerm> {
     }
 
     /**
-     * value of count}
+     *  <p>Number of ProductVariants for which the <code>term</code> applies.</p>
      * @return count
      */
 
@@ -82,7 +82,7 @@ public class FacetTermBuilder implements Builder<FacetTerm> {
     }
 
     /**
-     * value of productCount}
+     *  <p>Number of Products for which the <code>term</code> applies. Only available if the <code>counting products</code> extension is enabled.</p>
      * @return productCount
      */
 

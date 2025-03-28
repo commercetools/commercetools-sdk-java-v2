@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * PagedQueryResponse
+ *  <p>Each query endpoint returns a paged query response containing the actual resources matching the query predicate plus information about pagination. This documents the fields all query responses have in common, for specific response types, see the respective API reference pages.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PagedQueryResponseImpl implements PagedQueryResponse, ModelBase {
@@ -89,7 +89,7 @@ public class PagedQueryResponseImpl implements PagedQueryResponse, ModelBase {
     }
 
     /**
-     *
+     *  <p>The resources matching the query predicate. Each query endpoint returns resources of its specific type.</p>
      */
 
     public java.util.List<com.commercetools.api.models.common.BaseResource> getResults() {
@@ -97,7 +97,7 @@ public class PagedQueryResponseImpl implements PagedQueryResponse, ModelBase {
     }
 
     /**
-     *
+     *  <p>Object containing supplementary information about the results.</p>
      */
 
     public java.lang.Object getMeta() {

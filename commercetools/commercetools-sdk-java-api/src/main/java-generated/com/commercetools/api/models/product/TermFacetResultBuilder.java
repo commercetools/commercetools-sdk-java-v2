@@ -37,7 +37,7 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
     private java.util.List<com.commercetools.api.models.product.FacetTerm> terms;
 
     /**
-     * set the value to the dataType
+     *  <p>Data type to which the facet is applied.</p>
      * @param dataType value to be set
      * @return Builder
      */
@@ -48,7 +48,7 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
     }
 
     /**
-     * set the value to the missing
+     *  <p>Number of ProductVariants that have no value for the specified term facet expression.</p>
      * @param missing value to be set
      * @return Builder
      */
@@ -59,7 +59,11 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
     }
 
     /**
-     * set the value to the total
+     *  <p>Number of terms matching the term facet expression.</p>
+     *  <ul>
+     *   <li>If the expression refers to Product fields like <code>categories.id</code> and <code>reviewRatingStatistics.count</code>, the value represents the number of Products.</li>
+     *   <li>If the expression is defined for fields specific to Product Variants, for example, <code>variants.attributes.{name}</code>, the value represents the number of Product Variants matching the expression.</li>
+     *  </ul>
      * @param total value to be set
      * @return Builder
      */
@@ -70,7 +74,7 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
     }
 
     /**
-     * set the value to the other
+     *  <p>Number of terms not represented in this object (such as the number of terms beyond the limit).</p>
      * @param other value to be set
      * @return Builder
      */
@@ -81,7 +85,9 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
     }
 
     /**
-     * set values to the terms
+     *  <p>Values for the field specified in term facet expression for which at least one ProductVariant could be found.</p>
+     *  <p>By default, facet terms are returned in a descending order of their <code>count</code>.</p>
+     *  <p>If the term facet expression specifies to count Products through the <code>counting products</code> extension, then facet terms are returned in a descending order of their <code>productCount</code>.</p>
      * @param terms value to be set
      * @return Builder
      */
@@ -92,7 +98,9 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
     }
 
     /**
-     * set value to the terms
+     *  <p>Values for the field specified in term facet expression for which at least one ProductVariant could be found.</p>
+     *  <p>By default, facet terms are returned in a descending order of their <code>count</code>.</p>
+     *  <p>If the term facet expression specifies to count Products through the <code>counting products</code> extension, then facet terms are returned in a descending order of their <code>productCount</code>.</p>
      * @param terms value to be set
      * @return Builder
      */
@@ -103,7 +111,9 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
     }
 
     /**
-     * add values to the terms
+     *  <p>Values for the field specified in term facet expression for which at least one ProductVariant could be found.</p>
+     *  <p>By default, facet terms are returned in a descending order of their <code>count</code>.</p>
+     *  <p>If the term facet expression specifies to count Products through the <code>counting products</code> extension, then facet terms are returned in a descending order of their <code>productCount</code>.</p>
      * @param terms value to be set
      * @return Builder
      */
@@ -117,7 +127,9 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
     }
 
     /**
-     * add the value to the terms using the builder function
+     *  <p>Values for the field specified in term facet expression for which at least one ProductVariant could be found.</p>
+     *  <p>By default, facet terms are returned in a descending order of their <code>count</code>.</p>
+     *  <p>If the term facet expression specifies to count Products through the <code>counting products</code> extension, then facet terms are returned in a descending order of their <code>productCount</code>.</p>
      * @param builder function to build the terms value
      * @return Builder
      */
@@ -132,7 +144,9 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
     }
 
     /**
-     * set the value to the terms using the builder function
+     *  <p>Values for the field specified in term facet expression for which at least one ProductVariant could be found.</p>
+     *  <p>By default, facet terms are returned in a descending order of their <code>count</code>.</p>
+     *  <p>If the term facet expression specifies to count Products through the <code>counting products</code> extension, then facet terms are returned in a descending order of their <code>productCount</code>.</p>
      * @param builder function to build the terms value
      * @return Builder
      */
@@ -145,7 +159,9 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
     }
 
     /**
-     * add the value to the terms using the builder function
+     *  <p>Values for the field specified in term facet expression for which at least one ProductVariant could be found.</p>
+     *  <p>By default, facet terms are returned in a descending order of their <code>count</code>.</p>
+     *  <p>If the term facet expression specifies to count Products through the <code>counting products</code> extension, then facet terms are returned in a descending order of their <code>productCount</code>.</p>
      * @param builder function to build the terms value
      * @return Builder
      */
@@ -156,7 +172,9 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
     }
 
     /**
-     * set the value to the terms using the builder function
+     *  <p>Values for the field specified in term facet expression for which at least one ProductVariant could be found.</p>
+     *  <p>By default, facet terms are returned in a descending order of their <code>count</code>.</p>
+     *  <p>If the term facet expression specifies to count Products through the <code>counting products</code> extension, then facet terms are returned in a descending order of their <code>productCount</code>.</p>
      * @param builder function to build the terms value
      * @return Builder
      */
@@ -167,7 +185,7 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
     }
 
     /**
-     * value of dataType}
+     *  <p>Data type to which the facet is applied.</p>
      * @return dataType
      */
 
@@ -176,7 +194,7 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
     }
 
     /**
-     * value of missing}
+     *  <p>Number of ProductVariants that have no value for the specified term facet expression.</p>
      * @return missing
      */
 
@@ -185,7 +203,11 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
     }
 
     /**
-     * value of total}
+     *  <p>Number of terms matching the term facet expression.</p>
+     *  <ul>
+     *   <li>If the expression refers to Product fields like <code>categories.id</code> and <code>reviewRatingStatistics.count</code>, the value represents the number of Products.</li>
+     *   <li>If the expression is defined for fields specific to Product Variants, for example, <code>variants.attributes.{name}</code>, the value represents the number of Product Variants matching the expression.</li>
+     *  </ul>
      * @return total
      */
 
@@ -194,7 +216,7 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
     }
 
     /**
-     * value of other}
+     *  <p>Number of terms not represented in this object (such as the number of terms beyond the limit).</p>
      * @return other
      */
 
@@ -203,7 +225,9 @@ public class TermFacetResultBuilder implements Builder<TermFacetResult> {
     }
 
     /**
-     * value of terms}
+     *  <p>Values for the field specified in term facet expression for which at least one ProductVariant could be found.</p>
+     *  <p>By default, facet terms are returned in a descending order of their <code>count</code>.</p>
+     *  <p>If the term facet expression specifies to count Products through the <code>counting products</code> extension, then facet terms are returned in a descending order of their <code>productCount</code>.</p>
      * @return terms
      */
 

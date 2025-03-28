@@ -25,7 +25,7 @@ public class RangeFacetResultBuilder implements Builder<RangeFacetResult> {
     private java.util.List<com.commercetools.api.models.product.FacetRange> ranges;
 
     /**
-     * set values to the ranges
+     *  <p>Statistical data over values for <code>date</code>, <code>time</code>, <code>datetime</code>, <code>number</code>, and <code>money</code> type fields.</p>
      * @param ranges value to be set
      * @return Builder
      */
@@ -36,7 +36,7 @@ public class RangeFacetResultBuilder implements Builder<RangeFacetResult> {
     }
 
     /**
-     * set value to the ranges
+     *  <p>Statistical data over values for <code>date</code>, <code>time</code>, <code>datetime</code>, <code>number</code>, and <code>money</code> type fields.</p>
      * @param ranges value to be set
      * @return Builder
      */
@@ -48,7 +48,7 @@ public class RangeFacetResultBuilder implements Builder<RangeFacetResult> {
     }
 
     /**
-     * add values to the ranges
+     *  <p>Statistical data over values for <code>date</code>, <code>time</code>, <code>datetime</code>, <code>number</code>, and <code>money</code> type fields.</p>
      * @param ranges value to be set
      * @return Builder
      */
@@ -62,7 +62,7 @@ public class RangeFacetResultBuilder implements Builder<RangeFacetResult> {
     }
 
     /**
-     * add the value to the ranges using the builder function
+     *  <p>Statistical data over values for <code>date</code>, <code>time</code>, <code>datetime</code>, <code>number</code>, and <code>money</code> type fields.</p>
      * @param builder function to build the ranges value
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class RangeFacetResultBuilder implements Builder<RangeFacetResult> {
     }
 
     /**
-     * set the value to the ranges using the builder function
+     *  <p>Statistical data over values for <code>date</code>, <code>time</code>, <code>datetime</code>, <code>number</code>, and <code>money</code> type fields.</p>
      * @param builder function to build the ranges value
      * @return Builder
      */
@@ -90,7 +90,7 @@ public class RangeFacetResultBuilder implements Builder<RangeFacetResult> {
     }
 
     /**
-     * add the value to the ranges using the builder function
+     *  <p>Statistical data over values for <code>date</code>, <code>time</code>, <code>datetime</code>, <code>number</code>, and <code>money</code> type fields.</p>
      * @param builder function to build the ranges value
      * @return Builder
      */
@@ -101,7 +101,7 @@ public class RangeFacetResultBuilder implements Builder<RangeFacetResult> {
     }
 
     /**
-     * set the value to the ranges using the builder function
+     *  <p>Statistical data over values for <code>date</code>, <code>time</code>, <code>datetime</code>, <code>number</code>, and <code>money</code> type fields.</p>
      * @param builder function to build the ranges value
      * @return Builder
      */
@@ -112,7 +112,7 @@ public class RangeFacetResultBuilder implements Builder<RangeFacetResult> {
     }
 
     /**
-     * value of ranges}
+     *  <p>Statistical data over values for <code>date</code>, <code>time</code>, <code>datetime</code>, <code>number</code>, and <code>money</code> type fields.</p>
      * @return ranges
      */
 

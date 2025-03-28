@@ -55,7 +55,7 @@ public class FilteredFacetResultImpl implements FilteredFacetResult, ModelBase {
     }
 
     /**
-     *
+     *  <p>Number of ProductVariants matching the value specified in filtered facet expression.</p>
      */
 
     public Long getCount() {
@@ -63,7 +63,8 @@ public class FilteredFacetResultImpl implements FilteredFacetResult, ModelBase {
     }
 
     /**
-     *
+     *  <p>Number of Products matching the value specified in filtered facet expression.</p>
+     *  <p>Present only if the <code>counting products</code> extension is enabled.</p>
      */
 
     public Long getProductCount() {

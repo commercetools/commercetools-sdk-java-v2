@@ -21,7 +21,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Product Projection Search</p>
+ *  <p>For implementing funnel search on Product Listing Pages where users select multiple filters, use this POST method. To avoid URL length restrictions, this method passes the same query parameters as defined in the GET method, within the request body in URL-encoded format.</p>
  *
  * <hr>
  * <div class=code-example>

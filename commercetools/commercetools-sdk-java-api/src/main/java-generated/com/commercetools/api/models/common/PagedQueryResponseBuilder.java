@@ -85,7 +85,7 @@ public class PagedQueryResponseBuilder implements Builder<PagedQueryResponse> {
     }
 
     /**
-     * set values to the results
+     *  <p>The resources matching the query predicate. Each query endpoint returns resources of its specific type.</p>
      * @param results value to be set
      * @return Builder
      */
@@ -96,7 +96,7 @@ public class PagedQueryResponseBuilder implements Builder<PagedQueryResponse> {
     }
 
     /**
-     * set value to the results
+     *  <p>The resources matching the query predicate. Each query endpoint returns resources of its specific type.</p>
      * @param results value to be set
      * @return Builder
      */
@@ -108,7 +108,7 @@ public class PagedQueryResponseBuilder implements Builder<PagedQueryResponse> {
     }
 
     /**
-     * add values to the results
+     *  <p>The resources matching the query predicate. Each query endpoint returns resources of its specific type.</p>
      * @param results value to be set
      * @return Builder
      */
@@ -122,7 +122,7 @@ public class PagedQueryResponseBuilder implements Builder<PagedQueryResponse> {
     }
 
     /**
-     * set the value to the meta
+     *  <p>Object containing supplementary information about the results.</p>
      * @param meta value to be set
      * @return Builder
      */
@@ -170,7 +170,7 @@ public class PagedQueryResponseBuilder implements Builder<PagedQueryResponse> {
     }
 
     /**
-     * value of results}
+     *  <p>The resources matching the query predicate. Each query endpoint returns resources of its specific type.</p>
      * @return results
      */
 
@@ -179,7 +179,7 @@ public class PagedQueryResponseBuilder implements Builder<PagedQueryResponse> {
     }
 
     /**
-     * value of meta}
+     *  <p>Object containing supplementary information about the results.</p>
      * @return meta
      */
 

@@ -53,7 +53,8 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
     private Double mean;
 
     /**
-     * set the value to the from
+     *  <p>The range's lower endpoint.</p>
+     *  <p><code>0</code> represents -∞.</p>
      * @param from value to be set
      * @return Builder
      */
@@ -64,7 +65,8 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
     }
 
     /**
-     * set the value to the fromStr
+     *  <p>The range's lower endpoint.</p>
+     *  <p>An empty string represents -∞.</p>
      * @param fromStr value to be set
      * @return Builder
      */
@@ -75,7 +77,8 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
     }
 
     /**
-     * set the value to the to
+     *  <p>The range's upper endpoint.</p>
+     *  <p><code>0</code> represents +∞.</p>
      * @param to value to be set
      * @return Builder
      */
@@ -86,7 +89,8 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
     }
 
     /**
-     * set the value to the toStr
+     *  <p>The range's upper endpoint.</p>
+     *  <p>An empty string represents +∞.</p>
      * @param toStr value to be set
      * @return Builder
      */
@@ -97,7 +101,7 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
     }
 
     /**
-     * set the value to the count
+     *  <p>Number of ProductVariants for which the values in a field fall into the specified range.</p>
      * @param count value to be set
      * @return Builder
      */
@@ -108,7 +112,8 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
     }
 
     /**
-     * set the value to the productCount
+     *  <p>Number of Products for which the values in a field fall into the specified range.</p>
+     *  <p>Present only if the <code>counting products</code> extension is enabled.</p>
      * @param productCount value to be set
      * @return Builder
      */
@@ -119,7 +124,7 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
     }
 
     /**
-     * set the value to the total
+     *  <p>Sum of all values contained in the range.</p>
      * @param total value to be set
      * @return Builder
      */
@@ -130,7 +135,7 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
     }
 
     /**
-     * set the value to the min
+     *  <p>Minimum value within the range.</p>
      * @param min value to be set
      * @return Builder
      */
@@ -141,7 +146,7 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
     }
 
     /**
-     * set the value to the max
+     *  <p>Maximum value within the range.</p>
      * @param max value to be set
      * @return Builder
      */
@@ -152,7 +157,7 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
     }
 
     /**
-     * set the value to the mean
+     *  <p>Arithmetic mean of the values within the range.</p>
      * @param mean value to be set
      * @return Builder
      */
@@ -163,7 +168,8 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
     }
 
     /**
-     * value of from}
+     *  <p>The range's lower endpoint.</p>
+     *  <p><code>0</code> represents -∞.</p>
      * @return from
      */
 
@@ -172,7 +178,8 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
     }
 
     /**
-     * value of fromStr}
+     *  <p>The range's lower endpoint.</p>
+     *  <p>An empty string represents -∞.</p>
      * @return fromStr
      */
 
@@ -181,7 +188,8 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
     }
 
     /**
-     * value of to}
+     *  <p>The range's upper endpoint.</p>
+     *  <p><code>0</code> represents +∞.</p>
      * @return to
      */
 
@@ -190,7 +198,8 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
     }
 
     /**
-     * value of toStr}
+     *  <p>The range's upper endpoint.</p>
+     *  <p>An empty string represents +∞.</p>
      * @return toStr
      */
 
@@ -199,7 +208,7 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
     }
 
     /**
-     * value of count}
+     *  <p>Number of ProductVariants for which the values in a field fall into the specified range.</p>
      * @return count
      */
 
@@ -208,7 +217,8 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
     }
 
     /**
-     * value of productCount}
+     *  <p>Number of Products for which the values in a field fall into the specified range.</p>
+     *  <p>Present only if the <code>counting products</code> extension is enabled.</p>
      * @return productCount
      */
 
@@ -218,7 +228,7 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
     }
 
     /**
-     * value of total}
+     *  <p>Sum of all values contained in the range.</p>
      * @return total
      */
 
@@ -227,7 +237,7 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
     }
 
     /**
-     * value of min}
+     *  <p>Minimum value within the range.</p>
      * @return min
      */
 
@@ -236,7 +246,7 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
     }
 
     /**
-     * value of max}
+     *  <p>Maximum value within the range.</p>
      * @return max
      */
 
@@ -245,7 +255,7 @@ public class FacetRangeBuilder implements Builder<FacetRange> {
     }
 
     /**
-     * value of mean}
+     *  <p>Arithmetic mean of the values within the range.</p>
      * @return mean
      */
 

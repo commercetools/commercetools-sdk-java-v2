@@ -12,8 +12,10 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+
 /**
- * InsufficientScopeError
+ *  <p>This error occurs when your API Client does not have the OAuth scope required for the endpoint. Use an API Client with the required permissions for this endpoint instead.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,6 +35,29 @@ public interface InsufficientScopeError extends ErrorObject {
      * discriminator value for InsufficientScopeError
      */
     String INSUFFICIENT_SCOPE = "insufficient_scope";
+
+    /**
+     *
+     * @return code
+     */
+    @NotNull
+    @JsonProperty("code")
+    public String getCode();
+
+    /**
+     *  <p><code>"Insufficient scope. One of the following scopes is missing:"</code></p>
+     * @return message
+     */
+    @NotNull
+    @JsonProperty("message")
+    public String getMessage();
+
+    /**
+     *  <p><code>"Insufficient scope. One of the following scopes is missing:"</code></p>
+     * @param message value to be set
+     */
+
+    public void setMessage(final String message);
 
     /**
      * factory method

@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * AttributeDateTimeType
+ *  <p>Attribute type for DateTime type values.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

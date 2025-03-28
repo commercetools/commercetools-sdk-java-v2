@@ -12,8 +12,10 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+
 /**
- * GraphQLInsufficientScopeError
+ *  <p>This error occurs when your API Client does not have the OAuth scope required for the endpoint. Use an API Client with the required permissions for this endpoint instead.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -32,6 +34,14 @@ public interface GraphQLInsufficientScopeError extends GraphQLErrorObject {
      * discriminator value for GraphQLInsufficientScopeError
      */
     String INSUFFICIENT_SCOPE = "insufficient_scope";
+
+    /**
+     *
+     * @return code
+     */
+    @NotNull
+    @JsonProperty("code")
+    public String getCode();
 
     /**
      * factory method

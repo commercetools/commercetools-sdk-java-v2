@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- * ProductProjectionPagedSearchResponse
+ *  <p>The response returned to a Product Projection Search request. The object contains the query results with Product Projections where at least one ProductVariant matches the search query, as well as the facet results, if requested.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -25,10 +25,9 @@ import jakarta.validation.constraints.NotNull;
  * <pre><code class='java'>
  *     ProductProjectionPagedSearchResponse productProjectionPagedSearchResponse = ProductProjectionPagedSearchResponse.builder()
  *             .limit(0.3)
- *             .count(0.3)
  *             .offset(0.3)
+ *             .count(0.3)
  *             .plusResults(resultsBuilder -> resultsBuilder)
- *             .facets(facetsBuilder -> facetsBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -39,7 +38,7 @@ public interface ProductProjectionPagedSearchResponse
         extends com.commercetools.api.models.ResourcePagedQueryResponse<ProductProjection> {
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>The maximum number of results returned on a page.</p>
      * @return limit
      */
     @NotNull
@@ -47,23 +46,7 @@ public interface ProductProjectionPagedSearchResponse
     public Long getLimit();
 
     /**
-     *
-     * @return count
-     */
-    @NotNull
-    @JsonProperty("count")
-    public Long getCount();
-
-    /**
-     *
-     * @return total
-     */
-
-    @JsonProperty("total")
-    public Long getTotal();
-
-    /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>The starting point for the retrieved paginated result.</p>
      * @return offset
      */
     @NotNull
@@ -71,7 +54,23 @@ public interface ProductProjectionPagedSearchResponse
     public Long getOffset();
 
     /**
-     *
+     *  <p>Actual number of results returned.</p>
+     * @return count
+     */
+    @NotNull
+    @JsonProperty("count")
+    public Long getCount();
+
+    /**
+     *  <p>Total number of results matching the query.</p>
+     * @return total
+     */
+
+    @JsonProperty("total")
+    public Long getTotal();
+
+    /**
+     *  <p>ProductProjections where at least one ProductVariant matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter. If the query parameter <code>markMatchingVariants=true</code> was provided with the request, the matching variants are marked as such.</p>
      * @return results
      */
     @NotNull
@@ -80,44 +79,44 @@ public interface ProductProjectionPagedSearchResponse
     public List<ProductProjection> getResults();
 
     /**
-     *
+     *  <p>Facet results for each facet expression specified in the search request.</p>
+     *  <p>Only present if at least one <code>facet</code> parameter was provided with the search request.</p>
      * @return facets
      */
-    @NotNull
     @Valid
     @JsonProperty("facets")
     public FacetResults getFacets();
 
     /**
-     *  <p>Number of results requested.</p>
+     *  <p>The maximum number of results returned on a page.</p>
      * @param limit value to be set
      */
 
     public void setLimit(final Long limit);
 
     /**
-     * set count
-     * @param count value to be set
-     */
-
-    public void setCount(final Long count);
-
-    /**
-     * set total
-     * @param total value to be set
-     */
-
-    public void setTotal(final Long total);
-
-    /**
-     *  <p>Number of elements skipped.</p>
+     *  <p>The starting point for the retrieved paginated result.</p>
      * @param offset value to be set
      */
 
     public void setOffset(final Long offset);
 
     /**
-     * set results
+     *  <p>Actual number of results returned.</p>
+     * @param count value to be set
+     */
+
+    public void setCount(final Long count);
+
+    /**
+     *  <p>Total number of results matching the query.</p>
+     * @param total value to be set
+     */
+
+    public void setTotal(final Long total);
+
+    /**
+     *  <p>ProductProjections where at least one ProductVariant matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter. If the query parameter <code>markMatchingVariants=true</code> was provided with the request, the matching variants are marked as such.</p>
      * @param results values to be set
      */
 
@@ -125,14 +124,15 @@ public interface ProductProjectionPagedSearchResponse
     public void setResults(final ProductProjection... results);
 
     /**
-     * set results
+     *  <p>ProductProjections where at least one ProductVariant matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter. If the query parameter <code>markMatchingVariants=true</code> was provided with the request, the matching variants are marked as such.</p>
      * @param results values to be set
      */
 
     public void setResults(final List<ProductProjection> results);
 
     /**
-     * set facets
+     *  <p>Facet results for each facet expression specified in the search request.</p>
+     *  <p>Only present if at least one <code>facet</code> parameter was provided with the search request.</p>
      * @param facets value to be set
      */
 
@@ -154,9 +154,9 @@ public interface ProductProjectionPagedSearchResponse
     public static ProductProjectionPagedSearchResponse of(final ProductProjectionPagedSearchResponse template) {
         ProductProjectionPagedSearchResponseImpl instance = new ProductProjectionPagedSearchResponseImpl();
         instance.setLimit(template.getLimit());
+        instance.setOffset(template.getOffset());
         instance.setCount(template.getCount());
         instance.setTotal(template.getTotal());
-        instance.setOffset(template.getOffset());
         instance.setResults(template.getResults());
         instance.setFacets(template.getFacets());
         return instance;
@@ -175,9 +175,9 @@ public interface ProductProjectionPagedSearchResponse
         }
         ProductProjectionPagedSearchResponseImpl instance = new ProductProjectionPagedSearchResponseImpl();
         instance.setLimit(template.getLimit());
+        instance.setOffset(template.getOffset());
         instance.setCount(template.getCount());
         instance.setTotal(template.getTotal());
-        instance.setOffset(template.getOffset());
         instance.setResults(Optional.ofNullable(template.getResults())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.product.ProductProjection::deepCopy)

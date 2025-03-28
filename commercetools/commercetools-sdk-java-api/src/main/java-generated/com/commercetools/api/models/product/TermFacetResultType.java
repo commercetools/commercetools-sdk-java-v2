@@ -11,21 +11,28 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * TermFacetResultType
+ *  <p>Data type to which the facet is applied.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface TermFacetResultType extends JsonEnum {
 
+    /**
+    <p>For AttributeTextType Attributes.</p> */
     TermFacetResultType TEXT = TermFacetResultTypeEnum.TEXT;
-
+    /**
+    <p>For AttributeDateType Attributes.</p> */
     TermFacetResultType DATE = TermFacetResultTypeEnum.DATE;
-
+    /**
+    <p>For AttributeTimeType Attributes.</p> */
     TermFacetResultType TIME = TermFacetResultTypeEnum.TIME;
-
+    /**
+    <p>For AttributeDateTimeType Attributes.</p> */
     TermFacetResultType DATETIME = TermFacetResultTypeEnum.DATETIME;
-
+    /**
+    <p>For AttributeBooleanType Attributes.</p> */
     TermFacetResultType BOOLEAN = TermFacetResultTypeEnum.BOOLEAN;
-
+    /**
+    <p>For AttributeNumberType Attributes.</p> */
     TermFacetResultType NUMBER = TermFacetResultTypeEnum.NUMBER;
 
     /**

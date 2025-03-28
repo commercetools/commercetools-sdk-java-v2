@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Attribute type for Boolean values. Valid values for the Attribute are <code>true</code> and <code>false</code> (JSON Boolean).</p>
+ *  <p>Attribute type for boolean values. Valid values for the Attribute are <code>true</code> and <code>false</code>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

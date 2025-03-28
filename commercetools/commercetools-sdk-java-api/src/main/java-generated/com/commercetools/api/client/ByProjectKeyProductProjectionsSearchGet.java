@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Product Projection Search</p>
+ *  <p>This method appends query parameters to the URL. The maximum allowed URL length is 8192 characters. Exceeding this limit will result in URL truncation, potentially leading to unexpected results. For funnel searches on Product Listing Pages, where users select multiple filters, we recommend the POST method which passes the query parameters within the request body, avoiding URL length restrictions.</p>
  *
  * <hr>
  * <div class=code-example>
@@ -38,13 +38,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 public class ByProjectKeyProductProjectionsSearchGet extends
         TypeApiMethod<ByProjectKeyProductProjectionsSearchGet, com.commercetools.api.models.product.ProductProjectionPagedSearchResponse>
         implements ByProjectKeyProductProjectionsSearchGetMixin,
-        com.commercetools.api.client.SortableTrait<ByProjectKeyProductProjectionsSearchGet>,
-        com.commercetools.api.client.PagingTrait<ByProjectKeyProductProjectionsSearchGet>,
         com.commercetools.api.client.ProjectionselectingTrait<ByProjectKeyProductProjectionsSearchGet>,
         com.commercetools.api.client.PriceselectingTrait<ByProjectKeyProductProjectionsSearchGet>,
         com.commercetools.api.client.LocaleprojectingTrait<ByProjectKeyProductProjectionsSearchGet>,
         com.commercetools.api.client.StoreprojectingtailoringTrait<ByProjectKeyProductProjectionsSearchGet>,
-        com.commercetools.api.client.ExpandableTrait<ByProjectKeyProductProjectionsSearchGet>,
         com.commercetools.api.client.ErrorableTrait<ByProjectKeyProductProjectionsSearchGet>,
         com.commercetools.api.client.Deprecatable200Trait<ByProjectKeyProductProjectionsSearchGet> {
 
@@ -93,6 +90,10 @@ public class ByProjectKeyProductProjectionsSearchGet extends
         return this.projectKey;
     }
 
+    public List<String> getMarkMatchingVariants() {
+        return this.getQueryParam("markMatchingVariants");
+    }
+
     public List<String> getFuzzy() {
         return this.getQueryParam("fuzzy");
     }
@@ -101,24 +102,24 @@ public class ByProjectKeyProductProjectionsSearchGet extends
         return this.getQueryParam("fuzzyLevel");
     }
 
-    public List<String> getMarkMatchingVariants() {
-        return this.getQueryParam("markMatchingVariants");
+    public List<String> getFilterQuery() {
+        return this.getQueryParam("filter.query");
     }
 
     public List<String> getFilter() {
         return this.getQueryParam("filter");
     }
 
+    public List<String> getFacet() {
+        return this.getQueryParam("facet");
+    }
+
     public List<String> getFilterFacets() {
         return this.getQueryParam("filter.facets");
     }
 
-    public List<String> getFilterQuery() {
-        return this.getQueryParam("filter.query");
-    }
-
-    public List<String> getFacet() {
-        return this.getQueryParam("facet");
+    public List<String> getExpand() {
+        return this.getQueryParam("expand");
     }
 
     public List<String> getSort() {
@@ -131,10 +132,6 @@ public class ByProjectKeyProductProjectionsSearchGet extends
 
     public List<String> getOffset() {
         return this.getQueryParam("offset");
-    }
-
-    public List<String> getWithTotal() {
-        return this.getQueryParam("withTotal");
     }
 
     public List<String> getStaged() {
@@ -169,12 +166,94 @@ public class ByProjectKeyProductProjectionsSearchGet extends
         return this.getQueryParam("storeProjection");
     }
 
-    public List<String> getExpand() {
-        return this.getQueryParam("expand");
-    }
-
     public void setProjectKey(final String projectKey) {
         this.projectKey = projectKey;
+    }
+
+    /**
+     * set markMatchingVariants with the specified value
+     * @param markMatchingVariants value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
+     */
+    public <TValue> ByProjectKeyProductProjectionsSearchGet withMarkMatchingVariants(
+            final TValue markMatchingVariants) {
+        return copy().withQueryParam("markMatchingVariants", markMatchingVariants);
+    }
+
+    /**
+     * add additional markMatchingVariants query parameter
+     * @param markMatchingVariants value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
+     */
+    public <TValue> ByProjectKeyProductProjectionsSearchGet addMarkMatchingVariants(final TValue markMatchingVariants) {
+        return copy().addQueryParam("markMatchingVariants", markMatchingVariants);
+    }
+
+    /**
+     * set markMatchingVariants with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductProjectionsSearchGet
+     */
+    public ByProjectKeyProductProjectionsSearchGet withMarkMatchingVariants(final Supplier<Boolean> supplier) {
+        return copy().withQueryParam("markMatchingVariants", supplier.get());
+    }
+
+    /**
+     * add additional markMatchingVariants query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductProjectionsSearchGet
+     */
+    public ByProjectKeyProductProjectionsSearchGet addMarkMatchingVariants(final Supplier<Boolean> supplier) {
+        return copy().addQueryParam("markMatchingVariants", supplier.get());
+    }
+
+    /**
+     * set markMatchingVariants with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductProjectionsSearchGet
+     */
+    public ByProjectKeyProductProjectionsSearchGet withMarkMatchingVariants(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("markMatchingVariants", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional markMatchingVariants query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductProjectionsSearchGet
+     */
+    public ByProjectKeyProductProjectionsSearchGet addMarkMatchingVariants(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("markMatchingVariants", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set markMatchingVariants with the specified values
+     * @param markMatchingVariants values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
+     */
+    public <TValue> ByProjectKeyProductProjectionsSearchGet withMarkMatchingVariants(
+            final Collection<TValue> markMatchingVariants) {
+        return copy().withoutQueryParam("markMatchingVariants")
+                .addQueryParams(markMatchingVariants.stream()
+                        .map(s -> new ParamEntry<>("markMatchingVariants", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional markMatchingVariants query parameters
+     * @param markMatchingVariants values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
+     */
+    public <TValue> ByProjectKeyProductProjectionsSearchGet addMarkMatchingVariants(
+            final Collection<TValue> markMatchingVariants) {
+        return copy().addQueryParams(markMatchingVariants.stream()
+                .map(s -> new ParamEntry<>("markMatchingVariants", s.toString()))
+                .collect(Collectors.toList()));
     }
 
     /**
@@ -337,89 +416,83 @@ public class ByProjectKeyProductProjectionsSearchGet extends
     }
 
     /**
-     * set markMatchingVariants with the specified value
-     * @param markMatchingVariants value to be set
+     * set filterQuery with the specified value
+     * @param filterQuery value to be set
      * @param <TValue> value type
      * @return ByProjectKeyProductProjectionsSearchGet
      */
-    public <TValue> ByProjectKeyProductProjectionsSearchGet withMarkMatchingVariants(
-            final TValue markMatchingVariants) {
-        return copy().withQueryParam("markMatchingVariants", markMatchingVariants);
+    public <TValue> ByProjectKeyProductProjectionsSearchGet withFilterQuery(final TValue filterQuery) {
+        return copy().withQueryParam("filter.query", filterQuery);
     }
 
     /**
-     * add additional markMatchingVariants query parameter
-     * @param markMatchingVariants value to be added
+     * add additional filterQuery query parameter
+     * @param filterQuery value to be added
      * @param <TValue> value type
      * @return ByProjectKeyProductProjectionsSearchGet
      */
-    public <TValue> ByProjectKeyProductProjectionsSearchGet addMarkMatchingVariants(final TValue markMatchingVariants) {
-        return copy().addQueryParam("markMatchingVariants", markMatchingVariants);
+    public <TValue> ByProjectKeyProductProjectionsSearchGet addFilterQuery(final TValue filterQuery) {
+        return copy().addQueryParam("filter.query", filterQuery);
     }
 
     /**
-     * set markMatchingVariants with the specified value
+     * set filterQuery with the specified value
      * @param supplier supplier for the value to be set
      * @return ByProjectKeyProductProjectionsSearchGet
      */
-    public ByProjectKeyProductProjectionsSearchGet withMarkMatchingVariants(final Supplier<Boolean> supplier) {
-        return copy().withQueryParam("markMatchingVariants", supplier.get());
+    public ByProjectKeyProductProjectionsSearchGet withFilterQuery(final Supplier<String> supplier) {
+        return copy().withQueryParam("filter.query", supplier.get());
     }
 
     /**
-     * add additional markMatchingVariants query parameter
+     * add additional filterQuery query parameter
      * @param supplier supplier for the value to be added
      * @return ByProjectKeyProductProjectionsSearchGet
      */
-    public ByProjectKeyProductProjectionsSearchGet addMarkMatchingVariants(final Supplier<Boolean> supplier) {
-        return copy().addQueryParam("markMatchingVariants", supplier.get());
+    public ByProjectKeyProductProjectionsSearchGet addFilterQuery(final Supplier<String> supplier) {
+        return copy().addQueryParam("filter.query", supplier.get());
     }
 
     /**
-     * set markMatchingVariants with the specified value
+     * set filterQuery with the specified value
      * @param op builder for the value to be set
      * @return ByProjectKeyProductProjectionsSearchGet
      */
-    public ByProjectKeyProductProjectionsSearchGet withMarkMatchingVariants(
-            final Function<StringBuilder, StringBuilder> op) {
-        return copy().withQueryParam("markMatchingVariants", op.apply(new StringBuilder()));
+    public ByProjectKeyProductProjectionsSearchGet withFilterQuery(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("filter.query", op.apply(new StringBuilder()));
     }
 
     /**
-     * add additional markMatchingVariants query parameter
+     * add additional filterQuery query parameter
      * @param op builder for the value to be added
      * @return ByProjectKeyProductProjectionsSearchGet
      */
-    public ByProjectKeyProductProjectionsSearchGet addMarkMatchingVariants(
-            final Function<StringBuilder, StringBuilder> op) {
-        return copy().addQueryParam("markMatchingVariants", op.apply(new StringBuilder()));
+    public ByProjectKeyProductProjectionsSearchGet addFilterQuery(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("filter.query", op.apply(new StringBuilder()));
     }
 
     /**
-     * set markMatchingVariants with the specified values
-     * @param markMatchingVariants values to be set
+     * set filterQuery with the specified values
+     * @param filterQuery values to be set
      * @param <TValue> value type
      * @return ByProjectKeyProductProjectionsSearchGet
      */
-    public <TValue> ByProjectKeyProductProjectionsSearchGet withMarkMatchingVariants(
-            final Collection<TValue> markMatchingVariants) {
-        return copy().withoutQueryParam("markMatchingVariants")
-                .addQueryParams(markMatchingVariants.stream()
-                        .map(s -> new ParamEntry<>("markMatchingVariants", s.toString()))
+    public <TValue> ByProjectKeyProductProjectionsSearchGet withFilterQuery(final Collection<TValue> filterQuery) {
+        return copy().withoutQueryParam("filter.query")
+                .addQueryParams(filterQuery.stream()
+                        .map(s -> new ParamEntry<>("filter.query", s.toString()))
                         .collect(Collectors.toList()));
     }
 
     /**
-     * add additional markMatchingVariants query parameters
-     * @param markMatchingVariants values to be added
+     * add additional filterQuery query parameters
+     * @param filterQuery values to be added
      * @param <TValue> value type
      * @return ByProjectKeyProductProjectionsSearchGet
      */
-    public <TValue> ByProjectKeyProductProjectionsSearchGet addMarkMatchingVariants(
-            final Collection<TValue> markMatchingVariants) {
-        return copy().addQueryParams(markMatchingVariants.stream()
-                .map(s -> new ParamEntry<>("markMatchingVariants", s.toString()))
-                .collect(Collectors.toList()));
+    public <TValue> ByProjectKeyProductProjectionsSearchGet addFilterQuery(final Collection<TValue> filterQuery) {
+        return copy().addQueryParams(
+            filterQuery.stream().map(s -> new ParamEntry<>("filter.query", s.toString())).collect(Collectors.toList()));
     }
 
     /**
@@ -499,6 +572,85 @@ public class ByProjectKeyProductProjectionsSearchGet extends
     public <TValue> ByProjectKeyProductProjectionsSearchGet addFilter(final Collection<TValue> filter) {
         return copy().addQueryParams(
             filter.stream().map(s -> new ParamEntry<>("filter", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * set facet with the specified value
+     * @param facet value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
+     */
+    public <TValue> ByProjectKeyProductProjectionsSearchGet withFacet(final TValue facet) {
+        return copy().withQueryParam("facet", facet);
+    }
+
+    /**
+     * add additional facet query parameter
+     * @param facet value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
+     */
+    public <TValue> ByProjectKeyProductProjectionsSearchGet addFacet(final TValue facet) {
+        return copy().addQueryParam("facet", facet);
+    }
+
+    /**
+     * set facet with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductProjectionsSearchGet
+     */
+    public ByProjectKeyProductProjectionsSearchGet withFacet(final Supplier<String> supplier) {
+        return copy().withQueryParam("facet", supplier.get());
+    }
+
+    /**
+     * add additional facet query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductProjectionsSearchGet
+     */
+    public ByProjectKeyProductProjectionsSearchGet addFacet(final Supplier<String> supplier) {
+        return copy().addQueryParam("facet", supplier.get());
+    }
+
+    /**
+     * set facet with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductProjectionsSearchGet
+     */
+    public ByProjectKeyProductProjectionsSearchGet withFacet(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("facet", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional facet query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductProjectionsSearchGet
+     */
+    public ByProjectKeyProductProjectionsSearchGet addFacet(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("facet", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set facet with the specified values
+     * @param facet values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
+     */
+    public <TValue> ByProjectKeyProductProjectionsSearchGet withFacet(final Collection<TValue> facet) {
+        return copy().withoutQueryParam("facet")
+                .addQueryParams(
+                    facet.stream().map(s -> new ParamEntry<>("facet", s.toString())).collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional facet query parameters
+     * @param facet values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductProjectionsSearchGet
+     */
+    public <TValue> ByProjectKeyProductProjectionsSearchGet addFacet(final Collection<TValue> facet) {
+        return copy().addQueryParams(
+            facet.stream().map(s -> new ParamEntry<>("facet", s.toString())).collect(Collectors.toList()));
     }
 
     /**
@@ -583,162 +735,82 @@ public class ByProjectKeyProductProjectionsSearchGet extends
     }
 
     /**
-     * set filterQuery with the specified value
-     * @param filterQuery value to be set
+     * set expand with the specified value
+     * @param expand value to be set
      * @param <TValue> value type
      * @return ByProjectKeyProductProjectionsSearchGet
      */
-    public <TValue> ByProjectKeyProductProjectionsSearchGet withFilterQuery(final TValue filterQuery) {
-        return copy().withQueryParam("filter.query", filterQuery);
+    public <TValue> ByProjectKeyProductProjectionsSearchGet withExpand(final TValue expand) {
+        return copy().withQueryParam("expand", expand);
     }
 
     /**
-     * add additional filterQuery query parameter
-     * @param filterQuery value to be added
+     * add additional expand query parameter
+     * @param expand value to be added
      * @param <TValue> value type
      * @return ByProjectKeyProductProjectionsSearchGet
      */
-    public <TValue> ByProjectKeyProductProjectionsSearchGet addFilterQuery(final TValue filterQuery) {
-        return copy().addQueryParam("filter.query", filterQuery);
+    public <TValue> ByProjectKeyProductProjectionsSearchGet addExpand(final TValue expand) {
+        return copy().addQueryParam("expand", expand);
     }
 
     /**
-     * set filterQuery with the specified value
+     * set expand with the specified value
      * @param supplier supplier for the value to be set
      * @return ByProjectKeyProductProjectionsSearchGet
      */
-    public ByProjectKeyProductProjectionsSearchGet withFilterQuery(final Supplier<String> supplier) {
-        return copy().withQueryParam("filter.query", supplier.get());
+    public ByProjectKeyProductProjectionsSearchGet withExpand(final Supplier<String> supplier) {
+        return copy().withQueryParam("expand", supplier.get());
     }
 
     /**
-     * add additional filterQuery query parameter
+     * add additional expand query parameter
      * @param supplier supplier for the value to be added
      * @return ByProjectKeyProductProjectionsSearchGet
      */
-    public ByProjectKeyProductProjectionsSearchGet addFilterQuery(final Supplier<String> supplier) {
-        return copy().addQueryParam("filter.query", supplier.get());
+    public ByProjectKeyProductProjectionsSearchGet addExpand(final Supplier<String> supplier) {
+        return copy().addQueryParam("expand", supplier.get());
     }
 
     /**
-     * set filterQuery with the specified value
+     * set expand with the specified value
      * @param op builder for the value to be set
      * @return ByProjectKeyProductProjectionsSearchGet
      */
-    public ByProjectKeyProductProjectionsSearchGet withFilterQuery(final Function<StringBuilder, StringBuilder> op) {
-        return copy().withQueryParam("filter.query", op.apply(new StringBuilder()));
+    public ByProjectKeyProductProjectionsSearchGet withExpand(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("expand", op.apply(new StringBuilder()));
     }
 
     /**
-     * add additional filterQuery query parameter
+     * add additional expand query parameter
      * @param op builder for the value to be added
      * @return ByProjectKeyProductProjectionsSearchGet
      */
-    public ByProjectKeyProductProjectionsSearchGet addFilterQuery(final Function<StringBuilder, StringBuilder> op) {
-        return copy().addQueryParam("filter.query", op.apply(new StringBuilder()));
+    public ByProjectKeyProductProjectionsSearchGet addExpand(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("expand", op.apply(new StringBuilder()));
     }
 
     /**
-     * set filterQuery with the specified values
-     * @param filterQuery values to be set
+     * set expand with the specified values
+     * @param expand values to be set
      * @param <TValue> value type
      * @return ByProjectKeyProductProjectionsSearchGet
      */
-    public <TValue> ByProjectKeyProductProjectionsSearchGet withFilterQuery(final Collection<TValue> filterQuery) {
-        return copy().withoutQueryParam("filter.query")
-                .addQueryParams(filterQuery.stream()
-                        .map(s -> new ParamEntry<>("filter.query", s.toString()))
-                        .collect(Collectors.toList()));
-    }
-
-    /**
-     * add additional filterQuery query parameters
-     * @param filterQuery values to be added
-     * @param <TValue> value type
-     * @return ByProjectKeyProductProjectionsSearchGet
-     */
-    public <TValue> ByProjectKeyProductProjectionsSearchGet addFilterQuery(final Collection<TValue> filterQuery) {
-        return copy().addQueryParams(
-            filterQuery.stream().map(s -> new ParamEntry<>("filter.query", s.toString())).collect(Collectors.toList()));
-    }
-
-    /**
-     * set facet with the specified value
-     * @param facet value to be set
-     * @param <TValue> value type
-     * @return ByProjectKeyProductProjectionsSearchGet
-     */
-    public <TValue> ByProjectKeyProductProjectionsSearchGet withFacet(final TValue facet) {
-        return copy().withQueryParam("facet", facet);
-    }
-
-    /**
-     * add additional facet query parameter
-     * @param facet value to be added
-     * @param <TValue> value type
-     * @return ByProjectKeyProductProjectionsSearchGet
-     */
-    public <TValue> ByProjectKeyProductProjectionsSearchGet addFacet(final TValue facet) {
-        return copy().addQueryParam("facet", facet);
-    }
-
-    /**
-     * set facet with the specified value
-     * @param supplier supplier for the value to be set
-     * @return ByProjectKeyProductProjectionsSearchGet
-     */
-    public ByProjectKeyProductProjectionsSearchGet withFacet(final Supplier<String> supplier) {
-        return copy().withQueryParam("facet", supplier.get());
-    }
-
-    /**
-     * add additional facet query parameter
-     * @param supplier supplier for the value to be added
-     * @return ByProjectKeyProductProjectionsSearchGet
-     */
-    public ByProjectKeyProductProjectionsSearchGet addFacet(final Supplier<String> supplier) {
-        return copy().addQueryParam("facet", supplier.get());
-    }
-
-    /**
-     * set facet with the specified value
-     * @param op builder for the value to be set
-     * @return ByProjectKeyProductProjectionsSearchGet
-     */
-    public ByProjectKeyProductProjectionsSearchGet withFacet(final Function<StringBuilder, StringBuilder> op) {
-        return copy().withQueryParam("facet", op.apply(new StringBuilder()));
-    }
-
-    /**
-     * add additional facet query parameter
-     * @param op builder for the value to be added
-     * @return ByProjectKeyProductProjectionsSearchGet
-     */
-    public ByProjectKeyProductProjectionsSearchGet addFacet(final Function<StringBuilder, StringBuilder> op) {
-        return copy().addQueryParam("facet", op.apply(new StringBuilder()));
-    }
-
-    /**
-     * set facet with the specified values
-     * @param facet values to be set
-     * @param <TValue> value type
-     * @return ByProjectKeyProductProjectionsSearchGet
-     */
-    public <TValue> ByProjectKeyProductProjectionsSearchGet withFacet(final Collection<TValue> facet) {
-        return copy().withoutQueryParam("facet")
+    public <TValue> ByProjectKeyProductProjectionsSearchGet withExpand(final Collection<TValue> expand) {
+        return copy().withoutQueryParam("expand")
                 .addQueryParams(
-                    facet.stream().map(s -> new ParamEntry<>("facet", s.toString())).collect(Collectors.toList()));
+                    expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }
 
     /**
-     * add additional facet query parameters
-     * @param facet values to be added
+     * add additional expand query parameters
+     * @param expand values to be added
      * @param <TValue> value type
      * @return ByProjectKeyProductProjectionsSearchGet
      */
-    public <TValue> ByProjectKeyProductProjectionsSearchGet addFacet(final Collection<TValue> facet) {
+    public <TValue> ByProjectKeyProductProjectionsSearchGet addExpand(final Collection<TValue> expand) {
         return copy().addQueryParams(
-            facet.stream().map(s -> new ParamEntry<>("facet", s.toString())).collect(Collectors.toList()));
+            expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }
 
     /**
@@ -976,86 +1048,6 @@ public class ByProjectKeyProductProjectionsSearchGet extends
     public <TValue> ByProjectKeyProductProjectionsSearchGet addOffset(final Collection<TValue> offset) {
         return copy().addQueryParams(
             offset.stream().map(s -> new ParamEntry<>("offset", s.toString())).collect(Collectors.toList()));
-    }
-
-    /**
-     * set withTotal with the specified value
-     * @param withTotal value to be set
-     * @param <TValue> value type
-     * @return ByProjectKeyProductProjectionsSearchGet
-     */
-    public <TValue> ByProjectKeyProductProjectionsSearchGet withWithTotal(final TValue withTotal) {
-        return copy().withQueryParam("withTotal", withTotal);
-    }
-
-    /**
-     * add additional withTotal query parameter
-     * @param withTotal value to be added
-     * @param <TValue> value type
-     * @return ByProjectKeyProductProjectionsSearchGet
-     */
-    public <TValue> ByProjectKeyProductProjectionsSearchGet addWithTotal(final TValue withTotal) {
-        return copy().addQueryParam("withTotal", withTotal);
-    }
-
-    /**
-     * set withTotal with the specified value
-     * @param supplier supplier for the value to be set
-     * @return ByProjectKeyProductProjectionsSearchGet
-     */
-    public ByProjectKeyProductProjectionsSearchGet withWithTotal(final Supplier<Boolean> supplier) {
-        return copy().withQueryParam("withTotal", supplier.get());
-    }
-
-    /**
-     * add additional withTotal query parameter
-     * @param supplier supplier for the value to be added
-     * @return ByProjectKeyProductProjectionsSearchGet
-     */
-    public ByProjectKeyProductProjectionsSearchGet addWithTotal(final Supplier<Boolean> supplier) {
-        return copy().addQueryParam("withTotal", supplier.get());
-    }
-
-    /**
-     * set withTotal with the specified value
-     * @param op builder for the value to be set
-     * @return ByProjectKeyProductProjectionsSearchGet
-     */
-    public ByProjectKeyProductProjectionsSearchGet withWithTotal(final Function<StringBuilder, StringBuilder> op) {
-        return copy().withQueryParam("withTotal", op.apply(new StringBuilder()));
-    }
-
-    /**
-     * add additional withTotal query parameter
-     * @param op builder for the value to be added
-     * @return ByProjectKeyProductProjectionsSearchGet
-     */
-    public ByProjectKeyProductProjectionsSearchGet addWithTotal(final Function<StringBuilder, StringBuilder> op) {
-        return copy().addQueryParam("withTotal", op.apply(new StringBuilder()));
-    }
-
-    /**
-     * set withTotal with the specified values
-     * @param withTotal values to be set
-     * @param <TValue> value type
-     * @return ByProjectKeyProductProjectionsSearchGet
-     */
-    public <TValue> ByProjectKeyProductProjectionsSearchGet withWithTotal(final Collection<TValue> withTotal) {
-        return copy().withoutQueryParam("withTotal")
-                .addQueryParams(withTotal.stream()
-                        .map(s -> new ParamEntry<>("withTotal", s.toString()))
-                        .collect(Collectors.toList()));
-    }
-
-    /**
-     * add additional withTotal query parameters
-     * @param withTotal values to be added
-     * @param <TValue> value type
-     * @return ByProjectKeyProductProjectionsSearchGet
-     */
-    public <TValue> ByProjectKeyProductProjectionsSearchGet addWithTotal(final Collection<TValue> withTotal) {
-        return copy().addQueryParams(
-            withTotal.stream().map(s -> new ParamEntry<>("withTotal", s.toString())).collect(Collectors.toList()));
     }
 
     /**
@@ -1719,85 +1711,6 @@ public class ByProjectKeyProductProjectionsSearchGet extends
         return copy().addQueryParams(storeProjection.stream()
                 .map(s -> new ParamEntry<>("storeProjection", s.toString()))
                 .collect(Collectors.toList()));
-    }
-
-    /**
-     * set expand with the specified value
-     * @param expand value to be set
-     * @param <TValue> value type
-     * @return ByProjectKeyProductProjectionsSearchGet
-     */
-    public <TValue> ByProjectKeyProductProjectionsSearchGet withExpand(final TValue expand) {
-        return copy().withQueryParam("expand", expand);
-    }
-
-    /**
-     * add additional expand query parameter
-     * @param expand value to be added
-     * @param <TValue> value type
-     * @return ByProjectKeyProductProjectionsSearchGet
-     */
-    public <TValue> ByProjectKeyProductProjectionsSearchGet addExpand(final TValue expand) {
-        return copy().addQueryParam("expand", expand);
-    }
-
-    /**
-     * set expand with the specified value
-     * @param supplier supplier for the value to be set
-     * @return ByProjectKeyProductProjectionsSearchGet
-     */
-    public ByProjectKeyProductProjectionsSearchGet withExpand(final Supplier<String> supplier) {
-        return copy().withQueryParam("expand", supplier.get());
-    }
-
-    /**
-     * add additional expand query parameter
-     * @param supplier supplier for the value to be added
-     * @return ByProjectKeyProductProjectionsSearchGet
-     */
-    public ByProjectKeyProductProjectionsSearchGet addExpand(final Supplier<String> supplier) {
-        return copy().addQueryParam("expand", supplier.get());
-    }
-
-    /**
-     * set expand with the specified value
-     * @param op builder for the value to be set
-     * @return ByProjectKeyProductProjectionsSearchGet
-     */
-    public ByProjectKeyProductProjectionsSearchGet withExpand(final Function<StringBuilder, StringBuilder> op) {
-        return copy().withQueryParam("expand", op.apply(new StringBuilder()));
-    }
-
-    /**
-     * add additional expand query parameter
-     * @param op builder for the value to be added
-     * @return ByProjectKeyProductProjectionsSearchGet
-     */
-    public ByProjectKeyProductProjectionsSearchGet addExpand(final Function<StringBuilder, StringBuilder> op) {
-        return copy().addQueryParam("expand", op.apply(new StringBuilder()));
-    }
-
-    /**
-     * set expand with the specified values
-     * @param expand values to be set
-     * @param <TValue> value type
-     * @return ByProjectKeyProductProjectionsSearchGet
-     */
-    public <TValue> ByProjectKeyProductProjectionsSearchGet withExpand(final Collection<TValue> expand) {
-        return copy().withoutQueryParam("expand")
-                .addQueryParams(
-                    expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
-    }
-
-    /**
-     * add additional expand query parameters
-     * @param expand values to be added
-     * @param <TValue> value type
-     * @return ByProjectKeyProductProjectionsSearchGet
-     */
-    public <TValue> ByProjectKeyProductProjectionsSearchGet addExpand(final Collection<TValue> expand) {
-        return copy().addQueryParams(
-            expand.stream().map(s -> new ParamEntry<>("expand", s.toString())).collect(Collectors.toList()));
     }
 
     /**

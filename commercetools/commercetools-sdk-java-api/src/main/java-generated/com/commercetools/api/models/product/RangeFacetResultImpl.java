@@ -52,7 +52,7 @@ public class RangeFacetResultImpl implements RangeFacetResult, ModelBase {
     }
 
     /**
-     *
+     *  <p>Statistical data over values for <code>date</code>, <code>time</code>, <code>datetime</code>, <code>number</code>, and <code>money</code> type fields.</p>
      */
 
     public java.util.List<com.commercetools.api.models.product.FacetRange> getRanges() {

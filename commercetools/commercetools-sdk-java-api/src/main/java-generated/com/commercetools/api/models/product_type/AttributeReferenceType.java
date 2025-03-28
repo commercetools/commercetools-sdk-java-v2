@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- * AttributeReferenceType
+ *  <p>Attribute type for Reference type values.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

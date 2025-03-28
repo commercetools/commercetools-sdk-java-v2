@@ -32,7 +32,7 @@ import jakarta.validation.constraints.NotNull;
 public interface FacetTerm {
 
     /**
-     *
+     *  <p>Value for the field specified in the term facet expression for which at least one ProductVariant could be found.</p>
      * @return term
      */
     @NotNull
@@ -40,7 +40,7 @@ public interface FacetTerm {
     public Object getTerm();
 
     /**
-     *
+     *  <p>Number of ProductVariants for which the <code>term</code> applies.</p>
      * @return count
      */
     @NotNull
@@ -48,7 +48,7 @@ public interface FacetTerm {
     public Long getCount();
 
     /**
-     *
+     *  <p>Number of Products for which the <code>term</code> applies. Only available if the <code>counting products</code> extension is enabled.</p>
      * @return productCount
      */
 
@@ -56,21 +56,21 @@ public interface FacetTerm {
     public Long getProductCount();
 
     /**
-     * set term
+     *  <p>Value for the field specified in the term facet expression for which at least one ProductVariant could be found.</p>
      * @param term value to be set
      */
 
     public void setTerm(final Object term);
 
     /**
-     * set count
+     *  <p>Number of ProductVariants for which the <code>term</code> applies.</p>
      * @param count value to be set
      */
 
     public void setCount(final Long count);
 
     /**
-     * set productCount
+     *  <p>Number of Products for which the <code>term</code> applies. Only available if the <code>counting products</code> extension is enabled.</p>
      * @param productCount value to be set
      */
 

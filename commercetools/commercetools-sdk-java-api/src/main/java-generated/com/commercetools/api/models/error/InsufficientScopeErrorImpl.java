@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * InsufficientScopeError
+ *  <p>This error occurs when your API Client does not have the OAuth scope required for the endpoint. Use an API Client with the required permissions for this endpoint instead.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InsufficientScopeErrorImpl implements InsufficientScopeError, ModelBase {
@@ -48,7 +48,7 @@ public class InsufficientScopeErrorImpl implements InsufficientScopeError, Model
     }
 
     /**
-     *  <p>Error identifier.</p>
+     *
      */
 
     public String getCode() {
@@ -56,7 +56,7 @@ public class InsufficientScopeErrorImpl implements InsufficientScopeError, Model
     }
 
     /**
-     *  <p>Plain text description of the cause of the error.</p>
+     *  <p><code>"Insufficient scope. One of the following scopes is missing:"</code></p>
      */
 
     public String getMessage() {

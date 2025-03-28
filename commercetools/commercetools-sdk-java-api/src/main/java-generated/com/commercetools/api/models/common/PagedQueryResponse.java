@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- * PagedQueryResponse
+ *  <p>Each query endpoint returns a paged query response containing the actual resources matching the query predicate plus information about pagination. This documents the fields all query responses have in common, for specific response types, see the respective API reference pages.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -69,7 +69,7 @@ public interface PagedQueryResponse extends com.commercetools.api.models.Resourc
     public Long getTotal();
 
     /**
-     *
+     *  <p>The resources matching the query predicate. Each query endpoint returns resources of its specific type.</p>
      * @return results
      */
     @NotNull
@@ -78,7 +78,7 @@ public interface PagedQueryResponse extends com.commercetools.api.models.Resourc
     public List<BaseResource> getResults();
 
     /**
-     *
+     *  <p>Object containing supplementary information about the results.</p>
      * @return meta
      */
     @Valid
@@ -114,7 +114,7 @@ public interface PagedQueryResponse extends com.commercetools.api.models.Resourc
     public void setTotal(final Long total);
 
     /**
-     * set results
+     *  <p>The resources matching the query predicate. Each query endpoint returns resources of its specific type.</p>
      * @param results values to be set
      */
 
@@ -122,14 +122,14 @@ public interface PagedQueryResponse extends com.commercetools.api.models.Resourc
     public void setResults(final BaseResource... results);
 
     /**
-     * set results
+     *  <p>The resources matching the query predicate. Each query endpoint returns resources of its specific type.</p>
      * @param results values to be set
      */
 
     public void setResults(final List<BaseResource> results);
 
     /**
-     * set meta
+     *  <p>Object containing supplementary information about the results.</p>
      * @param meta value to be set
      */
 

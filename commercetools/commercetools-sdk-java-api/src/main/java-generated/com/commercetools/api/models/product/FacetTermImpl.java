@@ -46,7 +46,7 @@ public class FacetTermImpl implements FacetTerm, ModelBase {
     }
 
     /**
-     *
+     *  <p>Value for the field specified in the term facet expression for which at least one ProductVariant could be found.</p>
      */
 
     public java.lang.Object getTerm() {
@@ -54,7 +54,7 @@ public class FacetTermImpl implements FacetTerm, ModelBase {
     }
 
     /**
-     *
+     *  <p>Number of ProductVariants for which the <code>term</code> applies.</p>
      */
 
     public Long getCount() {
@@ -62,7 +62,7 @@ public class FacetTermImpl implements FacetTerm, ModelBase {
     }
 
     /**
-     *
+     *  <p>Number of Products for which the <code>term</code> applies. Only available if the <code>counting products</code> extension is enabled.</p>
      */
 
     public Long getProductCount() {

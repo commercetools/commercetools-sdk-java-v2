@@ -28,9 +28,9 @@ public class ProductProjectionPagedSearchResponseTest {
     @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] { new Object[] { ProductProjectionPagedSearchResponse.builder().limit(7L) },
+                new Object[] { ProductProjectionPagedSearchResponse.builder().offset(3L) },
                 new Object[] { ProductProjectionPagedSearchResponse.builder().count(2L) },
                 new Object[] { ProductProjectionPagedSearchResponse.builder().total(1L) },
-                new Object[] { ProductProjectionPagedSearchResponse.builder().offset(3L) },
                 new Object[] { ProductProjectionPagedSearchResponse.builder()
                         .results(Collections
                                 .singletonList(new com.commercetools.api.models.product.ProductProjectionImpl())) },
@@ -46,6 +46,13 @@ public class ProductProjectionPagedSearchResponseTest {
     }
 
     @Test
+    public void offset() {
+        ProductProjectionPagedSearchResponse value = ProductProjectionPagedSearchResponse.of();
+        value.setOffset(3L);
+        Assertions.assertThat(value.getOffset()).isEqualTo(3L);
+    }
+
+    @Test
     public void count() {
         ProductProjectionPagedSearchResponse value = ProductProjectionPagedSearchResponse.of();
         value.setCount(2L);
@@ -57,13 +64,6 @@ public class ProductProjectionPagedSearchResponseTest {
         ProductProjectionPagedSearchResponse value = ProductProjectionPagedSearchResponse.of();
         value.setTotal(1L);
         Assertions.assertThat(value.getTotal()).isEqualTo(1L);
-    }
-
-    @Test
-    public void offset() {
-        ProductProjectionPagedSearchResponse value = ProductProjectionPagedSearchResponse.of();
-        value.setOffset(3L);
-        Assertions.assertThat(value.getOffset()).isEqualTo(3L);
     }
 
     @Test

@@ -29,7 +29,7 @@ public class FilteredFacetResultBuilder implements Builder<FilteredFacetResult> 
     private Long productCount;
 
     /**
-     * set the value to the count
+     *  <p>Number of ProductVariants matching the value specified in filtered facet expression.</p>
      * @param count value to be set
      * @return Builder
      */
@@ -40,7 +40,8 @@ public class FilteredFacetResultBuilder implements Builder<FilteredFacetResult> 
     }
 
     /**
-     * set the value to the productCount
+     *  <p>Number of Products matching the value specified in filtered facet expression.</p>
+     *  <p>Present only if the <code>counting products</code> extension is enabled.</p>
      * @param productCount value to be set
      * @return Builder
      */
@@ -51,7 +52,7 @@ public class FilteredFacetResultBuilder implements Builder<FilteredFacetResult> 
     }
 
     /**
-     * value of count}
+     *  <p>Number of ProductVariants matching the value specified in filtered facet expression.</p>
      * @return count
      */
 
@@ -60,7 +61,8 @@ public class FilteredFacetResultBuilder implements Builder<FilteredFacetResult> 
     }
 
     /**
-     * value of productCount}
+     *  <p>Number of Products matching the value specified in filtered facet expression.</p>
+     *  <p>Present only if the <code>counting products</code> extension is enabled.</p>
      * @return productCount
      */
 

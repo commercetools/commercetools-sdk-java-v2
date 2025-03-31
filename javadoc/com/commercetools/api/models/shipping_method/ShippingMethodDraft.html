@@ -377,7 +377,7 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <h3>getIsDefault</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name">getIsDefault</span>()</div>
-<div class="block"><p>If set to <code>true</code>, the ShippingMethod will be the Project's default ShippingMethod.</p></div>
+<div class="block"><p>If set to <code>true</code>, the ShippingMethod will be the Project's default ShippingMethod. When retrieving matching Shipping Methods, it is returned as the first item in the array. This flag does not automatically apply the Shipping Method to Carts.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>isDefault</dd>
@@ -514,7 +514,7 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <section class="detail" id="setIsDefault(java.lang.Boolean)">
 <h3>setIsDefault</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setIsDefault</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isDefault)</span></div>
-<div class="block"><p>If set to <code>true</code>, the ShippingMethod will be the Project's default ShippingMethod.</p></div>
+<div class="block"><p>If set to <code>true</code>, the ShippingMethod will be the Project's default ShippingMethod. When retrieving matching Shipping Methods, it is returned as the first item in the array. This flag does not automatically apply the Shipping Method to Carts.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>isDefault</code> - value to be set</dd>

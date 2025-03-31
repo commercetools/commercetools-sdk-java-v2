@@ -58,11 +58,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/common/PagedQueryResponse.html" class="type-name-link" title="interface in com.commercetools.api.models.common">PagedQueryResponse</a> - Interface in <a href="../com/commercetools/api/models/common/package-summary.html">com.commercetools.api.models.common</a></dt>
 <dd>
-<div class="block">PagedQueryResponse
-
- 
- Example to create an instance using the builder pattern
- </div>
+<div class="block">Each query endpoint returns a paged query response containing the actual resources matching the query predicate plus information about pagination.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/common/PagedQueryResponseBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.common">PagedQueryResponseBuilder</a> - Class in <a href="../com/commercetools/api/models/common/package-summary.html">com.commercetools.api.models.common</a></dt>
 <dd>
@@ -6488,7 +6484,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/RangeFacetResultBuilder.html#plusRanges(com.commercetools.api.models.product.FacetRange...)" class="member-name-link">plusRanges(FacetRange...)</a> - Method in class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/RangeFacetResultBuilder.html" title="class in com.commercetools.api.models.product">RangeFacetResultBuilder</a></dt>
 <dd>
-<div class="block">add values to the ranges</div>
+<div class="block">Statistical data over values for <code>date</code>, <code>time</code>, <code>datetime</code>, <code>number</code>, and <code>money</code> type fields.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product_search/ProductSearchFacetRangesValueBuilder.html#plusRanges(java.util.function.Function)" class="member-name-link">plusRanges(Function&lt;ProductSearchFacetRangesFacetRangeBuilder, ProductSearchFacetRangesFacetRangeBuilder&gt;)</a> - Method in class com.commercetools.api.models.product_search.<a href="../com/commercetools/api/models/product_search/ProductSearchFacetRangesValueBuilder.html" title="class in com.commercetools.api.models.product_search">ProductSearchFacetRangesValueBuilder</a></dt>
 <dd>
@@ -6496,7 +6492,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/RangeFacetResultBuilder.html#plusRanges(java.util.function.Function)" class="member-name-link">plusRanges(Function&lt;FacetRangeBuilder, FacetRangeBuilder&gt;)</a> - Method in class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/RangeFacetResultBuilder.html" title="class in com.commercetools.api.models.product">RangeFacetResultBuilder</a></dt>
 <dd>
-<div class="block">add the value to the ranges using the builder function</div>
+<div class="block">Statistical data over values for <code>date</code>, <code>time</code>, <code>datetime</code>, <code>number</code>, and <code>money</code> type fields.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/tax_category/TaxCategoryBuilder.html#plusRates(com.commercetools.api.models.tax_category.TaxRate...)" class="member-name-link">plusRates(TaxRate...)</a> - Method in class com.commercetools.api.models.tax_category.<a href="../com/commercetools/api/models/tax_category/TaxCategoryBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryBuilder</a></dt>
 <dd>
@@ -6860,7 +6856,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/common/PagedQueryResponseBuilder.html#plusResults(com.commercetools.api.models.common.BaseResource...)" class="member-name-link">plusResults(BaseResource...)</a> - Method in class com.commercetools.api.models.common.<a href="../com/commercetools/api/models/common/PagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.common">PagedQueryResponseBuilder</a></dt>
 <dd>
-<div class="block">add values to the results</div>
+<div class="block">The resources matching the query predicate.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/custom_object/CustomObjectPagedQueryResponseBuilder.html#plusResults(com.commercetools.api.models.custom_object.CustomObject...)" class="member-name-link">plusResults(CustomObject...)</a> - Method in class com.commercetools.api.models.custom_object.<a href="../com/commercetools/api/models/custom_object/CustomObjectPagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.custom_object">CustomObjectPagedQueryResponseBuilder</a></dt>
 <dd>
@@ -6952,7 +6948,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#plusResults(com.commercetools.api.models.product.ProductProjection...)" class="member-name-link">plusResults(ProductProjection...)</a> - Method in class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></dt>
 <dd>
-<div class="block">add values to the results</div>
+<div class="block">ProductProjections where at least one ProductVariant matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/quote_request/QuoteRequestPagedQueryResponseBuilder.html#plusResults(com.commercetools.api.models.quote_request.QuoteRequest...)" class="member-name-link">plusResults(QuoteRequest...)</a> - Method in class com.commercetools.api.models.quote_request.<a href="../com/commercetools/api/models/quote_request/QuoteRequestPagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.quote_request">QuoteRequestPagedQueryResponseBuilder</a></dt>
 <dd>
@@ -7152,7 +7148,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html#plusResults(java.util.function.Function)" class="member-name-link">plusResults(Function&lt;ProductProjectionBuilder, ProductProjectionBuilder&gt;)</a> - Method in class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></dt>
 <dd>
-<div class="block">add the value to the results using the builder function</div>
+<div class="block">ProductProjections where at least one ProductVariant matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/quote_request/QuoteRequestPagedQueryResponseBuilder.html#plusResults(java.util.function.Function)" class="member-name-link">plusResults(Function&lt;QuoteRequestBuilder, QuoteRequestBuilder&gt;)</a> - Method in class com.commercetools.api.models.quote_request.<a href="../com/commercetools/api/models/quote_request/QuoteRequestPagedQueryResponseBuilder.html" title="class in com.commercetools.api.models.quote_request">QuoteRequestPagedQueryResponseBuilder</a></dt>
 <dd>
@@ -8068,11 +8064,11 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/TermFacetResultBuilder.html#plusTerms(com.commercetools.api.models.product.FacetTerm...)" class="member-name-link">plusTerms(FacetTerm...)</a> - Method in class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/TermFacetResultBuilder.html" title="class in com.commercetools.api.models.product">TermFacetResultBuilder</a></dt>
 <dd>
-<div class="block">add values to the terms</div>
+<div class="block">Values for the field specified in term facet expression for which at least one ProductVariant could be found.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/TermFacetResultBuilder.html#plusTerms(java.util.function.Function)" class="member-name-link">plusTerms(Function&lt;FacetTermBuilder, FacetTermBuilder&gt;)</a> - Method in class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/TermFacetResultBuilder.html" title="class in com.commercetools.api.models.product">TermFacetResultBuilder</a></dt>
 <dd>
-<div class="block">add the value to the terms using the builder function</div>
+<div class="block">Values for the field specified in term facet expression for which at least one ProductVariant could be found.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/me/MyShoppingListChangeTextLineItemsOrderActionBuilder.html#plusTextLineItemOrder(java.lang.String...)" class="member-name-link">plusTextLineItemOrder(String...)</a> - Method in class com.commercetools.api.models.me.<a href="../com/commercetools/api/models/me/MyShoppingListChangeTextLineItemsOrderActionBuilder.html" title="class in com.commercetools.api.models.me">MyShoppingListChangeTextLineItemsOrderActionBuilder</a></dt>
 <dd>
@@ -14712,15 +14708,15 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/FacetRangeBuilder.html#productCount(java.lang.Long)" class="member-name-link">productCount(Long)</a> - Method in class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/FacetRangeBuilder.html" title="class in com.commercetools.api.models.product">FacetRangeBuilder</a></dt>
 <dd>
-<div class="block">set the value to the productCount</div>
+<div class="block">Number of Products for which the values in a field fall into the specified range.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/FacetTermBuilder.html#productCount(java.lang.Long)" class="member-name-link">productCount(Long)</a> - Method in class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/FacetTermBuilder.html" title="class in com.commercetools.api.models.product">FacetTermBuilder</a></dt>
 <dd>
-<div class="block">set the value to the productCount</div>
+<div class="block">Number of Products for which the <code>term</code> applies.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/FilteredFacetResultBuilder.html#productCount(java.lang.Long)" class="member-name-link">productCount(Long)</a> - Method in class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/FilteredFacetResultBuilder.html" title="class in com.commercetools.api.models.product">FilteredFacetResultBuilder</a></dt>
 <dd>
-<div class="block">set the value to the productCount</div>
+<div class="block">Number of Products matching the value specified in filtered facet expression.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/Message.html#productCreatedBuilder()" class="member-name-link">productCreatedBuilder()</a> - Static method in interface com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/Message.html" title="interface in com.commercetools.api.models.message">Message</a></dt>
 <dd>
@@ -16410,11 +16406,7 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/product/ProductProjectionPagedSearchResponse.html" class="type-name-link" title="interface in com.commercetools.api.models.product">ProductProjectionPagedSearchResponse</a> - Interface in <a href="../com/commercetools/api/models/product/package-summary.html">com.commercetools.api.models.product</a></dt>
 <dd>
-<div class="block">ProductProjectionPagedSearchResponse
-
- 
- Example to create an instance using the builder pattern
- </div>
+<div class="block">The response returned to a Product Projection Search request.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/ProductProjectionPagedSearchResponseBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a> - Class in <a href="../com/commercetools/api/models/product/package-summary.html">com.commercetools.api.models.product</a></dt>
 <dd>

@@ -89,10 +89,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
  <pre><code class='java'>
      ProductProjectionPagedSearchResponse productProjectionPagedSearchResponse = ProductProjectionPagedSearchResponse.builder()
              .limit(0.3)
-             .count(0.3)
              .offset(0.3)
+             .count(0.3)
              .plusResults(resultsBuilder -> resultsBuilder)
-             .facets(facetsBuilder -> facetsBuilder)
              .build()
  </code></pre>
  </div></div>
@@ -126,7 +125,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addResults(java.util.function.Function)" class="member-name-link">addResults</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a>,<wbr><a href="ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">add the value to the results using the builder function</div>
+<div class="block">ProductProjections where at least one ProductVariant matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionPagedSearchResponse.html" title="interface in com.commercetools.api.models.product">ProductProjectionPagedSearchResponse</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#build()" class="member-name-link">build</a>()</code></div>
@@ -141,52 +140,52 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#count(java.lang.Long)" class="member-name-link">count</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;count)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the count</div>
+<div class="block">Actual number of results returned.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#facets(com.commercetools.api.models.product.FacetResults)" class="member-name-link">facets</a><wbr>(<a href="FacetResults.html" title="interface in com.commercetools.api.models.product">FacetResults</a>&nbsp;facets)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the facets</div>
+<div class="block">Facet results for each facet expression specified in the search request.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#facets(java.util.function.Function)" class="member-name-link">facets</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="FacetResultsBuilder.html" title="class in com.commercetools.api.models.product">FacetResultsBuilder</a>,<wbr><a href="FacetResultsBuilder.html" title="class in com.commercetools.api.models.product">FacetResultsBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the facets using the builder function</div>
+<div class="block">Facet results for each facet expression specified in the search request.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCount()" class="member-name-link">getCount</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">value of count}</div>
+<div class="block">Actual number of results returned.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="FacetResults.html" title="interface in com.commercetools.api.models.product">FacetResults</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFacets()" class="member-name-link">getFacets</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">value of facets}</div>
+<div class="block">Facet results for each facet expression specified in the search request.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLimit()" class="member-name-link">getLimit</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Number of results requested.</div>
+<div class="block">The maximum number of results returned on a page.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getOffset()" class="member-name-link">getOffset</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Number of elements skipped.</div>
+<div class="block">The starting point for the retrieved paginated result.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getResults()" class="member-name-link">getResults</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">value of results}</div>
+<div class="block">ProductProjections where at least one ProductVariant matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTotal()" class="member-name-link">getTotal</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">value of total}</div>
+<div class="block">Total number of results matching the query.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#limit(java.lang.Long)" class="member-name-link">limit</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;limit)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Number of results requested.</div>
+<div class="block">The maximum number of results returned on a page.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -201,47 +200,47 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#offset(java.lang.Long)" class="member-name-link">offset</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;offset)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Number of elements skipped.</div>
+<div class="block">The starting point for the retrieved paginated result.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusResults(com.commercetools.api.models.product.ProductProjection...)" class="member-name-link">plusResults</a><wbr>(<a href="ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>...&nbsp;results)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">add values to the results</div>
+<div class="block">ProductProjections where at least one ProductVariant matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusResults(java.util.function.Function)" class="member-name-link">plusResults</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a>,<wbr><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">add the value to the results using the builder function</div>
+<div class="block">ProductProjections where at least one ProductVariant matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#results(com.commercetools.api.models.product.ProductProjection...)" class="member-name-link">results</a><wbr>(<a href="ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>...&nbsp;results)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set values to the results</div>
+<div class="block">ProductProjections where at least one ProductVariant matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#results(java.util.List)" class="member-name-link">results</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>&gt;&nbsp;results)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set value to the results</div>
+<div class="block">ProductProjections where at least one ProductVariant matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setResults(java.util.function.Function)" class="member-name-link">setResults</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a>,<wbr><a href="ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the results using the builder function</div>
+<div class="block">ProductProjections where at least one ProductVariant matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#total(java.lang.Long)" class="member-name-link">total</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;total)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the total</div>
+<div class="block">Total number of results matching the query.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withFacets(java.util.function.Function)" class="member-name-link">withFacets</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="FacetResultsBuilder.html" title="class in com.commercetools.api.models.product">FacetResultsBuilder</a>,<wbr><a href="FacetResults.html" title="interface in com.commercetools.api.models.product">FacetResults</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the facets using the builder function</div>
+<div class="block">Facet results for each facet expression specified in the search request.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withResults(java.util.function.Function)" class="member-name-link">withResults</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a>,<wbr><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the results using the builder function</div>
+<div class="block">ProductProjections where at least one ProductVariant matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter.</div>
 </div>
 </div>
 </div>
@@ -278,7 +277,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="limit(java.lang.Long)">
 <h3>limit</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name">limit</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;limit)</span></div>
-<div class="block"><p>Number of results requested.</p></div>
+<div class="block"><p>The maximum number of results returned on a page.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>limit</code> - value to be set</dd>
@@ -288,10 +287,23 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
+<section class="detail" id="offset(java.lang.Long)">
+<h3>offset</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name">offset</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;offset)</span></div>
+<div class="block"><p>The starting point for the retrieved paginated result.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>offset</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="count(java.lang.Long)">
 <h3>count</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name">count</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;count)</span></div>
-<div class="block">set the value to the count</div>
+<div class="block"><p>Actual number of results returned.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>count</code> - value to be set</dd>
@@ -305,7 +317,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>total</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name">total</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;total)</span></div>
-<div class="block">set the value to the total</div>
+<div class="block"><p>Total number of results matching the query.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>total</code> - value to be set</dd>
@@ -315,23 +327,10 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
-<section class="detail" id="offset(java.lang.Long)">
-<h3>offset</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name">offset</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;offset)</span></div>
-<div class="block"><p>Number of elements skipped.</p></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>offset</code> - value to be set</dd>
-<dt>Returns:</dt>
-<dd>Builder</dd>
-</dl>
-</section>
-</li>
-<li>
 <section class="detail" id="results(com.commercetools.api.models.product.ProductProjection...)">
 <h3>results</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name">results</span><wbr><span class="parameters">(<a href="ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>...&nbsp;results)</span></div>
-<div class="block">set values to the results</div>
+<div class="block"><p>ProductProjections where at least one ProductVariant matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter. If the query parameter <code>markMatchingVariants=true</code> was provided with the request, the matching variants are marked as such.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>results</code> - value to be set</dd>
@@ -344,7 +343,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="results(java.util.List)">
 <h3>results</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name">results</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>&gt;&nbsp;results)</span></div>
-<div class="block">set value to the results</div>
+<div class="block"><p>ProductProjections where at least one ProductVariant matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter. If the query parameter <code>markMatchingVariants=true</code> was provided with the request, the matching variants are marked as such.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>results</code> - value to be set</dd>
@@ -357,7 +356,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="plusResults(com.commercetools.api.models.product.ProductProjection...)">
 <h3>plusResults</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name">plusResults</span><wbr><span class="parameters">(<a href="ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>...&nbsp;results)</span></div>
-<div class="block">add values to the results</div>
+<div class="block"><p>ProductProjections where at least one ProductVariant matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter. If the query parameter <code>markMatchingVariants=true</code> was provided with the request, the matching variants are marked as such.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>results</code> - value to be set</dd>
@@ -370,7 +369,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="plusResults(java.util.function.Function)">
 <h3>plusResults</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name">plusResults</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a>,<wbr><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block">add the value to the results using the builder function</div>
+<div class="block"><p>ProductProjections where at least one ProductVariant matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter. If the query parameter <code>markMatchingVariants=true</code> was provided with the request, the matching variants are marked as such.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the results value</dd>
@@ -383,7 +382,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withResults(java.util.function.Function)">
 <h3>withResults</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name">withResults</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a>,<wbr><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block">set the value to the results using the builder function</div>
+<div class="block"><p>ProductProjections where at least one ProductVariant matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter. If the query parameter <code>markMatchingVariants=true</code> was provided with the request, the matching variants are marked as such.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the results value</dd>
@@ -396,7 +395,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="addResults(java.util.function.Function)">
 <h3>addResults</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name">addResults</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a>,<wbr><a href="ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>&gt;&nbsp;builder)</span></div>
-<div class="block">add the value to the results using the builder function</div>
+<div class="block"><p>ProductProjections where at least one ProductVariant matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter. If the query parameter <code>markMatchingVariants=true</code> was provided with the request, the matching variants are marked as such.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the results value</dd>
@@ -409,7 +408,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="setResults(java.util.function.Function)">
 <h3>setResults</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name">setResults</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a>,<wbr><a href="ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>&gt;&nbsp;builder)</span></div>
-<div class="block">set the value to the results using the builder function</div>
+<div class="block"><p>ProductProjections where at least one ProductVariant matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter. If the query parameter <code>markMatchingVariants=true</code> was provided with the request, the matching variants are marked as such.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the results value</dd>
@@ -422,7 +421,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="facets(java.util.function.Function)">
 <h3>facets</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name">facets</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="FacetResultsBuilder.html" title="class in com.commercetools.api.models.product">FacetResultsBuilder</a>,<wbr><a href="FacetResultsBuilder.html" title="class in com.commercetools.api.models.product">FacetResultsBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block">set the value to the facets using the builder function</div>
+<div class="block"><p>Facet results for each facet expression specified in the search request.</p>
+  <p>Only present if at least one <code>facet</code> parameter was provided with the search request.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the facets value</dd>
@@ -435,7 +435,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withFacets(java.util.function.Function)">
 <h3>withFacets</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name">withFacets</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="FacetResultsBuilder.html" title="class in com.commercetools.api.models.product">FacetResultsBuilder</a>,<wbr><a href="FacetResults.html" title="interface in com.commercetools.api.models.product">FacetResults</a>&gt;&nbsp;builder)</span></div>
-<div class="block">set the value to the facets using the builder function</div>
+<div class="block"><p>Facet results for each facet expression specified in the search request.</p>
+  <p>Only present if at least one <code>facet</code> parameter was provided with the search request.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the facets value</dd>
@@ -447,8 +448,10 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="facets(com.commercetools.api.models.product.FacetResults)">
 <h3>facets</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name">facets</span><wbr><span class="parameters">(<a href="FacetResults.html" title="interface in com.commercetools.api.models.product">FacetResults</a>&nbsp;facets)</span></div>
-<div class="block">set the value to the facets</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionPagedSearchResponseBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionPagedSearchResponseBuilder</a></span>&nbsp;<span class="element-name">facets</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+ <a href="FacetResults.html" title="interface in com.commercetools.api.models.product">FacetResults</a>&nbsp;facets)</span></div>
+<div class="block"><p>Facet results for each facet expression specified in the search request.</p>
+  <p>Only present if at least one <code>facet</code> parameter was provided with the search request.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>facets</code> - value to be set</dd>
@@ -461,7 +464,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getLimit()">
 <h3>getLimit</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">getLimit</span>()</div>
-<div class="block"><p>Number of results requested.</p></div>
+<div class="block"><p>The maximum number of results returned on a page.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>limit</dd>
@@ -469,10 +472,21 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
+<section class="detail" id="getOffset()">
+<h3>getOffset</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">getOffset</span>()</div>
+<div class="block"><p>The starting point for the retrieved paginated result.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>offset</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getCount()">
 <h3>getCount</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">getCount</span>()</div>
-<div class="block">value of count}</div>
+<div class="block"><p>Actual number of results returned.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>count</dd>
@@ -484,7 +498,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getTotal</h3>
 <div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">getTotal</span>()</div>
-<div class="block">value of total}</div>
+<div class="block"><p>Total number of results matching the query.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>total</dd>
@@ -492,21 +506,10 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
-<section class="detail" id="getOffset()">
-<h3>getOffset</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">getOffset</span>()</div>
-<div class="block"><p>Number of elements skipped.</p></div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>offset</dd>
-</dl>
-</section>
-</li>
-<li>
 <section class="detail" id="getResults()">
 <h3>getResults</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a>&gt;</span>&nbsp;<span class="element-name">getResults</span>()</div>
-<div class="block">value of results}</div>
+<div class="block"><p>ProductProjections where at least one ProductVariant matches the search query, provided with the <code>text.{language}</code> and/or <code>filter.query</code> or <code>filter</code> query parameter. If the query parameter <code>markMatchingVariants=true</code> was provided with the request, the matching variants are marked as such.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>results</dd>
@@ -516,8 +519,10 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getFacets()">
 <h3>getFacets</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="FacetResults.html" title="interface in com.commercetools.api.models.product">FacetResults</a></span>&nbsp;<span class="element-name">getFacets</span>()</div>
-<div class="block">value of facets}</div>
+<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="FacetResults.html" title="interface in com.commercetools.api.models.product">FacetResults</a></span>&nbsp;<span class="element-name">getFacets</span>()</div>
+<div class="block"><p>Facet results for each facet expression specified in the search request.</p>
+  <p>Only present if at least one <code>facet</code> parameter was provided with the search request.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>facets</dd>

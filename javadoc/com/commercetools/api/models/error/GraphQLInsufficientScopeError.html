@@ -78,7 +78,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">GraphQLInsufficientScopeError</span><span class="extends-implements">
 extends <a href="GraphQLErrorObject.html" title="interface in com.commercetools.api.models.error">GraphQLErrorObject</a></span></div>
-<div class="block">GraphQLInsufficientScopeError
+<div class="block"><p>This error occurs when your API Client does not have the OAuth scope required for the endpoint. Use an API Client with the required permissions for this endpoint instead.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -113,7 +113,7 @@ extends <a href="GraphQLErrorObject.html" title="interface in com.commercetools.
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab5" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab5', 3)" class="table-tab">Default Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button><button id="method-summary-table-tab5" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab5', 3)" class="table-tab">Default Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
 <div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
@@ -134,24 +134,29 @@ extends <a href="GraphQLErrorObject.html" title="interface in com.commercetools.
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a deep copy of GraphQLInsufficientScopeError</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="GraphQLInsufficientScopeError.html" title="interface in com.commercetools.api.models.error">GraphQLInsufficientScopeError</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
-<div class="block">factory method</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCode()" class="member-name-link">getCode</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">One of the error codes that is listed on the Errors page.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="GraphQLInsufficientScopeError.html" title="interface in com.commercetools.api.models.error">GraphQLInsufficientScopeError</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(com.commercetools.api.models.error.GraphQLInsufficientScopeError)" class="member-name-link">of</a><wbr>(<a href="GraphQLInsufficientScopeError.html" title="interface in com.commercetools.api.models.error">GraphQLInsufficientScopeError</a>&nbsp;template)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="block">factory method</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="GraphQLInsufficientScopeError.html" title="interface in com.commercetools.api.models.error">GraphQLInsufficientScopeError</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(com.commercetools.api.models.error.GraphQLInsufficientScopeError)" class="member-name-link">of</a><wbr>(<a href="GraphQLInsufficientScopeError.html" title="interface in com.commercetools.api.models.error">GraphQLInsufficientScopeError</a>&nbsp;template)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a shallow copy GraphQLInsufficientScopeError</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="GraphQLInsufficientScopeError.html" title="interface in com.commercetools.api.models.error">GraphQLInsufficientScopeError</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="GraphQLInsufficientScopeError.html" title="interface in com.commercetools.api.models.error">GraphQLInsufficientScopeError</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;T&gt;&nbsp;T</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#withGraphQLInsufficientScopeError(java.util.function.Function)" class="member-name-link">withGraphQLInsufficientScopeError</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="GraphQLInsufficientScopeError.html" title="interface in com.commercetools.api.models.error">GraphQLInsufficientScopeError</a>,<wbr>T&gt;&nbsp;helper)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;T&gt;&nbsp;T</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#withGraphQLInsufficientScopeError(java.util.function.Function)" class="member-name-link">withGraphQLInsufficientScopeError</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="GraphQLInsufficientScopeError.html" title="interface in com.commercetools.api.models.error">GraphQLInsufficientScopeError</a>,<wbr>T&gt;&nbsp;helper)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">accessor map function</div>
 </div>
 </div>
@@ -159,7 +164,7 @@ extends <a href="GraphQLErrorObject.html" title="interface in com.commercetools.
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.commercetools.api.models.error.GraphQLErrorObject">Methods inherited from interface&nbsp;com.commercetools.api.models.error.<a href="GraphQLErrorObject.html" title="interface in com.commercetools.api.models.error">GraphQLErrorObject</a></h3>
-<code><a href="GraphQLErrorObject.html#getCode()">getCode</a>, <a href="GraphQLErrorObject.html#setValue(java.lang.String,java.lang.Object)">setValue</a>, <a href="GraphQLErrorObject.html#values()">values</a>, <a href="GraphQLErrorObject.html#withGraphQLErrorObject(java.util.function.Function)">withGraphQLErrorObject</a></code></div>
+<code><a href="GraphQLErrorObject.html#setValue(java.lang.String,java.lang.Object)">setValue</a>, <a href="GraphQLErrorObject.html#values()">values</a>, <a href="GraphQLErrorObject.html#withGraphQLErrorObject(java.util.function.Function)">withGraphQLErrorObject</a></code></div>
 </section>
 </li>
 </ul>
@@ -194,6 +199,21 @@ extends <a href="GraphQLErrorObject.html" title="interface in com.commercetools.
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="getCode()">
+<h3>getCode</h3>
+<div class="member-signature"><span class="annotations">@NotNull
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getCode</span>()</div>
+<div class="block"><span class="descfrm-type-label">Description copied from interface:&nbsp;<code><a href="GraphQLErrorObject.html#getCode()">GraphQLErrorObject</a></code></span></div>
+<div class="block"><p>One of the error codes that is listed on the Errors page.</p></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="GraphQLErrorObject.html#getCode()">getCode</a></code>&nbsp;in interface&nbsp;<code><a href="GraphQLErrorObject.html" title="interface in com.commercetools.api.models.error">GraphQLErrorObject</a></code></dd>
+<dt>Returns:</dt>
+<dd>code</dd>
+</dl>
+</section>
+</li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>

@@ -25,7 +25,8 @@ public class BusinessUnitChangeParentUnitActionBuilder implements Builder<Busine
     private com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifier parentUnit;
 
     /**
-     *  <p>New parent unit of the Business Unit. The new parent unit must have the same top-level unit as the old parent unit.</p>
+     *  <p>New parent unit of the Business Unit. It must be associated with the same Stores, as the old parent unit.</p>
+     *  <p>The Business Unit <code>inheritedAssociates</code> and <code>inheritedStores</code> field values will be eventually consistent.</p>
      * @param builder function to build the parentUnit value
      * @return Builder
      */
@@ -39,7 +40,8 @@ public class BusinessUnitChangeParentUnitActionBuilder implements Builder<Busine
     }
 
     /**
-     *  <p>New parent unit of the Business Unit. The new parent unit must have the same top-level unit as the old parent unit.</p>
+     *  <p>New parent unit of the Business Unit. It must be associated with the same Stores, as the old parent unit.</p>
+     *  <p>The Business Unit <code>inheritedAssociates</code> and <code>inheritedStores</code> field values will be eventually consistent.</p>
      * @param builder function to build the parentUnit value
      * @return Builder
      */
@@ -52,7 +54,8 @@ public class BusinessUnitChangeParentUnitActionBuilder implements Builder<Busine
     }
 
     /**
-     *  <p>New parent unit of the Business Unit. The new parent unit must have the same top-level unit as the old parent unit.</p>
+     *  <p>New parent unit of the Business Unit. It must be associated with the same Stores, as the old parent unit.</p>
+     *  <p>The Business Unit <code>inheritedAssociates</code> and <code>inheritedStores</code> field values will be eventually consistent.</p>
      * @param parentUnit value to be set
      * @return Builder
      */
@@ -64,7 +67,8 @@ public class BusinessUnitChangeParentUnitActionBuilder implements Builder<Busine
     }
 
     /**
-     *  <p>New parent unit of the Business Unit. The new parent unit must have the same top-level unit as the old parent unit.</p>
+     *  <p>New parent unit of the Business Unit. It must be associated with the same Stores, as the old parent unit.</p>
+     *  <p>The Business Unit <code>inheritedAssociates</code> and <code>inheritedStores</code> field values will be eventually consistent.</p>
      * @return parentUnit
      */
 

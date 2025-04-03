@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Checks if a QuoteRequest exists for a given <code>key</code>. Returns a <code>200 OK</code> status if the QuoteRequest exists or a ResourceNotFound error otherwise.</p>
+ *  <p>Checks if a QuoteRequest exists with the provided <code>key</code>. Returns a <code>200 OK</code> status if the QuoteRequest exists or a ResourceNotFound error otherwise.</p>
  *
  * <hr>
  * <div class=code-example>

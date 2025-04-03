@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Retrieves an ImportSummary for the given import container. An ImportSummary is calculated on demand.</p>
+ *  <p>Retrieves an ImportSummary for the given Import Container. An ImportSummary is calculated on demand.</p>
  *
  * <hr>
  * <div class=code-example>

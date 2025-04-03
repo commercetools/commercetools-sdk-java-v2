@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Checks if an Order exists for a given <code>id</code>. Returns a <code>200 OK</code> status if successful.</p>
+ *  <p>Checks if an Order exists with the provided <code>id</code>. Returns a <code>200 OK</code> status if successful.</p>
  *  <p>A ResourceNotFound error is returned in the following scenarios:</p>
  *  <ul>
  *   <li>If no Order exists for the given <code>id</code>.</li>

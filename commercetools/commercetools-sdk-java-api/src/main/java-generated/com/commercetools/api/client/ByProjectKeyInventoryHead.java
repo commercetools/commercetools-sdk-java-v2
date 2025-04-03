@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Checks if an InventoryEntry exists for a given Query Predicate. Returns a <code>200 OK</code> status if any Inventory Entries match the Query Predicate, a <code>404 Not Found</code> otherwise.</p>
+ *  <p>Checks if one or more InventoryEntries exist for the provided query predicate. Returns a <code>200 OK</code> status if any Inventory Entries match the Query Predicate, a <code>404 Not Found</code> otherwise.</p>
  *
  * <hr>
  * <div class=code-example>

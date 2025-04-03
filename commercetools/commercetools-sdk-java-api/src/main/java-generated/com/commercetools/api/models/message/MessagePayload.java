@@ -83,6 +83,8 @@ import jakarta.validation.constraints.NotNull;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitStoreModeChangedMessagePayloadImpl.class, name = BusinessUnitStoreModeChangedMessagePayload.BUSINESS_UNIT_STORE_MODE_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitStoreRemovedMessagePayloadImpl.class, name = BusinessUnitStoreRemovedMessagePayload.BUSINESS_UNIT_STORE_REMOVED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitStoresSetMessagePayloadImpl.class, name = BusinessUnitStoresSetMessagePayload.BUSINESS_UNIT_STORES_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitTopLevelUnitSetMessagePayloadImpl.class, name = BusinessUnitTopLevelUnitSetMessagePayload.BUSINESS_UNIT_TOP_LEVEL_UNIT_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitTypeSetMessagePayloadImpl.class, name = BusinessUnitTypeSetMessagePayload.BUSINESS_UNIT_TYPE_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CartDiscountCreatedMessagePayloadImpl.class, name = CartDiscountCreatedMessagePayload.CART_DISCOUNT_CREATED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CartDiscountDeletedMessagePayloadImpl.class, name = CartDiscountDeletedMessagePayload.CART_DISCOUNT_DELETED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CartDiscountStoreAddedMessagePayloadImpl.class, name = CartDiscountStoreAddedMessagePayload.CART_DISCOUNT_STORE_ADDED),
@@ -517,6 +519,14 @@ public interface MessagePayload extends MessagePayloadMixin {
         if (template instanceof com.commercetools.api.models.message.BusinessUnitStoresSetMessagePayload) {
             return com.commercetools.api.models.message.BusinessUnitStoresSetMessagePayload
                     .deepCopy((com.commercetools.api.models.message.BusinessUnitStoresSetMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.BusinessUnitTopLevelUnitSetMessagePayload) {
+            return com.commercetools.api.models.message.BusinessUnitTopLevelUnitSetMessagePayload.deepCopy(
+                (com.commercetools.api.models.message.BusinessUnitTopLevelUnitSetMessagePayload) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.BusinessUnitTypeSetMessagePayload) {
+            return com.commercetools.api.models.message.BusinessUnitTypeSetMessagePayload
+                    .deepCopy((com.commercetools.api.models.message.BusinessUnitTypeSetMessagePayload) template);
         }
         if (template instanceof com.commercetools.api.models.message.CartDiscountCreatedMessagePayload) {
             return com.commercetools.api.models.message.CartDiscountCreatedMessagePayload
@@ -1524,6 +1534,22 @@ public interface MessagePayload extends MessagePayloadMixin {
      */
     public static com.commercetools.api.models.message.BusinessUnitStoresSetMessagePayloadBuilder businessUnitStoresSetBuilder() {
         return com.commercetools.api.models.message.BusinessUnitStoresSetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for businessUnitTopLevelUnitSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.BusinessUnitTopLevelUnitSetMessagePayloadBuilder businessUnitTopLevelUnitSetBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitTopLevelUnitSetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for businessUnitTypeSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.BusinessUnitTypeSetMessagePayloadBuilder businessUnitTypeSetBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitTypeSetMessagePayloadBuilder.of();
     }
 
     /**

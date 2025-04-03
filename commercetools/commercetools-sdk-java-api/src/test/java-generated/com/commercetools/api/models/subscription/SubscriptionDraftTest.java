@@ -37,6 +37,9 @@ public class SubscriptionDraftTest {
                         .messages(Collections.singletonList(
                             new com.commercetools.api.models.subscription.MessageSubscriptionImpl())) },
                 new Object[] { SubscriptionDraft.builder()
+                        .events(Collections.singletonList(
+                            new com.commercetools.api.models.subscription.EventSubscriptionImpl())) },
+                new Object[] { SubscriptionDraft.builder()
                         .format(new com.commercetools.api.models.subscription.DeliveryFormatImpl()) } };
     }
 
@@ -73,6 +76,16 @@ public class SubscriptionDraftTest {
         Assertions.assertThat(value.getMessages())
                 .isEqualTo(
                     Collections.singletonList(new com.commercetools.api.models.subscription.MessageSubscriptionImpl()));
+    }
+
+    @Test
+    public void events() {
+        SubscriptionDraft value = SubscriptionDraft.of();
+        value.setEvents(
+            Collections.singletonList(new com.commercetools.api.models.subscription.EventSubscriptionImpl()));
+        Assertions.assertThat(value.getEvents())
+                .isEqualTo(
+                    Collections.singletonList(new com.commercetools.api.models.subscription.EventSubscriptionImpl()));
     }
 
     @Test

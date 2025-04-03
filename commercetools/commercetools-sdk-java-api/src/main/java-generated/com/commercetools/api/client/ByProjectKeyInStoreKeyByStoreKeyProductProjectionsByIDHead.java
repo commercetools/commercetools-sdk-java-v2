@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Checks if the current or staged representations of a Product exists for a given <code>id</code> in the specified Store. Returns a <code>200 OK</code> status if the ProductProjection exists or a <code>404 Not Found</code> otherwise.</p>
+ *  <p>Checks if the current or staged representations of a Product exists with the provided <code>id</code> in the specified Store. Returns a <code>200 OK</code> status if the ProductProjection exists or a <code>404 Not Found</code> otherwise.</p>
  *
  * <hr>
  * <div class=code-example>

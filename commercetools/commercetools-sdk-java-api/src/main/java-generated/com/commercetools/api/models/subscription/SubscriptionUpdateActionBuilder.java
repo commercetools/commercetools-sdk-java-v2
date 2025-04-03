@@ -19,6 +19,10 @@ public class SubscriptionUpdateActionBuilder {
         return com.commercetools.api.models.subscription.SubscriptionSetChangesActionBuilder.of();
     }
 
+    public com.commercetools.api.models.subscription.SubscriptionSetEventsActionBuilder setEventsBuilder() {
+        return com.commercetools.api.models.subscription.SubscriptionSetEventsActionBuilder.of();
+    }
+
     public com.commercetools.api.models.subscription.SubscriptionSetKeyActionBuilder setKeyBuilder() {
         return com.commercetools.api.models.subscription.SubscriptionSetKeyActionBuilder.of();
     }

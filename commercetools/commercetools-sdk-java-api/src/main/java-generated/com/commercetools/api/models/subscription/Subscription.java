@@ -35,6 +35,7 @@ import jakarta.validation.constraints.NotNull;
  *             .plusChanges(changesBuilder -> changesBuilder)
  *             .destination(destinationBuilder -> destinationBuilder)
  *             .plusMessages(messagesBuilder -> messagesBuilder)
+ *             .plusEvents(eventsBuilder -> eventsBuilder)
  *             .format(formatBuilder -> formatBuilder)
  *             .status(SubscriptionHealthStatus.HEALTHY)
  *             .build()
@@ -128,6 +129,15 @@ public interface Subscription extends BaseResource, com.commercetools.api.models
     @Valid
     @JsonProperty("messages")
     public List<MessageSubscription> getMessages();
+
+    /**
+     *  <p>Events subscribed to.</p>
+     * @return events
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("events")
+    public List<EventSubscription> getEvents();
 
     /**
      *  <p>Format in which the payload is delivered.</p>
@@ -233,6 +243,21 @@ public interface Subscription extends BaseResource, com.commercetools.api.models
     public void setMessages(final List<MessageSubscription> messages);
 
     /**
+     *  <p>Events subscribed to.</p>
+     * @param events values to be set
+     */
+
+    @JsonIgnore
+    public void setEvents(final EventSubscription... events);
+
+    /**
+     *  <p>Events subscribed to.</p>
+     * @param events values to be set
+     */
+
+    public void setEvents(final List<EventSubscription> events);
+
+    /**
      *  <p>Format in which the payload is delivered.</p>
      * @param format value to be set
      */
@@ -271,6 +296,7 @@ public interface Subscription extends BaseResource, com.commercetools.api.models
         instance.setDestination(template.getDestination());
         instance.setKey(template.getKey());
         instance.setMessages(template.getMessages());
+        instance.setEvents(template.getEvents());
         instance.setFormat(template.getFormat());
         instance.setStatus(template.getStatus());
         return instance;
@@ -305,6 +331,11 @@ public interface Subscription extends BaseResource, com.commercetools.api.models
         instance.setMessages(Optional.ofNullable(template.getMessages())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.subscription.MessageSubscription::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setEvents(Optional.ofNullable(template.getEvents())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.subscription.EventSubscription::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setFormat(com.commercetools.api.models.subscription.DeliveryFormat.deepCopy(template.getFormat()));

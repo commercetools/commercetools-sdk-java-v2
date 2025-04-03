@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Checks if an Order exists for a given Query Predicate. Returns a <code>200 OK</code> status if successful.</p>
+ *  <p>Checks if one or more Orders exist for the provided query predicate. Returns a <code>200 OK</code> status if successful.</p>
  *  <p>A ResourceNotFound error is returned in the following scenarios:</p>
  *  <ul>
  *   <li>If no Order exists that matches the Query Predicate.</li>

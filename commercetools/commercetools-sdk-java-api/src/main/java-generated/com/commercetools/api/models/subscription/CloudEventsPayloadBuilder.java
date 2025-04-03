@@ -2,7 +2,6 @@
 package com.commercetools.api.models.subscription;
 
 import java.util.*;
-import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -153,25 +152,13 @@ public class CloudEventsPayloadBuilder implements Builder<CloudEventsPayload> {
     }
 
     /**
-     *  <p>MessageDeliveryPayload, ResourceCreatedDeliveryPayload, ResourceUpdatedDeliveryPayload, or ResourceDeletedDeliveryPayload.</p>
+     *  <p>MessageDeliveryPayload, ResourceCreatedDeliveryPayload, ResourceUpdatedDeliveryPayload, or ResourceDeletedDeliveryPayload, EventDeliveryPayload.</p>
      * @param data value to be set
      * @return Builder
      */
 
     public CloudEventsPayloadBuilder data(final com.commercetools.api.models.subscription.DeliveryPayload data) {
         this.data = data;
-        return this;
-    }
-
-    /**
-     *  <p>MessageDeliveryPayload, ResourceCreatedDeliveryPayload, ResourceUpdatedDeliveryPayload, or ResourceDeletedDeliveryPayload.</p>
-     * @param builder function to build the data value
-     * @return Builder
-     */
-
-    public CloudEventsPayloadBuilder data(
-            Function<com.commercetools.api.models.subscription.DeliveryPayloadBuilder, Builder<? extends com.commercetools.api.models.subscription.DeliveryPayload>> builder) {
-        this.data = builder.apply(com.commercetools.api.models.subscription.DeliveryPayloadBuilder.of()).build();
         return this;
     }
 
@@ -260,7 +247,7 @@ public class CloudEventsPayloadBuilder implements Builder<CloudEventsPayload> {
     }
 
     /**
-     *  <p>MessageDeliveryPayload, ResourceCreatedDeliveryPayload, ResourceUpdatedDeliveryPayload, or ResourceDeletedDeliveryPayload.</p>
+     *  <p>MessageDeliveryPayload, ResourceCreatedDeliveryPayload, ResourceUpdatedDeliveryPayload, or ResourceDeletedDeliveryPayload, EventDeliveryPayload.</p>
      * @return data
      */
 

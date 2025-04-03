@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Checks if a StagedQuote exists for a given Query Predicate. Returns a <code>200 OK</code> status if any StagedQuotes match the Query Predicate or a ResourceNotFound error otherwise.</p>
+ *  <p>Checks if one or more StagedQuotes exist for the provided query predicate. Returns a <code>200 OK</code> status if any StagedQuotes match the query predicate, or Not Found otherwise.</p>
  *
  * <hr>
  * <div class=code-example>

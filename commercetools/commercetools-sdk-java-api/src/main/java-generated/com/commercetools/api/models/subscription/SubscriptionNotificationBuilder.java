@@ -6,10 +6,14 @@ import java.util.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * DeliveryPayloadBuilder
+ * SubscriptionNotificationBuilder
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class DeliveryPayloadBuilder {
+public class SubscriptionNotificationBuilder {
+
+    public com.commercetools.api.models.subscription.EventDeliveryPayloadBuilder eventBuilder() {
+        return com.commercetools.api.models.subscription.EventDeliveryPayloadBuilder.of();
+    }
 
     public com.commercetools.api.models.subscription.MessageDeliveryPayloadBuilder messageBuilder() {
         return com.commercetools.api.models.subscription.MessageDeliveryPayloadBuilder.of();
@@ -28,11 +32,11 @@ public class DeliveryPayloadBuilder {
     }
 
     /**
-     * factory method for an instance of DeliveryPayloadBuilder
+     * factory method for an instance of SubscriptionNotificationBuilder
      * @return builder
      */
-    public static DeliveryPayloadBuilder of() {
-        return new DeliveryPayloadBuilder();
+    public static SubscriptionNotificationBuilder of() {
+        return new SubscriptionNotificationBuilder();
     }
 
 }

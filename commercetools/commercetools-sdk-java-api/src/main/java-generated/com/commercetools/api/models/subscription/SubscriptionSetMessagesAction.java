@@ -37,7 +37,7 @@ public interface SubscriptionSetMessagesAction extends SubscriptionUpdateAction 
     String SET_MESSAGES = "setMessages";
 
     /**
-     *  <p>Value to set. Can only be unset if <code>changes</code> is set.</p>
+     *  <p>Value to set. Can only be unset if either <code>changes</code> or <code>events</code> is set.</p>
      * @return messages
      */
     @Valid
@@ -45,7 +45,7 @@ public interface SubscriptionSetMessagesAction extends SubscriptionUpdateAction 
     public List<MessageSubscription> getMessages();
 
     /**
-     *  <p>Value to set. Can only be unset if <code>changes</code> is set.</p>
+     *  <p>Value to set. Can only be unset if either <code>changes</code> or <code>events</code> is set.</p>
      * @param messages values to be set
      */
 
@@ -53,7 +53,7 @@ public interface SubscriptionSetMessagesAction extends SubscriptionUpdateAction 
     public void setMessages(final MessageSubscription... messages);
 
     /**
-     *  <p>Value to set. Can only be unset if <code>changes</code> is set.</p>
+     *  <p>Value to set. Can only be unset if either <code>changes</code> or <code>events</code> is set.</p>
      * @param messages values to be set
      */
 

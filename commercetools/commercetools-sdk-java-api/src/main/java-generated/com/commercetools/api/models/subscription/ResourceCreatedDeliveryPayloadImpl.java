@@ -22,9 +22,9 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ResourceCreatedDeliveryPayloadImpl implements ResourceCreatedDeliveryPayload, ModelBase {
 
-    private String projectKey;
-
     private String notificationType;
+
+    private String projectKey;
 
     private com.commercetools.api.models.common.Reference resource;
 
@@ -59,19 +59,19 @@ public class ResourceCreatedDeliveryPayloadImpl implements ResourceCreatedDelive
     }
 
     /**
-     *  <p><code>key</code> of the Project. Useful for processing notifications if the Destination receives them from multiple Projects.</p>
-     */
-
-    public String getProjectKey() {
-        return this.projectKey;
-    }
-
-    /**
      *  <p>Identifies the payload.</p>
      */
 
     public String getNotificationType() {
         return this.notificationType;
+    }
+
+    /**
+     *  <p><code>key</code> of the Project. Useful for processing notifications if the Destination receives them from multiple Projects.</p>
+     */
+
+    public String getProjectKey() {
+        return this.projectKey;
     }
 
     /**
@@ -137,14 +137,14 @@ public class ResourceCreatedDeliveryPayloadImpl implements ResourceCreatedDelive
 
         ResourceCreatedDeliveryPayloadImpl that = (ResourceCreatedDeliveryPayloadImpl) o;
 
-        return new EqualsBuilder().append(projectKey, that.projectKey)
-                .append(notificationType, that.notificationType)
+        return new EqualsBuilder().append(notificationType, that.notificationType)
+                .append(projectKey, that.projectKey)
                 .append(resource, that.resource)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(version, that.version)
                 .append(modifiedAt, that.modifiedAt)
-                .append(projectKey, that.projectKey)
                 .append(notificationType, that.notificationType)
+                .append(projectKey, that.projectKey)
                 .append(resource, that.resource)
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(version, that.version)
@@ -154,8 +154,8 @@ public class ResourceCreatedDeliveryPayloadImpl implements ResourceCreatedDelive
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(projectKey)
-                .append(notificationType)
+        return new HashCodeBuilder(17, 37).append(notificationType)
+                .append(projectKey)
                 .append(resource)
                 .append(resourceUserProvidedIdentifiers)
                 .append(version)
@@ -165,8 +165,8 @@ public class ResourceCreatedDeliveryPayloadImpl implements ResourceCreatedDelive
 
     @Override
     public String toString() {
-        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("projectKey", projectKey)
-                .append("notificationType", notificationType)
+        return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("notificationType", notificationType)
+                .append("projectKey", projectKey)
                 .append("resource", resource)
                 .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
                 .append("version", version)

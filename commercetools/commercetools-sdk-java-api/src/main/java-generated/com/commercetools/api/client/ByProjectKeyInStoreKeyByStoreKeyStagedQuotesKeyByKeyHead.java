@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Checks if a StagedQuote exists for a given <code>key</code>. Returns a <code>200 OK</code> status if the StagedQuote exists or a ResourceNotFound error otherwise.</p>
+ *  <p>Checks if a StagedQuote exists with the provided <code>key</code>. Returns a <code>200 OK</code> status if the StagedQuote exists or Not Found otherwise.</p>
  *
  * <hr>
  * <div class=code-example>

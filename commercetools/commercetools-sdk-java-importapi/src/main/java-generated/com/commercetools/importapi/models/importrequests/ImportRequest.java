@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>An import request batches multiple import resources of the same import resource type for processing by an import container.</p>
+ *  <p>An import request batches multiple import resources of the same import resource type for processing by an Import Container.</p>
  *
  * <hr>
  * Example to create a subtype instance using the builder pattern

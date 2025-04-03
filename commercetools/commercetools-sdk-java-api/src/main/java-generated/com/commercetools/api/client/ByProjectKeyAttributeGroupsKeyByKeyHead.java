@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Checks if an AttributeGroup exists for a given <code>key</code>. Returns <code>200 OK</code> status if the AttributeGroup exists or a <code>404 Not Found</code> otherwise.</p>
+ *  <p>Checks if an AttributeGroup exists with the provided <code>key</code>. Returns <code>200 OK</code> status if the AttributeGroup exists or a <code>404 Not Found</code> otherwise.</p>
  *
  * <hr>
  * <div class=code-example>

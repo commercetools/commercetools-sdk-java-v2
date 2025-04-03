@@ -143,7 +143,7 @@ public class CloudEventsPayloadImpl implements CloudEventsPayload, ModelBase {
     }
 
     /**
-     *  <p>MessageDeliveryPayload, ResourceCreatedDeliveryPayload, ResourceUpdatedDeliveryPayload, or ResourceDeletedDeliveryPayload.</p>
+     *  <p>MessageDeliveryPayload, ResourceCreatedDeliveryPayload, ResourceUpdatedDeliveryPayload, or ResourceDeletedDeliveryPayload, EventDeliveryPayload.</p>
      */
 
     public com.commercetools.api.models.subscription.DeliveryPayload getData() {

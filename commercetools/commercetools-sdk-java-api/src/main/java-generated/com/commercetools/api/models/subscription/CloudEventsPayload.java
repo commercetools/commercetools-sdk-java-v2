@@ -117,7 +117,7 @@ public interface CloudEventsPayload {
     public String getDataref();
 
     /**
-     *  <p>MessageDeliveryPayload, ResourceCreatedDeliveryPayload, ResourceUpdatedDeliveryPayload, or ResourceDeletedDeliveryPayload.</p>
+     *  <p>MessageDeliveryPayload, ResourceCreatedDeliveryPayload, ResourceUpdatedDeliveryPayload, or ResourceDeletedDeliveryPayload, EventDeliveryPayload.</p>
      * @return data
      */
     @NotNull
@@ -189,7 +189,7 @@ public interface CloudEventsPayload {
     public void setDataref(final String dataref);
 
     /**
-     *  <p>MessageDeliveryPayload, ResourceCreatedDeliveryPayload, ResourceUpdatedDeliveryPayload, or ResourceDeletedDeliveryPayload.</p>
+     *  <p>MessageDeliveryPayload, ResourceCreatedDeliveryPayload, ResourceUpdatedDeliveryPayload, or ResourceDeletedDeliveryPayload, EventDeliveryPayload.</p>
      * @param data value to be set
      */
 

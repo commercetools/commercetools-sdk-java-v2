@@ -17,7 +17,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Creates a new import container.</p>
+ *  <p>Creates a new Import Container.</p>
+ *  <p>Generates the ImportContainerCreated Event.</p>
  *
  * <hr>
  * <div class=code-example>

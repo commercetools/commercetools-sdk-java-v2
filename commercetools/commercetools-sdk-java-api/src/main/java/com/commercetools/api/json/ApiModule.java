@@ -6,6 +6,8 @@ import java.util.Optional;
 
 import com.commercetools.api.models.product.AttributeImpl;
 import com.commercetools.api.models.product_search.ProductSearchFacetResult;
+import com.commercetools.api.models.subscription.DeliveryPayload;
+import com.commercetools.api.models.subscription.DeliveryPayloadMixin;
 import com.commercetools.api.models.type.FieldContainerImpl;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.module.SimpleModule;
@@ -63,5 +65,6 @@ public class ApiModule extends SimpleModule {
             addDeserializer(FieldContainerImpl.class,
                 new CustomFieldDeserializer(customFieldAsDateString, customFieldNumberAsDouble, customFieldTypes));
         }
+        setMixInAnnotation(DeliveryPayload.class, DeliveryPayloadMixin.class);
     }
 }

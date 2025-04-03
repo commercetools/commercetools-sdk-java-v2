@@ -1,4 +1,46 @@
 
+# 17.30.0 (2025-03-31)
+
+## Important information
+
+This will be the last release for Java 8. The next released version will be built with Java 11.
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/851
+* fix(deps): update all dependencies by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/836
+* Delete .github/workflows/scorecard.yml by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/852
+* update logback by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/854
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/853
+* chore(deps): update actions/setup-java digest to 3a4f6e1 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/831
+* chore(deps): update actions/create-github-app-token digest to af35eda by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/830
+* chore(deps): update plugin com.github.johnrengelman.shadow to v8 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/800
+* add semgrep workflow by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/855
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/856
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/859
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/860
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/861
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/862
+* chore(deps): update gradle/actions digest to 06832c7 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/864
+* chore(deps): update actions/create-github-app-token digest to d72941d by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/863
+* chore(deps): update github/codeql-action digest to 9f45e74 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/857
+
+**Api changes**
+
+<details>
+<summary>Required Property(s)</summary>
+
+- changed property `facets` of type `ProductProjectionPagedSearchResponse` to be optional
+</details>
+
+
+<details>
+<summary>Removed QueryParameter(s)</summary>
+
+- :warning: removed query parameter `withTotal` from method `get /{projectKey}/product-projections/search`
+</details>
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.29.0...17.30.0
+
 # 17.29.0 (2025-03-19)
 
 ## What's Changed

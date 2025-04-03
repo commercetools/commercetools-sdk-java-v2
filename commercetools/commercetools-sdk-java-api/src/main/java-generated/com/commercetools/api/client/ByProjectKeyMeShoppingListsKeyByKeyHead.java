@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Checks if a ShoppingList exists for a given <code>key</code>. Returns a <code>200 OK</code> status if successful.</p>
+ *  <p>Checks if a ShoppingList exists with the provided <code>key</code>. Returns a <code>200 OK</code> status if successful.</p>
  *  <p>A ResourceNotFound error is returned in the following scenarios:</p>
  *  <ul>
  *   <li>If no ShoppingList exists for the given <code>key</code>.</li>

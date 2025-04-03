@@ -499,6 +499,21 @@ public class MessageQueryBuilderDsl {
             MessageQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<MessageQueryBuilderDsl> asBusinessUnitTopLevelUnitSet(
+            Function<com.commercetools.api.predicates.query.message.BusinessUnitTopLevelUnitSetMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.BusinessUnitTopLevelUnitSetMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.message.BusinessUnitTopLevelUnitSetMessageQueryBuilderDsl.of()),
+            MessageQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessageQueryBuilderDsl> asBusinessUnitTypeSet(
+            Function<com.commercetools.api.predicates.query.message.BusinessUnitTypeSetMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.BusinessUnitTypeSetMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.message.BusinessUnitTypeSetMessageQueryBuilderDsl.of()),
+            MessageQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<MessageQueryBuilderDsl> asCartDiscountCreated(
             Function<com.commercetools.api.predicates.query.message.CartDiscountCreatedMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.CartDiscountCreatedMessageQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

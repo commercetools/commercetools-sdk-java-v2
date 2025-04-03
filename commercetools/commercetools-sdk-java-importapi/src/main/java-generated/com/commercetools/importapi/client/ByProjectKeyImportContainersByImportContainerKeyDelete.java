@@ -16,7 +16,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Deletes the import container given by the key.</p>
+ *  <p>Deletes the Import Container specified by the <code>importContainerKey</code>.</p>
+ *  <p>Generates the ImportContainerDeleted Event.</p>
  *
  * <hr>
  * <div class=code-example>

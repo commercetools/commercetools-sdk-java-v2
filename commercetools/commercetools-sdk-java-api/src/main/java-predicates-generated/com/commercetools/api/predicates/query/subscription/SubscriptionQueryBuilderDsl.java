@@ -97,6 +97,21 @@ public class SubscriptionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, SubscriptionQueryBuilderDsl::of));
     }
 
+    public CombinationQueryPredicate<SubscriptionQueryBuilderDsl> events(
+            Function<com.commercetools.api.predicates.query.subscription.EventSubscriptionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.subscription.EventSubscriptionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("events"))
+                    .inner(fn.apply(
+                        com.commercetools.api.predicates.query.subscription.EventSubscriptionQueryBuilderDsl.of())),
+            SubscriptionQueryBuilderDsl::of);
+    }
+
+    public CollectionPredicateBuilder<SubscriptionQueryBuilderDsl> events() {
+        return new CollectionPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("events")),
+            p -> new CombinationQueryPredicate<>(p, SubscriptionQueryBuilderDsl::of));
+    }
+
     public CombinationQueryPredicate<SubscriptionQueryBuilderDsl> format(
             Function<com.commercetools.api.predicates.query.subscription.DeliveryFormatQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.subscription.DeliveryFormatQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

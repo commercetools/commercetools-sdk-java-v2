@@ -54,7 +54,8 @@ import jakarta.validation.constraints.NotNull;
         @JsonSubTypes.Type(value = com.commercetools.api.models.business_unit.BusinessUnitSetDefaultBillingAddressActionImpl.class, name = BusinessUnitSetDefaultBillingAddressAction.SET_DEFAULT_BILLING_ADDRESS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.business_unit.BusinessUnitSetDefaultShippingAddressActionImpl.class, name = BusinessUnitSetDefaultShippingAddressAction.SET_DEFAULT_SHIPPING_ADDRESS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.business_unit.BusinessUnitSetStoreModeActionImpl.class, name = BusinessUnitSetStoreModeAction.SET_STORE_MODE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.business_unit.BusinessUnitSetStoresActionImpl.class, name = BusinessUnitSetStoresAction.SET_STORES) })
+        @JsonSubTypes.Type(value = com.commercetools.api.models.business_unit.BusinessUnitSetStoresActionImpl.class, name = BusinessUnitSetStoresAction.SET_STORES),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.business_unit.BusinessUnitSetUnitTypeActionImpl.class, name = BusinessUnitSetUnitTypeAction.SET_UNIT_TYPE) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = BusinessUnitUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = BusinessUnitUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -186,6 +187,10 @@ public interface BusinessUnitUpdateAction
         if (template instanceof com.commercetools.api.models.business_unit.BusinessUnitSetStoresAction) {
             return com.commercetools.api.models.business_unit.BusinessUnitSetStoresAction
                     .deepCopy((com.commercetools.api.models.business_unit.BusinessUnitSetStoresAction) template);
+        }
+        if (template instanceof com.commercetools.api.models.business_unit.BusinessUnitSetUnitTypeAction) {
+            return com.commercetools.api.models.business_unit.BusinessUnitSetUnitTypeAction
+                    .deepCopy((com.commercetools.api.models.business_unit.BusinessUnitSetUnitTypeAction) template);
         }
         BusinessUnitUpdateActionImpl instance = new BusinessUnitUpdateActionImpl();
         return instance;
@@ -405,6 +410,14 @@ public interface BusinessUnitUpdateAction
      */
     public static com.commercetools.api.models.business_unit.BusinessUnitSetStoresActionBuilder setStoresBuilder() {
         return com.commercetools.api.models.business_unit.BusinessUnitSetStoresActionBuilder.of();
+    }
+
+    /**
+     * builder for setUnitType subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.business_unit.BusinessUnitSetUnitTypeActionBuilder setUnitTypeBuilder() {
+        return com.commercetools.api.models.business_unit.BusinessUnitSetUnitTypeActionBuilder.of();
     }
 
     /**

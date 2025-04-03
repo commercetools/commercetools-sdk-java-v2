@@ -227,6 +227,14 @@ public class MessagePayloadBuilder {
         return com.commercetools.api.models.message.BusinessUnitStoresSetMessagePayloadBuilder.of();
     }
 
+    public com.commercetools.api.models.message.BusinessUnitTopLevelUnitSetMessagePayloadBuilder businessUnitTopLevelUnitSetBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitTopLevelUnitSetMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.BusinessUnitTypeSetMessagePayloadBuilder businessUnitTypeSetBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitTypeSetMessagePayloadBuilder.of();
+    }
+
     public com.commercetools.api.models.message.CartDiscountCreatedMessagePayloadBuilder cartDiscountCreatedBuilder() {
         return com.commercetools.api.models.message.CartDiscountCreatedMessagePayloadBuilder.of();
     }

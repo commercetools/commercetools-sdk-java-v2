@@ -27,7 +27,7 @@ public class SubscriptionSetMessagesActionBuilder implements Builder<Subscriptio
     private java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages;
 
     /**
-     *  <p>Value to set. Can only be unset if <code>changes</code> is set.</p>
+     *  <p>Value to set. Can only be unset if either <code>changes</code> or <code>events</code> is set.</p>
      * @param messages value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class SubscriptionSetMessagesActionBuilder implements Builder<Subscriptio
     }
 
     /**
-     *  <p>Value to set. Can only be unset if <code>changes</code> is set.</p>
+     *  <p>Value to set. Can only be unset if either <code>changes</code> or <code>events</code> is set.</p>
      * @param messages value to be set
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class SubscriptionSetMessagesActionBuilder implements Builder<Subscriptio
     }
 
     /**
-     *  <p>Value to set. Can only be unset if <code>changes</code> is set.</p>
+     *  <p>Value to set. Can only be unset if either <code>changes</code> or <code>events</code> is set.</p>
      * @param messages value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class SubscriptionSetMessagesActionBuilder implements Builder<Subscriptio
     }
 
     /**
-     *  <p>Value to set. Can only be unset if <code>changes</code> is set.</p>
+     *  <p>Value to set. Can only be unset if either <code>changes</code> or <code>events</code> is set.</p>
      * @param builder function to build the messages value
      * @return Builder
      */
@@ -82,7 +82,7 @@ public class SubscriptionSetMessagesActionBuilder implements Builder<Subscriptio
     }
 
     /**
-     *  <p>Value to set. Can only be unset if <code>changes</code> is set.</p>
+     *  <p>Value to set. Can only be unset if either <code>changes</code> or <code>events</code> is set.</p>
      * @param builder function to build the messages value
      * @return Builder
      */
@@ -96,7 +96,7 @@ public class SubscriptionSetMessagesActionBuilder implements Builder<Subscriptio
     }
 
     /**
-     *  <p>Value to set. Can only be unset if <code>changes</code> is set.</p>
+     *  <p>Value to set. Can only be unset if either <code>changes</code> or <code>events</code> is set.</p>
      * @param builder function to build the messages value
      * @return Builder
      */
@@ -107,7 +107,7 @@ public class SubscriptionSetMessagesActionBuilder implements Builder<Subscriptio
     }
 
     /**
-     *  <p>Value to set. Can only be unset if <code>changes</code> is set.</p>
+     *  <p>Value to set. Can only be unset if either <code>changes</code> or <code>events</code> is set.</p>
      * @param builder function to build the messages value
      * @return Builder
      */
@@ -118,7 +118,7 @@ public class SubscriptionSetMessagesActionBuilder implements Builder<Subscriptio
     }
 
     /**
-     *  <p>Value to set. Can only be unset if <code>changes</code> is set.</p>
+     *  <p>Value to set. Can only be unset if either <code>changes</code> or <code>events</code> is set.</p>
      * @return messages
      */
 

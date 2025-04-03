@@ -52,7 +52,7 @@ public class SubscriptionSetMessagesActionImpl implements SubscriptionSetMessage
     }
 
     /**
-     *  <p>Value to set. Can only be unset if <code>changes</code> is set.</p>
+     *  <p>Value to set. Can only be unset if either <code>changes</code> or <code>events</code> is set.</p>
      */
 
     public java.util.List<com.commercetools.api.models.subscription.MessageSubscription> getMessages() {

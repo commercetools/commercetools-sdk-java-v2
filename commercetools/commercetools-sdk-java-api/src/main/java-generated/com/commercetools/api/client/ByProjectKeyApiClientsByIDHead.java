@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Checks if an API Client exists for a given <code>id</code>. Returns a <code>200 OK</code> status if the API Client exists or a <code>404 Not Found</code> otherwise.</p>
+ *  <p>Checks if an API Client exists with the provided <code>id</code>. Returns a <code>200 OK</code> status if the API Client exists or a <code>404 Not Found</code> otherwise.</p>
  *
  * <hr>
  * <div class=code-example>

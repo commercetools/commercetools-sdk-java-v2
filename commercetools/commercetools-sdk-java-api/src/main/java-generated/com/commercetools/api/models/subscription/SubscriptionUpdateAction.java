@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
 @JsonSubTypes({
         @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.SubscriptionChangeDestinationActionImpl.class, name = SubscriptionChangeDestinationAction.CHANGE_DESTINATION),
         @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.SubscriptionSetChangesActionImpl.class, name = SubscriptionSetChangesAction.SET_CHANGES),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.SubscriptionSetEventsActionImpl.class, name = SubscriptionSetEventsAction.SET_EVENTS),
         @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.SubscriptionSetKeyActionImpl.class, name = SubscriptionSetKeyAction.SET_KEY),
         @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.SubscriptionSetMessagesActionImpl.class, name = SubscriptionSetMessagesAction.SET_MESSAGES) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = SubscriptionUpdateActionImpl.class, visible = true)
@@ -64,6 +65,10 @@ public interface SubscriptionUpdateAction
             return com.commercetools.api.models.subscription.SubscriptionSetChangesAction
                     .deepCopy((com.commercetools.api.models.subscription.SubscriptionSetChangesAction) template);
         }
+        if (template instanceof com.commercetools.api.models.subscription.SubscriptionSetEventsAction) {
+            return com.commercetools.api.models.subscription.SubscriptionSetEventsAction
+                    .deepCopy((com.commercetools.api.models.subscription.SubscriptionSetEventsAction) template);
+        }
         if (template instanceof com.commercetools.api.models.subscription.SubscriptionSetKeyAction) {
             return com.commercetools.api.models.subscription.SubscriptionSetKeyAction
                     .deepCopy((com.commercetools.api.models.subscription.SubscriptionSetKeyAction) template);
@@ -90,6 +95,14 @@ public interface SubscriptionUpdateAction
      */
     public static com.commercetools.api.models.subscription.SubscriptionSetChangesActionBuilder setChangesBuilder() {
         return com.commercetools.api.models.subscription.SubscriptionSetChangesActionBuilder.of();
+    }
+
+    /**
+     * builder for setEvents subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.subscription.SubscriptionSetEventsActionBuilder setEventsBuilder() {
+        return com.commercetools.api.models.subscription.SubscriptionSetEventsActionBuilder.of();
     }
 
     /**

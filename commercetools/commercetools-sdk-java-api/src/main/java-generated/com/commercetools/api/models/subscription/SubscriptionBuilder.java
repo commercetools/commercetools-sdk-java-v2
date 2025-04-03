@@ -23,6 +23,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusChanges(changesBuilder -> changesBuilder)
  *             .destination(destinationBuilder -> destinationBuilder)
  *             .plusMessages(messagesBuilder -> messagesBuilder)
+ *             .plusEvents(eventsBuilder -> eventsBuilder)
  *             .format(formatBuilder -> formatBuilder)
  *             .status(SubscriptionHealthStatus.HEALTHY)
  *             .build()
@@ -54,6 +55,8 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     private String key;
 
     private java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages;
+
+    private java.util.List<com.commercetools.api.models.subscription.EventSubscription> events;
 
     private com.commercetools.api.models.subscription.DeliveryFormat format;
 
@@ -390,6 +393,93 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     }
 
     /**
+     *  <p>Events subscribed to.</p>
+     * @param events value to be set
+     * @return Builder
+     */
+
+    public SubscriptionBuilder events(final com.commercetools.api.models.subscription.EventSubscription... events) {
+        this.events = new ArrayList<>(Arrays.asList(events));
+        return this;
+    }
+
+    /**
+     *  <p>Events subscribed to.</p>
+     * @param events value to be set
+     * @return Builder
+     */
+
+    public SubscriptionBuilder events(
+            final java.util.List<com.commercetools.api.models.subscription.EventSubscription> events) {
+        this.events = events;
+        return this;
+    }
+
+    /**
+     *  <p>Events subscribed to.</p>
+     * @param events value to be set
+     * @return Builder
+     */
+
+    public SubscriptionBuilder plusEvents(final com.commercetools.api.models.subscription.EventSubscription... events) {
+        if (this.events == null) {
+            this.events = new ArrayList<>();
+        }
+        this.events.addAll(Arrays.asList(events));
+        return this;
+    }
+
+    /**
+     *  <p>Events subscribed to.</p>
+     * @param builder function to build the events value
+     * @return Builder
+     */
+
+    public SubscriptionBuilder plusEvents(
+            Function<com.commercetools.api.models.subscription.EventSubscriptionBuilder, com.commercetools.api.models.subscription.EventSubscriptionBuilder> builder) {
+        if (this.events == null) {
+            this.events = new ArrayList<>();
+        }
+        this.events.add(builder.apply(com.commercetools.api.models.subscription.EventSubscriptionBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Events subscribed to.</p>
+     * @param builder function to build the events value
+     * @return Builder
+     */
+
+    public SubscriptionBuilder withEvents(
+            Function<com.commercetools.api.models.subscription.EventSubscriptionBuilder, com.commercetools.api.models.subscription.EventSubscriptionBuilder> builder) {
+        this.events = new ArrayList<>();
+        this.events.add(builder.apply(com.commercetools.api.models.subscription.EventSubscriptionBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Events subscribed to.</p>
+     * @param builder function to build the events value
+     * @return Builder
+     */
+
+    public SubscriptionBuilder addEvents(
+            Function<com.commercetools.api.models.subscription.EventSubscriptionBuilder, com.commercetools.api.models.subscription.EventSubscription> builder) {
+        return plusEvents(builder.apply(com.commercetools.api.models.subscription.EventSubscriptionBuilder.of()));
+    }
+
+    /**
+     *  <p>Events subscribed to.</p>
+     * @param builder function to build the events value
+     * @return Builder
+     */
+
+    public SubscriptionBuilder setEvents(
+            Function<com.commercetools.api.models.subscription.EventSubscriptionBuilder, com.commercetools.api.models.subscription.EventSubscription> builder) {
+        return events(builder.apply(com.commercetools.api.models.subscription.EventSubscriptionBuilder.of()));
+    }
+
+    /**
      *  <p>Format in which the payload is delivered.</p>
      * @param format value to be set
      * @return Builder
@@ -517,6 +607,15 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     }
 
     /**
+     *  <p>Events subscribed to.</p>
+     * @return events
+     */
+
+    public java.util.List<com.commercetools.api.models.subscription.EventSubscription> getEvents() {
+        return this.events;
+    }
+
+    /**
      *  <p>Format in which the payload is delivered.</p>
      * @return format
      */
@@ -546,10 +645,11 @@ public class SubscriptionBuilder implements Builder<Subscription> {
         Objects.requireNonNull(changes, Subscription.class + ": changes is missing");
         Objects.requireNonNull(destination, Subscription.class + ": destination is missing");
         Objects.requireNonNull(messages, Subscription.class + ": messages is missing");
+        Objects.requireNonNull(events, Subscription.class + ": events is missing");
         Objects.requireNonNull(format, Subscription.class + ": format is missing");
         Objects.requireNonNull(status, Subscription.class + ": status is missing");
         return new SubscriptionImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, changes,
-            destination, key, messages, format, status);
+            destination, key, messages, events, format, status);
     }
 
     /**
@@ -558,7 +658,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
      */
     public Subscription buildUnchecked() {
         return new SubscriptionImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, changes,
-            destination, key, messages, format, status);
+            destination, key, messages, events, format, status);
     }
 
     /**
@@ -586,6 +686,7 @@ public class SubscriptionBuilder implements Builder<Subscription> {
         builder.destination = template.getDestination();
         builder.key = template.getKey();
         builder.messages = template.getMessages();
+        builder.events = template.getEvents();
         builder.format = template.getFormat();
         builder.status = template.getStatus();
         return builder;

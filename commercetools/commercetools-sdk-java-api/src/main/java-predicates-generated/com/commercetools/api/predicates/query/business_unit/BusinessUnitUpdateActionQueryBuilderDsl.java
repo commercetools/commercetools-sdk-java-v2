@@ -223,4 +223,12 @@ public class BusinessUnitUpdateActionQueryBuilderDsl {
                 com.commercetools.api.predicates.query.business_unit.BusinessUnitSetStoresActionQueryBuilderDsl.of()),
             BusinessUnitUpdateActionQueryBuilderDsl::of);
     }
+
+    public CombinationQueryPredicate<BusinessUnitUpdateActionQueryBuilderDsl> asSetUnitType(
+            Function<com.commercetools.api.predicates.query.business_unit.BusinessUnitSetUnitTypeActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.business_unit.BusinessUnitSetUnitTypeActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.business_unit.BusinessUnitSetUnitTypeActionQueryBuilderDsl.of()),
+            BusinessUnitUpdateActionQueryBuilderDsl::of);
+    }
 }

@@ -42,6 +42,8 @@ public class SubscriptionImpl implements Subscription, ModelBase {
 
     private java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages;
 
+    private java.util.List<com.commercetools.api.models.subscription.EventSubscription> events;
+
     private com.commercetools.api.models.subscription.DeliveryFormat format;
 
     private com.commercetools.api.models.subscription.SubscriptionHealthStatus status;
@@ -59,6 +61,7 @@ public class SubscriptionImpl implements Subscription, ModelBase {
             @JsonProperty("destination") final com.commercetools.api.models.subscription.Destination destination,
             @JsonProperty("key") final String key,
             @JsonProperty("messages") final java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages,
+            @JsonProperty("events") final java.util.List<com.commercetools.api.models.subscription.EventSubscription> events,
             @JsonProperty("format") final com.commercetools.api.models.subscription.DeliveryFormat format,
             @JsonProperty("status") final com.commercetools.api.models.subscription.SubscriptionHealthStatus status) {
         this.id = id;
@@ -71,6 +74,7 @@ public class SubscriptionImpl implements Subscription, ModelBase {
         this.destination = destination;
         this.key = key;
         this.messages = messages;
+        this.events = events;
         this.format = format;
         this.status = status;
     }
@@ -162,6 +166,14 @@ public class SubscriptionImpl implements Subscription, ModelBase {
     }
 
     /**
+     *  <p>Events subscribed to.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.subscription.EventSubscription> getEvents() {
+        return this.events;
+    }
+
+    /**
      *  <p>Format in which the payload is delivered.</p>
      */
 
@@ -226,6 +238,14 @@ public class SubscriptionImpl implements Subscription, ModelBase {
         this.messages = messages;
     }
 
+    public void setEvents(final com.commercetools.api.models.subscription.EventSubscription... events) {
+        this.events = new ArrayList<>(Arrays.asList(events));
+    }
+
+    public void setEvents(final java.util.List<com.commercetools.api.models.subscription.EventSubscription> events) {
+        this.events = events;
+    }
+
     public void setFormat(final com.commercetools.api.models.subscription.DeliveryFormat format) {
         this.format = format;
     }
@@ -254,6 +274,7 @@ public class SubscriptionImpl implements Subscription, ModelBase {
                 .append(destination, that.destination)
                 .append(key, that.key)
                 .append(messages, that.messages)
+                .append(events, that.events)
                 .append(format, that.format)
                 .append(status, that.status)
                 .append(id, that.id)
@@ -266,6 +287,7 @@ public class SubscriptionImpl implements Subscription, ModelBase {
                 .append(destination, that.destination)
                 .append(key, that.key)
                 .append(messages, that.messages)
+                .append(events, that.events)
                 .append(format, that.format)
                 .append(status, that.status)
                 .isEquals();
@@ -283,6 +305,7 @@ public class SubscriptionImpl implements Subscription, ModelBase {
                 .append(destination)
                 .append(key)
                 .append(messages)
+                .append(events)
                 .append(format)
                 .append(status)
                 .toHashCode();
@@ -300,6 +323,7 @@ public class SubscriptionImpl implements Subscription, ModelBase {
                 .append("destination", destination)
                 .append("key", key)
                 .append("messages", messages)
+                .append("events", events)
                 .append("format", format)
                 .append("status", status)
                 .build();

@@ -68,6 +68,14 @@ public interface SubscriptionDraft
     public List<MessageSubscription> getMessages();
 
     /**
+     *  <p>Events to be subscribed to.</p>
+     * @return events
+     */
+    @Valid
+    @JsonProperty("events")
+    public List<EventSubscription> getEvents();
+
+    /**
      *  <p>Format in which the payload is delivered. When not provided, the PlatformFormat is selected by default.</p>
      * @return format
      */
@@ -120,6 +128,21 @@ public interface SubscriptionDraft
     public void setMessages(final List<MessageSubscription> messages);
 
     /**
+     *  <p>Events to be subscribed to.</p>
+     * @param events values to be set
+     */
+
+    @JsonIgnore
+    public void setEvents(final EventSubscription... events);
+
+    /**
+     *  <p>Events to be subscribed to.</p>
+     * @param events values to be set
+     */
+
+    public void setEvents(final List<EventSubscription> events);
+
+    /**
      *  <p>Format in which the payload is delivered. When not provided, the PlatformFormat is selected by default.</p>
      * @param format value to be set
      */
@@ -145,6 +168,7 @@ public interface SubscriptionDraft
         instance.setDestination(template.getDestination());
         instance.setKey(template.getKey());
         instance.setMessages(template.getMessages());
+        instance.setEvents(template.getEvents());
         instance.setFormat(template.getFormat());
         return instance;
     }
@@ -171,6 +195,11 @@ public interface SubscriptionDraft
         instance.setMessages(Optional.ofNullable(template.getMessages())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.subscription.MessageSubscription::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setEvents(Optional.ofNullable(template.getEvents())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.subscription.EventSubscription::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setFormat(com.commercetools.api.models.subscription.DeliveryFormat.deepCopy(template.getFormat()));

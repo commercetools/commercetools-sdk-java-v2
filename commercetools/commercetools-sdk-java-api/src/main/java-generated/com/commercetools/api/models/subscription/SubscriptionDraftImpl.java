@@ -30,6 +30,8 @@ public class SubscriptionDraftImpl implements SubscriptionDraft, ModelBase {
 
     private java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages;
 
+    private java.util.List<com.commercetools.api.models.subscription.EventSubscription> events;
+
     private com.commercetools.api.models.subscription.DeliveryFormat format;
 
     /**
@@ -41,11 +43,13 @@ public class SubscriptionDraftImpl implements SubscriptionDraft, ModelBase {
             @JsonProperty("destination") final com.commercetools.api.models.subscription.Destination destination,
             @JsonProperty("key") final String key,
             @JsonProperty("messages") final java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages,
+            @JsonProperty("events") final java.util.List<com.commercetools.api.models.subscription.EventSubscription> events,
             @JsonProperty("format") final com.commercetools.api.models.subscription.DeliveryFormat format) {
         this.changes = changes;
         this.destination = destination;
         this.key = key;
         this.messages = messages;
+        this.events = events;
         this.format = format;
     }
 
@@ -88,6 +92,14 @@ public class SubscriptionDraftImpl implements SubscriptionDraft, ModelBase {
     }
 
     /**
+     *  <p>Events to be subscribed to.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.subscription.EventSubscription> getEvents() {
+        return this.events;
+    }
+
+    /**
      *  <p>Format in which the payload is delivered. When not provided, the PlatformFormat is selected by default.</p>
      */
 
@@ -120,6 +132,14 @@ public class SubscriptionDraftImpl implements SubscriptionDraft, ModelBase {
         this.messages = messages;
     }
 
+    public void setEvents(final com.commercetools.api.models.subscription.EventSubscription... events) {
+        this.events = new ArrayList<>(Arrays.asList(events));
+    }
+
+    public void setEvents(final java.util.List<com.commercetools.api.models.subscription.EventSubscription> events) {
+        this.events = events;
+    }
+
     public void setFormat(final com.commercetools.api.models.subscription.DeliveryFormat format) {
         this.format = format;
     }
@@ -138,11 +158,13 @@ public class SubscriptionDraftImpl implements SubscriptionDraft, ModelBase {
                 .append(destination, that.destination)
                 .append(key, that.key)
                 .append(messages, that.messages)
+                .append(events, that.events)
                 .append(format, that.format)
                 .append(changes, that.changes)
                 .append(destination, that.destination)
                 .append(key, that.key)
                 .append(messages, that.messages)
+                .append(events, that.events)
                 .append(format, that.format)
                 .isEquals();
     }
@@ -153,6 +175,7 @@ public class SubscriptionDraftImpl implements SubscriptionDraft, ModelBase {
                 .append(destination)
                 .append(key)
                 .append(messages)
+                .append(events)
                 .append(format)
                 .toHashCode();
     }
@@ -163,6 +186,7 @@ public class SubscriptionDraftImpl implements SubscriptionDraft, ModelBase {
                 .append("destination", destination)
                 .append("key", key)
                 .append("messages", messages)
+                .append("events", events)
                 .append("format", format)
                 .build();
     }

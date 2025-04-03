@@ -96,6 +96,8 @@ import jakarta.validation.constraints.NotNull;
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitStoreModeChangedMessageImpl.class, name = BusinessUnitStoreModeChangedMessage.BUSINESS_UNIT_STORE_MODE_CHANGED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitStoreRemovedMessageImpl.class, name = BusinessUnitStoreRemovedMessage.BUSINESS_UNIT_STORE_REMOVED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitStoresSetMessageImpl.class, name = BusinessUnitStoresSetMessage.BUSINESS_UNIT_STORES_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitTopLevelUnitSetMessageImpl.class, name = BusinessUnitTopLevelUnitSetMessage.BUSINESS_UNIT_TOP_LEVEL_UNIT_SET),
+        @JsonSubTypes.Type(value = com.commercetools.api.models.message.BusinessUnitTypeSetMessageImpl.class, name = BusinessUnitTypeSetMessage.BUSINESS_UNIT_TYPE_SET),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CartDiscountCreatedMessageImpl.class, name = CartDiscountCreatedMessage.CART_DISCOUNT_CREATED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CartDiscountDeletedMessageImpl.class, name = CartDiscountDeletedMessage.CART_DISCOUNT_DELETED),
         @JsonSubTypes.Type(value = com.commercetools.api.models.message.CartDiscountStoreAddedMessageImpl.class, name = CartDiscountStoreAddedMessage.CART_DISCOUNT_STORE_ADDED),
@@ -680,6 +682,14 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
         if (template instanceof com.commercetools.api.models.message.BusinessUnitStoresSetMessage) {
             return com.commercetools.api.models.message.BusinessUnitStoresSetMessage
                     .deepCopy((com.commercetools.api.models.message.BusinessUnitStoresSetMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.BusinessUnitTopLevelUnitSetMessage) {
+            return com.commercetools.api.models.message.BusinessUnitTopLevelUnitSetMessage
+                    .deepCopy((com.commercetools.api.models.message.BusinessUnitTopLevelUnitSetMessage) template);
+        }
+        if (template instanceof com.commercetools.api.models.message.BusinessUnitTypeSetMessage) {
+            return com.commercetools.api.models.message.BusinessUnitTypeSetMessage
+                    .deepCopy((com.commercetools.api.models.message.BusinessUnitTypeSetMessage) template);
         }
         if (template instanceof com.commercetools.api.models.message.CartDiscountCreatedMessage) {
             return com.commercetools.api.models.message.CartDiscountCreatedMessage
@@ -1695,6 +1705,22 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
      */
     public static com.commercetools.api.models.message.BusinessUnitStoresSetMessageBuilder businessUnitStoresSetBuilder() {
         return com.commercetools.api.models.message.BusinessUnitStoresSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for businessUnitTopLevelUnitSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.BusinessUnitTopLevelUnitSetMessageBuilder businessUnitTopLevelUnitSetBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitTopLevelUnitSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for businessUnitTypeSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.BusinessUnitTypeSetMessageBuilder businessUnitTypeSetBuilder() {
+        return com.commercetools.api.models.message.BusinessUnitTypeSetMessageBuilder.of();
     }
 
     /**

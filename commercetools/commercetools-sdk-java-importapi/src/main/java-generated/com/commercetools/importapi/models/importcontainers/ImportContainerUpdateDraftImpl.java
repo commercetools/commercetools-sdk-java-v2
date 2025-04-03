@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>The representation sent to the server when updating an import container.</p>
+ *  <p>The representation sent to the server when updating an Import Container.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImportContainerUpdateDraftImpl implements ImportContainerUpdateDraft, ModelBase {

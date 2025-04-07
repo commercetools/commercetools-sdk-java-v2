@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Checks if an Order exists with the provided <code>id</code>. Returns a <code>200 OK</code> status if the Order exists or a <code>404 Not Found</code> otherwise.</p>
+ *  <p>Checks if an Order exists with the provided <code>id</code> in a BusinessUnit. Returns a <code>200 OK</code> status if the Order exists or a <code>404 Not Found</code> otherwise.</p>
  *
  * <hr>
  * <div class=code-example>

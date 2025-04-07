@@ -21,7 +21,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>If the Order exists in the Project but does not have a <code>store</code> specified, or the <code>store</code> field references a different Store, this method returns a ResourceNotFound error.</p>
+ *  <p>Updates an Order in a Store using one or more update actions. If the Order exists in the Project but does not have a <code>store</code> specified, or the <code>store</code> field references a different Store, this method returns a ResourceNotFound error.</p>
  *
  * <hr>
  * <div class=code-example>

@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Importing an Order produces the Order Imported Message.</p>
+ *  <p>Creates an Order without needing to create a Cart first. Importing an Order produces the Order Imported Message.</p>
  *  <p>Specific Error Codes:</p>
  *  <ul>
  *   <li>OutOfStock</li>

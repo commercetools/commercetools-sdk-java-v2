@@ -20,10 +20,10 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Checks if one or more Orders exist for the provided query predicate. Returns a <code>200 OK</code> status if successful.</p>
- *  <p>A ResourceNotFound error is returned in the following scenarios:</p>
+ *  <p>Checks if one or more Orders exist for the provided query predicate for the authenticated Customer or anonymous user. Returns a <code>200 OK</code> status if successful.</p>
+ *  <p>A Not Found error is returned in the following scenarios:</p>
  *  <ul>
- *   <li>If no Order exists that matches the Query Predicate.</li>
+ *   <li>If no Orders exist that match the provided query predicate.</li>
  *   <li>If one or more Orders exist but don't have either a <code>customerId</code> that matches the customer:{id} scope, or an <code>anonymousId</code> that matches the anonymous_id:{id} scope.</li>
  *  </ul>
  *

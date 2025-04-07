@@ -20,8 +20,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Checks if one or more Orders exist for the provided query predicate in a Store. Returns a <code>200 OK</code> status if successful.</p>
- *  <p>A ResourceNotFound error is returned in the following scenarios:</p>
+ *  <p>Checks if one or more Orders exist for the provided query predicate in a Store for the authenticated Customer or anonymous user. Returns a <code>200 OK</code> status if successful.</p>
+ *  <p>A Not Found error is returned in the following scenarios:</p>
  *  <ul>
  *   <li>If no Orders exist in the Store that match the Query Predicate.</li>
  *   <li>If an Order matches the Query Predicate, but no <code>store</code> is specified, or the <code>store</code> field references a different Store.</li>

@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>If the Order exists in the Project but does not reference the requested BusinessUnit, this method returns an InvalidOperation error.</p>
+ *  <p>Retrieves an Order with the provided <code>id</code> in a BusinessUnit. If the Order exists in the Project but does not reference the requested Business Unit, this method returns an InvalidOperation error.</p>
  *
  * <hr>
  * <div class=code-example>

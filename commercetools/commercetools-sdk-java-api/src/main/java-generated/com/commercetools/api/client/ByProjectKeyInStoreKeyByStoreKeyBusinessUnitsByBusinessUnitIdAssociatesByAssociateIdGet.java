@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Retrieves all roles and permissions of an Associate in a Business Unit in a Store.</p>
+ *  <p>Retrieves roles and permissions of an Associate in a Business Unit in a Store.</p>
  *
  * <hr>
  * <div class=code-example>

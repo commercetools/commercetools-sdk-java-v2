@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Checks if one or more Orders exist for the provided query predicate. Returns a <code>200 OK</code> status if any Orders match the query predicate, or Not Found otherwise.</p>
+ *  <p>Checks if one or more Orders exist for the provided query predicate in a Store. Returns a <code>200 OK</code> status if any Orders match the query predicate, or Not Found otherwise.</p>
  *
  * <hr>
  * <div class=code-example>

@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Retrieves all ShoppingLists in a BusinessUnit.</p>
+ *  <p>Retrieves ShoppingLists in a BusinessUnit.</p>
  *
  * <hr>
  * <div class=code-example>

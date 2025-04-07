@@ -116,6 +116,26 @@ subprojects { project ->
             languageVersion = JavaLanguageVersion.of(17)
         }
     }
+    jmh {
+        javaLauncher = javaToolchains.launcherFor {
+            languageVersion = JavaLanguageVersion.of(17)
+        }
+    }
+    compileJmhJava {
+        javaCompiler = javaToolchains.compilerFor {
+            languageVersion = JavaLanguageVersion.of(17)
+        }
+    }
+    jmhCompileGeneratedClasses {
+        javaCompiler = javaToolchains.compilerFor {
+            languageVersion = JavaLanguageVersion.of(17)
+        }
+    }
+    tasks.withType(me.champeau.jmh.JmhBytecodeGeneratorTask).configureEach {
+        javaLauncher = javaToolchains.launcherFor {
+            languageVersion = JavaLanguageVersion.of(17)
+        }
+    }
     compileIntegrationTestJava {
         javaCompiler = javaToolchains.compilerFor {
             languageVersion = JavaLanguageVersion.of(17)

@@ -21,7 +21,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Updates a Payment for a given <code>id</code>. You can only update a Payment if it has no Transactions.</p>
+ *  <p>Updates a Payment for the authenticated Customer or anonymous user using one or more update actions. You can only update a Payment if it has no Transactions.</p>
  *
  * <hr>
  * <div class=code-example>

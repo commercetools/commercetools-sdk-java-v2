@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>When using this endpoint, the <code>store</code> field of a ShoppingList is always set to the Store specified in the path parameter.</p>
+ *  <p>Creates a ShoppingList in a Store. When using this endpoint, the <code>store</code> field of a ShoppingList is always set to the Store specified in the path parameter.</p>
  *
  * <hr>
  * <div class=code-example>

@@ -20,6 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
+ *  <p>Deletes a ShoppingList in a BusinessUnit.</p>
  *  <p>If the ShoppingList exists in the Project but does not reference the requested BusinessUnit, this method returns an InvalidOperation error.</p>
  *
  * <hr>

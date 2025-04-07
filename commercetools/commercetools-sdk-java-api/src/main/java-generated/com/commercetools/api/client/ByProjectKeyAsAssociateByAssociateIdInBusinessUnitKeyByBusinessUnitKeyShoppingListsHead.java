@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Checks if one or more ShoppingLists exist for the provided query predicate. Returns a <code>200 OK</code> if any ShoppingLists match the Query Predicate; otherwise, returns a ResourceNotFound error.</p>
+ *  <p>Checks if one or more ShoppingLists exist for the provided query predicate in a BusinessUnit. Returns a <code>200 OK</code> if any ShoppingLists match the query predicate; otherwise, returns Not Found.</p>
  *
  * <hr>
  * <div class=code-example>

@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Deletes the Payment for a given <code>id</code>. You can only delete a Payment if it has no Transactions.</p>
+ *  <p>Deletes a Payment with the provided <code>id</code> for the authenticated Customer or anonymous user. You can only delete a Payment if it has no Transactions.</p>
  *
  * <hr>
  * <div class=code-example>

@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Returns all Payments that match a given Query Predicate.</p>
+ *  <p>Retrieves all Payments for the authenticated Customer or anonymous user.</p>
  *
  * <hr>
  * <div class=code-example>

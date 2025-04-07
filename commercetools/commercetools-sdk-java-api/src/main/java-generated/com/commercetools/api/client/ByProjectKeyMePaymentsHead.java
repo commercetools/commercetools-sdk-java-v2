@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Checks if a Payment exists for the provided query predicate. Returns a <code>200 OK</code> status if any Payments match the query predicate, or a <code>404 Not Found</code> otherwise.</p>
+ *  <p>Checks if one or more Payments exist for the provided query predicate for the authenticated Customer or anonymous user. Returns a <code>200 OK</code> status if any Payments match the query predicate, or Not Found otherwise.</p>
  *
  * <hr>
  * <div class=code-example>

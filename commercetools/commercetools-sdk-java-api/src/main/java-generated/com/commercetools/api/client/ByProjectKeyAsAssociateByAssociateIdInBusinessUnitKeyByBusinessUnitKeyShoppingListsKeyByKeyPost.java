@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>If the Shopping List exists in the Project but does not reference the requested BusinessUnit, this method returns an InvalidOperation error.</p>
+ *  <p>Updates a ShoppingList in a BusinessUnit using one or more update actions. If the ShoppingList exists in the Project but does not reference the requested BusinessUnit, this method returns an InvalidOperation error.</p>
  *
  * <hr>
  * <div class=code-example>

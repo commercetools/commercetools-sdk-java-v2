@@ -21,12 +21,12 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Updates a ShoppingList for a given <code>id</code> in a Store. Returns a <code>200 OK</code> status if successful.</p>
+ *  <p>Updates a ShoppingList for the authenticated Customer or anonymous user in a Store using one or more update actions. Returns a <code>200 OK</code> status if successful.</p>
  *  <p>A ResourceNotFound error is returned in the following scenarios:</p>
  *  <ul>
- *   <li>If no ShoppingList matches the given <code>id</code> in a Store.</li>
- *   <li>If a ShoppingList matches the given <code>id</code> but does not have a <code>store</code> specified, or the <code>store</code> field references a different Store.</li>
- *   <li>If a ShoppingList matches the given <code>id</code> in a Store but does not contain either an <code>anonymousId</code> that matches the anonymous_id:{id} scope, or a <code>customer</code> with <code>id</code> value that matches the customer:{id} scope.</li>
+ *   <li>If no ShoppingList matches the provided <code>id</code> in a Store.</li>
+ *   <li>If a ShoppingList matches the provided <code>id</code> but does not have a <code>store</code> specified, or the <code>store</code> field references a different Store.</li>
+ *   <li>If a ShoppingList matches the provided <code>id</code> in a Store but does not contain either an <code>anonymousId</code> that matches the anonymous_id:{id} scope, or a <code>customer</code> with <code>id</code> value that matches the customer:{id} scope.</li>
  *  </ul>
  *
  * <hr>

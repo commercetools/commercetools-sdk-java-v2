@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Creates a ShoppingList for the Customer or anonymous user. The <code>customerId</code> or <code>anonymousId</code> on the ShoppingList is automatically set based on the given customer:{id} or anonymous_id:{id} scope.</p>
+ *  <p>Creates a ShoppingList for the authenticated Customer or anonymous user. The <code>customerId</code> or <code>anonymousId</code> on the ShoppingList is automatically set based on the given customer:{id} or anonymous_id:{id} scope.</p>
  *
  * <hr>
  * <div class=code-example>

@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Creates a ShoppingList in a Store for a Customer or anonymous user. The <code>customer</code> or <code>anonymousId</code> field on the ShoppingList is automatically set based on the given customer:{id} or anonymous_id:{id} scope.</p>
+ *  <p>Creates a ShoppingList for the authenticated Customer or anonymous user in a Store. The <code>customer</code> or <code>anonymousId</code> field on the ShoppingList is automatically set based on the given customer:{id} or anonymous_id:{id} scope.</p>
  *  <p>When using this endpoint, the <code>store</code> field of a ShoppingList is always set to the Store specified in the path parameter.</p>
  *
  * <hr>

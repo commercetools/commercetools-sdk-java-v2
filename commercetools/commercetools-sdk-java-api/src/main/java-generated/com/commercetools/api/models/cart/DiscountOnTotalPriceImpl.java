@@ -68,7 +68,8 @@ public class DiscountOnTotalPriceImpl implements DiscountOnTotalPrice, ModelBase
     }
 
     /**
-     *  <p>Money value of the discount on the total net price of the Cart or Order. Present only when <code>taxedPrice</code> of the Cart or Order exists.</p>
+     *  <p>Money value of the discount on the total net price of the Cart or Order.</p>
+     *  <p>The same percentage of discount applies as on the <code>discountedAmount</code>. Present only when <code>taxedPrice</code> of the Cart or Order exists.</p>
      */
 
     public com.commercetools.api.models.common.TypedMoney getDiscountedNetAmount() {
@@ -76,7 +77,8 @@ public class DiscountOnTotalPriceImpl implements DiscountOnTotalPrice, ModelBase
     }
 
     /**
-     *  <p>Money value of the discount on the total gross price of the Cart or Order. Present only when <code>taxedPrice</code> of the Cart or Order exists.</p>
+     *  <p>Money value of the discount on the total gross price of the Cart or Order.</p>
+     *  <p>The same percentage of discount applies as on the <code>discountedAmount</code>. Present only when <code>taxedPrice</code> of the Cart or Order exists.</p>
      */
 
     public com.commercetools.api.models.common.TypedMoney getDiscountedGrossAmount() {

@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Discount is applied to the total price of the Cart.</p>
+ *  <p>Discount is applied to the total price of the Cart. The same percentage of discount applies on the Cart or Order <code>taxedPrice</code>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartDiscountTotalPriceTargetImpl implements CartDiscountTotalPriceTarget, ModelBase {

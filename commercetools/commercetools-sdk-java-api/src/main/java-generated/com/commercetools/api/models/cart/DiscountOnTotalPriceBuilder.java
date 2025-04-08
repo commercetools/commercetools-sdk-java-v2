@@ -153,7 +153,8 @@ public class DiscountOnTotalPriceBuilder implements Builder<DiscountOnTotalPrice
     }
 
     /**
-     *  <p>Money value of the discount on the total net price of the Cart or Order. Present only when <code>taxedPrice</code> of the Cart or Order exists.</p>
+     *  <p>Money value of the discount on the total net price of the Cart or Order.</p>
+     *  <p>The same percentage of discount applies as on the <code>discountedAmount</code>. Present only when <code>taxedPrice</code> of the Cart or Order exists.</p>
      * @param discountedNetAmount value to be set
      * @return Builder
      */
@@ -165,7 +166,8 @@ public class DiscountOnTotalPriceBuilder implements Builder<DiscountOnTotalPrice
     }
 
     /**
-     *  <p>Money value of the discount on the total net price of the Cart or Order. Present only when <code>taxedPrice</code> of the Cart or Order exists.</p>
+     *  <p>Money value of the discount on the total net price of the Cart or Order.</p>
+     *  <p>The same percentage of discount applies as on the <code>discountedAmount</code>. Present only when <code>taxedPrice</code> of the Cart or Order exists.</p>
      * @param builder function to build the discountedNetAmount value
      * @return Builder
      */
@@ -177,7 +179,8 @@ public class DiscountOnTotalPriceBuilder implements Builder<DiscountOnTotalPrice
     }
 
     /**
-     *  <p>Money value of the discount on the total gross price of the Cart or Order. Present only when <code>taxedPrice</code> of the Cart or Order exists.</p>
+     *  <p>Money value of the discount on the total gross price of the Cart or Order.</p>
+     *  <p>The same percentage of discount applies as on the <code>discountedAmount</code>. Present only when <code>taxedPrice</code> of the Cart or Order exists.</p>
      * @param discountedGrossAmount value to be set
      * @return Builder
      */
@@ -189,7 +192,8 @@ public class DiscountOnTotalPriceBuilder implements Builder<DiscountOnTotalPrice
     }
 
     /**
-     *  <p>Money value of the discount on the total gross price of the Cart or Order. Present only when <code>taxedPrice</code> of the Cart or Order exists.</p>
+     *  <p>Money value of the discount on the total gross price of the Cart or Order.</p>
+     *  <p>The same percentage of discount applies as on the <code>discountedAmount</code>. Present only when <code>taxedPrice</code> of the Cart or Order exists.</p>
      * @param builder function to build the discountedGrossAmount value
      * @return Builder
      */
@@ -219,7 +223,8 @@ public class DiscountOnTotalPriceBuilder implements Builder<DiscountOnTotalPrice
     }
 
     /**
-     *  <p>Money value of the discount on the total net price of the Cart or Order. Present only when <code>taxedPrice</code> of the Cart or Order exists.</p>
+     *  <p>Money value of the discount on the total net price of the Cart or Order.</p>
+     *  <p>The same percentage of discount applies as on the <code>discountedAmount</code>. Present only when <code>taxedPrice</code> of the Cart or Order exists.</p>
      * @return discountedNetAmount
      */
 
@@ -229,7 +234,8 @@ public class DiscountOnTotalPriceBuilder implements Builder<DiscountOnTotalPrice
     }
 
     /**
-     *  <p>Money value of the discount on the total gross price of the Cart or Order. Present only when <code>taxedPrice</code> of the Cart or Order exists.</p>
+     *  <p>Money value of the discount on the total gross price of the Cart or Order.</p>
+     *  <p>The same percentage of discount applies as on the <code>discountedAmount</code>. Present only when <code>taxedPrice</code> of the Cart or Order exists.</p>
      * @return discountedGrossAmount
      */
 

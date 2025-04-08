@@ -54,7 +54,8 @@ public interface DiscountOnTotalPrice {
     public List<DiscountedTotalPricePortion> getIncludedDiscounts();
 
     /**
-     *  <p>Money value of the discount on the total net price of the Cart or Order. Present only when <code>taxedPrice</code> of the Cart or Order exists.</p>
+     *  <p>Money value of the discount on the total net price of the Cart or Order.</p>
+     *  <p>The same percentage of discount applies as on the <code>discountedAmount</code>. Present only when <code>taxedPrice</code> of the Cart or Order exists.</p>
      * @return discountedNetAmount
      */
     @Valid
@@ -62,7 +63,8 @@ public interface DiscountOnTotalPrice {
     public TypedMoney getDiscountedNetAmount();
 
     /**
-     *  <p>Money value of the discount on the total gross price of the Cart or Order. Present only when <code>taxedPrice</code> of the Cart or Order exists.</p>
+     *  <p>Money value of the discount on the total gross price of the Cart or Order.</p>
+     *  <p>The same percentage of discount applies as on the <code>discountedAmount</code>. Present only when <code>taxedPrice</code> of the Cart or Order exists.</p>
      * @return discountedGrossAmount
      */
     @Valid
@@ -92,14 +94,16 @@ public interface DiscountOnTotalPrice {
     public void setIncludedDiscounts(final List<DiscountedTotalPricePortion> includedDiscounts);
 
     /**
-     *  <p>Money value of the discount on the total net price of the Cart or Order. Present only when <code>taxedPrice</code> of the Cart or Order exists.</p>
+     *  <p>Money value of the discount on the total net price of the Cart or Order.</p>
+     *  <p>The same percentage of discount applies as on the <code>discountedAmount</code>. Present only when <code>taxedPrice</code> of the Cart or Order exists.</p>
      * @param discountedNetAmount value to be set
      */
 
     public void setDiscountedNetAmount(final TypedMoney discountedNetAmount);
 
     /**
-     *  <p>Money value of the discount on the total gross price of the Cart or Order. Present only when <code>taxedPrice</code> of the Cart or Order exists.</p>
+     *  <p>Money value of the discount on the total gross price of the Cart or Order.</p>
+     *  <p>The same percentage of discount applies as on the <code>discountedAmount</code>. Present only when <code>taxedPrice</code> of the Cart or Order exists.</p>
      * @param discountedGrossAmount value to be set
      */
 

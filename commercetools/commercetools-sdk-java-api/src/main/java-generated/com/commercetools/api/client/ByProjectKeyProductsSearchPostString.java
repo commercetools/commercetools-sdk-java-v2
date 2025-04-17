@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>If the indexing is in progress or the feature is inactive, an ObjectNotFound error is returned. If inactive, you can reactivate it.</p>
+ *  <p>If indexing is in progress or if Product Search is inactive, an ObjectNotFound error is returned. If inactive, you can reactivate it.</p>
  *
  * <hr>
  * <div class=code-example>

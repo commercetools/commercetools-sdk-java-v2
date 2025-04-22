@@ -36,6 +36,13 @@ tasks.register('runMainMethodMemoryLeakTest', JavaExec) {
     maxHeapSize("128m")
 }
 
+tasks.register('runLongRunningTimeoutTest', JavaExec) {
+    group = "Execution"
+    description = "Run the main method thread leak test class"
+    classpath = sourceSets.test.runtimeClasspath
+    mainClass = "com.commercetools.LongRunningTimeoutTest"
+    maxHeapSize("128m")
+}
 
 apply plugin: com.commercetools.sdk.plugins.MigrationInfoPlugin
 

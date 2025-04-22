@@ -54,7 +54,7 @@ public class LongRunningTimeoutTest {
         final int elements = 100000;
         BlockingQueue<Pair<String, Integer>> blockingQueue = new ArrayBlockingQueue<>(50000);
 
-        final int concurrency = 20;
+        final int concurrency = 100;
         ExecutorService threadPool = Executors.newFixedThreadPool(concurrency);
 
         Random r = new Random();
@@ -83,6 +83,7 @@ public class LongRunningTimeoutTest {
                 //                .protocols(Lists.list(Protocol.HTTP_1_1))
                 .build();
         for (int i = 0; i < concurrency; i++) {
+            int finalI = i;
             threadPool.execute(() -> {
                 try {
                     while (!threadPool.isTerminated()) {
@@ -90,19 +91,24 @@ public class LongRunningTimeoutTest {
                         if (p == null) {
                             break;
                         }
-                        //                        final Request request = new Request.Builder()
-                        //                                .addHeader("Authorization", "Bearer " + token.getAccessToken())
-                        //                                .addHeader("Content-Type", "application/json")
-                        //                                .url(ServiceRegion.GCP_EUROPE_WEST1.getApiUrl() + "/" + getProjectKey() + "/messages/"
-                        //                                        + p.getLeft())
-                        //                                .build();
-                        //                        try (Response response = client2.newCall(request).execute()) {
-                        //                            String b = response.body().string();
-                        //                            response.close();
-                        //                            System.out.println(b);
-                        //                            System.out.println(p.getRight());
-                        //                            System.out.println(client2.dispatcher().runningCallsCount());
-                        //                        }
+                        final Request request = new Request.Builder()
+                                //                                .addHeader("Authorization", "Bearer " + token.getAccessToken())
+                                //                                .addHeader("Content-Type", "application/json")
+                                .url("https://jsonapi.org/")
+                                .get()
+                                .build();
+                        try (Response response = client2.newCall(request).execute()) {
+                            String b = response.body().string();
+                            response.body().close();
+                            response.close();
+                            System.out.println("i: " + p.getRight() + "\ts: " + response.code() + "\tr: "
+                                    + client2.dispatcher().runningCallsCount() + "\tc: "
+                                    + client2.connectionPool().idleConnectionCount() + "; "
+                                    + client2.connectionPool().connectionCount());
+                        }
+                        catch (IOException e) {
+                            throw new RuntimeException(e);
+                        }
 
                         final ApiHttpResponse<byte[]> messageApiHttpResponse = client.withProjectKey(getProjectKey())
                                 .messages()

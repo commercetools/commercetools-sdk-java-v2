@@ -321,6 +321,14 @@ public class ApiRootBuilder {
         return with(clientBuilder -> clientBuilder.withPolicies(policyBuilder));
     }
 
+    public ApiRootBuilder withRequestPolicies(final Function<RequestPolicyBuilder, RequestPolicyBuilder> fn) {
+        return with(clientBuilder -> clientBuilder.withRequestPolicies(fn));
+    }
+
+    public ApiRootBuilder withRequestPolicies(final RequestPolicyBuilder policyBuilder) {
+        return with(clientBuilder -> clientBuilder.withRequestPolicies(policyBuilder));
+    }
+
     public ApiRootBuilder withPolicyMiddleware(final PolicyMiddleware policyMiddleware) {
         return with(clientBuilder -> clientBuilder.withPolicyMiddleware(policyMiddleware));
     }

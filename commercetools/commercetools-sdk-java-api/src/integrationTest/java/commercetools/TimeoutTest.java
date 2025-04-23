@@ -9,8 +9,10 @@ import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.defaultconfig.ApiRootBuilder;
 import com.commercetools.api.defaultconfig.ServiceRegion;
 import com.commercetools.api.models.category.Category;
+import com.commercetools.api.models.product.ProductProjectionPagedSearchResponse;
 import commercetools.utils.CommercetoolsTestUtils;
 
+import io.vrap.rmf.base.client.ApiHttpMethod;
 import io.vrap.rmf.base.client.ApiHttpResponse;
 import io.vrap.rmf.base.client.http.HttpStatusCode;
 import io.vrap.rmf.base.client.oauth2.ClientCredentials;
@@ -92,5 +94,48 @@ public class TimeoutTest {
                     .executeBlocking()
                     .getBody();
         });
+    }
+
+    @Test
+    public void requestPolicies() {
+        String projectKey = CommercetoolsTestUtils.getProjectKey();
+
+        ProjectApiRoot b = ApiRootBuilder.of()
+                .defaultClient(ClientCredentials.of()
+                        .withClientId(CommercetoolsTestUtils.getClientId())
+                        .withClientSecret(CommercetoolsTestUtils.getClientSecret())
+                        .build(),
+                    ServiceRegion.GCP_EUROPE_WEST1)
+                .withTelemetryMiddleware((request, next) -> next.apply(request).thenApply((response) -> {
+                    try {
+                        Thread.sleep(2000); // ensure timeout
+                    }
+                    catch (InterruptedException e) {
+                        throw new RuntimeException(e);
+                    }
+                    return response;
+                }))
+                .withRequestPolicies(policies -> policies
+                        .withRequestMatching(apiHttpRequest -> apiHttpRequest.getMethod().equals(ApiHttpMethod.POST),
+                            policyBuilder -> policyBuilder.withTimeout(Duration.ofSeconds(10)))
+                        .withRequestMatching(apiHttpRequest -> apiHttpRequest.getMethod().equals(ApiHttpMethod.GET),
+                            policyBuilder -> policyBuilder.withTimeout(Duration.ofSeconds(1))))
+                .build(projectKey);
+
+        Assertions.assertThatExceptionOfType(TimeoutExceededException.class).isThrownBy(() -> {
+            Category category = b.categories()
+                    .withId("fdbaf4ea-fbc9-4fea-bac4-1d7e6c1995b3")
+                    .get()
+                    .executeBlocking()
+                    .getBody();
+        });
+
+        ProductProjectionPagedSearchResponse searchResponse = b.productProjections()
+                .search()
+                .post()
+                .executeBlocking()
+                .getBody();
+
+        Assertions.assertThat(searchResponse).isNotNull();
     }
 }

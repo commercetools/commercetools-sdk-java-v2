@@ -43,28 +43,28 @@ package com.commercetools.docs.meta;
  * <pre>{@code
  * CartQueryBuilderDsl.of().id().is("abc");
  * CustomerQueryBuilderDsl.of().dateOfBirth().is(LocalDate.parse("2018-10-12"));
- * TaxRateQueryBuilderDsl.of().amount().is(10.0);
+ * TaxRateQueryBuilderDsl.of().amount().is(0.19);
  * }</pre>
  *
  * <h5>Logical Operators</h5>
  * <pre>{@code
  * CartQueryBuilderDsl.of().id().is("abc").not();
- * CartQueryBuilderDsl.of().id().is("abc").and(p -> p.id().is("def"));
- * CartQueryBuilderDsl.of().id().is("abc").or(p -> p.id().is("def"));
+ * CartQueryBuilderDsl.of().id().is("abc").and(p -> p.customerId().is("def"));
+ * CartQueryBuilderDsl.of().id().is("abc").or(p -> p.customerId().is("def"));
  * }</pre>
  *
  * <h5>Range Comparisons</h5>
  * <pre>{@code
  * CartQueryBuilderDsl.of().version().isLessThan(10L);
  * CartQueryBuilderDsl.of().version().isGreaterThan(10L);
- * TaxRateQueryBuilderDsl.of().amount().isLessThan(10.0);
+ * TaxRateQueryBuilderDsl.of().amount().isLessThan(0.19);
  * CustomerQueryBuilderDsl.of().dateOfBirth().isGreaterThan(LocalDate.parse("2018-10-12"));
  * }</pre>
  *
  * <h5>Collection Queries</h5>
  * <pre>{@code
  * CartQueryBuilderDsl.of().key().isIn(Arrays.asList("foo", "bar"));
- * TaxRateQueryBuilderDsl.of().amount().isIn(Arrays.asList(10.0, 20.0));
+ * TaxRateQueryBuilderDsl.of().amount().isIn(Arrays.asList(0.19, 0.20));
  * }</pre>
  *
  * <h5>Nested Queries</h5>
@@ -79,7 +79,7 @@ package com.commercetools.docs.meta;
  * CartQueryBuilderDsl.of().key().isDefined();
  * CartQueryBuilderDsl.of().key().isNotDefined();
  * CartQueryBuilderDsl.of().lineItems().isEmpty();
- * TypeQueryBuilderDsl.of().resourceTypeIds().containsAnyVar("foo");
+ * TypeQueryBuilderDsl.of().resourceTypeIds().containsAnyVar("approval-flow");
  * }</pre>
  *
  *

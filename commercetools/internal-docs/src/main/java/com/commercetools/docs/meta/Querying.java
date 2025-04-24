@@ -17,6 +17,72 @@ package com.commercetools.docs.meta;
  *
  * {@include.example example.ExamplesTest#queryPredicateVariableArray()}
  *
+ <h3 id="query-predicate-builder">Query Predicate Builder</h3>
+ *
+ * <p>The <a href="https://docs.commercetools.com/sdk/java-sdk-predicates">
+ * Query Predicate Builder</a> offers a fluent, type-safe interface for building Query Predicates.</p>
+ *
+ * <h4>Basic Usage</h4>
+ *
+ * <pre>{@code
+ * import static com.commercetools.api.predicates.query.CustomerQueryBuilderDsl.*;
+ *
+ * String predicate = CustomerQueryBuilderDsl.of()
+ *       .firstName().is("John")
+ *       .and()
+ *       .lastName().is("Doe")
+ *       .build();
+ * }</pre>
+ *
+ * <h4>Examples of Query Predicates</h4>
+ *
+ * <p>The following examples demonstrate how to use the Query Predicate builder for different scenarios. More examples can be found
+ * <a href="https://github.com/commercetools/commercetools-sdk-java-v2/tree/main/commercetools/commercetools-sdk-java-api/src/test/java/com/commercetools/api/predicates/query">here</a>.</p>
+ *
+ * <h5>Equality Comparisons</h5>
+ * <pre>{@code
+ * CartQueryBuilderDsl.of().id().is("abc");
+ * CustomerQueryBuilderDsl.of().dateOfBirth().is(LocalDate.parse("2018-10-12"));
+ * TaxRateQueryBuilderDsl.of().amount().is(0.19);
+ * }</pre>
+ *
+ * <h5>Logical Operators</h5>
+ * <pre>{@code
+ * CartQueryBuilderDsl.of().id().is("abc").not();
+ * CartQueryBuilderDsl.of().id().is("abc").and(p -> p.customerId().is("def"));
+ * CartQueryBuilderDsl.of().id().is("abc").or(p -> p.customerId().is("def"));
+ * }</pre>
+ *
+ * <h5>Range Comparisons</h5>
+ * <pre>{@code
+ * CartQueryBuilderDsl.of().version().isLessThan(10L);
+ * CartQueryBuilderDsl.of().version().isGreaterThan(10L);
+ * TaxRateQueryBuilderDsl.of().amount().isLessThan(0.19);
+ * CustomerQueryBuilderDsl.of().dateOfBirth().isGreaterThan(LocalDate.parse("2018-10-12"));
+ * }</pre>
+ *
+ * <h5>Collection Queries</h5>
+ * <pre>{@code
+ * CartQueryBuilderDsl.of().key().isIn(Arrays.asList("foo", "bar"));
+ * TaxRateQueryBuilderDsl.of().amount().isIn(Arrays.asList(0.19, 0.20));
+ * }</pre>
+ *
+ * <h5>Nested Queries</h5>
+ * <pre>{@code
+ * ProductQueryBuilderDsl.of()
+ *   .masterData(m -> m.current(c -> c.slug(l -> l.with(Locale.ENGLISH).is("super-product"))
+ *     .and(t -> t.name(l -> l.with(Locale.ENGLISH).is("Super Product")))));
+ * }</pre>
+ *
+ * <h5>Special Cases</h5>
+ * <pre>{@code
+ * CartQueryBuilderDsl.of().key().isDefined();
+ * CartQueryBuilderDsl.of().key().isNotDefined();
+ * CartQueryBuilderDsl.of().lineItems().isEmpty();
+ * TypeQueryBuilderDsl.of().resourceTypeIds().containsAnyVar("approval-flow");
+ * }</pre>
+ *
+ *
  * <h3 id="get-by-id">Get by id/key</h3>
  *
  * {@include.example example.ExamplesTest#getByIdOrKey()}

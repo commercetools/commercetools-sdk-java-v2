@@ -24,14 +24,14 @@ public class MyBusinessUnitUpdateImpl implements MyBusinessUnitUpdate, ModelBase
 
     private Long version;
 
-    private java.util.List<com.commercetools.api.models.business_unit.BusinessUnitUpdateAction> actions;
+    private java.util.List<com.commercetools.api.models.me.MyBusinessUnitUpdateAction> actions;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     MyBusinessUnitUpdateImpl(@JsonProperty("version") final Long version,
-            @JsonProperty("actions") final java.util.List<com.commercetools.api.models.business_unit.BusinessUnitUpdateAction> actions) {
+            @JsonProperty("actions") final java.util.List<com.commercetools.api.models.me.MyBusinessUnitUpdateAction> actions) {
         this.version = version;
         this.actions = actions;
     }
@@ -54,7 +54,7 @@ public class MyBusinessUnitUpdateImpl implements MyBusinessUnitUpdate, ModelBase
      *  <p>Update actions to be performed on the BusinessUnit.</p>
      */
 
-    public java.util.List<com.commercetools.api.models.business_unit.BusinessUnitUpdateAction> getActions() {
+    public java.util.List<com.commercetools.api.models.me.MyBusinessUnitUpdateAction> getActions() {
         return this.actions;
     }
 
@@ -62,12 +62,11 @@ public class MyBusinessUnitUpdateImpl implements MyBusinessUnitUpdate, ModelBase
         this.version = version;
     }
 
-    public void setActions(final com.commercetools.api.models.business_unit.BusinessUnitUpdateAction... actions) {
+    public void setActions(final com.commercetools.api.models.me.MyBusinessUnitUpdateAction... actions) {
         this.actions = new ArrayList<>(Arrays.asList(actions));
     }
 
-    public void setActions(
-            final java.util.List<com.commercetools.api.models.business_unit.BusinessUnitUpdateAction> actions) {
+    public void setActions(final java.util.List<com.commercetools.api.models.me.MyBusinessUnitUpdateAction> actions) {
         this.actions = actions;
     }
 

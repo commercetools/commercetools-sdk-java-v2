@@ -29,7 +29,7 @@ public class MyBusinessUnitUpdateTest {
         return new Object[][] { new Object[] { MyBusinessUnitUpdate.builder().version(2L) },
                 new Object[] { MyBusinessUnitUpdate.builder()
                         .actions(Collections.singletonList(
-                            new com.commercetools.api.models.business_unit.BusinessUnitUpdateActionImpl())) } };
+                            new com.commercetools.api.models.me.MyBusinessUnitUpdateActionImpl())) } };
     }
 
     @Test
@@ -43,9 +43,9 @@ public class MyBusinessUnitUpdateTest {
     public void actions() {
         MyBusinessUnitUpdate value = MyBusinessUnitUpdate.of();
         value.setActions(
-            Collections.singletonList(new com.commercetools.api.models.business_unit.BusinessUnitUpdateActionImpl()));
+            Collections.singletonList(new com.commercetools.api.models.me.MyBusinessUnitUpdateActionImpl()));
         Assertions.assertThat(value.getActions())
-                .isEqualTo(Collections
-                        .singletonList(new com.commercetools.api.models.business_unit.BusinessUnitUpdateActionImpl()));
+                .isEqualTo(
+                    Collections.singletonList(new com.commercetools.api.models.me.MyBusinessUnitUpdateActionImpl()));
     }
 }

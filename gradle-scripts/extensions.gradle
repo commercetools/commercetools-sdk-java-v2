@@ -10,9 +10,9 @@ ext {
     ]
 
     commons = [
-            text: 'org.apache.commons:commons-text:1.13.0',
+            text: 'org.apache.commons:commons-text:1.13.1',
             lang3: 'org.apache.commons:commons-lang3:3.17.0',
-            io: 'commons-io:commons-io:2.18.0',
+            io: 'commons-io:commons-io:2.19.0',
             io_version: {
                     strictly '[2.8.0,)'
                     prefer '2.16.1'
@@ -28,15 +28,15 @@ ext {
     ]
 
     jackson_core = [
-            annotations: 'com.fasterxml.jackson.core:jackson-annotations:2.18.3',
-            databind: 'com.fasterxml.jackson.core:jackson-databind:2.18.3',
-            core: 'com.fasterxml.jackson.core:jackson-core:2.18.3',
-            datatype: 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.18.3',
+            annotations: 'com.fasterxml.jackson.core:jackson-annotations:2.19.0',
+            databind: 'com.fasterxml.jackson.core:jackson-databind:2.19.0',
+            core: 'com.fasterxml.jackson.core:jackson-core:2.19.0',
+            datatype: 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.19.0',
     ]
 
     google = [
             findbugs: 'com.google.code.findbugs:jsr305:3.0.2',
-            gson: 'com.google.code.gson:gson:2.12.1',
+            gson: 'com.google.code.gson:gson:2.13.1',
     ]
 
     graphql = [
@@ -51,7 +51,7 @@ ext {
     ]
 
     junit = [
-            junit: 'org.junit.jupiter:junit-jupiter:5.11.4',
+            junit: 'org.junit.jupiter:junit-jupiter:5.12.2',
             dataprovider: 'com.tngtech.junit.dataprovider:junit-jupiter-dataprovider:2.10',
             jsonassert: 'org.skyscreamer:jsonassert:1.5.3',
             assertj: 'org.assertj:assertj-core:3.27.3'
@@ -59,7 +59,7 @@ ext {
 
     mockito = [
             inline: 'org.mockito:mockito-inline:5.2.0',
-            junit: 'org.mockito:mockito-junit-jupiter:5.16.1',
+            junit: 'org.mockito:mockito-junit-jupiter:5.17.0',
     ]
 
     failsafe = [

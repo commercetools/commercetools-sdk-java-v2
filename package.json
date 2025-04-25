@@ -9,10 +9,10 @@
     "node": ">=14.15",
     "npm": ">=5"
   },
-  "packageManager": "yarn@4.7.0",
+  "packageManager": "yarn@4.9.1",
   "dependencies": {
     "husky": "9.1.7",
-    "lint-staged": "15.5.0"
+    "lint-staged": "15.5.1"
   },
   "scripts": {
     "postinstall": "husky install",

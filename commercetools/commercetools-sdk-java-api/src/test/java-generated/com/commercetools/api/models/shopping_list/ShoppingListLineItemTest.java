@@ -38,6 +38,7 @@ public class ShoppingListLineItemTest {
                 new Object[] { ShoppingListLineItem.builder().productId("productId") },
                 new Object[] { ShoppingListLineItem.builder()
                         .productType(new com.commercetools.api.models.product_type.ProductTypeReferenceImpl()) },
+                new Object[] { ShoppingListLineItem.builder().published(true) },
                 new Object[] { ShoppingListLineItem.builder().quantity(8L) },
                 new Object[] { ShoppingListLineItem.builder().variantId(5L) },
                 new Object[] { ShoppingListLineItem.builder()
@@ -101,6 +102,13 @@ public class ShoppingListLineItemTest {
         value.setProductType(new com.commercetools.api.models.product_type.ProductTypeReferenceImpl());
         Assertions.assertThat(value.getProductType())
                 .isEqualTo(new com.commercetools.api.models.product_type.ProductTypeReferenceImpl());
+    }
+
+    @Test
+    public void published() {
+        ShoppingListLineItem value = ShoppingListLineItem.of();
+        value.setPublished(true);
+        Assertions.assertThat(value.getPublished()).isEqualTo(true);
     }
 
     @Test

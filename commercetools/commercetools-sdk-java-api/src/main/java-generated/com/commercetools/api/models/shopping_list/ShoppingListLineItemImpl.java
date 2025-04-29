@@ -39,6 +39,8 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
 
     private com.commercetools.api.models.product_type.ProductTypeReference productType;
 
+    private Boolean published;
+
     private Long quantity;
 
     private Long variantId;
@@ -58,7 +60,8 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
             @JsonProperty("name") final com.commercetools.api.models.common.LocalizedString name,
             @JsonProperty("productId") final String productId,
             @JsonProperty("productType") final com.commercetools.api.models.product_type.ProductTypeReference productType,
-            @JsonProperty("quantity") final Long quantity, @JsonProperty("variantId") final Long variantId,
+            @JsonProperty("published") final Boolean published, @JsonProperty("quantity") final Long quantity,
+            @JsonProperty("variantId") final Long variantId,
             @JsonProperty("variant") final com.commercetools.api.models.product.ProductVariant variant,
             @JsonProperty("productSlug") final com.commercetools.api.models.common.LocalizedString productSlug) {
         this.addedAt = addedAt;
@@ -69,6 +72,7 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
         this.name = name;
         this.productId = productId;
         this.productType = productType;
+        this.published = published;
         this.quantity = quantity;
         this.variantId = variantId;
         this.variant = variant;
@@ -148,6 +152,15 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
     }
 
     /**
+     *  <p>Whether the related Product is published or not.</p>
+     *  <p>This data is updated in an eventual consistent manner when the Product's published status changes.</p>
+     */
+
+    public Boolean getPublished() {
+        return this.published;
+    }
+
+    /**
      *  <p>Number of Products in the ShoppingListLineItem.</p>
      */
 
@@ -213,6 +226,10 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
         this.productType = productType;
     }
 
+    public void setPublished(final Boolean published) {
+        this.published = published;
+    }
+
     public void setQuantity(final Long quantity) {
         this.quantity = quantity;
     }
@@ -247,6 +264,7 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
                 .append(name, that.name)
                 .append(productId, that.productId)
                 .append(productType, that.productType)
+                .append(published, that.published)
                 .append(quantity, that.quantity)
                 .append(variantId, that.variantId)
                 .append(variant, that.variant)
@@ -259,6 +277,7 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
                 .append(name, that.name)
                 .append(productId, that.productId)
                 .append(productType, that.productType)
+                .append(published, that.published)
                 .append(quantity, that.quantity)
                 .append(variantId, that.variantId)
                 .append(variant, that.variant)
@@ -276,6 +295,7 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
                 .append(name)
                 .append(productId)
                 .append(productType)
+                .append(published)
                 .append(quantity)
                 .append(variantId)
                 .append(variant)
@@ -293,6 +313,7 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
                 .append("name", name)
                 .append("productId", productId)
                 .append("productType", productType)
+                .append("published", published)
                 .append("quantity", quantity)
                 .append("variantId", variantId)
                 .append("variant", variant)

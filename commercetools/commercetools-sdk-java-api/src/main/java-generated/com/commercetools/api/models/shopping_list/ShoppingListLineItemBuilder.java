@@ -21,6 +21,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name(nameBuilder -> nameBuilder)
  *             .productId("{productId}")
  *             .productType(productTypeBuilder -> productTypeBuilder)
+ *             .published(true)
  *             .quantity(0.3)
  *             .build()
  * </code></pre>
@@ -47,6 +48,8 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     private String productId;
 
     private com.commercetools.api.models.product_type.ProductTypeReference productType;
+
+    private Boolean published;
 
     private Long quantity;
 
@@ -222,6 +225,18 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     public ShoppingListLineItemBuilder productType(
             final com.commercetools.api.models.product_type.ProductTypeReference productType) {
         this.productType = productType;
+        return this;
+    }
+
+    /**
+     *  <p>Whether the related Product is published or not.</p>
+     *  <p>This data is updated in an eventual consistent manner when the Product's published status changes.</p>
+     * @param published value to be set
+     * @return Builder
+     */
+
+    public ShoppingListLineItemBuilder published(final Boolean published) {
+        this.published = published;
         return this;
     }
 
@@ -403,6 +418,16 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
     }
 
     /**
+     *  <p>Whether the related Product is published or not.</p>
+     *  <p>This data is updated in an eventual consistent manner when the Product's published status changes.</p>
+     * @return published
+     */
+
+    public Boolean getPublished() {
+        return this.published;
+    }
+
+    /**
      *  <p>Number of Products in the ShoppingListLineItem.</p>
      * @return quantity
      */
@@ -453,9 +478,10 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
         Objects.requireNonNull(name, ShoppingListLineItem.class + ": name is missing");
         Objects.requireNonNull(productId, ShoppingListLineItem.class + ": productId is missing");
         Objects.requireNonNull(productType, ShoppingListLineItem.class + ": productType is missing");
+        Objects.requireNonNull(published, ShoppingListLineItem.class + ": published is missing");
         Objects.requireNonNull(quantity, ShoppingListLineItem.class + ": quantity is missing");
         return new ShoppingListLineItemImpl(addedAt, custom, deactivatedAt, id, key, name, productId, productType,
-            quantity, variantId, variant, productSlug);
+            published, quantity, variantId, variant, productSlug);
     }
 
     /**
@@ -464,7 +490,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
      */
     public ShoppingListLineItem buildUnchecked() {
         return new ShoppingListLineItemImpl(addedAt, custom, deactivatedAt, id, key, name, productId, productType,
-            quantity, variantId, variant, productSlug);
+            published, quantity, variantId, variant, productSlug);
     }
 
     /**
@@ -490,6 +516,7 @@ public class ShoppingListLineItemBuilder implements Builder<ShoppingListLineItem
         builder.name = template.getName();
         builder.productId = template.getProductId();
         builder.productType = template.getProductType();
+        builder.published = template.getPublished();
         builder.quantity = template.getQuantity();
         builder.variantId = template.getVariantId();
         builder.variant = template.getVariant();

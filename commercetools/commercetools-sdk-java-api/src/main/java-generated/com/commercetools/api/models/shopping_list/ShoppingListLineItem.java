@@ -34,6 +34,7 @@ import jakarta.validation.constraints.NotNull;
  *             .name(nameBuilder -> nameBuilder)
  *             .productId("{productId}")
  *             .productType(productTypeBuilder -> productTypeBuilder)
+ *             .published(true)
  *             .quantity(0.3)
  *             .build()
  * </code></pre>
@@ -110,6 +111,15 @@ public interface ShoppingListLineItem extends com.commercetools.api.models.Custo
     @Valid
     @JsonProperty("productType")
     public ProductTypeReference getProductType();
+
+    /**
+     *  <p>Whether the related Product is published or not.</p>
+     *  <p>This data is updated in an eventual consistent manner when the Product's published status changes.</p>
+     * @return published
+     */
+    @NotNull
+    @JsonProperty("published")
+    public Boolean getPublished();
 
     /**
      *  <p>Number of Products in the ShoppingListLineItem.</p>
@@ -204,6 +214,14 @@ public interface ShoppingListLineItem extends com.commercetools.api.models.Custo
     public void setProductType(final ProductTypeReference productType);
 
     /**
+     *  <p>Whether the related Product is published or not.</p>
+     *  <p>This data is updated in an eventual consistent manner when the Product's published status changes.</p>
+     * @param published value to be set
+     */
+
+    public void setPublished(final Boolean published);
+
+    /**
      *  <p>Number of Products in the ShoppingListLineItem.</p>
      * @param quantity value to be set
      */
@@ -256,6 +274,7 @@ public interface ShoppingListLineItem extends com.commercetools.api.models.Custo
         instance.setName(template.getName());
         instance.setProductId(template.getProductId());
         instance.setProductType(template.getProductType());
+        instance.setPublished(template.getPublished());
         instance.setQuantity(template.getQuantity());
         instance.setVariantId(template.getVariantId());
         instance.setVariant(template.getVariant());
@@ -283,6 +302,7 @@ public interface ShoppingListLineItem extends com.commercetools.api.models.Custo
         instance.setProductId(template.getProductId());
         instance.setProductType(
             com.commercetools.api.models.product_type.ProductTypeReference.deepCopy(template.getProductType()));
+        instance.setPublished(template.getPublished());
         instance.setQuantity(template.getQuantity());
         instance.setVariantId(template.getVariantId());
         instance.setVariant(com.commercetools.api.models.product.ProductVariant.deepCopy(template.getVariant()));

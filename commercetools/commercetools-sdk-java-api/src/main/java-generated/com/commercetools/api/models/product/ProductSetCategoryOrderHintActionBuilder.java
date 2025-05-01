@@ -32,7 +32,7 @@ public class ProductSetCategoryOrderHintActionBuilder implements Builder<Product
     private Boolean staged;
 
     /**
-     *  <p>The <code>id</code> of the Category to add the <code>orderHint</code>.</p>
+     *  <p>The <code>id</code> of the Category to add the <code>orderHint</code>. If this Category is not assigned to the Product, an InvalidOperation error is returned.</p>
      * @param categoryId value to be set
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class ProductSetCategoryOrderHintActionBuilder implements Builder<Product
     }
 
     /**
-     *  <p>The <code>id</code> of the Category to add the <code>orderHint</code>.</p>
+     *  <p>The <code>id</code> of the Category to add the <code>orderHint</code>. If this Category is not assigned to the Product, an InvalidOperation error is returned.</p>
      * @return categoryId
      */
 

@@ -37,7 +37,7 @@ public interface ProductSetCategoryOrderHintAction extends ProductUpdateAction {
     String SET_CATEGORY_ORDER_HINT = "setCategoryOrderHint";
 
     /**
-     *  <p>The <code>id</code> of the Category to add the <code>orderHint</code>.</p>
+     *  <p>The <code>id</code> of the Category to add the <code>orderHint</code>. If this Category is not assigned to the Product, an InvalidOperation error is returned.</p>
      * @return categoryId
      */
     @NotNull
@@ -61,7 +61,7 @@ public interface ProductSetCategoryOrderHintAction extends ProductUpdateAction {
     public Boolean getStaged();
 
     /**
-     *  <p>The <code>id</code> of the Category to add the <code>orderHint</code>.</p>
+     *  <p>The <code>id</code> of the Category to add the <code>orderHint</code>. If this Category is not assigned to the Product, an InvalidOperation error is returned.</p>
      * @param categoryId value to be set
      */
 

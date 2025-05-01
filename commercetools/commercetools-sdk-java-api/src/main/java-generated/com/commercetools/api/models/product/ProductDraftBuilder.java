@@ -325,7 +325,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
-     *  <p>Numerical values to allow ordering of Products within a specified Category.</p>
+     *  <p>Numerical values to allow ordering of Products within specified Categories. If the referenced Categories are not also assigned in the <code>categories</code> field, an InvalidOperation error is returned.</p>
      * @param builder function to build the categoryOrderHints value
      * @return Builder
      */
@@ -338,7 +338,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
-     *  <p>Numerical values to allow ordering of Products within a specified Category.</p>
+     *  <p>Numerical values to allow ordering of Products within specified Categories. If the referenced Categories are not also assigned in the <code>categories</code> field, an InvalidOperation error is returned.</p>
      * @param builder function to build the categoryOrderHints value
      * @return Builder
      */
@@ -350,7 +350,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
-     *  <p>Numerical values to allow ordering of Products within a specified Category.</p>
+     *  <p>Numerical values to allow ordering of Products within specified Categories. If the referenced Categories are not also assigned in the <code>categories</code> field, an InvalidOperation error is returned.</p>
      * @param categoryOrderHints value to be set
      * @return Builder
      */
@@ -788,7 +788,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
-     *  <p>Numerical values to allow ordering of Products within a specified Category.</p>
+     *  <p>Numerical values to allow ordering of Products within specified Categories. If the referenced Categories are not also assigned in the <code>categories</code> field, an InvalidOperation error is returned.</p>
      * @return categoryOrderHints
      */
 

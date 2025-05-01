@@ -58,7 +58,7 @@ public class ProductSetCategoryOrderHintActionImpl implements ProductSetCategory
     }
 
     /**
-     *  <p>The <code>id</code> of the Category to add the <code>orderHint</code>.</p>
+     *  <p>The <code>id</code> of the Category to add the <code>orderHint</code>. If this Category is not assigned to the Product, an InvalidOperation error is returned.</p>
      */
 
     public String getCategoryId() {

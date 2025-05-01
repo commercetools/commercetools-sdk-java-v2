@@ -95,7 +95,7 @@ public interface ProductDraft
     public List<CategoryResourceIdentifier> getCategories();
 
     /**
-     *  <p>Numerical values to allow ordering of Products within a specified Category.</p>
+     *  <p>Numerical values to allow ordering of Products within specified Categories. If the referenced Categories are not also assigned in the <code>categories</code> field, an InvalidOperation error is returned.</p>
      * @return categoryOrderHints
      */
     @Valid
@@ -235,7 +235,7 @@ public interface ProductDraft
     public void setCategories(final List<CategoryResourceIdentifier> categories);
 
     /**
-     *  <p>Numerical values to allow ordering of Products within a specified Category.</p>
+     *  <p>Numerical values to allow ordering of Products within specified Categories. If the referenced Categories are not also assigned in the <code>categories</code> field, an InvalidOperation error is returned.</p>
      * @param categoryOrderHints value to be set
      */
 

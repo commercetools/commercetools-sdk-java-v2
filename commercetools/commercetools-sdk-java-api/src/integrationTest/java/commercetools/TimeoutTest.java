@@ -119,7 +119,8 @@ public class TimeoutTest {
                         .withRequestMatching(apiHttpRequest -> apiHttpRequest.getMethod().equals(ApiHttpMethod.POST),
                             policyBuilder -> policyBuilder.withTimeout(Duration.ofSeconds(10)))
                         .withRequestMatching(apiHttpRequest -> apiHttpRequest.getMethod().equals(ApiHttpMethod.GET),
-                            policyBuilder -> policyBuilder.withTimeout(Duration.ofSeconds(1))))
+                            policyBuilder -> policyBuilder.withTimeout(Duration.ofSeconds(1)))
+                        .withAllOtherRequests(policyBuilder -> policyBuilder.withTimeout(Duration.ofSeconds(60))))
                 .build(projectKey);
 
         Assertions.assertThatExceptionOfType(TimeoutExceededException.class).isThrownBy(() -> {

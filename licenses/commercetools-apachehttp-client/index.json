@@ -142,7 +142,7 @@
         },
         {
             "moduleName": "org.apache.httpcomponents.client5:httpclient5",
-            "moduleVersion": "5.4.2",
+            "moduleVersion": "5.4.3",
             "moduleLicenses": [
                 {
                     "moduleLicense": "Apache License, Version 2.0",
@@ -152,7 +152,7 @@
         },
         {
             "moduleName": "org.apache.httpcomponents.core5:httpcore5",
-            "moduleVersion": "5.3.3",
+            "moduleVersion": "5.3.4",
             "moduleLicenses": [
                 {
                     "moduleLicense": "Apache License, Version 2.0",
@@ -162,7 +162,7 @@
         },
         {
             "moduleName": "org.apache.httpcomponents.core5:httpcore5-h2",
-            "moduleVersion": "5.3.3",
+            "moduleVersion": "5.3.4",
             "moduleLicenses": [
                 {
                     "moduleLicense": "Apache License, Version 2.0",

@@ -4,46 +4,42 @@ package com.commercetools.importapi.models.orders;
 import java.time.ZonedDateTime;
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class LineItemPriceTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(LineItemPriceBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, LineItemPriceBuilder builder) {
         LineItemPrice lineItemPrice = builder.buildUnchecked();
         Assertions.assertThat(lineItemPrice).isInstanceOf(LineItemPrice.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] {
+                new Object[] { "value",
                         LineItemPrice.builder().value(new com.commercetools.importapi.models.common.TypedMoneyImpl()) },
-                new Object[] { LineItemPrice.builder().country("country") },
-                new Object[] { LineItemPrice.builder().validFrom(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { LineItemPrice.builder().validUntil(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { LineItemPrice.builder()
+                new Object[] { "country", LineItemPrice.builder().country("country") },
+                new Object[] { "validFrom",
+                        LineItemPrice.builder().validFrom(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "validUntil",
+                        LineItemPrice.builder().validUntil(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "customerGroup", LineItemPrice.builder()
                         .customerGroup(new com.commercetools.importapi.models.common.CustomerGroupKeyReferenceImpl()) },
-                new Object[] { LineItemPrice.builder()
-                        .channel(new com.commercetools.importapi.models.common.ChannelKeyReferenceImpl()) },
-                new Object[] { LineItemPrice.builder()
-                        .discounted(new com.commercetools.importapi.models.common.DiscountedPriceImpl()) },
-                new Object[] {
+                new Object[] { "channel",
+                        LineItemPrice.builder()
+                                .channel(new com.commercetools.importapi.models.common.ChannelKeyReferenceImpl()) },
+                new Object[] { "discounted",
+                        LineItemPrice.builder()
+                                .discounted(new com.commercetools.importapi.models.common.DiscountedPriceImpl()) },
+                new Object[] { "tiers",
                         LineItemPrice.builder()
                                 .tiers(Collections.singletonList(
                                     new com.commercetools.importapi.models.common.PriceTierImpl())) },
-                new Object[] { LineItemPrice.builder()
+                new Object[] { "custom", LineItemPrice.builder()
                         .custom(new com.commercetools.importapi.models.customfields.CustomImpl()) } };
     }
 

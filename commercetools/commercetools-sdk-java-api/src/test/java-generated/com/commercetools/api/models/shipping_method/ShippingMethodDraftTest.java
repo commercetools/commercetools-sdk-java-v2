@@ -3,46 +3,41 @@ package com.commercetools.api.models.shipping_method;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ShippingMethodDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ShippingMethodDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ShippingMethodDraftBuilder builder) {
         ShippingMethodDraft shippingMethodDraft = builder.buildUnchecked();
         Assertions.assertThat(shippingMethodDraft).isInstanceOf(ShippingMethodDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ShippingMethodDraft.builder().key("key") },
-                new Object[] { ShippingMethodDraft.builder().name("name") },
-                new Object[] { ShippingMethodDraft.builder()
-                        .localizedName(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { ShippingMethodDraft.builder().description("description") },
-                new Object[] { ShippingMethodDraft.builder()
-                        .localizedDescription(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { ShippingMethodDraft.builder()
+        return new Object[][] { new Object[] { "key", ShippingMethodDraft.builder().key("key") },
+                new Object[] { "name", ShippingMethodDraft.builder().name("name") },
+                new Object[] { "localizedName",
+                        ShippingMethodDraft.builder()
+                                .localizedName(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "description", ShippingMethodDraft.builder().description("description") },
+                new Object[] { "localizedDescription",
+                        ShippingMethodDraft.builder()
+                                .localizedDescription(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "taxCategory", ShippingMethodDraft.builder()
                         .taxCategory(
                             new com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierImpl()) },
-                new Object[] { ShippingMethodDraft.builder()
-                        .zoneRates(Collections
-                                .singletonList(new com.commercetools.api.models.shipping_method.ZoneRateDraftImpl())) },
-                new Object[] { ShippingMethodDraft.builder().active(true) },
-                new Object[] { ShippingMethodDraft.builder().isDefault(true) },
-                new Object[] { ShippingMethodDraft.builder().predicate("predicate") },
-                new Object[] { ShippingMethodDraft.builder()
+                new Object[] { "zoneRates",
+                        ShippingMethodDraft.builder()
+                                .zoneRates(Collections.singletonList(
+                                    new com.commercetools.api.models.shipping_method.ZoneRateDraftImpl())) },
+                new Object[] { "active", ShippingMethodDraft.builder().active(true) },
+                new Object[] { "isDefault", ShippingMethodDraft.builder().isDefault(true) },
+                new Object[] { "predicate", ShippingMethodDraft.builder().predicate("predicate") },
+                new Object[] { "custom", ShippingMethodDraft.builder()
                         .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) } };
     }
 

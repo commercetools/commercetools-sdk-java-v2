@@ -1,31 +1,23 @@
 
 package com.commercetools.api.models.event;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ImportContainerDeletedEventDataTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ImportContainerDeletedEventDataBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ImportContainerDeletedEventDataBuilder builder) {
         ImportContainerDeletedEventData importContainerDeletedEventData = builder.buildUnchecked();
         Assertions.assertThat(importContainerDeletedEventData).isInstanceOf(ImportContainerDeletedEventData.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ImportContainerDeletedEventData.builder().key("key") },
-                new Object[] { ImportContainerDeletedEventData.builder().version(2) } };
+        return new Object[][] { new Object[] { "key", ImportContainerDeletedEventData.builder().key("key") },
+                new Object[] { "version", ImportContainerDeletedEventData.builder().version(2) } };
     }
 
     @Test

@@ -1,32 +1,25 @@
 
 package com.commercetools.api.models.error;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class GraphQLEnumKeyAlreadyExistsErrorTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(GraphQLEnumKeyAlreadyExistsErrorBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, GraphQLEnumKeyAlreadyExistsErrorBuilder builder) {
         GraphQLEnumKeyAlreadyExistsError graphQLEnumKeyAlreadyExistsError = builder.buildUnchecked();
         Assertions.assertThat(graphQLEnumKeyAlreadyExistsError).isInstanceOf(GraphQLEnumKeyAlreadyExistsError.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { GraphQLEnumKeyAlreadyExistsError.builder().conflictingEnumKey("conflictingEnumKey") },
-                new Object[] { GraphQLEnumKeyAlreadyExistsError.builder()
+                new Object[] { "conflictingEnumKey",
+                        GraphQLEnumKeyAlreadyExistsError.builder().conflictingEnumKey("conflictingEnumKey") },
+                new Object[] { "conflictingAttributeName", GraphQLEnumKeyAlreadyExistsError.builder()
                         .conflictingAttributeName("conflictingAttributeName") } };
     }
 

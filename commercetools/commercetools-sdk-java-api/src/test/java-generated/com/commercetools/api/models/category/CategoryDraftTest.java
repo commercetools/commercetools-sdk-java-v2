@@ -3,51 +3,50 @@ package com.commercetools.api.models.category;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CategoryDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CategoryDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CategoryDraftBuilder builder) {
         CategoryDraft categoryDraft = builder.buildUnchecked();
         Assertions.assertThat(categoryDraft).isInstanceOf(CategoryDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] {
+                new Object[] { "name",
                         CategoryDraft.builder().name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] {
+                new Object[] { "slug",
                         CategoryDraft.builder().slug(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { CategoryDraft.builder()
-                        .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { CategoryDraft.builder()
-                        .parent(new com.commercetools.api.models.category.CategoryResourceIdentifierImpl()) },
-                new Object[] { CategoryDraft.builder().orderHint("orderHint") },
-                new Object[] { CategoryDraft.builder().externalId("externalId") },
-                new Object[] { CategoryDraft.builder()
-                        .metaTitle(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { CategoryDraft.builder()
-                        .metaDescription(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { CategoryDraft.builder()
-                        .metaKeywords(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] {
+                new Object[] { "description",
+                        CategoryDraft.builder()
+                                .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "parent",
+                        CategoryDraft.builder()
+                                .parent(new com.commercetools.api.models.category.CategoryResourceIdentifierImpl()) },
+                new Object[] { "orderHint", CategoryDraft.builder().orderHint("orderHint") },
+                new Object[] { "externalId", CategoryDraft.builder().externalId("externalId") },
+                new Object[] { "metaTitle",
+                        CategoryDraft.builder()
+                                .metaTitle(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "metaDescription",
+                        CategoryDraft.builder()
+                                .metaDescription(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "metaKeywords",
+                        CategoryDraft.builder()
+                                .metaKeywords(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "custom",
                         CategoryDraft.builder().custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) },
-                new Object[] { CategoryDraft.builder()
-                        .assets(Collections.singletonList(new com.commercetools.api.models.common.AssetDraftImpl())) },
-                new Object[] { CategoryDraft.builder().key("key") } };
+                new Object[] { "assets",
+                        CategoryDraft.builder()
+                                .assets(Collections
+                                        .singletonList(new com.commercetools.api.models.common.AssetDraftImpl())) },
+                new Object[] { "key", CategoryDraft.builder().key("key") } };
     }
 
     @Test

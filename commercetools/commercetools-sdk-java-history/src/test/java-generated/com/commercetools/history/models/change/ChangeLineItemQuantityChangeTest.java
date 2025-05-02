@@ -1,35 +1,28 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ChangeLineItemQuantityChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ChangeLineItemQuantityChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ChangeLineItemQuantityChangeBuilder builder) {
         ChangeLineItemQuantityChange changeLineItemQuantityChange = builder.buildUnchecked();
         Assertions.assertThat(changeLineItemQuantityChange).isInstanceOf(ChangeLineItemQuantityChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ChangeLineItemQuantityChange.builder().change("change") },
-                new Object[] { ChangeLineItemQuantityChange.builder().previousValue(8) },
-                new Object[] { ChangeLineItemQuantityChange.builder().nextValue(7) },
-                new Object[] { ChangeLineItemQuantityChange.builder()
-                        .lineItem(new com.commercetools.history.models.common.LocalizedStringImpl()) },
-                new Object[] { ChangeLineItemQuantityChange.builder().lineItemId("lineItemId") } };
+        return new Object[][] { new Object[] { "change", ChangeLineItemQuantityChange.builder().change("change") },
+                new Object[] { "previousValue", ChangeLineItemQuantityChange.builder().previousValue(8) },
+                new Object[] { "nextValue", ChangeLineItemQuantityChange.builder().nextValue(7) },
+                new Object[] { "lineItem",
+                        ChangeLineItemQuantityChange.builder()
+                                .lineItem(new com.commercetools.history.models.common.LocalizedStringImpl()) },
+                new Object[] { "lineItemId", ChangeLineItemQuantityChange.builder().lineItemId("lineItemId") } };
     }
 
     @Test

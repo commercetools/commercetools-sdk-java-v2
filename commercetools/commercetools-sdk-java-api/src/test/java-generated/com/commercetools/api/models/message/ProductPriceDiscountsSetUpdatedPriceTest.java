@@ -1,37 +1,31 @@
 
 package com.commercetools.api.models.message;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductPriceDiscountsSetUpdatedPriceTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductPriceDiscountsSetUpdatedPriceBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductPriceDiscountsSetUpdatedPriceBuilder builder) {
         ProductPriceDiscountsSetUpdatedPrice productPriceDiscountsSetUpdatedPrice = builder.buildUnchecked();
         Assertions.assertThat(productPriceDiscountsSetUpdatedPrice)
                 .isInstanceOf(ProductPriceDiscountsSetUpdatedPrice.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductPriceDiscountsSetUpdatedPrice.builder().variantId(5) },
-                new Object[] { ProductPriceDiscountsSetUpdatedPrice.builder().variantKey("variantKey") },
-                new Object[] { ProductPriceDiscountsSetUpdatedPrice.builder().sku("sku") },
-                new Object[] { ProductPriceDiscountsSetUpdatedPrice.builder().priceId("priceId") },
-                new Object[] { ProductPriceDiscountsSetUpdatedPrice.builder()
-                        .discounted(new com.commercetools.api.models.common.DiscountedPriceImpl()) },
-                new Object[] { ProductPriceDiscountsSetUpdatedPrice.builder().staged(true) } };
+        return new Object[][] {
+                new Object[] { "variantId", ProductPriceDiscountsSetUpdatedPrice.builder().variantId(5) },
+                new Object[] { "variantKey", ProductPriceDiscountsSetUpdatedPrice.builder().variantKey("variantKey") },
+                new Object[] { "sku", ProductPriceDiscountsSetUpdatedPrice.builder().sku("sku") },
+                new Object[] { "priceId", ProductPriceDiscountsSetUpdatedPrice.builder().priceId("priceId") },
+                new Object[] { "discounted",
+                        ProductPriceDiscountsSetUpdatedPrice.builder()
+                                .discounted(new com.commercetools.api.models.common.DiscountedPriceImpl()) },
+                new Object[] { "staged", ProductPriceDiscountsSetUpdatedPrice.builder().staged(true) } };
     }
 
     @Test

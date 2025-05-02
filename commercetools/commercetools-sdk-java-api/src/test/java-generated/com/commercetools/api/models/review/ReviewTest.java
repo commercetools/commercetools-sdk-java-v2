@@ -3,48 +3,46 @@ package com.commercetools.api.models.review;
 
 import java.time.ZonedDateTime;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ReviewTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ReviewBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ReviewBuilder builder) {
         Review review = builder.buildUnchecked();
         Assertions.assertThat(review).isInstanceOf(Review.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { Review.builder().id("id") },
-                new Object[] { Review.builder().version(2L) },
-                new Object[] { Review.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { Review.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] {
+        return new Object[][] { new Object[] { "id", Review.builder().id("id") },
+                new Object[] { "version", Review.builder().version(2L) },
+                new Object[] { "createdAt", Review.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedAt",
+                        Review.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedBy",
                         Review.builder().lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
-                new Object[] { Review.builder().createdBy(new com.commercetools.api.models.common.CreatedByImpl()) },
-                new Object[] { Review.builder().key("key") },
-                new Object[] { Review.builder().uniquenessValue("uniquenessValue") },
-                new Object[] { Review.builder().locale("locale") },
-                new Object[] { Review.builder().authorName("authorName") },
-                new Object[] { Review.builder().title("title") }, new Object[] { Review.builder().text("text") },
-                new Object[] { Review.builder().target(new com.commercetools.api.models.common.ReferenceImpl()) },
-                new Object[] { Review.builder().includedInStatistics(true) },
-                new Object[] { Review.builder().rating(5) },
-                new Object[] { Review.builder().state(new com.commercetools.api.models.state.StateReferenceImpl()) },
-                new Object[] {
+                new Object[] { "createdBy",
+                        Review.builder().createdBy(new com.commercetools.api.models.common.CreatedByImpl()) },
+                new Object[] { "key", Review.builder().key("key") },
+                new Object[] { "uniquenessValue", Review.builder().uniquenessValue("uniquenessValue") },
+                new Object[] { "locale", Review.builder().locale("locale") },
+                new Object[] { "authorName", Review.builder().authorName("authorName") },
+                new Object[] { "title", Review.builder().title("title") },
+                new Object[] { "text", Review.builder().text("text") },
+                new Object[] { "target",
+                        Review.builder().target(new com.commercetools.api.models.common.ReferenceImpl()) },
+                new Object[] { "includedInStatistics", Review.builder().includedInStatistics(true) },
+                new Object[] { "rating", Review.builder().rating(5) },
+                new Object[] { "state",
+                        Review.builder().state(new com.commercetools.api.models.state.StateReferenceImpl()) },
+                new Object[] { "customer",
                         Review.builder().customer(new com.commercetools.api.models.customer.CustomerReferenceImpl()) },
-                new Object[] { Review.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) } };
+                new Object[] { "custom",
+                        Review.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) } };
     }
 
     @Test

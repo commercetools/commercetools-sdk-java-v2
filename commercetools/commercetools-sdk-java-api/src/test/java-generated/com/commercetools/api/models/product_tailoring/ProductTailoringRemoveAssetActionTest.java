@@ -1,34 +1,26 @@
 
 package com.commercetools.api.models.product_tailoring;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductTailoringRemoveAssetActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductTailoringRemoveAssetActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductTailoringRemoveAssetActionBuilder builder) {
         ProductTailoringRemoveAssetAction productTailoringRemoveAssetAction = builder.buildUnchecked();
         Assertions.assertThat(productTailoringRemoveAssetAction).isInstanceOf(ProductTailoringRemoveAssetAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductTailoringRemoveAssetAction.builder().variantId(5L) },
-                new Object[] { ProductTailoringRemoveAssetAction.builder().sku("sku") },
-                new Object[] { ProductTailoringRemoveAssetAction.builder().staged(true) },
-                new Object[] { ProductTailoringRemoveAssetAction.builder().assetId("assetId") },
-                new Object[] { ProductTailoringRemoveAssetAction.builder().assetKey("assetKey") } };
+        return new Object[][] { new Object[] { "variantId", ProductTailoringRemoveAssetAction.builder().variantId(5L) },
+                new Object[] { "sku", ProductTailoringRemoveAssetAction.builder().sku("sku") },
+                new Object[] { "staged", ProductTailoringRemoveAssetAction.builder().staged(true) },
+                new Object[] { "assetId", ProductTailoringRemoveAssetAction.builder().assetId("assetId") },
+                new Object[] { "assetKey", ProductTailoringRemoveAssetAction.builder().assetKey("assetKey") } };
     }
 
     @Test

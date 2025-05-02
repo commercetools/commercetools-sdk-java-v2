@@ -1,34 +1,27 @@
 
 package com.commercetools.api.models.shipping_method;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ShippingMethodRemoveShippingRateActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ShippingMethodRemoveShippingRateActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ShippingMethodRemoveShippingRateActionBuilder builder) {
         ShippingMethodRemoveShippingRateAction shippingMethodRemoveShippingRateAction = builder.buildUnchecked();
         Assertions.assertThat(shippingMethodRemoveShippingRateAction)
                 .isInstanceOf(ShippingMethodRemoveShippingRateAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { ShippingMethodRemoveShippingRateAction.builder()
-                        .zone(new com.commercetools.api.models.zone.ZoneResourceIdentifierImpl()) },
-                new Object[] { ShippingMethodRemoveShippingRateAction.builder()
+                new Object[] { "zone",
+                        ShippingMethodRemoveShippingRateAction.builder()
+                                .zone(new com.commercetools.api.models.zone.ZoneResourceIdentifierImpl()) },
+                new Object[] { "shippingRate", ShippingMethodRemoveShippingRateAction.builder()
                         .shippingRate(new com.commercetools.api.models.shipping_method.ShippingRateDraftImpl()) } };
     }
 

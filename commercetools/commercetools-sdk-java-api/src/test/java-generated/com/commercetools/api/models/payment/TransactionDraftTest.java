@@ -3,38 +3,34 @@ package com.commercetools.api.models.payment;
 
 import java.time.ZonedDateTime;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class TransactionDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(TransactionDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, TransactionDraftBuilder builder) {
         TransactionDraft transactionDraft = builder.buildUnchecked();
         Assertions.assertThat(transactionDraft).isInstanceOf(TransactionDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { TransactionDraft.builder().timestamp(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { TransactionDraft.builder()
-                        .type(com.commercetools.api.models.payment.TransactionType.findEnum("Authorization")) },
-                new Object[] { TransactionDraft.builder().amount(new com.commercetools.api.models.common.MoneyImpl()) },
-                new Object[] { TransactionDraft.builder().interactionId("interactionId") },
-                new Object[] { TransactionDraft.builder()
-                        .state(com.commercetools.api.models.payment.TransactionState.findEnum("Initial")) },
-                new Object[] { TransactionDraft.builder()
+                new Object[] { "timestamp",
+                        TransactionDraft.builder().timestamp(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "type",
+                        TransactionDraft.builder()
+                                .type(com.commercetools.api.models.payment.TransactionType.findEnum("Authorization")) },
+                new Object[] { "amount",
+                        TransactionDraft.builder().amount(new com.commercetools.api.models.common.MoneyImpl()) },
+                new Object[] { "interactionId", TransactionDraft.builder().interactionId("interactionId") },
+                new Object[] { "state",
+                        TransactionDraft.builder()
+                                .state(com.commercetools.api.models.payment.TransactionState.findEnum("Initial")) },
+                new Object[] { "custom", TransactionDraft.builder()
                         .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) } };
     }
 

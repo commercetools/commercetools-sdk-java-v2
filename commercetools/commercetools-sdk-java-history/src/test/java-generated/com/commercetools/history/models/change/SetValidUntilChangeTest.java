@@ -1,32 +1,24 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetValidUntilChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetValidUntilChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetValidUntilChangeBuilder builder) {
         SetValidUntilChange setValidUntilChange = builder.buildUnchecked();
         Assertions.assertThat(setValidUntilChange).isInstanceOf(SetValidUntilChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetValidUntilChange.builder().change("change") },
-                new Object[] { SetValidUntilChange.builder().previousValue("previousValue") },
-                new Object[] { SetValidUntilChange.builder().nextValue("nextValue") } };
+        return new Object[][] { new Object[] { "change", SetValidUntilChange.builder().change("change") },
+                new Object[] { "previousValue", SetValidUntilChange.builder().previousValue("previousValue") },
+                new Object[] { "nextValue", SetValidUntilChange.builder().nextValue("nextValue") } };
     }
 
     @Test

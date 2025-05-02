@@ -3,33 +3,26 @@ package com.commercetools.api.models.message;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class AssociateRolePermissionsSetMessageTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(AssociateRolePermissionsSetMessageBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, AssociateRolePermissionsSetMessageBuilder builder) {
         AssociateRolePermissionsSetMessage associateRolePermissionsSetMessage = builder.buildUnchecked();
         Assertions.assertThat(associateRolePermissionsSetMessage)
                 .isInstanceOf(AssociateRolePermissionsSetMessage.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { AssociateRolePermissionsSetMessage.builder()
-                .permissions(Collections.singletonList(
-                    com.commercetools.api.models.associate_role.Permission.findEnum("AddChildUnits"))) } };
+        return new Object[][] { new Object[] { "permissions",
+                AssociateRolePermissionsSetMessage.builder()
+                        .permissions(Collections.singletonList(
+                            com.commercetools.api.models.associate_role.Permission.findEnum("AddChildUnits"))) } };
     }
 
     @Test

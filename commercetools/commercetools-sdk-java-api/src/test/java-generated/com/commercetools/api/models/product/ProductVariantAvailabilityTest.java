@@ -1,36 +1,28 @@
 
 package com.commercetools.api.models.product;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductVariantAvailabilityTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductVariantAvailabilityBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductVariantAvailabilityBuilder builder) {
         ProductVariantAvailability productVariantAvailability = builder.buildUnchecked();
         Assertions.assertThat(productVariantAvailability).isInstanceOf(ProductVariantAvailability.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductVariantAvailability.builder()
+        return new Object[][] { new Object[] { "channels", ProductVariantAvailability.builder()
                 .channels(new com.commercetools.api.models.product.ProductVariantChannelAvailabilityMapImpl()) },
-                new Object[] { ProductVariantAvailability.builder().isOnStock(true) },
-                new Object[] { ProductVariantAvailability.builder().restockableInDays(4L) },
-                new Object[] { ProductVariantAvailability.builder().availableQuantity(3L) },
-                new Object[] { ProductVariantAvailability.builder().id("id") },
-                new Object[] { ProductVariantAvailability.builder().version(2L) } };
+                new Object[] { "isOnStock", ProductVariantAvailability.builder().isOnStock(true) },
+                new Object[] { "restockableInDays", ProductVariantAvailability.builder().restockableInDays(4L) },
+                new Object[] { "availableQuantity", ProductVariantAvailability.builder().availableQuantity(3L) },
+                new Object[] { "id", ProductVariantAvailability.builder().id("id") },
+                new Object[] { "version", ProductVariantAvailability.builder().version(2L) } };
     }
 
     @Test

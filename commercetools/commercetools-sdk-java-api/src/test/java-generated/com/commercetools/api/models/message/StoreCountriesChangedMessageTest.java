@@ -3,36 +3,30 @@ package com.commercetools.api.models.message;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class StoreCountriesChangedMessageTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(StoreCountriesChangedMessageBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, StoreCountriesChangedMessageBuilder builder) {
         StoreCountriesChangedMessage storeCountriesChangedMessage = builder.buildUnchecked();
         Assertions.assertThat(storeCountriesChangedMessage).isInstanceOf(StoreCountriesChangedMessage.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { StoreCountriesChangedMessage.builder()
-                        .addedCountries(Collections
-                                .singletonList(new com.commercetools.api.models.store_country.StoreCountryImpl())) },
-                new Object[] { StoreCountriesChangedMessage.builder()
-                        .removedCountries(Collections
-                                .singletonList(new com.commercetools.api.models.store_country.StoreCountryImpl())) } };
+                new Object[] { "addedCountries",
+                        StoreCountriesChangedMessage.builder()
+                                .addedCountries(Collections.singletonList(
+                                    new com.commercetools.api.models.store_country.StoreCountryImpl())) },
+                new Object[] { "removedCountries",
+                        StoreCountriesChangedMessage.builder()
+                                .removedCountries(Collections.singletonList(
+                                    new com.commercetools.api.models.store_country.StoreCountryImpl())) } };
     }
 
     @Test

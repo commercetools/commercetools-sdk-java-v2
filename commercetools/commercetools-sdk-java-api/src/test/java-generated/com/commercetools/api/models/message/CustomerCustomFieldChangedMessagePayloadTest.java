@@ -1,33 +1,27 @@
 
 package com.commercetools.api.models.message;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CustomerCustomFieldChangedMessagePayloadTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CustomerCustomFieldChangedMessagePayloadBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CustomerCustomFieldChangedMessagePayloadBuilder builder) {
         CustomerCustomFieldChangedMessagePayload customerCustomFieldChangedMessagePayload = builder.buildUnchecked();
         Assertions.assertThat(customerCustomFieldChangedMessagePayload)
                 .isInstanceOf(CustomerCustomFieldChangedMessagePayload.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { CustomerCustomFieldChangedMessagePayload.builder().name("name") },
-                new Object[] { CustomerCustomFieldChangedMessagePayload.builder().value("value") },
-                new Object[] { CustomerCustomFieldChangedMessagePayload.builder().previousValue("previousValue") } };
+        return new Object[][] {
+                new Object[] { "name", CustomerCustomFieldChangedMessagePayload.builder().name("name") },
+                new Object[] { "value", CustomerCustomFieldChangedMessagePayload.builder().value("value") },
+                new Object[] { "previousValue",
+                        CustomerCustomFieldChangedMessagePayload.builder().previousValue("previousValue") } };
     }
 
     @Test

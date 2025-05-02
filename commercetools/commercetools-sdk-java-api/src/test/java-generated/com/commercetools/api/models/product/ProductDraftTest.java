@@ -3,62 +3,64 @@ package com.commercetools.api.models.product;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductDraftBuilder builder) {
         ProductDraft productDraft = builder.buildUnchecked();
         Assertions.assertThat(productDraft).isInstanceOf(ProductDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductDraft.builder()
+        return new Object[][] { new Object[] { "productType", ProductDraft.builder()
                 .productType(new com.commercetools.api.models.product_type.ProductTypeResourceIdentifierImpl()) },
-                new Object[] {
+                new Object[] { "name",
                         ProductDraft.builder().name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] {
+                new Object[] { "slug",
                         ProductDraft.builder().slug(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { ProductDraft.builder().key("key") },
-                new Object[] { ProductDraft.builder()
-                        .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { ProductDraft.builder()
-                        .categories(Collections.singletonList(
-                            new com.commercetools.api.models.category.CategoryResourceIdentifierImpl())) },
-                new Object[] { ProductDraft.builder()
+                new Object[] { "key", ProductDraft.builder().key("key") },
+                new Object[] { "description",
+                        ProductDraft.builder()
+                                .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "categories",
+                        ProductDraft.builder()
+                                .categories(Collections.singletonList(
+                                    new com.commercetools.api.models.category.CategoryResourceIdentifierImpl())) },
+                new Object[] { "categoryOrderHints", ProductDraft.builder()
                         .categoryOrderHints(new com.commercetools.api.models.product.CategoryOrderHintsImpl()) },
-                new Object[] { ProductDraft.builder()
-                        .metaTitle(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { ProductDraft.builder()
-                        .metaDescription(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { ProductDraft.builder()
-                        .metaKeywords(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { ProductDraft.builder()
-                        .masterVariant(new com.commercetools.api.models.product.ProductVariantDraftImpl()) },
-                new Object[] { ProductDraft.builder()
-                        .variants(Collections
-                                .singletonList(new com.commercetools.api.models.product.ProductVariantDraftImpl())) },
-                new Object[] { ProductDraft.builder()
+                new Object[] { "metaTitle",
+                        ProductDraft.builder()
+                                .metaTitle(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "metaDescription",
+                        ProductDraft.builder()
+                                .metaDescription(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "metaKeywords",
+                        ProductDraft.builder()
+                                .metaKeywords(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "masterVariant",
+                        ProductDraft.builder()
+                                .masterVariant(new com.commercetools.api.models.product.ProductVariantDraftImpl()) },
+                new Object[] { "variants",
+                        ProductDraft.builder()
+                                .variants(Collections.singletonList(
+                                    new com.commercetools.api.models.product.ProductVariantDraftImpl())) },
+                new Object[] { "taxCategory", ProductDraft.builder()
                         .taxCategory(
                             new com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierImpl()) },
-                new Object[] { ProductDraft.builder()
-                        .searchKeywords(new com.commercetools.api.models.product.SearchKeywordsImpl()) },
-                new Object[] { ProductDraft.builder()
-                        .state(new com.commercetools.api.models.state.StateResourceIdentifierImpl()) },
-                new Object[] { ProductDraft.builder().publish(true) }, new Object[] { ProductDraft.builder()
+                new Object[] { "searchKeywords",
+                        ProductDraft.builder()
+                                .searchKeywords(new com.commercetools.api.models.product.SearchKeywordsImpl()) },
+                new Object[] { "state",
+                        ProductDraft.builder()
+                                .state(new com.commercetools.api.models.state.StateResourceIdentifierImpl()) },
+                new Object[] { "publish", ProductDraft.builder().publish(true) },
+                new Object[] { "priceMode", ProductDraft.builder()
                         .priceMode(com.commercetools.api.models.product.ProductPriceModeEnum.findEnum("Embedded")) } };
     }
 

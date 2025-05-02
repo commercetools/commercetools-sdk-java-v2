@@ -3,35 +3,27 @@ package com.commercetools.api.models.product;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductSetAssetTagsActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductSetAssetTagsActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductSetAssetTagsActionBuilder builder) {
         ProductSetAssetTagsAction productSetAssetTagsAction = builder.buildUnchecked();
         Assertions.assertThat(productSetAssetTagsAction).isInstanceOf(ProductSetAssetTagsAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductSetAssetTagsAction.builder().variantId(5L) },
-                new Object[] { ProductSetAssetTagsAction.builder().sku("sku") },
-                new Object[] { ProductSetAssetTagsAction.builder().staged(true) },
-                new Object[] { ProductSetAssetTagsAction.builder().assetId("assetId") },
-                new Object[] { ProductSetAssetTagsAction.builder().assetKey("assetKey") },
-                new Object[] { ProductSetAssetTagsAction.builder().tags(Collections.singletonList("tags")) } };
+        return new Object[][] { new Object[] { "variantId", ProductSetAssetTagsAction.builder().variantId(5L) },
+                new Object[] { "sku", ProductSetAssetTagsAction.builder().sku("sku") },
+                new Object[] { "staged", ProductSetAssetTagsAction.builder().staged(true) },
+                new Object[] { "assetId", ProductSetAssetTagsAction.builder().assetId("assetId") },
+                new Object[] { "assetKey", ProductSetAssetTagsAction.builder().assetKey("assetKey") },
+                new Object[] { "tags", ProductSetAssetTagsAction.builder().tags(Collections.singletonList("tags")) } };
     }
 
     @Test

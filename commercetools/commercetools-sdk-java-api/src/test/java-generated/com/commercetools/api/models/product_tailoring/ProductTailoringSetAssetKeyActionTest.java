@@ -1,34 +1,26 @@
 
 package com.commercetools.api.models.product_tailoring;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductTailoringSetAssetKeyActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductTailoringSetAssetKeyActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductTailoringSetAssetKeyActionBuilder builder) {
         ProductTailoringSetAssetKeyAction productTailoringSetAssetKeyAction = builder.buildUnchecked();
         Assertions.assertThat(productTailoringSetAssetKeyAction).isInstanceOf(ProductTailoringSetAssetKeyAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductTailoringSetAssetKeyAction.builder().variantId(5L) },
-                new Object[] { ProductTailoringSetAssetKeyAction.builder().sku("sku") },
-                new Object[] { ProductTailoringSetAssetKeyAction.builder().staged(true) },
-                new Object[] { ProductTailoringSetAssetKeyAction.builder().assetId("assetId") },
-                new Object[] { ProductTailoringSetAssetKeyAction.builder().assetKey("assetKey") } };
+        return new Object[][] { new Object[] { "variantId", ProductTailoringSetAssetKeyAction.builder().variantId(5L) },
+                new Object[] { "sku", ProductTailoringSetAssetKeyAction.builder().sku("sku") },
+                new Object[] { "staged", ProductTailoringSetAssetKeyAction.builder().staged(true) },
+                new Object[] { "assetId", ProductTailoringSetAssetKeyAction.builder().assetId("assetId") },
+                new Object[] { "assetKey", ProductTailoringSetAssetKeyAction.builder().assetKey("assetKey") } };
     }
 
     @Test

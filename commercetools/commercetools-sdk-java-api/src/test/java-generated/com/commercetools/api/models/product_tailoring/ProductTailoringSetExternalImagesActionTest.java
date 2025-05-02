@@ -3,35 +3,28 @@ package com.commercetools.api.models.product_tailoring;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductTailoringSetExternalImagesActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductTailoringSetExternalImagesActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductTailoringSetExternalImagesActionBuilder builder) {
         ProductTailoringSetExternalImagesAction productTailoringSetExternalImagesAction = builder.buildUnchecked();
         Assertions.assertThat(productTailoringSetExternalImagesAction)
                 .isInstanceOf(ProductTailoringSetExternalImagesAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductTailoringSetExternalImagesAction.builder().variantId(5L) },
-                new Object[] { ProductTailoringSetExternalImagesAction.builder().sku("sku") },
-                new Object[] { ProductTailoringSetExternalImagesAction.builder()
+        return new Object[][] {
+                new Object[] { "variantId", ProductTailoringSetExternalImagesAction.builder().variantId(5L) },
+                new Object[] { "sku", ProductTailoringSetExternalImagesAction.builder().sku("sku") },
+                new Object[] { "images", ProductTailoringSetExternalImagesAction.builder()
                         .images(Collections.singletonList(new com.commercetools.api.models.common.ImageImpl())) },
-                new Object[] { ProductTailoringSetExternalImagesAction.builder().staged(true) } };
+                new Object[] { "staged", ProductTailoringSetExternalImagesAction.builder().staged(true) } };
     }
 
     @Test

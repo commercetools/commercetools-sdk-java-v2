@@ -3,89 +3,93 @@ package com.commercetools.api.models.cart;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CartDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CartDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CartDraftBuilder builder) {
         CartDraft cartDraft = builder.buildUnchecked();
         Assertions.assertThat(cartDraft).isInstanceOf(CartDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { CartDraft.builder().currency("currency") },
-                new Object[] { CartDraft.builder().key("key") },
-                new Object[] { CartDraft.builder().customerId("customerId") },
-                new Object[] { CartDraft.builder().customerEmail("customerEmail") },
-                new Object[] { CartDraft.builder()
+        return new Object[][] { new Object[] { "currency", CartDraft.builder().currency("currency") },
+                new Object[] { "key", CartDraft.builder().key("key") },
+                new Object[] { "customerId", CartDraft.builder().customerId("customerId") },
+                new Object[] { "customerEmail", CartDraft.builder().customerEmail("customerEmail") },
+                new Object[] { "customerGroup", CartDraft.builder()
                         .customerGroup(
                             new com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierImpl()) },
-                new Object[] { CartDraft.builder().anonymousId("anonymousId") },
-                new Object[] { CartDraft.builder()
+                new Object[] { "anonymousId", CartDraft.builder().anonymousId("anonymousId") },
+                new Object[] { "businessUnit", CartDraft.builder()
                         .businessUnit(
                             new com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierImpl()) },
-                new Object[] { CartDraft.builder()
-                        .store(new com.commercetools.api.models.store.StoreResourceIdentifierImpl()) },
-                new Object[] {
+                new Object[] { "store",
+                        CartDraft.builder()
+                                .store(new com.commercetools.api.models.store.StoreResourceIdentifierImpl()) },
+                new Object[] { "lineItems",
                         CartDraft.builder()
                                 .lineItems(Collections
                                         .singletonList(new com.commercetools.api.models.cart.LineItemDraftImpl())) },
-                new Object[] { CartDraft.builder()
-                        .customLineItems(Collections
-                                .singletonList(new com.commercetools.api.models.cart.CustomLineItemDraftImpl())) },
-                new Object[] {
+                new Object[] { "customLineItems",
+                        CartDraft.builder()
+                                .customLineItems(Collections.singletonList(
+                                    new com.commercetools.api.models.cart.CustomLineItemDraftImpl())) },
+                new Object[] { "taxMode",
                         CartDraft.builder().taxMode(com.commercetools.api.models.cart.TaxMode.findEnum("Platform")) },
-                new Object[] { CartDraft.builder()
-                        .externalTaxRateForShippingMethod(
-                            new com.commercetools.api.models.cart.ExternalTaxRateDraftImpl()) },
-                new Object[] { CartDraft.builder()
-                        .taxRoundingMode(com.commercetools.api.models.cart.RoundingMode.findEnum("HalfEven")) },
-                new Object[] { CartDraft.builder()
-                        .taxCalculationMode(
-                            com.commercetools.api.models.cart.TaxCalculationMode.findEnum("LineItemLevel")) },
-                new Object[] { CartDraft.builder()
-                        .inventoryMode(com.commercetools.api.models.cart.InventoryMode.findEnum("None")) },
-                new Object[] {
+                new Object[] { "externalTaxRateForShippingMethod",
+                        CartDraft.builder()
+                                .externalTaxRateForShippingMethod(
+                                    new com.commercetools.api.models.cart.ExternalTaxRateDraftImpl()) },
+                new Object[] { "taxRoundingMode",
+                        CartDraft.builder()
+                                .taxRoundingMode(com.commercetools.api.models.cart.RoundingMode.findEnum("HalfEven")) },
+                new Object[] { "taxCalculationMode",
+                        CartDraft.builder()
+                                .taxCalculationMode(
+                                    com.commercetools.api.models.cart.TaxCalculationMode.findEnum("LineItemLevel")) },
+                new Object[] { "inventoryMode",
+                        CartDraft.builder()
+                                .inventoryMode(com.commercetools.api.models.cart.InventoryMode.findEnum("None")) },
+                new Object[] { "billingAddress",
                         CartDraft.builder().billingAddress(new com.commercetools.api.models.common.BaseAddressImpl()) },
-                new Object[] { CartDraft.builder()
-                        .shippingAddress(new com.commercetools.api.models.common.BaseAddressImpl()) },
-                new Object[] { CartDraft.builder()
+                new Object[] { "shippingAddress",
+                        CartDraft.builder()
+                                .shippingAddress(new com.commercetools.api.models.common.BaseAddressImpl()) },
+                new Object[] { "shippingMethod", CartDraft.builder()
                         .shippingMethod(
                             new com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierImpl()) },
-                new Object[] { CartDraft.builder()
+                new Object[] { "shippingRateInput", CartDraft.builder()
                         .shippingRateInput(new com.commercetools.api.models.cart.ShippingRateInputDraftImpl()) },
-                new Object[] { CartDraft.builder()
-                        .shippingMode(com.commercetools.api.models.cart.ShippingMode.findEnum("Single")) },
-                new Object[] { CartDraft.builder()
-                        .customShipping(Collections
-                                .singletonList(new com.commercetools.api.models.cart.CustomShippingDraftImpl())) },
-                new Object[] {
+                new Object[] { "shippingMode",
+                        CartDraft.builder()
+                                .shippingMode(com.commercetools.api.models.cart.ShippingMode.findEnum("Single")) },
+                new Object[] { "customShipping",
+                        CartDraft.builder()
+                                .customShipping(Collections.singletonList(
+                                    new com.commercetools.api.models.cart.CustomShippingDraftImpl())) },
+                new Object[] { "shipping",
                         CartDraft.builder()
                                 .shipping(Collections
                                         .singletonList(new com.commercetools.api.models.cart.ShippingDraftImpl())) },
-                new Object[] {
+                new Object[] { "itemShippingAddresses",
                         CartDraft.builder()
                                 .itemShippingAddresses(Collections
                                         .singletonList(new com.commercetools.api.models.common.BaseAddressImpl())) },
-                new Object[] { CartDraft.builder().discountCodes(Collections.singletonList("discountCodes")) },
-                new Object[] { CartDraft.builder().country("country") },
-                new Object[] { CartDraft.builder().locale("locale") },
-                new Object[] {
+                new Object[] { "discountCodes",
+                        CartDraft.builder().discountCodes(Collections.singletonList("discountCodes")) },
+                new Object[] { "country", CartDraft.builder().country("country") },
+                new Object[] { "locale", CartDraft.builder().locale("locale") },
+                new Object[] { "origin",
                         CartDraft.builder().origin(com.commercetools.api.models.cart.CartOrigin.findEnum("Customer")) },
-                new Object[] { CartDraft.builder().deleteDaysAfterLastModification(3L) }, new Object[] {
+                new Object[] { "deleteDaysAfterLastModification",
+                        CartDraft.builder().deleteDaysAfterLastModification(3L) },
+                new Object[] { "custom",
                         CartDraft.builder().custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) } };
     }
 

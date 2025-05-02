@@ -1,35 +1,29 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetImageLabelChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetImageLabelChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetImageLabelChangeBuilder builder) {
         SetImageLabelChange setImageLabelChange = builder.buildUnchecked();
         Assertions.assertThat(setImageLabelChange).isInstanceOf(SetImageLabelChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetImageLabelChange.builder().change("change") },
-                new Object[] { SetImageLabelChange.builder()
-                        .previousValue(new com.commercetools.history.models.common.ImageImpl()) },
-                new Object[] { SetImageLabelChange.builder()
-                        .nextValue(new com.commercetools.history.models.common.ImageImpl()) },
-                new Object[] { SetImageLabelChange.builder().catalogData("catalogData") } };
+        return new Object[][] { new Object[] { "change", SetImageLabelChange.builder().change("change") },
+                new Object[] { "previousValue",
+                        SetImageLabelChange.builder()
+                                .previousValue(new com.commercetools.history.models.common.ImageImpl()) },
+                new Object[] { "nextValue",
+                        SetImageLabelChange.builder()
+                                .nextValue(new com.commercetools.history.models.common.ImageImpl()) },
+                new Object[] { "catalogData", SetImageLabelChange.builder().catalogData("catalogData") } };
     }
 
     @Test

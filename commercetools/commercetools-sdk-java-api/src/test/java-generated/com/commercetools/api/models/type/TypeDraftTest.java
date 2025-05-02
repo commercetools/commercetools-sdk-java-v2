@@ -3,38 +3,32 @@ package com.commercetools.api.models.type;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class TypeDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(TypeDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, TypeDraftBuilder builder) {
         TypeDraft typeDraft = builder.buildUnchecked();
         Assertions.assertThat(typeDraft).isInstanceOf(TypeDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { TypeDraft.builder().key("key") },
-                new Object[] {
+        return new Object[][] { new Object[] { "key", TypeDraft.builder().key("key") },
+                new Object[] { "name",
                         TypeDraft.builder().name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { TypeDraft.builder()
-                        .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { TypeDraft.builder()
-                        .resourceTypeIds(Collections
-                                .singletonList(com.commercetools.api.models.type.ResourceTypeId.findEnum("address"))) },
-                new Object[] { TypeDraft.builder()
+                new Object[] { "description",
+                        TypeDraft.builder()
+                                .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "resourceTypeIds",
+                        TypeDraft.builder()
+                                .resourceTypeIds(Collections.singletonList(
+                                    com.commercetools.api.models.type.ResourceTypeId.findEnum("address"))) },
+                new Object[] { "fieldDefinitions", TypeDraft.builder()
                         .fieldDefinitions(
                             Collections.singletonList(new com.commercetools.api.models.type.FieldDefinitionImpl())) } };
     }

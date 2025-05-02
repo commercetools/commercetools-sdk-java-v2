@@ -3,36 +3,29 @@ package com.commercetools.importapi.models.order_patches;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class DeliveryDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(DeliveryDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, DeliveryDraftBuilder builder) {
         DeliveryDraft deliveryDraft = builder.buildUnchecked();
         Assertions.assertThat(deliveryDraft).isInstanceOf(DeliveryDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { DeliveryDraft.builder()
-                        .items(Collections
-                                .singletonList(new com.commercetools.importapi.models.orders.DeliveryItemImpl())) },
-                new Object[] {
+                new Object[] { "items",
+                        DeliveryDraft.builder()
+                                .items(Collections.singletonList(
+                                    new com.commercetools.importapi.models.orders.DeliveryItemImpl())) },
+                new Object[] { "address",
                         DeliveryDraft.builder().address(new com.commercetools.importapi.models.common.AddressImpl()) },
-                new Object[] { DeliveryDraft.builder()
+                new Object[] { "parcels", DeliveryDraft.builder()
                         .parcels(Collections.singletonList(
                             new com.commercetools.importapi.models.order_patches.DeliveryParcelDraftImpl())) } };
     }

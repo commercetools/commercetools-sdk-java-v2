@@ -3,39 +3,34 @@ package com.commercetools.api.models.payment;
 
 import java.time.ZonedDateTime;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class TransactionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(TransactionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, TransactionBuilder builder) {
         Transaction transaction = builder.buildUnchecked();
         Assertions.assertThat(transaction).isInstanceOf(Transaction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { Transaction.builder().id("id") },
-                new Object[] { Transaction.builder().timestamp(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { Transaction.builder()
-                        .type(com.commercetools.api.models.payment.TransactionType.findEnum("Authorization")) },
-                new Object[] { Transaction.builder()
-                        .amount(new com.commercetools.api.models.common.CentPrecisionMoneyImpl()) },
-                new Object[] { Transaction.builder().interactionId("interactionId") },
-                new Object[] { Transaction.builder()
-                        .state(com.commercetools.api.models.payment.TransactionState.findEnum("Initial")) },
-                new Object[] {
+        return new Object[][] { new Object[] { "id", Transaction.builder().id("id") },
+                new Object[] { "timestamp", Transaction.builder().timestamp(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "type",
+                        Transaction.builder()
+                                .type(com.commercetools.api.models.payment.TransactionType.findEnum("Authorization")) },
+                new Object[] { "amount",
+                        Transaction.builder()
+                                .amount(new com.commercetools.api.models.common.CentPrecisionMoneyImpl()) },
+                new Object[] { "interactionId", Transaction.builder().interactionId("interactionId") },
+                new Object[] { "state",
+                        Transaction.builder()
+                                .state(com.commercetools.api.models.payment.TransactionState.findEnum("Initial")) },
+                new Object[] { "custom",
                         Transaction.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) } };
     }
 

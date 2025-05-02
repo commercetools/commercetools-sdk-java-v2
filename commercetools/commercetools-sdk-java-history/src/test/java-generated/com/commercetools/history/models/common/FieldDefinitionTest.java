@@ -1,36 +1,29 @@
 
 package com.commercetools.history.models.common;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class FieldDefinitionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(FieldDefinitionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, FieldDefinitionBuilder builder) {
         FieldDefinition fieldDefinition = builder.buildUnchecked();
         Assertions.assertThat(fieldDefinition).isInstanceOf(FieldDefinition.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] {
+                new Object[] { "type",
                         FieldDefinition.builder().type(new com.commercetools.history.models.common.FieldTypeImpl()) },
-                new Object[] { FieldDefinition.builder().name("name") },
-                new Object[] { FieldDefinition.builder()
-                        .label(new com.commercetools.history.models.common.LocalizedStringImpl()) },
-                new Object[] { FieldDefinition.builder()
+                new Object[] { "name", FieldDefinition.builder().name("name") },
+                new Object[] { "label",
+                        FieldDefinition.builder()
+                                .label(new com.commercetools.history.models.common.LocalizedStringImpl()) },
+                new Object[] { "inputHint", FieldDefinition.builder()
                         .inputHint(com.commercetools.history.models.common.TextInputHint.findEnum("SingleLine")) } };
     }
 

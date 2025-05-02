@@ -1,31 +1,24 @@
 
 package com.commercetools.api.models.type;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class TypeChangeInputHintActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(TypeChangeInputHintActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, TypeChangeInputHintActionBuilder builder) {
         TypeChangeInputHintAction typeChangeInputHintAction = builder.buildUnchecked();
         Assertions.assertThat(typeChangeInputHintAction).isInstanceOf(TypeChangeInputHintAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { TypeChangeInputHintAction.builder().fieldName("fieldName") },
-                new Object[] { TypeChangeInputHintAction.builder()
+        return new Object[][] {
+                new Object[] { "fieldName", TypeChangeInputHintAction.builder().fieldName("fieldName") },
+                new Object[] { "inputHint", TypeChangeInputHintAction.builder()
                         .inputHint(com.commercetools.api.models.type.TypeTextInputHint.findEnum("SingleLine")) } };
     }
 

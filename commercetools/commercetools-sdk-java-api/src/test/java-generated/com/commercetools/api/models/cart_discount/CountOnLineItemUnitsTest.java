@@ -1,33 +1,25 @@
 
 package com.commercetools.api.models.cart_discount;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CountOnLineItemUnitsTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CountOnLineItemUnitsBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CountOnLineItemUnitsBuilder builder) {
         CountOnLineItemUnits countOnLineItemUnits = builder.buildUnchecked();
         Assertions.assertThat(countOnLineItemUnits).isInstanceOf(CountOnLineItemUnits.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { CountOnLineItemUnits.builder().predicate("predicate") },
-                new Object[] { CountOnLineItemUnits.builder().minCount(1) },
-                new Object[] { CountOnLineItemUnits.builder().maxCount(8) },
-                new Object[] { CountOnLineItemUnits.builder().excludeCount(4) } };
+        return new Object[][] { new Object[] { "predicate", CountOnLineItemUnits.builder().predicate("predicate") },
+                new Object[] { "minCount", CountOnLineItemUnits.builder().minCount(1) },
+                new Object[] { "maxCount", CountOnLineItemUnits.builder().maxCount(8) },
+                new Object[] { "excludeCount", CountOnLineItemUnits.builder().excludeCount(4) } };
     }
 
     @Test

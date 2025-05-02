@@ -1,39 +1,32 @@
 
 package com.commercetools.api.models.order_edit;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class StagedOrderSetCustomLineItemCustomTypeActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(StagedOrderSetCustomLineItemCustomTypeActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, StagedOrderSetCustomLineItemCustomTypeActionBuilder builder) {
         StagedOrderSetCustomLineItemCustomTypeAction stagedOrderSetCustomLineItemCustomTypeAction = builder
                 .buildUnchecked();
         Assertions.assertThat(stagedOrderSetCustomLineItemCustomTypeAction)
                 .isInstanceOf(StagedOrderSetCustomLineItemCustomTypeAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] {
+                new Object[] { "customLineItemId",
                         StagedOrderSetCustomLineItemCustomTypeAction.builder().customLineItemId("customLineItemId") },
-                new Object[] {
+                new Object[] { "customLineItemKey",
                         StagedOrderSetCustomLineItemCustomTypeAction.builder().customLineItemKey("customLineItemKey") },
-                new Object[] { StagedOrderSetCustomLineItemCustomTypeAction.builder()
-                        .type(new com.commercetools.api.models.type.TypeResourceIdentifierImpl()) },
-                new Object[] { StagedOrderSetCustomLineItemCustomTypeAction.builder()
+                new Object[] { "type",
+                        StagedOrderSetCustomLineItemCustomTypeAction.builder()
+                                .type(new com.commercetools.api.models.type.TypeResourceIdentifierImpl()) },
+                new Object[] { "fields", StagedOrderSetCustomLineItemCustomTypeAction.builder()
                         .fields(new com.commercetools.api.models.type.FieldContainerImpl()) } };
     }
 

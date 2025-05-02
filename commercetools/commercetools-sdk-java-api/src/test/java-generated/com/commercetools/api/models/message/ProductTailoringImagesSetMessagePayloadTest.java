@@ -3,40 +3,35 @@ package com.commercetools.api.models.message;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductTailoringImagesSetMessagePayloadTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductTailoringImagesSetMessagePayloadBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductTailoringImagesSetMessagePayloadBuilder builder) {
         ProductTailoringImagesSetMessagePayload productTailoringImagesSetMessagePayload = builder.buildUnchecked();
         Assertions.assertThat(productTailoringImagesSetMessagePayload)
                 .isInstanceOf(ProductTailoringImagesSetMessagePayload.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { ProductTailoringImagesSetMessagePayload.builder()
-                        .store(new com.commercetools.api.models.store.StoreKeyReferenceImpl()) },
-                new Object[] { ProductTailoringImagesSetMessagePayload.builder().productKey("productKey") },
-                new Object[] { ProductTailoringImagesSetMessagePayload.builder()
-                        .product(new com.commercetools.api.models.product.ProductReferenceImpl()) },
-                new Object[] { ProductTailoringImagesSetMessagePayload.builder().variantId(5L) },
-                new Object[] { ProductTailoringImagesSetMessagePayload.builder()
+                new Object[] { "store",
+                        ProductTailoringImagesSetMessagePayload.builder()
+                                .store(new com.commercetools.api.models.store.StoreKeyReferenceImpl()) },
+                new Object[] { "productKey",
+                        ProductTailoringImagesSetMessagePayload.builder().productKey("productKey") },
+                new Object[] { "product",
+                        ProductTailoringImagesSetMessagePayload.builder()
+                                .product(new com.commercetools.api.models.product.ProductReferenceImpl()) },
+                new Object[] { "variantId", ProductTailoringImagesSetMessagePayload.builder().variantId(5L) },
+                new Object[] { "oldImages", ProductTailoringImagesSetMessagePayload.builder()
                         .oldImages(Collections.singletonList(new com.commercetools.api.models.common.ImageImpl())) },
-                new Object[] { ProductTailoringImagesSetMessagePayload.builder()
+                new Object[] { "images", ProductTailoringImagesSetMessagePayload.builder()
                         .images(Collections.singletonList(new com.commercetools.api.models.common.ImageImpl())) } };
     }
 

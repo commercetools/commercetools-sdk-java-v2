@@ -3,32 +3,24 @@ package com.commercetools.api.models.product_search;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductSearchErrorResponseTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductSearchErrorResponseBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductSearchErrorResponseBuilder builder) {
         ProductSearchErrorResponse productSearchErrorResponse = builder.buildUnchecked();
         Assertions.assertThat(productSearchErrorResponse).isInstanceOf(ProductSearchErrorResponse.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductSearchErrorResponse.builder().statusCode(8) },
-                new Object[] { ProductSearchErrorResponse.builder().message("message") },
-                new Object[] { ProductSearchErrorResponse.builder()
+        return new Object[][] { new Object[] { "statusCode", ProductSearchErrorResponse.builder().statusCode(8) },
+                new Object[] { "message", ProductSearchErrorResponse.builder().message("message") },
+                new Object[] { "errors", ProductSearchErrorResponse.builder()
                         .errors(
                             Collections.singletonList(new com.commercetools.api.models.error.ErrorObjectImpl())) } };
     }

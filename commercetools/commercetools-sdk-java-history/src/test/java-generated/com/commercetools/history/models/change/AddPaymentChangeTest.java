@@ -1,33 +1,26 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class AddPaymentChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(AddPaymentChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, AddPaymentChangeBuilder builder) {
         AddPaymentChange addPaymentChange = builder.buildUnchecked();
         Assertions.assertThat(addPaymentChange).isInstanceOf(AddPaymentChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { AddPaymentChange.builder().change("change") },
-                new Object[] { AddPaymentChange.builder()
-                        .previousValue(new com.commercetools.history.models.common.PaymentInfoImpl()) },
-                new Object[] { AddPaymentChange.builder()
+        return new Object[][] { new Object[] { "change", AddPaymentChange.builder().change("change") },
+                new Object[] { "previousValue",
+                        AddPaymentChange.builder()
+                                .previousValue(new com.commercetools.history.models.common.PaymentInfoImpl()) },
+                new Object[] { "nextValue", AddPaymentChange.builder()
                         .nextValue(new com.commercetools.history.models.common.PaymentInfoImpl()) } };
     }
 

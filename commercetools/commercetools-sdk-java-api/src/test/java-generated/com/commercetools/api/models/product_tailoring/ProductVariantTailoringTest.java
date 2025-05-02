@@ -3,35 +3,27 @@ package com.commercetools.api.models.product_tailoring;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductVariantTailoringTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductVariantTailoringBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductVariantTailoringBuilder builder) {
         ProductVariantTailoring productVariantTailoring = builder.buildUnchecked();
         Assertions.assertThat(productVariantTailoring).isInstanceOf(ProductVariantTailoring.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductVariantTailoring.builder().id(2L) },
-                new Object[] { ProductVariantTailoring.builder()
+        return new Object[][] { new Object[] { "id", ProductVariantTailoring.builder().id(2L) },
+                new Object[] { "images", ProductVariantTailoring.builder()
                         .images(Collections.singletonList(new com.commercetools.api.models.common.ImageImpl())) },
-                new Object[] { ProductVariantTailoring.builder()
+                new Object[] { "assets", ProductVariantTailoring.builder()
                         .assets(Collections.singletonList(new com.commercetools.api.models.common.AssetImpl())) },
-                new Object[] { ProductVariantTailoring.builder()
+                new Object[] { "attributes", ProductVariantTailoring.builder()
                         .attributes(Collections.singletonList(
                             new com.commercetools.api.models.product_tailoring.ProductTailoringAttributeImpl())) } };
     }

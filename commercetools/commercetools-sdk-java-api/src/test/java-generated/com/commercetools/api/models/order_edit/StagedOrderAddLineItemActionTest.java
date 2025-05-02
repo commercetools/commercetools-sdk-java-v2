@@ -3,52 +3,48 @@ package com.commercetools.api.models.order_edit;
 
 import java.time.ZonedDateTime;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class StagedOrderAddLineItemActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(StagedOrderAddLineItemActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, StagedOrderAddLineItemActionBuilder builder) {
         StagedOrderAddLineItemAction stagedOrderAddLineItemAction = builder.buildUnchecked();
         Assertions.assertThat(stagedOrderAddLineItemAction).isInstanceOf(StagedOrderAddLineItemAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { StagedOrderAddLineItemAction.builder().key("key") },
-                new Object[] { StagedOrderAddLineItemAction.builder().productId("productId") },
-                new Object[] { StagedOrderAddLineItemAction.builder().variantId(5L) },
-                new Object[] { StagedOrderAddLineItemAction.builder().sku("sku") },
-                new Object[] { StagedOrderAddLineItemAction.builder().quantity(8L) },
-                new Object[] {
+        return new Object[][] { new Object[] { "key", StagedOrderAddLineItemAction.builder().key("key") },
+                new Object[] { "productId", StagedOrderAddLineItemAction.builder().productId("productId") },
+                new Object[] { "variantId", StagedOrderAddLineItemAction.builder().variantId(5L) },
+                new Object[] { "sku", StagedOrderAddLineItemAction.builder().sku("sku") },
+                new Object[] { "quantity", StagedOrderAddLineItemAction.builder().quantity(8L) },
+                new Object[] { "addedAt",
                         StagedOrderAddLineItemAction.builder().addedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { StagedOrderAddLineItemAction.builder()
-                        .distributionChannel(
-                            new com.commercetools.api.models.channel.ChannelResourceIdentifierImpl()) },
-                new Object[] { StagedOrderAddLineItemAction.builder()
+                new Object[] { "distributionChannel",
+                        StagedOrderAddLineItemAction.builder()
+                                .distributionChannel(
+                                    new com.commercetools.api.models.channel.ChannelResourceIdentifierImpl()) },
+                new Object[] { "supplyChannel", StagedOrderAddLineItemAction.builder()
                         .supplyChannel(new com.commercetools.api.models.channel.ChannelResourceIdentifierImpl()) },
-                new Object[] { StagedOrderAddLineItemAction.builder()
-                        .externalPrice(new com.commercetools.api.models.common.MoneyImpl()) },
-                new Object[] { StagedOrderAddLineItemAction.builder()
+                new Object[] { "externalPrice",
+                        StagedOrderAddLineItemAction.builder()
+                                .externalPrice(new com.commercetools.api.models.common.MoneyImpl()) },
+                new Object[] { "externalTotalPrice", StagedOrderAddLineItemAction.builder()
                         .externalTotalPrice(new com.commercetools.api.models.cart.ExternalLineItemTotalPriceImpl()) },
-                new Object[] { StagedOrderAddLineItemAction.builder()
-                        .externalTaxRate(new com.commercetools.api.models.cart.ExternalTaxRateDraftImpl()) },
-                new Object[] { StagedOrderAddLineItemAction.builder()
-                        .inventoryMode(com.commercetools.api.models.cart.InventoryMode.findEnum("None")) },
-                new Object[] { StagedOrderAddLineItemAction.builder()
+                new Object[] { "externalTaxRate",
+                        StagedOrderAddLineItemAction.builder()
+                                .externalTaxRate(new com.commercetools.api.models.cart.ExternalTaxRateDraftImpl()) },
+                new Object[] { "inventoryMode",
+                        StagedOrderAddLineItemAction.builder()
+                                .inventoryMode(com.commercetools.api.models.cart.InventoryMode.findEnum("None")) },
+                new Object[] { "shippingDetails", StagedOrderAddLineItemAction.builder()
                         .shippingDetails(new com.commercetools.api.models.cart.ItemShippingDetailsDraftImpl()) },
-                new Object[] { StagedOrderAddLineItemAction.builder()
+                new Object[] { "custom", StagedOrderAddLineItemAction.builder()
                         .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) } };
     }
 

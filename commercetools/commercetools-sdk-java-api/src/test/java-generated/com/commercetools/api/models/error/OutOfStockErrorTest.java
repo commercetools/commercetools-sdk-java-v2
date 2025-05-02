@@ -3,32 +3,25 @@ package com.commercetools.api.models.error;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class OutOfStockErrorTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(OutOfStockErrorBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, OutOfStockErrorBuilder builder) {
         OutOfStockError outOfStockError = builder.buildUnchecked();
         Assertions.assertThat(outOfStockError).isInstanceOf(OutOfStockError.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { OutOfStockError.builder().message("message") },
-                new Object[] { OutOfStockError.builder().lineItems(Collections.singletonList("lineItems")) },
-                new Object[] { OutOfStockError.builder().skus(Collections.singletonList("skus")) } };
+        return new Object[][] { new Object[] { "message", OutOfStockError.builder().message("message") },
+                new Object[] { "lineItems",
+                        OutOfStockError.builder().lineItems(Collections.singletonList("lineItems")) },
+                new Object[] { "skus", OutOfStockError.builder().skus(Collections.singletonList("skus")) } };
     }
 
     @Test

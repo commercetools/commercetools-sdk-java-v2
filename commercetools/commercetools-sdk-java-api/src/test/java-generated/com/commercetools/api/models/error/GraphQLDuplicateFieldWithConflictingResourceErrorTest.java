@@ -1,36 +1,28 @@
 
 package com.commercetools.api.models.error;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class GraphQLDuplicateFieldWithConflictingResourceErrorTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(GraphQLDuplicateFieldWithConflictingResourceErrorBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, GraphQLDuplicateFieldWithConflictingResourceErrorBuilder builder) {
         GraphQLDuplicateFieldWithConflictingResourceError graphQLDuplicateFieldWithConflictingResourceError = builder
                 .buildUnchecked();
         Assertions.assertThat(graphQLDuplicateFieldWithConflictingResourceError)
                 .isInstanceOf(GraphQLDuplicateFieldWithConflictingResourceError.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { GraphQLDuplicateFieldWithConflictingResourceError.builder().field("field") },
-                new Object[] {
+                new Object[] { "field", GraphQLDuplicateFieldWithConflictingResourceError.builder().field("field") },
+                new Object[] { "duplicateValue",
                         GraphQLDuplicateFieldWithConflictingResourceError.builder().duplicateValue("duplicateValue") },
-                new Object[] { GraphQLDuplicateFieldWithConflictingResourceError.builder()
+                new Object[] { "conflictingResource", GraphQLDuplicateFieldWithConflictingResourceError.builder()
                         .conflictingResource(new com.commercetools.api.models.common.ReferenceImpl()) } };
     }
 

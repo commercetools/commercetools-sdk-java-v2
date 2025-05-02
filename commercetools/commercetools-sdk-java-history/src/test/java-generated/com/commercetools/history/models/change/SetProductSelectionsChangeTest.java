@@ -3,36 +3,30 @@ package com.commercetools.history.models.change;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetProductSelectionsChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetProductSelectionsChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetProductSelectionsChangeBuilder builder) {
         SetProductSelectionsChange setProductSelectionsChange = builder.buildUnchecked();
         Assertions.assertThat(setProductSelectionsChange).isInstanceOf(SetProductSelectionsChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetProductSelectionsChange.builder().change("change") },
-                new Object[] { SetProductSelectionsChange.builder()
-                        .previousValue(Collections.singletonList(
-                            new com.commercetools.history.models.common.ProductSelectionSettingImpl())) },
-                new Object[] { SetProductSelectionsChange.builder()
-                        .nextValue(Collections.singletonList(
-                            new com.commercetools.history.models.common.ProductSelectionSettingImpl())) } };
+        return new Object[][] { new Object[] { "change", SetProductSelectionsChange.builder().change("change") },
+                new Object[] { "previousValue",
+                        SetProductSelectionsChange.builder()
+                                .previousValue(Collections.singletonList(
+                                    new com.commercetools.history.models.common.ProductSelectionSettingImpl())) },
+                new Object[] { "nextValue",
+                        SetProductSelectionsChange.builder()
+                                .nextValue(Collections.singletonList(
+                                    new com.commercetools.history.models.common.ProductSelectionSettingImpl())) } };
     }
 
     @Test

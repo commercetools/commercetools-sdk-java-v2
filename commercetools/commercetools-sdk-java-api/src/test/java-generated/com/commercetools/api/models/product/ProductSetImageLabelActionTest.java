@@ -1,34 +1,26 @@
 
 package com.commercetools.api.models.product;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductSetImageLabelActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductSetImageLabelActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductSetImageLabelActionBuilder builder) {
         ProductSetImageLabelAction productSetImageLabelAction = builder.buildUnchecked();
         Assertions.assertThat(productSetImageLabelAction).isInstanceOf(ProductSetImageLabelAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductSetImageLabelAction.builder().sku("sku") },
-                new Object[] { ProductSetImageLabelAction.builder().variantId(5L) },
-                new Object[] { ProductSetImageLabelAction.builder().imageUrl("imageUrl") },
-                new Object[] { ProductSetImageLabelAction.builder().label("label") },
-                new Object[] { ProductSetImageLabelAction.builder().staged(true) } };
+        return new Object[][] { new Object[] { "sku", ProductSetImageLabelAction.builder().sku("sku") },
+                new Object[] { "variantId", ProductSetImageLabelAction.builder().variantId(5L) },
+                new Object[] { "imageUrl", ProductSetImageLabelAction.builder().imageUrl("imageUrl") },
+                new Object[] { "label", ProductSetImageLabelAction.builder().label("label") },
+                new Object[] { "staged", ProductSetImageLabelAction.builder().staged(true) } };
     }
 
     @Test

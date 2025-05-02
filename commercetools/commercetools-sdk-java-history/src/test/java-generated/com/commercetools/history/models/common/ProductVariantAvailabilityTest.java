@@ -1,33 +1,25 @@
 
 package com.commercetools.history.models.common;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductVariantAvailabilityTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductVariantAvailabilityBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductVariantAvailabilityBuilder builder) {
         ProductVariantAvailability productVariantAvailability = builder.buildUnchecked();
         Assertions.assertThat(productVariantAvailability).isInstanceOf(ProductVariantAvailability.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductVariantAvailability.builder().isOnStock(true) },
-                new Object[] { ProductVariantAvailability.builder().restockableInDays(4) },
-                new Object[] { ProductVariantAvailability.builder().availableQuantity(3) },
-                new Object[] { ProductVariantAvailability.builder()
+        return new Object[][] { new Object[] { "isOnStock", ProductVariantAvailability.builder().isOnStock(true) },
+                new Object[] { "restockableInDays", ProductVariantAvailability.builder().restockableInDays(4) },
+                new Object[] { "availableQuantity", ProductVariantAvailability.builder().availableQuantity(3) },
+                new Object[] { "channels", ProductVariantAvailability.builder()
                         .channels(
                             new com.commercetools.history.models.common.ProductVariantChannelAvailabilityMapImpl()) } };
     }

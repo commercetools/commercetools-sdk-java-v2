@@ -1,36 +1,30 @@
 
 package com.commercetools.api.models.message;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductPriceChangedMessageTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductPriceChangedMessageBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductPriceChangedMessageBuilder builder) {
         ProductPriceChangedMessage productPriceChangedMessage = builder.buildUnchecked();
         Assertions.assertThat(productPriceChangedMessage).isInstanceOf(ProductPriceChangedMessage.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductPriceChangedMessage.builder().variantId(5L) },
-                new Object[] { ProductPriceChangedMessage.builder()
-                        .oldPrice(new com.commercetools.api.models.common.PriceImpl()) },
-                new Object[] { ProductPriceChangedMessage.builder()
-                        .newPrice(new com.commercetools.api.models.common.PriceImpl()) },
-                new Object[] { ProductPriceChangedMessage.builder().staged(true) },
-                new Object[] { ProductPriceChangedMessage.builder()
+        return new Object[][] { new Object[] { "variantId", ProductPriceChangedMessage.builder().variantId(5L) },
+                new Object[] { "oldPrice",
+                        ProductPriceChangedMessage.builder()
+                                .oldPrice(new com.commercetools.api.models.common.PriceImpl()) },
+                new Object[] { "newPrice",
+                        ProductPriceChangedMessage.builder()
+                                .newPrice(new com.commercetools.api.models.common.PriceImpl()) },
+                new Object[] { "staged", ProductPriceChangedMessage.builder().staged(true) },
+                new Object[] { "oldStagedPrice", ProductPriceChangedMessage.builder()
                         .oldStagedPrice(new com.commercetools.api.models.common.PriceImpl()) } };
     }
 

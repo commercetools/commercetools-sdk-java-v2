@@ -1,39 +1,36 @@
 
 package com.commercetools.api.models.message;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ReviewStateTransitionMessageTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ReviewStateTransitionMessageBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ReviewStateTransitionMessageBuilder builder) {
         ReviewStateTransitionMessage reviewStateTransitionMessage = builder.buildUnchecked();
         Assertions.assertThat(reviewStateTransitionMessage).isInstanceOf(ReviewStateTransitionMessage.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { ReviewStateTransitionMessage.builder()
-                        .oldState(new com.commercetools.api.models.state.StateReferenceImpl()) },
-                new Object[] { ReviewStateTransitionMessage.builder()
-                        .newState(new com.commercetools.api.models.state.StateReferenceImpl()) },
-                new Object[] { ReviewStateTransitionMessage.builder().oldIncludedInStatistics(true) },
-                new Object[] { ReviewStateTransitionMessage.builder().newIncludedInStatistics(true) },
-                new Object[] { ReviewStateTransitionMessage.builder()
-                        .target(new com.commercetools.api.models.common.ReferenceImpl()) },
-                new Object[] { ReviewStateTransitionMessage.builder().force(true) } };
+                new Object[] { "oldState",
+                        ReviewStateTransitionMessage.builder()
+                                .oldState(new com.commercetools.api.models.state.StateReferenceImpl()) },
+                new Object[] { "newState",
+                        ReviewStateTransitionMessage.builder()
+                                .newState(new com.commercetools.api.models.state.StateReferenceImpl()) },
+                new Object[] { "oldIncludedInStatistics",
+                        ReviewStateTransitionMessage.builder().oldIncludedInStatistics(true) },
+                new Object[] { "newIncludedInStatistics",
+                        ReviewStateTransitionMessage.builder().newIncludedInStatistics(true) },
+                new Object[] { "target",
+                        ReviewStateTransitionMessage.builder()
+                                .target(new com.commercetools.api.models.common.ReferenceImpl()) },
+                new Object[] { "force", ReviewStateTransitionMessage.builder().force(true) } };
     }
 
     @Test

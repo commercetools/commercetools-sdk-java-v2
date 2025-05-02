@@ -3,39 +3,34 @@ package com.commercetools.api.models.business_unit;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class BusinessUnitAssociateResponseTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(BusinessUnitAssociateResponseBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, BusinessUnitAssociateResponseBuilder builder) {
         BusinessUnitAssociateResponse businessUnitAssociateResponse = builder.buildUnchecked();
         Assertions.assertThat(businessUnitAssociateResponse).isInstanceOf(BusinessUnitAssociateResponse.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { BusinessUnitAssociateResponse.builder()
-                        .customer(new com.commercetools.api.models.customer.CustomerReferenceImpl()) },
-                new Object[] { BusinessUnitAssociateResponse.builder()
-                        .associateRoles(Collections
-                                .singletonList(new com.commercetools.api.models.associate_role.AssociateRoleImpl())) },
-                new Object[] { BusinessUnitAssociateResponse.builder()
-                        .inheritedAssociateRoles(Collections
-                                .singletonList(new com.commercetools.api.models.associate_role.AssociateRoleImpl())) },
-                new Object[] { BusinessUnitAssociateResponse.builder()
+                new Object[] { "customer",
+                        BusinessUnitAssociateResponse.builder()
+                                .customer(new com.commercetools.api.models.customer.CustomerReferenceImpl()) },
+                new Object[] { "associateRoles",
+                        BusinessUnitAssociateResponse.builder()
+                                .associateRoles(Collections.singletonList(
+                                    new com.commercetools.api.models.associate_role.AssociateRoleImpl())) },
+                new Object[] { "inheritedAssociateRoles",
+                        BusinessUnitAssociateResponse.builder()
+                                .inheritedAssociateRoles(Collections.singletonList(
+                                    new com.commercetools.api.models.associate_role.AssociateRoleImpl())) },
+                new Object[] { "permissions", BusinessUnitAssociateResponse.builder()
                         .permissions(Collections.singletonList(
                             com.commercetools.api.models.associate_role.Permission.findEnum("AddChildUnits"))) } };
     }

@@ -3,34 +3,27 @@ package com.commercetools.api.models.message;
 
 import java.time.ZonedDateTime;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class StandalonePriceValidFromSetMessageTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(StandalonePriceValidFromSetMessageBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, StandalonePriceValidFromSetMessageBuilder builder) {
         StandalonePriceValidFromSetMessage standalonePriceValidFromSetMessage = builder.buildUnchecked();
         Assertions.assertThat(standalonePriceValidFromSetMessage)
                 .isInstanceOf(StandalonePriceValidFromSetMessage.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { StandalonePriceValidFromSetMessage.builder()
-                        .validFrom(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { StandalonePriceValidFromSetMessage.builder()
+                new Object[] { "validFrom",
+                        StandalonePriceValidFromSetMessage.builder()
+                                .validFrom(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "previousValidFrom", StandalonePriceValidFromSetMessage.builder()
                         .previousValidFrom(ZonedDateTime.parse("2023-06-01T12:00Z")) } };
     }
 

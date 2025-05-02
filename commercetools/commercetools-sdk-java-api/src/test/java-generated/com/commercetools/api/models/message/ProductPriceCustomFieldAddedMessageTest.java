@@ -1,35 +1,28 @@
 
 package com.commercetools.api.models.message;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductPriceCustomFieldAddedMessageTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductPriceCustomFieldAddedMessageBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductPriceCustomFieldAddedMessageBuilder builder) {
         ProductPriceCustomFieldAddedMessage productPriceCustomFieldAddedMessage = builder.buildUnchecked();
         Assertions.assertThat(productPriceCustomFieldAddedMessage)
                 .isInstanceOf(ProductPriceCustomFieldAddedMessage.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductPriceCustomFieldAddedMessage.builder().priceId("priceId") },
-                new Object[] { ProductPriceCustomFieldAddedMessage.builder().variantId(5L) },
-                new Object[] { ProductPriceCustomFieldAddedMessage.builder().staged(true) },
-                new Object[] { ProductPriceCustomFieldAddedMessage.builder().name("name") },
-                new Object[] { ProductPriceCustomFieldAddedMessage.builder().value("value") } };
+        return new Object[][] {
+                new Object[] { "priceId", ProductPriceCustomFieldAddedMessage.builder().priceId("priceId") },
+                new Object[] { "variantId", ProductPriceCustomFieldAddedMessage.builder().variantId(5L) },
+                new Object[] { "staged", ProductPriceCustomFieldAddedMessage.builder().staged(true) },
+                new Object[] { "name", ProductPriceCustomFieldAddedMessage.builder().name("name") },
+                new Object[] { "value", ProductPriceCustomFieldAddedMessage.builder().value("value") } };
     }
 
     @Test

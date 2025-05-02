@@ -4,42 +4,38 @@ package com.commercetools.api.models.product_type;
 import java.time.ZonedDateTime;
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductTypeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductTypeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductTypeBuilder builder) {
         ProductType productType = builder.buildUnchecked();
         Assertions.assertThat(productType).isInstanceOf(ProductType.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductType.builder().id("id") },
-                new Object[] { ProductType.builder().version(2L) },
-                new Object[] { ProductType.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { ProductType.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { ProductType.builder()
-                        .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
-                new Object[] {
+        return new Object[][] { new Object[] { "id", ProductType.builder().id("id") },
+                new Object[] { "version", ProductType.builder().version(2L) },
+                new Object[] { "createdAt", ProductType.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedAt",
+                        ProductType.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedBy",
+                        ProductType.builder()
+                                .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
+                new Object[] { "createdBy",
                         ProductType.builder().createdBy(new com.commercetools.api.models.common.CreatedByImpl()) },
-                new Object[] { ProductType.builder().key("key") }, new Object[] { ProductType.builder().name("name") },
-                new Object[] { ProductType.builder().description("description") },
-                new Object[] { ProductType.builder()
-                        .attributes(Collections.singletonList(
-                            new com.commercetools.api.models.product_type.AttributeDefinitionImpl())) } };
+                new Object[] { "key", ProductType.builder().key("key") },
+                new Object[] { "name", ProductType.builder().name("name") },
+                new Object[] { "description", ProductType.builder().description("description") },
+                new Object[] { "attributes",
+                        ProductType.builder()
+                                .attributes(Collections.singletonList(
+                                    new com.commercetools.api.models.product_type.AttributeDefinitionImpl())) } };
     }
 
     @Test

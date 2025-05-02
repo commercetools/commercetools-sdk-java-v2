@@ -1,38 +1,33 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetLineItemTaxRateChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetLineItemTaxRateChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetLineItemTaxRateChangeBuilder builder) {
         SetLineItemTaxRateChange setLineItemTaxRateChange = builder.buildUnchecked();
         Assertions.assertThat(setLineItemTaxRateChange).isInstanceOf(SetLineItemTaxRateChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetLineItemTaxRateChange.builder().change("change") },
-                new Object[] { SetLineItemTaxRateChange.builder()
-                        .previousValue(new com.commercetools.history.models.common.TaxRateImpl()) },
-                new Object[] { SetLineItemTaxRateChange.builder()
-                        .nextValue(new com.commercetools.history.models.common.TaxRateImpl()) },
-                new Object[] { SetLineItemTaxRateChange.builder()
-                        .lineItem(new com.commercetools.history.models.common.LocalizedStringImpl()) },
-                new Object[] { SetLineItemTaxRateChange.builder().variant("variant") },
-                new Object[] { SetLineItemTaxRateChange.builder()
+        return new Object[][] { new Object[] { "change", SetLineItemTaxRateChange.builder().change("change") },
+                new Object[] { "previousValue",
+                        SetLineItemTaxRateChange.builder()
+                                .previousValue(new com.commercetools.history.models.common.TaxRateImpl()) },
+                new Object[] { "nextValue",
+                        SetLineItemTaxRateChange.builder()
+                                .nextValue(new com.commercetools.history.models.common.TaxRateImpl()) },
+                new Object[] { "lineItem",
+                        SetLineItemTaxRateChange.builder()
+                                .lineItem(new com.commercetools.history.models.common.LocalizedStringImpl()) },
+                new Object[] { "variant", SetLineItemTaxRateChange.builder().variant("variant") },
+                new Object[] { "taxMode", SetLineItemTaxRateChange.builder()
                         .taxMode(com.commercetools.history.models.common.TaxMode.findEnum("Platform")) } };
     }
 

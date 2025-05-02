@@ -1,36 +1,29 @@
 
 package com.commercetools.api.models.error;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class GraphQLMatchingPriceNotFoundErrorTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(GraphQLMatchingPriceNotFoundErrorBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, GraphQLMatchingPriceNotFoundErrorBuilder builder) {
         GraphQLMatchingPriceNotFoundError graphQLMatchingPriceNotFoundError = builder.buildUnchecked();
         Assertions.assertThat(graphQLMatchingPriceNotFoundError).isInstanceOf(GraphQLMatchingPriceNotFoundError.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { GraphQLMatchingPriceNotFoundError.builder().productId("productId") },
-                new Object[] { GraphQLMatchingPriceNotFoundError.builder().variantId(5) },
-                new Object[] { GraphQLMatchingPriceNotFoundError.builder().currency("currency") },
-                new Object[] { GraphQLMatchingPriceNotFoundError.builder().country("country") },
-                new Object[] { GraphQLMatchingPriceNotFoundError.builder()
+        return new Object[][] {
+                new Object[] { "productId", GraphQLMatchingPriceNotFoundError.builder().productId("productId") },
+                new Object[] { "variantId", GraphQLMatchingPriceNotFoundError.builder().variantId(5) },
+                new Object[] { "currency", GraphQLMatchingPriceNotFoundError.builder().currency("currency") },
+                new Object[] { "country", GraphQLMatchingPriceNotFoundError.builder().country("country") },
+                new Object[] { "customerGroup", GraphQLMatchingPriceNotFoundError.builder()
                         .customerGroup(new com.commercetools.api.models.customer_group.CustomerGroupReferenceImpl()) },
-                new Object[] { GraphQLMatchingPriceNotFoundError.builder()
+                new Object[] { "channel", GraphQLMatchingPriceNotFoundError.builder()
                         .channel(new com.commercetools.api.models.channel.ChannelReferenceImpl()) } };
     }
 

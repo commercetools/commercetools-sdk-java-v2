@@ -1,33 +1,26 @@
 
 package com.commercetools.api.models.product_type;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductTypeChangeEnumKeyActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductTypeChangeEnumKeyActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductTypeChangeEnumKeyActionBuilder builder) {
         ProductTypeChangeEnumKeyAction productTypeChangeEnumKeyAction = builder.buildUnchecked();
         Assertions.assertThat(productTypeChangeEnumKeyAction).isInstanceOf(ProductTypeChangeEnumKeyAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { ProductTypeChangeEnumKeyAction.builder().attributeName("attributeName") },
-                new Object[] { ProductTypeChangeEnumKeyAction.builder().key("key") },
-                new Object[] { ProductTypeChangeEnumKeyAction.builder().newKey("newKey") } };
+                new Object[] { "attributeName",
+                        ProductTypeChangeEnumKeyAction.builder().attributeName("attributeName") },
+                new Object[] { "key", ProductTypeChangeEnumKeyAction.builder().key("key") },
+                new Object[] { "newKey", ProductTypeChangeEnumKeyAction.builder().newKey("newKey") } };
     }
 
     @Test

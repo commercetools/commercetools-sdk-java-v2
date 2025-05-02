@@ -3,43 +3,39 @@ package com.commercetools.api.models.me;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class MyPaymentTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(MyPaymentBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, MyPaymentBuilder builder) {
         MyPayment myPayment = builder.buildUnchecked();
         Assertions.assertThat(myPayment).isInstanceOf(MyPayment.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { MyPayment.builder().id("id") },
-                new Object[] { MyPayment.builder().version(2L) },
-                new Object[] { MyPayment.builder()
-                        .customer(new com.commercetools.api.models.customer.CustomerReferenceImpl()) },
-                new Object[] { MyPayment.builder().anonymousId("anonymousId") },
-                new Object[] { MyPayment.builder()
-                        .amountPlanned(new com.commercetools.api.models.common.CentPrecisionMoneyImpl()) },
-                new Object[] { MyPayment.builder()
-                        .paymentMethodInfo(new com.commercetools.api.models.payment.PaymentMethodInfoImpl()) },
-                new Object[] {
+        return new Object[][] { new Object[] { "id", MyPayment.builder().id("id") },
+                new Object[] { "version", MyPayment.builder().version(2L) },
+                new Object[] { "customer",
+                        MyPayment.builder()
+                                .customer(new com.commercetools.api.models.customer.CustomerReferenceImpl()) },
+                new Object[] { "anonymousId", MyPayment.builder().anonymousId("anonymousId") },
+                new Object[] { "amountPlanned",
+                        MyPayment.builder()
+                                .amountPlanned(new com.commercetools.api.models.common.CentPrecisionMoneyImpl()) },
+                new Object[] { "paymentMethodInfo",
+                        MyPayment.builder()
+                                .paymentMethodInfo(new com.commercetools.api.models.payment.PaymentMethodInfoImpl()) },
+                new Object[] { "transactions",
                         MyPayment.builder()
                                 .transactions(Collections
                                         .singletonList(new com.commercetools.api.models.payment.TransactionImpl())) },
-                new Object[] { MyPayment.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) } };
+                new Object[] { "custom",
+                        MyPayment.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) } };
     }
 
     @Test

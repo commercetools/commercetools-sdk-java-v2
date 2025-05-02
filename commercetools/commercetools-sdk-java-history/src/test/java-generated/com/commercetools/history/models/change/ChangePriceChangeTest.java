@@ -1,36 +1,30 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ChangePriceChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ChangePriceChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ChangePriceChangeBuilder builder) {
         ChangePriceChange changePriceChange = builder.buildUnchecked();
         Assertions.assertThat(changePriceChange).isInstanceOf(ChangePriceChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ChangePriceChange.builder().change("change") },
-                new Object[] { ChangePriceChange.builder()
-                        .previousValue(new com.commercetools.history.models.common.PriceImpl()) },
-                new Object[] { ChangePriceChange.builder()
-                        .nextValue(new com.commercetools.history.models.common.PriceImpl()) },
-                new Object[] { ChangePriceChange.builder().catalogData("catalogData") },
-                new Object[] { ChangePriceChange.builder().priceId("priceId") } };
+        return new Object[][] { new Object[] { "change", ChangePriceChange.builder().change("change") },
+                new Object[] { "previousValue",
+                        ChangePriceChange.builder()
+                                .previousValue(new com.commercetools.history.models.common.PriceImpl()) },
+                new Object[] { "nextValue",
+                        ChangePriceChange.builder()
+                                .nextValue(new com.commercetools.history.models.common.PriceImpl()) },
+                new Object[] { "catalogData", ChangePriceChange.builder().catalogData("catalogData") },
+                new Object[] { "priceId", ChangePriceChange.builder().priceId("priceId") } };
     }
 
     @Test

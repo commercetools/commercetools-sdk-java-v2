@@ -1,48 +1,43 @@
 
 package com.commercetools.api.models.order_edit;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class StagedOrderAddCustomLineItemActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(StagedOrderAddCustomLineItemActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, StagedOrderAddCustomLineItemActionBuilder builder) {
         StagedOrderAddCustomLineItemAction stagedOrderAddCustomLineItemAction = builder.buildUnchecked();
         Assertions.assertThat(stagedOrderAddCustomLineItemAction)
                 .isInstanceOf(StagedOrderAddCustomLineItemAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { StagedOrderAddCustomLineItemAction.builder()
-                        .money(new com.commercetools.api.models.common.MoneyImpl()) },
-                new Object[] { StagedOrderAddCustomLineItemAction.builder()
-                        .name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { StagedOrderAddCustomLineItemAction.builder().key("key") },
-                new Object[] { StagedOrderAddCustomLineItemAction.builder().quantity(8L) },
-                new Object[] { StagedOrderAddCustomLineItemAction.builder().slug("slug") },
-                new Object[] { StagedOrderAddCustomLineItemAction.builder()
+                new Object[] { "money",
+                        StagedOrderAddCustomLineItemAction.builder()
+                                .money(new com.commercetools.api.models.common.MoneyImpl()) },
+                new Object[] { "name",
+                        StagedOrderAddCustomLineItemAction.builder()
+                                .name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "key", StagedOrderAddCustomLineItemAction.builder().key("key") },
+                new Object[] { "quantity", StagedOrderAddCustomLineItemAction.builder().quantity(8L) },
+                new Object[] { "slug", StagedOrderAddCustomLineItemAction.builder().slug("slug") },
+                new Object[] { "taxCategory", StagedOrderAddCustomLineItemAction.builder()
                         .taxCategory(
                             new com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierImpl()) },
-                new Object[] { StagedOrderAddCustomLineItemAction.builder()
-                        .externalTaxRate(new com.commercetools.api.models.cart.ExternalTaxRateDraftImpl()) },
-                new Object[] { StagedOrderAddCustomLineItemAction.builder()
+                new Object[] { "externalTaxRate",
+                        StagedOrderAddCustomLineItemAction.builder()
+                                .externalTaxRate(new com.commercetools.api.models.cart.ExternalTaxRateDraftImpl()) },
+                new Object[] { "shippingDetails", StagedOrderAddCustomLineItemAction.builder()
                         .shippingDetails(new com.commercetools.api.models.cart.ItemShippingDetailsDraftImpl()) },
-                new Object[] { StagedOrderAddCustomLineItemAction.builder()
+                new Object[] { "priceMode", StagedOrderAddCustomLineItemAction.builder()
                         .priceMode(com.commercetools.api.models.cart.CustomLineItemPriceMode.findEnum("Standard")) },
-                new Object[] { StagedOrderAddCustomLineItemAction.builder()
+                new Object[] { "custom", StagedOrderAddCustomLineItemAction.builder()
                         .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) } };
     }
 

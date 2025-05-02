@@ -4,45 +4,42 @@ package com.commercetools.api.models.order_edit;
 import java.time.ZonedDateTime;
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class OrderEditTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(OrderEditBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, OrderEditBuilder builder) {
         OrderEdit orderEdit = builder.buildUnchecked();
         Assertions.assertThat(orderEdit).isInstanceOf(OrderEdit.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { OrderEdit.builder().id("id") },
-                new Object[] { OrderEdit.builder().version(2L) }, new Object[] { OrderEdit.builder().key("key") },
-                new Object[] {
+        return new Object[][] { new Object[] { "id", OrderEdit.builder().id("id") },
+                new Object[] { "version", OrderEdit.builder().version(2L) },
+                new Object[] { "key", OrderEdit.builder().key("key") },
+                new Object[] { "resource",
                         OrderEdit.builder().resource(new com.commercetools.api.models.order.OrderReferenceImpl()) },
-                new Object[] { OrderEdit.builder()
-                        .stagedActions(Collections
-                                .singletonList(new com.commercetools.api.models.order.StagedOrderUpdateActionImpl())) },
-                new Object[] {
+                new Object[] { "stagedActions",
+                        OrderEdit.builder()
+                                .stagedActions(Collections.singletonList(
+                                    new com.commercetools.api.models.order.StagedOrderUpdateActionImpl())) },
+                new Object[] { "result",
                         OrderEdit.builder().result(new com.commercetools.api.models.order_edit.OrderEditResultImpl()) },
-                new Object[] { OrderEdit.builder().comment("comment") },
-                new Object[] { OrderEdit.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) },
-                new Object[] { OrderEdit.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { OrderEdit.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { OrderEdit.builder()
-                        .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
-                new Object[] {
+                new Object[] { "comment", OrderEdit.builder().comment("comment") },
+                new Object[] { "custom",
+                        OrderEdit.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) },
+                new Object[] { "createdAt", OrderEdit.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedAt",
+                        OrderEdit.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedBy",
+                        OrderEdit.builder()
+                                .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
+                new Object[] { "createdBy",
                         OrderEdit.builder().createdBy(new com.commercetools.api.models.common.CreatedByImpl()) } };
     }
 

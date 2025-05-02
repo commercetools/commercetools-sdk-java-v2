@@ -3,37 +3,31 @@ package com.commercetools.api.models.me;
 
 import java.time.ZonedDateTime;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class MyTransactionDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(MyTransactionDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, MyTransactionDraftBuilder builder) {
         MyTransactionDraft myTransactionDraft = builder.buildUnchecked();
         Assertions.assertThat(myTransactionDraft).isInstanceOf(MyTransactionDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { MyTransactionDraft.builder().timestamp(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { MyTransactionDraft.builder()
-                        .type(com.commercetools.api.models.payment.TransactionType.findEnum("Authorization")) },
-                new Object[] {
+                new Object[] { "timestamp",
+                        MyTransactionDraft.builder().timestamp(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "type",
+                        MyTransactionDraft.builder()
+                                .type(com.commercetools.api.models.payment.TransactionType.findEnum("Authorization")) },
+                new Object[] { "amount",
                         MyTransactionDraft.builder().amount(new com.commercetools.api.models.common.MoneyImpl()) },
-                new Object[] { MyTransactionDraft.builder().interactionId("interactionId") },
-                new Object[] { MyTransactionDraft.builder()
+                new Object[] { "interactionId", MyTransactionDraft.builder().interactionId("interactionId") },
+                new Object[] { "custom", MyTransactionDraft.builder()
                         .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) } };
     }
 

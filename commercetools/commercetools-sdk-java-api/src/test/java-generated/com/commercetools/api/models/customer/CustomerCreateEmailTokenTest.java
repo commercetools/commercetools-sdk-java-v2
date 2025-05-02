@@ -1,32 +1,24 @@
 
 package com.commercetools.api.models.customer;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CustomerCreateEmailTokenTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CustomerCreateEmailTokenBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CustomerCreateEmailTokenBuilder builder) {
         CustomerCreateEmailToken customerCreateEmailToken = builder.buildUnchecked();
         Assertions.assertThat(customerCreateEmailToken).isInstanceOf(CustomerCreateEmailToken.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { CustomerCreateEmailToken.builder().id("id") },
-                new Object[] { CustomerCreateEmailToken.builder().version(2L) },
-                new Object[] { CustomerCreateEmailToken.builder().ttlMinutes(1L) } };
+        return new Object[][] { new Object[] { "id", CustomerCreateEmailToken.builder().id("id") },
+                new Object[] { "version", CustomerCreateEmailToken.builder().version(2L) },
+                new Object[] { "ttlMinutes", CustomerCreateEmailToken.builder().ttlMinutes(1L) } };
     }
 
     @Test

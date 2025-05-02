@@ -3,55 +3,56 @@ package com.commercetools.importapi.models.products;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductImportTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductImportBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductImportBuilder builder) {
         ProductImport productImport = builder.buildUnchecked();
         Assertions.assertThat(productImport).isInstanceOf(ProductImport.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductImport.builder().key("key") },
-                new Object[] { ProductImport.builder()
-                        .name(new com.commercetools.importapi.models.common.LocalizedStringImpl()) },
-                new Object[] { ProductImport.builder()
+        return new Object[][] { new Object[] { "key", ProductImport.builder().key("key") },
+                new Object[] { "name",
+                        ProductImport.builder()
+                                .name(new com.commercetools.importapi.models.common.LocalizedStringImpl()) },
+                new Object[] { "productType", ProductImport.builder()
                         .productType(new com.commercetools.importapi.models.common.ProductTypeKeyReferenceImpl()) },
-                new Object[] { ProductImport.builder()
-                        .slug(new com.commercetools.importapi.models.common.LocalizedStringImpl()) },
-                new Object[] { ProductImport.builder()
-                        .description(new com.commercetools.importapi.models.common.LocalizedStringImpl()) },
-                new Object[] { ProductImport.builder()
-                        .categories(Collections.singletonList(
-                            new com.commercetools.importapi.models.common.CategoryKeyReferenceImpl())) },
-                new Object[] { ProductImport.builder()
-                        .metaTitle(new com.commercetools.importapi.models.common.LocalizedStringImpl()) },
-                new Object[] { ProductImport.builder()
-                        .metaDescription(new com.commercetools.importapi.models.common.LocalizedStringImpl()) },
-                new Object[] { ProductImport.builder()
-                        .metaKeywords(new com.commercetools.importapi.models.common.LocalizedStringImpl()) },
-                new Object[] { ProductImport.builder()
+                new Object[] { "slug",
+                        ProductImport.builder()
+                                .slug(new com.commercetools.importapi.models.common.LocalizedStringImpl()) },
+                new Object[] { "description",
+                        ProductImport.builder()
+                                .description(new com.commercetools.importapi.models.common.LocalizedStringImpl()) },
+                new Object[] { "categories",
+                        ProductImport.builder()
+                                .categories(Collections.singletonList(
+                                    new com.commercetools.importapi.models.common.CategoryKeyReferenceImpl())) },
+                new Object[] { "metaTitle",
+                        ProductImport.builder()
+                                .metaTitle(new com.commercetools.importapi.models.common.LocalizedStringImpl()) },
+                new Object[] { "metaDescription",
+                        ProductImport.builder()
+                                .metaDescription(new com.commercetools.importapi.models.common.LocalizedStringImpl()) },
+                new Object[] { "metaKeywords",
+                        ProductImport.builder()
+                                .metaKeywords(new com.commercetools.importapi.models.common.LocalizedStringImpl()) },
+                new Object[] { "taxCategory", ProductImport.builder()
                         .taxCategory(new com.commercetools.importapi.models.common.TaxCategoryKeyReferenceImpl()) },
-                new Object[] { ProductImport.builder()
-                        .searchKeywords(new com.commercetools.importapi.models.products.SearchKeywordsImpl()) },
-                new Object[] { ProductImport.builder()
-                        .state(new com.commercetools.importapi.models.common.StateKeyReferenceImpl()) },
-                new Object[] { ProductImport.builder().publish(true) },
-                new Object[] { ProductImport.builder()
+                new Object[] { "searchKeywords",
+                        ProductImport.builder()
+                                .searchKeywords(new com.commercetools.importapi.models.products.SearchKeywordsImpl()) },
+                new Object[] { "state",
+                        ProductImport.builder()
+                                .state(new com.commercetools.importapi.models.common.StateKeyReferenceImpl()) },
+                new Object[] { "publish", ProductImport.builder().publish(true) },
+                new Object[] { "priceMode", ProductImport.builder()
                         .priceMode(
                             com.commercetools.importapi.models.common.ProductPriceModeEnum.findEnum("Embedded")) } };
     }

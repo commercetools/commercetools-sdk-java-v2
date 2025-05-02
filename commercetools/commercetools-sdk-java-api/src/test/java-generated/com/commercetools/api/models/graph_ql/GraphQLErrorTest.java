@@ -3,35 +3,28 @@ package com.commercetools.api.models.graph_ql;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class GraphQLErrorTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(GraphQLErrorBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, GraphQLErrorBuilder builder) {
         GraphQLError graphQLError = builder.buildUnchecked();
         Assertions.assertThat(graphQLError).isInstanceOf(GraphQLError.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { GraphQLError.builder().message("message") },
-                new Object[] { GraphQLError.builder()
-                        .locations(Collections
-                                .singletonList(new com.commercetools.api.models.graph_ql.GraphQLErrorLocationImpl())) },
-                new Object[] { GraphQLError.builder().path(Collections.singletonList("path")) },
-                new Object[] { GraphQLError.builder()
+        return new Object[][] { new Object[] { "message", GraphQLError.builder().message("message") },
+                new Object[] { "locations",
+                        GraphQLError.builder()
+                                .locations(Collections.singletonList(
+                                    new com.commercetools.api.models.graph_ql.GraphQLErrorLocationImpl())) },
+                new Object[] { "path", GraphQLError.builder().path(Collections.singletonList("path")) },
+                new Object[] { "extensions", GraphQLError.builder()
                         .extensions(new com.commercetools.api.models.error.GraphQLErrorObjectImpl()) } };
     }
 

@@ -3,43 +3,41 @@ package com.commercetools.api.models.message;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class OrderLineItemRemovedMessagePayloadTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(OrderLineItemRemovedMessagePayloadBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, OrderLineItemRemovedMessagePayloadBuilder builder) {
         OrderLineItemRemovedMessagePayload orderLineItemRemovedMessagePayload = builder.buildUnchecked();
         Assertions.assertThat(orderLineItemRemovedMessagePayload)
                 .isInstanceOf(OrderLineItemRemovedMessagePayload.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { OrderLineItemRemovedMessagePayload.builder().lineItemId("lineItemId") },
-                new Object[] { OrderLineItemRemovedMessagePayload.builder().lineItemKey("lineItemKey") },
-                new Object[] { OrderLineItemRemovedMessagePayload.builder().removedQuantity(7L) },
-                new Object[] { OrderLineItemRemovedMessagePayload.builder().newQuantity(4L) },
-                new Object[] { OrderLineItemRemovedMessagePayload.builder()
-                        .newState(Collections.singletonList(new com.commercetools.api.models.order.ItemStateImpl())) },
-                new Object[] { OrderLineItemRemovedMessagePayload.builder()
-                        .newTotalPrice(new com.commercetools.api.models.common.CentPrecisionMoneyImpl()) },
-                new Object[] { OrderLineItemRemovedMessagePayload.builder()
-                        .newTaxedPrice(new com.commercetools.api.models.cart.TaxedItemPriceImpl()) },
-                new Object[] { OrderLineItemRemovedMessagePayload.builder()
-                        .newPrice(new com.commercetools.api.models.common.PriceImpl()) },
-                new Object[] { OrderLineItemRemovedMessagePayload.builder()
+        return new Object[][] {
+                new Object[] { "lineItemId", OrderLineItemRemovedMessagePayload.builder().lineItemId("lineItemId") },
+                new Object[] { "lineItemKey", OrderLineItemRemovedMessagePayload.builder().lineItemKey("lineItemKey") },
+                new Object[] { "removedQuantity", OrderLineItemRemovedMessagePayload.builder().removedQuantity(7L) },
+                new Object[] { "newQuantity", OrderLineItemRemovedMessagePayload.builder().newQuantity(4L) },
+                new Object[] { "newState",
+                        OrderLineItemRemovedMessagePayload.builder()
+                                .newState(Collections
+                                        .singletonList(new com.commercetools.api.models.order.ItemStateImpl())) },
+                new Object[] { "newTotalPrice",
+                        OrderLineItemRemovedMessagePayload.builder()
+                                .newTotalPrice(new com.commercetools.api.models.common.CentPrecisionMoneyImpl()) },
+                new Object[] { "newTaxedPrice",
+                        OrderLineItemRemovedMessagePayload.builder()
+                                .newTaxedPrice(new com.commercetools.api.models.cart.TaxedItemPriceImpl()) },
+                new Object[] { "newPrice",
+                        OrderLineItemRemovedMessagePayload.builder()
+                                .newPrice(new com.commercetools.api.models.common.PriceImpl()) },
+                new Object[] { "newShippingDetail", OrderLineItemRemovedMessagePayload.builder()
                         .newShippingDetail(new com.commercetools.api.models.cart.ItemShippingDetailsImpl()) } };
     }
 

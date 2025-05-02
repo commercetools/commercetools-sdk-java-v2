@@ -3,39 +3,35 @@ package com.commercetools.api.models.error;
 
 import java.time.ZonedDateTime;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class GraphQLDiscountCodeNonApplicableErrorTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(GraphQLDiscountCodeNonApplicableErrorBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, GraphQLDiscountCodeNonApplicableErrorBuilder builder) {
         GraphQLDiscountCodeNonApplicableError graphQLDiscountCodeNonApplicableError = builder.buildUnchecked();
         Assertions.assertThat(graphQLDiscountCodeNonApplicableError)
                 .isInstanceOf(GraphQLDiscountCodeNonApplicableError.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { GraphQLDiscountCodeNonApplicableError.builder().discountCode("discountCode") },
-                new Object[] { GraphQLDiscountCodeNonApplicableError.builder().reason("reason") },
-                new Object[] { GraphQLDiscountCodeNonApplicableError.builder().discountCodeId("discountCodeId") },
-                new Object[] { GraphQLDiscountCodeNonApplicableError.builder()
-                        .validFrom(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { GraphQLDiscountCodeNonApplicableError.builder()
-                        .validUntil(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { GraphQLDiscountCodeNonApplicableError.builder()
+                new Object[] { "discountCode",
+                        GraphQLDiscountCodeNonApplicableError.builder().discountCode("discountCode") },
+                new Object[] { "reason", GraphQLDiscountCodeNonApplicableError.builder().reason("reason") },
+                new Object[] { "discountCodeId",
+                        GraphQLDiscountCodeNonApplicableError.builder().discountCodeId("discountCodeId") },
+                new Object[] { "validFrom",
+                        GraphQLDiscountCodeNonApplicableError.builder()
+                                .validFrom(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "validUntil",
+                        GraphQLDiscountCodeNonApplicableError.builder()
+                                .validUntil(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "validityCheckTime", GraphQLDiscountCodeNonApplicableError.builder()
                         .validityCheckTime(ZonedDateTime.parse("2023-06-01T12:00Z")) } };
     }
 

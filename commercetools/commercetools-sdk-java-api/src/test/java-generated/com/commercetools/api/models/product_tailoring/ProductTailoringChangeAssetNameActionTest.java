@@ -1,36 +1,29 @@
 
 package com.commercetools.api.models.product_tailoring;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductTailoringChangeAssetNameActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductTailoringChangeAssetNameActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductTailoringChangeAssetNameActionBuilder builder) {
         ProductTailoringChangeAssetNameAction productTailoringChangeAssetNameAction = builder.buildUnchecked();
         Assertions.assertThat(productTailoringChangeAssetNameAction)
                 .isInstanceOf(ProductTailoringChangeAssetNameAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductTailoringChangeAssetNameAction.builder().variantId(5L) },
-                new Object[] { ProductTailoringChangeAssetNameAction.builder().sku("sku") },
-                new Object[] { ProductTailoringChangeAssetNameAction.builder().staged(true) },
-                new Object[] { ProductTailoringChangeAssetNameAction.builder().assetId("assetId") },
-                new Object[] { ProductTailoringChangeAssetNameAction.builder().assetKey("assetKey") },
-                new Object[] { ProductTailoringChangeAssetNameAction.builder()
+        return new Object[][] {
+                new Object[] { "variantId", ProductTailoringChangeAssetNameAction.builder().variantId(5L) },
+                new Object[] { "sku", ProductTailoringChangeAssetNameAction.builder().sku("sku") },
+                new Object[] { "staged", ProductTailoringChangeAssetNameAction.builder().staged(true) },
+                new Object[] { "assetId", ProductTailoringChangeAssetNameAction.builder().assetId("assetId") },
+                new Object[] { "assetKey", ProductTailoringChangeAssetNameAction.builder().assetKey("assetKey") },
+                new Object[] { "name", ProductTailoringChangeAssetNameAction.builder()
                         .name(new com.commercetools.api.models.common.LocalizedStringImpl()) } };
     }
 

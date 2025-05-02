@@ -1,30 +1,23 @@
 
 package com.commercetools.api.models.error;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SearchIndexingInProgressErrorTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SearchIndexingInProgressErrorBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SearchIndexingInProgressErrorBuilder builder) {
         SearchIndexingInProgressError searchIndexingInProgressError = builder.buildUnchecked();
         Assertions.assertThat(searchIndexingInProgressError).isInstanceOf(SearchIndexingInProgressError.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SearchIndexingInProgressError.builder().message("message") } };
+        return new Object[][] {
+                new Object[] { "message", SearchIndexingInProgressError.builder().message("message") } };
     }
 
     @Test

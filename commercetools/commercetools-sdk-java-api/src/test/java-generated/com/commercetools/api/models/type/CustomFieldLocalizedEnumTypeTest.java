@@ -3,32 +3,25 @@ package com.commercetools.api.models.type;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CustomFieldLocalizedEnumTypeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CustomFieldLocalizedEnumTypeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CustomFieldLocalizedEnumTypeBuilder builder) {
         CustomFieldLocalizedEnumType customFieldLocalizedEnumType = builder.buildUnchecked();
         Assertions.assertThat(customFieldLocalizedEnumType).isInstanceOf(CustomFieldLocalizedEnumType.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { CustomFieldLocalizedEnumType.builder()
-                .values(Collections
-                        .singletonList(new com.commercetools.api.models.type.CustomFieldLocalizedEnumValueImpl())) } };
+        return new Object[][] { new Object[] { "values",
+                CustomFieldLocalizedEnumType.builder()
+                        .values(Collections.singletonList(
+                            new com.commercetools.api.models.type.CustomFieldLocalizedEnumValueImpl())) } };
     }
 
     @Test

@@ -1,40 +1,36 @@
 
 package com.commercetools.api.models.message;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductTailoringDescriptionSetMessagePayloadTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductTailoringDescriptionSetMessagePayloadBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductTailoringDescriptionSetMessagePayloadBuilder builder) {
         ProductTailoringDescriptionSetMessagePayload productTailoringDescriptionSetMessagePayload = builder
                 .buildUnchecked();
         Assertions.assertThat(productTailoringDescriptionSetMessagePayload)
                 .isInstanceOf(ProductTailoringDescriptionSetMessagePayload.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { ProductTailoringDescriptionSetMessagePayload.builder()
-                        .store(new com.commercetools.api.models.store.StoreKeyReferenceImpl()) },
-                new Object[] { ProductTailoringDescriptionSetMessagePayload.builder().productKey("productKey") },
-                new Object[] { ProductTailoringDescriptionSetMessagePayload.builder()
-                        .product(new com.commercetools.api.models.product.ProductReferenceImpl()) },
-                new Object[] { ProductTailoringDescriptionSetMessagePayload.builder()
-                        .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { ProductTailoringDescriptionSetMessagePayload.builder()
+                new Object[] { "store",
+                        ProductTailoringDescriptionSetMessagePayload.builder()
+                                .store(new com.commercetools.api.models.store.StoreKeyReferenceImpl()) },
+                new Object[] { "productKey",
+                        ProductTailoringDescriptionSetMessagePayload.builder().productKey("productKey") },
+                new Object[] { "product",
+                        ProductTailoringDescriptionSetMessagePayload.builder()
+                                .product(new com.commercetools.api.models.product.ProductReferenceImpl()) },
+                new Object[] { "description",
+                        ProductTailoringDescriptionSetMessagePayload.builder()
+                                .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "oldDescription", ProductTailoringDescriptionSetMessagePayload.builder()
                         .oldDescription(new com.commercetools.api.models.common.LocalizedStringImpl()) } };
     }
 

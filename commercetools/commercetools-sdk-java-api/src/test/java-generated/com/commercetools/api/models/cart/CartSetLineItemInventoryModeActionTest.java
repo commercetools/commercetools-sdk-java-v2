@@ -1,33 +1,26 @@
 
 package com.commercetools.api.models.cart;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CartSetLineItemInventoryModeActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CartSetLineItemInventoryModeActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CartSetLineItemInventoryModeActionBuilder builder) {
         CartSetLineItemInventoryModeAction cartSetLineItemInventoryModeAction = builder.buildUnchecked();
         Assertions.assertThat(cartSetLineItemInventoryModeAction)
                 .isInstanceOf(CartSetLineItemInventoryModeAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { CartSetLineItemInventoryModeAction.builder().lineItemId("lineItemId") },
-                new Object[] { CartSetLineItemInventoryModeAction.builder().lineItemKey("lineItemKey") },
-                new Object[] { CartSetLineItemInventoryModeAction.builder()
+        return new Object[][] {
+                new Object[] { "lineItemId", CartSetLineItemInventoryModeAction.builder().lineItemId("lineItemId") },
+                new Object[] { "lineItemKey", CartSetLineItemInventoryModeAction.builder().lineItemKey("lineItemKey") },
+                new Object[] { "inventoryMode", CartSetLineItemInventoryModeAction.builder()
                         .inventoryMode(com.commercetools.api.models.cart.InventoryMode.findEnum("None")) } };
     }
 

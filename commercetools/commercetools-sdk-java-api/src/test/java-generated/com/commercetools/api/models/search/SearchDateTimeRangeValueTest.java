@@ -3,34 +3,29 @@ package com.commercetools.api.models.search;
 
 import java.time.ZonedDateTime;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SearchDateTimeRangeValueTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SearchDateTimeRangeValueBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SearchDateTimeRangeValueBuilder builder) {
         SearchDateTimeRangeValue searchDateTimeRangeValue = builder.buildUnchecked();
         Assertions.assertThat(searchDateTimeRangeValue).isInstanceOf(SearchDateTimeRangeValue.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { SearchDateTimeRangeValue.builder().gte(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { SearchDateTimeRangeValue.builder().gt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { SearchDateTimeRangeValue.builder().lte(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { SearchDateTimeRangeValue.builder().lt(ZonedDateTime.parse("2023-06-01T12:00Z")) } };
+                new Object[] { "gte",
+                        SearchDateTimeRangeValue.builder().gte(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "gt", SearchDateTimeRangeValue.builder().gt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lte",
+                        SearchDateTimeRangeValue.builder().lte(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lt",
+                        SearchDateTimeRangeValue.builder().lt(ZonedDateTime.parse("2023-06-01T12:00Z")) } };
     }
 
     @Test

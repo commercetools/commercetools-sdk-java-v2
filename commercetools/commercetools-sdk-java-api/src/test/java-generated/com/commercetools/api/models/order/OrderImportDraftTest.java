@@ -4,83 +4,92 @@ package com.commercetools.api.models.order;
 import java.time.ZonedDateTime;
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class OrderImportDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(OrderImportDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, OrderImportDraftBuilder builder) {
         OrderImportDraft orderImportDraft = builder.buildUnchecked();
         Assertions.assertThat(orderImportDraft).isInstanceOf(OrderImportDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { OrderImportDraft.builder().orderNumber("orderNumber") },
-                new Object[] { OrderImportDraft.builder().purchaseOrderNumber("purchaseOrderNumber") },
-                new Object[] { OrderImportDraft.builder().customerId("customerId") },
-                new Object[] { OrderImportDraft.builder().customerEmail("customerEmail") },
-                new Object[] { OrderImportDraft.builder()
+        return new Object[][] { new Object[] { "orderNumber", OrderImportDraft.builder().orderNumber("orderNumber") },
+                new Object[] { "purchaseOrderNumber",
+                        OrderImportDraft.builder().purchaseOrderNumber("purchaseOrderNumber") },
+                new Object[] { "customerId", OrderImportDraft.builder().customerId("customerId") },
+                new Object[] { "customerEmail", OrderImportDraft.builder().customerEmail("customerEmail") },
+                new Object[] { "customerGroup", OrderImportDraft.builder()
                         .customerGroup(
                             new com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierImpl()) },
-                new Object[] { OrderImportDraft.builder()
+                new Object[] { "businessUnit", OrderImportDraft.builder()
                         .businessUnit(
                             new com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierImpl()) },
-                new Object[] { OrderImportDraft.builder()
-                        .store(new com.commercetools.api.models.store.StoreResourceIdentifierImpl()) },
-                new Object[] { OrderImportDraft.builder()
-                        .lineItems(Collections
-                                .singletonList(new com.commercetools.api.models.order.LineItemImportDraftImpl())) },
-                new Object[] { OrderImportDraft.builder()
-                        .customLineItems(Collections.singletonList(
-                            new com.commercetools.api.models.order.CustomLineItemImportDraftImpl())) },
-                new Object[] {
+                new Object[] { "store",
+                        OrderImportDraft.builder()
+                                .store(new com.commercetools.api.models.store.StoreResourceIdentifierImpl()) },
+                new Object[] { "lineItems",
+                        OrderImportDraft.builder()
+                                .lineItems(Collections.singletonList(
+                                    new com.commercetools.api.models.order.LineItemImportDraftImpl())) },
+                new Object[] { "customLineItems",
+                        OrderImportDraft.builder()
+                                .customLineItems(Collections.singletonList(
+                                    new com.commercetools.api.models.order.CustomLineItemImportDraftImpl())) },
+                new Object[] { "totalPrice",
                         OrderImportDraft.builder().totalPrice(new com.commercetools.api.models.common.MoneyImpl()) },
-                new Object[] { OrderImportDraft.builder()
-                        .taxedPrice(new com.commercetools.api.models.cart.TaxedPriceDraftImpl()) },
-                new Object[] { OrderImportDraft.builder()
-                        .taxRoundingMode(com.commercetools.api.models.cart.RoundingMode.findEnum("HalfEven")) },
-                new Object[] { OrderImportDraft.builder()
-                        .taxCalculationMode(
-                            com.commercetools.api.models.cart.TaxCalculationMode.findEnum("LineItemLevel")) },
-                new Object[] { OrderImportDraft.builder()
-                        .inventoryMode(com.commercetools.api.models.cart.InventoryMode.findEnum("None")) },
-                new Object[] { OrderImportDraft.builder()
-                        .billingAddress(new com.commercetools.api.models.common.BaseAddressImpl()) },
-                new Object[] { OrderImportDraft.builder()
-                        .shippingAddress(new com.commercetools.api.models.common.BaseAddressImpl()) },
-                new Object[] {
+                new Object[] { "taxedPrice",
+                        OrderImportDraft.builder()
+                                .taxedPrice(new com.commercetools.api.models.cart.TaxedPriceDraftImpl()) },
+                new Object[] { "taxRoundingMode",
+                        OrderImportDraft.builder()
+                                .taxRoundingMode(com.commercetools.api.models.cart.RoundingMode.findEnum("HalfEven")) },
+                new Object[] { "taxCalculationMode",
+                        OrderImportDraft.builder()
+                                .taxCalculationMode(
+                                    com.commercetools.api.models.cart.TaxCalculationMode.findEnum("LineItemLevel")) },
+                new Object[] { "inventoryMode",
+                        OrderImportDraft.builder()
+                                .inventoryMode(com.commercetools.api.models.cart.InventoryMode.findEnum("None")) },
+                new Object[] { "billingAddress",
+                        OrderImportDraft.builder()
+                                .billingAddress(new com.commercetools.api.models.common.BaseAddressImpl()) },
+                new Object[] { "shippingAddress",
+                        OrderImportDraft.builder()
+                                .shippingAddress(new com.commercetools.api.models.common.BaseAddressImpl()) },
+                new Object[] { "itemShippingAddresses",
                         OrderImportDraft.builder()
                                 .itemShippingAddresses(Collections
                                         .singletonList(new com.commercetools.api.models.common.BaseAddressImpl())) },
-                new Object[] { OrderImportDraft.builder()
-                        .shippingInfo(new com.commercetools.api.models.order.ShippingInfoImportDraftImpl()) },
-                new Object[] { OrderImportDraft.builder()
-                        .paymentInfo(new com.commercetools.api.models.order.PaymentInfoImpl()) },
-                new Object[] { OrderImportDraft.builder()
-                        .paymentState(com.commercetools.api.models.order.PaymentState.findEnum("BalanceDue")) },
-                new Object[] { OrderImportDraft.builder()
-                        .shipmentState(com.commercetools.api.models.order.ShipmentState.findEnum("Shipped")) },
-                new Object[] { OrderImportDraft.builder()
-                        .orderState(com.commercetools.api.models.order.OrderState.findEnum("Open")) },
-                new Object[] {
+                new Object[] { "shippingInfo",
+                        OrderImportDraft.builder()
+                                .shippingInfo(new com.commercetools.api.models.order.ShippingInfoImportDraftImpl()) },
+                new Object[] { "paymentInfo",
+                        OrderImportDraft.builder()
+                                .paymentInfo(new com.commercetools.api.models.order.PaymentInfoImpl()) },
+                new Object[] { "paymentState",
+                        OrderImportDraft.builder()
+                                .paymentState(com.commercetools.api.models.order.PaymentState.findEnum("BalanceDue")) },
+                new Object[] { "shipmentState",
+                        OrderImportDraft.builder()
+                                .shipmentState(com.commercetools.api.models.order.ShipmentState.findEnum("Shipped")) },
+                new Object[] { "orderState",
+                        OrderImportDraft.builder()
+                                .orderState(com.commercetools.api.models.order.OrderState.findEnum("Open")) },
+                new Object[] { "state",
                         OrderImportDraft.builder().state(new com.commercetools.api.models.state.StateReferenceImpl()) },
-                new Object[] { OrderImportDraft.builder().country("country") },
-                new Object[] { OrderImportDraft.builder()
-                        .origin(com.commercetools.api.models.cart.CartOrigin.findEnum("Customer")) },
-                new Object[] { OrderImportDraft.builder().completedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { OrderImportDraft.builder()
+                new Object[] { "country", OrderImportDraft.builder().country("country") },
+                new Object[] { "origin",
+                        OrderImportDraft.builder()
+                                .origin(com.commercetools.api.models.cart.CartOrigin.findEnum("Customer")) },
+                new Object[] { "completedAt",
+                        OrderImportDraft.builder().completedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "custom", OrderImportDraft.builder()
                         .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) } };
     }
 

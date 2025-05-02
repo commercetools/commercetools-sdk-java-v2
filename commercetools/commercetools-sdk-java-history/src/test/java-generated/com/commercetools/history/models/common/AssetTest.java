@@ -1,36 +1,30 @@
 
 package com.commercetools.history.models.common;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class AssetTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(AssetBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, AssetBuilder builder) {
         Asset asset = builder.buildUnchecked();
         Assertions.assertThat(asset).isInstanceOf(Asset.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { Asset.builder().id("id") },
-                new Object[] {
+        return new Object[][] { new Object[] { "id", Asset.builder().id("id") },
+                new Object[] { "name",
                         Asset.builder().name(new com.commercetools.history.models.common.LocalizedStringImpl()) },
-                new Object[] { Asset.builder()
-                        .description(new com.commercetools.history.models.common.LocalizedStringImpl()) },
-                new Object[] { Asset.builder().custom(new com.commercetools.history.models.common.CustomFieldsImpl()) },
-                new Object[] { Asset.builder().key("key") } };
+                new Object[] { "description",
+                        Asset.builder()
+                                .description(new com.commercetools.history.models.common.LocalizedStringImpl()) },
+                new Object[] { "custom",
+                        Asset.builder().custom(new com.commercetools.history.models.common.CustomFieldsImpl()) },
+                new Object[] { "key", Asset.builder().key("key") } };
     }
 
     @Test

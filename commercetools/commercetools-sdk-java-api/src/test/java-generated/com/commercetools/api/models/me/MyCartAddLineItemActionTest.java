@@ -3,43 +3,37 @@ package com.commercetools.api.models.me;
 
 import java.time.ZonedDateTime;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class MyCartAddLineItemActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(MyCartAddLineItemActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, MyCartAddLineItemActionBuilder builder) {
         MyCartAddLineItemAction myCartAddLineItemAction = builder.buildUnchecked();
         Assertions.assertThat(myCartAddLineItemAction).isInstanceOf(MyCartAddLineItemAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { MyCartAddLineItemAction.builder().key("key") },
-                new Object[] { MyCartAddLineItemAction.builder().productId("productId") },
-                new Object[] { MyCartAddLineItemAction.builder().variantId(5L) },
-                new Object[] { MyCartAddLineItemAction.builder().sku("sku") },
-                new Object[] { MyCartAddLineItemAction.builder().quantity(8L) },
-                new Object[] { MyCartAddLineItemAction.builder().addedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { MyCartAddLineItemAction.builder()
-                        .distributionChannel(
-                            new com.commercetools.api.models.channel.ChannelResourceIdentifierImpl()) },
-                new Object[] { MyCartAddLineItemAction.builder()
+        return new Object[][] { new Object[] { "key", MyCartAddLineItemAction.builder().key("key") },
+                new Object[] { "productId", MyCartAddLineItemAction.builder().productId("productId") },
+                new Object[] { "variantId", MyCartAddLineItemAction.builder().variantId(5L) },
+                new Object[] { "sku", MyCartAddLineItemAction.builder().sku("sku") },
+                new Object[] { "quantity", MyCartAddLineItemAction.builder().quantity(8L) },
+                new Object[] { "addedAt",
+                        MyCartAddLineItemAction.builder().addedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "distributionChannel",
+                        MyCartAddLineItemAction.builder()
+                                .distributionChannel(
+                                    new com.commercetools.api.models.channel.ChannelResourceIdentifierImpl()) },
+                new Object[] { "supplyChannel", MyCartAddLineItemAction.builder()
                         .supplyChannel(new com.commercetools.api.models.channel.ChannelResourceIdentifierImpl()) },
-                new Object[] { MyCartAddLineItemAction.builder()
+                new Object[] { "shippingDetails", MyCartAddLineItemAction.builder()
                         .shippingDetails(new com.commercetools.api.models.cart.ItemShippingDetailsDraftImpl()) },
-                new Object[] { MyCartAddLineItemAction.builder()
+                new Object[] { "custom", MyCartAddLineItemAction.builder()
                         .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) } };
     }
 

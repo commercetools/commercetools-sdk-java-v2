@@ -1,30 +1,23 @@
 
 package com.commercetools.api.models.customer;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class MyCustomerEmailVerifyTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(MyCustomerEmailVerifyBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, MyCustomerEmailVerifyBuilder builder) {
         MyCustomerEmailVerify myCustomerEmailVerify = builder.buildUnchecked();
         Assertions.assertThat(myCustomerEmailVerify).isInstanceOf(MyCustomerEmailVerify.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { MyCustomerEmailVerify.builder().tokenValue("tokenValue") } };
+        return new Object[][] {
+                new Object[] { "tokenValue", MyCustomerEmailVerify.builder().tokenValue("tokenValue") } };
     }
 
     @Test

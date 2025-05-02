@@ -1,41 +1,34 @@
 
 package com.commercetools.api.models.order_edit;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class StagedOrderSetCustomShippingMethodActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(StagedOrderSetCustomShippingMethodActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, StagedOrderSetCustomShippingMethodActionBuilder builder) {
         StagedOrderSetCustomShippingMethodAction stagedOrderSetCustomShippingMethodAction = builder.buildUnchecked();
         Assertions.assertThat(stagedOrderSetCustomShippingMethodAction)
                 .isInstanceOf(StagedOrderSetCustomShippingMethodAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] {
+                new Object[] { "shippingMethodName",
                         StagedOrderSetCustomShippingMethodAction.builder().shippingMethodName("shippingMethodName") },
-                new Object[] { StagedOrderSetCustomShippingMethodAction.builder()
+                new Object[] { "shippingRate", StagedOrderSetCustomShippingMethodAction.builder()
                         .shippingRate(new com.commercetools.api.models.shipping_method.ShippingRateDraftImpl()) },
-                new Object[] { StagedOrderSetCustomShippingMethodAction.builder()
+                new Object[] { "taxCategory", StagedOrderSetCustomShippingMethodAction.builder()
                         .taxCategory(
                             new com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierImpl()) },
-                new Object[] { StagedOrderSetCustomShippingMethodAction.builder()
-                        .externalTaxRate(new com.commercetools.api.models.cart.ExternalTaxRateDraftImpl()) },
-                new Object[] { StagedOrderSetCustomShippingMethodAction.builder()
+                new Object[] { "externalTaxRate",
+                        StagedOrderSetCustomShippingMethodAction.builder()
+                                .externalTaxRate(new com.commercetools.api.models.cart.ExternalTaxRateDraftImpl()) },
+                new Object[] { "custom", StagedOrderSetCustomShippingMethodAction.builder()
                         .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) } };
     }
 

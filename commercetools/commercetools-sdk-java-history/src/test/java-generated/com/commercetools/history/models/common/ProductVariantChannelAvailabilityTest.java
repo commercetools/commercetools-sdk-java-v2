@@ -1,32 +1,26 @@
 
 package com.commercetools.history.models.common;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductVariantChannelAvailabilityTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductVariantChannelAvailabilityBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductVariantChannelAvailabilityBuilder builder) {
         ProductVariantChannelAvailability productVariantChannelAvailability = builder.buildUnchecked();
         Assertions.assertThat(productVariantChannelAvailability).isInstanceOf(ProductVariantChannelAvailability.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductVariantChannelAvailability.builder().isOnStock(true) },
-                new Object[] { ProductVariantChannelAvailability.builder().restockableInDays(4) },
-                new Object[] { ProductVariantChannelAvailability.builder().availableQuantity(3) } };
+        return new Object[][] {
+                new Object[] { "isOnStock", ProductVariantChannelAvailability.builder().isOnStock(true) },
+                new Object[] { "restockableInDays", ProductVariantChannelAvailability.builder().restockableInDays(4) },
+                new Object[] { "availableQuantity",
+                        ProductVariantChannelAvailability.builder().availableQuantity(3) } };
     }
 
     @Test

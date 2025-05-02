@@ -3,41 +3,38 @@ package com.commercetools.importapi.models.productvariants;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductVariantImportTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductVariantImportBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductVariantImportBuilder builder) {
         ProductVariantImport productVariantImport = builder.buildUnchecked();
         Assertions.assertThat(productVariantImport).isInstanceOf(ProductVariantImport.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductVariantImport.builder().key("key") },
-                new Object[] { ProductVariantImport.builder().sku("sku") },
-                new Object[] { ProductVariantImport.builder().isMasterVariant(true) },
-                new Object[] { ProductVariantImport.builder()
-                        .attributes(Collections.singletonList(
-                            new com.commercetools.importapi.models.productvariants.AttributeImpl())) },
-                new Object[] { ProductVariantImport.builder()
-                        .images(Collections.singletonList(new com.commercetools.importapi.models.common.ImageImpl())) },
-                new Object[] { ProductVariantImport.builder()
-                        .assets(Collections.singletonList(new com.commercetools.importapi.models.common.AssetImpl())) },
-                new Object[] { ProductVariantImport.builder().staged(true) },
-                new Object[] { ProductVariantImport.builder()
+        return new Object[][] { new Object[] { "key", ProductVariantImport.builder().key("key") },
+                new Object[] { "sku", ProductVariantImport.builder().sku("sku") },
+                new Object[] { "isMasterVariant", ProductVariantImport.builder().isMasterVariant(true) },
+                new Object[] { "attributes",
+                        ProductVariantImport.builder()
+                                .attributes(Collections.singletonList(
+                                    new com.commercetools.importapi.models.productvariants.AttributeImpl())) },
+                new Object[] { "images",
+                        ProductVariantImport.builder()
+                                .images(Collections
+                                        .singletonList(new com.commercetools.importapi.models.common.ImageImpl())) },
+                new Object[] { "assets",
+                        ProductVariantImport.builder()
+                                .assets(Collections
+                                        .singletonList(new com.commercetools.importapi.models.common.AssetImpl())) },
+                new Object[] { "staged", ProductVariantImport.builder().staged(true) },
+                new Object[] { "product", ProductVariantImport.builder()
                         .product(new com.commercetools.importapi.models.common.ProductKeyReferenceImpl()) } };
     }
 

@@ -1,38 +1,34 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetLineItemDistributionChannelChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetLineItemDistributionChannelChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetLineItemDistributionChannelChangeBuilder builder) {
         SetLineItemDistributionChannelChange setLineItemDistributionChannelChange = builder.buildUnchecked();
         Assertions.assertThat(setLineItemDistributionChannelChange)
                 .isInstanceOf(SetLineItemDistributionChannelChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetLineItemDistributionChannelChange.builder().change("change") },
-                new Object[] { SetLineItemDistributionChannelChange.builder()
-                        .previousValue(new com.commercetools.history.models.common.ReferenceImpl()) },
-                new Object[] { SetLineItemDistributionChannelChange.builder()
-                        .nextValue(new com.commercetools.history.models.common.ReferenceImpl()) },
-                new Object[] { SetLineItemDistributionChannelChange.builder()
-                        .lineItem(new com.commercetools.history.models.common.LocalizedStringImpl()) },
-                new Object[] { SetLineItemDistributionChannelChange.builder().variant("variant") } };
+        return new Object[][] {
+                new Object[] { "change", SetLineItemDistributionChannelChange.builder().change("change") },
+                new Object[] { "previousValue",
+                        SetLineItemDistributionChannelChange.builder()
+                                .previousValue(new com.commercetools.history.models.common.ReferenceImpl()) },
+                new Object[] { "nextValue",
+                        SetLineItemDistributionChannelChange.builder()
+                                .nextValue(new com.commercetools.history.models.common.ReferenceImpl()) },
+                new Object[] { "lineItem",
+                        SetLineItemDistributionChannelChange.builder()
+                                .lineItem(new com.commercetools.history.models.common.LocalizedStringImpl()) },
+                new Object[] { "variant", SetLineItemDistributionChannelChange.builder().variant("variant") } };
     }
 
     @Test

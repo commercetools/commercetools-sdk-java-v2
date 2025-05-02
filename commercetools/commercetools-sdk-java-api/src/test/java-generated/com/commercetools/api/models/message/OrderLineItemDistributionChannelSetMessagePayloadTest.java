@@ -1,35 +1,29 @@
 
 package com.commercetools.api.models.message;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class OrderLineItemDistributionChannelSetMessagePayloadTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(OrderLineItemDistributionChannelSetMessagePayloadBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, OrderLineItemDistributionChannelSetMessagePayloadBuilder builder) {
         OrderLineItemDistributionChannelSetMessagePayload orderLineItemDistributionChannelSetMessagePayload = builder
                 .buildUnchecked();
         Assertions.assertThat(orderLineItemDistributionChannelSetMessagePayload)
                 .isInstanceOf(OrderLineItemDistributionChannelSetMessagePayload.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { OrderLineItemDistributionChannelSetMessagePayload.builder().lineItemId("lineItemId") },
-                new Object[] { OrderLineItemDistributionChannelSetMessagePayload.builder().lineItemKey("lineItemKey") },
-                new Object[] { OrderLineItemDistributionChannelSetMessagePayload.builder()
+                new Object[] { "lineItemId",
+                        OrderLineItemDistributionChannelSetMessagePayload.builder().lineItemId("lineItemId") },
+                new Object[] { "lineItemKey",
+                        OrderLineItemDistributionChannelSetMessagePayload.builder().lineItemKey("lineItemKey") },
+                new Object[] { "distributionChannel", OrderLineItemDistributionChannelSetMessagePayload.builder()
                         .distributionChannel(new com.commercetools.api.models.channel.ChannelReferenceImpl()) } };
     }
 

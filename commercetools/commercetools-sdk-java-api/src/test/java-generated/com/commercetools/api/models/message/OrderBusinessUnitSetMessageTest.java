@@ -1,35 +1,28 @@
 
 package com.commercetools.api.models.message;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class OrderBusinessUnitSetMessageTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(OrderBusinessUnitSetMessageBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, OrderBusinessUnitSetMessageBuilder builder) {
         OrderBusinessUnitSetMessage orderBusinessUnitSetMessage = builder.buildUnchecked();
         Assertions.assertThat(orderBusinessUnitSetMessage).isInstanceOf(OrderBusinessUnitSetMessage.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { OrderBusinessUnitSetMessage.builder()
+                new Object[] { "businessUnit", OrderBusinessUnitSetMessage.builder()
                         .businessUnit(new com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceImpl()) },
-                new Object[] { OrderBusinessUnitSetMessage.builder()
-                        .oldbusinessUnit(
-                            new com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceImpl()) } };
+                new Object[] { "oldbusinessUnit",
+                        OrderBusinessUnitSetMessage.builder()
+                                .oldbusinessUnit(
+                                    new com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceImpl()) } };
     }
 
     @Test

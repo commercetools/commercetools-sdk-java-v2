@@ -1,39 +1,33 @@
 
 package com.commercetools.api.models.cart_discount;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CartDiscountValueGiftLineItemDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CartDiscountValueGiftLineItemDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CartDiscountValueGiftLineItemDraftBuilder builder) {
         CartDiscountValueGiftLineItemDraft cartDiscountValueGiftLineItemDraft = builder.buildUnchecked();
         Assertions.assertThat(cartDiscountValueGiftLineItemDraft)
                 .isInstanceOf(CartDiscountValueGiftLineItemDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { CartDiscountValueGiftLineItemDraft.builder()
-                        .product(new com.commercetools.api.models.product.ProductResourceIdentifierImpl()) },
-                new Object[] { CartDiscountValueGiftLineItemDraft.builder().variantId(5L) },
-                new Object[] { CartDiscountValueGiftLineItemDraft.builder()
+                new Object[] { "product",
+                        CartDiscountValueGiftLineItemDraft.builder()
+                                .product(new com.commercetools.api.models.product.ProductResourceIdentifierImpl()) },
+                new Object[] { "variantId", CartDiscountValueGiftLineItemDraft.builder().variantId(5L) },
+                new Object[] { "supplyChannel", CartDiscountValueGiftLineItemDraft.builder()
                         .supplyChannel(new com.commercetools.api.models.channel.ChannelResourceIdentifierImpl()) },
-                new Object[] { CartDiscountValueGiftLineItemDraft.builder()
-                        .distributionChannel(
-                            new com.commercetools.api.models.channel.ChannelResourceIdentifierImpl()) } };
+                new Object[] { "distributionChannel",
+                        CartDiscountValueGiftLineItemDraft.builder()
+                                .distributionChannel(
+                                    new com.commercetools.api.models.channel.ChannelResourceIdentifierImpl()) } };
     }
 
     @Test

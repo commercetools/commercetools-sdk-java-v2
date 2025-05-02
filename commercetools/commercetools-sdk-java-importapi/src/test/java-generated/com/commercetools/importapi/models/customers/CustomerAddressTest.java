@@ -1,54 +1,48 @@
 
 package com.commercetools.importapi.models.customers;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CustomerAddressTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CustomerAddressBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CustomerAddressBuilder builder) {
         CustomerAddress customerAddress = builder.buildUnchecked();
         Assertions.assertThat(customerAddress).isInstanceOf(CustomerAddress.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { CustomerAddress.builder().key("key") },
-                new Object[] { CustomerAddress.builder().country("country") },
-                new Object[] { CustomerAddress.builder().title("title") },
-                new Object[] { CustomerAddress.builder().salutation("salutation") },
-                new Object[] { CustomerAddress.builder().firstName("firstName") },
-                new Object[] { CustomerAddress.builder().lastName("lastName") },
-                new Object[] { CustomerAddress.builder().streetName("streetName") },
-                new Object[] { CustomerAddress.builder().streetNumber("streetNumber") },
-                new Object[] { CustomerAddress.builder().additionalStreetInfo("additionalStreetInfo") },
-                new Object[] { CustomerAddress.builder().postalCode("postalCode") },
-                new Object[] { CustomerAddress.builder().city("city") },
-                new Object[] { CustomerAddress.builder().region("region") },
-                new Object[] { CustomerAddress.builder().state("state") },
-                new Object[] { CustomerAddress.builder().company("company") },
-                new Object[] { CustomerAddress.builder().department("department") },
-                new Object[] { CustomerAddress.builder().building("building") },
-                new Object[] { CustomerAddress.builder().apartment("apartment") },
-                new Object[] { CustomerAddress.builder().pOBox("pOBox") },
-                new Object[] { CustomerAddress.builder().phone("phone") },
-                new Object[] { CustomerAddress.builder().mobile("mobile") },
-                new Object[] { CustomerAddress.builder().email("email") },
-                new Object[] { CustomerAddress.builder().fax("fax") },
-                new Object[] { CustomerAddress.builder().additionalAddressInfo("additionalAddressInfo") },
-                new Object[] { CustomerAddress.builder().externalId("externalId") },
-                new Object[] { CustomerAddress.builder()
+        return new Object[][] { new Object[] { "key", CustomerAddress.builder().key("key") },
+                new Object[] { "country", CustomerAddress.builder().country("country") },
+                new Object[] { "title", CustomerAddress.builder().title("title") },
+                new Object[] { "salutation", CustomerAddress.builder().salutation("salutation") },
+                new Object[] { "firstName", CustomerAddress.builder().firstName("firstName") },
+                new Object[] { "lastName", CustomerAddress.builder().lastName("lastName") },
+                new Object[] { "streetName", CustomerAddress.builder().streetName("streetName") },
+                new Object[] { "streetNumber", CustomerAddress.builder().streetNumber("streetNumber") },
+                new Object[] { "additionalStreetInfo",
+                        CustomerAddress.builder().additionalStreetInfo("additionalStreetInfo") },
+                new Object[] { "postalCode", CustomerAddress.builder().postalCode("postalCode") },
+                new Object[] { "city", CustomerAddress.builder().city("city") },
+                new Object[] { "region", CustomerAddress.builder().region("region") },
+                new Object[] { "state", CustomerAddress.builder().state("state") },
+                new Object[] { "company", CustomerAddress.builder().company("company") },
+                new Object[] { "department", CustomerAddress.builder().department("department") },
+                new Object[] { "building", CustomerAddress.builder().building("building") },
+                new Object[] { "apartment", CustomerAddress.builder().apartment("apartment") },
+                new Object[] { "pOBox", CustomerAddress.builder().pOBox("pOBox") },
+                new Object[] { "phone", CustomerAddress.builder().phone("phone") },
+                new Object[] { "mobile", CustomerAddress.builder().mobile("mobile") },
+                new Object[] { "email", CustomerAddress.builder().email("email") },
+                new Object[] { "fax", CustomerAddress.builder().fax("fax") },
+                new Object[] { "additionalAddressInfo",
+                        CustomerAddress.builder().additionalAddressInfo("additionalAddressInfo") },
+                new Object[] { "externalId", CustomerAddress.builder().externalId("externalId") },
+                new Object[] { "custom", CustomerAddress.builder()
                         .custom(new com.commercetools.importapi.models.customfields.CustomImpl()) } };
     }
 

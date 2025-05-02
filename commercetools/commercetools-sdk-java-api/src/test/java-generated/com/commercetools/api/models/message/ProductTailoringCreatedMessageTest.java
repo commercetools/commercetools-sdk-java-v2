@@ -3,51 +3,51 @@ package com.commercetools.api.models.message;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductTailoringCreatedMessageTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductTailoringCreatedMessageBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductTailoringCreatedMessageBuilder builder) {
         ProductTailoringCreatedMessage productTailoringCreatedMessage = builder.buildUnchecked();
         Assertions.assertThat(productTailoringCreatedMessage).isInstanceOf(ProductTailoringCreatedMessage.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductTailoringCreatedMessage.builder().key("key") },
-                new Object[] { ProductTailoringCreatedMessage.builder()
-                        .store(new com.commercetools.api.models.store.StoreKeyReferenceImpl()) },
-                new Object[] { ProductTailoringCreatedMessage.builder().productKey("productKey") },
-                new Object[] { ProductTailoringCreatedMessage.builder()
-                        .product(new com.commercetools.api.models.product.ProductReferenceImpl()) },
-                new Object[] { ProductTailoringCreatedMessage.builder()
-                        .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { ProductTailoringCreatedMessage.builder()
-                        .name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { ProductTailoringCreatedMessage.builder()
-                        .slug(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { ProductTailoringCreatedMessage.builder()
-                        .metaTitle(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { ProductTailoringCreatedMessage.builder()
-                        .metaDescription(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { ProductTailoringCreatedMessage.builder()
-                        .metaKeywords(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { ProductTailoringCreatedMessage.builder()
+        return new Object[][] { new Object[] { "key", ProductTailoringCreatedMessage.builder().key("key") },
+                new Object[] { "store",
+                        ProductTailoringCreatedMessage.builder()
+                                .store(new com.commercetools.api.models.store.StoreKeyReferenceImpl()) },
+                new Object[] { "productKey", ProductTailoringCreatedMessage.builder().productKey("productKey") },
+                new Object[] { "product",
+                        ProductTailoringCreatedMessage.builder()
+                                .product(new com.commercetools.api.models.product.ProductReferenceImpl()) },
+                new Object[] { "description",
+                        ProductTailoringCreatedMessage.builder()
+                                .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "name",
+                        ProductTailoringCreatedMessage.builder()
+                                .name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "slug",
+                        ProductTailoringCreatedMessage.builder()
+                                .slug(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "metaTitle",
+                        ProductTailoringCreatedMessage.builder()
+                                .metaTitle(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "metaDescription",
+                        ProductTailoringCreatedMessage.builder()
+                                .metaDescription(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "metaKeywords",
+                        ProductTailoringCreatedMessage.builder()
+                                .metaKeywords(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "variants", ProductTailoringCreatedMessage.builder()
                         .variants(Collections.singletonList(
                             new com.commercetools.api.models.product_tailoring.ProductVariantTailoringImpl())) },
-                new Object[] { ProductTailoringCreatedMessage.builder().published(true) } };
+                new Object[] { "published", ProductTailoringCreatedMessage.builder().published(true) } };
     }
 
     @Test

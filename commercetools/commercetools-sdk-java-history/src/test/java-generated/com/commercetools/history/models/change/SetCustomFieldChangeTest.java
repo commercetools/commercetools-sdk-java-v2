@@ -1,34 +1,26 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetCustomFieldChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetCustomFieldChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetCustomFieldChangeBuilder builder) {
         SetCustomFieldChange setCustomFieldChange = builder.buildUnchecked();
         Assertions.assertThat(setCustomFieldChange).isInstanceOf(SetCustomFieldChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetCustomFieldChange.builder().change("change") },
-                new Object[] { SetCustomFieldChange.builder().previousValue("previousValue") },
-                new Object[] { SetCustomFieldChange.builder().nextValue("nextValue") },
-                new Object[] { SetCustomFieldChange.builder().name("name") },
-                new Object[] { SetCustomFieldChange.builder().customTypeId("customTypeId") } };
+        return new Object[][] { new Object[] { "change", SetCustomFieldChange.builder().change("change") },
+                new Object[] { "previousValue", SetCustomFieldChange.builder().previousValue("previousValue") },
+                new Object[] { "nextValue", SetCustomFieldChange.builder().nextValue("nextValue") },
+                new Object[] { "name", SetCustomFieldChange.builder().name("name") },
+                new Object[] { "customTypeId", SetCustomFieldChange.builder().customTypeId("customTypeId") } };
     }
 
     @Test

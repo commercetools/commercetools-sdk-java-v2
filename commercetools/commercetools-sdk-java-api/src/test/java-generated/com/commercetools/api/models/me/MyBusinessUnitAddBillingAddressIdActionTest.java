@@ -1,33 +1,26 @@
 
 package com.commercetools.api.models.me;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class MyBusinessUnitAddBillingAddressIdActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(MyBusinessUnitAddBillingAddressIdActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, MyBusinessUnitAddBillingAddressIdActionBuilder builder) {
         MyBusinessUnitAddBillingAddressIdAction myBusinessUnitAddBillingAddressIdAction = builder.buildUnchecked();
         Assertions.assertThat(myBusinessUnitAddBillingAddressIdAction)
                 .isInstanceOf(MyBusinessUnitAddBillingAddressIdAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { MyBusinessUnitAddBillingAddressIdAction.builder().addressId("addressId") },
-                new Object[] { MyBusinessUnitAddBillingAddressIdAction.builder().addressKey("addressKey") } };
+                new Object[] { "addressId", MyBusinessUnitAddBillingAddressIdAction.builder().addressId("addressId") },
+                new Object[] { "addressKey",
+                        MyBusinessUnitAddBillingAddressIdAction.builder().addressKey("addressKey") } };
     }
 
     @Test

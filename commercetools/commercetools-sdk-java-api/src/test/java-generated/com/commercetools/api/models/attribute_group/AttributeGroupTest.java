@@ -4,45 +4,42 @@ package com.commercetools.api.models.attribute_group;
 import java.time.ZonedDateTime;
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class AttributeGroupTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(AttributeGroupBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, AttributeGroupBuilder builder) {
         AttributeGroup attributeGroup = builder.buildUnchecked();
         Assertions.assertThat(attributeGroup).isInstanceOf(AttributeGroup.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { AttributeGroup.builder().id("id") },
-                new Object[] { AttributeGroup.builder().version(2L) },
-                new Object[] { AttributeGroup.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { AttributeGroup.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { AttributeGroup.builder()
-                        .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
-                new Object[] {
+        return new Object[][] { new Object[] { "id", AttributeGroup.builder().id("id") },
+                new Object[] { "version", AttributeGroup.builder().version(2L) },
+                new Object[] { "createdAt",
+                        AttributeGroup.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedAt",
+                        AttributeGroup.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedBy",
+                        AttributeGroup.builder()
+                                .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
+                new Object[] { "createdBy",
                         AttributeGroup.builder().createdBy(new com.commercetools.api.models.common.CreatedByImpl()) },
-                new Object[] {
+                new Object[] { "name",
                         AttributeGroup.builder().name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { AttributeGroup.builder()
-                        .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { AttributeGroup.builder()
-                        .attributes(Collections.singletonList(
-                            new com.commercetools.api.models.attribute_group.AttributeReferenceImpl())) },
-                new Object[] { AttributeGroup.builder().key("key") } };
+                new Object[] { "description",
+                        AttributeGroup.builder()
+                                .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "attributes",
+                        AttributeGroup.builder()
+                                .attributes(Collections.singletonList(
+                                    new com.commercetools.api.models.attribute_group.AttributeReferenceImpl())) },
+                new Object[] { "key", AttributeGroup.builder().key("key") } };
     }
 
     @Test

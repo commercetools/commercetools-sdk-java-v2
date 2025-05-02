@@ -4,70 +4,68 @@ package com.commercetools.api.models.customer;
 import java.time.LocalDate;
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CustomerDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CustomerDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CustomerDraftBuilder builder) {
         CustomerDraft customerDraft = builder.buildUnchecked();
         Assertions.assertThat(customerDraft).isInstanceOf(CustomerDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { CustomerDraft.builder().key("key") },
-                new Object[] { CustomerDraft.builder().customerNumber("customerNumber") },
-                new Object[] { CustomerDraft.builder().externalId("externalId") },
-                new Object[] { CustomerDraft.builder().email("email") },
-                new Object[] { CustomerDraft.builder().password("password") },
-                new Object[] { CustomerDraft.builder().firstName("firstName") },
-                new Object[] { CustomerDraft.builder().lastName("lastName") },
-                new Object[] { CustomerDraft.builder().middleName("middleName") },
-                new Object[] { CustomerDraft.builder().title("title") },
-                new Object[] { CustomerDraft.builder().anonymousCartId("anonymousCartId") },
-                new Object[] { CustomerDraft.builder()
-                        .anonymousCart(new com.commercetools.api.models.cart.CartResourceIdentifierImpl()) },
-                new Object[] { CustomerDraft.builder().anonymousId("anonymousId") },
-                new Object[] { CustomerDraft.builder().dateOfBirth(LocalDate.parse("2023-06-01")) },
-                new Object[] { CustomerDraft.builder().companyName("companyName") },
-                new Object[] { CustomerDraft.builder().vatId("vatId") },
-                new Object[] {
+        return new Object[][] { new Object[] { "key", CustomerDraft.builder().key("key") },
+                new Object[] { "customerNumber", CustomerDraft.builder().customerNumber("customerNumber") },
+                new Object[] { "externalId", CustomerDraft.builder().externalId("externalId") },
+                new Object[] { "email", CustomerDraft.builder().email("email") },
+                new Object[] { "password", CustomerDraft.builder().password("password") },
+                new Object[] { "firstName", CustomerDraft.builder().firstName("firstName") },
+                new Object[] { "lastName", CustomerDraft.builder().lastName("lastName") },
+                new Object[] { "middleName", CustomerDraft.builder().middleName("middleName") },
+                new Object[] { "title", CustomerDraft.builder().title("title") },
+                new Object[] { "anonymousCartId", CustomerDraft.builder().anonymousCartId("anonymousCartId") },
+                new Object[] { "anonymousCart",
+                        CustomerDraft.builder()
+                                .anonymousCart(new com.commercetools.api.models.cart.CartResourceIdentifierImpl()) },
+                new Object[] { "anonymousId", CustomerDraft.builder().anonymousId("anonymousId") },
+                new Object[] { "dateOfBirth", CustomerDraft.builder().dateOfBirth(LocalDate.parse("2023-06-01")) },
+                new Object[] { "companyName", CustomerDraft.builder().companyName("companyName") },
+                new Object[] { "vatId", CustomerDraft.builder().vatId("vatId") },
+                new Object[] { "addresses",
                         CustomerDraft.builder()
                                 .addresses(Collections
                                         .singletonList(new com.commercetools.api.models.common.BaseAddressImpl())) },
-                new Object[] { CustomerDraft.builder().defaultShippingAddress(4) },
-                new Object[] { CustomerDraft.builder().shippingAddresses(Collections.singletonList(5)) },
-                new Object[] { CustomerDraft.builder().defaultBillingAddress(3) },
-                new Object[] { CustomerDraft.builder().billingAddresses(Collections.singletonList(7)) },
-                new Object[] { CustomerDraft.builder().isEmailVerified(true) },
-                new Object[] { CustomerDraft.builder()
+                new Object[] { "defaultShippingAddress", CustomerDraft.builder().defaultShippingAddress(4) },
+                new Object[] { "shippingAddresses",
+                        CustomerDraft.builder().shippingAddresses(Collections.singletonList(5)) },
+                new Object[] { "defaultBillingAddress", CustomerDraft.builder().defaultBillingAddress(3) },
+                new Object[] { "billingAddresses",
+                        CustomerDraft.builder().billingAddresses(Collections.singletonList(7)) },
+                new Object[] { "isEmailVerified", CustomerDraft.builder().isEmailVerified(true) },
+                new Object[] { "customerGroup", CustomerDraft.builder()
                         .customerGroup(
                             new com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierImpl()) },
-                new Object[] {
+                new Object[] { "custom",
                         CustomerDraft.builder().custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) },
-                new Object[] { CustomerDraft.builder().locale("locale") },
-                new Object[] { CustomerDraft.builder().salutation("salutation") },
-                new Object[] { CustomerDraft.builder()
-                        .stores(Collections
-                                .singletonList(new com.commercetools.api.models.store.StoreResourceIdentifierImpl())) },
-                new Object[] { CustomerDraft.builder()
-                        .authenticationMode(
-                            com.commercetools.api.models.customer.AuthenticationMode.findEnum("Password")) },
-                new Object[] { CustomerDraft.builder()
-                        .customerGroupAssignments(Collections.singletonList(
-                            new com.commercetools.api.models.customer.CustomerGroupAssignmentDraftImpl())) } };
+                new Object[] { "locale", CustomerDraft.builder().locale("locale") },
+                new Object[] { "salutation", CustomerDraft.builder().salutation("salutation") },
+                new Object[] { "stores",
+                        CustomerDraft.builder()
+                                .stores(Collections.singletonList(
+                                    new com.commercetools.api.models.store.StoreResourceIdentifierImpl())) },
+                new Object[] { "authenticationMode",
+                        CustomerDraft.builder()
+                                .authenticationMode(
+                                    com.commercetools.api.models.customer.AuthenticationMode.findEnum("Password")) },
+                new Object[] { "customerGroupAssignments",
+                        CustomerDraft.builder()
+                                .customerGroupAssignments(Collections.singletonList(
+                                    new com.commercetools.api.models.customer.CustomerGroupAssignmentDraftImpl())) } };
     }
 
     @Test

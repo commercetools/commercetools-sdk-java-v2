@@ -1,33 +1,26 @@
 
 package com.commercetools.api.models.message;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class BusinessUnitCustomTypeSetMessageTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(BusinessUnitCustomTypeSetMessageBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, BusinessUnitCustomTypeSetMessageBuilder builder) {
         BusinessUnitCustomTypeSetMessage businessUnitCustomTypeSetMessage = builder.buildUnchecked();
         Assertions.assertThat(businessUnitCustomTypeSetMessage).isInstanceOf(BusinessUnitCustomTypeSetMessage.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { BusinessUnitCustomTypeSetMessage.builder()
-                        .customFields(new com.commercetools.api.models.type.CustomFieldsImpl()) },
-                new Object[] { BusinessUnitCustomTypeSetMessage.builder().oldTypeId("oldTypeId") } };
+                new Object[] { "customFields",
+                        BusinessUnitCustomTypeSetMessage.builder()
+                                .customFields(new com.commercetools.api.models.type.CustomFieldsImpl()) },
+                new Object[] { "oldTypeId", BusinessUnitCustomTypeSetMessage.builder().oldTypeId("oldTypeId") } };
     }
 
     @Test

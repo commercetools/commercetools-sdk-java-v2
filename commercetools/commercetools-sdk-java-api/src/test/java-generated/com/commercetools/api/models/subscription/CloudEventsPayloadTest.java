@@ -3,39 +3,31 @@ package com.commercetools.api.models.subscription;
 
 import java.time.ZonedDateTime;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CloudEventsPayloadTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CloudEventsPayloadBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CloudEventsPayloadBuilder builder) {
         CloudEventsPayload cloudEventsPayload = builder.buildUnchecked();
         Assertions.assertThat(cloudEventsPayload).isInstanceOf(CloudEventsPayload.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { CloudEventsPayload.builder().specversion("specversion") },
-                new Object[] { CloudEventsPayload.builder().id("id") },
-                new Object[] { CloudEventsPayload.builder().type("type") },
-                new Object[] { CloudEventsPayload.builder().source("source") },
-                new Object[] { CloudEventsPayload.builder().subject("subject") },
-                new Object[] { CloudEventsPayload.builder().time(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { CloudEventsPayload.builder().sequence("sequence") },
-                new Object[] { CloudEventsPayload.builder().sequencetype("sequencetype") },
-                new Object[] { CloudEventsPayload.builder().dataref("dataref") },
-                new Object[] { CloudEventsPayload.builder()
+        return new Object[][] { new Object[] { "specversion", CloudEventsPayload.builder().specversion("specversion") },
+                new Object[] { "id", CloudEventsPayload.builder().id("id") },
+                new Object[] { "type", CloudEventsPayload.builder().type("type") },
+                new Object[] { "source", CloudEventsPayload.builder().source("source") },
+                new Object[] { "subject", CloudEventsPayload.builder().subject("subject") },
+                new Object[] { "time", CloudEventsPayload.builder().time(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "sequence", CloudEventsPayload.builder().sequence("sequence") },
+                new Object[] { "sequencetype", CloudEventsPayload.builder().sequencetype("sequencetype") },
+                new Object[] { "dataref", CloudEventsPayload.builder().dataref("dataref") },
+                new Object[] { "data", CloudEventsPayload.builder()
                         .data(new com.commercetools.api.models.subscription.DeliveryPayloadImpl()) } };
     }
 

@@ -1,36 +1,31 @@
 
 package com.commercetools.api.models.message;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ParcelAddedToDeliveryMessagePayloadTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ParcelAddedToDeliveryMessagePayloadBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ParcelAddedToDeliveryMessagePayloadBuilder builder) {
         ParcelAddedToDeliveryMessagePayload parcelAddedToDeliveryMessagePayload = builder.buildUnchecked();
         Assertions.assertThat(parcelAddedToDeliveryMessagePayload)
                 .isInstanceOf(ParcelAddedToDeliveryMessagePayload.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { ParcelAddedToDeliveryMessagePayload.builder()
-                        .delivery(new com.commercetools.api.models.order.DeliveryImpl()) },
-                new Object[] { ParcelAddedToDeliveryMessagePayload.builder()
-                        .parcel(new com.commercetools.api.models.order.ParcelImpl()) },
-                new Object[] { ParcelAddedToDeliveryMessagePayload.builder().shippingKey("shippingKey") } };
+                new Object[] { "delivery",
+                        ParcelAddedToDeliveryMessagePayload.builder()
+                                .delivery(new com.commercetools.api.models.order.DeliveryImpl()) },
+                new Object[] { "parcel",
+                        ParcelAddedToDeliveryMessagePayload.builder()
+                                .parcel(new com.commercetools.api.models.order.ParcelImpl()) },
+                new Object[] { "shippingKey",
+                        ParcelAddedToDeliveryMessagePayload.builder().shippingKey("shippingKey") } };
     }
 
     @Test

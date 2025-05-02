@@ -1,33 +1,25 @@
 
 package com.commercetools.api.models.customer;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CustomerChangePasswordTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CustomerChangePasswordBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CustomerChangePasswordBuilder builder) {
         CustomerChangePassword customerChangePassword = builder.buildUnchecked();
         Assertions.assertThat(customerChangePassword).isInstanceOf(CustomerChangePassword.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { CustomerChangePassword.builder().id("id") },
-                new Object[] { CustomerChangePassword.builder().version(2L) },
-                new Object[] { CustomerChangePassword.builder().currentPassword("currentPassword") },
-                new Object[] { CustomerChangePassword.builder().newPassword("newPassword") } };
+        return new Object[][] { new Object[] { "id", CustomerChangePassword.builder().id("id") },
+                new Object[] { "version", CustomerChangePassword.builder().version(2L) },
+                new Object[] { "currentPassword", CustomerChangePassword.builder().currentPassword("currentPassword") },
+                new Object[] { "newPassword", CustomerChangePassword.builder().newPassword("newPassword") } };
     }
 
     @Test

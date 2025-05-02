@@ -3,39 +3,35 @@ package com.commercetools.history.models.change;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ChangeLocalizedEnumValueOrderChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ChangeLocalizedEnumValueOrderChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ChangeLocalizedEnumValueOrderChangeBuilder builder) {
         ChangeLocalizedEnumValueOrderChange changeLocalizedEnumValueOrderChange = builder.buildUnchecked();
         Assertions.assertThat(changeLocalizedEnumValueOrderChange)
                 .isInstanceOf(ChangeLocalizedEnumValueOrderChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ChangeLocalizedEnumValueOrderChange.builder().change("change") },
-                new Object[] { ChangeLocalizedEnumValueOrderChange.builder()
-                        .previousValue(Collections.singletonList(
-                            new com.commercetools.history.models.change_value.LocalizedEnumValueImpl())) },
-                new Object[] { ChangeLocalizedEnumValueOrderChange.builder()
-                        .nextValue(Collections.singletonList(
-                            new com.commercetools.history.models.change_value.LocalizedEnumValueImpl())) },
-                new Object[] { ChangeLocalizedEnumValueOrderChange.builder().fieldName("fieldName") },
-                new Object[] { ChangeLocalizedEnumValueOrderChange.builder().attributeName("attributeName") } };
+        return new Object[][] {
+                new Object[] { "change", ChangeLocalizedEnumValueOrderChange.builder().change("change") },
+                new Object[] { "previousValue",
+                        ChangeLocalizedEnumValueOrderChange.builder()
+                                .previousValue(Collections.singletonList(
+                                    new com.commercetools.history.models.change_value.LocalizedEnumValueImpl())) },
+                new Object[] { "nextValue",
+                        ChangeLocalizedEnumValueOrderChange.builder()
+                                .nextValue(Collections.singletonList(
+                                    new com.commercetools.history.models.change_value.LocalizedEnumValueImpl())) },
+                new Object[] { "fieldName", ChangeLocalizedEnumValueOrderChange.builder().fieldName("fieldName") },
+                new Object[] { "attributeName",
+                        ChangeLocalizedEnumValueOrderChange.builder().attributeName("attributeName") } };
     }
 
     @Test

@@ -1,31 +1,23 @@
 
 package com.commercetools.api.models.product;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductLegacySetSkuActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductLegacySetSkuActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductLegacySetSkuActionBuilder builder) {
         ProductLegacySetSkuAction productLegacySetSkuAction = builder.buildUnchecked();
         Assertions.assertThat(productLegacySetSkuAction).isInstanceOf(ProductLegacySetSkuAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductLegacySetSkuAction.builder().sku("sku") },
-                new Object[] { ProductLegacySetSkuAction.builder().variantId(5) } };
+        return new Object[][] { new Object[] { "sku", ProductLegacySetSkuAction.builder().sku("sku") },
+                new Object[] { "variantId", ProductLegacySetSkuAction.builder().variantId(5) } };
     }
 
     @Test

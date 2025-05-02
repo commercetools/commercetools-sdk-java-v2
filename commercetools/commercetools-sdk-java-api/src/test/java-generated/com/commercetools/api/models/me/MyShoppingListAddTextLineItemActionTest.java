@@ -3,40 +3,35 @@ package com.commercetools.api.models.me;
 
 import java.time.ZonedDateTime;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class MyShoppingListAddTextLineItemActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(MyShoppingListAddTextLineItemActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, MyShoppingListAddTextLineItemActionBuilder builder) {
         MyShoppingListAddTextLineItemAction myShoppingListAddTextLineItemAction = builder.buildUnchecked();
         Assertions.assertThat(myShoppingListAddTextLineItemAction)
                 .isInstanceOf(MyShoppingListAddTextLineItemAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { MyShoppingListAddTextLineItemAction.builder()
-                        .name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { MyShoppingListAddTextLineItemAction.builder().key("key") },
-                new Object[] { MyShoppingListAddTextLineItemAction.builder()
-                        .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { MyShoppingListAddTextLineItemAction.builder().quantity(8L) },
-                new Object[] { MyShoppingListAddTextLineItemAction.builder()
-                        .addedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { MyShoppingListAddTextLineItemAction.builder()
+                new Object[] { "name",
+                        MyShoppingListAddTextLineItemAction.builder()
+                                .name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "key", MyShoppingListAddTextLineItemAction.builder().key("key") },
+                new Object[] { "description",
+                        MyShoppingListAddTextLineItemAction.builder()
+                                .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "quantity", MyShoppingListAddTextLineItemAction.builder().quantity(8L) },
+                new Object[] { "addedAt",
+                        MyShoppingListAddTextLineItemAction.builder()
+                                .addedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "custom", MyShoppingListAddTextLineItemAction.builder()
                         .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) } };
     }
 

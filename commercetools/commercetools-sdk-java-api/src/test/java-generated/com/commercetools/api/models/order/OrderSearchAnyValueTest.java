@@ -1,32 +1,24 @@
 
 package com.commercetools.api.models.order;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class OrderSearchAnyValueTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(OrderSearchAnyValueBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, OrderSearchAnyValueBuilder builder) {
         OrderSearchAnyValue orderSearchAnyValue = builder.buildUnchecked();
         Assertions.assertThat(orderSearchAnyValue).isInstanceOf(OrderSearchAnyValue.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { OrderSearchAnyValue.builder().value("value") },
-                new Object[] { OrderSearchAnyValue.builder().language("language") },
-                new Object[] { OrderSearchAnyValue.builder().caseInsensitive(true) } };
+        return new Object[][] { new Object[] { "value", OrderSearchAnyValue.builder().value("value") },
+                new Object[] { "language", OrderSearchAnyValue.builder().language("language") },
+                new Object[] { "caseInsensitive", OrderSearchAnyValue.builder().caseInsensitive(true) } };
     }
 
     @Test

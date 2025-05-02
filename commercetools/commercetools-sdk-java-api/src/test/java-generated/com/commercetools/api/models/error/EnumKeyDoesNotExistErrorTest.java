@@ -1,32 +1,25 @@
 
 package com.commercetools.api.models.error;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class EnumKeyDoesNotExistErrorTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(EnumKeyDoesNotExistErrorBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, EnumKeyDoesNotExistErrorBuilder builder) {
         EnumKeyDoesNotExistError enumKeyDoesNotExistError = builder.buildUnchecked();
         Assertions.assertThat(enumKeyDoesNotExistError).isInstanceOf(EnumKeyDoesNotExistError.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { EnumKeyDoesNotExistError.builder().message("message") },
-                new Object[] { EnumKeyDoesNotExistError.builder().conflictingEnumKey("conflictingEnumKey") },
-                new Object[] {
+        return new Object[][] { new Object[] { "message", EnumKeyDoesNotExistError.builder().message("message") },
+                new Object[] { "conflictingEnumKey",
+                        EnumKeyDoesNotExistError.builder().conflictingEnumKey("conflictingEnumKey") },
+                new Object[] { "conflictingAttributeName",
                         EnumKeyDoesNotExistError.builder().conflictingAttributeName("conflictingAttributeName") } };
     }
 

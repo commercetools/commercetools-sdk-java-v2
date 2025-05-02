@@ -3,37 +3,31 @@ package com.commercetools.history.models.change;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ChangeEnumValueOrderChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ChangeEnumValueOrderChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ChangeEnumValueOrderChangeBuilder builder) {
         ChangeEnumValueOrderChange changeEnumValueOrderChange = builder.buildUnchecked();
         Assertions.assertThat(changeEnumValueOrderChange).isInstanceOf(ChangeEnumValueOrderChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ChangeEnumValueOrderChange.builder().change("change") },
-                new Object[] { ChangeEnumValueOrderChange.builder()
-                        .previousValue(Collections
-                                .singletonList(new com.commercetools.history.models.change_value.EnumValueImpl())) },
-                new Object[] { ChangeEnumValueOrderChange.builder()
-                        .nextValue(Collections
-                                .singletonList(new com.commercetools.history.models.change_value.EnumValueImpl())) },
-                new Object[] { ChangeEnumValueOrderChange.builder().fieldName("fieldName") } };
+        return new Object[][] { new Object[] { "change", ChangeEnumValueOrderChange.builder().change("change") },
+                new Object[] { "previousValue",
+                        ChangeEnumValueOrderChange.builder()
+                                .previousValue(Collections.singletonList(
+                                    new com.commercetools.history.models.change_value.EnumValueImpl())) },
+                new Object[] { "nextValue",
+                        ChangeEnumValueOrderChange.builder()
+                                .nextValue(Collections.singletonList(
+                                    new com.commercetools.history.models.change_value.EnumValueImpl())) },
+                new Object[] { "fieldName", ChangeEnumValueOrderChange.builder().fieldName("fieldName") } };
     }
 
     @Test

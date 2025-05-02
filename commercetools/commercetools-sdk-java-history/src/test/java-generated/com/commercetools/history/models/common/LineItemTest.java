@@ -1,43 +1,37 @@
 
 package com.commercetools.history.models.common;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class LineItemTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(LineItemBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, LineItemBuilder builder) {
         LineItem lineItem = builder.buildUnchecked();
         Assertions.assertThat(lineItem).isInstanceOf(LineItem.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { LineItem.builder().addedAt("addedAt") },
-                new Object[] {
+        return new Object[][] { new Object[] { "addedAt", LineItem.builder().addedAt("addedAt") },
+                new Object[] { "custom",
                         LineItem.builder().custom(new com.commercetools.history.models.common.CustomFieldsImpl()) },
-                new Object[] { LineItem.builder().id("id") },
-                new Object[] {
+                new Object[] { "id", LineItem.builder().id("id") },
+                new Object[] { "name",
                         LineItem.builder().name(new com.commercetools.history.models.common.LocalizedStringImpl()) },
-                new Object[] { LineItem.builder().productId("productId") },
-                new Object[] { LineItem.builder()
-                        .productSlug(new com.commercetools.history.models.common.LocalizedStringImpl()) },
-                new Object[] {
+                new Object[] { "productId", LineItem.builder().productId("productId") },
+                new Object[] { "productSlug",
+                        LineItem.builder()
+                                .productSlug(new com.commercetools.history.models.common.LocalizedStringImpl()) },
+                new Object[] { "productType",
                         LineItem.builder().productType(new com.commercetools.history.models.common.ReferenceImpl()) },
-                new Object[] { LineItem.builder().quantity(8) },
-                new Object[] { LineItem.builder().variant(new com.commercetools.history.models.common.VariantImpl()) },
-                new Object[] { LineItem.builder().variantId(5) } };
+                new Object[] { "quantity", LineItem.builder().quantity(8) },
+                new Object[] { "variant",
+                        LineItem.builder().variant(new com.commercetools.history.models.common.VariantImpl()) },
+                new Object[] { "variantId", LineItem.builder().variantId(5) } };
     }
 
     @Test

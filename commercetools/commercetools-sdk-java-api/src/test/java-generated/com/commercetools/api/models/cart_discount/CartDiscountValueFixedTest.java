@@ -3,35 +3,30 @@ package com.commercetools.api.models.cart_discount;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CartDiscountValueFixedTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CartDiscountValueFixedBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CartDiscountValueFixedBuilder builder) {
         CartDiscountValueFixed cartDiscountValueFixed = builder.buildUnchecked();
         Assertions.assertThat(cartDiscountValueFixed).isInstanceOf(CartDiscountValueFixed.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { CartDiscountValueFixed.builder()
-                        .money(Collections.singletonList(new com.commercetools.api.models.common.TypedMoneyImpl())) },
-                new Object[] { CartDiscountValueFixed.builder()
-                        .applicationMode(com.commercetools.api.models.cart_discount.DiscountApplicationMode
-                                .findEnum("ProportionateDistribution")) } };
+                new Object[] { "money",
+                        CartDiscountValueFixed.builder()
+                                .money(Collections
+                                        .singletonList(new com.commercetools.api.models.common.TypedMoneyImpl())) },
+                new Object[] { "applicationMode",
+                        CartDiscountValueFixed.builder()
+                                .applicationMode(com.commercetools.api.models.cart_discount.DiscountApplicationMode
+                                        .findEnum("ProportionateDistribution")) } };
     }
 
     @Test

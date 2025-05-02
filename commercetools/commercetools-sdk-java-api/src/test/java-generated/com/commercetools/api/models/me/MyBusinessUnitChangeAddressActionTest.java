@@ -1,32 +1,25 @@
 
 package com.commercetools.api.models.me;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class MyBusinessUnitChangeAddressActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(MyBusinessUnitChangeAddressActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, MyBusinessUnitChangeAddressActionBuilder builder) {
         MyBusinessUnitChangeAddressAction myBusinessUnitChangeAddressAction = builder.buildUnchecked();
         Assertions.assertThat(myBusinessUnitChangeAddressAction).isInstanceOf(MyBusinessUnitChangeAddressAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { MyBusinessUnitChangeAddressAction.builder().addressId("addressId") },
-                new Object[] { MyBusinessUnitChangeAddressAction.builder().addressKey("addressKey") },
-                new Object[] { MyBusinessUnitChangeAddressAction.builder()
+        return new Object[][] {
+                new Object[] { "addressId", MyBusinessUnitChangeAddressAction.builder().addressId("addressId") },
+                new Object[] { "addressKey", MyBusinessUnitChangeAddressAction.builder().addressKey("addressKey") },
+                new Object[] { "address", MyBusinessUnitChangeAddressAction.builder()
                         .address(new com.commercetools.api.models.common.BaseAddressImpl()) } };
     }
 

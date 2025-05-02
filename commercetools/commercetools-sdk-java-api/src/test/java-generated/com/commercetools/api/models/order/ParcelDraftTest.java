@@ -3,37 +3,32 @@ package com.commercetools.api.models.order;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ParcelDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ParcelDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ParcelDraftBuilder builder) {
         ParcelDraft parcelDraft = builder.buildUnchecked();
         Assertions.assertThat(parcelDraft).isInstanceOf(ParcelDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ParcelDraft.builder().key("key") },
-                new Object[] { ParcelDraft.builder()
-                        .measurements(new com.commercetools.api.models.order.ParcelMeasurementsImpl()) },
-                new Object[] {
+        return new Object[][] { new Object[] { "key", ParcelDraft.builder().key("key") },
+                new Object[] { "measurements",
+                        ParcelDraft.builder()
+                                .measurements(new com.commercetools.api.models.order.ParcelMeasurementsImpl()) },
+                new Object[] { "trackingData",
                         ParcelDraft.builder().trackingData(new com.commercetools.api.models.order.TrackingDataImpl()) },
-                new Object[] { ParcelDraft.builder()
-                        .items(Collections.singletonList(new com.commercetools.api.models.order.DeliveryItemImpl())) },
-                new Object[] {
+                new Object[] { "items",
+                        ParcelDraft.builder()
+                                .items(Collections
+                                        .singletonList(new com.commercetools.api.models.order.DeliveryItemImpl())) },
+                new Object[] { "custom",
                         ParcelDraft.builder().custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) } };
     }
 

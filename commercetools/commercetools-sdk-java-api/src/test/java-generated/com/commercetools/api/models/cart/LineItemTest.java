@@ -4,76 +4,81 @@ package com.commercetools.api.models.cart;
 import java.time.ZonedDateTime;
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class LineItemTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(LineItemBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, LineItemBuilder builder) {
         LineItem lineItem = builder.buildUnchecked();
         Assertions.assertThat(lineItem).isInstanceOf(LineItem.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { LineItem.builder().id("id") },
-                new Object[] { LineItem.builder().key("key") },
-                new Object[] { LineItem.builder().productId("productId") },
-                new Object[] { LineItem.builder().productKey("productKey") },
-                new Object[] { LineItem.builder().name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] {
+        return new Object[][] { new Object[] { "id", LineItem.builder().id("id") },
+                new Object[] { "key", LineItem.builder().key("key") },
+                new Object[] { "productId", LineItem.builder().productId("productId") },
+                new Object[] { "productKey", LineItem.builder().productKey("productKey") },
+                new Object[] { "name",
+                        LineItem.builder().name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "productSlug",
                         LineItem.builder().productSlug(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { LineItem.builder()
+                new Object[] { "productType", LineItem.builder()
                         .productType(new com.commercetools.api.models.product_type.ProductTypeReferenceImpl()) },
-                new Object[] {
+                new Object[] { "variant",
                         LineItem.builder().variant(new com.commercetools.api.models.product.ProductVariantImpl()) },
-                new Object[] { LineItem.builder().price(new com.commercetools.api.models.common.PriceImpl()) },
-                new Object[] { LineItem.builder().quantity(8L) },
-                new Object[] { LineItem.builder()
-                        .totalPrice(new com.commercetools.api.models.common.CentPrecisionMoneyImpl()) },
-                new Object[] { LineItem.builder()
-                        .discountedPricePerQuantity(Collections.singletonList(
-                            new com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityImpl())) },
-                new Object[] {
+                new Object[] { "price", LineItem.builder().price(new com.commercetools.api.models.common.PriceImpl()) },
+                new Object[] { "quantity", LineItem.builder().quantity(8L) },
+                new Object[] { "totalPrice",
+                        LineItem.builder()
+                                .totalPrice(new com.commercetools.api.models.common.CentPrecisionMoneyImpl()) },
+                new Object[] { "discountedPricePerQuantity",
+                        LineItem.builder()
+                                .discountedPricePerQuantity(Collections.singletonList(
+                                    new com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantityImpl())) },
+                new Object[] { "taxedPrice",
                         LineItem.builder().taxedPrice(new com.commercetools.api.models.cart.TaxedItemPriceImpl()) },
-                new Object[] {
+                new Object[] { "taxedPricePortions",
                         LineItem.builder()
                                 .taxedPricePortions(Collections
                                         .singletonList(new com.commercetools.api.models.cart.MethodTaxedPriceImpl())) },
-                new Object[] { LineItem.builder()
-                        .state(Collections.singletonList(new com.commercetools.api.models.order.ItemStateImpl())) },
-                new Object[] {
+                new Object[] { "state",
+                        LineItem.builder()
+                                .state(Collections
+                                        .singletonList(new com.commercetools.api.models.order.ItemStateImpl())) },
+                new Object[] { "taxRate",
                         LineItem.builder().taxRate(new com.commercetools.api.models.tax_category.TaxRateImpl()) },
-                new Object[] {
+                new Object[] { "perMethodTaxRate",
                         LineItem.builder()
                                 .perMethodTaxRate(Collections
                                         .singletonList(new com.commercetools.api.models.cart.MethodTaxRateImpl())) },
-                new Object[] { LineItem.builder()
-                        .supplyChannel(new com.commercetools.api.models.channel.ChannelReferenceImpl()) },
-                new Object[] { LineItem.builder()
-                        .distributionChannel(new com.commercetools.api.models.channel.ChannelReferenceImpl()) },
-                new Object[] { LineItem.builder()
-                        .priceMode(com.commercetools.api.models.cart.LineItemPriceMode.findEnum("Platform")) },
-                new Object[] { LineItem.builder()
-                        .lineItemMode(com.commercetools.api.models.cart.LineItemMode.findEnum("Standard")) },
-                new Object[] { LineItem.builder()
-                        .inventoryMode(com.commercetools.api.models.cart.InventoryMode.findEnum("None")) },
-                new Object[] { LineItem.builder()
-                        .shippingDetails(new com.commercetools.api.models.cart.ItemShippingDetailsImpl()) },
-                new Object[] { LineItem.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) },
-                new Object[] { LineItem.builder().addedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { LineItem.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) } };
+                new Object[] { "supplyChannel",
+                        LineItem.builder()
+                                .supplyChannel(new com.commercetools.api.models.channel.ChannelReferenceImpl()) },
+                new Object[] { "distributionChannel",
+                        LineItem.builder()
+                                .distributionChannel(new com.commercetools.api.models.channel.ChannelReferenceImpl()) },
+                new Object[] { "priceMode",
+                        LineItem.builder()
+                                .priceMode(com.commercetools.api.models.cart.LineItemPriceMode.findEnum("Platform")) },
+                new Object[] { "lineItemMode",
+                        LineItem.builder()
+                                .lineItemMode(com.commercetools.api.models.cart.LineItemMode.findEnum("Standard")) },
+                new Object[] { "inventoryMode",
+                        LineItem.builder()
+                                .inventoryMode(com.commercetools.api.models.cart.InventoryMode.findEnum("None")) },
+                new Object[] { "shippingDetails",
+                        LineItem.builder()
+                                .shippingDetails(new com.commercetools.api.models.cart.ItemShippingDetailsImpl()) },
+                new Object[] { "custom",
+                        LineItem.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) },
+                new Object[] { "addedAt", LineItem.builder().addedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedAt",
+                        LineItem.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) } };
     }
 
     @Test

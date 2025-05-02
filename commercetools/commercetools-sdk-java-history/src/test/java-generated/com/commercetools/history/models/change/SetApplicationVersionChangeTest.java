@@ -1,32 +1,24 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetApplicationVersionChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetApplicationVersionChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetApplicationVersionChangeBuilder builder) {
         SetApplicationVersionChange setApplicationVersionChange = builder.buildUnchecked();
         Assertions.assertThat(setApplicationVersionChange).isInstanceOf(SetApplicationVersionChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetApplicationVersionChange.builder().change("change") },
-                new Object[] { SetApplicationVersionChange.builder().previousValue(8) },
-                new Object[] { SetApplicationVersionChange.builder().nextValue(7) } };
+        return new Object[][] { new Object[] { "change", SetApplicationVersionChange.builder().change("change") },
+                new Object[] { "previousValue", SetApplicationVersionChange.builder().previousValue(8) },
+                new Object[] { "nextValue", SetApplicationVersionChange.builder().nextValue(7) } };
     }
 
     @Test

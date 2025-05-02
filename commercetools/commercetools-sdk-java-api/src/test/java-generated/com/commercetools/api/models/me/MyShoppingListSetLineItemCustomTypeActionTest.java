@@ -1,35 +1,29 @@
 
 package com.commercetools.api.models.me;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class MyShoppingListSetLineItemCustomTypeActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(MyShoppingListSetLineItemCustomTypeActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, MyShoppingListSetLineItemCustomTypeActionBuilder builder) {
         MyShoppingListSetLineItemCustomTypeAction myShoppingListSetLineItemCustomTypeAction = builder.buildUnchecked();
         Assertions.assertThat(myShoppingListSetLineItemCustomTypeAction)
                 .isInstanceOf(MyShoppingListSetLineItemCustomTypeAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { MyShoppingListSetLineItemCustomTypeAction.builder().lineItemId("lineItemId") },
-                new Object[] { MyShoppingListSetLineItemCustomTypeAction.builder()
-                        .type(new com.commercetools.api.models.type.TypeResourceIdentifierImpl()) },
-                new Object[] { MyShoppingListSetLineItemCustomTypeAction.builder()
+                new Object[] { "lineItemId",
+                        MyShoppingListSetLineItemCustomTypeAction.builder().lineItemId("lineItemId") },
+                new Object[] { "type",
+                        MyShoppingListSetLineItemCustomTypeAction.builder()
+                                .type(new com.commercetools.api.models.type.TypeResourceIdentifierImpl()) },
+                new Object[] { "fields", MyShoppingListSetLineItemCustomTypeAction.builder()
                         .fields(new com.commercetools.api.models.type.FieldContainerImpl()) } };
     }
 

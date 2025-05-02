@@ -1,33 +1,26 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class RemoveEnumValuesChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(RemoveEnumValuesChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, RemoveEnumValuesChangeBuilder builder) {
         RemoveEnumValuesChange removeEnumValuesChange = builder.buildUnchecked();
         Assertions.assertThat(removeEnumValuesChange).isInstanceOf(RemoveEnumValuesChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { RemoveEnumValuesChange.builder().change("change") },
-                new Object[] { RemoveEnumValuesChange.builder()
-                        .previousValue(new com.commercetools.history.models.change_value.EnumValueImpl()) },
-                new Object[] { RemoveEnumValuesChange.builder().attributeName("attributeName") } };
+        return new Object[][] { new Object[] { "change", RemoveEnumValuesChange.builder().change("change") },
+                new Object[] { "previousValue",
+                        RemoveEnumValuesChange.builder()
+                                .previousValue(new com.commercetools.history.models.change_value.EnumValueImpl()) },
+                new Object[] { "attributeName", RemoveEnumValuesChange.builder().attributeName("attributeName") } };
     }
 
     @Test

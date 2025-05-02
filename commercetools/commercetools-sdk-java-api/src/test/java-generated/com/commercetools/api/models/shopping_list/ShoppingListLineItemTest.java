@@ -3,47 +3,44 @@ package com.commercetools.api.models.shopping_list;
 
 import java.time.ZonedDateTime;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ShoppingListLineItemTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ShoppingListLineItemBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ShoppingListLineItemBuilder builder) {
         ShoppingListLineItem shoppingListLineItem = builder.buildUnchecked();
         Assertions.assertThat(shoppingListLineItem).isInstanceOf(ShoppingListLineItem.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { ShoppingListLineItem.builder().addedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { ShoppingListLineItem.builder()
-                        .custom(new com.commercetools.api.models.type.CustomFieldsImpl()) },
-                new Object[] { ShoppingListLineItem.builder().deactivatedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { ShoppingListLineItem.builder().id("id") },
-                new Object[] { ShoppingListLineItem.builder().key("key") },
-                new Object[] { ShoppingListLineItem.builder()
-                        .name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { ShoppingListLineItem.builder().productId("productId") },
-                new Object[] { ShoppingListLineItem.builder()
+                new Object[] { "addedAt",
+                        ShoppingListLineItem.builder().addedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "custom",
+                        ShoppingListLineItem.builder()
+                                .custom(new com.commercetools.api.models.type.CustomFieldsImpl()) },
+                new Object[] { "deactivatedAt",
+                        ShoppingListLineItem.builder().deactivatedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "id", ShoppingListLineItem.builder().id("id") },
+                new Object[] { "key", ShoppingListLineItem.builder().key("key") },
+                new Object[] { "name",
+                        ShoppingListLineItem.builder()
+                                .name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "productId", ShoppingListLineItem.builder().productId("productId") },
+                new Object[] { "productType", ShoppingListLineItem.builder()
                         .productType(new com.commercetools.api.models.product_type.ProductTypeReferenceImpl()) },
-                new Object[] { ShoppingListLineItem.builder().published(true) },
-                new Object[] { ShoppingListLineItem.builder().quantity(8L) },
-                new Object[] { ShoppingListLineItem.builder().variantId(5L) },
-                new Object[] { ShoppingListLineItem.builder()
-                        .variant(new com.commercetools.api.models.product.ProductVariantImpl()) },
-                new Object[] { ShoppingListLineItem.builder()
+                new Object[] { "published", ShoppingListLineItem.builder().published(true) },
+                new Object[] { "quantity", ShoppingListLineItem.builder().quantity(8L) },
+                new Object[] { "variantId", ShoppingListLineItem.builder().variantId(5L) },
+                new Object[] { "variant",
+                        ShoppingListLineItem.builder()
+                                .variant(new com.commercetools.api.models.product.ProductVariantImpl()) },
+                new Object[] { "productSlug", ShoppingListLineItem.builder()
                         .productSlug(new com.commercetools.api.models.common.LocalizedStringImpl()) } };
     }
 

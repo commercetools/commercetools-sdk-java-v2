@@ -1,32 +1,24 @@
 
 package com.commercetools.api.models.graph_ql;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class GraphQLRequestTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(GraphQLRequestBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, GraphQLRequestBuilder builder) {
         GraphQLRequest graphQLRequest = builder.buildUnchecked();
         Assertions.assertThat(graphQLRequest).isInstanceOf(GraphQLRequest.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { GraphQLRequest.builder().query("query") },
-                new Object[] { GraphQLRequest.builder().operationName("operationName") },
-                new Object[] { GraphQLRequest.builder()
+        return new Object[][] { new Object[] { "query", GraphQLRequest.builder().query("query") },
+                new Object[] { "operationName", GraphQLRequest.builder().operationName("operationName") },
+                new Object[] { "variables", GraphQLRequest.builder()
                         .variables(new com.commercetools.api.models.graph_ql.GraphQLVariablesMapImpl()) } };
     }
 

@@ -1,34 +1,28 @@
 
 package com.commercetools.api.models.message;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class BusinessUnitAddressCustomFieldAddedMessageTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(BusinessUnitAddressCustomFieldAddedMessageBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, BusinessUnitAddressCustomFieldAddedMessageBuilder builder) {
         BusinessUnitAddressCustomFieldAddedMessage businessUnitAddressCustomFieldAddedMessage = builder
                 .buildUnchecked();
         Assertions.assertThat(businessUnitAddressCustomFieldAddedMessage)
                 .isInstanceOf(BusinessUnitAddressCustomFieldAddedMessage.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { BusinessUnitAddressCustomFieldAddedMessage.builder().name("name") },
-                new Object[] { BusinessUnitAddressCustomFieldAddedMessage.builder().value("value") },
-                new Object[] { BusinessUnitAddressCustomFieldAddedMessage.builder().addressId("addressId") } };
+        return new Object[][] {
+                new Object[] { "name", BusinessUnitAddressCustomFieldAddedMessage.builder().name("name") },
+                new Object[] { "value", BusinessUnitAddressCustomFieldAddedMessage.builder().value("value") },
+                new Object[] { "addressId",
+                        BusinessUnitAddressCustomFieldAddedMessage.builder().addressId("addressId") } };
     }
 
     @Test

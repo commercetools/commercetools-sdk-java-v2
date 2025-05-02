@@ -1,32 +1,24 @@
 
 package com.commercetools.api.models.product;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductSetPriceKeyActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductSetPriceKeyActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductSetPriceKeyActionBuilder builder) {
         ProductSetPriceKeyAction productSetPriceKeyAction = builder.buildUnchecked();
         Assertions.assertThat(productSetPriceKeyAction).isInstanceOf(ProductSetPriceKeyAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductSetPriceKeyAction.builder().priceId("priceId") },
-                new Object[] { ProductSetPriceKeyAction.builder().staged(true) },
-                new Object[] { ProductSetPriceKeyAction.builder().key("key") } };
+        return new Object[][] { new Object[] { "priceId", ProductSetPriceKeyAction.builder().priceId("priceId") },
+                new Object[] { "staged", ProductSetPriceKeyAction.builder().staged(true) },
+                new Object[] { "key", ProductSetPriceKeyAction.builder().key("key") } };
     }
 
     @Test

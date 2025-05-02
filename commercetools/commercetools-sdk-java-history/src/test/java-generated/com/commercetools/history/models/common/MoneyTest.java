@@ -1,32 +1,25 @@
 
 package com.commercetools.history.models.common;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class MoneyTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(MoneyBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, MoneyBuilder builder) {
         Money money = builder.buildUnchecked();
         Assertions.assertThat(money).isInstanceOf(Money.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { Money.builder().currencyCode("currencyCode") },
-                new Object[] { Money.builder().centAmount(3) }, new Object[] { Money.builder().fractionDigits(4) },
-                new Object[] { Money.builder()
+        return new Object[][] { new Object[] { "currencyCode", Money.builder().currencyCode("currencyCode") },
+                new Object[] { "centAmount", Money.builder().centAmount(3) },
+                new Object[] { "fractionDigits", Money.builder().fractionDigits(4) },
+                new Object[] { "type", Money.builder()
                         .type(com.commercetools.history.models.common.MoneyType.findEnum("centPrecision")) } };
     }
 

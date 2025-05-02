@@ -1,47 +1,43 @@
 
 package com.commercetools.api.models.cart;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CartAddCustomLineItemActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CartAddCustomLineItemActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CartAddCustomLineItemActionBuilder builder) {
         CartAddCustomLineItemAction cartAddCustomLineItemAction = builder.buildUnchecked();
         Assertions.assertThat(cartAddCustomLineItemAction).isInstanceOf(CartAddCustomLineItemAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { CartAddCustomLineItemAction.builder()
-                        .money(new com.commercetools.api.models.common.MoneyImpl()) },
-                new Object[] { CartAddCustomLineItemAction.builder()
-                        .name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { CartAddCustomLineItemAction.builder().key("key") },
-                new Object[] { CartAddCustomLineItemAction.builder().quantity(8L) },
-                new Object[] { CartAddCustomLineItemAction.builder().slug("slug") },
-                new Object[] { CartAddCustomLineItemAction.builder()
+                new Object[] { "money",
+                        CartAddCustomLineItemAction.builder()
+                                .money(new com.commercetools.api.models.common.MoneyImpl()) },
+                new Object[] { "name",
+                        CartAddCustomLineItemAction.builder()
+                                .name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "key", CartAddCustomLineItemAction.builder().key("key") },
+                new Object[] { "quantity", CartAddCustomLineItemAction.builder().quantity(8L) },
+                new Object[] { "slug", CartAddCustomLineItemAction.builder().slug("slug") },
+                new Object[] { "taxCategory", CartAddCustomLineItemAction.builder()
                         .taxCategory(
                             new com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierImpl()) },
-                new Object[] { CartAddCustomLineItemAction.builder()
-                        .externalTaxRate(new com.commercetools.api.models.cart.ExternalTaxRateDraftImpl()) },
-                new Object[] { CartAddCustomLineItemAction.builder()
+                new Object[] { "externalTaxRate",
+                        CartAddCustomLineItemAction.builder()
+                                .externalTaxRate(new com.commercetools.api.models.cart.ExternalTaxRateDraftImpl()) },
+                new Object[] { "shippingDetails", CartAddCustomLineItemAction.builder()
                         .shippingDetails(new com.commercetools.api.models.cart.ItemShippingDetailsDraftImpl()) },
-                new Object[] { CartAddCustomLineItemAction.builder()
-                        .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) },
-                new Object[] { CartAddCustomLineItemAction.builder()
+                new Object[] { "custom",
+                        CartAddCustomLineItemAction.builder()
+                                .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) },
+                new Object[] { "priceMode", CartAddCustomLineItemAction.builder()
                         .priceMode(com.commercetools.api.models.cart.CustomLineItemPriceMode.findEnum("Standard")) } };
     }
 

@@ -1,31 +1,23 @@
 
 package com.commercetools.api.models.associate_role;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class AssociateRoleSetCustomFieldActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(AssociateRoleSetCustomFieldActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, AssociateRoleSetCustomFieldActionBuilder builder) {
         AssociateRoleSetCustomFieldAction associateRoleSetCustomFieldAction = builder.buildUnchecked();
         Assertions.assertThat(associateRoleSetCustomFieldAction).isInstanceOf(AssociateRoleSetCustomFieldAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { AssociateRoleSetCustomFieldAction.builder().name("name") },
-                new Object[] { AssociateRoleSetCustomFieldAction.builder().value("value") } };
+        return new Object[][] { new Object[] { "name", AssociateRoleSetCustomFieldAction.builder().name("name") },
+                new Object[] { "value", AssociateRoleSetCustomFieldAction.builder().value("value") } };
     }
 
     @Test

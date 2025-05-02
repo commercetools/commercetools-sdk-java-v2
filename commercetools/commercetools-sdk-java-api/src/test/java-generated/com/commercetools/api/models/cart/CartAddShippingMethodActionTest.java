@@ -3,44 +3,39 @@ package com.commercetools.api.models.cart;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CartAddShippingMethodActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CartAddShippingMethodActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CartAddShippingMethodActionBuilder builder) {
         CartAddShippingMethodAction cartAddShippingMethodAction = builder.buildUnchecked();
         Assertions.assertThat(cartAddShippingMethodAction).isInstanceOf(CartAddShippingMethodAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { CartAddShippingMethodAction.builder().shippingKey("shippingKey") },
-                new Object[] { CartAddShippingMethodAction.builder()
+        return new Object[][] {
+                new Object[] { "shippingKey", CartAddShippingMethodAction.builder().shippingKey("shippingKey") },
+                new Object[] { "shippingMethod", CartAddShippingMethodAction.builder()
                         .shippingMethod(
                             new com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierImpl()) },
-                new Object[] { CartAddShippingMethodAction.builder()
-                        .shippingAddress(new com.commercetools.api.models.common.BaseAddressImpl()) },
-                new Object[] { CartAddShippingMethodAction.builder()
+                new Object[] { "shippingAddress",
+                        CartAddShippingMethodAction.builder()
+                                .shippingAddress(new com.commercetools.api.models.common.BaseAddressImpl()) },
+                new Object[] { "shippingRateInput", CartAddShippingMethodAction.builder()
                         .shippingRateInput(new com.commercetools.api.models.cart.ShippingRateInputDraftImpl()) },
-                new Object[] { CartAddShippingMethodAction.builder()
-                        .externalTaxRate(new com.commercetools.api.models.cart.ExternalTaxRateDraftImpl()) },
-                new Object[] {
+                new Object[] { "externalTaxRate",
+                        CartAddShippingMethodAction.builder()
+                                .externalTaxRate(new com.commercetools.api.models.cart.ExternalTaxRateDraftImpl()) },
+                new Object[] { "deliveries",
                         CartAddShippingMethodAction.builder()
                                 .deliveries(Collections
                                         .singletonList(new com.commercetools.api.models.order.DeliveryDraftImpl())) },
-                new Object[] { CartAddShippingMethodAction.builder()
+                new Object[] { "custom", CartAddShippingMethodAction.builder()
                         .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) } };
     }
 

@@ -4,46 +4,43 @@ package com.commercetools.api.models.state;
 import java.time.ZonedDateTime;
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class StateTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(StateBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, StateBuilder builder) {
         State state = builder.buildUnchecked();
         Assertions.assertThat(state).isInstanceOf(State.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { State.builder().id("id") }, new Object[] { State.builder().version(2L) },
-                new Object[] { State.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { State.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] {
+        return new Object[][] { new Object[] { "id", State.builder().id("id") },
+                new Object[] { "version", State.builder().version(2L) },
+                new Object[] { "createdAt", State.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedAt",
+                        State.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedBy",
                         State.builder().lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
-                new Object[] { State.builder().createdBy(new com.commercetools.api.models.common.CreatedByImpl()) },
-                new Object[] { State.builder().key("key") },
-                new Object[] {
+                new Object[] { "createdBy",
+                        State.builder().createdBy(new com.commercetools.api.models.common.CreatedByImpl()) },
+                new Object[] { "key", State.builder().key("key") },
+                new Object[] { "type",
                         State.builder().type(com.commercetools.api.models.state.StateTypeEnum.findEnum("OrderState")) },
-                new Object[] { State.builder().name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] {
+                new Object[] { "name",
+                        State.builder().name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "description",
                         State.builder().description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { State.builder().initial(true) }, new Object[] { State.builder().builtIn(true) },
-                new Object[] { State.builder()
+                new Object[] { "initial", State.builder().initial(true) },
+                new Object[] { "builtIn", State.builder().builtIn(true) },
+                new Object[] { "roles", State.builder()
                         .roles(Collections.singletonList(
                             com.commercetools.api.models.state.StateRoleEnum.findEnum("ReviewIncludedInStatistics"))) },
-                new Object[] { State.builder()
+                new Object[] { "transitions", State.builder()
                         .transitions(
                             Collections.singletonList(new com.commercetools.api.models.state.StateReferenceImpl())) } };
     }

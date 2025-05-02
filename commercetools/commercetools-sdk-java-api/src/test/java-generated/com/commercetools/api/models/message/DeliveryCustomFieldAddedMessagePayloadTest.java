@@ -1,33 +1,26 @@
 
 package com.commercetools.api.models.message;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class DeliveryCustomFieldAddedMessagePayloadTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(DeliveryCustomFieldAddedMessagePayloadBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, DeliveryCustomFieldAddedMessagePayloadBuilder builder) {
         DeliveryCustomFieldAddedMessagePayload deliveryCustomFieldAddedMessagePayload = builder.buildUnchecked();
         Assertions.assertThat(deliveryCustomFieldAddedMessagePayload)
                 .isInstanceOf(DeliveryCustomFieldAddedMessagePayload.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { DeliveryCustomFieldAddedMessagePayload.builder().name("name") },
-                new Object[] { DeliveryCustomFieldAddedMessagePayload.builder().value("value") },
-                new Object[] { DeliveryCustomFieldAddedMessagePayload.builder().deliveryId("deliveryId") } };
+        return new Object[][] { new Object[] { "name", DeliveryCustomFieldAddedMessagePayload.builder().name("name") },
+                new Object[] { "value", DeliveryCustomFieldAddedMessagePayload.builder().value("value") },
+                new Object[] { "deliveryId",
+                        DeliveryCustomFieldAddedMessagePayload.builder().deliveryId("deliveryId") } };
     }
 
     @Test

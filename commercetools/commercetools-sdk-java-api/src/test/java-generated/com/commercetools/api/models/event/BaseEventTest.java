@@ -3,38 +3,33 @@ package com.commercetools.api.models.event;
 
 import java.time.ZonedDateTime;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class BaseEventTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(BaseEventBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, BaseEventBuilder builder) {
         BaseEvent baseEvent = builder.buildUnchecked();
         Assertions.assertThat(baseEvent).isInstanceOf(BaseEvent.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { BaseEvent.builder().id("id") },
-                new Object[] { BaseEvent.builder().notificationType("notificationType") },
-                new Object[] { BaseEvent.builder()
-                        .resourceType(com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId
-                                .findEnum("import-api")) },
-                new Object[] { BaseEvent.builder()
-                        .type(com.commercetools.api.models.subscription.EventType.findEnum("ImportContainerCreated")) },
-                new Object[] { BaseEvent.builder().data("data") },
-                new Object[] { BaseEvent.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) } };
+        return new Object[][] { new Object[] { "id", BaseEvent.builder().id("id") },
+                new Object[] { "notificationType", BaseEvent.builder().notificationType("notificationType") },
+                new Object[] { "resourceType",
+                        BaseEvent.builder()
+                                .resourceType(com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId
+                                        .findEnum("import-api")) },
+                new Object[] { "type",
+                        BaseEvent.builder()
+                                .type(com.commercetools.api.models.subscription.EventType
+                                        .findEnum("ImportContainerCreated")) },
+                new Object[] { "data", BaseEvent.builder().data("data") },
+                new Object[] { "createdAt", BaseEvent.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) } };
     }
 
     @Test

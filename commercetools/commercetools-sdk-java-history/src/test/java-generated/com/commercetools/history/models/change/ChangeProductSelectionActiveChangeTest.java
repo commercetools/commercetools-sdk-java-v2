@@ -1,35 +1,29 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ChangeProductSelectionActiveChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ChangeProductSelectionActiveChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ChangeProductSelectionActiveChangeBuilder builder) {
         ChangeProductSelectionActiveChange changeProductSelectionActiveChange = builder.buildUnchecked();
         Assertions.assertThat(changeProductSelectionActiveChange)
                 .isInstanceOf(ChangeProductSelectionActiveChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ChangeProductSelectionActiveChange.builder().change("change") },
-                new Object[] { ChangeProductSelectionActiveChange.builder()
-                        .productSelection(new com.commercetools.history.models.common.ReferenceImpl()) },
-                new Object[] { ChangeProductSelectionActiveChange.builder().previousValue(true) },
-                new Object[] { ChangeProductSelectionActiveChange.builder().nextValue(true) } };
+        return new Object[][] {
+                new Object[] { "change", ChangeProductSelectionActiveChange.builder().change("change") },
+                new Object[] { "productSelection",
+                        ChangeProductSelectionActiveChange.builder()
+                                .productSelection(new com.commercetools.history.models.common.ReferenceImpl()) },
+                new Object[] { "previousValue", ChangeProductSelectionActiveChange.builder().previousValue(true) },
+                new Object[] { "nextValue", ChangeProductSelectionActiveChange.builder().nextValue(true) } };
     }
 
     @Test

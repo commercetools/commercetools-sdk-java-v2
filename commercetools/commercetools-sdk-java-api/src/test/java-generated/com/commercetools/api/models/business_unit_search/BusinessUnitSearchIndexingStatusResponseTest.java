@@ -3,43 +3,37 @@ package com.commercetools.api.models.business_unit_search;
 
 import java.time.ZonedDateTime;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class BusinessUnitSearchIndexingStatusResponseTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(BusinessUnitSearchIndexingStatusResponseBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, BusinessUnitSearchIndexingStatusResponseBuilder builder) {
         BusinessUnitSearchIndexingStatusResponse businessUnitSearchIndexingStatusResponse = builder.buildUnchecked();
         Assertions.assertThat(businessUnitSearchIndexingStatusResponse)
                 .isInstanceOf(BusinessUnitSearchIndexingStatusResponse.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] {
+                new Object[] { "status",
                         BusinessUnitSearchIndexingStatusResponse.builder()
                                 .status(com.commercetools.api.models.project.BusinessUnitIndexingStatus
                                         .findEnum("Scheduled")) },
-                new Object[] { BusinessUnitSearchIndexingStatusResponse.builder()
+                new Object[] { "states", BusinessUnitSearchIndexingStatusResponse.builder()
                         .states(
                             new com.commercetools.api.models.business_unit_search.BusinessUnitIndexingProgressImpl()) },
-                new Object[] { BusinessUnitSearchIndexingStatusResponse.builder()
-                        .startedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { BusinessUnitSearchIndexingStatusResponse.builder()
-                        .lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { BusinessUnitSearchIndexingStatusResponse.builder().retryCount(7) } };
+                new Object[] { "startedAt",
+                        BusinessUnitSearchIndexingStatusResponse.builder()
+                                .startedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedAt",
+                        BusinessUnitSearchIndexingStatusResponse.builder()
+                                .lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "retryCount", BusinessUnitSearchIndexingStatusResponse.builder().retryCount(7) } };
     }
 
     @Test

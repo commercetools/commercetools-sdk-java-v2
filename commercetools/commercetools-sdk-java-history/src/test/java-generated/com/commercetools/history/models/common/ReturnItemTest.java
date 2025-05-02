@@ -1,41 +1,35 @@
 
 package com.commercetools.history.models.common;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ReturnItemTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ReturnItemBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ReturnItemBuilder builder) {
         ReturnItem returnItem = builder.buildUnchecked();
         Assertions.assertThat(returnItem).isInstanceOf(ReturnItem.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ReturnItem.builder().id("id") },
-                new Object[] { ReturnItem.builder().quantity(8) }, new Object[] { ReturnItem.builder().type("type") },
-                new Object[] { ReturnItem.builder().comment("comment") },
-                new Object[] { ReturnItem.builder()
-                        .shipmentState(
-                            com.commercetools.history.models.common.ReturnShipmentState.findEnum("Advised")) },
-                new Object[] {
+        return new Object[][] { new Object[] { "id", ReturnItem.builder().id("id") },
+                new Object[] { "quantity", ReturnItem.builder().quantity(8) },
+                new Object[] { "type", ReturnItem.builder().type("type") },
+                new Object[] { "comment", ReturnItem.builder().comment("comment") },
+                new Object[] { "shipmentState",
+                        ReturnItem.builder()
+                                .shipmentState(
+                                    com.commercetools.history.models.common.ReturnShipmentState.findEnum("Advised")) },
+                new Object[] { "paymentState",
                         ReturnItem.builder()
                                 .paymentState(com.commercetools.history.models.common.ReturnPaymentState
                                         .findEnum("NonRefundable")) },
-                new Object[] { ReturnItem.builder().lastModifiedAt("lastModifiedAt") },
-                new Object[] { ReturnItem.builder().createdAt("createdAt") } };
+                new Object[] { "lastModifiedAt", ReturnItem.builder().lastModifiedAt("lastModifiedAt") },
+                new Object[] { "createdAt", ReturnItem.builder().createdAt("createdAt") } };
     }
 
     @Test

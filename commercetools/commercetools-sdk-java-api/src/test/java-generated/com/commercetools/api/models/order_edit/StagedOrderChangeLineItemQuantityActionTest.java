@@ -1,37 +1,32 @@
 
 package com.commercetools.api.models.order_edit;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class StagedOrderChangeLineItemQuantityActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(StagedOrderChangeLineItemQuantityActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, StagedOrderChangeLineItemQuantityActionBuilder builder) {
         StagedOrderChangeLineItemQuantityAction stagedOrderChangeLineItemQuantityAction = builder.buildUnchecked();
         Assertions.assertThat(stagedOrderChangeLineItemQuantityAction)
                 .isInstanceOf(StagedOrderChangeLineItemQuantityAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { StagedOrderChangeLineItemQuantityAction.builder().lineItemId("lineItemId") },
-                new Object[] { StagedOrderChangeLineItemQuantityAction.builder().lineItemKey("lineItemKey") },
-                new Object[] { StagedOrderChangeLineItemQuantityAction.builder().quantity(8L) },
-                new Object[] { StagedOrderChangeLineItemQuantityAction.builder()
-                        .externalPrice(new com.commercetools.api.models.common.MoneyImpl()) },
-                new Object[] { StagedOrderChangeLineItemQuantityAction.builder()
+                new Object[] { "lineItemId",
+                        StagedOrderChangeLineItemQuantityAction.builder().lineItemId("lineItemId") },
+                new Object[] { "lineItemKey",
+                        StagedOrderChangeLineItemQuantityAction.builder().lineItemKey("lineItemKey") },
+                new Object[] { "quantity", StagedOrderChangeLineItemQuantityAction.builder().quantity(8L) },
+                new Object[] { "externalPrice",
+                        StagedOrderChangeLineItemQuantityAction.builder()
+                                .externalPrice(new com.commercetools.api.models.common.MoneyImpl()) },
+                new Object[] { "externalTotalPrice", StagedOrderChangeLineItemQuantityAction.builder()
                         .externalTotalPrice(new com.commercetools.api.models.cart.ExternalLineItemTotalPriceImpl()) } };
     }
 

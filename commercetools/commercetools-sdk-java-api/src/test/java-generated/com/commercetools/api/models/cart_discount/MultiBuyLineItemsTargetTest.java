@@ -1,36 +1,29 @@
 
 package com.commercetools.api.models.cart_discount;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class MultiBuyLineItemsTargetTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(MultiBuyLineItemsTargetBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, MultiBuyLineItemsTargetBuilder builder) {
         MultiBuyLineItemsTarget multiBuyLineItemsTarget = builder.buildUnchecked();
         Assertions.assertThat(multiBuyLineItemsTarget).isInstanceOf(MultiBuyLineItemsTarget.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { MultiBuyLineItemsTarget.builder().predicate("predicate") },
-                new Object[] { MultiBuyLineItemsTarget.builder().triggerQuantity(8) },
-                new Object[] { MultiBuyLineItemsTarget.builder().discountedQuantity(3) },
-                new Object[] { MultiBuyLineItemsTarget.builder().maxOccurrence(7) },
-                new Object[] { MultiBuyLineItemsTarget.builder()
-                        .selectionMode(
-                            com.commercetools.api.models.cart_discount.SelectionMode.findEnum("Cheapest")) } };
+        return new Object[][] { new Object[] { "predicate", MultiBuyLineItemsTarget.builder().predicate("predicate") },
+                new Object[] { "triggerQuantity", MultiBuyLineItemsTarget.builder().triggerQuantity(8) },
+                new Object[] { "discountedQuantity", MultiBuyLineItemsTarget.builder().discountedQuantity(3) },
+                new Object[] { "maxOccurrence", MultiBuyLineItemsTarget.builder().maxOccurrence(7) },
+                new Object[] { "selectionMode",
+                        MultiBuyLineItemsTarget.builder()
+                                .selectionMode(
+                                    com.commercetools.api.models.cart_discount.SelectionMode.findEnum("Cheapest")) } };
     }
 
     @Test

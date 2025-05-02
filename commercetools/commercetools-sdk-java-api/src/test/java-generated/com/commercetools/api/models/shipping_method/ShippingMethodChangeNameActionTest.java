@@ -1,30 +1,22 @@
 
 package com.commercetools.api.models.shipping_method;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ShippingMethodChangeNameActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ShippingMethodChangeNameActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ShippingMethodChangeNameActionBuilder builder) {
         ShippingMethodChangeNameAction shippingMethodChangeNameAction = builder.buildUnchecked();
         Assertions.assertThat(shippingMethodChangeNameAction).isInstanceOf(ShippingMethodChangeNameAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ShippingMethodChangeNameAction.builder().name("name") } };
+        return new Object[][] { new Object[] { "name", ShippingMethodChangeNameAction.builder().name("name") } };
     }
 
     @Test

@@ -4,51 +4,52 @@ package com.commercetools.api.models.store;
 import java.time.ZonedDateTime;
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class StoreTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(StoreBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, StoreBuilder builder) {
         Store store = builder.buildUnchecked();
         Assertions.assertThat(store).isInstanceOf(Store.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { Store.builder().id("id") }, new Object[] { Store.builder().version(2L) },
-                new Object[] { Store.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { Store.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] {
+        return new Object[][] { new Object[] { "id", Store.builder().id("id") },
+                new Object[] { "version", Store.builder().version(2L) },
+                new Object[] { "createdAt", Store.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedAt",
+                        Store.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedBy",
                         Store.builder().lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
-                new Object[] { Store.builder().createdBy(new com.commercetools.api.models.common.CreatedByImpl()) },
-                new Object[] { Store.builder().key("key") },
-                new Object[] { Store.builder().name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { Store.builder().languages(Collections.singletonList("languages")) },
-                new Object[] { Store.builder()
-                        .countries(Collections
-                                .singletonList(new com.commercetools.api.models.store_country.StoreCountryImpl())) },
-                new Object[] { Store.builder()
-                        .distributionChannels(Collections
-                                .singletonList(new com.commercetools.api.models.channel.ChannelReferenceImpl())) },
-                new Object[] { Store.builder()
-                        .supplyChannels(Collections
-                                .singletonList(new com.commercetools.api.models.channel.ChannelReferenceImpl())) },
-                new Object[] { Store.builder()
-                        .productSelections(Collections
-                                .singletonList(new com.commercetools.api.models.store.ProductSelectionSettingImpl())) },
-                new Object[] { Store.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) } };
+                new Object[] { "createdBy",
+                        Store.builder().createdBy(new com.commercetools.api.models.common.CreatedByImpl()) },
+                new Object[] { "key", Store.builder().key("key") },
+                new Object[] { "name",
+                        Store.builder().name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "languages", Store.builder().languages(Collections.singletonList("languages")) },
+                new Object[] { "countries",
+                        Store.builder()
+                                .countries(Collections.singletonList(
+                                    new com.commercetools.api.models.store_country.StoreCountryImpl())) },
+                new Object[] { "distributionChannels",
+                        Store.builder()
+                                .distributionChannels(Collections.singletonList(
+                                    new com.commercetools.api.models.channel.ChannelReferenceImpl())) },
+                new Object[] { "supplyChannels",
+                        Store.builder()
+                                .supplyChannels(Collections.singletonList(
+                                    new com.commercetools.api.models.channel.ChannelReferenceImpl())) },
+                new Object[] { "productSelections",
+                        Store.builder()
+                                .productSelections(Collections.singletonList(
+                                    new com.commercetools.api.models.store.ProductSelectionSettingImpl())) },
+                new Object[] { "custom",
+                        Store.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) } };
     }
 
     @Test

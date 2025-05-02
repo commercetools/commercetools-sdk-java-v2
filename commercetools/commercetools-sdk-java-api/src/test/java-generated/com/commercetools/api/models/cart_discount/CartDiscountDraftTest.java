@@ -4,51 +4,50 @@ package com.commercetools.api.models.cart_discount;
 import java.time.ZonedDateTime;
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CartDiscountDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CartDiscountDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CartDiscountDraftBuilder builder) {
         CartDiscountDraft cartDiscountDraft = builder.buildUnchecked();
         Assertions.assertThat(cartDiscountDraft).isInstanceOf(CartDiscountDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { CartDiscountDraft.builder()
-                        .name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { CartDiscountDraft.builder().key("key") },
-                new Object[] { CartDiscountDraft.builder()
-                        .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { CartDiscountDraft.builder()
-                        .value(new com.commercetools.api.models.cart_discount.CartDiscountValueDraftImpl()) },
-                new Object[] { CartDiscountDraft.builder().cartPredicate("cartPredicate") },
-                new Object[] { CartDiscountDraft.builder()
-                        .target(new com.commercetools.api.models.cart_discount.CartDiscountTargetImpl()) },
-                new Object[] { CartDiscountDraft.builder().sortOrder("sortOrder") },
-                new Object[] { CartDiscountDraft.builder()
-                        .stores(Collections
-                                .singletonList(new com.commercetools.api.models.store.StoreResourceIdentifierImpl())) },
-                new Object[] { CartDiscountDraft.builder().isActive(true) },
-                new Object[] { CartDiscountDraft.builder().validFrom(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { CartDiscountDraft.builder().validUntil(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { CartDiscountDraft.builder().requiresDiscountCode(true) },
-                new Object[] { CartDiscountDraft.builder()
+                new Object[] { "name",
+                        CartDiscountDraft.builder()
+                                .name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "key", CartDiscountDraft.builder().key("key") },
+                new Object[] { "description",
+                        CartDiscountDraft.builder()
+                                .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "value",
+                        CartDiscountDraft.builder()
+                                .value(new com.commercetools.api.models.cart_discount.CartDiscountValueDraftImpl()) },
+                new Object[] { "cartPredicate", CartDiscountDraft.builder().cartPredicate("cartPredicate") },
+                new Object[] { "target",
+                        CartDiscountDraft.builder()
+                                .target(new com.commercetools.api.models.cart_discount.CartDiscountTargetImpl()) },
+                new Object[] { "sortOrder", CartDiscountDraft.builder().sortOrder("sortOrder") },
+                new Object[] { "stores",
+                        CartDiscountDraft.builder()
+                                .stores(Collections.singletonList(
+                                    new com.commercetools.api.models.store.StoreResourceIdentifierImpl())) },
+                new Object[] { "isActive", CartDiscountDraft.builder().isActive(true) },
+                new Object[] { "validFrom",
+                        CartDiscountDraft.builder().validFrom(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "validUntil",
+                        CartDiscountDraft.builder().validUntil(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "requiresDiscountCode", CartDiscountDraft.builder().requiresDiscountCode(true) },
+                new Object[] { "stackingMode", CartDiscountDraft.builder()
                         .stackingMode(com.commercetools.api.models.cart_discount.StackingMode.findEnum("Stacking")) },
-                new Object[] { CartDiscountDraft.builder()
+                new Object[] { "custom", CartDiscountDraft.builder()
                         .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) } };
     }
 

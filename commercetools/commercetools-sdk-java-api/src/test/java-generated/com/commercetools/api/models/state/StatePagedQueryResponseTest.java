@@ -3,34 +3,26 @@ package com.commercetools.api.models.state;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class StatePagedQueryResponseTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(StatePagedQueryResponseBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, StatePagedQueryResponseBuilder builder) {
         StatePagedQueryResponse statePagedQueryResponse = builder.buildUnchecked();
         Assertions.assertThat(statePagedQueryResponse).isInstanceOf(StatePagedQueryResponse.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { StatePagedQueryResponse.builder().limit(7L) },
-                new Object[] { StatePagedQueryResponse.builder().offset(3L) },
-                new Object[] { StatePagedQueryResponse.builder().count(2L) },
-                new Object[] { StatePagedQueryResponse.builder().total(1L) },
-                new Object[] { StatePagedQueryResponse.builder()
+        return new Object[][] { new Object[] { "limit", StatePagedQueryResponse.builder().limit(7L) },
+                new Object[] { "offset", StatePagedQueryResponse.builder().offset(3L) },
+                new Object[] { "count", StatePagedQueryResponse.builder().count(2L) },
+                new Object[] { "total", StatePagedQueryResponse.builder().total(1L) },
+                new Object[] { "results", StatePagedQueryResponse.builder()
                         .results(Collections.singletonList(new com.commercetools.api.models.state.StateImpl())) } };
     }
 

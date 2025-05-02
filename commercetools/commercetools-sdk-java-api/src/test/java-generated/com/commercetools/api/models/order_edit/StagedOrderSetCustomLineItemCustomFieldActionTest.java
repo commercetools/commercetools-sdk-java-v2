@@ -1,38 +1,31 @@
 
 package com.commercetools.api.models.order_edit;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class StagedOrderSetCustomLineItemCustomFieldActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(StagedOrderSetCustomLineItemCustomFieldActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, StagedOrderSetCustomLineItemCustomFieldActionBuilder builder) {
         StagedOrderSetCustomLineItemCustomFieldAction stagedOrderSetCustomLineItemCustomFieldAction = builder
                 .buildUnchecked();
         Assertions.assertThat(stagedOrderSetCustomLineItemCustomFieldAction)
                 .isInstanceOf(StagedOrderSetCustomLineItemCustomFieldAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] {
+                new Object[] { "customLineItemId",
                         StagedOrderSetCustomLineItemCustomFieldAction.builder().customLineItemId("customLineItemId") },
-                new Object[] { StagedOrderSetCustomLineItemCustomFieldAction.builder()
-                        .customLineItemKey("customLineItemKey") },
-                new Object[] { StagedOrderSetCustomLineItemCustomFieldAction.builder().name("name") },
-                new Object[] { StagedOrderSetCustomLineItemCustomFieldAction.builder().value("value") } };
+                new Object[] { "customLineItemKey",
+                        StagedOrderSetCustomLineItemCustomFieldAction.builder()
+                                .customLineItemKey("customLineItemKey") },
+                new Object[] { "name", StagedOrderSetCustomLineItemCustomFieldAction.builder().name("name") },
+                new Object[] { "value", StagedOrderSetCustomLineItemCustomFieldAction.builder().value("value") } };
     }
 
     @Test

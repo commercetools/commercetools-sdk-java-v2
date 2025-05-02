@@ -1,33 +1,25 @@
 
 package com.commercetools.api.models.error;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ExtensionErrorTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ExtensionErrorBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ExtensionErrorBuilder builder) {
         ExtensionError extensionError = builder.buildUnchecked();
         Assertions.assertThat(extensionError).isInstanceOf(ExtensionError.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ExtensionError.builder().code("code") },
-                new Object[] { ExtensionError.builder().message("message") },
-                new Object[] { ExtensionError.builder().extensionId("extensionId") },
-                new Object[] { ExtensionError.builder().extensionKey("extensionKey") } };
+        return new Object[][] { new Object[] { "code", ExtensionError.builder().code("code") },
+                new Object[] { "message", ExtensionError.builder().message("message") },
+                new Object[] { "extensionId", ExtensionError.builder().extensionId("extensionId") },
+                new Object[] { "extensionKey", ExtensionError.builder().extensionKey("extensionKey") } };
     }
 
     @Test

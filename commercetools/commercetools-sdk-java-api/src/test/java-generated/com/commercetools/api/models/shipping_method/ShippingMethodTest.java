@@ -4,52 +4,50 @@ package com.commercetools.api.models.shipping_method;
 import java.time.ZonedDateTime;
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ShippingMethodTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ShippingMethodBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ShippingMethodBuilder builder) {
         ShippingMethod shippingMethod = builder.buildUnchecked();
         Assertions.assertThat(shippingMethod).isInstanceOf(ShippingMethod.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ShippingMethod.builder().id("id") },
-                new Object[] { ShippingMethod.builder().version(2L) },
-                new Object[] { ShippingMethod.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { ShippingMethod.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { ShippingMethod.builder()
-                        .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
-                new Object[] {
+        return new Object[][] { new Object[] { "id", ShippingMethod.builder().id("id") },
+                new Object[] { "version", ShippingMethod.builder().version(2L) },
+                new Object[] { "createdAt",
+                        ShippingMethod.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedAt",
+                        ShippingMethod.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedBy",
+                        ShippingMethod.builder()
+                                .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
+                new Object[] { "createdBy",
                         ShippingMethod.builder().createdBy(new com.commercetools.api.models.common.CreatedByImpl()) },
-                new Object[] { ShippingMethod.builder().key("key") },
-                new Object[] { ShippingMethod.builder().name("name") },
-                new Object[] { ShippingMethod.builder()
-                        .localizedName(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { ShippingMethod.builder().description("description") },
-                new Object[] { ShippingMethod.builder()
-                        .localizedDescription(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { ShippingMethod.builder()
+                new Object[] { "key", ShippingMethod.builder().key("key") },
+                new Object[] { "name", ShippingMethod.builder().name("name") },
+                new Object[] { "localizedName",
+                        ShippingMethod.builder()
+                                .localizedName(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "description", ShippingMethod.builder().description("description") },
+                new Object[] { "localizedDescription",
+                        ShippingMethod.builder()
+                                .localizedDescription(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "taxCategory", ShippingMethod.builder()
                         .taxCategory(new com.commercetools.api.models.tax_category.TaxCategoryReferenceImpl()) },
-                new Object[] { ShippingMethod.builder()
-                        .zoneRates(Collections
-                                .singletonList(new com.commercetools.api.models.shipping_method.ZoneRateImpl())) },
-                new Object[] { ShippingMethod.builder().active(true) },
-                new Object[] { ShippingMethod.builder().isDefault(true) },
-                new Object[] { ShippingMethod.builder().predicate("predicate") }, new Object[] {
+                new Object[] { "zoneRates",
+                        ShippingMethod.builder()
+                                .zoneRates(Collections.singletonList(
+                                    new com.commercetools.api.models.shipping_method.ZoneRateImpl())) },
+                new Object[] { "active", ShippingMethod.builder().active(true) },
+                new Object[] { "isDefault", ShippingMethod.builder().isDefault(true) },
+                new Object[] { "predicate", ShippingMethod.builder().predicate("predicate") }, new Object[] { "custom",
                         ShippingMethod.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) } };
     }
 

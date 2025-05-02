@@ -3,30 +3,22 @@ package com.commercetools.api.models.error;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class GraphQLDuplicateEnumValuesErrorTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(GraphQLDuplicateEnumValuesErrorBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, GraphQLDuplicateEnumValuesErrorBuilder builder) {
         GraphQLDuplicateEnumValuesError graphQLDuplicateEnumValuesError = builder.buildUnchecked();
         Assertions.assertThat(graphQLDuplicateEnumValuesError).isInstanceOf(GraphQLDuplicateEnumValuesError.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] {
+        return new Object[][] { new Object[] { "duplicates",
                 GraphQLDuplicateEnumValuesError.builder().duplicates(Collections.singletonList("duplicates")) } };
     }
 

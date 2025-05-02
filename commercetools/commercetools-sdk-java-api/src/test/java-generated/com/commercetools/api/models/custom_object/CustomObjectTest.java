@@ -3,40 +3,35 @@ package com.commercetools.api.models.custom_object;
 
 import java.time.ZonedDateTime;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CustomObjectTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CustomObjectBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CustomObjectBuilder builder) {
         CustomObject customObject = builder.buildUnchecked();
         Assertions.assertThat(customObject).isInstanceOf(CustomObject.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { CustomObject.builder().id("id") },
-                new Object[] { CustomObject.builder().version(2L) },
-                new Object[] { CustomObject.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { CustomObject.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { CustomObject.builder()
-                        .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
-                new Object[] {
+        return new Object[][] { new Object[] { "id", CustomObject.builder().id("id") },
+                new Object[] { "version", CustomObject.builder().version(2L) },
+                new Object[] { "createdAt",
+                        CustomObject.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedAt",
+                        CustomObject.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedBy",
+                        CustomObject.builder()
+                                .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
+                new Object[] { "createdBy",
                         CustomObject.builder().createdBy(new com.commercetools.api.models.common.CreatedByImpl()) },
-                new Object[] { CustomObject.builder().container("container") },
-                new Object[] { CustomObject.builder().key("key") },
-                new Object[] { CustomObject.builder().value("value") } };
+                new Object[] { "container", CustomObject.builder().container("container") },
+                new Object[] { "key", CustomObject.builder().key("key") },
+                new Object[] { "value", CustomObject.builder().value("value") } };
     }
 
     @Test

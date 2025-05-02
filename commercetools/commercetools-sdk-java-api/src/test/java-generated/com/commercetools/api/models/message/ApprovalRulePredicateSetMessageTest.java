@@ -1,31 +1,25 @@
 
 package com.commercetools.api.models.message;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ApprovalRulePredicateSetMessageTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ApprovalRulePredicateSetMessageBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ApprovalRulePredicateSetMessageBuilder builder) {
         ApprovalRulePredicateSetMessage approvalRulePredicateSetMessage = builder.buildUnchecked();
         Assertions.assertThat(approvalRulePredicateSetMessage).isInstanceOf(ApprovalRulePredicateSetMessage.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ApprovalRulePredicateSetMessage.builder().predicate("predicate") },
-                new Object[] { ApprovalRulePredicateSetMessage.builder().oldPredicate("oldPredicate") } };
+        return new Object[][] {
+                new Object[] { "predicate", ApprovalRulePredicateSetMessage.builder().predicate("predicate") },
+                new Object[] { "oldPredicate",
+                        ApprovalRulePredicateSetMessage.builder().oldPredicate("oldPredicate") } };
     }
 
     @Test

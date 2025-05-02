@@ -3,41 +3,35 @@ package com.commercetools.api.models.error;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ExtensionBadResponseErrorTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ExtensionBadResponseErrorBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ExtensionBadResponseErrorBuilder builder) {
         ExtensionBadResponseError extensionBadResponseError = builder.buildUnchecked();
         Assertions.assertThat(extensionBadResponseError).isInstanceOf(ExtensionBadResponseError.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ExtensionBadResponseError.builder().message("message") },
-                new Object[] { ExtensionBadResponseError.builder()
-                        .localizedMessage(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { ExtensionBadResponseError.builder().extensionExtraInfo("extensionExtraInfo") },
-                new Object[] {
+        return new Object[][] { new Object[] { "message", ExtensionBadResponseError.builder().message("message") },
+                new Object[] { "localizedMessage",
+                        ExtensionBadResponseError.builder()
+                                .localizedMessage(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "extensionExtraInfo",
+                        ExtensionBadResponseError.builder().extensionExtraInfo("extensionExtraInfo") },
+                new Object[] { "extensionErrors",
                         ExtensionBadResponseError.builder()
                                 .extensionErrors(Collections
                                         .singletonList(new com.commercetools.api.models.error.ExtensionErrorImpl())) },
-                new Object[] { ExtensionBadResponseError.builder().extensionBody("extensionBody") },
-                new Object[] { ExtensionBadResponseError.builder().extensionStatusCode(3) },
-                new Object[] { ExtensionBadResponseError.builder().extensionId("extensionId") },
-                new Object[] { ExtensionBadResponseError.builder().extensionKey("extensionKey") } };
+                new Object[] { "extensionBody", ExtensionBadResponseError.builder().extensionBody("extensionBody") },
+                new Object[] { "extensionStatusCode", ExtensionBadResponseError.builder().extensionStatusCode(3) },
+                new Object[] { "extensionId", ExtensionBadResponseError.builder().extensionId("extensionId") },
+                new Object[] { "extensionKey", ExtensionBadResponseError.builder().extensionKey("extensionKey") } };
     }
 
     @Test

@@ -4,59 +4,59 @@ package com.commercetools.api.models.discount_code;
 import java.time.ZonedDateTime;
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class DiscountCodeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(DiscountCodeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, DiscountCodeBuilder builder) {
         DiscountCode discountCode = builder.buildUnchecked();
         Assertions.assertThat(discountCode).isInstanceOf(DiscountCode.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { DiscountCode.builder().id("id") },
-                new Object[] { DiscountCode.builder().key("key") }, new Object[] { DiscountCode.builder().version(2L) },
-                new Object[] { DiscountCode.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { DiscountCode.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { DiscountCode.builder()
-                        .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
-                new Object[] {
+        return new Object[][] { new Object[] { "id", DiscountCode.builder().id("id") },
+                new Object[] { "key", DiscountCode.builder().key("key") },
+                new Object[] { "version", DiscountCode.builder().version(2L) },
+                new Object[] { "createdAt",
+                        DiscountCode.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedAt",
+                        DiscountCode.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedBy",
+                        DiscountCode.builder()
+                                .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
+                new Object[] { "createdBy",
                         DiscountCode.builder().createdBy(new com.commercetools.api.models.common.CreatedByImpl()) },
-                new Object[] {
+                new Object[] { "name",
                         DiscountCode.builder().name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { DiscountCode.builder()
-                        .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { DiscountCode.builder().code("code") },
-                new Object[] { DiscountCode.builder()
-                        .cartDiscounts(Collections.singletonList(
-                            new com.commercetools.api.models.cart_discount.CartDiscountReferenceImpl())) },
-                new Object[] { DiscountCode.builder().cartPredicate("cartPredicate") },
-                new Object[] { DiscountCode.builder().isActive(true) },
-                new Object[] {
+                new Object[] { "description",
+                        DiscountCode.builder()
+                                .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "code", DiscountCode.builder().code("code") },
+                new Object[] { "cartDiscounts",
+                        DiscountCode.builder()
+                                .cartDiscounts(Collections.singletonList(
+                                    new com.commercetools.api.models.cart_discount.CartDiscountReferenceImpl())) },
+                new Object[] { "cartPredicate", DiscountCode.builder().cartPredicate("cartPredicate") },
+                new Object[] { "isActive", DiscountCode.builder().isActive(true) },
+                new Object[] { "references",
                         DiscountCode.builder()
                                 .references(Collections
                                         .singletonList(new com.commercetools.api.models.common.ReferenceImpl())) },
-                new Object[] { DiscountCode.builder().maxApplications(9L) },
-                new Object[] { DiscountCode.builder().maxApplicationsPerCustomer(5L) },
-                new Object[] {
+                new Object[] { "maxApplications", DiscountCode.builder().maxApplications(9L) },
+                new Object[] { "maxApplicationsPerCustomer", DiscountCode.builder().maxApplicationsPerCustomer(5L) },
+                new Object[] { "custom",
                         DiscountCode.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) },
-                new Object[] { DiscountCode.builder().groups(Collections.singletonList("groups")) },
-                new Object[] { DiscountCode.builder().validFrom(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { DiscountCode.builder().validUntil(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { DiscountCode.builder().applicationVersion(8L) } };
+                new Object[] { "groups", DiscountCode.builder().groups(Collections.singletonList("groups")) },
+                new Object[] { "validFrom",
+                        DiscountCode.builder().validFrom(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "validUntil",
+                        DiscountCode.builder().validUntil(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "applicationVersion", DiscountCode.builder().applicationVersion(8L) } };
     }
 
     @Test

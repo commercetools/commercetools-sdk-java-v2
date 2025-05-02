@@ -1,32 +1,24 @@
 
 package com.commercetools.api.models.subscription;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class EventBridgeDestinationTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(EventBridgeDestinationBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, EventBridgeDestinationBuilder builder) {
         EventBridgeDestination eventBridgeDestination = builder.buildUnchecked();
         Assertions.assertThat(eventBridgeDestination).isInstanceOf(EventBridgeDestination.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { EventBridgeDestination.builder().region("region") },
-                new Object[] { EventBridgeDestination.builder().accountId("accountId") },
-                new Object[] { EventBridgeDestination.builder().source("source") } };
+        return new Object[][] { new Object[] { "region", EventBridgeDestination.builder().region("region") },
+                new Object[] { "accountId", EventBridgeDestination.builder().accountId("accountId") },
+                new Object[] { "source", EventBridgeDestination.builder().source("source") } };
     }
 
     @Test

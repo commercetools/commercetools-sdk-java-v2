@@ -1,41 +1,35 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetLineItemDiscountedPricePerQuantityChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetLineItemDiscountedPricePerQuantityChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetLineItemDiscountedPricePerQuantityChangeBuilder builder) {
         SetLineItemDiscountedPricePerQuantityChange setLineItemDiscountedPricePerQuantityChange = builder
                 .buildUnchecked();
         Assertions.assertThat(setLineItemDiscountedPricePerQuantityChange)
                 .isInstanceOf(SetLineItemDiscountedPricePerQuantityChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetLineItemDiscountedPricePerQuantityChange.builder().change("change") },
-                new Object[] { SetLineItemDiscountedPricePerQuantityChange.builder()
+        return new Object[][] {
+                new Object[] { "change", SetLineItemDiscountedPricePerQuantityChange.builder().change("change") },
+                new Object[] { "previousValue", SetLineItemDiscountedPricePerQuantityChange.builder()
                         .previousValue(
                             new com.commercetools.history.models.common.DiscountedLineItemPriceForQuantityImpl()) },
-                new Object[] { SetLineItemDiscountedPricePerQuantityChange.builder()
+                new Object[] { "nextValue", SetLineItemDiscountedPricePerQuantityChange.builder()
                         .nextValue(
                             new com.commercetools.history.models.common.DiscountedLineItemPriceForQuantityImpl()) },
-                new Object[] { SetLineItemDiscountedPricePerQuantityChange.builder()
-                        .lineItem(new com.commercetools.history.models.common.LocalizedStringImpl()) },
-                new Object[] { SetLineItemDiscountedPricePerQuantityChange.builder().variant("variant") } };
+                new Object[] { "lineItem",
+                        SetLineItemDiscountedPricePerQuantityChange.builder()
+                                .lineItem(new com.commercetools.history.models.common.LocalizedStringImpl()) },
+                new Object[] { "variant", SetLineItemDiscountedPricePerQuantityChange.builder().variant("variant") } };
     }
 
     @Test

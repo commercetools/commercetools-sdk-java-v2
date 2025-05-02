@@ -1,44 +1,39 @@
 
 package com.commercetools.api.models.order_edit;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class StagedOrderSetShippingAddressAndCustomShippingMethodActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, StagedOrderSetShippingAddressAndCustomShippingMethodActionBuilder builder) {
         StagedOrderSetShippingAddressAndCustomShippingMethodAction stagedOrderSetShippingAddressAndCustomShippingMethodAction = builder
                 .buildUnchecked();
         Assertions.assertThat(stagedOrderSetShippingAddressAndCustomShippingMethodAction)
                 .isInstanceOf(StagedOrderSetShippingAddressAndCustomShippingMethodAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { StagedOrderSetShippingAddressAndCustomShippingMethodAction.builder()
-                        .address(new com.commercetools.api.models.common.BaseAddressImpl()) },
-                new Object[] { StagedOrderSetShippingAddressAndCustomShippingMethodAction.builder()
-                        .shippingMethodName("shippingMethodName") },
-                new Object[] { StagedOrderSetShippingAddressAndCustomShippingMethodAction.builder()
+                new Object[] { "address",
+                        StagedOrderSetShippingAddressAndCustomShippingMethodAction.builder()
+                                .address(new com.commercetools.api.models.common.BaseAddressImpl()) },
+                new Object[] { "shippingMethodName",
+                        StagedOrderSetShippingAddressAndCustomShippingMethodAction.builder()
+                                .shippingMethodName("shippingMethodName") },
+                new Object[] { "shippingRate", StagedOrderSetShippingAddressAndCustomShippingMethodAction.builder()
                         .shippingRate(new com.commercetools.api.models.shipping_method.ShippingRateDraftImpl()) },
-                new Object[] { StagedOrderSetShippingAddressAndCustomShippingMethodAction.builder()
+                new Object[] { "taxCategory", StagedOrderSetShippingAddressAndCustomShippingMethodAction.builder()
                         .taxCategory(
                             new com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierImpl()) },
-                new Object[] { StagedOrderSetShippingAddressAndCustomShippingMethodAction.builder()
-                        .externalTaxRate(new com.commercetools.api.models.cart.ExternalTaxRateDraftImpl()) },
-                new Object[] { StagedOrderSetShippingAddressAndCustomShippingMethodAction.builder()
+                new Object[] { "externalTaxRate",
+                        StagedOrderSetShippingAddressAndCustomShippingMethodAction.builder()
+                                .externalTaxRate(new com.commercetools.api.models.cart.ExternalTaxRateDraftImpl()) },
+                new Object[] { "custom", StagedOrderSetShippingAddressAndCustomShippingMethodAction.builder()
                         .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) } };
     }
 

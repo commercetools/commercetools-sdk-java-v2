@@ -1,35 +1,28 @@
 
 package com.commercetools.api.models.product_tailoring;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductTailoringAddAssetActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductTailoringAddAssetActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductTailoringAddAssetActionBuilder builder) {
         ProductTailoringAddAssetAction productTailoringAddAssetAction = builder.buildUnchecked();
         Assertions.assertThat(productTailoringAddAssetAction).isInstanceOf(ProductTailoringAddAssetAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductTailoringAddAssetAction.builder().variantId(5L) },
-                new Object[] { ProductTailoringAddAssetAction.builder().sku("sku") },
-                new Object[] { ProductTailoringAddAssetAction.builder().staged(true) },
-                new Object[] { ProductTailoringAddAssetAction.builder()
-                        .asset(new com.commercetools.api.models.common.AssetDraftImpl()) },
-                new Object[] { ProductTailoringAddAssetAction.builder().position(4) } };
+        return new Object[][] { new Object[] { "variantId", ProductTailoringAddAssetAction.builder().variantId(5L) },
+                new Object[] { "sku", ProductTailoringAddAssetAction.builder().sku("sku") },
+                new Object[] { "staged", ProductTailoringAddAssetAction.builder().staged(true) },
+                new Object[] { "asset",
+                        ProductTailoringAddAssetAction.builder()
+                                .asset(new com.commercetools.api.models.common.AssetDraftImpl()) },
+                new Object[] { "position", ProductTailoringAddAssetAction.builder().position(4) } };
     }
 
     @Test

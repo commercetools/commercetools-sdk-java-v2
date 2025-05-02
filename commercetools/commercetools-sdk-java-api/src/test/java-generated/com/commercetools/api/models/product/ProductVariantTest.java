@@ -3,49 +3,43 @@ package com.commercetools.api.models.product;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductVariantTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductVariantBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductVariantBuilder builder) {
         ProductVariant productVariant = builder.buildUnchecked();
         Assertions.assertThat(productVariant).isInstanceOf(ProductVariant.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductVariant.builder().id(2L) },
-                new Object[] { ProductVariant.builder().sku("sku") },
-                new Object[] { ProductVariant.builder().key("key") },
-                new Object[] { ProductVariant.builder()
+        return new Object[][] { new Object[] { "id", ProductVariant.builder().id(2L) },
+                new Object[] { "sku", ProductVariant.builder().sku("sku") },
+                new Object[] { "key", ProductVariant.builder().key("key") },
+                new Object[] { "prices", ProductVariant.builder()
                         .prices(Collections.singletonList(new com.commercetools.api.models.common.PriceImpl())) },
-                new Object[] {
+                new Object[] { "attributes",
                         ProductVariant.builder()
                                 .attributes(Collections
                                         .singletonList(new com.commercetools.api.models.product.AttributeImpl())) },
-                new Object[] { ProductVariant.builder().price(new com.commercetools.api.models.common.PriceImpl()) },
-                new Object[] { ProductVariant.builder()
+                new Object[] { "price",
+                        ProductVariant.builder().price(new com.commercetools.api.models.common.PriceImpl()) },
+                new Object[] { "images", ProductVariant.builder()
                         .images(Collections.singletonList(new com.commercetools.api.models.common.ImageImpl())) },
-                new Object[] { ProductVariant.builder()
+                new Object[] { "assets", ProductVariant.builder()
                         .assets(Collections.singletonList(new com.commercetools.api.models.common.AssetImpl())) },
-                new Object[] { ProductVariant.builder()
+                new Object[] { "availability", ProductVariant.builder()
                         .availability(new com.commercetools.api.models.product.ProductVariantAvailabilityImpl()) },
-                new Object[] { ProductVariant.builder().isMatchingVariant(true) },
-                new Object[] { ProductVariant.builder()
-                        .scopedPrice(new com.commercetools.api.models.common.ScopedPriceImpl()) },
-                new Object[] { ProductVariant.builder().scopedPriceDiscounted(true) } };
+                new Object[] { "isMatchingVariant", ProductVariant.builder().isMatchingVariant(true) },
+                new Object[] { "scopedPrice",
+                        ProductVariant.builder()
+                                .scopedPrice(new com.commercetools.api.models.common.ScopedPriceImpl()) },
+                new Object[] { "scopedPriceDiscounted", ProductVariant.builder().scopedPriceDiscounted(true) } };
     }
 
     @Test

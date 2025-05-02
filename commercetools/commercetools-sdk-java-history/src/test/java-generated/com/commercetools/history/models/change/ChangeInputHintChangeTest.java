@@ -1,36 +1,28 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ChangeInputHintChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ChangeInputHintChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ChangeInputHintChangeBuilder builder) {
         ChangeInputHintChange changeInputHintChange = builder.buildUnchecked();
         Assertions.assertThat(changeInputHintChange).isInstanceOf(ChangeInputHintChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ChangeInputHintChange.builder().change("change") },
-                new Object[] { ChangeInputHintChange.builder()
+        return new Object[][] { new Object[] { "change", ChangeInputHintChange.builder().change("change") },
+                new Object[] { "previousValue", ChangeInputHintChange.builder()
                         .previousValue(com.commercetools.history.models.common.TextInputHint.findEnum("SingleLine")) },
-                new Object[] { ChangeInputHintChange.builder()
+                new Object[] { "nextValue", ChangeInputHintChange.builder()
                         .nextValue(com.commercetools.history.models.common.TextInputHint.findEnum("SingleLine")) },
-                new Object[] { ChangeInputHintChange.builder().fieldName("fieldName") },
-                new Object[] { ChangeInputHintChange.builder().attributeName("attributeName") } };
+                new Object[] { "fieldName", ChangeInputHintChange.builder().fieldName("fieldName") },
+                new Object[] { "attributeName", ChangeInputHintChange.builder().attributeName("attributeName") } };
     }
 
     @Test

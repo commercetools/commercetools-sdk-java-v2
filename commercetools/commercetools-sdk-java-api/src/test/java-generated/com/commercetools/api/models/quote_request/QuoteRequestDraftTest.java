@@ -1,40 +1,36 @@
 
 package com.commercetools.api.models.quote_request;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class QuoteRequestDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(QuoteRequestDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, QuoteRequestDraftBuilder builder) {
         QuoteRequestDraft quoteRequestDraft = builder.buildUnchecked();
         Assertions.assertThat(quoteRequestDraft).isInstanceOf(QuoteRequestDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { QuoteRequestDraft.builder()
-                        .cart(new com.commercetools.api.models.cart.CartResourceIdentifierImpl()) },
-                new Object[] { QuoteRequestDraft.builder().cartVersion(7L) },
-                new Object[] { QuoteRequestDraft.builder().key("key") },
-                new Object[] { QuoteRequestDraft.builder().comment("comment") },
-                new Object[] { QuoteRequestDraft.builder()
-                        .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) },
-                new Object[] { QuoteRequestDraft.builder()
-                        .state(new com.commercetools.api.models.state.StateReferenceImpl()) },
-                new Object[] { QuoteRequestDraft.builder().purchaseOrderNumber("purchaseOrderNumber") } };
+                new Object[] { "cart",
+                        QuoteRequestDraft.builder()
+                                .cart(new com.commercetools.api.models.cart.CartResourceIdentifierImpl()) },
+                new Object[] { "cartVersion", QuoteRequestDraft.builder().cartVersion(7L) },
+                new Object[] { "key", QuoteRequestDraft.builder().key("key") },
+                new Object[] { "comment", QuoteRequestDraft.builder().comment("comment") },
+                new Object[] { "custom",
+                        QuoteRequestDraft.builder()
+                                .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) },
+                new Object[] { "state",
+                        QuoteRequestDraft.builder()
+                                .state(new com.commercetools.api.models.state.StateReferenceImpl()) },
+                new Object[] { "purchaseOrderNumber",
+                        QuoteRequestDraft.builder().purchaseOrderNumber("purchaseOrderNumber") } };
     }
 
     @Test

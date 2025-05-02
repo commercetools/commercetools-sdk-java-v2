@@ -3,38 +3,33 @@ package com.commercetools.api.models.order;
 
 import java.time.ZonedDateTime;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class OrderTransitionLineItemStateActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(OrderTransitionLineItemStateActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, OrderTransitionLineItemStateActionBuilder builder) {
         OrderTransitionLineItemStateAction orderTransitionLineItemStateAction = builder.buildUnchecked();
         Assertions.assertThat(orderTransitionLineItemStateAction)
                 .isInstanceOf(OrderTransitionLineItemStateAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { OrderTransitionLineItemStateAction.builder().lineItemId("lineItemId") },
-                new Object[] { OrderTransitionLineItemStateAction.builder().lineItemKey("lineItemKey") },
-                new Object[] { OrderTransitionLineItemStateAction.builder().quantity(8L) },
-                new Object[] { OrderTransitionLineItemStateAction.builder()
-                        .fromState(new com.commercetools.api.models.state.StateResourceIdentifierImpl()) },
-                new Object[] { OrderTransitionLineItemStateAction.builder()
-                        .toState(new com.commercetools.api.models.state.StateResourceIdentifierImpl()) },
-                new Object[] { OrderTransitionLineItemStateAction.builder()
+        return new Object[][] {
+                new Object[] { "lineItemId", OrderTransitionLineItemStateAction.builder().lineItemId("lineItemId") },
+                new Object[] { "lineItemKey", OrderTransitionLineItemStateAction.builder().lineItemKey("lineItemKey") },
+                new Object[] { "quantity", OrderTransitionLineItemStateAction.builder().quantity(8L) },
+                new Object[] { "fromState",
+                        OrderTransitionLineItemStateAction.builder()
+                                .fromState(new com.commercetools.api.models.state.StateResourceIdentifierImpl()) },
+                new Object[] { "toState",
+                        OrderTransitionLineItemStateAction.builder()
+                                .toState(new com.commercetools.api.models.state.StateResourceIdentifierImpl()) },
+                new Object[] { "actualTransitionDate", OrderTransitionLineItemStateAction.builder()
                         .actualTransitionDate(ZonedDateTime.parse("2023-06-01T12:00Z")) } };
     }
 

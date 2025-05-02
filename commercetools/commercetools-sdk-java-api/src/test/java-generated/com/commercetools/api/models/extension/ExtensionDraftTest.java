@@ -3,36 +3,30 @@ package com.commercetools.api.models.extension;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ExtensionDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ExtensionDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ExtensionDraftBuilder builder) {
         ExtensionDraft extensionDraft = builder.buildUnchecked();
         Assertions.assertThat(extensionDraft).isInstanceOf(ExtensionDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ExtensionDraft.builder().key("key") },
-                new Object[] { ExtensionDraft.builder()
-                        .destination(new com.commercetools.api.models.extension.ExtensionDestinationImpl()) },
-                new Object[] { ExtensionDraft.builder()
-                        .triggers(Collections
-                                .singletonList(new com.commercetools.api.models.extension.ExtensionTriggerImpl())) },
-                new Object[] { ExtensionDraft.builder().timeoutInMs(6) } };
+        return new Object[][] { new Object[] { "key", ExtensionDraft.builder().key("key") },
+                new Object[] { "destination",
+                        ExtensionDraft.builder()
+                                .destination(new com.commercetools.api.models.extension.ExtensionDestinationImpl()) },
+                new Object[] { "triggers",
+                        ExtensionDraft.builder()
+                                .triggers(Collections.singletonList(
+                                    new com.commercetools.api.models.extension.ExtensionTriggerImpl())) },
+                new Object[] { "timeoutInMs", ExtensionDraft.builder().timeoutInMs(6) } };
     }
 
     @Test

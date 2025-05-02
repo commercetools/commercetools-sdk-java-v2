@@ -4,51 +4,49 @@ package com.commercetools.api.models.product;
 import java.time.ZonedDateTime;
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductBuilder builder) {
         Product product = builder.buildUnchecked();
         Assertions.assertThat(product).isInstanceOf(Product.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { Product.builder().id("id") },
-                new Object[] { Product.builder().version(2L) },
-                new Object[] { Product.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { Product.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { Product.builder()
-                        .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
-                new Object[] { Product.builder().createdBy(new com.commercetools.api.models.common.CreatedByImpl()) },
-                new Object[] { Product.builder().key("key") },
-                new Object[] { Product.builder()
+        return new Object[][] { new Object[] { "id", Product.builder().id("id") },
+                new Object[] { "version", Product.builder().version(2L) },
+                new Object[] { "createdAt", Product.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedAt",
+                        Product.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedBy",
+                        Product.builder()
+                                .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
+                new Object[] { "createdBy",
+                        Product.builder().createdBy(new com.commercetools.api.models.common.CreatedByImpl()) },
+                new Object[] { "key", Product.builder().key("key") },
+                new Object[] { "productType", Product.builder()
                         .productType(new com.commercetools.api.models.product_type.ProductTypeReferenceImpl()) },
-                new Object[] { Product.builder()
-                        .masterData(new com.commercetools.api.models.product.ProductCatalogDataImpl()) },
-                new Object[] { Product.builder()
+                new Object[] { "masterData",
+                        Product.builder()
+                                .masterData(new com.commercetools.api.models.product.ProductCatalogDataImpl()) },
+                new Object[] { "taxCategory", Product.builder()
                         .taxCategory(new com.commercetools.api.models.tax_category.TaxCategoryReferenceImpl()) },
-                new Object[] { Product.builder().state(new com.commercetools.api.models.state.StateReferenceImpl()) },
-                new Object[] { Product.builder()
+                new Object[] { "state",
+                        Product.builder().state(new com.commercetools.api.models.state.StateReferenceImpl()) },
+                new Object[] { "reviewRatingStatistics", Product.builder()
                         .reviewRatingStatistics(new com.commercetools.api.models.review.ReviewRatingStatisticsImpl()) },
-                new Object[] { Product.builder()
+                new Object[] { "priceMode", Product.builder()
                         .priceMode(com.commercetools.api.models.product.ProductPriceModeEnum.findEnum("Embedded")) },
-                new Object[] { Product.builder()
-                        .warnings(Collections
-                                .singletonList(new com.commercetools.api.models.warning.WarningObjectImpl())) } };
+                new Object[] { "warnings",
+                        Product.builder()
+                                .warnings(Collections.singletonList(
+                                    new com.commercetools.api.models.warning.WarningObjectImpl())) } };
     }
 
     @Test

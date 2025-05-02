@@ -1,34 +1,27 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class AddLocalizedEnumValueChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(AddLocalizedEnumValueChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, AddLocalizedEnumValueChangeBuilder builder) {
         AddLocalizedEnumValueChange addLocalizedEnumValueChange = builder.buildUnchecked();
         Assertions.assertThat(addLocalizedEnumValueChange).isInstanceOf(AddLocalizedEnumValueChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { AddLocalizedEnumValueChange.builder().change("change") },
-                new Object[] { AddLocalizedEnumValueChange.builder()
+        return new Object[][] { new Object[] { "change", AddLocalizedEnumValueChange.builder().change("change") },
+                new Object[] { "nextValue", AddLocalizedEnumValueChange.builder()
                         .nextValue(new com.commercetools.history.models.common.AttributeLocalizedEnumValueImpl()) },
-                new Object[] { AddLocalizedEnumValueChange.builder().fieldName("fieldName") },
-                new Object[] { AddLocalizedEnumValueChange.builder().attributeName("attributeName") } };
+                new Object[] { "fieldName", AddLocalizedEnumValueChange.builder().fieldName("fieldName") },
+                new Object[] { "attributeName",
+                        AddLocalizedEnumValueChange.builder().attributeName("attributeName") } };
     }
 
     @Test

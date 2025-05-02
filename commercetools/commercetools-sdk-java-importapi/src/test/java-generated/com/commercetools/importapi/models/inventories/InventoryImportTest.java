@@ -3,37 +3,30 @@ package com.commercetools.importapi.models.inventories;
 
 import java.time.ZonedDateTime;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class InventoryImportTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(InventoryImportBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, InventoryImportBuilder builder) {
         InventoryImport inventoryImport = builder.buildUnchecked();
         Assertions.assertThat(inventoryImport).isInstanceOf(InventoryImport.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { InventoryImport.builder().key("key") },
-                new Object[] { InventoryImport.builder().sku("sku") },
-                new Object[] { InventoryImport.builder().quantityOnStock(2L) },
-                new Object[] { InventoryImport.builder().restockableInDays(4L) },
-                new Object[] { InventoryImport.builder().expectedDelivery(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { InventoryImport.builder()
+        return new Object[][] { new Object[] { "key", InventoryImport.builder().key("key") },
+                new Object[] { "sku", InventoryImport.builder().sku("sku") },
+                new Object[] { "quantityOnStock", InventoryImport.builder().quantityOnStock(2L) },
+                new Object[] { "restockableInDays", InventoryImport.builder().restockableInDays(4L) },
+                new Object[] { "expectedDelivery",
+                        InventoryImport.builder().expectedDelivery(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "supplyChannel", InventoryImport.builder()
                         .supplyChannel(new com.commercetools.importapi.models.common.ChannelKeyReferenceImpl()) },
-                new Object[] { InventoryImport.builder()
+                new Object[] { "custom", InventoryImport.builder()
                         .custom(new com.commercetools.importapi.models.customfields.CustomImpl()) } };
     }
 

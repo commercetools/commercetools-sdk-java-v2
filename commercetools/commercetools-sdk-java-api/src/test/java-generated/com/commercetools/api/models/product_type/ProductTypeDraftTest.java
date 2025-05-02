@@ -3,35 +3,28 @@ package com.commercetools.api.models.product_type;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductTypeDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductTypeDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductTypeDraftBuilder builder) {
         ProductTypeDraft productTypeDraft = builder.buildUnchecked();
         Assertions.assertThat(productTypeDraft).isInstanceOf(ProductTypeDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductTypeDraft.builder().key("key") },
-                new Object[] { ProductTypeDraft.builder().name("name") },
-                new Object[] { ProductTypeDraft.builder().description("description") },
-                new Object[] { ProductTypeDraft.builder()
-                        .attributes(Collections.singletonList(
-                            new com.commercetools.api.models.product_type.AttributeDefinitionDraftImpl())) } };
+        return new Object[][] { new Object[] { "key", ProductTypeDraft.builder().key("key") },
+                new Object[] { "name", ProductTypeDraft.builder().name("name") },
+                new Object[] { "description", ProductTypeDraft.builder().description("description") },
+                new Object[] { "attributes",
+                        ProductTypeDraft.builder()
+                                .attributes(Collections.singletonList(
+                                    new com.commercetools.api.models.product_type.AttributeDefinitionDraftImpl())) } };
     }
 
     @Test

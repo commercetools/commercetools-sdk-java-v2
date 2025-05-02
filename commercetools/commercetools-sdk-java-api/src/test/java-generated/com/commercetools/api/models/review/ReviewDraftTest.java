@@ -1,43 +1,38 @@
 
 package com.commercetools.api.models.review;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ReviewDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ReviewDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ReviewDraftBuilder builder) {
         ReviewDraft reviewDraft = builder.buildUnchecked();
         Assertions.assertThat(reviewDraft).isInstanceOf(ReviewDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ReviewDraft.builder().key("key") },
-                new Object[] { ReviewDraft.builder().uniquenessValue("uniquenessValue") },
-                new Object[] { ReviewDraft.builder().locale("locale") },
-                new Object[] { ReviewDraft.builder().authorName("authorName") },
-                new Object[] { ReviewDraft.builder().title("title") },
-                new Object[] { ReviewDraft.builder().text("text") },
-                new Object[] { ReviewDraft.builder()
-                        .target(new com.commercetools.api.models.common.ResourceIdentifierImpl()) },
-                new Object[] { ReviewDraft.builder()
-                        .state(new com.commercetools.api.models.state.StateResourceIdentifierImpl()) },
-                new Object[] { ReviewDraft.builder().rating(5) },
-                new Object[] { ReviewDraft.builder()
-                        .customer(new com.commercetools.api.models.customer.CustomerResourceIdentifierImpl()) },
-                new Object[] {
+        return new Object[][] { new Object[] { "key", ReviewDraft.builder().key("key") },
+                new Object[] { "uniquenessValue", ReviewDraft.builder().uniquenessValue("uniquenessValue") },
+                new Object[] { "locale", ReviewDraft.builder().locale("locale") },
+                new Object[] { "authorName", ReviewDraft.builder().authorName("authorName") },
+                new Object[] { "title", ReviewDraft.builder().title("title") },
+                new Object[] { "text", ReviewDraft.builder().text("text") },
+                new Object[] { "target",
+                        ReviewDraft.builder()
+                                .target(new com.commercetools.api.models.common.ResourceIdentifierImpl()) },
+                new Object[] { "state",
+                        ReviewDraft.builder()
+                                .state(new com.commercetools.api.models.state.StateResourceIdentifierImpl()) },
+                new Object[] { "rating", ReviewDraft.builder().rating(5) },
+                new Object[] { "customer",
+                        ReviewDraft.builder()
+                                .customer(new com.commercetools.api.models.customer.CustomerResourceIdentifierImpl()) },
+                new Object[] { "custom",
                         ReviewDraft.builder().custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) } };
     }
 

@@ -1,36 +1,31 @@
 
 package com.commercetools.api.models.message;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class BusinessUnitAddressCustomTypeSetMessagePayloadTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(BusinessUnitAddressCustomTypeSetMessagePayloadBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, BusinessUnitAddressCustomTypeSetMessagePayloadBuilder builder) {
         BusinessUnitAddressCustomTypeSetMessagePayload businessUnitAddressCustomTypeSetMessagePayload = builder
                 .buildUnchecked();
         Assertions.assertThat(businessUnitAddressCustomTypeSetMessagePayload)
                 .isInstanceOf(BusinessUnitAddressCustomTypeSetMessagePayload.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { BusinessUnitAddressCustomTypeSetMessagePayload.builder()
-                        .customFields(new com.commercetools.api.models.type.CustomFieldsImpl()) },
-                new Object[] { BusinessUnitAddressCustomTypeSetMessagePayload.builder().oldTypeId("oldTypeId") },
-                new Object[] { BusinessUnitAddressCustomTypeSetMessagePayload.builder().addressId("addressId") } };
+                new Object[] { "customFields",
+                        BusinessUnitAddressCustomTypeSetMessagePayload.builder()
+                                .customFields(new com.commercetools.api.models.type.CustomFieldsImpl()) },
+                new Object[] { "oldTypeId",
+                        BusinessUnitAddressCustomTypeSetMessagePayload.builder().oldTypeId("oldTypeId") },
+                new Object[] { "addressId",
+                        BusinessUnitAddressCustomTypeSetMessagePayload.builder().addressId("addressId") } };
     }
 
     @Test

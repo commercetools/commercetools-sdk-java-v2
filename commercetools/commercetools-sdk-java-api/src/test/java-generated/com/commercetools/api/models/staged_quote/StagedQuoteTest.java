@@ -3,56 +3,55 @@ package com.commercetools.api.models.staged_quote;
 
 import java.time.ZonedDateTime;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class StagedQuoteTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(StagedQuoteBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, StagedQuoteBuilder builder) {
         StagedQuote stagedQuote = builder.buildUnchecked();
         Assertions.assertThat(stagedQuote).isInstanceOf(StagedQuote.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { StagedQuote.builder().id("id") },
-                new Object[] { StagedQuote.builder().version(2L) }, new Object[] { StagedQuote.builder().key("key") },
-                new Object[] { StagedQuote.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { StagedQuote.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { StagedQuote.builder()
-                        .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
-                new Object[] {
+        return new Object[][] { new Object[] { "id", StagedQuote.builder().id("id") },
+                new Object[] { "version", StagedQuote.builder().version(2L) },
+                new Object[] { "key", StagedQuote.builder().key("key") },
+                new Object[] { "createdAt", StagedQuote.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedAt",
+                        StagedQuote.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedBy",
+                        StagedQuote.builder()
+                                .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
+                new Object[] { "createdBy",
                         StagedQuote.builder().createdBy(new com.commercetools.api.models.common.CreatedByImpl()) },
-                new Object[] {
+                new Object[] { "stagedQuoteState",
                         StagedQuote.builder()
                                 .stagedQuoteState(com.commercetools.api.models.staged_quote.StagedQuoteState
                                         .findEnum("InProgress")) },
-                new Object[] { StagedQuote.builder()
-                        .customer(new com.commercetools.api.models.customer.CustomerReferenceImpl()) },
-                new Object[] { StagedQuote.builder()
+                new Object[] { "customer",
+                        StagedQuote.builder()
+                                .customer(new com.commercetools.api.models.customer.CustomerReferenceImpl()) },
+                new Object[] { "quoteRequest", StagedQuote.builder()
                         .quoteRequest(new com.commercetools.api.models.quote_request.QuoteRequestReferenceImpl()) },
-                new Object[] { StagedQuote.builder()
-                        .quotationCart(new com.commercetools.api.models.cart.CartReferenceImpl()) },
-                new Object[] { StagedQuote.builder().validTo(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { StagedQuote.builder().sellerComment("sellerComment") },
-                new Object[] { StagedQuote.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) },
-                new Object[] {
+                new Object[] { "quotationCart",
+                        StagedQuote.builder()
+                                .quotationCart(new com.commercetools.api.models.cart.CartReferenceImpl()) },
+                new Object[] { "validTo", StagedQuote.builder().validTo(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "sellerComment", StagedQuote.builder().sellerComment("sellerComment") },
+                new Object[] { "custom",
+                        StagedQuote.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) },
+                new Object[] { "state",
                         StagedQuote.builder().state(new com.commercetools.api.models.state.StateReferenceImpl()) },
-                new Object[] { StagedQuote.builder().purchaseOrderNumber("purchaseOrderNumber") },
-                new Object[] { StagedQuote.builder()
+                new Object[] { "purchaseOrderNumber",
+                        StagedQuote.builder().purchaseOrderNumber("purchaseOrderNumber") },
+                new Object[] { "businessUnit", StagedQuote.builder()
                         .businessUnit(new com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceImpl()) },
-                new Object[] {
+                new Object[] { "store",
                         StagedQuote.builder().store(new com.commercetools.api.models.store.StoreKeyReferenceImpl()) } };
     }
 

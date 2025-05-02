@@ -1,33 +1,26 @@
 
 package com.commercetools.api.models.message;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class DeliveryAddedMessageTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(DeliveryAddedMessageBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, DeliveryAddedMessageBuilder builder) {
         DeliveryAddedMessage deliveryAddedMessage = builder.buildUnchecked();
         Assertions.assertThat(deliveryAddedMessage).isInstanceOf(DeliveryAddedMessage.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { DeliveryAddedMessage.builder()
-                        .delivery(new com.commercetools.api.models.order.DeliveryImpl()) },
-                new Object[] { DeliveryAddedMessage.builder().shippingKey("shippingKey") } };
+                new Object[] { "delivery",
+                        DeliveryAddedMessage.builder()
+                                .delivery(new com.commercetools.api.models.order.DeliveryImpl()) },
+                new Object[] { "shippingKey", DeliveryAddedMessage.builder().shippingKey("shippingKey") } };
     }
 
     @Test

@@ -1,36 +1,31 @@
 
 package com.commercetools.api.models.order_edit;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class StagedOrderSetLineItemCustomTypeActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(StagedOrderSetLineItemCustomTypeActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, StagedOrderSetLineItemCustomTypeActionBuilder builder) {
         StagedOrderSetLineItemCustomTypeAction stagedOrderSetLineItemCustomTypeAction = builder.buildUnchecked();
         Assertions.assertThat(stagedOrderSetLineItemCustomTypeAction)
                 .isInstanceOf(StagedOrderSetLineItemCustomTypeAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { StagedOrderSetLineItemCustomTypeAction.builder().lineItemId("lineItemId") },
-                new Object[] { StagedOrderSetLineItemCustomTypeAction.builder().lineItemKey("lineItemKey") },
-                new Object[] { StagedOrderSetLineItemCustomTypeAction.builder()
-                        .type(new com.commercetools.api.models.type.TypeResourceIdentifierImpl()) },
-                new Object[] { StagedOrderSetLineItemCustomTypeAction.builder()
+                new Object[] { "lineItemId",
+                        StagedOrderSetLineItemCustomTypeAction.builder().lineItemId("lineItemId") },
+                new Object[] { "lineItemKey",
+                        StagedOrderSetLineItemCustomTypeAction.builder().lineItemKey("lineItemKey") },
+                new Object[] { "type",
+                        StagedOrderSetLineItemCustomTypeAction.builder()
+                                .type(new com.commercetools.api.models.type.TypeResourceIdentifierImpl()) },
+                new Object[] { "fields", StagedOrderSetLineItemCustomTypeAction.builder()
                         .fields(new com.commercetools.api.models.type.FieldContainerImpl()) } };
     }
 

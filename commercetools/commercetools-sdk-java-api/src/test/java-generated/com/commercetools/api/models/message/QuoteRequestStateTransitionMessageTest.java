@@ -1,36 +1,30 @@
 
 package com.commercetools.api.models.message;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class QuoteRequestStateTransitionMessageTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(QuoteRequestStateTransitionMessageBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, QuoteRequestStateTransitionMessageBuilder builder) {
         QuoteRequestStateTransitionMessage quoteRequestStateTransitionMessage = builder.buildUnchecked();
         Assertions.assertThat(quoteRequestStateTransitionMessage)
                 .isInstanceOf(QuoteRequestStateTransitionMessage.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { QuoteRequestStateTransitionMessage.builder()
-                        .state(new com.commercetools.api.models.state.StateReferenceImpl()) },
-                new Object[] { QuoteRequestStateTransitionMessage.builder()
-                        .oldState(new com.commercetools.api.models.state.StateReferenceImpl()) },
-                new Object[] { QuoteRequestStateTransitionMessage.builder().force(true) } };
+                new Object[] { "state",
+                        QuoteRequestStateTransitionMessage.builder()
+                                .state(new com.commercetools.api.models.state.StateReferenceImpl()) },
+                new Object[] { "oldState",
+                        QuoteRequestStateTransitionMessage.builder()
+                                .oldState(new com.commercetools.api.models.state.StateReferenceImpl()) },
+                new Object[] { "force", QuoteRequestStateTransitionMessage.builder().force(true) } };
     }
 
     @Test

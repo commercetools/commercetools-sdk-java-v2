@@ -3,37 +3,30 @@ package com.commercetools.history.models.change;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetReservationsChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetReservationsChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetReservationsChangeBuilder builder) {
         SetReservationsChange setReservationsChange = builder.buildUnchecked();
         Assertions.assertThat(setReservationsChange).isInstanceOf(SetReservationsChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetReservationsChange.builder().change("change") },
-                new Object[] {
+        return new Object[][] { new Object[] { "change", SetReservationsChange.builder().change("change") },
+                new Object[] { "previousValue",
                         SetReservationsChange.builder()
                                 .previousValue(Collections.singletonList(
                                     new com.commercetools.history.models.common.ReservationImpl())) },
-                new Object[] { SetReservationsChange.builder()
-                        .nextValue(Collections
-                                .singletonList(new com.commercetools.history.models.common.ReservationImpl())) } };
+                new Object[] { "nextValue",
+                        SetReservationsChange.builder()
+                                .nextValue(Collections.singletonList(
+                                    new com.commercetools.history.models.common.ReservationImpl())) } };
     }
 
     @Test

@@ -1,34 +1,26 @@
 
 package com.commercetools.api.models.message;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductPriceKeySetMessagePayloadTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductPriceKeySetMessagePayloadBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductPriceKeySetMessagePayloadBuilder builder) {
         ProductPriceKeySetMessagePayload productPriceKeySetMessagePayload = builder.buildUnchecked();
         Assertions.assertThat(productPriceKeySetMessagePayload).isInstanceOf(ProductPriceKeySetMessagePayload.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductPriceKeySetMessagePayload.builder().variantId(5L) },
-                new Object[] { ProductPriceKeySetMessagePayload.builder().priceId("priceId") },
-                new Object[] { ProductPriceKeySetMessagePayload.builder().oldKey("oldKey") },
-                new Object[] { ProductPriceKeySetMessagePayload.builder().key("key") },
-                new Object[] { ProductPriceKeySetMessagePayload.builder().staged(true) } };
+        return new Object[][] { new Object[] { "variantId", ProductPriceKeySetMessagePayload.builder().variantId(5L) },
+                new Object[] { "priceId", ProductPriceKeySetMessagePayload.builder().priceId("priceId") },
+                new Object[] { "oldKey", ProductPriceKeySetMessagePayload.builder().oldKey("oldKey") },
+                new Object[] { "key", ProductPriceKeySetMessagePayload.builder().key("key") },
+                new Object[] { "staged", ProductPriceKeySetMessagePayload.builder().staged(true) } };
     }
 
     @Test

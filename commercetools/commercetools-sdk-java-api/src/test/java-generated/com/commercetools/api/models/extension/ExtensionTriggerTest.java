@@ -3,35 +3,31 @@ package com.commercetools.api.models.extension;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ExtensionTriggerTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ExtensionTriggerBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ExtensionTriggerBuilder builder) {
         ExtensionTrigger extensionTrigger = builder.buildUnchecked();
         Assertions.assertThat(extensionTrigger).isInstanceOf(ExtensionTrigger.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ExtensionTrigger.builder()
-                .resourceTypeId(com.commercetools.api.models.extension.ExtensionResourceTypeId.findEnum("cart")) },
-                new Object[] { ExtensionTrigger.builder()
-                        .actions(Collections.singletonList(
-                            com.commercetools.api.models.extension.ExtensionAction.findEnum("Create"))) },
-                new Object[] { ExtensionTrigger.builder().condition("condition") } };
+        return new Object[][] {
+                new Object[] { "resourceTypeId",
+                        ExtensionTrigger.builder()
+                                .resourceTypeId(
+                                    com.commercetools.api.models.extension.ExtensionResourceTypeId.findEnum("cart")) },
+                new Object[] { "actions",
+                        ExtensionTrigger.builder()
+                                .actions(Collections.singletonList(
+                                    com.commercetools.api.models.extension.ExtensionAction.findEnum("Create"))) },
+                new Object[] { "condition", ExtensionTrigger.builder().condition("condition") } };
     }
 
     @Test

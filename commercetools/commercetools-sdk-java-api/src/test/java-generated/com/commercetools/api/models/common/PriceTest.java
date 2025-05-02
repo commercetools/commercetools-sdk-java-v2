@@ -4,43 +4,40 @@ package com.commercetools.api.models.common;
 import java.time.ZonedDateTime;
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class PriceTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(PriceBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, PriceBuilder builder) {
         Price price = builder.buildUnchecked();
         Assertions.assertThat(price).isInstanceOf(Price.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { Price.builder().id("id") }, new Object[] { Price.builder().key("key") },
-                new Object[] { Price.builder().value(new com.commercetools.api.models.common.TypedMoneyImpl()) },
-                new Object[] { Price.builder().country("country") },
-                new Object[] { Price.builder()
+        return new Object[][] { new Object[] { "id", Price.builder().id("id") },
+                new Object[] { "key", Price.builder().key("key") },
+                new Object[] { "value",
+                        Price.builder().value(new com.commercetools.api.models.common.TypedMoneyImpl()) },
+                new Object[] { "country", Price.builder().country("country") },
+                new Object[] { "customerGroup", Price.builder()
                         .customerGroup(new com.commercetools.api.models.customer_group.CustomerGroupReferenceImpl()) },
-                new Object[] {
+                new Object[] { "channel",
                         Price.builder().channel(new com.commercetools.api.models.channel.ChannelReferenceImpl()) },
-                new Object[] { Price.builder().validFrom(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { Price.builder().validUntil(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] {
+                new Object[] { "validFrom", Price.builder().validFrom(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "validUntil", Price.builder().validUntil(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "discounted",
                         Price.builder().discounted(new com.commercetools.api.models.common.DiscountedPriceImpl()) },
-                new Object[] { Price.builder()
-                        .tiers(Collections.singletonList(new com.commercetools.api.models.common.PriceTierImpl())) },
-                new Object[] { Price.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) } };
+                new Object[] { "tiers",
+                        Price.builder()
+                                .tiers(Collections
+                                        .singletonList(new com.commercetools.api.models.common.PriceTierImpl())) },
+                new Object[] { "custom",
+                        Price.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) } };
     }
 
     @Test

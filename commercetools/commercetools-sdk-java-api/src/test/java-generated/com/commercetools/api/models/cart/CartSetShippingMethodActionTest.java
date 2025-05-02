@@ -1,34 +1,26 @@
 
 package com.commercetools.api.models.cart;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CartSetShippingMethodActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CartSetShippingMethodActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CartSetShippingMethodActionBuilder builder) {
         CartSetShippingMethodAction cartSetShippingMethodAction = builder.buildUnchecked();
         Assertions.assertThat(cartSetShippingMethodAction).isInstanceOf(CartSetShippingMethodAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { CartSetShippingMethodAction.builder()
+                new Object[] { "shippingMethod", CartSetShippingMethodAction.builder()
                         .shippingMethod(
                             new com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifierImpl()) },
-                new Object[] { CartSetShippingMethodAction.builder()
+                new Object[] { "externalTaxRate", CartSetShippingMethodAction.builder()
                         .externalTaxRate(new com.commercetools.api.models.cart.ExternalTaxRateDraftImpl()) } };
     }
 

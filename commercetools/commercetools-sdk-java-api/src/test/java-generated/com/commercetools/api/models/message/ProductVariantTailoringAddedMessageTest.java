@@ -1,38 +1,32 @@
 
 package com.commercetools.api.models.message;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductVariantTailoringAddedMessageTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductVariantTailoringAddedMessageBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductVariantTailoringAddedMessageBuilder builder) {
         ProductVariantTailoringAddedMessage productVariantTailoringAddedMessage = builder.buildUnchecked();
         Assertions.assertThat(productVariantTailoringAddedMessage)
                 .isInstanceOf(ProductVariantTailoringAddedMessage.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { ProductVariantTailoringAddedMessage.builder()
-                        .store(new com.commercetools.api.models.store.StoreKeyReferenceImpl()) },
-                new Object[] { ProductVariantTailoringAddedMessage.builder().productKey("productKey") },
-                new Object[] { ProductVariantTailoringAddedMessage.builder()
-                        .product(new com.commercetools.api.models.product.ProductReferenceImpl()) },
-                new Object[] { ProductVariantTailoringAddedMessage.builder().variantId(5L) },
-                new Object[] { ProductVariantTailoringAddedMessage.builder()
+                new Object[] { "store",
+                        ProductVariantTailoringAddedMessage.builder()
+                                .store(new com.commercetools.api.models.store.StoreKeyReferenceImpl()) },
+                new Object[] { "productKey", ProductVariantTailoringAddedMessage.builder().productKey("productKey") },
+                new Object[] { "product",
+                        ProductVariantTailoringAddedMessage.builder()
+                                .product(new com.commercetools.api.models.product.ProductReferenceImpl()) },
+                new Object[] { "variantId", ProductVariantTailoringAddedMessage.builder().variantId(5L) },
+                new Object[] { "variant", ProductVariantTailoringAddedMessage.builder()
                         .variant(new com.commercetools.api.models.product_tailoring.ProductVariantTailoringImpl()) } };
     }
 

@@ -3,32 +3,24 @@ package com.commercetools.api.models.subscription;
 
 import java.time.ZonedDateTime;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ResourceUpdatedDeliveryPayloadTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ResourceUpdatedDeliveryPayloadBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ResourceUpdatedDeliveryPayloadBuilder builder) {
         ResourceUpdatedDeliveryPayload resourceUpdatedDeliveryPayload = builder.buildUnchecked();
         Assertions.assertThat(resourceUpdatedDeliveryPayload).isInstanceOf(ResourceUpdatedDeliveryPayload.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ResourceUpdatedDeliveryPayload.builder().version(2L) },
-                new Object[] { ResourceUpdatedDeliveryPayload.builder().oldVersion(3L) },
-                new Object[] { ResourceUpdatedDeliveryPayload.builder()
+        return new Object[][] { new Object[] { "version", ResourceUpdatedDeliveryPayload.builder().version(2L) },
+                new Object[] { "oldVersion", ResourceUpdatedDeliveryPayload.builder().oldVersion(3L) },
+                new Object[] { "modifiedAt", ResourceUpdatedDeliveryPayload.builder()
                         .modifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) } };
     }
 

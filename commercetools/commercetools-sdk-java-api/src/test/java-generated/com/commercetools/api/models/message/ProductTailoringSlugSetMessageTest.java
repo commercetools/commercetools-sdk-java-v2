@@ -1,38 +1,33 @@
 
 package com.commercetools.api.models.message;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductTailoringSlugSetMessageTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductTailoringSlugSetMessageBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductTailoringSlugSetMessageBuilder builder) {
         ProductTailoringSlugSetMessage productTailoringSlugSetMessage = builder.buildUnchecked();
         Assertions.assertThat(productTailoringSlugSetMessage).isInstanceOf(ProductTailoringSlugSetMessage.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { ProductTailoringSlugSetMessage.builder()
-                        .store(new com.commercetools.api.models.store.StoreKeyReferenceImpl()) },
-                new Object[] { ProductTailoringSlugSetMessage.builder().productKey("productKey") },
-                new Object[] { ProductTailoringSlugSetMessage.builder()
-                        .product(new com.commercetools.api.models.product.ProductReferenceImpl()) },
-                new Object[] { ProductTailoringSlugSetMessage.builder()
-                        .slug(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { ProductTailoringSlugSetMessage.builder()
+                new Object[] { "store",
+                        ProductTailoringSlugSetMessage.builder()
+                                .store(new com.commercetools.api.models.store.StoreKeyReferenceImpl()) },
+                new Object[] { "productKey", ProductTailoringSlugSetMessage.builder().productKey("productKey") },
+                new Object[] { "product",
+                        ProductTailoringSlugSetMessage.builder()
+                                .product(new com.commercetools.api.models.product.ProductReferenceImpl()) },
+                new Object[] { "slug",
+                        ProductTailoringSlugSetMessage.builder()
+                                .slug(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "oldSlug", ProductTailoringSlugSetMessage.builder()
                         .oldSlug(new com.commercetools.api.models.common.LocalizedStringImpl()) } };
     }
 

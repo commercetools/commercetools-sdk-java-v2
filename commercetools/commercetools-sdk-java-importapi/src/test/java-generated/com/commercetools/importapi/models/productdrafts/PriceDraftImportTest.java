@@ -4,48 +4,46 @@ package com.commercetools.importapi.models.productdrafts;
 import java.time.ZonedDateTime;
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class PriceDraftImportTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(PriceDraftImportBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, PriceDraftImportBuilder builder) {
         PriceDraftImport priceDraftImport = builder.buildUnchecked();
         Assertions.assertThat(priceDraftImport).isInstanceOf(PriceDraftImport.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { PriceDraftImport.builder()
-                        .value(new com.commercetools.importapi.models.common.TypedMoneyImpl()) },
-                new Object[] { PriceDraftImport.builder().country("country") },
-                new Object[] { PriceDraftImport.builder()
+                new Object[] { "value",
+                        PriceDraftImport.builder()
+                                .value(new com.commercetools.importapi.models.common.TypedMoneyImpl()) },
+                new Object[] { "country", PriceDraftImport.builder().country("country") },
+                new Object[] { "customerGroup", PriceDraftImport.builder()
                         .customerGroup(new com.commercetools.importapi.models.common.CustomerGroupKeyReferenceImpl()) },
-                new Object[] { PriceDraftImport.builder()
-                        .channel(new com.commercetools.importapi.models.common.ChannelKeyReferenceImpl()) },
-                new Object[] { PriceDraftImport.builder().validFrom(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { PriceDraftImport.builder().validUntil(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { PriceDraftImport.builder()
-                        .custom(new com.commercetools.importapi.models.customfields.CustomImpl()) },
-                new Object[] { PriceDraftImport.builder()
-                        .discounted(new com.commercetools.importapi.models.common.DiscountedPriceImpl()) },
-                new Object[] {
+                new Object[] { "channel",
+                        PriceDraftImport.builder()
+                                .channel(new com.commercetools.importapi.models.common.ChannelKeyReferenceImpl()) },
+                new Object[] { "validFrom",
+                        PriceDraftImport.builder().validFrom(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "validUntil",
+                        PriceDraftImport.builder().validUntil(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "custom",
+                        PriceDraftImport.builder()
+                                .custom(new com.commercetools.importapi.models.customfields.CustomImpl()) },
+                new Object[] { "discounted",
+                        PriceDraftImport.builder()
+                                .discounted(new com.commercetools.importapi.models.common.DiscountedPriceImpl()) },
+                new Object[] { "tiers",
                         PriceDraftImport.builder()
                                 .tiers(Collections.singletonList(
                                     new com.commercetools.importapi.models.common.PriceTierImpl())) },
-                new Object[] { PriceDraftImport.builder().key("key") } };
+                new Object[] { "key", PriceDraftImport.builder().key("key") } };
     }
 
     @Test

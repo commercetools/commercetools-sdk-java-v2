@@ -1,35 +1,27 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetStoreModeChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetStoreModeChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetStoreModeChangeBuilder builder) {
         SetStoreModeChange setStoreModeChange = builder.buildUnchecked();
         Assertions.assertThat(setStoreModeChange).isInstanceOf(SetStoreModeChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetStoreModeChange.builder().change("change") },
-                new Object[] {
+        return new Object[][] { new Object[] { "change", SetStoreModeChange.builder().change("change") },
+                new Object[] { "previousValue",
                         SetStoreModeChange.builder()
                                 .previousValue(com.commercetools.history.models.common.BusinessUnitStoreMode
                                         .findEnum("Explicit")) },
-                new Object[] { SetStoreModeChange.builder()
+                new Object[] { "nextValue", SetStoreModeChange.builder()
                         .nextValue(
                             com.commercetools.history.models.common.BusinessUnitStoreMode.findEnum("Explicit")) } };
     }

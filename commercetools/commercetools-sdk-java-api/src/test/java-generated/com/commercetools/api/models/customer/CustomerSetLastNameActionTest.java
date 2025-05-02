@@ -1,30 +1,22 @@
 
 package com.commercetools.api.models.customer;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CustomerSetLastNameActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CustomerSetLastNameActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CustomerSetLastNameActionBuilder builder) {
         CustomerSetLastNameAction customerSetLastNameAction = builder.buildUnchecked();
         Assertions.assertThat(customerSetLastNameAction).isInstanceOf(CustomerSetLastNameAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { CustomerSetLastNameAction.builder().lastName("lastName") } };
+        return new Object[][] { new Object[] { "lastName", CustomerSetLastNameAction.builder().lastName("lastName") } };
     }
 
     @Test

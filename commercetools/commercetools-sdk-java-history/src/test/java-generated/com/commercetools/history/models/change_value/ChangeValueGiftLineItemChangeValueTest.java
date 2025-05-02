@@ -1,37 +1,31 @@
 
 package com.commercetools.history.models.change_value;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ChangeValueGiftLineItemChangeValueTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ChangeValueGiftLineItemChangeValueBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ChangeValueGiftLineItemChangeValueBuilder builder) {
         ChangeValueGiftLineItemChangeValue changeValueGiftLineItemChangeValue = builder.buildUnchecked();
         Assertions.assertThat(changeValueGiftLineItemChangeValue)
                 .isInstanceOf(ChangeValueGiftLineItemChangeValue.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { ChangeValueGiftLineItemChangeValue.builder()
-                        .product(new com.commercetools.history.models.common.ReferenceImpl()) },
-                new Object[] { ChangeValueGiftLineItemChangeValue.builder().variantId(5) },
-                new Object[] { ChangeValueGiftLineItemChangeValue.builder()
-                        .supplyChannel(new com.commercetools.history.models.common.ReferenceImpl()) },
-                new Object[] { ChangeValueGiftLineItemChangeValue.builder()
+                new Object[] { "product",
+                        ChangeValueGiftLineItemChangeValue.builder()
+                                .product(new com.commercetools.history.models.common.ReferenceImpl()) },
+                new Object[] { "variantId", ChangeValueGiftLineItemChangeValue.builder().variantId(5) },
+                new Object[] { "supplyChannel",
+                        ChangeValueGiftLineItemChangeValue.builder()
+                                .supplyChannel(new com.commercetools.history.models.common.ReferenceImpl()) },
+                new Object[] { "distributionChannel", ChangeValueGiftLineItemChangeValue.builder()
                         .distributionChannel(new com.commercetools.history.models.common.ReferenceImpl()) } };
     }
 

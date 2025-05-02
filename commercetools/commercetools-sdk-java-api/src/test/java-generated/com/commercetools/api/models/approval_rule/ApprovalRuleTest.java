@@ -4,51 +4,48 @@ package com.commercetools.api.models.approval_rule;
 import java.time.ZonedDateTime;
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ApprovalRuleTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ApprovalRuleBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ApprovalRuleBuilder builder) {
         ApprovalRule approvalRule = builder.buildUnchecked();
         Assertions.assertThat(approvalRule).isInstanceOf(ApprovalRule.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ApprovalRule.builder().id("id") },
-                new Object[] { ApprovalRule.builder().version(2L) },
-                new Object[] { ApprovalRule.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] {
+        return new Object[][] { new Object[] { "id", ApprovalRule.builder().id("id") },
+                new Object[] { "version", ApprovalRule.builder().version(2L) },
+                new Object[] { "createdAt",
+                        ApprovalRule.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "createdBy",
                         ApprovalRule.builder().createdBy(new com.commercetools.api.models.common.CreatedByImpl()) },
-                new Object[] { ApprovalRule.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { ApprovalRule.builder()
-                        .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
-                new Object[] { ApprovalRule.builder().key("key") },
-                new Object[] { ApprovalRule.builder().name("name") },
-                new Object[] { ApprovalRule.builder().description("description") },
-                new Object[] { ApprovalRule.builder()
+                new Object[] { "lastModifiedAt",
+                        ApprovalRule.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedBy",
+                        ApprovalRule.builder()
+                                .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
+                new Object[] { "key", ApprovalRule.builder().key("key") },
+                new Object[] { "name", ApprovalRule.builder().name("name") },
+                new Object[] { "description", ApprovalRule.builder().description("description") },
+                new Object[] { "status", ApprovalRule.builder()
                         .status(com.commercetools.api.models.approval_rule.ApprovalRuleStatus.findEnum("Active")) },
-                new Object[] { ApprovalRule.builder().predicate("predicate") },
-                new Object[] { ApprovalRule.builder()
-                        .approvers(new com.commercetools.api.models.approval_rule.ApproverHierarchyImpl()) },
-                new Object[] { ApprovalRule.builder()
-                        .requesters(Collections
-                                .singletonList(new com.commercetools.api.models.approval_rule.RuleRequesterImpl())) },
-                new Object[] { ApprovalRule.builder()
+                new Object[] { "predicate", ApprovalRule.builder().predicate("predicate") },
+                new Object[] { "approvers",
+                        ApprovalRule.builder()
+                                .approvers(new com.commercetools.api.models.approval_rule.ApproverHierarchyImpl()) },
+                new Object[] { "requesters",
+                        ApprovalRule.builder()
+                                .requesters(Collections.singletonList(
+                                    new com.commercetools.api.models.approval_rule.RuleRequesterImpl())) },
+                new Object[] { "businessUnit", ApprovalRule.builder()
                         .businessUnit(new com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceImpl()) },
-                new Object[] {
+                new Object[] { "custom",
                         ApprovalRule.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) } };
     }
 

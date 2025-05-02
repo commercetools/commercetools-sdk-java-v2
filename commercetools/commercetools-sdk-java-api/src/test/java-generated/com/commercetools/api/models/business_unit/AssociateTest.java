@@ -3,34 +3,27 @@ package com.commercetools.api.models.business_unit;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class AssociateTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(AssociateBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, AssociateBuilder builder) {
         Associate associate = builder.buildUnchecked();
         Assertions.assertThat(associate).isInstanceOf(Associate.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { Associate.builder()
-                        .associateRoleAssignments(Collections.singletonList(
-                            new com.commercetools.api.models.business_unit.AssociateRoleAssignmentImpl())) },
-                new Object[] { Associate.builder()
+                new Object[] { "associateRoleAssignments",
+                        Associate.builder()
+                                .associateRoleAssignments(Collections.singletonList(
+                                    new com.commercetools.api.models.business_unit.AssociateRoleAssignmentImpl())) },
+                new Object[] { "customer", Associate.builder()
                         .customer(new com.commercetools.api.models.customer.CustomerReferenceImpl()) } };
     }
 

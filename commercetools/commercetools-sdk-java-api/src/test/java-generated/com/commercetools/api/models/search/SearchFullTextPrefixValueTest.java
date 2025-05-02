@@ -1,32 +1,24 @@
 
 package com.commercetools.api.models.search;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SearchFullTextPrefixValueTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SearchFullTextPrefixValueBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SearchFullTextPrefixValueBuilder builder) {
         SearchFullTextPrefixValue searchFullTextPrefixValue = builder.buildUnchecked();
         Assertions.assertThat(searchFullTextPrefixValue).isInstanceOf(SearchFullTextPrefixValue.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SearchFullTextPrefixValue.builder().value("value") },
-                new Object[] { SearchFullTextPrefixValue.builder().language("language") },
-                new Object[] { SearchFullTextPrefixValue.builder()
+        return new Object[][] { new Object[] { "value", SearchFullTextPrefixValue.builder().value("value") },
+                new Object[] { "language", SearchFullTextPrefixValue.builder().language("language") },
+                new Object[] { "mustMatch", SearchFullTextPrefixValue.builder()
                         .mustMatch(com.commercetools.api.models.search.SearchMatchType.findEnum("any")) } };
     }
 

@@ -3,33 +3,26 @@ package com.commercetools.api.models.search;
 
 import java.time.LocalDate;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SearchDateRangeValueTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SearchDateRangeValueBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SearchDateRangeValueBuilder builder) {
         SearchDateRangeValue searchDateRangeValue = builder.buildUnchecked();
         Assertions.assertThat(searchDateRangeValue).isInstanceOf(SearchDateRangeValue.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SearchDateRangeValue.builder().gte(LocalDate.parse("2023-06-01")) },
-                new Object[] { SearchDateRangeValue.builder().gt(LocalDate.parse("2023-06-01")) },
-                new Object[] { SearchDateRangeValue.builder().lte(LocalDate.parse("2023-06-01")) },
-                new Object[] { SearchDateRangeValue.builder().lt(LocalDate.parse("2023-06-01")) } };
+        return new Object[][] {
+                new Object[] { "gte", SearchDateRangeValue.builder().gte(LocalDate.parse("2023-06-01")) },
+                new Object[] { "gt", SearchDateRangeValue.builder().gt(LocalDate.parse("2023-06-01")) },
+                new Object[] { "lte", SearchDateRangeValue.builder().lte(LocalDate.parse("2023-06-01")) },
+                new Object[] { "lt", SearchDateRangeValue.builder().lt(LocalDate.parse("2023-06-01")) } };
     }
 
     @Test

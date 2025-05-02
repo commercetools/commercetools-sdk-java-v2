@@ -3,36 +3,29 @@ package com.commercetools.importapi.models.errors;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ErrorResponseTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ErrorResponseBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ErrorResponseBuilder builder) {
         ErrorResponse errorResponse = builder.buildUnchecked();
         Assertions.assertThat(errorResponse).isInstanceOf(ErrorResponse.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ErrorResponse.builder().statusCode(8) },
-                new Object[] { ErrorResponse.builder().message("message") },
-                new Object[] { ErrorResponse.builder().error("error") },
-                new Object[] { ErrorResponse.builder().error_description("error_description") },
-                new Object[] { ErrorResponse.builder()
-                        .errors(Collections
-                                .singletonList(new com.commercetools.importapi.models.errors.ErrorObjectImpl())) } };
+        return new Object[][] { new Object[] { "statusCode", ErrorResponse.builder().statusCode(8) },
+                new Object[] { "message", ErrorResponse.builder().message("message") },
+                new Object[] { "error", ErrorResponse.builder().error("error") },
+                new Object[] { "error_description", ErrorResponse.builder().error_description("error_description") },
+                new Object[] { "errors",
+                        ErrorResponse.builder()
+                                .errors(Collections.singletonList(
+                                    new com.commercetools.importapi.models.errors.ErrorObjectImpl())) } };
     }
 
     @Test

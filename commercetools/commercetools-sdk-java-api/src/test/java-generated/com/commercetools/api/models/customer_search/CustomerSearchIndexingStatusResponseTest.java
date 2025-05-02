@@ -3,40 +3,36 @@ package com.commercetools.api.models.customer_search;
 
 import java.time.ZonedDateTime;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CustomerSearchIndexingStatusResponseTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CustomerSearchIndexingStatusResponseBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CustomerSearchIndexingStatusResponseBuilder builder) {
         CustomerSearchIndexingStatusResponse customerSearchIndexingStatusResponse = builder.buildUnchecked();
         Assertions.assertThat(customerSearchIndexingStatusResponse)
                 .isInstanceOf(CustomerSearchIndexingStatusResponse.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { CustomerSearchIndexingStatusResponse.builder()
-                        .status(com.commercetools.api.models.project.CustomerIndexingStatus.findEnum("Scheduled")) },
-                new Object[] { CustomerSearchIndexingStatusResponse.builder()
+                new Object[] { "status",
+                        CustomerSearchIndexingStatusResponse.builder()
+                                .status(com.commercetools.api.models.project.CustomerIndexingStatus
+                                        .findEnum("Scheduled")) },
+                new Object[] { "states", CustomerSearchIndexingStatusResponse.builder()
                         .states(new com.commercetools.api.models.customer_search.CustomerIndexingProgressImpl()) },
-                new Object[] { CustomerSearchIndexingStatusResponse.builder()
-                        .startedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { CustomerSearchIndexingStatusResponse.builder()
-                        .lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { CustomerSearchIndexingStatusResponse.builder().retryCount(7) } };
+                new Object[] { "startedAt",
+                        CustomerSearchIndexingStatusResponse.builder()
+                                .startedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedAt",
+                        CustomerSearchIndexingStatusResponse.builder()
+                                .lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "retryCount", CustomerSearchIndexingStatusResponse.builder().retryCount(7) } };
     }
 
     @Test

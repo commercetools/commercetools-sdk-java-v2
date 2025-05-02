@@ -7,4 +7,5 @@ dependencies {
     testImplementation google.gson
     testImplementation mockito.inline
     testImplementation mockito.junit
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }

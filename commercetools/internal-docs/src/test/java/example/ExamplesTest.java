@@ -52,8 +52,6 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.slf4j.event.Level;
 
-import dev.failsafe.Failsafe;
-import dev.failsafe.FailsafeExecutor;
 import reactor.netty.http.HttpProtocol;
 
 public class ExamplesTest {
@@ -121,18 +119,14 @@ public class ExamplesTest {
     }
 
     public void timeoutMiddleware() {
-        dev.failsafe.Timeout<ApiHttpResponse<byte[]>> timeout = dev.failsafe.Timeout
-                .<ApiHttpResponse<byte[]>> builder(Duration.ofSeconds(10))
-                .build();
-        FailsafeExecutor<ApiHttpResponse<byte[]>> failsafeExecutor = Failsafe.with(timeout);
-
         ProjectApiRoot apiRoot = ApiRootBuilder.of()
                 .defaultClient(ClientCredentials.of()
                         .withClientId("your-client-id")
                         .withClientSecret("your-client-secret")
                         .build(),
                     ServiceRegion.GCP_EUROPE_WEST1)
-                .addMiddleware((request, next) -> failsafeExecutor.getStageAsync(() -> next.apply(request)))
+                .withRequestPolicies(
+                    policies -> policies.withAllOtherRequests(request -> request.withTimeout(Duration.ofSeconds(10))))
                 .build("my-project");
     }
 
@@ -401,8 +395,12 @@ public class ExamplesTest {
         ProjectApiRoot apiRoot = ApiRootBuilder.of()
                 .defaultClient(ClientCredentials.of().withClientId("clientId").withClientSecret("clientSecret").build(),
                     ServiceRegion.GCP_EUROPE_WEST1)
-                .withPolicies(policies -> policies.withRetry(builder -> builder.maxRetries(5)
-                        .statusCodes(Arrays.asList(BAD_GATEWAY_502, SERVICE_UNAVAILABLE_503, GATEWAY_TIMEOUT_504))))
+                .withRequestPolicies(
+                    policies -> policies
+                            .withAllOtherRequests(
+                                request -> request.withRetry(builder -> builder.maxRetries(5)
+                                        .statusCodes(Arrays.asList(BAD_GATEWAY_502, SERVICE_UNAVAILABLE_503,
+                                            GATEWAY_TIMEOUT_504)))))
                 .build("my-project");
     }
 
@@ -590,7 +588,8 @@ public class ExamplesTest {
     public void queueConcurrentLimitation() {
         ApiRootBuilder.of()
                 // ...
-                .withPolicies(policies -> policies.withBulkhead(64, Duration.ofSeconds(10)))
+                .withRequestPolicies(policies -> policies
+                        .withAllOtherRequests(request -> request.withBulkhead(64, Duration.ofSeconds(10))))
                 .build();
     }
 

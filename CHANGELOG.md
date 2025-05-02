@@ -1,4 +1,56 @@
 
+# 18.0.0 (2025-05-02)
+
+## New Features
+
+### Java 11
+
+The SDK is built with Java 11 now. We will also take advantage of different language features in future releases.
+
+### New Request Policy Middleware
+
+It's now possible to create request policies based on the requests context. E.g. different timeouts and retries for POST and GET requests:
+
+```java
+ProjectApiRoot b = ApiRootBuilder.of()
+       ...
+        .withRequestPolicies(policies -> policies
+                .withRequestMatching(apiHttpRequest -> apiHttpRequest.getMethod().equals(ApiHttpMethod.POST),
+                    policyBuilder -> policyBuilder.withTimeout(Duration.ofSeconds(10)))
+                .withRequestMatching(apiHttpRequest -> apiHttpRequest.getMethod().equals(ApiHttpMethod.GET),
+                    policyBuilder -> policyBuilder.withTimeout(Duration.ofSeconds(1)))
+                .withAllOtherRequests(policyBuilder -> policyBuilder.withTimeout(Duration.ofSeconds(60))))
+        .build(projectKey);
+```
+
+## What's Changed
+* fix Delivery discriminators by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/866
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/867
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/865
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/870
+* Update java to 11 by @lojzatran in https://github.com/commercetools/commercetools-sdk-java-v2/pull/844
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/871
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/872
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/873
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/877
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/879
+* DEVX-588 adding query predicate builder documentation by @barbara79 in https://github.com/commercetools/commercetools-sdk-java-v2/pull/874
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/883
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/885
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/886
+* Add request specific policies by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/882
+* chore(deps): lock file maintenance by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/881
+* chore(deps): update actions/setup-java digest to c5195ef by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/875
+* chore(deps): update actions/create-github-app-token action to v2 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/869
+* chore(deps): update github/codeql-action digest to 97a2bfd by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/868
+* fix(deps): update all dependencies by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/858
+* revert junit-jupiter by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/887
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/888
+* remove dataprovider library by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/889
+* update junit by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/890
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/17.30.0...18.0.0
+
 # 17.30.0 (2025-03-31)
 
 ## Important information

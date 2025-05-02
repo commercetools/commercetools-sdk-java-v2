@@ -15,33 +15,34 @@ import dev.failsafe.Policy;
 import dev.failsafe.spi.Scheduler;
 
 /**
- * <h2>PolicyBuilder</h2>
+ * <h2>RequestPolicyBuilder</h2>
  *
- * <p>The PolicyBuilder allows the combination of different policies for failing requests.</p>
+ * <p>The RequestPolicyBuilder allows the combination of different policies for failing requests and apply them to matching
+ * requests.</p>
  *
- * <p>The order of policies matters. For example applying a {@link #withTimeout(Duration) timeout} before
- * {@link #withRetry(RetryPolicyBuilder)} retry} will time out across all requests whereas applying a timeout after the retry count
+ * <p>The order of policies matters. For example applying a {@link PolicyBuilder#withTimeout(Duration) timeout} before
+ * {@link PolicyBuilder#withRetry(RetryPolicyBuilder)} retry} will time out across all requests whereas applying a timeout after the retry count
  * against every single request even the retried ones.</p>
  *
  * <h3 id="retry">Retry</h3>
  *
  * <h4>Retrying on HTTP status codes</h4>
  *
- * {@include.example io.vrap.rmf.base.client.http.PolicyMiddlewareTest#retryConfigurationStatusCodes()}
+ * {@include.example io.vrap.rmf.base.client.http.RequestPolicyMiddlewareTest#retryConfigurationStatusCodes()}
  *
  * <h3>Retrying specific exceptions</h3>
  *
- * {@include.example io.vrap.rmf.base.client.http.PolicyMiddlewareTest#retryConfigurationExceptions()}
+ * {@include.example io.vrap.rmf.base.client.http.RequestPolicyMiddlewareTest#retryConfigurationExceptions()}
  *
  * <h3 id="timeout">Timeout</h3>
  *
- * {@include.example io.vrap.rmf.base.client.http.PolicyMiddlewareTest#timeoutConfiguration()}
+ * {@include.example io.vrap.rmf.base.client.http.RequestPolicyMiddlewareTest#timeoutConfiguration()}
  *
  * <h3 id="bulkhead">Bulkhead</h3>
  *
  * <p>Implementation of a Queue to limit the number of concurrent requests handled by the client</p>
  *
- * {@include.example io.vrap.rmf.base.client.http.PolicyMiddlewareTest#queueConfiguration()}
+ * {@include.example io.vrap.rmf.base.client.http.RequestPolicyMiddlewareTest#queueConfiguration()}
  */
 public class RequestPolicyBuilder {
 
@@ -82,6 +83,13 @@ public class RequestPolicyBuilder {
         Map<Predicate<ApiHttpRequest>, List<Policy<ApiHttpResponse<byte[]>>>> policiesCopy = new LinkedHashMap<>(
             policies);
         policiesCopy.put(predicate, fn.apply(PolicyBuilder.of()).getPolicies());
+        return new RequestPolicyBuilder(scheduler, policiesCopy);
+    }
+
+    public RequestPolicyBuilder withAllOtherRequests(Function<PolicyBuilder, PolicyBuilder> fn) {
+        Map<Predicate<ApiHttpRequest>, List<Policy<ApiHttpResponse<byte[]>>>> policiesCopy = new LinkedHashMap<>(
+            policies);
+        policiesCopy.put(apiHttpRequest -> true, fn.apply(PolicyBuilder.of()).getPolicies());
         return new RequestPolicyBuilder(scheduler, policiesCopy);
     }
 

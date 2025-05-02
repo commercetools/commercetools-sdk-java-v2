@@ -18,6 +18,8 @@ import dev.failsafe.spi.Scheduler;
  *
  * <p>The PolicyBuilder allows the combination of different policies for failing requests.</p>
  *
+ * <p>In case you need different policies based on the request use the {@link RequestPolicyBuilder} instead</p>
+ *
  * <p>The order of policies matters. For example applying a {@link #withTimeout(Duration) timeout} before
  * {@link #withRetry(RetryPolicyBuilder)} retry} will time out across all requests whereas applying a timeout after the retry count
  * against every single request even the retried ones.</p>

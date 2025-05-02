@@ -9,31 +9,23 @@ import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import io.vrap.rmf.base.client.*;
 import io.vrap.rmf.base.client.error.*;
 
 import org.assertj.core.api.Assertions;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(DataProviderExtension.class)
-@ExtendWith(UseDataProviderExtension.class)
 public class TelemetryMiddlewareTest {
 
-    @DataProvider
     public static Object[][] responses() {
         return new Object[][] { { 200, 1, 0 }, { 201, 1, 0 }, { 400, 1, 1 }, { 401, 1, 1 }, { 403, 1, 1 },
                 { 404, 1, 1 }, { 409, 1, 1 }, { 499, 1, 1 }, { 500, 1, 1 }, { 502, 1, 1 }, { 503, 1, 1 }, { 504, 1, 1 },
                 { 599, 1, 1 }, };
     }
 
-    @TestTemplate
-    @UseDataProvider("responses")
+    @ParameterizedTest
+    @MethodSource("responses")
     public void testCounts(int statusCode, int count, int errorCount) {
         TestTelemetryMiddleware middleware = new TestTelemetryMiddleware();
 
@@ -50,8 +42,8 @@ public class TelemetryMiddlewareTest {
         Assertions.assertThat(middleware.errorCount).isEqualTo(errorCount);
     }
 
-    @TestTemplate
-    @UseDataProvider("responses")
+    @ParameterizedTest
+    @MethodSource("responses")
     public void testHttpCounts(int statusCode, int count, int errorCount) throws URISyntaxException {
         TestTelemetryMiddleware middleware = new TestTelemetryMiddleware();
 

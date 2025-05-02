@@ -38,7 +38,7 @@
         },
         {
             "moduleName": "org.javamoney.moneta:moneta-core",
-            "moduleVersion": "1.4.4",
+            "moduleVersion": "1.4.5",
             "moduleUrls": [
                 "http://javamoney.org",
                 "http://www.javamoney.org"

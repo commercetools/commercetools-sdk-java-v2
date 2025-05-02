@@ -1,31 +1,23 @@
 
 package com.commercetools.api.models.error;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductAssignmentMissingErrorTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductAssignmentMissingErrorBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductAssignmentMissingErrorBuilder builder) {
         ProductAssignmentMissingError productAssignmentMissingError = builder.buildUnchecked();
         Assertions.assertThat(productAssignmentMissingError).isInstanceOf(ProductAssignmentMissingError.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductAssignmentMissingError.builder().message("message") },
-                new Object[] { ProductAssignmentMissingError.builder()
+        return new Object[][] { new Object[] { "message", ProductAssignmentMissingError.builder().message("message") },
+                new Object[] { "product", ProductAssignmentMissingError.builder()
                         .product(new com.commercetools.api.models.product.ProductReferenceImpl()) } };
     }
 

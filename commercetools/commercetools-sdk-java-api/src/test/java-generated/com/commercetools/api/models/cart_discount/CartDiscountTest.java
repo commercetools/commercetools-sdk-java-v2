@@ -4,62 +4,63 @@ package com.commercetools.api.models.cart_discount;
 import java.time.ZonedDateTime;
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CartDiscountTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CartDiscountBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CartDiscountBuilder builder) {
         CartDiscount cartDiscount = builder.buildUnchecked();
         Assertions.assertThat(cartDiscount).isInstanceOf(CartDiscount.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { CartDiscount.builder().id("id") },
-                new Object[] { CartDiscount.builder().version(2L) },
-                new Object[] { CartDiscount.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { CartDiscount.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { CartDiscount.builder()
-                        .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
-                new Object[] {
+        return new Object[][] { new Object[] { "id", CartDiscount.builder().id("id") },
+                new Object[] { "version", CartDiscount.builder().version(2L) },
+                new Object[] { "createdAt",
+                        CartDiscount.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedAt",
+                        CartDiscount.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedBy",
+                        CartDiscount.builder()
+                                .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
+                new Object[] { "createdBy",
                         CartDiscount.builder().createdBy(new com.commercetools.api.models.common.CreatedByImpl()) },
-                new Object[] {
+                new Object[] { "name",
                         CartDiscount.builder().name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { CartDiscount.builder().key("key") },
-                new Object[] { CartDiscount.builder()
-                        .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { CartDiscount.builder()
-                        .value(new com.commercetools.api.models.cart_discount.CartDiscountValueImpl()) },
-                new Object[] { CartDiscount.builder().cartPredicate("cartPredicate") },
-                new Object[] { CartDiscount.builder()
-                        .target(new com.commercetools.api.models.cart_discount.CartDiscountTargetImpl()) },
-                new Object[] { CartDiscount.builder().sortOrder("sortOrder") },
-                new Object[] { CartDiscount.builder()
-                        .stores(Collections
-                                .singletonList(new com.commercetools.api.models.store.StoreKeyReferenceImpl())) },
-                new Object[] { CartDiscount.builder().isActive(true) },
-                new Object[] { CartDiscount.builder().validFrom(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { CartDiscount.builder().validUntil(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { CartDiscount.builder().requiresDiscountCode(true) },
-                new Object[] {
+                new Object[] { "key", CartDiscount.builder().key("key") },
+                new Object[] { "description",
+                        CartDiscount.builder()
+                                .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "value",
+                        CartDiscount.builder()
+                                .value(new com.commercetools.api.models.cart_discount.CartDiscountValueImpl()) },
+                new Object[] { "cartPredicate", CartDiscount.builder().cartPredicate("cartPredicate") },
+                new Object[] { "target",
+                        CartDiscount.builder()
+                                .target(new com.commercetools.api.models.cart_discount.CartDiscountTargetImpl()) },
+                new Object[] { "sortOrder", CartDiscount.builder().sortOrder("sortOrder") },
+                new Object[] { "stores",
+                        CartDiscount.builder()
+                                .stores(Collections.singletonList(
+                                    new com.commercetools.api.models.store.StoreKeyReferenceImpl())) },
+                new Object[] { "isActive", CartDiscount.builder().isActive(true) },
+                new Object[] { "validFrom",
+                        CartDiscount.builder().validFrom(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "validUntil",
+                        CartDiscount.builder().validUntil(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "requiresDiscountCode", CartDiscount.builder().requiresDiscountCode(true) },
+                new Object[] { "references",
                         CartDiscount.builder()
                                 .references(Collections
                                         .singletonList(new com.commercetools.api.models.common.ReferenceImpl())) },
-                new Object[] { CartDiscount.builder()
+                new Object[] { "stackingMode", CartDiscount.builder()
                         .stackingMode(com.commercetools.api.models.cart_discount.StackingMode.findEnum("Stacking")) },
-                new Object[] {
+                new Object[] { "custom",
                         CartDiscount.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) } };
     }
 

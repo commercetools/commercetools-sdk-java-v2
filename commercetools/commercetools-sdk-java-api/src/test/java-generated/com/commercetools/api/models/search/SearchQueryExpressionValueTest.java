@@ -1,32 +1,24 @@
 
 package com.commercetools.api.models.search;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SearchQueryExpressionValueTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SearchQueryExpressionValueBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SearchQueryExpressionValueBuilder builder) {
         SearchQueryExpressionValue searchQueryExpressionValue = builder.buildUnchecked();
         Assertions.assertThat(searchQueryExpressionValue).isInstanceOf(SearchQueryExpressionValue.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SearchQueryExpressionValue.builder().field("field") },
-                new Object[] { SearchQueryExpressionValue.builder().boost(0.8968434466791833) },
-                new Object[] { SearchQueryExpressionValue.builder()
+        return new Object[][] { new Object[] { "field", SearchQueryExpressionValue.builder().field("field") },
+                new Object[] { "boost", SearchQueryExpressionValue.builder().boost(0.8968434466791833) },
+                new Object[] { "fieldType", SearchQueryExpressionValue.builder()
                         .fieldType(com.commercetools.api.models.search.SearchFieldType.findEnum("boolean")) } };
     }
 

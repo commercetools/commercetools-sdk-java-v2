@@ -3,37 +3,34 @@ package com.commercetools.api.models.common;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class AssetTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(AssetBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, AssetBuilder builder) {
         Asset asset = builder.buildUnchecked();
         Assertions.assertThat(asset).isInstanceOf(Asset.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { Asset.builder().id("id") }, new Object[] { Asset.builder()
-                .sources(Collections.singletonList(new com.commercetools.api.models.common.AssetSourceImpl())) },
-                new Object[] { Asset.builder().name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] {
+        return new Object[][] { new Object[] { "id", Asset.builder().id("id") },
+                new Object[] { "sources",
+                        Asset.builder()
+                                .sources(Collections
+                                        .singletonList(new com.commercetools.api.models.common.AssetSourceImpl())) },
+                new Object[] { "name",
+                        Asset.builder().name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "description",
                         Asset.builder().description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { Asset.builder().tags(Collections.singletonList("tags")) },
-                new Object[] { Asset.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) },
-                new Object[] { Asset.builder().key("key") } };
+                new Object[] { "tags", Asset.builder().tags(Collections.singletonList("tags")) },
+                new Object[] { "custom",
+                        Asset.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) },
+                new Object[] { "key", Asset.builder().key("key") } };
     }
 
     @Test

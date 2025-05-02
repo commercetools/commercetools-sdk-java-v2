@@ -1,44 +1,42 @@
 
 package com.commercetools.api.models.order;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class OrderFromCartDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(OrderFromCartDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, OrderFromCartDraftBuilder builder) {
         OrderFromCartDraft orderFromCartDraft = builder.buildUnchecked();
         Assertions.assertThat(orderFromCartDraft).isInstanceOf(OrderFromCartDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { OrderFromCartDraft.builder().id("id") },
-                new Object[] { OrderFromCartDraft.builder()
-                        .cart(new com.commercetools.api.models.cart.CartResourceIdentifierImpl()) },
-                new Object[] { OrderFromCartDraft.builder().version(2L) },
-                new Object[] { OrderFromCartDraft.builder().orderNumber("orderNumber") },
-                new Object[] { OrderFromCartDraft.builder().purchaseOrderNumber("purchaseOrderNumber") },
-                new Object[] { OrderFromCartDraft.builder()
-                        .paymentState(com.commercetools.api.models.order.PaymentState.findEnum("BalanceDue")) },
-                new Object[] { OrderFromCartDraft.builder()
-                        .shipmentState(com.commercetools.api.models.order.ShipmentState.findEnum("Shipped")) },
-                new Object[] { OrderFromCartDraft.builder()
-                        .orderState(com.commercetools.api.models.order.OrderState.findEnum("Open")) },
-                new Object[] { OrderFromCartDraft.builder()
-                        .state(new com.commercetools.api.models.state.StateResourceIdentifierImpl()) },
-                new Object[] { OrderFromCartDraft.builder()
+        return new Object[][] { new Object[] { "id", OrderFromCartDraft.builder().id("id") },
+                new Object[] { "cart",
+                        OrderFromCartDraft.builder()
+                                .cart(new com.commercetools.api.models.cart.CartResourceIdentifierImpl()) },
+                new Object[] { "version", OrderFromCartDraft.builder().version(2L) },
+                new Object[] { "orderNumber", OrderFromCartDraft.builder().orderNumber("orderNumber") },
+                new Object[] { "purchaseOrderNumber",
+                        OrderFromCartDraft.builder().purchaseOrderNumber("purchaseOrderNumber") },
+                new Object[] { "paymentState",
+                        OrderFromCartDraft.builder()
+                                .paymentState(com.commercetools.api.models.order.PaymentState.findEnum("BalanceDue")) },
+                new Object[] { "shipmentState",
+                        OrderFromCartDraft.builder()
+                                .shipmentState(com.commercetools.api.models.order.ShipmentState.findEnum("Shipped")) },
+                new Object[] { "orderState",
+                        OrderFromCartDraft.builder()
+                                .orderState(com.commercetools.api.models.order.OrderState.findEnum("Open")) },
+                new Object[] { "state",
+                        OrderFromCartDraft.builder()
+                                .state(new com.commercetools.api.models.state.StateResourceIdentifierImpl()) },
+                new Object[] { "custom", OrderFromCartDraft.builder()
                         .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) } };
     }
 

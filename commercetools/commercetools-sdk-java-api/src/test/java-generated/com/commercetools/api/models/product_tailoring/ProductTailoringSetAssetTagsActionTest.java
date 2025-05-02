@@ -3,36 +3,30 @@ package com.commercetools.api.models.product_tailoring;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductTailoringSetAssetTagsActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductTailoringSetAssetTagsActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductTailoringSetAssetTagsActionBuilder builder) {
         ProductTailoringSetAssetTagsAction productTailoringSetAssetTagsAction = builder.buildUnchecked();
         Assertions.assertThat(productTailoringSetAssetTagsAction)
                 .isInstanceOf(ProductTailoringSetAssetTagsAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductTailoringSetAssetTagsAction.builder().variantId(5L) },
-                new Object[] { ProductTailoringSetAssetTagsAction.builder().sku("sku") },
-                new Object[] { ProductTailoringSetAssetTagsAction.builder().staged(true) },
-                new Object[] { ProductTailoringSetAssetTagsAction.builder().assetId("assetId") },
-                new Object[] { ProductTailoringSetAssetTagsAction.builder().assetKey("assetKey") },
-                new Object[] { ProductTailoringSetAssetTagsAction.builder().tags(Collections.singletonList("tags")) } };
+        return new Object[][] {
+                new Object[] { "variantId", ProductTailoringSetAssetTagsAction.builder().variantId(5L) },
+                new Object[] { "sku", ProductTailoringSetAssetTagsAction.builder().sku("sku") },
+                new Object[] { "staged", ProductTailoringSetAssetTagsAction.builder().staged(true) },
+                new Object[] { "assetId", ProductTailoringSetAssetTagsAction.builder().assetId("assetId") },
+                new Object[] { "assetKey", ProductTailoringSetAssetTagsAction.builder().assetKey("assetKey") },
+                new Object[] { "tags",
+                        ProductTailoringSetAssetTagsAction.builder().tags(Collections.singletonList("tags")) } };
     }
 
     @Test

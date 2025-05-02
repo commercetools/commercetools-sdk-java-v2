@@ -3,50 +3,46 @@ package com.commercetools.api.models.payment;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class PaymentDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(PaymentDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, PaymentDraftBuilder builder) {
         PaymentDraft paymentDraft = builder.buildUnchecked();
         Assertions.assertThat(paymentDraft).isInstanceOf(PaymentDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { PaymentDraft.builder()
-                        .customer(new com.commercetools.api.models.customer.CustomerResourceIdentifierImpl()) },
-                new Object[] { PaymentDraft.builder().anonymousId("anonymousId") },
-                new Object[] { PaymentDraft.builder().interfaceId("interfaceId") },
-                new Object[] {
+                new Object[] { "customer",
+                        PaymentDraft.builder()
+                                .customer(new com.commercetools.api.models.customer.CustomerResourceIdentifierImpl()) },
+                new Object[] { "anonymousId", PaymentDraft.builder().anonymousId("anonymousId") },
+                new Object[] { "interfaceId", PaymentDraft.builder().interfaceId("interfaceId") },
+                new Object[] { "amountPlanned",
                         PaymentDraft.builder().amountPlanned(new com.commercetools.api.models.common.MoneyImpl()) },
-                new Object[] { PaymentDraft.builder()
-                        .paymentMethodInfo(new com.commercetools.api.models.payment.PaymentMethodInfoImpl()) },
-                new Object[] { PaymentDraft.builder()
-                        .paymentStatus(new com.commercetools.api.models.payment.PaymentStatusDraftImpl()) },
-                new Object[] { PaymentDraft.builder()
-                        .transactions(Collections
-                                .singletonList(new com.commercetools.api.models.payment.TransactionDraftImpl())) },
-                new Object[] {
+                new Object[] { "paymentMethodInfo",
+                        PaymentDraft.builder()
+                                .paymentMethodInfo(new com.commercetools.api.models.payment.PaymentMethodInfoImpl()) },
+                new Object[] { "paymentStatus",
+                        PaymentDraft.builder()
+                                .paymentStatus(new com.commercetools.api.models.payment.PaymentStatusDraftImpl()) },
+                new Object[] { "transactions",
+                        PaymentDraft.builder()
+                                .transactions(Collections.singletonList(
+                                    new com.commercetools.api.models.payment.TransactionDraftImpl())) },
+                new Object[] { "interfaceInteractions",
                         PaymentDraft.builder()
                                 .interfaceInteractions(Collections.singletonList(
                                     new com.commercetools.api.models.type.CustomFieldsDraftImpl())) },
-                new Object[] {
+                new Object[] { "custom",
                         PaymentDraft.builder().custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) },
-                new Object[] { PaymentDraft.builder().key("key") } };
+                new Object[] { "key", PaymentDraft.builder().key("key") } };
     }
 
     @Test

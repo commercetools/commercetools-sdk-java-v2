@@ -3,33 +3,26 @@ package com.commercetools.importapi.models.errors;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class InvalidFieldErrorTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(InvalidFieldErrorBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, InvalidFieldErrorBuilder builder) {
         InvalidFieldError invalidFieldError = builder.buildUnchecked();
         Assertions.assertThat(invalidFieldError).isInstanceOf(InvalidFieldError.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { InvalidFieldError.builder().field("field") },
-                new Object[] { InvalidFieldError.builder().invalidValue("invalidValue") },
-                new Object[] { InvalidFieldError.builder().allowedValues(Collections.singletonList("allowedValues")) },
-                new Object[] { InvalidFieldError.builder().resourceIndex(4L) } };
+        return new Object[][] { new Object[] { "field", InvalidFieldError.builder().field("field") },
+                new Object[] { "invalidValue", InvalidFieldError.builder().invalidValue("invalidValue") },
+                new Object[] { "allowedValues",
+                        InvalidFieldError.builder().allowedValues(Collections.singletonList("allowedValues")) },
+                new Object[] { "resourceIndex", InvalidFieldError.builder().resourceIndex(4L) } };
     }
 
     @Test

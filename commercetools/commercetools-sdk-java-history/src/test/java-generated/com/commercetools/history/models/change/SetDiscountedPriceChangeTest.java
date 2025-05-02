@@ -1,37 +1,31 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetDiscountedPriceChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetDiscountedPriceChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetDiscountedPriceChangeBuilder builder) {
         SetDiscountedPriceChange setDiscountedPriceChange = builder.buildUnchecked();
         Assertions.assertThat(setDiscountedPriceChange).isInstanceOf(SetDiscountedPriceChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetDiscountedPriceChange.builder().change("change") },
-                new Object[] { SetDiscountedPriceChange.builder()
-                        .previousValue(new com.commercetools.history.models.common.PriceImpl()) },
-                new Object[] { SetDiscountedPriceChange.builder()
-                        .nextValue(new com.commercetools.history.models.common.PriceImpl()) },
-                new Object[] { SetDiscountedPriceChange.builder().catalogData("catalogData") },
-                new Object[] { SetDiscountedPriceChange.builder().variant("variant") },
-                new Object[] { SetDiscountedPriceChange.builder().priceId("priceId") } };
+        return new Object[][] { new Object[] { "change", SetDiscountedPriceChange.builder().change("change") },
+                new Object[] { "previousValue",
+                        SetDiscountedPriceChange.builder()
+                                .previousValue(new com.commercetools.history.models.common.PriceImpl()) },
+                new Object[] { "nextValue",
+                        SetDiscountedPriceChange.builder()
+                                .nextValue(new com.commercetools.history.models.common.PriceImpl()) },
+                new Object[] { "catalogData", SetDiscountedPriceChange.builder().catalogData("catalogData") },
+                new Object[] { "variant", SetDiscountedPriceChange.builder().variant("variant") },
+                new Object[] { "priceId", SetDiscountedPriceChange.builder().priceId("priceId") } };
     }
 
     @Test

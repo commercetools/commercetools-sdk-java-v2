@@ -1,36 +1,30 @@
 
 package com.commercetools.api.models.order;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class OrderSearchSortingTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(OrderSearchSortingBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, OrderSearchSortingBuilder builder) {
         OrderSearchSorting orderSearchSorting = builder.buildUnchecked();
         Assertions.assertThat(orderSearchSorting).isInstanceOf(OrderSearchSorting.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { OrderSearchSorting.builder().field("field") },
-                new Object[] { OrderSearchSorting.builder().language("language") },
-                new Object[] { OrderSearchSorting.builder()
-                        .order(com.commercetools.api.models.order.OrderSearchSortOrder.findEnum("asc")) },
-                new Object[] { OrderSearchSorting.builder()
-                        .mode(com.commercetools.api.models.order.OrderSearchSortMode.findEnum("min")) },
-                new Object[] { OrderSearchSorting.builder()
+        return new Object[][] { new Object[] { "field", OrderSearchSorting.builder().field("field") },
+                new Object[] { "language", OrderSearchSorting.builder().language("language") },
+                new Object[] { "order",
+                        OrderSearchSorting.builder()
+                                .order(com.commercetools.api.models.order.OrderSearchSortOrder.findEnum("asc")) },
+                new Object[] { "mode",
+                        OrderSearchSorting.builder()
+                                .mode(com.commercetools.api.models.order.OrderSearchSortMode.findEnum("min")) },
+                new Object[] { "filter", OrderSearchSorting.builder()
                         .filter(new com.commercetools.api.models.order.OrderSearchQueryExpressionImpl()) } };
     }
 

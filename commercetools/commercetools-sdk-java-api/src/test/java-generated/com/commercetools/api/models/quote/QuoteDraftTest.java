@@ -1,36 +1,30 @@
 
 package com.commercetools.api.models.quote;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class QuoteDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(QuoteDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, QuoteDraftBuilder builder) {
         QuoteDraft quoteDraft = builder.buildUnchecked();
         Assertions.assertThat(quoteDraft).isInstanceOf(QuoteDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { QuoteDraft.builder().key("key") }, new Object[] { QuoteDraft.builder()
-                .stagedQuote(new com.commercetools.api.models.staged_quote.StagedQuoteResourceIdentifierImpl()) },
-                new Object[] { QuoteDraft.builder().stagedQuoteVersion(8L) },
-                new Object[] { QuoteDraft.builder().stagedQuoteStateToSent(true) },
-                new Object[] {
+        return new Object[][] { new Object[] { "key", QuoteDraft.builder().key("key") },
+                new Object[] { "stagedQuote", QuoteDraft.builder()
+                        .stagedQuote(
+                            new com.commercetools.api.models.staged_quote.StagedQuoteResourceIdentifierImpl()) },
+                new Object[] { "stagedQuoteVersion", QuoteDraft.builder().stagedQuoteVersion(8L) },
+                new Object[] { "stagedQuoteStateToSent", QuoteDraft.builder().stagedQuoteStateToSent(true) },
+                new Object[] { "state",
                         QuoteDraft.builder().state(new com.commercetools.api.models.state.StateReferenceImpl()) },
-                new Object[] {
+                new Object[] { "custom",
                         QuoteDraft.builder().custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) } };
     }
 

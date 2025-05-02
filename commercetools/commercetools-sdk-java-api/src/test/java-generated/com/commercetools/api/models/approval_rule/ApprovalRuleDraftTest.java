@@ -3,40 +3,33 @@ package com.commercetools.api.models.approval_rule;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ApprovalRuleDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ApprovalRuleDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ApprovalRuleDraftBuilder builder) {
         ApprovalRuleDraft approvalRuleDraft = builder.buildUnchecked();
         Assertions.assertThat(approvalRuleDraft).isInstanceOf(ApprovalRuleDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ApprovalRuleDraft.builder().key("key") },
-                new Object[] { ApprovalRuleDraft.builder().name("name") },
-                new Object[] { ApprovalRuleDraft.builder().description("description") },
-                new Object[] { ApprovalRuleDraft.builder()
+        return new Object[][] { new Object[] { "key", ApprovalRuleDraft.builder().key("key") },
+                new Object[] { "name", ApprovalRuleDraft.builder().name("name") },
+                new Object[] { "description", ApprovalRuleDraft.builder().description("description") },
+                new Object[] { "status", ApprovalRuleDraft.builder()
                         .status(com.commercetools.api.models.approval_rule.ApprovalRuleStatus.findEnum("Active")) },
-                new Object[] { ApprovalRuleDraft.builder().predicate("predicate") },
-                new Object[] { ApprovalRuleDraft.builder()
+                new Object[] { "predicate", ApprovalRuleDraft.builder().predicate("predicate") },
+                new Object[] { "approvers", ApprovalRuleDraft.builder()
                         .approvers(new com.commercetools.api.models.approval_rule.ApproverHierarchyDraftImpl()) },
-                new Object[] { ApprovalRuleDraft.builder()
-                        .requesters(Collections.singletonList(
-                            new com.commercetools.api.models.approval_rule.RuleRequesterDraftImpl())) } };
+                new Object[] { "requesters",
+                        ApprovalRuleDraft.builder()
+                                .requesters(Collections.singletonList(
+                                    new com.commercetools.api.models.approval_rule.RuleRequesterDraftImpl())) } };
     }
 
     @Test

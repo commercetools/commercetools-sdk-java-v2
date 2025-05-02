@@ -1,33 +1,25 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetAssetKeyChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetAssetKeyChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetAssetKeyChangeBuilder builder) {
         SetAssetKeyChange setAssetKeyChange = builder.buildUnchecked();
         Assertions.assertThat(setAssetKeyChange).isInstanceOf(SetAssetKeyChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetAssetKeyChange.builder().change("change") },
-                new Object[] { SetAssetKeyChange.builder().previousValue("previousValue") },
-                new Object[] { SetAssetKeyChange.builder().nextValue("nextValue") },
-                new Object[] { SetAssetKeyChange.builder()
+        return new Object[][] { new Object[] { "change", SetAssetKeyChange.builder().change("change") },
+                new Object[] { "previousValue", SetAssetKeyChange.builder().previousValue("previousValue") },
+                new Object[] { "nextValue", SetAssetKeyChange.builder().nextValue("nextValue") },
+                new Object[] { "asset", SetAssetKeyChange.builder()
                         .asset(new com.commercetools.history.models.change_value.AssetChangeValueImpl()) } };
     }
 

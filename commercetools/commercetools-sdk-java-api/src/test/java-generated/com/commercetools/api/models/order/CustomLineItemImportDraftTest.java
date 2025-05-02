@@ -3,49 +3,46 @@ package com.commercetools.api.models.order;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CustomLineItemImportDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CustomLineItemImportDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CustomLineItemImportDraftBuilder builder) {
         CustomLineItemImportDraft customLineItemImportDraft = builder.buildUnchecked();
         Assertions.assertThat(customLineItemImportDraft).isInstanceOf(CustomLineItemImportDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { CustomLineItemImportDraft.builder()
-                        .name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { CustomLineItemImportDraft.builder().key("key") },
-                new Object[] { CustomLineItemImportDraft.builder().slug("slug") },
-                new Object[] { CustomLineItemImportDraft.builder().quantity(8L) },
-                new Object[] { CustomLineItemImportDraft.builder()
-                        .money(new com.commercetools.api.models.common.MoneyImpl()) },
-                new Object[] { CustomLineItemImportDraft.builder()
-                        .taxRate(new com.commercetools.api.models.tax_category.TaxRateImpl()) },
-                new Object[] { CustomLineItemImportDraft.builder()
+                new Object[] { "name",
+                        CustomLineItemImportDraft.builder()
+                                .name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "key", CustomLineItemImportDraft.builder().key("key") },
+                new Object[] { "slug", CustomLineItemImportDraft.builder().slug("slug") },
+                new Object[] { "quantity", CustomLineItemImportDraft.builder().quantity(8L) },
+                new Object[] { "money",
+                        CustomLineItemImportDraft.builder()
+                                .money(new com.commercetools.api.models.common.MoneyImpl()) },
+                new Object[] { "taxRate",
+                        CustomLineItemImportDraft.builder()
+                                .taxRate(new com.commercetools.api.models.tax_category.TaxRateImpl()) },
+                new Object[] { "taxCategory", CustomLineItemImportDraft.builder()
                         .taxCategory(
                             new com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifierImpl()) },
-                new Object[] { CustomLineItemImportDraft.builder()
+                new Object[] { "priceMode", CustomLineItemImportDraft.builder()
                         .priceMode(com.commercetools.api.models.cart.CustomLineItemPriceMode.findEnum("Standard")) },
-                new Object[] { CustomLineItemImportDraft.builder()
+                new Object[] { "shippingDetails", CustomLineItemImportDraft.builder()
                         .shippingDetails(new com.commercetools.api.models.cart.ItemShippingDetailsDraftImpl()) },
-                new Object[] { CustomLineItemImportDraft.builder()
-                        .state(Collections.singletonList(new com.commercetools.api.models.order.ItemStateImpl())) },
-                new Object[] { CustomLineItemImportDraft.builder()
+                new Object[] { "state",
+                        CustomLineItemImportDraft.builder()
+                                .state(Collections
+                                        .singletonList(new com.commercetools.api.models.order.ItemStateImpl())) },
+                new Object[] { "custom", CustomLineItemImportDraft.builder()
                         .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) } };
     }
 

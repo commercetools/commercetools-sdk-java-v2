@@ -3,36 +3,29 @@ package com.commercetools.api.models.customer_group;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CustomerGroupPagedQueryResponseTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CustomerGroupPagedQueryResponseBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CustomerGroupPagedQueryResponseBuilder builder) {
         CustomerGroupPagedQueryResponse customerGroupPagedQueryResponse = builder.buildUnchecked();
         Assertions.assertThat(customerGroupPagedQueryResponse).isInstanceOf(CustomerGroupPagedQueryResponse.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { CustomerGroupPagedQueryResponse.builder().limit(7L) },
-                new Object[] { CustomerGroupPagedQueryResponse.builder().offset(3L) },
-                new Object[] { CustomerGroupPagedQueryResponse.builder().count(2L) },
-                new Object[] { CustomerGroupPagedQueryResponse.builder().total(1L) },
-                new Object[] { CustomerGroupPagedQueryResponse.builder()
-                        .results(Collections.singletonList(
-                            new com.commercetools.api.models.customer_group.CustomerGroupImpl())) } };
+        return new Object[][] { new Object[] { "limit", CustomerGroupPagedQueryResponse.builder().limit(7L) },
+                new Object[] { "offset", CustomerGroupPagedQueryResponse.builder().offset(3L) },
+                new Object[] { "count", CustomerGroupPagedQueryResponse.builder().count(2L) },
+                new Object[] { "total", CustomerGroupPagedQueryResponse.builder().total(1L) },
+                new Object[] { "results",
+                        CustomerGroupPagedQueryResponse.builder()
+                                .results(Collections.singletonList(
+                                    new com.commercetools.api.models.customer_group.CustomerGroupImpl())) } };
     }
 
     @Test

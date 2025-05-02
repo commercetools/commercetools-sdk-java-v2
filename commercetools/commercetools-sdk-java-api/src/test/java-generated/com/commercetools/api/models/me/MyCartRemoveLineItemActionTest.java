@@ -1,39 +1,34 @@
 
 package com.commercetools.api.models.me;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class MyCartRemoveLineItemActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(MyCartRemoveLineItemActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, MyCartRemoveLineItemActionBuilder builder) {
         MyCartRemoveLineItemAction myCartRemoveLineItemAction = builder.buildUnchecked();
         Assertions.assertThat(myCartRemoveLineItemAction).isInstanceOf(MyCartRemoveLineItemAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { MyCartRemoveLineItemAction.builder().lineItemId("lineItemId") },
-                new Object[] { MyCartRemoveLineItemAction.builder().lineItemKey("lineItemKey") },
-                new Object[] { MyCartRemoveLineItemAction.builder().quantity(8L) },
-                new Object[] { MyCartRemoveLineItemAction.builder()
-                        .externalPrice(new com.commercetools.api.models.common.MoneyImpl()) },
-                new Object[] { MyCartRemoveLineItemAction.builder()
+        return new Object[][] {
+                new Object[] { "lineItemId", MyCartRemoveLineItemAction.builder().lineItemId("lineItemId") },
+                new Object[] { "lineItemKey", MyCartRemoveLineItemAction.builder().lineItemKey("lineItemKey") },
+                new Object[] { "quantity", MyCartRemoveLineItemAction.builder().quantity(8L) },
+                new Object[] { "externalPrice",
+                        MyCartRemoveLineItemAction.builder()
+                                .externalPrice(new com.commercetools.api.models.common.MoneyImpl()) },
+                new Object[] { "externalTotalPrice", MyCartRemoveLineItemAction.builder()
                         .externalTotalPrice(new com.commercetools.api.models.cart.ExternalLineItemTotalPriceImpl()) },
-                new Object[] { MyCartRemoveLineItemAction.builder()
-                        .shippingDetailsToRemove(
-                            new com.commercetools.api.models.cart.ItemShippingDetailsDraftImpl()) } };
+                new Object[] { "shippingDetailsToRemove",
+                        MyCartRemoveLineItemAction.builder()
+                                .shippingDetailsToRemove(
+                                    new com.commercetools.api.models.cart.ItemShippingDetailsDraftImpl()) } };
     }
 
     @Test

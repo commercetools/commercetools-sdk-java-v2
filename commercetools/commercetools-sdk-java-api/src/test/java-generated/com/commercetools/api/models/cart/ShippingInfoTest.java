@@ -3,48 +3,45 @@ package com.commercetools.api.models.cart;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ShippingInfoTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ShippingInfoBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ShippingInfoBuilder builder) {
         ShippingInfo shippingInfo = builder.buildUnchecked();
         Assertions.assertThat(shippingInfo).isInstanceOf(ShippingInfo.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ShippingInfo.builder().shippingMethodName("shippingMethodName") },
-                new Object[] { ShippingInfo.builder()
-                        .price(new com.commercetools.api.models.common.CentPrecisionMoneyImpl()) },
-                new Object[] { ShippingInfo.builder()
-                        .shippingRate(new com.commercetools.api.models.shipping_method.ShippingRateImpl()) },
-                new Object[] {
+        return new Object[][] {
+                new Object[] { "shippingMethodName", ShippingInfo.builder().shippingMethodName("shippingMethodName") },
+                new Object[] { "price",
+                        ShippingInfo.builder()
+                                .price(new com.commercetools.api.models.common.CentPrecisionMoneyImpl()) },
+                new Object[] { "shippingRate",
+                        ShippingInfo.builder()
+                                .shippingRate(new com.commercetools.api.models.shipping_method.ShippingRateImpl()) },
+                new Object[] { "taxedPrice",
                         ShippingInfo.builder().taxedPrice(new com.commercetools.api.models.cart.TaxedItemPriceImpl()) },
-                new Object[] {
+                new Object[] { "taxRate",
                         ShippingInfo.builder().taxRate(new com.commercetools.api.models.tax_category.TaxRateImpl()) },
-                new Object[] { ShippingInfo.builder()
+                new Object[] { "taxCategory", ShippingInfo.builder()
                         .taxCategory(new com.commercetools.api.models.tax_category.TaxCategoryReferenceImpl()) },
-                new Object[] { ShippingInfo.builder()
-                        .shippingMethod(
-                            new com.commercetools.api.models.shipping_method.ShippingMethodReferenceImpl()) },
-                new Object[] { ShippingInfo.builder()
+                new Object[] { "shippingMethod",
+                        ShippingInfo.builder()
+                                .shippingMethod(
+                                    new com.commercetools.api.models.shipping_method.ShippingMethodReferenceImpl()) },
+                new Object[] { "deliveries", ShippingInfo.builder()
                         .deliveries(Collections.singletonList(new com.commercetools.api.models.order.DeliveryImpl())) },
-                new Object[] { ShippingInfo.builder()
-                        .discountedPrice(new com.commercetools.api.models.cart.DiscountedLineItemPriceImpl()) },
-                new Object[] { ShippingInfo.builder()
+                new Object[] { "discountedPrice",
+                        ShippingInfo.builder()
+                                .discountedPrice(new com.commercetools.api.models.cart.DiscountedLineItemPriceImpl()) },
+                new Object[] { "shippingMethodState", ShippingInfo.builder()
                         .shippingMethodState(
                             com.commercetools.api.models.cart.ShippingMethodState.findEnum("DoesNotMatchCart")) } };
     }

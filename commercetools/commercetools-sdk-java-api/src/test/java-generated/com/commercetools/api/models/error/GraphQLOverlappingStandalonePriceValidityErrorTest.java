@@ -3,50 +3,48 @@ package com.commercetools.api.models.error;
 
 import java.time.ZonedDateTime;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class GraphQLOverlappingStandalonePriceValidityErrorTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(GraphQLOverlappingStandalonePriceValidityErrorBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, GraphQLOverlappingStandalonePriceValidityErrorBuilder builder) {
         GraphQLOverlappingStandalonePriceValidityError graphQLOverlappingStandalonePriceValidityError = builder
                 .buildUnchecked();
         Assertions.assertThat(graphQLOverlappingStandalonePriceValidityError)
                 .isInstanceOf(GraphQLOverlappingStandalonePriceValidityError.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { GraphQLOverlappingStandalonePriceValidityError.builder()
-                        .conflictingStandalonePrice(
-                            new com.commercetools.api.models.standalone_price.StandalonePriceReferenceImpl()) },
-                new Object[] { GraphQLOverlappingStandalonePriceValidityError.builder().sku("sku") },
-                new Object[] { GraphQLOverlappingStandalonePriceValidityError.builder().currency("currency") },
-                new Object[] { GraphQLOverlappingStandalonePriceValidityError.builder().country("country") },
-                new Object[] { GraphQLOverlappingStandalonePriceValidityError.builder()
+                new Object[] { "conflictingStandalonePrice",
+                        GraphQLOverlappingStandalonePriceValidityError.builder()
+                                .conflictingStandalonePrice(
+                                    new com.commercetools.api.models.standalone_price.StandalonePriceReferenceImpl()) },
+                new Object[] { "sku", GraphQLOverlappingStandalonePriceValidityError.builder().sku("sku") },
+                new Object[] { "currency",
+                        GraphQLOverlappingStandalonePriceValidityError.builder().currency("currency") },
+                new Object[] { "country", GraphQLOverlappingStandalonePriceValidityError.builder().country("country") },
+                new Object[] { "customerGroup", GraphQLOverlappingStandalonePriceValidityError.builder()
                         .customerGroup(
                             new com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierImpl()) },
-                new Object[] { GraphQLOverlappingStandalonePriceValidityError.builder()
-                        .channel(new com.commercetools.api.models.channel.ChannelResourceIdentifierImpl()) },
-                new Object[] { GraphQLOverlappingStandalonePriceValidityError.builder()
-                        .validFrom(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { GraphQLOverlappingStandalonePriceValidityError.builder()
-                        .validUntil(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { GraphQLOverlappingStandalonePriceValidityError.builder()
-                        .conflictingValidFrom(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { GraphQLOverlappingStandalonePriceValidityError.builder()
+                new Object[] { "channel",
+                        GraphQLOverlappingStandalonePriceValidityError.builder()
+                                .channel(new com.commercetools.api.models.channel.ChannelResourceIdentifierImpl()) },
+                new Object[] { "validFrom",
+                        GraphQLOverlappingStandalonePriceValidityError.builder()
+                                .validFrom(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "validUntil",
+                        GraphQLOverlappingStandalonePriceValidityError.builder()
+                                .validUntil(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "conflictingValidFrom",
+                        GraphQLOverlappingStandalonePriceValidityError.builder()
+                                .conflictingValidFrom(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "conflictingValidUntil", GraphQLOverlappingStandalonePriceValidityError.builder()
                         .conflictingValidUntil(ZonedDateTime.parse("2023-06-01T12:00Z")) } };
     }
 

@@ -1,31 +1,23 @@
 
 package com.commercetools.api.models.business_unit_search;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class BusinessUnitSearchResultTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(BusinessUnitSearchResultBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, BusinessUnitSearchResultBuilder builder) {
         BusinessUnitSearchResult businessUnitSearchResult = builder.buildUnchecked();
         Assertions.assertThat(businessUnitSearchResult).isInstanceOf(BusinessUnitSearchResult.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { BusinessUnitSearchResult.builder().id("id") },
-                new Object[] { BusinessUnitSearchResult.builder().relevance(0.5586561) } };
+        return new Object[][] { new Object[] { "id", BusinessUnitSearchResult.builder().id("id") },
+                new Object[] { "relevance", BusinessUnitSearchResult.builder().relevance(0.5586561) } };
     }
 
     @Test

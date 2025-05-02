@@ -1,34 +1,31 @@
 
 package com.commercetools.api.models.message;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class InventoryEntryQuantitySetMessageTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(InventoryEntryQuantitySetMessageBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, InventoryEntryQuantitySetMessageBuilder builder) {
         InventoryEntryQuantitySetMessage inventoryEntryQuantitySetMessage = builder.buildUnchecked();
         Assertions.assertThat(inventoryEntryQuantitySetMessage).isInstanceOf(InventoryEntryQuantitySetMessage.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { InventoryEntryQuantitySetMessage.builder().oldQuantityOnStock(4L) },
-                new Object[] { InventoryEntryQuantitySetMessage.builder().newQuantityOnStock(2L) },
-                new Object[] { InventoryEntryQuantitySetMessage.builder().oldAvailableQuantity(9L) },
-                new Object[] { InventoryEntryQuantitySetMessage.builder().newAvailableQuantity(8L) },
-                new Object[] { InventoryEntryQuantitySetMessage.builder()
+        return new Object[][] {
+                new Object[] { "oldQuantityOnStock",
+                        InventoryEntryQuantitySetMessage.builder().oldQuantityOnStock(4L) },
+                new Object[] { "newQuantityOnStock",
+                        InventoryEntryQuantitySetMessage.builder().newQuantityOnStock(2L) },
+                new Object[] { "oldAvailableQuantity",
+                        InventoryEntryQuantitySetMessage.builder().oldAvailableQuantity(9L) },
+                new Object[] { "newAvailableQuantity",
+                        InventoryEntryQuantitySetMessage.builder().newAvailableQuantity(8L) },
+                new Object[] { "supplyChannel", InventoryEntryQuantitySetMessage.builder()
                         .supplyChannel(new com.commercetools.api.models.channel.ChannelReferenceImpl()) } };
     }
 

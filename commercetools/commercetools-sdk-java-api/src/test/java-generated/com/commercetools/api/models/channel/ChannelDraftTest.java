@@ -3,42 +3,35 @@ package com.commercetools.api.models.channel;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ChannelDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ChannelDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ChannelDraftBuilder builder) {
         ChannelDraft channelDraft = builder.buildUnchecked();
         Assertions.assertThat(channelDraft).isInstanceOf(ChannelDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ChannelDraft.builder().key("key") },
-                new Object[] { ChannelDraft.builder()
+        return new Object[][] { new Object[] { "key", ChannelDraft.builder().key("key") },
+                new Object[] { "roles", ChannelDraft.builder()
                         .roles(Collections.singletonList(
                             com.commercetools.api.models.channel.ChannelRoleEnum.findEnum("InventorySupply"))) },
-                new Object[] {
+                new Object[] { "name",
                         ChannelDraft.builder().name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { ChannelDraft.builder()
-                        .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] {
+                new Object[] { "description",
+                        ChannelDraft.builder()
+                                .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "address",
                         ChannelDraft.builder().address(new com.commercetools.api.models.common.BaseAddressImpl()) },
-                new Object[] {
+                new Object[] { "custom",
                         ChannelDraft.builder().custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) },
-                new Object[] {
+                new Object[] { "geoLocation",
                         ChannelDraft.builder().geoLocation(new com.commercetools.api.models.common.GeoJsonImpl()) } };
     }
 

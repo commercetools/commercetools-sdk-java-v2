@@ -5,68 +5,72 @@ import java.time.LocalDate;
 import java.time.ZonedDateTime;
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CustomerTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CustomerBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CustomerBuilder builder) {
         Customer customer = builder.buildUnchecked();
         Assertions.assertThat(customer).isInstanceOf(Customer.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { Customer.builder().id("id") },
-                new Object[] { Customer.builder().version(2L) }, new Object[] { Customer.builder().key("key") },
-                new Object[] { Customer.builder().customerNumber("customerNumber") },
-                new Object[] { Customer.builder().externalId("externalId") },
-                new Object[] { Customer.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { Customer.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { Customer.builder()
-                        .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
-                new Object[] { Customer.builder().createdBy(new com.commercetools.api.models.common.CreatedByImpl()) },
-                new Object[] { Customer.builder().email("email") },
-                new Object[] { Customer.builder().password("password") },
-                new Object[] { Customer.builder().firstName("firstName") },
-                new Object[] { Customer.builder().lastName("lastName") },
-                new Object[] { Customer.builder().middleName("middleName") },
-                new Object[] { Customer.builder().title("title") },
-                new Object[] { Customer.builder().dateOfBirth(LocalDate.parse("2023-06-01")) },
-                new Object[] { Customer.builder().companyName("companyName") },
-                new Object[] { Customer.builder().vatId("vatId") },
-                new Object[] { Customer.builder()
+        return new Object[][] { new Object[] { "id", Customer.builder().id("id") },
+                new Object[] { "version", Customer.builder().version(2L) },
+                new Object[] { "key", Customer.builder().key("key") },
+                new Object[] { "customerNumber", Customer.builder().customerNumber("customerNumber") },
+                new Object[] { "externalId", Customer.builder().externalId("externalId") },
+                new Object[] { "createdAt", Customer.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedAt",
+                        Customer.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedBy",
+                        Customer.builder()
+                                .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
+                new Object[] { "createdBy",
+                        Customer.builder().createdBy(new com.commercetools.api.models.common.CreatedByImpl()) },
+                new Object[] { "email", Customer.builder().email("email") },
+                new Object[] { "password", Customer.builder().password("password") },
+                new Object[] { "firstName", Customer.builder().firstName("firstName") },
+                new Object[] { "lastName", Customer.builder().lastName("lastName") },
+                new Object[] { "middleName", Customer.builder().middleName("middleName") },
+                new Object[] { "title", Customer.builder().title("title") },
+                new Object[] { "dateOfBirth", Customer.builder().dateOfBirth(LocalDate.parse("2023-06-01")) },
+                new Object[] { "companyName", Customer.builder().companyName("companyName") },
+                new Object[] { "vatId", Customer.builder().vatId("vatId") },
+                new Object[] { "addresses", Customer.builder()
                         .addresses(Collections.singletonList(new com.commercetools.api.models.common.AddressImpl())) },
-                new Object[] { Customer.builder().defaultShippingAddressId("defaultShippingAddressId") },
-                new Object[] { Customer.builder().shippingAddressIds(Collections.singletonList("shippingAddressIds")) },
-                new Object[] { Customer.builder().defaultBillingAddressId("defaultBillingAddressId") },
-                new Object[] { Customer.builder().billingAddressIds(Collections.singletonList("billingAddressIds")) },
-                new Object[] { Customer.builder().isEmailVerified(true) },
-                new Object[] { Customer.builder()
+                new Object[] { "defaultShippingAddressId",
+                        Customer.builder().defaultShippingAddressId("defaultShippingAddressId") },
+                new Object[] { "shippingAddressIds",
+                        Customer.builder().shippingAddressIds(Collections.singletonList("shippingAddressIds")) },
+                new Object[] { "defaultBillingAddressId",
+                        Customer.builder().defaultBillingAddressId("defaultBillingAddressId") },
+                new Object[] { "billingAddressIds",
+                        Customer.builder().billingAddressIds(Collections.singletonList("billingAddressIds")) },
+                new Object[] { "isEmailVerified", Customer.builder().isEmailVerified(true) },
+                new Object[] { "customerGroup", Customer.builder()
                         .customerGroup(new com.commercetools.api.models.customer_group.CustomerGroupReferenceImpl()) },
-                new Object[] { Customer.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) },
-                new Object[] { Customer.builder().locale("locale") },
-                new Object[] { Customer.builder().salutation("salutation") },
-                new Object[] { Customer.builder()
-                        .stores(Collections
-                                .singletonList(new com.commercetools.api.models.store.StoreKeyReferenceImpl())) },
-                new Object[] { Customer.builder()
-                        .authenticationMode(
-                            com.commercetools.api.models.customer.AuthenticationMode.findEnum("Password")) },
-                new Object[] { Customer.builder()
-                        .customerGroupAssignments(Collections.singletonList(
-                            new com.commercetools.api.models.customer.CustomerGroupAssignmentImpl())) } };
+                new Object[] { "custom",
+                        Customer.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) },
+                new Object[] { "locale", Customer.builder().locale("locale") },
+                new Object[] { "salutation", Customer.builder().salutation("salutation") },
+                new Object[] { "stores",
+                        Customer.builder()
+                                .stores(Collections.singletonList(
+                                    new com.commercetools.api.models.store.StoreKeyReferenceImpl())) },
+                new Object[] { "authenticationMode",
+                        Customer.builder()
+                                .authenticationMode(
+                                    com.commercetools.api.models.customer.AuthenticationMode.findEnum("Password")) },
+                new Object[] { "customerGroupAssignments",
+                        Customer.builder()
+                                .customerGroupAssignments(Collections.singletonList(
+                                    new com.commercetools.api.models.customer.CustomerGroupAssignmentImpl())) } };
     }
 
     @Test

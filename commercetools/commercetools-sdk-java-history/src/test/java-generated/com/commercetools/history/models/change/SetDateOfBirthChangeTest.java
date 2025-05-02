@@ -1,32 +1,24 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetDateOfBirthChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetDateOfBirthChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetDateOfBirthChangeBuilder builder) {
         SetDateOfBirthChange setDateOfBirthChange = builder.buildUnchecked();
         Assertions.assertThat(setDateOfBirthChange).isInstanceOf(SetDateOfBirthChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetDateOfBirthChange.builder().change("change") },
-                new Object[] { SetDateOfBirthChange.builder().previousValue("previousValue") },
-                new Object[] { SetDateOfBirthChange.builder().nextValue("nextValue") } };
+        return new Object[][] { new Object[] { "change", SetDateOfBirthChange.builder().change("change") },
+                new Object[] { "previousValue", SetDateOfBirthChange.builder().previousValue("previousValue") },
+                new Object[] { "nextValue", SetDateOfBirthChange.builder().nextValue("nextValue") } };
     }
 
     @Test

@@ -3,32 +3,25 @@ package com.commercetools.api.models.approval_rule;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ApproverHierarchyDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ApproverHierarchyDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ApproverHierarchyDraftBuilder builder) {
         ApproverHierarchyDraft approverHierarchyDraft = builder.buildUnchecked();
         Assertions.assertThat(approverHierarchyDraft).isInstanceOf(ApproverHierarchyDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ApproverHierarchyDraft.builder()
-                .tiers(Collections.singletonList(
-                    new com.commercetools.api.models.approval_rule.ApproverConjunctionDraftImpl())) } };
+        return new Object[][] { new Object[] { "tiers",
+                ApproverHierarchyDraft.builder()
+                        .tiers(Collections.singletonList(
+                            new com.commercetools.api.models.approval_rule.ApproverConjunctionDraftImpl())) } };
     }
 
     @Test

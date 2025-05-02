@@ -1,40 +1,34 @@
 
 package com.commercetools.history.models.common;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CustomLineItemTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CustomLineItemBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CustomLineItemBuilder builder) {
         CustomLineItem customLineItem = builder.buildUnchecked();
         Assertions.assertThat(customLineItem).isInstanceOf(CustomLineItem.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { CustomLineItem.builder().id("id") },
-                new Object[] { CustomLineItem.builder()
-                        .name(new com.commercetools.history.models.common.LocalizedStringImpl()) },
-                new Object[] {
+        return new Object[][] { new Object[] { "id", CustomLineItem.builder().id("id") },
+                new Object[] { "name",
+                        CustomLineItem.builder()
+                                .name(new com.commercetools.history.models.common.LocalizedStringImpl()) },
+                new Object[] { "money",
                         CustomLineItem.builder().money(new com.commercetools.history.models.common.MoneyImpl()) },
-                new Object[] { CustomLineItem.builder()
-                        .taxedPrice(new com.commercetools.history.models.common.TaxedItemPriceImpl()) },
-                new Object[] {
+                new Object[] { "taxedPrice",
+                        CustomLineItem.builder()
+                                .taxedPrice(new com.commercetools.history.models.common.TaxedItemPriceImpl()) },
+                new Object[] { "totalPrice",
                         CustomLineItem.builder().totalPrice(new com.commercetools.history.models.common.MoneyImpl()) },
-                new Object[] { CustomLineItem.builder().slug("slug") },
-                new Object[] { CustomLineItem.builder().quantity(8) } };
+                new Object[] { "slug", CustomLineItem.builder().slug("slug") },
+                new Object[] { "quantity", CustomLineItem.builder().quantity(8) } };
     }
 
     @Test

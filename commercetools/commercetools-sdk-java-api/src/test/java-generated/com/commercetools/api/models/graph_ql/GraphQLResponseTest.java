@@ -3,32 +3,26 @@ package com.commercetools.api.models.graph_ql;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class GraphQLResponseTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(GraphQLResponseBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, GraphQLResponseBuilder builder) {
         GraphQLResponse graphQLResponse = builder.buildUnchecked();
         Assertions.assertThat(graphQLResponse).isInstanceOf(GraphQLResponse.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { GraphQLResponse.builder().data("data") }, new Object[] { GraphQLResponse
-                .builder()
-                .errors(Collections.singletonList(new com.commercetools.api.models.graph_ql.GraphQLErrorImpl())) } };
+        return new Object[][] { new Object[] { "data", GraphQLResponse.builder().data("data") },
+                new Object[] { "errors",
+                        GraphQLResponse.builder()
+                                .errors(Collections.singletonList(
+                                    new com.commercetools.api.models.graph_ql.GraphQLErrorImpl())) } };
     }
 
     @Test

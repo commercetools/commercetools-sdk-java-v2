@@ -4,59 +4,59 @@ package com.commercetools.api.models.shopping_list;
 import java.time.ZonedDateTime;
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ShoppingListTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ShoppingListBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ShoppingListBuilder builder) {
         ShoppingList shoppingList = builder.buildUnchecked();
         Assertions.assertThat(shoppingList).isInstanceOf(ShoppingList.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ShoppingList.builder().id("id") },
-                new Object[] { ShoppingList.builder().version(2L) },
-                new Object[] {
+        return new Object[][] { new Object[] { "id", ShoppingList.builder().id("id") },
+                new Object[] { "version", ShoppingList.builder().version(2L) },
+                new Object[] { "name",
                         ShoppingList.builder().name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { ShoppingList.builder().key("key") },
-                new Object[] { ShoppingList.builder()
-                        .customer(new com.commercetools.api.models.customer.CustomerReferenceImpl()) },
-                new Object[] {
+                new Object[] { "key", ShoppingList.builder().key("key") },
+                new Object[] { "customer",
+                        ShoppingList.builder()
+                                .customer(new com.commercetools.api.models.customer.CustomerReferenceImpl()) },
+                new Object[] { "slug",
                         ShoppingList.builder().slug(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { ShoppingList.builder()
-                        .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { ShoppingList.builder()
-                        .lineItems(Collections.singletonList(
-                            new com.commercetools.api.models.shopping_list.ShoppingListLineItemImpl())) },
-                new Object[] { ShoppingList.builder()
-                        .textLineItems(Collections
-                                .singletonList(new com.commercetools.api.models.shopping_list.TextLineItemImpl())) },
-                new Object[] { ShoppingList.builder().deleteDaysAfterLastModification(3L) },
-                new Object[] { ShoppingList.builder().anonymousId("anonymousId") },
-                new Object[] {
+                new Object[] { "description",
+                        ShoppingList.builder()
+                                .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "lineItems",
+                        ShoppingList.builder()
+                                .lineItems(Collections.singletonList(
+                                    new com.commercetools.api.models.shopping_list.ShoppingListLineItemImpl())) },
+                new Object[] { "textLineItems",
+                        ShoppingList.builder()
+                                .textLineItems(Collections.singletonList(
+                                    new com.commercetools.api.models.shopping_list.TextLineItemImpl())) },
+                new Object[] { "deleteDaysAfterLastModification",
+                        ShoppingList.builder().deleteDaysAfterLastModification(3L) },
+                new Object[] { "anonymousId", ShoppingList.builder().anonymousId("anonymousId") },
+                new Object[] { "store",
                         ShoppingList.builder().store(new com.commercetools.api.models.store.StoreKeyReferenceImpl()) },
-                new Object[] { ShoppingList.builder()
+                new Object[] { "businessUnit", ShoppingList.builder()
                         .businessUnit(new com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceImpl()) },
-                new Object[] {
+                new Object[] { "custom",
                         ShoppingList.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) },
-                new Object[] { ShoppingList.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { ShoppingList.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { ShoppingList.builder()
-                        .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
-                new Object[] {
+                new Object[] { "createdAt",
+                        ShoppingList.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedAt",
+                        ShoppingList.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedBy",
+                        ShoppingList.builder()
+                                .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
+                new Object[] { "createdBy",
                         ShoppingList.builder().createdBy(new com.commercetools.api.models.common.CreatedByImpl()) } };
     }
 

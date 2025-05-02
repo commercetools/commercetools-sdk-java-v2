@@ -4,54 +4,52 @@ package com.commercetools.api.models.cart;
 import java.time.ZonedDateTime;
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CartAddLineItemActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CartAddLineItemActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CartAddLineItemActionBuilder builder) {
         CartAddLineItemAction cartAddLineItemAction = builder.buildUnchecked();
         Assertions.assertThat(cartAddLineItemAction).isInstanceOf(CartAddLineItemAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { CartAddLineItemAction.builder().key("key") },
-                new Object[] { CartAddLineItemAction.builder().productId("productId") },
-                new Object[] { CartAddLineItemAction.builder().variantId(5L) },
-                new Object[] { CartAddLineItemAction.builder().sku("sku") },
-                new Object[] { CartAddLineItemAction.builder().quantity(8L) },
-                new Object[] { CartAddLineItemAction.builder().addedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { CartAddLineItemAction.builder()
-                        .distributionChannel(
-                            new com.commercetools.api.models.channel.ChannelResourceIdentifierImpl()) },
-                new Object[] { CartAddLineItemAction.builder()
+        return new Object[][] { new Object[] { "key", CartAddLineItemAction.builder().key("key") },
+                new Object[] { "productId", CartAddLineItemAction.builder().productId("productId") },
+                new Object[] { "variantId", CartAddLineItemAction.builder().variantId(5L) },
+                new Object[] { "sku", CartAddLineItemAction.builder().sku("sku") },
+                new Object[] { "quantity", CartAddLineItemAction.builder().quantity(8L) },
+                new Object[] { "addedAt",
+                        CartAddLineItemAction.builder().addedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "distributionChannel",
+                        CartAddLineItemAction.builder()
+                                .distributionChannel(
+                                    new com.commercetools.api.models.channel.ChannelResourceIdentifierImpl()) },
+                new Object[] { "supplyChannel", CartAddLineItemAction.builder()
                         .supplyChannel(new com.commercetools.api.models.channel.ChannelResourceIdentifierImpl()) },
-                new Object[] { CartAddLineItemAction.builder()
-                        .externalPrice(new com.commercetools.api.models.common.MoneyImpl()) },
-                new Object[] { CartAddLineItemAction.builder()
+                new Object[] { "externalPrice",
+                        CartAddLineItemAction.builder()
+                                .externalPrice(new com.commercetools.api.models.common.MoneyImpl()) },
+                new Object[] { "externalTotalPrice", CartAddLineItemAction.builder()
                         .externalTotalPrice(new com.commercetools.api.models.cart.ExternalLineItemTotalPriceImpl()) },
-                new Object[] { CartAddLineItemAction.builder()
-                        .externalTaxRate(new com.commercetools.api.models.cart.ExternalTaxRateDraftImpl()) },
-                new Object[] { CartAddLineItemAction.builder()
-                        .perMethodExternalTaxRate(Collections.singletonList(
-                            new com.commercetools.api.models.cart.MethodExternalTaxRateDraftImpl())) },
-                new Object[] { CartAddLineItemAction.builder()
-                        .inventoryMode(com.commercetools.api.models.cart.InventoryMode.findEnum("None")) },
-                new Object[] { CartAddLineItemAction.builder()
+                new Object[] { "externalTaxRate",
+                        CartAddLineItemAction.builder()
+                                .externalTaxRate(new com.commercetools.api.models.cart.ExternalTaxRateDraftImpl()) },
+                new Object[] { "perMethodExternalTaxRate",
+                        CartAddLineItemAction.builder()
+                                .perMethodExternalTaxRate(Collections.singletonList(
+                                    new com.commercetools.api.models.cart.MethodExternalTaxRateDraftImpl())) },
+                new Object[] { "inventoryMode",
+                        CartAddLineItemAction.builder()
+                                .inventoryMode(com.commercetools.api.models.cart.InventoryMode.findEnum("None")) },
+                new Object[] { "shippingDetails", CartAddLineItemAction.builder()
                         .shippingDetails(new com.commercetools.api.models.cart.ItemShippingDetailsDraftImpl()) },
-                new Object[] { CartAddLineItemAction.builder()
+                new Object[] { "custom", CartAddLineItemAction.builder()
                         .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) } };
     }
 

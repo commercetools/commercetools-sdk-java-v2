@@ -1,34 +1,28 @@
 
 package com.commercetools.api.models.shopping_list;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ShoppingListRemoveTextLineItemActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ShoppingListRemoveTextLineItemActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ShoppingListRemoveTextLineItemActionBuilder builder) {
         ShoppingListRemoveTextLineItemAction shoppingListRemoveTextLineItemAction = builder.buildUnchecked();
         Assertions.assertThat(shoppingListRemoveTextLineItemAction)
                 .isInstanceOf(ShoppingListRemoveTextLineItemAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { ShoppingListRemoveTextLineItemAction.builder().textLineItemId("textLineItemId") },
-                new Object[] { ShoppingListRemoveTextLineItemAction.builder().textLineItemKey("textLineItemKey") },
-                new Object[] { ShoppingListRemoveTextLineItemAction.builder().quantity(8L) } };
+                new Object[] { "textLineItemId",
+                        ShoppingListRemoveTextLineItemAction.builder().textLineItemId("textLineItemId") },
+                new Object[] { "textLineItemKey",
+                        ShoppingListRemoveTextLineItemAction.builder().textLineItemKey("textLineItemKey") },
+                new Object[] { "quantity", ShoppingListRemoveTextLineItemAction.builder().quantity(8L) } };
     }
 
     @Test

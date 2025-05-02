@@ -1,35 +1,29 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class AddProductChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(AddProductChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, AddProductChangeBuilder builder) {
         AddProductChange addProductChange = builder.buildUnchecked();
         Assertions.assertThat(addProductChange).isInstanceOf(AddProductChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { AddProductChange.builder().change("change") },
-                new Object[] { AddProductChange.builder()
-                        .nextValue(new com.commercetools.history.models.common.ReferenceImpl()) },
-                new Object[] { AddProductChange.builder()
-                        .variantSelection(
-                            new com.commercetools.history.models.common.ProductVariantSelectionImpl()) } };
+        return new Object[][] { new Object[] { "change", AddProductChange.builder().change("change") },
+                new Object[] { "nextValue",
+                        AddProductChange.builder()
+                                .nextValue(new com.commercetools.history.models.common.ReferenceImpl()) },
+                new Object[] { "variantSelection",
+                        AddProductChange.builder()
+                                .variantSelection(
+                                    new com.commercetools.history.models.common.ProductVariantSelectionImpl()) } };
     }
 
     @Test

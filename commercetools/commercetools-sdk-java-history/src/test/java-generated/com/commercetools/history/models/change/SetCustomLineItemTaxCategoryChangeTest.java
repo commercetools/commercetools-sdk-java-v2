@@ -1,38 +1,35 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetCustomLineItemTaxCategoryChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetCustomLineItemTaxCategoryChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetCustomLineItemTaxCategoryChangeBuilder builder) {
         SetCustomLineItemTaxCategoryChange setCustomLineItemTaxCategoryChange = builder.buildUnchecked();
         Assertions.assertThat(setCustomLineItemTaxCategoryChange)
                 .isInstanceOf(SetCustomLineItemTaxCategoryChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetCustomLineItemTaxCategoryChange.builder().change("change") },
-                new Object[] { SetCustomLineItemTaxCategoryChange.builder()
-                        .previousValue(new com.commercetools.history.models.common.ReferenceImpl()) },
-                new Object[] { SetCustomLineItemTaxCategoryChange.builder()
-                        .nextValue(new com.commercetools.history.models.common.ReferenceImpl()) },
-                new Object[] { SetCustomLineItemTaxCategoryChange.builder()
-                        .customLineItem(new com.commercetools.history.models.common.LocalizedStringImpl()) },
-                new Object[] { SetCustomLineItemTaxCategoryChange.builder().customLineItemId("customLineItemId") } };
+        return new Object[][] {
+                new Object[] { "change", SetCustomLineItemTaxCategoryChange.builder().change("change") },
+                new Object[] { "previousValue",
+                        SetCustomLineItemTaxCategoryChange.builder()
+                                .previousValue(new com.commercetools.history.models.common.ReferenceImpl()) },
+                new Object[] { "nextValue",
+                        SetCustomLineItemTaxCategoryChange.builder()
+                                .nextValue(new com.commercetools.history.models.common.ReferenceImpl()) },
+                new Object[] { "customLineItem",
+                        SetCustomLineItemTaxCategoryChange.builder()
+                                .customLineItem(new com.commercetools.history.models.common.LocalizedStringImpl()) },
+                new Object[] { "customLineItemId",
+                        SetCustomLineItemTaxCategoryChange.builder().customLineItemId("customLineItemId") } };
     }
 
     @Test

@@ -1,31 +1,23 @@
 
 package com.commercetools.api.models.approval_flow;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ApprovalFlowSetCustomFieldActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ApprovalFlowSetCustomFieldActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ApprovalFlowSetCustomFieldActionBuilder builder) {
         ApprovalFlowSetCustomFieldAction approvalFlowSetCustomFieldAction = builder.buildUnchecked();
         Assertions.assertThat(approvalFlowSetCustomFieldAction).isInstanceOf(ApprovalFlowSetCustomFieldAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ApprovalFlowSetCustomFieldAction.builder().name("name") },
-                new Object[] { ApprovalFlowSetCustomFieldAction.builder().value("value") } };
+        return new Object[][] { new Object[] { "name", ApprovalFlowSetCustomFieldAction.builder().name("name") },
+                new Object[] { "value", ApprovalFlowSetCustomFieldAction.builder().value("value") } };
     }
 
     @Test

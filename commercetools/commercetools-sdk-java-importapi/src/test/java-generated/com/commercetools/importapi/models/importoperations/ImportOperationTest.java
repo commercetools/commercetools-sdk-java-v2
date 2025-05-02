@@ -4,45 +4,43 @@ package com.commercetools.importapi.models.importoperations;
 import java.time.ZonedDateTime;
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ImportOperationTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ImportOperationBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ImportOperationBuilder builder) {
         ImportOperation importOperation = builder.buildUnchecked();
         Assertions.assertThat(importOperation).isInstanceOf(ImportOperation.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ImportOperation.builder().version(2L) },
-                new Object[] { ImportOperation.builder().importContainerKey("importContainerKey") },
-                new Object[] { ImportOperation.builder().resourceKey("resourceKey") },
-                new Object[] { ImportOperation.builder().id("id") },
-                new Object[] { ImportOperation.builder()
+        return new Object[][] { new Object[] { "version", ImportOperation.builder().version(2L) },
+                new Object[] { "importContainerKey",
+                        ImportOperation.builder().importContainerKey("importContainerKey") },
+                new Object[] { "resourceKey", ImportOperation.builder().resourceKey("resourceKey") },
+                new Object[] { "id", ImportOperation.builder().id("id") },
+                new Object[] { "state", ImportOperation.builder()
                         .state(com.commercetools.importapi.models.common.ProcessingState.findEnum("processing")) },
-                new Object[] { ImportOperation.builder().resourceVersion(9L) },
-                new Object[] { ImportOperation.builder()
-                        .errors(Collections
-                                .singletonList(new com.commercetools.importapi.models.errors.ErrorObjectImpl())) },
-                new Object[] { ImportOperation.builder()
-                        .unresolvedReferences(Collections.singletonList(
-                            new com.commercetools.importapi.models.common.UnresolvedReferencesImpl())) },
-                new Object[] { ImportOperation.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { ImportOperation.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { ImportOperation.builder().expiresAt(ZonedDateTime.parse("2023-06-01T12:00Z")) } };
+                new Object[] { "resourceVersion", ImportOperation.builder().resourceVersion(9L) },
+                new Object[] { "errors",
+                        ImportOperation.builder()
+                                .errors(Collections.singletonList(
+                                    new com.commercetools.importapi.models.errors.ErrorObjectImpl())) },
+                new Object[] { "unresolvedReferences",
+                        ImportOperation.builder()
+                                .unresolvedReferences(Collections.singletonList(
+                                    new com.commercetools.importapi.models.common.UnresolvedReferencesImpl())) },
+                new Object[] { "createdAt",
+                        ImportOperation.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedAt",
+                        ImportOperation.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "expiresAt",
+                        ImportOperation.builder().expiresAt(ZonedDateTime.parse("2023-06-01T12:00Z")) } };
     }
 
     @Test

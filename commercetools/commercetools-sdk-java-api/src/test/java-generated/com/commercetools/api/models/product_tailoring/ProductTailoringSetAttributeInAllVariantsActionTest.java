@@ -1,34 +1,27 @@
 
 package com.commercetools.api.models.product_tailoring;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductTailoringSetAttributeInAllVariantsActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductTailoringSetAttributeInAllVariantsActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductTailoringSetAttributeInAllVariantsActionBuilder builder) {
         ProductTailoringSetAttributeInAllVariantsAction productTailoringSetAttributeInAllVariantsAction = builder
                 .buildUnchecked();
         Assertions.assertThat(productTailoringSetAttributeInAllVariantsAction)
                 .isInstanceOf(ProductTailoringSetAttributeInAllVariantsAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductTailoringSetAttributeInAllVariantsAction.builder().name("name") },
-                new Object[] { ProductTailoringSetAttributeInAllVariantsAction.builder().value("value") },
-                new Object[] { ProductTailoringSetAttributeInAllVariantsAction.builder().staged(true) } };
+        return new Object[][] {
+                new Object[] { "name", ProductTailoringSetAttributeInAllVariantsAction.builder().name("name") },
+                new Object[] { "value", ProductTailoringSetAttributeInAllVariantsAction.builder().value("value") },
+                new Object[] { "staged", ProductTailoringSetAttributeInAllVariantsAction.builder().staged(true) } };
     }
 
     @Test

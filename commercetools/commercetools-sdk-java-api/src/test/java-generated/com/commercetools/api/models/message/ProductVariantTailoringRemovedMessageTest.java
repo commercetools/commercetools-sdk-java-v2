@@ -1,38 +1,32 @@
 
 package com.commercetools.api.models.message;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductVariantTailoringRemovedMessageTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductVariantTailoringRemovedMessageBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductVariantTailoringRemovedMessageBuilder builder) {
         ProductVariantTailoringRemovedMessage productVariantTailoringRemovedMessage = builder.buildUnchecked();
         Assertions.assertThat(productVariantTailoringRemovedMessage)
                 .isInstanceOf(ProductVariantTailoringRemovedMessage.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { ProductVariantTailoringRemovedMessage.builder()
-                        .store(new com.commercetools.api.models.store.StoreKeyReferenceImpl()) },
-                new Object[] { ProductVariantTailoringRemovedMessage.builder().productKey("productKey") },
-                new Object[] { ProductVariantTailoringRemovedMessage.builder()
-                        .product(new com.commercetools.api.models.product.ProductReferenceImpl()) },
-                new Object[] { ProductVariantTailoringRemovedMessage.builder().variantId(5L) },
-                new Object[] { ProductVariantTailoringRemovedMessage.builder()
+                new Object[] { "store",
+                        ProductVariantTailoringRemovedMessage.builder()
+                                .store(new com.commercetools.api.models.store.StoreKeyReferenceImpl()) },
+                new Object[] { "productKey", ProductVariantTailoringRemovedMessage.builder().productKey("productKey") },
+                new Object[] { "product",
+                        ProductVariantTailoringRemovedMessage.builder()
+                                .product(new com.commercetools.api.models.product.ProductReferenceImpl()) },
+                new Object[] { "variantId", ProductVariantTailoringRemovedMessage.builder().variantId(5L) },
+                new Object[] { "variant", ProductVariantTailoringRemovedMessage.builder()
                         .variant(new com.commercetools.api.models.product_tailoring.ProductVariantTailoringImpl()) } };
     }
 

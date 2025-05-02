@@ -1,34 +1,27 @@
 
 package com.commercetools.api.models.event;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ImportContainerDeletedEventTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ImportContainerDeletedEventBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ImportContainerDeletedEventBuilder builder) {
         ImportContainerDeletedEvent importContainerDeletedEvent = builder.buildUnchecked();
         Assertions.assertThat(importContainerDeletedEvent).isInstanceOf(ImportContainerDeletedEvent.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { ImportContainerDeletedEvent.builder()
-                        .resourceType(com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId
-                                .findEnum("import-api")) },
-                new Object[] { ImportContainerDeletedEvent.builder()
+                new Object[] { "resourceType",
+                        ImportContainerDeletedEvent.builder()
+                                .resourceType(com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId
+                                        .findEnum("import-api")) },
+                new Object[] { "data", ImportContainerDeletedEvent.builder()
                         .data(new com.commercetools.api.models.event.ImportContainerDeletedEventDataImpl()) } };
     }
 

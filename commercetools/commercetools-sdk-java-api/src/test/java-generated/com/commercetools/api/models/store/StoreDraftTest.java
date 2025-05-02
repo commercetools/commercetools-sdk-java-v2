@@ -3,46 +3,42 @@ package com.commercetools.api.models.store;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class StoreDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(StoreDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, StoreDraftBuilder builder) {
         StoreDraft storeDraft = builder.buildUnchecked();
         Assertions.assertThat(storeDraft).isInstanceOf(StoreDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { StoreDraft.builder().key("key") },
-                new Object[] {
+        return new Object[][] { new Object[] { "key", StoreDraft.builder().key("key") },
+                new Object[] { "name",
                         StoreDraft.builder().name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { StoreDraft.builder().languages(Collections.singletonList("languages")) },
-                new Object[] { StoreDraft.builder()
-                        .countries(Collections
-                                .singletonList(new com.commercetools.api.models.store_country.StoreCountryImpl())) },
-                new Object[] { StoreDraft.builder()
-                        .distributionChannels(Collections.singletonList(
-                            new com.commercetools.api.models.channel.ChannelResourceIdentifierImpl())) },
-                new Object[] { StoreDraft.builder()
-                        .supplyChannels(Collections.singletonList(
-                            new com.commercetools.api.models.channel.ChannelResourceIdentifierImpl())) },
-                new Object[] { StoreDraft.builder()
-                        .productSelections(Collections.singletonList(
-                            new com.commercetools.api.models.store.ProductSelectionSettingDraftImpl())) },
-                new Object[] {
+                new Object[] { "languages", StoreDraft.builder().languages(Collections.singletonList("languages")) },
+                new Object[] { "countries",
+                        StoreDraft.builder()
+                                .countries(Collections.singletonList(
+                                    new com.commercetools.api.models.store_country.StoreCountryImpl())) },
+                new Object[] { "distributionChannels",
+                        StoreDraft.builder()
+                                .distributionChannels(Collections.singletonList(
+                                    new com.commercetools.api.models.channel.ChannelResourceIdentifierImpl())) },
+                new Object[] { "supplyChannels",
+                        StoreDraft.builder()
+                                .supplyChannels(Collections.singletonList(
+                                    new com.commercetools.api.models.channel.ChannelResourceIdentifierImpl())) },
+                new Object[] { "productSelections",
+                        StoreDraft.builder()
+                                .productSelections(Collections.singletonList(
+                                    new com.commercetools.api.models.store.ProductSelectionSettingDraftImpl())) },
+                new Object[] { "custom",
                         StoreDraft.builder().custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) } };
     }
 

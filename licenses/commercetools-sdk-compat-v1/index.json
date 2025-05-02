@@ -72,7 +72,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-annotations",
-            "moduleVersion": "2.18.3",
+            "moduleVersion": "2.19.0",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson"
             ],
@@ -85,7 +85,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-core",
-            "moduleVersion": "2.18.3",
+            "moduleVersion": "2.19.0",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-core"
             ],
@@ -98,7 +98,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-databind",
-            "moduleVersion": "2.18.3",
+            "moduleVersion": "2.19.0",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson"
             ],
@@ -111,7 +111,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.dataformat:jackson-dataformat-cbor",
-            "moduleVersion": "2.18.3",
+            "moduleVersion": "2.19.0",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-dataformats-binary"
             ],
@@ -124,7 +124,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.datatype:jackson-datatype-jsr310",
-            "moduleVersion": "2.18.3",
+            "moduleVersion": "2.19.0",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-modules-java8/jackson-datatype-jsr310"
             ],
@@ -137,7 +137,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.module:jackson-module-parameter-names",
-            "moduleVersion": "2.18.3",
+            "moduleVersion": "2.19.0",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-modules-java8/jackson-module-parameter-names"
             ],
@@ -243,7 +243,7 @@
         },
         {
             "moduleName": "io.netty:netty-buffer",
-            "moduleVersion": "4.1.119.Final",
+            "moduleVersion": "4.2.0.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -256,7 +256,33 @@
         },
         {
             "moduleName": "io.netty:netty-codec",
-            "moduleVersion": "4.1.119.Final",
+            "moduleVersion": "4.2.0.Final",
+            "moduleUrls": [
+                "https://netty.io/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "io.netty:netty-codec-base",
+            "moduleVersion": "4.2.0.Final",
+            "moduleUrls": [
+                "https://netty.io/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "io.netty:netty-codec-compression",
+            "moduleVersion": "4.2.0.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -269,7 +295,33 @@
         },
         {
             "moduleName": "io.netty:netty-codec-http",
-            "moduleVersion": "4.1.119.Final",
+            "moduleVersion": "4.2.0.Final",
+            "moduleUrls": [
+                "https://netty.io/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "io.netty:netty-codec-marshalling",
+            "moduleVersion": "4.2.0.Final",
+            "moduleUrls": [
+                "https://netty.io/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                }
+            ]
+        },
+        {
+            "moduleName": "io.netty:netty-codec-protobuf",
+            "moduleVersion": "4.2.0.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -282,7 +334,7 @@
         },
         {
             "moduleName": "io.netty:netty-common",
-            "moduleVersion": "4.1.119.Final",
+            "moduleVersion": "4.2.0.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -295,7 +347,7 @@
         },
         {
             "moduleName": "io.netty:netty-handler",
-            "moduleVersion": "4.1.119.Final",
+            "moduleVersion": "4.2.0.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -308,7 +360,7 @@
         },
         {
             "moduleName": "io.netty:netty-resolver",
-            "moduleVersion": "4.1.119.Final",
+            "moduleVersion": "4.2.0.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -321,7 +373,7 @@
         },
         {
             "moduleName": "io.netty:netty-transport",
-            "moduleVersion": "4.1.119.Final",
+            "moduleVersion": "4.2.0.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -347,7 +399,7 @@
         },
         {
             "moduleName": "io.netty:netty-transport-native-unix-common",
-            "moduleVersion": "4.1.119.Final",
+            "moduleVersion": "4.2.0.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -449,7 +501,7 @@
         },
         {
             "moduleName": "org.apache.commons:commons-text",
-            "moduleVersion": "1.13.0",
+            "moduleVersion": "1.13.1",
             "moduleUrls": [
                 "https://commons.apache.org/proper/commons-text"
             ],
@@ -565,7 +617,7 @@
         },
         {
             "moduleName": "org.javamoney.moneta:moneta-core",
-            "moduleVersion": "1.4.4",
+            "moduleVersion": "1.4.5",
             "moduleUrls": [
                 "http://javamoney.org",
                 "http://www.javamoney.org"

@@ -1,35 +1,28 @@
 
 package com.commercetools.api.models.product_tailoring;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductTailoringMoveImageToPositionActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductTailoringMoveImageToPositionActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductTailoringMoveImageToPositionActionBuilder builder) {
         ProductTailoringMoveImageToPositionAction productTailoringMoveImageToPositionAction = builder.buildUnchecked();
         Assertions.assertThat(productTailoringMoveImageToPositionAction)
                 .isInstanceOf(ProductTailoringMoveImageToPositionAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductTailoringMoveImageToPositionAction.builder().variantId(5L) },
-                new Object[] { ProductTailoringMoveImageToPositionAction.builder().sku("sku") },
-                new Object[] { ProductTailoringMoveImageToPositionAction.builder().imageUrl("imageUrl") },
-                new Object[] { ProductTailoringMoveImageToPositionAction.builder().position(4L) },
-                new Object[] { ProductTailoringMoveImageToPositionAction.builder().staged(true) } };
+        return new Object[][] {
+                new Object[] { "variantId", ProductTailoringMoveImageToPositionAction.builder().variantId(5L) },
+                new Object[] { "sku", ProductTailoringMoveImageToPositionAction.builder().sku("sku") },
+                new Object[] { "imageUrl", ProductTailoringMoveImageToPositionAction.builder().imageUrl("imageUrl") },
+                new Object[] { "position", ProductTailoringMoveImageToPositionAction.builder().position(4L) },
+                new Object[] { "staged", ProductTailoringMoveImageToPositionAction.builder().staged(true) } };
     }
 
     @Test

@@ -1,32 +1,25 @@
 
 package com.commercetools.api.models.product;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductReferenceTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductReferenceBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductReferenceBuilder builder) {
         ProductReference productReference = builder.buildUnchecked();
         Assertions.assertThat(productReference).isInstanceOf(ProductReference.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { ProductReference.builder().obj(new com.commercetools.api.models.product.ProductImpl()) },
-                new Object[] { ProductReference.builder().id("id") } };
+                new Object[] { "obj",
+                        ProductReference.builder().obj(new com.commercetools.api.models.product.ProductImpl()) },
+                new Object[] { "id", ProductReference.builder().id("id") } };
     }
 
     @Test

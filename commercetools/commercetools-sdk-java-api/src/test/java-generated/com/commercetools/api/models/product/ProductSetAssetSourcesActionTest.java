@@ -3,35 +3,27 @@ package com.commercetools.api.models.product;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductSetAssetSourcesActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductSetAssetSourcesActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductSetAssetSourcesActionBuilder builder) {
         ProductSetAssetSourcesAction productSetAssetSourcesAction = builder.buildUnchecked();
         Assertions.assertThat(productSetAssetSourcesAction).isInstanceOf(ProductSetAssetSourcesAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductSetAssetSourcesAction.builder().variantId(5L) },
-                new Object[] { ProductSetAssetSourcesAction.builder().sku("sku") },
-                new Object[] { ProductSetAssetSourcesAction.builder().staged(true) },
-                new Object[] { ProductSetAssetSourcesAction.builder().assetId("assetId") },
-                new Object[] { ProductSetAssetSourcesAction.builder().assetKey("assetKey") },
-                new Object[] { ProductSetAssetSourcesAction.builder()
+        return new Object[][] { new Object[] { "variantId", ProductSetAssetSourcesAction.builder().variantId(5L) },
+                new Object[] { "sku", ProductSetAssetSourcesAction.builder().sku("sku") },
+                new Object[] { "staged", ProductSetAssetSourcesAction.builder().staged(true) },
+                new Object[] { "assetId", ProductSetAssetSourcesAction.builder().assetId("assetId") },
+                new Object[] { "assetKey", ProductSetAssetSourcesAction.builder().assetKey("assetKey") },
+                new Object[] { "sources", ProductSetAssetSourcesAction.builder()
                         .sources(
                             Collections.singletonList(new com.commercetools.api.models.common.AssetSourceImpl())) } };
     }

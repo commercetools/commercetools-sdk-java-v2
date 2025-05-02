@@ -1,54 +1,48 @@
 
 package com.commercetools.api.models.common;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class BaseAddressTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(BaseAddressBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, BaseAddressBuilder builder) {
         BaseAddress baseAddress = builder.buildUnchecked();
         Assertions.assertThat(baseAddress).isInstanceOf(BaseAddress.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { BaseAddress.builder().id("id") },
-                new Object[] { BaseAddress.builder().key("key") },
-                new Object[] { BaseAddress.builder().country("country") },
-                new Object[] { BaseAddress.builder().title("title") },
-                new Object[] { BaseAddress.builder().salutation("salutation") },
-                new Object[] { BaseAddress.builder().firstName("firstName") },
-                new Object[] { BaseAddress.builder().lastName("lastName") },
-                new Object[] { BaseAddress.builder().streetName("streetName") },
-                new Object[] { BaseAddress.builder().streetNumber("streetNumber") },
-                new Object[] { BaseAddress.builder().additionalStreetInfo("additionalStreetInfo") },
-                new Object[] { BaseAddress.builder().postalCode("postalCode") },
-                new Object[] { BaseAddress.builder().city("city") },
-                new Object[] { BaseAddress.builder().region("region") },
-                new Object[] { BaseAddress.builder().state("state") },
-                new Object[] { BaseAddress.builder().company("company") },
-                new Object[] { BaseAddress.builder().department("department") },
-                new Object[] { BaseAddress.builder().building("building") },
-                new Object[] { BaseAddress.builder().apartment("apartment") },
-                new Object[] { BaseAddress.builder().pOBox("pOBox") },
-                new Object[] { BaseAddress.builder().phone("phone") },
-                new Object[] { BaseAddress.builder().mobile("mobile") },
-                new Object[] { BaseAddress.builder().email("email") },
-                new Object[] { BaseAddress.builder().fax("fax") },
-                new Object[] { BaseAddress.builder().additionalAddressInfo("additionalAddressInfo") },
-                new Object[] { BaseAddress.builder().externalId("externalId") } };
+        return new Object[][] { new Object[] { "id", BaseAddress.builder().id("id") },
+                new Object[] { "key", BaseAddress.builder().key("key") },
+                new Object[] { "country", BaseAddress.builder().country("country") },
+                new Object[] { "title", BaseAddress.builder().title("title") },
+                new Object[] { "salutation", BaseAddress.builder().salutation("salutation") },
+                new Object[] { "firstName", BaseAddress.builder().firstName("firstName") },
+                new Object[] { "lastName", BaseAddress.builder().lastName("lastName") },
+                new Object[] { "streetName", BaseAddress.builder().streetName("streetName") },
+                new Object[] { "streetNumber", BaseAddress.builder().streetNumber("streetNumber") },
+                new Object[] { "additionalStreetInfo",
+                        BaseAddress.builder().additionalStreetInfo("additionalStreetInfo") },
+                new Object[] { "postalCode", BaseAddress.builder().postalCode("postalCode") },
+                new Object[] { "city", BaseAddress.builder().city("city") },
+                new Object[] { "region", BaseAddress.builder().region("region") },
+                new Object[] { "state", BaseAddress.builder().state("state") },
+                new Object[] { "company", BaseAddress.builder().company("company") },
+                new Object[] { "department", BaseAddress.builder().department("department") },
+                new Object[] { "building", BaseAddress.builder().building("building") },
+                new Object[] { "apartment", BaseAddress.builder().apartment("apartment") },
+                new Object[] { "pOBox", BaseAddress.builder().pOBox("pOBox") },
+                new Object[] { "phone", BaseAddress.builder().phone("phone") },
+                new Object[] { "mobile", BaseAddress.builder().mobile("mobile") },
+                new Object[] { "email", BaseAddress.builder().email("email") },
+                new Object[] { "fax", BaseAddress.builder().fax("fax") },
+                new Object[] { "additionalAddressInfo",
+                        BaseAddress.builder().additionalAddressInfo("additionalAddressInfo") },
+                new Object[] { "externalId", BaseAddress.builder().externalId("externalId") } };
     }
 
     @Test

@@ -1,30 +1,22 @@
 
 package com.commercetools.api.models.channel;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ChannelSetGeoLocationActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ChannelSetGeoLocationActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ChannelSetGeoLocationActionBuilder builder) {
         ChannelSetGeoLocationAction channelSetGeoLocationAction = builder.buildUnchecked();
         Assertions.assertThat(channelSetGeoLocationAction).isInstanceOf(ChannelSetGeoLocationAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ChannelSetGeoLocationAction.builder()
+        return new Object[][] { new Object[] { "geoLocation", ChannelSetGeoLocationAction.builder()
                 .geoLocation(new com.commercetools.api.models.common.GeoJsonImpl()) } };
     }
 

@@ -1,35 +1,29 @@
 
 package com.commercetools.api.models.product_tailoring;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductTailoringAddExternalImageActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductTailoringAddExternalImageActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductTailoringAddExternalImageActionBuilder builder) {
         ProductTailoringAddExternalImageAction productTailoringAddExternalImageAction = builder.buildUnchecked();
         Assertions.assertThat(productTailoringAddExternalImageAction)
                 .isInstanceOf(ProductTailoringAddExternalImageAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductTailoringAddExternalImageAction.builder().variantId(5L) },
-                new Object[] { ProductTailoringAddExternalImageAction.builder().sku("sku") },
-                new Object[] { ProductTailoringAddExternalImageAction.builder()
-                        .image(new com.commercetools.api.models.common.ImageImpl()) },
-                new Object[] { ProductTailoringAddExternalImageAction.builder().staged(true) } };
+        return new Object[][] {
+                new Object[] { "variantId", ProductTailoringAddExternalImageAction.builder().variantId(5L) },
+                new Object[] { "sku", ProductTailoringAddExternalImageAction.builder().sku("sku") },
+                new Object[] { "image",
+                        ProductTailoringAddExternalImageAction.builder()
+                                .image(new com.commercetools.api.models.common.ImageImpl()) },
+                new Object[] { "staged", ProductTailoringAddExternalImageAction.builder().staged(true) } };
     }
 
     @Test

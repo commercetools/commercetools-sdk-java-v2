@@ -1,36 +1,31 @@
 
 package com.commercetools.history.models.common;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class TransactionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(TransactionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, TransactionBuilder builder) {
         Transaction transaction = builder.buildUnchecked();
         Assertions.assertThat(transaction).isInstanceOf(Transaction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { Transaction.builder().id("id") },
-                new Object[] { Transaction.builder().timestamp("timestamp") },
-                new Object[] { Transaction.builder()
-                        .type(com.commercetools.history.models.common.TransactionType.findEnum("Authorization")) },
-                new Object[] { Transaction.builder().amount(new com.commercetools.history.models.common.MoneyImpl()) },
-                new Object[] { Transaction.builder().interactionId("interactionId") },
-                new Object[] { Transaction.builder()
+        return new Object[][] { new Object[] { "id", Transaction.builder().id("id") },
+                new Object[] { "timestamp", Transaction.builder().timestamp("timestamp") },
+                new Object[] { "type",
+                        Transaction.builder()
+                                .type(com.commercetools.history.models.common.TransactionType
+                                        .findEnum("Authorization")) },
+                new Object[] { "amount",
+                        Transaction.builder().amount(new com.commercetools.history.models.common.MoneyImpl()) },
+                new Object[] { "interactionId", Transaction.builder().interactionId("interactionId") },
+                new Object[] { "state", Transaction.builder()
                         .state(com.commercetools.history.models.common.TransactionState.findEnum("Initial")) } };
     }
 

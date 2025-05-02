@@ -1,37 +1,33 @@
 
 package com.commercetools.history.models.change_value;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ChangeTargetMultiBuyCustomLineItemsChangeValueTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ChangeTargetMultiBuyCustomLineItemsChangeValueBuilder builder) {
         ChangeTargetMultiBuyCustomLineItemsChangeValue changeTargetMultiBuyCustomLineItemsChangeValue = builder
                 .buildUnchecked();
         Assertions.assertThat(changeTargetMultiBuyCustomLineItemsChangeValue)
                 .isInstanceOf(ChangeTargetMultiBuyCustomLineItemsChangeValue.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { ChangeTargetMultiBuyCustomLineItemsChangeValue.builder().predicate("predicate") },
-                new Object[] { ChangeTargetMultiBuyCustomLineItemsChangeValue.builder().triggerQuantity(8) },
-                new Object[] { ChangeTargetMultiBuyCustomLineItemsChangeValue.builder().discountedQuantity(3) },
-                new Object[] { ChangeTargetMultiBuyCustomLineItemsChangeValue.builder().maxOccurrence(7) },
-                new Object[] { ChangeTargetMultiBuyCustomLineItemsChangeValue.builder()
+                new Object[] { "predicate",
+                        ChangeTargetMultiBuyCustomLineItemsChangeValue.builder().predicate("predicate") },
+                new Object[] { "triggerQuantity",
+                        ChangeTargetMultiBuyCustomLineItemsChangeValue.builder().triggerQuantity(8) },
+                new Object[] { "discountedQuantity",
+                        ChangeTargetMultiBuyCustomLineItemsChangeValue.builder().discountedQuantity(3) },
+                new Object[] { "maxOccurrence",
+                        ChangeTargetMultiBuyCustomLineItemsChangeValue.builder().maxOccurrence(7) },
+                new Object[] { "selectionMode", ChangeTargetMultiBuyCustomLineItemsChangeValue.builder()
                         .selectionMode(com.commercetools.history.models.common.SelectionMode.findEnum("Cheapest")) } };
     }
 

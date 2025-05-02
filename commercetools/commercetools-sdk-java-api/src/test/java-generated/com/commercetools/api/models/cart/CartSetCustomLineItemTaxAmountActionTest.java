@@ -1,36 +1,31 @@
 
 package com.commercetools.api.models.cart;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CartSetCustomLineItemTaxAmountActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CartSetCustomLineItemTaxAmountActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CartSetCustomLineItemTaxAmountActionBuilder builder) {
         CartSetCustomLineItemTaxAmountAction cartSetCustomLineItemTaxAmountAction = builder.buildUnchecked();
         Assertions.assertThat(cartSetCustomLineItemTaxAmountAction)
                 .isInstanceOf(CartSetCustomLineItemTaxAmountAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { CartSetCustomLineItemTaxAmountAction.builder().customLineItemId("customLineItemId") },
-                new Object[] { CartSetCustomLineItemTaxAmountAction.builder().customLineItemKey("customLineItemKey") },
-                new Object[] { CartSetCustomLineItemTaxAmountAction.builder()
+                new Object[] { "customLineItemId",
+                        CartSetCustomLineItemTaxAmountAction.builder().customLineItemId("customLineItemId") },
+                new Object[] { "customLineItemKey",
+                        CartSetCustomLineItemTaxAmountAction.builder().customLineItemKey("customLineItemKey") },
+                new Object[] { "externalTaxAmount", CartSetCustomLineItemTaxAmountAction.builder()
                         .externalTaxAmount(new com.commercetools.api.models.cart.ExternalTaxAmountDraftImpl()) },
-                new Object[] { CartSetCustomLineItemTaxAmountAction.builder().shippingKey("shippingKey") } };
+                new Object[] { "shippingKey",
+                        CartSetCustomLineItemTaxAmountAction.builder().shippingKey("shippingKey") } };
     }
 
     @Test

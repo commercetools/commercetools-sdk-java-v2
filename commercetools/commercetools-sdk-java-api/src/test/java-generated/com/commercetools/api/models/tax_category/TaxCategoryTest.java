@@ -4,44 +4,38 @@ package com.commercetools.api.models.tax_category;
 import java.time.ZonedDateTime;
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class TaxCategoryTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(TaxCategoryBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, TaxCategoryBuilder builder) {
         TaxCategory taxCategory = builder.buildUnchecked();
         Assertions.assertThat(taxCategory).isInstanceOf(TaxCategory.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { TaxCategory.builder().id("id") },
-                new Object[] { TaxCategory.builder().version(2L) },
-                new Object[] { TaxCategory.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { TaxCategory.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { TaxCategory.builder()
-                        .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
-                new Object[] {
+        return new Object[][] { new Object[] { "id", TaxCategory.builder().id("id") },
+                new Object[] { "version", TaxCategory.builder().version(2L) },
+                new Object[] { "createdAt", TaxCategory.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedAt",
+                        TaxCategory.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedBy",
+                        TaxCategory.builder()
+                                .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
+                new Object[] { "createdBy",
                         TaxCategory.builder().createdBy(new com.commercetools.api.models.common.CreatedByImpl()) },
-                new Object[] { TaxCategory.builder().name("name") },
-                new Object[] { TaxCategory.builder().description("description") },
-                new Object[] {
+                new Object[] { "name", TaxCategory.builder().name("name") },
+                new Object[] { "description", TaxCategory.builder().description("description") },
+                new Object[] { "rates",
                         TaxCategory.builder()
                                 .rates(Collections
                                         .singletonList(new com.commercetools.api.models.tax_category.TaxRateImpl())) },
-                new Object[] { TaxCategory.builder().key("key") } };
+                new Object[] { "key", TaxCategory.builder().key("key") } };
     }
 
     @Test

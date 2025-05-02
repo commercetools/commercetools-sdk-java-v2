@@ -3,34 +3,26 @@ package com.commercetools.api.models.event;
 
 import java.time.ZonedDateTime;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ImportContainerCreatedEventDataTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ImportContainerCreatedEventDataBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ImportContainerCreatedEventDataBuilder builder) {
         ImportContainerCreatedEventData importContainerCreatedEventData = builder.buildUnchecked();
         Assertions.assertThat(importContainerCreatedEventData).isInstanceOf(ImportContainerCreatedEventData.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ImportContainerCreatedEventData.builder().key("key") },
-                new Object[] { ImportContainerCreatedEventData.builder().version(2) },
-                new Object[] {
+        return new Object[][] { new Object[] { "key", ImportContainerCreatedEventData.builder().key("key") },
+                new Object[] { "version", ImportContainerCreatedEventData.builder().version(2) },
+                new Object[] { "createdAt",
                         ImportContainerCreatedEventData.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { ImportContainerCreatedEventData.builder()
+                new Object[] { "lastModifiedAt", ImportContainerCreatedEventData.builder()
                         .lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) } };
     }
 

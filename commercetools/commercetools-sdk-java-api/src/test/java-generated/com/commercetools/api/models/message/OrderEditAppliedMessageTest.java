@@ -1,33 +1,26 @@
 
 package com.commercetools.api.models.message;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class OrderEditAppliedMessageTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(OrderEditAppliedMessageBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, OrderEditAppliedMessageBuilder builder) {
         OrderEditAppliedMessage orderEditAppliedMessage = builder.buildUnchecked();
         Assertions.assertThat(orderEditAppliedMessage).isInstanceOf(OrderEditAppliedMessage.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { OrderEditAppliedMessage.builder()
-                        .edit(new com.commercetools.api.models.order_edit.OrderEditImpl()) },
-                new Object[] { OrderEditAppliedMessage.builder()
+                new Object[] { "edit",
+                        OrderEditAppliedMessage.builder()
+                                .edit(new com.commercetools.api.models.order_edit.OrderEditImpl()) },
+                new Object[] { "result", OrderEditAppliedMessage.builder()
                         .result(new com.commercetools.api.models.order_edit.OrderEditAppliedImpl()) } };
     }
 

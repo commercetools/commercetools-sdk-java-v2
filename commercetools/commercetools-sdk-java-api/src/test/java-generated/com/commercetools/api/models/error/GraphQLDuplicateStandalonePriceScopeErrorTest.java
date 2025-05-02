@@ -3,45 +3,40 @@ package com.commercetools.api.models.error;
 
 import java.time.ZonedDateTime;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class GraphQLDuplicateStandalonePriceScopeErrorTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(GraphQLDuplicateStandalonePriceScopeErrorBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, GraphQLDuplicateStandalonePriceScopeErrorBuilder builder) {
         GraphQLDuplicateStandalonePriceScopeError graphQLDuplicateStandalonePriceScopeError = builder.buildUnchecked();
         Assertions.assertThat(graphQLDuplicateStandalonePriceScopeError)
                 .isInstanceOf(GraphQLDuplicateStandalonePriceScopeError.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { GraphQLDuplicateStandalonePriceScopeError.builder()
-                        .conflictingStandalonePrice(
-                            new com.commercetools.api.models.standalone_price.StandalonePriceReferenceImpl()) },
-                new Object[] { GraphQLDuplicateStandalonePriceScopeError.builder().sku("sku") },
-                new Object[] { GraphQLDuplicateStandalonePriceScopeError.builder().currency("currency") },
-                new Object[] { GraphQLDuplicateStandalonePriceScopeError.builder().country("country") },
-                new Object[] { GraphQLDuplicateStandalonePriceScopeError.builder()
+                new Object[] { "conflictingStandalonePrice",
+                        GraphQLDuplicateStandalonePriceScopeError.builder()
+                                .conflictingStandalonePrice(
+                                    new com.commercetools.api.models.standalone_price.StandalonePriceReferenceImpl()) },
+                new Object[] { "sku", GraphQLDuplicateStandalonePriceScopeError.builder().sku("sku") },
+                new Object[] { "currency", GraphQLDuplicateStandalonePriceScopeError.builder().currency("currency") },
+                new Object[] { "country", GraphQLDuplicateStandalonePriceScopeError.builder().country("country") },
+                new Object[] { "customerGroup", GraphQLDuplicateStandalonePriceScopeError.builder()
                         .customerGroup(
                             new com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifierImpl()) },
-                new Object[] { GraphQLDuplicateStandalonePriceScopeError.builder()
-                        .channel(new com.commercetools.api.models.channel.ChannelResourceIdentifierImpl()) },
-                new Object[] { GraphQLDuplicateStandalonePriceScopeError.builder()
-                        .validFrom(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { GraphQLDuplicateStandalonePriceScopeError.builder()
+                new Object[] { "channel",
+                        GraphQLDuplicateStandalonePriceScopeError.builder()
+                                .channel(new com.commercetools.api.models.channel.ChannelResourceIdentifierImpl()) },
+                new Object[] { "validFrom",
+                        GraphQLDuplicateStandalonePriceScopeError.builder()
+                                .validFrom(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "validUntil", GraphQLDuplicateStandalonePriceScopeError.builder()
                         .validUntil(ZonedDateTime.parse("2023-06-01T12:00Z")) } };
     }
 

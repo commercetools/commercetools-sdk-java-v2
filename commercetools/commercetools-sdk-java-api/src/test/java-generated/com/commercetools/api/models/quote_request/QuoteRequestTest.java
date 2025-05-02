@@ -4,94 +4,100 @@ package com.commercetools.api.models.quote_request;
 import java.time.ZonedDateTime;
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class QuoteRequestTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(QuoteRequestBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, QuoteRequestBuilder builder) {
         QuoteRequest quoteRequest = builder.buildUnchecked();
         Assertions.assertThat(quoteRequest).isInstanceOf(QuoteRequest.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { QuoteRequest.builder().id("id") },
-                new Object[] { QuoteRequest.builder().version(2L) }, new Object[] { QuoteRequest.builder().key("key") },
-                new Object[] { QuoteRequest.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { QuoteRequest.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { QuoteRequest.builder()
-                        .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
-                new Object[] {
+        return new Object[][] { new Object[] { "id", QuoteRequest.builder().id("id") },
+                new Object[] { "version", QuoteRequest.builder().version(2L) },
+                new Object[] { "key", QuoteRequest.builder().key("key") },
+                new Object[] { "createdAt",
+                        QuoteRequest.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedAt",
+                        QuoteRequest.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedBy",
+                        QuoteRequest.builder()
+                                .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
+                new Object[] { "createdBy",
                         QuoteRequest.builder().createdBy(new com.commercetools.api.models.common.CreatedByImpl()) },
-                new Object[] {
+                new Object[] { "quoteRequestState",
                         QuoteRequest.builder()
                                 .quoteRequestState(com.commercetools.api.models.quote_request.QuoteRequestState
                                         .findEnum("Submitted")) },
-                new Object[] { QuoteRequest.builder().comment("comment") },
-                new Object[] { QuoteRequest.builder()
-                        .customer(new com.commercetools.api.models.customer.CustomerReferenceImpl()) },
-                new Object[] { QuoteRequest.builder()
+                new Object[] { "comment", QuoteRequest.builder().comment("comment") },
+                new Object[] { "customer",
+                        QuoteRequest.builder()
+                                .customer(new com.commercetools.api.models.customer.CustomerReferenceImpl()) },
+                new Object[] { "customerGroup", QuoteRequest.builder()
                         .customerGroup(new com.commercetools.api.models.customer_group.CustomerGroupReferenceImpl()) },
-                new Object[] {
+                new Object[] { "store",
                         QuoteRequest.builder().store(new com.commercetools.api.models.store.StoreKeyReferenceImpl()) },
-                new Object[] { QuoteRequest.builder()
+                new Object[] { "lineItems", QuoteRequest.builder()
                         .lineItems(Collections.singletonList(new com.commercetools.api.models.cart.LineItemImpl())) },
-                new Object[] {
+                new Object[] { "customLineItems",
                         QuoteRequest.builder()
                                 .customLineItems(Collections
                                         .singletonList(new com.commercetools.api.models.cart.CustomLineItemImpl())) },
-                new Object[] {
+                new Object[] { "totalPrice",
                         QuoteRequest.builder().totalPrice(new com.commercetools.api.models.common.TypedMoneyImpl()) },
-                new Object[] {
+                new Object[] { "taxedPrice",
                         QuoteRequest.builder().taxedPrice(new com.commercetools.api.models.cart.TaxedPriceImpl()) },
-                new Object[] {
+                new Object[] { "shippingAddress",
                         QuoteRequest.builder().shippingAddress(new com.commercetools.api.models.common.AddressImpl()) },
-                new Object[] {
+                new Object[] { "billingAddress",
                         QuoteRequest.builder().billingAddress(new com.commercetools.api.models.common.AddressImpl()) },
-                new Object[] { QuoteRequest.builder()
-                        .inventoryMode(com.commercetools.api.models.cart.InventoryMode.findEnum("None")) },
-                new Object[] { QuoteRequest.builder()
-                        .taxMode(com.commercetools.api.models.cart.TaxMode.findEnum("Platform")) },
-                new Object[] { QuoteRequest.builder()
-                        .taxRoundingMode(com.commercetools.api.models.cart.RoundingMode.findEnum("HalfEven")) },
-                new Object[] { QuoteRequest.builder()
-                        .taxCalculationMode(
-                            com.commercetools.api.models.cart.TaxCalculationMode.findEnum("LineItemLevel")) },
-                new Object[] { QuoteRequest.builder().country("country") },
-                new Object[] {
+                new Object[] { "inventoryMode",
+                        QuoteRequest.builder()
+                                .inventoryMode(com.commercetools.api.models.cart.InventoryMode.findEnum("None")) },
+                new Object[] { "taxMode",
+                        QuoteRequest.builder()
+                                .taxMode(com.commercetools.api.models.cart.TaxMode.findEnum("Platform")) },
+                new Object[] { "taxRoundingMode",
+                        QuoteRequest.builder()
+                                .taxRoundingMode(com.commercetools.api.models.cart.RoundingMode.findEnum("HalfEven")) },
+                new Object[] { "taxCalculationMode",
+                        QuoteRequest.builder()
+                                .taxCalculationMode(
+                                    com.commercetools.api.models.cart.TaxCalculationMode.findEnum("LineItemLevel")) },
+                new Object[] { "country", QuoteRequest.builder().country("country") },
+                new Object[] { "shippingInfo",
                         QuoteRequest.builder().shippingInfo(new com.commercetools.api.models.cart.ShippingInfoImpl()) },
-                new Object[] {
+                new Object[] { "paymentInfo",
                         QuoteRequest.builder().paymentInfo(new com.commercetools.api.models.order.PaymentInfoImpl()) },
-                new Object[] { QuoteRequest.builder()
-                        .shippingRateInput(new com.commercetools.api.models.cart.ShippingRateInputImpl()) },
-                new Object[] { QuoteRequest.builder()
-                        .itemShippingAddresses(
-                            Collections.singletonList(new com.commercetools.api.models.common.AddressImpl())) },
-                new Object[] {
+                new Object[] { "shippingRateInput",
+                        QuoteRequest.builder()
+                                .shippingRateInput(new com.commercetools.api.models.cart.ShippingRateInputImpl()) },
+                new Object[] { "itemShippingAddresses",
+                        QuoteRequest.builder()
+                                .itemShippingAddresses(
+                                    Collections.singletonList(new com.commercetools.api.models.common.AddressImpl())) },
+                new Object[] { "directDiscounts",
                         QuoteRequest.builder()
                                 .directDiscounts(Collections
                                         .singletonList(new com.commercetools.api.models.cart.DirectDiscountImpl())) },
-                new Object[] {
+                new Object[] { "custom",
                         QuoteRequest.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) },
-                new Object[] {
+                new Object[] { "state",
                         QuoteRequest.builder().state(new com.commercetools.api.models.state.StateReferenceImpl()) },
-                new Object[] { QuoteRequest.builder().purchaseOrderNumber("purchaseOrderNumber") },
-                new Object[] { QuoteRequest.builder().cart(new com.commercetools.api.models.cart.CartReferenceImpl()) },
-                new Object[] { QuoteRequest.builder()
-                        .businessUnit(
-                            new com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceImpl()) } };
+                new Object[] { "purchaseOrderNumber",
+                        QuoteRequest.builder().purchaseOrderNumber("purchaseOrderNumber") },
+                new Object[] { "cart",
+                        QuoteRequest.builder().cart(new com.commercetools.api.models.cart.CartReferenceImpl()) },
+                new Object[] { "businessUnit",
+                        QuoteRequest.builder()
+                                .businessUnit(
+                                    new com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceImpl()) } };
     }
 
     @Test

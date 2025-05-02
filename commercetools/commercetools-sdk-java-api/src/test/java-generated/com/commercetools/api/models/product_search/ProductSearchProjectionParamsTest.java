@@ -3,41 +3,38 @@ package com.commercetools.api.models.product_search;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductSearchProjectionParamsTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductSearchProjectionParamsBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductSearchProjectionParamsBuilder builder) {
         ProductSearchProjectionParams productSearchProjectionParams = builder.buildUnchecked();
         Assertions.assertThat(productSearchProjectionParams).isInstanceOf(ProductSearchProjectionParams.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { ProductSearchProjectionParams.builder().expand(Collections.singletonList("expand")) },
-                new Object[] { ProductSearchProjectionParams.builder().staged(true) },
-                new Object[] { ProductSearchProjectionParams.builder().priceCurrency("priceCurrency") },
-                new Object[] { ProductSearchProjectionParams.builder().priceCountry("priceCountry") },
-                new Object[] { ProductSearchProjectionParams.builder().priceCustomerGroup("priceCustomerGroup") },
-                new Object[] { ProductSearchProjectionParams.builder()
+                new Object[] { "expand",
+                        ProductSearchProjectionParams.builder().expand(Collections.singletonList("expand")) },
+                new Object[] { "staged", ProductSearchProjectionParams.builder().staged(true) },
+                new Object[] { "priceCurrency",
+                        ProductSearchProjectionParams.builder().priceCurrency("priceCurrency") },
+                new Object[] { "priceCountry", ProductSearchProjectionParams.builder().priceCountry("priceCountry") },
+                new Object[] { "priceCustomerGroup",
+                        ProductSearchProjectionParams.builder().priceCustomerGroup("priceCustomerGroup") },
+                new Object[] { "priceCustomerGroupAssignments", ProductSearchProjectionParams.builder()
                         .priceCustomerGroupAssignments(Collections.singletonList("priceCustomerGroupAssignments")) },
-                new Object[] { ProductSearchProjectionParams.builder().priceChannel("priceChannel") },
-                new Object[] { ProductSearchProjectionParams.builder()
-                        .localeProjection(Collections.singletonList("localeProjection")) },
-                new Object[] { ProductSearchProjectionParams.builder().storeProjection("storeProjection") } };
+                new Object[] { "priceChannel", ProductSearchProjectionParams.builder().priceChannel("priceChannel") },
+                new Object[] { "localeProjection",
+                        ProductSearchProjectionParams.builder()
+                                .localeProjection(Collections.singletonList("localeProjection")) },
+                new Object[] { "storeProjection",
+                        ProductSearchProjectionParams.builder().storeProjection("storeProjection") } };
     }
 
     @Test

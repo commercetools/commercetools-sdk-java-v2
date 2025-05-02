@@ -1,33 +1,26 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class AddCustomLineItemChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(AddCustomLineItemChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, AddCustomLineItemChangeBuilder builder) {
         AddCustomLineItemChange addCustomLineItemChange = builder.buildUnchecked();
         Assertions.assertThat(addCustomLineItemChange).isInstanceOf(AddCustomLineItemChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { AddCustomLineItemChange.builder().change("change") },
-                new Object[] { AddCustomLineItemChange.builder()
-                        .previousValue(new com.commercetools.history.models.common.CustomLineItemImpl()) },
-                new Object[] { AddCustomLineItemChange.builder()
+        return new Object[][] { new Object[] { "change", AddCustomLineItemChange.builder().change("change") },
+                new Object[] { "previousValue",
+                        AddCustomLineItemChange.builder()
+                                .previousValue(new com.commercetools.history.models.common.CustomLineItemImpl()) },
+                new Object[] { "nextValue", AddCustomLineItemChange.builder()
                         .nextValue(new com.commercetools.history.models.common.CustomLineItemImpl()) } };
     }
 

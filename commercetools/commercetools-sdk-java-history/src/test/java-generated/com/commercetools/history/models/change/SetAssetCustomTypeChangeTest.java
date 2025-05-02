@@ -1,35 +1,29 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetAssetCustomTypeChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetAssetCustomTypeChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetAssetCustomTypeChangeBuilder builder) {
         SetAssetCustomTypeChange setAssetCustomTypeChange = builder.buildUnchecked();
         Assertions.assertThat(setAssetCustomTypeChange).isInstanceOf(SetAssetCustomTypeChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetAssetCustomTypeChange.builder().change("change") },
-                new Object[] { SetAssetCustomTypeChange.builder()
-                        .previousValue(new com.commercetools.history.models.common.CustomFieldsImpl()) },
-                new Object[] { SetAssetCustomTypeChange.builder()
-                        .nextValue(new com.commercetools.history.models.common.CustomFieldsImpl()) },
-                new Object[] { SetAssetCustomTypeChange.builder()
+        return new Object[][] { new Object[] { "change", SetAssetCustomTypeChange.builder().change("change") },
+                new Object[] { "previousValue",
+                        SetAssetCustomTypeChange.builder()
+                                .previousValue(new com.commercetools.history.models.common.CustomFieldsImpl()) },
+                new Object[] { "nextValue",
+                        SetAssetCustomTypeChange.builder()
+                                .nextValue(new com.commercetools.history.models.common.CustomFieldsImpl()) },
+                new Object[] { "asset", SetAssetCustomTypeChange.builder()
                         .asset(new com.commercetools.history.models.change_value.AssetChangeValueImpl()) } };
     }
 

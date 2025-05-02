@@ -1,37 +1,30 @@
 
 package com.commercetools.api.models.product_tailoring;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductTailoringSetAssetCustomFieldActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductTailoringSetAssetCustomFieldActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductTailoringSetAssetCustomFieldActionBuilder builder) {
         ProductTailoringSetAssetCustomFieldAction productTailoringSetAssetCustomFieldAction = builder.buildUnchecked();
         Assertions.assertThat(productTailoringSetAssetCustomFieldAction)
                 .isInstanceOf(ProductTailoringSetAssetCustomFieldAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductTailoringSetAssetCustomFieldAction.builder().variantId(5L) },
-                new Object[] { ProductTailoringSetAssetCustomFieldAction.builder().sku("sku") },
-                new Object[] { ProductTailoringSetAssetCustomFieldAction.builder().staged(true) },
-                new Object[] { ProductTailoringSetAssetCustomFieldAction.builder().assetId("assetId") },
-                new Object[] { ProductTailoringSetAssetCustomFieldAction.builder().assetKey("assetKey") },
-                new Object[] { ProductTailoringSetAssetCustomFieldAction.builder().name("name") },
-                new Object[] { ProductTailoringSetAssetCustomFieldAction.builder().value("value") } };
+        return new Object[][] {
+                new Object[] { "variantId", ProductTailoringSetAssetCustomFieldAction.builder().variantId(5L) },
+                new Object[] { "sku", ProductTailoringSetAssetCustomFieldAction.builder().sku("sku") },
+                new Object[] { "staged", ProductTailoringSetAssetCustomFieldAction.builder().staged(true) },
+                new Object[] { "assetId", ProductTailoringSetAssetCustomFieldAction.builder().assetId("assetId") },
+                new Object[] { "assetKey", ProductTailoringSetAssetCustomFieldAction.builder().assetKey("assetKey") },
+                new Object[] { "name", ProductTailoringSetAssetCustomFieldAction.builder().name("name") },
+                new Object[] { "value", ProductTailoringSetAssetCustomFieldAction.builder().value("value") } };
     }
 
     @Test

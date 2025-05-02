@@ -1,33 +1,26 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class AddShoppingListLineItemChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(AddShoppingListLineItemChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, AddShoppingListLineItemChangeBuilder builder) {
         AddShoppingListLineItemChange addShoppingListLineItemChange = builder.buildUnchecked();
         Assertions.assertThat(addShoppingListLineItemChange).isInstanceOf(AddShoppingListLineItemChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { AddShoppingListLineItemChange.builder().change("change") },
-                new Object[] { AddShoppingListLineItemChange.builder()
-                        .previousValue(new com.commercetools.history.models.common.LineItemImpl()) },
-                new Object[] { AddShoppingListLineItemChange.builder()
+        return new Object[][] { new Object[] { "change", AddShoppingListLineItemChange.builder().change("change") },
+                new Object[] { "previousValue",
+                        AddShoppingListLineItemChange.builder()
+                                .previousValue(new com.commercetools.history.models.common.LineItemImpl()) },
+                new Object[] { "nextValue", AddShoppingListLineItemChange.builder()
                         .nextValue(new com.commercetools.history.models.common.LineItemImpl()) } };
     }
 

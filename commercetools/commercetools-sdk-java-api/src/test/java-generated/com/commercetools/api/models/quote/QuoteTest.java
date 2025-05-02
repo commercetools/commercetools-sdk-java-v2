@@ -4,87 +4,97 @@ package com.commercetools.api.models.quote;
 import java.time.ZonedDateTime;
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class QuoteTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(QuoteBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, QuoteBuilder builder) {
         Quote quote = builder.buildUnchecked();
         Assertions.assertThat(quote).isInstanceOf(Quote.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { Quote.builder().id("id") }, new Object[] { Quote.builder().version(2L) },
-                new Object[] { Quote.builder().key("key") },
-                new Object[] { Quote.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { Quote.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] {
+        return new Object[][] { new Object[] { "id", Quote.builder().id("id") },
+                new Object[] { "version", Quote.builder().version(2L) },
+                new Object[] { "key", Quote.builder().key("key") },
+                new Object[] { "createdAt", Quote.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedAt",
+                        Quote.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedBy",
                         Quote.builder().lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
-                new Object[] { Quote.builder().createdBy(new com.commercetools.api.models.common.CreatedByImpl()) },
-                new Object[] { Quote.builder()
+                new Object[] { "createdBy",
+                        Quote.builder().createdBy(new com.commercetools.api.models.common.CreatedByImpl()) },
+                new Object[] { "quoteRequest", Quote.builder()
                         .quoteRequest(new com.commercetools.api.models.quote_request.QuoteRequestReferenceImpl()) },
-                new Object[] { Quote.builder()
+                new Object[] { "stagedQuote", Quote.builder()
                         .stagedQuote(new com.commercetools.api.models.staged_quote.StagedQuoteReferenceImpl()) },
-                new Object[] {
+                new Object[] { "customer",
                         Quote.builder().customer(new com.commercetools.api.models.customer.CustomerReferenceImpl()) },
-                new Object[] { Quote.builder()
+                new Object[] { "customerGroup", Quote.builder()
                         .customerGroup(new com.commercetools.api.models.customer_group.CustomerGroupReferenceImpl()) },
-                new Object[] { Quote.builder().validTo(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { Quote.builder().sellerComment("sellerComment") },
-                new Object[] { Quote.builder().buyerComment("buyerComment") },
-                new Object[] { Quote.builder().store(new com.commercetools.api.models.store.StoreKeyReferenceImpl()) },
-                new Object[] { Quote.builder()
+                new Object[] { "validTo", Quote.builder().validTo(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "sellerComment", Quote.builder().sellerComment("sellerComment") },
+                new Object[] { "buyerComment", Quote.builder().buyerComment("buyerComment") },
+                new Object[] { "store",
+                        Quote.builder().store(new com.commercetools.api.models.store.StoreKeyReferenceImpl()) },
+                new Object[] { "lineItems", Quote.builder()
                         .lineItems(Collections.singletonList(new com.commercetools.api.models.cart.LineItemImpl())) },
-                new Object[] {
+                new Object[] { "customLineItems",
                         Quote.builder()
                                 .customLineItems(Collections
                                         .singletonList(new com.commercetools.api.models.cart.CustomLineItemImpl())) },
-                new Object[] { Quote.builder().totalPrice(new com.commercetools.api.models.common.TypedMoneyImpl()) },
-                new Object[] { Quote.builder().taxedPrice(new com.commercetools.api.models.cart.TaxedPriceImpl()) },
-                new Object[] { Quote.builder().shippingAddress(new com.commercetools.api.models.common.AddressImpl()) },
-                new Object[] { Quote.builder().billingAddress(new com.commercetools.api.models.common.AddressImpl()) },
-                new Object[] { Quote.builder()
-                        .inventoryMode(com.commercetools.api.models.cart.InventoryMode.findEnum("None")) },
-                new Object[] {
+                new Object[] { "totalPrice",
+                        Quote.builder().totalPrice(new com.commercetools.api.models.common.TypedMoneyImpl()) },
+                new Object[] { "taxedPrice",
+                        Quote.builder().taxedPrice(new com.commercetools.api.models.cart.TaxedPriceImpl()) },
+                new Object[] { "shippingAddress",
+                        Quote.builder().shippingAddress(new com.commercetools.api.models.common.AddressImpl()) },
+                new Object[] { "billingAddress",
+                        Quote.builder().billingAddress(new com.commercetools.api.models.common.AddressImpl()) },
+                new Object[] { "inventoryMode",
+                        Quote.builder()
+                                .inventoryMode(com.commercetools.api.models.cart.InventoryMode.findEnum("None")) },
+                new Object[] { "taxMode",
                         Quote.builder().taxMode(com.commercetools.api.models.cart.TaxMode.findEnum("Platform")) },
-                new Object[] { Quote.builder()
-                        .taxRoundingMode(com.commercetools.api.models.cart.RoundingMode.findEnum("HalfEven")) },
-                new Object[] { Quote.builder()
-                        .taxCalculationMode(
-                            com.commercetools.api.models.cart.TaxCalculationMode.findEnum("LineItemLevel")) },
-                new Object[] { Quote.builder().country("country") },
-                new Object[] { Quote.builder().shippingInfo(new com.commercetools.api.models.cart.ShippingInfoImpl()) },
-                new Object[] { Quote.builder().paymentInfo(new com.commercetools.api.models.order.PaymentInfoImpl()) },
-                new Object[] { Quote.builder()
-                        .shippingRateInput(new com.commercetools.api.models.cart.ShippingRateInputImpl()) },
-                new Object[] { Quote.builder()
-                        .itemShippingAddresses(
-                            Collections.singletonList(new com.commercetools.api.models.common.AddressImpl())) },
-                new Object[] {
+                new Object[] { "taxRoundingMode",
+                        Quote.builder()
+                                .taxRoundingMode(com.commercetools.api.models.cart.RoundingMode.findEnum("HalfEven")) },
+                new Object[] { "taxCalculationMode",
+                        Quote.builder()
+                                .taxCalculationMode(
+                                    com.commercetools.api.models.cart.TaxCalculationMode.findEnum("LineItemLevel")) },
+                new Object[] { "country", Quote.builder().country("country") },
+                new Object[] { "shippingInfo",
+                        Quote.builder().shippingInfo(new com.commercetools.api.models.cart.ShippingInfoImpl()) },
+                new Object[] { "paymentInfo",
+                        Quote.builder().paymentInfo(new com.commercetools.api.models.order.PaymentInfoImpl()) },
+                new Object[] { "shippingRateInput",
+                        Quote.builder()
+                                .shippingRateInput(new com.commercetools.api.models.cart.ShippingRateInputImpl()) },
+                new Object[] { "itemShippingAddresses",
+                        Quote.builder()
+                                .itemShippingAddresses(
+                                    Collections.singletonList(new com.commercetools.api.models.common.AddressImpl())) },
+                new Object[] { "directDiscounts",
                         Quote.builder()
                                 .directDiscounts(Collections
                                         .singletonList(new com.commercetools.api.models.cart.DirectDiscountImpl())) },
-                new Object[] { Quote.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) },
-                new Object[] {
+                new Object[] { "custom",
+                        Quote.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) },
+                new Object[] { "quoteState",
                         Quote.builder().quoteState(com.commercetools.api.models.quote.QuoteState.findEnum("Pending")) },
-                new Object[] { Quote.builder().state(new com.commercetools.api.models.state.StateReferenceImpl()) },
-                new Object[] { Quote.builder().purchaseOrderNumber("purchaseOrderNumber") },
-                new Object[] { Quote.builder()
-                        .businessUnit(
-                            new com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceImpl()) } };
+                new Object[] { "state",
+                        Quote.builder().state(new com.commercetools.api.models.state.StateReferenceImpl()) },
+                new Object[] { "purchaseOrderNumber", Quote.builder().purchaseOrderNumber("purchaseOrderNumber") },
+                new Object[] { "businessUnit",
+                        Quote.builder()
+                                .businessUnit(
+                                    new com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceImpl()) } };
     }
 
     @Test

@@ -3,39 +3,36 @@ package com.commercetools.importapi.models.orders;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class LineItemProductVariantImportDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(LineItemProductVariantImportDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, LineItemProductVariantImportDraftBuilder builder) {
         LineItemProductVariantImportDraft lineItemProductVariantImportDraft = builder.buildUnchecked();
         Assertions.assertThat(lineItemProductVariantImportDraft).isInstanceOf(LineItemProductVariantImportDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { LineItemProductVariantImportDraft.builder()
-                .productVariant(new com.commercetools.importapi.models.common.ProductVariantKeyReferenceImpl()) },
-                new Object[] { LineItemProductVariantImportDraft.builder().sku("sku") },
-                new Object[] { LineItemProductVariantImportDraft.builder()
-                        .prices(Collections
-                                .singletonList(new com.commercetools.importapi.models.orders.LineItemPriceImpl())) },
-                new Object[] { LineItemProductVariantImportDraft.builder()
-                        .attributes(Collections.singletonList(
-                            new com.commercetools.importapi.models.productvariants.AttributeImpl())) },
-                new Object[] { LineItemProductVariantImportDraft.builder()
+        return new Object[][] {
+                new Object[] { "productVariant",
+                        LineItemProductVariantImportDraft.builder()
+                                .productVariant(
+                                    new com.commercetools.importapi.models.common.ProductVariantKeyReferenceImpl()) },
+                new Object[] { "sku", LineItemProductVariantImportDraft.builder().sku("sku") },
+                new Object[] { "prices",
+                        LineItemProductVariantImportDraft.builder()
+                                .prices(Collections.singletonList(
+                                    new com.commercetools.importapi.models.orders.LineItemPriceImpl())) },
+                new Object[] { "attributes",
+                        LineItemProductVariantImportDraft.builder()
+                                .attributes(Collections.singletonList(
+                                    new com.commercetools.importapi.models.productvariants.AttributeImpl())) },
+                new Object[] { "images", LineItemProductVariantImportDraft.builder()
                         .images(
                             Collections.singletonList(new com.commercetools.importapi.models.common.ImageImpl())) } };
     }

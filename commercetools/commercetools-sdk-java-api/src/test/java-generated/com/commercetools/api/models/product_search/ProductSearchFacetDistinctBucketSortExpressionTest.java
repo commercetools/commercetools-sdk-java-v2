@@ -1,36 +1,29 @@
 
 package com.commercetools.api.models.product_search;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductSearchFacetDistinctBucketSortExpressionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductSearchFacetDistinctBucketSortExpressionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductSearchFacetDistinctBucketSortExpressionBuilder builder) {
         ProductSearchFacetDistinctBucketSortExpression productSearchFacetDistinctBucketSortExpression = builder
                 .buildUnchecked();
         Assertions.assertThat(productSearchFacetDistinctBucketSortExpression)
                 .isInstanceOf(ProductSearchFacetDistinctBucketSortExpression.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { ProductSearchFacetDistinctBucketSortExpression.builder()
-                        .by(com.commercetools.api.models.product_search.ProductSearchFacetDistinctBucketSortBy
-                                .findEnum("count")) },
-                new Object[] { ProductSearchFacetDistinctBucketSortExpression.builder()
+                new Object[] { "by",
+                        ProductSearchFacetDistinctBucketSortExpression.builder()
+                                .by(com.commercetools.api.models.product_search.ProductSearchFacetDistinctBucketSortBy
+                                        .findEnum("count")) },
+                new Object[] { "order", ProductSearchFacetDistinctBucketSortExpression.builder()
                         .order(com.commercetools.api.models.search.SearchSortOrder.findEnum("asc")) } };
     }
 

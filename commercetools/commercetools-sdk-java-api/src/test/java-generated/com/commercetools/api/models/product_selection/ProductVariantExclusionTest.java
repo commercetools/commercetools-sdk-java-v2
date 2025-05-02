@@ -3,31 +3,23 @@ package com.commercetools.api.models.product_selection;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductVariantExclusionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductVariantExclusionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductVariantExclusionBuilder builder) {
         ProductVariantExclusion productVariantExclusion = builder.buildUnchecked();
         Assertions.assertThat(productVariantExclusion).isInstanceOf(ProductVariantExclusion.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { ProductVariantExclusion.builder().skus(Collections.singletonList("skus")) } };
+                new Object[] { "skus", ProductVariantExclusion.builder().skus(Collections.singletonList("skus")) } };
     }
 
     @Test

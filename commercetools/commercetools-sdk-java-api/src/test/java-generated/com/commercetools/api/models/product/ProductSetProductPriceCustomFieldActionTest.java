@@ -1,34 +1,27 @@
 
 package com.commercetools.api.models.product;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductSetProductPriceCustomFieldActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductSetProductPriceCustomFieldActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductSetProductPriceCustomFieldActionBuilder builder) {
         ProductSetProductPriceCustomFieldAction productSetProductPriceCustomFieldAction = builder.buildUnchecked();
         Assertions.assertThat(productSetProductPriceCustomFieldAction)
                 .isInstanceOf(ProductSetProductPriceCustomFieldAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductSetProductPriceCustomFieldAction.builder().priceId("priceId") },
-                new Object[] { ProductSetProductPriceCustomFieldAction.builder().staged(true) },
-                new Object[] { ProductSetProductPriceCustomFieldAction.builder().name("name") },
-                new Object[] { ProductSetProductPriceCustomFieldAction.builder().value("value") } };
+        return new Object[][] {
+                new Object[] { "priceId", ProductSetProductPriceCustomFieldAction.builder().priceId("priceId") },
+                new Object[] { "staged", ProductSetProductPriceCustomFieldAction.builder().staged(true) },
+                new Object[] { "name", ProductSetProductPriceCustomFieldAction.builder().name("name") },
+                new Object[] { "value", ProductSetProductPriceCustomFieldAction.builder().value("value") } };
     }
 
     @Test

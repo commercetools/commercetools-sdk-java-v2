@@ -1,37 +1,32 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetLineItemTaxedPriceChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetLineItemTaxedPriceChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetLineItemTaxedPriceChangeBuilder builder) {
         SetLineItemTaxedPriceChange setLineItemTaxedPriceChange = builder.buildUnchecked();
         Assertions.assertThat(setLineItemTaxedPriceChange).isInstanceOf(SetLineItemTaxedPriceChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetLineItemTaxedPriceChange.builder().change("change") },
-                new Object[] { SetLineItemTaxedPriceChange.builder()
-                        .previousValue(new com.commercetools.history.models.common.TaxedItemPriceImpl()) },
-                new Object[] { SetLineItemTaxedPriceChange.builder()
-                        .nextValue(new com.commercetools.history.models.common.TaxedItemPriceImpl()) },
-                new Object[] { SetLineItemTaxedPriceChange.builder()
-                        .lineItem(new com.commercetools.history.models.common.LocalizedStringImpl()) },
-                new Object[] { SetLineItemTaxedPriceChange.builder().lineItemId("lineItemId") } };
+        return new Object[][] { new Object[] { "change", SetLineItemTaxedPriceChange.builder().change("change") },
+                new Object[] { "previousValue",
+                        SetLineItemTaxedPriceChange.builder()
+                                .previousValue(new com.commercetools.history.models.common.TaxedItemPriceImpl()) },
+                new Object[] { "nextValue",
+                        SetLineItemTaxedPriceChange.builder()
+                                .nextValue(new com.commercetools.history.models.common.TaxedItemPriceImpl()) },
+                new Object[] { "lineItem",
+                        SetLineItemTaxedPriceChange.builder()
+                                .lineItem(new com.commercetools.history.models.common.LocalizedStringImpl()) },
+                new Object[] { "lineItemId", SetLineItemTaxedPriceChange.builder().lineItemId("lineItemId") } };
     }
 
     @Test

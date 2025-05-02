@@ -1,35 +1,28 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetAttributeChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetAttributeChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetAttributeChangeBuilder builder) {
         SetAttributeChange setAttributeChange = builder.buildUnchecked();
         Assertions.assertThat(setAttributeChange).isInstanceOf(SetAttributeChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetAttributeChange.builder().change("change") },
-                new Object[] { SetAttributeChange.builder()
+        return new Object[][] { new Object[] { "change", SetAttributeChange.builder().change("change") },
+                new Object[] { "previousValue", SetAttributeChange.builder()
                         .previousValue(new com.commercetools.history.models.change_value.AttributeValueImpl()) },
-                new Object[] { SetAttributeChange.builder()
-                        .nextValue(new com.commercetools.history.models.change_value.AttributeValueImpl()) },
-                new Object[] { SetAttributeChange.builder().catalogData("catalogData") } };
+                new Object[] { "nextValue",
+                        SetAttributeChange.builder()
+                                .nextValue(new com.commercetools.history.models.change_value.AttributeValueImpl()) },
+                new Object[] { "catalogData", SetAttributeChange.builder().catalogData("catalogData") } };
     }
 
     @Test

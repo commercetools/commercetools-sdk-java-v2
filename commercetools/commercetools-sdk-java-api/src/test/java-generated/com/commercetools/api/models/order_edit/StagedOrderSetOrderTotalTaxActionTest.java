@@ -3,33 +3,26 @@ package com.commercetools.api.models.order_edit;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class StagedOrderSetOrderTotalTaxActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(StagedOrderSetOrderTotalTaxActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, StagedOrderSetOrderTotalTaxActionBuilder builder) {
         StagedOrderSetOrderTotalTaxAction stagedOrderSetOrderTotalTaxAction = builder.buildUnchecked();
         Assertions.assertThat(stagedOrderSetOrderTotalTaxAction).isInstanceOf(StagedOrderSetOrderTotalTaxAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { StagedOrderSetOrderTotalTaxAction.builder()
-                        .externalTotalGross(new com.commercetools.api.models.common.MoneyImpl()) },
-                new Object[] { StagedOrderSetOrderTotalTaxAction.builder()
+                new Object[] { "externalTotalGross",
+                        StagedOrderSetOrderTotalTaxAction.builder()
+                                .externalTotalGross(new com.commercetools.api.models.common.MoneyImpl()) },
+                new Object[] { "externalTaxPortions", StagedOrderSetOrderTotalTaxAction.builder()
                         .externalTaxPortions(
                             Collections.singletonList(new com.commercetools.api.models.cart.TaxPortionDraftImpl())) } };
     }

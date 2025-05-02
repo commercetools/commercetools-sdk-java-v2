@@ -1,32 +1,25 @@
 
 package com.commercetools.api.models.order;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class OrderSetParcelMeasurementsActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(OrderSetParcelMeasurementsActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, OrderSetParcelMeasurementsActionBuilder builder) {
         OrderSetParcelMeasurementsAction orderSetParcelMeasurementsAction = builder.buildUnchecked();
         Assertions.assertThat(orderSetParcelMeasurementsAction).isInstanceOf(OrderSetParcelMeasurementsAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { OrderSetParcelMeasurementsAction.builder().parcelId("parcelId") },
-                new Object[] { OrderSetParcelMeasurementsAction.builder().parcelKey("parcelKey") },
-                new Object[] { OrderSetParcelMeasurementsAction.builder()
+        return new Object[][] {
+                new Object[] { "parcelId", OrderSetParcelMeasurementsAction.builder().parcelId("parcelId") },
+                new Object[] { "parcelKey", OrderSetParcelMeasurementsAction.builder().parcelKey("parcelKey") },
+                new Object[] { "measurements", OrderSetParcelMeasurementsAction.builder()
                         .measurements(new com.commercetools.api.models.order.ParcelMeasurementsImpl()) } };
     }
 

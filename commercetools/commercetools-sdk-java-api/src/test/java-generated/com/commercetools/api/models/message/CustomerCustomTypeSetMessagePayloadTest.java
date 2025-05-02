@@ -1,34 +1,28 @@
 
 package com.commercetools.api.models.message;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CustomerCustomTypeSetMessagePayloadTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CustomerCustomTypeSetMessagePayloadBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CustomerCustomTypeSetMessagePayloadBuilder builder) {
         CustomerCustomTypeSetMessagePayload customerCustomTypeSetMessagePayload = builder.buildUnchecked();
         Assertions.assertThat(customerCustomTypeSetMessagePayload)
                 .isInstanceOf(CustomerCustomTypeSetMessagePayload.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { CustomerCustomTypeSetMessagePayload.builder()
-                        .customFields(new com.commercetools.api.models.type.CustomFieldsImpl()) },
-                new Object[] { CustomerCustomTypeSetMessagePayload.builder().previousTypeId("previousTypeId") } };
+                new Object[] { "customFields",
+                        CustomerCustomTypeSetMessagePayload.builder()
+                                .customFields(new com.commercetools.api.models.type.CustomFieldsImpl()) },
+                new Object[] { "previousTypeId",
+                        CustomerCustomTypeSetMessagePayload.builder().previousTypeId("previousTypeId") } };
     }
 
     @Test

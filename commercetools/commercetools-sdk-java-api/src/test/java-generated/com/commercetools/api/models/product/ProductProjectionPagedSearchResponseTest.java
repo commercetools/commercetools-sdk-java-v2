@@ -3,38 +3,31 @@ package com.commercetools.api.models.product;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductProjectionPagedSearchResponseTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductProjectionPagedSearchResponseBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductProjectionPagedSearchResponseBuilder builder) {
         ProductProjectionPagedSearchResponse productProjectionPagedSearchResponse = builder.buildUnchecked();
         Assertions.assertThat(productProjectionPagedSearchResponse)
                 .isInstanceOf(ProductProjectionPagedSearchResponse.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductProjectionPagedSearchResponse.builder().limit(7L) },
-                new Object[] { ProductProjectionPagedSearchResponse.builder().offset(3L) },
-                new Object[] { ProductProjectionPagedSearchResponse.builder().count(2L) },
-                new Object[] { ProductProjectionPagedSearchResponse.builder().total(1L) },
-                new Object[] { ProductProjectionPagedSearchResponse.builder()
-                        .results(Collections
-                                .singletonList(new com.commercetools.api.models.product.ProductProjectionImpl())) },
-                new Object[] { ProductProjectionPagedSearchResponse.builder()
+        return new Object[][] { new Object[] { "limit", ProductProjectionPagedSearchResponse.builder().limit(7L) },
+                new Object[] { "offset", ProductProjectionPagedSearchResponse.builder().offset(3L) },
+                new Object[] { "count", ProductProjectionPagedSearchResponse.builder().count(2L) },
+                new Object[] { "total", ProductProjectionPagedSearchResponse.builder().total(1L) },
+                new Object[] { "results",
+                        ProductProjectionPagedSearchResponse.builder()
+                                .results(Collections.singletonList(
+                                    new com.commercetools.api.models.product.ProductProjectionImpl())) },
+                new Object[] { "facets", ProductProjectionPagedSearchResponse.builder()
                         .facets(new com.commercetools.api.models.product.FacetResultsImpl()) } };
     }
 

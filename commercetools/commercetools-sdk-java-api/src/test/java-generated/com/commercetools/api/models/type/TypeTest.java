@@ -4,43 +4,40 @@ package com.commercetools.api.models.type;
 import java.time.ZonedDateTime;
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class TypeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(TypeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, TypeBuilder builder) {
         Type type = builder.buildUnchecked();
         Assertions.assertThat(type).isInstanceOf(Type.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { Type.builder().id("id") }, new Object[] { Type.builder().version(2L) },
-                new Object[] { Type.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { Type.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] {
+        return new Object[][] { new Object[] { "id", Type.builder().id("id") },
+                new Object[] { "version", Type.builder().version(2L) },
+                new Object[] { "createdAt", Type.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedAt",
+                        Type.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedBy",
                         Type.builder().lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
-                new Object[] { Type.builder().createdBy(new com.commercetools.api.models.common.CreatedByImpl()) },
-                new Object[] { Type.builder().key("key") },
-                new Object[] { Type.builder().name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] {
+                new Object[] { "createdBy",
+                        Type.builder().createdBy(new com.commercetools.api.models.common.CreatedByImpl()) },
+                new Object[] { "key", Type.builder().key("key") },
+                new Object[] { "name",
+                        Type.builder().name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "description",
                         Type.builder().description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { Type.builder()
-                        .resourceTypeIds(Collections
-                                .singletonList(com.commercetools.api.models.type.ResourceTypeId.findEnum("address"))) },
-                new Object[] { Type.builder()
+                new Object[] { "resourceTypeIds",
+                        Type.builder()
+                                .resourceTypeIds(Collections.singletonList(
+                                    com.commercetools.api.models.type.ResourceTypeId.findEnum("address"))) },
+                new Object[] { "fieldDefinitions", Type.builder()
                         .fieldDefinitions(
                             Collections.singletonList(new com.commercetools.api.models.type.FieldDefinitionImpl())) } };
     }

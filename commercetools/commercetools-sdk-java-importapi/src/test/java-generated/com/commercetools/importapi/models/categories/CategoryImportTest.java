@@ -3,49 +3,50 @@ package com.commercetools.importapi.models.categories;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CategoryImportTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CategoryImportBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CategoryImportBuilder builder) {
         CategoryImport categoryImport = builder.buildUnchecked();
         Assertions.assertThat(categoryImport).isInstanceOf(CategoryImport.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { CategoryImport.builder().key("key") },
-                new Object[] { CategoryImport.builder()
-                        .name(new com.commercetools.importapi.models.common.LocalizedStringImpl()) },
-                new Object[] { CategoryImport.builder()
-                        .slug(new com.commercetools.importapi.models.common.LocalizedStringImpl()) },
-                new Object[] { CategoryImport.builder()
-                        .description(new com.commercetools.importapi.models.common.LocalizedStringImpl()) },
-                new Object[] { CategoryImport.builder()
-                        .parent(new com.commercetools.importapi.models.common.CategoryKeyReferenceImpl()) },
-                new Object[] { CategoryImport.builder().orderHint("orderHint") },
-                new Object[] { CategoryImport.builder().externalId("externalId") },
-                new Object[] { CategoryImport.builder()
-                        .metaTitle(new com.commercetools.importapi.models.common.LocalizedStringImpl()) },
-                new Object[] { CategoryImport.builder()
-                        .metaDescription(new com.commercetools.importapi.models.common.LocalizedStringImpl()) },
-                new Object[] { CategoryImport.builder()
-                        .metaKeywords(new com.commercetools.importapi.models.common.LocalizedStringImpl()) },
-                new Object[] { CategoryImport.builder()
-                        .assets(Collections.singletonList(new com.commercetools.importapi.models.common.AssetImpl())) },
-                new Object[] { CategoryImport.builder()
+        return new Object[][] { new Object[] { "key", CategoryImport.builder().key("key") },
+                new Object[] { "name",
+                        CategoryImport.builder()
+                                .name(new com.commercetools.importapi.models.common.LocalizedStringImpl()) },
+                new Object[] { "slug",
+                        CategoryImport.builder()
+                                .slug(new com.commercetools.importapi.models.common.LocalizedStringImpl()) },
+                new Object[] { "description",
+                        CategoryImport.builder()
+                                .description(new com.commercetools.importapi.models.common.LocalizedStringImpl()) },
+                new Object[] { "parent",
+                        CategoryImport.builder()
+                                .parent(new com.commercetools.importapi.models.common.CategoryKeyReferenceImpl()) },
+                new Object[] { "orderHint", CategoryImport.builder().orderHint("orderHint") },
+                new Object[] { "externalId", CategoryImport.builder().externalId("externalId") },
+                new Object[] { "metaTitle",
+                        CategoryImport.builder()
+                                .metaTitle(new com.commercetools.importapi.models.common.LocalizedStringImpl()) },
+                new Object[] { "metaDescription",
+                        CategoryImport.builder()
+                                .metaDescription(new com.commercetools.importapi.models.common.LocalizedStringImpl()) },
+                new Object[] { "metaKeywords",
+                        CategoryImport.builder()
+                                .metaKeywords(new com.commercetools.importapi.models.common.LocalizedStringImpl()) },
+                new Object[] { "assets",
+                        CategoryImport.builder()
+                                .assets(Collections
+                                        .singletonList(new com.commercetools.importapi.models.common.AssetImpl())) },
+                new Object[] { "custom", CategoryImport.builder()
                         .custom(new com.commercetools.importapi.models.customfields.CustomImpl()) } };
     }
 

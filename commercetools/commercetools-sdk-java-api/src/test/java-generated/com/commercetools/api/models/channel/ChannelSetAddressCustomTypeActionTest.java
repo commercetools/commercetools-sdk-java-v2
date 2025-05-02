@@ -1,33 +1,26 @@
 
 package com.commercetools.api.models.channel;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ChannelSetAddressCustomTypeActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ChannelSetAddressCustomTypeActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ChannelSetAddressCustomTypeActionBuilder builder) {
         ChannelSetAddressCustomTypeAction channelSetAddressCustomTypeAction = builder.buildUnchecked();
         Assertions.assertThat(channelSetAddressCustomTypeAction).isInstanceOf(ChannelSetAddressCustomTypeAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { ChannelSetAddressCustomTypeAction.builder()
-                        .type(new com.commercetools.api.models.type.TypeResourceIdentifierImpl()) },
-                new Object[] { ChannelSetAddressCustomTypeAction.builder()
+                new Object[] { "type",
+                        ChannelSetAddressCustomTypeAction.builder()
+                                .type(new com.commercetools.api.models.type.TypeResourceIdentifierImpl()) },
+                new Object[] { "fields", ChannelSetAddressCustomTypeAction.builder()
                         .fields(new com.commercetools.api.models.type.FieldContainerImpl()) } };
     }
 

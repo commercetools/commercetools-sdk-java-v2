@@ -1,32 +1,25 @@
 
 package com.commercetools.api.models.order;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CustomLineItemReturnItemTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CustomLineItemReturnItemBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CustomLineItemReturnItemBuilder builder) {
         CustomLineItemReturnItem customLineItemReturnItem = builder.buildUnchecked();
         Assertions.assertThat(customLineItemReturnItem).isInstanceOf(CustomLineItemReturnItem.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { CustomLineItemReturnItem.builder().key("key") },
-                new Object[] { CustomLineItemReturnItem.builder().customLineItemId("customLineItemId") },
-                new Object[] { CustomLineItemReturnItem.builder().quantity(8L) } };
+        return new Object[][] { new Object[] { "key", CustomLineItemReturnItem.builder().key("key") },
+                new Object[] { "customLineItemId",
+                        CustomLineItemReturnItem.builder().customLineItemId("customLineItemId") },
+                new Object[] { "quantity", CustomLineItemReturnItem.builder().quantity(8L) } };
     }
 
     @Test

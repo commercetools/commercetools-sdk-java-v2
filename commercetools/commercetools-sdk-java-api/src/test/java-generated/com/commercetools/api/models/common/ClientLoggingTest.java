@@ -1,35 +1,28 @@
 
 package com.commercetools.api.models.common;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ClientLoggingTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ClientLoggingBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ClientLoggingBuilder builder) {
         ClientLogging clientLogging = builder.buildUnchecked();
         Assertions.assertThat(clientLogging).isInstanceOf(ClientLogging.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ClientLogging.builder().clientId("clientId") },
-                new Object[] { ClientLogging.builder().externalUserId("externalUserId") },
-                new Object[] { ClientLogging.builder()
-                        .customer(new com.commercetools.api.models.customer.CustomerReferenceImpl()) },
-                new Object[] { ClientLogging.builder().anonymousId("anonymousId") },
-                new Object[] { ClientLogging.builder()
+        return new Object[][] { new Object[] { "clientId", ClientLogging.builder().clientId("clientId") },
+                new Object[] { "externalUserId", ClientLogging.builder().externalUserId("externalUserId") },
+                new Object[] { "customer",
+                        ClientLogging.builder()
+                                .customer(new com.commercetools.api.models.customer.CustomerReferenceImpl()) },
+                new Object[] { "anonymousId", ClientLogging.builder().anonymousId("anonymousId") },
+                new Object[] { "associate", ClientLogging.builder()
                         .associate(new com.commercetools.api.models.customer.CustomerReferenceImpl()) } };
     }
 

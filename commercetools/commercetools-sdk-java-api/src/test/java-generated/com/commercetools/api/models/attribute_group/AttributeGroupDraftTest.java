@@ -3,38 +3,33 @@ package com.commercetools.api.models.attribute_group;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class AttributeGroupDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(AttributeGroupDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, AttributeGroupDraftBuilder builder) {
         AttributeGroupDraft attributeGroupDraft = builder.buildUnchecked();
         Assertions.assertThat(attributeGroupDraft).isInstanceOf(AttributeGroupDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { AttributeGroupDraft.builder()
-                        .name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { AttributeGroupDraft.builder()
-                        .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { AttributeGroupDraft.builder()
-                        .attributes(Collections.singletonList(
-                            new com.commercetools.api.models.attribute_group.AttributeReferenceImpl())) },
-                new Object[] { AttributeGroupDraft.builder().key("key") } };
+                new Object[] { "name",
+                        AttributeGroupDraft.builder()
+                                .name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "description",
+                        AttributeGroupDraft.builder()
+                                .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "attributes",
+                        AttributeGroupDraft.builder()
+                                .attributes(Collections.singletonList(
+                                    new com.commercetools.api.models.attribute_group.AttributeReferenceImpl())) },
+                new Object[] { "key", AttributeGroupDraft.builder().key("key") } };
     }
 
     @Test

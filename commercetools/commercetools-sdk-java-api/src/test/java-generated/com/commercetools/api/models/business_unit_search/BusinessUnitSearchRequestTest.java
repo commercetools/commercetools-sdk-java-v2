@@ -3,36 +3,31 @@ package com.commercetools.api.models.business_unit_search;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class BusinessUnitSearchRequestTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(BusinessUnitSearchRequestBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, BusinessUnitSearchRequestBuilder builder) {
         BusinessUnitSearchRequest businessUnitSearchRequest = builder.buildUnchecked();
         Assertions.assertThat(businessUnitSearchRequest).isInstanceOf(BusinessUnitSearchRequest.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { BusinessUnitSearchRequest.builder()
-                        .query(new com.commercetools.api.models.search.SearchQueryImpl()) },
-                new Object[] { BusinessUnitSearchRequest.builder()
-                        .sort(Collections.singletonList(new com.commercetools.api.models.search.SearchSortingImpl())) },
-                new Object[] { BusinessUnitSearchRequest.builder().limit(7) },
-                new Object[] { BusinessUnitSearchRequest.builder().offset(3) } };
+                new Object[] { "query",
+                        BusinessUnitSearchRequest.builder()
+                                .query(new com.commercetools.api.models.search.SearchQueryImpl()) },
+                new Object[] { "sort",
+                        BusinessUnitSearchRequest.builder()
+                                .sort(Collections
+                                        .singletonList(new com.commercetools.api.models.search.SearchSortingImpl())) },
+                new Object[] { "limit", BusinessUnitSearchRequest.builder().limit(7) },
+                new Object[] { "offset", BusinessUnitSearchRequest.builder().offset(3) } };
     }
 
     @Test

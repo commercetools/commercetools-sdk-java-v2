@@ -1,32 +1,25 @@
 
 package com.commercetools.api.models.customer;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CustomerChangeAddressActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CustomerChangeAddressActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CustomerChangeAddressActionBuilder builder) {
         CustomerChangeAddressAction customerChangeAddressAction = builder.buildUnchecked();
         Assertions.assertThat(customerChangeAddressAction).isInstanceOf(CustomerChangeAddressAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { CustomerChangeAddressAction.builder().addressId("addressId") },
-                new Object[] { CustomerChangeAddressAction.builder().addressKey("addressKey") },
-                new Object[] { CustomerChangeAddressAction.builder()
+        return new Object[][] {
+                new Object[] { "addressId", CustomerChangeAddressAction.builder().addressId("addressId") },
+                new Object[] { "addressKey", CustomerChangeAddressAction.builder().addressKey("addressKey") },
+                new Object[] { "address", CustomerChangeAddressAction.builder()
                         .address(new com.commercetools.api.models.common.BaseAddressImpl()) } };
     }
 

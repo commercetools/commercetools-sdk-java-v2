@@ -1,34 +1,28 @@
 
 package com.commercetools.api.models.order;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class OrderSetDeliveryCustomTypeActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(OrderSetDeliveryCustomTypeActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, OrderSetDeliveryCustomTypeActionBuilder builder) {
         OrderSetDeliveryCustomTypeAction orderSetDeliveryCustomTypeAction = builder.buildUnchecked();
         Assertions.assertThat(orderSetDeliveryCustomTypeAction).isInstanceOf(OrderSetDeliveryCustomTypeAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { OrderSetDeliveryCustomTypeAction.builder().deliveryId("deliveryId") },
-                new Object[] { OrderSetDeliveryCustomTypeAction.builder().deliveryKey("deliveryKey") },
-                new Object[] { OrderSetDeliveryCustomTypeAction.builder()
-                        .type(new com.commercetools.api.models.type.TypeResourceIdentifierImpl()) },
-                new Object[] { OrderSetDeliveryCustomTypeAction.builder()
+        return new Object[][] {
+                new Object[] { "deliveryId", OrderSetDeliveryCustomTypeAction.builder().deliveryId("deliveryId") },
+                new Object[] { "deliveryKey", OrderSetDeliveryCustomTypeAction.builder().deliveryKey("deliveryKey") },
+                new Object[] { "type",
+                        OrderSetDeliveryCustomTypeAction.builder()
+                                .type(new com.commercetools.api.models.type.TypeResourceIdentifierImpl()) },
+                new Object[] { "fields", OrderSetDeliveryCustomTypeAction.builder()
                         .fields(new com.commercetools.api.models.type.FieldContainerImpl()) } };
     }
 

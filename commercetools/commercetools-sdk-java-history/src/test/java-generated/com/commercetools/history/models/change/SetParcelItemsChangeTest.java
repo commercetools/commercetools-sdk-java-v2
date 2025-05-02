@@ -3,37 +3,31 @@ package com.commercetools.history.models.change;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetParcelItemsChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetParcelItemsChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetParcelItemsChangeBuilder builder) {
         SetParcelItemsChange setParcelItemsChange = builder.buildUnchecked();
         Assertions.assertThat(setParcelItemsChange).isInstanceOf(SetParcelItemsChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetParcelItemsChange.builder().change("change") },
-                new Object[] { SetParcelItemsChange.builder()
-                        .previousValue(Collections
-                                .singletonList(new com.commercetools.history.models.common.DeliveryItemImpl())) },
-                new Object[] { SetParcelItemsChange.builder()
-                        .nextValue(Collections
-                                .singletonList(new com.commercetools.history.models.common.DeliveryItemImpl())) },
-                new Object[] { SetParcelItemsChange.builder()
+        return new Object[][] { new Object[] { "change", SetParcelItemsChange.builder().change("change") },
+                new Object[] { "previousValue",
+                        SetParcelItemsChange.builder()
+                                .previousValue(Collections.singletonList(
+                                    new com.commercetools.history.models.common.DeliveryItemImpl())) },
+                new Object[] { "nextValue",
+                        SetParcelItemsChange.builder()
+                                .nextValue(Collections.singletonList(
+                                    new com.commercetools.history.models.common.DeliveryItemImpl())) },
+                new Object[] { "parcel", SetParcelItemsChange.builder()
                         .parcel(new com.commercetools.history.models.change_value.ParcelChangeValueImpl()) } };
     }
 

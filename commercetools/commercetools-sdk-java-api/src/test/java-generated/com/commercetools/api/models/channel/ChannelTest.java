@@ -4,48 +4,47 @@ package com.commercetools.api.models.channel;
 import java.time.ZonedDateTime;
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ChannelTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ChannelBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ChannelBuilder builder) {
         Channel channel = builder.buildUnchecked();
         Assertions.assertThat(channel).isInstanceOf(Channel.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { Channel.builder().id("id") },
-                new Object[] { Channel.builder().version(2L) },
-                new Object[] { Channel.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { Channel.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { Channel.builder()
-                        .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
-                new Object[] { Channel.builder().createdBy(new com.commercetools.api.models.common.CreatedByImpl()) },
-                new Object[] { Channel.builder().key("key") },
-                new Object[] { Channel.builder()
+        return new Object[][] { new Object[] { "id", Channel.builder().id("id") },
+                new Object[] { "version", Channel.builder().version(2L) },
+                new Object[] { "createdAt", Channel.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedAt",
+                        Channel.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedBy",
+                        Channel.builder()
+                                .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
+                new Object[] { "createdBy",
+                        Channel.builder().createdBy(new com.commercetools.api.models.common.CreatedByImpl()) },
+                new Object[] { "key", Channel.builder().key("key") },
+                new Object[] { "roles", Channel.builder()
                         .roles(Collections.singletonList(
                             com.commercetools.api.models.channel.ChannelRoleEnum.findEnum("InventorySupply"))) },
-                new Object[] { Channel.builder().name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] {
+                new Object[] { "name",
+                        Channel.builder().name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "description",
                         Channel.builder().description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { Channel.builder().address(new com.commercetools.api.models.common.AddressImpl()) },
-                new Object[] { Channel.builder()
+                new Object[] { "address",
+                        Channel.builder().address(new com.commercetools.api.models.common.AddressImpl()) },
+                new Object[] { "reviewRatingStatistics", Channel.builder()
                         .reviewRatingStatistics(new com.commercetools.api.models.review.ReviewRatingStatisticsImpl()) },
-                new Object[] { Channel.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) },
-                new Object[] { Channel.builder().geoLocation(new com.commercetools.api.models.common.GeoJsonImpl()) } };
+                new Object[] { "custom",
+                        Channel.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) },
+                new Object[] { "geoLocation",
+                        Channel.builder().geoLocation(new com.commercetools.api.models.common.GeoJsonImpl()) } };
     }
 
     @Test

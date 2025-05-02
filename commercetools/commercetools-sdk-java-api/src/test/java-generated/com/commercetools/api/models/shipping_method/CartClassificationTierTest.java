@@ -1,33 +1,25 @@
 
 package com.commercetools.api.models.shipping_method;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CartClassificationTierTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CartClassificationTierBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CartClassificationTierBuilder builder) {
         CartClassificationTier cartClassificationTier = builder.buildUnchecked();
         Assertions.assertThat(cartClassificationTier).isInstanceOf(CartClassificationTier.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { CartClassificationTier.builder().value("value") },
-                new Object[] {
+        return new Object[][] { new Object[] { "value", CartClassificationTier.builder().value("value") },
+                new Object[] { "price",
                         CartClassificationTier.builder().price(new com.commercetools.api.models.common.MoneyImpl()) },
-                new Object[] { CartClassificationTier.builder().isMatching(true) } };
+                new Object[] { "isMatching", CartClassificationTier.builder().isMatching(true) } };
     }
 
     @Test

@@ -3,35 +3,27 @@ package com.commercetools.api.models.subscription;
 
 import java.time.ZonedDateTime;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class EventDeliveryPayloadTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(EventDeliveryPayloadBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, EventDeliveryPayloadBuilder builder) {
         EventDeliveryPayload eventDeliveryPayload = builder.buildUnchecked();
         Assertions.assertThat(eventDeliveryPayload).isInstanceOf(EventDeliveryPayload.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { EventDeliveryPayload.builder().id("id") },
-                new Object[] { EventDeliveryPayload.builder()
+        return new Object[][] { new Object[] { "id", EventDeliveryPayload.builder().id("id") }, new Object[] { "type",
+                EventDeliveryPayload.builder()
                         .type(com.commercetools.api.models.subscription.EventType.findEnum("ImportContainerCreated")) },
-                new Object[] { EventDeliveryPayload.builder().resourceType("resourceType") },
-                new Object[] { EventDeliveryPayload.builder().data("data") },
-                new Object[] { EventDeliveryPayload.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) } };
+                new Object[] { "resourceType", EventDeliveryPayload.builder().resourceType("resourceType") },
+                new Object[] { "data", EventDeliveryPayload.builder().data("data") }, new Object[] { "createdAt",
+                        EventDeliveryPayload.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) } };
     }
 
     @Test

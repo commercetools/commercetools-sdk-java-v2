@@ -1,36 +1,28 @@
 
 package com.commercetools.importapi.models.importsummaries;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class OperationStatesTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(OperationStatesBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, OperationStatesBuilder builder) {
         OperationStates operationStates = builder.buildUnchecked();
         Assertions.assertThat(operationStates).isInstanceOf(OperationStates.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { OperationStates.builder().processing(4L) },
-                new Object[] { OperationStates.builder().validationFailed(8L) },
-                new Object[] { OperationStates.builder().unresolved(5L) },
-                new Object[] { OperationStates.builder().waitForMasterVariant(8L) },
-                new Object[] { OperationStates.builder().imported(1L) },
-                new Object[] { OperationStates.builder().rejected(3L) },
-                new Object[] { OperationStates.builder().canceled(5L) } };
+        return new Object[][] { new Object[] { "processing", OperationStates.builder().processing(4L) },
+                new Object[] { "validationFailed", OperationStates.builder().validationFailed(8L) },
+                new Object[] { "unresolved", OperationStates.builder().unresolved(5L) },
+                new Object[] { "waitForMasterVariant", OperationStates.builder().waitForMasterVariant(8L) },
+                new Object[] { "imported", OperationStates.builder().imported(1L) },
+                new Object[] { "rejected", OperationStates.builder().rejected(3L) },
+                new Object[] { "canceled", OperationStates.builder().canceled(5L) } };
     }
 
     @Test

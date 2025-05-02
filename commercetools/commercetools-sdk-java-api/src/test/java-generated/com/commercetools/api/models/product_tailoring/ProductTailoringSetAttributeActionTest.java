@@ -1,35 +1,28 @@
 
 package com.commercetools.api.models.product_tailoring;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductTailoringSetAttributeActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductTailoringSetAttributeActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductTailoringSetAttributeActionBuilder builder) {
         ProductTailoringSetAttributeAction productTailoringSetAttributeAction = builder.buildUnchecked();
         Assertions.assertThat(productTailoringSetAttributeAction)
                 .isInstanceOf(ProductTailoringSetAttributeAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductTailoringSetAttributeAction.builder().variantId(5L) },
-                new Object[] { ProductTailoringSetAttributeAction.builder().sku("sku") },
-                new Object[] { ProductTailoringSetAttributeAction.builder().name("name") },
-                new Object[] { ProductTailoringSetAttributeAction.builder().value("value") },
-                new Object[] { ProductTailoringSetAttributeAction.builder().staged(true) } };
+        return new Object[][] {
+                new Object[] { "variantId", ProductTailoringSetAttributeAction.builder().variantId(5L) },
+                new Object[] { "sku", ProductTailoringSetAttributeAction.builder().sku("sku") },
+                new Object[] { "name", ProductTailoringSetAttributeAction.builder().name("name") },
+                new Object[] { "value", ProductTailoringSetAttributeAction.builder().value("value") },
+                new Object[] { "staged", ProductTailoringSetAttributeAction.builder().staged(true) } };
     }
 
     @Test

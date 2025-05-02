@@ -1,32 +1,24 @@
 
 package com.commercetools.history.models.change_value;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ChangeTargetCustomLineItemsChangeValueTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ChangeTargetCustomLineItemsChangeValueBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ChangeTargetCustomLineItemsChangeValueBuilder builder) {
         ChangeTargetCustomLineItemsChangeValue changeTargetCustomLineItemsChangeValue = builder.buildUnchecked();
         Assertions.assertThat(changeTargetCustomLineItemsChangeValue)
                 .isInstanceOf(ChangeTargetCustomLineItemsChangeValue.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { ChangeTargetCustomLineItemsChangeValue.builder().predicate("predicate") } };
+                new Object[] { "predicate", ChangeTargetCustomLineItemsChangeValue.builder().predicate("predicate") } };
     }
 
     @Test

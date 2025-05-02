@@ -1,30 +1,22 @@
 
 package com.commercetools.api.models.review;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ReviewSetKeyActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ReviewSetKeyActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ReviewSetKeyActionBuilder builder) {
         ReviewSetKeyAction reviewSetKeyAction = builder.buildUnchecked();
         Assertions.assertThat(reviewSetKeyAction).isInstanceOf(ReviewSetKeyAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ReviewSetKeyAction.builder().key("key") } };
+        return new Object[][] { new Object[] { "key", ReviewSetKeyAction.builder().key("key") } };
     }
 
     @Test

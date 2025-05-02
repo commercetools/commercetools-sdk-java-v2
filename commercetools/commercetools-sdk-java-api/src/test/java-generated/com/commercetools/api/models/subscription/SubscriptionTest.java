@@ -4,52 +4,52 @@ package com.commercetools.api.models.subscription;
 import java.time.ZonedDateTime;
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SubscriptionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SubscriptionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SubscriptionBuilder builder) {
         Subscription subscription = builder.buildUnchecked();
         Assertions.assertThat(subscription).isInstanceOf(Subscription.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { Subscription.builder().id("id") },
-                new Object[] { Subscription.builder().version(2L) },
-                new Object[] { Subscription.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { Subscription.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { Subscription.builder()
-                        .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
-                new Object[] {
+        return new Object[][] { new Object[] { "id", Subscription.builder().id("id") },
+                new Object[] { "version", Subscription.builder().version(2L) },
+                new Object[] { "createdAt",
+                        Subscription.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedAt",
+                        Subscription.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedBy",
+                        Subscription.builder()
+                                .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
+                new Object[] { "createdBy",
                         Subscription.builder().createdBy(new com.commercetools.api.models.common.CreatedByImpl()) },
-                new Object[] { Subscription.builder()
-                        .changes(Collections.singletonList(
-                            new com.commercetools.api.models.subscription.ChangeSubscriptionImpl())) },
-                new Object[] { Subscription.builder()
-                        .destination(new com.commercetools.api.models.subscription.DestinationImpl()) },
-                new Object[] { Subscription.builder().key("key") },
-                new Object[] { Subscription.builder()
-                        .messages(Collections.singletonList(
-                            new com.commercetools.api.models.subscription.MessageSubscriptionImpl())) },
-                new Object[] { Subscription.builder()
-                        .events(Collections.singletonList(
-                            new com.commercetools.api.models.subscription.EventSubscriptionImpl())) },
-                new Object[] { Subscription.builder()
-                        .format(new com.commercetools.api.models.subscription.DeliveryFormatImpl()) },
-                new Object[] { Subscription.builder()
+                new Object[] { "changes",
+                        Subscription.builder()
+                                .changes(Collections.singletonList(
+                                    new com.commercetools.api.models.subscription.ChangeSubscriptionImpl())) },
+                new Object[] { "destination",
+                        Subscription.builder()
+                                .destination(new com.commercetools.api.models.subscription.DestinationImpl()) },
+                new Object[] { "key", Subscription.builder().key("key") },
+                new Object[] { "messages",
+                        Subscription.builder()
+                                .messages(Collections.singletonList(
+                                    new com.commercetools.api.models.subscription.MessageSubscriptionImpl())) },
+                new Object[] { "events",
+                        Subscription.builder()
+                                .events(Collections.singletonList(
+                                    new com.commercetools.api.models.subscription.EventSubscriptionImpl())) },
+                new Object[] { "format",
+                        Subscription.builder()
+                                .format(new com.commercetools.api.models.subscription.DeliveryFormatImpl()) },
+                new Object[] { "status", Subscription.builder()
                         .status(
                             com.commercetools.api.models.subscription.SubscriptionHealthStatus.findEnum("Healthy")) } };
     }

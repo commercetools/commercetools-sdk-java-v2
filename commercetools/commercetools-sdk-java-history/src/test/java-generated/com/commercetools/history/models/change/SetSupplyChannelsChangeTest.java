@@ -3,35 +3,27 @@ package com.commercetools.history.models.change;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetSupplyChannelsChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetSupplyChannelsChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetSupplyChannelsChangeBuilder builder) {
         SetSupplyChannelsChange setSupplyChannelsChange = builder.buildUnchecked();
         Assertions.assertThat(setSupplyChannelsChange).isInstanceOf(SetSupplyChannelsChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetSupplyChannelsChange.builder().change("change") },
-                new Object[] {
+        return new Object[][] { new Object[] { "change", SetSupplyChannelsChange.builder().change("change") },
+                new Object[] { "previousValue",
                         SetSupplyChannelsChange.builder()
                                 .previousValue(Collections
                                         .singletonList(new com.commercetools.history.models.common.ReferenceImpl())) },
-                new Object[] { SetSupplyChannelsChange.builder()
+                new Object[] { "nextValue", SetSupplyChannelsChange.builder()
                         .nextValue(
                             Collections.singletonList(new com.commercetools.history.models.common.ReferenceImpl())) } };
     }

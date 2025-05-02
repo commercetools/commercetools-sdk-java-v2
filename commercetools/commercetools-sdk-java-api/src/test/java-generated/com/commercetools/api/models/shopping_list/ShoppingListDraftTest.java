@@ -3,53 +3,53 @@ package com.commercetools.api.models.shopping_list;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ShoppingListDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ShoppingListDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ShoppingListDraftBuilder builder) {
         ShoppingListDraft shoppingListDraft = builder.buildUnchecked();
         Assertions.assertThat(shoppingListDraft).isInstanceOf(ShoppingListDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { ShoppingListDraft.builder()
-                        .name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { ShoppingListDraft.builder()
-                        .slug(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { ShoppingListDraft.builder()
-                        .customer(new com.commercetools.api.models.customer.CustomerResourceIdentifierImpl()) },
-                new Object[] { ShoppingListDraft.builder().key("key") },
-                new Object[] { ShoppingListDraft.builder()
-                        .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { ShoppingListDraft.builder().anonymousId("anonymousId") },
-                new Object[] { ShoppingListDraft.builder().deleteDaysAfterLastModification(3L) },
-                new Object[] { ShoppingListDraft.builder()
-                        .lineItems(Collections.singletonList(
-                            new com.commercetools.api.models.shopping_list.ShoppingListLineItemDraftImpl())) },
-                new Object[] { ShoppingListDraft.builder()
-                        .textLineItems(Collections.singletonList(
-                            new com.commercetools.api.models.shopping_list.TextLineItemDraftImpl())) },
-                new Object[] { ShoppingListDraft.builder()
-                        .store(new com.commercetools.api.models.store.StoreResourceIdentifierImpl()) },
-                new Object[] { ShoppingListDraft.builder()
+                new Object[] { "name",
+                        ShoppingListDraft.builder()
+                                .name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "slug",
+                        ShoppingListDraft.builder()
+                                .slug(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "customer",
+                        ShoppingListDraft.builder()
+                                .customer(new com.commercetools.api.models.customer.CustomerResourceIdentifierImpl()) },
+                new Object[] { "key", ShoppingListDraft.builder().key("key") },
+                new Object[] { "description",
+                        ShoppingListDraft.builder()
+                                .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "anonymousId", ShoppingListDraft.builder().anonymousId("anonymousId") },
+                new Object[] { "deleteDaysAfterLastModification",
+                        ShoppingListDraft.builder().deleteDaysAfterLastModification(3L) },
+                new Object[] { "lineItems",
+                        ShoppingListDraft.builder()
+                                .lineItems(Collections.singletonList(
+                                    new com.commercetools.api.models.shopping_list.ShoppingListLineItemDraftImpl())) },
+                new Object[] { "textLineItems",
+                        ShoppingListDraft.builder()
+                                .textLineItems(Collections.singletonList(
+                                    new com.commercetools.api.models.shopping_list.TextLineItemDraftImpl())) },
+                new Object[] { "store",
+                        ShoppingListDraft.builder()
+                                .store(new com.commercetools.api.models.store.StoreResourceIdentifierImpl()) },
+                new Object[] { "businessUnit", ShoppingListDraft.builder()
                         .businessUnit(
                             new com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierImpl()) },
-                new Object[] { ShoppingListDraft.builder()
+                new Object[] { "custom", ShoppingListDraft.builder()
                         .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) } };
     }
 

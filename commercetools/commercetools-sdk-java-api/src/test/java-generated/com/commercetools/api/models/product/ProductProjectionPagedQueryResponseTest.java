@@ -3,37 +3,30 @@ package com.commercetools.api.models.product;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductProjectionPagedQueryResponseTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductProjectionPagedQueryResponseBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductProjectionPagedQueryResponseBuilder builder) {
         ProductProjectionPagedQueryResponse productProjectionPagedQueryResponse = builder.buildUnchecked();
         Assertions.assertThat(productProjectionPagedQueryResponse)
                 .isInstanceOf(ProductProjectionPagedQueryResponse.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductProjectionPagedQueryResponse.builder().limit(7L) },
-                new Object[] { ProductProjectionPagedQueryResponse.builder().count(2L) },
-                new Object[] { ProductProjectionPagedQueryResponse.builder().total(1L) },
-                new Object[] { ProductProjectionPagedQueryResponse.builder().offset(3L) },
-                new Object[] { ProductProjectionPagedQueryResponse.builder()
-                        .results(Collections
-                                .singletonList(new com.commercetools.api.models.product.ProductProjectionImpl())) } };
+        return new Object[][] { new Object[] { "limit", ProductProjectionPagedQueryResponse.builder().limit(7L) },
+                new Object[] { "count", ProductProjectionPagedQueryResponse.builder().count(2L) },
+                new Object[] { "total", ProductProjectionPagedQueryResponse.builder().total(1L) },
+                new Object[] { "offset", ProductProjectionPagedQueryResponse.builder().offset(3L) },
+                new Object[] { "results",
+                        ProductProjectionPagedQueryResponse.builder()
+                                .results(Collections.singletonList(
+                                    new com.commercetools.api.models.product.ProductProjectionImpl())) } };
     }
 
     @Test

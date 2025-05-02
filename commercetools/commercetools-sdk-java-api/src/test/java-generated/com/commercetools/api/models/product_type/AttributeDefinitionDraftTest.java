@@ -1,45 +1,40 @@
 
 package com.commercetools.api.models.product_type;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class AttributeDefinitionDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(AttributeDefinitionDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, AttributeDefinitionDraftBuilder builder) {
         AttributeDefinitionDraft attributeDefinitionDraft = builder.buildUnchecked();
         Assertions.assertThat(attributeDefinitionDraft).isInstanceOf(AttributeDefinitionDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { AttributeDefinitionDraft.builder()
-                        .type(new com.commercetools.api.models.product_type.AttributeTypeImpl()) },
-                new Object[] { AttributeDefinitionDraft.builder().name("name") },
-                new Object[] { AttributeDefinitionDraft.builder()
-                        .label(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { AttributeDefinitionDraft.builder().isRequired(true) },
-                new Object[] {
+                new Object[] { "type",
+                        AttributeDefinitionDraft.builder()
+                                .type(new com.commercetools.api.models.product_type.AttributeTypeImpl()) },
+                new Object[] { "name", AttributeDefinitionDraft.builder().name("name") },
+                new Object[] { "label",
+                        AttributeDefinitionDraft.builder()
+                                .label(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "isRequired", AttributeDefinitionDraft.builder().isRequired(true) },
+                new Object[] { "attributeConstraint",
                         AttributeDefinitionDraft.builder()
                                 .attributeConstraint(com.commercetools.api.models.product_type.AttributeConstraintEnum
                                         .findEnum("None")) },
-                new Object[] { AttributeDefinitionDraft.builder()
-                        .inputTip(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { AttributeDefinitionDraft.builder()
+                new Object[] { "inputTip",
+                        AttributeDefinitionDraft.builder()
+                                .inputTip(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "inputHint", AttributeDefinitionDraft.builder()
                         .inputHint(com.commercetools.api.models.product_type.TextInputHint.findEnum("SingleLine")) },
-                new Object[] { AttributeDefinitionDraft.builder().isSearchable(true) } };
+                new Object[] { "isSearchable", AttributeDefinitionDraft.builder().isSearchable(true) } };
     }
 
     @Test

@@ -3,43 +3,36 @@ package com.commercetools.api.models.me;
 
 import java.time.ZonedDateTime;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class MyLineItemDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(MyLineItemDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, MyLineItemDraftBuilder builder) {
         MyLineItemDraft myLineItemDraft = builder.buildUnchecked();
         Assertions.assertThat(myLineItemDraft).isInstanceOf(MyLineItemDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { MyLineItemDraft.builder().key("key") },
-                new Object[] { MyLineItemDraft.builder().productId("productId") },
-                new Object[] { MyLineItemDraft.builder().variantId(5L) },
-                new Object[] { MyLineItemDraft.builder().sku("sku") },
-                new Object[] { MyLineItemDraft.builder().quantity(8L) },
-                new Object[] { MyLineItemDraft.builder().addedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { MyLineItemDraft.builder()
+        return new Object[][] { new Object[] { "key", MyLineItemDraft.builder().key("key") },
+                new Object[] { "productId", MyLineItemDraft.builder().productId("productId") },
+                new Object[] { "variantId", MyLineItemDraft.builder().variantId(5L) },
+                new Object[] { "sku", MyLineItemDraft.builder().sku("sku") },
+                new Object[] { "quantity", MyLineItemDraft.builder().quantity(8L) },
+                new Object[] { "addedAt", MyLineItemDraft.builder().addedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "supplyChannel", MyLineItemDraft.builder()
                         .supplyChannel(new com.commercetools.api.models.channel.ChannelResourceIdentifierImpl()) },
-                new Object[] { MyLineItemDraft.builder()
-                        .distributionChannel(
-                            new com.commercetools.api.models.channel.ChannelResourceIdentifierImpl()) },
-                new Object[] { MyLineItemDraft.builder()
+                new Object[] { "distributionChannel",
+                        MyLineItemDraft.builder()
+                                .distributionChannel(
+                                    new com.commercetools.api.models.channel.ChannelResourceIdentifierImpl()) },
+                new Object[] { "shippingDetails", MyLineItemDraft.builder()
                         .shippingDetails(new com.commercetools.api.models.cart.ItemShippingDetailsDraftImpl()) },
-                new Object[] { MyLineItemDraft.builder()
+                new Object[] { "custom", MyLineItemDraft.builder()
                         .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) } };
     }
 

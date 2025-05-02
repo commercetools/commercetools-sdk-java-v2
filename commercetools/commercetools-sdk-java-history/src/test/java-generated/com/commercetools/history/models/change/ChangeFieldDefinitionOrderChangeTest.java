@@ -3,34 +3,26 @@ package com.commercetools.history.models.change;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ChangeFieldDefinitionOrderChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ChangeFieldDefinitionOrderChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ChangeFieldDefinitionOrderChangeBuilder builder) {
         ChangeFieldDefinitionOrderChange changeFieldDefinitionOrderChange = builder.buildUnchecked();
         Assertions.assertThat(changeFieldDefinitionOrderChange).isInstanceOf(ChangeFieldDefinitionOrderChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ChangeFieldDefinitionOrderChange.builder().change("change") },
-                new Object[] { ChangeFieldDefinitionOrderChange.builder()
+        return new Object[][] { new Object[] { "change", ChangeFieldDefinitionOrderChange.builder().change("change") },
+                new Object[] { "previousValue", ChangeFieldDefinitionOrderChange.builder()
                         .previousValue(Collections.singletonList(
                             new com.commercetools.history.models.change_value.FieldDefinitionOrderValueImpl())) },
-                new Object[] { ChangeFieldDefinitionOrderChange.builder()
+                new Object[] { "nextValue", ChangeFieldDefinitionOrderChange.builder()
                         .nextValue(Collections.singletonList(
                             new com.commercetools.history.models.change_value.FieldDefinitionOrderValueImpl())) } };
     }

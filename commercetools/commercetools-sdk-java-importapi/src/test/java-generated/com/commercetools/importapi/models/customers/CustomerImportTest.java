@@ -4,59 +4,56 @@ package com.commercetools.importapi.models.customers;
 import java.time.LocalDate;
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CustomerImportTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CustomerImportBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CustomerImportBuilder builder) {
         CustomerImport customerImport = builder.buildUnchecked();
         Assertions.assertThat(customerImport).isInstanceOf(CustomerImport.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { CustomerImport.builder().key("key") },
-                new Object[] { CustomerImport.builder().customerNumber("customerNumber") },
-                new Object[] { CustomerImport.builder().email("email") },
-                new Object[] { CustomerImport.builder().password("password") },
-                new Object[] { CustomerImport.builder()
-                        .stores(Collections.singletonList(
-                            new com.commercetools.importapi.models.common.StoreKeyReferenceImpl())) },
-                new Object[] { CustomerImport.builder().firstName("firstName") },
-                new Object[] { CustomerImport.builder().lastName("lastName") },
-                new Object[] { CustomerImport.builder().middleName("middleName") },
-                new Object[] { CustomerImport.builder().title("title") },
-                new Object[] { CustomerImport.builder().salutation("salutation") },
-                new Object[] { CustomerImport.builder().externalId("externalId") },
-                new Object[] { CustomerImport.builder().dateOfBirth(LocalDate.parse("2023-06-01")) },
-                new Object[] { CustomerImport.builder().companyName("companyName") },
-                new Object[] { CustomerImport.builder().vatId("vatId") },
-                new Object[] { CustomerImport.builder().isEmailVerified(true) },
-                new Object[] { CustomerImport.builder()
+        return new Object[][] { new Object[] { "key", CustomerImport.builder().key("key") },
+                new Object[] { "customerNumber", CustomerImport.builder().customerNumber("customerNumber") },
+                new Object[] { "email", CustomerImport.builder().email("email") },
+                new Object[] { "password", CustomerImport.builder().password("password") },
+                new Object[] { "stores",
+                        CustomerImport.builder()
+                                .stores(Collections.singletonList(
+                                    new com.commercetools.importapi.models.common.StoreKeyReferenceImpl())) },
+                new Object[] { "firstName", CustomerImport.builder().firstName("firstName") },
+                new Object[] { "lastName", CustomerImport.builder().lastName("lastName") },
+                new Object[] { "middleName", CustomerImport.builder().middleName("middleName") },
+                new Object[] { "title", CustomerImport.builder().title("title") },
+                new Object[] { "salutation", CustomerImport.builder().salutation("salutation") },
+                new Object[] { "externalId", CustomerImport.builder().externalId("externalId") },
+                new Object[] { "dateOfBirth", CustomerImport.builder().dateOfBirth(LocalDate.parse("2023-06-01")) },
+                new Object[] { "companyName", CustomerImport.builder().companyName("companyName") },
+                new Object[] { "vatId", CustomerImport.builder().vatId("vatId") },
+                new Object[] { "isEmailVerified", CustomerImport.builder().isEmailVerified(true) },
+                new Object[] { "customerGroup", CustomerImport.builder()
                         .customerGroup(new com.commercetools.importapi.models.common.CustomerGroupKeyReferenceImpl()) },
-                new Object[] { CustomerImport.builder()
-                        .addresses(Collections.singletonList(
-                            new com.commercetools.importapi.models.customers.CustomerAddressImpl())) },
-                new Object[] { CustomerImport.builder().defaultBillingAddress(3) },
-                new Object[] { CustomerImport.builder().billingAddresses(Collections.singletonList(7)) },
-                new Object[] { CustomerImport.builder().defaultShippingAddress(4) },
-                new Object[] { CustomerImport.builder().shippingAddresses(Collections.singletonList(5)) },
-                new Object[] { CustomerImport.builder().locale("locale") },
-                new Object[] { CustomerImport.builder()
-                        .custom(new com.commercetools.importapi.models.customfields.CustomImpl()) },
-                new Object[] { CustomerImport.builder()
+                new Object[] { "addresses",
+                        CustomerImport.builder()
+                                .addresses(Collections.singletonList(
+                                    new com.commercetools.importapi.models.customers.CustomerAddressImpl())) },
+                new Object[] { "defaultBillingAddress", CustomerImport.builder().defaultBillingAddress(3) },
+                new Object[] { "billingAddresses",
+                        CustomerImport.builder().billingAddresses(Collections.singletonList(7)) },
+                new Object[] { "defaultShippingAddress", CustomerImport.builder().defaultShippingAddress(4) },
+                new Object[] { "shippingAddresses",
+                        CustomerImport.builder().shippingAddresses(Collections.singletonList(5)) },
+                new Object[] { "locale", CustomerImport.builder().locale("locale") },
+                new Object[] { "custom",
+                        CustomerImport.builder()
+                                .custom(new com.commercetools.importapi.models.customfields.CustomImpl()) },
+                new Object[] { "authenticationMode", CustomerImport.builder()
                         .authenticationMode(
                             com.commercetools.importapi.models.customers.AuthenticationMode.findEnum("Password")) } };
     }

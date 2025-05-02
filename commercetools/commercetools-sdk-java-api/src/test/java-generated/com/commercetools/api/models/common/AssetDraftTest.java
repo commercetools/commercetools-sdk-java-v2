@@ -3,42 +3,35 @@ package com.commercetools.api.models.common;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class AssetDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(AssetDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, AssetDraftBuilder builder) {
         AssetDraft assetDraft = builder.buildUnchecked();
         Assertions.assertThat(assetDraft).isInstanceOf(AssetDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] {
+                new Object[] { "sources",
                         AssetDraft.builder()
                                 .sources(Collections
                                         .singletonList(new com.commercetools.api.models.common.AssetSourceImpl())) },
-                new Object[] {
+                new Object[] { "name",
                         AssetDraft.builder().name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { AssetDraft.builder()
-                        .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { AssetDraft.builder().tags(Collections.singletonList("tags")) },
-                new Object[] {
+                new Object[] { "description",
+                        AssetDraft.builder()
+                                .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "tags", AssetDraft.builder().tags(Collections.singletonList("tags")) },
+                new Object[] { "custom",
                         AssetDraft.builder().custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) },
-                new Object[] { AssetDraft.builder().key("key") } };
+                new Object[] { "key", AssetDraft.builder().key("key") } };
     }
 
     @Test

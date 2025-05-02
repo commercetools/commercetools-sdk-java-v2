@@ -1,35 +1,29 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetDeliveryAddressChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetDeliveryAddressChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetDeliveryAddressChangeBuilder builder) {
         SetDeliveryAddressChange setDeliveryAddressChange = builder.buildUnchecked();
         Assertions.assertThat(setDeliveryAddressChange).isInstanceOf(SetDeliveryAddressChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetDeliveryAddressChange.builder().change("change") },
-                new Object[] { SetDeliveryAddressChange.builder()
-                        .previousValue(new com.commercetools.history.models.common.AddressImpl()) },
-                new Object[] { SetDeliveryAddressChange.builder()
-                        .nextValue(new com.commercetools.history.models.common.AddressImpl()) },
-                new Object[] { SetDeliveryAddressChange.builder().deliveryId("deliveryId") } };
+        return new Object[][] { new Object[] { "change", SetDeliveryAddressChange.builder().change("change") },
+                new Object[] { "previousValue",
+                        SetDeliveryAddressChange.builder()
+                                .previousValue(new com.commercetools.history.models.common.AddressImpl()) },
+                new Object[] { "nextValue",
+                        SetDeliveryAddressChange.builder()
+                                .nextValue(new com.commercetools.history.models.common.AddressImpl()) },
+                new Object[] { "deliveryId", SetDeliveryAddressChange.builder().deliveryId("deliveryId") } };
     }
 
     @Test

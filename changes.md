@@ -1,15 +1,15 @@
 **Api changes**
 
 <details>
-<summary>Changed Property(s)</summary>
+<summary>Added Property(s)</summary>
 
-- :warning: changed property `actions` of type `MyBusinessUnitUpdate` from type `BusinessUnitUpdateAction[]` to `MyBusinessUnitUpdateAction[]`
+- added property `published` to type `ShoppingListLineItem`
 </details>
 
 
 <details>
-<summary>Added Property(s)</summary>
+<summary>Changed Property(s)</summary>
 
-- added property `published` to type `ShoppingListLineItem`
+- :warning: changed property `actions` of type `MyBusinessUnitUpdate` from type `BusinessUnitUpdateAction[]` to `MyBusinessUnitUpdateAction[]`
 </details>
 

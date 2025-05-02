@@ -1,32 +1,24 @@
 
 package com.commercetools.api.models.search;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SearchFullTextValueTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SearchFullTextValueBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SearchFullTextValueBuilder builder) {
         SearchFullTextValue searchFullTextValue = builder.buildUnchecked();
         Assertions.assertThat(searchFullTextValue).isInstanceOf(SearchFullTextValue.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SearchFullTextValue.builder().value("value") },
-                new Object[] { SearchFullTextValue.builder().language("language") },
-                new Object[] { SearchFullTextValue.builder()
+        return new Object[][] { new Object[] { "value", SearchFullTextValue.builder().value("value") },
+                new Object[] { "language", SearchFullTextValue.builder().language("language") },
+                new Object[] { "mustMatch", SearchFullTextValue.builder()
                         .mustMatch(com.commercetools.api.models.search.SearchMatchType.findEnum("any")) } };
     }
 

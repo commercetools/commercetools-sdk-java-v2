@@ -1,34 +1,26 @@
 
 package com.commercetools.api.models.product;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductSetAttributeActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductSetAttributeActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductSetAttributeActionBuilder builder) {
         ProductSetAttributeAction productSetAttributeAction = builder.buildUnchecked();
         Assertions.assertThat(productSetAttributeAction).isInstanceOf(ProductSetAttributeAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductSetAttributeAction.builder().variantId(5L) },
-                new Object[] { ProductSetAttributeAction.builder().sku("sku") },
-                new Object[] { ProductSetAttributeAction.builder().name("name") },
-                new Object[] { ProductSetAttributeAction.builder().value("value") },
-                new Object[] { ProductSetAttributeAction.builder().staged(true) } };
+        return new Object[][] { new Object[] { "variantId", ProductSetAttributeAction.builder().variantId(5L) },
+                new Object[] { "sku", ProductSetAttributeAction.builder().sku("sku") },
+                new Object[] { "name", ProductSetAttributeAction.builder().name("name") },
+                new Object[] { "value", ProductSetAttributeAction.builder().value("value") },
+                new Object[] { "staged", ProductSetAttributeAction.builder().staged(true) } };
     }
 
     @Test

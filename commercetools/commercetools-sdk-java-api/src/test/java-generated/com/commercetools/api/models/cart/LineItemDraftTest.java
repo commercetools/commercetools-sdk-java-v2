@@ -4,54 +4,50 @@ package com.commercetools.api.models.cart;
 import java.time.ZonedDateTime;
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class LineItemDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(LineItemDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, LineItemDraftBuilder builder) {
         LineItemDraft lineItemDraft = builder.buildUnchecked();
         Assertions.assertThat(lineItemDraft).isInstanceOf(LineItemDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { LineItemDraft.builder().key("key") },
-                new Object[] { LineItemDraft.builder().productId("productId") },
-                new Object[] { LineItemDraft.builder().variantId(5L) },
-                new Object[] { LineItemDraft.builder().sku("sku") },
-                new Object[] { LineItemDraft.builder().quantity(8L) },
-                new Object[] { LineItemDraft.builder().addedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { LineItemDraft.builder()
-                        .distributionChannel(
-                            new com.commercetools.api.models.channel.ChannelResourceIdentifierImpl()) },
-                new Object[] { LineItemDraft.builder()
+        return new Object[][] { new Object[] { "key", LineItemDraft.builder().key("key") },
+                new Object[] { "productId", LineItemDraft.builder().productId("productId") },
+                new Object[] { "variantId", LineItemDraft.builder().variantId(5L) },
+                new Object[] { "sku", LineItemDraft.builder().sku("sku") },
+                new Object[] { "quantity", LineItemDraft.builder().quantity(8L) },
+                new Object[] { "addedAt", LineItemDraft.builder().addedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "distributionChannel",
+                        LineItemDraft.builder()
+                                .distributionChannel(
+                                    new com.commercetools.api.models.channel.ChannelResourceIdentifierImpl()) },
+                new Object[] { "supplyChannel", LineItemDraft.builder()
                         .supplyChannel(new com.commercetools.api.models.channel.ChannelResourceIdentifierImpl()) },
-                new Object[] {
+                new Object[] { "externalPrice",
                         LineItemDraft.builder().externalPrice(new com.commercetools.api.models.common.MoneyImpl()) },
-                new Object[] { LineItemDraft.builder()
+                new Object[] { "externalTotalPrice", LineItemDraft.builder()
                         .externalTotalPrice(new com.commercetools.api.models.cart.ExternalLineItemTotalPriceImpl()) },
-                new Object[] { LineItemDraft.builder()
-                        .externalTaxRate(new com.commercetools.api.models.cart.ExternalTaxRateDraftImpl()) },
-                new Object[] { LineItemDraft.builder()
-                        .perMethodExternalTaxRate(Collections.singletonList(
-                            new com.commercetools.api.models.cart.MethodExternalTaxRateDraftImpl())) },
-                new Object[] { LineItemDraft.builder()
-                        .inventoryMode(com.commercetools.api.models.cart.InventoryMode.findEnum("None")) },
-                new Object[] { LineItemDraft.builder()
+                new Object[] { "externalTaxRate",
+                        LineItemDraft.builder()
+                                .externalTaxRate(new com.commercetools.api.models.cart.ExternalTaxRateDraftImpl()) },
+                new Object[] { "perMethodExternalTaxRate",
+                        LineItemDraft.builder()
+                                .perMethodExternalTaxRate(Collections.singletonList(
+                                    new com.commercetools.api.models.cart.MethodExternalTaxRateDraftImpl())) },
+                new Object[] { "inventoryMode",
+                        LineItemDraft.builder()
+                                .inventoryMode(com.commercetools.api.models.cart.InventoryMode.findEnum("None")) },
+                new Object[] { "shippingDetails", LineItemDraft.builder()
                         .shippingDetails(new com.commercetools.api.models.cart.ItemShippingDetailsDraftImpl()) },
-                new Object[] { LineItemDraft.builder()
+                new Object[] { "custom", LineItemDraft.builder()
                         .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) } };
     }
 

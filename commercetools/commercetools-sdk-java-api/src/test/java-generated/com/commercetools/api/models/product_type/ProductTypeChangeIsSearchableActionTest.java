@@ -1,33 +1,26 @@
 
 package com.commercetools.api.models.product_type;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductTypeChangeIsSearchableActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductTypeChangeIsSearchableActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductTypeChangeIsSearchableActionBuilder builder) {
         ProductTypeChangeIsSearchableAction productTypeChangeIsSearchableAction = builder.buildUnchecked();
         Assertions.assertThat(productTypeChangeIsSearchableAction)
                 .isInstanceOf(ProductTypeChangeIsSearchableAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { ProductTypeChangeIsSearchableAction.builder().attributeName("attributeName") },
-                new Object[] { ProductTypeChangeIsSearchableAction.builder().isSearchable(true) } };
+                new Object[] { "attributeName",
+                        ProductTypeChangeIsSearchableAction.builder().attributeName("attributeName") },
+                new Object[] { "isSearchable", ProductTypeChangeIsSearchableAction.builder().isSearchable(true) } };
     }
 
     @Test

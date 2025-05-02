@@ -1,35 +1,28 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetVariantSelectionChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetVariantSelectionChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetVariantSelectionChangeBuilder builder) {
         SetVariantSelectionChange setVariantSelectionChange = builder.buildUnchecked();
         Assertions.assertThat(setVariantSelectionChange).isInstanceOf(SetVariantSelectionChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetVariantSelectionChange.builder().change("change") },
-                new Object[] { SetVariantSelectionChange.builder()
+        return new Object[][] { new Object[] { "change", SetVariantSelectionChange.builder().change("change") },
+                new Object[] { "previousValue", SetVariantSelectionChange.builder()
                         .previousValue(new com.commercetools.history.models.common.ProductVariantSelectionImpl()) },
-                new Object[] { SetVariantSelectionChange.builder()
-                        .nextValue(new com.commercetools.history.models.common.ProductVariantSelectionImpl()) },
-                new Object[] { SetVariantSelectionChange.builder()
+                new Object[] { "nextValue",
+                        SetVariantSelectionChange.builder()
+                                .nextValue(new com.commercetools.history.models.common.ProductVariantSelectionImpl()) },
+                new Object[] { "product", SetVariantSelectionChange.builder()
                         .product(new com.commercetools.history.models.common.ReferenceImpl()) } };
     }
 

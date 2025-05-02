@@ -1,32 +1,25 @@
 
 package com.commercetools.api.models.state;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class StateReferenceTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(StateReferenceBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, StateReferenceBuilder builder) {
         StateReference stateReference = builder.buildUnchecked();
         Assertions.assertThat(stateReference).isInstanceOf(StateReference.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { StateReference.builder().obj(new com.commercetools.api.models.state.StateImpl()) },
-                new Object[] { StateReference.builder().id("id") } };
+                new Object[] { "obj",
+                        StateReference.builder().obj(new com.commercetools.api.models.state.StateImpl()) },
+                new Object[] { "id", StateReference.builder().id("id") } };
     }
 
     @Test

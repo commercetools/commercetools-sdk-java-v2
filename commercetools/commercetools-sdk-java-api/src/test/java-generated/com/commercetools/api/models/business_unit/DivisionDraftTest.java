@@ -1,39 +1,32 @@
 
 package com.commercetools.api.models.business_unit;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class DivisionDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(DivisionDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, DivisionDraftBuilder builder) {
         DivisionDraft divisionDraft = builder.buildUnchecked();
         Assertions.assertThat(divisionDraft).isInstanceOf(DivisionDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { DivisionDraft.builder()
+        return new Object[][] { new Object[] { "parentUnit", DivisionDraft.builder()
                 .parentUnit(new com.commercetools.api.models.business_unit.BusinessUnitResourceIdentifierImpl()) },
-                new Object[] {
+                new Object[] { "storeMode",
                         DivisionDraft.builder()
                                 .storeMode(com.commercetools.api.models.business_unit.BusinessUnitStoreMode
                                         .findEnum("Explicit")) },
-                new Object[] { DivisionDraft.builder()
-                        .associateMode(com.commercetools.api.models.business_unit.BusinessUnitAssociateMode
-                                .findEnum("Explicit")) },
-                new Object[] { DivisionDraft.builder()
+                new Object[] { "associateMode",
+                        DivisionDraft.builder()
+                                .associateMode(com.commercetools.api.models.business_unit.BusinessUnitAssociateMode
+                                        .findEnum("Explicit")) },
+                new Object[] { "approvalRuleMode", DivisionDraft.builder()
                         .approvalRuleMode(com.commercetools.api.models.business_unit.BusinessUnitApprovalRuleMode
                                 .findEnum("Explicit")) } };
     }

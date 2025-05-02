@@ -1,35 +1,27 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ChangeAssociateModeChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ChangeAssociateModeChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ChangeAssociateModeChangeBuilder builder) {
         ChangeAssociateModeChange changeAssociateModeChange = builder.buildUnchecked();
         Assertions.assertThat(changeAssociateModeChange).isInstanceOf(ChangeAssociateModeChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ChangeAssociateModeChange.builder().change("change") },
-                new Object[] {
+        return new Object[][] { new Object[] { "change", ChangeAssociateModeChange.builder().change("change") },
+                new Object[] { "previousValue",
                         ChangeAssociateModeChange.builder()
                                 .previousValue(com.commercetools.history.models.common.BusinessUnitAssociateMode
                                         .findEnum("Explicit")) },
-                new Object[] { ChangeAssociateModeChange.builder()
+                new Object[] { "nextValue", ChangeAssociateModeChange.builder()
                         .nextValue(
                             com.commercetools.history.models.common.BusinessUnitAssociateMode.findEnum("Explicit")) } };
     }

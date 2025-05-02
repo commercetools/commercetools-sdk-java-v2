@@ -1,30 +1,22 @@
 
 package com.commercetools.api.models.message;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class BusinessUnitAssociateAddedMessageTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(BusinessUnitAssociateAddedMessageBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, BusinessUnitAssociateAddedMessageBuilder builder) {
         BusinessUnitAssociateAddedMessage businessUnitAssociateAddedMessage = builder.buildUnchecked();
         Assertions.assertThat(businessUnitAssociateAddedMessage).isInstanceOf(BusinessUnitAssociateAddedMessage.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { BusinessUnitAssociateAddedMessage.builder()
+        return new Object[][] { new Object[] { "associate", BusinessUnitAssociateAddedMessage.builder()
                 .associate(new com.commercetools.api.models.business_unit.AssociateImpl()) } };
     }
 

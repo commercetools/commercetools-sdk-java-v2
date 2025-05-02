@@ -1,35 +1,29 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetParcelMeasurementsChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetParcelMeasurementsChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetParcelMeasurementsChangeBuilder builder) {
         SetParcelMeasurementsChange setParcelMeasurementsChange = builder.buildUnchecked();
         Assertions.assertThat(setParcelMeasurementsChange).isInstanceOf(SetParcelMeasurementsChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetParcelMeasurementsChange.builder().change("change") },
-                new Object[] { SetParcelMeasurementsChange.builder()
-                        .previousValue(new com.commercetools.history.models.common.ParcelMeasurementsImpl()) },
-                new Object[] { SetParcelMeasurementsChange.builder()
-                        .nextValue(new com.commercetools.history.models.common.ParcelMeasurementsImpl()) },
-                new Object[] { SetParcelMeasurementsChange.builder()
+        return new Object[][] { new Object[] { "change", SetParcelMeasurementsChange.builder().change("change") },
+                new Object[] { "previousValue",
+                        SetParcelMeasurementsChange.builder()
+                                .previousValue(new com.commercetools.history.models.common.ParcelMeasurementsImpl()) },
+                new Object[] { "nextValue",
+                        SetParcelMeasurementsChange.builder()
+                                .nextValue(new com.commercetools.history.models.common.ParcelMeasurementsImpl()) },
+                new Object[] { "parcel", SetParcelMeasurementsChange.builder()
                         .parcel(new com.commercetools.history.models.change_value.ParcelChangeValueImpl()) } };
     }
 

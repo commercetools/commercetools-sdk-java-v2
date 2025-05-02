@@ -4,57 +4,58 @@ package com.commercetools.api.models.category;
 import java.time.ZonedDateTime;
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CategoryTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CategoryBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CategoryBuilder builder) {
         Category category = builder.buildUnchecked();
         Assertions.assertThat(category).isInstanceOf(Category.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { Category.builder().id("id") },
-                new Object[] { Category.builder().version(2L) },
-                new Object[] { Category.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { Category.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { Category.builder()
-                        .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
-                new Object[] { Category.builder().createdBy(new com.commercetools.api.models.common.CreatedByImpl()) },
-                new Object[] { Category.builder().name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { Category.builder().slug(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] {
+        return new Object[][] { new Object[] { "id", Category.builder().id("id") },
+                new Object[] { "version", Category.builder().version(2L) },
+                new Object[] { "createdAt", Category.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedAt",
+                        Category.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedBy",
+                        Category.builder()
+                                .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
+                new Object[] { "createdBy",
+                        Category.builder().createdBy(new com.commercetools.api.models.common.CreatedByImpl()) },
+                new Object[] { "name",
+                        Category.builder().name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "slug",
+                        Category.builder().slug(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "description",
                         Category.builder().description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { Category.builder()
-                        .ancestors(Collections
-                                .singletonList(new com.commercetools.api.models.category.CategoryReferenceImpl())) },
-                new Object[] {
+                new Object[] { "ancestors",
+                        Category.builder()
+                                .ancestors(Collections.singletonList(
+                                    new com.commercetools.api.models.category.CategoryReferenceImpl())) },
+                new Object[] { "parent",
                         Category.builder().parent(new com.commercetools.api.models.category.CategoryReferenceImpl()) },
-                new Object[] { Category.builder().orderHint("orderHint") },
-                new Object[] { Category.builder().externalId("externalId") },
-                new Object[] {
+                new Object[] { "orderHint", Category.builder().orderHint("orderHint") },
+                new Object[] { "externalId", Category.builder().externalId("externalId") },
+                new Object[] { "metaTitle",
                         Category.builder().metaTitle(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { Category.builder()
-                        .metaDescription(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { Category.builder()
-                        .metaKeywords(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { Category.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) },
-                new Object[] { Category.builder()
+                new Object[] { "metaDescription",
+                        Category.builder()
+                                .metaDescription(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "metaKeywords",
+                        Category.builder()
+                                .metaKeywords(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "custom",
+                        Category.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) },
+                new Object[] { "assets", Category.builder()
                         .assets(Collections.singletonList(new com.commercetools.api.models.common.AssetImpl())) },
-                new Object[] { Category.builder().key("key") } };
+                new Object[] { "key", Category.builder().key("key") } };
     }
 
     @Test

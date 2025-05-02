@@ -1,33 +1,25 @@
 
 package com.commercetools.api.models.common;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class DiscountedPriceDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(DiscountedPriceDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, DiscountedPriceDraftBuilder builder) {
         DiscountedPriceDraft discountedPriceDraft = builder.buildUnchecked();
         Assertions.assertThat(discountedPriceDraft).isInstanceOf(DiscountedPriceDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] {
+                new Object[] { "value",
                         DiscountedPriceDraft.builder().value(new com.commercetools.api.models.common.MoneyImpl()) },
-                new Object[] { DiscountedPriceDraft.builder()
+                new Object[] { "discount", DiscountedPriceDraft.builder()
                         .discount(new com.commercetools.api.models.product_discount.ProductDiscountReferenceImpl()) } };
     }
 

@@ -3,39 +3,31 @@ package com.commercetools.api.models.tax_category;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class TaxRateDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(TaxRateDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, TaxRateDraftBuilder builder) {
         TaxRateDraft taxRateDraft = builder.buildUnchecked();
         Assertions.assertThat(taxRateDraft).isInstanceOf(TaxRateDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { TaxRateDraft.builder().name("name") },
-                new Object[] { TaxRateDraft.builder().amount(0.43789625) },
-                new Object[] { TaxRateDraft.builder().includedInPrice(true) },
-                new Object[] { TaxRateDraft.builder().country("country") },
-                new Object[] { TaxRateDraft.builder().state("state") },
-                new Object[] {
+        return new Object[][] { new Object[] { "name", TaxRateDraft.builder().name("name") },
+                new Object[] { "amount", TaxRateDraft.builder().amount(0.43789625) },
+                new Object[] { "includedInPrice", TaxRateDraft.builder().includedInPrice(true) },
+                new Object[] { "country", TaxRateDraft.builder().country("country") },
+                new Object[] { "state", TaxRateDraft.builder().state("state") },
+                new Object[] { "subRates",
                         TaxRateDraft.builder()
                                 .subRates(Collections
                                         .singletonList(new com.commercetools.api.models.tax_category.SubRateImpl())) },
-                new Object[] { TaxRateDraft.builder().key("key") } };
+                new Object[] { "key", TaxRateDraft.builder().key("key") } };
     }
 
     @Test

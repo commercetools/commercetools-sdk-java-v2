@@ -1,34 +1,27 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ChangeQuantityChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ChangeQuantityChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ChangeQuantityChangeBuilder builder) {
         ChangeQuantityChange changeQuantityChange = builder.buildUnchecked();
         Assertions.assertThat(changeQuantityChange).isInstanceOf(ChangeQuantityChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ChangeQuantityChange.builder().change("change") },
-                new Object[] { ChangeQuantityChange.builder()
-                        .previousValue(
-                            new com.commercetools.history.models.change_value.InventoryQuantityValueImpl()) },
-                new Object[] { ChangeQuantityChange.builder()
+        return new Object[][] { new Object[] { "change", ChangeQuantityChange.builder().change("change") },
+                new Object[] { "previousValue",
+                        ChangeQuantityChange.builder()
+                                .previousValue(
+                                    new com.commercetools.history.models.change_value.InventoryQuantityValueImpl()) },
+                new Object[] { "nextValue", ChangeQuantityChange.builder()
                         .nextValue(new com.commercetools.history.models.change_value.InventoryQuantityValueImpl()) } };
     }
 

@@ -1,38 +1,32 @@
 
 package com.commercetools.api.models.message;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductSelectionVariantExclusionChangedMessagePayloadTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductSelectionVariantExclusionChangedMessagePayloadBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductSelectionVariantExclusionChangedMessagePayloadBuilder builder) {
         ProductSelectionVariantExclusionChangedMessagePayload productSelectionVariantExclusionChangedMessagePayload = builder
                 .buildUnchecked();
         Assertions.assertThat(productSelectionVariantExclusionChangedMessagePayload)
                 .isInstanceOf(ProductSelectionVariantExclusionChangedMessagePayload.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { ProductSelectionVariantExclusionChangedMessagePayload.builder()
-                        .product(new com.commercetools.api.models.product.ProductReferenceImpl()) },
-                new Object[] { ProductSelectionVariantExclusionChangedMessagePayload.builder()
-                        .oldVariantExclusion(
-                            new com.commercetools.api.models.product_selection.ProductVariantExclusionImpl()) },
-                new Object[] { ProductSelectionVariantExclusionChangedMessagePayload.builder()
+                new Object[] { "product",
+                        ProductSelectionVariantExclusionChangedMessagePayload.builder()
+                                .product(new com.commercetools.api.models.product.ProductReferenceImpl()) },
+                new Object[] { "oldVariantExclusion",
+                        ProductSelectionVariantExclusionChangedMessagePayload.builder()
+                                .oldVariantExclusion(
+                                    new com.commercetools.api.models.product_selection.ProductVariantExclusionImpl()) },
+                new Object[] { "newVariantExclusion", ProductSelectionVariantExclusionChangedMessagePayload.builder()
                         .newVariantExclusion(
                             new com.commercetools.api.models.product_selection.ProductVariantExclusionImpl()) } };
     }

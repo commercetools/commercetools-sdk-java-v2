@@ -1,31 +1,23 @@
 
 package com.commercetools.api.models.zone;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ZoneResourceIdentifierTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ZoneResourceIdentifierBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ZoneResourceIdentifierBuilder builder) {
         ZoneResourceIdentifier zoneResourceIdentifier = builder.buildUnchecked();
         Assertions.assertThat(zoneResourceIdentifier).isInstanceOf(ZoneResourceIdentifier.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ZoneResourceIdentifier.builder().id("id") },
-                new Object[] { ZoneResourceIdentifier.builder().key("key") } };
+        return new Object[][] { new Object[] { "id", ZoneResourceIdentifier.builder().id("id") },
+                new Object[] { "key", ZoneResourceIdentifier.builder().key("key") } };
     }
 
     @Test

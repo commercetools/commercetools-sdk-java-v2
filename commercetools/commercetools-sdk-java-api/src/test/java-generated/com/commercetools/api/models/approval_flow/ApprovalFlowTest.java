@@ -4,61 +4,63 @@ package com.commercetools.api.models.approval_flow;
 import java.time.ZonedDateTime;
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ApprovalFlowTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ApprovalFlowBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ApprovalFlowBuilder builder) {
         ApprovalFlow approvalFlow = builder.buildUnchecked();
         Assertions.assertThat(approvalFlow).isInstanceOf(ApprovalFlow.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ApprovalFlow.builder().id("id") },
-                new Object[] { ApprovalFlow.builder().version(2L) },
-                new Object[] { ApprovalFlow.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] {
+        return new Object[][] { new Object[] { "id", ApprovalFlow.builder().id("id") },
+                new Object[] { "version", ApprovalFlow.builder().version(2L) },
+                new Object[] { "createdAt",
+                        ApprovalFlow.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "createdBy",
                         ApprovalFlow.builder().createdBy(new com.commercetools.api.models.common.CreatedByImpl()) },
-                new Object[] { ApprovalFlow.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { ApprovalFlow.builder()
-                        .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
-                new Object[] {
+                new Object[] { "lastModifiedAt",
+                        ApprovalFlow.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedBy",
+                        ApprovalFlow.builder()
+                                .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
+                new Object[] { "order",
                         ApprovalFlow.builder().order(new com.commercetools.api.models.order.OrderReferenceImpl()) },
-                new Object[] { ApprovalFlow.builder()
+                new Object[] { "businessUnit", ApprovalFlow.builder()
                         .businessUnit(new com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceImpl()) },
-                new Object[] { ApprovalFlow.builder()
-                        .rules(Collections
-                                .singletonList(new com.commercetools.api.models.approval_rule.ApprovalRuleImpl())) },
-                new Object[] { ApprovalFlow.builder()
-                        .status(com.commercetools.api.models.approval_flow.ApprovalFlowStatus.findEnum("Pending")) },
-                new Object[] { ApprovalFlow.builder()
+                new Object[] { "rules",
+                        ApprovalFlow.builder()
+                                .rules(Collections.singletonList(
+                                    new com.commercetools.api.models.approval_rule.ApprovalRuleImpl())) },
+                new Object[] { "status",
+                        ApprovalFlow.builder()
+                                .status(com.commercetools.api.models.approval_flow.ApprovalFlowStatus
+                                        .findEnum("Pending")) },
+                new Object[] { "rejection", ApprovalFlow.builder()
                         .rejection(new com.commercetools.api.models.approval_flow.ApprovalFlowRejectionImpl()) },
-                new Object[] { ApprovalFlow.builder()
-                        .approvals(Collections.singletonList(
-                            new com.commercetools.api.models.approval_flow.ApprovalFlowApprovalImpl())) },
-                new Object[] { ApprovalFlow.builder()
-                        .eligibleApprovers(Collections
-                                .singletonList(new com.commercetools.api.models.approval_rule.RuleApproverImpl())) },
-                new Object[] { ApprovalFlow.builder()
-                        .pendingApprovers(Collections
-                                .singletonList(new com.commercetools.api.models.approval_rule.RuleApproverImpl())) },
-                new Object[] { ApprovalFlow.builder()
-                        .currentTierPendingApprovers(Collections
-                                .singletonList(new com.commercetools.api.models.approval_rule.RuleApproverImpl())) },
-                new Object[] {
+                new Object[] { "approvals",
+                        ApprovalFlow.builder()
+                                .approvals(Collections.singletonList(
+                                    new com.commercetools.api.models.approval_flow.ApprovalFlowApprovalImpl())) },
+                new Object[] { "eligibleApprovers",
+                        ApprovalFlow.builder()
+                                .eligibleApprovers(Collections.singletonList(
+                                    new com.commercetools.api.models.approval_rule.RuleApproverImpl())) },
+                new Object[] { "pendingApprovers",
+                        ApprovalFlow.builder()
+                                .pendingApprovers(Collections.singletonList(
+                                    new com.commercetools.api.models.approval_rule.RuleApproverImpl())) },
+                new Object[] { "currentTierPendingApprovers",
+                        ApprovalFlow.builder()
+                                .currentTierPendingApprovers(Collections.singletonList(
+                                    new com.commercetools.api.models.approval_rule.RuleApproverImpl())) },
+                new Object[] { "custom",
                         ApprovalFlow.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) } };
     }
 

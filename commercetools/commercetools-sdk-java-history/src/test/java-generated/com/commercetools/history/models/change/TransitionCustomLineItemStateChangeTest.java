@@ -3,41 +3,34 @@ package com.commercetools.history.models.change;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class TransitionCustomLineItemStateChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(TransitionCustomLineItemStateChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, TransitionCustomLineItemStateChangeBuilder builder) {
         TransitionCustomLineItemStateChange transitionCustomLineItemStateChange = builder.buildUnchecked();
         Assertions.assertThat(transitionCustomLineItemStateChange)
                 .isInstanceOf(TransitionCustomLineItemStateChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { TransitionCustomLineItemStateChange.builder().change("change") },
-                new Object[] {
+        return new Object[][] {
+                new Object[] { "change", TransitionCustomLineItemStateChange.builder().change("change") },
+                new Object[] { "previousValue",
                         TransitionCustomLineItemStateChange.builder()
                                 .previousValue(Collections
                                         .singletonList(new com.commercetools.history.models.common.ItemStateImpl())) },
-                new Object[] {
+                new Object[] { "nextValue",
                         TransitionCustomLineItemStateChange.builder()
                                 .nextValue(Collections
                                         .singletonList(new com.commercetools.history.models.common.ItemStateImpl())) },
-                new Object[] { TransitionCustomLineItemStateChange.builder().lineItemId("lineItemId") },
-                new Object[] { TransitionCustomLineItemStateChange.builder().stateId("stateId") } };
+                new Object[] { "lineItemId", TransitionCustomLineItemStateChange.builder().lineItemId("lineItemId") },
+                new Object[] { "stateId", TransitionCustomLineItemStateChange.builder().stateId("stateId") } };
     }
 
     @Test

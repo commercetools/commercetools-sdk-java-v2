@@ -3,46 +3,45 @@ package com.commercetools.api.models.product_tailoring;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductTailoringInStoreDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductTailoringInStoreDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductTailoringInStoreDraftBuilder builder) {
         ProductTailoringInStoreDraft productTailoringInStoreDraft = builder.buildUnchecked();
         Assertions.assertThat(productTailoringInStoreDraft).isInstanceOf(ProductTailoringInStoreDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductTailoringInStoreDraft.builder().key("key") },
-                new Object[] { ProductTailoringInStoreDraft.builder()
-                        .product(new com.commercetools.api.models.product.ProductResourceIdentifierImpl()) },
-                new Object[] { ProductTailoringInStoreDraft.builder()
-                        .name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { ProductTailoringInStoreDraft.builder()
-                        .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { ProductTailoringInStoreDraft.builder()
-                        .metaTitle(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { ProductTailoringInStoreDraft.builder()
-                        .metaDescription(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { ProductTailoringInStoreDraft.builder()
-                        .metaKeywords(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { ProductTailoringInStoreDraft.builder()
-                        .slug(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { ProductTailoringInStoreDraft.builder().publish(true) },
-                new Object[] { ProductTailoringInStoreDraft.builder()
+        return new Object[][] { new Object[] { "key", ProductTailoringInStoreDraft.builder().key("key") },
+                new Object[] { "product",
+                        ProductTailoringInStoreDraft.builder()
+                                .product(new com.commercetools.api.models.product.ProductResourceIdentifierImpl()) },
+                new Object[] { "name",
+                        ProductTailoringInStoreDraft.builder()
+                                .name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "description",
+                        ProductTailoringInStoreDraft.builder()
+                                .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "metaTitle",
+                        ProductTailoringInStoreDraft.builder()
+                                .metaTitle(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "metaDescription",
+                        ProductTailoringInStoreDraft.builder()
+                                .metaDescription(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "metaKeywords",
+                        ProductTailoringInStoreDraft.builder()
+                                .metaKeywords(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "slug",
+                        ProductTailoringInStoreDraft.builder()
+                                .slug(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "publish", ProductTailoringInStoreDraft.builder().publish(true) },
+                new Object[] { "variants", ProductTailoringInStoreDraft.builder()
                         .variants(Collections.singletonList(
                             new com.commercetools.api.models.product_tailoring.ProductVariantTailoringDraftImpl())) } };
     }

@@ -1,37 +1,31 @@
 
 package com.commercetools.api.models.staged_quote;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class StagedQuoteDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(StagedQuoteDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, StagedQuoteDraftBuilder builder) {
         StagedQuoteDraft stagedQuoteDraft = builder.buildUnchecked();
         Assertions.assertThat(stagedQuoteDraft).isInstanceOf(StagedQuoteDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { StagedQuoteDraft.builder()
+        return new Object[][] { new Object[] { "quoteRequest", StagedQuoteDraft.builder()
                 .quoteRequest(new com.commercetools.api.models.quote_request.QuoteRequestResourceIdentifierImpl()) },
-                new Object[] { StagedQuoteDraft.builder().quoteRequestVersion(8L) },
-                new Object[] { StagedQuoteDraft.builder().quoteRequestStateToAccepted(true) },
-                new Object[] { StagedQuoteDraft.builder().key("key") },
-                new Object[] { StagedQuoteDraft.builder()
-                        .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) },
-                new Object[] { StagedQuoteDraft.builder()
+                new Object[] { "quoteRequestVersion", StagedQuoteDraft.builder().quoteRequestVersion(8L) },
+                new Object[] { "quoteRequestStateToAccepted",
+                        StagedQuoteDraft.builder().quoteRequestStateToAccepted(true) },
+                new Object[] { "key", StagedQuoteDraft.builder().key("key") },
+                new Object[] { "custom",
+                        StagedQuoteDraft.builder()
+                                .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) },
+                new Object[] { "state", StagedQuoteDraft.builder()
                         .state(new com.commercetools.api.models.state.StateReferenceImpl()) } };
     }
 

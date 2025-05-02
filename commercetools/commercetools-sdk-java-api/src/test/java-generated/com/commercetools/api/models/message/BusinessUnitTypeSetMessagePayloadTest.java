@@ -1,37 +1,29 @@
 
 package com.commercetools.api.models.message;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class BusinessUnitTypeSetMessagePayloadTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(BusinessUnitTypeSetMessagePayloadBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, BusinessUnitTypeSetMessagePayloadBuilder builder) {
         BusinessUnitTypeSetMessagePayload businessUnitTypeSetMessagePayload = builder.buildUnchecked();
         Assertions.assertThat(businessUnitTypeSetMessagePayload).isInstanceOf(BusinessUnitTypeSetMessagePayload.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { BusinessUnitTypeSetMessagePayload.builder()
+                new Object[] { "parentUnit", BusinessUnitTypeSetMessagePayload.builder()
                         .parentUnit(new com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceImpl()) },
-                new Object[] { BusinessUnitTypeSetMessagePayload.builder()
+                new Object[] { "oldParentUnit", BusinessUnitTypeSetMessagePayload.builder()
                         .oldParentUnit(new com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceImpl()) },
-                new Object[] { BusinessUnitTypeSetMessagePayload.builder()
+                new Object[] { "unitType", BusinessUnitTypeSetMessagePayload.builder()
                         .unitType(com.commercetools.api.models.business_unit.BusinessUnitType.findEnum("Company")) },
-                new Object[] { BusinessUnitTypeSetMessagePayload.builder()
+                new Object[] { "oldUnitType", BusinessUnitTypeSetMessagePayload.builder()
                         .oldUnitType(
                             com.commercetools.api.models.business_unit.BusinessUnitType.findEnum("Company")) } };
     }

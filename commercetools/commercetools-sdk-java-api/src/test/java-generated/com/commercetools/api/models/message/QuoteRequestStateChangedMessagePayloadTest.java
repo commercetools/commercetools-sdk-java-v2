@@ -1,36 +1,28 @@
 
 package com.commercetools.api.models.message;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class QuoteRequestStateChangedMessagePayloadTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(QuoteRequestStateChangedMessagePayloadBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, QuoteRequestStateChangedMessagePayloadBuilder builder) {
         QuoteRequestStateChangedMessagePayload quoteRequestStateChangedMessagePayload = builder.buildUnchecked();
         Assertions.assertThat(quoteRequestStateChangedMessagePayload)
                 .isInstanceOf(QuoteRequestStateChangedMessagePayload.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] {
+                new Object[] { "quoteRequestState",
                         QuoteRequestStateChangedMessagePayload.builder()
                                 .quoteRequestState(com.commercetools.api.models.quote_request.QuoteRequestState
                                         .findEnum("Submitted")) },
-                new Object[] { QuoteRequestStateChangedMessagePayload.builder()
+                new Object[] { "oldQuoteRequestState", QuoteRequestStateChangedMessagePayload.builder()
                         .oldQuoteRequestState(
                             com.commercetools.api.models.quote_request.QuoteRequestState.findEnum("Submitted")) } };
     }

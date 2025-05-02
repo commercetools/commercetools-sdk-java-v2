@@ -1,34 +1,28 @@
 
 package com.commercetools.api.models.payment;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class PaymentChangeTransactionInteractionIdActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(PaymentChangeTransactionInteractionIdActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, PaymentChangeTransactionInteractionIdActionBuilder builder) {
         PaymentChangeTransactionInteractionIdAction paymentChangeTransactionInteractionIdAction = builder
                 .buildUnchecked();
         Assertions.assertThat(paymentChangeTransactionInteractionIdAction)
                 .isInstanceOf(PaymentChangeTransactionInteractionIdAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { PaymentChangeTransactionInteractionIdAction.builder().transactionId("transactionId") },
-                new Object[] { PaymentChangeTransactionInteractionIdAction.builder().interactionId("interactionId") } };
+                new Object[] { "transactionId",
+                        PaymentChangeTransactionInteractionIdAction.builder().transactionId("transactionId") },
+                new Object[] { "interactionId",
+                        PaymentChangeTransactionInteractionIdAction.builder().interactionId("interactionId") } };
     }
 
     @Test

@@ -3,35 +3,28 @@ package com.commercetools.history.models.change;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ChangeShoppingListLineItemsOrderChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ChangeShoppingListLineItemsOrderChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ChangeShoppingListLineItemsOrderChangeBuilder builder) {
         ChangeShoppingListLineItemsOrderChange changeShoppingListLineItemsOrderChange = builder.buildUnchecked();
         Assertions.assertThat(changeShoppingListLineItemsOrderChange)
                 .isInstanceOf(ChangeShoppingListLineItemsOrderChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ChangeShoppingListLineItemsOrderChange.builder().change("change") },
-                new Object[] { ChangeShoppingListLineItemsOrderChange.builder()
+        return new Object[][] {
+                new Object[] { "change", ChangeShoppingListLineItemsOrderChange.builder().change("change") },
+                new Object[] { "previousValue", ChangeShoppingListLineItemsOrderChange.builder()
                         .previousValue(Collections.singletonList(
                             new com.commercetools.history.models.change_value.ShoppingListLineItemValueImpl())) },
-                new Object[] { ChangeShoppingListLineItemsOrderChange.builder()
+                new Object[] { "nextValue", ChangeShoppingListLineItemsOrderChange.builder()
                         .nextValue(Collections.singletonList(
                             new com.commercetools.history.models.change_value.ShoppingListLineItemValueImpl())) } };
     }

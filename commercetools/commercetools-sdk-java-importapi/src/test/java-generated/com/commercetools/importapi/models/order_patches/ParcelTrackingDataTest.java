@@ -1,31 +1,23 @@
 
 package com.commercetools.importapi.models.order_patches;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ParcelTrackingDataTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ParcelTrackingDataBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ParcelTrackingDataBuilder builder) {
         ParcelTrackingData parcelTrackingData = builder.buildUnchecked();
         Assertions.assertThat(parcelTrackingData).isInstanceOf(ParcelTrackingData.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ParcelTrackingData.builder().parcelId("parcelId") },
-                new Object[] { ParcelTrackingData.builder()
+        return new Object[][] { new Object[] { "parcelId", ParcelTrackingData.builder().parcelId("parcelId") },
+                new Object[] { "trackingData", ParcelTrackingData.builder()
                         .trackingData(new com.commercetools.importapi.models.orders.TrackingDataImpl()) } };
     }
 

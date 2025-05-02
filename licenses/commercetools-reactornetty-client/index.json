@@ -2,7 +2,7 @@
     "dependencies": [
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-annotations",
-            "moduleVersion": "2.18.3",
+            "moduleVersion": "2.19.0",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson"
             ],
@@ -15,7 +15,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-core",
-            "moduleVersion": "2.18.3",
+            "moduleVersion": "2.19.0",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-core"
             ],
@@ -28,7 +28,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-databind",
-            "moduleVersion": "2.18.3",
+            "moduleVersion": "2.19.0",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson"
             ],
@@ -41,7 +41,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.datatype:jackson-datatype-jsr310",
-            "moduleVersion": "2.18.3",
+            "moduleVersion": "2.19.0",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-modules-java8/jackson-datatype-jsr310"
             ],
@@ -315,7 +315,7 @@
         },
         {
             "moduleName": "io.projectreactor.netty:reactor-netty-core",
-            "moduleVersion": "1.2.4",
+            "moduleVersion": "1.2.5",
             "moduleUrls": [
                 "https://github.com/reactor/reactor-netty"
             ],
@@ -328,7 +328,7 @@
         },
         {
             "moduleName": "io.projectreactor.netty:reactor-netty-http",
-            "moduleVersion": "1.2.4",
+            "moduleVersion": "1.2.5",
             "moduleUrls": [
                 "https://github.com/reactor/reactor-netty"
             ],
@@ -341,7 +341,7 @@
         },
         {
             "moduleName": "io.projectreactor:reactor-core",
-            "moduleVersion": "3.7.4",
+            "moduleVersion": "3.7.5",
             "moduleUrls": [
                 "https://github.com/reactor/reactor-core"
             ],

@@ -1,36 +1,31 @@
 
 package com.commercetools.api.models.message;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ParcelTrackingDataUpdatedMessagePayloadTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ParcelTrackingDataUpdatedMessagePayloadBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ParcelTrackingDataUpdatedMessagePayloadBuilder builder) {
         ParcelTrackingDataUpdatedMessagePayload parcelTrackingDataUpdatedMessagePayload = builder.buildUnchecked();
         Assertions.assertThat(parcelTrackingDataUpdatedMessagePayload)
                 .isInstanceOf(ParcelTrackingDataUpdatedMessagePayload.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { ParcelTrackingDataUpdatedMessagePayload.builder().deliveryId("deliveryId") },
-                new Object[] { ParcelTrackingDataUpdatedMessagePayload.builder().parcelId("parcelId") },
-                new Object[] { ParcelTrackingDataUpdatedMessagePayload.builder()
-                        .trackingData(new com.commercetools.api.models.order.TrackingDataImpl()) },
-                new Object[] { ParcelTrackingDataUpdatedMessagePayload.builder().shippingKey("shippingKey") } };
+                new Object[] { "deliveryId",
+                        ParcelTrackingDataUpdatedMessagePayload.builder().deliveryId("deliveryId") },
+                new Object[] { "parcelId", ParcelTrackingDataUpdatedMessagePayload.builder().parcelId("parcelId") },
+                new Object[] { "trackingData",
+                        ParcelTrackingDataUpdatedMessagePayload.builder()
+                                .trackingData(new com.commercetools.api.models.order.TrackingDataImpl()) },
+                new Object[] { "shippingKey",
+                        ParcelTrackingDataUpdatedMessagePayload.builder().shippingKey("shippingKey") } };
     }
 
     @Test

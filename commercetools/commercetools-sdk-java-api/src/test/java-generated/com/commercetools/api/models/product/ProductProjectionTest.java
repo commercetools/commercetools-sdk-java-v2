@@ -4,70 +4,74 @@ package com.commercetools.api.models.product;
 import java.time.ZonedDateTime;
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductProjectionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductProjectionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductProjectionBuilder builder) {
         ProductProjection productProjection = builder.buildUnchecked();
         Assertions.assertThat(productProjection).isInstanceOf(ProductProjection.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductProjection.builder().id("id") },
-                new Object[] { ProductProjection.builder().version(2L) },
-                new Object[] { ProductProjection.builder().key("key") },
-                new Object[] { ProductProjection.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { ProductProjection.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { ProductProjection.builder()
+        return new Object[][] { new Object[] { "id", ProductProjection.builder().id("id") },
+                new Object[] { "version", ProductProjection.builder().version(2L) },
+                new Object[] { "key", ProductProjection.builder().key("key") },
+                new Object[] { "createdAt",
+                        ProductProjection.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedAt",
+                        ProductProjection.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "productType", ProductProjection.builder()
                         .productType(new com.commercetools.api.models.product_type.ProductTypeReferenceImpl()) },
-                new Object[] { ProductProjection.builder()
-                        .name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { ProductProjection.builder()
-                        .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { ProductProjection.builder()
-                        .slug(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { ProductProjection.builder()
-                        .categories(Collections
-                                .singletonList(new com.commercetools.api.models.category.CategoryReferenceImpl())) },
-                new Object[] { ProductProjection.builder()
+                new Object[] { "name",
+                        ProductProjection.builder()
+                                .name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "description",
+                        ProductProjection.builder()
+                                .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "slug",
+                        ProductProjection.builder()
+                                .slug(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "categories",
+                        ProductProjection.builder()
+                                .categories(Collections.singletonList(
+                                    new com.commercetools.api.models.category.CategoryReferenceImpl())) },
+                new Object[] { "categoryOrderHints", ProductProjection.builder()
                         .categoryOrderHints(new com.commercetools.api.models.product.CategoryOrderHintsImpl()) },
-                new Object[] { ProductProjection.builder()
-                        .metaTitle(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { ProductProjection.builder()
-                        .metaDescription(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { ProductProjection.builder()
-                        .metaKeywords(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { ProductProjection.builder()
-                        .searchKeywords(new com.commercetools.api.models.product.SearchKeywordsImpl()) },
-                new Object[] { ProductProjection.builder().hasStagedChanges(true) },
-                new Object[] { ProductProjection.builder().published(true) },
-                new Object[] { ProductProjection.builder()
-                        .masterVariant(new com.commercetools.api.models.product.ProductVariantImpl()) },
-                new Object[] {
+                new Object[] { "metaTitle",
+                        ProductProjection.builder()
+                                .metaTitle(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "metaDescription",
+                        ProductProjection.builder()
+                                .metaDescription(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "metaKeywords",
+                        ProductProjection.builder()
+                                .metaKeywords(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "searchKeywords",
+                        ProductProjection.builder()
+                                .searchKeywords(new com.commercetools.api.models.product.SearchKeywordsImpl()) },
+                new Object[] { "hasStagedChanges", ProductProjection.builder().hasStagedChanges(true) },
+                new Object[] { "published", ProductProjection.builder().published(true) },
+                new Object[] { "masterVariant",
+                        ProductProjection.builder()
+                                .masterVariant(new com.commercetools.api.models.product.ProductVariantImpl()) },
+                new Object[] { "variants",
                         ProductProjection.builder()
                                 .variants(Collections.singletonList(
                                     new com.commercetools.api.models.product.ProductVariantImpl())) },
-                new Object[] { ProductProjection.builder()
+                new Object[] { "taxCategory", ProductProjection.builder()
                         .taxCategory(new com.commercetools.api.models.tax_category.TaxCategoryReferenceImpl()) },
-                new Object[] { ProductProjection.builder()
-                        .state(new com.commercetools.api.models.state.StateReferenceImpl()) },
-                new Object[] { ProductProjection.builder()
+                new Object[] { "state",
+                        ProductProjection.builder()
+                                .state(new com.commercetools.api.models.state.StateReferenceImpl()) },
+                new Object[] { "reviewRatingStatistics", ProductProjection.builder()
                         .reviewRatingStatistics(new com.commercetools.api.models.review.ReviewRatingStatisticsImpl()) },
-                new Object[] { ProductProjection.builder()
+                new Object[] { "priceMode", ProductProjection.builder()
                         .priceMode(com.commercetools.api.models.product.ProductPriceModeEnum.findEnum("Embedded")) } };
     }
 

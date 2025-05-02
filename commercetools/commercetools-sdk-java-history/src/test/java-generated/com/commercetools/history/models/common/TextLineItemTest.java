@@ -1,38 +1,32 @@
 
 package com.commercetools.history.models.common;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class TextLineItemTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(TextLineItemBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, TextLineItemBuilder builder) {
         TextLineItem textLineItem = builder.buildUnchecked();
         Assertions.assertThat(textLineItem).isInstanceOf(TextLineItem.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { TextLineItem.builder().addedAt("addedAt") },
-                new Object[] {
+        return new Object[][] { new Object[] { "addedAt", TextLineItem.builder().addedAt("addedAt") },
+                new Object[] { "custom",
                         TextLineItem.builder().custom(new com.commercetools.history.models.common.CustomFieldsImpl()) },
-                new Object[] { TextLineItem.builder()
-                        .description(new com.commercetools.history.models.common.LocalizedStringImpl()) },
-                new Object[] { TextLineItem.builder().id("id") },
-                new Object[] { TextLineItem.builder()
-                        .name(new com.commercetools.history.models.common.LocalizedStringImpl()) },
-                new Object[] { TextLineItem.builder().quantity(8) } };
+                new Object[] { "description",
+                        TextLineItem.builder()
+                                .description(new com.commercetools.history.models.common.LocalizedStringImpl()) },
+                new Object[] { "id", TextLineItem.builder().id("id") },
+                new Object[] { "name",
+                        TextLineItem.builder()
+                                .name(new com.commercetools.history.models.common.LocalizedStringImpl()) },
+                new Object[] { "quantity", TextLineItem.builder().quantity(8) } };
     }
 
     @Test

@@ -1,33 +1,26 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ChangeOrderStateChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ChangeOrderStateChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ChangeOrderStateChangeBuilder builder) {
         ChangeOrderStateChange changeOrderStateChange = builder.buildUnchecked();
         Assertions.assertThat(changeOrderStateChange).isInstanceOf(ChangeOrderStateChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ChangeOrderStateChange.builder().change("change") },
-                new Object[] { ChangeOrderStateChange.builder()
-                        .previousValue(com.commercetools.history.models.common.OrderState.findEnum("Open")) },
-                new Object[] { ChangeOrderStateChange.builder()
+        return new Object[][] { new Object[] { "change", ChangeOrderStateChange.builder().change("change") },
+                new Object[] { "previousValue",
+                        ChangeOrderStateChange.builder()
+                                .previousValue(com.commercetools.history.models.common.OrderState.findEnum("Open")) },
+                new Object[] { "nextValue", ChangeOrderStateChange.builder()
                         .nextValue(com.commercetools.history.models.common.OrderState.findEnum("Open")) } };
     }
 

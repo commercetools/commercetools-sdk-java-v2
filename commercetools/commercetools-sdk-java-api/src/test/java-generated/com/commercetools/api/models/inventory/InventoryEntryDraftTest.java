@@ -3,38 +3,30 @@ package com.commercetools.api.models.inventory;
 
 import java.time.ZonedDateTime;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class InventoryEntryDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(InventoryEntryDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, InventoryEntryDraftBuilder builder) {
         InventoryEntryDraft inventoryEntryDraft = builder.buildUnchecked();
         Assertions.assertThat(inventoryEntryDraft).isInstanceOf(InventoryEntryDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { InventoryEntryDraft.builder().sku("sku") },
-                new Object[] { InventoryEntryDraft.builder().key("key") },
-                new Object[] { InventoryEntryDraft.builder()
+        return new Object[][] { new Object[] { "sku", InventoryEntryDraft.builder().sku("sku") },
+                new Object[] { "key", InventoryEntryDraft.builder().key("key") },
+                new Object[] { "supplyChannel", InventoryEntryDraft.builder()
                         .supplyChannel(new com.commercetools.api.models.channel.ChannelResourceIdentifierImpl()) },
-                new Object[] { InventoryEntryDraft.builder().quantityOnStock(2L) },
-                new Object[] { InventoryEntryDraft.builder().restockableInDays(4L) },
-                new Object[] {
+                new Object[] { "quantityOnStock", InventoryEntryDraft.builder().quantityOnStock(2L) },
+                new Object[] { "restockableInDays", InventoryEntryDraft.builder().restockableInDays(4L) },
+                new Object[] { "expectedDelivery",
                         InventoryEntryDraft.builder().expectedDelivery(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { InventoryEntryDraft.builder()
+                new Object[] { "custom", InventoryEntryDraft.builder()
                         .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) } };
     }
 

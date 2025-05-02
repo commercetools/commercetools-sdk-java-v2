@@ -3,41 +3,35 @@ package com.commercetools.api.models.product;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProductAddVariantActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProductAddVariantActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProductAddVariantActionBuilder builder) {
         ProductAddVariantAction productAddVariantAction = builder.buildUnchecked();
         Assertions.assertThat(productAddVariantAction).isInstanceOf(ProductAddVariantAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ProductAddVariantAction.builder().sku("sku") },
-                new Object[] { ProductAddVariantAction.builder().key("key") },
-                new Object[] { ProductAddVariantAction.builder()
-                        .prices(Collections.singletonList(new com.commercetools.api.models.common.PriceDraftImpl())) },
-                new Object[] { ProductAddVariantAction.builder()
+        return new Object[][] { new Object[] { "sku", ProductAddVariantAction.builder().sku("sku") },
+                new Object[] { "key", ProductAddVariantAction.builder().key("key") },
+                new Object[] { "prices",
+                        ProductAddVariantAction.builder()
+                                .prices(Collections
+                                        .singletonList(new com.commercetools.api.models.common.PriceDraftImpl())) },
+                new Object[] { "images", ProductAddVariantAction.builder()
                         .images(Collections.singletonList(new com.commercetools.api.models.common.ImageImpl())) },
-                new Object[] {
+                new Object[] { "attributes",
                         ProductAddVariantAction.builder()
                                 .attributes(Collections
                                         .singletonList(new com.commercetools.api.models.product.AttributeImpl())) },
-                new Object[] { ProductAddVariantAction.builder().staged(true) },
-                new Object[] { ProductAddVariantAction.builder()
+                new Object[] { "staged", ProductAddVariantAction.builder().staged(true) },
+                new Object[] { "assets", ProductAddVariantAction.builder()
                         .assets(
                             Collections.singletonList(new com.commercetools.api.models.common.AssetDraftImpl())) } };
     }

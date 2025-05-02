@@ -1,35 +1,29 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetSearchKeywordsChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetSearchKeywordsChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetSearchKeywordsChangeBuilder builder) {
         SetSearchKeywordsChange setSearchKeywordsChange = builder.buildUnchecked();
         Assertions.assertThat(setSearchKeywordsChange).isInstanceOf(SetSearchKeywordsChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetSearchKeywordsChange.builder().change("change") },
-                new Object[] { SetSearchKeywordsChange.builder()
-                        .previousValue(new com.commercetools.history.models.common.SearchKeywordsImpl()) },
-                new Object[] { SetSearchKeywordsChange.builder()
-                        .nextValue(new com.commercetools.history.models.common.SearchKeywordsImpl()) },
-                new Object[] { SetSearchKeywordsChange.builder().catalogData("catalogData") } };
+        return new Object[][] { new Object[] { "change", SetSearchKeywordsChange.builder().change("change") },
+                new Object[] { "previousValue",
+                        SetSearchKeywordsChange.builder()
+                                .previousValue(new com.commercetools.history.models.common.SearchKeywordsImpl()) },
+                new Object[] { "nextValue",
+                        SetSearchKeywordsChange.builder()
+                                .nextValue(new com.commercetools.history.models.common.SearchKeywordsImpl()) },
+                new Object[] { "catalogData", SetSearchKeywordsChange.builder().catalogData("catalogData") } };
     }
 
     @Test

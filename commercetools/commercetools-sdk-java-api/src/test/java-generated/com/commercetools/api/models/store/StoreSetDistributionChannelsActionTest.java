@@ -3,33 +3,26 @@ package com.commercetools.api.models.store;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class StoreSetDistributionChannelsActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(StoreSetDistributionChannelsActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, StoreSetDistributionChannelsActionBuilder builder) {
         StoreSetDistributionChannelsAction storeSetDistributionChannelsAction = builder.buildUnchecked();
         Assertions.assertThat(storeSetDistributionChannelsAction)
                 .isInstanceOf(StoreSetDistributionChannelsAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { StoreSetDistributionChannelsAction.builder()
-                .distributionChannels(Collections
-                        .singletonList(new com.commercetools.api.models.channel.ChannelResourceIdentifierImpl())) } };
+        return new Object[][] { new Object[] { "distributionChannels",
+                StoreSetDistributionChannelsAction.builder()
+                        .distributionChannels(Collections.singletonList(
+                            new com.commercetools.api.models.channel.ChannelResourceIdentifierImpl())) } };
     }
 
     @Test

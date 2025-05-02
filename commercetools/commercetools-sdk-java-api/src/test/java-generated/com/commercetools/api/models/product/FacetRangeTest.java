@@ -1,38 +1,31 @@
 
 package com.commercetools.api.models.product;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class FacetRangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(FacetRangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, FacetRangeBuilder builder) {
         FacetRange facetRange = builder.buildUnchecked();
         Assertions.assertThat(facetRange).isInstanceOf(FacetRange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { FacetRange.builder().from(0.470235) },
-                new Object[] { FacetRange.builder().fromStr("fromStr") },
-                new Object[] { FacetRange.builder().to(0.061924815) },
-                new Object[] { FacetRange.builder().toStr("toStr") }, new Object[] { FacetRange.builder().count(2L) },
-                new Object[] { FacetRange.builder().productCount(1L) },
-                new Object[] { FacetRange.builder().total(0.60145235) },
-                new Object[] { FacetRange.builder().min(0.34761357) },
-                new Object[] { FacetRange.builder().max(0.4280588) },
-                new Object[] { FacetRange.builder().mean(0.49018955) } };
+        return new Object[][] { new Object[] { "from", FacetRange.builder().from(0.470235) },
+                new Object[] { "fromStr", FacetRange.builder().fromStr("fromStr") },
+                new Object[] { "to", FacetRange.builder().to(0.061924815) },
+                new Object[] { "toStr", FacetRange.builder().toStr("toStr") },
+                new Object[] { "count", FacetRange.builder().count(2L) },
+                new Object[] { "productCount", FacetRange.builder().productCount(1L) },
+                new Object[] { "total", FacetRange.builder().total(0.60145235) },
+                new Object[] { "min", FacetRange.builder().min(0.34761357) },
+                new Object[] { "max", FacetRange.builder().max(0.4280588) },
+                new Object[] { "mean", FacetRange.builder().mean(0.49018955) } };
     }
 
     @Test

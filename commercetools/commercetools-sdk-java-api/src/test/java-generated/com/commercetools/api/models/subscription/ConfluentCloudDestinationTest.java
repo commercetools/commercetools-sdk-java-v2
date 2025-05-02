@@ -1,35 +1,29 @@
 
 package com.commercetools.api.models.subscription;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ConfluentCloudDestinationTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ConfluentCloudDestinationBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ConfluentCloudDestinationBuilder builder) {
         ConfluentCloudDestination confluentCloudDestination = builder.buildUnchecked();
         Assertions.assertThat(confluentCloudDestination).isInstanceOf(ConfluentCloudDestination.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ConfluentCloudDestination.builder().bootstrapServer("bootstrapServer") },
-                new Object[] { ConfluentCloudDestination.builder().apiKey("apiKey") },
-                new Object[] { ConfluentCloudDestination.builder().apiSecret("apiSecret") },
-                new Object[] { ConfluentCloudDestination.builder().acks("acks") },
-                new Object[] { ConfluentCloudDestination.builder().topic("topic") },
-                new Object[] { ConfluentCloudDestination.builder().key("key") } };
+        return new Object[][] {
+                new Object[] { "bootstrapServer",
+                        ConfluentCloudDestination.builder().bootstrapServer("bootstrapServer") },
+                new Object[] { "apiKey", ConfluentCloudDestination.builder().apiKey("apiKey") },
+                new Object[] { "apiSecret", ConfluentCloudDestination.builder().apiSecret("apiSecret") },
+                new Object[] { "acks", ConfluentCloudDestination.builder().acks("acks") },
+                new Object[] { "topic", ConfluentCloudDestination.builder().topic("topic") },
+                new Object[] { "key", ConfluentCloudDestination.builder().key("key") } };
     }
 
     @Test

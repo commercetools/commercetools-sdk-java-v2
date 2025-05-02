@@ -1,33 +1,26 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class RemovePaymentChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(RemovePaymentChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, RemovePaymentChangeBuilder builder) {
         RemovePaymentChange removePaymentChange = builder.buildUnchecked();
         Assertions.assertThat(removePaymentChange).isInstanceOf(RemovePaymentChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { RemovePaymentChange.builder().change("change") },
-                new Object[] { RemovePaymentChange.builder()
-                        .previousValue(new com.commercetools.history.models.common.PaymentInfoImpl()) },
-                new Object[] { RemovePaymentChange.builder()
+        return new Object[][] { new Object[] { "change", RemovePaymentChange.builder().change("change") },
+                new Object[] { "previousValue",
+                        RemovePaymentChange.builder()
+                                .previousValue(new com.commercetools.history.models.common.PaymentInfoImpl()) },
+                new Object[] { "nextValue", RemovePaymentChange.builder()
                         .nextValue(new com.commercetools.history.models.common.PaymentInfoImpl()) } };
     }
 

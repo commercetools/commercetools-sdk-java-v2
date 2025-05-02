@@ -3,37 +3,31 @@ package com.commercetools.api.models.shopping_list;
 
 import java.time.ZonedDateTime;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ShoppingListLineItemDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ShoppingListLineItemDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ShoppingListLineItemDraftBuilder builder) {
         ShoppingListLineItemDraft shoppingListLineItemDraft = builder.buildUnchecked();
         Assertions.assertThat(shoppingListLineItemDraft).isInstanceOf(ShoppingListLineItemDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ShoppingListLineItemDraft.builder().key("key") },
-                new Object[] { ShoppingListLineItemDraft.builder().productId("productId") },
-                new Object[] { ShoppingListLineItemDraft.builder().variantId(5L) },
-                new Object[] { ShoppingListLineItemDraft.builder().sku("sku") },
-                new Object[] { ShoppingListLineItemDraft.builder().addedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { ShoppingListLineItemDraft.builder()
-                        .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) },
-                new Object[] { ShoppingListLineItemDraft.builder().quantity(8L) } };
+        return new Object[][] { new Object[] { "key", ShoppingListLineItemDraft.builder().key("key") },
+                new Object[] { "productId", ShoppingListLineItemDraft.builder().productId("productId") },
+                new Object[] { "variantId", ShoppingListLineItemDraft.builder().variantId(5L) },
+                new Object[] { "sku", ShoppingListLineItemDraft.builder().sku("sku") },
+                new Object[] { "addedAt",
+                        ShoppingListLineItemDraft.builder().addedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "custom",
+                        ShoppingListLineItemDraft.builder()
+                                .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) },
+                new Object[] { "quantity", ShoppingListLineItemDraft.builder().quantity(8L) } };
     }
 
     @Test

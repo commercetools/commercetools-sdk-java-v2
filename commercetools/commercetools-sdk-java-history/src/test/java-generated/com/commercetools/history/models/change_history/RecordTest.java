@@ -3,46 +3,46 @@ package com.commercetools.history.models.change_history;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class RecordTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(RecordBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, RecordBuilder builder) {
         Record record = builder.buildUnchecked();
         Assertions.assertThat(record).isInstanceOf(Record.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { Record.builder().version(2) },
-                new Object[] { Record.builder().previousVersion(9) }, new Object[] { Record.builder().type("type") },
-                new Object[] { Record.builder()
-                        .modifiedBy(new com.commercetools.history.models.change_history.ModifiedByImpl()) },
-                new Object[] { Record.builder().modifiedAt("modifiedAt") },
-                new Object[] { Record.builder().label(new com.commercetools.history.models.label.LabelImpl()) },
-                new Object[] { Record.builder().previousLabel(new com.commercetools.history.models.label.LabelImpl()) },
-                new Object[] { Record.builder()
-                        .changes(Collections.singletonList(new com.commercetools.history.models.change.ChangeImpl())) },
-                new Object[] { Record.builder()
-                        .resource(new com.commercetools.history.models.common.ResourceIdentifierImpl()) },
-                new Object[] { Record.builder()
-                        .stores(Collections
-                                .singletonList(new com.commercetools.history.models.common.KeyReferenceImpl())) },
-                new Object[] {
+        return new Object[][] { new Object[] { "version", Record.builder().version(2) },
+                new Object[] { "previousVersion", Record.builder().previousVersion(9) },
+                new Object[] { "type", Record.builder().type("type") },
+                new Object[] { "modifiedBy",
+                        Record.builder()
+                                .modifiedBy(new com.commercetools.history.models.change_history.ModifiedByImpl()) },
+                new Object[] { "modifiedAt", Record.builder().modifiedAt("modifiedAt") },
+                new Object[] { "label",
+                        Record.builder().label(new com.commercetools.history.models.label.LabelImpl()) },
+                new Object[] { "previousLabel",
+                        Record.builder().previousLabel(new com.commercetools.history.models.label.LabelImpl()) },
+                new Object[] { "changes",
+                        Record.builder()
+                                .changes(Collections
+                                        .singletonList(new com.commercetools.history.models.change.ChangeImpl())) },
+                new Object[] { "resource",
+                        Record.builder()
+                                .resource(new com.commercetools.history.models.common.ResourceIdentifierImpl()) },
+                new Object[] { "stores",
+                        Record.builder()
+                                .stores(Collections.singletonList(
+                                    new com.commercetools.history.models.common.KeyReferenceImpl())) },
+                new Object[] { "businessUnit",
                         Record.builder().businessUnit(new com.commercetools.history.models.common.KeyReferenceImpl()) },
-                new Object[] { Record.builder().withoutChanges(true) } };
+                new Object[] { "withoutChanges", Record.builder().withoutChanges(true) } };
     }
 
     @Test

@@ -3,53 +3,52 @@ package com.commercetools.api.models.order;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class LineItemImportDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(LineItemImportDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, LineItemImportDraftBuilder builder) {
         LineItemImportDraft lineItemImportDraft = builder.buildUnchecked();
         Assertions.assertThat(lineItemImportDraft).isInstanceOf(LineItemImportDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { LineItemImportDraft.builder()
-                        .name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { LineItemImportDraft.builder().key("key") },
-                new Object[] { LineItemImportDraft.builder()
-                        .variant(new com.commercetools.api.models.order.ProductVariantImportDraftImpl()) },
-                new Object[] { LineItemImportDraft.builder().productId("productId") },
-                new Object[] { LineItemImportDraft.builder().quantity(8L) },
-                new Object[] {
+                new Object[] { "name",
+                        LineItemImportDraft.builder()
+                                .name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "key", LineItemImportDraft.builder().key("key") },
+                new Object[] { "variant",
+                        LineItemImportDraft.builder()
+                                .variant(new com.commercetools.api.models.order.ProductVariantImportDraftImpl()) },
+                new Object[] { "productId", LineItemImportDraft.builder().productId("productId") },
+                new Object[] { "quantity", LineItemImportDraft.builder().quantity(8L) },
+                new Object[] { "price",
                         LineItemImportDraft.builder().price(new com.commercetools.api.models.common.PriceDraftImpl()) },
-                new Object[] { LineItemImportDraft.builder()
-                        .taxRate(new com.commercetools.api.models.tax_category.TaxRateImpl()) },
-                new Object[] { LineItemImportDraft.builder()
-                        .distributionChannel(
-                            new com.commercetools.api.models.channel.ChannelResourceIdentifierImpl()) },
-                new Object[] { LineItemImportDraft.builder()
+                new Object[] { "taxRate",
+                        LineItemImportDraft.builder()
+                                .taxRate(new com.commercetools.api.models.tax_category.TaxRateImpl()) },
+                new Object[] { "distributionChannel",
+                        LineItemImportDraft.builder()
+                                .distributionChannel(
+                                    new com.commercetools.api.models.channel.ChannelResourceIdentifierImpl()) },
+                new Object[] { "supplyChannel", LineItemImportDraft.builder()
                         .supplyChannel(new com.commercetools.api.models.channel.ChannelResourceIdentifierImpl()) },
-                new Object[] { LineItemImportDraft.builder()
-                        .inventoryMode(com.commercetools.api.models.cart.InventoryMode.findEnum("None")) },
-                new Object[] { LineItemImportDraft.builder()
+                new Object[] { "inventoryMode",
+                        LineItemImportDraft.builder()
+                                .inventoryMode(com.commercetools.api.models.cart.InventoryMode.findEnum("None")) },
+                new Object[] { "shippingDetails", LineItemImportDraft.builder()
                         .shippingDetails(new com.commercetools.api.models.cart.ItemShippingDetailsDraftImpl()) },
-                new Object[] { LineItemImportDraft.builder()
-                        .state(Collections.singletonList(new com.commercetools.api.models.order.ItemStateImpl())) },
-                new Object[] { LineItemImportDraft.builder()
+                new Object[] { "state",
+                        LineItemImportDraft.builder()
+                                .state(Collections
+                                        .singletonList(new com.commercetools.api.models.order.ItemStateImpl())) },
+                new Object[] { "custom", LineItemImportDraft.builder()
                         .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) } };
     }
 

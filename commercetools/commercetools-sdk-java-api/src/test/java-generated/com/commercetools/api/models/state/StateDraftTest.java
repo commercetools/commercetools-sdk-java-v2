@@ -3,43 +3,38 @@ package com.commercetools.api.models.state;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class StateDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(StateDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, StateDraftBuilder builder) {
         StateDraft stateDraft = builder.buildUnchecked();
         Assertions.assertThat(stateDraft).isInstanceOf(StateDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { StateDraft.builder().key("key") },
-                new Object[] { StateDraft.builder()
-                        .type(com.commercetools.api.models.state.StateTypeEnum.findEnum("OrderState")) },
-                new Object[] {
+        return new Object[][] { new Object[] { "key", StateDraft.builder().key("key") },
+                new Object[] { "type",
+                        StateDraft.builder()
+                                .type(com.commercetools.api.models.state.StateTypeEnum.findEnum("OrderState")) },
+                new Object[] { "name",
                         StateDraft.builder().name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { StateDraft.builder()
-                        .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
-                new Object[] { StateDraft.builder().initial(true) },
-                new Object[] { StateDraft.builder()
+                new Object[] { "description",
+                        StateDraft.builder()
+                                .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "initial", StateDraft.builder().initial(true) },
+                new Object[] { "roles", StateDraft.builder()
                         .roles(Collections.singletonList(
                             com.commercetools.api.models.state.StateRoleEnum.findEnum("ReviewIncludedInStatistics"))) },
-                new Object[] { StateDraft.builder()
-                        .transitions(Collections.singletonList(
-                            new com.commercetools.api.models.state.StateResourceIdentifierImpl())) } };
+                new Object[] { "transitions",
+                        StateDraft.builder()
+                                .transitions(Collections.singletonList(
+                                    new com.commercetools.api.models.state.StateResourceIdentifierImpl())) } };
     }
 
     @Test

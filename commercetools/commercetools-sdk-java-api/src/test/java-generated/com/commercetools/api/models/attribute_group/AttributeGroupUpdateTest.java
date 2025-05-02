@@ -3,31 +3,23 @@ package com.commercetools.api.models.attribute_group;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class AttributeGroupUpdateTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(AttributeGroupUpdateBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, AttributeGroupUpdateBuilder builder) {
         AttributeGroupUpdate attributeGroupUpdate = builder.buildUnchecked();
         Assertions.assertThat(attributeGroupUpdate).isInstanceOf(AttributeGroupUpdate.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { AttributeGroupUpdate.builder().version(2L) },
-                new Object[] { AttributeGroupUpdate.builder()
+        return new Object[][] { new Object[] { "version", AttributeGroupUpdate.builder().version(2L) },
+                new Object[] { "actions", AttributeGroupUpdate.builder()
                         .actions(Collections.singletonList(
                             new com.commercetools.api.models.attribute_group.AttributeGroupUpdateActionImpl())) } };
     }

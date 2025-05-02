@@ -1,31 +1,23 @@
 
 package com.commercetools.api.models.type;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class TypeAddEnumValueActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(TypeAddEnumValueActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, TypeAddEnumValueActionBuilder builder) {
         TypeAddEnumValueAction typeAddEnumValueAction = builder.buildUnchecked();
         Assertions.assertThat(typeAddEnumValueAction).isInstanceOf(TypeAddEnumValueAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { TypeAddEnumValueAction.builder().fieldName("fieldName") },
-                new Object[] { TypeAddEnumValueAction.builder()
+        return new Object[][] { new Object[] { "fieldName", TypeAddEnumValueAction.builder().fieldName("fieldName") },
+                new Object[] { "value", TypeAddEnumValueAction.builder()
                         .value(new com.commercetools.api.models.type.CustomFieldEnumValueImpl()) } };
     }
 

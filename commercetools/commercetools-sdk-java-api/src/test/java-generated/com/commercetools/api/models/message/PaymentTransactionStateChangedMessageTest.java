@@ -1,33 +1,26 @@
 
 package com.commercetools.api.models.message;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class PaymentTransactionStateChangedMessageTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(PaymentTransactionStateChangedMessageBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, PaymentTransactionStateChangedMessageBuilder builder) {
         PaymentTransactionStateChangedMessage paymentTransactionStateChangedMessage = builder.buildUnchecked();
         Assertions.assertThat(paymentTransactionStateChangedMessage)
                 .isInstanceOf(PaymentTransactionStateChangedMessage.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { PaymentTransactionStateChangedMessage.builder().transactionId("transactionId") },
-                new Object[] { PaymentTransactionStateChangedMessage.builder()
+                new Object[] { "transactionId",
+                        PaymentTransactionStateChangedMessage.builder().transactionId("transactionId") },
+                new Object[] { "state", PaymentTransactionStateChangedMessage.builder()
                         .state(com.commercetools.api.models.payment.TransactionState.findEnum("Initial")) } };
     }
 

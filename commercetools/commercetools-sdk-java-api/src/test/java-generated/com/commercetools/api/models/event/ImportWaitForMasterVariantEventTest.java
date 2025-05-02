@@ -1,34 +1,27 @@
 
 package com.commercetools.api.models.event;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ImportWaitForMasterVariantEventTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ImportWaitForMasterVariantEventBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ImportWaitForMasterVariantEventBuilder builder) {
         ImportWaitForMasterVariantEvent importWaitForMasterVariantEvent = builder.buildUnchecked();
         Assertions.assertThat(importWaitForMasterVariantEvent).isInstanceOf(ImportWaitForMasterVariantEvent.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { ImportWaitForMasterVariantEvent.builder()
-                        .resourceType(com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId
-                                .findEnum("import-api")) },
-                new Object[] { ImportWaitForMasterVariantEvent.builder()
+                new Object[] { "resourceType",
+                        ImportWaitForMasterVariantEvent.builder()
+                                .resourceType(com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId
+                                        .findEnum("import-api")) },
+                new Object[] { "data", ImportWaitForMasterVariantEvent.builder()
                         .data(new com.commercetools.api.models.event.ImportWaitForMasterVariantEventDataImpl()) } };
     }
 

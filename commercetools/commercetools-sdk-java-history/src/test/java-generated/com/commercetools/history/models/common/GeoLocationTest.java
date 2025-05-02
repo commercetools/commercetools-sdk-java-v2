@@ -3,31 +3,23 @@ package com.commercetools.history.models.common;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class GeoLocationTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(GeoLocationBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, GeoLocationBuilder builder) {
         GeoLocation geoLocation = builder.buildUnchecked();
         Assertions.assertThat(geoLocation).isInstanceOf(GeoLocation.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { GeoLocation.builder().type("type") },
-                new Object[] { GeoLocation.builder().coordinates(Collections.singletonList(9)) } };
+        return new Object[][] { new Object[] { "type", GeoLocation.builder().type("type") },
+                new Object[] { "coordinates", GeoLocation.builder().coordinates(Collections.singletonList(9)) } };
     }
 
     @Test

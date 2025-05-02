@@ -1,34 +1,28 @@
 
 package com.commercetools.api.models.me;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class MyCartSetLineItemShippingDetailsActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(MyCartSetLineItemShippingDetailsActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, MyCartSetLineItemShippingDetailsActionBuilder builder) {
         MyCartSetLineItemShippingDetailsAction myCartSetLineItemShippingDetailsAction = builder.buildUnchecked();
         Assertions.assertThat(myCartSetLineItemShippingDetailsAction)
                 .isInstanceOf(MyCartSetLineItemShippingDetailsAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { MyCartSetLineItemShippingDetailsAction.builder().lineItemId("lineItemId") },
-                new Object[] { MyCartSetLineItemShippingDetailsAction.builder().lineItemKey("lineItemKey") },
-                new Object[] { MyCartSetLineItemShippingDetailsAction.builder()
+                new Object[] { "lineItemId",
+                        MyCartSetLineItemShippingDetailsAction.builder().lineItemId("lineItemId") },
+                new Object[] { "lineItemKey",
+                        MyCartSetLineItemShippingDetailsAction.builder().lineItemKey("lineItemKey") },
+                new Object[] { "shippingDetails", MyCartSetLineItemShippingDetailsAction.builder()
                         .shippingDetails(new com.commercetools.api.models.cart.ItemShippingDetailsDraftImpl()) } };
     }
 

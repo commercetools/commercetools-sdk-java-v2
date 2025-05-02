@@ -1,32 +1,24 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetKeyChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetKeyChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetKeyChangeBuilder builder) {
         SetKeyChange setKeyChange = builder.buildUnchecked();
         Assertions.assertThat(setKeyChange).isInstanceOf(SetKeyChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetKeyChange.builder().change("change") },
-                new Object[] { SetKeyChange.builder().previousValue("previousValue") },
-                new Object[] { SetKeyChange.builder().nextValue("nextValue") } };
+        return new Object[][] { new Object[] { "change", SetKeyChange.builder().change("change") },
+                new Object[] { "previousValue", SetKeyChange.builder().previousValue("previousValue") },
+                new Object[] { "nextValue", SetKeyChange.builder().nextValue("nextValue") } };
     }
 
     @Test

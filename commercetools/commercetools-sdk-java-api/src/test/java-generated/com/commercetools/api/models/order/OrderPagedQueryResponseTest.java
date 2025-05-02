@@ -3,34 +3,26 @@ package com.commercetools.api.models.order;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class OrderPagedQueryResponseTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(OrderPagedQueryResponseBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, OrderPagedQueryResponseBuilder builder) {
         OrderPagedQueryResponse orderPagedQueryResponse = builder.buildUnchecked();
         Assertions.assertThat(orderPagedQueryResponse).isInstanceOf(OrderPagedQueryResponse.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { OrderPagedQueryResponse.builder().limit(7L) },
-                new Object[] { OrderPagedQueryResponse.builder().offset(3L) },
-                new Object[] { OrderPagedQueryResponse.builder().count(2L) },
-                new Object[] { OrderPagedQueryResponse.builder().total(1L) },
-                new Object[] { OrderPagedQueryResponse.builder()
+        return new Object[][] { new Object[] { "limit", OrderPagedQueryResponse.builder().limit(7L) },
+                new Object[] { "offset", OrderPagedQueryResponse.builder().offset(3L) },
+                new Object[] { "count", OrderPagedQueryResponse.builder().count(2L) },
+                new Object[] { "total", OrderPagedQueryResponse.builder().total(1L) },
+                new Object[] { "results", OrderPagedQueryResponse.builder()
                         .results(Collections.singletonList(new com.commercetools.api.models.order.OrderImpl())) } };
     }
 

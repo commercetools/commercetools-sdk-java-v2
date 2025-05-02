@@ -1,36 +1,30 @@
 
 package com.commercetools.api.models.order;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class OrderSetItemShippingAddressCustomTypeActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(OrderSetItemShippingAddressCustomTypeActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, OrderSetItemShippingAddressCustomTypeActionBuilder builder) {
         OrderSetItemShippingAddressCustomTypeAction orderSetItemShippingAddressCustomTypeAction = builder
                 .buildUnchecked();
         Assertions.assertThat(orderSetItemShippingAddressCustomTypeAction)
                 .isInstanceOf(OrderSetItemShippingAddressCustomTypeAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { OrderSetItemShippingAddressCustomTypeAction.builder().addressKey("addressKey") },
-                new Object[] { OrderSetItemShippingAddressCustomTypeAction.builder()
-                        .type(new com.commercetools.api.models.type.TypeResourceIdentifierImpl()) },
-                new Object[] { OrderSetItemShippingAddressCustomTypeAction.builder()
+                new Object[] { "addressKey",
+                        OrderSetItemShippingAddressCustomTypeAction.builder().addressKey("addressKey") },
+                new Object[] { "type",
+                        OrderSetItemShippingAddressCustomTypeAction.builder()
+                                .type(new com.commercetools.api.models.type.TypeResourceIdentifierImpl()) },
+                new Object[] { "fields", OrderSetItemShippingAddressCustomTypeAction.builder()
                         .fields(new com.commercetools.api.models.type.FieldContainerImpl()) } };
     }
 

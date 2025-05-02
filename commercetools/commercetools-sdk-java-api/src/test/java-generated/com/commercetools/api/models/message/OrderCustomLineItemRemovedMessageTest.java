@@ -1,33 +1,27 @@
 
 package com.commercetools.api.models.message;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class OrderCustomLineItemRemovedMessageTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(OrderCustomLineItemRemovedMessageBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, OrderCustomLineItemRemovedMessageBuilder builder) {
         OrderCustomLineItemRemovedMessage orderCustomLineItemRemovedMessage = builder.buildUnchecked();
         Assertions.assertThat(orderCustomLineItemRemovedMessage).isInstanceOf(OrderCustomLineItemRemovedMessage.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { OrderCustomLineItemRemovedMessage.builder().customLineItemId("customLineItemId") },
-                new Object[] { OrderCustomLineItemRemovedMessage.builder().customLineItemKey("customLineItemKey") },
-                new Object[] { OrderCustomLineItemRemovedMessage.builder()
+                new Object[] { "customLineItemId",
+                        OrderCustomLineItemRemovedMessage.builder().customLineItemId("customLineItemId") },
+                new Object[] { "customLineItemKey",
+                        OrderCustomLineItemRemovedMessage.builder().customLineItemKey("customLineItemKey") },
+                new Object[] { "customLineItem", OrderCustomLineItemRemovedMessage.builder()
                         .customLineItem(new com.commercetools.api.models.cart.CustomLineItemImpl()) } };
     }
 

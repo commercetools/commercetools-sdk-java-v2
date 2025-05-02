@@ -4,117 +4,133 @@ package com.commercetools.api.models.order;
 import java.time.ZonedDateTime;
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class OrderTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(OrderBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, OrderBuilder builder) {
         Order order = builder.buildUnchecked();
         Assertions.assertThat(order).isInstanceOf(Order.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { Order.builder().id("id") }, new Object[] { Order.builder().version(2L) },
-                new Object[] { Order.builder().orderNumber("orderNumber") },
-                new Object[] { Order.builder().purchaseOrderNumber("purchaseOrderNumber") },
-                new Object[] { Order.builder().customerId("customerId") },
-                new Object[] { Order.builder().customerEmail("customerEmail") },
-                new Object[] { Order.builder()
+        return new Object[][] { new Object[] { "id", Order.builder().id("id") },
+                new Object[] { "version", Order.builder().version(2L) },
+                new Object[] { "orderNumber", Order.builder().orderNumber("orderNumber") },
+                new Object[] { "purchaseOrderNumber", Order.builder().purchaseOrderNumber("purchaseOrderNumber") },
+                new Object[] { "customerId", Order.builder().customerId("customerId") },
+                new Object[] { "customerEmail", Order.builder().customerEmail("customerEmail") },
+                new Object[] { "customerGroup", Order.builder()
                         .customerGroup(new com.commercetools.api.models.customer_group.CustomerGroupReferenceImpl()) },
-                new Object[] { Order.builder().anonymousId("anonymousId") },
-                new Object[] { Order.builder()
+                new Object[] { "anonymousId", Order.builder().anonymousId("anonymousId") },
+                new Object[] { "businessUnit", Order.builder()
                         .businessUnit(new com.commercetools.api.models.business_unit.BusinessUnitKeyReferenceImpl()) },
-                new Object[] { Order.builder().store(new com.commercetools.api.models.store.StoreKeyReferenceImpl()) },
-                new Object[] { Order.builder()
+                new Object[] { "store",
+                        Order.builder().store(new com.commercetools.api.models.store.StoreKeyReferenceImpl()) },
+                new Object[] { "lineItems", Order.builder()
                         .lineItems(Collections.singletonList(new com.commercetools.api.models.cart.LineItemImpl())) },
-                new Object[] {
+                new Object[] { "customLineItems",
                         Order.builder()
                                 .customLineItems(Collections
                                         .singletonList(new com.commercetools.api.models.cart.CustomLineItemImpl())) },
-                new Object[] {
+                new Object[] { "totalPrice",
                         Order.builder().totalPrice(new com.commercetools.api.models.common.CentPrecisionMoneyImpl()) },
-                new Object[] { Order.builder().taxedPrice(new com.commercetools.api.models.cart.TaxedPriceImpl()) },
-                new Object[] {
+                new Object[] { "taxedPrice",
+                        Order.builder().taxedPrice(new com.commercetools.api.models.cart.TaxedPriceImpl()) },
+                new Object[] { "taxedShippingPrice",
                         Order.builder().taxedShippingPrice(new com.commercetools.api.models.cart.TaxedPriceImpl()) },
-                new Object[] { Order.builder()
+                new Object[] { "discountOnTotalPrice", Order.builder()
                         .discountOnTotalPrice(new com.commercetools.api.models.cart.DiscountOnTotalPriceImpl()) },
-                new Object[] {
+                new Object[] { "taxMode",
                         Order.builder().taxMode(com.commercetools.api.models.cart.TaxMode.findEnum("Platform")) },
-                new Object[] { Order.builder()
-                        .taxRoundingMode(com.commercetools.api.models.cart.RoundingMode.findEnum("HalfEven")) },
-                new Object[] { Order.builder()
-                        .taxCalculationMode(
-                            com.commercetools.api.models.cart.TaxCalculationMode.findEnum("LineItemLevel")) },
-                new Object[] { Order.builder()
-                        .inventoryMode(com.commercetools.api.models.cart.InventoryMode.findEnum("None")) },
-                new Object[] { Order.builder().billingAddress(new com.commercetools.api.models.common.AddressImpl()) },
-                new Object[] { Order.builder().shippingAddress(new com.commercetools.api.models.common.AddressImpl()) },
-                new Object[] { Order.builder()
-                        .shippingMode(com.commercetools.api.models.cart.ShippingMode.findEnum("Single")) },
-                new Object[] { Order.builder().shippingKey("shippingKey") },
-                new Object[] { Order.builder().shippingInfo(new com.commercetools.api.models.cart.ShippingInfoImpl()) },
-                new Object[] { Order.builder()
-                        .shippingRateInput(new com.commercetools.api.models.cart.ShippingRateInputImpl()) },
-                new Object[] { Order.builder()
-                        .shippingCustomFields(new com.commercetools.api.models.type.CustomFieldsImpl()) },
-                new Object[] { Order.builder()
+                new Object[] { "taxRoundingMode",
+                        Order.builder()
+                                .taxRoundingMode(com.commercetools.api.models.cart.RoundingMode.findEnum("HalfEven")) },
+                new Object[] { "taxCalculationMode",
+                        Order.builder()
+                                .taxCalculationMode(
+                                    com.commercetools.api.models.cart.TaxCalculationMode.findEnum("LineItemLevel")) },
+                new Object[] { "inventoryMode",
+                        Order.builder()
+                                .inventoryMode(com.commercetools.api.models.cart.InventoryMode.findEnum("None")) },
+                new Object[] { "billingAddress",
+                        Order.builder().billingAddress(new com.commercetools.api.models.common.AddressImpl()) },
+                new Object[] { "shippingAddress",
+                        Order.builder().shippingAddress(new com.commercetools.api.models.common.AddressImpl()) },
+                new Object[] { "shippingMode",
+                        Order.builder()
+                                .shippingMode(com.commercetools.api.models.cart.ShippingMode.findEnum("Single")) },
+                new Object[] { "shippingKey", Order.builder().shippingKey("shippingKey") },
+                new Object[] { "shippingInfo",
+                        Order.builder().shippingInfo(new com.commercetools.api.models.cart.ShippingInfoImpl()) },
+                new Object[] { "shippingRateInput",
+                        Order.builder()
+                                .shippingRateInput(new com.commercetools.api.models.cart.ShippingRateInputImpl()) },
+                new Object[] { "shippingCustomFields",
+                        Order.builder()
+                                .shippingCustomFields(new com.commercetools.api.models.type.CustomFieldsImpl()) },
+                new Object[] { "shipping", Order.builder()
                         .shipping(Collections.singletonList(new com.commercetools.api.models.cart.ShippingImpl())) },
-                new Object[] { Order.builder()
-                        .itemShippingAddresses(
-                            Collections.singletonList(new com.commercetools.api.models.common.AddressImpl())) },
-                new Object[] {
+                new Object[] { "itemShippingAddresses",
+                        Order.builder()
+                                .itemShippingAddresses(
+                                    Collections.singletonList(new com.commercetools.api.models.common.AddressImpl())) },
+                new Object[] { "discountCodes",
                         Order.builder()
                                 .discountCodes(Collections
                                         .singletonList(new com.commercetools.api.models.cart.DiscountCodeInfoImpl())) },
-                new Object[] {
+                new Object[] { "directDiscounts",
                         Order.builder()
                                 .directDiscounts(Collections
                                         .singletonList(new com.commercetools.api.models.cart.DirectDiscountImpl())) },
-                new Object[] { Order.builder()
-                        .refusedGifts(Collections.singletonList(
-                            new com.commercetools.api.models.cart_discount.CartDiscountReferenceImpl())) },
-                new Object[] { Order.builder().paymentInfo(new com.commercetools.api.models.order.PaymentInfoImpl()) },
-                new Object[] { Order.builder().country("country") }, new Object[] { Order.builder().locale("locale") },
-                new Object[] {
+                new Object[] { "refusedGifts",
+                        Order.builder()
+                                .refusedGifts(Collections.singletonList(
+                                    new com.commercetools.api.models.cart_discount.CartDiscountReferenceImpl())) },
+                new Object[] { "paymentInfo",
+                        Order.builder().paymentInfo(new com.commercetools.api.models.order.PaymentInfoImpl()) },
+                new Object[] { "country", Order.builder().country("country") },
+                new Object[] { "locale", Order.builder().locale("locale") },
+                new Object[] { "origin",
                         Order.builder().origin(com.commercetools.api.models.cart.CartOrigin.findEnum("Customer")) },
-                new Object[] { Order.builder().cart(new com.commercetools.api.models.cart.CartReferenceImpl()) },
-                new Object[] { Order.builder().quote(new com.commercetools.api.models.quote.QuoteReferenceImpl()) },
-                new Object[] {
+                new Object[] { "cart",
+                        Order.builder().cart(new com.commercetools.api.models.cart.CartReferenceImpl()) },
+                new Object[] { "quote",
+                        Order.builder().quote(new com.commercetools.api.models.quote.QuoteReferenceImpl()) },
+                new Object[] { "orderState",
                         Order.builder().orderState(com.commercetools.api.models.order.OrderState.findEnum("Open")) },
-                new Object[] { Order.builder()
-                        .shipmentState(com.commercetools.api.models.order.ShipmentState.findEnum("Shipped")) },
-                new Object[] { Order.builder()
-                        .paymentState(com.commercetools.api.models.order.PaymentState.findEnum("BalanceDue")) },
-                new Object[] { Order.builder().state(new com.commercetools.api.models.state.StateReferenceImpl()) },
-                new Object[] { Order.builder()
+                new Object[] { "shipmentState",
+                        Order.builder()
+                                .shipmentState(com.commercetools.api.models.order.ShipmentState.findEnum("Shipped")) },
+                new Object[] { "paymentState",
+                        Order.builder()
+                                .paymentState(com.commercetools.api.models.order.PaymentState.findEnum("BalanceDue")) },
+                new Object[] { "state",
+                        Order.builder().state(new com.commercetools.api.models.state.StateReferenceImpl()) },
+                new Object[] { "syncInfo", Order.builder()
                         .syncInfo(Collections.singletonList(new com.commercetools.api.models.order.SyncInfoImpl())) },
-                new Object[] {
+                new Object[] { "returnInfo",
                         Order.builder()
                                 .returnInfo(Collections
                                         .singletonList(new com.commercetools.api.models.order.ReturnInfoImpl())) },
-                new Object[] { Order.builder()
+                new Object[] { "discountTypeCombination", Order.builder()
                         .discountTypeCombination(new com.commercetools.api.models.cart.DiscountTypeCombinationImpl()) },
-                new Object[] { Order.builder().lastMessageSequenceNumber(8L) },
-                new Object[] { Order.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) },
-                new Object[] { Order.builder().completedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { Order.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { Order.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] {
+                new Object[] { "lastMessageSequenceNumber", Order.builder().lastMessageSequenceNumber(8L) },
+                new Object[] { "custom",
+                        Order.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) },
+                new Object[] { "completedAt", Order.builder().completedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "createdAt", Order.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedAt",
+                        Order.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "lastModifiedBy",
                         Order.builder().lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
-                new Object[] { Order.builder().createdBy(new com.commercetools.api.models.common.CreatedByImpl()) } };
+                new Object[] { "createdBy",
+                        Order.builder().createdBy(new com.commercetools.api.models.common.CreatedByImpl()) } };
     }
 
     @Test

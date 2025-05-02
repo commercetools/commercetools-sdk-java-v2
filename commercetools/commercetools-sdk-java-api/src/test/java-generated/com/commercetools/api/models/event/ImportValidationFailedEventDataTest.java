@@ -1,32 +1,25 @@
 
 package com.commercetools.api.models.event;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ImportValidationFailedEventDataTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ImportValidationFailedEventDataBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ImportValidationFailedEventDataBuilder builder) {
         ImportValidationFailedEventData importValidationFailedEventData = builder.buildUnchecked();
         Assertions.assertThat(importValidationFailedEventData).isInstanceOf(ImportValidationFailedEventData.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ImportValidationFailedEventData.builder().id("id") },
-                new Object[] { ImportValidationFailedEventData.builder().version(2) },
-                new Object[] { ImportValidationFailedEventData.builder().importContainerKey("importContainerKey") } };
+        return new Object[][] { new Object[] { "id", ImportValidationFailedEventData.builder().id("id") },
+                new Object[] { "version", ImportValidationFailedEventData.builder().version(2) },
+                new Object[] { "importContainerKey",
+                        ImportValidationFailedEventData.builder().importContainerKey("importContainerKey") } };
     }
 
     @Test

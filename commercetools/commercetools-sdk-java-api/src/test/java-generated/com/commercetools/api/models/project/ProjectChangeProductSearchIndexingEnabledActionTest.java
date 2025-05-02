@@ -1,36 +1,29 @@
 
 package com.commercetools.api.models.project;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ProjectChangeProductSearchIndexingEnabledActionTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ProjectChangeProductSearchIndexingEnabledActionBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ProjectChangeProductSearchIndexingEnabledActionBuilder builder) {
         ProjectChangeProductSearchIndexingEnabledAction projectChangeProductSearchIndexingEnabledAction = builder
                 .buildUnchecked();
         Assertions.assertThat(projectChangeProductSearchIndexingEnabledAction)
                 .isInstanceOf(ProjectChangeProductSearchIndexingEnabledAction.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
         return new Object[][] {
-                new Object[] { ProjectChangeProductSearchIndexingEnabledAction.builder().enabled(true) },
-                new Object[] { ProjectChangeProductSearchIndexingEnabledAction.builder()
-                        .mode(com.commercetools.api.models.project.ProductSearchIndexingMode
-                                .findEnum("ProductProjectionsSearch")) } };
+                new Object[] { "enabled", ProjectChangeProductSearchIndexingEnabledAction.builder().enabled(true) },
+                new Object[] { "mode",
+                        ProjectChangeProductSearchIndexingEnabledAction.builder()
+                                .mode(com.commercetools.api.models.project.ProductSearchIndexingMode
+                                        .findEnum("ProductProjectionsSearch")) } };
     }
 
     @Test

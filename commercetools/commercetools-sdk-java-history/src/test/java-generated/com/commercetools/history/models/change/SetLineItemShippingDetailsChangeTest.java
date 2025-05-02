@@ -1,35 +1,29 @@
 
 package com.commercetools.history.models.change;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SetLineItemShippingDetailsChangeTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(SetLineItemShippingDetailsChangeBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, SetLineItemShippingDetailsChangeBuilder builder) {
         SetLineItemShippingDetailsChange setLineItemShippingDetailsChange = builder.buildUnchecked();
         Assertions.assertThat(setLineItemShippingDetailsChange).isInstanceOf(SetLineItemShippingDetailsChange.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { SetLineItemShippingDetailsChange.builder().change("change") },
-                new Object[] { SetLineItemShippingDetailsChange.builder()
-                        .previousValue(new com.commercetools.history.models.common.ItemShippingDetailsImpl()) },
-                new Object[] { SetLineItemShippingDetailsChange.builder()
-                        .nextValue(new com.commercetools.history.models.common.ItemShippingDetailsImpl()) },
-                new Object[] { SetLineItemShippingDetailsChange.builder().lineItemId("lineItemId") } };
+        return new Object[][] { new Object[] { "change", SetLineItemShippingDetailsChange.builder().change("change") },
+                new Object[] { "previousValue",
+                        SetLineItemShippingDetailsChange.builder()
+                                .previousValue(new com.commercetools.history.models.common.ItemShippingDetailsImpl()) },
+                new Object[] { "nextValue",
+                        SetLineItemShippingDetailsChange.builder()
+                                .nextValue(new com.commercetools.history.models.common.ItemShippingDetailsImpl()) },
+                new Object[] { "lineItemId", SetLineItemShippingDetailsChange.builder().lineItemId("lineItemId") } };
     }
 
     @Test

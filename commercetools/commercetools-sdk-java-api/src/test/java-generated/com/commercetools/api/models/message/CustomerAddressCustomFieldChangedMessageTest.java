@@ -1,34 +1,29 @@
 
 package com.commercetools.api.models.message;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class CustomerAddressCustomFieldChangedMessageTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(CustomerAddressCustomFieldChangedMessageBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, CustomerAddressCustomFieldChangedMessageBuilder builder) {
         CustomerAddressCustomFieldChangedMessage customerAddressCustomFieldChangedMessage = builder.buildUnchecked();
         Assertions.assertThat(customerAddressCustomFieldChangedMessage)
                 .isInstanceOf(CustomerAddressCustomFieldChangedMessage.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { CustomerAddressCustomFieldChangedMessage.builder().name("name") },
-                new Object[] { CustomerAddressCustomFieldChangedMessage.builder().value("value") },
-                new Object[] { CustomerAddressCustomFieldChangedMessage.builder().previousValue("previousValue") },
-                new Object[] { CustomerAddressCustomFieldChangedMessage.builder().addressId("addressId") } };
+        return new Object[][] {
+                new Object[] { "name", CustomerAddressCustomFieldChangedMessage.builder().name("name") },
+                new Object[] { "value", CustomerAddressCustomFieldChangedMessage.builder().value("value") },
+                new Object[] { "previousValue",
+                        CustomerAddressCustomFieldChangedMessage.builder().previousValue("previousValue") },
+                new Object[] { "addressId",
+                        CustomerAddressCustomFieldChangedMessage.builder().addressId("addressId") } };
     }
 
     @Test

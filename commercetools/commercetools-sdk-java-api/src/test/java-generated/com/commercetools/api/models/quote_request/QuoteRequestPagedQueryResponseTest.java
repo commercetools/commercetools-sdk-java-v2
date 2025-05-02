@@ -3,36 +3,29 @@ package com.commercetools.api.models.quote_request;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class QuoteRequestPagedQueryResponseTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(QuoteRequestPagedQueryResponseBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, QuoteRequestPagedQueryResponseBuilder builder) {
         QuoteRequestPagedQueryResponse quoteRequestPagedQueryResponse = builder.buildUnchecked();
         Assertions.assertThat(quoteRequestPagedQueryResponse).isInstanceOf(QuoteRequestPagedQueryResponse.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { QuoteRequestPagedQueryResponse.builder().limit(7L) },
-                new Object[] { QuoteRequestPagedQueryResponse.builder().offset(3L) },
-                new Object[] { QuoteRequestPagedQueryResponse.builder().count(2L) },
-                new Object[] { QuoteRequestPagedQueryResponse.builder().total(1L) },
-                new Object[] { QuoteRequestPagedQueryResponse.builder()
-                        .results(Collections
-                                .singletonList(new com.commercetools.api.models.quote_request.QuoteRequestImpl())) } };
+        return new Object[][] { new Object[] { "limit", QuoteRequestPagedQueryResponse.builder().limit(7L) },
+                new Object[] { "offset", QuoteRequestPagedQueryResponse.builder().offset(3L) },
+                new Object[] { "count", QuoteRequestPagedQueryResponse.builder().count(2L) },
+                new Object[] { "total", QuoteRequestPagedQueryResponse.builder().total(1L) },
+                new Object[] { "results",
+                        QuoteRequestPagedQueryResponse.builder()
+                                .results(Collections.singletonList(
+                                    new com.commercetools.api.models.quote_request.QuoteRequestImpl())) } };
     }
 
     @Test

@@ -1,36 +1,29 @@
 
 package com.commercetools.importapi.models.order_patches;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class ReturnItemDraftTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(ReturnItemDraftBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, ReturnItemDraftBuilder builder) {
         ReturnItemDraft returnItemDraft = builder.buildUnchecked();
         Assertions.assertThat(returnItemDraft).isInstanceOf(ReturnItemDraft.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { ReturnItemDraft.builder().quantity(8L) },
-                new Object[] { ReturnItemDraft.builder().lineItemId("lineItemId") },
-                new Object[] { ReturnItemDraft.builder().customLineItemId("customLineItemId") },
-                new Object[] { ReturnItemDraft.builder().comment("comment") },
-                new Object[] { ReturnItemDraft.builder()
-                        .shipmentState(com.commercetools.importapi.models.order_patches.ReturnShipmentState
-                                .findEnum("Advised")) } };
+        return new Object[][] { new Object[] { "quantity", ReturnItemDraft.builder().quantity(8L) },
+                new Object[] { "lineItemId", ReturnItemDraft.builder().lineItemId("lineItemId") },
+                new Object[] { "customLineItemId", ReturnItemDraft.builder().customLineItemId("customLineItemId") },
+                new Object[] { "comment", ReturnItemDraft.builder().comment("comment") },
+                new Object[] { "shipmentState",
+                        ReturnItemDraft.builder()
+                                .shipmentState(com.commercetools.importapi.models.order_patches.ReturnShipmentState
+                                        .findEnum("Advised")) } };
     }
 
     @Test

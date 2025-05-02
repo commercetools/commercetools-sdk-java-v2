@@ -3,33 +3,26 @@ package com.commercetools.api.models.business_unit;
 
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class BusinessUnitUpdateTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(BusinessUnitUpdateBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, BusinessUnitUpdateBuilder builder) {
         BusinessUnitUpdate businessUnitUpdate = builder.buildUnchecked();
         Assertions.assertThat(businessUnitUpdate).isInstanceOf(BusinessUnitUpdate.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { BusinessUnitUpdate.builder().version(2L) },
-                new Object[] { BusinessUnitUpdate.builder()
-                        .actions(Collections.singletonList(
-                            new com.commercetools.api.models.business_unit.BusinessUnitUpdateActionImpl())) } };
+        return new Object[][] { new Object[] { "version", BusinessUnitUpdate.builder().version(2L) },
+                new Object[] { "actions",
+                        BusinessUnitUpdate.builder()
+                                .actions(Collections.singletonList(
+                                    new com.commercetools.api.models.business_unit.BusinessUnitUpdateActionImpl())) } };
     }
 
     @Test

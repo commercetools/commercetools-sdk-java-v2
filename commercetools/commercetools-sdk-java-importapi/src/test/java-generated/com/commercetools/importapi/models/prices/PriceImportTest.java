@@ -4,52 +4,49 @@ package com.commercetools.importapi.models.prices;
 import java.time.ZonedDateTime;
 import java.util.Collections;
 
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
-
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class PriceImportTest {
 
-    @TestTemplate
-    @UseDataProvider("objectBuilder")
-    public void buildUnchecked(PriceImportBuilder builder) {
+    @ParameterizedTest(name = "#{index} with {0}")
+    @MethodSource("objectBuilder")
+    public void buildUnchecked(String name, PriceImportBuilder builder) {
         PriceImport priceImport = builder.buildUnchecked();
         Assertions.assertThat(priceImport).isInstanceOf(PriceImport.class);
     }
 
-    @DataProvider
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { PriceImport.builder().key("key") },
-                new Object[] {
+        return new Object[][] { new Object[] { "key", PriceImport.builder().key("key") },
+                new Object[] { "value",
                         PriceImport.builder().value(new com.commercetools.importapi.models.common.TypedMoneyImpl()) },
-                new Object[] { PriceImport.builder().country("country") },
-                new Object[] { PriceImport.builder().validFrom(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { PriceImport.builder().validUntil(ZonedDateTime.parse("2023-06-01T12:00Z")) },
-                new Object[] { PriceImport.builder()
+                new Object[] { "country", PriceImport.builder().country("country") },
+                new Object[] { "validFrom", PriceImport.builder().validFrom(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "validUntil",
+                        PriceImport.builder().validUntil(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "customerGroup", PriceImport.builder()
                         .customerGroup(new com.commercetools.importapi.models.common.CustomerGroupKeyReferenceImpl()) },
-                new Object[] { PriceImport.builder()
-                        .channel(new com.commercetools.importapi.models.common.ChannelKeyReferenceImpl()) },
-                new Object[] { PriceImport.builder()
-                        .discounted(new com.commercetools.importapi.models.common.DiscountedPriceImpl()) },
-                new Object[] { PriceImport.builder().staged(true) },
-                new Object[] {
+                new Object[] { "channel",
+                        PriceImport.builder()
+                                .channel(new com.commercetools.importapi.models.common.ChannelKeyReferenceImpl()) },
+                new Object[] { "discounted",
+                        PriceImport.builder()
+                                .discounted(new com.commercetools.importapi.models.common.DiscountedPriceImpl()) },
+                new Object[] { "staged", PriceImport.builder().staged(true) },
+                new Object[] { "tiers",
                         PriceImport.builder()
                                 .tiers(Collections.singletonList(
                                     new com.commercetools.importapi.models.common.PriceTierImpl())) },
-                new Object[] { PriceImport.builder()
-                        .custom(new com.commercetools.importapi.models.customfields.CustomImpl()) },
-                new Object[] { PriceImport.builder()
-                        .productVariant(
-                            new com.commercetools.importapi.models.common.ProductVariantKeyReferenceImpl()) },
-                new Object[] { PriceImport.builder()
+                new Object[] { "custom",
+                        PriceImport.builder()
+                                .custom(new com.commercetools.importapi.models.customfields.CustomImpl()) },
+                new Object[] { "productVariant",
+                        PriceImport.builder()
+                                .productVariant(
+                                    new com.commercetools.importapi.models.common.ProductVariantKeyReferenceImpl()) },
+                new Object[] { "product", PriceImport.builder()
                         .product(new com.commercetools.importapi.models.common.ProductKeyReferenceImpl()) } };
     }
 

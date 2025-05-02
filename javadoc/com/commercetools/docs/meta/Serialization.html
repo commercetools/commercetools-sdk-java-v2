@@ -66,13 +66,13 @@ loadScripts(document, 'script');</script>
 <div class="sub-title"><span class="package-label-in-type">Package</span>&nbsp;<a href="package-summary.html">com.commercetools.docs.meta</a></div>
 <h1 title="Class Serialization" class="title">Class Serialization</h1>
 </div>
-<div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
+<div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
 <div class="inheritance">com.commercetools.docs.meta.Serialization</div>
 </div>
 <section class="class-description" id="class-description">
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Serialization</span>
-<span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
 <div class="block"><b>Table of content</b><ul><li>Serialization</li><ul><li><a href="#customization">Customization</a></li><li><a href="#date-time-attributes">Date and time attributes</a></li><li><a href="#number-attributes">Number attributes</a></li><li><a href="#JsonNodes">Deserialize Attributes as JsonNode</a></li></ul></ul>
  <h2>Serialization</h2>
 
@@ -82,7 +82,7 @@ loadScripts(document, 'script');</script>
 
  <h3 id="customization">Customization</h3>
 
- <p>To allow customization of the ObjectMapper the SDK uses <a href="https://docs.oracle.com/javase/8/docs/api/java/util/ServiceLoader.html" title="class or interface in java.util" class="external-link"><code>ServiceLoader</code></a> for
+ <p>To allow customization of the ObjectMapper the SDK uses <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/ServiceLoader.html" title="class or interface in java.util" class="external-link"><code>ServiceLoader</code></a> for
  <a href="../../../../io/vrap/rmf/base/client/utils/json/ModuleSupplier.html" title="interface in io.vrap.rmf.base.client.utils.json"><code>ModuleSupplier</code></a>. Adding a file
  <code>resources/META-INF/services/io.vrap.rmf.base.client.utils.json.ModuleSupplier</code> to your project
  with FQCN of the module supplier to be used will register the supplied modules</p>
@@ -98,6 +98,8 @@ import java.util.Optional;
 
 import com.commercetools.api.models.product.AttributeImpl;
 import com.commercetools.api.models.product_search.ProductSearchFacetResult;
+import com.commercetools.api.models.subscription.DeliveryPayload;
+import com.commercetools.api.models.subscription.DeliveryPayloadMixin;
 import com.commercetools.api.models.type.FieldContainerImpl;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.module.SimpleModule;
@@ -155,6 +157,7 @@ public class ApiModule extends SimpleModule {
             addDeserializer(FieldContainerImpl.class,
                 new CustomFieldDeserializer(customFieldAsDateString, customFieldNumberAsDouble, customFieldTypes));
         }
+        setMixInAnnotation(DeliveryPayload.class, DeliveryPayloadMixin.class);
     }
 }
 </code></pre></div>
@@ -162,10 +165,10 @@ public class ApiModule extends SimpleModule {
 
  <h3 id="date-time-attributes">Date and time attributes</h3>
 
- <p>When using Date, Time and DateTime types for product attributes or custom fields the SDK deserializes them as <a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDate.html" title="class or interface in java.time" class="external-link"><code>LocalDate</code></a>,
- <a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalTime.html" title="class or interface in java.time" class="external-link"><code>LocalTime</code></a> and <a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link"><code>ZonedDateTime</code></a>. As sometimes it may needed to serialize them as <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link"><code>String</code></a> the ObjectMapper
+ <p>When using Date, Time and DateTime types for product attributes or custom fields the SDK deserializes them as <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDate.html" title="class or interface in java.time" class="external-link"><code>LocalDate</code></a>,
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalTime.html" title="class or interface in java.time" class="external-link"><code>LocalTime</code></a> and <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link"><code>ZonedDateTime</code></a>. As sometimes it may needed to serialize them as <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link"><code>String</code></a> the ObjectMapper
  can be configured with <a href="../../../../io/vrap/rmf/base/client/utils/json/modules/ModuleOptions.html" title="interface in io.vrap.rmf.base.client.utils.json.modules"><code>ModuleOptions</code></a>. The <a href="../../api/json/ApiModule.html" title="class in com.commercetools.api.json"><code>ApiModule</code></a> also is loading the configuration options
- using <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/System.html#getProperty-java.lang.String-" title="class or interface in java.lang" class="external-link"><code>System.getProperty(String)</code></a> e.g.: <a href="../../api/json/ApiModuleOptions.html#DESERIALIZE_DATE_ATTRIBUTE_AS_STRING"><code>commercetools.deserializeDateAttributeAsString</code></a></p>
+ using <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/System.html#getProperty(java.lang.String)" title="class or interface in java.lang" class="external-link"><code>System.getProperty(String)</code></a> e.g.: <a href="../../api/json/ApiModuleOptions.html#DESERIALIZE_DATE_ATTRIBUTE_AS_STRING"><code>commercetools.deserializeDateAttributeAsString</code></a></p>
  <div id="example-SerializationTest-dateAsString--%s" class=code-example><pre><code class='java'>ApiModuleOptions options = ApiModuleOptions.of()
         .withDateAttributeAsString(true)
         .withDateCustomFieldAsString(true);
@@ -211,7 +214,7 @@ assertThat(attributes.get("set-datetime").withAttribute(AttributeAccessor::asSet
 
  <h3 id="number-attributes">Number attributes</h3>
 
- <p>When using numbers for attributes and custom fields they will be automatically deserialized as <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link"><code>Long</code></a> if they don't have a fraction part.
+ <p>When using numbers for attributes and custom fields they will be automatically deserialized as <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link"><code>Long</code></a> if they don't have a fraction part.
  This can be disabled with the options <a href="../../api/json/ApiModuleOptions.html#DESERIALIZE_ATTRIBUTE_NUMBER_AS_DOUBLE"><code>ApiModuleOptions.DESERIALIZE_ATTRIBUTE_NUMBER_AS_DOUBLE</code></a> and <a href="../../api/json/ApiModuleOptions.html#DESERIALIZE_CUSTOM_FIELD_NUMBER_AS_DOUBLE"><code>ApiModuleOptions.DESERIALIZE_CUSTOM_FIELD_NUMBER_AS_DOUBLE</code></a></p>
 
  <div id="com-commercetools-AttributesTest-attributesNumberAsDouble--%s" class=code-example><pre><code class='java'>ApiModuleOptions options = ApiModuleOptions.of().withAttributeNumberAsDouble(true);
@@ -261,8 +264,8 @@ ProjectApiRoot apiRoot = ApiRootBuilder.of()
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div class="inherited-list">
-<h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
-<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-" title="class or interface in java.lang" class="external-link">wait</a></code></div>
+<h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
+<code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
 </section>
 </li>
 </ul>

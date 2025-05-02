@@ -413,15 +413,15 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../io/vrap/rmf/base/client/utils/CompletableFutureUtils.html#recover(java.util.concurrent.CompletionStage,java.util.function.Function)" class="member-name-link">recover(CompletionStage&lt;T&gt;, Function&lt;Throwable, ? extends T&gt;)</a> - Static method in class io.vrap.rmf.base.client.utils.<a href="../io/vrap/rmf/base/client/utils/CompletableFutureUtils.html" title="class in io.vrap.rmf.base.client.utils">CompletableFutureUtils</a></dt>
 <dd>
-<div class="block">Creates a <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletionStage.html" title="class or interface in java.util.concurrent" class="external-link"><code>CompletionStage</code></a> which can be recovered if an error occurs.</div>
+<div class="block">Creates a <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletionStage.html" title="class or interface in java.util.concurrent" class="external-link"><code>CompletionStage</code></a> which can be recovered if an error occurs.</div>
 </dd>
 <dt><a href="../io/vrap/rmf/base/client/utils/CompletableFutureUtils.html#recoverWith(java.util.concurrent.CompletionStage,java.util.function.Function)" class="member-name-link">recoverWith(CompletionStage&lt;T&gt;, Function&lt;? super Throwable, CompletionStage&lt;T&gt;&gt;)</a> - Static method in class io.vrap.rmf.base.client.utils.<a href="../io/vrap/rmf/base/client/utils/CompletableFutureUtils.html" title="class in io.vrap.rmf.base.client.utils">CompletableFutureUtils</a></dt>
 <dd>
-<div class="block">Creates a <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletionStage.html" title="class or interface in java.util.concurrent" class="external-link"><code>CompletionStage</code></a> which can be recovered if an error occurs.</div>
+<div class="block">Creates a <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletionStage.html" title="class or interface in java.util.concurrent" class="external-link"><code>CompletionStage</code></a> which can be recovered if an error occurs.</div>
 </dd>
 <dt><a href="../io/vrap/rmf/base/client/utils/CompletableFutureUtils.html#recoverWith(java.util.concurrent.CompletionStage,java.util.function.Function,java.util.concurrent.Executor)" class="member-name-link">recoverWith(CompletionStage&lt;T&gt;, Function&lt;? super Throwable, CompletionStage&lt;T&gt;&gt;, Executor)</a> - Static method in class io.vrap.rmf.base.client.utils.<a href="../io/vrap/rmf/base/client/utils/CompletableFutureUtils.html" title="class in io.vrap.rmf.base.client.utils">CompletableFutureUtils</a></dt>
 <dd>
-<div class="block">Creates a <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletionStage.html" title="class or interface in java.util.concurrent" class="external-link"><code>CompletionStage</code></a> which can be recovered if an error occurs by executing a function in a certain thread pool.</div>
+<div class="block">Creates a <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletionStage.html" title="class or interface in java.util.concurrent" class="external-link"><code>CompletionStage</code></a> which can be recovered if an error occurs by executing a function in a certain thread pool.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/Referencable.html" class="type-name-link" title="interface in com.commercetools.api.models">Referencable</a>&lt;<a href="../com/commercetools/api/models/Referencable.html" title="type parameter in Referencable">T</a> extends <a href="../com/commercetools/api/models/Referencable.html" title="interface in com.commercetools.api.models">Referencable</a>&lt;<a href="../com/commercetools/api/models/Referencable.html" title="type parameter in Referencable">T</a>&gt;&gt; - Interface in <a href="../com/commercetools/api/models/package-summary.html">com.commercetools.api.models</a></dt>
 <dd>
@@ -3088,6 +3088,20 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">New requesters to set for the Approval Rule.</div>
 </dd>
+<dt><a href="../io/vrap/rmf/base/client/http/RequestPolicyBuilder.html" class="type-name-link" title="class in io.vrap.rmf.base.client.http">RequestPolicyBuilder</a> - Class in <a href="../io/vrap/rmf/base/client/http/package-summary.html">io.vrap.rmf.base.client.http</a></dt>
+<dd>
+<div class="block">RequestPolicyBuilder</div>
+</dd>
+<dt><a href="../io/vrap/rmf/base/client/http/RequestPolicyBuilder.html#%3Cinit%3E()" class="member-name-link">RequestPolicyBuilder()</a> - Constructor for class io.vrap.rmf.base.client.http.<a href="../io/vrap/rmf/base/client/http/RequestPolicyBuilder.html" title="class in io.vrap.rmf.base.client.http">RequestPolicyBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../io/vrap/rmf/base/client/http/RequestPolicyBuilder.html#%3Cinit%3E(dev.failsafe.spi.Scheduler,java.util.Map)" class="member-name-link">RequestPolicyBuilder(Scheduler, Map&lt;Predicate&lt;ApiHttpRequest&gt;, List&lt;Policy&lt;ApiHttpResponse&lt;byte[]&gt;&gt;&gt;&gt;)</a> - Constructor for class io.vrap.rmf.base.client.http.<a href="../io/vrap/rmf/base/client/http/RequestPolicyBuilder.html" title="class in io.vrap.rmf.base.client.http">RequestPolicyBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../io/vrap/rmf/base/client/http/RequestPolicyBuilder.html#%3Cinit%3E(java.util.Map)" class="member-name-link">RequestPolicyBuilder(Map&lt;Predicate&lt;ApiHttpRequest&gt;, List&lt;Policy&lt;ApiHttpResponse&lt;byte[]&gt;&gt;&gt;&gt;)</a> - Constructor for class io.vrap.rmf.base.client.http.<a href="../io/vrap/rmf/base/client/http/RequestPolicyBuilder.html" title="class in io.vrap.rmf.base.client.http">RequestPolicyBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../io/vrap/rmf/base/client/http/RequestPolicyMiddlewareImpl.html" class="type-name-link" title="class in io.vrap.rmf.base.client.http">RequestPolicyMiddlewareImpl</a> - Class in <a href="../io/vrap/rmf/base/client/http/package-summary.html">io.vrap.rmf.base.client.http</a></dt>
+<dd>
+<div class="block">Implementation for a failsafe requests handling</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/quote/QuoteUpdateAction.html#requestQuoteRenegotiationBuilder()" class="member-name-link">requestQuoteRenegotiationBuilder()</a> - Static method in interface com.commercetools.api.models.quote.<a href="../com/commercetools/api/models/quote/QuoteUpdateAction.html" title="interface in com.commercetools.api.models.quote">QuoteUpdateAction</a></dt>
 <dd>
 <div class="block">builder for requestQuoteRenegotiation subtype</div>
@@ -3343,6 +3357,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/predicates/expansion/message/BusinessUnitStoreRemovedMessageExpansionBuilderDsl.html#resource()" class="member-name-link">resource()</a> - Method in class com.commercetools.api.predicates.expansion.message.<a href="../com/commercetools/api/predicates/expansion/message/BusinessUnitStoreRemovedMessageExpansionBuilderDsl.html" title="class in com.commercetools.api.predicates.expansion.message">BusinessUnitStoreRemovedMessageExpansionBuilderDsl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/predicates/expansion/message/BusinessUnitStoresSetMessageExpansionBuilderDsl.html#resource()" class="member-name-link">resource()</a> - Method in class com.commercetools.api.predicates.expansion.message.<a href="../com/commercetools/api/predicates/expansion/message/BusinessUnitStoresSetMessageExpansionBuilderDsl.html" title="class in com.commercetools.api.predicates.expansion.message">BusinessUnitStoresSetMessageExpansionBuilderDsl</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/predicates/expansion/message/BusinessUnitTopLevelUnitSetMessageExpansionBuilderDsl.html#resource()" class="member-name-link">resource()</a> - Method in class com.commercetools.api.predicates.expansion.message.<a href="../com/commercetools/api/predicates/expansion/message/BusinessUnitTopLevelUnitSetMessageExpansionBuilderDsl.html" title="class in com.commercetools.api.predicates.expansion.message">BusinessUnitTopLevelUnitSetMessageExpansionBuilderDsl</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/predicates/expansion/message/BusinessUnitTypeSetMessageExpansionBuilderDsl.html#resource()" class="member-name-link">resource()</a> - Method in class com.commercetools.api.predicates.expansion.message.<a href="../com/commercetools/api/predicates/expansion/message/BusinessUnitTypeSetMessageExpansionBuilderDsl.html" title="class in com.commercetools.api.predicates.expansion.message">BusinessUnitTypeSetMessageExpansionBuilderDsl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/predicates/expansion/message/CartDiscountCreatedMessageExpansionBuilderDsl.html#resource()" class="member-name-link">resource()</a> - Method in class com.commercetools.api.predicates.expansion.message.<a href="../com/commercetools/api/predicates/expansion/message/CartDiscountCreatedMessageExpansionBuilderDsl.html" title="class in com.commercetools.api.predicates.expansion.message">CartDiscountCreatedMessageExpansionBuilderDsl</a></dt>
 <dd>&nbsp;</dd>
@@ -3959,6 +3977,14 @@ loadScripts(document, 'script');</script>
 <div class="block">Reference to the resource on which the change or action was performed.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/BusinessUnitStoresSetMessageBuilder.html#resource(com.commercetools.api.models.common.Reference)" class="member-name-link">resource(Reference)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitStoresSetMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitStoresSetMessageBuilder</a></dt>
+<dd>
+<div class="block">Reference to the resource on which the change or action was performed.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitTopLevelUnitSetMessageBuilder.html#resource(com.commercetools.api.models.common.Reference)" class="member-name-link">resource(Reference)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitTopLevelUnitSetMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitTopLevelUnitSetMessageBuilder</a></dt>
+<dd>
+<div class="block">Reference to the resource on which the change or action was performed.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitTypeSetMessageBuilder.html#resource(com.commercetools.api.models.common.Reference)" class="member-name-link">resource(Reference)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitTypeSetMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitTypeSetMessageBuilder</a></dt>
 <dd>
 <div class="block">Reference to the resource on which the change or action was performed.</div>
 </dd>
@@ -5006,6 +5032,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Reference to the resource on which the change or action was performed.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitTopLevelUnitSetMessageBuilder.html#resource(java.util.function.Function)" class="member-name-link">resource(Function&lt;ReferenceBuilder, Builder&lt;? extends Reference&gt;&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitTopLevelUnitSetMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitTopLevelUnitSetMessageBuilder</a></dt>
+<dd>
+<div class="block">Reference to the resource on which the change or action was performed.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitTypeSetMessageBuilder.html#resource(java.util.function.Function)" class="member-name-link">resource(Function&lt;ReferenceBuilder, Builder&lt;? extends Reference&gt;&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitTypeSetMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitTypeSetMessageBuilder</a></dt>
+<dd>
+<div class="block">Reference to the resource on which the change or action was performed.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/message/CartDiscountCreatedMessageBuilder.html#resource(java.util.function.Function)" class="member-name-link">resource(Function&lt;ReferenceBuilder, Builder&lt;? extends Reference&gt;&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CartDiscountCreatedMessageBuilder.html" title="class in com.commercetools.api.models.message">CartDiscountCreatedMessageBuilder</a></dt>
 <dd>
 <div class="block">Reference to the resource on which the change or action was performed.</div>
@@ -5858,11 +5892,11 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">discriminator value for ResourceUpdatedDeliveryPayload</div>
 </dd>
-<dt><a href="../com/commercetools/api/models/subscription/DeliveryPayload.html#resourceCreatedBuilder()" class="member-name-link">resourceCreatedBuilder()</a> - Static method in interface com.commercetools.api.models.subscription.<a href="../com/commercetools/api/models/subscription/DeliveryPayload.html" title="interface in com.commercetools.api.models.subscription">DeliveryPayload</a></dt>
+<dt><a href="../com/commercetools/api/models/subscription/SubscriptionNotification.html#resourceCreatedBuilder()" class="member-name-link">resourceCreatedBuilder()</a> - Static method in interface com.commercetools.api.models.subscription.<a href="../com/commercetools/api/models/subscription/SubscriptionNotification.html" title="interface in com.commercetools.api.models.subscription">SubscriptionNotification</a></dt>
 <dd>
 <div class="block">builder for resourceCreated subtype</div>
 </dd>
-<dt><a href="../com/commercetools/api/models/subscription/DeliveryPayloadBuilder.html#resourceCreatedBuilder()" class="member-name-link">resourceCreatedBuilder()</a> - Method in class com.commercetools.api.models.subscription.<a href="../com/commercetools/api/models/subscription/DeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">DeliveryPayloadBuilder</a></dt>
+<dt><a href="../com/commercetools/api/models/subscription/SubscriptionNotificationBuilder.html#resourceCreatedBuilder()" class="member-name-link">resourceCreatedBuilder()</a> - Method in class com.commercetools.api.models.subscription.<a href="../com/commercetools/api/models/subscription/SubscriptionNotificationBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionNotificationBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/subscription/ResourceCreatedDelivery.html" class="type-name-link" title="interface in com.commercetools.api.models.subscription">ResourceCreatedDelivery</a> - Interface in <a href="../com/commercetools/api/models/subscription/package-summary.html">com.commercetools.api.models.subscription</a></dt>
 <dd>
@@ -5916,11 +5950,11 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/importapi/models/errors/ResourceCreationErrorBuilder.html#%3Cinit%3E()" class="member-name-link">ResourceCreationErrorBuilder()</a> - Constructor for class com.commercetools.importapi.models.errors.<a href="../com/commercetools/importapi/models/errors/ResourceCreationErrorBuilder.html" title="class in com.commercetools.importapi.models.errors">ResourceCreationErrorBuilder</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="../com/commercetools/api/models/subscription/DeliveryPayload.html#resourceDeletedBuilder()" class="member-name-link">resourceDeletedBuilder()</a> - Static method in interface com.commercetools.api.models.subscription.<a href="../com/commercetools/api/models/subscription/DeliveryPayload.html" title="interface in com.commercetools.api.models.subscription">DeliveryPayload</a></dt>
+<dt><a href="../com/commercetools/api/models/subscription/SubscriptionNotification.html#resourceDeletedBuilder()" class="member-name-link">resourceDeletedBuilder()</a> - Static method in interface com.commercetools.api.models.subscription.<a href="../com/commercetools/api/models/subscription/SubscriptionNotification.html" title="interface in com.commercetools.api.models.subscription">SubscriptionNotification</a></dt>
 <dd>
 <div class="block">builder for resourceDeleted subtype</div>
 </dd>
-<dt><a href="../com/commercetools/api/models/subscription/DeliveryPayloadBuilder.html#resourceDeletedBuilder()" class="member-name-link">resourceDeletedBuilder()</a> - Method in class com.commercetools.api.models.subscription.<a href="../com/commercetools/api/models/subscription/DeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">DeliveryPayloadBuilder</a></dt>
+<dt><a href="../com/commercetools/api/models/subscription/SubscriptionNotificationBuilder.html#resourceDeletedBuilder()" class="member-name-link">resourceDeletedBuilder()</a> - Method in class com.commercetools.api.models.subscription.<a href="../com/commercetools/api/models/subscription/SubscriptionNotificationBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionNotificationBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/subscription/ResourceDeletedDelivery.html" class="type-name-link" title="interface in com.commercetools.api.models.subscription">ResourceDeletedDelivery</a> - Interface in <a href="../com/commercetools/api/models/subscription/package-summary.html">com.commercetools.api.models.subscription</a></dt>
 <dd>
@@ -6186,6 +6220,34 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/error/ResourceSizeLimitExceededErrorBuilder.html#%3Cinit%3E()" class="member-name-link">ResourceSizeLimitExceededErrorBuilder()</a> - Constructor for class com.commercetools.api.models.error.<a href="../com/commercetools/api/models/error/ResourceSizeLimitExceededErrorBuilder.html" title="class in com.commercetools.api.models.error">ResourceSizeLimitExceededErrorBuilder</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/event/BaseEventBuilder.html#resourceType(com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId)" class="member-name-link">resourceType(EventSubscriptionResourceTypeId)</a> - Method in class com.commercetools.api.models.event.<a href="../com/commercetools/api/models/event/BaseEventBuilder.html" title="class in com.commercetools.api.models.event">BaseEventBuilder</a></dt>
+<dd>
+<div class="block">The type of resource targeted by the Event.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/event/ImportContainerCreatedEventBuilder.html#resourceType(com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId)" class="member-name-link">resourceType(EventSubscriptionResourceTypeId)</a> - Method in class com.commercetools.api.models.event.<a href="../com/commercetools/api/models/event/ImportContainerCreatedEventBuilder.html" title="class in com.commercetools.api.models.event">ImportContainerCreatedEventBuilder</a></dt>
+<dd>
+<div class="block">set the value to the resourceType</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/event/ImportContainerDeletedEventBuilder.html#resourceType(com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId)" class="member-name-link">resourceType(EventSubscriptionResourceTypeId)</a> - Method in class com.commercetools.api.models.event.<a href="../com/commercetools/api/models/event/ImportContainerDeletedEventBuilder.html" title="class in com.commercetools.api.models.event">ImportContainerDeletedEventBuilder</a></dt>
+<dd>
+<div class="block">set the value to the resourceType</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/event/ImportOperationRejectedEventBuilder.html#resourceType(com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId)" class="member-name-link">resourceType(EventSubscriptionResourceTypeId)</a> - Method in class com.commercetools.api.models.event.<a href="../com/commercetools/api/models/event/ImportOperationRejectedEventBuilder.html" title="class in com.commercetools.api.models.event">ImportOperationRejectedEventBuilder</a></dt>
+<dd>
+<div class="block">set the value to the resourceType</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/event/ImportUnresolvedEventBuilder.html#resourceType(com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId)" class="member-name-link">resourceType(EventSubscriptionResourceTypeId)</a> - Method in class com.commercetools.api.models.event.<a href="../com/commercetools/api/models/event/ImportUnresolvedEventBuilder.html" title="class in com.commercetools.api.models.event">ImportUnresolvedEventBuilder</a></dt>
+<dd>
+<div class="block">set the value to the resourceType</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/event/ImportValidationFailedEventBuilder.html#resourceType(com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId)" class="member-name-link">resourceType(EventSubscriptionResourceTypeId)</a> - Method in class com.commercetools.api.models.event.<a href="../com/commercetools/api/models/event/ImportValidationFailedEventBuilder.html" title="class in com.commercetools.api.models.event">ImportValidationFailedEventBuilder</a></dt>
+<dd>
+<div class="block">set the value to the resourceType</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/event/ImportWaitForMasterVariantEventBuilder.html#resourceType(com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId)" class="member-name-link">resourceType(EventSubscriptionResourceTypeId)</a> - Method in class com.commercetools.api.models.event.<a href="../com/commercetools/api/models/event/ImportWaitForMasterVariantEventBuilder.html" title="class in com.commercetools.api.models.event">ImportWaitForMasterVariantEventBuilder</a></dt>
+<dd>
+<div class="block">set the value to the resourceType</div>
+</dd>
 <dt><a href="../com/commercetools/importapi/models/importcontainers/ImportContainerBuilder.html#resourceType(com.commercetools.importapi.models.common.ImportResourceType)" class="member-name-link">resourceType(ImportResourceType)</a> - Method in class com.commercetools.importapi.models.importcontainers.<a href="../com/commercetools/importapi/models/importcontainers/ImportContainerBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerBuilder</a></dt>
 <dd>
 <div class="block">The resource type the ImportContainer is able to handle.</div>
@@ -6198,6 +6260,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">The resource type to be imported.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/subscription/EventDeliveryPayloadBuilder.html#resourceType(java.lang.String)" class="member-name-link">resourceType(String)</a> - Method in class com.commercetools.api.models.subscription.<a href="../com/commercetools/api/models/subscription/EventDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">EventDeliveryPayloadBuilder</a></dt>
+<dd>
+<div class="block">The type of resource targeted by the Event.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/extension/ExtensionTriggerBuilder.html#resourceTypeId(com.commercetools.api.models.extension.ExtensionResourceTypeId)" class="member-name-link">resourceTypeId(ExtensionResourceTypeId)</a> - Method in class com.commercetools.api.models.extension.<a href="../com/commercetools/api/models/extension/ExtensionTriggerBuilder.html" title="class in com.commercetools.api.models.extension">ExtensionTriggerBuilder</a></dt>
 <dd>
 <div class="block">The resource that triggers the Extension.</div>
@@ -6205,6 +6271,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/models/subscription/ChangeSubscriptionBuilder.html#resourceTypeId(com.commercetools.api.models.subscription.ChangeSubscriptionResourceTypeId)" class="member-name-link">resourceTypeId(ChangeSubscriptionResourceTypeId)</a> - Method in class com.commercetools.api.models.subscription.<a href="../com/commercetools/api/models/subscription/ChangeSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">ChangeSubscriptionBuilder</a></dt>
 <dd>
 <div class="block">Unique identifier for the type of resource, for example, <code>cart</code>.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/subscription/EventSubscriptionBuilder.html#resourceTypeId(com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId)" class="member-name-link">resourceTypeId(EventSubscriptionResourceTypeId)</a> - Method in class com.commercetools.api.models.subscription.<a href="../com/commercetools/api/models/subscription/EventSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">EventSubscriptionBuilder</a></dt>
+<dd>
+<div class="block">Unique identifier for the type of resource, for example, <code>import-api</code>.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/subscription/MessageSubscriptionBuilder.html#resourceTypeId(com.commercetools.api.models.subscription.MessageSubscriptionResourceTypeId)" class="member-name-link">resourceTypeId(MessageSubscriptionResourceTypeId)</a> - Method in class com.commercetools.api.models.subscription.<a href="../com/commercetools/api/models/subscription/MessageSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">MessageSubscriptionBuilder</a></dt>
 <dd>
@@ -6260,11 +6330,11 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/importapi/models/errors/ErrorObjectBuilder.html#resourceUpdateBuilder()" class="member-name-link">resourceUpdateBuilder()</a> - Method in class com.commercetools.importapi.models.errors.<a href="../com/commercetools/importapi/models/errors/ErrorObjectBuilder.html" title="class in com.commercetools.importapi.models.errors">ErrorObjectBuilder</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="../com/commercetools/api/models/subscription/DeliveryPayload.html#resourceUpdatedBuilder()" class="member-name-link">resourceUpdatedBuilder()</a> - Static method in interface com.commercetools.api.models.subscription.<a href="../com/commercetools/api/models/subscription/DeliveryPayload.html" title="interface in com.commercetools.api.models.subscription">DeliveryPayload</a></dt>
+<dt><a href="../com/commercetools/api/models/subscription/SubscriptionNotification.html#resourceUpdatedBuilder()" class="member-name-link">resourceUpdatedBuilder()</a> - Static method in interface com.commercetools.api.models.subscription.<a href="../com/commercetools/api/models/subscription/SubscriptionNotification.html" title="interface in com.commercetools.api.models.subscription">SubscriptionNotification</a></dt>
 <dd>
 <div class="block">builder for resourceUpdated subtype</div>
 </dd>
-<dt><a href="../com/commercetools/api/models/subscription/DeliveryPayloadBuilder.html#resourceUpdatedBuilder()" class="member-name-link">resourceUpdatedBuilder()</a> - Method in class com.commercetools.api.models.subscription.<a href="../com/commercetools/api/models/subscription/DeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">DeliveryPayloadBuilder</a></dt>
+<dt><a href="../com/commercetools/api/models/subscription/SubscriptionNotificationBuilder.html#resourceUpdatedBuilder()" class="member-name-link">resourceUpdatedBuilder()</a> - Method in class com.commercetools.api.models.subscription.<a href="../com/commercetools/api/models/subscription/SubscriptionNotificationBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionNotificationBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/subscription/ResourceUpdatedDelivery.html" class="type-name-link" title="interface in com.commercetools.api.models.subscription">ResourceUpdatedDelivery</a> - Interface in <a href="../com/commercetools/api/models/subscription/package-summary.html">com.commercetools.api.models.subscription</a></dt>
 <dd>
@@ -6525,6 +6595,14 @@ loadScripts(document, 'script');</script>
 <div class="block">User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/BusinessUnitStoresSetMessageBuilder.html#resourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers)" class="member-name-link">resourceUserProvidedIdentifiers(UserProvidedIdentifiers)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitStoresSetMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitStoresSetMessageBuilder</a></dt>
+<dd>
+<div class="block">User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitTopLevelUnitSetMessageBuilder.html#resourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers)" class="member-name-link">resourceUserProvidedIdentifiers(UserProvidedIdentifiers)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitTopLevelUnitSetMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitTopLevelUnitSetMessageBuilder</a></dt>
+<dd>
+<div class="block">User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitTypeSetMessageBuilder.html#resourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers)" class="member-name-link">resourceUserProvidedIdentifiers(UserProvidedIdentifiers)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitTypeSetMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitTypeSetMessageBuilder</a></dt>
 <dd>
 <div class="block">User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>.</div>
 </dd>
@@ -7540,6 +7618,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitTopLevelUnitSetMessageBuilder.html#resourceUserProvidedIdentifiers(java.util.function.Function)" class="member-name-link">resourceUserProvidedIdentifiers(Function&lt;UserProvidedIdentifiersBuilder, UserProvidedIdentifiersBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitTopLevelUnitSetMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitTopLevelUnitSetMessageBuilder</a></dt>
+<dd>
+<div class="block">User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitTypeSetMessageBuilder.html#resourceUserProvidedIdentifiers(java.util.function.Function)" class="member-name-link">resourceUserProvidedIdentifiers(Function&lt;UserProvidedIdentifiersBuilder, UserProvidedIdentifiersBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitTypeSetMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitTypeSetMessageBuilder</a></dt>
+<dd>
+<div class="block">User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/message/CartDiscountCreatedMessageBuilder.html#resourceUserProvidedIdentifiers(java.util.function.Function)" class="member-name-link">resourceUserProvidedIdentifiers(Function&lt;UserProvidedIdentifiersBuilder, UserProvidedIdentifiersBuilder&gt;)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/CartDiscountCreatedMessageBuilder.html" title="class in com.commercetools.api.models.message">CartDiscountCreatedMessageBuilder</a></dt>
 <dd>
 <div class="block">User-provided identifiers of the resource, such as <code>key</code> or <code>externalId</code>.</div>
@@ -8549,6 +8635,14 @@ loadScripts(document, 'script');</script>
 <div class="block">Version of the resource on which the change or action was performed.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/message/BusinessUnitStoresSetMessageBuilder.html#resourceVersion(java.lang.Long)" class="member-name-link">resourceVersion(Long)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitStoresSetMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitStoresSetMessageBuilder</a></dt>
+<dd>
+<div class="block">Version of the resource on which the change or action was performed.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitTopLevelUnitSetMessageBuilder.html#resourceVersion(java.lang.Long)" class="member-name-link">resourceVersion(Long)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitTopLevelUnitSetMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitTopLevelUnitSetMessageBuilder</a></dt>
+<dd>
+<div class="block">Version of the resource on which the change or action was performed.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/message/BusinessUnitTypeSetMessageBuilder.html#resourceVersion(java.lang.Long)" class="member-name-link">resourceVersion(Long)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/BusinessUnitTypeSetMessageBuilder.html" title="class in com.commercetools.api.models.message">BusinessUnitTypeSetMessageBuilder</a></dt>
 <dd>
 <div class="block">Version of the resource on which the change or action was performed.</div>
 </dd>

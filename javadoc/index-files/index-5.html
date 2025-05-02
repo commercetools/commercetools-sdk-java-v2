@@ -2648,7 +2648,7 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../io/vrap/rmf/base/client/AutoCloseableService.html#equals(java.lang.Object)" class="member-name-link">equals(Object)</a> - Method in class io.vrap.rmf.base.client.<a href="../io/vrap/rmf/base/client/AutoCloseableService.html" title="class in io.vrap.rmf.base.client">AutoCloseableService</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="../io/vrap/rmf/base/client/BodyApiMethod.html#equals(java.lang.Object)" class="member-name-link">equals(Object)</a> - Method in class io.vrap.rmf.base.client.<a href="../io/vrap/rmf/base/client/BodyApiMethod.html" title="class in io.vrap.rmf.base.client">BodyApiMethod</a></dt>
+<dt><a href="../io/vrap/rmf/base/client/StringBodyApiMethod.html#equals(java.lang.Object)" class="member-name-link">equals(Object)</a> - Method in class io.vrap.rmf.base.client.<a href="../io/vrap/rmf/base/client/StringBodyApiMethod.html" title="class in io.vrap.rmf.base.client">StringBodyApiMethod</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/common/BaseAddressMixin.html#equalsIgnoreId(com.commercetools.api.models.common.BaseAddress)" class="member-name-link">equalsIgnoreId(BaseAddress)</a> - Method in interface com.commercetools.api.models.common.<a href="../com/commercetools/api/models/common/BaseAddressMixin.html" title="interface in com.commercetools.api.models.common">BaseAddressMixin</a></dt>
 <dd>&nbsp;</dd>
@@ -2917,6 +2917,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Distributes the Discount evenly across eligible Line Items or Custom Line Items.</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/event/Event.html" class="type-name-link" title="interface in com.commercetools.api.models.event">Event</a> - Interface in <a href="../com/commercetools/api/models/event/package-summary.html">com.commercetools.api.models.event</a></dt>
+<dd>
+<div class="block">Base representation of an Event containing common fields to all Event Types.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/subscription/EventDeliveryPayload.html#EVENT" class="member-name-link">EVENT</a> - Static variable in interface com.commercetools.api.models.subscription.<a href="../com/commercetools/api/models/subscription/EventDeliveryPayload.html" title="interface in com.commercetools.api.models.subscription">EventDeliveryPayload</a></dt>
+<dd>
+<div class="block">discriminator value for EventDeliveryPayload</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/subscription/EventBridgeDestination.html#EVENT_BRIDGE" class="member-name-link">EVENT_BRIDGE</a> - Static variable in interface com.commercetools.api.models.subscription.<a href="../com/commercetools/api/models/subscription/EventBridgeDestination.html" title="interface in com.commercetools.api.models.subscription">EventBridgeDestination</a></dt>
 <dd>
 <div class="block">discriminator value for EventBridgeDestination</div>
@@ -2944,12 +2952,82 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/subscription/EventBridgeDestinationBuilder.html#%3Cinit%3E()" class="member-name-link">EventBridgeDestinationBuilder()</a> - Constructor for class com.commercetools.api.models.subscription.<a href="../com/commercetools/api/models/subscription/EventBridgeDestinationBuilder.html" title="class in com.commercetools.api.models.subscription">EventBridgeDestinationBuilder</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/subscription/SubscriptionNotification.html#eventBuilder()" class="member-name-link">eventBuilder()</a> - Static method in interface com.commercetools.api.models.subscription.<a href="../com/commercetools/api/models/subscription/SubscriptionNotification.html" title="interface in com.commercetools.api.models.subscription">SubscriptionNotification</a></dt>
+<dd>
+<div class="block">builder for event subtype</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/subscription/SubscriptionNotificationBuilder.html#eventBuilder()" class="member-name-link">eventBuilder()</a> - Method in class com.commercetools.api.models.subscription.<a href="../com/commercetools/api/models/subscription/SubscriptionNotificationBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionNotificationBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/event/EventBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.event">EventBuilder</a> - Class in <a href="../com/commercetools/api/models/event/package-summary.html">com.commercetools.api.models.event</a></dt>
+<dd>
+<div class="block">EventBuilder</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/event/EventBuilder.html#%3Cinit%3E()" class="member-name-link">EventBuilder()</a> - Constructor for class com.commercetools.api.models.event.<a href="../com/commercetools/api/models/event/EventBuilder.html" title="class in com.commercetools.api.models.event">EventBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/subscription/EventDeliveryPayload.html" class="type-name-link" title="interface in com.commercetools.api.models.subscription">EventDeliveryPayload</a> - Interface in <a href="../com/commercetools/api/models/subscription/package-summary.html">com.commercetools.api.models.subscription</a></dt>
+<dd>
+<div class="block">This payload is sent for an EventSubscription.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/subscription/EventDeliveryPayloadBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.subscription">EventDeliveryPayloadBuilder</a> - Class in <a href="../com/commercetools/api/models/subscription/package-summary.html">com.commercetools.api.models.subscription</a></dt>
+<dd>
+<div class="block">EventDeliveryPayloadBuilder
+ 
+ Example to create an instance using the builder pattern
+ </div>
+</dd>
+<dt><a href="../com/commercetools/api/models/subscription/EventDeliveryPayloadBuilder.html#%3Cinit%3E()" class="member-name-link">EventDeliveryPayloadBuilder()</a> - Constructor for class com.commercetools.api.models.subscription.<a href="../com/commercetools/api/models/subscription/EventDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">EventDeliveryPayloadBuilder</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/subscription/Destination.html#eventGridBuilder()" class="member-name-link">eventGridBuilder()</a> - Static method in interface com.commercetools.api.models.subscription.<a href="../com/commercetools/api/models/subscription/Destination.html" title="interface in com.commercetools.api.models.subscription">Destination</a></dt>
 <dd>
 <div class="block">builder for eventGrid subtype</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/subscription/DestinationBuilder.html#eventGridBuilder()" class="member-name-link">eventGridBuilder()</a> - Method in class com.commercetools.api.models.subscription.<a href="../com/commercetools/api/models/subscription/DestinationBuilder.html" title="class in com.commercetools.api.models.subscription">DestinationBuilder</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/subscription/SubscriptionBuilder.html#events(com.commercetools.api.models.subscription.EventSubscription...)" class="member-name-link">events(EventSubscription...)</a> - Method in class com.commercetools.api.models.subscription.<a href="../com/commercetools/api/models/subscription/SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></dt>
+<dd>
+<div class="block">Events subscribed to.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/subscription/SubscriptionDraftBuilder.html#events(com.commercetools.api.models.subscription.EventSubscription...)" class="member-name-link">events(EventSubscription...)</a> - Method in class com.commercetools.api.models.subscription.<a href="../com/commercetools/api/models/subscription/SubscriptionDraftBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionDraftBuilder</a></dt>
+<dd>
+<div class="block">Events to be subscribed to.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/subscription/SubscriptionBuilder.html#events(java.util.List)" class="member-name-link">events(List&lt;EventSubscription&gt;)</a> - Method in class com.commercetools.api.models.subscription.<a href="../com/commercetools/api/models/subscription/SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></dt>
+<dd>
+<div class="block">Events subscribed to.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/subscription/SubscriptionDraftBuilder.html#events(java.util.List)" class="member-name-link">events(List&lt;EventSubscription&gt;)</a> - Method in class com.commercetools.api.models.subscription.<a href="../com/commercetools/api/models/subscription/SubscriptionDraftBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionDraftBuilder</a></dt>
+<dd>
+<div class="block">Events to be subscribed to.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/subscription/EventSubscription.html" class="type-name-link" title="interface in com.commercetools.api.models.subscription">EventSubscription</a> - Interface in <a href="../com/commercetools/api/models/subscription/package-summary.html">com.commercetools.api.models.subscription</a></dt>
+<dd>
+<div class="block">For EventSubscription, the format of the payload is custom for each specific notification.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/subscription/EventSubscriptionBuilder.html" class="type-name-link" title="class in com.commercetools.api.models.subscription">EventSubscriptionBuilder</a> - Class in <a href="../com/commercetools/api/models/subscription/package-summary.html">com.commercetools.api.models.subscription</a></dt>
+<dd>
+<div class="block">EventSubscriptionBuilder
+ 
+ Example to create an instance using the builder pattern
+ </div>
+</dd>
+<dt><a href="../com/commercetools/api/models/subscription/EventSubscriptionBuilder.html#%3Cinit%3E()" class="member-name-link">EventSubscriptionBuilder()</a> - Constructor for class com.commercetools.api.models.subscription.<a href="../com/commercetools/api/models/subscription/EventSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">EventSubscriptionBuilder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/subscription/EventSubscriptionResourceTypeId.html" class="type-name-link" title="interface in com.commercetools.api.models.subscription">EventSubscriptionResourceTypeId</a> - Interface in <a href="../com/commercetools/api/models/subscription/package-summary.html">com.commercetools.api.models.subscription</a></dt>
+<dd>
+<div class="block">Resource types supported by EventSubscriptions.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/subscription/EventSubscriptionResourceTypeId.EventSubscriptionResourceTypeIdEnum.html" class="type-name-link" title="enum in com.commercetools.api.models.subscription">EventSubscriptionResourceTypeId.EventSubscriptionResourceTypeIdEnum</a> - Enum in <a href="../com/commercetools/api/models/subscription/package-summary.html">com.commercetools.api.models.subscription</a></dt>
+<dd>
+<div class="block">possible values of EventSubscriptionResourceTypeId</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/subscription/EventType.html" class="type-name-link" title="interface in com.commercetools.api.models.subscription">EventType</a> - Interface in <a href="../com/commercetools/api/models/subscription/package-summary.html">com.commercetools.api.models.subscription</a></dt>
+<dd>
+<div class="block">Type of events supported by EventSubscriptions.</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/subscription/EventType.EventTypeEnum.html" class="type-name-link" title="enum in com.commercetools.api.models.subscription">EventType.EventTypeEnum</a> - Enum in <a href="../com/commercetools/api/models/subscription/package-summary.html">com.commercetools.api.models.subscription</a></dt>
+<dd>
+<div class="block">possible values of EventType</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/order/OrderSearchExactExpressionBuilder.html#exact(com.commercetools.api.models.order.OrderSearchAnyValue)" class="member-name-link">exact(OrderSearchAnyValue)</a> - Method in class com.commercetools.api.models.order.<a href="../com/commercetools/api/models/order/OrderSearchExactExpressionBuilder.html" title="class in com.commercetools.api.models.order">OrderSearchExactExpressionBuilder</a></dt>
 <dd>
 <div class="block">set the value to the exact</div>
@@ -2980,11 +3058,11 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../io/vrap/rmf/base/client/utils/ExceptionalFunction.html" class="type-name-link" title="interface in io.vrap.rmf.base.client.utils">ExceptionalFunction</a>&lt;<a href="../io/vrap/rmf/base/client/utils/ExceptionalFunction.html" title="type parameter in ExceptionalFunction">T</a>,<wbr><a href="../io/vrap/rmf/base/client/utils/ExceptionalFunction.html" title="type parameter in ExceptionalFunction">R</a>&gt; - Interface in <a href="../io/vrap/rmf/base/client/utils/package-summary.html">io.vrap.rmf.base.client.utils</a></dt>
 <dd>
-<div class="block">A function like <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link"><code>Function</code></a> but allows you to throw exception</div>
+<div class="block">A function like <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link"><code>Function</code></a> but allows you to throw exception</div>
 </dd>
 <dt><a href="../io/vrap/rmf/base/client/utils/CompletableFutureUtils.html#exceptionallyCompletedFuture(java.lang.Throwable)" class="member-name-link">exceptionallyCompletedFuture(Throwable)</a> - Static method in class io.vrap.rmf.base.client.utils.<a href="../io/vrap/rmf/base/client/utils/CompletableFutureUtils.html" title="class in io.vrap.rmf.base.client.utils">CompletableFutureUtils</a></dt>
 <dd>
-<div class="block">Creates a <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link"><code>CompletableFuture</code></a> which is completed exceptionally with the given Exception.</div>
+<div class="block">Creates a <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link"><code>CompletableFuture</code></a> which is completed exceptionally with the given Exception.</div>
 </dd>
 <dt><a href="../com/commercetools/docs/meta/ExceptionDocumentation.html" class="type-name-link" title="class in com.commercetools.docs.meta">ExceptionDocumentation</a> - Class in <a href="../com/commercetools/docs/meta/package-summary.html">com.commercetools.docs.meta</a></dt>
 <dd>

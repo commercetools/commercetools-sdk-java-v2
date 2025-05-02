@@ -66,14 +66,14 @@ loadScripts(document, 'script');</script>
 <div class="sub-title"><span class="package-label-in-type">Package</span>&nbsp;<a href="package-summary.html">com.commercetools.docs.meta</a></div>
 <h1 title="Class Querying" class="title">Class Querying</h1>
 </div>
-<div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
+<div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
 <div class="inheritance">com.commercetools.docs.meta.Querying</div>
 </div>
 <section class="class-description" id="class-description">
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Querying</span>
-<span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
-<div class="block"><b>Table of content</b><ul><li><a href="#querying-api">Querying the API</a></li><ul><li><a href="#predicates">Predicates</a></li><li><a href="#get-by-id">Get by id/key</a></li><li><a href="#query-all">Query all</a></li><li><a href="#sorting">Sorting</a></li><li><a href="#pagination">Pagination</a></li></ul><li><a href="#tests">Test cases</a></li></ul>
+<span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<div class="block"><b>Table of content</b><ul><li><a href="#querying-api">Querying the API</a></li><ul><li><a href="#predicates">Predicates</a></li><li><a href="#query-predicate-builder">Query Predicate Builder</a></li><ul><li>Basic Usage</li><li>Examples of Query Predicates</li></ul><li><a href="#get-by-id">Get by id/key</a></li><li><a href="#query-all">Query all</a></li><li><a href="#sorting">Sorting</a></li><li><a href="#pagination">Pagination</a></li></ul><li><a href="#tests">Test cases</a></li></ul>
  <h2 id="querying-api">Querying the API</h2>
 
  <h3 id="predicates">Predicates</h3>
@@ -125,6 +125,72 @@ apiRoot.productProjections()
         .withPredicateVar("skus", "abc")
         .addPredicateVar("skus", "def");
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/ExamplesTest.java" target="_blank">test code</a>.</pre></div>
+
+ <h3 id="query-predicate-builder">Query Predicate Builder</h3>
+
+ <p>The <a href="https://docs.commercetools.com/sdk/java-sdk-predicates">
+ Query Predicate Builder</a> offers a fluent, type-safe interface for building Query Predicates.</p>
+
+ <h4>Basic Usage</h4>
+
+ <pre><code>
+ import static com.commercetools.api.predicates.query.CustomerQueryBuilderDsl.*;
+
+ String predicate = CustomerQueryBuilderDsl.of()
+       .firstName().is("John")
+       .and()
+       .lastName().is("Doe")
+       .build();
+ </code></pre>
+
+ <h4>Examples of Query Predicates</h4>
+
+ <p>The following examples demonstrate how to use the Query Predicate builder for different scenarios. More examples can be found
+ <a href="https://github.com/commercetools/commercetools-sdk-java-v2/tree/main/commercetools/commercetools-sdk-java-api/src/test/java/com/commercetools/api/predicates/query">here</a>.</p>
+
+ <h5>Equality Comparisons</h5>
+ <pre><code>
+ CartQueryBuilderDsl.of().id().is("abc");
+ CustomerQueryBuilderDsl.of().dateOfBirth().is(LocalDate.parse("2018-10-12"));
+ TaxRateQueryBuilderDsl.of().amount().is(0.19);
+ </code></pre>
+
+ <h5>Logical Operators</h5>
+ <pre><code>
+ CartQueryBuilderDsl.of().id().is("abc").not();
+ CartQueryBuilderDsl.of().id().is("abc").and(p -&gt; p.customerId().is("def"));
+ CartQueryBuilderDsl.of().id().is("abc").or(p -&gt; p.customerId().is("def"));
+ </code></pre>
+
+ <h5>Range Comparisons</h5>
+ <pre><code>
+ CartQueryBuilderDsl.of().version().isLessThan(10L);
+ CartQueryBuilderDsl.of().version().isGreaterThan(10L);
+ TaxRateQueryBuilderDsl.of().amount().isLessThan(0.19);
+ CustomerQueryBuilderDsl.of().dateOfBirth().isGreaterThan(LocalDate.parse("2018-10-12"));
+ </code></pre>
+
+ <h5>Collection Queries</h5>
+ <pre><code>
+ CartQueryBuilderDsl.of().key().isIn(Arrays.asList("foo", "bar"));
+ TaxRateQueryBuilderDsl.of().amount().isIn(Arrays.asList(0.19, 0.20));
+ </code></pre>
+
+ <h5>Nested Queries</h5>
+ <pre><code>
+ ProductQueryBuilderDsl.of()
+   .masterData(m -&gt; m.current(c -&gt; c.slug(l -&gt; l.with(Locale.ENGLISH).is("super-product"))
+     .and(t -&gt; t.name(l -&gt; l.with(Locale.ENGLISH).is("Super Product")))));
+ </code></pre>
+
+ <h5>Special Cases</h5>
+ <pre><code>
+ CartQueryBuilderDsl.of().key().isDefined();
+ CartQueryBuilderDsl.of().key().isNotDefined();
+ CartQueryBuilderDsl.of().lineItems().isEmpty();
+ TypeQueryBuilderDsl.of().resourceTypeIds().containsAnyVar("approval-flow");
+ </code></pre>
+
 
  <h3 id="get-by-id">Get by id/key</h3>
 
@@ -206,8 +272,8 @@ apiRoot.products().get().withLimit(4).withOffset(4);
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div class="inherited-list">
-<h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
-<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-" title="class or interface in java.lang" class="external-link">wait</a></code></div>
+<h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
+<code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
 </section>
 </li>
 </ul>

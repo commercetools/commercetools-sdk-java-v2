@@ -66,13 +66,13 @@ loadScripts(document, 'script');</script>
 <div class="sub-title"><span class="package-label-in-type">Package</span>&nbsp;<a href="package-summary.html">com.commercetools.docs.meta</a></div>
 <h1 title="Class ProductAttributeDocumentation" class="title">Class ProductAttributeDocumentation</h1>
 </div>
-<div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
+<div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
 <div class="inheritance">com.commercetools.docs.meta.ProductAttributeDocumentation</div>
 </div>
 <section class="class-description" id="class-description">
 <hr>
 <div class="type-signature"><span class="modifiers">public final class </span><span class="element-name type-name-label">ProductAttributeDocumentation</span>
-<span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
 <div class="block"><b>Table of content</b><ul><li><a href="#intro">Introduction</a></li><ul><li><a href="#product-type-creation">ProductType Creation</a></li><li><a href="#product-creation">Product Creation</a></li><li><a href="#attribute-access-without-product-type">Reading Attributes</a></li><li><a href="#attribute-update">Update attribute values of a product</a></li><li><a href="#attributes-in-order-import">Create attributes for importing orders</a></li></ul></ul>
  <h2 id="intro">Introduction</h2>
  <h3 id="product-type-creation">ProductType Creation</h3>
@@ -88,7 +88,7 @@ loadScripts(document, 'script');</script>
 
  <p>The book product type contains the following attributes:</p>
  <ul>
-    <li><code>isbn</code> as <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link"><code>String</code></a>, International Standard Book Number</li>
+    <li><code>isbn</code> as <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link"><code>String</code></a>, International Standard Book Number</li>
  </ul>
 
  <p>The tshirt product type contains the following attributes:</p>
@@ -99,7 +99,7 @@ loadScripts(document, 'script');</script>
     <li><code>laundrySymbols</code> as set of <a href="../../api/models/product_type/AttributeLocalizedEnumValue.html" title="interface in com.commercetools.api.models.product_type"><code>AttributeLocalizedEnumValue</code></a> with temperature and tumble drying</li>
     <li><code>matchingProducts</code> as set of <a href="../../api/models/product/ProductReference.html" title="interface in com.commercetools.api.models.product"><code>ProductReference</code></a>s, which can point to products that are similar to the current product</li>
     <li><code>rrp</code> as <a href="../../api/models/common/Money.html" title="interface in com.commercetools.api.models.common"><code>Money</code></a> containing the recommended retail price</li>
-    <li><code>availableSince</code> as <a href="https://docs.oracle.com/javase/8/docs/api/java/time/LocalDateTime.html" title="class or interface in java.time" class="external-link"><code>LocalDateTime</code></a> which contains the date since when the product is available for the customer in the shop</li>
+    <li><code>availableSince</code> as <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/LocalDateTime.html" title="class or interface in java.time" class="external-link"><code>LocalDateTime</code></a> which contains the date since when the product is available for the customer in the shop</li>
  </ul>
 
 
@@ -446,7 +446,7 @@ final Optional&lt;AttributePlainEnumValue&gt; attributeOption = masterVariant.fi
 assertThat(attributeOption).contains(AttributePlainEnumValue.builder().key("S").label("S").build());
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/commercetools-sdk-java-api/src/integrationTest/java/commercetools/product_type/ProductTypeCreationDemoIntegrationTest.java" target="_blank">test code</a>.</pre></div>
 
- <p>If the attribute is not present in the <a href="../../api/models/product/AttributeContainer.html" title="interface in com.commercetools.api.models.product"><code>AttributeContainer</code></a> then the <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html" title="class or interface in java.util" class="external-link"><code>Optional</code></a> will be empty:</p>
+ <p>If the attribute is not present in the <a href="../../api/models/product/AttributeContainer.html" title="interface in com.commercetools.api.models.product"><code>AttributeContainer</code></a> then the <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link"><code>Optional</code></a> will be empty:</p>
 
  <div id="commercetools-product-type-ProductTypeCreationDemoIntegrationTest-notPresentAttributeRead--%s" class=code-example><pre><code class='java'>final ProductVariant masterVariant = createProduct().getMasterData().getStaged().getMasterVariant();
 
@@ -604,8 +604,8 @@ assertThat(presentAttributes).containsOnly(COLOR_ATTR_NAME, RRP_ATTR_NAME);
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div class="inherited-list">
-<h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
-<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-" title="class or interface in java.lang" class="external-link">wait</a></code></div>
+<h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
+<code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
 </section>
 </li>
 </ul>

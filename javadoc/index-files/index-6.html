@@ -219,7 +219,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../io/vrap/rmf/base/client/utils/CompletableFutureUtils.html#failed(java.lang.Throwable)" class="member-name-link">failed(Throwable)</a> - Static method in class io.vrap.rmf.base.client.utils.<a href="../io/vrap/rmf/base/client/utils/CompletableFutureUtils.html" title="class in io.vrap.rmf.base.client.utils">CompletableFutureUtils</a></dt>
 <dd>
-<div class="block">Creates a <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link"><code>CompletableFuture</code></a> which is completed exceptionally with the given Exception.</div>
+<div class="block">Creates a <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/concurrent/CompletableFuture.html" title="class or interface in java.util.concurrent" class="external-link"><code>CompletableFuture</code></a> which is completed exceptionally with the given Exception.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/order/PaymentState.PaymentStateEnum.html#FAILED" class="member-name-link">FAILED</a> - Enum constant in enum com.commercetools.api.models.order.<a href="../com/commercetools/api/models/order/PaymentState.PaymentStateEnum.html" title="enum in com.commercetools.api.models.order">PaymentState.PaymentStateEnum</a></dt>
 <dd>
@@ -1546,11 +1546,11 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/common/LocalizedString.html#find(java.lang.Iterable)" class="member-name-link">find(Iterable&lt;Locale&gt;)</a> - Method in interface com.commercetools.api.models.common.<a href="../com/commercetools/api/models/common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></dt>
 <dd>
-<div class="block">Searches the translation for some exact locales in the order they appear and returning the result in an <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html" title="class or interface in java.util" class="external-link"><code>Optional</code></a>.</div>
+<div class="block">Searches the translation for some exact locales in the order they appear and returning the result in an <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link"><code>Optional</code></a>.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/common/LocalizedString.html#find(java.util.Locale)" class="member-name-link">find(Locale)</a> - Method in interface com.commercetools.api.models.common.<a href="../com/commercetools/api/models/common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></dt>
 <dd>
-<div class="block">Searches the translation for an exact locale and returning the result in an <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Optional.html" title="class or interface in java.util" class="external-link"><code>Optional</code></a>.</div>
+<div class="block">Searches the translation for an exact locale and returning the result in an <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Optional.html" title="class or interface in java.util" class="external-link"><code>Optional</code></a>.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/customer/CustomerMixin.html#findAddressById(java.lang.String)" class="member-name-link">findAddressById(String)</a> - Method in interface com.commercetools.api.models.customer.<a href="../com/commercetools/api/models/customer/CustomerMixin.html" title="interface in com.commercetools.api.models.customer">CustomerMixin</a></dt>
 <dd>&nbsp;</dd>
@@ -1969,6 +1969,16 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/models/subscription/ChangeSubscriptionResourceTypeId.html#findEnum(java.lang.String)" class="member-name-link">findEnum(String)</a> - Static method in interface com.commercetools.api.models.subscription.<a href="../com/commercetools/api/models/subscription/ChangeSubscriptionResourceTypeId.html" title="interface in com.commercetools.api.models.subscription">ChangeSubscriptionResourceTypeId</a></dt>
 <dd>
 <div class="block">factory method for a enum value of ChangeSubscriptionResourceTypeId
+ if no enum has been found an anonymous instance will be created</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/subscription/EventSubscriptionResourceTypeId.html#findEnum(java.lang.String)" class="member-name-link">findEnum(String)</a> - Static method in interface com.commercetools.api.models.subscription.<a href="../com/commercetools/api/models/subscription/EventSubscriptionResourceTypeId.html" title="interface in com.commercetools.api.models.subscription">EventSubscriptionResourceTypeId</a></dt>
+<dd>
+<div class="block">factory method for a enum value of EventSubscriptionResourceTypeId
+ if no enum has been found an anonymous instance will be created</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/subscription/EventType.html#findEnum(java.lang.String)" class="member-name-link">findEnum(String)</a> - Static method in interface com.commercetools.api.models.subscription.<a href="../com/commercetools/api/models/subscription/EventType.html" title="interface in com.commercetools.api.models.subscription">EventType</a></dt>
+<dd>
+<div class="block">factory method for a enum value of EventType
  if no enum has been found an anonymous instance will be created</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/subscription/MessageSubscriptionResourceTypeId.html#findEnum(java.lang.String)" class="member-name-link">findEnum(String)</a> - Static method in interface com.commercetools.api.models.subscription.<a href="../com/commercetools/api/models/subscription/MessageSubscriptionResourceTypeId.html" title="interface in com.commercetools.api.models.subscription">MessageSubscriptionResourceTypeId</a></dt>
@@ -2609,6 +2619,14 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">method to find enum using the JSON value</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/subscription/EventSubscriptionResourceTypeId.html#findEnumViaJsonName(java.lang.String)" class="member-name-link">findEnumViaJsonName(String)</a> - Static method in interface com.commercetools.api.models.subscription.<a href="../com/commercetools/api/models/subscription/EventSubscriptionResourceTypeId.html" title="interface in com.commercetools.api.models.subscription">EventSubscriptionResourceTypeId</a></dt>
+<dd>
+<div class="block">method to find enum using the JSON value</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/subscription/EventType.html#findEnumViaJsonName(java.lang.String)" class="member-name-link">findEnumViaJsonName(String)</a> - Static method in interface com.commercetools.api.models.subscription.<a href="../com/commercetools/api/models/subscription/EventType.html" title="interface in com.commercetools.api.models.subscription">EventType</a></dt>
+<dd>
+<div class="block">method to find enum using the JSON value</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/subscription/MessageSubscriptionResourceTypeId.html#findEnumViaJsonName(java.lang.String)" class="member-name-link">findEnumViaJsonName(String)</a> - Static method in interface com.commercetools.api.models.subscription.<a href="../com/commercetools/api/models/subscription/MessageSubscriptionResourceTypeId.html" title="interface in com.commercetools.api.models.subscription">MessageSubscriptionResourceTypeId</a></dt>
 <dd>
 <div class="block">method to find enum using the JSON value</div>
@@ -3128,11 +3146,11 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/search/products/TermFormatter.html#format(javax.money.CurrencyUnit)" class="member-name-link">format(CurrencyUnit)</a> - Static method in class com.commercetools.api.search.products.<a href="../com/commercetools/api/search/products/TermFormatter.html" title="class in com.commercetools.api.search.products">TermFormatter</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="../com/commercetools/api/predicates/query/DateTimeCollectionPredicateBuilder.html#format(TValue)" class="member-name-link">format(ZonedDateTime)</a> - Method in class com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/DateTimeCollectionPredicateBuilder.html" title="class in com.commercetools.api.predicates.query">DateTimeCollectionPredicateBuilder</a></dt>
+<dt><a href="../com/commercetools/api/predicates/query/StringCollectionPredicateBuilder.html#format(TValue)" class="member-name-link">format(String)</a> - Method in class com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/StringCollectionPredicateBuilder.html" title="class in com.commercetools.api.predicates.query">StringCollectionPredicateBuilder</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="../com/commercetools/api/predicates/query/DateTimeCollectionPredicateBuilder.html#format(TValue)" class="member-name-link">format(ZonedDateTime)</a> - Method in class com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/DateTimeCollectionPredicateBuilder.html" title="class in com.commercetools.api.predicates.query">DateTimeCollectionPredicateBuilder</a></dt>
+<dt><a href="../com/commercetools/api/predicates/query/ComparisonPredicateBuilder.html#format(TValue)" class="member-name-link">format(TValue)</a> - Method in interface com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/ComparisonPredicateBuilder.html" title="interface in com.commercetools.api.predicates.query">ComparisonPredicateBuilder</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="../com/commercetools/api/predicates/query/TimeComparisonPredicateBuilder.html#format(TValue)" class="member-name-link">format(LocalTime)</a> - Method in class com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/TimeComparisonPredicateBuilder.html" title="class in com.commercetools.api.predicates.query">TimeComparisonPredicateBuilder</a></dt>
+<dt><a href="../com/commercetools/api/predicates/query/LongComparisonPredicateBuilder.html#format(TValue)" class="member-name-link">format(Long)</a> - Method in class com.commercetools.api.predicates.query.<a href="../com/commercetools/api/predicates/query/LongComparisonPredicateBuilder.html" title="class in com.commercetools.api.predicates.query">LongComparisonPredicateBuilder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../io/vrap/rmf/base/client/http/LogFormatter.html#formatError(io.vrap.rmf.base.client.ApiHttpRequest,java.lang.Throwable,long)" class="member-name-link">formatError(ApiHttpRequest, Throwable, long)</a> - Static method in class io.vrap.rmf.base.client.http.<a href="../io/vrap/rmf/base/client/http/LogFormatter.html" title="class in io.vrap.rmf.base.client.http">LogFormatter</a></dt>
 <dd>&nbsp;</dd>

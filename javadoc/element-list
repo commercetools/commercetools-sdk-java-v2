@@ -22,6 +22,7 @@ com.commercetools.api.models.customer_group
 com.commercetools.api.models.customer_search
 com.commercetools.api.models.discount_code
 com.commercetools.api.models.error
+com.commercetools.api.models.event
 com.commercetools.api.models.extension
 com.commercetools.api.models.graph_ql
 com.commercetools.api.models.inventory

@@ -66,13 +66,13 @@ loadScripts(document, 'script');</script>
 <div class="sub-title"><span class="package-label-in-type">Package</span>&nbsp;<a href="package-summary.html">com.commercetools.docs.meta</a></div>
 <h1 title="Class ClientTuning" class="title">Class ClientTuning</h1>
 </div>
-<div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
+<div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
 <div class="inheritance">com.commercetools.docs.meta.ClientTuning</div>
 </div>
 <section class="class-description" id="class-description">
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">ClientTuning</span>
-<span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
 <div class="block"><b>Table of content</b><ul><li><a href="#client-tuning">Tuning the client</a></li><ul><li><a href="#blocking-execution">Blocking execution</a></li><li><a href="#policy-middleware">PolicyMiddleware</a></li><li><a href="#configure-http-client">Configure the underlying http client</a></li><li><a href="#limit-requests">Limit concurrent requests</a></li><li><a href="#timeouts">Timeouts</a></li><li><a href="#http-version">HTTP protocol version</a></li></ul></ul>
  <h2 id=client-tuning>Tuning the client</h2>
 
@@ -96,8 +96,12 @@ Project project = apiRoot.get().executeBlocking().getBody();
  <div id="example-ExamplesTest-retry--%s" class=code-example><pre><code class='java'>ProjectApiRoot apiRoot = ApiRootBuilder.of()
         .defaultClient(ClientCredentials.of().withClientId("clientId").withClientSecret("clientSecret").build(),
             ServiceRegion.GCP_EUROPE_WEST1)
-        .withPolicies(policies -&gt; policies.withRetry(builder -&gt; builder.maxRetries(5)
-                .statusCodes(Arrays.asList(BAD_GATEWAY_502, SERVICE_UNAVAILABLE_503, GATEWAY_TIMEOUT_504))))
+        .withRequestPolicies(
+            policies -&gt; policies
+                    .withAllOtherRequests(
+                        request -&gt; request.withRetry(builder -&gt; builder.maxRetries(5)
+                                .statusCodes(Arrays.asList(BAD_GATEWAY_502, SERVICE_UNAVAILABLE_503,
+                                    GATEWAY_TIMEOUT_504)))))
         .build("my-project");
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/ExamplesTest.java" target="_blank">test code</a>.</pre></div>
 
@@ -142,7 +146,8 @@ ApiRootBuilder.of(new CtApacheHttpClient(64, 64))
 
  <div id="example-ExamplesTest-queueConcurrentLimitation--%s" class=code-example><pre><code class='java'>ApiRootBuilder.of()
         // ...
-        .withPolicies(policies -&gt; policies.withBulkhead(64, Duration.ofSeconds(10)))
+        .withRequestPolicies(policies -&gt; policies
+                .withAllOtherRequests(request -&gt; request.withBulkhead(64, Duration.ofSeconds(10))))
         .build();
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/ExamplesTest.java" target="_blank">test code</a>.</pre></div>
 
@@ -154,18 +159,14 @@ ApiRootBuilder.of(new CtApacheHttpClient(64, 64))
  requests should timeout after 10 seconds where as POST requests should timeout after 120 seconds. It's best to use a
  resilience library like <a href="https://failsafe.dev/">failsafe</a> to implement this functionality.</p>
 
- <div id="example-ExamplesTest-timeoutMiddleware--%s" class=code-example><pre><code class='java'>dev.failsafe.Timeout&lt;ApiHttpResponse&lt;byte[]&gt;&gt; timeout = dev.failsafe.Timeout
-        .&lt;ApiHttpResponse&lt;byte[]&gt;&gt; builder(Duration.ofSeconds(10))
-        .build();
-FailsafeExecutor&lt;ApiHttpResponse&lt;byte[]&gt;&gt; failsafeExecutor = Failsafe.with(timeout);
-
-ProjectApiRoot apiRoot = ApiRootBuilder.of()
+ <div id="example-ExamplesTest-timeoutMiddleware--%s" class=code-example><pre><code class='java'>ProjectApiRoot apiRoot = ApiRootBuilder.of()
         .defaultClient(ClientCredentials.of()
                 .withClientId("your-client-id")
                 .withClientSecret("your-client-secret")
                 .build(),
             ServiceRegion.GCP_EUROPE_WEST1)
-        .addMiddleware((request, next) -&gt; failsafeExecutor.getStageAsync(() -&gt; next.apply(request)))
+        .withRequestPolicies(
+            policies -&gt; policies.withAllOtherRequests(request -&gt; request.withTimeout(Duration.ofSeconds(10))))
         .build("my-project");
 </code><p>See the <a href="https://github.com/commercetools/commercetools-sdk-java-v2/blob/master/commercetools/internal-docs/src/test/java/example/ExamplesTest.java" target="_blank">test code</a>.</pre></div>
 
@@ -230,8 +231,8 @@ CtJavaNetHttpClient javaNetHttpClient = new CtJavaNetHttpClient(HttpClient.Versi
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div class="inherited-list">
-<h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
-<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-" title="class or interface in java.lang" class="external-link">wait</a></code></div>
+<h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
+<code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
 </section>
 </li>
 </ul>

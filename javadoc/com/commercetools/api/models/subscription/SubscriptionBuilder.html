@@ -70,7 +70,7 @@ loadScripts(document, 'script');</script>
 <div class="sub-title"><span class="package-label-in-type">Package</span>&nbsp;<a href="package-summary.html">com.commercetools.api.models.subscription</a></div>
 <h1 title="Class SubscriptionBuilder" class="title">Class SubscriptionBuilder</h1>
 </div>
-<div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
+<div class="inheritance" title="Inheritance Tree"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">java.lang.Object</a>
 <div class="inheritance">com.commercetools.api.models.subscription.SubscriptionBuilder</div>
 </div>
 <section class="class-description" id="class-description">
@@ -80,7 +80,7 @@ loadScripts(document, 'script');</script>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">SubscriptionBuilder</span>
-<span class="extends-implements">extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
+<span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
 implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;<a href="Subscription.html" title="interface in com.commercetools.api.models.subscription">Subscription</a>&gt;</span></div>
 <div class="block">SubscriptionBuilder
  <hr>
@@ -95,6 +95,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
              .plusChanges(changesBuilder -> changesBuilder)
              .destination(destinationBuilder -> destinationBuilder)
              .plusMessages(messagesBuilder -> messagesBuilder)
+             .plusEvents(eventsBuilder -> eventsBuilder)
              .format(formatBuilder -> formatBuilder)
              .status(SubscriptionHealthStatus.HEALTHY)
              .build()
@@ -128,106 +129,126 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addChanges(java.util.function.Function)" class="member-name-link">addChanges</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ChangeSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">ChangeSubscriptionBuilder</a>,<wbr><a href="ChangeSubscription.html" title="interface in com.commercetools.api.models.subscription">ChangeSubscription</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addChanges(java.util.function.Function)" class="member-name-link">addChanges</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ChangeSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">ChangeSubscriptionBuilder</a>,<wbr><a href="ChangeSubscription.html" title="interface in com.commercetools.api.models.subscription">ChangeSubscription</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Changes subscribed to.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addMessages(java.util.function.Function)" class="member-name-link">addMessages</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MessageSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">MessageSubscriptionBuilder</a>,<wbr><a href="MessageSubscription.html" title="interface in com.commercetools.api.models.subscription">MessageSubscription</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addEvents(java.util.function.Function)" class="member-name-link">addEvents</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="EventSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">EventSubscriptionBuilder</a>,<wbr><a href="EventSubscription.html" title="interface in com.commercetools.api.models.subscription">EventSubscription</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Events subscribed to.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addMessages(java.util.function.Function)" class="member-name-link">addMessages</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MessageSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">MessageSubscriptionBuilder</a>,<wbr><a href="MessageSubscription.html" title="interface in com.commercetools.api.models.subscription">MessageSubscription</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Messages subscribed to.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Subscription.html" title="interface in com.commercetools.api.models.subscription">Subscription</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#build()" class="member-name-link">build</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Subscription.html" title="interface in com.commercetools.api.models.subscription">Subscription</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#build()" class="member-name-link">build</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">builds Subscription with checking for non-null required values</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Subscription.html" title="interface in com.commercetools.api.models.subscription">Subscription</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#buildUnchecked()" class="member-name-link">buildUnchecked</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Subscription.html" title="interface in com.commercetools.api.models.subscription">Subscription</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#buildUnchecked()" class="member-name-link">buildUnchecked</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">builds Subscription without checking for non-null required values</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#changes(com.commercetools.api.models.subscription.ChangeSubscription...)" class="member-name-link">changes</a><wbr>(<a href="ChangeSubscription.html" title="interface in com.commercetools.api.models.subscription">ChangeSubscription</a>...&nbsp;changes)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Changes subscribed to.</div>
-</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#changes(java.util.List)" class="member-name-link">changes</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ChangeSubscription.html" title="interface in com.commercetools.api.models.subscription">ChangeSubscription</a>&gt;&nbsp;changes)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#changes(com.commercetools.api.models.subscription.ChangeSubscription...)" class="member-name-link">changes</a><wbr>(<a href="ChangeSubscription.html" title="interface in com.commercetools.api.models.subscription">ChangeSubscription</a>...&nbsp;changes)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Changes subscribed to.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createdAt(java.time.ZonedDateTime)" class="member-name-link">createdAt</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#changes(java.util.List)" class="member-name-link">changes</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ChangeSubscription.html" title="interface in com.commercetools.api.models.subscription">ChangeSubscription</a>&gt;&nbsp;changes)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Changes subscribed to.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createdAt(java.time.ZonedDateTime)" class="member-name-link">createdAt</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Date and time (UTC) the Subscription was initially created.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createdBy(com.commercetools.api.models.common.CreatedBy)" class="member-name-link">createdBy</a><wbr>(<a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a>&nbsp;createdBy)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">IDs and references that created the Subscription.</div>
-</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createdBy(java.util.function.Function)" class="member-name-link">createdBy</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CreatedByBuilder.html" title="class in com.commercetools.api.models.common">CreatedByBuilder</a>,<wbr><a href="../common/CreatedByBuilder.html" title="class in com.commercetools.api.models.common">CreatedByBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createdBy(com.commercetools.api.models.common.CreatedBy)" class="member-name-link">createdBy</a><wbr>(<a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a>&nbsp;createdBy)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">IDs and references that created the Subscription.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#destination(com.commercetools.api.models.subscription.Destination)" class="member-name-link">destination</a><wbr>(<a href="Destination.html" title="interface in com.commercetools.api.models.subscription">Destination</a>&nbsp;destination)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createdBy(java.util.function.Function)" class="member-name-link">createdBy</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CreatedByBuilder.html" title="class in com.commercetools.api.models.common">CreatedByBuilder</a>,<wbr><a href="../common/CreatedByBuilder.html" title="class in com.commercetools.api.models.common">CreatedByBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Messaging service to which the notifications are sent.</div>
+<div class="block">IDs and references that created the Subscription.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#destination(java.util.function.Function)" class="member-name-link">destination</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="DestinationBuilder.html" title="class in com.commercetools.api.models.subscription">DestinationBuilder</a>,<wbr><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="Destination.html" title="interface in com.commercetools.api.models.subscription">Destination</a>&gt;&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#destination(com.commercetools.api.models.subscription.Destination)" class="member-name-link">destination</a><wbr>(<a href="Destination.html" title="interface in com.commercetools.api.models.subscription">Destination</a>&nbsp;destination)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Messaging service to which the notifications are sent.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#format(com.commercetools.api.models.subscription.DeliveryFormat)" class="member-name-link">format</a><wbr>(<a href="DeliveryFormat.html" title="interface in com.commercetools.api.models.subscription">DeliveryFormat</a>&nbsp;format)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#destination(java.util.function.Function)" class="member-name-link">destination</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="DestinationBuilder.html" title="class in com.commercetools.api.models.subscription">DestinationBuilder</a>,<wbr><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="Destination.html" title="interface in com.commercetools.api.models.subscription">Destination</a>&gt;&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Messaging service to which the notifications are sent.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#events(com.commercetools.api.models.subscription.EventSubscription...)" class="member-name-link">events</a><wbr>(<a href="EventSubscription.html" title="interface in com.commercetools.api.models.subscription">EventSubscription</a>...&nbsp;events)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Events subscribed to.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#events(java.util.List)" class="member-name-link">events</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="EventSubscription.html" title="interface in com.commercetools.api.models.subscription">EventSubscription</a>&gt;&nbsp;events)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Events subscribed to.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#format(com.commercetools.api.models.subscription.DeliveryFormat)" class="member-name-link">format</a><wbr>(<a href="DeliveryFormat.html" title="interface in com.commercetools.api.models.subscription">DeliveryFormat</a>&nbsp;format)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Format in which the payload is delivered.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#format(java.util.function.Function)" class="member-name-link">format</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="DeliveryFormatBuilder.html" title="class in com.commercetools.api.models.subscription">DeliveryFormatBuilder</a>,<wbr><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="DeliveryFormat.html" title="interface in com.commercetools.api.models.subscription">DeliveryFormat</a>&gt;&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Format in which the payload is delivered.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#format(java.util.function.Function)" class="member-name-link">format</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="DeliveryFormatBuilder.html" title="class in com.commercetools.api.models.subscription">DeliveryFormatBuilder</a>,<wbr><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="DeliveryFormat.html" title="interface in com.commercetools.api.models.subscription">DeliveryFormat</a>&gt;&gt;&nbsp;builder)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ChangeSubscription.html" title="interface in com.commercetools.api.models.subscription">ChangeSubscription</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getChanges()" class="member-name-link">getChanges</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Format in which the payload is delivered.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ChangeSubscription.html" title="interface in com.commercetools.api.models.subscription">ChangeSubscription</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getChanges()" class="member-name-link">getChanges</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Changes subscribed to.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCreatedAt()" class="member-name-link">getCreatedAt</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCreatedAt()" class="member-name-link">getCreatedAt</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Date and time (UTC) the Subscription was initially created.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCreatedBy()" class="member-name-link">getCreatedBy</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCreatedBy()" class="member-name-link">getCreatedBy</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">IDs and references that created the Subscription.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Destination.html" title="interface in com.commercetools.api.models.subscription">Destination</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDestination()" class="member-name-link">getDestination</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Destination.html" title="interface in com.commercetools.api.models.subscription">Destination</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDestination()" class="member-name-link">getDestination</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Messaging service to which the notifications are sent.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="EventSubscription.html" title="interface in com.commercetools.api.models.subscription">EventSubscription</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEvents()" class="member-name-link">getEvents</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Events subscribed to.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DeliveryFormat.html" title="interface in com.commercetools.api.models.subscription">DeliveryFormat</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFormat()" class="member-name-link">getFormat</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Format in which the payload is delivered.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getId()" class="member-name-link">getId</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Unique identifier of the Subscription.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getKey()" class="member-name-link">getKey</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">User-defined unique identifier of the Subscription.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLastModifiedAt()" class="member-name-link">getLastModifiedAt</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Date and time (UTC) the Subscription was last modified.</div>
@@ -237,7 +258,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">IDs and references that last modified the Subscription.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="MessageSubscription.html" title="interface in com.commercetools.api.models.subscription">MessageSubscription</a>&gt;</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="MessageSubscription.html" title="interface in com.commercetools.api.models.subscription">MessageSubscription</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMessages()" class="member-name-link">getMessages</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Messages subscribed to.</div>
@@ -247,23 +268,23 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Status of the Subscription.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVersion()" class="member-name-link">getVersion</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Current version of the Subscription.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#id(java.lang.String)" class="member-name-link">id</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#id(java.lang.String)" class="member-name-link">id</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Unique identifier of the Subscription.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#key(java.lang.String)" class="member-name-link">key</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#key(java.lang.String)" class="member-name-link">key</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">User-defined unique identifier of the Subscription.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#lastModifiedAt(java.time.ZonedDateTime)" class="member-name-link">lastModifiedAt</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;lastModifiedAt)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#lastModifiedAt(java.time.ZonedDateTime)" class="member-name-link">lastModifiedAt</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;lastModifiedAt)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Date and time (UTC) the Subscription was last modified.</div>
 </div>
@@ -273,7 +294,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="block">IDs and references that last modified the Subscription.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#lastModifiedBy(java.util.function.Function)" class="member-name-link">lastModifiedBy</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a>,<wbr><a href="../common/LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#lastModifiedBy(java.util.function.Function)" class="member-name-link">lastModifiedBy</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a>,<wbr><a href="../common/LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">IDs and references that last modified the Subscription.</div>
 </div>
@@ -283,7 +304,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="block">Messages subscribed to.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#messages(java.util.List)" class="member-name-link">messages</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="MessageSubscription.html" title="interface in com.commercetools.api.models.subscription">MessageSubscription</a>&gt;&nbsp;messages)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#messages(java.util.List)" class="member-name-link">messages</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="MessageSubscription.html" title="interface in com.commercetools.api.models.subscription">MessageSubscription</a>&gt;&nbsp;messages)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Messages subscribed to.</div>
 </div>
@@ -303,9 +324,19 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="block">Changes subscribed to.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusChanges(java.util.function.Function)" class="member-name-link">plusChanges</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ChangeSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">ChangeSubscriptionBuilder</a>,<wbr><a href="ChangeSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">ChangeSubscriptionBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusChanges(java.util.function.Function)" class="member-name-link">plusChanges</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ChangeSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">ChangeSubscriptionBuilder</a>,<wbr><a href="ChangeSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">ChangeSubscriptionBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Changes subscribed to.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusEvents(com.commercetools.api.models.subscription.EventSubscription...)" class="member-name-link">plusEvents</a><wbr>(<a href="EventSubscription.html" title="interface in com.commercetools.api.models.subscription">EventSubscription</a>...&nbsp;events)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Events subscribed to.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusEvents(java.util.function.Function)" class="member-name-link">plusEvents</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="EventSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">EventSubscriptionBuilder</a>,<wbr><a href="EventSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">EventSubscriptionBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Events subscribed to.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusMessages(com.commercetools.api.models.subscription.MessageSubscription...)" class="member-name-link">plusMessages</a><wbr>(<a href="MessageSubscription.html" title="interface in com.commercetools.api.models.subscription">MessageSubscription</a>...&nbsp;messages)</code></div>
@@ -313,47 +344,57 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="block">Messages subscribed to.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusMessages(java.util.function.Function)" class="member-name-link">plusMessages</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MessageSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">MessageSubscriptionBuilder</a>,<wbr><a href="MessageSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">MessageSubscriptionBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusMessages(java.util.function.Function)" class="member-name-link">plusMessages</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MessageSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">MessageSubscriptionBuilder</a>,<wbr><a href="MessageSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">MessageSubscriptionBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Messages subscribed to.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setChanges(java.util.function.Function)" class="member-name-link">setChanges</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ChangeSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">ChangeSubscriptionBuilder</a>,<wbr><a href="ChangeSubscription.html" title="interface in com.commercetools.api.models.subscription">ChangeSubscription</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setChanges(java.util.function.Function)" class="member-name-link">setChanges</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ChangeSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">ChangeSubscriptionBuilder</a>,<wbr><a href="ChangeSubscription.html" title="interface in com.commercetools.api.models.subscription">ChangeSubscription</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Changes subscribed to.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMessages(java.util.function.Function)" class="member-name-link">setMessages</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MessageSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">MessageSubscriptionBuilder</a>,<wbr><a href="MessageSubscription.html" title="interface in com.commercetools.api.models.subscription">MessageSubscription</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setEvents(java.util.function.Function)" class="member-name-link">setEvents</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="EventSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">EventSubscriptionBuilder</a>,<wbr><a href="EventSubscription.html" title="interface in com.commercetools.api.models.subscription">EventSubscription</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Messages subscribed to.</div>
+<div class="block">Events subscribed to.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#status(com.commercetools.api.models.subscription.SubscriptionHealthStatus)" class="member-name-link">status</a><wbr>(<a href="SubscriptionHealthStatus.html" title="interface in com.commercetools.api.models.subscription">SubscriptionHealthStatus</a>&nbsp;status)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMessages(java.util.function.Function)" class="member-name-link">setMessages</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MessageSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">MessageSubscriptionBuilder</a>,<wbr><a href="MessageSubscription.html" title="interface in com.commercetools.api.models.subscription">MessageSubscription</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Messages subscribed to.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#status(com.commercetools.api.models.subscription.SubscriptionHealthStatus)" class="member-name-link">status</a><wbr>(<a href="SubscriptionHealthStatus.html" title="interface in com.commercetools.api.models.subscription">SubscriptionHealthStatus</a>&nbsp;status)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Status of the Subscription.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#version(java.lang.Long)" class="member-name-link">version</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#version(java.lang.Long)" class="member-name-link">version</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Current version of the Subscription.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withChanges(java.util.function.Function)" class="member-name-link">withChanges</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ChangeSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">ChangeSubscriptionBuilder</a>,<wbr><a href="ChangeSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">ChangeSubscriptionBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withChanges(java.util.function.Function)" class="member-name-link">withChanges</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ChangeSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">ChangeSubscriptionBuilder</a>,<wbr><a href="ChangeSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">ChangeSubscriptionBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Changes subscribed to.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withCreatedBy(java.util.function.Function)" class="member-name-link">withCreatedBy</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CreatedByBuilder.html" title="class in com.commercetools.api.models.common">CreatedByBuilder</a>,<wbr><a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withCreatedBy(java.util.function.Function)" class="member-name-link">withCreatedBy</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CreatedByBuilder.html" title="class in com.commercetools.api.models.common">CreatedByBuilder</a>,<wbr><a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">IDs and references that created the Subscription.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withEvents(java.util.function.Function)" class="member-name-link">withEvents</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="EventSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">EventSubscriptionBuilder</a>,<wbr><a href="EventSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">EventSubscriptionBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Events subscribed to.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withLastModifiedBy(java.util.function.Function)" class="member-name-link">withLastModifiedBy</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a>,<wbr><a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withLastModifiedBy(java.util.function.Function)" class="member-name-link">withLastModifiedBy</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a>,<wbr><a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">IDs and references that last modified the Subscription.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withMessages(java.util.function.Function)" class="member-name-link">withMessages</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MessageSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">MessageSubscriptionBuilder</a>,<wbr><a href="MessageSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">MessageSubscriptionBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withMessages(java.util.function.Function)" class="member-name-link">withMessages</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MessageSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">MessageSubscriptionBuilder</a>,<wbr><a href="MessageSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">MessageSubscriptionBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Messages subscribed to.</div>
 </div>
@@ -361,8 +402,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </div>
 </div>
 <div class="inherited-list">
-<h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
-<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#equals-java.lang.Object-" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#getClass--" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#hashCode--" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notify--" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#notifyAll--" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#toString--" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait--" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html#wait-long-int-" title="class or interface in java.lang" class="external-link">wait</a></code></div>
+<h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></h3>
+<code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
 </section>
 </li>
 </ul>
@@ -391,7 +432,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="id(java.lang.String)">
 <h3>id</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">id</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">id</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
 <div class="block"><p>Unique identifier of the Subscription.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -404,7 +445,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="version(java.lang.Long)">
 <h3>version</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">version</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">version</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</span></div>
 <div class="block"><p>Current version of the Subscription.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -417,7 +458,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="createdAt(java.time.ZonedDateTime)">
 <h3>createdAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">createdAt</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">createdAt</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</span></div>
 <div class="block"><p>Date and time (UTC) the Subscription was initially created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -430,7 +471,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="lastModifiedAt(java.time.ZonedDateTime)">
 <h3>lastModifiedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">lastModifiedAt</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;lastModifiedAt)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">lastModifiedAt</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;lastModifiedAt)</span></div>
 <div class="block"><p>Date and time (UTC) the Subscription was last modified.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -443,7 +484,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="lastModifiedBy(java.util.function.Function)">
 <h3>lastModifiedBy</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">lastModifiedBy</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a>,<wbr><a href="../common/LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">lastModifiedBy</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a>,<wbr><a href="../common/LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>IDs and references that last modified the Subscription.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -456,7 +497,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="withLastModifiedBy(java.util.function.Function)">
 <h3>withLastModifiedBy</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">withLastModifiedBy</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a>,<wbr><a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">withLastModifiedBy</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a>,<wbr><a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>IDs and references that last modified the Subscription.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -469,7 +510,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="lastModifiedBy(com.commercetools.api.models.common.LastModifiedBy)">
 <h3>lastModifiedBy</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">lastModifiedBy</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">lastModifiedBy</span><wbr><span class="parameters">(@Nullable
  <a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a>&nbsp;lastModifiedBy)</span></div>
 <div class="block"><p>IDs and references that last modified the Subscription.</p></div>
 <dl class="notes">
@@ -483,7 +524,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="createdBy(java.util.function.Function)">
 <h3>createdBy</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">createdBy</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CreatedByBuilder.html" title="class in com.commercetools.api.models.common">CreatedByBuilder</a>,<wbr><a href="../common/CreatedByBuilder.html" title="class in com.commercetools.api.models.common">CreatedByBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">createdBy</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CreatedByBuilder.html" title="class in com.commercetools.api.models.common">CreatedByBuilder</a>,<wbr><a href="../common/CreatedByBuilder.html" title="class in com.commercetools.api.models.common">CreatedByBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>IDs and references that created the Subscription.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -496,7 +537,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="withCreatedBy(java.util.function.Function)">
 <h3>withCreatedBy</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">withCreatedBy</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CreatedByBuilder.html" title="class in com.commercetools.api.models.common">CreatedByBuilder</a>,<wbr><a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">withCreatedBy</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CreatedByBuilder.html" title="class in com.commercetools.api.models.common">CreatedByBuilder</a>,<wbr><a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>IDs and references that created the Subscription.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -509,7 +550,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="createdBy(com.commercetools.api.models.common.CreatedBy)">
 <h3>createdBy</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">createdBy</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">createdBy</span><wbr><span class="parameters">(@Nullable
  <a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a>&nbsp;createdBy)</span></div>
 <div class="block"><p>IDs and references that created the Subscription.</p></div>
 <dl class="notes">
@@ -536,7 +577,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="changes(java.util.List)">
 <h3>changes</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">changes</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ChangeSubscription.html" title="interface in com.commercetools.api.models.subscription">ChangeSubscription</a>&gt;&nbsp;changes)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">changes</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ChangeSubscription.html" title="interface in com.commercetools.api.models.subscription">ChangeSubscription</a>&gt;&nbsp;changes)</span></div>
 <div class="block"><p>Changes subscribed to.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -562,7 +603,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="plusChanges(java.util.function.Function)">
 <h3>plusChanges</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">plusChanges</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ChangeSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">ChangeSubscriptionBuilder</a>,<wbr><a href="ChangeSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">ChangeSubscriptionBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">plusChanges</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ChangeSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">ChangeSubscriptionBuilder</a>,<wbr><a href="ChangeSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">ChangeSubscriptionBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Changes subscribed to.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -575,7 +616,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="withChanges(java.util.function.Function)">
 <h3>withChanges</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">withChanges</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ChangeSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">ChangeSubscriptionBuilder</a>,<wbr><a href="ChangeSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">ChangeSubscriptionBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">withChanges</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ChangeSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">ChangeSubscriptionBuilder</a>,<wbr><a href="ChangeSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">ChangeSubscriptionBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Changes subscribed to.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -588,7 +629,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="addChanges(java.util.function.Function)">
 <h3>addChanges</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">addChanges</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ChangeSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">ChangeSubscriptionBuilder</a>,<wbr><a href="ChangeSubscription.html" title="interface in com.commercetools.api.models.subscription">ChangeSubscription</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">addChanges</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ChangeSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">ChangeSubscriptionBuilder</a>,<wbr><a href="ChangeSubscription.html" title="interface in com.commercetools.api.models.subscription">ChangeSubscription</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Changes subscribed to.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -601,7 +642,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="setChanges(java.util.function.Function)">
 <h3>setChanges</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">setChanges</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ChangeSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">ChangeSubscriptionBuilder</a>,<wbr><a href="ChangeSubscription.html" title="interface in com.commercetools.api.models.subscription">ChangeSubscription</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">setChanges</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ChangeSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">ChangeSubscriptionBuilder</a>,<wbr><a href="ChangeSubscription.html" title="interface in com.commercetools.api.models.subscription">ChangeSubscription</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Changes subscribed to.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -627,7 +668,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="destination(java.util.function.Function)">
 <h3>destination</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">destination</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="DestinationBuilder.html" title="class in com.commercetools.api.models.subscription">DestinationBuilder</a>,<wbr><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="Destination.html" title="interface in com.commercetools.api.models.subscription">Destination</a>&gt;&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">destination</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="DestinationBuilder.html" title="class in com.commercetools.api.models.subscription">DestinationBuilder</a>,<wbr><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="Destination.html" title="interface in com.commercetools.api.models.subscription">Destination</a>&gt;&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Messaging service to which the notifications are sent.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -640,8 +681,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="key(java.lang.String)">
 <h3>key</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">key</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
- <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">key</span><wbr><span class="parameters">(@Nullable
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
 <div class="block"><p>User-defined unique identifier of the Subscription.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -667,7 +708,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="messages(java.util.List)">
 <h3>messages</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">messages</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="MessageSubscription.html" title="interface in com.commercetools.api.models.subscription">MessageSubscription</a>&gt;&nbsp;messages)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">messages</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="MessageSubscription.html" title="interface in com.commercetools.api.models.subscription">MessageSubscription</a>&gt;&nbsp;messages)</span></div>
 <div class="block"><p>Messages subscribed to.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -693,7 +734,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="plusMessages(java.util.function.Function)">
 <h3>plusMessages</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">plusMessages</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MessageSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">MessageSubscriptionBuilder</a>,<wbr><a href="MessageSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">MessageSubscriptionBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">plusMessages</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MessageSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">MessageSubscriptionBuilder</a>,<wbr><a href="MessageSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">MessageSubscriptionBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Messages subscribed to.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -706,7 +747,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="withMessages(java.util.function.Function)">
 <h3>withMessages</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">withMessages</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MessageSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">MessageSubscriptionBuilder</a>,<wbr><a href="MessageSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">MessageSubscriptionBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">withMessages</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MessageSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">MessageSubscriptionBuilder</a>,<wbr><a href="MessageSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">MessageSubscriptionBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Messages subscribed to.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -719,7 +760,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="addMessages(java.util.function.Function)">
 <h3>addMessages</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">addMessages</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MessageSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">MessageSubscriptionBuilder</a>,<wbr><a href="MessageSubscription.html" title="interface in com.commercetools.api.models.subscription">MessageSubscription</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">addMessages</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MessageSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">MessageSubscriptionBuilder</a>,<wbr><a href="MessageSubscription.html" title="interface in com.commercetools.api.models.subscription">MessageSubscription</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Messages subscribed to.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -732,11 +773,102 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="setMessages(java.util.function.Function)">
 <h3>setMessages</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">setMessages</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MessageSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">MessageSubscriptionBuilder</a>,<wbr><a href="MessageSubscription.html" title="interface in com.commercetools.api.models.subscription">MessageSubscription</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">setMessages</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MessageSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">MessageSubscriptionBuilder</a>,<wbr><a href="MessageSubscription.html" title="interface in com.commercetools.api.models.subscription">MessageSubscription</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Messages subscribed to.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the messages value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="events(com.commercetools.api.models.subscription.EventSubscription...)">
+<h3>events</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">events</span><wbr><span class="parameters">(<a href="EventSubscription.html" title="interface in com.commercetools.api.models.subscription">EventSubscription</a>...&nbsp;events)</span></div>
+<div class="block"><p>Events subscribed to.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>events</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="events(java.util.List)">
+<h3>events</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">events</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="EventSubscription.html" title="interface in com.commercetools.api.models.subscription">EventSubscription</a>&gt;&nbsp;events)</span></div>
+<div class="block"><p>Events subscribed to.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>events</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="plusEvents(com.commercetools.api.models.subscription.EventSubscription...)">
+<h3>plusEvents</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">plusEvents</span><wbr><span class="parameters">(<a href="EventSubscription.html" title="interface in com.commercetools.api.models.subscription">EventSubscription</a>...&nbsp;events)</span></div>
+<div class="block"><p>Events subscribed to.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>events</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="plusEvents(java.util.function.Function)">
+<h3>plusEvents</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">plusEvents</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="EventSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">EventSubscriptionBuilder</a>,<wbr><a href="EventSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">EventSubscriptionBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Events subscribed to.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the events value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="withEvents(java.util.function.Function)">
+<h3>withEvents</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">withEvents</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="EventSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">EventSubscriptionBuilder</a>,<wbr><a href="EventSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">EventSubscriptionBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Events subscribed to.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the events value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="addEvents(java.util.function.Function)">
+<h3>addEvents</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">addEvents</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="EventSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">EventSubscriptionBuilder</a>,<wbr><a href="EventSubscription.html" title="interface in com.commercetools.api.models.subscription">EventSubscription</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Events subscribed to.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the events value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setEvents(java.util.function.Function)">
+<h3>setEvents</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">setEvents</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="EventSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">EventSubscriptionBuilder</a>,<wbr><a href="EventSubscription.html" title="interface in com.commercetools.api.models.subscription">EventSubscription</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Events subscribed to.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the events value</dd>
 <dt>Returns:</dt>
 <dd>Builder</dd>
 </dl>
@@ -758,7 +890,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="format(java.util.function.Function)">
 <h3>format</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">format</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="DeliveryFormatBuilder.html" title="class in com.commercetools.api.models.subscription">DeliveryFormatBuilder</a>,<wbr><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="DeliveryFormat.html" title="interface in com.commercetools.api.models.subscription">DeliveryFormat</a>&gt;&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">format</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="DeliveryFormatBuilder.html" title="class in com.commercetools.api.models.subscription">DeliveryFormatBuilder</a>,<wbr><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="DeliveryFormat.html" title="interface in com.commercetools.api.models.subscription">DeliveryFormat</a>&gt;&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Format in which the payload is delivered.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -784,7 +916,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getId()">
 <h3>getId</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getId</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getId</span>()</div>
 <div class="block"><p>Unique identifier of the Subscription.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -795,7 +927,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getVersion()">
 <h3>getVersion</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">getVersion</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">getVersion</span>()</div>
 <div class="block"><p>Current version of the Subscription.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -806,7 +938,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getCreatedAt()">
 <h3>getCreatedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name">getCreatedAt</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name">getCreatedAt</span>()</div>
 <div class="block"><p>Date and time (UTC) the Subscription was initially created.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -817,7 +949,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getLastModifiedAt()">
 <h3>getLastModifiedAt</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name">getLastModifiedAt</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name">getLastModifiedAt</span>()</div>
 <div class="block"><p>Date and time (UTC) the Subscription was last modified.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -828,7 +960,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getLastModifiedBy()">
 <h3>getLastModifiedBy</h3>
-<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="annotations">@Nullable
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a></span>&nbsp;<span class="element-name">getLastModifiedBy</span>()</div>
 <div class="block"><p>IDs and references that last modified the Subscription.</p></div>
 <dl class="notes">
@@ -840,7 +972,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getCreatedBy()">
 <h3>getCreatedBy</h3>
-<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="annotations">@Nullable
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a></span>&nbsp;<span class="element-name">getCreatedBy</span>()</div>
 <div class="block"><p>IDs and references that created the Subscription.</p></div>
 <dl class="notes">
@@ -852,7 +984,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getChanges()">
 <h3>getChanges</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ChangeSubscription.html" title="interface in com.commercetools.api.models.subscription">ChangeSubscription</a>&gt;</span>&nbsp;<span class="element-name">getChanges</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ChangeSubscription.html" title="interface in com.commercetools.api.models.subscription">ChangeSubscription</a>&gt;</span>&nbsp;<span class="element-name">getChanges</span>()</div>
 <div class="block"><p>Changes subscribed to.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -874,8 +1006,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getKey()">
 <h3>getKey</h3>
-<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getKey</span>()</div>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getKey</span>()</div>
 <div class="block"><p>User-defined unique identifier of the Subscription.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -886,11 +1018,22 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="getMessages()">
 <h3>getMessages</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="MessageSubscription.html" title="interface in com.commercetools.api.models.subscription">MessageSubscription</a>&gt;</span>&nbsp;<span class="element-name">getMessages</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="MessageSubscription.html" title="interface in com.commercetools.api.models.subscription">MessageSubscription</a>&gt;</span>&nbsp;<span class="element-name">getMessages</span>()</div>
 <div class="block"><p>Messages subscribed to.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>messages</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getEvents()">
+<h3>getEvents</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="EventSubscription.html" title="interface in com.commercetools.api.models.subscription">EventSubscription</a>&gt;</span>&nbsp;<span class="element-name">getEvents</span>()</div>
+<div class="block"><p>Events subscribed to.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>events</dd>
 </dl>
 </section>
 </li>

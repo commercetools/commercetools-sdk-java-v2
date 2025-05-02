@@ -73,7 +73,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Superinterfaces:</dt>
-<dd><code><a href="DeliveryPayload.html" title="interface in com.commercetools.api.models.subscription">DeliveryPayload</a></code>, <code><a href="MessageDeliveryPayloadMixin.html" title="interface in com.commercetools.api.models.subscription">MessageDeliveryPayloadMixin</a></code></dd>
+<dd><code><a href="DeliveryPayload.html" title="interface in com.commercetools.api.models.subscription">DeliveryPayload</a></code>, <code><a href="MessageDeliveryPayloadMixin.html" title="interface in com.commercetools.api.models.subscription">MessageDeliveryPayloadMixin</a></code>, <code><a href="SubscriptionNotification.html" title="interface in com.commercetools.api.models.subscription">SubscriptionNotification</a></code></dd>
 </dl>
 <dl class="notes">
 <dt>All Known Subinterfaces:</dt>
@@ -112,7 +112,7 @@ extends <a href="DeliveryPayload.html" title="interface in com.commercetools.api
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color"><code>static final <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-first even-row-color"><code>static final <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color"><code><a href="#MESSAGE" class="member-name-link">MESSAGE</a></code></div>
 <div class="col-last even-row-color">
 <div class="block">discriminator value for MessageDeliveryPayload</div>
@@ -146,17 +146,17 @@ extends <a href="DeliveryPayload.html" title="interface in com.commercetools.api
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a deep copy of MessageDeliveryPayload</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCreatedAt()" class="member-name-link">getCreatedAt</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Date and time (UTC) the resource was initially created.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getId()" class="member-name-link">getId</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Unique ID of the message.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getLastModifiedAt()" class="member-name-link">getLastModifiedAt</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Date and time (UTC) the resource was last modified.</div>
@@ -166,17 +166,17 @@ extends <a href="DeliveryPayload.html" title="interface in com.commercetools.api
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">If the payload does not fit into the size limit or its format is not accepted by the messaging service, the <code>payloadNotIncluded</code> field is present.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getResourceVersion()" class="member-name-link">getResourceVersion</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Version of the resource on which the update was performed.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSequenceNumber()" class="member-name-link">getSequenceNumber</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Used to ensure all messages of the resource are processed in correct order.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getVersion()" class="member-name-link">getVersion</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Last seen version of the resource.</div>
@@ -192,17 +192,17 @@ extends <a href="DeliveryPayload.html" title="interface in com.commercetools.api
 <div class="block">factory method to create a shallow copy MessageDeliveryPayload</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCreatedAt(java.time.ZonedDateTime)" class="member-name-link">setCreatedAt</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCreatedAt(java.time.ZonedDateTime)" class="member-name-link">setCreatedAt</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Date and time (UTC) the resource was initially created.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setId(java.lang.String)" class="member-name-link">setId</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setId(java.lang.String)" class="member-name-link">setId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Unique ID of the message.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setLastModifiedAt(java.time.ZonedDateTime)" class="member-name-link">setLastModifiedAt</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;lastModifiedAt)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setLastModifiedAt(java.time.ZonedDateTime)" class="member-name-link">setLastModifiedAt</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;lastModifiedAt)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Date and time (UTC) the resource was last modified.</div>
 </div>
@@ -212,17 +212,17 @@ extends <a href="DeliveryPayload.html" title="interface in com.commercetools.api
 <div class="block">If the payload does not fit into the size limit or its format is not accepted by the messaging service, the <code>payloadNotIncluded</code> field is present.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setResourceVersion(java.lang.Long)" class="member-name-link">setResourceVersion</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;resourceVersion)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setResourceVersion(java.lang.Long)" class="member-name-link">setResourceVersion</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;resourceVersion)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Version of the resource on which the update was performed.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setSequenceNumber(java.lang.Long)" class="member-name-link">setSequenceNumber</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;sequenceNumber)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setSequenceNumber(java.lang.Long)" class="member-name-link">setSequenceNumber</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;sequenceNumber)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Used to ensure all messages of the resource are processed in correct order.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setVersion(java.lang.Long)" class="member-name-link">setVersion</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setVersion(java.lang.Long)" class="member-name-link">setVersion</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Last seen version of the resource.</div>
 </div>
@@ -232,7 +232,7 @@ extends <a href="DeliveryPayload.html" title="interface in com.commercetools.api
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;T&gt;&nbsp;T</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#withMessageDeliveryPayload(java.util.function.Function)" class="member-name-link">withMessageDeliveryPayload</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MessageDeliveryPayload.html" title="interface in com.commercetools.api.models.subscription">MessageDeliveryPayload</a>,<wbr>T&gt;&nbsp;helper)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#withMessageDeliveryPayload(java.util.function.Function)" class="member-name-link">withMessageDeliveryPayload</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MessageDeliveryPayload.html" title="interface in com.commercetools.api.models.subscription">MessageDeliveryPayload</a>,<wbr>T&gt;&nbsp;helper)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">accessor map function</div>
 </div>
@@ -241,10 +241,13 @@ extends <a href="DeliveryPayload.html" title="interface in com.commercetools.api
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.commercetools.api.models.subscription.DeliveryPayload">Methods inherited from interface&nbsp;com.commercetools.api.models.subscription.<a href="DeliveryPayload.html" title="interface in com.commercetools.api.models.subscription">DeliveryPayload</a></h3>
-<code><a href="DeliveryPayload.html#getNotificationType()">getNotificationType</a>, <a href="DeliveryPayload.html#getProjectKey()">getProjectKey</a>, <a href="DeliveryPayload.html#getResource()">getResource</a>, <a href="DeliveryPayload.html#getResourceUserProvidedIdentifiers()">getResourceUserProvidedIdentifiers</a>, <a href="DeliveryPayload.html#setProjectKey(java.lang.String)">setProjectKey</a>, <a href="DeliveryPayload.html#setResource(com.commercetools.api.models.common.Reference)">setResource</a>, <a href="DeliveryPayload.html#setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers)">setResourceUserProvidedIdentifiers</a>, <a href="DeliveryPayload.html#withDeliveryPayload(java.util.function.Function)">withDeliveryPayload</a></code></div>
+<code><a href="DeliveryPayload.html#getProjectKey()">getProjectKey</a>, <a href="DeliveryPayload.html#getResource()">getResource</a>, <a href="DeliveryPayload.html#getResourceUserProvidedIdentifiers()">getResourceUserProvidedIdentifiers</a>, <a href="DeliveryPayload.html#setProjectKey(java.lang.String)">setProjectKey</a>, <a href="DeliveryPayload.html#setResource(com.commercetools.api.models.common.Reference)">setResource</a>, <a href="DeliveryPayload.html#setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers)">setResourceUserProvidedIdentifiers</a>, <a href="DeliveryPayload.html#withDeliveryPayload(java.util.function.Function)">withDeliveryPayload</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.commercetools.api.models.subscription.MessageDeliveryPayloadMixin">Methods inherited from interface&nbsp;com.commercetools.api.models.subscription.<a href="MessageDeliveryPayloadMixin.html" title="interface in com.commercetools.api.models.subscription">MessageDeliveryPayloadMixin</a></h3>
 <code><a href="MessageDeliveryPayloadMixin.html#getMessagePayload()">getMessagePayload</a>, <a href="MessageDeliveryPayloadMixin.html#hasCompleteMessage()">hasCompleteMessage</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.commercetools.api.models.subscription.SubscriptionNotification">Methods inherited from interface&nbsp;com.commercetools.api.models.subscription.<a href="SubscriptionNotification.html" title="interface in com.commercetools.api.models.subscription">SubscriptionNotification</a></h3>
+<code><a href="SubscriptionNotification.html#getNotificationType()">getNotificationType</a>, <a href="SubscriptionNotification.html#withSubscriptionNotification(java.util.function.Function)">withSubscriptionNotification</a></code></div>
 </section>
 </li>
 </ul>
@@ -259,7 +262,7 @@ extends <a href="DeliveryPayload.html" title="interface in com.commercetools.api
 <li>
 <section class="detail" id="MESSAGE">
 <h3>MESSAGE</h3>
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">MESSAGE</span></div>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">MESSAGE</span></div>
 <div class="block">discriminator value for MessageDeliveryPayload</div>
 <dl class="notes">
 <dt>See Also:</dt>
@@ -283,7 +286,7 @@ extends <a href="DeliveryPayload.html" title="interface in com.commercetools.api
 <section class="detail" id="getId()">
 <h3>getId</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getId</span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getId</span>()</div>
 <div class="block"><p>Unique ID of the message.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -295,7 +298,7 @@ extends <a href="DeliveryPayload.html" title="interface in com.commercetools.api
 <section class="detail" id="getVersion()">
 <h3>getVersion</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">getVersion</span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">getVersion</span>()</div>
 <div class="block"><p>Last seen version of the resource.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -307,7 +310,7 @@ extends <a href="DeliveryPayload.html" title="interface in com.commercetools.api
 <section class="detail" id="getCreatedAt()">
 <h3>getCreatedAt</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name">getCreatedAt</span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name">getCreatedAt</span>()</div>
 <div class="block"><p>Date and time (UTC) the resource was initially created.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -319,7 +322,7 @@ extends <a href="DeliveryPayload.html" title="interface in com.commercetools.api
 <section class="detail" id="getLastModifiedAt()">
 <h3>getLastModifiedAt</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name">getLastModifiedAt</span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name">getLastModifiedAt</span>()</div>
 <div class="block"><p>Date and time (UTC) the resource was last modified.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -331,7 +334,7 @@ extends <a href="DeliveryPayload.html" title="interface in com.commercetools.api
 <section class="detail" id="getSequenceNumber()">
 <h3>getSequenceNumber</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">getSequenceNumber</span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">getSequenceNumber</span>()</div>
 <div class="block"><p>Used to ensure all messages of the resource are processed in correct order. The <code>sequenceNumber</code> of the next message of the resource is a successor of the <code>sequenceNumber</code> of the current message.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -343,7 +346,7 @@ extends <a href="DeliveryPayload.html" title="interface in com.commercetools.api
 <section class="detail" id="getResourceVersion()">
 <h3>getResourceVersion</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">getResourceVersion</span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">getResourceVersion</span>()</div>
 <div class="block"><p>Version of the resource on which the update was performed.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -366,7 +369,7 @@ extends <a href="DeliveryPayload.html" title="interface in com.commercetools.api
 <li>
 <section class="detail" id="setId(java.lang.String)">
 <h3>setId</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setId</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setId</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</span></div>
 <div class="block"><p>Unique ID of the message.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -377,7 +380,7 @@ extends <a href="DeliveryPayload.html" title="interface in com.commercetools.api
 <li>
 <section class="detail" id="setVersion(java.lang.Long)">
 <h3>setVersion</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setVersion</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setVersion</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</span></div>
 <div class="block"><p>Last seen version of the resource.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -388,7 +391,7 @@ extends <a href="DeliveryPayload.html" title="interface in com.commercetools.api
 <li>
 <section class="detail" id="setCreatedAt(java.time.ZonedDateTime)">
 <h3>setCreatedAt</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCreatedAt</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCreatedAt</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</span></div>
 <div class="block"><p>Date and time (UTC) the resource was initially created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -399,7 +402,7 @@ extends <a href="DeliveryPayload.html" title="interface in com.commercetools.api
 <li>
 <section class="detail" id="setLastModifiedAt(java.time.ZonedDateTime)">
 <h3>setLastModifiedAt</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setLastModifiedAt</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;lastModifiedAt)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setLastModifiedAt</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;lastModifiedAt)</span></div>
 <div class="block"><p>Date and time (UTC) the resource was last modified.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -410,7 +413,7 @@ extends <a href="DeliveryPayload.html" title="interface in com.commercetools.api
 <li>
 <section class="detail" id="setSequenceNumber(java.lang.Long)">
 <h3>setSequenceNumber</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setSequenceNumber</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;sequenceNumber)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setSequenceNumber</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;sequenceNumber)</span></div>
 <div class="block"><p>Used to ensure all messages of the resource are processed in correct order. The <code>sequenceNumber</code> of the next message of the resource is a successor of the <code>sequenceNumber</code> of the current message.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -421,7 +424,7 @@ extends <a href="DeliveryPayload.html" title="interface in com.commercetools.api
 <li>
 <section class="detail" id="setResourceVersion(java.lang.Long)">
 <h3>setResourceVersion</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setResourceVersion</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;resourceVersion)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setResourceVersion</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;resourceVersion)</span></div>
 <div class="block"><p>Version of the resource on which the update was performed.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -467,8 +470,8 @@ extends <a href="DeliveryPayload.html" title="interface in com.commercetools.api
 <li>
 <section class="detail" id="deepCopy(com.commercetools.api.models.subscription.MessageDeliveryPayload)">
 <h3>deepCopy</h3>
-<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MessageDeliveryPayload.html" title="interface in com.commercetools.api.models.subscription">MessageDeliveryPayload</a></span>&nbsp;<span class="element-name">deepCopy</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MessageDeliveryPayload.html" title="interface in com.commercetools.api.models.subscription">MessageDeliveryPayload</a></span>&nbsp;<span class="element-name">deepCopy</span><wbr><span class="parameters">(@Nullable
  <a href="MessageDeliveryPayload.html" title="interface in com.commercetools.api.models.subscription">MessageDeliveryPayload</a>&nbsp;template)</span></div>
 <div class="block">factory method to create a deep copy of MessageDeliveryPayload</div>
 <dl class="notes">
@@ -506,7 +509,7 @@ extends <a href="DeliveryPayload.html" title="interface in com.commercetools.api
 <li>
 <section class="detail" id="withMessageDeliveryPayload(java.util.function.Function)">
 <h3>withMessageDeliveryPayload</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name">withMessageDeliveryPayload</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MessageDeliveryPayload.html" title="interface in com.commercetools.api.models.subscription">MessageDeliveryPayload</a>,<wbr>T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name">withMessageDeliveryPayload</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="MessageDeliveryPayload.html" title="interface in com.commercetools.api.models.subscription">MessageDeliveryPayload</a>,<wbr>T&gt;&nbsp;helper)</span></div>
 <div class="block">accessor map function</div>
 <dl class="notes">
 <dt>Type Parameters:</dt>

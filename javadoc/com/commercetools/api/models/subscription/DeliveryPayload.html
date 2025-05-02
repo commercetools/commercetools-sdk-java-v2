@@ -72,26 +72,25 @@ loadScripts(document, 'script');</script>
 </div>
 <section class="class-description" id="class-description">
 <dl class="notes">
+<dt>All Superinterfaces:</dt>
+<dd><code><a href="SubscriptionNotification.html" title="interface in com.commercetools.api.models.subscription">SubscriptionNotification</a></code></dd>
+</dl>
+<dl class="notes">
 <dt>All Known Subinterfaces:</dt>
 <dd><code><a href="MessageDelivery.html" title="interface in com.commercetools.api.models.subscription">MessageDelivery</a></code>, <code><a href="MessageDeliveryPayload.html" title="interface in com.commercetools.api.models.subscription">MessageDeliveryPayload</a></code>, <code><a href="ResourceCreatedDelivery.html" title="interface in com.commercetools.api.models.subscription">ResourceCreatedDelivery</a></code>, <code><a href="ResourceCreatedDeliveryPayload.html" title="interface in com.commercetools.api.models.subscription">ResourceCreatedDeliveryPayload</a></code>, <code><a href="ResourceDeletedDelivery.html" title="interface in com.commercetools.api.models.subscription">ResourceDeletedDelivery</a></code>, <code><a href="ResourceDeletedDeliveryPayload.html" title="interface in com.commercetools.api.models.subscription">ResourceDeletedDeliveryPayload</a></code>, <code><a href="ResourceUpdatedDelivery.html" title="interface in com.commercetools.api.models.subscription">ResourceUpdatedDelivery</a></code>, <code><a href="ResourceUpdatedDeliveryPayload.html" title="interface in com.commercetools.api.models.subscription">ResourceUpdatedDeliveryPayload</a></code>, <code><a href="SubscriptionDelivery.html" title="interface in com.commercetools.api.models.subscription">SubscriptionDelivery</a></code></dd>
 </dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">DeliveryPayload</span></div>
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">DeliveryPayload</span><span class="extends-implements">
+extends <a href="SubscriptionNotification.html" title="interface in com.commercetools.api.models.subscription">SubscriptionNotification</a></span></div>
 <div class="block"><p>All payloads for the PlatformFormat share these common fields.</p>
 
  <hr>
- Example to create a subtype instance using the builder pattern
+ Example to create an instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-     DeliveryPayload deliveryPayload = DeliveryPayload.messageBuilder()
-             projectKey("{projectKey}")
-             resource(resourceBuilder -> resourceBuilder)
-             id("{id}")
-             version(0.3)
-             createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-             lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-             sequenceNumber(0.3)
-             resourceVersion(0.3)
+     DeliveryPayload deliveryPayload = DeliveryPayload.builder()
+             .projectKey("{projectKey}")
+             .resource(resourceBuilder -> resourceBuilder)
              .build()
  </code></pre>
  </div></div>
@@ -114,74 +113,52 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a deep copy of DeliveryPayload</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getNotificationType()" class="member-name-link">getNotificationType</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getProjectKey()" class="member-name-link">getProjectKey</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Identifies the payload.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getProjectKey()" class="member-name-link">getProjectKey</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block"><code>key</code> of the Project.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getResource()" class="member-name-link">getResource</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getResource()" class="member-name-link">getResource</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Reference to the resource that triggered the notification.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../message/UserProvidedIdentifiers.html" title="interface in com.commercetools.api.models.message">UserProvidedIdentifiers</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getResourceUserProvidedIdentifiers()" class="member-name-link">getResourceUserProvidedIdentifiers</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">User-defined unique identifiers of the resource.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#messageBuilder()" class="member-name-link">messageBuilder</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
-<div class="block">builder for message subtype</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ResourceCreatedDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">ResourceCreatedDeliveryPayloadBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#resourceCreatedBuilder()" class="member-name-link">resourceCreatedBuilder</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
-<div class="block">builder for resourceCreated subtype</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ResourceDeletedDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">ResourceDeletedDeliveryPayloadBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#resourceDeletedBuilder()" class="member-name-link">resourceDeletedBuilder</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
-<div class="block">builder for resourceDeleted subtype</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ResourceUpdatedDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">ResourceUpdatedDeliveryPayloadBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#resourceUpdatedBuilder()" class="member-name-link">resourceUpdatedBuilder</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
-<div class="block">builder for resourceUpdated subtype</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setProjectKey(java.lang.String)" class="member-name-link">setProjectKey</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../message/UserProvidedIdentifiers.html" title="interface in com.commercetools.api.models.message">UserProvidedIdentifiers</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getResourceUserProvidedIdentifiers()" class="member-name-link">getResourceUserProvidedIdentifiers</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block"><code>key</code> of the Project.</div>
+<div class="block">User-defined unique identifiers of the resource.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setResource(com.commercetools.api.models.common.Reference)" class="member-name-link">setResource</a><wbr>(<a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&nbsp;resource)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setProjectKey(java.lang.String)" class="member-name-link">setProjectKey</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Reference to the resource that triggered the notification.</div>
+<div class="block"><code>key</code> of the Project.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers)" class="member-name-link">setResourceUserProvidedIdentifiers</a><wbr>(<a href="../message/UserProvidedIdentifiers.html" title="interface in com.commercetools.api.models.message">UserProvidedIdentifiers</a>&nbsp;resourceUserProvidedIdentifiers)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setResource(com.commercetools.api.models.common.Reference)" class="member-name-link">setResource</a><wbr>(<a href="../common/Reference.html" title="interface in com.commercetools.api.models.common">Reference</a>&nbsp;resource)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Reference to the resource that triggered the notification.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setResourceUserProvidedIdentifiers(com.commercetools.api.models.message.UserProvidedIdentifiers)" class="member-name-link">setResourceUserProvidedIdentifiers</a><wbr>(<a href="../message/UserProvidedIdentifiers.html" title="interface in com.commercetools.api.models.message">UserProvidedIdentifiers</a>&nbsp;resourceUserProvidedIdentifiers)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">User-defined unique identifiers of the resource.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="DeliveryPayload.html" title="interface in com.commercetools.api.models.subscription">DeliveryPayload</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="DeliveryPayload.html" title="interface in com.commercetools.api.models.subscription">DeliveryPayload</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;T&gt;&nbsp;T</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#withDeliveryPayload(java.util.function.Function)" class="member-name-link">withDeliveryPayload</a><wbr>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="DeliveryPayload.html" title="interface in com.commercetools.api.models.subscription">DeliveryPayload</a>,<wbr>T&gt;&nbsp;helper)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;T&gt;&nbsp;T</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#withDeliveryPayload(java.util.function.Function)" class="member-name-link">withDeliveryPayload</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="DeliveryPayload.html" title="interface in com.commercetools.api.models.subscription">DeliveryPayload</a>,<wbr>T&gt;&nbsp;helper)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">accessor map function</div>
 </div>
 </div>
 </div>
 </div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.commercetools.api.models.subscription.SubscriptionNotification">Methods inherited from interface&nbsp;com.commercetools.api.models.subscription.<a href="SubscriptionNotification.html" title="interface in com.commercetools.api.models.subscription">SubscriptionNotification</a></h3>
+<code><a href="SubscriptionNotification.html#getNotificationType()">getNotificationType</a>, <a href="SubscriptionNotification.html#withSubscriptionNotification(java.util.function.Function)">withSubscriptionNotification</a></code></div>
 </section>
 </li>
 </ul>
@@ -197,23 +174,11 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getProjectKey()">
 <h3>getProjectKey</h3>
 <div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getProjectKey</span>()</div>
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getProjectKey</span>()</div>
 <div class="block"><p><code>key</code> of the Project. Useful for processing notifications if the Destination receives them from multiple Projects.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>projectKey</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getNotificationType()">
-<h3>getNotificationType</h3>
-<div class="member-signature"><span class="annotations">@NotNull
-</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getNotificationType</span>()</div>
-<div class="block"><p>Identifies the payload.</p></div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>notificationType</dd>
 </dl>
 </section>
 </li>
@@ -245,7 +210,7 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="setProjectKey(java.lang.String)">
 <h3>setProjectKey</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setProjectKey</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setProjectKey</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;projectKey)</span></div>
 <div class="block"><p><code>key</code> of the Project. Useful for processing notifications if the Destination receives them from multiple Projects.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -278,8 +243,8 @@ loadScripts(document, 'script');</script>
 <li>
 <section class="detail" id="deepCopy(com.commercetools.api.models.subscription.DeliveryPayload)">
 <h3>deepCopy</h3>
-<div class="member-signature"><span class="annotations"><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
-</span><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DeliveryPayload.html" title="interface in com.commercetools.api.models.subscription">DeliveryPayload</a></span>&nbsp;<span class="element-name">deepCopy</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html" title="class or interface in javax.annotation" class="external-link">@Nullable</a>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="DeliveryPayload.html" title="interface in com.commercetools.api.models.subscription">DeliveryPayload</a></span>&nbsp;<span class="element-name">deepCopy</span><wbr><span class="parameters">(@Nullable
  <a href="DeliveryPayload.html" title="interface in com.commercetools.api.models.subscription">DeliveryPayload</a>&nbsp;template)</span></div>
 <div class="block">factory method to create a deep copy of DeliveryPayload</div>
 <dl class="notes">
@@ -291,53 +256,9 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="messageBuilder()">
-<h3>messageBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="MessageDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">MessageDeliveryPayloadBuilder</a></span>&nbsp;<span class="element-name">messageBuilder</span>()</div>
-<div class="block">builder for message subtype</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>builder</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="resourceCreatedBuilder()">
-<h3>resourceCreatedBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ResourceCreatedDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">ResourceCreatedDeliveryPayloadBuilder</a></span>&nbsp;<span class="element-name">resourceCreatedBuilder</span>()</div>
-<div class="block">builder for resourceCreated subtype</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>builder</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="resourceDeletedBuilder()">
-<h3>resourceDeletedBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ResourceDeletedDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">ResourceDeletedDeliveryPayloadBuilder</a></span>&nbsp;<span class="element-name">resourceDeletedBuilder</span>()</div>
-<div class="block">builder for resourceDeleted subtype</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>builder</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="resourceUpdatedBuilder()">
-<h3>resourceUpdatedBuilder</h3>
-<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="ResourceUpdatedDeliveryPayloadBuilder.html" title="class in com.commercetools.api.models.subscription">ResourceUpdatedDeliveryPayloadBuilder</a></span>&nbsp;<span class="element-name">resourceUpdatedBuilder</span>()</div>
-<div class="block">builder for resourceUpdated subtype</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>builder</dd>
-</dl>
-</section>
-</li>
-<li>
 <section class="detail" id="withDeliveryPayload(java.util.function.Function)">
 <h3>withDeliveryPayload</h3>
-<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name">withDeliveryPayload</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="DeliveryPayload.html" title="interface in com.commercetools.api.models.subscription">DeliveryPayload</a>,<wbr>T&gt;&nbsp;helper)</span></div>
+<div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">T</span>&nbsp;<span class="element-name">withDeliveryPayload</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="DeliveryPayload.html" title="interface in com.commercetools.api.models.subscription">DeliveryPayload</a>,<wbr>T&gt;&nbsp;helper)</span></div>
 <div class="block">accessor map function</div>
 <dl class="notes">
 <dt>Type Parameters:</dt>

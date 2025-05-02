@@ -12,18 +12,12 @@ import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.models.Identifiable;
 import com.commercetools.api.models.common.DefaultCurrencyUnits;
 import com.commercetools.api.search.products.*;
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
 
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class SearchTests {
 
     @Test
@@ -58,19 +52,18 @@ public class SearchTests {
                     "filter=categories.id%3A+%22abc%22&filter.facets=categories.id%3A+%22def%22&filter.query=categories.id%3A+%22ghi%22&facet=categories.id");
     }
 
-    @TestTemplate
-    @UseDataProvider("filterExpressions")
+    @ParameterizedTest
+    @MethodSource("filterExpressions")
     public void filterRender(FilterExpression searchExpression, String expectedPredicate) {
         Assertions.assertThat(searchExpression.render()).isEqualTo(expectedPredicate);
     }
 
-    @TestTemplate
-    @UseDataProvider("facetExpressions")
+    @ParameterizedTest
+    @MethodSource("facetExpressions")
     public void facetRender(FilterExpression searchExpression, String expectedPredicate) {
         Assertions.assertThat(searchExpression.render()).isEqualTo(expectedPredicate);
     }
 
-    @DataProvider
     public static Object[][] filterExpressions() {
         return new Object[][] { new Object[] { ProductFilterExpressionBuilder.of().key().is("foo"), "key: \"foo\"" },
                 new Object[] { ProductFilterExpressionBuilder.of().key().exists(), "key: exists" },
@@ -291,7 +284,6 @@ public class SearchTests {
         };
     }
 
-    @DataProvider
     public static Object[][] facetExpressions() {
         return new Object[][] {
                 new Object[] { ProductFacetExpressionBuilder.of().categories().id().alias("cat"),

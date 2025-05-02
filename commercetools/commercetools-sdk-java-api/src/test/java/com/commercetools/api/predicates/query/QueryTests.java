@@ -20,26 +20,19 @@ import com.commercetools.api.predicates.query.product.ProductQueryBuilderDsl;
 import com.commercetools.api.predicates.query.state.StateQueryBuilderDsl;
 import com.commercetools.api.predicates.query.tax_category.TaxRateQueryBuilderDsl;
 import com.commercetools.api.predicates.query.type.TypeQueryBuilderDsl;
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
 
 import org.assertj.core.api.Assertions;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 
-@ExtendWith(UseDataProviderExtension.class)
-@ExtendWith(DataProviderExtension.class)
 public class QueryTests {
 
-    @TestTemplate
-    @UseDataProvider("predicates")
+    @ParameterizedTest
+    @MethodSource("predicates")
     public void predicateRender(QueryPredicate t, String expectedPredicate) {
         Assertions.assertThat(t.render()).isEqualTo(expectedPredicate);
     }
 
-    @DataProvider
     public static Object[][] predicates() {
         return new Object[][] { new Object[] { CartQueryBuilderDsl.of().id().is("abc"), "id = \"abc\"", },
                 new Object[] { CartQueryBuilderDsl.of().id().is("abc").not(), "not(id = \"abc\")", },

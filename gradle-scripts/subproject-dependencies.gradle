@@ -1,6 +1,5 @@
 dependencies {
     testImplementation junit.junit
-    testImplementation junit.dataprovider
     testImplementation junit.assertj
     testImplementation awaitility.awaitility
     testImplementation logback.classic

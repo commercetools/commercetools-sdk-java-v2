@@ -12,30 +12,23 @@ import java.util.function.Function;
 import com.commercetools.monitoring.datadog.DatadogMiddleware;
 import com.datadog.api.client.ApiException;
 import com.datadog.api.client.v2.api.MetricsApi;
-import com.tngtech.junit.dataprovider.DataProvider;
-import com.tngtech.junit.dataprovider.DataProviderExtension;
-import com.tngtech.junit.dataprovider.UseDataProvider;
-import com.tngtech.junit.dataprovider.UseDataProviderExtension;
 
 import io.vrap.rmf.base.client.*;
 
 import org.assertj.core.api.Assertions;
-import org.junit.jupiter.api.TestTemplate;
-import org.junit.jupiter.api.extension.ExtendWith;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.MethodSource;
 import org.mockito.Mockito;
 
-@ExtendWith(DataProviderExtension.class)
-@ExtendWith(UseDataProviderExtension.class)
 public class TelemetryMiddlewareTest {
 
-    @DataProvider
     public static Object[][] responses() {
         return new Object[][] { { 200, 2 }, { 201, 2 }, { 400, 3 }, { 401, 3 }, { 403, 3 }, { 404, 3 }, { 409, 3 },
                 { 499, 3 }, { 500, 3 }, { 502, 3 }, { 503, 3 }, { 504, 3 }, { 599, 3 }, };
     }
 
-    @TestTemplate
-    @UseDataProvider("responses")
+    @ParameterizedTest
+    @MethodSource("responses")
     public void testCounts(int statusCode, int count) throws ApiException {
         MetricsApi metricsApi = Mockito.mock(MetricsApi.class);
         Mockito.when(metricsApi.submitMetrics(Mockito.any())).thenReturn(null);
@@ -59,8 +52,8 @@ public class TelemetryMiddlewareTest {
         }));
     }
 
-    @TestTemplate
-    @UseDataProvider("responses")
+    @ParameterizedTest
+    @MethodSource("responses")
     public void testHttpCounts(int statusCode, int count) throws URISyntaxException, ApiException {
         MetricsApi metricsApi = Mockito.mock(MetricsApi.class);
         Mockito.when(metricsApi.submitMetrics(Mockito.any())).thenReturn(null);

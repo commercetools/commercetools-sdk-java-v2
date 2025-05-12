@@ -32,9 +32,9 @@ import jakarta.validation.constraints.NotNull;
  *             .version(0.3)
  *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
- *             .plusChanges(changesBuilder -> changesBuilder)
  *             .destination(destinationBuilder -> destinationBuilder)
  *             .plusMessages(messagesBuilder -> messagesBuilder)
+ *             .plusChanges(changesBuilder -> changesBuilder)
  *             .plusEvents(eventsBuilder -> eventsBuilder)
  *             .format(formatBuilder -> formatBuilder)
  *             .status(SubscriptionHealthStatus.HEALTHY)
@@ -96,15 +96,6 @@ public interface Subscription extends BaseResource, com.commercetools.api.models
     public CreatedBy getCreatedBy();
 
     /**
-     *  <p>Changes subscribed to.</p>
-     * @return changes
-     */
-    @NotNull
-    @Valid
-    @JsonProperty("changes")
-    public List<ChangeSubscription> getChanges();
-
-    /**
      *  <p>Messaging service to which the notifications are sent.</p>
      * @return destination
      */
@@ -129,6 +120,15 @@ public interface Subscription extends BaseResource, com.commercetools.api.models
     @Valid
     @JsonProperty("messages")
     public List<MessageSubscription> getMessages();
+
+    /**
+     *  <p>Changes subscribed to.</p>
+     * @return changes
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("changes")
+    public List<ChangeSubscription> getChanges();
 
     /**
      *  <p>Events subscribed to.</p>
@@ -199,21 +199,6 @@ public interface Subscription extends BaseResource, com.commercetools.api.models
     public void setCreatedBy(final CreatedBy createdBy);
 
     /**
-     *  <p>Changes subscribed to.</p>
-     * @param changes values to be set
-     */
-
-    @JsonIgnore
-    public void setChanges(final ChangeSubscription... changes);
-
-    /**
-     *  <p>Changes subscribed to.</p>
-     * @param changes values to be set
-     */
-
-    public void setChanges(final List<ChangeSubscription> changes);
-
-    /**
      *  <p>Messaging service to which the notifications are sent.</p>
      * @param destination value to be set
      */
@@ -241,6 +226,21 @@ public interface Subscription extends BaseResource, com.commercetools.api.models
      */
 
     public void setMessages(final List<MessageSubscription> messages);
+
+    /**
+     *  <p>Changes subscribed to.</p>
+     * @param changes values to be set
+     */
+
+    @JsonIgnore
+    public void setChanges(final ChangeSubscription... changes);
+
+    /**
+     *  <p>Changes subscribed to.</p>
+     * @param changes values to be set
+     */
+
+    public void setChanges(final List<ChangeSubscription> changes);
 
     /**
      *  <p>Events subscribed to.</p>
@@ -292,10 +292,10 @@ public interface Subscription extends BaseResource, com.commercetools.api.models
         instance.setLastModifiedAt(template.getLastModifiedAt());
         instance.setLastModifiedBy(template.getLastModifiedBy());
         instance.setCreatedBy(template.getCreatedBy());
-        instance.setChanges(template.getChanges());
         instance.setDestination(template.getDestination());
         instance.setKey(template.getKey());
         instance.setMessages(template.getMessages());
+        instance.setChanges(template.getChanges());
         instance.setEvents(template.getEvents());
         instance.setFormat(template.getFormat());
         instance.setStatus(template.getStatus());
@@ -320,17 +320,17 @@ public interface Subscription extends BaseResource, com.commercetools.api.models
         instance.setLastModifiedBy(
             com.commercetools.api.models.common.LastModifiedBy.deepCopy(template.getLastModifiedBy()));
         instance.setCreatedBy(com.commercetools.api.models.common.CreatedBy.deepCopy(template.getCreatedBy()));
-        instance.setChanges(Optional.ofNullable(template.getChanges())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.subscription.ChangeSubscription::deepCopy)
-                        .collect(Collectors.toList()))
-                .orElse(null));
         instance.setDestination(
             com.commercetools.api.models.subscription.Destination.deepCopy(template.getDestination()));
         instance.setKey(template.getKey());
         instance.setMessages(Optional.ofNullable(template.getMessages())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.subscription.MessageSubscription::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setChanges(Optional.ofNullable(template.getChanges())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.subscription.ChangeSubscription::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setEvents(Optional.ofNullable(template.getEvents())

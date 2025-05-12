@@ -30,10 +30,6 @@ public class SubscriptionTest {
                                 .lastModifiedBy(new com.commercetools.api.models.common.LastModifiedByImpl()) },
                 new Object[] { "createdBy",
                         Subscription.builder().createdBy(new com.commercetools.api.models.common.CreatedByImpl()) },
-                new Object[] { "changes",
-                        Subscription.builder()
-                                .changes(Collections.singletonList(
-                                    new com.commercetools.api.models.subscription.ChangeSubscriptionImpl())) },
                 new Object[] { "destination",
                         Subscription.builder()
                                 .destination(new com.commercetools.api.models.subscription.DestinationImpl()) },
@@ -42,6 +38,10 @@ public class SubscriptionTest {
                         Subscription.builder()
                                 .messages(Collections.singletonList(
                                     new com.commercetools.api.models.subscription.MessageSubscriptionImpl())) },
+                new Object[] { "changes",
+                        Subscription.builder()
+                                .changes(Collections.singletonList(
+                                    new com.commercetools.api.models.subscription.ChangeSubscriptionImpl())) },
                 new Object[] { "events",
                         Subscription.builder()
                                 .events(Collections.singletonList(
@@ -98,16 +98,6 @@ public class SubscriptionTest {
     }
 
     @Test
-    public void changes() {
-        Subscription value = Subscription.of();
-        value.setChanges(
-            Collections.singletonList(new com.commercetools.api.models.subscription.ChangeSubscriptionImpl()));
-        Assertions.assertThat(value.getChanges())
-                .isEqualTo(
-                    Collections.singletonList(new com.commercetools.api.models.subscription.ChangeSubscriptionImpl()));
-    }
-
-    @Test
     public void destination() {
         Subscription value = Subscription.of();
         value.setDestination(new com.commercetools.api.models.subscription.DestinationImpl());
@@ -130,6 +120,16 @@ public class SubscriptionTest {
         Assertions.assertThat(value.getMessages())
                 .isEqualTo(
                     Collections.singletonList(new com.commercetools.api.models.subscription.MessageSubscriptionImpl()));
+    }
+
+    @Test
+    public void changes() {
+        Subscription value = Subscription.of();
+        value.setChanges(
+            Collections.singletonList(new com.commercetools.api.models.subscription.ChangeSubscriptionImpl()));
+        Assertions.assertThat(value.getChanges())
+                .isEqualTo(
+                    Collections.singletonList(new com.commercetools.api.models.subscription.ChangeSubscriptionImpl()));
     }
 
     @Test

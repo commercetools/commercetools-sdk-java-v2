@@ -20,9 +20,9 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .version(0.3)
  *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
- *             .plusChanges(changesBuilder -> changesBuilder)
  *             .destination(destinationBuilder -> destinationBuilder)
  *             .plusMessages(messagesBuilder -> messagesBuilder)
+ *             .plusChanges(changesBuilder -> changesBuilder)
  *             .plusEvents(eventsBuilder -> eventsBuilder)
  *             .format(formatBuilder -> formatBuilder)
  *             .status(SubscriptionHealthStatus.HEALTHY)
@@ -47,14 +47,14 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     @Nullable
     private com.commercetools.api.models.common.CreatedBy createdBy;
 
-    private java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes;
-
     private com.commercetools.api.models.subscription.Destination destination;
 
     @Nullable
     private String key;
 
     private java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages;
+
+    private java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes;
 
     private java.util.List<com.commercetools.api.models.subscription.EventSubscription> events;
 
@@ -175,96 +175,6 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     public SubscriptionBuilder createdBy(@Nullable final com.commercetools.api.models.common.CreatedBy createdBy) {
         this.createdBy = createdBy;
         return this;
-    }
-
-    /**
-     *  <p>Changes subscribed to.</p>
-     * @param changes value to be set
-     * @return Builder
-     */
-
-    public SubscriptionBuilder changes(final com.commercetools.api.models.subscription.ChangeSubscription... changes) {
-        this.changes = new ArrayList<>(Arrays.asList(changes));
-        return this;
-    }
-
-    /**
-     *  <p>Changes subscribed to.</p>
-     * @param changes value to be set
-     * @return Builder
-     */
-
-    public SubscriptionBuilder changes(
-            final java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes) {
-        this.changes = changes;
-        return this;
-    }
-
-    /**
-     *  <p>Changes subscribed to.</p>
-     * @param changes value to be set
-     * @return Builder
-     */
-
-    public SubscriptionBuilder plusChanges(
-            final com.commercetools.api.models.subscription.ChangeSubscription... changes) {
-        if (this.changes == null) {
-            this.changes = new ArrayList<>();
-        }
-        this.changes.addAll(Arrays.asList(changes));
-        return this;
-    }
-
-    /**
-     *  <p>Changes subscribed to.</p>
-     * @param builder function to build the changes value
-     * @return Builder
-     */
-
-    public SubscriptionBuilder plusChanges(
-            Function<com.commercetools.api.models.subscription.ChangeSubscriptionBuilder, com.commercetools.api.models.subscription.ChangeSubscriptionBuilder> builder) {
-        if (this.changes == null) {
-            this.changes = new ArrayList<>();
-        }
-        this.changes
-                .add(builder.apply(com.commercetools.api.models.subscription.ChangeSubscriptionBuilder.of()).build());
-        return this;
-    }
-
-    /**
-     *  <p>Changes subscribed to.</p>
-     * @param builder function to build the changes value
-     * @return Builder
-     */
-
-    public SubscriptionBuilder withChanges(
-            Function<com.commercetools.api.models.subscription.ChangeSubscriptionBuilder, com.commercetools.api.models.subscription.ChangeSubscriptionBuilder> builder) {
-        this.changes = new ArrayList<>();
-        this.changes
-                .add(builder.apply(com.commercetools.api.models.subscription.ChangeSubscriptionBuilder.of()).build());
-        return this;
-    }
-
-    /**
-     *  <p>Changes subscribed to.</p>
-     * @param builder function to build the changes value
-     * @return Builder
-     */
-
-    public SubscriptionBuilder addChanges(
-            Function<com.commercetools.api.models.subscription.ChangeSubscriptionBuilder, com.commercetools.api.models.subscription.ChangeSubscription> builder) {
-        return plusChanges(builder.apply(com.commercetools.api.models.subscription.ChangeSubscriptionBuilder.of()));
-    }
-
-    /**
-     *  <p>Changes subscribed to.</p>
-     * @param builder function to build the changes value
-     * @return Builder
-     */
-
-    public SubscriptionBuilder setChanges(
-            Function<com.commercetools.api.models.subscription.ChangeSubscriptionBuilder, com.commercetools.api.models.subscription.ChangeSubscription> builder) {
-        return changes(builder.apply(com.commercetools.api.models.subscription.ChangeSubscriptionBuilder.of()));
     }
 
     /**
@@ -390,6 +300,96 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     public SubscriptionBuilder setMessages(
             Function<com.commercetools.api.models.subscription.MessageSubscriptionBuilder, com.commercetools.api.models.subscription.MessageSubscription> builder) {
         return messages(builder.apply(com.commercetools.api.models.subscription.MessageSubscriptionBuilder.of()));
+    }
+
+    /**
+     *  <p>Changes subscribed to.</p>
+     * @param changes value to be set
+     * @return Builder
+     */
+
+    public SubscriptionBuilder changes(final com.commercetools.api.models.subscription.ChangeSubscription... changes) {
+        this.changes = new ArrayList<>(Arrays.asList(changes));
+        return this;
+    }
+
+    /**
+     *  <p>Changes subscribed to.</p>
+     * @param changes value to be set
+     * @return Builder
+     */
+
+    public SubscriptionBuilder changes(
+            final java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes) {
+        this.changes = changes;
+        return this;
+    }
+
+    /**
+     *  <p>Changes subscribed to.</p>
+     * @param changes value to be set
+     * @return Builder
+     */
+
+    public SubscriptionBuilder plusChanges(
+            final com.commercetools.api.models.subscription.ChangeSubscription... changes) {
+        if (this.changes == null) {
+            this.changes = new ArrayList<>();
+        }
+        this.changes.addAll(Arrays.asList(changes));
+        return this;
+    }
+
+    /**
+     *  <p>Changes subscribed to.</p>
+     * @param builder function to build the changes value
+     * @return Builder
+     */
+
+    public SubscriptionBuilder plusChanges(
+            Function<com.commercetools.api.models.subscription.ChangeSubscriptionBuilder, com.commercetools.api.models.subscription.ChangeSubscriptionBuilder> builder) {
+        if (this.changes == null) {
+            this.changes = new ArrayList<>();
+        }
+        this.changes
+                .add(builder.apply(com.commercetools.api.models.subscription.ChangeSubscriptionBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Changes subscribed to.</p>
+     * @param builder function to build the changes value
+     * @return Builder
+     */
+
+    public SubscriptionBuilder withChanges(
+            Function<com.commercetools.api.models.subscription.ChangeSubscriptionBuilder, com.commercetools.api.models.subscription.ChangeSubscriptionBuilder> builder) {
+        this.changes = new ArrayList<>();
+        this.changes
+                .add(builder.apply(com.commercetools.api.models.subscription.ChangeSubscriptionBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Changes subscribed to.</p>
+     * @param builder function to build the changes value
+     * @return Builder
+     */
+
+    public SubscriptionBuilder addChanges(
+            Function<com.commercetools.api.models.subscription.ChangeSubscriptionBuilder, com.commercetools.api.models.subscription.ChangeSubscription> builder) {
+        return plusChanges(builder.apply(com.commercetools.api.models.subscription.ChangeSubscriptionBuilder.of()));
+    }
+
+    /**
+     *  <p>Changes subscribed to.</p>
+     * @param builder function to build the changes value
+     * @return Builder
+     */
+
+    public SubscriptionBuilder setChanges(
+            Function<com.commercetools.api.models.subscription.ChangeSubscriptionBuilder, com.commercetools.api.models.subscription.ChangeSubscription> builder) {
+        return changes(builder.apply(com.commercetools.api.models.subscription.ChangeSubscriptionBuilder.of()));
     }
 
     /**
@@ -570,15 +570,6 @@ public class SubscriptionBuilder implements Builder<Subscription> {
     }
 
     /**
-     *  <p>Changes subscribed to.</p>
-     * @return changes
-     */
-
-    public java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> getChanges() {
-        return this.changes;
-    }
-
-    /**
      *  <p>Messaging service to which the notifications are sent.</p>
      * @return destination
      */
@@ -604,6 +595,15 @@ public class SubscriptionBuilder implements Builder<Subscription> {
 
     public java.util.List<com.commercetools.api.models.subscription.MessageSubscription> getMessages() {
         return this.messages;
+    }
+
+    /**
+     *  <p>Changes subscribed to.</p>
+     * @return changes
+     */
+
+    public java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> getChanges() {
+        return this.changes;
     }
 
     /**
@@ -642,14 +642,14 @@ public class SubscriptionBuilder implements Builder<Subscription> {
         Objects.requireNonNull(version, Subscription.class + ": version is missing");
         Objects.requireNonNull(createdAt, Subscription.class + ": createdAt is missing");
         Objects.requireNonNull(lastModifiedAt, Subscription.class + ": lastModifiedAt is missing");
-        Objects.requireNonNull(changes, Subscription.class + ": changes is missing");
         Objects.requireNonNull(destination, Subscription.class + ": destination is missing");
         Objects.requireNonNull(messages, Subscription.class + ": messages is missing");
+        Objects.requireNonNull(changes, Subscription.class + ": changes is missing");
         Objects.requireNonNull(events, Subscription.class + ": events is missing");
         Objects.requireNonNull(format, Subscription.class + ": format is missing");
         Objects.requireNonNull(status, Subscription.class + ": status is missing");
-        return new SubscriptionImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, changes,
-            destination, key, messages, events, format, status);
+        return new SubscriptionImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, destination, key,
+            messages, changes, events, format, status);
     }
 
     /**
@@ -657,8 +657,8 @@ public class SubscriptionBuilder implements Builder<Subscription> {
      * @return Subscription
      */
     public Subscription buildUnchecked() {
-        return new SubscriptionImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, changes,
-            destination, key, messages, events, format, status);
+        return new SubscriptionImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, destination, key,
+            messages, changes, events, format, status);
     }
 
     /**
@@ -682,10 +682,10 @@ public class SubscriptionBuilder implements Builder<Subscription> {
         builder.lastModifiedAt = template.getLastModifiedAt();
         builder.lastModifiedBy = template.getLastModifiedBy();
         builder.createdBy = template.getCreatedBy();
-        builder.changes = template.getChanges();
         builder.destination = template.getDestination();
         builder.key = template.getKey();
         builder.messages = template.getMessages();
+        builder.changes = template.getChanges();
         builder.events = template.getEvents();
         builder.format = template.getFormat();
         builder.status = template.getStatus();

@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Either <code>messages</code> or <code>changes</code> must be set.</p>
+ *  <p>Either <code>messages</code>, <code>changes</code>, or <code>events</code> must be set.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,14 +33,6 @@ import jakarta.validation.constraints.NotNull;
 @JsonDeserialize(as = SubscriptionDraftImpl.class)
 public interface SubscriptionDraft
         extends com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<SubscriptionDraft> {
-
-    /**
-     *  <p>Changes to be subscribed to.</p>
-     * @return changes
-     */
-    @Valid
-    @JsonProperty("changes")
-    public List<ChangeSubscription> getChanges();
 
     /**
      *  <p>Messaging service to which the notifications are sent.</p>
@@ -68,6 +60,14 @@ public interface SubscriptionDraft
     public List<MessageSubscription> getMessages();
 
     /**
+     *  <p>Changes to be subscribed to.</p>
+     * @return changes
+     */
+    @Valid
+    @JsonProperty("changes")
+    public List<ChangeSubscription> getChanges();
+
+    /**
      *  <p>Events to be subscribed to.</p>
      * @return events
      */
@@ -82,21 +82,6 @@ public interface SubscriptionDraft
     @Valid
     @JsonProperty("format")
     public DeliveryFormat getFormat();
-
-    /**
-     *  <p>Changes to be subscribed to.</p>
-     * @param changes values to be set
-     */
-
-    @JsonIgnore
-    public void setChanges(final ChangeSubscription... changes);
-
-    /**
-     *  <p>Changes to be subscribed to.</p>
-     * @param changes values to be set
-     */
-
-    public void setChanges(final List<ChangeSubscription> changes);
 
     /**
      *  <p>Messaging service to which the notifications are sent.</p>
@@ -126,6 +111,21 @@ public interface SubscriptionDraft
      */
 
     public void setMessages(final List<MessageSubscription> messages);
+
+    /**
+     *  <p>Changes to be subscribed to.</p>
+     * @param changes values to be set
+     */
+
+    @JsonIgnore
+    public void setChanges(final ChangeSubscription... changes);
+
+    /**
+     *  <p>Changes to be subscribed to.</p>
+     * @param changes values to be set
+     */
+
+    public void setChanges(final List<ChangeSubscription> changes);
 
     /**
      *  <p>Events to be subscribed to.</p>
@@ -164,10 +164,10 @@ public interface SubscriptionDraft
      */
     public static SubscriptionDraft of(final SubscriptionDraft template) {
         SubscriptionDraftImpl instance = new SubscriptionDraftImpl();
-        instance.setChanges(template.getChanges());
         instance.setDestination(template.getDestination());
         instance.setKey(template.getKey());
         instance.setMessages(template.getMessages());
+        instance.setChanges(template.getChanges());
         instance.setEvents(template.getEvents());
         instance.setFormat(template.getFormat());
         return instance;
@@ -184,17 +184,17 @@ public interface SubscriptionDraft
             return null;
         }
         SubscriptionDraftImpl instance = new SubscriptionDraftImpl();
-        instance.setChanges(Optional.ofNullable(template.getChanges())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.subscription.ChangeSubscription::deepCopy)
-                        .collect(Collectors.toList()))
-                .orElse(null));
         instance.setDestination(
             com.commercetools.api.models.subscription.Destination.deepCopy(template.getDestination()));
         instance.setKey(template.getKey());
         instance.setMessages(Optional.ofNullable(template.getMessages())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.subscription.MessageSubscription::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setChanges(Optional.ofNullable(template.getChanges())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.subscription.ChangeSubscription::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setEvents(Optional.ofNullable(template.getEvents())

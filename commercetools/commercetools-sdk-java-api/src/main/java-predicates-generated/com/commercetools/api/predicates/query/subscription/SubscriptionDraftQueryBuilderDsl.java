@@ -13,21 +13,6 @@ public class SubscriptionDraftQueryBuilderDsl {
         return new SubscriptionDraftQueryBuilderDsl();
     }
 
-    public CombinationQueryPredicate<SubscriptionDraftQueryBuilderDsl> changes(
-            Function<com.commercetools.api.predicates.query.subscription.ChangeSubscriptionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.subscription.ChangeSubscriptionQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(
-            ContainerQueryPredicate.of()
-                    .parent(ConstantQueryPredicate.of().constant("changes"))
-                    .inner(fn.apply(
-                        com.commercetools.api.predicates.query.subscription.ChangeSubscriptionQueryBuilderDsl.of())),
-            SubscriptionDraftQueryBuilderDsl::of);
-    }
-
-    public CollectionPredicateBuilder<SubscriptionDraftQueryBuilderDsl> changes() {
-        return new CollectionPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("changes")),
-            p -> new CombinationQueryPredicate<>(p, SubscriptionDraftQueryBuilderDsl::of));
-    }
-
     public CombinationQueryPredicate<SubscriptionDraftQueryBuilderDsl> destination(
             Function<com.commercetools.api.predicates.query.subscription.DestinationQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.subscription.DestinationQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
@@ -53,6 +38,21 @@ public class SubscriptionDraftQueryBuilderDsl {
 
     public CollectionPredicateBuilder<SubscriptionDraftQueryBuilderDsl> messages() {
         return new CollectionPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("messages")),
+            p -> new CombinationQueryPredicate<>(p, SubscriptionDraftQueryBuilderDsl::of));
+    }
+
+    public CombinationQueryPredicate<SubscriptionDraftQueryBuilderDsl> changes(
+            Function<com.commercetools.api.predicates.query.subscription.ChangeSubscriptionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.subscription.ChangeSubscriptionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("changes"))
+                    .inner(fn.apply(
+                        com.commercetools.api.predicates.query.subscription.ChangeSubscriptionQueryBuilderDsl.of())),
+            SubscriptionDraftQueryBuilderDsl::of);
+    }
+
+    public CollectionPredicateBuilder<SubscriptionDraftQueryBuilderDsl> changes() {
+        return new CollectionPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("changes")),
             p -> new CombinationQueryPredicate<>(p, SubscriptionDraftQueryBuilderDsl::of));
     }
 

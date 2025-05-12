@@ -34,13 +34,13 @@ public class SubscriptionImpl implements Subscription, ModelBase {
 
     private com.commercetools.api.models.common.CreatedBy createdBy;
 
-    private java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes;
-
     private com.commercetools.api.models.subscription.Destination destination;
 
     private String key;
 
     private java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages;
+
+    private java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes;
 
     private java.util.List<com.commercetools.api.models.subscription.EventSubscription> events;
 
@@ -57,10 +57,10 @@ public class SubscriptionImpl implements Subscription, ModelBase {
             @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt,
             @JsonProperty("lastModifiedBy") final com.commercetools.api.models.common.LastModifiedBy lastModifiedBy,
             @JsonProperty("createdBy") final com.commercetools.api.models.common.CreatedBy createdBy,
-            @JsonProperty("changes") final java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes,
             @JsonProperty("destination") final com.commercetools.api.models.subscription.Destination destination,
             @JsonProperty("key") final String key,
             @JsonProperty("messages") final java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages,
+            @JsonProperty("changes") final java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes,
             @JsonProperty("events") final java.util.List<com.commercetools.api.models.subscription.EventSubscription> events,
             @JsonProperty("format") final com.commercetools.api.models.subscription.DeliveryFormat format,
             @JsonProperty("status") final com.commercetools.api.models.subscription.SubscriptionHealthStatus status) {
@@ -70,10 +70,10 @@ public class SubscriptionImpl implements Subscription, ModelBase {
         this.lastModifiedAt = lastModifiedAt;
         this.lastModifiedBy = lastModifiedBy;
         this.createdBy = createdBy;
-        this.changes = changes;
         this.destination = destination;
         this.key = key;
         this.messages = messages;
+        this.changes = changes;
         this.events = events;
         this.format = format;
         this.status = status;
@@ -134,14 +134,6 @@ public class SubscriptionImpl implements Subscription, ModelBase {
     }
 
     /**
-     *  <p>Changes subscribed to.</p>
-     */
-
-    public java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> getChanges() {
-        return this.changes;
-    }
-
-    /**
      *  <p>Messaging service to which the notifications are sent.</p>
      */
 
@@ -163,6 +155,14 @@ public class SubscriptionImpl implements Subscription, ModelBase {
 
     public java.util.List<com.commercetools.api.models.subscription.MessageSubscription> getMessages() {
         return this.messages;
+    }
+
+    /**
+     *  <p>Changes subscribed to.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> getChanges() {
+        return this.changes;
     }
 
     /**
@@ -213,14 +213,6 @@ public class SubscriptionImpl implements Subscription, ModelBase {
         this.createdBy = createdBy;
     }
 
-    public void setChanges(final com.commercetools.api.models.subscription.ChangeSubscription... changes) {
-        this.changes = new ArrayList<>(Arrays.asList(changes));
-    }
-
-    public void setChanges(final java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes) {
-        this.changes = changes;
-    }
-
     public void setDestination(final com.commercetools.api.models.subscription.Destination destination) {
         this.destination = destination;
     }
@@ -236,6 +228,14 @@ public class SubscriptionImpl implements Subscription, ModelBase {
     public void setMessages(
             final java.util.List<com.commercetools.api.models.subscription.MessageSubscription> messages) {
         this.messages = messages;
+    }
+
+    public void setChanges(final com.commercetools.api.models.subscription.ChangeSubscription... changes) {
+        this.changes = new ArrayList<>(Arrays.asList(changes));
+    }
+
+    public void setChanges(final java.util.List<com.commercetools.api.models.subscription.ChangeSubscription> changes) {
+        this.changes = changes;
     }
 
     public void setEvents(final com.commercetools.api.models.subscription.EventSubscription... events) {
@@ -270,10 +270,10 @@ public class SubscriptionImpl implements Subscription, ModelBase {
                 .append(lastModifiedAt, that.lastModifiedAt)
                 .append(lastModifiedBy, that.lastModifiedBy)
                 .append(createdBy, that.createdBy)
-                .append(changes, that.changes)
                 .append(destination, that.destination)
                 .append(key, that.key)
                 .append(messages, that.messages)
+                .append(changes, that.changes)
                 .append(events, that.events)
                 .append(format, that.format)
                 .append(status, that.status)
@@ -283,10 +283,10 @@ public class SubscriptionImpl implements Subscription, ModelBase {
                 .append(lastModifiedAt, that.lastModifiedAt)
                 .append(lastModifiedBy, that.lastModifiedBy)
                 .append(createdBy, that.createdBy)
-                .append(changes, that.changes)
                 .append(destination, that.destination)
                 .append(key, that.key)
                 .append(messages, that.messages)
+                .append(changes, that.changes)
                 .append(events, that.events)
                 .append(format, that.format)
                 .append(status, that.status)
@@ -301,10 +301,10 @@ public class SubscriptionImpl implements Subscription, ModelBase {
                 .append(lastModifiedAt)
                 .append(lastModifiedBy)
                 .append(createdBy)
-                .append(changes)
                 .append(destination)
                 .append(key)
                 .append(messages)
+                .append(changes)
                 .append(events)
                 .append(format)
                 .append(status)
@@ -319,10 +319,10 @@ public class SubscriptionImpl implements Subscription, ModelBase {
                 .append("lastModifiedAt", lastModifiedAt)
                 .append("lastModifiedBy", lastModifiedBy)
                 .append("createdBy", createdBy)
-                .append("changes", changes)
                 .append("destination", destination)
                 .append("key", key)
                 .append("messages", messages)
+                .append("changes", changes)
                 .append("events", events)
                 .append("format", format)
                 .append("status", status)

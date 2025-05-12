@@ -398,7 +398,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public DiscountTypeCombination getDiscountTypeCombination();
 
     /**
-     *  <p>Number of days after which an active Cart is deleted since its last modification. Configured in Project settings.</p>
+     *  <p>Number of days after the last modification before a Cart is deleted. Configured in Project settings.</p>
      * @return deleteDaysAfterLastModification
      */
 
@@ -779,7 +779,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public void setDiscountTypeCombination(final DiscountTypeCombination discountTypeCombination);
 
     /**
-     *  <p>Number of days after which an active Cart is deleted since its last modification. Configured in Project settings.</p>
+     *  <p>Number of days after the last modification before a Cart is deleted. Configured in Project settings.</p>
      * @param deleteDaysAfterLastModification value to be set
      */
 

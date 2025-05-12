@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Number of days after which a Cart with <code>Active</code> CartState is deleted since its last modification.</p>
+ *  <p>Number of days after the last modification before a Cart is deleted.</p>
  *  <p>If a ChangeSubscription exists for Carts, a ResourceDeletedDeliveryPayload is sent.</p>
  *
  * <hr>

@@ -1530,7 +1530,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Number of days after which an active Cart is deleted since its last modification. Configured in Project settings.</p>
+     *  <p>Number of days after the last modification before a Cart is deleted. Configured in Project settings.</p>
      * @param deleteDaysAfterLastModification value to be set
      * @return Builder
      */
@@ -2014,7 +2014,7 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Number of days after which an active Cart is deleted since its last modification. Configured in Project settings.</p>
+     *  <p>Number of days after the last modification before a Cart is deleted. Configured in Project settings.</p>
      * @return deleteDaysAfterLastModification
      */
 

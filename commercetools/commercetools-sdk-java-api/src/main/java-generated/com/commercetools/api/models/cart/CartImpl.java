@@ -547,7 +547,7 @@ public class CartImpl implements Cart, ModelBase {
     }
 
     /**
-     *  <p>Number of days after which an active Cart is deleted since its last modification. Configured in Project settings.</p>
+     *  <p>Number of days after the last modification before a Cart is deleted. Configured in Project settings.</p>
      */
 
     public Integer getDeleteDaysAfterLastModification() {

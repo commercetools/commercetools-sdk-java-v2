@@ -27,7 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * <div class=code-example>
  * <pre><code class='java'>
  *     LocalizedString localizedString = LocalizedString.builder()
- *             ./^[a-z]{2}(-[A-Z]{2})?$/("{/^[a-z]{2}(-[A-Z]{2})?$/}")
+ *             ./^[a-zA-Z]{2,3}(?:-[a-zA-Z]{4})?(?:-(?:[a-zA-Z]{2}|\d{3}))?$/("{/^[a-zA-Z]{2,3}(?:-[a-zA-Z]{4})?(?:-(?:[a-zA-Z]{2}|\d{3}))?$/}")
  *             .build()
  * </code></pre>
  * </div>

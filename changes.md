@@ -1,15 +1,17 @@
-**Api changes**
+**Import changes**
 
 <details>
 <summary>Added Property(s)</summary>
 
-- added property `published` to type `ShoppingListLineItem`
+- added property `/^[a-zA-Z]{2,3}(?:-[a-zA-Z]{4})?(?:-(?:[a-zA-Z]{2}|\d{3}))?$/` to type `SearchKeywords`
+- added property `/^[a-zA-Z]{2,3}(?:-[a-zA-Z]{4})?(?:-(?:[a-zA-Z]{2}|\d{3}))?$/` to type `LocalizedString`
 </details>
 
 
 <details>
-<summary>Changed Property(s)</summary>
+<summary>Removed Property(s)</summary>
 
-- :warning: changed property `actions` of type `MyBusinessUnitUpdate` from type `BusinessUnitUpdateAction[]` to `MyBusinessUnitUpdateAction[]`
+- :warning: removed property `/^[a-z]{2}(-[A-Z]{2})?$/` from type `SearchKeywords`
+- :warning: removed property `/^[a-z]{2}(-[A-Z]{2})?$/` from type `LocalizedString`
 </details>
 

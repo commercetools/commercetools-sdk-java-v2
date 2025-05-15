@@ -643,6 +643,31 @@
             ]
         },
         {
+            "moduleName": "org.javassist:javassist",
+            "moduleVersion": "3.28.0-GA",
+            "moduleUrls": [
+                "http://www.javassist.org/"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": null,
+                    "moduleLicenseUrl": "http://www.mozilla.org/MPL/MPL-1.1.html, http://www.gnu.org/licenses/lgpl-2.1.html, http://www.apache.org/licenses/"
+                },
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                },
+                {
+                    "moduleLicense": "GNU LESSER GENERAL PUBLIC LICENSE, Version 2.1",
+                    "moduleLicenseUrl": "https://www.gnu.org/licenses/lgpl-2.1"
+                },
+                {
+                    "moduleLicense": "Mozilla Public License Version 1.1",
+                    "moduleLicenseUrl": "https://www.mozilla.org/en-US/MPL/1.1"
+                }
+            ]
+        },
+        {
             "moduleName": "org.jetbrains.kotlin:kotlin-stdlib",
             "moduleVersion": "1.9.10",
             "moduleUrls": [
@@ -718,6 +743,23 @@
                 {
                     "moduleLicense": "Creative Commons Legal Code",
                     "moduleLicenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/legalcode"
+                }
+            ]
+        },
+        {
+            "moduleName": "org.reflections:reflections",
+            "moduleVersion": "0.10.2",
+            "moduleUrls": [
+                "http://github.com/ronmamo/reflections"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                },
+                {
+                    "moduleLicense": "WTFPL",
+                    "moduleLicenseUrl": "http://www.wtfpl.net/"
                 }
             ]
         },

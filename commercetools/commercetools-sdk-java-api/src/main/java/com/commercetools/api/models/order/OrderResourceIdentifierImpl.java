@@ -2,6 +2,7 @@
 package com.commercetools.api.models.order;
 
 import com.commercetools.api.models.common.ReferenceTypeId;
+import com.commercetools.api.models.common.ResourceIdentifier;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -91,4 +92,8 @@ public class OrderResourceIdentifierImpl implements OrderResourceIdentifier, Mod
         return new HashCodeBuilder(17, 37).append(typeId).append(id).append(key).toHashCode();
     }
 
+    @Override
+    public ResourceIdentifier copyDeep() {
+        return OrderResourceIdentifier.deepCopy(this);
+    }
 }

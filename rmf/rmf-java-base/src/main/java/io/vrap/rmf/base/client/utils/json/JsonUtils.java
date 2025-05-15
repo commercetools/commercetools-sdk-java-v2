@@ -18,6 +18,7 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
 import io.vrap.rmf.base.client.utils.json.modules.ModuleOptions;
+import io.vrap.rmf.base.client.utils.json.modules.SubTypeModule;
 import io.vrap.rmf.base.client.utils.json.modules.ZonedDateTimeDeserializationModule;
 import io.vrap.rmf.base.client.utils.json.modules.ZonedDateTimeSerializationModule;
 import io.vrap.rmf.base.client.utils.json.modules.deserializers.LocalDateDeserializationModule;
@@ -58,6 +59,7 @@ public class JsonUtils {
                 .addModule(new ZonedDateTimeSerializationModule()) //custom serializer for LocalDate, LocalTime and ZonedDateTime
                 .addModule(new ZonedDateTimeDeserializationModule()) //custom deserializer for ZonedDateTime
                 .addModule(new LocalDateDeserializationModule()) //custom deserializer for LocalDate
+                .addModule(new SubTypeModule("com.commercetools"))
                 .addModules(loader)
                 .addModules(moduleList)
                 .serializationInclusion(JsonInclude.Include.NON_NULL) //ignore null fields

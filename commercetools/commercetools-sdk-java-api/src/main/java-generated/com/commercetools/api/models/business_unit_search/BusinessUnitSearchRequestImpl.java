@@ -136,4 +136,8 @@ public class BusinessUnitSearchRequestImpl implements BusinessUnitSearchRequest,
                 .build();
     }
 
+    @Override
+    public BusinessUnitSearchRequest copyDeep() {
+        return BusinessUnitSearchRequest.deepCopy(this);
+    }
 }

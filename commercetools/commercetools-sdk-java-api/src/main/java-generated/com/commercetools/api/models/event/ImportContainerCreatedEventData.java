@@ -117,6 +117,8 @@ public interface ImportContainerCreatedEventData {
         return instance;
     }
 
+    public ImportContainerCreatedEventData copyDeep();
+
     /**
      * factory method to create a deep copy of ImportContainerCreatedEventData
      * @param template instance to be copied

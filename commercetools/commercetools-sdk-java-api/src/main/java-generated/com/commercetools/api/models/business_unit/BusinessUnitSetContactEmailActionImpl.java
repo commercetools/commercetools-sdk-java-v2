@@ -91,4 +91,8 @@ public class BusinessUnitSetContactEmailActionImpl implements BusinessUnitSetCon
                 .build();
     }
 
+    @Override
+    public BusinessUnitSetContactEmailAction copyDeep() {
+        return BusinessUnitSetContactEmailAction.deepCopy(this);
+    }
 }

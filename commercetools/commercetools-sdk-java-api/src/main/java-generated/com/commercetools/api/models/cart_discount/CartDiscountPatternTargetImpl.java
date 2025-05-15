@@ -170,4 +170,8 @@ public class CartDiscountPatternTargetImpl implements CartDiscountPatternTarget,
                 .build();
     }
 
+    @Override
+    public CartDiscountPatternTarget copyDeep() {
+        return CartDiscountPatternTarget.deepCopy(this);
+    }
 }

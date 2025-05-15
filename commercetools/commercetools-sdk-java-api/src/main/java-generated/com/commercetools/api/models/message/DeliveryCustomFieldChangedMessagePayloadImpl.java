@@ -154,4 +154,8 @@ public class DeliveryCustomFieldChangedMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public DeliveryCustomFieldChangedMessagePayload copyDeep() {
+        return DeliveryCustomFieldChangedMessagePayload.deepCopy(this);
+    }
 }

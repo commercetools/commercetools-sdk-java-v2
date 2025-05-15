@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeInputHint")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TypeChangeInputHintActionImpl.class)
 public interface TypeChangeInputHintAction extends TypeUpdateAction {
@@ -86,6 +87,8 @@ public interface TypeChangeInputHintAction extends TypeUpdateAction {
         instance.setInputHint(template.getInputHint());
         return instance;
     }
+
+    public TypeChangeInputHintAction copyDeep();
 
     /**
      * factory method to create a deep copy of TypeChangeInputHintAction

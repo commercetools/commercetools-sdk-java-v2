@@ -147,6 +147,8 @@ public interface SearchSorting {
         return instance;
     }
 
+    public SearchSorting copyDeep();
+
     /**
      * factory method to create a deep copy of SearchSorting
      * @param template instance to be copied

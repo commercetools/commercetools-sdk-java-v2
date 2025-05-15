@@ -111,4 +111,8 @@ public class CustomerGroupReferenceImpl implements CustomerGroupReference, Model
                 .build();
     }
 
+    @Override
+    public CustomerGroupReference copyDeep() {
+        return CustomerGroupReference.deepCopy(this);
+    }
 }

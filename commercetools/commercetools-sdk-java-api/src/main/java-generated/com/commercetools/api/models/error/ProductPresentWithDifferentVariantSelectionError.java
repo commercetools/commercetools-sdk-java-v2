@@ -33,6 +33,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ProductPresentWithDifferentVariantSelection")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductPresentWithDifferentVariantSelectionErrorImpl.class)
 public interface ProductPresentWithDifferentVariantSelectionError extends ErrorObject {
@@ -119,6 +120,8 @@ public interface ProductPresentWithDifferentVariantSelectionError extends ErrorO
         instance.setExistingVariantSelection(template.getExistingVariantSelection());
         return instance;
     }
+
+    public ProductPresentWithDifferentVariantSelectionError copyDeep();
 
     /**
      * factory method to create a deep copy of ProductPresentWithDifferentVariantSelectionError

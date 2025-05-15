@@ -69,4 +69,8 @@ public class MyCustomerUpdateActionImpl implements MyCustomerUpdateAction, Model
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action).build();
     }
 
+    @Override
+    public MyCustomerUpdateAction copyDeep() {
+        return MyCustomerUpdateAction.deepCopy(this);
+    }
 }

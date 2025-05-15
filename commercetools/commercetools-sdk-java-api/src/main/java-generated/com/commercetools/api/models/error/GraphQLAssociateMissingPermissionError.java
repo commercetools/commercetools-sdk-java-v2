@@ -33,6 +33,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("AssociateMissingPermission")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLAssociateMissingPermissionErrorImpl.class)
 public interface GraphQLAssociateMissingPermissionError extends GraphQLErrorObject {
@@ -142,6 +143,8 @@ public interface GraphQLAssociateMissingPermissionError extends GraphQLErrorObje
         instance.setPermissions(template.getPermissions());
         return instance;
     }
+
+    public GraphQLAssociateMissingPermissionError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLAssociateMissingPermissionError

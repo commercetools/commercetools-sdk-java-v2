@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeCustomLineItemQuantity")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderChangeCustomLineItemQuantityActionImpl.class)
 public interface StagedOrderChangeCustomLineItemQuantityAction extends StagedOrderUpdateAction {
@@ -104,6 +105,8 @@ public interface StagedOrderChangeCustomLineItemQuantityAction extends StagedOrd
         instance.setQuantity(template.getQuantity());
         return instance;
     }
+
+    public StagedOrderChangeCustomLineItemQuantityAction copyDeep();
 
     /**
      * factory method to create a deep copy of StagedOrderChangeCustomLineItemQuantityAction

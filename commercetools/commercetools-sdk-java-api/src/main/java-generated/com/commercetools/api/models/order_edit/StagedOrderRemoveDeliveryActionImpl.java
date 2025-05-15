@@ -112,4 +112,8 @@ public class StagedOrderRemoveDeliveryActionImpl implements StagedOrderRemoveDel
                 .build();
     }
 
+    @Override
+    public StagedOrderRemoveDeliveryAction copyDeep() {
+        return StagedOrderRemoveDeliveryAction.deepCopy(this);
+    }
 }

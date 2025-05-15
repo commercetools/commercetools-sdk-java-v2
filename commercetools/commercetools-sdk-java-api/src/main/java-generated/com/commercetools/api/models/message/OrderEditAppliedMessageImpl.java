@@ -313,4 +313,8 @@ public class OrderEditAppliedMessageImpl implements OrderEditAppliedMessage, Mod
                 .build();
     }
 
+    @Override
+    public OrderEditAppliedMessage copyDeep() {
+        return OrderEditAppliedMessage.deepCopy(this);
+    }
 }

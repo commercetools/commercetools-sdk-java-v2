@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setComment")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderEditSetCommentActionImpl.class)
 public interface OrderEditSetCommentAction extends OrderEditUpdateAction {
@@ -66,6 +67,8 @@ public interface OrderEditSetCommentAction extends OrderEditUpdateAction {
         instance.setComment(template.getComment());
         return instance;
     }
+
+    public OrderEditSetCommentAction copyDeep();
 
     /**
      * factory method to create a deep copy of OrderEditSetCommentAction

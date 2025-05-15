@@ -92,4 +92,8 @@ public class CustomerAddressRemovedMessagePayloadImpl implements CustomerAddress
                 .build();
     }
 
+    @Override
+    public CustomerAddressRemovedMessagePayload copyDeep() {
+        return CustomerAddressRemovedMessagePayload.deepCopy(this);
+    }
 }

@@ -110,4 +110,8 @@ public class MyBusinessUnitAddBillingAddressIdActionImpl implements MyBusinessUn
                 .build();
     }
 
+    @Override
+    public MyBusinessUnitAddBillingAddressIdAction copyDeep() {
+        return MyBusinessUnitAddBillingAddressIdAction.deepCopy(this);
+    }
 }

@@ -156,4 +156,8 @@ public class ApiClientDraftImpl implements ApiClientDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public ApiClientDraft copyDeep() {
+        return ApiClientDraft.deepCopy(this);
+    }
 }

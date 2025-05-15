@@ -99,6 +99,8 @@ public interface ImportValidationFailedEventData {
         return instance;
     }
 
+    public ImportValidationFailedEventData copyDeep();
+
     /**
      * factory method to create a deep copy of ImportValidationFailedEventData
      * @param template instance to be copied

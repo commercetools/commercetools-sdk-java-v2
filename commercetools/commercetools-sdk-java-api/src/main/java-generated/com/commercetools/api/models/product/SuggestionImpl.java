@@ -73,4 +73,8 @@ public class SuggestionImpl implements Suggestion, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("text", text).build();
     }
 
+    @Override
+    public Suggestion copyDeep() {
+        return Suggestion.deepCopy(this);
+    }
 }

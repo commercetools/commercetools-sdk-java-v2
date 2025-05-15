@@ -82,6 +82,8 @@ public interface DeliveryItem {
         return instance;
     }
 
+    public DeliveryItem copyDeep();
+
     /**
      * factory method to create a deep copy of DeliveryItem
      * @param template instance to be copied

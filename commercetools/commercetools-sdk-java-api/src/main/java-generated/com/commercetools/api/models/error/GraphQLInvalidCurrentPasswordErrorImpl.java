@@ -101,4 +101,8 @@ public class GraphQLInvalidCurrentPasswordErrorImpl implements GraphQLInvalidCur
                 .build();
     }
 
+    @Override
+    public GraphQLInvalidCurrentPasswordError copyDeep() {
+        return GraphQLInvalidCurrentPasswordError.deepCopy(this);
+    }
 }

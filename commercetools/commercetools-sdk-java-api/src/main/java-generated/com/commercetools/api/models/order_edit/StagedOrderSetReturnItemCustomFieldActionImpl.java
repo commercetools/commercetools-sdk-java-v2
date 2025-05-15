@@ -153,4 +153,8 @@ public class StagedOrderSetReturnItemCustomFieldActionImpl
                 .build();
     }
 
+    @Override
+    public StagedOrderSetReturnItemCustomFieldAction copyDeep() {
+        return StagedOrderSetReturnItemCustomFieldAction.deepCopy(this);
+    }
 }

@@ -313,4 +313,8 @@ public class ProductVariantAddedMessageImpl implements ProductVariantAddedMessag
                 .build();
     }
 
+    @Override
+    public ProductVariantAddedMessage copyDeep() {
+        return ProductVariantAddedMessage.deepCopy(this);
+    }
 }

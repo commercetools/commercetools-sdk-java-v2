@@ -27,25 +27,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyBusinessUnitAddAddressActionImpl.class, name = MyBusinessUnitAddAddressAction.ADD_ADDRESS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyBusinessUnitAddBillingAddressIdActionImpl.class, name = MyBusinessUnitAddBillingAddressIdAction.ADD_BILLING_ADDRESS_ID),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyBusinessUnitAddShippingAddressIdActionImpl.class, name = MyBusinessUnitAddShippingAddressIdAction.ADD_SHIPPING_ADDRESS_ID),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyBusinessUnitChangeAddressActionImpl.class, name = MyBusinessUnitChangeAddressAction.CHANGE_ADDRESS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyBusinessUnitChangeAssociateActionImpl.class, name = MyBusinessUnitChangeAssociateAction.CHANGE_ASSOCIATE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyBusinessUnitChangeNameActionImpl.class, name = MyBusinessUnitChangeNameAction.CHANGE_NAME),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyBusinessUnitChangeParentUnitActionImpl.class, name = MyBusinessUnitChangeParentUnitAction.CHANGE_PARENT_UNIT),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyBusinessUnitRemoveAddressActionImpl.class, name = MyBusinessUnitRemoveAddressAction.REMOVE_ADDRESS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyBusinessUnitRemoveAssociateActionImpl.class, name = MyBusinessUnitRemoveAssociateAction.REMOVE_ASSOCIATE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyBusinessUnitRemoveBillingAddressIdActionImpl.class, name = MyBusinessUnitRemoveBillingAddressIdAction.REMOVE_BILLING_ADDRESS_ID),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyBusinessUnitRemoveShippingAddressIdActionImpl.class, name = MyBusinessUnitRemoveShippingAddressIdAction.REMOVE_SHIPPING_ADDRESS_ID),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyBusinessUnitSetAddressCustomFieldActionImpl.class, name = MyBusinessUnitSetAddressCustomFieldAction.SET_ADDRESS_CUSTOM_FIELD),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyBusinessUnitSetAddressCustomTypeActionImpl.class, name = MyBusinessUnitSetAddressCustomTypeAction.SET_ADDRESS_CUSTOM_TYPE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyBusinessUnitSetContactEmailActionImpl.class, name = MyBusinessUnitSetContactEmailAction.SET_CONTACT_EMAIL),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyBusinessUnitSetCustomFieldActionImpl.class, name = MyBusinessUnitSetCustomFieldAction.SET_CUSTOM_FIELD),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyBusinessUnitSetCustomTypeActionImpl.class, name = MyBusinessUnitSetCustomTypeAction.SET_CUSTOM_TYPE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyBusinessUnitSetDefaultBillingAddressActionImpl.class, name = MyBusinessUnitSetDefaultBillingAddressAction.SET_DEFAULT_BILLING_ADDRESS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyBusinessUnitSetDefaultShippingAddressActionImpl.class, name = MyBusinessUnitSetDefaultShippingAddressAction.SET_DEFAULT_SHIPPING_ADDRESS) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = MyBusinessUnitUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = MyBusinessUnitUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -59,6 +40,8 @@ public interface MyBusinessUnitUpdateAction {
     @JsonProperty("action")
     public String getAction();
 
+    public MyBusinessUnitUpdateAction copyDeep();
+
     /**
      * factory method to create a deep copy of MyBusinessUnitUpdateAction
      * @param template instance to be copied
@@ -69,77 +52,9 @@ public interface MyBusinessUnitUpdateAction {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.me.MyBusinessUnitAddAddressAction) {
-            return com.commercetools.api.models.me.MyBusinessUnitAddAddressAction
-                    .deepCopy((com.commercetools.api.models.me.MyBusinessUnitAddAddressAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyBusinessUnitAddBillingAddressIdAction) {
-            return com.commercetools.api.models.me.MyBusinessUnitAddBillingAddressIdAction
-                    .deepCopy((com.commercetools.api.models.me.MyBusinessUnitAddBillingAddressIdAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyBusinessUnitAddShippingAddressIdAction) {
-            return com.commercetools.api.models.me.MyBusinessUnitAddShippingAddressIdAction
-                    .deepCopy((com.commercetools.api.models.me.MyBusinessUnitAddShippingAddressIdAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyBusinessUnitChangeAddressAction) {
-            return com.commercetools.api.models.me.MyBusinessUnitChangeAddressAction
-                    .deepCopy((com.commercetools.api.models.me.MyBusinessUnitChangeAddressAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyBusinessUnitChangeAssociateAction) {
-            return com.commercetools.api.models.me.MyBusinessUnitChangeAssociateAction
-                    .deepCopy((com.commercetools.api.models.me.MyBusinessUnitChangeAssociateAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyBusinessUnitChangeNameAction) {
-            return com.commercetools.api.models.me.MyBusinessUnitChangeNameAction
-                    .deepCopy((com.commercetools.api.models.me.MyBusinessUnitChangeNameAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyBusinessUnitChangeParentUnitAction) {
-            return com.commercetools.api.models.me.MyBusinessUnitChangeParentUnitAction
-                    .deepCopy((com.commercetools.api.models.me.MyBusinessUnitChangeParentUnitAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyBusinessUnitRemoveAddressAction) {
-            return com.commercetools.api.models.me.MyBusinessUnitRemoveAddressAction
-                    .deepCopy((com.commercetools.api.models.me.MyBusinessUnitRemoveAddressAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyBusinessUnitRemoveAssociateAction) {
-            return com.commercetools.api.models.me.MyBusinessUnitRemoveAssociateAction
-                    .deepCopy((com.commercetools.api.models.me.MyBusinessUnitRemoveAssociateAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyBusinessUnitRemoveBillingAddressIdAction) {
-            return com.commercetools.api.models.me.MyBusinessUnitRemoveBillingAddressIdAction
-                    .deepCopy((com.commercetools.api.models.me.MyBusinessUnitRemoveBillingAddressIdAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyBusinessUnitRemoveShippingAddressIdAction) {
-            return com.commercetools.api.models.me.MyBusinessUnitRemoveShippingAddressIdAction
-                    .deepCopy((com.commercetools.api.models.me.MyBusinessUnitRemoveShippingAddressIdAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyBusinessUnitSetAddressCustomFieldAction) {
-            return com.commercetools.api.models.me.MyBusinessUnitSetAddressCustomFieldAction
-                    .deepCopy((com.commercetools.api.models.me.MyBusinessUnitSetAddressCustomFieldAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyBusinessUnitSetAddressCustomTypeAction) {
-            return com.commercetools.api.models.me.MyBusinessUnitSetAddressCustomTypeAction
-                    .deepCopy((com.commercetools.api.models.me.MyBusinessUnitSetAddressCustomTypeAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyBusinessUnitSetContactEmailAction) {
-            return com.commercetools.api.models.me.MyBusinessUnitSetContactEmailAction
-                    .deepCopy((com.commercetools.api.models.me.MyBusinessUnitSetContactEmailAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyBusinessUnitSetCustomFieldAction) {
-            return com.commercetools.api.models.me.MyBusinessUnitSetCustomFieldAction
-                    .deepCopy((com.commercetools.api.models.me.MyBusinessUnitSetCustomFieldAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyBusinessUnitSetCustomTypeAction) {
-            return com.commercetools.api.models.me.MyBusinessUnitSetCustomTypeAction
-                    .deepCopy((com.commercetools.api.models.me.MyBusinessUnitSetCustomTypeAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyBusinessUnitSetDefaultBillingAddressAction) {
-            return com.commercetools.api.models.me.MyBusinessUnitSetDefaultBillingAddressAction
-                    .deepCopy((com.commercetools.api.models.me.MyBusinessUnitSetDefaultBillingAddressAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyBusinessUnitSetDefaultShippingAddressAction) {
-            return com.commercetools.api.models.me.MyBusinessUnitSetDefaultShippingAddressAction
-                    .deepCopy((com.commercetools.api.models.me.MyBusinessUnitSetDefaultShippingAddressAction) template);
+
+        if (!(template instanceof MyBusinessUnitUpdateActionImpl)) {
+            return template.copyDeep();
         }
         MyBusinessUnitUpdateActionImpl instance = new MyBusinessUnitUpdateActionImpl();
         return instance;

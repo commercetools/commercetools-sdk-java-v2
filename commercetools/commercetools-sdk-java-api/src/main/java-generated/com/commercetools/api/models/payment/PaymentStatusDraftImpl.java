@@ -114,4 +114,8 @@ public class PaymentStatusDraftImpl implements PaymentStatusDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public PaymentStatusDraft copyDeep() {
+        return PaymentStatusDraft.deepCopy(this);
+    }
 }

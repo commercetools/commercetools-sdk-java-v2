@@ -293,4 +293,8 @@ public class OrderDiscountCodeAddedMessageImpl implements OrderDiscountCodeAdded
                 .build();
     }
 
+    @Override
+    public OrderDiscountCodeAddedMessage copyDeep() {
+        return OrderDiscountCodeAddedMessage.deepCopy(this);
+    }
 }

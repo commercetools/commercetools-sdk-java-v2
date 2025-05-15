@@ -136,4 +136,8 @@ public class StagedOrderAddShoppingListActionImpl implements StagedOrderAddShopp
                 .build();
     }
 
+    @Override
+    public StagedOrderAddShoppingListAction copyDeep() {
+        return StagedOrderAddShoppingListAction.deepCopy(this);
+    }
 }

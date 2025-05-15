@@ -111,4 +111,8 @@ public class PaymentChangeTransactionInteractionIdActionImpl
                 .build();
     }
 
+    @Override
+    public PaymentChangeTransactionInteractionIdAction copyDeep() {
+        return PaymentChangeTransactionInteractionIdAction.deepCopy(this);
+    }
 }

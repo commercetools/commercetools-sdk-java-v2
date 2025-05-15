@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setMethodInfoMethod")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PaymentSetMethodInfoMethodActionImpl.class)
 public interface PaymentSetMethodInfoMethodAction extends PaymentUpdateAction {
@@ -66,6 +67,8 @@ public interface PaymentSetMethodInfoMethodAction extends PaymentUpdateAction {
         instance.setMethod(template.getMethod());
         return instance;
     }
+
+    public PaymentSetMethodInfoMethodAction copyDeep();
 
     /**
      * factory method to create a deep copy of PaymentSetMethodInfoMethodAction

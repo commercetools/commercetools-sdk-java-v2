@@ -95,4 +95,8 @@ public class GraphQLContentTooLargeErrorImpl implements GraphQLContentTooLargeEr
                 .build();
     }
 
+    @Override
+    public GraphQLContentTooLargeError copyDeep() {
+        return GraphQLContentTooLargeError.deepCopy(this);
+    }
 }

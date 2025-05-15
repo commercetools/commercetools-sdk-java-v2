@@ -26,11 +26,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.approval_flow.ApprovalFlowApproveActionImpl.class, name = ApprovalFlowApproveAction.APPROVE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.approval_flow.ApprovalFlowRejectActionImpl.class, name = ApprovalFlowRejectAction.REJECT),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.approval_flow.ApprovalFlowSetCustomFieldActionImpl.class, name = ApprovalFlowSetCustomFieldAction.SET_CUSTOM_FIELD),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.approval_flow.ApprovalFlowSetCustomTypeActionImpl.class, name = ApprovalFlowSetCustomTypeAction.SET_CUSTOM_TYPE) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = ApprovalFlowUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = ApprovalFlowUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -44,6 +39,8 @@ public interface ApprovalFlowUpdateAction {
     @JsonProperty("action")
     public String getAction();
 
+    public ApprovalFlowUpdateAction copyDeep();
+
     /**
      * factory method to create a deep copy of ApprovalFlowUpdateAction
      * @param template instance to be copied
@@ -54,21 +51,9 @@ public interface ApprovalFlowUpdateAction {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.approval_flow.ApprovalFlowApproveAction) {
-            return com.commercetools.api.models.approval_flow.ApprovalFlowApproveAction
-                    .deepCopy((com.commercetools.api.models.approval_flow.ApprovalFlowApproveAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.approval_flow.ApprovalFlowRejectAction) {
-            return com.commercetools.api.models.approval_flow.ApprovalFlowRejectAction
-                    .deepCopy((com.commercetools.api.models.approval_flow.ApprovalFlowRejectAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.approval_flow.ApprovalFlowSetCustomFieldAction) {
-            return com.commercetools.api.models.approval_flow.ApprovalFlowSetCustomFieldAction
-                    .deepCopy((com.commercetools.api.models.approval_flow.ApprovalFlowSetCustomFieldAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.approval_flow.ApprovalFlowSetCustomTypeAction) {
-            return com.commercetools.api.models.approval_flow.ApprovalFlowSetCustomTypeAction
-                    .deepCopy((com.commercetools.api.models.approval_flow.ApprovalFlowSetCustomTypeAction) template);
+
+        if (!(template instanceof ApprovalFlowUpdateActionImpl)) {
+            return template.copyDeep();
         }
         ApprovalFlowUpdateActionImpl instance = new ApprovalFlowUpdateActionImpl();
         return instance;

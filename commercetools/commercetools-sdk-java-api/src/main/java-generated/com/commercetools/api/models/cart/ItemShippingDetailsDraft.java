@@ -79,6 +79,8 @@ public interface ItemShippingDetailsDraft extends io.vrap.rmf.base.client.Draft<
         return instance;
     }
 
+    public ItemShippingDetailsDraft copyDeep();
+
     /**
      * factory method to create a deep copy of ItemShippingDetailsDraft
      * @param template instance to be copied

@@ -111,4 +111,8 @@ public class ProductTailoringSetSlugActionImpl implements ProductTailoringSetSlu
                 .build();
     }
 
+    @Override
+    public ProductTailoringSetSlugAction copyDeep() {
+        return ProductTailoringSetSlugAction.deepCopy(this);
+    }
 }

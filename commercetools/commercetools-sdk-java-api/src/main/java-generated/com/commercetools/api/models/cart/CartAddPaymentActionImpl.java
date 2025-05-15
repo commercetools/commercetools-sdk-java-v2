@@ -92,4 +92,8 @@ public class CartAddPaymentActionImpl implements CartAddPaymentAction, ModelBase
                 .build();
     }
 
+    @Override
+    public CartAddPaymentAction copyDeep() {
+        return CartAddPaymentAction.deepCopy(this);
+    }
 }

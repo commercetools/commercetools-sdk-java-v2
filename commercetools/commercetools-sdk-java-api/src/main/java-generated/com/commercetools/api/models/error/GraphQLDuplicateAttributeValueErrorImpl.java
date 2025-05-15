@@ -115,4 +115,8 @@ public class GraphQLDuplicateAttributeValueErrorImpl implements GraphQLDuplicate
                 .build();
     }
 
+    @Override
+    public GraphQLDuplicateAttributeValueError copyDeep() {
+        return GraphQLDuplicateAttributeValueError.deepCopy(this);
+    }
 }

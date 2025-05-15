@@ -294,4 +294,8 @@ public class BusinessUnitCustomFieldRemovedMessageImpl implements BusinessUnitCu
                 .build();
     }
 
+    @Override
+    public BusinessUnitCustomFieldRemovedMessage copyDeep() {
+        return BusinessUnitCustomFieldRemovedMessage.deepCopy(this);
+    }
 }

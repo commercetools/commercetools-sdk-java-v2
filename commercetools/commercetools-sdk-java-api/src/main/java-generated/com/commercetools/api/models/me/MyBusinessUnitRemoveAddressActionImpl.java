@@ -110,4 +110,8 @@ public class MyBusinessUnitRemoveAddressActionImpl implements MyBusinessUnitRemo
                 .build();
     }
 
+    @Override
+    public MyBusinessUnitRemoveAddressAction copyDeep() {
+        return MyBusinessUnitRemoveAddressAction.deepCopy(this);
+    }
 }

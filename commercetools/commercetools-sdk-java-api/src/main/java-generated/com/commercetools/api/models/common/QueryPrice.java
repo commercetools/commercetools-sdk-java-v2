@@ -227,6 +227,8 @@ public interface QueryPrice extends com.commercetools.api.models.Customizable<Qu
         return instance;
     }
 
+    public QueryPrice copyDeep();
+
     /**
      * factory method to create a deep copy of QueryPrice
      * @param template instance to be copied

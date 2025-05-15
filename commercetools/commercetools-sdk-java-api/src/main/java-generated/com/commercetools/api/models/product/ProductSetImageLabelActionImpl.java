@@ -171,4 +171,8 @@ public class ProductSetImageLabelActionImpl implements ProductSetImageLabelActio
                 .build();
     }
 
+    @Override
+    public ProductSetImageLabelAction copyDeep() {
+        return ProductSetImageLabelAction.deepCopy(this);
+    }
 }

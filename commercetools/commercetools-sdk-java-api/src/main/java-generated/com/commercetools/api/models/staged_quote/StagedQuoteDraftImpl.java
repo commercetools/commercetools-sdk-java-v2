@@ -183,4 +183,8 @@ public class StagedQuoteDraftImpl implements StagedQuoteDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public StagedQuoteDraft copyDeep() {
+        return StagedQuoteDraft.deepCopy(this);
+    }
 }

@@ -36,6 +36,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("DuplicateStandalonePriceScope")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DuplicateStandalonePriceScopeErrorImpl.class)
 public interface DuplicateStandalonePriceScopeError extends ErrorObject {
@@ -216,6 +217,8 @@ public interface DuplicateStandalonePriceScopeError extends ErrorObject {
         instance.setValidUntil(template.getValidUntil());
         return instance;
     }
+
+    public DuplicateStandalonePriceScopeError copyDeep();
 
     /**
      * factory method to create a deep copy of DuplicateStandalonePriceScopeError

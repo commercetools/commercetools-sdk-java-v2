@@ -159,4 +159,8 @@ public class OrderPagedQueryResponseImpl implements OrderPagedQueryResponse, Mod
                 .build();
     }
 
+    @Override
+    public OrderPagedQueryResponse copyDeep() {
+        return OrderPagedQueryResponse.deepCopy(this);
+    }
 }

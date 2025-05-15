@@ -95,4 +95,8 @@ public class PayloadNotIncludedImpl implements PayloadNotIncluded, ModelBase {
                 .build();
     }
 
+    @Override
+    public PayloadNotIncluded copyDeep() {
+        return PayloadNotIncluded.deepCopy(this);
+    }
 }

@@ -138,4 +138,8 @@ public class ProjectNotConfiguredForLanguagesErrorImpl implements ProjectNotConf
                 .build();
     }
 
+    @Override
+    public ProjectNotConfiguredForLanguagesError copyDeep() {
+        return ProjectNotConfiguredForLanguagesError.deepCopy(this);
+    }
 }

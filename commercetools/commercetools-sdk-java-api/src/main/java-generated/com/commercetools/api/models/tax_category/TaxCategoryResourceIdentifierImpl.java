@@ -110,4 +110,8 @@ public class TaxCategoryResourceIdentifierImpl implements TaxCategoryResourceIde
                 .build();
     }
 
+    @Override
+    public TaxCategoryResourceIdentifier copyDeep() {
+        return TaxCategoryResourceIdentifier.deepCopy(this);
+    }
 }

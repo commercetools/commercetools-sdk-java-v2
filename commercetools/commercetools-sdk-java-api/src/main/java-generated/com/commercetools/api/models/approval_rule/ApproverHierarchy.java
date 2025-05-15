@@ -76,6 +76,8 @@ public interface ApproverHierarchy {
         return instance;
     }
 
+    public ApproverHierarchy copyDeep();
+
     /**
      * factory method to create a deep copy of ApproverHierarchy
      * @param template instance to be copied

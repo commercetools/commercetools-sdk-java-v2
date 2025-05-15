@@ -334,4 +334,8 @@ public class QuoteRequestStateTransitionMessageImpl implements QuoteRequestState
                 .build();
     }
 
+    @Override
+    public QuoteRequestStateTransitionMessage copyDeep() {
+        return QuoteRequestStateTransitionMessage.deepCopy(this);
+    }
 }

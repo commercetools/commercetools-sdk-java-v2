@@ -92,4 +92,8 @@ public class InventoryEntrySetExpectedDeliveryActionImpl implements InventoryEnt
                 .build();
     }
 
+    @Override
+    public InventoryEntrySetExpectedDeliveryAction copyDeep() {
+        return InventoryEntrySetExpectedDeliveryAction.deepCopy(this);
+    }
 }

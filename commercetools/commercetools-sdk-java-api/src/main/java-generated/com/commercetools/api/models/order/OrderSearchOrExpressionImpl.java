@@ -78,4 +78,8 @@ public class OrderSearchOrExpressionImpl implements OrderSearchOrExpression, Mod
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("or", or).build();
     }
 
+    @Override
+    public OrderSearchOrExpression copyDeep() {
+        return OrderSearchOrExpression.deepCopy(this);
+    }
 }

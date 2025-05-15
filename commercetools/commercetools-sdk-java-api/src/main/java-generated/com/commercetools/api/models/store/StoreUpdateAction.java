@@ -27,24 +27,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreAddCountryActionImpl.class, name = StoreAddCountryAction.ADD_COUNTRY),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreAddDistributionChannelActionImpl.class, name = StoreAddDistributionChannelAction.ADD_DISTRIBUTION_CHANNEL),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreAddProductSelectionActionImpl.class, name = StoreAddProductSelectionAction.ADD_PRODUCT_SELECTION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreAddSupplyChannelActionImpl.class, name = StoreAddSupplyChannelAction.ADD_SUPPLY_CHANNEL),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreChangeProductSelectionActionImpl.class, name = StoreChangeProductSelectionAction.CHANGE_PRODUCT_SELECTION_ACTIVE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreRemoveCountryActionImpl.class, name = StoreRemoveCountryAction.REMOVE_COUNTRY),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreRemoveDistributionChannelActionImpl.class, name = StoreRemoveDistributionChannelAction.REMOVE_DISTRIBUTION_CHANNEL),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreRemoveProductSelectionActionImpl.class, name = StoreRemoveProductSelectionAction.REMOVE_PRODUCT_SELECTION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreRemoveSupplyChannelActionImpl.class, name = StoreRemoveSupplyChannelAction.REMOVE_SUPPLY_CHANNEL),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreSetCountriesActionImpl.class, name = StoreSetCountriesAction.SET_COUNTRIES),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreSetCustomFieldActionImpl.class, name = StoreSetCustomFieldAction.SET_CUSTOM_FIELD),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreSetCustomTypeActionImpl.class, name = StoreSetCustomTypeAction.SET_CUSTOM_TYPE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreSetDistributionChannelsActionImpl.class, name = StoreSetDistributionChannelsAction.SET_DISTRIBUTION_CHANNELS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreSetLanguagesActionImpl.class, name = StoreSetLanguagesAction.SET_LANGUAGES),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreSetNameActionImpl.class, name = StoreSetNameAction.SET_NAME),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreSetProductSelectionsActionImpl.class, name = StoreSetProductSelectionsAction.SET_PRODUCT_SELECTIONS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.store.StoreSetSupplyChannelsActionImpl.class, name = StoreSetSupplyChannelsAction.SET_SUPPLY_CHANNELS) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = StoreUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = StoreUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -58,6 +40,8 @@ public interface StoreUpdateAction extends com.commercetools.api.models.Resource
     @JsonProperty("action")
     public String getAction();
 
+    public StoreUpdateAction copyDeep();
+
     /**
      * factory method to create a deep copy of StoreUpdateAction
      * @param template instance to be copied
@@ -68,73 +52,9 @@ public interface StoreUpdateAction extends com.commercetools.api.models.Resource
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.store.StoreAddCountryAction) {
-            return com.commercetools.api.models.store.StoreAddCountryAction
-                    .deepCopy((com.commercetools.api.models.store.StoreAddCountryAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.store.StoreAddDistributionChannelAction) {
-            return com.commercetools.api.models.store.StoreAddDistributionChannelAction
-                    .deepCopy((com.commercetools.api.models.store.StoreAddDistributionChannelAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.store.StoreAddProductSelectionAction) {
-            return com.commercetools.api.models.store.StoreAddProductSelectionAction
-                    .deepCopy((com.commercetools.api.models.store.StoreAddProductSelectionAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.store.StoreAddSupplyChannelAction) {
-            return com.commercetools.api.models.store.StoreAddSupplyChannelAction
-                    .deepCopy((com.commercetools.api.models.store.StoreAddSupplyChannelAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.store.StoreChangeProductSelectionAction) {
-            return com.commercetools.api.models.store.StoreChangeProductSelectionAction
-                    .deepCopy((com.commercetools.api.models.store.StoreChangeProductSelectionAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.store.StoreRemoveCountryAction) {
-            return com.commercetools.api.models.store.StoreRemoveCountryAction
-                    .deepCopy((com.commercetools.api.models.store.StoreRemoveCountryAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.store.StoreRemoveDistributionChannelAction) {
-            return com.commercetools.api.models.store.StoreRemoveDistributionChannelAction
-                    .deepCopy((com.commercetools.api.models.store.StoreRemoveDistributionChannelAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.store.StoreRemoveProductSelectionAction) {
-            return com.commercetools.api.models.store.StoreRemoveProductSelectionAction
-                    .deepCopy((com.commercetools.api.models.store.StoreRemoveProductSelectionAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.store.StoreRemoveSupplyChannelAction) {
-            return com.commercetools.api.models.store.StoreRemoveSupplyChannelAction
-                    .deepCopy((com.commercetools.api.models.store.StoreRemoveSupplyChannelAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.store.StoreSetCountriesAction) {
-            return com.commercetools.api.models.store.StoreSetCountriesAction
-                    .deepCopy((com.commercetools.api.models.store.StoreSetCountriesAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.store.StoreSetCustomFieldAction) {
-            return com.commercetools.api.models.store.StoreSetCustomFieldAction
-                    .deepCopy((com.commercetools.api.models.store.StoreSetCustomFieldAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.store.StoreSetCustomTypeAction) {
-            return com.commercetools.api.models.store.StoreSetCustomTypeAction
-                    .deepCopy((com.commercetools.api.models.store.StoreSetCustomTypeAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.store.StoreSetDistributionChannelsAction) {
-            return com.commercetools.api.models.store.StoreSetDistributionChannelsAction
-                    .deepCopy((com.commercetools.api.models.store.StoreSetDistributionChannelsAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.store.StoreSetLanguagesAction) {
-            return com.commercetools.api.models.store.StoreSetLanguagesAction
-                    .deepCopy((com.commercetools.api.models.store.StoreSetLanguagesAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.store.StoreSetNameAction) {
-            return com.commercetools.api.models.store.StoreSetNameAction
-                    .deepCopy((com.commercetools.api.models.store.StoreSetNameAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.store.StoreSetProductSelectionsAction) {
-            return com.commercetools.api.models.store.StoreSetProductSelectionsAction
-                    .deepCopy((com.commercetools.api.models.store.StoreSetProductSelectionsAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.store.StoreSetSupplyChannelsAction) {
-            return com.commercetools.api.models.store.StoreSetSupplyChannelsAction
-                    .deepCopy((com.commercetools.api.models.store.StoreSetSupplyChannelsAction) template);
+
+        if (!(template instanceof StoreUpdateActionImpl)) {
+            return template.copyDeep();
         }
         StoreUpdateActionImpl instance = new StoreUpdateActionImpl();
         return instance;

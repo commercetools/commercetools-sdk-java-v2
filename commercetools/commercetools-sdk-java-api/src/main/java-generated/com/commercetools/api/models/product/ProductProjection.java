@@ -459,6 +459,8 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
         return instance;
     }
 
+    public ProductProjection copyDeep();
+
     /**
      * factory method to create a deep copy of ProductProjection
      * @param template instance to be copied

@@ -116,4 +116,8 @@ public class GraphQLDuplicatePriceScopeErrorImpl implements GraphQLDuplicatePric
                 .build();
     }
 
+    @Override
+    public GraphQLDuplicatePriceScopeError copyDeep() {
+        return GraphQLDuplicatePriceScopeError.deepCopy(this);
+    }
 }

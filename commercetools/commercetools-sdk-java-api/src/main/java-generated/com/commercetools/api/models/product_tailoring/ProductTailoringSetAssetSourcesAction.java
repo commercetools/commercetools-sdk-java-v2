@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setAssetSources")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTailoringSetAssetSourcesActionImpl.class)
 public interface ProductTailoringSetAssetSourcesAction extends ProductTailoringUpdateAction {
@@ -161,6 +162,8 @@ public interface ProductTailoringSetAssetSourcesAction extends ProductTailoringU
         instance.setSources(template.getSources());
         return instance;
     }
+
+    public ProductTailoringSetAssetSourcesAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductTailoringSetAssetSourcesAction

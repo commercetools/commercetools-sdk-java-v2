@@ -96,4 +96,8 @@ public class GraphQLQueryTimedOutErrorImpl implements GraphQLQueryTimedOutError,
                 .build();
     }
 
+    @Override
+    public GraphQLQueryTimedOutError copyDeep() {
+        return GraphQLQueryTimedOutError.deepCopy(this);
+    }
 }

@@ -144,6 +144,8 @@ public interface CartDiscountPagedQueryResponse
         return instance;
     }
 
+    public CartDiscountPagedQueryResponse copyDeep();
+
     /**
      * factory method to create a deep copy of CartDiscountPagedQueryResponse
      * @param template instance to be copied

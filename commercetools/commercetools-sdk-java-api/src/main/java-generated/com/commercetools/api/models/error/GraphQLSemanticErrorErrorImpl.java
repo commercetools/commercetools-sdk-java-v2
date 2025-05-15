@@ -95,4 +95,8 @@ public class GraphQLSemanticErrorErrorImpl implements GraphQLSemanticErrorError,
                 .build();
     }
 
+    @Override
+    public GraphQLSemanticErrorError copyDeep() {
+        return GraphQLSemanticErrorError.deepCopy(this);
+    }
 }

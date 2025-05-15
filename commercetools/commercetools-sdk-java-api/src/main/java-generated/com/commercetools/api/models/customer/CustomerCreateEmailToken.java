@@ -98,6 +98,8 @@ public interface CustomerCreateEmailToken {
         return instance;
     }
 
+    public CustomerCreateEmailToken copyDeep();
+
     /**
      * factory method to create a deep copy of CustomerCreateEmailToken
      * @param template instance to be copied

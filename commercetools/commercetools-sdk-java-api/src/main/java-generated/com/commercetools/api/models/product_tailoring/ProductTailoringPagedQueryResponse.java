@@ -143,6 +143,8 @@ public interface ProductTailoringPagedQueryResponse {
         return instance;
     }
 
+    public ProductTailoringPagedQueryResponse copyDeep();
+
     /**
      * factory method to create a deep copy of ProductTailoringPagedQueryResponse
      * @param template instance to be copied

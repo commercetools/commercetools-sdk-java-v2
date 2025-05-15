@@ -91,4 +91,8 @@ public class CustomerSetExternalIdActionImpl implements CustomerSetExternalIdAct
                 .build();
     }
 
+    @Override
+    public CustomerSetExternalIdAction copyDeep() {
+        return CustomerSetExternalIdAction.deepCopy(this);
+    }
 }

@@ -119,4 +119,8 @@ public class StagedOrderSetOrderTotalTaxActionImpl implements StagedOrderSetOrde
                 .build();
     }
 
+    @Override
+    public StagedOrderSetOrderTotalTaxAction copyDeep() {
+        return StagedOrderSetOrderTotalTaxAction.deepCopy(this);
+    }
 }

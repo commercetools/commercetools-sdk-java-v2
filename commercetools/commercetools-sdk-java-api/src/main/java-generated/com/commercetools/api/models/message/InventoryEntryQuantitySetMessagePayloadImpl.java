@@ -173,4 +173,8 @@ public class InventoryEntryQuantitySetMessagePayloadImpl implements InventoryEnt
                 .build();
     }
 
+    @Override
+    public InventoryEntryQuantitySetMessagePayload copyDeep() {
+        return InventoryEntryQuantitySetMessagePayload.deepCopy(this);
+    }
 }

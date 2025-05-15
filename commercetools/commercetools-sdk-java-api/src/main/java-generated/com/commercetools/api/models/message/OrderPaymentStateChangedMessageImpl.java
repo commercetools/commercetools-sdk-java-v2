@@ -314,4 +314,8 @@ public class OrderPaymentStateChangedMessageImpl implements OrderPaymentStateCha
                 .build();
     }
 
+    @Override
+    public OrderPaymentStateChangedMessage copyDeep() {
+        return OrderPaymentStateChangedMessage.deepCopy(this);
+    }
 }

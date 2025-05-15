@@ -144,6 +144,8 @@ public interface MyPaymentPagedQueryResponse
         return instance;
     }
 
+    public MyPaymentPagedQueryResponse copyDeep();
+
     /**
      * factory method to create a deep copy of MyPaymentPagedQueryResponse
      * @param template instance to be copied

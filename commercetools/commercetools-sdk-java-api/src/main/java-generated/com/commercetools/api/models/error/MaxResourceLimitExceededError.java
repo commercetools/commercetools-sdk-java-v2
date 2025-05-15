@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("MaxResourceLimitExceeded")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MaxResourceLimitExceededErrorImpl.class)
 public interface MaxResourceLimitExceededError extends ErrorObject {
@@ -97,6 +98,8 @@ public interface MaxResourceLimitExceededError extends ErrorObject {
         instance.setExceededResource(template.getExceededResource());
         return instance;
     }
+
+    public MaxResourceLimitExceededError copyDeep();
 
     /**
      * factory method to create a deep copy of MaxResourceLimitExceededError

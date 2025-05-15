@@ -1154,4 +1154,8 @@ public class OrderImpl implements Order, ModelBase {
                 .build();
     }
 
+    @Override
+    public Order copyDeep() {
+        return Order.deepCopy(this);
+    }
 }

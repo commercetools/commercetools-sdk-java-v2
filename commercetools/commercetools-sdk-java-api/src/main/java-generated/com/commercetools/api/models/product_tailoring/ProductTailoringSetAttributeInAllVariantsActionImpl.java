@@ -138,4 +138,8 @@ public class ProductTailoringSetAttributeInAllVariantsActionImpl
                 .build();
     }
 
+    @Override
+    public ProductTailoringSetAttributeInAllVariantsAction copyDeep() {
+        return ProductTailoringSetAttributeInAllVariantsAction.deepCopy(this);
+    }
 }

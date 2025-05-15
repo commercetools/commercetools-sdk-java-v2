@@ -111,4 +111,8 @@ public class ProductAddedToCategoryMessagePayloadImpl implements ProductAddedToC
                 .build();
     }
 
+    @Override
+    public ProductAddedToCategoryMessagePayload copyDeep() {
+        return ProductAddedToCategoryMessagePayload.deepCopy(this);
+    }
 }

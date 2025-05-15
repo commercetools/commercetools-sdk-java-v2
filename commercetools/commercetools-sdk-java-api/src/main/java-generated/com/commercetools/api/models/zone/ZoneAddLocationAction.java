@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("addLocation")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ZoneAddLocationActionImpl.class)
 public interface ZoneAddLocationAction extends ZoneUpdateAction {
@@ -71,6 +72,8 @@ public interface ZoneAddLocationAction extends ZoneUpdateAction {
         instance.setLocation(template.getLocation());
         return instance;
     }
+
+    public ZoneAddLocationAction copyDeep();
 
     /**
      * factory method to create a deep copy of ZoneAddLocationAction

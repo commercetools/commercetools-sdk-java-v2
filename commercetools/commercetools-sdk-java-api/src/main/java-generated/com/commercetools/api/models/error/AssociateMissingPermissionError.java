@@ -34,6 +34,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("AssociateMissingPermission")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AssociateMissingPermissionErrorImpl.class)
 public interface AssociateMissingPermissionError extends ErrorObject {
@@ -167,6 +168,8 @@ public interface AssociateMissingPermissionError extends ErrorObject {
         instance.setPermissions(template.getPermissions());
         return instance;
     }
+
+    public AssociateMissingPermissionError copyDeep();
 
     /**
      * factory method to create a deep copy of AssociateMissingPermissionError

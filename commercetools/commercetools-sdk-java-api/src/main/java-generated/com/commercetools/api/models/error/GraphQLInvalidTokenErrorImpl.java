@@ -95,4 +95,8 @@ public class GraphQLInvalidTokenErrorImpl implements GraphQLInvalidTokenError, M
                 .build();
     }
 
+    @Override
+    public GraphQLInvalidTokenError copyDeep() {
+        return GraphQLInvalidTokenError.deepCopy(this);
+    }
 }

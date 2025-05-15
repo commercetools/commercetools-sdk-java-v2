@@ -110,4 +110,8 @@ public class ApprovalRuleNameSetMessagePayloadImpl implements ApprovalRuleNameSe
                 .build();
     }
 
+    @Override
+    public ApprovalRuleNameSetMessagePayload copyDeep() {
+        return ApprovalRuleNameSetMessagePayload.deepCopy(this);
+    }
 }

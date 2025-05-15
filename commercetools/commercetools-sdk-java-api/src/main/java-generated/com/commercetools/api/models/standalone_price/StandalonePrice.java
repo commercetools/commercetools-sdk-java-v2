@@ -387,6 +387,8 @@ public interface StandalonePrice
         return instance;
     }
 
+    public StandalonePrice copyDeep();
+
     /**
      * factory method to create a deep copy of StandalonePrice
      * @param template instance to be copied

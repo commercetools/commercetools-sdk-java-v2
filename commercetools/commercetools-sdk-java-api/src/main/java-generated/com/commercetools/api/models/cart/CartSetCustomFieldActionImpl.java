@@ -110,4 +110,8 @@ public class CartSetCustomFieldActionImpl implements CartSetCustomFieldAction, M
                 .build();
     }
 
+    @Override
+    public CartSetCustomFieldAction copyDeep() {
+        return CartSetCustomFieldAction.deepCopy(this);
+    }
 }

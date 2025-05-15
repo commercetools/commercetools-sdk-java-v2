@@ -110,4 +110,8 @@ public class ProductChangeNameActionImpl implements ProductChangeNameAction, Mod
                 .build();
     }
 
+    @Override
+    public ProductChangeNameAction copyDeep() {
+        return ProductChangeNameAction.deepCopy(this);
+    }
 }

@@ -111,4 +111,8 @@ public class CategorySetCustomTypeActionImpl implements CategorySetCustomTypeAct
                 .build();
     }
 
+    @Override
+    public CategorySetCustomTypeAction copyDeep() {
+        return CategorySetCustomTypeAction.deepCopy(this);
+    }
 }

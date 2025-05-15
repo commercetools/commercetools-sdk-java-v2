@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("order-edit")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderEditResourceIdentifierImpl.class)
 public interface OrderEditResourceIdentifier
@@ -84,6 +85,8 @@ public interface OrderEditResourceIdentifier
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public OrderEditResourceIdentifier copyDeep();
 
     /**
      * factory method to create a deep copy of OrderEditResourceIdentifier

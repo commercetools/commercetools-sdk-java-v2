@@ -333,4 +333,8 @@ public class BusinessUnitAddressCustomTypeSetMessageImpl implements BusinessUnit
                 .build();
     }
 
+    @Override
+    public BusinessUnitAddressCustomTypeSetMessage copyDeep() {
+        return BusinessUnitAddressCustomTypeSetMessage.deepCopy(this);
+    }
 }

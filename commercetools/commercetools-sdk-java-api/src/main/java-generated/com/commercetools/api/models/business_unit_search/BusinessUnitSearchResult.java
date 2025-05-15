@@ -82,6 +82,8 @@ public interface BusinessUnitSearchResult {
         return instance;
     }
 
+    public BusinessUnitSearchResult copyDeep();
+
     /**
      * factory method to create a deep copy of BusinessUnitSearchResult
      * @param template instance to be copied

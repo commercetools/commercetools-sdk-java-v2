@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("LocalizedString")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomFieldLocalizedStringTypeImpl.class)
 public interface CustomFieldLocalizedStringType extends FieldType {
@@ -50,6 +51,8 @@ public interface CustomFieldLocalizedStringType extends FieldType {
         CustomFieldLocalizedStringTypeImpl instance = new CustomFieldLocalizedStringTypeImpl();
         return instance;
     }
+
+    public CustomFieldLocalizedStringType copyDeep();
 
     /**
      * factory method to create a deep copy of CustomFieldLocalizedStringType

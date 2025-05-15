@@ -134,4 +134,8 @@ public class LockedFieldErrorImpl implements LockedFieldError, ModelBase {
                 .build();
     }
 
+    @Override
+    public LockedFieldError copyDeep() {
+        return LockedFieldError.deepCopy(this);
+    }
 }

@@ -235,4 +235,8 @@ public class CustomerGroupImpl implements CustomerGroup, ModelBase {
                 .build();
     }
 
+    @Override
+    public CustomerGroup copyDeep() {
+        return CustomerGroup.deepCopy(this);
+    }
 }

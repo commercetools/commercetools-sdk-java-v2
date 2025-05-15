@@ -145,6 +145,8 @@ public interface LastModifiedBy extends ClientLogging {
         return instance;
     }
 
+    public LastModifiedBy copyDeep();
+
     /**
      * factory method to create a deep copy of LastModifiedBy
      * @param template instance to be copied

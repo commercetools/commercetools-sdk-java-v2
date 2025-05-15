@@ -114,4 +114,8 @@ public class PaymentMethodInfoImpl implements PaymentMethodInfo, ModelBase {
                 .build();
     }
 
+    @Override
+    public PaymentMethodInfo copyDeep() {
+        return PaymentMethodInfo.deepCopy(this);
+    }
 }

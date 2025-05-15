@@ -314,4 +314,8 @@ public class ProductRemovedFromCategoryMessageImpl implements ProductRemovedFrom
                 .build();
     }
 
+    @Override
+    public ProductRemovedFromCategoryMessage copyDeep() {
+        return ProductRemovedFromCategoryMessage.deepCopy(this);
+    }
 }

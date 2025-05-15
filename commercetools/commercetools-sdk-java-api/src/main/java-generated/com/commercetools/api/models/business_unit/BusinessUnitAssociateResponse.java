@@ -148,6 +148,8 @@ public interface BusinessUnitAssociateResponse {
         return instance;
     }
 
+    public BusinessUnitAssociateResponse copyDeep();
+
     /**
      * factory method to create a deep copy of BusinessUnitAssociateResponse
      * @param template instance to be copied

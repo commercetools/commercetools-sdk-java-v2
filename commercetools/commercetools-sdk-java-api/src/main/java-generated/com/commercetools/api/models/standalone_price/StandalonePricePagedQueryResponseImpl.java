@@ -161,4 +161,8 @@ public class StandalonePricePagedQueryResponseImpl implements StandalonePricePag
                 .build();
     }
 
+    @Override
+    public StandalonePricePagedQueryResponse copyDeep() {
+        return StandalonePricePagedQueryResponse.deepCopy(this);
+    }
 }

@@ -111,4 +111,8 @@ public class OrderEditSetCustomTypeActionImpl implements OrderEditSetCustomTypeA
                 .build();
     }
 
+    @Override
+    public OrderEditSetCustomTypeAction copyDeep() {
+        return OrderEditSetCustomTypeAction.deepCopy(this);
+    }
 }

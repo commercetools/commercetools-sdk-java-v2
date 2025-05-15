@@ -182,4 +182,8 @@ public class ExtensionUpdateActionsFailedErrorImpl implements ExtensionUpdateAct
                 .build();
     }
 
+    @Override
+    public ExtensionUpdateActionsFailedError copyDeep() {
+        return ExtensionUpdateActionsFailedError.deepCopy(this);
+    }
 }

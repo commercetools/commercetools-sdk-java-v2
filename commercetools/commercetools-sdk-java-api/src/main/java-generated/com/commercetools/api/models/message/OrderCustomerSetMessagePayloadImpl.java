@@ -156,4 +156,8 @@ public class OrderCustomerSetMessagePayloadImpl implements OrderCustomerSetMessa
                 .build();
     }
 
+    @Override
+    public OrderCustomerSetMessagePayload copyDeep() {
+        return OrderCustomerSetMessagePayload.deepCopy(this);
+    }
 }

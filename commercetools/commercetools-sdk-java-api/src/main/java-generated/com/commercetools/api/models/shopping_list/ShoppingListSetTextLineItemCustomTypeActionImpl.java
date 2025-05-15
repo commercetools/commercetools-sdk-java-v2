@@ -154,4 +154,8 @@ public class ShoppingListSetTextLineItemCustomTypeActionImpl
                 .build();
     }
 
+    @Override
+    public ShoppingListSetTextLineItemCustomTypeAction copyDeep() {
+        return ShoppingListSetTextLineItemCustomTypeAction.deepCopy(this);
+    }
 }

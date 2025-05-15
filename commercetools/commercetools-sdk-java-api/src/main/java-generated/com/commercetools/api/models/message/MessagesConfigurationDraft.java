@@ -82,6 +82,8 @@ public interface MessagesConfigurationDraft extends io.vrap.rmf.base.client.Draf
         return instance;
     }
 
+    public MessagesConfigurationDraft copyDeep();
+
     /**
      * factory method to create a deep copy of MessagesConfigurationDraft
      * @param template instance to be copied

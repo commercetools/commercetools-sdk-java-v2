@@ -27,6 +27,7 @@ import jakarta.validation.Valid;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setTransitions")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StateSetTransitionsActionImpl.class)
 public interface StateSetTransitionsAction extends StateUpdateAction {
@@ -86,6 +87,8 @@ public interface StateSetTransitionsAction extends StateUpdateAction {
         instance.setTransitions(template.getTransitions());
         return instance;
     }
+
+    public StateSetTransitionsAction copyDeep();
 
     /**
      * factory method to create a deep copy of StateSetTransitionsAction

@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setDescription")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ZoneSetDescriptionActionImpl.class)
 public interface ZoneSetDescriptionAction extends ZoneUpdateAction {
@@ -66,6 +67,8 @@ public interface ZoneSetDescriptionAction extends ZoneUpdateAction {
         instance.setDescription(template.getDescription());
         return instance;
     }
+
+    public ZoneSetDescriptionAction copyDeep();
 
     /**
      * factory method to create a deep copy of ZoneSetDescriptionAction

@@ -122,4 +122,8 @@ public class AssignedProductReferenceImpl implements AssignedProductReference, M
                 .build();
     }
 
+    @Override
+    public AssignedProductReference copyDeep() {
+        return AssignedProductReference.deepCopy(this);
+    }
 }

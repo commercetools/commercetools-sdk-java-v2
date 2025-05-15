@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ExtensionNoResponse")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLExtensionNoResponseErrorImpl.class)
 public interface GraphQLExtensionNoResponseError extends GraphQLErrorObject {
@@ -94,6 +95,8 @@ public interface GraphQLExtensionNoResponseError extends GraphQLErrorObject {
         instance.setExtensionKey(template.getExtensionKey());
         return instance;
     }
+
+    public GraphQLExtensionNoResponseError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLExtensionNoResponseError

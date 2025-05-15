@@ -159,4 +159,8 @@ public class ReviewPagedQueryResponseImpl implements ReviewPagedQueryResponse, M
                 .build();
     }
 
+    @Override
+    public ReviewPagedQueryResponse copyDeep() {
+        return ReviewPagedQueryResponse.deepCopy(this);
+    }
 }

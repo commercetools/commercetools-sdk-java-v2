@@ -392,4 +392,8 @@ public class ProductPriceExternalDiscountSetMessageImpl implements ProductPriceE
                 .build();
     }
 
+    @Override
+    public ProductPriceExternalDiscountSetMessage copyDeep() {
+        return ProductPriceExternalDiscountSetMessage.deepCopy(this);
+    }
 }

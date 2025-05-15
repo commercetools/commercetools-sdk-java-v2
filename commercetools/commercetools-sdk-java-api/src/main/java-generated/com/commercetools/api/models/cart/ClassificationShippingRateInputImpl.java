@@ -110,4 +110,8 @@ public class ClassificationShippingRateInputImpl implements ClassificationShippi
                 .build();
     }
 
+    @Override
+    public ClassificationShippingRateInput copyDeep() {
+        return ClassificationShippingRateInput.deepCopy(this);
+    }
 }

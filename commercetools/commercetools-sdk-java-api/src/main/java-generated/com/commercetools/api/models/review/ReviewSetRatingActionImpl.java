@@ -91,4 +91,8 @@ public class ReviewSetRatingActionImpl implements ReviewSetRatingAction, ModelBa
                 .build();
     }
 
+    @Override
+    public ReviewSetRatingAction copyDeep() {
+        return ReviewSetRatingAction.deepCopy(this);
+    }
 }

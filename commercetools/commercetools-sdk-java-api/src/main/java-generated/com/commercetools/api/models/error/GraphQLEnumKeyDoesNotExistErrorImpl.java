@@ -139,4 +139,8 @@ public class GraphQLEnumKeyDoesNotExistErrorImpl implements GraphQLEnumKeyDoesNo
                 .build();
     }
 
+    @Override
+    public GraphQLEnumKeyDoesNotExistError copyDeep() {
+        return GraphQLEnumKeyDoesNotExistError.deepCopy(this);
+    }
 }

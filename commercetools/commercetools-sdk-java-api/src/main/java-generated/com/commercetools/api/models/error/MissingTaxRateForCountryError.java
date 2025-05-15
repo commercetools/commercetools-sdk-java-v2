@@ -40,6 +40,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("MissingTaxRateForCountry")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MissingTaxRateForCountryErrorImpl.class)
 public interface MissingTaxRateForCountryError extends ErrorObject {
@@ -139,6 +140,8 @@ public interface MissingTaxRateForCountryError extends ErrorObject {
         instance.setState(template.getState());
         return instance;
     }
+
+    public MissingTaxRateForCountryError copyDeep();
 
     /**
      * factory method to create a deep copy of MissingTaxRateForCountryError

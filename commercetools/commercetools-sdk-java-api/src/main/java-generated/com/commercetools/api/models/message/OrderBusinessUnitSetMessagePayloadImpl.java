@@ -113,4 +113,8 @@ public class OrderBusinessUnitSetMessagePayloadImpl implements OrderBusinessUnit
                 .build();
     }
 
+    @Override
+    public OrderBusinessUnitSetMessagePayload copyDeep() {
+        return OrderBusinessUnitSetMessagePayload.deepCopy(this);
+    }
 }

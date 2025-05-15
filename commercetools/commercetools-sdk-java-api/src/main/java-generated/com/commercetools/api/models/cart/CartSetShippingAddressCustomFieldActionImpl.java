@@ -110,4 +110,8 @@ public class CartSetShippingAddressCustomFieldActionImpl implements CartSetShipp
                 .build();
     }
 
+    @Override
+    public CartSetShippingAddressCustomFieldAction copyDeep() {
+        return CartSetShippingAddressCustomFieldAction.deepCopy(this);
+    }
 }

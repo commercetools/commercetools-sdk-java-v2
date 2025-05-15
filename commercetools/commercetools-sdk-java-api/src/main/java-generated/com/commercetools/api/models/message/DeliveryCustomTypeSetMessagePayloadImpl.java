@@ -134,4 +134,8 @@ public class DeliveryCustomTypeSetMessagePayloadImpl implements DeliveryCustomTy
                 .build();
     }
 
+    @Override
+    public DeliveryCustomTypeSetMessagePayload copyDeep() {
+        return DeliveryCustomTypeSetMessagePayload.deepCopy(this);
+    }
 }

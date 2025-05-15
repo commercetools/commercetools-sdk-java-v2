@@ -111,4 +111,8 @@ public class ProductTransitionStateActionImpl implements ProductTransitionStateA
                 .build();
     }
 
+    @Override
+    public ProductTransitionStateAction copyDeep() {
+        return ProductTransitionStateAction.deepCopy(this);
+    }
 }

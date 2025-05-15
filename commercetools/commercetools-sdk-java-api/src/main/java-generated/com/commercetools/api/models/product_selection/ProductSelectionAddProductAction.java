@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("addProduct")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSelectionAddProductActionImpl.class)
 public interface ProductSelectionAddProductAction extends ProductSelectionUpdateAction {
@@ -89,6 +90,8 @@ public interface ProductSelectionAddProductAction extends ProductSelectionUpdate
         instance.setVariantSelection(template.getVariantSelection());
         return instance;
     }
+
+    public ProductSelectionAddProductAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductSelectionAddProductAction

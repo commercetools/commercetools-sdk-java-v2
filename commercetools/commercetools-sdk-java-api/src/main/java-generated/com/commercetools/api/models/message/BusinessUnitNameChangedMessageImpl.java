@@ -293,4 +293,8 @@ public class BusinessUnitNameChangedMessageImpl implements BusinessUnitNameChang
                 .build();
     }
 
+    @Override
+    public BusinessUnitNameChangedMessage copyDeep() {
+        return BusinessUnitNameChangedMessage.deepCopy(this);
+    }
 }

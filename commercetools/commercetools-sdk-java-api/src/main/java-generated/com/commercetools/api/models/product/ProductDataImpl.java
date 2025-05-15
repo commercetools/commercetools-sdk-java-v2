@@ -287,4 +287,8 @@ public class ProductDataImpl implements ProductData, ModelBase {
                 .build();
     }
 
+    @Override
+    public ProductData copyDeep() {
+        return ProductData.deepCopy(this);
+    }
 }

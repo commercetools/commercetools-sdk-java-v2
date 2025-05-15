@@ -313,4 +313,8 @@ public class QuoteCustomerChangedMessageImpl implements QuoteCustomerChangedMess
                 .build();
     }
 
+    @Override
+    public QuoteCustomerChangedMessage copyDeep() {
+        return QuoteCustomerChangedMessage.deepCopy(this);
+    }
 }

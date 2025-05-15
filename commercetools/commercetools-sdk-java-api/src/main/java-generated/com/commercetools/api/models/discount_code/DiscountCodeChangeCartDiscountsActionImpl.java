@@ -98,4 +98,8 @@ public class DiscountCodeChangeCartDiscountsActionImpl implements DiscountCodeCh
                 .build();
     }
 
+    @Override
+    public DiscountCodeChangeCartDiscountsAction copyDeep() {
+        return DiscountCodeChangeCartDiscountsAction.deepCopy(this);
+    }
 }

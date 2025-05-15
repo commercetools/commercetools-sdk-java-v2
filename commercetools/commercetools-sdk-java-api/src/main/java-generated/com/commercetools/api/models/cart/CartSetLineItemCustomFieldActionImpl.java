@@ -152,4 +152,8 @@ public class CartSetLineItemCustomFieldActionImpl implements CartSetLineItemCust
                 .build();
     }
 
+    @Override
+    public CartSetLineItemCustomFieldAction copyDeep() {
+        return CartSetLineItemCustomFieldAction.deepCopy(this);
+    }
 }

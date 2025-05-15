@@ -92,4 +92,8 @@ public class ProjectChangeOrderSearchStatusActionImpl implements ProjectChangeOr
                 .build();
     }
 
+    @Override
+    public ProjectChangeOrderSearchStatusAction copyDeep() {
+        return ProjectChangeOrderSearchStatusAction.deepCopy(this);
+    }
 }

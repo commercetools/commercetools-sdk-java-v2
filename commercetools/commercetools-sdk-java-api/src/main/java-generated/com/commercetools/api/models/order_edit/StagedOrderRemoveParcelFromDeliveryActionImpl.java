@@ -113,4 +113,8 @@ public class StagedOrderRemoveParcelFromDeliveryActionImpl
                 .build();
     }
 
+    @Override
+    public StagedOrderRemoveParcelFromDeliveryAction copyDeep() {
+        return StagedOrderRemoveParcelFromDeliveryAction.deepCopy(this);
+    }
 }

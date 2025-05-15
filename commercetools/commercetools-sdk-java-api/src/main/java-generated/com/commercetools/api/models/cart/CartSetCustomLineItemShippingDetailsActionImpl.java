@@ -134,4 +134,8 @@ public class CartSetCustomLineItemShippingDetailsActionImpl
                 .build();
     }
 
+    @Override
+    public CartSetCustomLineItemShippingDetailsAction copyDeep() {
+        return CartSetCustomLineItemShippingDetailsAction.deepCopy(this);
+    }
 }

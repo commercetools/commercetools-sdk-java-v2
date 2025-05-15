@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setAssetTags")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTailoringSetAssetTagsActionImpl.class)
 public interface ProductTailoringSetAssetTagsAction extends ProductTailoringUpdateAction {
@@ -154,6 +155,8 @@ public interface ProductTailoringSetAssetTagsAction extends ProductTailoringUpda
         instance.setTags(template.getTags());
         return instance;
     }
+
+    public ProductTailoringSetAssetTagsAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductTailoringSetAssetTagsAction

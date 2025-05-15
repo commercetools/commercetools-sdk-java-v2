@@ -201,4 +201,8 @@ public class ApprovalRuleDraftImpl implements ApprovalRuleDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public ApprovalRuleDraft copyDeep() {
+        return ApprovalRuleDraft.deepCopy(this);
+    }
 }

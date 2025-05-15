@@ -273,4 +273,8 @@ public class QuoteRequestDeletedMessageImpl implements QuoteRequestDeletedMessag
                 .build();
     }
 
+    @Override
+    public QuoteRequestDeletedMessage copyDeep() {
+        return QuoteRequestDeletedMessage.deepCopy(this);
+    }
 }

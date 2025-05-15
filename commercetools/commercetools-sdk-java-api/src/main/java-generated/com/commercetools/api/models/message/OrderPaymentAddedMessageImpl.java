@@ -293,4 +293,8 @@ public class OrderPaymentAddedMessageImpl implements OrderPaymentAddedMessage, M
                 .build();
     }
 
+    @Override
+    public OrderPaymentAddedMessage copyDeep() {
+        return OrderPaymentAddedMessage.deepCopy(this);
+    }
 }

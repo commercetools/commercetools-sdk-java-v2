@@ -94,6 +94,8 @@ public interface MyQuoteRequestUpdate extends
         return instance;
     }
 
+    public MyQuoteRequestUpdate copyDeep();
+
     /**
      * factory method to create a deep copy of MyQuoteRequestUpdate
      * @param template instance to be copied

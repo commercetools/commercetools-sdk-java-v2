@@ -138,4 +138,8 @@ public class BusinessUnitPagedSearchResponseImpl implements BusinessUnitPagedSea
                 .build();
     }
 
+    @Override
+    public BusinessUnitPagedSearchResponse copyDeep() {
+        return BusinessUnitPagedSearchResponse.deepCopy(this);
+    }
 }

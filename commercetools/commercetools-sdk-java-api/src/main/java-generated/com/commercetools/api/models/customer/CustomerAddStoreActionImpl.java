@@ -92,4 +92,8 @@ public class CustomerAddStoreActionImpl implements CustomerAddStoreAction, Model
                 .build();
     }
 
+    @Override
+    public CustomerAddStoreAction copyDeep() {
+        return CustomerAddStoreAction.deepCopy(this);
+    }
 }

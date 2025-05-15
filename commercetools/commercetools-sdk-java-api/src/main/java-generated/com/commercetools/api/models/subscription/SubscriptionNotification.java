@@ -31,12 +31,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.EventDeliveryPayloadImpl.class, name = EventDeliveryPayload.EVENT),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.MessageDeliveryPayloadImpl.class, name = MessageDeliveryPayload.MESSAGE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.ResourceCreatedDeliveryPayloadImpl.class, name = ResourceCreatedDeliveryPayload.RESOURCE_CREATED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.ResourceDeletedDeliveryPayloadImpl.class, name = ResourceDeletedDeliveryPayload.RESOURCE_DELETED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.ResourceUpdatedDeliveryPayloadImpl.class, name = ResourceUpdatedDeliveryPayload.RESOURCE_UPDATED) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "notificationType", defaultImpl = SubscriptionNotificationImpl.class, visible = true)
 @JsonDeserialize(as = SubscriptionNotificationImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -50,6 +44,8 @@ public interface SubscriptionNotification {
     @JsonProperty("notificationType")
     public String getNotificationType();
 
+    public SubscriptionNotification copyDeep();
+
     /**
      * factory method to create a deep copy of SubscriptionNotification
      * @param template instance to be copied
@@ -60,13 +56,9 @@ public interface SubscriptionNotification {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.subscription.DeliveryPayload) {
-            return com.commercetools.api.models.subscription.DeliveryPayload
-                    .deepCopy((com.commercetools.api.models.subscription.DeliveryPayload) template);
-        }
-        if (template instanceof com.commercetools.api.models.subscription.EventDeliveryPayload) {
-            return com.commercetools.api.models.subscription.EventDeliveryPayload
-                    .deepCopy((com.commercetools.api.models.subscription.EventDeliveryPayload) template);
+
+        if (!(template instanceof SubscriptionNotificationImpl)) {
+            return template.copyDeep();
         }
         SubscriptionNotificationImpl instance = new SubscriptionNotificationImpl();
         return instance;

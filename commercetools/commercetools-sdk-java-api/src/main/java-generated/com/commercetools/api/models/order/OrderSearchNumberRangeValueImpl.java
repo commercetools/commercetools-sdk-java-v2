@@ -156,4 +156,8 @@ public class OrderSearchNumberRangeValueImpl implements OrderSearchNumberRangeVa
                 .build();
     }
 
+    @Override
+    public OrderSearchNumberRangeValue copyDeep() {
+        return OrderSearchNumberRangeValue.deepCopy(this);
+    }
 }

@@ -93,4 +93,8 @@ public class BusinessUnitChangeAssociateModeActionImpl implements BusinessUnitCh
                 .build();
     }
 
+    @Override
+    public BusinessUnitChangeAssociateModeAction copyDeep() {
+        return BusinessUnitChangeAssociateModeAction.deepCopy(this);
+    }
 }

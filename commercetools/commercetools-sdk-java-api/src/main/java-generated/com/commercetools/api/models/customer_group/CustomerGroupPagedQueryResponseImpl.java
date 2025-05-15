@@ -160,4 +160,8 @@ public class CustomerGroupPagedQueryResponseImpl implements CustomerGroupPagedQu
                 .build();
     }
 
+    @Override
+    public CustomerGroupPagedQueryResponse copyDeep() {
+        return CustomerGroupPagedQueryResponse.deepCopy(this);
+    }
 }

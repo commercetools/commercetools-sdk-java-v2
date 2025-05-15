@@ -91,4 +91,8 @@ public class ScoreShippingRateInputDraftImpl implements ScoreShippingRateInputDr
                 .build();
     }
 
+    @Override
+    public ScoreShippingRateInputDraft copyDeep() {
+        return ScoreShippingRateInputDraft.deepCopy(this);
+    }
 }

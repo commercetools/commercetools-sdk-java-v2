@@ -69,4 +69,8 @@ public class BusinessUnitUpdateActionImpl implements BusinessUnitUpdateAction, M
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action).build();
     }
 
+    @Override
+    public BusinessUnitUpdateAction copyDeep() {
+        return BusinessUnitUpdateAction.deepCopy(this);
+    }
 }

@@ -154,4 +154,8 @@ public class BusinessUnitAddressCustomFieldChangedMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public BusinessUnitAddressCustomFieldChangedMessagePayload copyDeep() {
+        return BusinessUnitAddressCustomFieldChangedMessagePayload.deepCopy(this);
+    }
 }

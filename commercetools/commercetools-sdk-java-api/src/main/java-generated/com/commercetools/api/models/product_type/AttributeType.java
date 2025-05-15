@@ -26,20 +26,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.AttributeBooleanTypeImpl.class, name = AttributeBooleanType.BOOLEAN),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.AttributeDateTimeTypeImpl.class, name = AttributeDateTimeType.DATETIME),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.AttributeDateTypeImpl.class, name = AttributeDateType.DATE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.AttributeEnumTypeImpl.class, name = AttributeEnumType.ENUM),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.AttributeLocalizableTextTypeImpl.class, name = AttributeLocalizableTextType.LTEXT),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.AttributeLocalizedEnumTypeImpl.class, name = AttributeLocalizedEnumType.LENUM),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.AttributeMoneyTypeImpl.class, name = AttributeMoneyType.MONEY),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.AttributeNestedTypeImpl.class, name = AttributeNestedType.NESTED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.AttributeNumberTypeImpl.class, name = AttributeNumberType.NUMBER),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.AttributeReferenceTypeImpl.class, name = AttributeReferenceType.REFERENCE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.AttributeSetTypeImpl.class, name = AttributeSetType.SET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.AttributeTextTypeImpl.class, name = AttributeTextType.TEXT),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.AttributeTimeTypeImpl.class, name = AttributeTimeType.TIME) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "name", defaultImpl = AttributeTypeImpl.class, visible = true)
 @JsonDeserialize(as = AttributeTypeImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -53,6 +39,8 @@ public interface AttributeType {
     @JsonProperty("name")
     public String getName();
 
+    public AttributeType copyDeep();
+
     /**
      * factory method to create a deep copy of AttributeType
      * @param template instance to be copied
@@ -63,57 +51,9 @@ public interface AttributeType {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.product_type.AttributeBooleanType) {
-            return com.commercetools.api.models.product_type.AttributeBooleanType
-                    .deepCopy((com.commercetools.api.models.product_type.AttributeBooleanType) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_type.AttributeDateTimeType) {
-            return com.commercetools.api.models.product_type.AttributeDateTimeType
-                    .deepCopy((com.commercetools.api.models.product_type.AttributeDateTimeType) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_type.AttributeDateType) {
-            return com.commercetools.api.models.product_type.AttributeDateType
-                    .deepCopy((com.commercetools.api.models.product_type.AttributeDateType) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_type.AttributeEnumType) {
-            return com.commercetools.api.models.product_type.AttributeEnumType
-                    .deepCopy((com.commercetools.api.models.product_type.AttributeEnumType) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_type.AttributeLocalizableTextType) {
-            return com.commercetools.api.models.product_type.AttributeLocalizableTextType
-                    .deepCopy((com.commercetools.api.models.product_type.AttributeLocalizableTextType) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_type.AttributeLocalizedEnumType) {
-            return com.commercetools.api.models.product_type.AttributeLocalizedEnumType
-                    .deepCopy((com.commercetools.api.models.product_type.AttributeLocalizedEnumType) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_type.AttributeMoneyType) {
-            return com.commercetools.api.models.product_type.AttributeMoneyType
-                    .deepCopy((com.commercetools.api.models.product_type.AttributeMoneyType) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_type.AttributeNestedType) {
-            return com.commercetools.api.models.product_type.AttributeNestedType
-                    .deepCopy((com.commercetools.api.models.product_type.AttributeNestedType) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_type.AttributeNumberType) {
-            return com.commercetools.api.models.product_type.AttributeNumberType
-                    .deepCopy((com.commercetools.api.models.product_type.AttributeNumberType) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_type.AttributeReferenceType) {
-            return com.commercetools.api.models.product_type.AttributeReferenceType
-                    .deepCopy((com.commercetools.api.models.product_type.AttributeReferenceType) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_type.AttributeSetType) {
-            return com.commercetools.api.models.product_type.AttributeSetType
-                    .deepCopy((com.commercetools.api.models.product_type.AttributeSetType) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_type.AttributeTextType) {
-            return com.commercetools.api.models.product_type.AttributeTextType
-                    .deepCopy((com.commercetools.api.models.product_type.AttributeTextType) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_type.AttributeTimeType) {
-            return com.commercetools.api.models.product_type.AttributeTimeType
-                    .deepCopy((com.commercetools.api.models.product_type.AttributeTimeType) template);
+
+        if (!(template instanceof AttributeTypeImpl)) {
+            return template.copyDeep();
         }
         AttributeTypeImpl instance = new AttributeTypeImpl();
         return instance;

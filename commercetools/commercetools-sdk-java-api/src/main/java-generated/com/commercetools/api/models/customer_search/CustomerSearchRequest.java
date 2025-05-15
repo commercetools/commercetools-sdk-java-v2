@@ -123,6 +123,8 @@ public interface CustomerSearchRequest {
         return instance;
     }
 
+    public CustomerSearchRequest copyDeep();
+
     /**
      * factory method to create a deep copy of CustomerSearchRequest
      * @param template instance to be copied

@@ -133,4 +133,8 @@ public class StagedOrderSetLineItemPriceActionImpl implements StagedOrderSetLine
                 .build();
     }
 
+    @Override
+    public StagedOrderSetLineItemPriceAction copyDeep() {
+        return StagedOrderSetLineItemPriceAction.deepCopy(this);
+    }
 }

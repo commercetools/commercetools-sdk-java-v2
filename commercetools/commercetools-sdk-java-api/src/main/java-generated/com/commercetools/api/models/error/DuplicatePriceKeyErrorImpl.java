@@ -138,4 +138,8 @@ public class DuplicatePriceKeyErrorImpl implements DuplicatePriceKeyError, Model
                 .build();
     }
 
+    @Override
+    public DuplicatePriceKeyError copyDeep() {
+        return DuplicatePriceKeyError.deepCopy(this);
+    }
 }

@@ -46,6 +46,8 @@ public interface SearchQuery {
         return instance;
     }
 
+    public SearchQuery copyDeep();
+
     /**
      * factory method to create a deep copy of SearchQuery
      * @param template instance to be copied
@@ -56,13 +58,9 @@ public interface SearchQuery {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.search.SearchCompoundExpression) {
-            return com.commercetools.api.models.search.SearchCompoundExpression
-                    .deepCopy((com.commercetools.api.models.search.SearchCompoundExpression) template);
-        }
-        if (template instanceof com.commercetools.api.models.search.SearchQueryExpression) {
-            return com.commercetools.api.models.search.SearchQueryExpression
-                    .deepCopy((com.commercetools.api.models.search.SearchQueryExpression) template);
+
+        if (!(template instanceof SearchQueryImpl)) {
+            return template.copyDeep();
         }
         SearchQueryImpl instance = new SearchQueryImpl();
         return instance;

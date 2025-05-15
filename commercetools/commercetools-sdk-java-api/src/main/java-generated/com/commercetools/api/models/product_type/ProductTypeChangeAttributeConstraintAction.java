@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeAttributeConstraint")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTypeChangeAttributeConstraintActionImpl.class)
 public interface ProductTypeChangeAttributeConstraintAction extends ProductTypeUpdateAction {
@@ -87,6 +88,8 @@ public interface ProductTypeChangeAttributeConstraintAction extends ProductTypeU
         instance.setNewValue(template.getNewValue());
         return instance;
     }
+
+    public ProductTypeChangeAttributeConstraintAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductTypeChangeAttributeConstraintAction

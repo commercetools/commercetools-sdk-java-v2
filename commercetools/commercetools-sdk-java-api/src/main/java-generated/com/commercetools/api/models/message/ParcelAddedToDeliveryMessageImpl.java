@@ -333,4 +333,8 @@ public class ParcelAddedToDeliveryMessageImpl implements ParcelAddedToDeliveryMe
                 .build();
     }
 
+    @Override
+    public ParcelAddedToDeliveryMessage copyDeep() {
+        return ParcelAddedToDeliveryMessage.deepCopy(this);
+    }
 }

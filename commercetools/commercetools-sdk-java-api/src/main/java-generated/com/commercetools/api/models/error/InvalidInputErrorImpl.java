@@ -114,4 +114,8 @@ public class InvalidInputErrorImpl implements InvalidInputError, ModelBase {
                 .build();
     }
 
+    @Override
+    public InvalidInputError copyDeep() {
+        return InvalidInputError.deepCopy(this);
+    }
 }

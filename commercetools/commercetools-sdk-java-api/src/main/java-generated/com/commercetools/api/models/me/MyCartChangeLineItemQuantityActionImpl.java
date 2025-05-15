@@ -135,4 +135,8 @@ public class MyCartChangeLineItemQuantityActionImpl implements MyCartChangeLineI
                 .build();
     }
 
+    @Override
+    public MyCartChangeLineItemQuantityAction copyDeep() {
+        return MyCartChangeLineItemQuantityAction.deepCopy(this);
+    }
 }

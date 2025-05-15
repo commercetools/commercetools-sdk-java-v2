@@ -70,4 +70,8 @@ public class ProductVariantSelectionImpl implements ProductVariantSelection, Mod
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type).build();
     }
 
+    @Override
+    public ProductVariantSelection copyDeep() {
+        return ProductVariantSelection.deepCopy(this);
+    }
 }

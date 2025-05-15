@@ -194,4 +194,8 @@ public class OrderTransitionCustomLineItemStateActionImpl
                 .build();
     }
 
+    @Override
+    public OrderTransitionCustomLineItemStateAction copyDeep() {
+        return OrderTransitionCustomLineItemStateAction.deepCopy(this);
+    }
 }

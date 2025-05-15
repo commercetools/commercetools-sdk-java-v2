@@ -33,6 +33,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ImportWaitForMasterVariant")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ImportWaitForMasterVariantEventImpl.class)
 public interface ImportWaitForMasterVariantEvent extends Event {
@@ -95,6 +96,8 @@ public interface ImportWaitForMasterVariantEvent extends Event {
         instance.setData(template.getData());
         return instance;
     }
+
+    public ImportWaitForMasterVariantEvent copyDeep();
 
     /**
      * factory method to create a deep copy of ImportWaitForMasterVariantEvent

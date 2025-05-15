@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeAttributeOrderByName")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTypeChangeAttributeOrderByNameActionImpl.class)
 public interface ProductTypeChangeAttributeOrderByNameAction extends ProductTypeUpdateAction {
@@ -78,6 +79,8 @@ public interface ProductTypeChangeAttributeOrderByNameAction extends ProductType
         instance.setAttributeNames(template.getAttributeNames());
         return instance;
     }
+
+    public ProductTypeChangeAttributeOrderByNameAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductTypeChangeAttributeOrderByNameAction

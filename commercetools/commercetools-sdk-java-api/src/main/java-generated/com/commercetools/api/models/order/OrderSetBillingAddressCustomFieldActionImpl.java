@@ -110,4 +110,8 @@ public class OrderSetBillingAddressCustomFieldActionImpl implements OrderSetBill
                 .build();
     }
 
+    @Override
+    public OrderSetBillingAddressCustomFieldAction copyDeep() {
+        return OrderSetBillingAddressCustomFieldAction.deepCopy(this);
+    }
 }

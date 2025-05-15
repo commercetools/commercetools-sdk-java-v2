@@ -67,6 +67,8 @@ public interface SearchLongRangeExpression extends SearchQueryExpression {
         return instance;
     }
 
+    public SearchLongRangeExpression copyDeep();
+
     /**
      * factory method to create a deep copy of SearchLongRangeExpression
      * @param template instance to be copied

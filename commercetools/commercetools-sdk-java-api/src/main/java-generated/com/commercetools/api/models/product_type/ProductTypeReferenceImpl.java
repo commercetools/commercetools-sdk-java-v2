@@ -111,4 +111,8 @@ public class ProductTypeReferenceImpl implements ProductTypeReference, ModelBase
                 .build();
     }
 
+    @Override
+    public ProductTypeReference copyDeep() {
+        return ProductTypeReference.deepCopy(this);
+    }
 }

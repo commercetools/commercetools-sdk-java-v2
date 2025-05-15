@@ -259,4 +259,8 @@ public class TaxCategoryImpl implements TaxCategory, ModelBase {
                 .build();
     }
 
+    @Override
+    public TaxCategory copyDeep() {
+        return TaxCategory.deepCopy(this);
+    }
 }

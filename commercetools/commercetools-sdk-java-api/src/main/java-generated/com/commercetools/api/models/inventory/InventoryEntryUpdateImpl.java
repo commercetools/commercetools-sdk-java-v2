@@ -100,4 +100,8 @@ public class InventoryEntryUpdateImpl implements InventoryEntryUpdate, ModelBase
                 .build();
     }
 
+    @Override
+    public InventoryEntryUpdate copyDeep() {
+        return InventoryEntryUpdate.deepCopy(this);
+    }
 }

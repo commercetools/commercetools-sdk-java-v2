@@ -527,4 +527,8 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
                 .build();
     }
 
+    @Override
+    public ProductProjection copyDeep() {
+        return ProductProjection.deepCopy(this);
+    }
 }

@@ -162,4 +162,8 @@ public class ShippingImpl implements Shipping, ModelBase {
                 .build();
     }
 
+    @Override
+    public Shipping copyDeep() {
+        return Shipping.deepCopy(this);
+    }
 }

@@ -144,6 +144,8 @@ public interface CustomerGroupPagedQueryResponse
         return instance;
     }
 
+    public CustomerGroupPagedQueryResponse copyDeep();
+
     /**
      * factory method to create a deep copy of CustomerGroupPagedQueryResponse
      * @param template instance to be copied

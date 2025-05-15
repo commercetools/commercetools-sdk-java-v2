@@ -93,4 +93,8 @@ public class StagedOrderUpdateItemShippingAddressActionImpl
                 .build();
     }
 
+    @Override
+    public StagedOrderUpdateItemShippingAddressAction copyDeep() {
+        return StagedOrderUpdateItemShippingAddressAction.deepCopy(this);
+    }
 }

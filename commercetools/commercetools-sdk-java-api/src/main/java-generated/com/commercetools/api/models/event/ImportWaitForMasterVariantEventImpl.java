@@ -175,4 +175,8 @@ public class ImportWaitForMasterVariantEventImpl implements ImportWaitForMasterV
                 .build();
     }
 
+    @Override
+    public ImportWaitForMasterVariantEvent copyDeep() {
+        return ImportWaitForMasterVariantEvent.deepCopy(this);
+    }
 }

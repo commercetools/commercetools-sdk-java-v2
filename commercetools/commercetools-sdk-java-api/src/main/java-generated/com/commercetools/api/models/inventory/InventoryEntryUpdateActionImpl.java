@@ -69,4 +69,8 @@ public class InventoryEntryUpdateActionImpl implements InventoryEntryUpdateActio
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action).build();
     }
 
+    @Override
+    public InventoryEntryUpdateAction copyDeep() {
+        return InventoryEntryUpdateAction.deepCopy(this);
+    }
 }

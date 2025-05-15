@@ -110,4 +110,8 @@ public class MyCustomerAddShippingAddressIdActionImpl implements MyCustomerAddSh
                 .build();
     }
 
+    @Override
+    public MyCustomerAddShippingAddressIdAction copyDeep() {
+        return MyCustomerAddShippingAddressIdAction.deepCopy(this);
+    }
 }

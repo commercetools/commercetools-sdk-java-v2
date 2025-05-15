@@ -111,4 +111,8 @@ public class CustomerSetAuthenticationModeActionImpl implements CustomerSetAuthe
                 .build();
     }
 
+    @Override
+    public CustomerSetAuthenticationModeAction copyDeep() {
+        return CustomerSetAuthenticationModeAction.deepCopy(this);
+    }
 }

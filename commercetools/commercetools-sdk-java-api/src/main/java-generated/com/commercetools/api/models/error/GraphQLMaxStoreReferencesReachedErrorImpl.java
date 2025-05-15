@@ -101,4 +101,8 @@ public class GraphQLMaxStoreReferencesReachedErrorImpl implements GraphQLMaxStor
                 .build();
     }
 
+    @Override
+    public GraphQLMaxStoreReferencesReachedError copyDeep() {
+        return GraphQLMaxStoreReferencesReachedError.deepCopy(this);
+    }
 }

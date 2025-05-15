@@ -103,4 +103,8 @@ public class InheritedAssociateImpl implements InheritedAssociate, ModelBase {
                 .build();
     }
 
+    @Override
+    public InheritedAssociate copyDeep() {
+        return InheritedAssociate.deepCopy(this);
+    }
 }

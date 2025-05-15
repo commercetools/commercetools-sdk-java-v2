@@ -91,4 +91,8 @@ public class ProductPublishActionImpl implements ProductPublishAction, ModelBase
                 .build();
     }
 
+    @Override
+    public ProductPublishAction copyDeep() {
+        return ProductPublishAction.deepCopy(this);
+    }
 }

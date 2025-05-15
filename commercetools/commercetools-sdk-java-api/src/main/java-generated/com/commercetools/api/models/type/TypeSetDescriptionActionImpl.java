@@ -92,4 +92,8 @@ public class TypeSetDescriptionActionImpl implements TypeSetDescriptionAction, M
                 .build();
     }
 
+    @Override
+    public TypeSetDescriptionAction copyDeep() {
+        return TypeSetDescriptionAction.deepCopy(this);
+    }
 }

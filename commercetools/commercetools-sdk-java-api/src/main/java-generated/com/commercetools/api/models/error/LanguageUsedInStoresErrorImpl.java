@@ -115,4 +115,8 @@ public class LanguageUsedInStoresErrorImpl implements LanguageUsedInStoresError,
                 .build();
     }
 
+    @Override
+    public LanguageUsedInStoresError copyDeep() {
+        return LanguageUsedInStoresError.deepCopy(this);
+    }
 }

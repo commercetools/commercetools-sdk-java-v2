@@ -93,4 +93,8 @@ public class TypeAddFieldDefinitionActionImpl implements TypeAddFieldDefinitionA
                 .build();
     }
 
+    @Override
+    public TypeAddFieldDefinitionAction copyDeep() {
+        return TypeAddFieldDefinitionAction.deepCopy(this);
+    }
 }

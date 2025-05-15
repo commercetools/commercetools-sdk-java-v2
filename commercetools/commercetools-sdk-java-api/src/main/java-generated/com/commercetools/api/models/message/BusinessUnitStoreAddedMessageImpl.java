@@ -293,4 +293,8 @@ public class BusinessUnitStoreAddedMessageImpl implements BusinessUnitStoreAdded
                 .build();
     }
 
+    @Override
+    public BusinessUnitStoreAddedMessage copyDeep() {
+        return BusinessUnitStoreAddedMessage.deepCopy(this);
+    }
 }

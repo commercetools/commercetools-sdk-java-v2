@@ -114,4 +114,8 @@ public class GraphQLRequestImpl implements GraphQLRequest, ModelBase {
                 .build();
     }
 
+    @Override
+    public GraphQLRequest copyDeep() {
+        return GraphQLRequest.deepCopy(this);
+    }
 }

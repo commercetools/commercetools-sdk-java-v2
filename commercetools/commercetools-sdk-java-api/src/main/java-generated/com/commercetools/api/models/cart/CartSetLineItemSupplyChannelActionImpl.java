@@ -136,4 +136,8 @@ public class CartSetLineItemSupplyChannelActionImpl implements CartSetLineItemSu
                 .build();
     }
 
+    @Override
+    public CartSetLineItemSupplyChannelAction copyDeep() {
+        return CartSetLineItemSupplyChannelAction.deepCopy(this);
+    }
 }

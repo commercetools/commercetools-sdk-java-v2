@@ -74,4 +74,8 @@ public class OrderSearchWildCardExpressionImpl implements OrderSearchWildCardExp
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("wildcard", wildcard).build();
     }
 
+    @Override
+    public OrderSearchWildCardExpression copyDeep() {
+        return OrderSearchWildCardExpression.deepCopy(this);
+    }
 }

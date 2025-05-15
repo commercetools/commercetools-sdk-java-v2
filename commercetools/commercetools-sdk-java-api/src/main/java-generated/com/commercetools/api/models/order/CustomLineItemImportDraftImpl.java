@@ -284,4 +284,8 @@ public class CustomLineItemImportDraftImpl implements CustomLineItemImportDraft,
                 .build();
     }
 
+    @Override
+    public CustomLineItemImportDraft copyDeep() {
+        return CustomLineItemImportDraft.deepCopy(this);
+    }
 }

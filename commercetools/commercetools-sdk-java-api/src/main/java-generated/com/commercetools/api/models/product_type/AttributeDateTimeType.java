@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("datetime")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AttributeDateTimeTypeImpl.class)
 public interface AttributeDateTimeType extends AttributeType {
@@ -50,6 +51,8 @@ public interface AttributeDateTimeType extends AttributeType {
         AttributeDateTimeTypeImpl instance = new AttributeDateTimeTypeImpl();
         return instance;
     }
+
+    public AttributeDateTimeType copyDeep();
 
     /**
      * factory method to create a deep copy of AttributeDateTimeType

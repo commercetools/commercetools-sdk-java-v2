@@ -114,4 +114,8 @@ public class GraphQLRequiredFieldErrorImpl implements GraphQLRequiredFieldError,
                 .build();
     }
 
+    @Override
+    public GraphQLRequiredFieldError copyDeep() {
+        return GraphQLRequiredFieldError.deepCopy(this);
+    }
 }

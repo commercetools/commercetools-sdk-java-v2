@@ -33,9 +33,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.business_unit.CompanyDraftImpl.class, name = CompanyDraft.COMPANY),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.business_unit.DivisionDraftImpl.class, name = DivisionDraft.DIVISION) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "unitType", defaultImpl = BusinessUnitDraftImpl.class, visible = true)
 @JsonDeserialize(as = BusinessUnitDraftImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -320,6 +317,8 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
 
     public void setCustom(final CustomFieldsDraft custom);
 
+    public BusinessUnitDraft copyDeep();
+
     /**
      * factory method to create a deep copy of BusinessUnitDraft
      * @param template instance to be copied
@@ -330,13 +329,9 @@ public interface BusinessUnitDraft extends com.commercetools.api.models.WithKey 
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.business_unit.CompanyDraft) {
-            return com.commercetools.api.models.business_unit.CompanyDraft
-                    .deepCopy((com.commercetools.api.models.business_unit.CompanyDraft) template);
-        }
-        if (template instanceof com.commercetools.api.models.business_unit.DivisionDraft) {
-            return com.commercetools.api.models.business_unit.DivisionDraft
-                    .deepCopy((com.commercetools.api.models.business_unit.DivisionDraft) template);
+
+        if (!(template instanceof BusinessUnitDraftImpl)) {
+            return template.copyDeep();
         }
         BusinessUnitDraftImpl instance = new BusinessUnitDraftImpl();
         instance.setKey(template.getKey());

@@ -103,4 +103,8 @@ public class AssociateDraftImpl implements AssociateDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public AssociateDraft copyDeep() {
+        return AssociateDraft.deepCopy(this);
+    }
 }

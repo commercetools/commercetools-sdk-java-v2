@@ -293,4 +293,8 @@ public class CustomerPasswordUpdatedMessageImpl implements CustomerPasswordUpdat
                 .build();
     }
 
+    @Override
+    public CustomerPasswordUpdatedMessage copyDeep() {
+        return CustomerPasswordUpdatedMessage.deepCopy(this);
+    }
 }

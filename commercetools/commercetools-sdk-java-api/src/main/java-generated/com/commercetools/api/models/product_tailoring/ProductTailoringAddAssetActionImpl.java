@@ -172,4 +172,8 @@ public class ProductTailoringAddAssetActionImpl implements ProductTailoringAddAs
                 .build();
     }
 
+    @Override
+    public ProductTailoringAddAssetAction copyDeep() {
+        return ProductTailoringAddAssetAction.deepCopy(this);
+    }
 }

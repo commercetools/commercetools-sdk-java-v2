@@ -115,6 +115,8 @@ public interface ProductSearchFacetCountValue {
         return instance;
     }
 
+    public ProductSearchFacetCountValue copyDeep();
+
     /**
      * factory method to create a deep copy of ProductSearchFacetCountValue
      * @param template instance to be copied

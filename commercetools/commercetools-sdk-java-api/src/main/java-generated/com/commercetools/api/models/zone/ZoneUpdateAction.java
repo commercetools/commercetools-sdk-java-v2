@@ -27,12 +27,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.zone.ZoneAddLocationActionImpl.class, name = ZoneAddLocationAction.ADD_LOCATION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.zone.ZoneChangeNameActionImpl.class, name = ZoneChangeNameAction.CHANGE_NAME),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.zone.ZoneRemoveLocationActionImpl.class, name = ZoneRemoveLocationAction.REMOVE_LOCATION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.zone.ZoneSetDescriptionActionImpl.class, name = ZoneSetDescriptionAction.SET_DESCRIPTION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.zone.ZoneSetKeyActionImpl.class, name = ZoneSetKeyAction.SET_KEY) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = ZoneUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = ZoneUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -46,6 +40,8 @@ public interface ZoneUpdateAction extends com.commercetools.api.models.ResourceU
     @JsonProperty("action")
     public String getAction();
 
+    public ZoneUpdateAction copyDeep();
+
     /**
      * factory method to create a deep copy of ZoneUpdateAction
      * @param template instance to be copied
@@ -56,25 +52,9 @@ public interface ZoneUpdateAction extends com.commercetools.api.models.ResourceU
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.zone.ZoneAddLocationAction) {
-            return com.commercetools.api.models.zone.ZoneAddLocationAction
-                    .deepCopy((com.commercetools.api.models.zone.ZoneAddLocationAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.zone.ZoneChangeNameAction) {
-            return com.commercetools.api.models.zone.ZoneChangeNameAction
-                    .deepCopy((com.commercetools.api.models.zone.ZoneChangeNameAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.zone.ZoneRemoveLocationAction) {
-            return com.commercetools.api.models.zone.ZoneRemoveLocationAction
-                    .deepCopy((com.commercetools.api.models.zone.ZoneRemoveLocationAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.zone.ZoneSetDescriptionAction) {
-            return com.commercetools.api.models.zone.ZoneSetDescriptionAction
-                    .deepCopy((com.commercetools.api.models.zone.ZoneSetDescriptionAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.zone.ZoneSetKeyAction) {
-            return com.commercetools.api.models.zone.ZoneSetKeyAction
-                    .deepCopy((com.commercetools.api.models.zone.ZoneSetKeyAction) template);
+
+        if (!(template instanceof ZoneUpdateActionImpl)) {
+            return template.copyDeep();
         }
         ZoneUpdateActionImpl instance = new ZoneUpdateActionImpl();
         return instance;

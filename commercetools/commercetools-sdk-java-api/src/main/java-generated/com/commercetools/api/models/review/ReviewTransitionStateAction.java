@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("transitionState")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ReviewTransitionStateActionImpl.class)
 public interface ReviewTransitionStateAction extends ReviewUpdateAction {
@@ -88,6 +89,8 @@ public interface ReviewTransitionStateAction extends ReviewUpdateAction {
         instance.setForce(template.getForce());
         return instance;
     }
+
+    public ReviewTransitionStateAction copyDeep();
 
     /**
      * factory method to create a deep copy of ReviewTransitionStateAction

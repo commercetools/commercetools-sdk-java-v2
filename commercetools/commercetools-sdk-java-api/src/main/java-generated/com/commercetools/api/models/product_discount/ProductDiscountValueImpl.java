@@ -69,4 +69,8 @@ public class ProductDiscountValueImpl implements ProductDiscountValue, ModelBase
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type).build();
     }
 
+    @Override
+    public ProductDiscountValue copyDeep() {
+        return ProductDiscountValue.deepCopy(this);
+    }
 }

@@ -87,6 +87,8 @@ public interface DiscountedLineItemPortionDraft extends io.vrap.rmf.base.client.
         return instance;
     }
 
+    public DiscountedLineItemPortionDraft copyDeep();
+
     /**
      * factory method to create a deep copy of DiscountedLineItemPortionDraft
      * @param template instance to be copied

@@ -175,4 +175,8 @@ public class ImportOperationRejectedEventImpl implements ImportOperationRejected
                 .build();
     }
 
+    @Override
+    public ImportOperationRejectedEvent copyDeep() {
+        return ImportOperationRejectedEvent.deepCopy(this);
+    }
 }

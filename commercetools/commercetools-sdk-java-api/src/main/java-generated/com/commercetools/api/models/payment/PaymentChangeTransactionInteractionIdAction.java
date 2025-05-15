@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeTransactionInteractionId")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PaymentChangeTransactionInteractionIdActionImpl.class)
 public interface PaymentChangeTransactionInteractionIdAction extends PaymentUpdateAction {
@@ -87,6 +88,8 @@ public interface PaymentChangeTransactionInteractionIdAction extends PaymentUpda
         instance.setInteractionId(template.getInteractionId());
         return instance;
     }
+
+    public PaymentChangeTransactionInteractionIdAction copyDeep();
 
     /**
      * factory method to create a deep copy of PaymentChangeTransactionInteractionIdAction

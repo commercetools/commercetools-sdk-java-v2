@@ -91,4 +91,8 @@ public class ReviewSetAuthorNameActionImpl implements ReviewSetAuthorNameAction,
                 .build();
     }
 
+    @Override
+    public ReviewSetAuthorNameAction copyDeep() {
+        return ReviewSetAuthorNameAction.deepCopy(this);
+    }
 }

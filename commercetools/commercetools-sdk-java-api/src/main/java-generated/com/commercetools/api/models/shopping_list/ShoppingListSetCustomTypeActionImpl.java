@@ -111,4 +111,8 @@ public class ShoppingListSetCustomTypeActionImpl implements ShoppingListSetCusto
                 .build();
     }
 
+    @Override
+    public ShoppingListSetCustomTypeAction copyDeep() {
+        return ShoppingListSetCustomTypeAction.deepCopy(this);
+    }
 }

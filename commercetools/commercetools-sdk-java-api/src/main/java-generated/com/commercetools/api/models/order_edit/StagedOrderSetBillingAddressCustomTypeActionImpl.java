@@ -112,4 +112,8 @@ public class StagedOrderSetBillingAddressCustomTypeActionImpl
                 .build();
     }
 
+    @Override
+    public StagedOrderSetBillingAddressCustomTypeAction copyDeep() {
+        return StagedOrderSetBillingAddressCustomTypeAction.deepCopy(this);
+    }
 }

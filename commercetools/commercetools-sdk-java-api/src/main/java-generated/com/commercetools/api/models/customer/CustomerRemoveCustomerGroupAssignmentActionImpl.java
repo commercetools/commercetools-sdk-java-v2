@@ -94,4 +94,8 @@ public class CustomerRemoveCustomerGroupAssignmentActionImpl
                 .build();
     }
 
+    @Override
+    public CustomerRemoveCustomerGroupAssignmentAction copyDeep() {
+        return CustomerRemoveCustomerGroupAssignmentAction.deepCopy(this);
+    }
 }

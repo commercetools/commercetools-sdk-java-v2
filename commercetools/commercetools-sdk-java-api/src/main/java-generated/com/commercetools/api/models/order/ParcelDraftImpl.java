@@ -161,4 +161,8 @@ public class ParcelDraftImpl implements ParcelDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public ParcelDraft copyDeep() {
+        return ParcelDraft.deepCopy(this);
+    }
 }

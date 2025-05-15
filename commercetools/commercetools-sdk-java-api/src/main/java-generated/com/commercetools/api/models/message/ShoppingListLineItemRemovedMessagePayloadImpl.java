@@ -93,4 +93,8 @@ public class ShoppingListLineItemRemovedMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public ShoppingListLineItemRemovedMessagePayload copyDeep() {
+        return ShoppingListLineItemRemovedMessagePayload.deepCopy(this);
+    }
 }

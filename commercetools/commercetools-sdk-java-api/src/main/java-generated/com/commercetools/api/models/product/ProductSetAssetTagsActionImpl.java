@@ -195,4 +195,8 @@ public class ProductSetAssetTagsActionImpl implements ProductSetAssetTagsAction,
                 .build();
     }
 
+    @Override
+    public ProductSetAssetTagsAction copyDeep() {
+        return ProductSetAssetTagsAction.deepCopy(this);
+    }
 }

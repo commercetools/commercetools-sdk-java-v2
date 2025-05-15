@@ -26,6 +26,7 @@ import jakarta.validation.Valid;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setParcelTrackingData")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderSetParcelTrackingDataActionImpl.class)
 public interface OrderSetParcelTrackingDataAction extends OrderUpdateAction {
@@ -104,6 +105,8 @@ public interface OrderSetParcelTrackingDataAction extends OrderUpdateAction {
         instance.setTrackingData(template.getTrackingData());
         return instance;
     }
+
+    public OrderSetParcelTrackingDataAction copyDeep();
 
     /**
      * factory method to create a deep copy of OrderSetParcelTrackingDataAction

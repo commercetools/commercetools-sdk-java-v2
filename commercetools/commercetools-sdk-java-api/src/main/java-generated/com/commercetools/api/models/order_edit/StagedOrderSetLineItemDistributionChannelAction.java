@@ -29,6 +29,7 @@ import jakarta.validation.Valid;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setLineItemDistributionChannel")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderSetLineItemDistributionChannelActionImpl.class)
 public interface StagedOrderSetLineItemDistributionChannelAction extends StagedOrderUpdateAction {
@@ -110,6 +111,8 @@ public interface StagedOrderSetLineItemDistributionChannelAction extends StagedO
         instance.setDistributionChannel(template.getDistributionChannel());
         return instance;
     }
+
+    public StagedOrderSetLineItemDistributionChannelAction copyDeep();
 
     /**
      * factory method to create a deep copy of StagedOrderSetLineItemDistributionChannelAction

@@ -91,4 +91,8 @@ public class TaxCategoryChangeNameActionImpl implements TaxCategoryChangeNameAct
                 .build();
     }
 
+    @Override
+    public TaxCategoryChangeNameAction copyDeep() {
+        return TaxCategoryChangeNameAction.deepCopy(this);
+    }
 }

@@ -92,4 +92,8 @@ public class ProductSearchMatchingVariantEntryImpl implements ProductSearchMatch
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id).append("sku", sku).build();
     }
 
+    @Override
+    public ProductSearchMatchingVariantEntry copyDeep() {
+        return ProductSearchMatchingVariantEntry.deepCopy(this);
+    }
 }

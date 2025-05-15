@@ -92,4 +92,8 @@ public class AssociateRoleAddPermissionActionImpl implements AssociateRoleAddPer
                 .build();
     }
 
+    @Override
+    public AssociateRoleAddPermissionAction copyDeep() {
+        return AssociateRoleAddPermissionAction.deepCopy(this);
+    }
 }

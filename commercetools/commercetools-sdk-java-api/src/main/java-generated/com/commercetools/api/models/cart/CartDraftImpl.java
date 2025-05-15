@@ -678,4 +678,8 @@ public class CartDraftImpl implements CartDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public CartDraft copyDeep() {
+        return CartDraft.deepCopy(this);
+    }
 }

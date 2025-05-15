@@ -69,4 +69,8 @@ public class StagedQuoteUpdateActionImpl implements StagedQuoteUpdateAction, Mod
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action).build();
     }
 
+    @Override
+    public StagedQuoteUpdateAction copyDeep() {
+        return StagedQuoteUpdateAction.deepCopy(this);
+    }
 }

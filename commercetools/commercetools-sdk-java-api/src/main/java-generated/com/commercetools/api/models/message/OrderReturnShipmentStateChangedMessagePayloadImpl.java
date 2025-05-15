@@ -112,4 +112,8 @@ public class OrderReturnShipmentStateChangedMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public OrderReturnShipmentStateChangedMessagePayload copyDeep() {
+        return OrderReturnShipmentStateChangedMessagePayload.deepCopy(this);
+    }
 }

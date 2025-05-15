@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("LanguageUsedInStores")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLLanguageUsedInStoresErrorImpl.class)
 public interface GraphQLLanguageUsedInStoresError extends GraphQLErrorObject {
@@ -62,6 +63,8 @@ public interface GraphQLLanguageUsedInStoresError extends GraphQLErrorObject {
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
+
+    public GraphQLLanguageUsedInStoresError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLLanguageUsedInStoresError

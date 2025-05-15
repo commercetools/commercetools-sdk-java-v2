@@ -36,6 +36,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("BusinessUnitBillingAddressRemoved")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = BusinessUnitBillingAddressRemovedMessageImpl.class)
 public interface BusinessUnitBillingAddressRemovedMessage extends Message {
@@ -89,6 +90,8 @@ public interface BusinessUnitBillingAddressRemovedMessage extends Message {
         instance.setAddress(template.getAddress());
         return instance;
     }
+
+    public BusinessUnitBillingAddressRemovedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of BusinessUnitBillingAddressRemovedMessage

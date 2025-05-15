@@ -99,4 +99,8 @@ public class MyBusinessUnitUpdateImpl implements MyBusinessUnitUpdate, ModelBase
                 .build();
     }
 
+    @Override
+    public MyBusinessUnitUpdate copyDeep() {
+        return MyBusinessUnitUpdate.deepCopy(this);
+    }
 }

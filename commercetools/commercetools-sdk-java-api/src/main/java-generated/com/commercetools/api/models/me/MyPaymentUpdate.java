@@ -94,6 +94,8 @@ public interface MyPaymentUpdate extends
         return instance;
     }
 
+    public MyPaymentUpdate copyDeep();
+
     /**
      * factory method to create a deep copy of MyPaymentUpdate
      * @param template instance to be copied

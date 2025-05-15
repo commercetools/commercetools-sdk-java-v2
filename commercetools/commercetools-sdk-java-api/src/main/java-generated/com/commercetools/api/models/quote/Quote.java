@@ -703,6 +703,8 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
         return instance;
     }
 
+    public Quote copyDeep();
+
     /**
      * factory method to create a deep copy of Quote
      * @param template instance to be copied

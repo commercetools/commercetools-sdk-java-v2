@@ -144,4 +144,8 @@ public class GraphQLInvalidItemShippingDetailsErrorImpl implements GraphQLInvali
                 .build();
     }
 
+    @Override
+    public GraphQLInvalidItemShippingDetailsError copyDeep() {
+        return GraphQLInvalidItemShippingDetailsError.deepCopy(this);
+    }
 }

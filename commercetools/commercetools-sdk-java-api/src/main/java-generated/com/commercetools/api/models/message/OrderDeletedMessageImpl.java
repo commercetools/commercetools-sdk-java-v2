@@ -293,4 +293,8 @@ public class OrderDeletedMessageImpl implements OrderDeletedMessage, ModelBase {
                 .build();
     }
 
+    @Override
+    public OrderDeletedMessage copyDeep() {
+        return OrderDeletedMessage.deepCopy(this);
+    }
 }

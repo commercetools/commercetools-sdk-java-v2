@@ -91,4 +91,8 @@ public class ExtensionSetKeyActionImpl implements ExtensionSetKeyAction, ModelBa
                 .build();
     }
 
+    @Override
+    public ExtensionSetKeyAction copyDeep() {
+        return ExtensionSetKeyAction.deepCopy(this);
+    }
 }

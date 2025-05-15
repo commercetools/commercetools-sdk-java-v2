@@ -91,4 +91,8 @@ public class PaymentSetInterfaceIdActionImpl implements PaymentSetInterfaceIdAct
                 .build();
     }
 
+    @Override
+    public PaymentSetInterfaceIdAction copyDeep() {
+        return PaymentSetInterfaceIdAction.deepCopy(this);
+    }
 }

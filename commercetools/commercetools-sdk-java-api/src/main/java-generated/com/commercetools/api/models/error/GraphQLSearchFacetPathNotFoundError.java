@@ -26,6 +26,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SearchFacetPathNotFound")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLSearchFacetPathNotFoundErrorImpl.class)
 public interface GraphQLSearchFacetPathNotFoundError extends GraphQLErrorObject {
@@ -61,6 +62,8 @@ public interface GraphQLSearchFacetPathNotFoundError extends GraphQLErrorObject 
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
+
+    public GraphQLSearchFacetPathNotFoundError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLSearchFacetPathNotFoundError

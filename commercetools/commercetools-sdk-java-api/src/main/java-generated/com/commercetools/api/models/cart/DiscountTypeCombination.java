@@ -27,9 +27,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.cart.BestDealImpl.class, name = BestDeal.BEST_DEAL),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.cart.StackingImpl.class, name = Stacking.STACKING) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = DiscountTypeCombinationImpl.class, visible = true)
 @JsonDeserialize(as = DiscountTypeCombinationImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -43,6 +40,8 @@ public interface DiscountTypeCombination {
     @JsonProperty("type")
     public String getType();
 
+    public DiscountTypeCombination copyDeep();
+
     /**
      * factory method to create a deep copy of DiscountTypeCombination
      * @param template instance to be copied
@@ -53,13 +52,9 @@ public interface DiscountTypeCombination {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.cart.BestDeal) {
-            return com.commercetools.api.models.cart.BestDeal
-                    .deepCopy((com.commercetools.api.models.cart.BestDeal) template);
-        }
-        if (template instanceof com.commercetools.api.models.cart.Stacking) {
-            return com.commercetools.api.models.cart.Stacking
-                    .deepCopy((com.commercetools.api.models.cart.Stacking) template);
+
+        if (!(template instanceof DiscountTypeCombinationImpl)) {
+            return template.copyDeep();
         }
         DiscountTypeCombinationImpl instance = new DiscountTypeCombinationImpl();
         return instance;

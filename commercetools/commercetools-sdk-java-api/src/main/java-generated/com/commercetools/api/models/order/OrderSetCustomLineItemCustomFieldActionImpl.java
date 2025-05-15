@@ -152,4 +152,8 @@ public class OrderSetCustomLineItemCustomFieldActionImpl implements OrderSetCust
                 .build();
     }
 
+    @Override
+    public OrderSetCustomLineItemCustomFieldAction copyDeep() {
+        return OrderSetCustomLineItemCustomFieldAction.deepCopy(this);
+    }
 }

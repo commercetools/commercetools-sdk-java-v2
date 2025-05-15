@@ -95,4 +95,8 @@ public class ProjectChangeLanguagesActionImpl implements ProjectChangeLanguagesA
                 .build();
     }
 
+    @Override
+    public ProjectChangeLanguagesAction copyDeep() {
+        return ProjectChangeLanguagesAction.deepCopy(this);
+    }
 }

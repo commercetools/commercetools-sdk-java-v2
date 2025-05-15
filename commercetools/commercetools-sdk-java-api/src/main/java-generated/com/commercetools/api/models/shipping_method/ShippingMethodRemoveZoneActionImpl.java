@@ -92,4 +92,8 @@ public class ShippingMethodRemoveZoneActionImpl implements ShippingMethodRemoveZ
                 .build();
     }
 
+    @Override
+    public ShippingMethodRemoveZoneAction copyDeep() {
+        return ShippingMethodRemoveZoneAction.deepCopy(this);
+    }
 }

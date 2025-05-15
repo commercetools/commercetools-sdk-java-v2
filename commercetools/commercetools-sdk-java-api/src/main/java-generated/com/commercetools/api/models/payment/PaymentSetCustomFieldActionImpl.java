@@ -110,4 +110,8 @@ public class PaymentSetCustomFieldActionImpl implements PaymentSetCustomFieldAct
                 .build();
     }
 
+    @Override
+    public PaymentSetCustomFieldAction copyDeep() {
+        return PaymentSetCustomFieldAction.deepCopy(this);
+    }
 }

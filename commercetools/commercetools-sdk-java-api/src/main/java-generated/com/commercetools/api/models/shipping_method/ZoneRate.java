@@ -95,6 +95,8 @@ public interface ZoneRate {
         return instance;
     }
 
+    public ZoneRate copyDeep();
+
     /**
      * factory method to create a deep copy of ZoneRate
      * @param template instance to be copied

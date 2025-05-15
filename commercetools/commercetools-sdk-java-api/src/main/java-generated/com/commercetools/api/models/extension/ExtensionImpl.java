@@ -260,4 +260,8 @@ public class ExtensionImpl implements Extension, ModelBase {
                 .build();
     }
 
+    @Override
+    public Extension copyDeep() {
+        return Extension.deepCopy(this);
+    }
 }

@@ -94,4 +94,8 @@ public class OrderSetStoreActionImpl implements OrderSetStoreAction, ModelBase {
                 .build();
     }
 
+    @Override
+    public OrderSetStoreAction copyDeep() {
+        return OrderSetStoreAction.deepCopy(this);
+    }
 }

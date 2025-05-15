@@ -114,4 +114,8 @@ public class ImportWaitForMasterVariantEventDataImpl implements ImportWaitForMas
                 .build();
     }
 
+    @Override
+    public ImportWaitForMasterVariantEventData copyDeep() {
+        return ImportWaitForMasterVariantEventData.deepCopy(this);
+    }
 }

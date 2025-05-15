@@ -119,6 +119,8 @@ public interface ProductDiscountMatchQuery {
         return instance;
     }
 
+    public ProductDiscountMatchQuery copyDeep();
+
     /**
      * factory method to create a deep copy of ProductDiscountMatchQuery
      * @param template instance to be copied

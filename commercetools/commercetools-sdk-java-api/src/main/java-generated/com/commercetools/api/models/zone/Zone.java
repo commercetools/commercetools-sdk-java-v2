@@ -231,6 +231,8 @@ public interface Zone extends BaseResource, ZoneMixin, com.commercetools.api.mod
         return instance;
     }
 
+    public Zone copyDeep();
+
     /**
      * factory method to create a deep copy of Zone
      * @param template instance to be copied

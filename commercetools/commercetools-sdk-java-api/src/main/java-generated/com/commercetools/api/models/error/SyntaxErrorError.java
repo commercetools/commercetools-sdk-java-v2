@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SyntaxError")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SyntaxErrorErrorImpl.class)
 public interface SyntaxErrorError extends ErrorObject {
@@ -78,6 +79,8 @@ public interface SyntaxErrorError extends ErrorObject {
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
+
+    public SyntaxErrorError copyDeep();
 
     /**
      * factory method to create a deep copy of SyntaxErrorError

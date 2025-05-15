@@ -238,4 +238,8 @@ public class StoreCreatedMessagePayloadImpl implements StoreCreatedMessagePayloa
                 .build();
     }
 
+    @Override
+    public StoreCreatedMessagePayload copyDeep() {
+        return StoreCreatedMessagePayload.deepCopy(this);
+    }
 }

@@ -118,4 +118,8 @@ public class ProductSearchErrorResponseImpl implements ProductSearchErrorRespons
                 .build();
     }
 
+    @Override
+    public ProductSearchErrorResponse copyDeep() {
+        return ProductSearchErrorResponse.deepCopy(this);
+    }
 }

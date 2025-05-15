@@ -99,4 +99,8 @@ public class ReviewUpdateImpl implements ReviewUpdate, ModelBase {
                 .build();
     }
 
+    @Override
+    public ReviewUpdate copyDeep() {
+        return ReviewUpdate.deepCopy(this);
+    }
 }

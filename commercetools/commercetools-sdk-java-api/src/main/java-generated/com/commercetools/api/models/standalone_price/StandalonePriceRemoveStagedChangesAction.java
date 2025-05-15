@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("removeStagedChanges")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StandalonePriceRemoveStagedChangesActionImpl.class)
 public interface StandalonePriceRemoveStagedChangesAction extends StandalonePriceUpdateAction {
@@ -50,6 +51,8 @@ public interface StandalonePriceRemoveStagedChangesAction extends StandalonePric
         StandalonePriceRemoveStagedChangesActionImpl instance = new StandalonePriceRemoveStagedChangesActionImpl();
         return instance;
     }
+
+    public StandalonePriceRemoveStagedChangesAction copyDeep();
 
     /**
      * factory method to create a deep copy of StandalonePriceRemoveStagedChangesAction

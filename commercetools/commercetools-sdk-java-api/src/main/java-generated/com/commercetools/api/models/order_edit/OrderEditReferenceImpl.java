@@ -111,4 +111,8 @@ public class OrderEditReferenceImpl implements OrderEditReference, ModelBase {
                 .build();
     }
 
+    @Override
+    public OrderEditReference copyDeep() {
+        return OrderEditReference.deepCopy(this);
+    }
 }

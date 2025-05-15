@@ -111,4 +111,8 @@ public class ProductVariantAddedMessagePayloadImpl implements ProductVariantAdde
                 .build();
     }
 
+    @Override
+    public ProductVariantAddedMessagePayload copyDeep() {
+        return ProductVariantAddedMessagePayload.deepCopy(this);
+    }
 }

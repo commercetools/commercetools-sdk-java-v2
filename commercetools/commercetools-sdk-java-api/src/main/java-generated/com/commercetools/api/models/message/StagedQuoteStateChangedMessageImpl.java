@@ -314,4 +314,8 @@ public class StagedQuoteStateChangedMessageImpl implements StagedQuoteStateChang
                 .build();
     }
 
+    @Override
+    public StagedQuoteStateChangedMessage copyDeep() {
+        return StagedQuoteStateChangedMessage.deepCopy(this);
+    }
 }

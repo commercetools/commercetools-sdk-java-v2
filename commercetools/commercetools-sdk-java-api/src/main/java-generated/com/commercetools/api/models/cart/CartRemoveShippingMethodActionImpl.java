@@ -91,4 +91,8 @@ public class CartRemoveShippingMethodActionImpl implements CartRemoveShippingMet
                 .build();
     }
 
+    @Override
+    public CartRemoveShippingMethodAction copyDeep() {
+        return CartRemoveShippingMethodAction.deepCopy(this);
+    }
 }

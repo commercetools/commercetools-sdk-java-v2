@@ -33,6 +33,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("Event")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = EventDeliveryPayloadImpl.class)
 public interface EventDeliveryPayload extends SubscriptionNotification {
@@ -140,6 +141,8 @@ public interface EventDeliveryPayload extends SubscriptionNotification {
         instance.setCreatedAt(template.getCreatedAt());
         return instance;
     }
+
+    public EventDeliveryPayload copyDeep();
 
     /**
      * factory method to create a deep copy of EventDeliveryPayload

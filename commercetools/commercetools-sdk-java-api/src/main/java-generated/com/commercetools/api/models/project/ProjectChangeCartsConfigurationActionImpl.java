@@ -93,4 +93,8 @@ public class ProjectChangeCartsConfigurationActionImpl implements ProjectChangeC
                 .build();
     }
 
+    @Override
+    public ProjectChangeCartsConfigurationAction copyDeep() {
+        return ProjectChangeCartsConfigurationAction.deepCopy(this);
+    }
 }

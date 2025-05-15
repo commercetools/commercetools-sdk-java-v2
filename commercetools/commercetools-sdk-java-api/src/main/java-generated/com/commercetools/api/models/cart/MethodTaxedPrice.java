@@ -82,6 +82,8 @@ public interface MethodTaxedPrice {
         return instance;
     }
 
+    public MethodTaxedPrice copyDeep();
+
     /**
      * factory method to create a deep copy of MethodTaxedPrice
      * @param template instance to be copied

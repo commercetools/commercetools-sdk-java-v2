@@ -111,4 +111,8 @@ public class ApprovalRuleSetCustomTypeActionImpl implements ApprovalRuleSetCusto
                 .build();
     }
 
+    @Override
+    public ApprovalRuleSetCustomTypeAction copyDeep() {
+        return ApprovalRuleSetCustomTypeAction.deepCopy(this);
+    }
 }

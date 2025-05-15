@@ -197,6 +197,8 @@ public interface ApiClient extends com.commercetools.api.models.Identifiable<Api
         return instance;
     }
 
+    public ApiClient copyDeep();
+
     /**
      * factory method to create a deep copy of ApiClient
      * @param template instance to be copied

@@ -132,4 +132,8 @@ public class MyShoppingListRemoveLineItemActionImpl implements MyShoppingListRem
                 .build();
     }
 
+    @Override
+    public MyShoppingListRemoveLineItemAction copyDeep() {
+        return MyShoppingListRemoveLineItemAction.deepCopy(this);
+    }
 }

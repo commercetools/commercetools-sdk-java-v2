@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("cart")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartReferenceImpl.class)
 public interface CartReference extends Reference, com.commercetools.api.models.Identifiable<Cart>,
@@ -88,6 +89,8 @@ public interface CartReference extends Reference, com.commercetools.api.models.I
         instance.setObj(template.getObj());
         return instance;
     }
+
+    public CartReference copyDeep();
 
     /**
      * factory method to create a deep copy of CartReference

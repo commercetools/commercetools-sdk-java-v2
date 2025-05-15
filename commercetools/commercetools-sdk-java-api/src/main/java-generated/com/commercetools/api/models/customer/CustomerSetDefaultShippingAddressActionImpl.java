@@ -110,4 +110,8 @@ public class CustomerSetDefaultShippingAddressActionImpl implements CustomerSetD
                 .build();
     }
 
+    @Override
+    public CustomerSetDefaultShippingAddressAction copyDeep() {
+        return CustomerSetDefaultShippingAddressAction.deepCopy(this);
+    }
 }

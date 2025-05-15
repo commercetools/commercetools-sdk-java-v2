@@ -36,6 +36,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("BusinessUnitAssociateAdded")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = BusinessUnitAssociateAddedMessageImpl.class)
 public interface BusinessUnitAssociateAddedMessage extends Message {
@@ -89,6 +90,8 @@ public interface BusinessUnitAssociateAddedMessage extends Message {
         instance.setAssociate(template.getAssociate());
         return instance;
     }
+
+    public BusinessUnitAssociateAddedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of BusinessUnitAssociateAddedMessage

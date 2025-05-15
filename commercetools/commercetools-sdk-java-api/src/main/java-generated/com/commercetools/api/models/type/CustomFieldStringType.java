@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("String")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomFieldStringTypeImpl.class)
 public interface CustomFieldStringType extends FieldType {
@@ -50,6 +51,8 @@ public interface CustomFieldStringType extends FieldType {
         CustomFieldStringTypeImpl instance = new CustomFieldStringTypeImpl();
         return instance;
     }
+
+    public CustomFieldStringType copyDeep();
 
     /**
      * factory method to create a deep copy of CustomFieldStringType

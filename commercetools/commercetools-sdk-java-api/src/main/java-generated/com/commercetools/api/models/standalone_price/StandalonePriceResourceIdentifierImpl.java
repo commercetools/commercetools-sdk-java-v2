@@ -110,4 +110,8 @@ public class StandalonePriceResourceIdentifierImpl implements StandalonePriceRes
                 .build();
     }
 
+    @Override
+    public StandalonePriceResourceIdentifier copyDeep() {
+        return StandalonePriceResourceIdentifier.deepCopy(this);
+    }
 }

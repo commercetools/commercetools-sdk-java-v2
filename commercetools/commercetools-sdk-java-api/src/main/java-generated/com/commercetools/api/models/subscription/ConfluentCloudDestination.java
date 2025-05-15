@@ -32,6 +32,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ConfluentCloud")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ConfluentCloudDestinationImpl.class)
 public interface ConfluentCloudDestination extends Destination {
@@ -154,6 +155,8 @@ public interface ConfluentCloudDestination extends Destination {
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public ConfluentCloudDestination copyDeep();
 
     /**
      * factory method to create a deep copy of ConfluentCloudDestination

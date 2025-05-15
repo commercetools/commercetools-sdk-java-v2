@@ -78,4 +78,8 @@ public class ApproverDisjunctionImpl implements ApproverDisjunction, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("or", or).build();
     }
 
+    @Override
+    public ApproverDisjunction copyDeep() {
+        return ApproverDisjunction.deepCopy(this);
+    }
 }

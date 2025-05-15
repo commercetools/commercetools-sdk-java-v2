@@ -113,4 +113,8 @@ public class BusinessUnitSetUnitTypeActionImpl implements BusinessUnitSetUnitTyp
                 .build();
     }
 
+    @Override
+    public BusinessUnitSetUnitTypeAction copyDeep() {
+        return BusinessUnitSetUnitTypeAction.deepCopy(this);
+    }
 }

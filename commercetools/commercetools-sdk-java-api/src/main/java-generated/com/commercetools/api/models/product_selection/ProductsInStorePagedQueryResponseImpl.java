@@ -161,4 +161,8 @@ public class ProductsInStorePagedQueryResponseImpl implements ProductsInStorePag
                 .build();
     }
 
+    @Override
+    public ProductsInStorePagedQueryResponse copyDeep() {
+        return ProductsInStorePagedQueryResponse.deepCopy(this);
+    }
 }

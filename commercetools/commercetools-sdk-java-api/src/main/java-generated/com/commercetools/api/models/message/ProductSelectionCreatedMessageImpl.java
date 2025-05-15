@@ -294,4 +294,8 @@ public class ProductSelectionCreatedMessageImpl implements ProductSelectionCreat
                 .build();
     }
 
+    @Override
+    public ProductSelectionCreatedMessage copyDeep() {
+        return ProductSelectionCreatedMessage.deepCopy(this);
+    }
 }

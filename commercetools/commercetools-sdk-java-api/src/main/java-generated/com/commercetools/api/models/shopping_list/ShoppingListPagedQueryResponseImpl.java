@@ -159,4 +159,8 @@ public class ShoppingListPagedQueryResponseImpl implements ShoppingListPagedQuer
                 .build();
     }
 
+    @Override
+    public ShoppingListPagedQueryResponse copyDeep() {
+        return ShoppingListPagedQueryResponse.deepCopy(this);
+    }
 }

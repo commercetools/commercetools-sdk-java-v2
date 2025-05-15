@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setMethodInfoInterface")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyPaymentSetMethodInfoInterfaceActionImpl.class)
 public interface MyPaymentSetMethodInfoInterfaceAction extends MyPaymentUpdateAction {
@@ -69,6 +70,8 @@ public interface MyPaymentSetMethodInfoInterfaceAction extends MyPaymentUpdateAc
         instance.setInterface(template.getInterface());
         return instance;
     }
+
+    public MyPaymentSetMethodInfoInterfaceAction copyDeep();
 
     /**
      * factory method to create a deep copy of MyPaymentSetMethodInfoInterfaceAction

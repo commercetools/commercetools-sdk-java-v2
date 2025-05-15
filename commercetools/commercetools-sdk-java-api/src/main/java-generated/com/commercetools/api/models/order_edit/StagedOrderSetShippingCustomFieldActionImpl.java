@@ -128,4 +128,8 @@ public class StagedOrderSetShippingCustomFieldActionImpl implements StagedOrderS
                 .build();
     }
 
+    @Override
+    public StagedOrderSetShippingCustomFieldAction copyDeep() {
+        return StagedOrderSetShippingCustomFieldAction.deepCopy(this);
+    }
 }

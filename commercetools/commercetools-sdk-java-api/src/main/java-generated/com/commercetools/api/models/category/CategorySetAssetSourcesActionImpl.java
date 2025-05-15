@@ -133,4 +133,8 @@ public class CategorySetAssetSourcesActionImpl implements CategorySetAssetSource
                 .build();
     }
 
+    @Override
+    public CategorySetAssetSourcesAction copyDeep() {
+        return CategorySetAssetSourcesAction.deepCopy(this);
+    }
 }

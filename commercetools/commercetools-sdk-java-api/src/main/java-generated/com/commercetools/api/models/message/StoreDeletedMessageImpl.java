@@ -273,4 +273,8 @@ public class StoreDeletedMessageImpl implements StoreDeletedMessage, ModelBase {
                 .build();
     }
 
+    @Override
+    public StoreDeletedMessage copyDeep() {
+        return StoreDeletedMessage.deepCopy(this);
+    }
 }

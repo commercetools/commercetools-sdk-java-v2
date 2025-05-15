@@ -313,4 +313,8 @@ public class StandalonePriceActiveChangedMessageImpl implements StandalonePriceA
                 .build();
     }
 
+    @Override
+    public StandalonePriceActiveChangedMessage copyDeep() {
+        return StandalonePriceActiveChangedMessage.deepCopy(this);
+    }
 }

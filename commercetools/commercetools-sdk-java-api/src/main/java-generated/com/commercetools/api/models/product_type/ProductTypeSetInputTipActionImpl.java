@@ -110,4 +110,8 @@ public class ProductTypeSetInputTipActionImpl implements ProductTypeSetInputTipA
                 .build();
     }
 
+    @Override
+    public ProductTypeSetInputTipAction copyDeep() {
+        return ProductTypeSetInputTipAction.deepCopy(this);
+    }
 }

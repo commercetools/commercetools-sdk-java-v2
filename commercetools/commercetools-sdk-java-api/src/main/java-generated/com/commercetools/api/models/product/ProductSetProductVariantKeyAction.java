@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setProductVariantKey")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSetProductVariantKeyActionImpl.class)
 public interface ProductSetProductVariantKeyAction extends ProductUpdateAction {
@@ -114,6 +115,8 @@ public interface ProductSetProductVariantKeyAction extends ProductUpdateAction {
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public ProductSetProductVariantKeyAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductSetProductVariantKeyAction

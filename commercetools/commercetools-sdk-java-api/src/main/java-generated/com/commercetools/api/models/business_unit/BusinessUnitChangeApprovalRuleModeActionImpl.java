@@ -96,4 +96,8 @@ public class BusinessUnitChangeApprovalRuleModeActionImpl
                 .build();
     }
 
+    @Override
+    public BusinessUnitChangeApprovalRuleModeAction copyDeep() {
+        return BusinessUnitChangeApprovalRuleModeAction.deepCopy(this);
+    }
 }

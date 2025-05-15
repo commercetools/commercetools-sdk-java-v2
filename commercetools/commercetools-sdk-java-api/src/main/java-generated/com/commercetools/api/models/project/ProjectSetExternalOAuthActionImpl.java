@@ -92,4 +92,8 @@ public class ProjectSetExternalOAuthActionImpl implements ProjectSetExternalOAut
                 .build();
     }
 
+    @Override
+    public ProjectSetExternalOAuthAction copyDeep() {
+        return ProjectSetExternalOAuthAction.deepCopy(this);
+    }
 }

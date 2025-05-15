@@ -92,4 +92,8 @@ public class ShippingMethodAddZoneActionImpl implements ShippingMethodAddZoneAct
                 .build();
     }
 
+    @Override
+    public ShippingMethodAddZoneAction copyDeep() {
+        return ShippingMethodAddZoneAction.deepCopy(this);
+    }
 }

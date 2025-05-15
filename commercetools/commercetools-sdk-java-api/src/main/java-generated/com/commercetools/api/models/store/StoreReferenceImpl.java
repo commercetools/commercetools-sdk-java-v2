@@ -111,4 +111,8 @@ public class StoreReferenceImpl implements StoreReference, ModelBase {
                 .build();
     }
 
+    @Override
+    public StoreReference copyDeep() {
+        return StoreReference.deepCopy(this);
+    }
 }

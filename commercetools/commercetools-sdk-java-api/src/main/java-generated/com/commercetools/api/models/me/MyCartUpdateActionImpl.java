@@ -69,4 +69,8 @@ public class MyCartUpdateActionImpl implements MyCartUpdateAction, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action).build();
     }
 
+    @Override
+    public MyCartUpdateAction copyDeep() {
+        return MyCartUpdateAction.deepCopy(this);
+    }
 }

@@ -130,6 +130,8 @@ public interface OrderSearchSorting {
         return instance;
     }
 
+    public OrderSearchSorting copyDeep();
+
     /**
      * factory method to create a deep copy of OrderSearchSorting
      * @param template instance to be copied

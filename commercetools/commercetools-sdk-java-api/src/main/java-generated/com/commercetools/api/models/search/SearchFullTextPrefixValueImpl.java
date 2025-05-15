@@ -175,4 +175,8 @@ public class SearchFullTextPrefixValueImpl implements SearchFullTextPrefixValue,
                 .build();
     }
 
+    @Override
+    public SearchFullTextPrefixValue copyDeep() {
+        return SearchFullTextPrefixValue.deepCopy(this);
+    }
 }

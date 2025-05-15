@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setAttributes")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AttributeGroupSetAttributesActionImpl.class)
 public interface AttributeGroupSetAttributesAction extends AttributeGroupUpdateAction {
@@ -80,6 +81,8 @@ public interface AttributeGroupSetAttributesAction extends AttributeGroupUpdateA
         instance.setAttributes(template.getAttributes());
         return instance;
     }
+
+    public AttributeGroupSetAttributesAction copyDeep();
 
     /**
      * factory method to create a deep copy of AttributeGroupSetAttributesAction

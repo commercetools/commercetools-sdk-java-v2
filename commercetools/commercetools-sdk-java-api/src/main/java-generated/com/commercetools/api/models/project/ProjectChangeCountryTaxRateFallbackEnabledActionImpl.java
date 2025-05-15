@@ -93,4 +93,8 @@ public class ProjectChangeCountryTaxRateFallbackEnabledActionImpl
                 .build();
     }
 
+    @Override
+    public ProjectChangeCountryTaxRateFallbackEnabledAction copyDeep() {
+        return ProjectChangeCountryTaxRateFallbackEnabledAction.deepCopy(this);
+    }
 }

@@ -111,4 +111,8 @@ public class StandalonePriceReferenceImpl implements StandalonePriceReference, M
                 .build();
     }
 
+    @Override
+    public StandalonePriceReference copyDeep() {
+        return StandalonePriceReference.deepCopy(this);
+    }
 }

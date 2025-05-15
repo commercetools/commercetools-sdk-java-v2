@@ -67,6 +67,8 @@ public interface SearchPrefixExpression extends SearchQueryExpression {
         return instance;
     }
 
+    public SearchPrefixExpression copyDeep();
+
     /**
      * factory method to create a deep copy of SearchPrefixExpression
      * @param template instance to be copied

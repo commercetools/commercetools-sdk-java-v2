@@ -99,6 +99,8 @@ public interface ImportWaitForMasterVariantEventData {
         return instance;
     }
 
+    public ImportWaitForMasterVariantEventData copyDeep();
+
     /**
      * factory method to create a deep copy of ImportWaitForMasterVariantEventData
      * @param template instance to be copied

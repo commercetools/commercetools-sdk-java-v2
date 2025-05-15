@@ -91,4 +91,8 @@ public class QuoteRequestQuoteRenegotiationActionImpl implements QuoteRequestQuo
                 .build();
     }
 
+    @Override
+    public QuoteRequestQuoteRenegotiationAction copyDeep() {
+        return QuoteRequestQuoteRenegotiationAction.deepCopy(this);
+    }
 }

@@ -92,4 +92,8 @@ public class AttributeGroupRemoveAttributeActionImpl implements AttributeGroupRe
                 .build();
     }
 
+    @Override
+    public AttributeGroupRemoveAttributeAction copyDeep() {
+        return AttributeGroupRemoveAttributeAction.deepCopy(this);
+    }
 }

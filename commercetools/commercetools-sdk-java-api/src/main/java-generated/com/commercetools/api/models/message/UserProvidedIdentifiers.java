@@ -161,6 +161,8 @@ public interface UserProvidedIdentifiers {
         return instance;
     }
 
+    public UserProvidedIdentifiers copyDeep();
+
     /**
      * factory method to create a deep copy of UserProvidedIdentifiers
      * @param template instance to be copied

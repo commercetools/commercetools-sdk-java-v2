@@ -91,4 +91,8 @@ public class CustomerGroupChangeNameActionImpl implements CustomerGroupChangeNam
                 .build();
     }
 
+    @Override
+    public CustomerGroupChangeNameAction copyDeep() {
+        return CustomerGroupChangeNameAction.deepCopy(this);
+    }
 }

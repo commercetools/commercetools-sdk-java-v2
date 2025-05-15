@@ -153,4 +153,8 @@ public class StoreProductSelectionsChangedMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public StoreProductSelectionsChangedMessagePayload copyDeep() {
+        return StoreProductSelectionsChangedMessagePayload.deepCopy(this);
+    }
 }

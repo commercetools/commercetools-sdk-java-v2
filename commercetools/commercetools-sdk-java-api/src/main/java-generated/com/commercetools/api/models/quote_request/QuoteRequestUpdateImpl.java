@@ -100,4 +100,8 @@ public class QuoteRequestUpdateImpl implements QuoteRequestUpdate, ModelBase {
                 .build();
     }
 
+    @Override
+    public QuoteRequestUpdate copyDeep() {
+        return QuoteRequestUpdate.deepCopy(this);
+    }
 }

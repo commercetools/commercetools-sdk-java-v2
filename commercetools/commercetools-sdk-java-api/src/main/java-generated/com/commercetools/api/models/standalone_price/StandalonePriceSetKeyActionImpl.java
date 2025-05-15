@@ -91,4 +91,8 @@ public class StandalonePriceSetKeyActionImpl implements StandalonePriceSetKeyAct
                 .build();
     }
 
+    @Override
+    public StandalonePriceSetKeyAction copyDeep() {
+        return StandalonePriceSetKeyAction.deepCopy(this);
+    }
 }

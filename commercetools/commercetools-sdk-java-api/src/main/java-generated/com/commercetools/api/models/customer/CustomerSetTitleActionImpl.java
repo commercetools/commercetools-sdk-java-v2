@@ -91,4 +91,8 @@ public class CustomerSetTitleActionImpl implements CustomerSetTitleAction, Model
                 .build();
     }
 
+    @Override
+    public CustomerSetTitleAction copyDeep() {
+        return CustomerSetTitleAction.deepCopy(this);
+    }
 }

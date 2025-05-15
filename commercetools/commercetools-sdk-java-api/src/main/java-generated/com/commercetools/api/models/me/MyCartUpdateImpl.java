@@ -99,4 +99,8 @@ public class MyCartUpdateImpl implements MyCartUpdate, ModelBase {
                 .build();
     }
 
+    @Override
+    public MyCartUpdate copyDeep() {
+        return MyCartUpdate.deepCopy(this);
+    }
 }

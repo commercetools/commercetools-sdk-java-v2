@@ -92,4 +92,8 @@ public class TaxCategoryAddTaxRateActionImpl implements TaxCategoryAddTaxRateAct
                 .build();
     }
 
+    @Override
+    public TaxCategoryAddTaxRateAction copyDeep() {
+        return TaxCategoryAddTaxRateAction.deepCopy(this);
+    }
 }

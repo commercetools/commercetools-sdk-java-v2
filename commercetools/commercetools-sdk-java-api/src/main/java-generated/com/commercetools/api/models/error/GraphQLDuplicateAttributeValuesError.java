@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("DuplicateAttributeValues")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLDuplicateAttributeValuesErrorImpl.class)
 public interface GraphQLDuplicateAttributeValuesError extends GraphQLErrorObject {
@@ -90,6 +91,8 @@ public interface GraphQLDuplicateAttributeValuesError extends GraphQLErrorObject
         instance.setAttributes(template.getAttributes());
         return instance;
     }
+
+    public GraphQLDuplicateAttributeValuesError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLDuplicateAttributeValuesError

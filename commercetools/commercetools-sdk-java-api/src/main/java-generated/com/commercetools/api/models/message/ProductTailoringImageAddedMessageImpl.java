@@ -374,4 +374,8 @@ public class ProductTailoringImageAddedMessageImpl implements ProductTailoringIm
                 .build();
     }
 
+    @Override
+    public ProductTailoringImageAddedMessage copyDeep() {
+        return ProductTailoringImageAddedMessage.deepCopy(this);
+    }
 }

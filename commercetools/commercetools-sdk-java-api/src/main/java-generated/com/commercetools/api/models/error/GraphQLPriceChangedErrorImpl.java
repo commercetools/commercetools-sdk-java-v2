@@ -144,4 +144,8 @@ public class GraphQLPriceChangedErrorImpl implements GraphQLPriceChangedError, M
                 .build();
     }
 
+    @Override
+    public GraphQLPriceChangedError copyDeep() {
+        return GraphQLPriceChangedError.deepCopy(this);
+    }
 }

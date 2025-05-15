@@ -173,4 +173,8 @@ public class MultiBuyCustomLineItemsTargetImpl implements MultiBuyCustomLineItem
                 .build();
     }
 
+    @Override
+    public MultiBuyCustomLineItemsTarget copyDeep() {
+        return MultiBuyCustomLineItemsTarget.deepCopy(this);
+    }
 }

@@ -314,4 +314,8 @@ public class ApprovalRuleDescriptionSetMessageImpl implements ApprovalRuleDescri
                 .build();
     }
 
+    @Override
+    public ApprovalRuleDescriptionSetMessage copyDeep() {
+        return ApprovalRuleDescriptionSetMessage.deepCopy(this);
+    }
 }

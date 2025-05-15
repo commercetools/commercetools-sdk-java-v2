@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("addExternalImage")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductAddExternalImageActionImpl.class)
 public interface ProductAddExternalImageAction extends ProductUpdateAction {
@@ -120,6 +121,8 @@ public interface ProductAddExternalImageAction extends ProductUpdateAction {
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public ProductAddExternalImageAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductAddExternalImageAction

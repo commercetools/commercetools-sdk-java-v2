@@ -28,6 +28,7 @@ import jakarta.validation.Valid;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("StoreNameSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StoreNameSetMessagePayloadImpl.class)
 public interface StoreNameSetMessagePayload extends MessagePayload {
@@ -94,6 +95,8 @@ public interface StoreNameSetMessagePayload extends MessagePayload {
         instance.setNameAllLocales(template.getNameAllLocales());
         return instance;
     }
+
+    public StoreNameSetMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of StoreNameSetMessagePayload

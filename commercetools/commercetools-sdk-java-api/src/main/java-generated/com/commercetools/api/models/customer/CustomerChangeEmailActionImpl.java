@@ -91,4 +91,8 @@ public class CustomerChangeEmailActionImpl implements CustomerChangeEmailAction,
                 .build();
     }
 
+    @Override
+    public CustomerChangeEmailAction copyDeep() {
+        return CustomerChangeEmailAction.deepCopy(this);
+    }
 }

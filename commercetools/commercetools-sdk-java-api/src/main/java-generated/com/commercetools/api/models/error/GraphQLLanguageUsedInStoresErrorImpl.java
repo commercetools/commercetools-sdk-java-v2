@@ -97,4 +97,8 @@ public class GraphQLLanguageUsedInStoresErrorImpl implements GraphQLLanguageUsed
                 .build();
     }
 
+    @Override
+    public GraphQLLanguageUsedInStoresError copyDeep() {
+        return GraphQLLanguageUsedInStoresError.deepCopy(this);
+    }
 }

@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("publish")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductPublishActionImpl.class)
 public interface ProductPublishAction extends ProductUpdateAction {
@@ -67,6 +68,8 @@ public interface ProductPublishAction extends ProductUpdateAction {
         instance.setScope(template.getScope());
         return instance;
     }
+
+    public ProductPublishAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductPublishAction

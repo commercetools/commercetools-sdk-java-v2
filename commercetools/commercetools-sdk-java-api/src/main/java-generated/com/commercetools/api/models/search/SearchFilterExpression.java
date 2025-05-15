@@ -76,6 +76,8 @@ public interface SearchFilterExpression extends SearchCompoundExpression {
         return instance;
     }
 
+    public SearchFilterExpression copyDeep();
+
     /**
      * factory method to create a deep copy of SearchFilterExpression
      * @param template instance to be copied

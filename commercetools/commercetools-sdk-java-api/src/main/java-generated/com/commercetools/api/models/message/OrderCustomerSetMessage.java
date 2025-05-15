@@ -35,6 +35,7 @@ import jakarta.validation.Valid;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("OrderCustomerSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderCustomerSetMessageImpl.class)
 public interface OrderCustomerSetMessage extends OrderMessage {
@@ -135,6 +136,8 @@ public interface OrderCustomerSetMessage extends OrderMessage {
         instance.setOldCustomerGroup(template.getOldCustomerGroup());
         return instance;
     }
+
+    public OrderCustomerSetMessage copyDeep();
 
     /**
      * factory method to create a deep copy of OrderCustomerSetMessage

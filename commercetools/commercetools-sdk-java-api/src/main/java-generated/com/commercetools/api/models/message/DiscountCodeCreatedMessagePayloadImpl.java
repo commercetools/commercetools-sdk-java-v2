@@ -92,4 +92,8 @@ public class DiscountCodeCreatedMessagePayloadImpl implements DiscountCodeCreate
                 .build();
     }
 
+    @Override
+    public DiscountCodeCreatedMessagePayload copyDeep() {
+        return DiscountCodeCreatedMessagePayload.deepCopy(this);
+    }
 }

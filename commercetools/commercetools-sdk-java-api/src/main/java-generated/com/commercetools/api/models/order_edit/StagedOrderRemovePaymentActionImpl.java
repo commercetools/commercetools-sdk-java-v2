@@ -92,4 +92,8 @@ public class StagedOrderRemovePaymentActionImpl implements StagedOrderRemovePaym
                 .build();
     }
 
+    @Override
+    public StagedOrderRemovePaymentAction copyDeep() {
+        return StagedOrderRemovePaymentAction.deepCopy(this);
+    }
 }

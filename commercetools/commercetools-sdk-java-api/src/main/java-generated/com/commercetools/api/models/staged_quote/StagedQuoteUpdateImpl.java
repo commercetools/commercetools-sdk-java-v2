@@ -100,4 +100,8 @@ public class StagedQuoteUpdateImpl implements StagedQuoteUpdate, ModelBase {
                 .build();
     }
 
+    @Override
+    public StagedQuoteUpdate copyDeep() {
+        return StagedQuoteUpdate.deepCopy(this);
+    }
 }

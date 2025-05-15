@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setAssetKey")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CategorySetAssetKeyActionImpl.class)
 public interface CategorySetAssetKeyAction extends CategoryUpdateAction {
@@ -85,6 +86,8 @@ public interface CategorySetAssetKeyAction extends CategoryUpdateAction {
         instance.setAssetKey(template.getAssetKey());
         return instance;
     }
+
+    public CategorySetAssetKeyAction copyDeep();
 
     /**
      * factory method to create a deep copy of CategorySetAssetKeyAction

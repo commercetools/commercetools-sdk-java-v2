@@ -91,4 +91,8 @@ public class ShoppingListSetKeyActionImpl implements ShoppingListSetKeyAction, M
                 .build();
     }
 
+    @Override
+    public ShoppingListSetKeyAction copyDeep() {
+        return ShoppingListSetKeyAction.deepCopy(this);
+    }
 }

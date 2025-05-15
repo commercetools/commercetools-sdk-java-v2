@@ -312,4 +312,8 @@ public class OrderCustomerEmailSetMessageImpl implements OrderCustomerEmailSetMe
                 .build();
     }
 
+    @Override
+    public OrderCustomerEmailSetMessage copyDeep() {
+        return OrderCustomerEmailSetMessage.deepCopy(this);
+    }
 }

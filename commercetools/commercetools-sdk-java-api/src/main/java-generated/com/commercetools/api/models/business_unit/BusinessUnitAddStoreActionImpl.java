@@ -92,4 +92,8 @@ public class BusinessUnitAddStoreActionImpl implements BusinessUnitAddStoreActio
                 .build();
     }
 
+    @Override
+    public BusinessUnitAddStoreAction copyDeep() {
+        return BusinessUnitAddStoreAction.deepCopy(this);
+    }
 }

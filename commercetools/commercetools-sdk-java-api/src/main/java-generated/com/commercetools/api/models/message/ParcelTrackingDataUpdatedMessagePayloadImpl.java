@@ -153,4 +153,8 @@ public class ParcelTrackingDataUpdatedMessagePayloadImpl implements ParcelTracki
                 .build();
     }
 
+    @Override
+    public ParcelTrackingDataUpdatedMessagePayload copyDeep() {
+        return ParcelTrackingDataUpdatedMessagePayload.deepCopy(this);
+    }
 }

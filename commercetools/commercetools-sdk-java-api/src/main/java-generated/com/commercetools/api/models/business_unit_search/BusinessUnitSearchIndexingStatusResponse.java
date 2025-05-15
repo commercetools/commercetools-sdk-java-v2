@@ -132,6 +132,8 @@ public interface BusinessUnitSearchIndexingStatusResponse {
         return instance;
     }
 
+    public BusinessUnitSearchIndexingStatusResponse copyDeep();
+
     /**
      * factory method to create a deep copy of BusinessUnitSearchIndexingStatusResponse
      * @param template instance to be copied

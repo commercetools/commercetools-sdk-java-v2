@@ -98,4 +98,8 @@ public class CartClassificationTypeImpl implements CartClassificationType, Model
                 .build();
     }
 
+    @Override
+    public CartClassificationType copyDeep() {
+        return CartClassificationType.deepCopy(this);
+    }
 }

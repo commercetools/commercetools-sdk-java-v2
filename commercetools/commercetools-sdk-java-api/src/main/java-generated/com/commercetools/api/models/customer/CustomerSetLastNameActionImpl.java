@@ -91,4 +91,8 @@ public class CustomerSetLastNameActionImpl implements CustomerSetLastNameAction,
                 .build();
     }
 
+    @Override
+    public CustomerSetLastNameAction copyDeep() {
+        return CustomerSetLastNameAction.deepCopy(this);
+    }
 }

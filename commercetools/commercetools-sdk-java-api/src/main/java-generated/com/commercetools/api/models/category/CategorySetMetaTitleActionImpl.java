@@ -92,4 +92,8 @@ public class CategorySetMetaTitleActionImpl implements CategorySetMetaTitleActio
                 .build();
     }
 
+    @Override
+    public CategorySetMetaTitleAction copyDeep() {
+        return CategorySetMetaTitleAction.deepCopy(this);
+    }
 }

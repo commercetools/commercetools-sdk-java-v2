@@ -94,4 +94,8 @@ public class AttributePlainEnumValueImpl implements AttributePlainEnumValue, Mod
                 .build();
     }
 
+    @Override
+    public AttributePlainEnumValue copyDeep() {
+        return AttributePlainEnumValue.deepCopy(this);
+    }
 }

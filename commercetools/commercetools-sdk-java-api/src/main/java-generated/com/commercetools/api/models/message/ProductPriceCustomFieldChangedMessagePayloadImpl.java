@@ -172,4 +172,8 @@ public class ProductPriceCustomFieldChangedMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public ProductPriceCustomFieldChangedMessagePayload copyDeep() {
+        return ProductPriceCustomFieldChangedMessagePayload.deepCopy(this);
+    }
 }

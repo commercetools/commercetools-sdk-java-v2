@@ -74,4 +74,8 @@ public class OrderSearchFullTextExpressionImpl implements OrderSearchFullTextExp
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("fullText", fullText).build();
     }
 
+    @Override
+    public OrderSearchFullTextExpression copyDeep() {
+        return OrderSearchFullTextExpression.deepCopy(this);
+    }
 }

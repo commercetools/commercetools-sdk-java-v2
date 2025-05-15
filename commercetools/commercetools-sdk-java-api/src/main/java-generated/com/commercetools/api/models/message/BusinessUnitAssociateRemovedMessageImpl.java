@@ -294,4 +294,8 @@ public class BusinessUnitAssociateRemovedMessageImpl implements BusinessUnitAsso
                 .build();
     }
 
+    @Override
+    public BusinessUnitAssociateRemovedMessage copyDeep() {
+        return BusinessUnitAssociateRemovedMessage.deepCopy(this);
+    }
 }

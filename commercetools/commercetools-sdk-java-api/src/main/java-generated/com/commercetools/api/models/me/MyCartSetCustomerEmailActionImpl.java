@@ -91,4 +91,8 @@ public class MyCartSetCustomerEmailActionImpl implements MyCartSetCustomerEmailA
                 .build();
     }
 
+    @Override
+    public MyCartSetCustomerEmailAction copyDeep() {
+        return MyCartSetCustomerEmailAction.deepCopy(this);
+    }
 }

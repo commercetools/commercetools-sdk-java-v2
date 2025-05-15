@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("channel")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChannelResourceIdentifierImpl.class)
 public interface ChannelResourceIdentifier
@@ -84,6 +85,8 @@ public interface ChannelResourceIdentifier
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public ChannelResourceIdentifier copyDeep();
 
     /**
      * factory method to create a deep copy of ChannelResourceIdentifier

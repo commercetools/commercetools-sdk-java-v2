@@ -313,4 +313,8 @@ public class OrderShippingAddressSetMessageImpl implements OrderShippingAddressS
                 .build();
     }
 
+    @Override
+    public OrderShippingAddressSetMessage copyDeep() {
+        return OrderShippingAddressSetMessage.deepCopy(this);
+    }
 }

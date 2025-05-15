@@ -91,4 +91,8 @@ public class CategorySetExternalIdActionImpl implements CategorySetExternalIdAct
                 .build();
     }
 
+    @Override
+    public CategorySetExternalIdAction copyDeep() {
+        return CategorySetExternalIdAction.deepCopy(this);
+    }
 }

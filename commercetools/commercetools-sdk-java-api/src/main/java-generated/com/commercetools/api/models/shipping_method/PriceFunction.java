@@ -84,6 +84,8 @@ public interface PriceFunction {
         return instance;
     }
 
+    public PriceFunction copyDeep();
+
     /**
      * factory method to create a deep copy of PriceFunction
      * @param template instance to be copied

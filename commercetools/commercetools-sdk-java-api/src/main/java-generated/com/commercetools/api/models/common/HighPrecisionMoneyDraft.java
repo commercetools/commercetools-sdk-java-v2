@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("highPrecision")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = HighPrecisionMoneyDraftImpl.class)
 public interface HighPrecisionMoneyDraft
@@ -109,6 +110,8 @@ public interface HighPrecisionMoneyDraft
         instance.setPreciseAmount(template.getPreciseAmount());
         return instance;
     }
+
+    public HighPrecisionMoneyDraft copyDeep();
 
     /**
      * factory method to create a deep copy of HighPrecisionMoneyDraft

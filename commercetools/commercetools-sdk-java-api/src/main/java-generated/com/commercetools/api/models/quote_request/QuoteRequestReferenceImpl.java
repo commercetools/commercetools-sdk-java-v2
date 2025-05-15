@@ -111,4 +111,8 @@ public class QuoteRequestReferenceImpl implements QuoteRequestReference, ModelBa
                 .build();
     }
 
+    @Override
+    public QuoteRequestReference copyDeep() {
+        return QuoteRequestReference.deepCopy(this);
+    }
 }

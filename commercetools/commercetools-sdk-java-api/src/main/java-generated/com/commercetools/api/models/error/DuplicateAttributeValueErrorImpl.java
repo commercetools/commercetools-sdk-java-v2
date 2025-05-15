@@ -133,4 +133,8 @@ public class DuplicateAttributeValueErrorImpl implements DuplicateAttributeValue
                 .build();
     }
 
+    @Override
+    public DuplicateAttributeValueError copyDeep() {
+        return DuplicateAttributeValueError.deepCopy(this);
+    }
 }

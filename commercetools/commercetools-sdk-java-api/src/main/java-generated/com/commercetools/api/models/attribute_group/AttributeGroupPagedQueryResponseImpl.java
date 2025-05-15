@@ -160,4 +160,8 @@ public class AttributeGroupPagedQueryResponseImpl implements AttributeGroupPaged
                 .build();
     }
 
+    @Override
+    public AttributeGroupPagedQueryResponse copyDeep() {
+        return AttributeGroupPagedQueryResponse.deepCopy(this);
+    }
 }

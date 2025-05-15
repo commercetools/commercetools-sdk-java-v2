@@ -113,4 +113,8 @@ public class SearchQueryExpressionValueImpl implements SearchQueryExpressionValu
                 .build();
     }
 
+    @Override
+    public SearchQueryExpressionValue copyDeep() {
+        return SearchQueryExpressionValue.deepCopy(this);
+    }
 }

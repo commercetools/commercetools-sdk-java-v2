@@ -91,4 +91,8 @@ public class ProductDiscountValueRelativeImpl implements ProductDiscountValueRel
                 .build();
     }
 
+    @Override
+    public ProductDiscountValueRelative copyDeep() {
+        return ProductDiscountValueRelative.deepCopy(this);
+    }
 }

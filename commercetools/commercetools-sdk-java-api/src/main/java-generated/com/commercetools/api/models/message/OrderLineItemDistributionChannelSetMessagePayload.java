@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("OrderLineItemDistributionChannelSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderLineItemDistributionChannelSetMessagePayloadImpl.class)
 public interface OrderLineItemDistributionChannelSetMessagePayload extends OrderMessagePayload {
@@ -104,6 +105,8 @@ public interface OrderLineItemDistributionChannelSetMessagePayload extends Order
         instance.setDistributionChannel(template.getDistributionChannel());
         return instance;
     }
+
+    public OrderLineItemDistributionChannelSetMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of OrderLineItemDistributionChannelSetMessagePayload

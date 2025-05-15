@@ -110,4 +110,8 @@ public class MyCustomerRemoveBillingAddressIdActionImpl implements MyCustomerRem
                 .build();
     }
 
+    @Override
+    public MyCustomerRemoveBillingAddressIdAction copyDeep() {
+        return MyCustomerRemoveBillingAddressIdAction.deepCopy(this);
+    }
 }

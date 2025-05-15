@@ -72,4 +72,8 @@ public class SubscriptionNotificationImpl implements SubscriptionNotification, M
                 .build();
     }
 
+    @Override
+    public SubscriptionNotification copyDeep() {
+        return SubscriptionNotification.deepCopy(this);
+    }
 }

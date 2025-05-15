@@ -373,4 +373,8 @@ public class ProductPriceChangedMessageImpl implements ProductPriceChangedMessag
                 .build();
     }
 
+    @Override
+    public ProductPriceChangedMessage copyDeep() {
+        return ProductPriceChangedMessage.deepCopy(this);
+    }
 }

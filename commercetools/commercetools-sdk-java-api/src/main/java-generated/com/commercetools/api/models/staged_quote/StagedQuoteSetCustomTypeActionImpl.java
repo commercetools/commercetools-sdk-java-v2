@@ -111,4 +111,8 @@ public class StagedQuoteSetCustomTypeActionImpl implements StagedQuoteSetCustomT
                 .build();
     }
 
+    @Override
+    public StagedQuoteSetCustomTypeAction copyDeep() {
+        return StagedQuoteSetCustomTypeAction.deepCopy(this);
+    }
 }

@@ -67,6 +67,8 @@ public interface SearchNumberRangeExpression extends SearchQueryExpression {
         return instance;
     }
 
+    public SearchNumberRangeExpression copyDeep();
+
     /**
      * factory method to create a deep copy of SearchNumberRangeExpression
      * @param template instance to be copied

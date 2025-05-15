@@ -161,4 +161,8 @@ public class ProductTailoringPagedQueryResponseImpl implements ProductTailoringP
                 .build();
     }
 
+    @Override
+    public ProductTailoringPagedQueryResponse copyDeep() {
+        return ProductTailoringPagedQueryResponse.deepCopy(this);
+    }
 }

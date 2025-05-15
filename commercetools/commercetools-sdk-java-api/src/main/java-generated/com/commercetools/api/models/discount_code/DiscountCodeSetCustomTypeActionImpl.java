@@ -111,4 +111,8 @@ public class DiscountCodeSetCustomTypeActionImpl implements DiscountCodeSetCusto
                 .build();
     }
 
+    @Override
+    public DiscountCodeSetCustomTypeAction copyDeep() {
+        return DiscountCodeSetCustomTypeAction.deepCopy(this);
+    }
 }

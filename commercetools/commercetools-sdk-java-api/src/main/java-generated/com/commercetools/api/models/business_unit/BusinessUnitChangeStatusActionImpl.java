@@ -91,4 +91,8 @@ public class BusinessUnitChangeStatusActionImpl implements BusinessUnitChangeSta
                 .build();
     }
 
+    @Override
+    public BusinessUnitChangeStatusAction copyDeep() {
+        return BusinessUnitChangeStatusAction.deepCopy(this);
+    }
 }

@@ -138,4 +138,8 @@ public class MyCartSetLineItemDistributionChannelActionImpl
                 .build();
     }
 
+    @Override
+    public MyCartSetLineItemDistributionChannelAction copyDeep() {
+        return MyCartSetLineItemDistributionChannelAction.deepCopy(this);
+    }
 }

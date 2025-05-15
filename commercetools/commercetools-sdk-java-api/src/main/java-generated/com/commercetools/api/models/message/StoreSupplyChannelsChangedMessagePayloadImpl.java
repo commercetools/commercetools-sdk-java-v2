@@ -127,4 +127,8 @@ public class StoreSupplyChannelsChangedMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public StoreSupplyChannelsChangedMessagePayload copyDeep() {
+        return StoreSupplyChannelsChangedMessagePayload.deepCopy(this);
+    }
 }

@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("AssociateRoleDeleted")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AssociateRoleDeletedMessagePayloadImpl.class)
 public interface AssociateRoleDeletedMessagePayload extends MessagePayload {
@@ -50,6 +51,8 @@ public interface AssociateRoleDeletedMessagePayload extends MessagePayload {
         AssociateRoleDeletedMessagePayloadImpl instance = new AssociateRoleDeletedMessagePayloadImpl();
         return instance;
     }
+
+    public AssociateRoleDeletedMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of AssociateRoleDeletedMessagePayload

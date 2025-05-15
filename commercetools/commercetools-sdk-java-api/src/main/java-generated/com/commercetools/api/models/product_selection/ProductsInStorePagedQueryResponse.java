@@ -144,6 +144,8 @@ public interface ProductsInStorePagedQueryResponse
         return instance;
     }
 
+    public ProductsInStorePagedQueryResponse copyDeep();
+
     /**
      * factory method to create a deep copy of ProductsInStorePagedQueryResponse
      * @param template instance to be copied

@@ -68,6 +68,8 @@ public interface RuleRequester {
         return instance;
     }
 
+    public RuleRequester copyDeep();
+
     /**
      * factory method to create a deep copy of RuleRequester
      * @param template instance to be copied

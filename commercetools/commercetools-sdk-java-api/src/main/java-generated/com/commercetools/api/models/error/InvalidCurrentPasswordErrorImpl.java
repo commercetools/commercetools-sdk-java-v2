@@ -119,4 +119,8 @@ public class InvalidCurrentPasswordErrorImpl implements InvalidCurrentPasswordEr
                 .build();
     }
 
+    @Override
+    public InvalidCurrentPasswordError copyDeep() {
+        return InvalidCurrentPasswordError.deepCopy(this);
+    }
 }

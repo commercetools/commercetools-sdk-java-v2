@@ -116,4 +116,8 @@ public class GraphQLAttributeNameDoesNotExistErrorImpl implements GraphQLAttribu
                 .build();
     }
 
+    @Override
+    public GraphQLAttributeNameDoesNotExistError copyDeep() {
+        return GraphQLAttributeNameDoesNotExistError.deepCopy(this);
+    }
 }

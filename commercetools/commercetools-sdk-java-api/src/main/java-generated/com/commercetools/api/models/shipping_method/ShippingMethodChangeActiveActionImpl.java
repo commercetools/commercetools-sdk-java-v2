@@ -92,4 +92,8 @@ public class ShippingMethodChangeActiveActionImpl implements ShippingMethodChang
                 .build();
     }
 
+    @Override
+    public ShippingMethodChangeActiveAction copyDeep() {
+        return ShippingMethodChangeActiveAction.deepCopy(this);
+    }
 }

@@ -137,4 +137,8 @@ public class ReferenceExistsErrorImpl implements ReferenceExistsError, ModelBase
                 .build();
     }
 
+    @Override
+    public ReferenceExistsError copyDeep() {
+        return ReferenceExistsError.deepCopy(this);
+    }
 }

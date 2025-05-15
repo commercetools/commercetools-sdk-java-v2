@@ -95,4 +95,8 @@ public class TaxedItemPriceDraftImpl implements TaxedItemPriceDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public TaxedItemPriceDraft copyDeep() {
+        return TaxedItemPriceDraft.deepCopy(this);
+    }
 }

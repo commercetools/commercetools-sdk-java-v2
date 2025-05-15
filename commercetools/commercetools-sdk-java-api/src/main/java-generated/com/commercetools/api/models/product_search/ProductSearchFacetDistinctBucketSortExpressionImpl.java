@@ -97,4 +97,8 @@ public class ProductSearchFacetDistinctBucketSortExpressionImpl
                 .build();
     }
 
+    @Override
+    public ProductSearchFacetDistinctBucketSortExpression copyDeep() {
+        return ProductSearchFacetDistinctBucketSortExpression.deepCopy(this);
+    }
 }

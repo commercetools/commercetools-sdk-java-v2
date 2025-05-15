@@ -114,4 +114,8 @@ public class TypeChangeEnumValueOrderActionImpl implements TypeChangeEnumValueOr
                 .build();
     }
 
+    @Override
+    public TypeChangeEnumValueOrderAction copyDeep() {
+        return TypeChangeEnumValueOrderAction.deepCopy(this);
+    }
 }

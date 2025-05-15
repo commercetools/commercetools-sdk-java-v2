@@ -159,4 +159,8 @@ public class ApiClientPagedQueryResponseImpl implements ApiClientPagedQueryRespo
                 .build();
     }
 
+    @Override
+    public ApiClientPagedQueryResponse copyDeep() {
+        return ApiClientPagedQueryResponse.deepCopy(this);
+    }
 }

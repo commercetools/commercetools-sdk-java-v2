@@ -175,4 +175,8 @@ public class ImportUnresolvedEventImpl implements ImportUnresolvedEvent, ModelBa
                 .build();
     }
 
+    @Override
+    public ImportUnresolvedEvent copyDeep() {
+        return ImportUnresolvedEvent.deepCopy(this);
+    }
 }

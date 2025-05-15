@@ -155,4 +155,8 @@ public class HighPrecisionMoneyDraftImpl implements HighPrecisionMoneyDraft, Mod
                 .build();
     }
 
+    @Override
+    public HighPrecisionMoneyDraft copyDeep() {
+        return HighPrecisionMoneyDraft.deepCopy(this);
+    }
 }

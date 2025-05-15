@@ -136,4 +136,8 @@ public class CartAddShoppingListActionImpl implements CartAddShoppingListAction,
                 .build();
     }
 
+    @Override
+    public CartAddShoppingListAction copyDeep() {
+        return CartAddShoppingListAction.deepCopy(this);
+    }
 }

@@ -125,4 +125,8 @@ public class GraphQLStoreCartDiscountsLimitReachedErrorImpl
                 .build();
     }
 
+    @Override
+    public GraphQLStoreCartDiscountsLimitReachedError copyDeep() {
+        return GraphQLStoreCartDiscountsLimitReachedError.deepCopy(this);
+    }
 }

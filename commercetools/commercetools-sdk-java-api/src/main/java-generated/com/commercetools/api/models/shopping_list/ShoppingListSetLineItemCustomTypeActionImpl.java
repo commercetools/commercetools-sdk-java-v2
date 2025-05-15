@@ -153,4 +153,8 @@ public class ShoppingListSetLineItemCustomTypeActionImpl implements ShoppingList
                 .build();
     }
 
+    @Override
+    public ShoppingListSetLineItemCustomTypeAction copyDeep() {
+        return ShoppingListSetLineItemCustomTypeAction.deepCopy(this);
+    }
 }

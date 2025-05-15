@@ -116,4 +116,8 @@ public class QuoteRequestStateChangedMessagePayloadImpl implements QuoteRequestS
                 .build();
     }
 
+    @Override
+    public QuoteRequestStateChangedMessagePayload copyDeep() {
+        return QuoteRequestStateChangedMessagePayload.deepCopy(this);
+    }
 }

@@ -94,4 +94,8 @@ public class MyCartChangeTaxModeActionImpl implements MyCartChangeTaxModeAction,
                 .build();
     }
 
+    @Override
+    public MyCartChangeTaxModeAction copyDeep() {
+        return MyCartChangeTaxModeAction.deepCopy(this);
+    }
 }

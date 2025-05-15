@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setKey")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShippingMethodSetKeyActionImpl.class)
 public interface ShippingMethodSetKeyAction extends ShippingMethodUpdateAction {
@@ -66,6 +67,8 @@ public interface ShippingMethodSetKeyAction extends ShippingMethodUpdateAction {
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public ShippingMethodSetKeyAction copyDeep();
 
     /**
      * factory method to create a deep copy of ShippingMethodSetKeyAction

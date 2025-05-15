@@ -92,4 +92,8 @@ public class PaymentChangeAmountPlannedActionImpl implements PaymentChangeAmount
                 .build();
     }
 
+    @Override
+    public PaymentChangeAmountPlannedAction copyDeep() {
+        return PaymentChangeAmountPlannedAction.deepCopy(this);
+    }
 }

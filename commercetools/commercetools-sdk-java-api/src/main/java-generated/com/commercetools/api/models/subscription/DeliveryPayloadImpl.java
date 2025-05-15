@@ -134,4 +134,8 @@ public class DeliveryPayloadImpl implements DeliveryPayload, ModelBase {
                 .build();
     }
 
+    @Override
+    public DeliveryPayload copyDeep() {
+        return DeliveryPayload.deepCopy(this);
+    }
 }

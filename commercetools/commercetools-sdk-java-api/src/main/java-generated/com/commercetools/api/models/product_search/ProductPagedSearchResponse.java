@@ -153,6 +153,8 @@ public interface ProductPagedSearchResponse {
         return instance;
     }
 
+    public ProductPagedSearchResponse copyDeep();
+
     /**
      * factory method to create a deep copy of ProductPagedSearchResponse
      * @param template instance to be copied

@@ -92,4 +92,8 @@ public class OrderRemovePaymentActionImpl implements OrderRemovePaymentAction, M
                 .build();
     }
 
+    @Override
+    public OrderRemovePaymentAction copyDeep() {
+        return OrderRemovePaymentAction.deepCopy(this);
+    }
 }

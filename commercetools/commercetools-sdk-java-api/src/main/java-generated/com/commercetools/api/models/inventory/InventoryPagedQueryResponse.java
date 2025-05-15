@@ -144,6 +144,8 @@ public interface InventoryPagedQueryResponse
         return instance;
     }
 
+    public InventoryPagedQueryResponse copyDeep();
+
     /**
      * factory method to create a deep copy of InventoryPagedQueryResponse
      * @param template instance to be copied

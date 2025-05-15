@@ -65,6 +65,8 @@ public interface AttributeReference extends com.commercetools.api.models.WithKey
         return instance;
     }
 
+    public AttributeReference copyDeep();
+
     /**
      * factory method to create a deep copy of AttributeReference
      * @param template instance to be copied

@@ -160,4 +160,8 @@ public class TaxCategoryPagedQueryResponseImpl implements TaxCategoryPagedQueryR
                 .build();
     }
 
+    @Override
+    public TaxCategoryPagedQueryResponse copyDeep() {
+        return TaxCategoryPagedQueryResponse.deepCopy(this);
+    }
 }

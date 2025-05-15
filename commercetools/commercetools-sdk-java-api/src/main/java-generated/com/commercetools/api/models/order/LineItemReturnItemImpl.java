@@ -275,4 +275,8 @@ public class LineItemReturnItemImpl implements LineItemReturnItem, ModelBase {
                 .build();
     }
 
+    @Override
+    public LineItemReturnItem copyDeep() {
+        return LineItemReturnItem.deepCopy(this);
+    }
 }

@@ -106,6 +106,8 @@ public interface ExtensionTrigger {
         return instance;
     }
 
+    public ExtensionTrigger copyDeep();
+
     /**
      * factory method to create a deep copy of ExtensionTrigger
      * @param template instance to be copied

@@ -92,4 +92,8 @@ public class ChannelChangeDescriptionActionImpl implements ChannelChangeDescript
                 .build();
     }
 
+    @Override
+    public ChannelChangeDescriptionAction copyDeep() {
+        return ChannelChangeDescriptionAction.deepCopy(this);
+    }
 }

@@ -110,4 +110,8 @@ public class ProductTypeAddLocalizedEnumValueActionImpl implements ProductTypeAd
                 .build();
     }
 
+    @Override
+    public ProductTypeAddLocalizedEnumValueAction copyDeep() {
+        return ProductTypeAddLocalizedEnumValueAction.deepCopy(this);
+    }
 }

@@ -295,4 +295,8 @@ public class AssociateRoleBuyerAssignableChangedMessageImpl
                 .build();
     }
 
+    @Override
+    public AssociateRoleBuyerAssignableChangedMessage copyDeep() {
+        return AssociateRoleBuyerAssignableChangedMessage.deepCopy(this);
+    }
 }

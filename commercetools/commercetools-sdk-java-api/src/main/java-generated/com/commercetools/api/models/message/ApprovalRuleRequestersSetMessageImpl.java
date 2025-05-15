@@ -324,4 +324,8 @@ public class ApprovalRuleRequestersSetMessageImpl implements ApprovalRuleRequest
                 .build();
     }
 
+    @Override
+    public ApprovalRuleRequestersSetMessage copyDeep() {
+        return ApprovalRuleRequestersSetMessage.deepCopy(this);
+    }
 }

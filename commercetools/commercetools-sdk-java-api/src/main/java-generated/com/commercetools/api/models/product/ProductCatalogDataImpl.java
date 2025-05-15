@@ -137,4 +137,8 @@ public class ProductCatalogDataImpl implements ProductCatalogData, ModelBase {
                 .build();
     }
 
+    @Override
+    public ProductCatalogData copyDeep() {
+        return ProductCatalogData.deepCopy(this);
+    }
 }

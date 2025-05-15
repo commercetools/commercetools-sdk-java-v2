@@ -111,4 +111,8 @@ public class OrderCustomTypeSetMessagePayloadImpl implements OrderCustomTypeSetM
                 .build();
     }
 
+    @Override
+    public OrderCustomTypeSetMessagePayload copyDeep() {
+        return OrderCustomTypeSetMessagePayload.deepCopy(this);
+    }
 }

@@ -95,4 +95,8 @@ public class MessagesConfigurationDraftImpl implements MessagesConfigurationDraf
                 .build();
     }
 
+    @Override
+    public MessagesConfigurationDraft copyDeep() {
+        return MessagesConfigurationDraft.deepCopy(this);
+    }
 }

@@ -99,4 +99,8 @@ public class StagedOrderSetDirectDiscountsActionImpl implements StagedOrderSetDi
                 .build();
     }
 
+    @Override
+    public StagedOrderSetDirectDiscountsAction copyDeep() {
+        return StagedOrderSetDirectDiscountsAction.deepCopy(this);
+    }
 }

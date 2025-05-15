@@ -312,4 +312,8 @@ public class ApprovalRuleNameSetMessageImpl implements ApprovalRuleNameSetMessag
                 .build();
     }
 
+    @Override
+    public ApprovalRuleNameSetMessage copyDeep() {
+        return ApprovalRuleNameSetMessage.deepCopy(this);
+    }
 }

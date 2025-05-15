@@ -295,4 +295,8 @@ public class StandalonePriceExternalDiscountSetMessageImpl
                 .build();
     }
 
+    @Override
+    public StandalonePriceExternalDiscountSetMessage copyDeep() {
+        return StandalonePriceExternalDiscountSetMessage.deepCopy(this);
+    }
 }

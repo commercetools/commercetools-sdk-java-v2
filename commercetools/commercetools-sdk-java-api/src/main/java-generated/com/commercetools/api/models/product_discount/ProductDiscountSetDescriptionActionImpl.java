@@ -92,4 +92,8 @@ public class ProductDiscountSetDescriptionActionImpl implements ProductDiscountS
                 .build();
     }
 
+    @Override
+    public ProductDiscountSetDescriptionAction copyDeep() {
+        return ProductDiscountSetDescriptionAction.deepCopy(this);
+    }
 }

@@ -95,4 +95,8 @@ public class GraphQLSearchNotReadyErrorImpl implements GraphQLSearchNotReadyErro
                 .build();
     }
 
+    @Override
+    public GraphQLSearchNotReadyError copyDeep() {
+        return GraphQLSearchNotReadyError.deepCopy(this);
+    }
 }

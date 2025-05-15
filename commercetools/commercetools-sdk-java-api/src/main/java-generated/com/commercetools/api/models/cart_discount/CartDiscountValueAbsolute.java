@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("absolute")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartDiscountValueAbsoluteImpl.class)
 public interface CartDiscountValueAbsolute extends CartDiscountValue, CartDiscountValueAbsoluteMixin {
@@ -97,6 +98,8 @@ public interface CartDiscountValueAbsolute extends CartDiscountValue, CartDiscou
         instance.setApplicationMode(template.getApplicationMode());
         return instance;
     }
+
+    public CartDiscountValueAbsolute copyDeep();
 
     /**
      * factory method to create a deep copy of CartDiscountValueAbsolute

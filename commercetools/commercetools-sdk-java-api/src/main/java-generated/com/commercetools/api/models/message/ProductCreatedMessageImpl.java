@@ -293,4 +293,8 @@ public class ProductCreatedMessageImpl implements ProductCreatedMessage, ModelBa
                 .build();
     }
 
+    @Override
+    public ProductCreatedMessage copyDeep() {
+        return ProductCreatedMessage.deepCopy(this);
+    }
 }

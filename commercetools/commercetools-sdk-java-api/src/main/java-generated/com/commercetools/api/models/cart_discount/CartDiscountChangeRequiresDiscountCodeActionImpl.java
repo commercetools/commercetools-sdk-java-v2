@@ -93,4 +93,8 @@ public class CartDiscountChangeRequiresDiscountCodeActionImpl
                 .build();
     }
 
+    @Override
+    public CartDiscountChangeRequiresDiscountCodeAction copyDeep() {
+        return CartDiscountChangeRequiresDiscountCodeAction.deepCopy(this);
+    }
 }

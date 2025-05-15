@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setDeliveryAddressCustomField")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderSetDeliveryAddressCustomFieldActionImpl.class)
 public interface StagedOrderSetDeliveryAddressCustomFieldAction extends StagedOrderUpdateAction {
@@ -123,6 +124,8 @@ public interface StagedOrderSetDeliveryAddressCustomFieldAction extends StagedOr
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public StagedOrderSetDeliveryAddressCustomFieldAction copyDeep();
 
     /**
      * factory method to create a deep copy of StagedOrderSetDeliveryAddressCustomFieldAction

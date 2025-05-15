@@ -128,4 +128,8 @@ public class AWSLambdaDestinationImpl implements AWSLambdaDestination, ModelBase
                 .build();
     }
 
+    @Override
+    public AWSLambdaDestination copyDeep() {
+        return AWSLambdaDestination.deepCopy(this);
+    }
 }

@@ -116,4 +116,8 @@ public class OrderEditPreviewSuccessImpl implements OrderEditPreviewSuccess, Mod
                 .build();
     }
 
+    @Override
+    public OrderEditPreviewSuccess copyDeep() {
+        return OrderEditPreviewSuccess.deepCopy(this);
+    }
 }

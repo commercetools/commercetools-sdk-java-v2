@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("discount-code")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DiscountCodeResourceIdentifierImpl.class)
 public interface DiscountCodeResourceIdentifier
@@ -84,6 +85,8 @@ public interface DiscountCodeResourceIdentifier
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public DiscountCodeResourceIdentifier copyDeep();
 
     /**
      * factory method to create a deep copy of DiscountCodeResourceIdentifier

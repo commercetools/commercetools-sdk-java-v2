@@ -193,4 +193,8 @@ public class LineItemStateTransitionMessagePayloadImpl implements LineItemStateT
                 .build();
     }
 
+    @Override
+    public LineItemStateTransitionMessagePayload copyDeep() {
+        return LineItemStateTransitionMessagePayload.deepCopy(this);
+    }
 }

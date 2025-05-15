@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("DiscountCodeKeySet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DiscountCodeKeySetMessagePayloadImpl.class)
 public interface DiscountCodeKeySetMessagePayload extends MessagePayload {
@@ -82,6 +83,8 @@ public interface DiscountCodeKeySetMessagePayload extends MessagePayload {
         instance.setOldKey(template.getOldKey());
         return instance;
     }
+
+    public DiscountCodeKeySetMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of DiscountCodeKeySetMessagePayload

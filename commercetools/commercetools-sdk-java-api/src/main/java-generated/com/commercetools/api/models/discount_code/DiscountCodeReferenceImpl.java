@@ -111,4 +111,8 @@ public class DiscountCodeReferenceImpl implements DiscountCodeReference, ModelBa
                 .build();
     }
 
+    @Override
+    public DiscountCodeReference copyDeep() {
+        return DiscountCodeReference.deepCopy(this);
+    }
 }

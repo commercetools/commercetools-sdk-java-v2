@@ -113,4 +113,8 @@ public class FacetTermImpl implements FacetTerm, ModelBase {
                 .build();
     }
 
+    @Override
+    public FacetTerm copyDeep() {
+        return FacetTerm.deepCopy(this);
+    }
 }

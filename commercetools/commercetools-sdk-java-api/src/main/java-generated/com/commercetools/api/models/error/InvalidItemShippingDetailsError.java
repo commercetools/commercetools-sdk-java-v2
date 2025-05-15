@@ -40,6 +40,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("InvalidItemShippingDetails")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = InvalidItemShippingDetailsErrorImpl.class)
 public interface InvalidItemShippingDetailsError extends ErrorObject {
@@ -123,6 +124,8 @@ public interface InvalidItemShippingDetailsError extends ErrorObject {
         instance.setItemId(template.getItemId());
         return instance;
     }
+
+    public InvalidItemShippingDetailsError copyDeep();
 
     /**
      * factory method to create a deep copy of InvalidItemShippingDetailsError

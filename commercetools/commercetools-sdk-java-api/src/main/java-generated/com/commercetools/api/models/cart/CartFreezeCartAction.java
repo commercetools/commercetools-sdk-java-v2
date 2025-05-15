@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("freezeCart")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartFreezeCartActionImpl.class)
 public interface CartFreezeCartAction extends CartUpdateAction {
@@ -50,6 +51,8 @@ public interface CartFreezeCartAction extends CartUpdateAction {
         CartFreezeCartActionImpl instance = new CartFreezeCartActionImpl();
         return instance;
     }
+
+    public CartFreezeCartAction copyDeep();
 
     /**
      * factory method to create a deep copy of CartFreezeCartAction

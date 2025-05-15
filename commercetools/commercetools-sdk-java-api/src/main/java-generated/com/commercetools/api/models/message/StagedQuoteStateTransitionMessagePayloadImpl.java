@@ -131,4 +131,8 @@ public class StagedQuoteStateTransitionMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public StagedQuoteStateTransitionMessagePayload copyDeep() {
+        return StagedQuoteStateTransitionMessagePayload.deepCopy(this);
+    }
 }

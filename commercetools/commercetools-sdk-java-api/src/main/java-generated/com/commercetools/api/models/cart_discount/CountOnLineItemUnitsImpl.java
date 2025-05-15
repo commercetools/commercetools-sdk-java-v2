@@ -157,4 +157,8 @@ public class CountOnLineItemUnitsImpl implements CountOnLineItemUnits, ModelBase
                 .build();
     }
 
+    @Override
+    public CountOnLineItemUnits copyDeep() {
+        return CountOnLineItemUnits.deepCopy(this);
+    }
 }

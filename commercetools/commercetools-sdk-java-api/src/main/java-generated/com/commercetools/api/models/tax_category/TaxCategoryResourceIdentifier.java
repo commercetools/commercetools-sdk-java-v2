@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("tax-category")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TaxCategoryResourceIdentifierImpl.class)
 public interface TaxCategoryResourceIdentifier
@@ -84,6 +85,8 @@ public interface TaxCategoryResourceIdentifier
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public TaxCategoryResourceIdentifier copyDeep();
 
     /**
      * factory method to create a deep copy of TaxCategoryResourceIdentifier

@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("StandalonePriceValidFromSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StandalonePriceValidFromSetMessagePayloadImpl.class)
 public interface StandalonePriceValidFromSetMessagePayload extends MessagePayload {
@@ -84,6 +85,8 @@ public interface StandalonePriceValidFromSetMessagePayload extends MessagePayloa
         instance.setPreviousValidFrom(template.getPreviousValidFrom());
         return instance;
     }
+
+    public StandalonePriceValidFromSetMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of StandalonePriceValidFromSetMessagePayload

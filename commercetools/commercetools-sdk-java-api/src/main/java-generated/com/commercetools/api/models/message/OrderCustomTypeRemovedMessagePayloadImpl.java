@@ -91,4 +91,8 @@ public class OrderCustomTypeRemovedMessagePayloadImpl implements OrderCustomType
                 .build();
     }
 
+    @Override
+    public OrderCustomTypeRemovedMessagePayload copyDeep() {
+        return OrderCustomTypeRemovedMessagePayload.deepCopy(this);
+    }
 }

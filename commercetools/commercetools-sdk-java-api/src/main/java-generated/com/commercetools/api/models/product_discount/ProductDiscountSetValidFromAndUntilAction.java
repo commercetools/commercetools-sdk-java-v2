@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setValidFromAndUntil")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductDiscountSetValidFromAndUntilActionImpl.class)
 public interface ProductDiscountSetValidFromAndUntilAction extends ProductDiscountUpdateAction {
@@ -84,6 +85,8 @@ public interface ProductDiscountSetValidFromAndUntilAction extends ProductDiscou
         instance.setValidUntil(template.getValidUntil());
         return instance;
     }
+
+    public ProductDiscountSetValidFromAndUntilAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductDiscountSetValidFromAndUntilAction

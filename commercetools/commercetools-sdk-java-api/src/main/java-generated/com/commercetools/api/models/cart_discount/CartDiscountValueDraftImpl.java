@@ -69,4 +69,8 @@ public class CartDiscountValueDraftImpl implements CartDiscountValueDraft, Model
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type).build();
     }
 
+    @Override
+    public CartDiscountValueDraft copyDeep() {
+        return CartDiscountValueDraft.deepCopy(this);
+    }
 }

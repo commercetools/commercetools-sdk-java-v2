@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("quote")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = QuoteResourceIdentifierImpl.class)
 public interface QuoteResourceIdentifier extends ResourceIdentifier, com.commercetools.api.models.Identifiable<Quote> {
@@ -53,6 +54,8 @@ public interface QuoteResourceIdentifier extends ResourceIdentifier, com.commerc
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public QuoteResourceIdentifier copyDeep();
 
     /**
      * factory method to create a deep copy of QuoteResourceIdentifier

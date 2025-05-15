@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("removePriceTier")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StandalonePriceRemovePriceTierActionImpl.class)
 public interface StandalonePriceRemovePriceTierAction extends StandalonePriceUpdateAction {
@@ -69,6 +70,8 @@ public interface StandalonePriceRemovePriceTierAction extends StandalonePriceUpd
         instance.setTierMinimumQuantity(template.getTierMinimumQuantity());
         return instance;
     }
+
+    public StandalonePriceRemovePriceTierAction copyDeep();
 
     /**
      * factory method to create a deep copy of StandalonePriceRemovePriceTierAction

@@ -91,4 +91,8 @@ public class ProductTypeSetKeyActionImpl implements ProductTypeSetKeyAction, Mod
                 .build();
     }
 
+    @Override
+    public ProductTypeSetKeyAction copyDeep() {
+        return ProductTypeSetKeyAction.deepCopy(this);
+    }
 }

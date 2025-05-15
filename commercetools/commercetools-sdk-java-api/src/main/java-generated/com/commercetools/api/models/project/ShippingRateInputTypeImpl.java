@@ -70,4 +70,8 @@ public class ShippingRateInputTypeImpl implements ShippingRateInputType, ModelBa
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type).build();
     }
 
+    @Override
+    public ShippingRateInputType copyDeep() {
+        return ShippingRateInputType.deepCopy(this);
+    }
 }

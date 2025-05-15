@@ -95,4 +95,8 @@ public class GraphQLObjectNotFoundErrorImpl implements GraphQLObjectNotFoundErro
                 .build();
     }
 
+    @Override
+    public GraphQLObjectNotFoundError copyDeep() {
+        return GraphQLObjectNotFoundError.deepCopy(this);
+    }
 }

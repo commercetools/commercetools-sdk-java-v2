@@ -333,4 +333,8 @@ public class ProductImageAddedMessageImpl implements ProductImageAddedMessage, M
                 .build();
     }
 
+    @Override
+    public ProductImageAddedMessage copyDeep() {
+        return ProductImageAddedMessage.deepCopy(this);
+    }
 }

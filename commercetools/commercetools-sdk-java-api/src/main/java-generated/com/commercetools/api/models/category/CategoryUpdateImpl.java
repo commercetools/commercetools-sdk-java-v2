@@ -99,4 +99,8 @@ public class CategoryUpdateImpl implements CategoryUpdate, ModelBase {
                 .build();
     }
 
+    @Override
+    public CategoryUpdate copyDeep() {
+        return CategoryUpdate.deepCopy(this);
+    }
 }

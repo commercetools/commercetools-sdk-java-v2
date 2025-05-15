@@ -62,4 +62,8 @@ public class ProductTailoringUnpublishActionImpl implements ProductTailoringUnpu
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action).build();
     }
 
+    @Override
+    public ProductTailoringUnpublishAction copyDeep() {
+        return ProductTailoringUnpublishAction.deepCopy(this);
+    }
 }

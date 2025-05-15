@@ -68,6 +68,8 @@ public interface RuleApprover {
         return instance;
     }
 
+    public RuleApprover copyDeep();
+
     /**
      * factory method to create a deep copy of RuleApprover
      * @param template instance to be copied

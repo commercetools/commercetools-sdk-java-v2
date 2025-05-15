@@ -27,9 +27,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductVariantSelectionIncludeAllExceptImpl.class, name = ProductVariantSelectionIncludeAllExcept.INCLUDE_ALL_EXCEPT),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductVariantSelectionIncludeOnlyImpl.class, name = ProductVariantSelectionIncludeOnly.INCLUDE_ONLY) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = ProductVariantSelectionImpl.class, visible = true)
 @JsonDeserialize(as = ProductVariantSelectionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -43,6 +40,8 @@ public interface ProductVariantSelection {
     @JsonProperty("type")
     public ProductVariantSelectionTypeEnum getType();
 
+    public ProductVariantSelection copyDeep();
+
     /**
      * factory method to create a deep copy of ProductVariantSelection
      * @param template instance to be copied
@@ -53,13 +52,9 @@ public interface ProductVariantSelection {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.product_selection.ProductVariantSelectionIncludeAllExcept) {
-            return com.commercetools.api.models.product_selection.ProductVariantSelectionIncludeAllExcept.deepCopy(
-                (com.commercetools.api.models.product_selection.ProductVariantSelectionIncludeAllExcept) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_selection.ProductVariantSelectionIncludeOnly) {
-            return com.commercetools.api.models.product_selection.ProductVariantSelectionIncludeOnly.deepCopy(
-                (com.commercetools.api.models.product_selection.ProductVariantSelectionIncludeOnly) template);
+
+        if (!(template instanceof ProductVariantSelectionImpl)) {
+            return template.copyDeep();
         }
         ProductVariantSelectionImpl instance = new ProductVariantSelectionImpl();
         return instance;

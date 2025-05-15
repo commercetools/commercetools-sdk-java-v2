@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("range")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = RangeFacetResultImpl.class)
 public interface RangeFacetResult extends FacetResult {
@@ -80,6 +81,8 @@ public interface RangeFacetResult extends FacetResult {
         instance.setRanges(template.getRanges());
         return instance;
     }
+
+    public RangeFacetResult copyDeep();
 
     /**
      * factory method to create a deep copy of RangeFacetResult

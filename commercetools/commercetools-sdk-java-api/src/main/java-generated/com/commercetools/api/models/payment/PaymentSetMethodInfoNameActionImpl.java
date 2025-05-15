@@ -92,4 +92,8 @@ public class PaymentSetMethodInfoNameActionImpl implements PaymentSetMethodInfoN
                 .build();
     }
 
+    @Override
+    public PaymentSetMethodInfoNameAction copyDeep() {
+        return PaymentSetMethodInfoNameAction.deepCopy(this);
+    }
 }

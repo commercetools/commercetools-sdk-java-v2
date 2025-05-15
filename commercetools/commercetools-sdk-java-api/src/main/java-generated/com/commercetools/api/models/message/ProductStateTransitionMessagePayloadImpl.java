@@ -111,4 +111,8 @@ public class ProductStateTransitionMessagePayloadImpl implements ProductStateTra
                 .build();
     }
 
+    @Override
+    public ProductStateTransitionMessagePayload copyDeep() {
+        return ProductStateTransitionMessagePayload.deepCopy(this);
+    }
 }

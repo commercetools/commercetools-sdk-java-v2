@@ -110,4 +110,8 @@ public class DiscountCodeResourceIdentifierImpl implements DiscountCodeResourceI
                 .build();
     }
 
+    @Override
+    public DiscountCodeResourceIdentifier copyDeep() {
+        return DiscountCodeResourceIdentifier.deepCopy(this);
+    }
 }

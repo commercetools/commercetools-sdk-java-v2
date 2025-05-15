@@ -62,4 +62,8 @@ public class CartUnfreezeCartActionImpl implements CartUnfreezeCartAction, Model
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action).build();
     }
 
+    @Override
+    public CartUnfreezeCartAction copyDeep() {
+        return CartUnfreezeCartAction.deepCopy(this);
+    }
 }

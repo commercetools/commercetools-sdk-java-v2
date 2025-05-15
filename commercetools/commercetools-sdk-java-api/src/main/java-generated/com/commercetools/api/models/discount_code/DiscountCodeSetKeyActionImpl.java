@@ -91,4 +91,8 @@ public class DiscountCodeSetKeyActionImpl implements DiscountCodeSetKeyAction, M
                 .build();
     }
 
+    @Override
+    public DiscountCodeSetKeyAction copyDeep() {
+        return DiscountCodeSetKeyAction.deepCopy(this);
+    }
 }

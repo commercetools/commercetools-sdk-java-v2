@@ -194,4 +194,8 @@ public class ResourceDeletedDeliveryPayloadImpl implements ResourceDeletedDelive
                 .build();
     }
 
+    @Override
+    public ResourceDeletedDeliveryPayload copyDeep() {
+        return ResourceDeletedDeliveryPayload.deepCopy(this);
+    }
 }

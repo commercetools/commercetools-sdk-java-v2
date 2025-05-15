@@ -133,4 +133,8 @@ public class ProductSetDiscountedPriceActionImpl implements ProductSetDiscounted
                 .build();
     }
 
+    @Override
+    public ProductSetDiscountedPriceAction copyDeep() {
+        return ProductSetDiscountedPriceAction.deepCopy(this);
+    }
 }

@@ -118,4 +118,8 @@ public class StoreLanguagesChangedMessagePayloadImpl implements StoreLanguagesCh
                 .build();
     }
 
+    @Override
+    public StoreLanguagesChangedMessagePayload copyDeep() {
+        return StoreLanguagesChangedMessagePayload.deepCopy(this);
+    }
 }

@@ -333,4 +333,8 @@ public class ProductPriceAddedMessageImpl implements ProductPriceAddedMessage, M
                 .build();
     }
 
+    @Override
+    public ProductPriceAddedMessage copyDeep() {
+        return ProductPriceAddedMessage.deepCopy(this);
+    }
 }

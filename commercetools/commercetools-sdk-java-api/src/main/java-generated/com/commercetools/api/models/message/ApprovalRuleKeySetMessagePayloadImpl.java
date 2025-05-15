@@ -110,4 +110,8 @@ public class ApprovalRuleKeySetMessagePayloadImpl implements ApprovalRuleKeySetM
                 .build();
     }
 
+    @Override
+    public ApprovalRuleKeySetMessagePayload copyDeep() {
+        return ApprovalRuleKeySetMessagePayload.deepCopy(this);
+    }
 }

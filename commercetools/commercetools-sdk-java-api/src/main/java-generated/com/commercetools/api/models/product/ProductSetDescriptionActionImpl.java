@@ -111,4 +111,8 @@ public class ProductSetDescriptionActionImpl implements ProductSetDescriptionAct
                 .build();
     }
 
+    @Override
+    public ProductSetDescriptionAction copyDeep() {
+        return ProductSetDescriptionAction.deepCopy(this);
+    }
 }

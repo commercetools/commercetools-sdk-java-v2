@@ -159,4 +159,8 @@ public class MessagePagedQueryResponseImpl implements MessagePagedQueryResponse,
                 .build();
     }
 
+    @Override
+    public MessagePagedQueryResponse copyDeep() {
+        return MessagePagedQueryResponse.deepCopy(this);
+    }
 }

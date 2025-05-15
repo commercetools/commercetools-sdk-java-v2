@@ -99,4 +99,8 @@ public class OrderUpdateImpl implements OrderUpdate, ModelBase {
                 .build();
     }
 
+    @Override
+    public OrderUpdate copyDeep() {
+        return OrderUpdate.deepCopy(this);
+    }
 }

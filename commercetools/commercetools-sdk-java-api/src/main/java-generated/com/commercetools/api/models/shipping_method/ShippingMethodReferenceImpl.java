@@ -111,4 +111,8 @@ public class ShippingMethodReferenceImpl implements ShippingMethodReference, Mod
                 .build();
     }
 
+    @Override
+    public ShippingMethodReference copyDeep() {
+        return ShippingMethodReference.deepCopy(this);
+    }
 }

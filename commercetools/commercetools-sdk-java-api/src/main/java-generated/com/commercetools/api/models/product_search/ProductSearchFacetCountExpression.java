@@ -67,6 +67,8 @@ public interface ProductSearchFacetCountExpression extends ProductSearchFacetExp
         return instance;
     }
 
+    public ProductSearchFacetCountExpression copyDeep();
+
     /**
      * factory method to create a deep copy of ProductSearchFacetCountExpression
      * @param template instance to be copied

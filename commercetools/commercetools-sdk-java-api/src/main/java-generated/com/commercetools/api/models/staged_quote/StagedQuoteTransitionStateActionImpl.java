@@ -111,4 +111,8 @@ public class StagedQuoteTransitionStateActionImpl implements StagedQuoteTransiti
                 .build();
     }
 
+    @Override
+    public StagedQuoteTransitionStateAction copyDeep() {
+        return StagedQuoteTransitionStateAction.deepCopy(this);
+    }
 }

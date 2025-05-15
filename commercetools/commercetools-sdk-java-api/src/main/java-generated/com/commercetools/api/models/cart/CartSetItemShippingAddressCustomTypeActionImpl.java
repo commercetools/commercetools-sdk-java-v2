@@ -130,4 +130,8 @@ public class CartSetItemShippingAddressCustomTypeActionImpl
                 .build();
     }
 
+    @Override
+    public CartSetItemShippingAddressCustomTypeAction copyDeep() {
+        return CartSetItemShippingAddressCustomTypeAction.deepCopy(this);
+    }
 }

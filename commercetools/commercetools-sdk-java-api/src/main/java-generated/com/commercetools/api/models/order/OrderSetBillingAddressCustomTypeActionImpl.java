@@ -111,4 +111,8 @@ public class OrderSetBillingAddressCustomTypeActionImpl implements OrderSetBilli
                 .build();
     }
 
+    @Override
+    public OrderSetBillingAddressCustomTypeAction copyDeep() {
+        return OrderSetBillingAddressCustomTypeAction.deepCopy(this);
+    }
 }

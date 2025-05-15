@@ -110,4 +110,8 @@ public class ReviewResourceIdentifierImpl implements ReviewResourceIdentifier, M
                 .build();
     }
 
+    @Override
+    public ReviewResourceIdentifier copyDeep() {
+        return ReviewResourceIdentifier.deepCopy(this);
+    }
 }

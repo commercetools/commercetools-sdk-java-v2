@@ -175,4 +175,8 @@ public class ImportValidationFailedEventImpl implements ImportValidationFailedEv
                 .build();
     }
 
+    @Override
+    public ImportValidationFailedEvent copyDeep() {
+        return ImportValidationFailedEvent.deepCopy(this);
+    }
 }

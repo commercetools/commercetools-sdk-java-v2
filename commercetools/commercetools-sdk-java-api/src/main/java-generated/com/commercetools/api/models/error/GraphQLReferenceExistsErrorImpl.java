@@ -114,4 +114,8 @@ public class GraphQLReferenceExistsErrorImpl implements GraphQLReferenceExistsEr
                 .build();
     }
 
+    @Override
+    public GraphQLReferenceExistsError copyDeep() {
+        return GraphQLReferenceExistsError.deepCopy(this);
+    }
 }

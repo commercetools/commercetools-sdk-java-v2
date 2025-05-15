@@ -91,4 +91,8 @@ public class CartDiscountCustomLineItemsTargetImpl implements CartDiscountCustom
                 .build();
     }
 
+    @Override
+    public CartDiscountCustomLineItemsTarget copyDeep() {
+        return CartDiscountCustomLineItemsTarget.deepCopy(this);
+    }
 }

@@ -78,4 +78,8 @@ public class ShoppingListsConfigurationImpl implements ShoppingListsConfiguratio
                 .build();
     }
 
+    @Override
+    public ShoppingListsConfiguration copyDeep() {
+        return ShoppingListsConfiguration.deepCopy(this);
+    }
 }

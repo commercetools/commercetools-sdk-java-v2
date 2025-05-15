@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setValidFrom")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DiscountCodeSetValidFromActionImpl.class)
 public interface DiscountCodeSetValidFromAction extends DiscountCodeUpdateAction {
@@ -67,6 +68,8 @@ public interface DiscountCodeSetValidFromAction extends DiscountCodeUpdateAction
         instance.setValidFrom(template.getValidFrom());
         return instance;
     }
+
+    public DiscountCodeSetValidFromAction copyDeep();
 
     /**
      * factory method to create a deep copy of DiscountCodeSetValidFromAction

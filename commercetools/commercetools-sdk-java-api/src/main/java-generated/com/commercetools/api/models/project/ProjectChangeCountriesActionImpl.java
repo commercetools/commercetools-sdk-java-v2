@@ -95,4 +95,8 @@ public class ProjectChangeCountriesActionImpl implements ProjectChangeCountriesA
                 .build();
     }
 
+    @Override
+    public ProjectChangeCountriesAction copyDeep() {
+        return ProjectChangeCountriesAction.deepCopy(this);
+    }
 }

@@ -94,4 +94,8 @@ public class QuoteRequestChangeQuoteRequestStateActionImpl
                 .build();
     }
 
+    @Override
+    public QuoteRequestChangeQuoteRequestStateAction copyDeep() {
+        return QuoteRequestChangeQuoteRequestStateAction.deepCopy(this);
+    }
 }

@@ -313,4 +313,8 @@ public class OrderLineItemAddedMessageImpl implements OrderLineItemAddedMessage,
                 .build();
     }
 
+    @Override
+    public OrderLineItemAddedMessage copyDeep() {
+        return OrderLineItemAddedMessage.deepCopy(this);
+    }
 }

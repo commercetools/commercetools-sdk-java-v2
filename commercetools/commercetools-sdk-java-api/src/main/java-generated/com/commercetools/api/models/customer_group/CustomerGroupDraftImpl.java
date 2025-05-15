@@ -113,4 +113,8 @@ public class CustomerGroupDraftImpl implements CustomerGroupDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public CustomerGroupDraft copyDeep() {
+        return CustomerGroupDraft.deepCopy(this);
+    }
 }

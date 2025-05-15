@@ -111,4 +111,8 @@ public class CartSetCustomTypeActionImpl implements CartSetCustomTypeAction, Mod
                 .build();
     }
 
+    @Override
+    public CartSetCustomTypeAction copyDeep() {
+        return CartSetCustomTypeAction.deepCopy(this);
+    }
 }

@@ -114,4 +114,8 @@ public class BusinessUnitAssociateModeChangedMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public BusinessUnitAssociateModeChangedMessagePayload copyDeep() {
+        return BusinessUnitAssociateModeChangedMessagePayload.deepCopy(this);
+    }
 }

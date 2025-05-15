@@ -314,4 +314,8 @@ public class StandalonePriceValidFromSetMessageImpl implements StandalonePriceVa
                 .build();
     }
 
+    @Override
+    public StandalonePriceValidFromSetMessage copyDeep() {
+        return StandalonePriceValidFromSetMessage.deepCopy(this);
+    }
 }

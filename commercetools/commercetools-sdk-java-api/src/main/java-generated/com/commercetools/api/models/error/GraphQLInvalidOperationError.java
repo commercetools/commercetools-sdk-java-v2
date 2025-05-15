@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("InvalidOperation")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLInvalidOperationErrorImpl.class)
 public interface GraphQLInvalidOperationError extends GraphQLErrorObject {
@@ -62,6 +63,8 @@ public interface GraphQLInvalidOperationError extends GraphQLErrorObject {
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
+
+    public GraphQLInvalidOperationError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLInvalidOperationError

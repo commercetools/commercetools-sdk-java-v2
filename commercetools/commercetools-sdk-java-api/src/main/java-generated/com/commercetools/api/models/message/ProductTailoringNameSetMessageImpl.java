@@ -373,4 +373,8 @@ public class ProductTailoringNameSetMessageImpl implements ProductTailoringNameS
                 .build();
     }
 
+    @Override
+    public ProductTailoringNameSetMessage copyDeep() {
+        return ProductTailoringNameSetMessage.deepCopy(this);
+    }
 }

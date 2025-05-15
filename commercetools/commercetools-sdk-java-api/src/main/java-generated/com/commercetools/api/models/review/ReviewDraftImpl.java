@@ -276,4 +276,8 @@ public class ReviewDraftImpl implements ReviewDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public ReviewDraft copyDeep() {
+        return ReviewDraft.deepCopy(this);
+    }
 }

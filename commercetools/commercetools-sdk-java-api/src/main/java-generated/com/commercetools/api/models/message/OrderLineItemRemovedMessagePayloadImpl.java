@@ -257,4 +257,8 @@ public class OrderLineItemRemovedMessagePayloadImpl implements OrderLineItemRemo
                 .build();
     }
 
+    @Override
+    public OrderLineItemRemovedMessagePayload copyDeep() {
+        return OrderLineItemRemovedMessagePayload.deepCopy(this);
+    }
 }

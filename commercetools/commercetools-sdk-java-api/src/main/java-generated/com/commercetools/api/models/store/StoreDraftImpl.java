@@ -249,4 +249,8 @@ public class StoreDraftImpl implements StoreDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public StoreDraft copyDeep() {
+        return StoreDraft.deepCopy(this);
+    }
 }

@@ -111,4 +111,8 @@ public class ReviewSetCustomTypeActionImpl implements ReviewSetCustomTypeAction,
                 .build();
     }
 
+    @Override
+    public ReviewSetCustomTypeAction copyDeep() {
+        return ReviewSetCustomTypeAction.deepCopy(this);
+    }
 }

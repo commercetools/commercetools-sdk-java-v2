@@ -316,4 +316,8 @@ public class BusinessUnitAssociateModeChangedMessageImpl implements BusinessUnit
                 .build();
     }
 
+    @Override
+    public BusinessUnitAssociateModeChangedMessage copyDeep() {
+        return BusinessUnitAssociateModeChangedMessage.deepCopy(this);
+    }
 }

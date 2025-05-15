@@ -294,4 +294,8 @@ public class CustomerGroupCustomTypeRemovedMessageImpl implements CustomerGroupC
                 .build();
     }
 
+    @Override
+    public CustomerGroupCustomTypeRemovedMessage copyDeep() {
+        return CustomerGroupCustomTypeRemovedMessage.deepCopy(this);
+    }
 }

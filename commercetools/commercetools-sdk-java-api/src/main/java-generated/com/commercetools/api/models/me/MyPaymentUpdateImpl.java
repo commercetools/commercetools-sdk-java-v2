@@ -99,4 +99,8 @@ public class MyPaymentUpdateImpl implements MyPaymentUpdate, ModelBase {
                 .build();
     }
 
+    @Override
+    public MyPaymentUpdate copyDeep() {
+        return MyPaymentUpdate.deepCopy(this);
+    }
 }

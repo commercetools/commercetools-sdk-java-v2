@@ -92,4 +92,8 @@ public class StoreAddCountryActionImpl implements StoreAddCountryAction, ModelBa
                 .build();
     }
 
+    @Override
+    public StoreAddCountryAction copyDeep() {
+        return StoreAddCountryAction.deepCopy(this);
+    }
 }

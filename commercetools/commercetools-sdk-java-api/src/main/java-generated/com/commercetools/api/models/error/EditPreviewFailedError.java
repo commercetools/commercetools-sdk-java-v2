@@ -31,6 +31,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("EditPreviewFailed")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = EditPreviewFailedErrorImpl.class)
 public interface EditPreviewFailedError extends ErrorObject {
@@ -99,6 +100,8 @@ public interface EditPreviewFailedError extends ErrorObject {
         instance.setResult(template.getResult());
         return instance;
     }
+
+    public EditPreviewFailedError copyDeep();
 
     /**
      * factory method to create a deep copy of EditPreviewFailedError

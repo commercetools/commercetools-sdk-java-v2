@@ -110,4 +110,8 @@ public class CustomerSetCustomFieldActionImpl implements CustomerSetCustomFieldA
                 .build();
     }
 
+    @Override
+    public CustomerSetCustomFieldAction copyDeep() {
+        return CustomerSetCustomFieldAction.deepCopy(this);
+    }
 }

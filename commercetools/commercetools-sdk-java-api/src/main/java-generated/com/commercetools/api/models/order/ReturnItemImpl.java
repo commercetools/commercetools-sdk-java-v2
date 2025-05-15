@@ -255,4 +255,8 @@ public class ReturnItemImpl implements ReturnItem, ModelBase {
                 .build();
     }
 
+    @Override
+    public ReturnItem copyDeep() {
+        return ReturnItem.deepCopy(this);
+    }
 }

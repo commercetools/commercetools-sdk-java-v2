@@ -91,4 +91,8 @@ public class CustomerSetCustomerNumberActionImpl implements CustomerSetCustomerN
                 .build();
     }
 
+    @Override
+    public CustomerSetCustomerNumberAction copyDeep() {
+        return CustomerSetCustomerNumberAction.deepCopy(this);
+    }
 }

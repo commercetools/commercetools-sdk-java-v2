@@ -92,4 +92,8 @@ public class AuthorizationHeaderAuthenticationImpl implements AuthorizationHeade
                 .build();
     }
 
+    @Override
+    public AuthorizationHeaderAuthentication copyDeep() {
+        return AuthorizationHeaderAuthentication.deepCopy(this);
+    }
 }

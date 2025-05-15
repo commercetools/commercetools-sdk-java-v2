@@ -220,4 +220,8 @@ public class MyPaymentImpl implements MyPayment, ModelBase {
                 .build();
     }
 
+    @Override
+    public MyPayment copyDeep() {
+        return MyPayment.deepCopy(this);
+    }
 }

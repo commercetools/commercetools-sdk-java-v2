@@ -36,6 +36,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ProductDeleted")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductDeletedMessageImpl.class)
 public interface ProductDeletedMessage extends Message {
@@ -112,6 +113,8 @@ public interface ProductDeletedMessage extends Message {
         instance.setCurrentProjection(template.getCurrentProjection());
         return instance;
     }
+
+    public ProductDeletedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of ProductDeletedMessage

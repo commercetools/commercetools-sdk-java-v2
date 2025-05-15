@@ -91,4 +91,8 @@ public class MyCustomerSetCompanyNameActionImpl implements MyCustomerSetCompanyN
                 .build();
     }
 
+    @Override
+    public MyCustomerSetCompanyNameAction copyDeep() {
+        return MyCustomerSetCompanyNameAction.deepCopy(this);
+    }
 }

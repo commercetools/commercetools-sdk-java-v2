@@ -114,4 +114,8 @@ public class CartRemoveCustomLineItemActionImpl implements CartRemoveCustomLineI
                 .build();
     }
 
+    @Override
+    public CartRemoveCustomLineItemAction copyDeep() {
+        return CartRemoveCustomLineItemAction.deepCopy(this);
+    }
 }

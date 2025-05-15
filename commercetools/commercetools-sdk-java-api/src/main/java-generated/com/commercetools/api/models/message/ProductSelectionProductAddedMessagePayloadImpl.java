@@ -113,4 +113,8 @@ public class ProductSelectionProductAddedMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public ProductSelectionProductAddedMessagePayload copyDeep() {
+        return ProductSelectionProductAddedMessagePayload.deepCopy(this);
+    }
 }

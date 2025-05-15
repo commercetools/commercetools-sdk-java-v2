@@ -334,4 +334,8 @@ public class ParcelRemovedFromDeliveryMessageImpl implements ParcelRemovedFromDe
                 .build();
     }
 
+    @Override
+    public ParcelRemovedFromDeliveryMessage copyDeep() {
+        return ParcelRemovedFromDeliveryMessage.deepCopy(this);
+    }
 }

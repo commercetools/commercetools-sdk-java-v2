@@ -69,4 +69,8 @@ public class OrderMessagePayloadImpl implements OrderMessagePayload, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type).build();
     }
 
+    @Override
+    public OrderMessagePayload copyDeep() {
+        return OrderMessagePayload.deepCopy(this);
+    }
 }

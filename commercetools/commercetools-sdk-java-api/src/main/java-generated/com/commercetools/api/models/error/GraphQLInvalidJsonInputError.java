@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("InvalidJsonInput")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLInvalidJsonInputErrorImpl.class)
 public interface GraphQLInvalidJsonInputError extends GraphQLErrorObject {
@@ -79,6 +80,8 @@ public interface GraphQLInvalidJsonInputError extends GraphQLErrorObject {
         instance.setDetailedErrorMessage(template.getDetailedErrorMessage());
         return instance;
     }
+
+    public GraphQLInvalidJsonInputError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLInvalidJsonInputError

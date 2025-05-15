@@ -386,4 +386,8 @@ public class PaymentImpl implements Payment, ModelBase {
                 .build();
     }
 
+    @Override
+    public Payment copyDeep() {
+        return Payment.deepCopy(this);
+    }
 }

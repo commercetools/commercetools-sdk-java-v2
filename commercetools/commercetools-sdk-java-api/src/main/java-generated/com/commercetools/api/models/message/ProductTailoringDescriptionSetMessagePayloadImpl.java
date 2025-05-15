@@ -175,4 +175,8 @@ public class ProductTailoringDescriptionSetMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public ProductTailoringDescriptionSetMessagePayload copyDeep() {
+        return ProductTailoringDescriptionSetMessagePayload.deepCopy(this);
+    }
 }

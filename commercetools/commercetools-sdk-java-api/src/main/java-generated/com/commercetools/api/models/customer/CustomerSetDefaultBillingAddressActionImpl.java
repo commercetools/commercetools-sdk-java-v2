@@ -110,4 +110,8 @@ public class CustomerSetDefaultBillingAddressActionImpl implements CustomerSetDe
                 .build();
     }
 
+    @Override
+    public CustomerSetDefaultBillingAddressAction copyDeep() {
+        return CustomerSetDefaultBillingAddressAction.deepCopy(this);
+    }
 }

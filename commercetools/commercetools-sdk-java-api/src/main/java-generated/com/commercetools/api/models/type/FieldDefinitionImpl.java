@@ -157,4 +157,8 @@ public class FieldDefinitionImpl implements FieldDefinition, ModelBase {
                 .build();
     }
 
+    @Override
+    public FieldDefinition copyDeep() {
+        return FieldDefinition.deepCopy(this);
+    }
 }

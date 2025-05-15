@@ -95,4 +95,8 @@ public class CustomerSignInResultImpl implements CustomerSignInResult, ModelBase
                 .build();
     }
 
+    @Override
+    public CustomerSignInResult copyDeep() {
+        return CustomerSignInResult.deepCopy(this);
+    }
 }

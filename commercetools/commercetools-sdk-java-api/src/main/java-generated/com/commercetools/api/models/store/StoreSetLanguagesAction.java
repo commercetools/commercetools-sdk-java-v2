@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setLanguages")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StoreSetLanguagesActionImpl.class)
 public interface StoreSetLanguagesAction extends StoreUpdateAction {
@@ -74,6 +75,8 @@ public interface StoreSetLanguagesAction extends StoreUpdateAction {
         instance.setLanguages(template.getLanguages());
         return instance;
     }
+
+    public StoreSetLanguagesAction copyDeep();
 
     /**
      * factory method to create a deep copy of StoreSetLanguagesAction

@@ -142,4 +142,8 @@ public class ShippingRateImpl implements ShippingRate, ModelBase {
                 .build();
     }
 
+    @Override
+    public ShippingRate copyDeep() {
+        return ShippingRate.deepCopy(this);
+    }
 }

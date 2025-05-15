@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setPredicate")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShippingMethodSetPredicateActionImpl.class)
 public interface ShippingMethodSetPredicateAction extends ShippingMethodUpdateAction {
@@ -66,6 +67,8 @@ public interface ShippingMethodSetPredicateAction extends ShippingMethodUpdateAc
         instance.setPredicate(template.getPredicate());
         return instance;
     }
+
+    public ShippingMethodSetPredicateAction copyDeep();
 
     /**
      * factory method to create a deep copy of ShippingMethodSetPredicateAction

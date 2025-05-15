@@ -317,4 +317,8 @@ public class ProductDeletedMessageImpl implements ProductDeletedMessage, ModelBa
                 .build();
     }
 
+    @Override
+    public ProductDeletedMessage copyDeep() {
+        return ProductDeletedMessage.deepCopy(this);
+    }
 }

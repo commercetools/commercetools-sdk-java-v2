@@ -92,4 +92,8 @@ public class BusinessUnitStoreRemovedMessagePayloadImpl implements BusinessUnitS
                 .build();
     }
 
+    @Override
+    public BusinessUnitStoreRemovedMessagePayload copyDeep() {
+        return BusinessUnitStoreRemovedMessagePayload.deepCopy(this);
+    }
 }

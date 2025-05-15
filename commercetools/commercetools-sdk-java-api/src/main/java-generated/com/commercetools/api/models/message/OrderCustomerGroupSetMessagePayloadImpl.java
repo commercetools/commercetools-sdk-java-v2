@@ -113,4 +113,8 @@ public class OrderCustomerGroupSetMessagePayloadImpl implements OrderCustomerGro
                 .build();
     }
 
+    @Override
+    public OrderCustomerGroupSetMessagePayload copyDeep() {
+        return OrderCustomerGroupSetMessagePayload.deepCopy(this);
+    }
 }

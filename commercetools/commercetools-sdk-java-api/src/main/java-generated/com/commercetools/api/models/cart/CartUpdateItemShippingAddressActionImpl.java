@@ -92,4 +92,8 @@ public class CartUpdateItemShippingAddressActionImpl implements CartUpdateItemSh
                 .build();
     }
 
+    @Override
+    public CartUpdateItemShippingAddressAction copyDeep() {
+        return CartUpdateItemShippingAddressAction.deepCopy(this);
+    }
 }

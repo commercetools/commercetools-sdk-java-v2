@@ -111,4 +111,8 @@ public class MyPaymentSetTransactionCustomFieldActionImpl
                 .build();
     }
 
+    @Override
+    public MyPaymentSetTransactionCustomFieldAction copyDeep() {
+        return MyPaymentSetTransactionCustomFieldAction.deepCopy(this);
+    }
 }

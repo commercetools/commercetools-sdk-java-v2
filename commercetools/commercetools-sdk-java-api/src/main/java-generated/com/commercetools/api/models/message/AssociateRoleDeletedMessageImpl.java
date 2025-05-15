@@ -273,4 +273,8 @@ public class AssociateRoleDeletedMessageImpl implements AssociateRoleDeletedMess
                 .build();
     }
 
+    @Override
+    public AssociateRoleDeletedMessage copyDeep() {
+        return AssociateRoleDeletedMessage.deepCopy(this);
+    }
 }

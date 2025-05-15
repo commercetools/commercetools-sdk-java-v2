@@ -312,4 +312,8 @@ public class OrderCustomFieldAddedMessageImpl implements OrderCustomFieldAddedMe
                 .build();
     }
 
+    @Override
+    public OrderCustomFieldAddedMessage copyDeep() {
+        return OrderCustomFieldAddedMessage.deepCopy(this);
+    }
 }

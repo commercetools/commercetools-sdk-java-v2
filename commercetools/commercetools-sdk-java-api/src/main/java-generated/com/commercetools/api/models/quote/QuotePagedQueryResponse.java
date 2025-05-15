@@ -143,6 +143,8 @@ public interface QuotePagedQueryResponse extends com.commercetools.api.models.Re
         return instance;
     }
 
+    public QuotePagedQueryResponse copyDeep();
+
     /**
      * factory method to create a deep copy of QuotePagedQueryResponse
      * @param template instance to be copied

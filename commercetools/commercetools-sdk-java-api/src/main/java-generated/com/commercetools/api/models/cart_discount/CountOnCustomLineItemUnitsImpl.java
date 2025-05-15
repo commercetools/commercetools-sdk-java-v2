@@ -157,4 +157,8 @@ public class CountOnCustomLineItemUnitsImpl implements CountOnCustomLineItemUnit
                 .build();
     }
 
+    @Override
+    public CountOnCustomLineItemUnits copyDeep() {
+        return CountOnCustomLineItemUnits.deepCopy(this);
+    }
 }

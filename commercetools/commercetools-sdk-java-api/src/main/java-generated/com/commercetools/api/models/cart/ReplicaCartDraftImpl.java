@@ -95,4 +95,8 @@ public class ReplicaCartDraftImpl implements ReplicaCartDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public ReplicaCartDraft copyDeep() {
+        return ReplicaCartDraft.deepCopy(this);
+    }
 }

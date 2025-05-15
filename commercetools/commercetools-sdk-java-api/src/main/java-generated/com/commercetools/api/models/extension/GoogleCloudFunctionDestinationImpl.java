@@ -91,4 +91,8 @@ public class GoogleCloudFunctionDestinationImpl implements GoogleCloudFunctionDe
                 .build();
     }
 
+    @Override
+    public GoogleCloudFunctionDestination copyDeep() {
+        return GoogleCloudFunctionDestination.deepCopy(this);
+    }
 }

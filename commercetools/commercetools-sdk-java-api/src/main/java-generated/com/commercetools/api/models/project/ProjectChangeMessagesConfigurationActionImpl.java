@@ -94,4 +94,8 @@ public class ProjectChangeMessagesConfigurationActionImpl
                 .build();
     }
 
+    @Override
+    public ProjectChangeMessagesConfigurationAction copyDeep() {
+        return ProjectChangeMessagesConfigurationAction.deepCopy(this);
+    }
 }

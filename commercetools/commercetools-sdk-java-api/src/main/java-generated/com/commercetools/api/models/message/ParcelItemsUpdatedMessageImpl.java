@@ -380,4 +380,8 @@ public class ParcelItemsUpdatedMessageImpl implements ParcelItemsUpdatedMessage,
                 .build();
     }
 
+    @Override
+    public ParcelItemsUpdatedMessage copyDeep() {
+        return ParcelItemsUpdatedMessage.deepCopy(this);
+    }
 }

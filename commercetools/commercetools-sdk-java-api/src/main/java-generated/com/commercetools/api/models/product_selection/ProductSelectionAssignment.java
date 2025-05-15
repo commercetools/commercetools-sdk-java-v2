@@ -126,6 +126,8 @@ public interface ProductSelectionAssignment {
         return instance;
     }
 
+    public ProductSelectionAssignment copyDeep();
+
     /**
      * factory method to create a deep copy of ProductSelectionAssignment
      * @param template instance to be copied

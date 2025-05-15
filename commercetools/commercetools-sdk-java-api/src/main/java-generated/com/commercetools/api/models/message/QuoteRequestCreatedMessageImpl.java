@@ -293,4 +293,8 @@ public class QuoteRequestCreatedMessageImpl implements QuoteRequestCreatedMessag
                 .build();
     }
 
+    @Override
+    public QuoteRequestCreatedMessage copyDeep() {
+        return QuoteRequestCreatedMessage.deepCopy(this);
+    }
 }

@@ -27,29 +27,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.category.CategoryAddAssetActionImpl.class, name = CategoryAddAssetAction.ADD_ASSET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.category.CategoryChangeAssetNameActionImpl.class, name = CategoryChangeAssetNameAction.CHANGE_ASSET_NAME),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.category.CategoryChangeAssetOrderActionImpl.class, name = CategoryChangeAssetOrderAction.CHANGE_ASSET_ORDER),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.category.CategoryChangeNameActionImpl.class, name = CategoryChangeNameAction.CHANGE_NAME),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.category.CategoryChangeOrderHintActionImpl.class, name = CategoryChangeOrderHintAction.CHANGE_ORDER_HINT),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.category.CategoryChangeParentActionImpl.class, name = CategoryChangeParentAction.CHANGE_PARENT),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.category.CategoryChangeSlugActionImpl.class, name = CategoryChangeSlugAction.CHANGE_SLUG),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.category.CategoryRemoveAssetActionImpl.class, name = CategoryRemoveAssetAction.REMOVE_ASSET),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.category.CategorySetAssetCustomFieldActionImpl.class, name = CategorySetAssetCustomFieldAction.SET_ASSET_CUSTOM_FIELD),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.category.CategorySetAssetCustomTypeActionImpl.class, name = CategorySetAssetCustomTypeAction.SET_ASSET_CUSTOM_TYPE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.category.CategorySetAssetDescriptionActionImpl.class, name = CategorySetAssetDescriptionAction.SET_ASSET_DESCRIPTION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.category.CategorySetAssetKeyActionImpl.class, name = CategorySetAssetKeyAction.SET_ASSET_KEY),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.category.CategorySetAssetSourcesActionImpl.class, name = CategorySetAssetSourcesAction.SET_ASSET_SOURCES),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.category.CategorySetAssetTagsActionImpl.class, name = CategorySetAssetTagsAction.SET_ASSET_TAGS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.category.CategorySetCustomFieldActionImpl.class, name = CategorySetCustomFieldAction.SET_CUSTOM_FIELD),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.category.CategorySetCustomTypeActionImpl.class, name = CategorySetCustomTypeAction.SET_CUSTOM_TYPE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.category.CategorySetDescriptionActionImpl.class, name = CategorySetDescriptionAction.SET_DESCRIPTION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.category.CategorySetExternalIdActionImpl.class, name = CategorySetExternalIdAction.SET_EXTERNAL_ID),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.category.CategorySetKeyActionImpl.class, name = CategorySetKeyAction.SET_KEY),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.category.CategorySetMetaDescriptionActionImpl.class, name = CategorySetMetaDescriptionAction.SET_META_DESCRIPTION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.category.CategorySetMetaKeywordsActionImpl.class, name = CategorySetMetaKeywordsAction.SET_META_KEYWORDS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.category.CategorySetMetaTitleActionImpl.class, name = CategorySetMetaTitleAction.SET_META_TITLE) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = CategoryUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = CategoryUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -63,6 +40,8 @@ public interface CategoryUpdateAction extends com.commercetools.api.models.Resou
     @JsonProperty("action")
     public String getAction();
 
+    public CategoryUpdateAction copyDeep();
+
     /**
      * factory method to create a deep copy of CategoryUpdateAction
      * @param template instance to be copied
@@ -73,93 +52,9 @@ public interface CategoryUpdateAction extends com.commercetools.api.models.Resou
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.category.CategoryAddAssetAction) {
-            return com.commercetools.api.models.category.CategoryAddAssetAction
-                    .deepCopy((com.commercetools.api.models.category.CategoryAddAssetAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.category.CategoryChangeAssetNameAction) {
-            return com.commercetools.api.models.category.CategoryChangeAssetNameAction
-                    .deepCopy((com.commercetools.api.models.category.CategoryChangeAssetNameAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.category.CategoryChangeAssetOrderAction) {
-            return com.commercetools.api.models.category.CategoryChangeAssetOrderAction
-                    .deepCopy((com.commercetools.api.models.category.CategoryChangeAssetOrderAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.category.CategoryChangeNameAction) {
-            return com.commercetools.api.models.category.CategoryChangeNameAction
-                    .deepCopy((com.commercetools.api.models.category.CategoryChangeNameAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.category.CategoryChangeOrderHintAction) {
-            return com.commercetools.api.models.category.CategoryChangeOrderHintAction
-                    .deepCopy((com.commercetools.api.models.category.CategoryChangeOrderHintAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.category.CategoryChangeParentAction) {
-            return com.commercetools.api.models.category.CategoryChangeParentAction
-                    .deepCopy((com.commercetools.api.models.category.CategoryChangeParentAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.category.CategoryChangeSlugAction) {
-            return com.commercetools.api.models.category.CategoryChangeSlugAction
-                    .deepCopy((com.commercetools.api.models.category.CategoryChangeSlugAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.category.CategoryRemoveAssetAction) {
-            return com.commercetools.api.models.category.CategoryRemoveAssetAction
-                    .deepCopy((com.commercetools.api.models.category.CategoryRemoveAssetAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.category.CategorySetAssetCustomFieldAction) {
-            return com.commercetools.api.models.category.CategorySetAssetCustomFieldAction
-                    .deepCopy((com.commercetools.api.models.category.CategorySetAssetCustomFieldAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.category.CategorySetAssetCustomTypeAction) {
-            return com.commercetools.api.models.category.CategorySetAssetCustomTypeAction
-                    .deepCopy((com.commercetools.api.models.category.CategorySetAssetCustomTypeAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.category.CategorySetAssetDescriptionAction) {
-            return com.commercetools.api.models.category.CategorySetAssetDescriptionAction
-                    .deepCopy((com.commercetools.api.models.category.CategorySetAssetDescriptionAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.category.CategorySetAssetKeyAction) {
-            return com.commercetools.api.models.category.CategorySetAssetKeyAction
-                    .deepCopy((com.commercetools.api.models.category.CategorySetAssetKeyAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.category.CategorySetAssetSourcesAction) {
-            return com.commercetools.api.models.category.CategorySetAssetSourcesAction
-                    .deepCopy((com.commercetools.api.models.category.CategorySetAssetSourcesAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.category.CategorySetAssetTagsAction) {
-            return com.commercetools.api.models.category.CategorySetAssetTagsAction
-                    .deepCopy((com.commercetools.api.models.category.CategorySetAssetTagsAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.category.CategorySetCustomFieldAction) {
-            return com.commercetools.api.models.category.CategorySetCustomFieldAction
-                    .deepCopy((com.commercetools.api.models.category.CategorySetCustomFieldAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.category.CategorySetCustomTypeAction) {
-            return com.commercetools.api.models.category.CategorySetCustomTypeAction
-                    .deepCopy((com.commercetools.api.models.category.CategorySetCustomTypeAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.category.CategorySetDescriptionAction) {
-            return com.commercetools.api.models.category.CategorySetDescriptionAction
-                    .deepCopy((com.commercetools.api.models.category.CategorySetDescriptionAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.category.CategorySetExternalIdAction) {
-            return com.commercetools.api.models.category.CategorySetExternalIdAction
-                    .deepCopy((com.commercetools.api.models.category.CategorySetExternalIdAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.category.CategorySetKeyAction) {
-            return com.commercetools.api.models.category.CategorySetKeyAction
-                    .deepCopy((com.commercetools.api.models.category.CategorySetKeyAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.category.CategorySetMetaDescriptionAction) {
-            return com.commercetools.api.models.category.CategorySetMetaDescriptionAction
-                    .deepCopy((com.commercetools.api.models.category.CategorySetMetaDescriptionAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.category.CategorySetMetaKeywordsAction) {
-            return com.commercetools.api.models.category.CategorySetMetaKeywordsAction
-                    .deepCopy((com.commercetools.api.models.category.CategorySetMetaKeywordsAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.category.CategorySetMetaTitleAction) {
-            return com.commercetools.api.models.category.CategorySetMetaTitleAction
-                    .deepCopy((com.commercetools.api.models.category.CategorySetMetaTitleAction) template);
+
+        if (!(template instanceof CategoryUpdateActionImpl)) {
+            return template.copyDeep();
         }
         CategoryUpdateActionImpl instance = new CategoryUpdateActionImpl();
         return instance;

@@ -312,4 +312,8 @@ public class ApprovalRuleKeySetMessageImpl implements ApprovalRuleKeySetMessage,
                 .build();
     }
 
+    @Override
+    public ApprovalRuleKeySetMessage copyDeep() {
+        return ApprovalRuleKeySetMessage.deepCopy(this);
+    }
 }

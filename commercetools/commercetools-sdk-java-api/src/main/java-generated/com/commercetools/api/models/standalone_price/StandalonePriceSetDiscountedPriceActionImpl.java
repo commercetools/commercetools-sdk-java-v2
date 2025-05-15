@@ -94,4 +94,8 @@ public class StandalonePriceSetDiscountedPriceActionImpl implements StandalonePr
                 .build();
     }
 
+    @Override
+    public StandalonePriceSetDiscountedPriceAction copyDeep() {
+        return StandalonePriceSetDiscountedPriceAction.deepCopy(this);
+    }
 }

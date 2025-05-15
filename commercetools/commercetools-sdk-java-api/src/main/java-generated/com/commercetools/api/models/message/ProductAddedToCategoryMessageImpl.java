@@ -313,4 +313,8 @@ public class ProductAddedToCategoryMessageImpl implements ProductAddedToCategory
                 .build();
     }
 
+    @Override
+    public ProductAddedToCategoryMessage copyDeep() {
+        return ProductAddedToCategoryMessage.deepCopy(this);
+    }
 }

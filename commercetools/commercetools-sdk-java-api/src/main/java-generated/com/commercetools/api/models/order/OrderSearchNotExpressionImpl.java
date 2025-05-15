@@ -78,4 +78,8 @@ public class OrderSearchNotExpressionImpl implements OrderSearchNotExpression, M
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("not", not).build();
     }
 
+    @Override
+    public OrderSearchNotExpression copyDeep() {
+        return OrderSearchNotExpression.deepCopy(this);
+    }
 }

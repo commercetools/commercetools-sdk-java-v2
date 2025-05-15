@@ -91,4 +91,8 @@ public class ProductSelectionSetKeyActionImpl implements ProductSelectionSetKeyA
                 .build();
     }
 
+    @Override
+    public ProductSelectionSetKeyAction copyDeep() {
+        return ProductSelectionSetKeyAction.deepCopy(this);
+    }
 }

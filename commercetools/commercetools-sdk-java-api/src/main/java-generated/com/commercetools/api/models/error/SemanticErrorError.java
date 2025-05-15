@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SemanticError")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SemanticErrorErrorImpl.class)
 public interface SemanticErrorError extends ErrorObject {
@@ -78,6 +79,8 @@ public interface SemanticErrorError extends ErrorObject {
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
+
+    public SemanticErrorError copyDeep();
 
     /**
      * factory method to create a deep copy of SemanticErrorError

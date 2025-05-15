@@ -98,4 +98,8 @@ public class AssociateRoleAssignmentImpl implements AssociateRoleAssignment, Mod
                 .build();
     }
 
+    @Override
+    public AssociateRoleAssignment copyDeep() {
+        return AssociateRoleAssignment.deepCopy(this);
+    }
 }

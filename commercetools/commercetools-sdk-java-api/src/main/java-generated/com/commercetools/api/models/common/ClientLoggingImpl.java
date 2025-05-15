@@ -157,4 +157,8 @@ public class ClientLoggingImpl implements ClientLogging, ModelBase {
                 .build();
     }
 
+    @Override
+    public ClientLogging copyDeep() {
+        return ClientLogging.deepCopy(this);
+    }
 }

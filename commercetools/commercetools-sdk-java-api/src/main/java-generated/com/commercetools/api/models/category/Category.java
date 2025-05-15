@@ -391,6 +391,8 @@ public interface Category extends BaseResource, CategoryMixin, com.commercetools
         return instance;
     }
 
+    public Category copyDeep();
+
     /**
      * factory method to create a deep copy of Category
      * @param template instance to be copied

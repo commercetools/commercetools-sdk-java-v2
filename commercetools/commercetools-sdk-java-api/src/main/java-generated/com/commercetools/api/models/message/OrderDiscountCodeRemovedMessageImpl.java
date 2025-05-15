@@ -294,4 +294,8 @@ public class OrderDiscountCodeRemovedMessageImpl implements OrderDiscountCodeRem
                 .build();
     }
 
+    @Override
+    public OrderDiscountCodeRemovedMessage copyDeep() {
+        return OrderDiscountCodeRemovedMessage.deepCopy(this);
+    }
 }

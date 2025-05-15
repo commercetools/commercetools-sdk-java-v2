@@ -82,6 +82,8 @@ public interface CustomFieldEnumValue extends com.commercetools.api.models.WithK
         return instance;
     }
 
+    public CustomFieldEnumValue copyDeep();
+
     /**
      * factory method to create a deep copy of CustomFieldEnumValue
      * @param template instance to be copied

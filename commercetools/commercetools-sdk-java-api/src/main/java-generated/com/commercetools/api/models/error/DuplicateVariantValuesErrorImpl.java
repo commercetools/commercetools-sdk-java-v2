@@ -137,4 +137,8 @@ public class DuplicateVariantValuesErrorImpl implements DuplicateVariantValuesEr
                 .build();
     }
 
+    @Override
+    public DuplicateVariantValuesError copyDeep() {
+        return DuplicateVariantValuesError.deepCopy(this);
+    }
 }

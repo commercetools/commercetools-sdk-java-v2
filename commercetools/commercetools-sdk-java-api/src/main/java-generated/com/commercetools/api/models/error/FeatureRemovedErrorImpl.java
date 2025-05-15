@@ -114,4 +114,8 @@ public class FeatureRemovedErrorImpl implements FeatureRemovedError, ModelBase {
                 .build();
     }
 
+    @Override
+    public FeatureRemovedError copyDeep() {
+        return FeatureRemovedError.deepCopy(this);
+    }
 }

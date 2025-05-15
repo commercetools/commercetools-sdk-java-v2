@@ -293,4 +293,8 @@ public class ApprovalRuleCreatedMessageImpl implements ApprovalRuleCreatedMessag
                 .build();
     }
 
+    @Override
+    public ApprovalRuleCreatedMessage copyDeep() {
+        return ApprovalRuleCreatedMessage.deepCopy(this);
+    }
 }

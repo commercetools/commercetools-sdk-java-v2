@@ -86,6 +86,8 @@ public interface ExternalLineItemTotalPrice {
         return instance;
     }
 
+    public ExternalLineItemTotalPrice copyDeep();
+
     /**
      * factory method to create a deep copy of ExternalLineItemTotalPrice
      * @param template instance to be copied

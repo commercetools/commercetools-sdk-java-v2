@@ -244,6 +244,8 @@ public interface ShippingMethodDraft extends com.commercetools.api.models.Custom
         return instance;
     }
 
+    public ShippingMethodDraft copyDeep();
+
     /**
      * factory method to create a deep copy of ShippingMethodDraft
      * @param template instance to be copied

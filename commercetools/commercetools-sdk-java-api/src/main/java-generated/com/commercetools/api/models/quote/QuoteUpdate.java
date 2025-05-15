@@ -94,6 +94,8 @@ public interface QuoteUpdate
         return instance;
     }
 
+    public QuoteUpdate copyDeep();
+
     /**
      * factory method to create a deep copy of QuoteUpdate
      * @param template instance to be copied

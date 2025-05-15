@@ -27,9 +27,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CountOnCustomLineItemUnitsImpl.class, name = CountOnCustomLineItemUnits.COUNT_ON_CUSTOM_LINE_ITEM_UNITS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CountOnLineItemUnitsImpl.class, name = CountOnLineItemUnits.COUNT_ON_LINE_ITEM_UNITS) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = PatternComponentImpl.class, visible = true)
 @JsonDeserialize(as = PatternComponentImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -43,6 +40,8 @@ public interface PatternComponent {
     @JsonProperty("type")
     public String getType();
 
+    public PatternComponent copyDeep();
+
     /**
      * factory method to create a deep copy of PatternComponent
      * @param template instance to be copied
@@ -53,13 +52,9 @@ public interface PatternComponent {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.cart_discount.CountOnCustomLineItemUnits) {
-            return com.commercetools.api.models.cart_discount.CountOnCustomLineItemUnits
-                    .deepCopy((com.commercetools.api.models.cart_discount.CountOnCustomLineItemUnits) template);
-        }
-        if (template instanceof com.commercetools.api.models.cart_discount.CountOnLineItemUnits) {
-            return com.commercetools.api.models.cart_discount.CountOnLineItemUnits
-                    .deepCopy((com.commercetools.api.models.cart_discount.CountOnLineItemUnits) template);
+
+        if (!(template instanceof PatternComponentImpl)) {
+            return template.copyDeep();
         }
         PatternComponentImpl instance = new PatternComponentImpl();
         return instance;

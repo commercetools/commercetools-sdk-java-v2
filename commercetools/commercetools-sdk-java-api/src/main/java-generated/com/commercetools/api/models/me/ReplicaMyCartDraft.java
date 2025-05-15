@@ -80,6 +80,8 @@ public interface ReplicaMyCartDraft extends io.vrap.rmf.base.client.Draft<Replic
         return instance;
     }
 
+    public ReplicaMyCartDraft copyDeep();
+
     /**
      * factory method to create a deep copy of ReplicaMyCartDraft
      * @param template instance to be copied

@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("addFieldDefinition")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TypeAddFieldDefinitionActionImpl.class)
 public interface TypeAddFieldDefinitionAction extends TypeUpdateAction {
@@ -72,6 +73,8 @@ public interface TypeAddFieldDefinitionAction extends TypeUpdateAction {
         instance.setFieldDefinition(template.getFieldDefinition());
         return instance;
     }
+
+    public TypeAddFieldDefinitionAction copyDeep();
 
     /**
      * factory method to create a deep copy of TypeAddFieldDefinitionAction

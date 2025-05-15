@@ -110,4 +110,8 @@ public class StagedQuoteResourceIdentifierImpl implements StagedQuoteResourceIde
                 .build();
     }
 
+    @Override
+    public StagedQuoteResourceIdentifier copyDeep() {
+        return StagedQuoteResourceIdentifier.deepCopy(this);
+    }
 }

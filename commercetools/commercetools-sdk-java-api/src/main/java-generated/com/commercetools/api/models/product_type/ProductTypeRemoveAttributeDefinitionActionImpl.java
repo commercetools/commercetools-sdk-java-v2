@@ -93,4 +93,8 @@ public class ProductTypeRemoveAttributeDefinitionActionImpl
                 .build();
     }
 
+    @Override
+    public ProductTypeRemoveAttributeDefinitionAction copyDeep() {
+        return ProductTypeRemoveAttributeDefinitionAction.deepCopy(this);
+    }
 }

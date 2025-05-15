@@ -113,4 +113,8 @@ public class ImportUnresolvedEventDataImpl implements ImportUnresolvedEventData,
                 .build();
     }
 
+    @Override
+    public ImportUnresolvedEventData copyDeep() {
+        return ImportUnresolvedEventData.deepCopy(this);
+    }
 }

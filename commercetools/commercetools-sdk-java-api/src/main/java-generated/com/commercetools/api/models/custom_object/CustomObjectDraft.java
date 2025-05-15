@@ -122,6 +122,8 @@ public interface CustomObjectDraft extends io.vrap.rmf.base.client.Draft<CustomO
         return instance;
     }
 
+    public CustomObjectDraft copyDeep();
+
     /**
      * factory method to create a deep copy of CustomObjectDraft
      * @param template instance to be copied

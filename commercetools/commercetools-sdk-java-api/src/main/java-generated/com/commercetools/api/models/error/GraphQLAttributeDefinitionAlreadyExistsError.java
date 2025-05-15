@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("AttributeDefinitionAlreadyExists")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLAttributeDefinitionAlreadyExistsErrorImpl.class)
 public interface GraphQLAttributeDefinitionAlreadyExistsError extends GraphQLErrorObject {
@@ -114,6 +115,8 @@ public interface GraphQLAttributeDefinitionAlreadyExistsError extends GraphQLErr
         instance.setConflictingAttributeName(template.getConflictingAttributeName());
         return instance;
     }
+
+    public GraphQLAttributeDefinitionAlreadyExistsError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLAttributeDefinitionAlreadyExistsError

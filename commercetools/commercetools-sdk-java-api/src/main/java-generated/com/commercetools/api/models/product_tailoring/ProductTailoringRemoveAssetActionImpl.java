@@ -171,4 +171,8 @@ public class ProductTailoringRemoveAssetActionImpl implements ProductTailoringRe
                 .build();
     }
 
+    @Override
+    public ProductTailoringRemoveAssetAction copyDeep() {
+        return ProductTailoringRemoveAssetAction.deepCopy(this);
+    }
 }

@@ -129,4 +129,8 @@ public class MyBusinessUnitSetAddressCustomFieldActionImpl
                 .build();
     }
 
+    @Override
+    public MyBusinessUnitSetAddressCustomFieldAction copyDeep() {
+        return MyBusinessUnitSetAddressCustomFieldAction.deepCopy(this);
+    }
 }

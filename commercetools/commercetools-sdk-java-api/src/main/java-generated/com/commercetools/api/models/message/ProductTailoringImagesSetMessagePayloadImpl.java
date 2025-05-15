@@ -202,4 +202,8 @@ public class ProductTailoringImagesSetMessagePayloadImpl implements ProductTailo
                 .build();
     }
 
+    @Override
+    public ProductTailoringImagesSetMessagePayload copyDeep() {
+        return ProductTailoringImagesSetMessagePayload.deepCopy(this);
+    }
 }

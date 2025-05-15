@@ -219,4 +219,8 @@ public class OrderAddParcelToDeliveryActionImpl implements OrderAddParcelToDeliv
                 .build();
     }
 
+    @Override
+    public OrderAddParcelToDeliveryAction copyDeep() {
+        return OrderAddParcelToDeliveryAction.deepCopy(this);
+    }
 }

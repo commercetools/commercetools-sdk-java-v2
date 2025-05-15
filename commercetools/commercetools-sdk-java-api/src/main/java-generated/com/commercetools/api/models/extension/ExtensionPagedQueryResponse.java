@@ -144,6 +144,8 @@ public interface ExtensionPagedQueryResponse
         return instance;
     }
 
+    public ExtensionPagedQueryResponse copyDeep();
+
     /**
      * factory method to create a deep copy of ExtensionPagedQueryResponse
      * @param template instance to be copied

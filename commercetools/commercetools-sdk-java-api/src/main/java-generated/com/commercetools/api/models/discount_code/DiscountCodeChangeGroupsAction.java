@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeGroups")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DiscountCodeChangeGroupsActionImpl.class)
 public interface DiscountCodeChangeGroupsAction extends DiscountCodeUpdateAction {
@@ -77,6 +78,8 @@ public interface DiscountCodeChangeGroupsAction extends DiscountCodeUpdateAction
         instance.setGroups(template.getGroups());
         return instance;
     }
+
+    public DiscountCodeChangeGroupsAction copyDeep();
 
     /**
      * factory method to create a deep copy of DiscountCodeChangeGroupsAction

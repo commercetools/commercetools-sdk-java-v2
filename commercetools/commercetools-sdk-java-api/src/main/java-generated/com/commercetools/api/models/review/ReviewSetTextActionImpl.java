@@ -91,4 +91,8 @@ public class ReviewSetTextActionImpl implements ReviewSetTextAction, ModelBase {
                 .build();
     }
 
+    @Override
+    public ReviewSetTextAction copyDeep() {
+        return ReviewSetTextAction.deepCopy(this);
+    }
 }

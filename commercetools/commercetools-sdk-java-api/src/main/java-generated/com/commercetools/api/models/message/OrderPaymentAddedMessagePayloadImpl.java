@@ -92,4 +92,8 @@ public class OrderPaymentAddedMessagePayloadImpl implements OrderPaymentAddedMes
                 .build();
     }
 
+    @Override
+    public OrderPaymentAddedMessagePayload copyDeep() {
+        return OrderPaymentAddedMessagePayload.deepCopy(this);
+    }
 }

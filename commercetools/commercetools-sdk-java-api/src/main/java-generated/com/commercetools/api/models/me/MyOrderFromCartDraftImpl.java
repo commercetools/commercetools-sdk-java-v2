@@ -94,4 +94,8 @@ public class MyOrderFromCartDraftImpl implements MyOrderFromCartDraft, ModelBase
                 .build();
     }
 
+    @Override
+    public MyOrderFromCartDraft copyDeep() {
+        return MyOrderFromCartDraft.deepCopy(this);
+    }
 }

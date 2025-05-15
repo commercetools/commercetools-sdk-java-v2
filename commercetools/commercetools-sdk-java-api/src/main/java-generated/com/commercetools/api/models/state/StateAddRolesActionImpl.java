@@ -96,4 +96,8 @@ public class StateAddRolesActionImpl implements StateAddRolesAction, ModelBase {
                 .build();
     }
 
+    @Override
+    public StateAddRolesAction copyDeep() {
+        return StateAddRolesAction.deepCopy(this);
+    }
 }

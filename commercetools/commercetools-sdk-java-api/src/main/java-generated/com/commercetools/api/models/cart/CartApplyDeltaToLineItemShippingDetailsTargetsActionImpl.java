@@ -139,4 +139,8 @@ public class CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl
                 .build();
     }
 
+    @Override
+    public CartApplyDeltaToLineItemShippingDetailsTargetsAction copyDeep() {
+        return CartApplyDeltaToLineItemShippingDetailsTargetsAction.deepCopy(this);
+    }
 }

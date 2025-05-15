@@ -91,4 +91,8 @@ public class OrderRemoveItemShippingAddressActionImpl implements OrderRemoveItem
                 .build();
     }
 
+    @Override
+    public OrderRemoveItemShippingAddressAction copyDeep() {
+        return OrderRemoveItemShippingAddressAction.deepCopy(this);
+    }
 }

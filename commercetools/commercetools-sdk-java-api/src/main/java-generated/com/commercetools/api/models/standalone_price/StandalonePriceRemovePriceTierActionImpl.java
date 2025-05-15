@@ -91,4 +91,8 @@ public class StandalonePriceRemovePriceTierActionImpl implements StandalonePrice
                 .build();
     }
 
+    @Override
+    public StandalonePriceRemovePriceTierAction copyDeep() {
+        return StandalonePriceRemovePriceTierAction.deepCopy(this);
+    }
 }

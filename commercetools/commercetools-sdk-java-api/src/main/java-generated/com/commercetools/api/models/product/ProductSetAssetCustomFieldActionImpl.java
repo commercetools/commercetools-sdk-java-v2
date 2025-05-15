@@ -210,4 +210,8 @@ public class ProductSetAssetCustomFieldActionImpl implements ProductSetAssetCust
                 .build();
     }
 
+    @Override
+    public ProductSetAssetCustomFieldAction copyDeep() {
+        return ProductSetAssetCustomFieldAction.deepCopy(this);
+    }
 }

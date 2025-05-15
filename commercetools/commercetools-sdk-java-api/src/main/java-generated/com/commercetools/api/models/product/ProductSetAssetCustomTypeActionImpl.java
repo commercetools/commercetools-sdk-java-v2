@@ -211,4 +211,8 @@ public class ProductSetAssetCustomTypeActionImpl implements ProductSetAssetCusto
                 .build();
     }
 
+    @Override
+    public ProductSetAssetCustomTypeAction copyDeep() {
+        return ProductSetAssetCustomTypeAction.deepCopy(this);
+    }
 }

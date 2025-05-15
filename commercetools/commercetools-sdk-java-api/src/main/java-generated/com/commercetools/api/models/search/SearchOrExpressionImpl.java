@@ -78,4 +78,8 @@ public class SearchOrExpressionImpl implements SearchOrExpression, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("or", or).build();
     }
 
+    @Override
+    public SearchOrExpression copyDeep() {
+        return SearchOrExpression.deepCopy(this);
+    }
 }

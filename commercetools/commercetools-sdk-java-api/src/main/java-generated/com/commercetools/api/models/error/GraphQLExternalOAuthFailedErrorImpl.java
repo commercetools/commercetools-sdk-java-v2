@@ -96,4 +96,8 @@ public class GraphQLExternalOAuthFailedErrorImpl implements GraphQLExternalOAuth
                 .build();
     }
 
+    @Override
+    public GraphQLExternalOAuthFailedError copyDeep() {
+        return GraphQLExternalOAuthFailedError.deepCopy(this);
+    }
 }

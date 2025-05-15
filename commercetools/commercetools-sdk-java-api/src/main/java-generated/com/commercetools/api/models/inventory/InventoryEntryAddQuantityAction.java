@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("addQuantity")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = InventoryEntryAddQuantityActionImpl.class)
 public interface InventoryEntryAddQuantityAction extends InventoryEntryUpdateAction {
@@ -69,6 +70,8 @@ public interface InventoryEntryAddQuantityAction extends InventoryEntryUpdateAct
         instance.setQuantity(template.getQuantity());
         return instance;
     }
+
+    public InventoryEntryAddQuantityAction copyDeep();
 
     /**
      * factory method to create a deep copy of InventoryEntryAddQuantityAction

@@ -301,4 +301,8 @@ public class CategoryDraftImpl implements CategoryDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public CategoryDraft copyDeep() {
+        return CategoryDraft.deepCopy(this);
+    }
 }

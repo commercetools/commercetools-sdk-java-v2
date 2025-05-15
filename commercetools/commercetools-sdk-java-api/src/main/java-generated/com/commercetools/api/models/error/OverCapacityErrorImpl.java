@@ -115,4 +115,8 @@ public class OverCapacityErrorImpl implements OverCapacityError, ModelBase {
                 .build();
     }
 
+    @Override
+    public OverCapacityError copyDeep() {
+        return OverCapacityError.deepCopy(this);
+    }
 }

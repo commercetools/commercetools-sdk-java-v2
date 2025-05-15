@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("removeAsset")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductRemoveAssetActionImpl.class)
 public interface ProductRemoveAssetAction extends ProductUpdateAction {
@@ -130,6 +131,8 @@ public interface ProductRemoveAssetAction extends ProductUpdateAction {
         instance.setAssetKey(template.getAssetKey());
         return instance;
     }
+
+    public ProductRemoveAssetAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductRemoveAssetAction

@@ -221,4 +221,8 @@ public class AttributeDefinitionDraftImpl implements AttributeDefinitionDraft, M
                 .build();
     }
 
+    @Override
+    public AttributeDefinitionDraft copyDeep() {
+        return AttributeDefinitionDraft.deepCopy(this);
+    }
 }

@@ -96,4 +96,8 @@ public class GraphQLResourceNotFoundErrorImpl implements GraphQLResourceNotFound
                 .build();
     }
 
+    @Override
+    public GraphQLResourceNotFoundError copyDeep() {
+        return GraphQLResourceNotFoundError.deepCopy(this);
+    }
 }

@@ -306,6 +306,8 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
         return instance;
     }
 
+    public LineItemDraft copyDeep();
+
     /**
      * factory method to create a deep copy of LineItemDraft
      * @param template instance to be copied

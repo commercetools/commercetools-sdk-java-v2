@@ -115,4 +115,8 @@ public class GraphQLEditPreviewFailedErrorImpl implements GraphQLEditPreviewFail
                 .build();
     }
 
+    @Override
+    public GraphQLEditPreviewFailedError copyDeep() {
+        return GraphQLEditPreviewFailedError.deepCopy(this);
+    }
 }

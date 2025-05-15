@@ -160,4 +160,8 @@ public class AssociateRolePagedQueryResponseImpl implements AssociateRolePagedQu
                 .build();
     }
 
+    @Override
+    public AssociateRolePagedQueryResponse copyDeep() {
+        return AssociateRolePagedQueryResponse.deepCopy(this);
+    }
 }

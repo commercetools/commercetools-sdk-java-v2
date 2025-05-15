@@ -91,4 +91,8 @@ public class ProjectChangeNameActionImpl implements ProjectChangeNameAction, Mod
                 .build();
     }
 
+    @Override
+    public ProjectChangeNameAction copyDeep() {
+        return ProjectChangeNameAction.deepCopy(this);
+    }
 }

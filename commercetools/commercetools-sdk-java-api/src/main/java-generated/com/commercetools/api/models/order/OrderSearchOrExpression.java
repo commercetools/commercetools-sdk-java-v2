@@ -76,6 +76,8 @@ public interface OrderSearchOrExpression extends OrderSearchCompoundExpression {
         return instance;
     }
 
+    public OrderSearchOrExpression copyDeep();
+
     /**
      * factory method to create a deep copy of OrderSearchOrExpression
      * @param template instance to be copied

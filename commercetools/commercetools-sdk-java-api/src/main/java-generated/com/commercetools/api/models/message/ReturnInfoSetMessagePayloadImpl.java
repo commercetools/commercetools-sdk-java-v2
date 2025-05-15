@@ -96,4 +96,8 @@ public class ReturnInfoSetMessagePayloadImpl implements ReturnInfoSetMessagePayl
                 .build();
     }
 
+    @Override
+    public ReturnInfoSetMessagePayload copyDeep() {
+        return ReturnInfoSetMessagePayload.deepCopy(this);
+    }
 }

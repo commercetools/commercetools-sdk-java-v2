@@ -92,4 +92,8 @@ public class StagedOrderChangeShipmentStateActionImpl implements StagedOrderChan
                 .build();
     }
 
+    @Override
+    public StagedOrderChangeShipmentStateAction copyDeep() {
+        return StagedOrderChangeShipmentStateAction.deepCopy(this);
+    }
 }

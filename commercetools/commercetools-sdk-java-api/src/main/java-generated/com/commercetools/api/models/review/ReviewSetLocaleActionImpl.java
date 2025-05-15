@@ -91,4 +91,8 @@ public class ReviewSetLocaleActionImpl implements ReviewSetLocaleAction, ModelBa
                 .build();
     }
 
+    @Override
+    public ReviewSetLocaleAction copyDeep() {
+        return ReviewSetLocaleAction.deepCopy(this);
+    }
 }

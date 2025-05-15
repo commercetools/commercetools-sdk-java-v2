@@ -417,4 +417,8 @@ public class MyCartDraftImpl implements MyCartDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public MyCartDraft copyDeep() {
+        return MyCartDraft.deepCopy(this);
+    }
 }

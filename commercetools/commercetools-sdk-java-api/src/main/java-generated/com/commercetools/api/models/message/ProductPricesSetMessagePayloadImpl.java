@@ -133,4 +133,8 @@ public class ProductPricesSetMessagePayloadImpl implements ProductPricesSetMessa
                 .build();
     }
 
+    @Override
+    public ProductPricesSetMessagePayload copyDeep() {
+        return ProductPricesSetMessagePayload.deepCopy(this);
+    }
 }

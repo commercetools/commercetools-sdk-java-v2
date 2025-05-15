@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("addRoles")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StateAddRolesActionImpl.class)
 public interface StateAddRolesAction extends StateUpdateAction {
@@ -77,6 +78,8 @@ public interface StateAddRolesAction extends StateUpdateAction {
         instance.setRoles(template.getRoles());
         return instance;
     }
+
+    public StateAddRolesAction copyDeep();
 
     /**
      * factory method to create a deep copy of StateAddRolesAction

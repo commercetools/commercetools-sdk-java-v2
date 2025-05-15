@@ -41,6 +41,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ProductTailoringImagesSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTailoringImagesSetMessageImpl.class)
 public interface ProductTailoringImagesSetMessage extends Message {
@@ -191,6 +192,8 @@ public interface ProductTailoringImagesSetMessage extends Message {
         instance.setImages(template.getImages());
         return instance;
     }
+
+    public ProductTailoringImagesSetMessage copyDeep();
 
     /**
      * factory method to create a deep copy of ProductTailoringImagesSetMessage

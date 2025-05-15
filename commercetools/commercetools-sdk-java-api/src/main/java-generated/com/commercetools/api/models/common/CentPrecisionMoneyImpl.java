@@ -137,4 +137,8 @@ public class CentPrecisionMoneyImpl implements CentPrecisionMoney, ModelBase {
                 .build();
     }
 
+    @Override
+    public CentPrecisionMoney copyDeep() {
+        return CentPrecisionMoney.deepCopy(this);
+    }
 }

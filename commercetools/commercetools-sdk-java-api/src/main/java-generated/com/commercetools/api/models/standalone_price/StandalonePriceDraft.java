@@ -282,6 +282,8 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
         return instance;
     }
 
+    public StandalonePriceDraft copyDeep();
+
     /**
      * factory method to create a deep copy of StandalonePriceDraft
      * @param template instance to be copied

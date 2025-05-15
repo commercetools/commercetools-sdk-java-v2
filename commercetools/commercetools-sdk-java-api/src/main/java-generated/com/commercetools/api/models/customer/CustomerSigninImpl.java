@@ -205,4 +205,8 @@ public class CustomerSigninImpl implements CustomerSignin, ModelBase {
                 .build();
     }
 
+    @Override
+    public CustomerSignin copyDeep() {
+        return CustomerSignin.deepCopy(this);
+    }
 }

@@ -36,6 +36,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ProductSlugChanged")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSlugChangedMessageImpl.class)
 public interface ProductSlugChangedMessage extends Message {
@@ -105,6 +106,8 @@ public interface ProductSlugChangedMessage extends Message {
         instance.setOldSlug(template.getOldSlug());
         return instance;
     }
+
+    public ProductSlugChangedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of ProductSlugChangedMessage

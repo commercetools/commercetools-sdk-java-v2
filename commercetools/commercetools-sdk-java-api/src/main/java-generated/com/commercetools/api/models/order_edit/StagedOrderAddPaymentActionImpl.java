@@ -92,4 +92,8 @@ public class StagedOrderAddPaymentActionImpl implements StagedOrderAddPaymentAct
                 .build();
     }
 
+    @Override
+    public StagedOrderAddPaymentAction copyDeep() {
+        return StagedOrderAddPaymentAction.deepCopy(this);
+    }
 }

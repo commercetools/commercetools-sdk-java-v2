@@ -168,4 +168,8 @@ public class ProductVariantImportDraftImpl implements ProductVariantImportDraft,
                 .build();
     }
 
+    @Override
+    public ProductVariantImportDraft copyDeep() {
+        return ProductVariantImportDraft.deepCopy(this);
+    }
 }

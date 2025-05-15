@@ -100,4 +100,8 @@ public class DiscountCodeUpdateImpl implements DiscountCodeUpdate, ModelBase {
                 .build();
     }
 
+    @Override
+    public DiscountCodeUpdate copyDeep() {
+        return DiscountCodeUpdate.deepCopy(this);
+    }
 }

@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeProductSearchIndexingEnabled")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProjectChangeProductSearchIndexingEnabledActionImpl.class)
 public interface ProjectChangeProductSearchIndexingEnabledAction extends ProjectUpdateAction {
@@ -92,6 +93,8 @@ public interface ProjectChangeProductSearchIndexingEnabledAction extends Project
         instance.setMode(template.getMode());
         return instance;
     }
+
+    public ProjectChangeProductSearchIndexingEnabledAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProjectChangeProductSearchIndexingEnabledAction

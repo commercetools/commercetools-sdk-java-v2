@@ -97,6 +97,8 @@ public interface FacetTerm {
         return instance;
     }
 
+    public FacetTerm copyDeep();
+
     /**
      * factory method to create a deep copy of FacetTerm
      * @param template instance to be copied

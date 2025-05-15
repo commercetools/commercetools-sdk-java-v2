@@ -646,4 +646,8 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public CustomerDraft copyDeep() {
+        return CustomerDraft.deepCopy(this);
+    }
 }

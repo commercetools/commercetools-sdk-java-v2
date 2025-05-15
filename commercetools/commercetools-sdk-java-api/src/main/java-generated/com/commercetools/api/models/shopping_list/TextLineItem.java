@@ -169,6 +169,8 @@ public interface TextLineItem extends com.commercetools.api.models.Customizable<
         return instance;
     }
 
+    public TextLineItem copyDeep();
+
     /**
      * factory method to create a deep copy of TextLineItem
      * @param template instance to be copied

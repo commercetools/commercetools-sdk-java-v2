@@ -110,6 +110,8 @@ public interface ProductSearchErrorResponse extends ErrorResponse {
         return instance;
     }
 
+    public ProductSearchErrorResponse copyDeep();
+
     /**
      * factory method to create a deep copy of ProductSearchErrorResponse
      * @param template instance to be copied

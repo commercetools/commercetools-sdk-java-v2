@@ -111,4 +111,8 @@ public class ReviewTransitionStateActionImpl implements ReviewTransitionStateAct
                 .build();
     }
 
+    @Override
+    public ReviewTransitionStateAction copyDeep() {
+        return ReviewTransitionStateAction.deepCopy(this);
+    }
 }

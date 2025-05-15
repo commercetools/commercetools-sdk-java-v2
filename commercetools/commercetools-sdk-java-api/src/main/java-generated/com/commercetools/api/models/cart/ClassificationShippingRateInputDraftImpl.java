@@ -91,4 +91,8 @@ public class ClassificationShippingRateInputDraftImpl implements ClassificationS
                 .build();
     }
 
+    @Override
+    public ClassificationShippingRateInputDraft copyDeep() {
+        return ClassificationShippingRateInputDraft.deepCopy(this);
+    }
 }

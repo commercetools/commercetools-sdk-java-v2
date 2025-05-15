@@ -27,8 +27,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.common.GeoJsonPointImpl.class, name = GeoJsonPoint.POINT) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = GeoJsonImpl.class, visible = true)
 @JsonDeserialize(as = GeoJsonImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -42,6 +40,8 @@ public interface GeoJson {
     @JsonProperty("type")
     public String getType();
 
+    public GeoJson copyDeep();
+
     /**
      * factory method to create a deep copy of GeoJson
      * @param template instance to be copied
@@ -52,9 +52,9 @@ public interface GeoJson {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.common.GeoJsonPoint) {
-            return com.commercetools.api.models.common.GeoJsonPoint
-                    .deepCopy((com.commercetools.api.models.common.GeoJsonPoint) template);
+
+        if (!(template instanceof GeoJsonImpl)) {
+            return template.copyDeep();
         }
         GeoJsonImpl instance = new GeoJsonImpl();
         return instance;

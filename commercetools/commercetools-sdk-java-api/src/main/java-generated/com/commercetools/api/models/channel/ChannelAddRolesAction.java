@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("addRoles")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChannelAddRolesActionImpl.class)
 public interface ChannelAddRolesAction extends ChannelUpdateAction {
@@ -77,6 +78,8 @@ public interface ChannelAddRolesAction extends ChannelUpdateAction {
         instance.setRoles(template.getRoles());
         return instance;
     }
+
+    public ChannelAddRolesAction copyDeep();
 
     /**
      * factory method to create a deep copy of ChannelAddRolesAction

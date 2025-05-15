@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setLineItemInventoryMode")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartSetLineItemInventoryModeActionImpl.class)
 public interface CartSetLineItemInventoryModeAction extends CartUpdateAction {
@@ -98,6 +99,8 @@ public interface CartSetLineItemInventoryModeAction extends CartUpdateAction {
         instance.setInventoryMode(template.getInventoryMode());
         return instance;
     }
+
+    public CartSetLineItemInventoryModeAction copyDeep();
 
     /**
      * factory method to create a deep copy of CartSetLineItemInventoryModeAction

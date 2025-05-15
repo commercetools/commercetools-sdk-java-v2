@@ -91,4 +91,8 @@ public class ChannelChangeNameActionImpl implements ChannelChangeNameAction, Mod
                 .build();
     }
 
+    @Override
+    public ChannelChangeNameAction copyDeep() {
+        return ChannelChangeNameAction.deepCopy(this);
+    }
 }

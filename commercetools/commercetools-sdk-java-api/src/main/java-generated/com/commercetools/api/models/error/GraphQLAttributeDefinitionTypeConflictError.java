@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("AttributeDefinitionTypeConflict")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLAttributeDefinitionTypeConflictErrorImpl.class)
 public interface GraphQLAttributeDefinitionTypeConflictError extends GraphQLErrorObject {
@@ -114,6 +115,8 @@ public interface GraphQLAttributeDefinitionTypeConflictError extends GraphQLErro
         instance.setConflictingAttributeName(template.getConflictingAttributeName());
         return instance;
     }
+
+    public GraphQLAttributeDefinitionTypeConflictError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLAttributeDefinitionTypeConflictError

@@ -175,4 +175,8 @@ public class OrderSearchAnyValueImpl implements OrderSearchAnyValue, ModelBase {
                 .build();
     }
 
+    @Override
+    public OrderSearchAnyValue copyDeep() {
+        return OrderSearchAnyValue.deepCopy(this);
+    }
 }

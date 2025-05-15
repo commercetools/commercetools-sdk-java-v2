@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setTimeoutInMs")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ExtensionSetTimeoutInMsActionImpl.class)
 public interface ExtensionSetTimeoutInMsAction extends ExtensionUpdateAction {
@@ -68,6 +69,8 @@ public interface ExtensionSetTimeoutInMsAction extends ExtensionUpdateAction {
         instance.setTimeoutInMs(template.getTimeoutInMs());
         return instance;
     }
+
+    public ExtensionSetTimeoutInMsAction copyDeep();
 
     /**
      * factory method to create a deep copy of ExtensionSetTimeoutInMsAction

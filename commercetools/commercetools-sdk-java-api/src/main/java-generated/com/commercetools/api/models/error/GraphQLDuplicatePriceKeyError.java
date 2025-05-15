@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("DuplicatePriceKey")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLDuplicatePriceKeyErrorImpl.class)
 public interface GraphQLDuplicatePriceKeyError extends GraphQLErrorObject {
@@ -82,6 +83,8 @@ public interface GraphQLDuplicatePriceKeyError extends GraphQLErrorObject {
         instance.setConflictingPrice(template.getConflictingPrice());
         return instance;
     }
+
+    public GraphQLDuplicatePriceKeyError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLDuplicatePriceKeyError

@@ -110,4 +110,8 @@ public class TypeChangeLabelActionImpl implements TypeChangeLabelAction, ModelBa
                 .build();
     }
 
+    @Override
+    public TypeChangeLabelAction copyDeep() {
+        return TypeChangeLabelAction.deepCopy(this);
+    }
 }

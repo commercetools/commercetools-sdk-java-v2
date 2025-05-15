@@ -96,4 +96,8 @@ public class CustomerSetStoresActionImpl implements CustomerSetStoresAction, Mod
                 .build();
     }
 
+    @Override
+    public CustomerSetStoresAction copyDeep() {
+        return CustomerSetStoresAction.deepCopy(this);
+    }
 }

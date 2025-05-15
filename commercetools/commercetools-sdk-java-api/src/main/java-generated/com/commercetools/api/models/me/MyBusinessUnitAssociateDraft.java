@@ -112,6 +112,8 @@ public interface MyBusinessUnitAssociateDraft extends io.vrap.rmf.base.client.Dr
         return instance;
     }
 
+    public MyBusinessUnitAssociateDraft copyDeep();
+
     /**
      * factory method to create a deep copy of MyBusinessUnitAssociateDraft
      * @param template instance to be copied

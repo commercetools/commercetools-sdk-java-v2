@@ -293,4 +293,8 @@ public class CustomerCompanyNameSetMessageImpl implements CustomerCompanyNameSet
                 .build();
     }
 
+    @Override
+    public CustomerCompanyNameSetMessage copyDeep() {
+        return CustomerCompanyNameSetMessage.deepCopy(this);
+    }
 }

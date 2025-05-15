@@ -96,4 +96,8 @@ public class OrderEditPreviewFailureImpl implements OrderEditPreviewFailure, Mod
                 .build();
     }
 
+    @Override
+    public OrderEditPreviewFailure copyDeep() {
+        return OrderEditPreviewFailure.deepCopy(this);
+    }
 }

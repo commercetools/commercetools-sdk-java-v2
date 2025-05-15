@@ -133,4 +133,8 @@ public class MyBusinessUnitChangeAddressActionImpl implements MyBusinessUnitChan
                 .build();
     }
 
+    @Override
+    public MyBusinessUnitChangeAddressAction copyDeep() {
+        return MyBusinessUnitChangeAddressAction.deepCopy(this);
+    }
 }

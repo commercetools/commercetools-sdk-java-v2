@@ -94,4 +94,8 @@ public class StagedOrderSetStoreActionImpl implements StagedOrderSetStoreAction,
                 .build();
     }
 
+    @Override
+    public StagedOrderSetStoreAction copyDeep() {
+        return StagedOrderSetStoreAction.deepCopy(this);
+    }
 }

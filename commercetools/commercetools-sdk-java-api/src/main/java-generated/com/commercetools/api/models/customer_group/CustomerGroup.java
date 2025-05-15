@@ -207,6 +207,8 @@ public interface CustomerGroup
         return instance;
     }
 
+    public CustomerGroup copyDeep();
+
     /**
      * factory method to create a deep copy of CustomerGroup
      * @param template instance to be copied

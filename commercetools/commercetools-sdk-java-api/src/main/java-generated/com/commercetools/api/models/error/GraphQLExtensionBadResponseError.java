@@ -31,6 +31,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ExtensionBadResponse")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLExtensionBadResponseErrorImpl.class)
 public interface GraphQLExtensionBadResponseError extends GraphQLErrorObject {
@@ -187,6 +188,8 @@ public interface GraphQLExtensionBadResponseError extends GraphQLErrorObject {
         instance.setExtensionKey(template.getExtensionKey());
         return instance;
     }
+
+    public GraphQLExtensionBadResponseError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLExtensionBadResponseError

@@ -170,4 +170,8 @@ public class CountryNotConfiguredInStoreErrorImpl implements CountryNotConfigure
                 .build();
     }
 
+    @Override
+    public CountryNotConfiguredInStoreError copyDeep() {
+        return CountryNotConfiguredInStoreError.deepCopy(this);
+    }
 }

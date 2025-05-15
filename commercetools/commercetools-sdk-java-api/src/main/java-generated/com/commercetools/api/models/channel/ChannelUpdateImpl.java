@@ -99,4 +99,8 @@ public class ChannelUpdateImpl implements ChannelUpdate, ModelBase {
                 .build();
     }
 
+    @Override
+    public ChannelUpdate copyDeep() {
+        return ChannelUpdate.deepCopy(this);
+    }
 }

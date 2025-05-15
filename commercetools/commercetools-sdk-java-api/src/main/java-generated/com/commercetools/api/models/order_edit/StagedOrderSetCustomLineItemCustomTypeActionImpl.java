@@ -154,4 +154,8 @@ public class StagedOrderSetCustomLineItemCustomTypeActionImpl
                 .build();
     }
 
+    @Override
+    public StagedOrderSetCustomLineItemCustomTypeAction copyDeep() {
+        return StagedOrderSetCustomLineItemCustomTypeAction.deepCopy(this);
+    }
 }

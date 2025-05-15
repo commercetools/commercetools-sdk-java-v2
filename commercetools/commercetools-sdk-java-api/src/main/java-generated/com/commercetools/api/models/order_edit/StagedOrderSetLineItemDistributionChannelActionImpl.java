@@ -139,4 +139,8 @@ public class StagedOrderSetLineItemDistributionChannelActionImpl
                 .build();
     }
 
+    @Override
+    public StagedOrderSetLineItemDistributionChannelAction copyDeep() {
+        return StagedOrderSetLineItemDistributionChannelAction.deepCopy(this);
+    }
 }

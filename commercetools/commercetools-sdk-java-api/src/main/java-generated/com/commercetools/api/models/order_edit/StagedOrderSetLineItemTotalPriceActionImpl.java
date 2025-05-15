@@ -134,4 +134,8 @@ public class StagedOrderSetLineItemTotalPriceActionImpl implements StagedOrderSe
                 .build();
     }
 
+    @Override
+    public StagedOrderSetLineItemTotalPriceAction copyDeep() {
+        return StagedOrderSetLineItemTotalPriceAction.deepCopy(this);
+    }
 }

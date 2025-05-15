@@ -100,6 +100,8 @@ public interface OrderSearchAnyValue extends OrderSearchQueryExpressionValue {
         return instance;
     }
 
+    public OrderSearchAnyValue copyDeep();
+
     /**
      * factory method to create a deep copy of OrderSearchAnyValue
      * @param template instance to be copied

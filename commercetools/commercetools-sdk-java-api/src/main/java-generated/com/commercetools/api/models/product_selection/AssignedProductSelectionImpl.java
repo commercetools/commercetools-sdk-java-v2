@@ -143,4 +143,8 @@ public class AssignedProductSelectionImpl implements AssignedProductSelection, M
                 .build();
     }
 
+    @Override
+    public AssignedProductSelection copyDeep() {
+        return AssignedProductSelection.deepCopy(this);
+    }
 }

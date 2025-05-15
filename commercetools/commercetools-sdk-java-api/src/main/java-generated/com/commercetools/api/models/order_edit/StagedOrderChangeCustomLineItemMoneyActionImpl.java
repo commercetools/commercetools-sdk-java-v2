@@ -134,4 +134,8 @@ public class StagedOrderChangeCustomLineItemMoneyActionImpl
                 .build();
     }
 
+    @Override
+    public StagedOrderChangeCustomLineItemMoneyAction copyDeep() {
+        return StagedOrderChangeCustomLineItemMoneyAction.deepCopy(this);
+    }
 }

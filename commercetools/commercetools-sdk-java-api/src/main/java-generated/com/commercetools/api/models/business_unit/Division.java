@@ -42,6 +42,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("Division")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DivisionImpl.class)
 public interface Division extends BusinessUnit {
@@ -154,6 +155,8 @@ public interface Division extends BusinessUnit {
         instance.setApprovalRuleMode(template.getApprovalRuleMode());
         return instance;
     }
+
+    public Division copyDeep();
 
     /**
      * factory method to create a deep copy of Division

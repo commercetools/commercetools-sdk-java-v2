@@ -74,4 +74,8 @@ public class OrderSearchDateRangeExpressionImpl implements OrderSearchDateRangeE
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("range", range).build();
     }
 
+    @Override
+    public OrderSearchDateRangeExpression copyDeep() {
+        return OrderSearchDateRangeExpression.deepCopy(this);
+    }
 }

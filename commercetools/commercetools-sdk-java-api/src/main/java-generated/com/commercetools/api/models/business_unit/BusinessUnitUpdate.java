@@ -94,6 +94,8 @@ public interface BusinessUnitUpdate extends
         return instance;
     }
 
+    public BusinessUnitUpdate copyDeep();
+
     /**
      * factory method to create a deep copy of BusinessUnitUpdate
      * @param template instance to be copied

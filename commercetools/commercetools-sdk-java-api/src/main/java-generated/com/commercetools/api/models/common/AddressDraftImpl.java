@@ -568,4 +568,8 @@ public class AddressDraftImpl implements AddressDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public AddressDraft copyDeep() {
+        return AddressDraft.deepCopy(this);
+    }
 }

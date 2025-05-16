@@ -97,7 +97,7 @@ projectDir.toPath().resolve("src/main/java-generated/com/commercetools/api/model
     signing {
         sign publication
     }
-    assemble.dependsOn("models_$dirname")
+    assemble.dependsOn("models_${dirname}Jar")
 }
 
 tasks.register("predicatesJar", Jar) {

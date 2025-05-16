@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("Money")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomFieldMoneyTypeImpl.class)
 public interface CustomFieldMoneyType extends FieldType {
@@ -50,6 +51,8 @@ public interface CustomFieldMoneyType extends FieldType {
         CustomFieldMoneyTypeImpl instance = new CustomFieldMoneyTypeImpl();
         return instance;
     }
+
+    public CustomFieldMoneyType copyDeep();
 
     /**
      * factory method to create a deep copy of CustomFieldMoneyType

@@ -117,4 +117,8 @@ public class BusinessUnitApprovalRuleModeChangedMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public BusinessUnitApprovalRuleModeChangedMessagePayload copyDeep() {
+        return BusinessUnitApprovalRuleModeChangedMessagePayload.deepCopy(this);
+    }
 }

@@ -211,4 +211,8 @@ public class StateDraftImpl implements StateDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public StateDraft copyDeep() {
+        return StateDraft.deepCopy(this);
+    }
 }

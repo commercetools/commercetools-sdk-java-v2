@@ -92,4 +92,8 @@ public class OrderStoreSetMessagePayloadImpl implements OrderStoreSetMessagePayl
                 .build();
     }
 
+    @Override
+    public OrderStoreSetMessagePayload copyDeep() {
+        return OrderStoreSetMessagePayload.deepCopy(this);
+    }
 }

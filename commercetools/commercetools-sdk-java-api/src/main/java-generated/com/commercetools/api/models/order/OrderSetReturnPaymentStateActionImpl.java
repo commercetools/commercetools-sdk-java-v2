@@ -133,4 +133,8 @@ public class OrderSetReturnPaymentStateActionImpl implements OrderSetReturnPayme
                 .build();
     }
 
+    @Override
+    public OrderSetReturnPaymentStateAction copyDeep() {
+        return OrderSetReturnPaymentStateAction.deepCopy(this);
+    }
 }

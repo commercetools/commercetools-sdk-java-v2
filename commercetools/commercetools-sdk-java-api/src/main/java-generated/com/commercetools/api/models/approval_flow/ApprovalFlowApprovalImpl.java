@@ -96,4 +96,8 @@ public class ApprovalFlowApprovalImpl implements ApprovalFlowApproval, ModelBase
                 .build();
     }
 
+    @Override
+    public ApprovalFlowApproval copyDeep() {
+        return ApprovalFlowApproval.deepCopy(this);
+    }
 }

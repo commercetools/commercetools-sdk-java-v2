@@ -69,4 +69,8 @@ public class ReviewUpdateActionImpl implements ReviewUpdateAction, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action).build();
     }
 
+    @Override
+    public ReviewUpdateAction copyDeep() {
+        return ReviewUpdateAction.deepCopy(this);
+    }
 }

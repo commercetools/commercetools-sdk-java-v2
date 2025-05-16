@@ -27,13 +27,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.staged_quote.StagedQuoteChangeStagedQuoteStateActionImpl.class, name = StagedQuoteChangeStagedQuoteStateAction.CHANGE_STAGED_QUOTE_STATE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.staged_quote.StagedQuoteSetCustomFieldActionImpl.class, name = StagedQuoteSetCustomFieldAction.SET_CUSTOM_FIELD),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.staged_quote.StagedQuoteSetCustomTypeActionImpl.class, name = StagedQuoteSetCustomTypeAction.SET_CUSTOM_TYPE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.staged_quote.StagedQuoteSetSellerCommentActionImpl.class, name = StagedQuoteSetSellerCommentAction.SET_SELLER_COMMENT),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.staged_quote.StagedQuoteSetValidToActionImpl.class, name = StagedQuoteSetValidToAction.SET_VALID_TO),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.staged_quote.StagedQuoteTransitionStateActionImpl.class, name = StagedQuoteTransitionStateAction.TRANSITION_STATE) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = StagedQuoteUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = StagedQuoteUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -48,6 +41,8 @@ public interface StagedQuoteUpdateAction
     @JsonProperty("action")
     public String getAction();
 
+    public StagedQuoteUpdateAction copyDeep();
+
     /**
      * factory method to create a deep copy of StagedQuoteUpdateAction
      * @param template instance to be copied
@@ -58,29 +53,9 @@ public interface StagedQuoteUpdateAction
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.staged_quote.StagedQuoteChangeStagedQuoteStateAction) {
-            return com.commercetools.api.models.staged_quote.StagedQuoteChangeStagedQuoteStateAction.deepCopy(
-                (com.commercetools.api.models.staged_quote.StagedQuoteChangeStagedQuoteStateAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.staged_quote.StagedQuoteSetCustomFieldAction) {
-            return com.commercetools.api.models.staged_quote.StagedQuoteSetCustomFieldAction
-                    .deepCopy((com.commercetools.api.models.staged_quote.StagedQuoteSetCustomFieldAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.staged_quote.StagedQuoteSetCustomTypeAction) {
-            return com.commercetools.api.models.staged_quote.StagedQuoteSetCustomTypeAction
-                    .deepCopy((com.commercetools.api.models.staged_quote.StagedQuoteSetCustomTypeAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.staged_quote.StagedQuoteSetSellerCommentAction) {
-            return com.commercetools.api.models.staged_quote.StagedQuoteSetSellerCommentAction
-                    .deepCopy((com.commercetools.api.models.staged_quote.StagedQuoteSetSellerCommentAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.staged_quote.StagedQuoteSetValidToAction) {
-            return com.commercetools.api.models.staged_quote.StagedQuoteSetValidToAction
-                    .deepCopy((com.commercetools.api.models.staged_quote.StagedQuoteSetValidToAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.staged_quote.StagedQuoteTransitionStateAction) {
-            return com.commercetools.api.models.staged_quote.StagedQuoteTransitionStateAction
-                    .deepCopy((com.commercetools.api.models.staged_quote.StagedQuoteTransitionStateAction) template);
+
+        if (!(template instanceof StagedQuoteUpdateActionImpl)) {
+            return template.copyDeep();
         }
         StagedQuoteUpdateActionImpl instance = new StagedQuoteUpdateActionImpl();
         return instance;

@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("updateItemShippingAddress")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderUpdateItemShippingAddressActionImpl.class)
 public interface OrderUpdateItemShippingAddressAction extends OrderUpdateAction {
@@ -72,6 +73,8 @@ public interface OrderUpdateItemShippingAddressAction extends OrderUpdateAction 
         instance.setAddress(template.getAddress());
         return instance;
     }
+
+    public OrderUpdateItemShippingAddressAction copyDeep();
 
     /**
      * factory method to create a deep copy of OrderUpdateItemShippingAddressAction

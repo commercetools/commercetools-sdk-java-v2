@@ -96,4 +96,8 @@ public class StandalonePriceSetPriceTiersActionImpl implements StandalonePriceSe
                 .build();
     }
 
+    @Override
+    public StandalonePriceSetPriceTiersAction copyDeep() {
+        return StandalonePriceSetPriceTiersAction.deepCopy(this);
+    }
 }

@@ -321,4 +321,8 @@ public class ShoppingListLineItemImpl implements ShoppingListLineItem, ModelBase
                 .build();
     }
 
+    @Override
+    public ShoppingListLineItem copyDeep() {
+        return ShoppingListLineItem.deepCopy(this);
+    }
 }

@@ -134,4 +134,8 @@ public class ApprovalFlowRejectedMessagePayloadImpl implements ApprovalFlowRejec
                 .build();
     }
 
+    @Override
+    public ApprovalFlowRejectedMessagePayload copyDeep() {
+        return ApprovalFlowRejectedMessagePayload.deepCopy(this);
+    }
 }

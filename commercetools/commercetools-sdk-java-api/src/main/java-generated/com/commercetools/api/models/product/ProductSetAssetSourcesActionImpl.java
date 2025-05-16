@@ -195,4 +195,8 @@ public class ProductSetAssetSourcesActionImpl implements ProductSetAssetSourcesA
                 .build();
     }
 
+    @Override
+    public ProductSetAssetSourcesAction copyDeep() {
+        return ProductSetAssetSourcesAction.deepCopy(this);
+    }
 }

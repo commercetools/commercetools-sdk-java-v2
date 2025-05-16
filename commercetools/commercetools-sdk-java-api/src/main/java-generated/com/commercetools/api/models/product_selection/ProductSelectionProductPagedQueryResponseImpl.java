@@ -162,4 +162,8 @@ public class ProductSelectionProductPagedQueryResponseImpl
                 .build();
     }
 
+    @Override
+    public ProductSelectionProductPagedQueryResponse copyDeep() {
+        return ProductSelectionProductPagedQueryResponse.deepCopy(this);
+    }
 }

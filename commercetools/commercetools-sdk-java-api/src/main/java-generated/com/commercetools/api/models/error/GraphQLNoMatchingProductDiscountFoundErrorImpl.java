@@ -98,4 +98,8 @@ public class GraphQLNoMatchingProductDiscountFoundErrorImpl
                 .build();
     }
 
+    @Override
+    public GraphQLNoMatchingProductDiscountFoundError copyDeep() {
+        return GraphQLNoMatchingProductDiscountFoundError.deepCopy(this);
+    }
 }

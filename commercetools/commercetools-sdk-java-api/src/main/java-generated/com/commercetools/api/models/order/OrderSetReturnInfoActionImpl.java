@@ -96,4 +96,8 @@ public class OrderSetReturnInfoActionImpl implements OrderSetReturnInfoAction, M
                 .build();
     }
 
+    @Override
+    public OrderSetReturnInfoAction copyDeep() {
+        return OrderSetReturnInfoAction.deepCopy(this);
+    }
 }

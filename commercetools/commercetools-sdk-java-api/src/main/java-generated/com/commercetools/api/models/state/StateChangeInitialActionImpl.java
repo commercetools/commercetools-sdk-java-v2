@@ -91,4 +91,8 @@ public class StateChangeInitialActionImpl implements StateChangeInitialAction, M
                 .build();
     }
 
+    @Override
+    public StateChangeInitialAction copyDeep() {
+        return StateChangeInitialAction.deepCopy(this);
+    }
 }

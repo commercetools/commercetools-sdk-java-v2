@@ -99,4 +99,8 @@ public class CartSetDirectDiscountsActionImpl implements CartSetDirectDiscountsA
                 .build();
     }
 
+    @Override
+    public CartSetDirectDiscountsAction copyDeep() {
+        return CartSetDirectDiscountsAction.deepCopy(this);
+    }
 }

@@ -225,6 +225,8 @@ public interface OrderFromCartDraft extends io.vrap.rmf.base.client.Draft<OrderF
         return instance;
     }
 
+    public OrderFromCartDraft copyDeep();
+
     /**
      * factory method to create a deep copy of OrderFromCartDraft
      * @param template instance to be copied

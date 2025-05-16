@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("zone")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ZoneReferenceImpl.class)
 public interface ZoneReference extends Reference, com.commercetools.api.models.Identifiable<Zone>,
@@ -88,6 +89,8 @@ public interface ZoneReference extends Reference, com.commercetools.api.models.I
         instance.setObj(template.getObj());
         return instance;
     }
+
+    public ZoneReference copyDeep();
 
     /**
      * factory method to create a deep copy of ZoneReference

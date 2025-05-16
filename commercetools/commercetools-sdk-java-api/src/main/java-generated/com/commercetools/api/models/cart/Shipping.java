@@ -146,6 +146,8 @@ public interface Shipping {
         return instance;
     }
 
+    public Shipping copyDeep();
+
     /**
      * factory method to create a deep copy of Shipping
      * @param template instance to be copied

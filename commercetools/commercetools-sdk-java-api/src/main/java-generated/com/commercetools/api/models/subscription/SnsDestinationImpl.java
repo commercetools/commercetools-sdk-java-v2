@@ -156,4 +156,8 @@ public class SnsDestinationImpl implements SnsDestination, ModelBase {
                 .build();
     }
 
+    @Override
+    public SnsDestination copyDeep() {
+        return SnsDestination.deepCopy(this);
+    }
 }

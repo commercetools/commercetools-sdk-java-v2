@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("fixed")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartDiscountValueFixedImpl.class)
 public interface CartDiscountValueFixed extends CartDiscountValue, CartDiscountValueFixedMixin {
@@ -99,6 +100,8 @@ public interface CartDiscountValueFixed extends CartDiscountValue, CartDiscountV
         instance.setApplicationMode(template.getApplicationMode());
         return instance;
     }
+
+    public CartDiscountValueFixed copyDeep();
 
     /**
      * factory method to create a deep copy of CartDiscountValueFixed

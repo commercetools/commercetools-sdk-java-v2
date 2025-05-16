@@ -195,4 +195,8 @@ public class ProductTailoringSetAssetTagsActionImpl implements ProductTailoringS
                 .build();
     }
 
+    @Override
+    public ProductTailoringSetAssetTagsAction copyDeep() {
+        return ProductTailoringSetAssetTagsAction.deepCopy(this);
+    }
 }

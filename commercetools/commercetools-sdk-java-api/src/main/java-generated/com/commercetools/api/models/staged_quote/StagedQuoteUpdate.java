@@ -94,6 +94,8 @@ public interface StagedQuoteUpdate extends
         return instance;
     }
 
+    public StagedQuoteUpdate copyDeep();
+
     /**
      * factory method to create a deep copy of StagedQuoteUpdate
      * @param template instance to be copied

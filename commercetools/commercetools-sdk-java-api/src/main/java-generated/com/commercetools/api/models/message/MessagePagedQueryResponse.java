@@ -143,6 +143,8 @@ public interface MessagePagedQueryResponse extends com.commercetools.api.models.
         return instance;
     }
 
+    public MessagePagedQueryResponse copyDeep();
+
     /**
      * factory method to create a deep copy of MessagePagedQueryResponse
      * @param template instance to be copied

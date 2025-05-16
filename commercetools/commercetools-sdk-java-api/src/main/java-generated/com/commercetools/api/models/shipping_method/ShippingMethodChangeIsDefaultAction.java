@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeIsDefault")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShippingMethodChangeIsDefaultActionImpl.class)
 public interface ShippingMethodChangeIsDefaultAction extends ShippingMethodUpdateAction {
@@ -69,6 +70,8 @@ public interface ShippingMethodChangeIsDefaultAction extends ShippingMethodUpdat
         instance.setIsDefault(template.getIsDefault());
         return instance;
     }
+
+    public ShippingMethodChangeIsDefaultAction copyDeep();
 
     /**
      * factory method to create a deep copy of ShippingMethodChangeIsDefaultAction

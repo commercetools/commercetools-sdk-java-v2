@@ -313,4 +313,8 @@ public class CustomerCustomTypeSetMessageImpl implements CustomerCustomTypeSetMe
                 .build();
     }
 
+    @Override
+    public CustomerCustomTypeSetMessage copyDeep() {
+        return CustomerCustomTypeSetMessage.deepCopy(this);
+    }
 }

@@ -110,4 +110,8 @@ public class InventoryEntrySetCustomFieldActionImpl implements InventoryEntrySet
                 .build();
     }
 
+    @Override
+    public InventoryEntrySetCustomFieldAction copyDeep() {
+        return InventoryEntrySetCustomFieldAction.deepCopy(this);
+    }
 }

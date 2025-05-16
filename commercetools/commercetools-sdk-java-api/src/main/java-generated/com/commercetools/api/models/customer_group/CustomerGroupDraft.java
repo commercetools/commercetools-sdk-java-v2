@@ -100,6 +100,8 @@ public interface CustomerGroupDraft extends com.commercetools.api.models.Customi
         return instance;
     }
 
+    public CustomerGroupDraft copyDeep();
+
     /**
      * factory method to create a deep copy of CustomerGroupDraft
      * @param template instance to be copied

@@ -110,4 +110,8 @@ public class ProductRemovePriceActionImpl implements ProductRemovePriceAction, M
                 .build();
     }
 
+    @Override
+    public ProductRemovePriceAction copyDeep() {
+        return ProductRemovePriceAction.deepCopy(this);
+    }
 }

@@ -37,6 +37,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("addCustomShippingMethod")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartAddCustomShippingMethodActionImpl.class)
 public interface CartAddCustomShippingMethodAction extends CartUpdateAction {
@@ -227,6 +228,8 @@ public interface CartAddCustomShippingMethodAction extends CartUpdateAction {
         instance.setCustom(template.getCustom());
         return instance;
     }
+
+    public CartAddCustomShippingMethodAction copyDeep();
 
     /**
      * factory method to create a deep copy of CartAddCustomShippingMethodAction

@@ -334,4 +334,8 @@ public class StagedQuoteStateTransitionMessageImpl implements StagedQuoteStateTr
                 .build();
     }
 
+    @Override
+    public StagedQuoteStateTransitionMessage copyDeep() {
+        return StagedQuoteStateTransitionMessage.deepCopy(this);
+    }
 }

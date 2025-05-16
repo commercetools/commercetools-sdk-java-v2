@@ -173,6 +173,8 @@ public interface SubscriptionDraft
         return instance;
     }
 
+    public SubscriptionDraft copyDeep();
+
     /**
      * factory method to create a deep copy of SubscriptionDraft
      * @param template instance to be copied

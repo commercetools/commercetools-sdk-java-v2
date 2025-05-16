@@ -111,4 +111,8 @@ public class AssociateRoleReferenceImpl implements AssociateRoleReference, Model
                 .build();
     }
 
+    @Override
+    public AssociateRoleReference copyDeep() {
+        return AssociateRoleReference.deepCopy(this);
+    }
 }

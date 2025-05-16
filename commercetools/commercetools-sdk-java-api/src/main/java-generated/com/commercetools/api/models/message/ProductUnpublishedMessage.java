@@ -31,6 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ProductUnpublished")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductUnpublishedMessageImpl.class)
 public interface ProductUnpublishedMessage extends Message {
@@ -67,6 +68,8 @@ public interface ProductUnpublishedMessage extends Message {
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         return instance;
     }
+
+    public ProductUnpublishedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of ProductUnpublishedMessage

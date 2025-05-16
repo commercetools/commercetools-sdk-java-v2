@@ -137,4 +137,8 @@ public class CustomerChangePasswordImpl implements CustomerChangePassword, Model
                 .build();
     }
 
+    @Override
+    public CustomerChangePassword copyDeep() {
+        return CustomerChangePassword.deepCopy(this);
+    }
 }

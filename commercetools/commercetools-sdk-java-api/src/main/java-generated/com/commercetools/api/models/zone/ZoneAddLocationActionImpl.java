@@ -91,4 +91,8 @@ public class ZoneAddLocationActionImpl implements ZoneAddLocationAction, ModelBa
                 .build();
     }
 
+    @Override
+    public ZoneAddLocationAction copyDeep() {
+        return ZoneAddLocationAction.deepCopy(this);
+    }
 }

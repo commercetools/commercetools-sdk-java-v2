@@ -129,6 +129,8 @@ public interface ClientLogging {
         return instance;
     }
 
+    public ClientLogging copyDeep();
+
     /**
      * factory method to create a deep copy of ClientLogging
      * @param template instance to be copied
@@ -139,13 +141,9 @@ public interface ClientLogging {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.common.CreatedBy) {
-            return com.commercetools.api.models.common.CreatedBy
-                    .deepCopy((com.commercetools.api.models.common.CreatedBy) template);
-        }
-        if (template instanceof com.commercetools.api.models.common.LastModifiedBy) {
-            return com.commercetools.api.models.common.LastModifiedBy
-                    .deepCopy((com.commercetools.api.models.common.LastModifiedBy) template);
+
+        if (!(template instanceof ClientLoggingImpl)) {
+            return template.copyDeep();
         }
         ClientLoggingImpl instance = new ClientLoggingImpl();
         instance.setClientId(template.getClientId());

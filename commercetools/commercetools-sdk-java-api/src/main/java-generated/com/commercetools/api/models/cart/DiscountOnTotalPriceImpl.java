@@ -146,4 +146,8 @@ public class DiscountOnTotalPriceImpl implements DiscountOnTotalPrice, ModelBase
                 .build();
     }
 
+    @Override
+    public DiscountOnTotalPrice copyDeep() {
+        return DiscountOnTotalPrice.deepCopy(this);
+    }
 }

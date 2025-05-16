@@ -32,6 +32,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setOrderTotalTax")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderSetOrderTotalTaxActionImpl.class)
 public interface StagedOrderSetOrderTotalTaxAction extends StagedOrderUpdateAction {
@@ -99,6 +100,8 @@ public interface StagedOrderSetOrderTotalTaxAction extends StagedOrderUpdateActi
         instance.setExternalTaxPortions(template.getExternalTaxPortions());
         return instance;
     }
+
+    public StagedOrderSetOrderTotalTaxAction copyDeep();
 
     /**
      * factory method to create a deep copy of StagedOrderSetOrderTotalTaxAction

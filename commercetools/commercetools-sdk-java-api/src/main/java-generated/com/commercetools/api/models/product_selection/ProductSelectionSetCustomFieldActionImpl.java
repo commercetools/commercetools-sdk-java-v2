@@ -110,4 +110,8 @@ public class ProductSelectionSetCustomFieldActionImpl implements ProductSelectio
                 .build();
     }
 
+    @Override
+    public ProductSelectionSetCustomFieldAction copyDeep() {
+        return ProductSelectionSetCustomFieldAction.deepCopy(this);
+    }
 }

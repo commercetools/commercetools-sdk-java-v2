@@ -130,4 +130,8 @@ public class StagedOrderSetItemShippingAddressCustomTypeActionImpl
                 .build();
     }
 
+    @Override
+    public StagedOrderSetItemShippingAddressCustomTypeAction copyDeep() {
+        return StagedOrderSetItemShippingAddressCustomTypeAction.deepCopy(this);
+    }
 }

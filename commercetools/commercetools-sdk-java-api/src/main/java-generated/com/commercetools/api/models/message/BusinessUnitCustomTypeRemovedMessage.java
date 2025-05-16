@@ -31,6 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("BusinessUnitCustomTypeRemoved")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = BusinessUnitCustomTypeRemovedMessageImpl.class)
 public interface BusinessUnitCustomTypeRemovedMessage extends Message {
@@ -83,6 +84,8 @@ public interface BusinessUnitCustomTypeRemovedMessage extends Message {
         instance.setOldTypeId(template.getOldTypeId());
         return instance;
     }
+
+    public BusinessUnitCustomTypeRemovedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of BusinessUnitCustomTypeRemovedMessage

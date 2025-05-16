@@ -137,4 +137,8 @@ public class ProductSetAttributeInAllVariantsActionImpl implements ProductSetAtt
                 .build();
     }
 
+    @Override
+    public ProductSetAttributeInAllVariantsAction copyDeep() {
+        return ProductSetAttributeInAllVariantsAction.deepCopy(this);
+    }
 }

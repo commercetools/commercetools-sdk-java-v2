@@ -130,6 +130,8 @@ public interface ProductVariantChannelAvailability {
         return instance;
     }
 
+    public ProductVariantChannelAvailability copyDeep();
+
     /**
      * factory method to create a deep copy of ProductVariantChannelAvailability
      * @param template instance to be copied

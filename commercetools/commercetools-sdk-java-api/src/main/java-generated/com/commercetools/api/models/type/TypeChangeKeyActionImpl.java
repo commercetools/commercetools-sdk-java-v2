@@ -91,4 +91,8 @@ public class TypeChangeKeyActionImpl implements TypeChangeKeyAction, ModelBase {
                 .build();
     }
 
+    @Override
+    public TypeChangeKeyAction copyDeep() {
+        return TypeChangeKeyAction.deepCopy(this);
+    }
 }

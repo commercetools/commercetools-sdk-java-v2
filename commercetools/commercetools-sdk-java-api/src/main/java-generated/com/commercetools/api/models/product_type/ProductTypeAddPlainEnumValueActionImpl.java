@@ -110,4 +110,8 @@ public class ProductTypeAddPlainEnumValueActionImpl implements ProductTypeAddPla
                 .build();
     }
 
+    @Override
+    public ProductTypeAddPlainEnumValueAction copyDeep() {
+        return ProductTypeAddPlainEnumValueAction.deepCopy(this);
+    }
 }

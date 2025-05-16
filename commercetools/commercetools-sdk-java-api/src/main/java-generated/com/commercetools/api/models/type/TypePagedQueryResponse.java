@@ -143,6 +143,8 @@ public interface TypePagedQueryResponse extends com.commercetools.api.models.Res
         return instance;
     }
 
+    public TypePagedQueryResponse copyDeep();
+
     /**
      * factory method to create a deep copy of TypePagedQueryResponse
      * @param template instance to be copied

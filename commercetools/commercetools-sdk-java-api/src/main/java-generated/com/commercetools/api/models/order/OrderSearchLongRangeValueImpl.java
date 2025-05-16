@@ -155,4 +155,8 @@ public class OrderSearchLongRangeValueImpl implements OrderSearchLongRangeValue,
                 .build();
     }
 
+    @Override
+    public OrderSearchLongRangeValue copyDeep() {
+        return OrderSearchLongRangeValue.deepCopy(this);
+    }
 }

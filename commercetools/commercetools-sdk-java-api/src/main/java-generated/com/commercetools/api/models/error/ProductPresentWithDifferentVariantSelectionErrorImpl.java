@@ -160,4 +160,8 @@ public class ProductPresentWithDifferentVariantSelectionErrorImpl
                 .build();
     }
 
+    @Override
+    public ProductPresentWithDifferentVariantSelectionError copyDeep() {
+        return ProductPresentWithDifferentVariantSelectionError.deepCopy(this);
+    }
 }

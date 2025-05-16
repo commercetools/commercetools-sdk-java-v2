@@ -96,4 +96,8 @@ public class MethodExternalTaxRateDraftImpl implements MethodExternalTaxRateDraf
                 .build();
     }
 
+    @Override
+    public MethodExternalTaxRateDraft copyDeep() {
+        return MethodExternalTaxRateDraft.deepCopy(this);
+    }
 }

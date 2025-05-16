@@ -97,4 +97,8 @@ public class CustomFieldLocalizedEnumTypeImpl implements CustomFieldLocalizedEnu
                 .build();
     }
 
+    @Override
+    public CustomFieldLocalizedEnumType copyDeep() {
+        return CustomFieldLocalizedEnumType.deepCopy(this);
+    }
 }

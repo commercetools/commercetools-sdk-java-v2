@@ -101,6 +101,8 @@ public interface OrderSearchFullTextValue extends OrderSearchQueryExpressionValu
         return instance;
     }
 
+    public OrderSearchFullTextValue copyDeep();
+
     /**
      * factory method to create a deep copy of OrderSearchFullTextValue
      * @param template instance to be copied

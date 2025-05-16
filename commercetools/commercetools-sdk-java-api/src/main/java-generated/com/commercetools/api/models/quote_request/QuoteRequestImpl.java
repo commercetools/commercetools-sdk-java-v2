@@ -738,4 +738,8 @@ public class QuoteRequestImpl implements QuoteRequest, ModelBase {
                 .build();
     }
 
+    @Override
+    public QuoteRequest copyDeep() {
+        return QuoteRequest.deepCopy(this);
+    }
 }

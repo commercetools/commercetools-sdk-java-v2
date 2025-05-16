@@ -137,4 +137,8 @@ public class OrderImportCustomLineItemStateActionImpl implements OrderImportCust
                 .build();
     }
 
+    @Override
+    public OrderImportCustomLineItemStateAction copyDeep() {
+        return OrderImportCustomLineItemStateAction.deepCopy(this);
+    }
 }

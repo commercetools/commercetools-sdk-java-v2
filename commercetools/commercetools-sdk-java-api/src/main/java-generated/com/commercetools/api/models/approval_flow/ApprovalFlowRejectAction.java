@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("reject")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ApprovalFlowRejectActionImpl.class)
 public interface ApprovalFlowRejectAction extends ApprovalFlowUpdateAction {
@@ -67,6 +68,8 @@ public interface ApprovalFlowRejectAction extends ApprovalFlowUpdateAction {
         instance.setReason(template.getReason());
         return instance;
     }
+
+    public ApprovalFlowRejectAction copyDeep();
 
     /**
      * factory method to create a deep copy of ApprovalFlowRejectAction

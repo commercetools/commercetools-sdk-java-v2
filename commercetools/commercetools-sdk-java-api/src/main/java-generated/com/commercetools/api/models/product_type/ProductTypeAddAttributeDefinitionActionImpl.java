@@ -92,4 +92,8 @@ public class ProductTypeAddAttributeDefinitionActionImpl implements ProductTypeA
                 .build();
     }
 
+    @Override
+    public ProductTypeAddAttributeDefinitionAction copyDeep() {
+        return ProductTypeAddAttributeDefinitionAction.deepCopy(this);
+    }
 }

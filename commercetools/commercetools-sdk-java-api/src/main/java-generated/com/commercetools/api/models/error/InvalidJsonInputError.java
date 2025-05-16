@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("InvalidJsonInput")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = InvalidJsonInputErrorImpl.class)
 public interface InvalidJsonInputError extends ErrorObject {
@@ -96,6 +97,8 @@ public interface InvalidJsonInputError extends ErrorObject {
         instance.setDetailedErrorMessage(template.getDetailedErrorMessage());
         return instance;
     }
+
+    public InvalidJsonInputError copyDeep();
 
     /**
      * factory method to create a deep copy of InvalidJsonInputError

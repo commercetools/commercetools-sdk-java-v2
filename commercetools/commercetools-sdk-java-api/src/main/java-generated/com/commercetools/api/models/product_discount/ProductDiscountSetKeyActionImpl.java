@@ -91,4 +91,8 @@ public class ProductDiscountSetKeyActionImpl implements ProductDiscountSetKeyAct
                 .build();
     }
 
+    @Override
+    public ProductDiscountSetKeyAction copyDeep() {
+        return ProductDiscountSetKeyAction.deepCopy(this);
+    }
 }

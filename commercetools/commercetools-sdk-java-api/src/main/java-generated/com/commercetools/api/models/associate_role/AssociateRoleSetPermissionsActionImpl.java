@@ -97,4 +97,8 @@ public class AssociateRoleSetPermissionsActionImpl implements AssociateRoleSetPe
                 .build();
     }
 
+    @Override
+    public AssociateRoleSetPermissionsAction copyDeep() {
+        return AssociateRoleSetPermissionsAction.deepCopy(this);
+    }
 }

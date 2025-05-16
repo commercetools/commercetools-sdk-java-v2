@@ -111,4 +111,8 @@ public class TypeReferenceImpl implements TypeReference, ModelBase {
                 .build();
     }
 
+    @Override
+    public TypeReference copyDeep() {
+        return TypeReference.deepCopy(this);
+    }
 }

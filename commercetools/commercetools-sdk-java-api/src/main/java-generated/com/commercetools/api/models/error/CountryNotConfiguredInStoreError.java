@@ -38,6 +38,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("CountryNotConfiguredInStore")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CountryNotConfiguredInStoreErrorImpl.class)
 public interface CountryNotConfiguredInStoreError extends ErrorObject {
@@ -129,6 +130,8 @@ public interface CountryNotConfiguredInStoreError extends ErrorObject {
         instance.setCountry(template.getCountry());
         return instance;
     }
+
+    public CountryNotConfiguredInStoreError copyDeep();
 
     /**
      * factory method to create a deep copy of CountryNotConfiguredInStoreError

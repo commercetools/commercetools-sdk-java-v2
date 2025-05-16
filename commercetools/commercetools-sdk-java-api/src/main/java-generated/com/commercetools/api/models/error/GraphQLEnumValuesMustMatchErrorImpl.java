@@ -97,4 +97,8 @@ public class GraphQLEnumValuesMustMatchErrorImpl implements GraphQLEnumValuesMus
                 .build();
     }
 
+    @Override
+    public GraphQLEnumValuesMustMatchError copyDeep() {
+        return GraphQLEnumValuesMustMatchError.deepCopy(this);
+    }
 }

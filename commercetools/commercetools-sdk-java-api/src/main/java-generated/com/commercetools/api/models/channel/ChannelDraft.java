@@ -175,6 +175,8 @@ public interface ChannelDraft extends com.commercetools.api.models.CustomizableD
         return instance;
     }
 
+    public ChannelDraft copyDeep();
+
     /**
      * factory method to create a deep copy of ChannelDraft
      * @param template instance to be copied

@@ -159,4 +159,8 @@ public class CartPagedQueryResponseImpl implements CartPagedQueryResponse, Model
                 .build();
     }
 
+    @Override
+    public CartPagedQueryResponse copyDeep() {
+        return CartPagedQueryResponse.deepCopy(this);
+    }
 }

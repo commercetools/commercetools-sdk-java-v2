@@ -333,4 +333,8 @@ public class ProductTailoringDeletedMessageImpl implements ProductTailoringDelet
                 .build();
     }
 
+    @Override
+    public ProductTailoringDeletedMessage copyDeep() {
+        return ProductTailoringDeletedMessage.deepCopy(this);
+    }
 }

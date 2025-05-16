@@ -441,4 +441,8 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
                 .build();
     }
 
+    @Override
+    public StandalonePrice copyDeep() {
+        return StandalonePrice.deepCopy(this);
+    }
 }

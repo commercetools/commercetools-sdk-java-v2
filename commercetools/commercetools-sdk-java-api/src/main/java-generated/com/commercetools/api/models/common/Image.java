@@ -100,6 +100,8 @@ public interface Image {
         return instance;
     }
 
+    public Image copyDeep();
+
     /**
      * factory method to create a deep copy of Image
      * @param template instance to be copied

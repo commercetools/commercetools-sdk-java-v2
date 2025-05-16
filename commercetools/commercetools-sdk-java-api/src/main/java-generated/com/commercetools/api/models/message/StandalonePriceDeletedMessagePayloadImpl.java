@@ -91,4 +91,8 @@ public class StandalonePriceDeletedMessagePayloadImpl implements StandalonePrice
                 .build();
     }
 
+    @Override
+    public StandalonePriceDeletedMessagePayload copyDeep() {
+        return StandalonePriceDeletedMessagePayload.deepCopy(this);
+    }
 }

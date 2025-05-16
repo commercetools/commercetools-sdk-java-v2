@@ -91,4 +91,8 @@ public class CustomerSetVatIdActionImpl implements CustomerSetVatIdAction, Model
                 .build();
     }
 
+    @Override
+    public CustomerSetVatIdAction copyDeep() {
+        return CustomerSetVatIdAction.deepCopy(this);
+    }
 }

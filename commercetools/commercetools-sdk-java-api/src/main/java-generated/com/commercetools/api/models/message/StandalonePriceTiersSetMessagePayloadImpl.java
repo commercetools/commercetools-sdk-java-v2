@@ -119,4 +119,8 @@ public class StandalonePriceTiersSetMessagePayloadImpl implements StandalonePric
                 .build();
     }
 
+    @Override
+    public StandalonePriceTiersSetMessagePayload copyDeep() {
+        return StandalonePriceTiersSetMessagePayload.deepCopy(this);
+    }
 }

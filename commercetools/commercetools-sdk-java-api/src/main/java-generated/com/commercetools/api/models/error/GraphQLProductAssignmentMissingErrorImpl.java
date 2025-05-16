@@ -115,4 +115,8 @@ public class GraphQLProductAssignmentMissingErrorImpl implements GraphQLProductA
                 .build();
     }
 
+    @Override
+    public GraphQLProductAssignmentMissingError copyDeep() {
+        return GraphQLProductAssignmentMissingError.deepCopy(this);
+    }
 }

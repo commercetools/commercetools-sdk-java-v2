@@ -110,4 +110,8 @@ public class StandalonePriceKeySetMessagePayloadImpl implements StandalonePriceK
                 .build();
     }
 
+    @Override
+    public StandalonePriceKeySetMessagePayload copyDeep() {
+        return StandalonePriceKeySetMessagePayload.deepCopy(this);
+    }
 }

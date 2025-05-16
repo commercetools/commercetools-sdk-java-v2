@@ -93,4 +93,8 @@ public class CartDiscountRemoveStoreActionImpl implements CartDiscountRemoveStor
                 .build();
     }
 
+    @Override
+    public CartDiscountRemoveStoreAction copyDeep() {
+        return CartDiscountRemoveStoreAction.deepCopy(this);
+    }
 }

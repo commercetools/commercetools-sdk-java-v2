@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("includeOnly")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductVariantSelectionIncludeOnlyImpl.class)
 public interface ProductVariantSelectionIncludeOnly extends ProductVariantSelection {
@@ -85,6 +86,8 @@ public interface ProductVariantSelectionIncludeOnly extends ProductVariantSelect
         instance.setSkus(template.getSkus());
         return instance;
     }
+
+    public ProductVariantSelectionIncludeOnly copyDeep();
 
     /**
      * factory method to create a deep copy of ProductVariantSelectionIncludeOnly

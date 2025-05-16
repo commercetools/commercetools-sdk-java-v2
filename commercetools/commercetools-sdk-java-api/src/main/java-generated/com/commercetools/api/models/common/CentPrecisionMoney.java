@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("centPrecision")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CentPrecisionMoneyImpl.class)
 public interface CentPrecisionMoney extends TypedMoney {
@@ -73,6 +74,8 @@ public interface CentPrecisionMoney extends TypedMoney {
         instance.setFractionDigits(template.getFractionDigits());
         return instance;
     }
+
+    public CentPrecisionMoney copyDeep();
 
     /**
      * factory method to create a deep copy of CentPrecisionMoney

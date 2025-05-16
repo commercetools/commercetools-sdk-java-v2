@@ -134,4 +134,8 @@ public class ShoppingListSetTextLineItemDescriptionActionImpl
                 .build();
     }
 
+    @Override
+    public ShoppingListSetTextLineItemDescriptionAction copyDeep() {
+        return ShoppingListSetTextLineItemDescriptionAction.deepCopy(this);
+    }
 }

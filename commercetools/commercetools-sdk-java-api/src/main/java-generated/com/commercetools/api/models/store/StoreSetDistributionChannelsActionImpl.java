@@ -99,4 +99,8 @@ public class StoreSetDistributionChannelsActionImpl implements StoreSetDistribut
                 .build();
     }
 
+    @Override
+    public StoreSetDistributionChannelsAction copyDeep() {
+        return StoreSetDistributionChannelsAction.deepCopy(this);
+    }
 }

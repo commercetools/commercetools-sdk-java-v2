@@ -92,4 +92,8 @@ public class ProductSetKeyActionImpl implements ProductSetKeyAction, ModelBase {
                 .build();
     }
 
+    @Override
+    public ProductSetKeyAction copyDeep() {
+        return ProductSetKeyAction.deepCopy(this);
+    }
 }

@@ -137,4 +137,8 @@ public class ProductTypeDraftImpl implements ProductTypeDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public ProductTypeDraft copyDeep() {
+        return ProductTypeDraft.deepCopy(this);
+    }
 }

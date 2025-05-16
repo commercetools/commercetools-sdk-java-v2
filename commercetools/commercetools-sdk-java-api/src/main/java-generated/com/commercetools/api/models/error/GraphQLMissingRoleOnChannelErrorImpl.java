@@ -146,4 +146,8 @@ public class GraphQLMissingRoleOnChannelErrorImpl implements GraphQLMissingRoleO
                 .build();
     }
 
+    @Override
+    public GraphQLMissingRoleOnChannelError copyDeep() {
+        return GraphQLMissingRoleOnChannelError.deepCopy(this);
+    }
 }

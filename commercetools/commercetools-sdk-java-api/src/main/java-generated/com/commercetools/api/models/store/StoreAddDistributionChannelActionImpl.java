@@ -94,4 +94,8 @@ public class StoreAddDistributionChannelActionImpl implements StoreAddDistributi
                 .build();
     }
 
+    @Override
+    public StoreAddDistributionChannelAction copyDeep() {
+        return StoreAddDistributionChannelAction.deepCopy(this);
+    }
 }

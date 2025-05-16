@@ -381,4 +381,8 @@ public class MyCustomerDraftImpl implements MyCustomerDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public MyCustomerDraft copyDeep() {
+        return MyCustomerDraft.deepCopy(this);
+    }
 }

@@ -288,6 +288,8 @@ public interface DiscountCodeDraft extends com.commercetools.api.models.Customiz
         return instance;
     }
 
+    public DiscountCodeDraft copyDeep();
+
     /**
      * factory method to create a deep copy of DiscountCodeDraft
      * @param template instance to be copied

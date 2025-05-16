@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("DuplicateFieldWithConflictingResource")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLDuplicateFieldWithConflictingResourceErrorImpl.class)
 public interface GraphQLDuplicateFieldWithConflictingResourceError extends GraphQLErrorObject {
@@ -115,6 +116,8 @@ public interface GraphQLDuplicateFieldWithConflictingResourceError extends Graph
         instance.setConflictingResource(template.getConflictingResource());
         return instance;
     }
+
+    public GraphQLDuplicateFieldWithConflictingResourceError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLDuplicateFieldWithConflictingResourceError

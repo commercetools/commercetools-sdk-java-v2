@@ -280,4 +280,8 @@ public class ProductSearchFacetDistinctValueImpl implements ProductSearchFacetDi
                 .build();
     }
 
+    @Override
+    public ProductSearchFacetDistinctValue copyDeep() {
+        return ProductSearchFacetDistinctValue.deepCopy(this);
+    }
 }

@@ -326,6 +326,8 @@ public interface Project extends com.commercetools.api.models.WithKey {
         return instance;
     }
 
+    public Project copyDeep();
+
     /**
      * factory method to create a deep copy of Project
      * @param template instance to be copied

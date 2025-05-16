@@ -31,6 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("StandalonePriceKeySet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StandalonePriceKeySetMessageImpl.class)
 public interface StandalonePriceKeySetMessage extends Message {
@@ -99,6 +100,8 @@ public interface StandalonePriceKeySetMessage extends Message {
         instance.setOldKey(template.getOldKey());
         return instance;
     }
+
+    public StandalonePriceKeySetMessage copyDeep();
 
     /**
      * factory method to create a deep copy of StandalonePriceKeySetMessage

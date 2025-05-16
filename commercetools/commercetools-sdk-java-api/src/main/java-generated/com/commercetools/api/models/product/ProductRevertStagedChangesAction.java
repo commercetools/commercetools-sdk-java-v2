@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("revertStagedChanges")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductRevertStagedChangesActionImpl.class)
 public interface ProductRevertStagedChangesAction extends ProductUpdateAction {
@@ -50,6 +51,8 @@ public interface ProductRevertStagedChangesAction extends ProductUpdateAction {
         ProductRevertStagedChangesActionImpl instance = new ProductRevertStagedChangesActionImpl();
         return instance;
     }
+
+    public ProductRevertStagedChangesAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductRevertStagedChangesAction

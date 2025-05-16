@@ -36,6 +36,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("OrderLineItemDiscountSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderLineItemDiscountSetMessagePayloadImpl.class)
 public interface OrderLineItemDiscountSetMessagePayload extends OrderMessagePayload {
@@ -178,6 +179,8 @@ public interface OrderLineItemDiscountSetMessagePayload extends OrderMessagePayl
         instance.setTaxedPricePortions(template.getTaxedPricePortions());
         return instance;
     }
+
+    public OrderLineItemDiscountSetMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of OrderLineItemDiscountSetMessagePayload

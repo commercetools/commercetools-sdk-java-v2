@@ -133,4 +133,8 @@ public class CartChangeCustomLineItemMoneyActionImpl implements CartChangeCustom
                 .build();
     }
 
+    @Override
+    public CartChangeCustomLineItemMoneyAction copyDeep() {
+        return CartChangeCustomLineItemMoneyAction.deepCopy(this);
+    }
 }

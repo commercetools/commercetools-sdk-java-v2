@@ -97,4 +97,8 @@ public class SubscriptionSetMessagesActionImpl implements SubscriptionSetMessage
                 .build();
     }
 
+    @Override
+    public SubscriptionSetMessagesAction copyDeep() {
+        return SubscriptionSetMessagesAction.deepCopy(this);
+    }
 }

@@ -63,4 +63,8 @@ public class ApprovalFlowApproveActionImpl implements ApprovalFlowApproveAction,
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action).build();
     }
 
+    @Override
+    public ApprovalFlowApproveAction copyDeep() {
+        return ApprovalFlowApproveAction.deepCopy(this);
+    }
 }

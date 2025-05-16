@@ -92,4 +92,8 @@ public class QuoteChangeCustomerActionImpl implements QuoteChangeCustomerAction,
                 .build();
     }
 
+    @Override
+    public QuoteChangeCustomerAction copyDeep() {
+        return QuoteChangeCustomerAction.deepCopy(this);
+    }
 }

@@ -92,4 +92,8 @@ public class AttributeGroupAddAttributeActionImpl implements AttributeGroupAddAt
                 .build();
     }
 
+    @Override
+    public AttributeGroupAddAttributeAction copyDeep() {
+        return AttributeGroupAddAttributeAction.deepCopy(this);
+    }
 }

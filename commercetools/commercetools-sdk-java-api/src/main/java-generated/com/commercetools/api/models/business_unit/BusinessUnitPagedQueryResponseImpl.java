@@ -160,4 +160,8 @@ public class BusinessUnitPagedQueryResponseImpl implements BusinessUnitPagedQuer
                 .build();
     }
 
+    @Override
+    public BusinessUnitPagedQueryResponse copyDeep() {
+        return BusinessUnitPagedQueryResponse.deepCopy(this);
+    }
 }

@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("StoreLanguagesChanged")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StoreLanguagesChangedMessagePayloadImpl.class)
 public interface StoreLanguagesChangedMessagePayload extends MessagePayload {
@@ -98,6 +99,8 @@ public interface StoreLanguagesChangedMessagePayload extends MessagePayload {
         instance.setRemovedLanguages(template.getRemovedLanguages());
         return instance;
     }
+
+    public StoreLanguagesChangedMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of StoreLanguagesChangedMessagePayload

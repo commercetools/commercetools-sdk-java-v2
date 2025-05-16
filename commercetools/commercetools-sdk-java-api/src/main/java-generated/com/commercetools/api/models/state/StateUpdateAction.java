@@ -27,16 +27,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.state.StateAddRolesActionImpl.class, name = StateAddRolesAction.ADD_ROLES),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.state.StateChangeInitialActionImpl.class, name = StateChangeInitialAction.CHANGE_INITIAL),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.state.StateChangeKeyActionImpl.class, name = StateChangeKeyAction.CHANGE_KEY),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.state.StateChangeTypeActionImpl.class, name = StateChangeTypeAction.CHANGE_TYPE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.state.StateRemoveRolesActionImpl.class, name = StateRemoveRolesAction.REMOVE_ROLES),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.state.StateSetDescriptionActionImpl.class, name = StateSetDescriptionAction.SET_DESCRIPTION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.state.StateSetNameActionImpl.class, name = StateSetNameAction.SET_NAME),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.state.StateSetRolesActionImpl.class, name = StateSetRolesAction.SET_ROLES),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.state.StateSetTransitionsActionImpl.class, name = StateSetTransitionsAction.SET_TRANSITIONS) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = StateUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = StateUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -50,6 +40,8 @@ public interface StateUpdateAction extends com.commercetools.api.models.Resource
     @JsonProperty("action")
     public String getAction();
 
+    public StateUpdateAction copyDeep();
+
     /**
      * factory method to create a deep copy of StateUpdateAction
      * @param template instance to be copied
@@ -60,41 +52,9 @@ public interface StateUpdateAction extends com.commercetools.api.models.Resource
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.state.StateAddRolesAction) {
-            return com.commercetools.api.models.state.StateAddRolesAction
-                    .deepCopy((com.commercetools.api.models.state.StateAddRolesAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.state.StateChangeInitialAction) {
-            return com.commercetools.api.models.state.StateChangeInitialAction
-                    .deepCopy((com.commercetools.api.models.state.StateChangeInitialAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.state.StateChangeKeyAction) {
-            return com.commercetools.api.models.state.StateChangeKeyAction
-                    .deepCopy((com.commercetools.api.models.state.StateChangeKeyAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.state.StateChangeTypeAction) {
-            return com.commercetools.api.models.state.StateChangeTypeAction
-                    .deepCopy((com.commercetools.api.models.state.StateChangeTypeAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.state.StateRemoveRolesAction) {
-            return com.commercetools.api.models.state.StateRemoveRolesAction
-                    .deepCopy((com.commercetools.api.models.state.StateRemoveRolesAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.state.StateSetDescriptionAction) {
-            return com.commercetools.api.models.state.StateSetDescriptionAction
-                    .deepCopy((com.commercetools.api.models.state.StateSetDescriptionAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.state.StateSetNameAction) {
-            return com.commercetools.api.models.state.StateSetNameAction
-                    .deepCopy((com.commercetools.api.models.state.StateSetNameAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.state.StateSetRolesAction) {
-            return com.commercetools.api.models.state.StateSetRolesAction
-                    .deepCopy((com.commercetools.api.models.state.StateSetRolesAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.state.StateSetTransitionsAction) {
-            return com.commercetools.api.models.state.StateSetTransitionsAction
-                    .deepCopy((com.commercetools.api.models.state.StateSetTransitionsAction) template);
+
+        if (!(template instanceof StateUpdateActionImpl)) {
+            return template.copyDeep();
         }
         StateUpdateActionImpl instance = new StateUpdateActionImpl();
         return instance;

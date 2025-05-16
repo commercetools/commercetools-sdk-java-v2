@@ -136,4 +136,8 @@ public class ProductDiscountMatchQueryImpl implements ProductDiscountMatchQuery,
                 .build();
     }
 
+    @Override
+    public ProductDiscountMatchQuery copyDeep() {
+        return ProductDiscountMatchQuery.deepCopy(this);
+    }
 }

@@ -293,4 +293,8 @@ public class AssociateRoleNameSetMessageImpl implements AssociateRoleNameSetMess
                 .build();
     }
 
+    @Override
+    public AssociateRoleNameSetMessage copyDeep() {
+        return AssociateRoleNameSetMessage.deepCopy(this);
+    }
 }

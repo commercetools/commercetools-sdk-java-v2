@@ -319,4 +319,8 @@ public class OverlappingStandalonePriceValidityErrorImpl implements OverlappingS
                 .build();
     }
 
+    @Override
+    public OverlappingStandalonePriceValidityError copyDeep() {
+        return OverlappingStandalonePriceValidityError.deepCopy(this);
+    }
 }

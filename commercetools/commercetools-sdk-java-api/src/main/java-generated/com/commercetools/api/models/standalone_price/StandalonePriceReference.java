@@ -28,6 +28,7 @@ import jakarta.validation.Valid;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("standalone-price")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StandalonePriceReferenceImpl.class)
 public interface StandalonePriceReference extends Reference {
@@ -71,6 +72,8 @@ public interface StandalonePriceReference extends Reference {
         instance.setObj(template.getObj());
         return instance;
     }
+
+    public StandalonePriceReference copyDeep();
 
     /**
      * factory method to create a deep copy of StandalonePriceReference

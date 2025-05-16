@@ -97,4 +97,8 @@ public class GraphQLInvalidOperationErrorImpl implements GraphQLInvalidOperation
                 .build();
     }
 
+    @Override
+    public GraphQLInvalidOperationError copyDeep() {
+        return GraphQLInvalidOperationError.deepCopy(this);
+    }
 }

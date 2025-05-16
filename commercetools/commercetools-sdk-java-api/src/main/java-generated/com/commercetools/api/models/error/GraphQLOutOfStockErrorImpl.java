@@ -147,4 +147,8 @@ public class GraphQLOutOfStockErrorImpl implements GraphQLOutOfStockError, Model
                 .build();
     }
 
+    @Override
+    public GraphQLOutOfStockError copyDeep() {
+        return GraphQLOutOfStockError.deepCopy(this);
+    }
 }

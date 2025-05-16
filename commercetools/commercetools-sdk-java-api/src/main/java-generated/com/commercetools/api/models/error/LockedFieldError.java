@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("LockedField")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = LockedFieldErrorImpl.class)
 public interface LockedFieldError extends ErrorObject {
@@ -96,6 +97,8 @@ public interface LockedFieldError extends ErrorObject {
         instance.setField(template.getField());
         return instance;
     }
+
+    public LockedFieldError copyDeep();
 
     /**
      * factory method to create a deep copy of LockedFieldError

@@ -85,6 +85,8 @@ public interface AssociateRoleAssignment {
         return instance;
     }
 
+    public AssociateRoleAssignment copyDeep();
+
     /**
      * factory method to create a deep copy of AssociateRoleAssignment
      * @param template instance to be copied

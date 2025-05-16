@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("shipping")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartDiscountShippingCostTargetImpl.class)
 public interface CartDiscountShippingCostTarget extends CartDiscountTarget {
@@ -50,6 +51,8 @@ public interface CartDiscountShippingCostTarget extends CartDiscountTarget {
         CartDiscountShippingCostTargetImpl instance = new CartDiscountShippingCostTargetImpl();
         return instance;
     }
+
+    public CartDiscountShippingCostTarget copyDeep();
 
     /**
      * factory method to create a deep copy of CartDiscountShippingCostTarget

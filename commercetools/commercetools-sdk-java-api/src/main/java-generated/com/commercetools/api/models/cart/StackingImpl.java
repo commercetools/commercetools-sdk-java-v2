@@ -62,4 +62,8 @@ public class StackingImpl implements Stacking, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type).build();
     }
 
+    @Override
+    public Stacking copyDeep() {
+        return Stacking.deepCopy(this);
+    }
 }

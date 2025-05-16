@@ -129,4 +129,8 @@ public class CartClassificationTierImpl implements CartClassificationTier, Model
                 .build();
     }
 
+    @Override
+    public CartClassificationTier copyDeep() {
+        return CartClassificationTier.deepCopy(this);
+    }
 }

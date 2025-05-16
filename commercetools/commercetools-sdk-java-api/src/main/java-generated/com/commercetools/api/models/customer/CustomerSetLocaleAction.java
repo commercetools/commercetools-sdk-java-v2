@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setLocale")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerSetLocaleActionImpl.class)
 public interface CustomerSetLocaleAction extends CustomerUpdateAction {
@@ -66,6 +67,8 @@ public interface CustomerSetLocaleAction extends CustomerUpdateAction {
         instance.setLocale(template.getLocale());
         return instance;
     }
+
+    public CustomerSetLocaleAction copyDeep();
 
     /**
      * factory method to create a deep copy of CustomerSetLocaleAction

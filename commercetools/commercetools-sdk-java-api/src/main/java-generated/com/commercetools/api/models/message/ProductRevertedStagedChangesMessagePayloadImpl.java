@@ -97,4 +97,8 @@ public class ProductRevertedStagedChangesMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public ProductRevertedStagedChangesMessagePayload copyDeep() {
+        return ProductRevertedStagedChangesMessagePayload.deepCopy(this);
+    }
 }

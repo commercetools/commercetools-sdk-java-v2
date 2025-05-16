@@ -159,4 +159,8 @@ public class ChannelPagedQueryResponseImpl implements ChannelPagedQueryResponse,
                 .build();
     }
 
+    @Override
+    public ChannelPagedQueryResponse copyDeep() {
+        return ChannelPagedQueryResponse.deepCopy(this);
+    }
 }

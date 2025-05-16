@@ -156,4 +156,8 @@ public class ReviewRatingStatisticsImpl implements ReviewRatingStatistics, Model
                 .build();
     }
 
+    @Override
+    public ReviewRatingStatistics copyDeep() {
+        return ReviewRatingStatistics.deepCopy(this);
+    }
 }

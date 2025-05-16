@@ -293,4 +293,8 @@ public class StagedQuoteValidToSetMessageImpl implements StagedQuoteValidToSetMe
                 .build();
     }
 
+    @Override
+    public StagedQuoteValidToSetMessage copyDeep() {
+        return StagedQuoteValidToSetMessage.deepCopy(this);
+    }
 }

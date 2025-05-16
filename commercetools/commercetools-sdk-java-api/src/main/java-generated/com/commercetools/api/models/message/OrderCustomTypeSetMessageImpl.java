@@ -313,4 +313,8 @@ public class OrderCustomTypeSetMessageImpl implements OrderCustomTypeSetMessage,
                 .build();
     }
 
+    @Override
+    public OrderCustomTypeSetMessage copyDeep() {
+        return OrderCustomTypeSetMessage.deepCopy(this);
+    }
 }

@@ -31,6 +31,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeEnumKey")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTypeChangeEnumKeyActionImpl.class)
 public interface ProductTypeChangeEnumKeyAction extends ProductTypeUpdateAction {
@@ -105,6 +106,8 @@ public interface ProductTypeChangeEnumKeyAction extends ProductTypeUpdateAction 
         instance.setNewKey(template.getNewKey());
         return instance;
     }
+
+    public ProductTypeChangeEnumKeyAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductTypeChangeEnumKeyAction

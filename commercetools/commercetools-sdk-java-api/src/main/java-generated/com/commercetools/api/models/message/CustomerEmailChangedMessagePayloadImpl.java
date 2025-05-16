@@ -91,4 +91,8 @@ public class CustomerEmailChangedMessagePayloadImpl implements CustomerEmailChan
                 .build();
     }
 
+    @Override
+    public CustomerEmailChangedMessagePayload copyDeep() {
+        return CustomerEmailChangedMessagePayload.deepCopy(this);
+    }
 }

@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("AttributeNameDoesNotExist")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLAttributeNameDoesNotExistErrorImpl.class)
 public interface GraphQLAttributeNameDoesNotExistError extends GraphQLErrorObject {
@@ -79,6 +80,8 @@ public interface GraphQLAttributeNameDoesNotExistError extends GraphQLErrorObjec
         instance.setInvalidAttributeName(template.getInvalidAttributeName());
         return instance;
     }
+
+    public GraphQLAttributeNameDoesNotExistError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLAttributeNameDoesNotExistError

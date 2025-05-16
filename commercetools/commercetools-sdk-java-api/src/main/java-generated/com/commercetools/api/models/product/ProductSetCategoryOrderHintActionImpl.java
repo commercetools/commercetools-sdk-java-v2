@@ -132,4 +132,8 @@ public class ProductSetCategoryOrderHintActionImpl implements ProductSetCategory
                 .build();
     }
 
+    @Override
+    public ProductSetCategoryOrderHintAction copyDeep() {
+        return ProductSetCategoryOrderHintAction.deepCopy(this);
+    }
 }

@@ -34,6 +34,7 @@ import jakarta.validation.Valid;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("addLineItem")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartAddLineItemActionImpl.class)
 public interface CartAddLineItemAction
@@ -317,6 +318,8 @@ public interface CartAddLineItemAction
         instance.setCustom(template.getCustom());
         return instance;
     }
+
+    public CartAddLineItemAction copyDeep();
 
     /**
      * factory method to create a deep copy of CartAddLineItemAction

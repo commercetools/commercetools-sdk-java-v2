@@ -95,4 +95,8 @@ public class GraphQLInvalidSubjectErrorImpl implements GraphQLInvalidSubjectErro
                 .build();
     }
 
+    @Override
+    public GraphQLInvalidSubjectError copyDeep() {
+        return GraphQLInvalidSubjectError.deepCopy(this);
+    }
 }

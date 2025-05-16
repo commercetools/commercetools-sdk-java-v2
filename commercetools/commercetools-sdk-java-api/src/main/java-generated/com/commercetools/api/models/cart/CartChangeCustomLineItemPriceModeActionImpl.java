@@ -133,4 +133,8 @@ public class CartChangeCustomLineItemPriceModeActionImpl implements CartChangeCu
                 .build();
     }
 
+    @Override
+    public CartChangeCustomLineItemPriceModeAction copyDeep() {
+        return CartChangeCustomLineItemPriceModeAction.deepCopy(this);
+    }
 }

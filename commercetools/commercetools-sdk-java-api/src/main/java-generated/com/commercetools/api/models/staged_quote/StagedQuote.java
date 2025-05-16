@@ -357,6 +357,8 @@ public interface StagedQuote extends BaseResource, com.commercetools.api.models.
         return instance;
     }
 
+    public StagedQuote copyDeep();
+
     /**
      * factory method to create a deep copy of StagedQuote
      * @param template instance to be copied

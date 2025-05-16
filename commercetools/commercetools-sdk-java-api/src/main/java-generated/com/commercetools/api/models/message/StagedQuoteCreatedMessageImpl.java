@@ -293,4 +293,8 @@ public class StagedQuoteCreatedMessageImpl implements StagedQuoteCreatedMessage,
                 .build();
     }
 
+    @Override
+    public StagedQuoteCreatedMessage copyDeep() {
+        return StagedQuoteCreatedMessage.deepCopy(this);
+    }
 }

@@ -94,4 +94,8 @@ public class CartSetCustomerGroupActionImpl implements CartSetCustomerGroupActio
                 .build();
     }
 
+    @Override
+    public CartSetCustomerGroupAction copyDeep() {
+        return CartSetCustomerGroupAction.deepCopy(this);
+    }
 }

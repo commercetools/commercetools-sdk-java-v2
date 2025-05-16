@@ -95,4 +95,8 @@ public class GraphQLSyntaxErrorErrorImpl implements GraphQLSyntaxErrorError, Mod
                 .build();
     }
 
+    @Override
+    public GraphQLSyntaxErrorError copyDeep() {
+        return GraphQLSyntaxErrorError.deepCopy(this);
+    }
 }

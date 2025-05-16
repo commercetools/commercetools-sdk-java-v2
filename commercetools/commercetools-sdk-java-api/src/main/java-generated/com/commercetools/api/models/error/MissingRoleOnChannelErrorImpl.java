@@ -169,4 +169,8 @@ public class MissingRoleOnChannelErrorImpl implements MissingRoleOnChannelError,
                 .build();
     }
 
+    @Override
+    public MissingRoleOnChannelError copyDeep() {
+        return MissingRoleOnChannelError.deepCopy(this);
+    }
 }

@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("QueryComplexityLimitExceeded")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = QueryComplexityLimitExceededErrorImpl.class)
 public interface QueryComplexityLimitExceededError extends ErrorObject {
@@ -78,6 +79,8 @@ public interface QueryComplexityLimitExceededError extends ErrorObject {
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
+
+    public QueryComplexityLimitExceededError copyDeep();
 
     /**
      * factory method to create a deep copy of QueryComplexityLimitExceededError

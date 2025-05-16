@@ -99,6 +99,8 @@ public interface ProductSearchResult {
         return instance;
     }
 
+    public ProductSearchResult copyDeep();
+
     /**
      * factory method to create a deep copy of ProductSearchResult
      * @param template instance to be copied

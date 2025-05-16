@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeCartsConfiguration")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProjectChangeCartsConfigurationActionImpl.class)
 public interface ProjectChangeCartsConfigurationAction extends ProjectUpdateAction {
@@ -71,6 +72,8 @@ public interface ProjectChangeCartsConfigurationAction extends ProjectUpdateActi
         instance.setCartsConfiguration(template.getCartsConfiguration());
         return instance;
     }
+
+    public ProjectChangeCartsConfigurationAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProjectChangeCartsConfigurationAction

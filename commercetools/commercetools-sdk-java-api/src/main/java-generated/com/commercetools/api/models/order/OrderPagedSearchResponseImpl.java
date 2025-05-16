@@ -136,4 +136,8 @@ public class OrderPagedSearchResponseImpl implements OrderPagedSearchResponse, M
                 .build();
     }
 
+    @Override
+    public OrderPagedSearchResponse copyDeep() {
+        return OrderPagedSearchResponse.deepCopy(this);
+    }
 }

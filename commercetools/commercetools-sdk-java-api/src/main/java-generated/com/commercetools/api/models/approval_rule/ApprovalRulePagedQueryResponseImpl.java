@@ -160,4 +160,8 @@ public class ApprovalRulePagedQueryResponseImpl implements ApprovalRulePagedQuer
                 .build();
     }
 
+    @Override
+    public ApprovalRulePagedQueryResponse copyDeep() {
+        return ApprovalRulePagedQueryResponse.deepCopy(this);
+    }
 }

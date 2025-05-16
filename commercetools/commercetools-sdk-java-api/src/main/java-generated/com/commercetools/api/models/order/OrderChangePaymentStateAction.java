@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changePaymentState")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderChangePaymentStateActionImpl.class)
 public interface OrderChangePaymentStateAction extends OrderUpdateAction {
@@ -69,6 +70,8 @@ public interface OrderChangePaymentStateAction extends OrderUpdateAction {
         instance.setPaymentState(template.getPaymentState());
         return instance;
     }
+
+    public OrderChangePaymentStateAction copyDeep();
 
     /**
      * factory method to create a deep copy of OrderChangePaymentStateAction

@@ -111,4 +111,8 @@ public class DeliveryAddedMessagePayloadImpl implements DeliveryAddedMessagePayl
                 .build();
     }
 
+    @Override
+    public DeliveryAddedMessagePayload copyDeep() {
+        return DeliveryAddedMessagePayload.deepCopy(this);
+    }
 }

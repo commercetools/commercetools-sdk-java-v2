@@ -92,4 +92,8 @@ public class CustomerCreatedMessagePayloadImpl implements CustomerCreatedMessage
                 .build();
     }
 
+    @Override
+    public CustomerCreatedMessagePayload copyDeep() {
+        return CustomerCreatedMessagePayload.deepCopy(this);
+    }
 }

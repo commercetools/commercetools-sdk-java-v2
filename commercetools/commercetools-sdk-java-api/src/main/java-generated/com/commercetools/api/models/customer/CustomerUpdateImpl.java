@@ -99,4 +99,8 @@ public class CustomerUpdateImpl implements CustomerUpdate, ModelBase {
                 .build();
     }
 
+    @Override
+    public CustomerUpdate copyDeep() {
+        return CustomerUpdate.deepCopy(this);
+    }
 }

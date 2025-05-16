@@ -95,4 +95,8 @@ public class StagedOrderChangeTaxModeActionImpl implements StagedOrderChangeTaxM
                 .build();
     }
 
+    @Override
+    public StagedOrderChangeTaxModeAction copyDeep() {
+        return StagedOrderChangeTaxModeAction.deepCopy(this);
+    }
 }

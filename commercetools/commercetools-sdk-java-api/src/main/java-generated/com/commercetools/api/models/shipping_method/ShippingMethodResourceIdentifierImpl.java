@@ -110,4 +110,8 @@ public class ShippingMethodResourceIdentifierImpl implements ShippingMethodResou
                 .build();
     }
 
+    @Override
+    public ShippingMethodResourceIdentifier copyDeep() {
+        return ShippingMethodResourceIdentifier.deepCopy(this);
+    }
 }

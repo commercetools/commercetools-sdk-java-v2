@@ -313,4 +313,8 @@ public class ProductSlugChangedMessageImpl implements ProductSlugChangedMessage,
                 .build();
     }
 
+    @Override
+    public ProductSlugChangedMessage copyDeep() {
+        return ProductSlugChangedMessage.deepCopy(this);
+    }
 }

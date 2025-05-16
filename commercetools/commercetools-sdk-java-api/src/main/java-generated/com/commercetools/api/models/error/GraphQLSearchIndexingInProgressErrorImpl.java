@@ -96,4 +96,8 @@ public class GraphQLSearchIndexingInProgressErrorImpl implements GraphQLSearchIn
                 .build();
     }
 
+    @Override
+    public GraphQLSearchIndexingInProgressError copyDeep() {
+        return GraphQLSearchIndexingInProgressError.deepCopy(this);
+    }
 }

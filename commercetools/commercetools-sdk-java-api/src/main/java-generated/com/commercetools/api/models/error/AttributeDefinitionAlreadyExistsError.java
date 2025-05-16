@@ -31,6 +31,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("AttributeDefinitionAlreadyExists")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AttributeDefinitionAlreadyExistsErrorImpl.class)
 public interface AttributeDefinitionAlreadyExistsError extends ErrorObject {
@@ -130,6 +131,8 @@ public interface AttributeDefinitionAlreadyExistsError extends ErrorObject {
         instance.setConflictingAttributeName(template.getConflictingAttributeName());
         return instance;
     }
+
+    public AttributeDefinitionAlreadyExistsError copyDeep();
 
     /**
      * factory method to create a deep copy of AttributeDefinitionAlreadyExistsError

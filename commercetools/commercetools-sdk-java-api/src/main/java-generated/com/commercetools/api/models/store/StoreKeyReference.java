@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("store")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StoreKeyReferenceImpl.class)
 public interface StoreKeyReference extends KeyReference {
@@ -70,6 +71,8 @@ public interface StoreKeyReference extends KeyReference {
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public StoreKeyReference copyDeep();
 
     /**
      * factory method to create a deep copy of StoreKeyReference

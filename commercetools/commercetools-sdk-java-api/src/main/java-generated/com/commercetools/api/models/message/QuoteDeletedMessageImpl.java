@@ -273,4 +273,8 @@ public class QuoteDeletedMessageImpl implements QuoteDeletedMessage, ModelBase {
                 .build();
     }
 
+    @Override
+    public QuoteDeletedMessage copyDeep() {
+        return QuoteDeletedMessage.deepCopy(this);
+    }
 }

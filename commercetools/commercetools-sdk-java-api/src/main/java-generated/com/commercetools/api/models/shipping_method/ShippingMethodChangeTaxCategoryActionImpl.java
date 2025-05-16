@@ -93,4 +93,8 @@ public class ShippingMethodChangeTaxCategoryActionImpl implements ShippingMethod
                 .build();
     }
 
+    @Override
+    public ShippingMethodChangeTaxCategoryAction copyDeep() {
+        return ShippingMethodChangeTaxCategoryAction.deepCopy(this);
+    }
 }

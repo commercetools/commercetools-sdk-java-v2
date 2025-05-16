@@ -317,6 +317,8 @@ public interface ApprovalRule extends BaseResource {
         return instance;
     }
 
+    public ApprovalRule copyDeep();
+
     /**
      * factory method to create a deep copy of ApprovalRule
      * @param template instance to be copied

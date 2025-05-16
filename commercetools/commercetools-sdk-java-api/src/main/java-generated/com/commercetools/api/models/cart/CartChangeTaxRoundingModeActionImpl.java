@@ -92,4 +92,8 @@ public class CartChangeTaxRoundingModeActionImpl implements CartChangeTaxRoundin
                 .build();
     }
 
+    @Override
+    public CartChangeTaxRoundingModeAction copyDeep() {
+        return CartChangeTaxRoundingModeAction.deepCopy(this);
+    }
 }

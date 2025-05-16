@@ -92,4 +92,8 @@ public class PaymentAddTransactionActionImpl implements PaymentAddTransactionAct
                 .build();
     }
 
+    @Override
+    public PaymentAddTransactionAction copyDeep() {
+        return PaymentAddTransactionAction.deepCopy(this);
+    }
 }

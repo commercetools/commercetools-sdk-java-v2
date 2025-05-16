@@ -82,6 +82,8 @@ public interface SubRate {
         return instance;
     }
 
+    public SubRate copyDeep();
+
     /**
      * factory method to create a deep copy of SubRate
      * @param template instance to be copied

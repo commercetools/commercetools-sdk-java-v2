@@ -177,4 +177,8 @@ public class CartChangeLineItemQuantityActionImpl implements CartChangeLineItemQ
                 .build();
     }
 
+    @Override
+    public CartChangeLineItemQuantityAction copyDeep() {
+        return CartChangeLineItemQuantityAction.deepCopy(this);
+    }
 }

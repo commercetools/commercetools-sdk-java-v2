@@ -153,4 +153,8 @@ public class EventImpl implements Event, ModelBase {
                 .build();
     }
 
+    @Override
+    public Event copyDeep() {
+        return Event.deepCopy(this);
+    }
 }

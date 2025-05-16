@@ -176,4 +176,8 @@ public class SqsDestinationImpl implements SqsDestination, ModelBase {
                 .build();
     }
 
+    @Override
+    public SqsDestination copyDeep() {
+        return SqsDestination.deepCopy(this);
+    }
 }

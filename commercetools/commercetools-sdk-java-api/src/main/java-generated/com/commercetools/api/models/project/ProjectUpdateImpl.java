@@ -99,4 +99,8 @@ public class ProjectUpdateImpl implements ProjectUpdate, ModelBase {
                 .build();
     }
 
+    @Override
+    public ProjectUpdate copyDeep() {
+        return ProjectUpdate.deepCopy(this);
+    }
 }

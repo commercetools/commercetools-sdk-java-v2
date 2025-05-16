@@ -69,4 +69,8 @@ public class ProductDiscountUpdateActionImpl implements ProductDiscountUpdateAct
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action).build();
     }
 
+    @Override
+    public ProductDiscountUpdateAction copyDeep() {
+        return ProductDiscountUpdateAction.deepCopy(this);
+    }
 }

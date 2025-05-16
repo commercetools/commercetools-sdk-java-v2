@@ -132,4 +132,8 @@ public class CategorySetAssetTagsActionImpl implements CategorySetAssetTagsActio
                 .build();
     }
 
+    @Override
+    public CategorySetAssetTagsAction copyDeep() {
+        return CategorySetAssetTagsAction.deepCopy(this);
+    }
 }

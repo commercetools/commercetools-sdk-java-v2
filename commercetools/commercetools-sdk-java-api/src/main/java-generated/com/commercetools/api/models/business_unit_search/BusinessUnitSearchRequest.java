@@ -123,6 +123,8 @@ public interface BusinessUnitSearchRequest {
         return instance;
     }
 
+    public BusinessUnitSearchRequest copyDeep();
+
     /**
      * factory method to create a deep copy of BusinessUnitSearchRequest
      * @param template instance to be copied

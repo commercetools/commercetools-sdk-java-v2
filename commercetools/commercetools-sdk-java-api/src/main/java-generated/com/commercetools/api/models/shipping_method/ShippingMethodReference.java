@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("shipping-method")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShippingMethodReferenceImpl.class)
 public interface ShippingMethodReference extends Reference, com.commercetools.api.models.Identifiable<ShippingMethod>,
@@ -88,6 +89,8 @@ public interface ShippingMethodReference extends Reference, com.commercetools.ap
         instance.setObj(template.getObj());
         return instance;
     }
+
+    public ShippingMethodReference copyDeep();
 
     /**
      * factory method to create a deep copy of ShippingMethodReference

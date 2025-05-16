@@ -153,4 +153,8 @@ public class StagedOrderSetLineItemTaxRateActionImpl implements StagedOrderSetLi
                 .build();
     }
 
+    @Override
+    public StagedOrderSetLineItemTaxRateAction copyDeep() {
+        return StagedOrderSetLineItemTaxRateAction.deepCopy(this);
+    }
 }

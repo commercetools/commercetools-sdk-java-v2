@@ -95,4 +95,8 @@ public class CustomerCreatePasswordResetTokenImpl implements CustomerCreatePassw
                 .build();
     }
 
+    @Override
+    public CustomerCreatePasswordResetToken copyDeep() {
+        return CustomerCreatePasswordResetToken.deepCopy(this);
+    }
 }

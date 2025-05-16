@@ -334,4 +334,8 @@ public class OrderDiscountCodeStateSetMessageImpl implements OrderDiscountCodeSt
                 .build();
     }
 
+    @Override
+    public OrderDiscountCodeStateSetMessage copyDeep() {
+        return OrderDiscountCodeStateSetMessage.deepCopy(this);
+    }
 }

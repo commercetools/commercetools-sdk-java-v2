@@ -91,4 +91,8 @@ public class StagedQuoteSetSellerCommentActionImpl implements StagedQuoteSetSell
                 .build();
     }
 
+    @Override
+    public StagedQuoteSetSellerCommentAction copyDeep() {
+        return StagedQuoteSetSellerCommentAction.deepCopy(this);
+    }
 }

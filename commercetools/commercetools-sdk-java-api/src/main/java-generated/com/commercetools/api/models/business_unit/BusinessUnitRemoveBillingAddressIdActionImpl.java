@@ -111,4 +111,8 @@ public class BusinessUnitRemoveBillingAddressIdActionImpl
                 .build();
     }
 
+    @Override
+    public BusinessUnitRemoveBillingAddressIdAction copyDeep() {
+        return BusinessUnitRemoveBillingAddressIdAction.deepCopy(this);
+    }
 }

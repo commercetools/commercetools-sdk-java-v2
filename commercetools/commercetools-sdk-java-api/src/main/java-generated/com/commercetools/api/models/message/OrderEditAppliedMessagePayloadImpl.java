@@ -111,4 +111,8 @@ public class OrderEditAppliedMessagePayloadImpl implements OrderEditAppliedMessa
                 .build();
     }
 
+    @Override
+    public OrderEditAppliedMessagePayload copyDeep() {
+        return OrderEditAppliedMessagePayload.deepCopy(this);
+    }
 }

@@ -155,4 +155,8 @@ public class BusinessUnitTypeSetMessagePayloadImpl implements BusinessUnitTypeSe
                 .build();
     }
 
+    @Override
+    public BusinessUnitTypeSetMessagePayload copyDeep() {
+        return BusinessUnitTypeSetMessagePayload.deepCopy(this);
+    }
 }

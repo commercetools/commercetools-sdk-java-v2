@@ -29,6 +29,7 @@ import jakarta.validation.Valid;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setSupplyChannels")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StoreSetSupplyChannelsActionImpl.class)
 public interface StoreSetSupplyChannelsAction extends StoreUpdateAction {
@@ -79,6 +80,8 @@ public interface StoreSetSupplyChannelsAction extends StoreUpdateAction {
         instance.setSupplyChannels(template.getSupplyChannels());
         return instance;
     }
+
+    public StoreSetSupplyChannelsAction copyDeep();
 
     /**
      * factory method to create a deep copy of StoreSetSupplyChannelsAction

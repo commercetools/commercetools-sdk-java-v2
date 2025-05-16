@@ -32,6 +32,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeTaxMode")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderChangeTaxModeActionImpl.class)
 public interface StagedOrderChangeTaxModeAction extends StagedOrderUpdateAction {
@@ -74,6 +75,8 @@ public interface StagedOrderChangeTaxModeAction extends StagedOrderUpdateAction 
         instance.setTaxMode(template.getTaxMode());
         return instance;
     }
+
+    public StagedOrderChangeTaxModeAction copyDeep();
 
     /**
      * factory method to create a deep copy of StagedOrderChangeTaxModeAction

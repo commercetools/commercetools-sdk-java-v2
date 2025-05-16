@@ -593,6 +593,8 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
         return instance;
     }
 
+    public CartDraft copyDeep();
+
     /**
      * factory method to create a deep copy of CartDraft
      * @param template instance to be copied

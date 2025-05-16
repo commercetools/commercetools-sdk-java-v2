@@ -123,6 +123,8 @@ public interface ZoneDraft extends com.commercetools.api.models.WithKey, io.vrap
         return instance;
     }
 
+    public ZoneDraft copyDeep();
+
     /**
      * factory method to create a deep copy of ZoneDraft
      * @param template instance to be copied

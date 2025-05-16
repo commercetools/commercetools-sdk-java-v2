@@ -294,4 +294,8 @@ public class BusinessUnitAddressRemovedMessageImpl implements BusinessUnitAddres
                 .build();
     }
 
+    @Override
+    public BusinessUnitAddressRemovedMessage copyDeep() {
+        return BusinessUnitAddressRemovedMessage.deepCopy(this);
+    }
 }

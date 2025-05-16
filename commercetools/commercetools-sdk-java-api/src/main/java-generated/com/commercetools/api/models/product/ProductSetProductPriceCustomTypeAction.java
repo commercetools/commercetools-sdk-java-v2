@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setProductPriceCustomType")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSetProductPriceCustomTypeActionImpl.class)
 public interface ProductSetProductPriceCustomTypeAction extends ProductUpdateAction {
@@ -120,6 +121,8 @@ public interface ProductSetProductPriceCustomTypeAction extends ProductUpdateAct
         instance.setFields(template.getFields());
         return instance;
     }
+
+    public ProductSetProductPriceCustomTypeAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductSetProductPriceCustomTypeAction

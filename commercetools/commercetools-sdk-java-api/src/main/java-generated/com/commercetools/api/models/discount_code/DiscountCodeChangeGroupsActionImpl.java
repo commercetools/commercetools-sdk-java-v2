@@ -95,4 +95,8 @@ public class DiscountCodeChangeGroupsActionImpl implements DiscountCodeChangeGro
                 .build();
     }
 
+    @Override
+    public DiscountCodeChangeGroupsAction copyDeep() {
+        return DiscountCodeChangeGroupsAction.deepCopy(this);
+    }
 }

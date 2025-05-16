@@ -206,4 +206,8 @@ public class ProductTailoringAddVariantActionImpl implements ProductTailoringAdd
                 .build();
     }
 
+    @Override
+    public ProductTailoringAddVariantAction copyDeep() {
+        return ProductTailoringAddVariantAction.deepCopy(this);
+    }
 }

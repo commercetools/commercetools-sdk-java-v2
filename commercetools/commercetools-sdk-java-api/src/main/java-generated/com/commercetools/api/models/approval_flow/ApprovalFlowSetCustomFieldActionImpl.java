@@ -110,4 +110,8 @@ public class ApprovalFlowSetCustomFieldActionImpl implements ApprovalFlowSetCust
                 .build();
     }
 
+    @Override
+    public ApprovalFlowSetCustomFieldAction copyDeep() {
+        return ApprovalFlowSetCustomFieldAction.deepCopy(this);
+    }
 }

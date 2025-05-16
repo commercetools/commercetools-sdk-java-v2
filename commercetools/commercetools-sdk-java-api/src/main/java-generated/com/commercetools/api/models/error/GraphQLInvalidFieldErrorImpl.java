@@ -161,4 +161,8 @@ public class GraphQLInvalidFieldErrorImpl implements GraphQLInvalidFieldError, M
                 .build();
     }
 
+    @Override
+    public GraphQLInvalidFieldError copyDeep() {
+        return GraphQLInvalidFieldError.deepCopy(this);
+    }
 }

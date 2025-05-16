@@ -231,6 +231,8 @@ public interface ProductType extends BaseResource, AttributeDefinitionContainer,
         return instance;
     }
 
+    public ProductType copyDeep();
+
     /**
      * factory method to create a deep copy of ProductType
      * @param template instance to be copied

@@ -94,4 +94,8 @@ public class MyCartSetDeleteDaysAfterLastModificationActionImpl
                 .build();
     }
 
+    @Override
+    public MyCartSetDeleteDaysAfterLastModificationAction copyDeep() {
+        return MyCartSetDeleteDaysAfterLastModificationAction.deepCopy(this);
+    }
 }

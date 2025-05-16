@@ -129,4 +129,8 @@ public class ProductPriceAddedMessagePayloadImpl implements ProductPriceAddedMes
                 .build();
     }
 
+    @Override
+    public ProductPriceAddedMessagePayload copyDeep() {
+        return ProductPriceAddedMessagePayload.deepCopy(this);
+    }
 }

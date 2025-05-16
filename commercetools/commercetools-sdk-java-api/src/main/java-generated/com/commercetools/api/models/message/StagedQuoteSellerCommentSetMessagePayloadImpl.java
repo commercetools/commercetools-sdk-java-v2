@@ -92,4 +92,8 @@ public class StagedQuoteSellerCommentSetMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public StagedQuoteSellerCommentSetMessagePayload copyDeep() {
+        return StagedQuoteSellerCommentSetMessagePayload.deepCopy(this);
+    }
 }

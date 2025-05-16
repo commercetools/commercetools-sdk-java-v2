@@ -194,4 +194,8 @@ public class ShoppingListAddTextLineItemActionImpl implements ShoppingListAddTex
                 .build();
     }
 
+    @Override
+    public ShoppingListAddTextLineItemAction copyDeep() {
+        return ShoppingListAddTextLineItemAction.deepCopy(this);
+    }
 }

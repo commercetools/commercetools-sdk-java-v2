@@ -51,4 +51,8 @@ public class OrderSearchQueryImpl implements OrderSearchQuery, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).build();
     }
 
+    @Override
+    public OrderSearchQuery copyDeep() {
+        return OrderSearchQuery.deepCopy(this);
+    }
 }

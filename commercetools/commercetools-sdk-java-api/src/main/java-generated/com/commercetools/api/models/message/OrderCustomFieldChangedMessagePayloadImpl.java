@@ -129,4 +129,8 @@ public class OrderCustomFieldChangedMessagePayloadImpl implements OrderCustomFie
                 .build();
     }
 
+    @Override
+    public OrderCustomFieldChangedMessagePayload copyDeep() {
+        return OrderCustomFieldChangedMessagePayload.deepCopy(this);
+    }
 }

@@ -93,4 +93,8 @@ public class ShoppingListSetDeleteDaysAfterLastModificationActionImpl
                 .build();
     }
 
+    @Override
+    public ShoppingListSetDeleteDaysAfterLastModificationAction copyDeep() {
+        return ShoppingListSetDeleteDaysAfterLastModificationAction.deepCopy(this);
+    }
 }

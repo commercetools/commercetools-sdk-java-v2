@@ -110,4 +110,8 @@ public class TypeChangeEnumValueLabelActionImpl implements TypeChangeEnumValueLa
                 .build();
     }
 
+    @Override
+    public TypeChangeEnumValueLabelAction copyDeep() {
+        return TypeChangeEnumValueLabelAction.deepCopy(this);
+    }
 }

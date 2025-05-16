@@ -128,4 +128,8 @@ public class BusinessUnitSetAddressCustomFieldActionImpl implements BusinessUnit
                 .build();
     }
 
+    @Override
+    public BusinessUnitSetAddressCustomFieldAction copyDeep() {
+        return BusinessUnitSetAddressCustomFieldAction.deepCopy(this);
+    }
 }

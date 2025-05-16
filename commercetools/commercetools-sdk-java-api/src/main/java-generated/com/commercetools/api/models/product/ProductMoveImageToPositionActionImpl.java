@@ -171,4 +171,8 @@ public class ProductMoveImageToPositionActionImpl implements ProductMoveImageToP
                 .build();
     }
 
+    @Override
+    public ProductMoveImageToPositionAction copyDeep() {
+        return ProductMoveImageToPositionAction.deepCopy(this);
+    }
 }

@@ -33,6 +33,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ImportValidationFailed")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ImportValidationFailedEventImpl.class)
 public interface ImportValidationFailedEvent extends Event {
@@ -95,6 +96,8 @@ public interface ImportValidationFailedEvent extends Event {
         instance.setData(template.getData());
         return instance;
     }
+
+    public ImportValidationFailedEvent copyDeep();
 
     /**
      * factory method to create a deep copy of ImportValidationFailedEvent

@@ -130,4 +130,8 @@ public class ProductTailoringDeletedMessagePayloadImpl implements ProductTailori
                 .build();
     }
 
+    @Override
+    public ProductTailoringDeletedMessagePayload copyDeep() {
+        return ProductTailoringDeletedMessagePayload.deepCopy(this);
+    }
 }

@@ -33,6 +33,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("CustomLineItemReturnItem")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomLineItemReturnItemImpl.class)
 public interface CustomLineItemReturnItem extends ReturnItem {
@@ -114,6 +115,8 @@ public interface CustomLineItemReturnItem extends ReturnItem {
         instance.setCustomLineItemId(template.getCustomLineItemId());
         return instance;
     }
+
+    public CustomLineItemReturnItem copyDeep();
 
     /**
      * factory method to create a deep copy of CustomLineItemReturnItem

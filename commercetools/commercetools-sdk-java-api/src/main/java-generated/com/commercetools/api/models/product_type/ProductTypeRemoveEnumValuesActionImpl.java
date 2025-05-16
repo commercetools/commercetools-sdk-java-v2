@@ -115,4 +115,8 @@ public class ProductTypeRemoveEnumValuesActionImpl implements ProductTypeRemoveE
                 .build();
     }
 
+    @Override
+    public ProductTypeRemoveEnumValuesAction copyDeep() {
+        return ProductTypeRemoveEnumValuesAction.deepCopy(this);
+    }
 }

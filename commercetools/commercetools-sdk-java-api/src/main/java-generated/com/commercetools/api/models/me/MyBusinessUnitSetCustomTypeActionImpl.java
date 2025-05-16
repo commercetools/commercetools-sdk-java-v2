@@ -111,4 +111,8 @@ public class MyBusinessUnitSetCustomTypeActionImpl implements MyBusinessUnitSetC
                 .build();
     }
 
+    @Override
+    public MyBusinessUnitSetCustomTypeAction copyDeep() {
+        return MyBusinessUnitSetCustomTypeAction.deepCopy(this);
+    }
 }

@@ -193,4 +193,8 @@ public class ProductPriceExternalDiscountSetMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public ProductPriceExternalDiscountSetMessagePayload copyDeep() {
+        return ProductPriceExternalDiscountSetMessagePayload.deepCopy(this);
+    }
 }

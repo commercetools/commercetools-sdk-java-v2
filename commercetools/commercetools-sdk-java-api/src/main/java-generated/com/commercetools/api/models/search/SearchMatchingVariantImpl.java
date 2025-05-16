@@ -92,4 +92,8 @@ public class SearchMatchingVariantImpl implements SearchMatchingVariant, ModelBa
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id).append("sku", sku).build();
     }
 
+    @Override
+    public SearchMatchingVariant copyDeep() {
+        return SearchMatchingVariant.deepCopy(this);
+    }
 }

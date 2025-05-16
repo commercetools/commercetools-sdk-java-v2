@@ -296,4 +296,8 @@ public class StandalonePriceStagedChangesRemovedMessageImpl
                 .build();
     }
 
+    @Override
+    public StandalonePriceStagedChangesRemovedMessage copyDeep() {
+        return StandalonePriceStagedChangesRemovedMessage.deepCopy(this);
+    }
 }

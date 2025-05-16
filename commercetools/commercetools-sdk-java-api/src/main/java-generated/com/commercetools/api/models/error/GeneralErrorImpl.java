@@ -115,4 +115,8 @@ public class GeneralErrorImpl implements GeneralError, ModelBase {
                 .build();
     }
 
+    @Override
+    public GeneralError copyDeep() {
+        return GeneralError.deepCopy(this);
+    }
 }

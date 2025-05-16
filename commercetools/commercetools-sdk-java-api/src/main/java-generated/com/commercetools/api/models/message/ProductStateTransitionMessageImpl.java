@@ -313,4 +313,8 @@ public class ProductStateTransitionMessageImpl implements ProductStateTransition
                 .build();
     }
 
+    @Override
+    public ProductStateTransitionMessage copyDeep() {
+        return ProductStateTransitionMessage.deepCopy(this);
+    }
 }

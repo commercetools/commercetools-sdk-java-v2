@@ -374,4 +374,8 @@ public class ProductTailoringDescriptionSetMessageImpl implements ProductTailori
                 .build();
     }
 
+    @Override
+    public ProductTailoringDescriptionSetMessage copyDeep() {
+        return ProductTailoringDescriptionSetMessage.deepCopy(this);
+    }
 }

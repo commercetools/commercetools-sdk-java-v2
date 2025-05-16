@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeCountryTaxRateFallbackEnabled")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProjectChangeCountryTaxRateFallbackEnabledActionImpl.class)
 public interface ProjectChangeCountryTaxRateFallbackEnabledAction extends ProjectUpdateAction {
@@ -70,6 +71,8 @@ public interface ProjectChangeCountryTaxRateFallbackEnabledAction extends Projec
         instance.setCountryTaxRateFallbackEnabled(template.getCountryTaxRateFallbackEnabled());
         return instance;
     }
+
+    public ProjectChangeCountryTaxRateFallbackEnabledAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProjectChangeCountryTaxRateFallbackEnabledAction

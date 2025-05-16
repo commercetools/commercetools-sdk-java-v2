@@ -94,4 +94,8 @@ public class GraphQLErrorLocationImpl implements GraphQLErrorLocation, ModelBase
                 .build();
     }
 
+    @Override
+    public GraphQLErrorLocation copyDeep() {
+        return GraphQLErrorLocation.deepCopy(this);
+    }
 }

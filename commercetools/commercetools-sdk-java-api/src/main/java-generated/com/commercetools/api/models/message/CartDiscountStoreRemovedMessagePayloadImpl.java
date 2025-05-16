@@ -92,4 +92,8 @@ public class CartDiscountStoreRemovedMessagePayloadImpl implements CartDiscountS
                 .build();
     }
 
+    @Override
+    public CartDiscountStoreRemovedMessagePayload copyDeep() {
+        return CartDiscountStoreRemovedMessagePayload.deepCopy(this);
+    }
 }

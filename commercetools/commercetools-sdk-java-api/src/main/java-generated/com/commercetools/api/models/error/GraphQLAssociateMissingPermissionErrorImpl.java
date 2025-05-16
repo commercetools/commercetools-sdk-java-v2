@@ -185,4 +185,8 @@ public class GraphQLAssociateMissingPermissionErrorImpl implements GraphQLAssoci
                 .build();
     }
 
+    @Override
+    public GraphQLAssociateMissingPermissionError copyDeep() {
+        return GraphQLAssociateMissingPermissionError.deepCopy(this);
+    }
 }

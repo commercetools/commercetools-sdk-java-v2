@@ -106,6 +106,8 @@ public interface Address extends BaseAddress, com.commercetools.api.models.Custo
         return instance;
     }
 
+    public Address copyDeep();
+
     /**
      * factory method to create a deep copy of Address
      * @param template instance to be copied

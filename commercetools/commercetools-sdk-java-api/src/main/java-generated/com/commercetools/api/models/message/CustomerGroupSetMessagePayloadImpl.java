@@ -93,4 +93,8 @@ public class CustomerGroupSetMessagePayloadImpl implements CustomerGroupSetMessa
                 .build();
     }
 
+    @Override
+    public CustomerGroupSetMessagePayload copyDeep() {
+        return CustomerGroupSetMessagePayload.deepCopy(this);
+    }
 }

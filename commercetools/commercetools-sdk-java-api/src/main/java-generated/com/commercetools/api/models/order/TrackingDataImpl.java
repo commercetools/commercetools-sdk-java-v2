@@ -159,4 +159,8 @@ public class TrackingDataImpl implements TrackingData, ModelBase {
                 .build();
     }
 
+    @Override
+    public TrackingData copyDeep() {
+        return TrackingData.deepCopy(this);
+    }
 }

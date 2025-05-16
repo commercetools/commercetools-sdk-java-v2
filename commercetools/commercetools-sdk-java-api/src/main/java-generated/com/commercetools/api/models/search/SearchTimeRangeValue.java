@@ -115,6 +115,8 @@ public interface SearchTimeRangeValue extends SearchQueryExpressionValue {
         return instance;
     }
 
+    public SearchTimeRangeValue copyDeep();
+
     /**
      * factory method to create a deep copy of SearchTimeRangeValue
      * @param template instance to be copied

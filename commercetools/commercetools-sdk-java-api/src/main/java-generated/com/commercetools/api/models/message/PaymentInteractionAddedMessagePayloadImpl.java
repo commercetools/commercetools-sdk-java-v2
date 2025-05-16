@@ -92,4 +92,8 @@ public class PaymentInteractionAddedMessagePayloadImpl implements PaymentInterac
                 .build();
     }
 
+    @Override
+    public PaymentInteractionAddedMessagePayload copyDeep() {
+        return PaymentInteractionAddedMessagePayload.deepCopy(this);
+    }
 }

@@ -212,4 +212,8 @@ public class ProductTailoringSetAssetCustomTypeActionImpl
                 .build();
     }
 
+    @Override
+    public ProductTailoringSetAssetCustomTypeAction copyDeep() {
+        return ProductTailoringSetAssetCustomTypeAction.deepCopy(this);
+    }
 }

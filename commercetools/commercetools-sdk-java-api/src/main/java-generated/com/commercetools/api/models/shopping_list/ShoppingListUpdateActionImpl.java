@@ -69,4 +69,8 @@ public class ShoppingListUpdateActionImpl implements ShoppingListUpdateAction, M
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action).build();
     }
 
+    @Override
+    public ShoppingListUpdateAction copyDeep() {
+        return ShoppingListUpdateAction.deepCopy(this);
+    }
 }

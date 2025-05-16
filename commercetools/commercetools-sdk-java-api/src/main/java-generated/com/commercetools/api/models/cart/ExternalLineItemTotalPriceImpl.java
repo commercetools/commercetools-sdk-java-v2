@@ -95,4 +95,8 @@ public class ExternalLineItemTotalPriceImpl implements ExternalLineItemTotalPric
                 .build();
     }
 
+    @Override
+    public ExternalLineItemTotalPrice copyDeep() {
+        return ExternalLineItemTotalPrice.deepCopy(this);
+    }
 }

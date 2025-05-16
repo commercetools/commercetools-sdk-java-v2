@@ -91,4 +91,8 @@ public class DiscountCodeChangeIsActiveActionImpl implements DiscountCodeChangeI
                 .build();
     }
 
+    @Override
+    public DiscountCodeChangeIsActiveAction copyDeep() {
+        return DiscountCodeChangeIsActiveAction.deepCopy(this);
+    }
 }

@@ -156,4 +156,8 @@ public class OrderSearchSortingImpl implements OrderSearchSorting, ModelBase {
                 .build();
     }
 
+    @Override
+    public OrderSearchSorting copyDeep() {
+        return OrderSearchSorting.deepCopy(this);
+    }
 }

@@ -27,6 +27,7 @@ import jakarta.validation.Valid;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("removeLineItem")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartRemoveLineItemActionImpl.class)
 public interface CartRemoveLineItemAction extends CartUpdateAction {
@@ -149,6 +150,8 @@ public interface CartRemoveLineItemAction extends CartUpdateAction {
         instance.setShippingDetailsToRemove(template.getShippingDetailsToRemove());
         return instance;
     }
+
+    public CartRemoveLineItemAction copyDeep();
 
     /**
      * factory method to create a deep copy of CartRemoveLineItemAction

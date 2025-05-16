@@ -347,4 +347,8 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public CartDiscountDraft copyDeep() {
+        return CartDiscountDraft.deepCopy(this);
+    }
 }

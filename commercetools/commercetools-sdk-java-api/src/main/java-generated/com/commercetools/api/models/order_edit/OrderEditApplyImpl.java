@@ -95,4 +95,8 @@ public class OrderEditApplyImpl implements OrderEditApply, ModelBase {
                 .build();
     }
 
+    @Override
+    public OrderEditApply copyDeep() {
+        return OrderEditApply.deepCopy(this);
+    }
 }

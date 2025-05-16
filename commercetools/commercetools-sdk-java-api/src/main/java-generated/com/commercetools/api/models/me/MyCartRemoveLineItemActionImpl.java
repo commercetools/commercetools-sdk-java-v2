@@ -194,4 +194,8 @@ public class MyCartRemoveLineItemActionImpl implements MyCartRemoveLineItemActio
                 .build();
     }
 
+    @Override
+    public MyCartRemoveLineItemAction copyDeep() {
+        return MyCartRemoveLineItemAction.deepCopy(this);
+    }
 }

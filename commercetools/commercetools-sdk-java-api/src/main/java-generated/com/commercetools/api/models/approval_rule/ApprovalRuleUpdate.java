@@ -93,6 +93,8 @@ public interface ApprovalRuleUpdate {
         return instance;
     }
 
+    public ApprovalRuleUpdate copyDeep();
+
     /**
      * factory method to create a deep copy of ApprovalRuleUpdate
      * @param template instance to be copied

@@ -130,6 +130,8 @@ public interface ApiClientDraft extends io.vrap.rmf.base.client.Draft<ApiClientD
         return instance;
     }
 
+    public ApiClientDraft copyDeep();
+
     /**
      * factory method to create a deep copy of ApiClientDraft
      * @param template instance to be copied

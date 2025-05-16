@@ -28,6 +28,7 @@ import jakarta.validation.Valid;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setBillingAddressCustomType")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderSetBillingAddressCustomTypeActionImpl.class)
 public interface OrderSetBillingAddressCustomTypeAction extends OrderUpdateAction {
@@ -86,6 +87,8 @@ public interface OrderSetBillingAddressCustomTypeAction extends OrderUpdateActio
         instance.setFields(template.getFields());
         return instance;
     }
+
+    public OrderSetBillingAddressCustomTypeAction copyDeep();
 
     /**
      * factory method to create a deep copy of OrderSetBillingAddressCustomTypeAction

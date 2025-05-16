@@ -248,4 +248,8 @@ public class ProductSearchProjectionParamsImpl implements ProductSearchProjectio
                 .build();
     }
 
+    @Override
+    public ProductSearchProjectionParams copyDeep() {
+        return ProductSearchProjectionParams.deepCopy(this);
+    }
 }

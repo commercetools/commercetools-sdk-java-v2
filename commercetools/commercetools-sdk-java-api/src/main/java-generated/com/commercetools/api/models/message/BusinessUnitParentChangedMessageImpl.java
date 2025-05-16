@@ -316,4 +316,8 @@ public class BusinessUnitParentChangedMessageImpl implements BusinessUnitParentC
                 .build();
     }
 
+    @Override
+    public BusinessUnitParentChangedMessage copyDeep() {
+        return BusinessUnitParentChangedMessage.deepCopy(this);
+    }
 }

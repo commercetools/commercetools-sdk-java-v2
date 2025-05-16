@@ -176,4 +176,8 @@ public class ReferencedResourceNotFoundErrorImpl implements ReferencedResourceNo
                 .build();
     }
 
+    @Override
+    public ReferencedResourceNotFoundError copyDeep() {
+        return ReferencedResourceNotFoundError.deepCopy(this);
+    }
 }

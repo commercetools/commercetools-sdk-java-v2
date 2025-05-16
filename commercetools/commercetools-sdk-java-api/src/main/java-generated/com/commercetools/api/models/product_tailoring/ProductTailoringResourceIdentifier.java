@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("product-tailoring")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTailoringResourceIdentifierImpl.class)
 public interface ProductTailoringResourceIdentifier extends ResourceIdentifier {
@@ -83,6 +84,8 @@ public interface ProductTailoringResourceIdentifier extends ResourceIdentifier {
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public ProductTailoringResourceIdentifier copyDeep();
 
     /**
      * factory method to create a deep copy of ProductTailoringResourceIdentifier

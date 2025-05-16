@@ -293,4 +293,8 @@ public class QuoteCreatedMessageImpl implements QuoteCreatedMessage, ModelBase {
                 .build();
     }
 
+    @Override
+    public QuoteCreatedMessage copyDeep() {
+        return QuoteCreatedMessage.deepCopy(this);
+    }
 }

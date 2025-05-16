@@ -82,6 +82,8 @@ public interface MyCustomerResetPassword {
         return instance;
     }
 
+    public MyCustomerResetPassword copyDeep();
+
     /**
      * factory method to create a deep copy of MyCustomerResetPassword
      * @param template instance to be copied

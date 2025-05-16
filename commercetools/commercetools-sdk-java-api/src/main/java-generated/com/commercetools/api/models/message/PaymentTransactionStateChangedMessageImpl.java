@@ -314,4 +314,8 @@ public class PaymentTransactionStateChangedMessageImpl implements PaymentTransac
                 .build();
     }
 
+    @Override
+    public PaymentTransactionStateChangedMessage copyDeep() {
+        return PaymentTransactionStateChangedMessage.deepCopy(this);
+    }
 }

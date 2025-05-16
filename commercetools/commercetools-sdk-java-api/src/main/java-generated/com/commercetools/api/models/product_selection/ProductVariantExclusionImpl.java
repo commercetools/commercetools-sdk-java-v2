@@ -77,4 +77,8 @@ public class ProductVariantExclusionImpl implements ProductVariantExclusion, Mod
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("skus", skus).build();
     }
 
+    @Override
+    public ProductVariantExclusion copyDeep() {
+        return ProductVariantExclusion.deepCopy(this);
+    }
 }

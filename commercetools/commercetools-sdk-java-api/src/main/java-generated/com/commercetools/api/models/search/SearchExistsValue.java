@@ -66,6 +66,8 @@ public interface SearchExistsValue extends SearchQueryExpressionValue {
         return instance;
     }
 
+    public SearchExistsValue copyDeep();
+
     /**
      * factory method to create a deep copy of SearchExistsValue
      * @param template instance to be copied

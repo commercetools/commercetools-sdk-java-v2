@@ -91,4 +91,8 @@ public class InventoryEntrySetKeyActionImpl implements InventoryEntrySetKeyActio
                 .build();
     }
 
+    @Override
+    public InventoryEntrySetKeyAction copyDeep() {
+        return InventoryEntrySetKeyAction.deepCopy(this);
+    }
 }

@@ -159,4 +159,8 @@ public class InventoryPagedQueryResponseImpl implements InventoryPagedQueryRespo
                 .build();
     }
 
+    @Override
+    public InventoryPagedQueryResponse copyDeep() {
+        return InventoryPagedQueryResponse.deepCopy(this);
+    }
 }

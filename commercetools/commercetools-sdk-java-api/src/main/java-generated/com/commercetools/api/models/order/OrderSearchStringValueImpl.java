@@ -175,4 +175,8 @@ public class OrderSearchStringValueImpl implements OrderSearchStringValue, Model
                 .build();
     }
 
+    @Override
+    public OrderSearchStringValue copyDeep() {
+        return OrderSearchStringValue.deepCopy(this);
+    }
 }

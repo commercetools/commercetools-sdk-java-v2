@@ -92,4 +92,8 @@ public class OrderChangeOrderStateActionImpl implements OrderChangeOrderStateAct
                 .build();
     }
 
+    @Override
+    public OrderChangeOrderStateAction copyDeep() {
+        return OrderChangeOrderStateAction.deepCopy(this);
+    }
 }

@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setRating")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ReviewSetRatingActionImpl.class)
 public interface ReviewSetRatingAction extends ReviewUpdateAction {
@@ -66,6 +67,8 @@ public interface ReviewSetRatingAction extends ReviewUpdateAction {
         instance.setRating(template.getRating());
         return instance;
     }
+
+    public ReviewSetRatingAction copyDeep();
 
     /**
      * factory method to create a deep copy of ReviewSetRatingAction

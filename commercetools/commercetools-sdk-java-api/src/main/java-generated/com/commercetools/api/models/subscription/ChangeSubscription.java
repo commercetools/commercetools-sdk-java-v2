@@ -65,6 +65,8 @@ public interface ChangeSubscription {
         return instance;
     }
 
+    public ChangeSubscription copyDeep();
+
     /**
      * factory method to create a deep copy of ChangeSubscription
      * @param template instance to be copied

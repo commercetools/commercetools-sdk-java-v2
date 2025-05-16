@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("addShippingRate")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShippingMethodAddShippingRateActionImpl.class)
 public interface ShippingMethodAddShippingRateAction extends ShippingMethodUpdateAction {
@@ -90,6 +91,8 @@ public interface ShippingMethodAddShippingRateAction extends ShippingMethodUpdat
         instance.setShippingRate(template.getShippingRate());
         return instance;
     }
+
+    public ShippingMethodAddShippingRateAction copyDeep();
 
     /**
      * factory method to create a deep copy of ShippingMethodAddShippingRateAction

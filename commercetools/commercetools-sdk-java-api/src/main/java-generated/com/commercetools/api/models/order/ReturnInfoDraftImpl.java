@@ -119,4 +119,8 @@ public class ReturnInfoDraftImpl implements ReturnInfoDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public ReturnInfoDraft copyDeep() {
+        return ReturnInfoDraft.deepCopy(this);
+    }
 }

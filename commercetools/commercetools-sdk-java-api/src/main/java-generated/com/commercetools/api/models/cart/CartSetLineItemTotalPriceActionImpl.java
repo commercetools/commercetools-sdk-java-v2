@@ -134,4 +134,8 @@ public class CartSetLineItemTotalPriceActionImpl implements CartSetLineItemTotal
                 .build();
     }
 
+    @Override
+    public CartSetLineItemTotalPriceAction copyDeep() {
+        return CartSetLineItemTotalPriceAction.deepCopy(this);
+    }
 }

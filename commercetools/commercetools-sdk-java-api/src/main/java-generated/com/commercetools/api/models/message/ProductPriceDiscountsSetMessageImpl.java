@@ -300,4 +300,8 @@ public class ProductPriceDiscountsSetMessageImpl implements ProductPriceDiscount
                 .build();
     }
 
+    @Override
+    public ProductPriceDiscountsSetMessage copyDeep() {
+        return ProductPriceDiscountsSetMessage.deepCopy(this);
+    }
 }

@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("whitespace")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = WhitespaceTokenizerImpl.class)
 public interface WhitespaceTokenizer extends SuggestTokenizer {
@@ -50,6 +51,8 @@ public interface WhitespaceTokenizer extends SuggestTokenizer {
         WhitespaceTokenizerImpl instance = new WhitespaceTokenizerImpl();
         return instance;
     }
+
+    public WhitespaceTokenizer copyDeep();
 
     /**
      * factory method to create a deep copy of WhitespaceTokenizer

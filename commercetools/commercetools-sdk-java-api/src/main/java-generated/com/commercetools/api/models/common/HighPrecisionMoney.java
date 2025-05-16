@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("highPrecision")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = HighPrecisionMoneyImpl.class)
 public interface HighPrecisionMoney extends TypedMoney {
@@ -90,6 +91,8 @@ public interface HighPrecisionMoney extends TypedMoney {
         instance.setPreciseAmount(template.getPreciseAmount());
         return instance;
     }
+
+    public HighPrecisionMoney copyDeep();
 
     /**
      * factory method to create a deep copy of HighPrecisionMoney

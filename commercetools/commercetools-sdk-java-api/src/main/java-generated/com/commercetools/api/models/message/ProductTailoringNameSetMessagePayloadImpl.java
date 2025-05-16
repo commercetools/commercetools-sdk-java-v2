@@ -174,4 +174,8 @@ public class ProductTailoringNameSetMessagePayloadImpl implements ProductTailori
                 .build();
     }
 
+    @Override
+    public ProductTailoringNameSetMessagePayload copyDeep() {
+        return ProductTailoringNameSetMessagePayload.deepCopy(this);
+    }
 }

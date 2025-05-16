@@ -93,4 +93,8 @@ public class StagedOrderAddDiscountCodeActionImpl implements StagedOrderAddDisco
                 .build();
     }
 
+    @Override
+    public StagedOrderAddDiscountCodeAction copyDeep() {
+        return StagedOrderAddDiscountCodeAction.deepCopy(this);
+    }
 }

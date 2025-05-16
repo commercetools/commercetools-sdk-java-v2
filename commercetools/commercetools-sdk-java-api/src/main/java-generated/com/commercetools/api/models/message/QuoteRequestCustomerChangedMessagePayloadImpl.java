@@ -112,4 +112,8 @@ public class QuoteRequestCustomerChangedMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public QuoteRequestCustomerChangedMessagePayload copyDeep() {
+        return QuoteRequestCustomerChangedMessagePayload.deepCopy(this);
+    }
 }

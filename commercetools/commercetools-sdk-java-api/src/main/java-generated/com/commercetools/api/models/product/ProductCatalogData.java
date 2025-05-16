@@ -119,6 +119,8 @@ public interface ProductCatalogData extends ProductCatalogDataMixin {
         return instance;
     }
 
+    public ProductCatalogData copyDeep();
+
     /**
      * factory method to create a deep copy of ProductCatalogData
      * @param template instance to be copied

@@ -69,4 +69,8 @@ public class PaymentUpdateActionImpl implements PaymentUpdateAction, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action).build();
     }
 
+    @Override
+    public PaymentUpdateAction copyDeep() {
+        return PaymentUpdateAction.deepCopy(this);
+    }
 }

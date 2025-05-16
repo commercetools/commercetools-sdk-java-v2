@@ -35,6 +35,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ApprovalRulePredicateSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ApprovalRulePredicateSetMessageImpl.class)
 public interface ApprovalRulePredicateSetMessage extends Message {
@@ -103,6 +104,8 @@ public interface ApprovalRulePredicateSetMessage extends Message {
         instance.setOldPredicate(template.getOldPredicate());
         return instance;
     }
+
+    public ApprovalRulePredicateSetMessage copyDeep();
 
     /**
      * factory method to create a deep copy of ApprovalRulePredicateSetMessage

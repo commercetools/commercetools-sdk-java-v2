@@ -200,6 +200,8 @@ public interface MyPayment extends com.commercetools.api.models.DomainResource<M
         return instance;
     }
 
+    public MyPayment copyDeep();
+
     /**
      * factory method to create a deep copy of MyPayment
      * @param template instance to be copied

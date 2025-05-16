@@ -95,4 +95,8 @@ public class MessagesConfigurationImpl implements MessagesConfiguration, ModelBa
                 .build();
     }
 
+    @Override
+    public MessagesConfiguration copyDeep() {
+        return MessagesConfiguration.deepCopy(this);
+    }
 }

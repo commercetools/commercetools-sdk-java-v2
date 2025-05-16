@@ -266,6 +266,8 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
         return instance;
     }
 
+    public ShoppingListDraft copyDeep();
+
     /**
      * factory method to create a deep copy of ShoppingListDraft
      * @param template instance to be copied

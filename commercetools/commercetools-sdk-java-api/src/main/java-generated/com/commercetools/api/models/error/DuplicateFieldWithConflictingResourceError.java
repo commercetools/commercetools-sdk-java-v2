@@ -31,6 +31,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("DuplicateFieldWithConflictingResource")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DuplicateFieldWithConflictingResourceErrorImpl.class)
 public interface DuplicateFieldWithConflictingResourceError extends ErrorObject {
@@ -132,6 +133,8 @@ public interface DuplicateFieldWithConflictingResourceError extends ErrorObject 
         instance.setConflictingResource(template.getConflictingResource());
         return instance;
     }
+
+    public DuplicateFieldWithConflictingResourceError copyDeep();
 
     /**
      * factory method to create a deep copy of DuplicateFieldWithConflictingResourceError

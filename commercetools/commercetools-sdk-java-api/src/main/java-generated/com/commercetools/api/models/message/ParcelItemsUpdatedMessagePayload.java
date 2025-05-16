@@ -33,6 +33,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ParcelItemsUpdated")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ParcelItemsUpdatedMessagePayloadImpl.class)
 public interface ParcelItemsUpdatedMessagePayload extends OrderMessagePayload {
@@ -157,6 +158,8 @@ public interface ParcelItemsUpdatedMessagePayload extends OrderMessagePayload {
         instance.setShippingKey(template.getShippingKey());
         return instance;
     }
+
+    public ParcelItemsUpdatedMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of ParcelItemsUpdatedMessagePayload

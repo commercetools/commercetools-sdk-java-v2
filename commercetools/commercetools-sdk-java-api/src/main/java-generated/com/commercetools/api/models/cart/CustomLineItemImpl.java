@@ -419,4 +419,8 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
                 .build();
     }
 
+    @Override
+    public CustomLineItem copyDeep() {
+        return CustomLineItem.deepCopy(this);
+    }
 }

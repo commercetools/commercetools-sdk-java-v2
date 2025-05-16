@@ -136,4 +136,8 @@ public class ZoneDraftImpl implements ZoneDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public ZoneDraft copyDeep() {
+        return ZoneDraft.deepCopy(this);
+    }
 }

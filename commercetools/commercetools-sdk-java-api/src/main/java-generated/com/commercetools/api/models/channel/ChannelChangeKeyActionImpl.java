@@ -91,4 +91,8 @@ public class ChannelChangeKeyActionImpl implements ChannelChangeKeyAction, Model
                 .build();
     }
 
+    @Override
+    public ChannelChangeKeyAction copyDeep() {
+        return ChannelChangeKeyAction.deepCopy(this);
+    }
 }

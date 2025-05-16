@@ -69,4 +69,8 @@ public class ApprovalRuleUpdateActionImpl implements ApprovalRuleUpdateAction, M
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action).build();
     }
 
+    @Override
+    public ApprovalRuleUpdateAction copyDeep() {
+        return ApprovalRuleUpdateAction.deepCopy(this);
+    }
 }

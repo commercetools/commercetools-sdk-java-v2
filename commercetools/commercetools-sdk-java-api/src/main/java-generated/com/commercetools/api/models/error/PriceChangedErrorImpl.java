@@ -168,4 +168,8 @@ public class PriceChangedErrorImpl implements PriceChangedError, ModelBase {
                 .build();
     }
 
+    @Override
+    public PriceChangedError copyDeep() {
+        return PriceChangedError.deepCopy(this);
+    }
 }

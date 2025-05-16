@@ -294,4 +294,8 @@ public class BusinessUnitStatusChangedMessageImpl implements BusinessUnitStatusC
                 .build();
     }
 
+    @Override
+    public BusinessUnitStatusChangedMessage copyDeep() {
+        return BusinessUnitStatusChangedMessage.deepCopy(this);
+    }
 }

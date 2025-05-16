@@ -115,4 +115,8 @@ public class MyCustomerChangePasswordImpl implements MyCustomerChangePassword, M
                 .build();
     }
 
+    @Override
+    public MyCustomerChangePassword copyDeep() {
+        return MyCustomerChangePassword.deepCopy(this);
+    }
 }

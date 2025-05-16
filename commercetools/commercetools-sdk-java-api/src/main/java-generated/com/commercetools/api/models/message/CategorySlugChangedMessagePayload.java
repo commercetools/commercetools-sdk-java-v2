@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("CategorySlugChanged")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CategorySlugChangedMessagePayloadImpl.class)
 public interface CategorySlugChangedMessagePayload extends MessagePayload {
@@ -88,6 +89,8 @@ public interface CategorySlugChangedMessagePayload extends MessagePayload {
         instance.setOldSlug(template.getOldSlug());
         return instance;
     }
+
+    public CategorySlugChangedMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of CategorySlugChangedMessagePayload

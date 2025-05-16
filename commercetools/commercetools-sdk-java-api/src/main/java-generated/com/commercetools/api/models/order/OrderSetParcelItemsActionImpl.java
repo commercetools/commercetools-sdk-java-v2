@@ -135,4 +135,8 @@ public class OrderSetParcelItemsActionImpl implements OrderSetParcelItemsAction,
                 .build();
     }
 
+    @Override
+    public OrderSetParcelItemsAction copyDeep() {
+        return OrderSetParcelItemsAction.deepCopy(this);
+    }
 }

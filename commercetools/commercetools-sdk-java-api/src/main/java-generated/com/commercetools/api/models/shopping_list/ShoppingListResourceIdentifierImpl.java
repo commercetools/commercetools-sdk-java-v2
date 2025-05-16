@@ -110,4 +110,8 @@ public class ShoppingListResourceIdentifierImpl implements ShoppingListResourceI
                 .build();
     }
 
+    @Override
+    public ShoppingListResourceIdentifier copyDeep() {
+        return ShoppingListResourceIdentifier.deepCopy(this);
+    }
 }

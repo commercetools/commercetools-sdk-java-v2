@@ -293,4 +293,8 @@ public class PaymentCreatedMessageImpl implements PaymentCreatedMessage, ModelBa
                 .build();
     }
 
+    @Override
+    public PaymentCreatedMessage copyDeep() {
+        return PaymentCreatedMessage.deepCopy(this);
+    }
 }

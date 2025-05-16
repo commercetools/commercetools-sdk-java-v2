@@ -94,4 +94,8 @@ public class LocationImpl implements Location, ModelBase {
                 .build();
     }
 
+    @Override
+    public Location copyDeep() {
+        return Location.deepCopy(this);
+    }
 }

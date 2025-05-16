@@ -92,4 +92,8 @@ public class StagedOrderSetCountryActionImpl implements StagedOrderSetCountryAct
                 .build();
     }
 
+    @Override
+    public StagedOrderSetCountryAction copyDeep() {
+        return StagedOrderSetCountryAction.deepCopy(this);
+    }
 }

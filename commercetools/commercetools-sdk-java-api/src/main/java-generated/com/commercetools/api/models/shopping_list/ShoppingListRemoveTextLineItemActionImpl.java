@@ -133,4 +133,8 @@ public class ShoppingListRemoveTextLineItemActionImpl implements ShoppingListRem
                 .build();
     }
 
+    @Override
+    public ShoppingListRemoveTextLineItemAction copyDeep() {
+        return ShoppingListRemoveTextLineItemAction.deepCopy(this);
+    }
 }

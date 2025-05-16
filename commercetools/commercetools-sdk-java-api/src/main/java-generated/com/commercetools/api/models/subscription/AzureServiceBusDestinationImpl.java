@@ -91,4 +91,8 @@ public class AzureServiceBusDestinationImpl implements AzureServiceBusDestinatio
                 .build();
     }
 
+    @Override
+    public AzureServiceBusDestination copyDeep() {
+        return AzureServiceBusDestination.deepCopy(this);
+    }
 }

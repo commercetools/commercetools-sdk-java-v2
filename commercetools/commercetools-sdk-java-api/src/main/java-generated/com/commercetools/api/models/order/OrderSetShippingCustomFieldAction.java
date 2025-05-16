@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setShippingCustomField")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderSetShippingCustomFieldActionImpl.class)
 public interface OrderSetShippingCustomFieldAction extends OrderUpdateAction {
@@ -101,6 +102,8 @@ public interface OrderSetShippingCustomFieldAction extends OrderUpdateAction {
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public OrderSetShippingCustomFieldAction copyDeep();
 
     /**
      * factory method to create a deep copy of OrderSetShippingCustomFieldAction

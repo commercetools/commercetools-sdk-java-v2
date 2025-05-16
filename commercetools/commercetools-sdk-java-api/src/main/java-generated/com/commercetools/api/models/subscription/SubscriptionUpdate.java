@@ -94,6 +94,8 @@ public interface SubscriptionUpdate extends
         return instance;
     }
 
+    public SubscriptionUpdate copyDeep();
+
     /**
      * factory method to create a deep copy of SubscriptionUpdate
      * @param template instance to be copied

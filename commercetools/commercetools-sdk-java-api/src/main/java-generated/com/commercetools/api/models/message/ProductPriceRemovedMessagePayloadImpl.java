@@ -129,4 +129,8 @@ public class ProductPriceRemovedMessagePayloadImpl implements ProductPriceRemove
                 .build();
     }
 
+    @Override
+    public ProductPriceRemovedMessagePayload copyDeep() {
+        return ProductPriceRemovedMessagePayload.deepCopy(this);
+    }
 }

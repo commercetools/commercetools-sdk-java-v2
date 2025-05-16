@@ -94,4 +94,8 @@ public class CartSetShippingAddressActionImpl implements CartSetShippingAddressA
                 .build();
     }
 
+    @Override
+    public CartSetShippingAddressAction copyDeep() {
+        return CartSetShippingAddressAction.deepCopy(this);
+    }
 }

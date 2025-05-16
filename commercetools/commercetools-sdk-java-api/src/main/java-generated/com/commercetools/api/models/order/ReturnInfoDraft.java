@@ -109,6 +109,8 @@ public interface ReturnInfoDraft extends io.vrap.rmf.base.client.Draft<ReturnInf
         return instance;
     }
 
+    public ReturnInfoDraft copyDeep();
+
     /**
      * factory method to create a deep copy of ReturnInfoDraft
      * @param template instance to be copied

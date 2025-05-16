@@ -78,4 +78,8 @@ public class SearchNotExpressionImpl implements SearchNotExpression, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("not", not).build();
     }
 
+    @Override
+    public SearchNotExpression copyDeep() {
+        return SearchNotExpression.deepCopy(this);
+    }
 }

@@ -115,4 +115,8 @@ public class NoMatchingProductDiscountFoundErrorImpl implements NoMatchingProduc
                 .build();
     }
 
+    @Override
+    public NoMatchingProductDiscountFoundError copyDeep() {
+        return NoMatchingProductDiscountFoundError.deepCopy(this);
+    }
 }

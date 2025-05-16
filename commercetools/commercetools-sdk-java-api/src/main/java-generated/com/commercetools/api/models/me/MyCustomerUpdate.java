@@ -94,6 +94,8 @@ public interface MyCustomerUpdate extends
         return instance;
     }
 
+    public MyCustomerUpdate copyDeep();
+
     /**
      * factory method to create a deep copy of MyCustomerUpdate
      * @param template instance to be copied

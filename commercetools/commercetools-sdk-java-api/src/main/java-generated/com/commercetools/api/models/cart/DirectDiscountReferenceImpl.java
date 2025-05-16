@@ -92,4 +92,8 @@ public class DirectDiscountReferenceImpl implements DirectDiscountReference, Mod
                 .build();
     }
 
+    @Override
+    public DirectDiscountReference copyDeep() {
+        return DirectDiscountReference.deepCopy(this);
+    }
 }

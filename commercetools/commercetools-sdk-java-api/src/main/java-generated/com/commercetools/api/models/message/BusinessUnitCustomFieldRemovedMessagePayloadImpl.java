@@ -92,4 +92,8 @@ public class BusinessUnitCustomFieldRemovedMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public BusinessUnitCustomFieldRemovedMessagePayload copyDeep() {
+        return BusinessUnitCustomFieldRemovedMessagePayload.deepCopy(this);
+    }
 }

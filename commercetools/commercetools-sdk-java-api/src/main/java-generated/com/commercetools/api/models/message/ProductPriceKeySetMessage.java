@@ -35,6 +35,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ProductPriceKeySet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductPriceKeySetMessageImpl.class)
 public interface ProductPriceKeySetMessage extends Message {
@@ -151,6 +152,8 @@ public interface ProductPriceKeySetMessage extends Message {
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public ProductPriceKeySetMessage copyDeep();
 
     /**
      * factory method to create a deep copy of ProductPriceKeySetMessage

@@ -192,4 +192,8 @@ public class OrderTransitionLineItemStateActionImpl implements OrderTransitionLi
                 .build();
     }
 
+    @Override
+    public OrderTransitionLineItemStateAction copyDeep() {
+        return OrderTransitionLineItemStateAction.deepCopy(this);
+    }
 }

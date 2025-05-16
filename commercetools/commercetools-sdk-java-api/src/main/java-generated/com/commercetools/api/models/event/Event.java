@@ -34,13 +34,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.event.ImportContainerCreatedEventImpl.class, name = ImportContainerCreatedEvent.IMPORT_CONTAINER_CREATED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.event.ImportContainerDeletedEventImpl.class, name = ImportContainerDeletedEvent.IMPORT_CONTAINER_DELETED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.event.ImportOperationRejectedEventImpl.class, name = ImportOperationRejectedEvent.IMPORT_OPERATION_REJECTED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.event.ImportUnresolvedEventImpl.class, name = ImportUnresolvedEvent.IMPORT_UNRESOLVED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.event.ImportValidationFailedEventImpl.class, name = ImportValidationFailedEvent.IMPORT_VALIDATION_FAILED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.event.ImportWaitForMasterVariantEventImpl.class, name = ImportWaitForMasterVariantEvent.IMPORT_WAIT_FOR_MASTER_VARIANT) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = EventImpl.class, visible = true)
 @JsonDeserialize(as = EventImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -114,6 +107,8 @@ public interface Event {
 
     public void setCreatedAt(final ZonedDateTime createdAt);
 
+    public Event copyDeep();
+
     /**
      * factory method to create a deep copy of Event
      * @param template instance to be copied
@@ -124,29 +119,9 @@ public interface Event {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.event.ImportContainerCreatedEvent) {
-            return com.commercetools.api.models.event.ImportContainerCreatedEvent
-                    .deepCopy((com.commercetools.api.models.event.ImportContainerCreatedEvent) template);
-        }
-        if (template instanceof com.commercetools.api.models.event.ImportContainerDeletedEvent) {
-            return com.commercetools.api.models.event.ImportContainerDeletedEvent
-                    .deepCopy((com.commercetools.api.models.event.ImportContainerDeletedEvent) template);
-        }
-        if (template instanceof com.commercetools.api.models.event.ImportOperationRejectedEvent) {
-            return com.commercetools.api.models.event.ImportOperationRejectedEvent
-                    .deepCopy((com.commercetools.api.models.event.ImportOperationRejectedEvent) template);
-        }
-        if (template instanceof com.commercetools.api.models.event.ImportUnresolvedEvent) {
-            return com.commercetools.api.models.event.ImportUnresolvedEvent
-                    .deepCopy((com.commercetools.api.models.event.ImportUnresolvedEvent) template);
-        }
-        if (template instanceof com.commercetools.api.models.event.ImportValidationFailedEvent) {
-            return com.commercetools.api.models.event.ImportValidationFailedEvent
-                    .deepCopy((com.commercetools.api.models.event.ImportValidationFailedEvent) template);
-        }
-        if (template instanceof com.commercetools.api.models.event.ImportWaitForMasterVariantEvent) {
-            return com.commercetools.api.models.event.ImportWaitForMasterVariantEvent
-                    .deepCopy((com.commercetools.api.models.event.ImportWaitForMasterVariantEvent) template);
+
+        if (!(template instanceof EventImpl)) {
+            return template.copyDeep();
         }
         EventImpl instance = new EventImpl();
         instance.setId(template.getId());

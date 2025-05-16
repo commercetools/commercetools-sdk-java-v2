@@ -115,4 +115,8 @@ public class PendingOperationErrorImpl implements PendingOperationError, ModelBa
                 .build();
     }
 
+    @Override
+    public PendingOperationError copyDeep() {
+        return PendingOperationError.deepCopy(this);
+    }
 }

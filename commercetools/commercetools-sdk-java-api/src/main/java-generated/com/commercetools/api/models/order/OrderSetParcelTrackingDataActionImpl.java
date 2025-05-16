@@ -135,4 +135,8 @@ public class OrderSetParcelTrackingDataActionImpl implements OrderSetParcelTrack
                 .build();
     }
 
+    @Override
+    public OrderSetParcelTrackingDataAction copyDeep() {
+        return OrderSetParcelTrackingDataAction.deepCopy(this);
+    }
 }

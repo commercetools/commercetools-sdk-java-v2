@@ -93,4 +93,8 @@ public class StoreRemoveDistributionChannelActionImpl implements StoreRemoveDist
                 .build();
     }
 
+    @Override
+    public StoreRemoveDistributionChannelAction copyDeep() {
+        return StoreRemoveDistributionChannelAction.deepCopy(this);
+    }
 }

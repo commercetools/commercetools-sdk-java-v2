@@ -27,6 +27,7 @@ import jakarta.validation.Valid;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setCustomLineItemShippingDetails")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderSetCustomLineItemShippingDetailsActionImpl.class)
 public interface OrderSetCustomLineItemShippingDetailsAction extends OrderUpdateAction {
@@ -102,6 +103,8 @@ public interface OrderSetCustomLineItemShippingDetailsAction extends OrderUpdate
         instance.setShippingDetails(template.getShippingDetails());
         return instance;
     }
+
+    public OrderSetCustomLineItemShippingDetailsAction copyDeep();
 
     /**
      * factory method to create a deep copy of OrderSetCustomLineItemShippingDetailsAction

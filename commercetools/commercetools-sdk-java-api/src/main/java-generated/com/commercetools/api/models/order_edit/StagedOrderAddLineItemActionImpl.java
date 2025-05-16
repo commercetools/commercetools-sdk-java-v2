@@ -359,4 +359,8 @@ public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemA
                 .build();
     }
 
+    @Override
+    public StagedOrderAddLineItemAction copyDeep() {
+        return StagedOrderAddLineItemAction.deepCopy(this);
+    }
 }

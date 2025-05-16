@@ -92,4 +92,8 @@ public class CustomerRemoveStoreActionImpl implements CustomerRemoveStoreAction,
                 .build();
     }
 
+    @Override
+    public CustomerRemoveStoreAction copyDeep() {
+        return CustomerRemoveStoreAction.deepCopy(this);
+    }
 }

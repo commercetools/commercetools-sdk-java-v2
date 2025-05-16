@@ -261,4 +261,8 @@ public class AttributeGroupImpl implements AttributeGroup, ModelBase {
                 .build();
     }
 
+    @Override
+    public AttributeGroup copyDeep() {
+        return AttributeGroup.deepCopy(this);
+    }
 }

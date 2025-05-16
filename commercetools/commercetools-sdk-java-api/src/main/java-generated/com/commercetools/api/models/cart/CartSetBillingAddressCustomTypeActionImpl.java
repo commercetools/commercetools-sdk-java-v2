@@ -111,4 +111,8 @@ public class CartSetBillingAddressCustomTypeActionImpl implements CartSetBilling
                 .build();
     }
 
+    @Override
+    public CartSetBillingAddressCustomTypeAction copyDeep() {
+        return CartSetBillingAddressCustomTypeAction.deepCopy(this);
+    }
 }

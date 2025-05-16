@@ -138,4 +138,8 @@ public class MaxResourceLimitExceededErrorImpl implements MaxResourceLimitExceed
                 .build();
     }
 
+    @Override
+    public MaxResourceLimitExceededError copyDeep() {
+        return MaxResourceLimitExceededError.deepCopy(this);
+    }
 }

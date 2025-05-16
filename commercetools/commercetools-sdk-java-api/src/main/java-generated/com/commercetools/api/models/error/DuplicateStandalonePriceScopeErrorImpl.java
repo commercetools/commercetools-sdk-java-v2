@@ -279,4 +279,8 @@ public class DuplicateStandalonePriceScopeErrorImpl implements DuplicateStandalo
                 .build();
     }
 
+    @Override
+    public DuplicateStandalonePriceScopeError copyDeep() {
+        return DuplicateStandalonePriceScopeError.deepCopy(this);
+    }
 }

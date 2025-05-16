@@ -68,6 +68,8 @@ public interface CustomerGroupAssignment {
         return instance;
     }
 
+    public CustomerGroupAssignment copyDeep();
+
     /**
      * factory method to create a deep copy of CustomerGroupAssignment
      * @param template instance to be copied

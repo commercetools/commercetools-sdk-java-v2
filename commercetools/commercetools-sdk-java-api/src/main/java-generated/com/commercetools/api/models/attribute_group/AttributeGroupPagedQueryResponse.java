@@ -144,6 +144,8 @@ public interface AttributeGroupPagedQueryResponse
         return instance;
     }
 
+    public AttributeGroupPagedQueryResponse copyDeep();
+
     /**
      * factory method to create a deep copy of AttributeGroupPagedQueryResponse
      * @param template instance to be copied

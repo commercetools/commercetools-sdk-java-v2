@@ -116,4 +116,8 @@ public class GraphQLExtensionPredicateEvaluationFailedErrorImpl
                 .build();
     }
 
+    @Override
+    public GraphQLExtensionPredicateEvaluationFailedError copyDeep() {
+        return GraphQLExtensionPredicateEvaluationFailedError.deepCopy(this);
+    }
 }

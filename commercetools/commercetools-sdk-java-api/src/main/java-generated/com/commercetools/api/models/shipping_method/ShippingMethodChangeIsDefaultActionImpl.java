@@ -91,4 +91,8 @@ public class ShippingMethodChangeIsDefaultActionImpl implements ShippingMethodCh
                 .build();
     }
 
+    @Override
+    public ShippingMethodChangeIsDefaultAction copyDeep() {
+        return ShippingMethodChangeIsDefaultAction.deepCopy(this);
+    }
 }

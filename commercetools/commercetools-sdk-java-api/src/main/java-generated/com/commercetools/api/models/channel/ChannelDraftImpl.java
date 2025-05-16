@@ -201,4 +201,8 @@ public class ChannelDraftImpl implements ChannelDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public ChannelDraft copyDeep() {
+        return ChannelDraft.deepCopy(this);
+    }
 }

@@ -110,4 +110,8 @@ public class CartResourceIdentifierImpl implements CartResourceIdentifier, Model
                 .build();
     }
 
+    @Override
+    public CartResourceIdentifier copyDeep() {
+        return CartResourceIdentifier.deepCopy(this);
+    }
 }

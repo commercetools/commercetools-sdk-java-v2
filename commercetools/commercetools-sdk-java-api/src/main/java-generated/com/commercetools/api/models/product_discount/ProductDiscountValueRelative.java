@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("relative")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductDiscountValueRelativeImpl.class)
 public interface ProductDiscountValueRelative extends ProductDiscountValue {
@@ -69,6 +70,8 @@ public interface ProductDiscountValueRelative extends ProductDiscountValue {
         instance.setPermyriad(template.getPermyriad());
         return instance;
     }
+
+    public ProductDiscountValueRelative copyDeep();
 
     /**
      * factory method to create a deep copy of ProductDiscountValueRelative

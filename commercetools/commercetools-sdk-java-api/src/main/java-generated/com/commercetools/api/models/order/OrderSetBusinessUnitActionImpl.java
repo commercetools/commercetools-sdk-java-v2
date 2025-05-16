@@ -95,4 +95,8 @@ public class OrderSetBusinessUnitActionImpl implements OrderSetBusinessUnitActio
                 .build();
     }
 
+    @Override
+    public OrderSetBusinessUnitAction copyDeep() {
+        return OrderSetBusinessUnitAction.deepCopy(this);
+    }
 }

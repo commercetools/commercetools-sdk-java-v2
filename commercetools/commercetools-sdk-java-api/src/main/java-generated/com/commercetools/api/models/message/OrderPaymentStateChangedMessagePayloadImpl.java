@@ -111,4 +111,8 @@ public class OrderPaymentStateChangedMessagePayloadImpl implements OrderPaymentS
                 .build();
     }
 
+    @Override
+    public OrderPaymentStateChangedMessagePayload copyDeep() {
+        return OrderPaymentStateChangedMessagePayload.deepCopy(this);
+    }
 }

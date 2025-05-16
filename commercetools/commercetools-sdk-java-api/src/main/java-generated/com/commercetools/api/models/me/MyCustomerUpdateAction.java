@@ -27,28 +27,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerAddAddressActionImpl.class, name = MyCustomerAddAddressAction.ADD_ADDRESS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerAddBillingAddressIdActionImpl.class, name = MyCustomerAddBillingAddressIdAction.ADD_BILLING_ADDRESS_ID),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerAddShippingAddressIdActionImpl.class, name = MyCustomerAddShippingAddressIdAction.ADD_SHIPPING_ADDRESS_ID),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerChangeAddressActionImpl.class, name = MyCustomerChangeAddressAction.CHANGE_ADDRESS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerChangeEmailActionImpl.class, name = MyCustomerChangeEmailAction.CHANGE_EMAIL),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerRemoveAddressActionImpl.class, name = MyCustomerRemoveAddressAction.REMOVE_ADDRESS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerRemoveBillingAddressIdActionImpl.class, name = MyCustomerRemoveBillingAddressIdAction.REMOVE_BILLING_ADDRESS_ID),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerRemoveShippingAddressIdActionImpl.class, name = MyCustomerRemoveShippingAddressIdAction.REMOVE_SHIPPING_ADDRESS_ID),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerSetCompanyNameActionImpl.class, name = MyCustomerSetCompanyNameAction.SET_COMPANY_NAME),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerSetCustomFieldActionImpl.class, name = MyCustomerSetCustomFieldAction.SET_CUSTOM_FIELD),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerSetCustomTypeActionImpl.class, name = MyCustomerSetCustomTypeAction.SET_CUSTOM_TYPE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerSetDateOfBirthActionImpl.class, name = MyCustomerSetDateOfBirthAction.SET_DATE_OF_BIRTH),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerSetDefaultBillingAddressActionImpl.class, name = MyCustomerSetDefaultBillingAddressAction.SET_DEFAULT_BILLING_ADDRESS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerSetDefaultShippingAddressActionImpl.class, name = MyCustomerSetDefaultShippingAddressAction.SET_DEFAULT_SHIPPING_ADDRESS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerSetFirstNameActionImpl.class, name = MyCustomerSetFirstNameAction.SET_FIRST_NAME),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerSetLastNameActionImpl.class, name = MyCustomerSetLastNameAction.SET_LAST_NAME),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerSetLocaleActionImpl.class, name = MyCustomerSetLocaleAction.SET_LOCALE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerSetMiddleNameActionImpl.class, name = MyCustomerSetMiddleNameAction.SET_MIDDLE_NAME),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerSetSalutationActionImpl.class, name = MyCustomerSetSalutationAction.SET_SALUTATION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerSetTitleActionImpl.class, name = MyCustomerSetTitleAction.SET_TITLE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyCustomerSetVatIdActionImpl.class, name = MyCustomerSetVatIdAction.SET_VAT_ID) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = MyCustomerUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = MyCustomerUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -63,6 +41,8 @@ public interface MyCustomerUpdateAction
     @JsonProperty("action")
     public String getAction();
 
+    public MyCustomerUpdateAction copyDeep();
+
     /**
      * factory method to create a deep copy of MyCustomerUpdateAction
      * @param template instance to be copied
@@ -73,89 +53,9 @@ public interface MyCustomerUpdateAction
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.me.MyCustomerAddAddressAction) {
-            return com.commercetools.api.models.me.MyCustomerAddAddressAction
-                    .deepCopy((com.commercetools.api.models.me.MyCustomerAddAddressAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyCustomerAddBillingAddressIdAction) {
-            return com.commercetools.api.models.me.MyCustomerAddBillingAddressIdAction
-                    .deepCopy((com.commercetools.api.models.me.MyCustomerAddBillingAddressIdAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyCustomerAddShippingAddressIdAction) {
-            return com.commercetools.api.models.me.MyCustomerAddShippingAddressIdAction
-                    .deepCopy((com.commercetools.api.models.me.MyCustomerAddShippingAddressIdAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyCustomerChangeAddressAction) {
-            return com.commercetools.api.models.me.MyCustomerChangeAddressAction
-                    .deepCopy((com.commercetools.api.models.me.MyCustomerChangeAddressAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyCustomerChangeEmailAction) {
-            return com.commercetools.api.models.me.MyCustomerChangeEmailAction
-                    .deepCopy((com.commercetools.api.models.me.MyCustomerChangeEmailAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyCustomerRemoveAddressAction) {
-            return com.commercetools.api.models.me.MyCustomerRemoveAddressAction
-                    .deepCopy((com.commercetools.api.models.me.MyCustomerRemoveAddressAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyCustomerRemoveBillingAddressIdAction) {
-            return com.commercetools.api.models.me.MyCustomerRemoveBillingAddressIdAction
-                    .deepCopy((com.commercetools.api.models.me.MyCustomerRemoveBillingAddressIdAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyCustomerRemoveShippingAddressIdAction) {
-            return com.commercetools.api.models.me.MyCustomerRemoveShippingAddressIdAction
-                    .deepCopy((com.commercetools.api.models.me.MyCustomerRemoveShippingAddressIdAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyCustomerSetCompanyNameAction) {
-            return com.commercetools.api.models.me.MyCustomerSetCompanyNameAction
-                    .deepCopy((com.commercetools.api.models.me.MyCustomerSetCompanyNameAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyCustomerSetCustomFieldAction) {
-            return com.commercetools.api.models.me.MyCustomerSetCustomFieldAction
-                    .deepCopy((com.commercetools.api.models.me.MyCustomerSetCustomFieldAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyCustomerSetCustomTypeAction) {
-            return com.commercetools.api.models.me.MyCustomerSetCustomTypeAction
-                    .deepCopy((com.commercetools.api.models.me.MyCustomerSetCustomTypeAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyCustomerSetDateOfBirthAction) {
-            return com.commercetools.api.models.me.MyCustomerSetDateOfBirthAction
-                    .deepCopy((com.commercetools.api.models.me.MyCustomerSetDateOfBirthAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyCustomerSetDefaultBillingAddressAction) {
-            return com.commercetools.api.models.me.MyCustomerSetDefaultBillingAddressAction
-                    .deepCopy((com.commercetools.api.models.me.MyCustomerSetDefaultBillingAddressAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyCustomerSetDefaultShippingAddressAction) {
-            return com.commercetools.api.models.me.MyCustomerSetDefaultShippingAddressAction
-                    .deepCopy((com.commercetools.api.models.me.MyCustomerSetDefaultShippingAddressAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyCustomerSetFirstNameAction) {
-            return com.commercetools.api.models.me.MyCustomerSetFirstNameAction
-                    .deepCopy((com.commercetools.api.models.me.MyCustomerSetFirstNameAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyCustomerSetLastNameAction) {
-            return com.commercetools.api.models.me.MyCustomerSetLastNameAction
-                    .deepCopy((com.commercetools.api.models.me.MyCustomerSetLastNameAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyCustomerSetLocaleAction) {
-            return com.commercetools.api.models.me.MyCustomerSetLocaleAction
-                    .deepCopy((com.commercetools.api.models.me.MyCustomerSetLocaleAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyCustomerSetMiddleNameAction) {
-            return com.commercetools.api.models.me.MyCustomerSetMiddleNameAction
-                    .deepCopy((com.commercetools.api.models.me.MyCustomerSetMiddleNameAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyCustomerSetSalutationAction) {
-            return com.commercetools.api.models.me.MyCustomerSetSalutationAction
-                    .deepCopy((com.commercetools.api.models.me.MyCustomerSetSalutationAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyCustomerSetTitleAction) {
-            return com.commercetools.api.models.me.MyCustomerSetTitleAction
-                    .deepCopy((com.commercetools.api.models.me.MyCustomerSetTitleAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyCustomerSetVatIdAction) {
-            return com.commercetools.api.models.me.MyCustomerSetVatIdAction
-                    .deepCopy((com.commercetools.api.models.me.MyCustomerSetVatIdAction) template);
+
+        if (!(template instanceof MyCustomerUpdateActionImpl)) {
+            return template.copyDeep();
         }
         MyCustomerUpdateActionImpl instance = new MyCustomerUpdateActionImpl();
         return instance;

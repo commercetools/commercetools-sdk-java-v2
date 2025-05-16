@@ -73,4 +73,8 @@ public class AttributeReferenceImpl implements AttributeReference, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("key", key).build();
     }
 
+    @Override
+    public AttributeReference copyDeep() {
+        return AttributeReference.deepCopy(this);
+    }
 }

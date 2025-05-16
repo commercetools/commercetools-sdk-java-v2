@@ -95,4 +95,8 @@ public class DiscountedPriceImpl implements DiscountedPrice, ModelBase {
                 .build();
     }
 
+    @Override
+    public DiscountedPrice copyDeep() {
+        return DiscountedPrice.deepCopy(this);
+    }
 }

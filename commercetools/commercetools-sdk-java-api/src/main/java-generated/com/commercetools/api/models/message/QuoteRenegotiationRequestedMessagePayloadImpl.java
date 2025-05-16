@@ -92,4 +92,8 @@ public class QuoteRenegotiationRequestedMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public QuoteRenegotiationRequestedMessagePayload copyDeep() {
+        return QuoteRenegotiationRequestedMessagePayload.deepCopy(this);
+    }
 }

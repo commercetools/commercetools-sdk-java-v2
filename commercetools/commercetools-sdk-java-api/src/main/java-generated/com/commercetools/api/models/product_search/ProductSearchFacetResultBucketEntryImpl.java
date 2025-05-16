@@ -95,4 +95,8 @@ public class ProductSearchFacetResultBucketEntryImpl implements ProductSearchFac
                 .build();
     }
 
+    @Override
+    public ProductSearchFacetResultBucketEntry copyDeep() {
+        return ProductSearchFacetResultBucketEntry.deepCopy(this);
+    }
 }

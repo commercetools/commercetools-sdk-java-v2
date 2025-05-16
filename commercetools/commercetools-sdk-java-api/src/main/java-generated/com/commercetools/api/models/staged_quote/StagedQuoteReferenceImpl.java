@@ -111,4 +111,8 @@ public class StagedQuoteReferenceImpl implements StagedQuoteReference, ModelBase
                 .build();
     }
 
+    @Override
+    public StagedQuoteReference copyDeep() {
+        return StagedQuoteReference.deepCopy(this);
+    }
 }

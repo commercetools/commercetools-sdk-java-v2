@@ -176,4 +176,8 @@ public class StagedOrderChangeLineItemQuantityActionImpl implements StagedOrderC
                 .build();
     }
 
+    @Override
+    public StagedOrderChangeLineItemQuantityAction copyDeep() {
+        return StagedOrderChangeLineItemQuantityAction.deepCopy(this);
+    }
 }

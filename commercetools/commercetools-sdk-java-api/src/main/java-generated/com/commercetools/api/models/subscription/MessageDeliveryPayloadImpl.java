@@ -281,4 +281,8 @@ public class MessageDeliveryPayloadImpl implements MessageDeliveryPayload, Model
         return messagePayload;
     }
 
+    @Override
+    public MessageDeliveryPayload copyDeep() {
+        return MessageDeliveryPayload.deepCopy(this);
+    }
 }

@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("InvalidInput")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = InvalidInputErrorImpl.class)
 public interface InvalidInputError extends ErrorObject {
@@ -78,6 +79,8 @@ public interface InvalidInputError extends ErrorObject {
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
+
+    public InvalidInputError copyDeep();
 
     /**
      * factory method to create a deep copy of InvalidInputError

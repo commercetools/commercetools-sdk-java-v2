@@ -397,4 +397,8 @@ public class BusinessUnitDraftImpl implements BusinessUnitDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public BusinessUnitDraft copyDeep() {
+        return BusinessUnitDraft.deepCopy(this);
+    }
 }

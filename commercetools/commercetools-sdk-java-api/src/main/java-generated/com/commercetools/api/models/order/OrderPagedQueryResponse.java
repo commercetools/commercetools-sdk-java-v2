@@ -143,6 +143,8 @@ public interface OrderPagedQueryResponse extends com.commercetools.api.models.Re
         return instance;
     }
 
+    public OrderPagedQueryResponse copyDeep();
+
     /**
      * factory method to create a deep copy of OrderPagedQueryResponse
      * @param template instance to be copied

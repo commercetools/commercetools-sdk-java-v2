@@ -293,4 +293,8 @@ public class ReturnInfoAddedMessageImpl implements ReturnInfoAddedMessage, Model
                 .build();
     }
 
+    @Override
+    public ReturnInfoAddedMessage copyDeep() {
+        return ReturnInfoAddedMessage.deepCopy(this);
+    }
 }

@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("order")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderReferenceImpl.class)
 public interface OrderReference extends Reference, com.commercetools.api.models.Identifiable<Order>,
@@ -88,6 +89,8 @@ public interface OrderReference extends Reference, com.commercetools.api.models.
         instance.setObj(template.getObj());
         return instance;
     }
+
+    public OrderReference copyDeep();
 
     /**
      * factory method to create a deep copy of OrderReference

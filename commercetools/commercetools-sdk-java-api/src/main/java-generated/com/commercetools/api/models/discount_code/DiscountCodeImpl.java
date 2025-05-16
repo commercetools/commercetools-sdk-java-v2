@@ -489,4 +489,8 @@ public class DiscountCodeImpl implements DiscountCode, ModelBase {
                 .build();
     }
 
+    @Override
+    public DiscountCode copyDeep() {
+        return DiscountCode.deepCopy(this);
+    }
 }

@@ -310,6 +310,8 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
         return instance;
     }
 
+    public CartDiscountDraft copyDeep();
+
     /**
      * factory method to create a deep copy of CartDiscountDraft
      * @param template instance to be copied

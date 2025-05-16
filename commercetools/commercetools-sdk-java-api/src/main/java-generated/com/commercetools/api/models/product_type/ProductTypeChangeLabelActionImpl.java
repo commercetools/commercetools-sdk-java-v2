@@ -110,4 +110,8 @@ public class ProductTypeChangeLabelActionImpl implements ProductTypeChangeLabelA
                 .build();
     }
 
+    @Override
+    public ProductTypeChangeLabelAction copyDeep() {
+        return ProductTypeChangeLabelAction.deepCopy(this);
+    }
 }

@@ -111,4 +111,8 @@ public class AssociateRoleSetCustomTypeActionImpl implements AssociateRoleSetCus
                 .build();
     }
 
+    @Override
+    public AssociateRoleSetCustomTypeAction copyDeep() {
+        return AssociateRoleSetCustomTypeAction.deepCopy(this);
+    }
 }

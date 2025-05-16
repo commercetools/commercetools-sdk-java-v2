@@ -93,4 +93,8 @@ public class OrderSetBillingAddressActionImpl implements OrderSetBillingAddressA
                 .build();
     }
 
+    @Override
+    public OrderSetBillingAddressAction copyDeep() {
+        return OrderSetBillingAddressAction.deepCopy(this);
+    }
 }

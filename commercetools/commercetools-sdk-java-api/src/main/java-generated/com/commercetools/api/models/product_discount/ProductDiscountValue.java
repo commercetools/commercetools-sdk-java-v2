@@ -27,10 +27,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_discount.ProductDiscountValueAbsoluteImpl.class, name = ProductDiscountValueAbsolute.ABSOLUTE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_discount.ProductDiscountValueExternalImpl.class, name = ProductDiscountValueExternal.EXTERNAL),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_discount.ProductDiscountValueRelativeImpl.class, name = ProductDiscountValueRelative.RELATIVE) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = ProductDiscountValueImpl.class, visible = true)
 @JsonDeserialize(as = ProductDiscountValueImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -44,6 +40,8 @@ public interface ProductDiscountValue {
     @JsonProperty("type")
     public String getType();
 
+    public ProductDiscountValue copyDeep();
+
     /**
      * factory method to create a deep copy of ProductDiscountValue
      * @param template instance to be copied
@@ -54,17 +52,9 @@ public interface ProductDiscountValue {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.product_discount.ProductDiscountValueAbsolute) {
-            return com.commercetools.api.models.product_discount.ProductDiscountValueAbsolute
-                    .deepCopy((com.commercetools.api.models.product_discount.ProductDiscountValueAbsolute) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_discount.ProductDiscountValueExternal) {
-            return com.commercetools.api.models.product_discount.ProductDiscountValueExternal
-                    .deepCopy((com.commercetools.api.models.product_discount.ProductDiscountValueExternal) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_discount.ProductDiscountValueRelative) {
-            return com.commercetools.api.models.product_discount.ProductDiscountValueRelative
-                    .deepCopy((com.commercetools.api.models.product_discount.ProductDiscountValueRelative) template);
+
+        if (!(template instanceof ProductDiscountValueImpl)) {
+            return template.copyDeep();
         }
         ProductDiscountValueImpl instance = new ProductDiscountValueImpl();
         return instance;

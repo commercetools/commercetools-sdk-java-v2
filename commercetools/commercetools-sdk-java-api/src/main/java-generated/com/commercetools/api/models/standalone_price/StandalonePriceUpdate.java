@@ -94,6 +94,8 @@ public interface StandalonePriceUpdate extends
         return instance;
     }
 
+    public StandalonePriceUpdate copyDeep();
+
     /**
      * factory method to create a deep copy of StandalonePriceUpdate
      * @param template instance to be copied

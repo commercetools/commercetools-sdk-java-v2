@@ -159,4 +159,8 @@ public class GraphQLDuplicateFieldWithConflictingResourceErrorImpl
                 .build();
     }
 
+    @Override
+    public GraphQLDuplicateFieldWithConflictingResourceError copyDeep() {
+        return GraphQLDuplicateFieldWithConflictingResourceError.deepCopy(this);
+    }
 }

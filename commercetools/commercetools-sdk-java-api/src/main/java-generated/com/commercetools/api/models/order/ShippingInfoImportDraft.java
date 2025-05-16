@@ -213,6 +213,8 @@ public interface ShippingInfoImportDraft extends io.vrap.rmf.base.client.Draft<S
         return instance;
     }
 
+    public ShippingInfoImportDraft copyDeep();
+
     /**
      * factory method to create a deep copy of ShippingInfoImportDraft
      * @param template instance to be copied

@@ -314,4 +314,8 @@ public class OrderPurchaseOrderNumberSetMessageImpl implements OrderPurchaseOrde
                 .build();
     }
 
+    @Override
+    public OrderPurchaseOrderNumberSetMessage copyDeep() {
+        return OrderPurchaseOrderNumberSetMessage.deepCopy(this);
+    }
 }

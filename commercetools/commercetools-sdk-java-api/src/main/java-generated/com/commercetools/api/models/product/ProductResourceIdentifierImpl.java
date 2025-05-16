@@ -110,4 +110,8 @@ public class ProductResourceIdentifierImpl implements ProductResourceIdentifier,
                 .build();
     }
 
+    @Override
+    public ProductResourceIdentifier copyDeep() {
+        return ProductResourceIdentifier.deepCopy(this);
+    }
 }

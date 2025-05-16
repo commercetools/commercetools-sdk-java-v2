@@ -151,6 +151,8 @@ public interface TextLineItemDraft extends com.commercetools.api.models.Customiz
         return instance;
     }
 
+    public TextLineItemDraft copyDeep();
+
     /**
      * factory method to create a deep copy of TextLineItemDraft
      * @param template instance to be copied

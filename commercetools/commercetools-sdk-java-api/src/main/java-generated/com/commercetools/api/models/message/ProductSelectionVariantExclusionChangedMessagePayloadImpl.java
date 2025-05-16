@@ -137,4 +137,8 @@ public class ProductSelectionVariantExclusionChangedMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public ProductSelectionVariantExclusionChangedMessagePayload copyDeep() {
+        return ProductSelectionVariantExclusionChangedMessagePayload.deepCopy(this);
+    }
 }

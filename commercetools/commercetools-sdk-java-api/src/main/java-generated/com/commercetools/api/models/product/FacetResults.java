@@ -69,6 +69,8 @@ public interface FacetResults {
         return instance;
     }
 
+    public FacetResults copyDeep();
+
     /**
      * factory method to create a deep copy of FacetResults
      * @param template instance to be copied

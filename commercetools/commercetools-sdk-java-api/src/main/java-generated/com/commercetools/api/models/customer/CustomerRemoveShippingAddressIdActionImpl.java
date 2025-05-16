@@ -110,4 +110,8 @@ public class CustomerRemoveShippingAddressIdActionImpl implements CustomerRemove
                 .build();
     }
 
+    @Override
+    public CustomerRemoveShippingAddressIdAction copyDeep() {
+        return CustomerRemoveShippingAddressIdAction.deepCopy(this);
+    }
 }

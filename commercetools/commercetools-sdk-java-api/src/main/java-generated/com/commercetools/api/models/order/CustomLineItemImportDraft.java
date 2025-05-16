@@ -255,6 +255,8 @@ public interface CustomLineItemImportDraft
         return instance;
     }
 
+    public CustomLineItemImportDraft copyDeep();
+
     /**
      * factory method to create a deep copy of CustomLineItemImportDraft
      * @param template instance to be copied

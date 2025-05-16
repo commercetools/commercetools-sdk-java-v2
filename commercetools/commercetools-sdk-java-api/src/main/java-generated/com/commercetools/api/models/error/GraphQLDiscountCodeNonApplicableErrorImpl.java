@@ -227,4 +227,8 @@ public class GraphQLDiscountCodeNonApplicableErrorImpl implements GraphQLDiscoun
                 .build();
     }
 
+    @Override
+    public GraphQLDiscountCodeNonApplicableError copyDeep() {
+        return GraphQLDiscountCodeNonApplicableError.deepCopy(this);
+    }
 }

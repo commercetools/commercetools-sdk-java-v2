@@ -111,4 +111,8 @@ public class ProductTailoringSetMetaTitleActionImpl implements ProductTailoringS
                 .build();
     }
 
+    @Override
+    public ProductTailoringSetMetaTitleAction copyDeep() {
+        return ProductTailoringSetMetaTitleAction.deepCopy(this);
+    }
 }

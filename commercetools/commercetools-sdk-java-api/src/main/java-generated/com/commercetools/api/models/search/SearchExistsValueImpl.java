@@ -132,4 +132,8 @@ public class SearchExistsValueImpl implements SearchExistsValue, ModelBase {
                 .build();
     }
 
+    @Override
+    public SearchExistsValue copyDeep() {
+        return SearchExistsValue.deepCopy(this);
+    }
 }

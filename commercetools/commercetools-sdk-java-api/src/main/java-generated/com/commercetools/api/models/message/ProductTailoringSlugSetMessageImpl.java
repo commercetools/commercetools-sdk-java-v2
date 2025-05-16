@@ -373,4 +373,8 @@ public class ProductTailoringSlugSetMessageImpl implements ProductTailoringSlugS
                 .build();
     }
 
+    @Override
+    public ProductTailoringSlugSetMessage copyDeep() {
+        return ProductTailoringSlugSetMessage.deepCopy(this);
+    }
 }

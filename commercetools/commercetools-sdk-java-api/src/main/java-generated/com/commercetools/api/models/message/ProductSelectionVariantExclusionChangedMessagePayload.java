@@ -32,6 +32,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ProductSelectionVariantExclusionChanged")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSelectionVariantExclusionChangedMessagePayloadImpl.class)
 public interface ProductSelectionVariantExclusionChangedMessagePayload extends MessagePayload {
@@ -110,6 +111,8 @@ public interface ProductSelectionVariantExclusionChangedMessagePayload extends M
         instance.setNewVariantExclusion(template.getNewVariantExclusion());
         return instance;
     }
+
+    public ProductSelectionVariantExclusionChangedMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of ProductSelectionVariantExclusionChangedMessagePayload

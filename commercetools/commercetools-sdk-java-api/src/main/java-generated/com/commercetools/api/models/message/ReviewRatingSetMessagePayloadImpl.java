@@ -153,4 +153,8 @@ public class ReviewRatingSetMessagePayloadImpl implements ReviewRatingSetMessage
                 .build();
     }
 
+    @Override
+    public ReviewRatingSetMessagePayload copyDeep() {
+        return ReviewRatingSetMessagePayload.deepCopy(this);
+    }
 }

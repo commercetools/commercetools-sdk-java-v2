@@ -91,4 +91,8 @@ public class OrderCreatedMessagePayloadImpl implements OrderCreatedMessagePayloa
                 .build();
     }
 
+    @Override
+    public OrderCreatedMessagePayload copyDeep() {
+        return OrderCreatedMessagePayload.deepCopy(this);
+    }
 }

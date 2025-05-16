@@ -111,4 +111,8 @@ public class ShippingMethodAddShippingRateActionImpl implements ShippingMethodAd
                 .build();
     }
 
+    @Override
+    public ShippingMethodAddShippingRateAction copyDeep() {
+        return ShippingMethodAddShippingRateAction.deepCopy(this);
+    }
 }

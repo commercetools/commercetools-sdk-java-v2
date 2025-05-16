@@ -293,4 +293,8 @@ public class CustomerEmailChangedMessageImpl implements CustomerEmailChangedMess
                 .build();
     }
 
+    @Override
+    public CustomerEmailChangedMessage copyDeep() {
+        return CustomerEmailChangedMessage.deepCopy(this);
+    }
 }

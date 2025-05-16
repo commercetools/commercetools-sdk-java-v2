@@ -92,4 +92,8 @@ public class CartDiscountStoreAddedMessagePayloadImpl implements CartDiscountSto
                 .build();
     }
 
+    @Override
+    public CartDiscountStoreAddedMessagePayload copyDeep() {
+        return CartDiscountStoreAddedMessagePayload.deepCopy(this);
+    }
 }

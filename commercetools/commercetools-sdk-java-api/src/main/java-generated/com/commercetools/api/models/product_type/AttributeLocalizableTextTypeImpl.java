@@ -62,4 +62,8 @@ public class AttributeLocalizableTextTypeImpl implements AttributeLocalizableTex
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("name", name).build();
     }
 
+    @Override
+    public AttributeLocalizableTextType copyDeep() {
+        return AttributeLocalizableTextType.deepCopy(this);
+    }
 }

@@ -67,6 +67,8 @@ public interface OrderSearchWildCardExpression extends OrderSearchQueryExpressio
         return instance;
     }
 
+    public OrderSearchWildCardExpression copyDeep();
+
     /**
      * factory method to create a deep copy of OrderSearchWildCardExpression
      * @param template instance to be copied

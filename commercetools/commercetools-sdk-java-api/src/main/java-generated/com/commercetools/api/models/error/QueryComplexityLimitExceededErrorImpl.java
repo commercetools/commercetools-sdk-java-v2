@@ -114,4 +114,8 @@ public class QueryComplexityLimitExceededErrorImpl implements QueryComplexityLim
                 .build();
     }
 
+    @Override
+    public QueryComplexityLimitExceededError copyDeep() {
+        return QueryComplexityLimitExceededError.deepCopy(this);
+    }
 }

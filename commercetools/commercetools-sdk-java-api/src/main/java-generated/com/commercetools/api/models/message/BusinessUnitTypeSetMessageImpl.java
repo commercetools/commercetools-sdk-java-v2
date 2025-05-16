@@ -354,4 +354,8 @@ public class BusinessUnitTypeSetMessageImpl implements BusinessUnitTypeSetMessag
                 .build();
     }
 
+    @Override
+    public BusinessUnitTypeSetMessage copyDeep() {
+        return BusinessUnitTypeSetMessage.deepCopy(this);
+    }
 }

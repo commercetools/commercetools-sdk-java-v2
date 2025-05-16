@@ -169,6 +169,8 @@ public interface Transaction extends com.commercetools.api.models.Customizable<T
         return instance;
     }
 
+    public Transaction copyDeep();
+
     /**
      * factory method to create a deep copy of Transaction
      * @param template instance to be copied

@@ -104,4 +104,8 @@ public class ProductSearchMatchingVariantsImpl implements ProductSearchMatchingV
                 .build();
     }
 
+    @Override
+    public ProductSearchMatchingVariants copyDeep() {
+        return ProductSearchMatchingVariants.deepCopy(this);
+    }
 }

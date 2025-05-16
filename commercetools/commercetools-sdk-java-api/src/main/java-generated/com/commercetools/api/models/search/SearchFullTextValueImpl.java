@@ -175,4 +175,8 @@ public class SearchFullTextValueImpl implements SearchFullTextValue, ModelBase {
                 .build();
     }
 
+    @Override
+    public SearchFullTextValue copyDeep() {
+        return SearchFullTextValue.deepCopy(this);
+    }
 }

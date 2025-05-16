@@ -91,4 +91,8 @@ public class PaymentSetStatusInterfaceCodeActionImpl implements PaymentSetStatus
                 .build();
     }
 
+    @Override
+    public PaymentSetStatusInterfaceCodeAction copyDeep() {
+        return PaymentSetStatusInterfaceCodeAction.deepCopy(this);
+    }
 }

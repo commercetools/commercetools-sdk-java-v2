@@ -111,4 +111,8 @@ public class ProductSetSearchKeywordsActionImpl implements ProductSetSearchKeywo
                 .build();
     }
 
+    @Override
+    public ProductSetSearchKeywordsAction copyDeep() {
+        return ProductSetSearchKeywordsAction.deepCopy(this);
+    }
 }

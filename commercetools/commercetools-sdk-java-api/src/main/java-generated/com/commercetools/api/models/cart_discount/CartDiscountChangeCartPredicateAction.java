@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeCartPredicate")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartDiscountChangeCartPredicateActionImpl.class)
 public interface CartDiscountChangeCartPredicateAction extends CartDiscountUpdateAction {
@@ -69,6 +70,8 @@ public interface CartDiscountChangeCartPredicateAction extends CartDiscountUpdat
         instance.setCartPredicate(template.getCartPredicate());
         return instance;
     }
+
+    public CartDiscountChangeCartPredicateAction copyDeep();
 
     /**
      * factory method to create a deep copy of CartDiscountChangeCartPredicateAction

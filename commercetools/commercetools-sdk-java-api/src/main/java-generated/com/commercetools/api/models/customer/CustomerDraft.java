@@ -568,6 +568,8 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
         return instance;
     }
 
+    public CustomerDraft copyDeep();
+
     /**
      * factory method to create a deep copy of CustomerDraft
      * @param template instance to be copied

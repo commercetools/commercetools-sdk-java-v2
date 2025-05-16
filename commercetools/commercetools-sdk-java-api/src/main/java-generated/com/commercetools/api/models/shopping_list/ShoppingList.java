@@ -377,6 +377,8 @@ public interface ShoppingList
         return instance;
     }
 
+    public ShoppingList copyDeep();
+
     /**
      * factory method to create a deep copy of ShoppingList
      * @param template instance to be copied

@@ -228,4 +228,8 @@ public class ProductAddVariantActionImpl implements ProductAddVariantAction, Mod
                 .build();
     }
 
+    @Override
+    public ProductAddVariantAction copyDeep() {
+        return ProductAddVariantAction.deepCopy(this);
+    }
 }

@@ -111,4 +111,8 @@ public class ZoneReferenceImpl implements ZoneReference, ModelBase {
                 .build();
     }
 
+    @Override
+    public ZoneReference copyDeep() {
+        return ZoneReference.deepCopy(this);
+    }
 }

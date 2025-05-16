@@ -92,4 +92,8 @@ public class ApprovalRuleSetStatusActionImpl implements ApprovalRuleSetStatusAct
                 .build();
     }
 
+    @Override
+    public ApprovalRuleSetStatusAction copyDeep() {
+        return ApprovalRuleSetStatusAction.deepCopy(this);
+    }
 }

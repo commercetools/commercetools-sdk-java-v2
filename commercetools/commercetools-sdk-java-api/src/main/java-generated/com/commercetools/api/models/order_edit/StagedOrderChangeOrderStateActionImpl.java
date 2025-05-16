@@ -92,4 +92,8 @@ public class StagedOrderChangeOrderStateActionImpl implements StagedOrderChangeO
                 .build();
     }
 
+    @Override
+    public StagedOrderChangeOrderStateAction copyDeep() {
+        return StagedOrderChangeOrderStateAction.deepCopy(this);
+    }
 }

@@ -91,4 +91,8 @@ public class ApprovalRuleSetPredicateActionImpl implements ApprovalRuleSetPredic
                 .build();
     }
 
+    @Override
+    public ApprovalRuleSetPredicateAction copyDeep() {
+        return ApprovalRuleSetPredicateAction.deepCopy(this);
+    }
 }

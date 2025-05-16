@@ -212,4 +212,8 @@ public class ShoppingListAddLineItemActionImpl implements ShoppingListAddLineIte
                 .build();
     }
 
+    @Override
+    public ShoppingListAddLineItemAction copyDeep() {
+        return ShoppingListAddLineItemAction.deepCopy(this);
+    }
 }

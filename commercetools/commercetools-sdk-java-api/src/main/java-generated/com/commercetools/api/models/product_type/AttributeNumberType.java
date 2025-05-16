@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("number")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AttributeNumberTypeImpl.class)
 public interface AttributeNumberType extends AttributeType {
@@ -50,6 +51,8 @@ public interface AttributeNumberType extends AttributeType {
         AttributeNumberTypeImpl instance = new AttributeNumberTypeImpl();
         return instance;
     }
+
+    public AttributeNumberType copyDeep();
 
     /**
      * factory method to create a deep copy of AttributeNumberType

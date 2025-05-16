@@ -91,4 +91,8 @@ public class KeyReferenceImpl implements KeyReference, ModelBase {
                 .build();
     }
 
+    @Override
+    public KeyReference copyDeep() {
+        return KeyReference.deepCopy(this);
+    }
 }

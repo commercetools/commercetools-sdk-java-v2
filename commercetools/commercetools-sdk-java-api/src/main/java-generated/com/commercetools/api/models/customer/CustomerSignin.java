@@ -176,6 +176,8 @@ public interface CustomerSignin {
         return instance;
     }
 
+    public CustomerSignin copyDeep();
+
     /**
      * factory method to create a deep copy of CustomerSignin
      * @param template instance to be copied

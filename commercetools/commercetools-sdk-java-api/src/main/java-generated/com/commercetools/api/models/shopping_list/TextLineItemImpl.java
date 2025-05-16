@@ -196,4 +196,8 @@ public class TextLineItemImpl implements TextLineItem, ModelBase {
                 .build();
     }
 
+    @Override
+    public TextLineItem copyDeep() {
+        return TextLineItem.deepCopy(this);
+    }
 }

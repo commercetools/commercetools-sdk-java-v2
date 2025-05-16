@@ -112,4 +112,8 @@ public class ProductTypeChangeAttributeNameActionImpl implements ProductTypeChan
                 .build();
     }
 
+    @Override
+    public ProductTypeChangeAttributeNameAction copyDeep() {
+        return ProductTypeChangeAttributeNameAction.deepCopy(this);
+    }
 }

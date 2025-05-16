@@ -67,6 +67,8 @@ public interface OrderSearchNumberRangeExpression extends OrderSearchQueryExpres
         return instance;
     }
 
+    public OrderSearchNumberRangeExpression copyDeep();
+
     /**
      * factory method to create a deep copy of OrderSearchNumberRangeExpression
      * @param template instance to be copied

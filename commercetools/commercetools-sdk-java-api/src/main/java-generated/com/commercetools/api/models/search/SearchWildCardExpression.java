@@ -67,6 +67,8 @@ public interface SearchWildCardExpression extends SearchQueryExpression {
         return instance;
     }
 
+    public SearchWildCardExpression copyDeep();
+
     /**
      * factory method to create a deep copy of SearchWildCardExpression
      * @param template instance to be copied

@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("EventGrid")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AzureEventGridDestinationImpl.class)
 public interface AzureEventGridDestination extends Destination {
@@ -86,6 +87,8 @@ public interface AzureEventGridDestination extends Destination {
         instance.setAccessKey(template.getAccessKey());
         return instance;
     }
+
+    public AzureEventGridDestination copyDeep();
 
     /**
      * factory method to create a deep copy of AzureEventGridDestination

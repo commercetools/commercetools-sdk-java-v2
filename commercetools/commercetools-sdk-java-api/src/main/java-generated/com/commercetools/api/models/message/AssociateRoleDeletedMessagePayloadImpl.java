@@ -62,4 +62,8 @@ public class AssociateRoleDeletedMessagePayloadImpl implements AssociateRoleDele
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type).build();
     }
 
+    @Override
+    public AssociateRoleDeletedMessagePayload copyDeep() {
+        return AssociateRoleDeletedMessagePayload.deepCopy(this);
+    }
 }

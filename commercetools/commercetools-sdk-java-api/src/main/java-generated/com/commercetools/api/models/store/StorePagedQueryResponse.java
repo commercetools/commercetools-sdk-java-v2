@@ -143,6 +143,8 @@ public interface StorePagedQueryResponse extends com.commercetools.api.models.Re
         return instance;
     }
 
+    public StorePagedQueryResponse copyDeep();
+
     /**
      * factory method to create a deep copy of StorePagedQueryResponse
      * @param template instance to be copied

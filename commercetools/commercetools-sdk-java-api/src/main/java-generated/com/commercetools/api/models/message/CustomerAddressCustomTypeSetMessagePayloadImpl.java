@@ -135,4 +135,8 @@ public class CustomerAddressCustomTypeSetMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public CustomerAddressCustomTypeSetMessagePayload copyDeep() {
+        return CustomerAddressCustomTypeSetMessagePayload.deepCopy(this);
+    }
 }

@@ -99,4 +99,8 @@ public class TypeUpdateImpl implements TypeUpdate, ModelBase {
                 .build();
     }
 
+    @Override
+    public TypeUpdate copyDeep() {
+        return TypeUpdate.deepCopy(this);
+    }
 }

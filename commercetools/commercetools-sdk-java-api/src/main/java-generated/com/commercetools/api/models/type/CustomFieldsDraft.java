@@ -83,6 +83,8 @@ public interface CustomFieldsDraft extends io.vrap.rmf.base.client.Draft<CustomF
         return instance;
     }
 
+    public CustomFieldsDraft copyDeep();
+
     /**
      * factory method to create a deep copy of CustomFieldsDraft
      * @param template instance to be copied

@@ -112,4 +112,8 @@ public class ProductRemovedFromCategoryMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public ProductRemovedFromCategoryMessagePayload copyDeep() {
+        return ProductRemovedFromCategoryMessagePayload.deepCopy(this);
+    }
 }

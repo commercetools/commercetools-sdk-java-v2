@@ -113,4 +113,8 @@ public class ProductSearchFacetRangesFacetRangeImpl implements ProductSearchFace
                 .build();
     }
 
+    @Override
+    public ProductSearchFacetRangesFacetRange copyDeep() {
+        return ProductSearchFacetRangesFacetRange.deepCopy(this);
+    }
 }

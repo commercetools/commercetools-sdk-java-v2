@@ -69,4 +69,8 @@ public class StandalonePriceUpdateActionImpl implements StandalonePriceUpdateAct
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action).build();
     }
 
+    @Override
+    public StandalonePriceUpdateAction copyDeep() {
+        return StandalonePriceUpdateAction.deepCopy(this);
+    }
 }

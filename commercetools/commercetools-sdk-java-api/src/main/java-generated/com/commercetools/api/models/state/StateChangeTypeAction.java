@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeType")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StateChangeTypeActionImpl.class)
 public interface StateChangeTypeAction extends StateUpdateAction {
@@ -69,6 +70,8 @@ public interface StateChangeTypeAction extends StateUpdateAction {
         instance.setType(template.getType());
         return instance;
     }
+
+    public StateChangeTypeAction copyDeep();
 
     /**
      * factory method to create a deep copy of StateChangeTypeAction

@@ -78,4 +78,8 @@ public class RuleApproverDraftImpl implements RuleApproverDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public RuleApproverDraft copyDeep() {
+        return RuleApproverDraft.deepCopy(this);
+    }
 }

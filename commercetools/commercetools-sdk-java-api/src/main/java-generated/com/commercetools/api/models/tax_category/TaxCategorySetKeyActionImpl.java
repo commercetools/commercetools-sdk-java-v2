@@ -91,4 +91,8 @@ public class TaxCategorySetKeyActionImpl implements TaxCategorySetKeyAction, Mod
                 .build();
     }
 
+    @Override
+    public TaxCategorySetKeyAction copyDeep() {
+        return TaxCategorySetKeyAction.deepCopy(this);
+    }
 }

@@ -97,4 +97,8 @@ public class MyShoppingListChangeLineItemsOrderActionImpl
                 .build();
     }
 
+    @Override
+    public MyShoppingListChangeLineItemsOrderAction copyDeep() {
+        return MyShoppingListChangeLineItemsOrderAction.deepCopy(this);
+    }
 }

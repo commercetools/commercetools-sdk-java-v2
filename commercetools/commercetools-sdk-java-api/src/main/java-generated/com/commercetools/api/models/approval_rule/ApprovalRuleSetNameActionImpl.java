@@ -91,4 +91,8 @@ public class ApprovalRuleSetNameActionImpl implements ApprovalRuleSetNameAction,
                 .build();
     }
 
+    @Override
+    public ApprovalRuleSetNameAction copyDeep() {
+        return ApprovalRuleSetNameAction.deepCopy(this);
+    }
 }

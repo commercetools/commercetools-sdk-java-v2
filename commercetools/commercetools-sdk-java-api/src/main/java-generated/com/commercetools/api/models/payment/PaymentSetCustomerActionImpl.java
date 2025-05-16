@@ -92,4 +92,8 @@ public class PaymentSetCustomerActionImpl implements PaymentSetCustomerAction, M
                 .build();
     }
 
+    @Override
+    public PaymentSetCustomerAction copyDeep() {
+        return PaymentSetCustomerAction.deepCopy(this);
+    }
 }

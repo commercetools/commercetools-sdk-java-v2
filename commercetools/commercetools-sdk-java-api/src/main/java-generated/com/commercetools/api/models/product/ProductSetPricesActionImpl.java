@@ -156,4 +156,8 @@ public class ProductSetPricesActionImpl implements ProductSetPricesAction, Model
                 .build();
     }
 
+    @Override
+    public ProductSetPricesAction copyDeep() {
+        return ProductSetPricesAction.deepCopy(this);
+    }
 }

@@ -94,4 +94,8 @@ public class CustomerAddCustomerGroupAssignmentActionImpl
                 .build();
     }
 
+    @Override
+    public CustomerAddCustomerGroupAssignmentAction copyDeep() {
+        return CustomerAddCustomerGroupAssignmentAction.deepCopy(this);
+    }
 }

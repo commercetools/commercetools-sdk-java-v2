@@ -73,4 +73,8 @@ public class StoreCountryImpl implements StoreCountry, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("code", code).build();
     }
 
+    @Override
+    public StoreCountry copyDeep() {
+        return StoreCountry.deepCopy(this);
+    }
 }

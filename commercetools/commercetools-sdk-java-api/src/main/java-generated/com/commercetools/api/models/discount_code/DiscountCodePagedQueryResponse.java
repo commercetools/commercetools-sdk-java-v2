@@ -144,6 +144,8 @@ public interface DiscountCodePagedQueryResponse
         return instance;
     }
 
+    public DiscountCodePagedQueryResponse copyDeep();
+
     /**
      * factory method to create a deep copy of DiscountCodePagedQueryResponse
      * @param template instance to be copied

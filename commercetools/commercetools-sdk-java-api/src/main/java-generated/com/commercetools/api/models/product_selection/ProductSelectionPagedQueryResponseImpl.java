@@ -161,4 +161,8 @@ public class ProductSelectionPagedQueryResponseImpl implements ProductSelectionP
                 .build();
     }
 
+    @Override
+    public ProductSelectionPagedQueryResponse copyDeep() {
+        return ProductSelectionPagedQueryResponse.deepCopy(this);
+    }
 }

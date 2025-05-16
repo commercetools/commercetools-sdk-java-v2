@@ -340,4 +340,8 @@ public class ProductTailoringImpl implements ProductTailoring, ModelBase {
                 .build();
     }
 
+    @Override
+    public ProductTailoring copyDeep() {
+        return ProductTailoring.deepCopy(this);
+    }
 }

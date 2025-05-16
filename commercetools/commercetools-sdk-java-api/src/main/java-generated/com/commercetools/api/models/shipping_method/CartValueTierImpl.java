@@ -133,4 +133,8 @@ public class CartValueTierImpl implements CartValueTier, ModelBase {
                 .build();
     }
 
+    @Override
+    public CartValueTier copyDeep() {
+        return CartValueTier.deepCopy(this);
+    }
 }

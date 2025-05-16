@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("set")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AttributeSetTypeImpl.class)
 public interface AttributeSetType extends AttributeType {
@@ -71,6 +72,8 @@ public interface AttributeSetType extends AttributeType {
         instance.setElementType(template.getElementType());
         return instance;
     }
+
+    public AttributeSetType copyDeep();
 
     /**
      * factory method to create a deep copy of AttributeSetType

@@ -27,6 +27,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("Company")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyCompanyDraftImpl.class)
 public interface MyCompanyDraft extends MyBusinessUnitDraft, io.vrap.rmf.base.client.Draft<MyCompanyDraft> {
@@ -62,6 +63,8 @@ public interface MyCompanyDraft extends MyBusinessUnitDraft, io.vrap.rmf.base.cl
         instance.setDefaultBillingAddress(template.getDefaultBillingAddress());
         return instance;
     }
+
+    public MyCompanyDraft copyDeep();
 
     /**
      * factory method to create a deep copy of MyCompanyDraft

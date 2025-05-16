@@ -373,4 +373,8 @@ public class ProductPriceCustomFieldsSetMessageImpl implements ProductPriceCusto
                 .build();
     }
 
+    @Override
+    public ProductPriceCustomFieldsSetMessage copyDeep() {
+        return ProductPriceCustomFieldsSetMessage.deepCopy(this);
+    }
 }

@@ -77,4 +77,8 @@ public class GraphQLVariablesMapImpl implements GraphQLVariablesMap, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("values", values).build();
     }
 
+    @Override
+    public GraphQLVariablesMap copyDeep() {
+        return GraphQLVariablesMap.deepCopy(this);
+    }
 }

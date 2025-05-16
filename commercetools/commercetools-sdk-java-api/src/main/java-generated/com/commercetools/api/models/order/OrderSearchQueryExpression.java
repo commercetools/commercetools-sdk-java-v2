@@ -46,6 +46,8 @@ public interface OrderSearchQueryExpression extends OrderSearchQuery {
         return instance;
     }
 
+    public OrderSearchQueryExpression copyDeep();
+
     /**
      * factory method to create a deep copy of OrderSearchQueryExpression
      * @param template instance to be copied
@@ -56,37 +58,9 @@ public interface OrderSearchQueryExpression extends OrderSearchQuery {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.order.OrderSearchDateRangeExpression) {
-            return com.commercetools.api.models.order.OrderSearchDateRangeExpression
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchDateRangeExpression) template);
-        }
-        if (template instanceof com.commercetools.api.models.order.OrderSearchExactExpression) {
-            return com.commercetools.api.models.order.OrderSearchExactExpression
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchExactExpression) template);
-        }
-        if (template instanceof com.commercetools.api.models.order.OrderSearchExistsExpression) {
-            return com.commercetools.api.models.order.OrderSearchExistsExpression
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchExistsExpression) template);
-        }
-        if (template instanceof com.commercetools.api.models.order.OrderSearchFullTextExpression) {
-            return com.commercetools.api.models.order.OrderSearchFullTextExpression
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchFullTextExpression) template);
-        }
-        if (template instanceof com.commercetools.api.models.order.OrderSearchLongRangeExpression) {
-            return com.commercetools.api.models.order.OrderSearchLongRangeExpression
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchLongRangeExpression) template);
-        }
-        if (template instanceof com.commercetools.api.models.order.OrderSearchNumberRangeExpression) {
-            return com.commercetools.api.models.order.OrderSearchNumberRangeExpression
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchNumberRangeExpression) template);
-        }
-        if (template instanceof com.commercetools.api.models.order.OrderSearchPrefixExpression) {
-            return com.commercetools.api.models.order.OrderSearchPrefixExpression
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchPrefixExpression) template);
-        }
-        if (template instanceof com.commercetools.api.models.order.OrderSearchWildCardExpression) {
-            return com.commercetools.api.models.order.OrderSearchWildCardExpression
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchWildCardExpression) template);
+
+        if (!(template instanceof OrderSearchQueryExpressionImpl)) {
+            return template.copyDeep();
         }
         OrderSearchQueryExpressionImpl instance = new OrderSearchQueryExpressionImpl();
         return instance;

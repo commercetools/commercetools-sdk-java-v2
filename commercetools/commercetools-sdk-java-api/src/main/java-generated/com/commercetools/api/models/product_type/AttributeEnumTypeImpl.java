@@ -97,4 +97,8 @@ public class AttributeEnumTypeImpl implements AttributeEnumType, ModelBase {
                 .build();
     }
 
+    @Override
+    public AttributeEnumType copyDeep() {
+        return AttributeEnumType.deepCopy(this);
+    }
 }

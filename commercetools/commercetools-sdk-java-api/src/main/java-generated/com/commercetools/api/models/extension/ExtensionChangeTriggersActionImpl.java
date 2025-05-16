@@ -96,4 +96,8 @@ public class ExtensionChangeTriggersActionImpl implements ExtensionChangeTrigger
                 .build();
     }
 
+    @Override
+    public ExtensionChangeTriggersAction copyDeep() {
+        return ExtensionChangeTriggersAction.deepCopy(this);
+    }
 }

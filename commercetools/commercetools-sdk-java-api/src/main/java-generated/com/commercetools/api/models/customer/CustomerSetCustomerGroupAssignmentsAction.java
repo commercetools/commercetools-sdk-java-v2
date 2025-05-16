@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setCustomerGroupAssignments")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerSetCustomerGroupAssignmentsActionImpl.class)
 public interface CustomerSetCustomerGroupAssignmentsAction extends CustomerUpdateAction {
@@ -81,6 +82,8 @@ public interface CustomerSetCustomerGroupAssignmentsAction extends CustomerUpdat
         instance.setCustomerGroupAssignments(template.getCustomerGroupAssignments());
         return instance;
     }
+
+    public CustomerSetCustomerGroupAssignmentsAction copyDeep();
 
     /**
      * factory method to create a deep copy of CustomerSetCustomerGroupAssignmentsAction

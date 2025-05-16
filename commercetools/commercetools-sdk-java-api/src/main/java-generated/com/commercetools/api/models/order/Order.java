@@ -1027,6 +1027,8 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
         return instance;
     }
 
+    public Order copyDeep();
+
     /**
      * factory method to create a deep copy of Order
      * @param template instance to be copied
@@ -1037,9 +1039,9 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.order_edit.StagedOrder) {
-            return com.commercetools.api.models.order_edit.StagedOrder
-                    .deepCopy((com.commercetools.api.models.order_edit.StagedOrder) template);
+
+        if (!(template instanceof OrderImpl)) {
+            return template.copyDeep();
         }
         OrderImpl instance = new OrderImpl();
         instance.setId(template.getId());

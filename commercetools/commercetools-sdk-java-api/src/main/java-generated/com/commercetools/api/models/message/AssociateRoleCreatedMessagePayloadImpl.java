@@ -92,4 +92,8 @@ public class AssociateRoleCreatedMessagePayloadImpl implements AssociateRoleCrea
                 .build();
     }
 
+    @Override
+    public AssociateRoleCreatedMessagePayload copyDeep() {
+        return AssociateRoleCreatedMessagePayload.deepCopy(this);
+    }
 }

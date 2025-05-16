@@ -62,4 +62,8 @@ public class CartDiscountTotalPriceTargetImpl implements CartDiscountTotalPriceT
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type).build();
     }
 
+    @Override
+    public CartDiscountTotalPriceTarget copyDeep() {
+        return CartDiscountTotalPriceTarget.deepCopy(this);
+    }
 }

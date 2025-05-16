@@ -78,4 +78,8 @@ public class CustomerGroupAssignmentImpl implements CustomerGroupAssignment, Mod
                 .build();
     }
 
+    @Override
+    public CustomerGroupAssignment copyDeep() {
+        return CustomerGroupAssignment.deepCopy(this);
+    }
 }

@@ -111,4 +111,8 @@ public class ProductSetMetaKeywordsActionImpl implements ProductSetMetaKeywordsA
                 .build();
     }
 
+    @Override
+    public ProductSetMetaKeywordsAction copyDeep() {
+        return ProductSetMetaKeywordsAction.deepCopy(this);
+    }
 }

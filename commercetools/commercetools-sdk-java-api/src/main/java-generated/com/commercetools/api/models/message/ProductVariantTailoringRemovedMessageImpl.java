@@ -374,4 +374,8 @@ public class ProductVariantTailoringRemovedMessageImpl implements ProductVariant
                 .build();
     }
 
+    @Override
+    public ProductVariantTailoringRemovedMessage copyDeep() {
+        return ProductVariantTailoringRemovedMessage.deepCopy(this);
+    }
 }

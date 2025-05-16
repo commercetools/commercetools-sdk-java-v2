@@ -110,4 +110,8 @@ public class ProductTailoringResourceIdentifierImpl implements ProductTailoringR
                 .build();
     }
 
+    @Override
+    public ProductTailoringResourceIdentifier copyDeep() {
+        return ProductTailoringResourceIdentifier.deepCopy(this);
+    }
 }

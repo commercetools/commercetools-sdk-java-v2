@@ -92,4 +92,8 @@ public class CartDiscountChangeStackingModeActionImpl implements CartDiscountCha
                 .build();
     }
 
+    @Override
+    public CartDiscountChangeStackingModeAction copyDeep() {
+        return CartDiscountChangeStackingModeAction.deepCopy(this);
+    }
 }

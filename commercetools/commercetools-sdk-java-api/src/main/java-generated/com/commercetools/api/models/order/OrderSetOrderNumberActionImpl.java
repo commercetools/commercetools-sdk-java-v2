@@ -91,4 +91,8 @@ public class OrderSetOrderNumberActionImpl implements OrderSetOrderNumberAction,
                 .build();
     }
 
+    @Override
+    public OrderSetOrderNumberAction copyDeep() {
+        return OrderSetOrderNumberAction.deepCopy(this);
+    }
 }

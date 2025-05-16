@@ -194,4 +194,8 @@ public class CustomLineItemStateTransitionMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public CustomLineItemStateTransitionMessagePayload copyDeep() {
+        return CustomLineItemStateTransitionMessagePayload.deepCopy(this);
+    }
 }

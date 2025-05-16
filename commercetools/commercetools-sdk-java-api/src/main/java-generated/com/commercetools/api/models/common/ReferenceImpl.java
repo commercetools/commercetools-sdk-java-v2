@@ -91,4 +91,8 @@ public class ReferenceImpl implements Reference, ModelBase {
                 .build();
     }
 
+    @Override
+    public Reference copyDeep() {
+        return Reference.deepCopy(this);
+    }
 }

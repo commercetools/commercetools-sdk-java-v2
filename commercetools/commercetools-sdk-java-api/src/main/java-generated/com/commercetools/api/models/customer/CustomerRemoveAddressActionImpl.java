@@ -111,4 +111,8 @@ public class CustomerRemoveAddressActionImpl implements CustomerRemoveAddressAct
                 .build();
     }
 
+    @Override
+    public CustomerRemoveAddressAction copyDeep() {
+        return CustomerRemoveAddressAction.deepCopy(this);
+    }
 }

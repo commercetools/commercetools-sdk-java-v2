@@ -115,4 +115,8 @@ public class BadGatewayErrorImpl implements BadGatewayError, ModelBase {
                 .build();
     }
 
+    @Override
+    public BadGatewayError copyDeep() {
+        return BadGatewayError.deepCopy(this);
+    }
 }

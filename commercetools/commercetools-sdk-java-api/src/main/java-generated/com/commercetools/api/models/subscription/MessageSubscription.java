@@ -90,6 +90,8 @@ public interface MessageSubscription {
         return instance;
     }
 
+    public MessageSubscription copyDeep();
+
     /**
      * factory method to create a deep copy of MessageSubscription
      * @param template instance to be copied

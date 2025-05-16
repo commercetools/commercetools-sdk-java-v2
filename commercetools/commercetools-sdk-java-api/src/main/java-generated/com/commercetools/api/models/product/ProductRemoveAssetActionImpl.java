@@ -171,4 +171,8 @@ public class ProductRemoveAssetActionImpl implements ProductRemoveAssetAction, M
                 .build();
     }
 
+    @Override
+    public ProductRemoveAssetAction copyDeep() {
+        return ProductRemoveAssetAction.deepCopy(this);
+    }
 }

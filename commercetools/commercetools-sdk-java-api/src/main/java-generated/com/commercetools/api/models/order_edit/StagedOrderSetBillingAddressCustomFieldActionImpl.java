@@ -111,4 +111,8 @@ public class StagedOrderSetBillingAddressCustomFieldActionImpl
                 .build();
     }
 
+    @Override
+    public StagedOrderSetBillingAddressCustomFieldAction copyDeep() {
+        return StagedOrderSetBillingAddressCustomFieldAction.deepCopy(this);
+    }
 }

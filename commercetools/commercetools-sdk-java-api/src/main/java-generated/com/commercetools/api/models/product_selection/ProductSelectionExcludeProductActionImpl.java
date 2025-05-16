@@ -113,4 +113,8 @@ public class ProductSelectionExcludeProductActionImpl implements ProductSelectio
                 .build();
     }
 
+    @Override
+    public ProductSelectionExcludeProductAction copyDeep() {
+        return ProductSelectionExcludeProductAction.deepCopy(this);
+    }
 }

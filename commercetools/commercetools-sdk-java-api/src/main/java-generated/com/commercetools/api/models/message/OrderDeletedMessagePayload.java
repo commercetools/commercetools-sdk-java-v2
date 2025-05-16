@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("OrderDeleted")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderDeletedMessagePayloadImpl.class)
 public interface OrderDeletedMessagePayload extends OrderMessagePayload {
@@ -72,6 +73,8 @@ public interface OrderDeletedMessagePayload extends OrderMessagePayload {
         instance.setOrder(template.getOrder());
         return instance;
     }
+
+    public OrderDeletedMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of OrderDeletedMessagePayload

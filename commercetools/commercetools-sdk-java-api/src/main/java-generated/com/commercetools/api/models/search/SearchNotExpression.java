@@ -76,6 +76,8 @@ public interface SearchNotExpression extends SearchCompoundExpression {
         return instance;
     }
 
+    public SearchNotExpression copyDeep();
+
     /**
      * factory method to create a deep copy of SearchNotExpression
      * @param template instance to be copied

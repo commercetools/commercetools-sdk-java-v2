@@ -69,4 +69,8 @@ public class ChannelUpdateActionImpl implements ChannelUpdateAction, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action).build();
     }
 
+    @Override
+    public ChannelUpdateAction copyDeep() {
+        return ChannelUpdateAction.deepCopy(this);
+    }
 }

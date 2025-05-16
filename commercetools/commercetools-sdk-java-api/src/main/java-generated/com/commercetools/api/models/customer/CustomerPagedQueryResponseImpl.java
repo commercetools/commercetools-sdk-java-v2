@@ -159,4 +159,8 @@ public class CustomerPagedQueryResponseImpl implements CustomerPagedQueryRespons
                 .build();
     }
 
+    @Override
+    public CustomerPagedQueryResponse copyDeep() {
+        return CustomerPagedQueryResponse.deepCopy(this);
+    }
 }

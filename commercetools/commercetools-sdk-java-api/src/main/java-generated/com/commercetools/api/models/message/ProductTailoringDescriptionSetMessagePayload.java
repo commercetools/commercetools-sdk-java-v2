@@ -32,6 +32,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ProductTailoringDescriptionSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTailoringDescriptionSetMessagePayloadImpl.class)
 public interface ProductTailoringDescriptionSetMessagePayload extends MessagePayload {
@@ -141,6 +142,8 @@ public interface ProductTailoringDescriptionSetMessagePayload extends MessagePay
         instance.setOldDescription(template.getOldDescription());
         return instance;
     }
+
+    public ProductTailoringDescriptionSetMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of ProductTailoringDescriptionSetMessagePayload

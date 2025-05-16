@@ -92,4 +92,8 @@ public class DiscountCodeSetMaxApplicationsActionImpl implements DiscountCodeSet
                 .build();
     }
 
+    @Override
+    public DiscountCodeSetMaxApplicationsAction copyDeep() {
+        return DiscountCodeSetMaxApplicationsAction.deepCopy(this);
+    }
 }

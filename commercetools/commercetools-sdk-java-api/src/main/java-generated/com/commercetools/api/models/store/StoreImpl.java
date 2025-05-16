@@ -367,4 +367,8 @@ public class StoreImpl implements Store, ModelBase {
                 .build();
     }
 
+    @Override
+    public Store copyDeep() {
+        return Store.deepCopy(this);
+    }
 }

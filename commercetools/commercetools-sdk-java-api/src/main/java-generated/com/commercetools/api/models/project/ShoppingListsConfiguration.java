@@ -62,6 +62,8 @@ public interface ShoppingListsConfiguration {
         return instance;
     }
 
+    public ShoppingListsConfiguration copyDeep();
+
     /**
      * factory method to create a deep copy of ShoppingListsConfiguration
      * @param template instance to be copied

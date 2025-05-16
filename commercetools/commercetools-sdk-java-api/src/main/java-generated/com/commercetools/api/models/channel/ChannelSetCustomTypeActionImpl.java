@@ -111,4 +111,8 @@ public class ChannelSetCustomTypeActionImpl implements ChannelSetCustomTypeActio
                 .build();
     }
 
+    @Override
+    public ChannelSetCustomTypeAction copyDeep() {
+        return ChannelSetCustomTypeAction.deepCopy(this);
+    }
 }

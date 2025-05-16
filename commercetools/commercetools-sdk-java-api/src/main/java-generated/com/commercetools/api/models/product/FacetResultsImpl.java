@@ -78,4 +78,8 @@ public class FacetResultsImpl implements FacetResults, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("values", values).build();
     }
 
+    @Override
+    public FacetResults copyDeep() {
+        return FacetResults.deepCopy(this);
+    }
 }

@@ -65,6 +65,8 @@ public interface ProductSearchFacetResult {
         return instance;
     }
 
+    public ProductSearchFacetResult copyDeep();
+
     /**
      * factory method to create a deep copy of ProductSearchFacetResult
      * @param template instance to be copied
@@ -75,13 +77,9 @@ public interface ProductSearchFacetResult {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.product_search.ProductSearchFacetResultBucket) {
-            return com.commercetools.api.models.product_search.ProductSearchFacetResultBucket
-                    .deepCopy((com.commercetools.api.models.product_search.ProductSearchFacetResultBucket) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_search.ProductSearchFacetResultCount) {
-            return com.commercetools.api.models.product_search.ProductSearchFacetResultCount
-                    .deepCopy((com.commercetools.api.models.product_search.ProductSearchFacetResultCount) template);
+
+        if (!(template instanceof ProductSearchFacetResultImpl)) {
+            return template.copyDeep();
         }
         ProductSearchFacetResultImpl instance = new ProductSearchFacetResultImpl();
         instance.setName(template.getName());

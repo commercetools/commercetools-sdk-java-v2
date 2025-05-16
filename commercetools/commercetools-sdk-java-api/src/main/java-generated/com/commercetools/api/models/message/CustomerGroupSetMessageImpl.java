@@ -294,4 +294,8 @@ public class CustomerGroupSetMessageImpl implements CustomerGroupSetMessage, Mod
                 .build();
     }
 
+    @Override
+    public CustomerGroupSetMessage copyDeep() {
+        return CustomerGroupSetMessage.deepCopy(this);
+    }
 }

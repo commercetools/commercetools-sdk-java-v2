@@ -92,6 +92,8 @@ public interface AddressDraft extends BaseAddress, com.commercetools.api.models.
         return instance;
     }
 
+    public AddressDraft copyDeep();
+
     /**
      * factory method to create a deep copy of AddressDraft
      * @param template instance to be copied

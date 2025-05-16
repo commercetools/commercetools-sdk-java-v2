@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("shipping-method")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShippingMethodResourceIdentifierImpl.class)
 public interface ShippingMethodResourceIdentifier
@@ -84,6 +85,8 @@ public interface ShippingMethodResourceIdentifier
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public ShippingMethodResourceIdentifier copyDeep();
 
     /**
      * factory method to create a deep copy of ShippingMethodResourceIdentifier

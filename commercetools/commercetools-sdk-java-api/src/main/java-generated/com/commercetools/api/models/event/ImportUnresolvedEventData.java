@@ -99,6 +99,8 @@ public interface ImportUnresolvedEventData {
         return instance;
     }
 
+    public ImportUnresolvedEventData copyDeep();
+
     /**
      * factory method to create a deep copy of ImportUnresolvedEventData
      * @param template instance to be copied

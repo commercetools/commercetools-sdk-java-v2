@@ -91,4 +91,8 @@ public class AssociateRoleSetNameActionImpl implements AssociateRoleSetNameActio
                 .build();
     }
 
+    @Override
+    public AssociateRoleSetNameAction copyDeep() {
+        return AssociateRoleSetNameAction.deepCopy(this);
+    }
 }

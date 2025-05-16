@@ -27,16 +27,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.inventory.InventoryEntryAddQuantityActionImpl.class, name = InventoryEntryAddQuantityAction.ADD_QUANTITY),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.inventory.InventoryEntryChangeQuantityActionImpl.class, name = InventoryEntryChangeQuantityAction.CHANGE_QUANTITY),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.inventory.InventoryEntryRemoveQuantityActionImpl.class, name = InventoryEntryRemoveQuantityAction.REMOVE_QUANTITY),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.inventory.InventoryEntrySetCustomFieldActionImpl.class, name = InventoryEntrySetCustomFieldAction.SET_CUSTOM_FIELD),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.inventory.InventoryEntrySetCustomTypeActionImpl.class, name = InventoryEntrySetCustomTypeAction.SET_CUSTOM_TYPE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.inventory.InventoryEntrySetExpectedDeliveryActionImpl.class, name = InventoryEntrySetExpectedDeliveryAction.SET_EXPECTED_DELIVERY),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.inventory.InventoryEntrySetKeyActionImpl.class, name = InventoryEntrySetKeyAction.SET_KEY),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.inventory.InventoryEntrySetRestockableInDaysActionImpl.class, name = InventoryEntrySetRestockableInDaysAction.SET_RESTOCKABLE_IN_DAYS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.inventory.InventoryEntrySetSupplyChannelActionImpl.class, name = InventoryEntrySetSupplyChannelAction.SET_SUPPLY_CHANNEL) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = InventoryEntryUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = InventoryEntryUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -51,6 +41,8 @@ public interface InventoryEntryUpdateAction
     @JsonProperty("action")
     public String getAction();
 
+    public InventoryEntryUpdateAction copyDeep();
+
     /**
      * factory method to create a deep copy of InventoryEntryUpdateAction
      * @param template instance to be copied
@@ -61,41 +53,9 @@ public interface InventoryEntryUpdateAction
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.inventory.InventoryEntryAddQuantityAction) {
-            return com.commercetools.api.models.inventory.InventoryEntryAddQuantityAction
-                    .deepCopy((com.commercetools.api.models.inventory.InventoryEntryAddQuantityAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.inventory.InventoryEntryChangeQuantityAction) {
-            return com.commercetools.api.models.inventory.InventoryEntryChangeQuantityAction
-                    .deepCopy((com.commercetools.api.models.inventory.InventoryEntryChangeQuantityAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.inventory.InventoryEntryRemoveQuantityAction) {
-            return com.commercetools.api.models.inventory.InventoryEntryRemoveQuantityAction
-                    .deepCopy((com.commercetools.api.models.inventory.InventoryEntryRemoveQuantityAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.inventory.InventoryEntrySetCustomFieldAction) {
-            return com.commercetools.api.models.inventory.InventoryEntrySetCustomFieldAction
-                    .deepCopy((com.commercetools.api.models.inventory.InventoryEntrySetCustomFieldAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.inventory.InventoryEntrySetCustomTypeAction) {
-            return com.commercetools.api.models.inventory.InventoryEntrySetCustomTypeAction
-                    .deepCopy((com.commercetools.api.models.inventory.InventoryEntrySetCustomTypeAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.inventory.InventoryEntrySetExpectedDeliveryAction) {
-            return com.commercetools.api.models.inventory.InventoryEntrySetExpectedDeliveryAction.deepCopy(
-                (com.commercetools.api.models.inventory.InventoryEntrySetExpectedDeliveryAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.inventory.InventoryEntrySetKeyAction) {
-            return com.commercetools.api.models.inventory.InventoryEntrySetKeyAction
-                    .deepCopy((com.commercetools.api.models.inventory.InventoryEntrySetKeyAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.inventory.InventoryEntrySetRestockableInDaysAction) {
-            return com.commercetools.api.models.inventory.InventoryEntrySetRestockableInDaysAction.deepCopy(
-                (com.commercetools.api.models.inventory.InventoryEntrySetRestockableInDaysAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.inventory.InventoryEntrySetSupplyChannelAction) {
-            return com.commercetools.api.models.inventory.InventoryEntrySetSupplyChannelAction
-                    .deepCopy((com.commercetools.api.models.inventory.InventoryEntrySetSupplyChannelAction) template);
+
+        if (!(template instanceof InventoryEntryUpdateActionImpl)) {
+            return template.copyDeep();
         }
         InventoryEntryUpdateActionImpl instance = new InventoryEntryUpdateActionImpl();
         return instance;

@@ -82,6 +82,8 @@ public interface ContainerAndKey {
         return instance;
     }
 
+    public ContainerAndKey copyDeep();
+
     /**
      * factory method to create a deep copy of ContainerAndKey
      * @param template instance to be copied

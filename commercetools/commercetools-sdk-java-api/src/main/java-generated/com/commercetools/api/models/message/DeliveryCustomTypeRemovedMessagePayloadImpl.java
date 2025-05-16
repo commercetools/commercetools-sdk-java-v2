@@ -110,4 +110,8 @@ public class DeliveryCustomTypeRemovedMessagePayloadImpl implements DeliveryCust
                 .build();
     }
 
+    @Override
+    public DeliveryCustomTypeRemovedMessagePayload copyDeep() {
+        return DeliveryCustomTypeRemovedMessagePayload.deepCopy(this);
+    }
 }

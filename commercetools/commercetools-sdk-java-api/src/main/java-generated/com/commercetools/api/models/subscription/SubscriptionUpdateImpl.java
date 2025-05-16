@@ -100,4 +100,8 @@ public class SubscriptionUpdateImpl implements SubscriptionUpdate, ModelBase {
                 .build();
     }
 
+    @Override
+    public SubscriptionUpdate copyDeep() {
+        return SubscriptionUpdate.deepCopy(this);
+    }
 }

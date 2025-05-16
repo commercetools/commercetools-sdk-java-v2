@@ -114,4 +114,8 @@ public class SearchIndexingInProgressErrorImpl implements SearchIndexingInProgre
                 .build();
     }
 
+    @Override
+    public SearchIndexingInProgressError copyDeep() {
+        return SearchIndexingInProgressError.deepCopy(this);
+    }
 }

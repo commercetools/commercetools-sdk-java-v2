@@ -95,4 +95,8 @@ public class GraphQLMoneyOverflowErrorImpl implements GraphQLMoneyOverflowError,
                 .build();
     }
 
+    @Override
+    public GraphQLMoneyOverflowError copyDeep() {
+        return GraphQLMoneyOverflowError.deepCopy(this);
+    }
 }

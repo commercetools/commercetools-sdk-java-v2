@@ -92,4 +92,8 @@ public class OrderSetCustomerIdActionImpl implements OrderSetCustomerIdAction, M
                 .build();
     }
 
+    @Override
+    public OrderSetCustomerIdAction copyDeep() {
+        return OrderSetCustomerIdAction.deepCopy(this);
+    }
 }

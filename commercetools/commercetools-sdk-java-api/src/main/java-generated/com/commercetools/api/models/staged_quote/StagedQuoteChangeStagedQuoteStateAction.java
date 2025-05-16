@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeStagedQuoteState")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedQuoteChangeStagedQuoteStateActionImpl.class)
 public interface StagedQuoteChangeStagedQuoteStateAction extends StagedQuoteUpdateAction {
@@ -69,6 +70,8 @@ public interface StagedQuoteChangeStagedQuoteStateAction extends StagedQuoteUpda
         instance.setStagedQuoteState(template.getStagedQuoteState());
         return instance;
     }
+
+    public StagedQuoteChangeStagedQuoteStateAction copyDeep();
 
     /**
      * factory method to create a deep copy of StagedQuoteChangeStagedQuoteStateAction

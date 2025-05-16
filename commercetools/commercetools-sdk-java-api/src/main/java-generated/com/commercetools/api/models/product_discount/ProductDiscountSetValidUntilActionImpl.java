@@ -91,4 +91,8 @@ public class ProductDiscountSetValidUntilActionImpl implements ProductDiscountSe
                 .build();
     }
 
+    @Override
+    public ProductDiscountSetValidUntilAction copyDeep() {
+        return ProductDiscountSetValidUntilAction.deepCopy(this);
+    }
 }

@@ -115,4 +115,8 @@ public class AnonymousIdAlreadyInUseErrorImpl implements AnonymousIdAlreadyInUse
                 .build();
     }
 
+    @Override
+    public AnonymousIdAlreadyInUseError copyDeep() {
+        return AnonymousIdAlreadyInUseError.deepCopy(this);
+    }
 }

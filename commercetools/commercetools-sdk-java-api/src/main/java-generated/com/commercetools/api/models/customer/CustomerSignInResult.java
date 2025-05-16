@@ -84,6 +84,8 @@ public interface CustomerSignInResult {
         return instance;
     }
 
+    public CustomerSignInResult copyDeep();
+
     /**
      * factory method to create a deep copy of CustomerSignInResult
      * @param template instance to be copied

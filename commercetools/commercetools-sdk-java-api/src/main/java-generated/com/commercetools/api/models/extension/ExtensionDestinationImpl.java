@@ -69,4 +69,8 @@ public class ExtensionDestinationImpl implements ExtensionDestination, ModelBase
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type).build();
     }
 
+    @Override
+    public ExtensionDestination copyDeep() {
+        return ExtensionDestination.deepCopy(this);
+    }
 }

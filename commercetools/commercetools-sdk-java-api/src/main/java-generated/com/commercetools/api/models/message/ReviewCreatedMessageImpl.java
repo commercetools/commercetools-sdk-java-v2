@@ -293,4 +293,8 @@ public class ReviewCreatedMessageImpl implements ReviewCreatedMessage, ModelBase
                 .build();
     }
 
+    @Override
+    public ReviewCreatedMessage copyDeep() {
+        return ReviewCreatedMessage.deepCopy(this);
+    }
 }

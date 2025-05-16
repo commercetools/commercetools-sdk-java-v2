@@ -177,4 +177,8 @@ public class TransactionDraftImpl implements TransactionDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public TransactionDraft copyDeep() {
+        return TransactionDraft.deepCopy(this);
+    }
 }

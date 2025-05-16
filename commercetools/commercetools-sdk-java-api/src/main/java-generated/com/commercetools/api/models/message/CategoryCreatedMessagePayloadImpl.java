@@ -92,4 +92,8 @@ public class CategoryCreatedMessagePayloadImpl implements CategoryCreatedMessage
                 .build();
     }
 
+    @Override
+    public CategoryCreatedMessagePayload copyDeep() {
+        return CategoryCreatedMessagePayload.deepCopy(this);
+    }
 }

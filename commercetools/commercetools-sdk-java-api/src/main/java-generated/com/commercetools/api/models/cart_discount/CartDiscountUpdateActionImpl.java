@@ -69,4 +69,8 @@ public class CartDiscountUpdateActionImpl implements CartDiscountUpdateAction, M
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action).build();
     }
 
+    @Override
+    public CartDiscountUpdateAction copyDeep() {
+        return CartDiscountUpdateAction.deepCopy(this);
+    }
 }

@@ -69,4 +69,8 @@ public class AttributeTypeImpl implements AttributeType, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("name", name).build();
     }
 
+    @Override
+    public AttributeType copyDeep() {
+        return AttributeType.deepCopy(this);
+    }
 }

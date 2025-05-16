@@ -69,4 +69,8 @@ public class DiscountCodeUpdateActionImpl implements DiscountCodeUpdateAction, M
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action).build();
     }
 
+    @Override
+    public DiscountCodeUpdateAction copyDeep() {
+        return DiscountCodeUpdateAction.deepCopy(this);
+    }
 }

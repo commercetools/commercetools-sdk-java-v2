@@ -337,4 +337,8 @@ public class ProductPricesSetMessageImpl implements ProductPricesSetMessage, Mod
                 .build();
     }
 
+    @Override
+    public ProductPricesSetMessage copyDeep() {
+        return ProductPricesSetMessage.deepCopy(this);
+    }
 }

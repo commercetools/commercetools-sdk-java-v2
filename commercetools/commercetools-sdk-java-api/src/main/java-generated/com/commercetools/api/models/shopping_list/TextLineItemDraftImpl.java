@@ -177,4 +177,8 @@ public class TextLineItemDraftImpl implements TextLineItemDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public TextLineItemDraft copyDeep() {
+        return TextLineItemDraft.deepCopy(this);
+    }
 }

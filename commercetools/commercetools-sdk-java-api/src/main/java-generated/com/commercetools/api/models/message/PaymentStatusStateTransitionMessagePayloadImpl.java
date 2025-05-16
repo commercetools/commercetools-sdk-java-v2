@@ -112,4 +112,8 @@ public class PaymentStatusStateTransitionMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public PaymentStatusStateTransitionMessagePayload copyDeep() {
+        return PaymentStatusStateTransitionMessagePayload.deepCopy(this);
+    }
 }

@@ -114,4 +114,8 @@ public class SearchFacetPathNotFoundErrorImpl implements SearchFacetPathNotFound
                 .build();
     }
 
+    @Override
+    public SearchFacetPathNotFoundError copyDeep() {
+        return SearchFacetPathNotFoundError.deepCopy(this);
+    }
 }

@@ -115,4 +115,8 @@ public class GraphQLDuplicateVariantValuesErrorImpl implements GraphQLDuplicateV
                 .build();
     }
 
+    @Override
+    public GraphQLDuplicateVariantValuesError copyDeep() {
+        return GraphQLDuplicateVariantValuesError.deepCopy(this);
+    }
 }

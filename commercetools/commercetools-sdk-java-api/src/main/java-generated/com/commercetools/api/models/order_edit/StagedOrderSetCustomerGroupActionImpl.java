@@ -94,4 +94,8 @@ public class StagedOrderSetCustomerGroupActionImpl implements StagedOrderSetCust
                 .build();
     }
 
+    @Override
+    public StagedOrderSetCustomerGroupAction copyDeep() {
+        return StagedOrderSetCustomerGroupAction.deepCopy(this);
+    }
 }

@@ -113,4 +113,8 @@ public class TaxPortionImpl implements TaxPortion, ModelBase {
                 .build();
     }
 
+    @Override
+    public TaxPortion copyDeep() {
+        return TaxPortion.deepCopy(this);
+    }
 }

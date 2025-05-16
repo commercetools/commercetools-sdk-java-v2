@@ -94,6 +94,8 @@ public interface StoreUpdate
         return instance;
     }
 
+    public StoreUpdate copyDeep();
+
     /**
      * factory method to create a deep copy of StoreUpdate
      * @param template instance to be copied

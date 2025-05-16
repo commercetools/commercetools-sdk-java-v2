@@ -78,4 +78,8 @@ public class RuleApproverImpl implements RuleApprover, ModelBase {
                 .build();
     }
 
+    @Override
+    public RuleApprover copyDeep() {
+        return RuleApprover.deepCopy(this);
+    }
 }

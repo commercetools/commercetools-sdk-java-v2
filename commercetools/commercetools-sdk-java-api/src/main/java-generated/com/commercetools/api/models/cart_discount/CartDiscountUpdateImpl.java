@@ -100,4 +100,8 @@ public class CartDiscountUpdateImpl implements CartDiscountUpdate, ModelBase {
                 .build();
     }
 
+    @Override
+    public CartDiscountUpdate copyDeep() {
+        return CartDiscountUpdate.deepCopy(this);
+    }
 }

@@ -148,6 +148,8 @@ public interface DeliveryDraft extends com.commercetools.api.models.Customizable
         return instance;
     }
 
+    public DeliveryDraft copyDeep();
+
     /**
      * factory method to create a deep copy of DeliveryDraft
      * @param template instance to be copied

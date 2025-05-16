@@ -100,4 +100,8 @@ public class ShippingMethodUpdateImpl implements ShippingMethodUpdate, ModelBase
                 .build();
     }
 
+    @Override
+    public ShippingMethodUpdate copyDeep() {
+        return ShippingMethodUpdate.deepCopy(this);
+    }
 }

@@ -96,4 +96,8 @@ public class StateRemoveRolesActionImpl implements StateRemoveRolesAction, Model
                 .build();
     }
 
+    @Override
+    public StateRemoveRolesAction copyDeep() {
+        return StateRemoveRolesAction.deepCopy(this);
+    }
 }

@@ -161,4 +161,8 @@ public class AssociateRoleDraftImpl implements AssociateRoleDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public AssociateRoleDraft copyDeep() {
+        return AssociateRoleDraft.deepCopy(this);
+    }
 }

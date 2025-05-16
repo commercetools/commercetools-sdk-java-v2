@@ -100,4 +100,8 @@ public class StandalonePriceUpdateImpl implements StandalonePriceUpdate, ModelBa
                 .build();
     }
 
+    @Override
+    public StandalonePriceUpdate copyDeep() {
+        return StandalonePriceUpdate.deepCopy(this);
+    }
 }

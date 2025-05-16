@@ -92,4 +92,8 @@ public class MyBusinessUnitAddAddressActionImpl implements MyBusinessUnitAddAddr
                 .build();
     }
 
+    @Override
+    public MyBusinessUnitAddAddressAction copyDeep() {
+        return MyBusinessUnitAddAddressAction.deepCopy(this);
+    }
 }

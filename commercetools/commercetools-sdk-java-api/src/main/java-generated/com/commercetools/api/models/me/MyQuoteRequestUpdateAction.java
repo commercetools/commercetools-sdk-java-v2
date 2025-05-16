@@ -26,8 +26,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyQuoteRequestCancelActionImpl.class, name = MyQuoteRequestCancelAction.CANCEL_QUOTE_REQUEST) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = MyQuoteRequestUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = MyQuoteRequestUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -42,6 +40,8 @@ public interface MyQuoteRequestUpdateAction
     @JsonProperty("action")
     public String getAction();
 
+    public MyQuoteRequestUpdateAction copyDeep();
+
     /**
      * factory method to create a deep copy of MyQuoteRequestUpdateAction
      * @param template instance to be copied
@@ -52,9 +52,9 @@ public interface MyQuoteRequestUpdateAction
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.me.MyQuoteRequestCancelAction) {
-            return com.commercetools.api.models.me.MyQuoteRequestCancelAction
-                    .deepCopy((com.commercetools.api.models.me.MyQuoteRequestCancelAction) template);
+
+        if (!(template instanceof MyQuoteRequestUpdateActionImpl)) {
+            return template.copyDeep();
         }
         MyQuoteRequestUpdateActionImpl instance = new MyQuoteRequestUpdateActionImpl();
         return instance;

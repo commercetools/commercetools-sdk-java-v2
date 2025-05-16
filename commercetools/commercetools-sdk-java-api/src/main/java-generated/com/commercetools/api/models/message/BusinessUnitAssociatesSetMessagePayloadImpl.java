@@ -96,4 +96,8 @@ public class BusinessUnitAssociatesSetMessagePayloadImpl implements BusinessUnit
                 .build();
     }
 
+    @Override
+    public BusinessUnitAssociatesSetMessagePayload copyDeep() {
+        return BusinessUnitAssociatesSetMessagePayload.deepCopy(this);
+    }
 }

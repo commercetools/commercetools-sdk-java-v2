@@ -100,4 +100,8 @@ public class AttributeGroupUpdateImpl implements AttributeGroupUpdate, ModelBase
                 .build();
     }
 
+    @Override
+    public AttributeGroupUpdate copyDeep() {
+        return AttributeGroupUpdate.deepCopy(this);
+    }
 }

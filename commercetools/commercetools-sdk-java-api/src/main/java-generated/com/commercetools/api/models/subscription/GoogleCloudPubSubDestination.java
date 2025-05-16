@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("GoogleCloudPubSub")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GoogleCloudPubSubDestinationImpl.class)
 public interface GoogleCloudPubSubDestination extends Destination {
@@ -86,6 +87,8 @@ public interface GoogleCloudPubSubDestination extends Destination {
         instance.setTopic(template.getTopic());
         return instance;
     }
+
+    public GoogleCloudPubSubDestination copyDeep();
 
     /**
      * factory method to create a deep copy of GoogleCloudPubSubDestination

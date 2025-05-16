@@ -333,4 +333,8 @@ public class OrderStateTransitionMessageImpl implements OrderStateTransitionMess
                 .build();
     }
 
+    @Override
+    public OrderStateTransitionMessage copyDeep() {
+        return OrderStateTransitionMessage.deepCopy(this);
+    }
 }

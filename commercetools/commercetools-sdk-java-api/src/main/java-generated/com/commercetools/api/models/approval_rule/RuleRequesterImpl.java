@@ -78,4 +78,8 @@ public class RuleRequesterImpl implements RuleRequester, ModelBase {
                 .build();
     }
 
+    @Override
+    public RuleRequester copyDeep() {
+        return RuleRequester.deepCopy(this);
+    }
 }

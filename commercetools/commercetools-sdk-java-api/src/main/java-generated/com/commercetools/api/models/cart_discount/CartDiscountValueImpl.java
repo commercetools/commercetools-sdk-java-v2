@@ -69,4 +69,8 @@ public class CartDiscountValueImpl implements CartDiscountValue, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type).build();
     }
 
+    @Override
+    public CartDiscountValue copyDeep() {
+        return CartDiscountValue.deepCopy(this);
+    }
 }

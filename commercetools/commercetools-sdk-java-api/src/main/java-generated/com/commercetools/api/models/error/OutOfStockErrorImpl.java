@@ -171,4 +171,8 @@ public class OutOfStockErrorImpl implements OutOfStockError, ModelBase {
                 .build();
     }
 
+    @Override
+    public OutOfStockError copyDeep() {
+        return OutOfStockError.deepCopy(this);
+    }
 }

@@ -46,6 +46,8 @@ public interface OrderSearchCompoundExpression extends OrderSearchQuery {
         return instance;
     }
 
+    public OrderSearchCompoundExpression copyDeep();
+
     /**
      * factory method to create a deep copy of OrderSearchCompoundExpression
      * @param template instance to be copied
@@ -56,21 +58,9 @@ public interface OrderSearchCompoundExpression extends OrderSearchQuery {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.order.OrderSearchAndExpression) {
-            return com.commercetools.api.models.order.OrderSearchAndExpression
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchAndExpression) template);
-        }
-        if (template instanceof com.commercetools.api.models.order.OrderSearchFilterExpression) {
-            return com.commercetools.api.models.order.OrderSearchFilterExpression
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchFilterExpression) template);
-        }
-        if (template instanceof com.commercetools.api.models.order.OrderSearchNotExpression) {
-            return com.commercetools.api.models.order.OrderSearchNotExpression
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchNotExpression) template);
-        }
-        if (template instanceof com.commercetools.api.models.order.OrderSearchOrExpression) {
-            return com.commercetools.api.models.order.OrderSearchOrExpression
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchOrExpression) template);
+
+        if (!(template instanceof OrderSearchCompoundExpressionImpl)) {
+            return template.copyDeep();
         }
         OrderSearchCompoundExpressionImpl instance = new OrderSearchCompoundExpressionImpl();
         return instance;

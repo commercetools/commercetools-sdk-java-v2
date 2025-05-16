@@ -92,4 +92,8 @@ public class ShippingMethodSetLocalizedNameActionImpl implements ShippingMethodS
                 .build();
     }
 
+    @Override
+    public ShippingMethodSetLocalizedNameAction copyDeep() {
+        return ShippingMethodSetLocalizedNameAction.deepCopy(this);
+    }
 }

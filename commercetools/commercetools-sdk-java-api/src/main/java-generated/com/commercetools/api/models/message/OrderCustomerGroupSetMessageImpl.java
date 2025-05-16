@@ -315,4 +315,8 @@ public class OrderCustomerGroupSetMessageImpl implements OrderCustomerGroupSetMe
                 .build();
     }
 
+    @Override
+    public OrderCustomerGroupSetMessage copyDeep() {
+        return OrderCustomerGroupSetMessage.deepCopy(this);
+    }
 }

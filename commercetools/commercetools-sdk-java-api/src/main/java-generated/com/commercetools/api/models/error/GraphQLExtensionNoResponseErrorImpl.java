@@ -138,4 +138,8 @@ public class GraphQLExtensionNoResponseErrorImpl implements GraphQLExtensionNoRe
                 .build();
     }
 
+    @Override
+    public GraphQLExtensionNoResponseError copyDeep() {
+        return GraphQLExtensionNoResponseError.deepCopy(this);
+    }
 }

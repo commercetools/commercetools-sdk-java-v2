@@ -74,4 +74,8 @@ public class ProductSearchFacetRangesExpressionImpl implements ProductSearchFace
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("ranges", ranges).build();
     }
 
+    @Override
+    public ProductSearchFacetRangesExpression copyDeep() {
+        return ProductSearchFacetRangesExpression.deepCopy(this);
+    }
 }

@@ -74,4 +74,8 @@ public class SearchPrefixExpressionImpl implements SearchPrefixExpression, Model
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("prefix", prefix).build();
     }
 
+    @Override
+    public SearchPrefixExpression copyDeep() {
+        return SearchPrefixExpression.deepCopy(this);
+    }
 }

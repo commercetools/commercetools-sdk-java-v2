@@ -92,4 +92,8 @@ public class ErrorByExtensionImpl implements ErrorByExtension, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id).append("key", key).build();
     }
 
+    @Override
+    public ErrorByExtension copyDeep() {
+        return ErrorByExtension.deepCopy(this);
+    }
 }

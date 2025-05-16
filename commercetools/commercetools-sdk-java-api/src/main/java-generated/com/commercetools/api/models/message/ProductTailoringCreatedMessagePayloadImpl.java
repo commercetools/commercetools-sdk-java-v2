@@ -318,4 +318,8 @@ public class ProductTailoringCreatedMessagePayloadImpl implements ProductTailori
                 .build();
     }
 
+    @Override
+    public ProductTailoringCreatedMessagePayload copyDeep() {
+        return ProductTailoringCreatedMessagePayload.deepCopy(this);
+    }
 }

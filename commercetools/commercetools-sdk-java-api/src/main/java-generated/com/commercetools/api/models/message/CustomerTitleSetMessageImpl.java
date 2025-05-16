@@ -293,4 +293,8 @@ public class CustomerTitleSetMessageImpl implements CustomerTitleSetMessage, Mod
                 .build();
     }
 
+    @Override
+    public CustomerTitleSetMessage copyDeep() {
+        return CustomerTitleSetMessage.deepCopy(this);
+    }
 }

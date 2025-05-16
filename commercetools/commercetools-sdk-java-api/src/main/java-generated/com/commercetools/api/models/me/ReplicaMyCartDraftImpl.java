@@ -86,4 +86,8 @@ public class ReplicaMyCartDraftImpl implements ReplicaMyCartDraft, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("reference", reference).build();
     }
 
+    @Override
+    public ReplicaMyCartDraft copyDeep() {
+        return ReplicaMyCartDraft.deepCopy(this);
+    }
 }

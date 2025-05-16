@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("removeDistributionChannel")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StoreRemoveDistributionChannelActionImpl.class)
 public interface StoreRemoveDistributionChannelAction extends StoreUpdateAction {
@@ -72,6 +73,8 @@ public interface StoreRemoveDistributionChannelAction extends StoreUpdateAction 
         instance.setDistributionChannel(template.getDistributionChannel());
         return instance;
     }
+
+    public StoreRemoveDistributionChannelAction copyDeep();
 
     /**
      * factory method to create a deep copy of StoreRemoveDistributionChannelAction

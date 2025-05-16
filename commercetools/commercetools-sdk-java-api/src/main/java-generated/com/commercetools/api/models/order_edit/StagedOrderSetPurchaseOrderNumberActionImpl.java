@@ -91,4 +91,8 @@ public class StagedOrderSetPurchaseOrderNumberActionImpl implements StagedOrderS
                 .build();
     }
 
+    @Override
+    public StagedOrderSetPurchaseOrderNumberAction copyDeep() {
+        return StagedOrderSetPurchaseOrderNumberAction.deepCopy(this);
+    }
 }

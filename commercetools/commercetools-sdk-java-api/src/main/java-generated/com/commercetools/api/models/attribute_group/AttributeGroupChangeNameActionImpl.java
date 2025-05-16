@@ -92,4 +92,8 @@ public class AttributeGroupChangeNameActionImpl implements AttributeGroupChangeN
                 .build();
     }
 
+    @Override
+    public AttributeGroupChangeNameAction copyDeep() {
+        return AttributeGroupChangeNameAction.deepCopy(this);
+    }
 }

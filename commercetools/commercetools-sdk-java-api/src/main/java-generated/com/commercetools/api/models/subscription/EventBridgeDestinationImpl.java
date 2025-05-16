@@ -128,4 +128,8 @@ public class EventBridgeDestinationImpl implements EventBridgeDestination, Model
                 .build();
     }
 
+    @Override
+    public EventBridgeDestination copyDeep() {
+        return EventBridgeDestination.deepCopy(this);
+    }
 }

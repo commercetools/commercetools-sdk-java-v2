@@ -92,4 +92,8 @@ public class AttributeNestedTypeImpl implements AttributeNestedType, ModelBase {
                 .build();
     }
 
+    @Override
+    public AttributeNestedType copyDeep() {
+        return AttributeNestedType.deepCopy(this);
+    }
 }

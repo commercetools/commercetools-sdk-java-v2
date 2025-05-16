@@ -113,4 +113,8 @@ public class MyQuoteRequestDraftImpl implements MyQuoteRequestDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public MyQuoteRequestDraft copyDeep() {
+        return MyQuoteRequestDraft.deepCopy(this);
+    }
 }

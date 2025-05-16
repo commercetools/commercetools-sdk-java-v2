@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setStatusInterfaceText")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PaymentSetStatusInterfaceTextActionImpl.class)
 public interface PaymentSetStatusInterfaceTextAction extends PaymentUpdateAction {
@@ -69,6 +70,8 @@ public interface PaymentSetStatusInterfaceTextAction extends PaymentUpdateAction
         instance.setInterfaceText(template.getInterfaceText());
         return instance;
     }
+
+    public PaymentSetStatusInterfaceTextAction copyDeep();
 
     /**
      * factory method to create a deep copy of PaymentSetStatusInterfaceTextAction

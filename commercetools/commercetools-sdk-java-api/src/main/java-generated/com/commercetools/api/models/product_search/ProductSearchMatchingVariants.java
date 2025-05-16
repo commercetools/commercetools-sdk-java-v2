@@ -100,6 +100,8 @@ public interface ProductSearchMatchingVariants {
         return instance;
     }
 
+    public ProductSearchMatchingVariants copyDeep();
+
     /**
      * factory method to create a deep copy of ProductSearchMatchingVariants
      * @param template instance to be copied

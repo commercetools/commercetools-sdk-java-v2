@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeBuyerAssignable")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AssociateRoleChangeBuyerAssignableActionImpl.class)
 public interface AssociateRoleChangeBuyerAssignableAction extends AssociateRoleUpdateAction {
@@ -69,6 +70,8 @@ public interface AssociateRoleChangeBuyerAssignableAction extends AssociateRoleU
         instance.setBuyerAssignable(template.getBuyerAssignable());
         return instance;
     }
+
+    public AssociateRoleChangeBuyerAssignableAction copyDeep();
 
     /**
      * factory method to create a deep copy of AssociateRoleChangeBuyerAssignableAction

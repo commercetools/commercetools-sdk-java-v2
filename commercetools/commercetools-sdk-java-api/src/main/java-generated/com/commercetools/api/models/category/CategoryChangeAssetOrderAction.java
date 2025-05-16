@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeAssetOrder")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CategoryChangeAssetOrderActionImpl.class)
 public interface CategoryChangeAssetOrderAction extends CategoryUpdateAction {
@@ -77,6 +78,8 @@ public interface CategoryChangeAssetOrderAction extends CategoryUpdateAction {
         instance.setAssetOrder(template.getAssetOrder());
         return instance;
     }
+
+    public CategoryChangeAssetOrderAction copyDeep();
 
     /**
      * factory method to create a deep copy of CategoryChangeAssetOrderAction

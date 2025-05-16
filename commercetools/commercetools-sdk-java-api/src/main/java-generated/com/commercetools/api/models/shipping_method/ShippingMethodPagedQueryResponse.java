@@ -142,6 +142,8 @@ public interface ShippingMethodPagedQueryResponse
         return instance;
     }
 
+    public ShippingMethodPagedQueryResponse copyDeep();
+
     /**
      * factory method to create a deep copy of ShippingMethodPagedQueryResponse
      * @param template instance to be copied

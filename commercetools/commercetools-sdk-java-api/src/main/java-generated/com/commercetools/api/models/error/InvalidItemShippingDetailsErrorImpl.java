@@ -167,4 +167,8 @@ public class InvalidItemShippingDetailsErrorImpl implements InvalidItemShippingD
                 .build();
     }
 
+    @Override
+    public InvalidItemShippingDetailsError copyDeep() {
+        return InvalidItemShippingDetailsError.deepCopy(this);
+    }
 }

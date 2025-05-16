@@ -245,6 +245,8 @@ public interface AssociateRole extends BaseResource, com.commercetools.api.model
         return instance;
     }
 
+    public AssociateRole copyDeep();
+
     /**
      * factory method to create a deep copy of AssociateRole
      * @param template instance to be copied

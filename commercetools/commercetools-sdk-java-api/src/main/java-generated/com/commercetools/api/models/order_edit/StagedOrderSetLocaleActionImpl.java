@@ -91,4 +91,8 @@ public class StagedOrderSetLocaleActionImpl implements StagedOrderSetLocaleActio
                 .build();
     }
 
+    @Override
+    public StagedOrderSetLocaleAction copyDeep() {
+        return StagedOrderSetLocaleAction.deepCopy(this);
+    }
 }

@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("business-unit")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = BusinessUnitKeyReferenceImpl.class)
 public interface BusinessUnitKeyReference extends KeyReference {
@@ -70,6 +71,8 @@ public interface BusinessUnitKeyReference extends KeyReference {
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public BusinessUnitKeyReference copyDeep();
 
     /**
      * factory method to create a deep copy of BusinessUnitKeyReference

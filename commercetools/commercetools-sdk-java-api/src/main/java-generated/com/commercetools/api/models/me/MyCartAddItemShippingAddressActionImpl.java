@@ -93,4 +93,8 @@ public class MyCartAddItemShippingAddressActionImpl implements MyCartAddItemShip
                 .build();
     }
 
+    @Override
+    public MyCartAddItemShippingAddressAction copyDeep() {
+        return MyCartAddItemShippingAddressAction.deepCopy(this);
+    }
 }

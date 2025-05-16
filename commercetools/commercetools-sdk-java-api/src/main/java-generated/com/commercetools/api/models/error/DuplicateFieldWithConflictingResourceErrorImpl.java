@@ -178,4 +178,8 @@ public class DuplicateFieldWithConflictingResourceErrorImpl
                 .build();
     }
 
+    @Override
+    public DuplicateFieldWithConflictingResourceError copyDeep() {
+        return DuplicateFieldWithConflictingResourceError.deepCopy(this);
+    }
 }

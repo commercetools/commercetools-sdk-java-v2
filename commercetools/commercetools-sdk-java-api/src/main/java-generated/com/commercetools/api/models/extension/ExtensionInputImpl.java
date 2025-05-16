@@ -95,4 +95,8 @@ public class ExtensionInputImpl implements ExtensionInput, ModelBase {
                 .build();
     }
 
+    @Override
+    public ExtensionInput copyDeep() {
+        return ExtensionInput.deepCopy(this);
+    }
 }

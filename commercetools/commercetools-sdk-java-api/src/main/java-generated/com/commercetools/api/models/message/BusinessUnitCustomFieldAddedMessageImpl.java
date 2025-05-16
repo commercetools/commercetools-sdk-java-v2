@@ -313,4 +313,8 @@ public class BusinessUnitCustomFieldAddedMessageImpl implements BusinessUnitCust
                 .build();
     }
 
+    @Override
+    public BusinessUnitCustomFieldAddedMessage copyDeep() {
+        return BusinessUnitCustomFieldAddedMessage.deepCopy(this);
+    }
 }

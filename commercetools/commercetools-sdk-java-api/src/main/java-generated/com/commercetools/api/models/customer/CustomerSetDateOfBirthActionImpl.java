@@ -91,4 +91,8 @@ public class CustomerSetDateOfBirthActionImpl implements CustomerSetDateOfBirthA
                 .build();
     }
 
+    @Override
+    public CustomerSetDateOfBirthAction copyDeep() {
+        return CustomerSetDateOfBirthAction.deepCopy(this);
+    }
 }

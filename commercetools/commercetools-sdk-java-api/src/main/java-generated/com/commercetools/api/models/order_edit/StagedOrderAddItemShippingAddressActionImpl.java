@@ -92,4 +92,8 @@ public class StagedOrderAddItemShippingAddressActionImpl implements StagedOrderA
                 .build();
     }
 
+    @Override
+    public StagedOrderAddItemShippingAddressAction copyDeep() {
+        return StagedOrderAddItemShippingAddressAction.deepCopy(this);
+    }
 }

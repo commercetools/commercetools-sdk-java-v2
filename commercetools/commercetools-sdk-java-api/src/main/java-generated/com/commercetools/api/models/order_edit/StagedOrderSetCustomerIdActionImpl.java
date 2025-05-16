@@ -92,4 +92,8 @@ public class StagedOrderSetCustomerIdActionImpl implements StagedOrderSetCustome
                 .build();
     }
 
+    @Override
+    public StagedOrderSetCustomerIdAction copyDeep() {
+        return StagedOrderSetCustomerIdAction.deepCopy(this);
+    }
 }

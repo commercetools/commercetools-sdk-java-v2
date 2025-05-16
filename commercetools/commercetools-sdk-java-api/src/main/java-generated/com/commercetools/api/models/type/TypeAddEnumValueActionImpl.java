@@ -110,4 +110,8 @@ public class TypeAddEnumValueActionImpl implements TypeAddEnumValueAction, Model
                 .build();
     }
 
+    @Override
+    public TypeAddEnumValueAction copyDeep() {
+        return TypeAddEnumValueAction.deepCopy(this);
+    }
 }

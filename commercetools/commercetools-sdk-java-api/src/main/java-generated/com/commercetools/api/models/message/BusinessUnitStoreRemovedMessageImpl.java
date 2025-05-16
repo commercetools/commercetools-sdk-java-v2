@@ -294,4 +294,8 @@ public class BusinessUnitStoreRemovedMessageImpl implements BusinessUnitStoreRem
                 .build();
     }
 
+    @Override
+    public BusinessUnitStoreRemovedMessage copyDeep() {
+        return BusinessUnitStoreRemovedMessage.deepCopy(this);
+    }
 }

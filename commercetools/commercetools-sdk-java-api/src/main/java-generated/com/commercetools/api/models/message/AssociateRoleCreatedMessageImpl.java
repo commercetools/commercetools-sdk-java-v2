@@ -293,4 +293,8 @@ public class AssociateRoleCreatedMessageImpl implements AssociateRoleCreatedMess
                 .build();
     }
 
+    @Override
+    public AssociateRoleCreatedMessage copyDeep() {
+        return AssociateRoleCreatedMessage.deepCopy(this);
+    }
 }

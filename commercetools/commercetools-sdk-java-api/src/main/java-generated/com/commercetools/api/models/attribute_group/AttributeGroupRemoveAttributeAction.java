@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("removeAttribute")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AttributeGroupRemoveAttributeActionImpl.class)
 public interface AttributeGroupRemoveAttributeAction extends AttributeGroupUpdateAction {
@@ -71,6 +72,8 @@ public interface AttributeGroupRemoveAttributeAction extends AttributeGroupUpdat
         instance.setAttribute(template.getAttribute());
         return instance;
     }
+
+    public AttributeGroupRemoveAttributeAction copyDeep();
 
     /**
      * factory method to create a deep copy of AttributeGroupRemoveAttributeAction

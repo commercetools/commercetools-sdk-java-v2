@@ -207,4 +207,8 @@ public class MyShoppingListDraftImpl implements MyShoppingListDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public MyShoppingListDraft copyDeep() {
+        return MyShoppingListDraft.deepCopy(this);
+    }
 }

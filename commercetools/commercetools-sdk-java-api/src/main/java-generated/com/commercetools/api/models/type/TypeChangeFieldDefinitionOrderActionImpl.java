@@ -95,4 +95,8 @@ public class TypeChangeFieldDefinitionOrderActionImpl implements TypeChangeField
                 .build();
     }
 
+    @Override
+    public TypeChangeFieldDefinitionOrderAction copyDeep() {
+        return TypeChangeFieldDefinitionOrderAction.deepCopy(this);
+    }
 }

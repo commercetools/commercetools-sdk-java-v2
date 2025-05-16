@@ -91,4 +91,8 @@ public class OrderEditSetKeyActionImpl implements OrderEditSetKeyAction, ModelBa
                 .build();
     }
 
+    @Override
+    public OrderEditSetKeyAction copyDeep() {
+        return OrderEditSetKeyAction.deepCopy(this);
+    }
 }

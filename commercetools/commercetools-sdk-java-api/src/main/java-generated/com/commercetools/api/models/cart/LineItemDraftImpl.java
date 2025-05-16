@@ -365,4 +365,8 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public LineItemDraft copyDeep() {
+        return LineItemDraft.deepCopy(this);
+    }
 }

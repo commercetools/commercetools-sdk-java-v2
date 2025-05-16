@@ -111,4 +111,8 @@ public class StandalonePriceChangeValueActionImpl implements StandalonePriceChan
                 .build();
     }
 
+    @Override
+    public StandalonePriceChangeValueAction copyDeep() {
+        return StandalonePriceChangeValueAction.deepCopy(this);
+    }
 }

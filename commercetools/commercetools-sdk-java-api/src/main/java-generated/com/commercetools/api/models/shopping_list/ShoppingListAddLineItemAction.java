@@ -29,6 +29,7 @@ import jakarta.validation.Valid;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("addLineItem")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShoppingListAddLineItemActionImpl.class)
 public interface ShoppingListAddLineItemAction extends ShoppingListUpdateAction,
@@ -168,6 +169,8 @@ public interface ShoppingListAddLineItemAction extends ShoppingListUpdateAction,
         instance.setCustom(template.getCustom());
         return instance;
     }
+
+    public ShoppingListAddLineItemAction copyDeep();
 
     /**
      * factory method to create a deep copy of ShoppingListAddLineItemAction

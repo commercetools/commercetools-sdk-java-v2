@@ -128,4 +128,8 @@ public class CartSetShippingCustomFieldActionImpl implements CartSetShippingCust
                 .build();
     }
 
+    @Override
+    public CartSetShippingCustomFieldAction copyDeep() {
+        return CartSetShippingCustomFieldAction.deepCopy(this);
+    }
 }

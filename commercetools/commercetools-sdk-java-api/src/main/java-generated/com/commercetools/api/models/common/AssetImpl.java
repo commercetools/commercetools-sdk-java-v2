@@ -205,4 +205,8 @@ public class AssetImpl implements Asset, ModelBase {
                 .build();
     }
 
+    @Override
+    public Asset copyDeep() {
+        return Asset.deepCopy(this);
+    }
 }

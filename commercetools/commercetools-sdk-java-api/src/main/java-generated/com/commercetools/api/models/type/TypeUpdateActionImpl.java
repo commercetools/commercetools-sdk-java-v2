@@ -69,4 +69,8 @@ public class TypeUpdateActionImpl implements TypeUpdateAction, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action).build();
     }
 
+    @Override
+    public TypeUpdateAction copyDeep() {
+        return TypeUpdateAction.deepCopy(this);
+    }
 }

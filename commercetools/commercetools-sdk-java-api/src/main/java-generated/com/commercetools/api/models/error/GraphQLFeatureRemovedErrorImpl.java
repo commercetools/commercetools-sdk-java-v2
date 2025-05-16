@@ -95,4 +95,8 @@ public class GraphQLFeatureRemovedErrorImpl implements GraphQLFeatureRemovedErro
                 .build();
     }
 
+    @Override
+    public GraphQLFeatureRemovedError copyDeep() {
+        return GraphQLFeatureRemovedError.deepCopy(this);
+    }
 }

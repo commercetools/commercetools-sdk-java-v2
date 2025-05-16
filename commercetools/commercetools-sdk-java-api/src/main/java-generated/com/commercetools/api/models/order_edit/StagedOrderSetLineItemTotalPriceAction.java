@@ -28,6 +28,7 @@ import jakarta.validation.Valid;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setLineItemTotalPrice")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderSetLineItemTotalPriceActionImpl.class)
 public interface StagedOrderSetLineItemTotalPriceAction extends StagedOrderUpdateAction {
@@ -102,6 +103,8 @@ public interface StagedOrderSetLineItemTotalPriceAction extends StagedOrderUpdat
         instance.setExternalTotalPrice(template.getExternalTotalPrice());
         return instance;
     }
+
+    public StagedOrderSetLineItemTotalPriceAction copyDeep();
 
     /**
      * factory method to create a deep copy of StagedOrderSetLineItemTotalPriceAction

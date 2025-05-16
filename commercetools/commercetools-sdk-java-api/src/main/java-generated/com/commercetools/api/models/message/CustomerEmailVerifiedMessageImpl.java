@@ -273,4 +273,8 @@ public class CustomerEmailVerifiedMessageImpl implements CustomerEmailVerifiedMe
                 .build();
     }
 
+    @Override
+    public CustomerEmailVerifiedMessage copyDeep() {
+        return CustomerEmailVerifiedMessage.deepCopy(this);
+    }
 }

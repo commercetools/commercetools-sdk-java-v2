@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("custom")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomTokenizerImpl.class)
 public interface CustomTokenizer extends SuggestTokenizer {
@@ -77,6 +78,8 @@ public interface CustomTokenizer extends SuggestTokenizer {
         instance.setInputs(template.getInputs());
         return instance;
     }
+
+    public CustomTokenizer copyDeep();
 
     /**
      * factory method to create a deep copy of CustomTokenizer

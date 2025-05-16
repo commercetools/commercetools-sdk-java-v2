@@ -137,4 +137,8 @@ public class StagedOrderImportLineItemStateActionImpl implements StagedOrderImpo
                 .build();
     }
 
+    @Override
+    public StagedOrderImportLineItemStateAction copyDeep() {
+        return StagedOrderImportLineItemStateAction.deepCopy(this);
+    }
 }

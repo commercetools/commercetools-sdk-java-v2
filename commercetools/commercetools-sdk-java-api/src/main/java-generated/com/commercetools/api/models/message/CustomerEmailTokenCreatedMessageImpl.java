@@ -314,4 +314,8 @@ public class CustomerEmailTokenCreatedMessageImpl implements CustomerEmailTokenC
                 .build();
     }
 
+    @Override
+    public CustomerEmailTokenCreatedMessage copyDeep() {
+        return CustomerEmailTokenCreatedMessage.deepCopy(this);
+    }
 }

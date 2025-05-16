@@ -379,4 +379,8 @@ public class ProductDiscountImpl implements ProductDiscount, ModelBase {
                 .build();
     }
 
+    @Override
+    public ProductDiscount copyDeep() {
+        return ProductDiscount.deepCopy(this);
+    }
 }

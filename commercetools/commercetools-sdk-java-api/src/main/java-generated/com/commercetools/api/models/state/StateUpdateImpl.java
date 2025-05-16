@@ -99,4 +99,8 @@ public class StateUpdateImpl implements StateUpdate, ModelBase {
                 .build();
     }
 
+    @Override
+    public StateUpdate copyDeep() {
+        return StateUpdate.deepCopy(this);
+    }
 }

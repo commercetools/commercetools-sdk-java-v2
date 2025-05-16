@@ -94,6 +94,8 @@ public interface ZoneUpdate
         return instance;
     }
 
+    public ZoneUpdate copyDeep();
+
     /**
      * factory method to create a deep copy of ZoneUpdate
      * @param template instance to be copied

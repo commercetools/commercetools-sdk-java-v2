@@ -27,16 +27,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.approval_rule.ApprovalRuleSetApproversActionImpl.class, name = ApprovalRuleSetApproversAction.SET_APPROVERS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.approval_rule.ApprovalRuleSetCustomFieldActionImpl.class, name = ApprovalRuleSetCustomFieldAction.SET_CUSTOM_FIELD),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.approval_rule.ApprovalRuleSetCustomTypeActionImpl.class, name = ApprovalRuleSetCustomTypeAction.SET_CUSTOM_TYPE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.approval_rule.ApprovalRuleSetDescriptionActionImpl.class, name = ApprovalRuleSetDescriptionAction.SET_DESCRIPTION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.approval_rule.ApprovalRuleSetKeyActionImpl.class, name = ApprovalRuleSetKeyAction.SET_KEY),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.approval_rule.ApprovalRuleSetNameActionImpl.class, name = ApprovalRuleSetNameAction.SET_NAME),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.approval_rule.ApprovalRuleSetPredicateActionImpl.class, name = ApprovalRuleSetPredicateAction.SET_PREDICATE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.approval_rule.ApprovalRuleSetRequestersActionImpl.class, name = ApprovalRuleSetRequestersAction.SET_REQUESTERS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.approval_rule.ApprovalRuleSetStatusActionImpl.class, name = ApprovalRuleSetStatusAction.SET_STATUS) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = ApprovalRuleUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = ApprovalRuleUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -50,6 +40,8 @@ public interface ApprovalRuleUpdateAction {
     @JsonProperty("action")
     public String getAction();
 
+    public ApprovalRuleUpdateAction copyDeep();
+
     /**
      * factory method to create a deep copy of ApprovalRuleUpdateAction
      * @param template instance to be copied
@@ -60,41 +52,9 @@ public interface ApprovalRuleUpdateAction {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.approval_rule.ApprovalRuleSetApproversAction) {
-            return com.commercetools.api.models.approval_rule.ApprovalRuleSetApproversAction
-                    .deepCopy((com.commercetools.api.models.approval_rule.ApprovalRuleSetApproversAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.approval_rule.ApprovalRuleSetCustomFieldAction) {
-            return com.commercetools.api.models.approval_rule.ApprovalRuleSetCustomFieldAction
-                    .deepCopy((com.commercetools.api.models.approval_rule.ApprovalRuleSetCustomFieldAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.approval_rule.ApprovalRuleSetCustomTypeAction) {
-            return com.commercetools.api.models.approval_rule.ApprovalRuleSetCustomTypeAction
-                    .deepCopy((com.commercetools.api.models.approval_rule.ApprovalRuleSetCustomTypeAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.approval_rule.ApprovalRuleSetDescriptionAction) {
-            return com.commercetools.api.models.approval_rule.ApprovalRuleSetDescriptionAction
-                    .deepCopy((com.commercetools.api.models.approval_rule.ApprovalRuleSetDescriptionAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.approval_rule.ApprovalRuleSetKeyAction) {
-            return com.commercetools.api.models.approval_rule.ApprovalRuleSetKeyAction
-                    .deepCopy((com.commercetools.api.models.approval_rule.ApprovalRuleSetKeyAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.approval_rule.ApprovalRuleSetNameAction) {
-            return com.commercetools.api.models.approval_rule.ApprovalRuleSetNameAction
-                    .deepCopy((com.commercetools.api.models.approval_rule.ApprovalRuleSetNameAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.approval_rule.ApprovalRuleSetPredicateAction) {
-            return com.commercetools.api.models.approval_rule.ApprovalRuleSetPredicateAction
-                    .deepCopy((com.commercetools.api.models.approval_rule.ApprovalRuleSetPredicateAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.approval_rule.ApprovalRuleSetRequestersAction) {
-            return com.commercetools.api.models.approval_rule.ApprovalRuleSetRequestersAction
-                    .deepCopy((com.commercetools.api.models.approval_rule.ApprovalRuleSetRequestersAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.approval_rule.ApprovalRuleSetStatusAction) {
-            return com.commercetools.api.models.approval_rule.ApprovalRuleSetStatusAction
-                    .deepCopy((com.commercetools.api.models.approval_rule.ApprovalRuleSetStatusAction) template);
+
+        if (!(template instanceof ApprovalRuleUpdateActionImpl)) {
+            return template.copyDeep();
         }
         ApprovalRuleUpdateActionImpl instance = new ApprovalRuleUpdateActionImpl();
         return instance;

@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeKey")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChannelChangeKeyActionImpl.class)
 public interface ChannelChangeKeyAction extends ChannelUpdateAction {
@@ -69,6 +70,8 @@ public interface ChannelChangeKeyAction extends ChannelUpdateAction {
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public ChannelChangeKeyAction copyDeep();
 
     /**
      * factory method to create a deep copy of ChannelChangeKeyAction

@@ -259,4 +259,8 @@ public class ZoneImpl implements Zone, ModelBase {
                 .build();
     }
 
+    @Override
+    public Zone copyDeep() {
+        return Zone.deepCopy(this);
+    }
 }

@@ -244,6 +244,8 @@ public interface Price extends com.commercetools.api.models.Customizable<Price>,
         return instance;
     }
 
+    public Price copyDeep();
+
     /**
      * factory method to create a deep copy of Price
      * @param template instance to be copied

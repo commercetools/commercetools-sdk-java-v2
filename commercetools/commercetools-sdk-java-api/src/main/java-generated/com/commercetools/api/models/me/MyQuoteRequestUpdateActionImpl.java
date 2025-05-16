@@ -69,4 +69,8 @@ public class MyQuoteRequestUpdateActionImpl implements MyQuoteRequestUpdateActio
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action).build();
     }
 
+    @Override
+    public MyQuoteRequestUpdateAction copyDeep() {
+        return MyQuoteRequestUpdateAction.deepCopy(this);
+    }
 }

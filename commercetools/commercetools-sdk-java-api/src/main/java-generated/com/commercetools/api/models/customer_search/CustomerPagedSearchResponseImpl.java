@@ -137,4 +137,8 @@ public class CustomerPagedSearchResponseImpl implements CustomerPagedSearchRespo
                 .build();
     }
 
+    @Override
+    public CustomerPagedSearchResponse copyDeep() {
+        return CustomerPagedSearchResponse.deepCopy(this);
+    }
 }

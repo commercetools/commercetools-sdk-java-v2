@@ -314,4 +314,8 @@ public class DeliveryCustomTypeRemovedMessageImpl implements DeliveryCustomTypeR
                 .build();
     }
 
+    @Override
+    public DeliveryCustomTypeRemovedMessage copyDeep() {
+        return DeliveryCustomTypeRemovedMessage.deepCopy(this);
+    }
 }

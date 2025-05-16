@@ -65,6 +65,8 @@ public interface UpdateAction extends com.commercetools.api.models.ResourceUpdat
         return instance;
     }
 
+    public UpdateAction copyDeep();
+
     /**
      * factory method to create a deep copy of UpdateAction
      * @param template instance to be copied

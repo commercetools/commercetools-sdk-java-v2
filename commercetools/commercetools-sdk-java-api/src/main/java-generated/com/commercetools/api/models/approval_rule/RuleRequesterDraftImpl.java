@@ -78,4 +78,8 @@ public class RuleRequesterDraftImpl implements RuleRequesterDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public RuleRequesterDraft copyDeep() {
+        return RuleRequesterDraft.deepCopy(this);
+    }
 }

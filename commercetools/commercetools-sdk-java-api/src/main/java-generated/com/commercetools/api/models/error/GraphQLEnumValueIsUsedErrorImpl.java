@@ -96,4 +96,8 @@ public class GraphQLEnumValueIsUsedErrorImpl implements GraphQLEnumValueIsUsedEr
                 .build();
     }
 
+    @Override
+    public GraphQLEnumValueIsUsedError copyDeep() {
+        return GraphQLEnumValueIsUsedError.deepCopy(this);
+    }
 }

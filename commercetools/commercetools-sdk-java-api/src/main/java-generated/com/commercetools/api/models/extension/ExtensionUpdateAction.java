@@ -27,11 +27,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.extension.ExtensionChangeDestinationActionImpl.class, name = ExtensionChangeDestinationAction.CHANGE_DESTINATION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.extension.ExtensionChangeTriggersActionImpl.class, name = ExtensionChangeTriggersAction.CHANGE_TRIGGERS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.extension.ExtensionSetKeyActionImpl.class, name = ExtensionSetKeyAction.SET_KEY),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.extension.ExtensionSetTimeoutInMsActionImpl.class, name = ExtensionSetTimeoutInMsAction.SET_TIMEOUT_IN_MS) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = ExtensionUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = ExtensionUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -46,6 +41,8 @@ public interface ExtensionUpdateAction
     @JsonProperty("action")
     public String getAction();
 
+    public ExtensionUpdateAction copyDeep();
+
     /**
      * factory method to create a deep copy of ExtensionUpdateAction
      * @param template instance to be copied
@@ -56,21 +53,9 @@ public interface ExtensionUpdateAction
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.extension.ExtensionChangeDestinationAction) {
-            return com.commercetools.api.models.extension.ExtensionChangeDestinationAction
-                    .deepCopy((com.commercetools.api.models.extension.ExtensionChangeDestinationAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.extension.ExtensionChangeTriggersAction) {
-            return com.commercetools.api.models.extension.ExtensionChangeTriggersAction
-                    .deepCopy((com.commercetools.api.models.extension.ExtensionChangeTriggersAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.extension.ExtensionSetKeyAction) {
-            return com.commercetools.api.models.extension.ExtensionSetKeyAction
-                    .deepCopy((com.commercetools.api.models.extension.ExtensionSetKeyAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.extension.ExtensionSetTimeoutInMsAction) {
-            return com.commercetools.api.models.extension.ExtensionSetTimeoutInMsAction
-                    .deepCopy((com.commercetools.api.models.extension.ExtensionSetTimeoutInMsAction) template);
+
+        if (!(template instanceof ExtensionUpdateActionImpl)) {
+            return template.copyDeep();
         }
         ExtensionUpdateActionImpl instance = new ExtensionUpdateActionImpl();
         return instance;

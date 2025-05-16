@@ -316,4 +316,8 @@ public class QuoteRequestStateChangedMessageImpl implements QuoteRequestStateCha
                 .build();
     }
 
+    @Override
+    public QuoteRequestStateChangedMessage copyDeep() {
+        return QuoteRequestStateChangedMessage.deepCopy(this);
+    }
 }

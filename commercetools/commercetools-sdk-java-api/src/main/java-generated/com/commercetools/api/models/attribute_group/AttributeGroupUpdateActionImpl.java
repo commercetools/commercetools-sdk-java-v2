@@ -69,4 +69,8 @@ public class AttributeGroupUpdateActionImpl implements AttributeGroupUpdateActio
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action).build();
     }
 
+    @Override
+    public AttributeGroupUpdateAction copyDeep() {
+        return AttributeGroupUpdateAction.deepCopy(this);
+    }
 }

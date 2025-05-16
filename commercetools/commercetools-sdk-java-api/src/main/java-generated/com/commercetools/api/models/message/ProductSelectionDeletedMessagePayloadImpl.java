@@ -62,4 +62,8 @@ public class ProductSelectionDeletedMessagePayloadImpl implements ProductSelecti
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type).build();
     }
 
+    @Override
+    public ProductSelectionDeletedMessagePayload copyDeep() {
+        return ProductSelectionDeletedMessagePayload.deepCopy(this);
+    }
 }

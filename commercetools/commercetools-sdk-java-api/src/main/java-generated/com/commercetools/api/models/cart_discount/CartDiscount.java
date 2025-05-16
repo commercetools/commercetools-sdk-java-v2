@@ -442,6 +442,8 @@ public interface CartDiscount
         return instance;
     }
 
+    public CartDiscount copyDeep();
+
     /**
      * factory method to create a deep copy of CartDiscount
      * @param template instance to be copied

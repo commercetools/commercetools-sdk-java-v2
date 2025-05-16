@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("QueryTimedOut")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = QueryTimedOutErrorImpl.class)
 public interface QueryTimedOutError extends ErrorObject {
@@ -79,6 +80,8 @@ public interface QueryTimedOutError extends ErrorObject {
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
+
+    public QueryTimedOutError copyDeep();
 
     /**
      * factory method to create a deep copy of QueryTimedOutError

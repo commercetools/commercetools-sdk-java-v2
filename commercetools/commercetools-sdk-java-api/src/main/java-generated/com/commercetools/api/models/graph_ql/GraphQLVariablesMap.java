@@ -66,6 +66,8 @@ public interface GraphQLVariablesMap {
         return instance;
     }
 
+    public GraphQLVariablesMap copyDeep();
+
     /**
      * factory method to create a deep copy of GraphQLVariablesMap
      * @param template instance to be copied

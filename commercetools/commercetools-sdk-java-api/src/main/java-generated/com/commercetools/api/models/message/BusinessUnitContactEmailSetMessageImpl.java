@@ -294,4 +294,8 @@ public class BusinessUnitContactEmailSetMessageImpl implements BusinessUnitConta
                 .build();
     }
 
+    @Override
+    public BusinessUnitContactEmailSetMessage copyDeep() {
+        return BusinessUnitContactEmailSetMessage.deepCopy(this);
+    }
 }

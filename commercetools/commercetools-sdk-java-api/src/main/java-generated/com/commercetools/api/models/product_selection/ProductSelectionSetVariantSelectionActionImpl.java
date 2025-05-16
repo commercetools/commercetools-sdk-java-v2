@@ -114,4 +114,8 @@ public class ProductSelectionSetVariantSelectionActionImpl
                 .build();
     }
 
+    @Override
+    public ProductSelectionSetVariantSelectionAction copyDeep() {
+        return ProductSelectionSetVariantSelectionAction.deepCopy(this);
+    }
 }

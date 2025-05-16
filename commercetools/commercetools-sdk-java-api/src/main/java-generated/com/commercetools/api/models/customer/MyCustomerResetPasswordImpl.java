@@ -95,4 +95,8 @@ public class MyCustomerResetPasswordImpl implements MyCustomerResetPassword, Mod
                 .build();
     }
 
+    @Override
+    public MyCustomerResetPassword copyDeep() {
+        return MyCustomerResetPassword.deepCopy(this);
+    }
 }

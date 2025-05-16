@@ -293,4 +293,8 @@ public class InventoryEntryCreatedMessageImpl implements InventoryEntryCreatedMe
                 .build();
     }
 
+    @Override
+    public InventoryEntryCreatedMessage copyDeep() {
+        return InventoryEntryCreatedMessage.deepCopy(this);
+    }
 }

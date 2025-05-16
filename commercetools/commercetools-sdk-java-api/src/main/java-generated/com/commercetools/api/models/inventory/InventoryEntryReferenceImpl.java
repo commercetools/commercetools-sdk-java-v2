@@ -111,4 +111,8 @@ public class InventoryEntryReferenceImpl implements InventoryEntryReference, Mod
                 .build();
     }
 
+    @Override
+    public InventoryEntryReference copyDeep() {
+        return InventoryEntryReference.deepCopy(this);
+    }
 }

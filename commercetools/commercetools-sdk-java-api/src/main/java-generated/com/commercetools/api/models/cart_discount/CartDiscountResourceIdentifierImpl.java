@@ -110,4 +110,8 @@ public class CartDiscountResourceIdentifierImpl implements CartDiscountResourceI
                 .build();
     }
 
+    @Override
+    public CartDiscountResourceIdentifier copyDeep() {
+        return CartDiscountResourceIdentifier.deepCopy(this);
+    }
 }

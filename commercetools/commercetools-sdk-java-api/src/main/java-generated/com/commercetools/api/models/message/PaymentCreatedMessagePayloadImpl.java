@@ -92,4 +92,8 @@ public class PaymentCreatedMessagePayloadImpl implements PaymentCreatedMessagePa
                 .build();
     }
 
+    @Override
+    public PaymentCreatedMessagePayload copyDeep() {
+        return PaymentCreatedMessagePayload.deepCopy(this);
+    }
 }

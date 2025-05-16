@@ -31,6 +31,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ResourceCreated")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ResourceCreatedDeliveryPayloadImpl.class)
 public interface ResourceCreatedDeliveryPayload extends DeliveryPayload {
@@ -92,6 +93,8 @@ public interface ResourceCreatedDeliveryPayload extends DeliveryPayload {
         instance.setModifiedAt(template.getModifiedAt());
         return instance;
     }
+
+    public ResourceCreatedDeliveryPayload copyDeep();
 
     /**
      * factory method to create a deep copy of ResourceCreatedDeliveryPayload

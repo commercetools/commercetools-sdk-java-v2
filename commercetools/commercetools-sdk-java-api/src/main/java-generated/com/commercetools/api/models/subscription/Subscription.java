@@ -302,6 +302,8 @@ public interface Subscription extends BaseResource, com.commercetools.api.models
         return instance;
     }
 
+    public Subscription copyDeep();
+
     /**
      * factory method to create a deep copy of Subscription
      * @param template instance to be copied

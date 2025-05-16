@@ -110,4 +110,8 @@ public class StoreResourceIdentifierImpl implements StoreResourceIdentifier, Mod
                 .build();
     }
 
+    @Override
+    public StoreResourceIdentifier copyDeep() {
+        return StoreResourceIdentifier.deepCopy(this);
+    }
 }

@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setCustomField")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AssociateRoleSetCustomFieldActionImpl.class)
 public interface AssociateRoleSetCustomFieldAction extends AssociateRoleUpdateAction {
@@ -85,6 +86,8 @@ public interface AssociateRoleSetCustomFieldAction extends AssociateRoleUpdateAc
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public AssociateRoleSetCustomFieldAction copyDeep();
 
     /**
      * factory method to create a deep copy of AssociateRoleSetCustomFieldAction

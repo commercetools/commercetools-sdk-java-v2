@@ -175,4 +175,8 @@ public class ImportContainerCreatedEventImpl implements ImportContainerCreatedEv
                 .build();
     }
 
+    @Override
+    public ImportContainerCreatedEvent copyDeep() {
+        return ImportContainerCreatedEvent.deepCopy(this);
+    }
 }

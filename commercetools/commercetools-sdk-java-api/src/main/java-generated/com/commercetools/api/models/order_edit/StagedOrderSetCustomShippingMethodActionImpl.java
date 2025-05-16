@@ -176,4 +176,8 @@ public class StagedOrderSetCustomShippingMethodActionImpl
                 .build();
     }
 
+    @Override
+    public StagedOrderSetCustomShippingMethodAction copyDeep() {
+        return StagedOrderSetCustomShippingMethodAction.deepCopy(this);
+    }
 }

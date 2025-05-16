@@ -94,4 +94,8 @@ public class ProjectSetBusinessUnitAssociateRoleOnCreationActionImpl
                 .build();
     }
 
+    @Override
+    public ProjectSetBusinessUnitAssociateRoleOnCreationAction copyDeep() {
+        return ProjectSetBusinessUnitAssociateRoleOnCreationAction.deepCopy(this);
+    }
 }

@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ProductPriceCustomFieldAdded")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductPriceCustomFieldAddedMessagePayloadImpl.class)
 public interface ProductPriceCustomFieldAddedMessagePayload extends MessagePayload {
@@ -137,6 +138,8 @@ public interface ProductPriceCustomFieldAddedMessagePayload extends MessagePaylo
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public ProductPriceCustomFieldAddedMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of ProductPriceCustomFieldAddedMessagePayload

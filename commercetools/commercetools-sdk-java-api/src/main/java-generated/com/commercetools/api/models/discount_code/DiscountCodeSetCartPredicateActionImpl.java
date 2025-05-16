@@ -91,4 +91,8 @@ public class DiscountCodeSetCartPredicateActionImpl implements DiscountCodeSetCa
                 .build();
     }
 
+    @Override
+    public DiscountCodeSetCartPredicateAction copyDeep() {
+        return DiscountCodeSetCartPredicateAction.deepCopy(this);
+    }
 }

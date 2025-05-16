@@ -92,4 +92,8 @@ public class ProjectChangeCustomerSearchStatusActionImpl implements ProjectChang
                 .build();
     }
 
+    @Override
+    public ProjectChangeCustomerSearchStatusAction copyDeep() {
+        return ProjectChangeCustomerSearchStatusAction.deepCopy(this);
+    }
 }

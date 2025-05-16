@@ -276,4 +276,8 @@ public class ProductSelectionImpl implements ProductSelection, ModelBase {
                 .build();
     }
 
+    @Override
+    public ProductSelection copyDeep() {
+        return ProductSelection.deepCopy(this);
+    }
 }

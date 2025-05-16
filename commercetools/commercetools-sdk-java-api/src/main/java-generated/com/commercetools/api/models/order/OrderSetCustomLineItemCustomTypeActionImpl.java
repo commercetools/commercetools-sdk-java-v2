@@ -153,4 +153,8 @@ public class OrderSetCustomLineItemCustomTypeActionImpl implements OrderSetCusto
                 .build();
     }
 
+    @Override
+    public OrderSetCustomLineItemCustomTypeAction copyDeep() {
+        return OrderSetCustomLineItemCustomTypeAction.deepCopy(this);
+    }
 }

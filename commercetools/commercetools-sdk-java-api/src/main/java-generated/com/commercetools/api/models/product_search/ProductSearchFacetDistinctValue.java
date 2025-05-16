@@ -237,6 +237,8 @@ public interface ProductSearchFacetDistinctValue {
         return instance;
     }
 
+    public ProductSearchFacetDistinctValue copyDeep();
+
     /**
      * factory method to create a deep copy of ProductSearchFacetDistinctValue
      * @param template instance to be copied

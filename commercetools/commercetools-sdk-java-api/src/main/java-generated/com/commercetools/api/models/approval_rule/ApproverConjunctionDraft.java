@@ -76,6 +76,8 @@ public interface ApproverConjunctionDraft extends io.vrap.rmf.base.client.Draft<
         return instance;
     }
 
+    public ApproverConjunctionDraft copyDeep();
+
     /**
      * factory method to create a deep copy of ApproverConjunctionDraft
      * @param template instance to be copied

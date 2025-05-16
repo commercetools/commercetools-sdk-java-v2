@@ -96,4 +96,8 @@ public class DiscountedLineItemPortionDraftImpl implements DiscountedLineItemPor
                 .build();
     }
 
+    @Override
+    public DiscountedLineItemPortionDraft copyDeep() {
+        return DiscountedLineItemPortionDraft.deepCopy(this);
+    }
 }

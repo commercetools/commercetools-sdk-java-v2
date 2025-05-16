@@ -110,4 +110,8 @@ public class QuoteResourceIdentifierImpl implements QuoteResourceIdentifier, Mod
                 .build();
     }
 
+    @Override
+    public QuoteResourceIdentifier copyDeep() {
+        return QuoteResourceIdentifier.deepCopy(this);
+    }
 }

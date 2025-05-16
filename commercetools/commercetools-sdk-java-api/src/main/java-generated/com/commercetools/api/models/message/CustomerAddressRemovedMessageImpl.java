@@ -293,4 +293,8 @@ public class CustomerAddressRemovedMessageImpl implements CustomerAddressRemoved
                 .build();
     }
 
+    @Override
+    public CustomerAddressRemovedMessage copyDeep() {
+        return CustomerAddressRemovedMessage.deepCopy(this);
+    }
 }

@@ -179,4 +179,8 @@ public class PagedQueryResponseImpl implements PagedQueryResponse, ModelBase {
                 .build();
     }
 
+    @Override
+    public PagedQueryResponse copyDeep() {
+        return PagedQueryResponse.deepCopy(this);
+    }
 }

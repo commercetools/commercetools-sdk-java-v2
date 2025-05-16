@@ -115,4 +115,8 @@ public class SearchDeactivatedErrorImpl implements SearchDeactivatedError, Model
                 .build();
     }
 
+    @Override
+    public SearchDeactivatedError copyDeep() {
+        return SearchDeactivatedError.deepCopy(this);
+    }
 }

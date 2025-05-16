@@ -204,4 +204,8 @@ public class OrderLineItemDiscountSetMessagePayloadImpl implements OrderLineItem
                 .build();
     }
 
+    @Override
+    public OrderLineItemDiscountSetMessagePayload copyDeep() {
+        return OrderLineItemDiscountSetMessagePayload.deepCopy(this);
+    }
 }

@@ -97,4 +97,8 @@ public class PriceTierDraftImpl implements PriceTierDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public PriceTierDraft copyDeep() {
+        return PriceTierDraft.deepCopy(this);
+    }
 }

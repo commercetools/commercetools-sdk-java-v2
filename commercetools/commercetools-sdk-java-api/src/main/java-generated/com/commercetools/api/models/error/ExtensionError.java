@@ -133,6 +133,8 @@ public interface ExtensionError {
         return instance;
     }
 
+    public ExtensionError copyDeep();
+
     /**
      * factory method to create a deep copy of ExtensionError
      * @param template instance to be copied

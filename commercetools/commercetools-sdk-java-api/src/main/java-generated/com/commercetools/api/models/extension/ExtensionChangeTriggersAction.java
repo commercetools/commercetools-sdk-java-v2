@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeTriggers")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ExtensionChangeTriggersActionImpl.class)
 public interface ExtensionChangeTriggersAction extends ExtensionUpdateAction {
@@ -80,6 +81,8 @@ public interface ExtensionChangeTriggersAction extends ExtensionUpdateAction {
         instance.setTriggers(template.getTriggers());
         return instance;
     }
+
+    public ExtensionChangeTriggersAction copyDeep();
 
     /**
      * factory method to create a deep copy of ExtensionChangeTriggersAction

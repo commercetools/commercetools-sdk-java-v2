@@ -91,4 +91,8 @@ public class StateSetNameActionImpl implements StateSetNameAction, ModelBase {
                 .build();
     }
 
+    @Override
+    public StateSetNameAction copyDeep() {
+        return StateSetNameAction.deepCopy(this);
+    }
 }

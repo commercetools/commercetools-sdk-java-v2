@@ -293,4 +293,8 @@ public class ProductPriceModeSetMessageImpl implements ProductPriceModeSetMessag
                 .build();
     }
 
+    @Override
+    public ProductPriceModeSetMessage copyDeep() {
+        return ProductPriceModeSetMessage.deepCopy(this);
+    }
 }

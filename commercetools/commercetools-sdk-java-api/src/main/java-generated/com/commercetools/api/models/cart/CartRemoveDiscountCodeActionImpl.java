@@ -92,4 +92,8 @@ public class CartRemoveDiscountCodeActionImpl implements CartRemoveDiscountCodeA
                 .build();
     }
 
+    @Override
+    public CartRemoveDiscountCodeAction copyDeep() {
+        return CartRemoveDiscountCodeAction.deepCopy(this);
+    }
 }

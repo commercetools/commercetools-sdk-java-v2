@@ -82,6 +82,8 @@ public interface AssetDimensions {
         return instance;
     }
 
+    public AssetDimensions copyDeep();
+
     /**
      * factory method to create a deep copy of AssetDimensions
      * @param template instance to be copied

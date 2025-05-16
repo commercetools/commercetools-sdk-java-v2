@@ -91,4 +91,8 @@ public class StandalonePriceChangeActiveActionImpl implements StandalonePriceCha
                 .build();
     }
 
+    @Override
+    public StandalonePriceChangeActiveAction copyDeep() {
+        return StandalonePriceChangeActiveAction.deepCopy(this);
+    }
 }

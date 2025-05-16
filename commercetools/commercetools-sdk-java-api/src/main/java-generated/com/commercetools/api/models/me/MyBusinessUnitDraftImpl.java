@@ -264,4 +264,8 @@ public class MyBusinessUnitDraftImpl implements MyBusinessUnitDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public MyBusinessUnitDraft copyDeep() {
+        return MyBusinessUnitDraft.deepCopy(this);
+    }
 }

@@ -264,4 +264,8 @@ public class OrderFromCartDraftImpl implements OrderFromCartDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public OrderFromCartDraft copyDeep() {
+        return OrderFromCartDraft.deepCopy(this);
+    }
 }

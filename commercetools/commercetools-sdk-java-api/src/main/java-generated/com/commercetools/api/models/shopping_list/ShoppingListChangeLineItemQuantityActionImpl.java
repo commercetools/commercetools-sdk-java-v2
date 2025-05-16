@@ -133,4 +133,8 @@ public class ShoppingListChangeLineItemQuantityActionImpl
                 .build();
     }
 
+    @Override
+    public ShoppingListChangeLineItemQuantityAction copyDeep() {
+        return ShoppingListChangeLineItemQuantityAction.deepCopy(this);
+    }
 }

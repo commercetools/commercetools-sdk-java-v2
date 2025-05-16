@@ -36,6 +36,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ReturnInfoAdded")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ReturnInfoAddedMessageImpl.class)
 public interface ReturnInfoAddedMessage extends OrderMessage {
@@ -89,6 +90,8 @@ public interface ReturnInfoAddedMessage extends OrderMessage {
         instance.setReturnInfo(template.getReturnInfo());
         return instance;
     }
+
+    public ReturnInfoAddedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of ReturnInfoAddedMessage

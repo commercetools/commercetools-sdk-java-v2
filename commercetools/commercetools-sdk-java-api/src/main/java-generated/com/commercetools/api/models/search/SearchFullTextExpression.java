@@ -67,6 +67,8 @@ public interface SearchFullTextExpression extends SearchQueryExpression {
         return instance;
     }
 
+    public SearchFullTextExpression copyDeep();
+
     /**
      * factory method to create a deep copy of SearchFullTextExpression
      * @param template instance to be copied

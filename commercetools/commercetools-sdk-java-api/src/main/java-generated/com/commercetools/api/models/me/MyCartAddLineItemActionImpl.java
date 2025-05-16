@@ -279,4 +279,8 @@ public class MyCartAddLineItemActionImpl implements MyCartAddLineItemAction, Mod
                 .build();
     }
 
+    @Override
+    public MyCartAddLineItemAction copyDeep() {
+        return MyCartAddLineItemAction.deepCopy(this);
+    }
 }

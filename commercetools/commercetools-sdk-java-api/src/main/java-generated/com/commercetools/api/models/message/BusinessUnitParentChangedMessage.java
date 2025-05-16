@@ -34,6 +34,7 @@ import jakarta.validation.Valid;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("BusinessUnitParentChanged")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = BusinessUnitParentChangedMessageImpl.class)
 public interface BusinessUnitParentChangedMessage extends Message {
@@ -102,6 +103,8 @@ public interface BusinessUnitParentChangedMessage extends Message {
         instance.setNewParentUnit(template.getNewParentUnit());
         return instance;
     }
+
+    public BusinessUnitParentChangedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of BusinessUnitParentChangedMessage

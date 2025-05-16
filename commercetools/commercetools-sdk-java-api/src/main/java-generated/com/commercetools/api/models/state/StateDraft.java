@@ -196,6 +196,8 @@ public interface StateDraft extends com.commercetools.api.models.WithKey, io.vra
         return instance;
     }
 
+    public StateDraft copyDeep();
+
     /**
      * factory method to create a deep copy of StateDraft
      * @param template instance to be copied

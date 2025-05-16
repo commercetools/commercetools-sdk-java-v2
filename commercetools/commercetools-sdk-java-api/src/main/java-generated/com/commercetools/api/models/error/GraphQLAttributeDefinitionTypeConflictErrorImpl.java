@@ -160,4 +160,8 @@ public class GraphQLAttributeDefinitionTypeConflictErrorImpl
                 .build();
     }
 
+    @Override
+    public GraphQLAttributeDefinitionTypeConflictError copyDeep() {
+        return GraphQLAttributeDefinitionTypeConflictError.deepCopy(this);
+    }
 }

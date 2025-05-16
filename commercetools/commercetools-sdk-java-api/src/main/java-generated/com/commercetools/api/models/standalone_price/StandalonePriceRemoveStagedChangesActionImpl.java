@@ -63,4 +63,8 @@ public class StandalonePriceRemoveStagedChangesActionImpl
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action).build();
     }
 
+    @Override
+    public StandalonePriceRemoveStagedChangesAction copyDeep() {
+        return StandalonePriceRemoveStagedChangesAction.deepCopy(this);
+    }
 }

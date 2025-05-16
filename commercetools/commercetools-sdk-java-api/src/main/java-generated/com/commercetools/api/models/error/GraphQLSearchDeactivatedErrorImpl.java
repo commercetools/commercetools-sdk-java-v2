@@ -97,4 +97,8 @@ public class GraphQLSearchDeactivatedErrorImpl implements GraphQLSearchDeactivat
                 .build();
     }
 
+    @Override
+    public GraphQLSearchDeactivatedError copyDeep() {
+        return GraphQLSearchDeactivatedError.deepCopy(this);
+    }
 }

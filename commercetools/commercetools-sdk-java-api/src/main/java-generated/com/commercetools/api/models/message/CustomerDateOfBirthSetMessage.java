@@ -32,6 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("CustomerDateOfBirthSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerDateOfBirthSetMessageImpl.class)
 public interface CustomerDateOfBirthSetMessage extends Message {
@@ -84,6 +85,8 @@ public interface CustomerDateOfBirthSetMessage extends Message {
         instance.setDateOfBirth(template.getDateOfBirth());
         return instance;
     }
+
+    public CustomerDateOfBirthSetMessage copyDeep();
 
     /**
      * factory method to create a deep copy of CustomerDateOfBirthSetMessage

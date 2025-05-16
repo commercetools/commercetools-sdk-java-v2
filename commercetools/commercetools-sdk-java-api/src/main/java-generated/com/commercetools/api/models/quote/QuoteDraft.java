@@ -160,6 +160,8 @@ public interface QuoteDraft extends com.commercetools.api.models.CustomizableDra
         return instance;
     }
 
+    public QuoteDraft copyDeep();
+
     /**
      * factory method to create a deep copy of QuoteDraft
      * @param template instance to be copied

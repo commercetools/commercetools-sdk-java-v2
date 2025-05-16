@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setCustomerNumber")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerSetCustomerNumberActionImpl.class)
 public interface CustomerSetCustomerNumberAction extends CustomerUpdateAction {
@@ -66,6 +67,8 @@ public interface CustomerSetCustomerNumberAction extends CustomerUpdateAction {
         instance.setCustomerNumber(template.getCustomerNumber());
         return instance;
     }
+
+    public CustomerSetCustomerNumberAction copyDeep();
 
     /**
      * factory method to create a deep copy of CustomerSetCustomerNumberAction

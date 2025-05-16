@@ -110,4 +110,8 @@ public class ChannelSetCustomFieldActionImpl implements ChannelSetCustomFieldAct
                 .build();
     }
 
+    @Override
+    public ChannelSetCustomFieldAction copyDeep() {
+        return ChannelSetCustomFieldAction.deepCopy(this);
+    }
 }

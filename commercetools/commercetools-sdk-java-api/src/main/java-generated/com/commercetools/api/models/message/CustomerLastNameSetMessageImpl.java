@@ -293,4 +293,8 @@ public class CustomerLastNameSetMessageImpl implements CustomerLastNameSetMessag
                 .build();
     }
 
+    @Override
+    public CustomerLastNameSetMessage copyDeep() {
+        return CustomerLastNameSetMessage.deepCopy(this);
+    }
 }

@@ -92,4 +92,8 @@ public class OrderCustomLineItemAddedMessagePayloadImpl implements OrderCustomLi
                 .build();
     }
 
+    @Override
+    public OrderCustomLineItemAddedMessagePayload copyDeep() {
+        return OrderCustomLineItemAddedMessagePayload.deepCopy(this);
+    }
 }

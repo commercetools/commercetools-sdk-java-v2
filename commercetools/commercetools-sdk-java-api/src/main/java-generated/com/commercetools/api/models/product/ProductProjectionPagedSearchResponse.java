@@ -162,6 +162,8 @@ public interface ProductProjectionPagedSearchResponse
         return instance;
     }
 
+    public ProductProjectionPagedSearchResponse copyDeep();
+
     /**
      * factory method to create a deep copy of ProductProjectionPagedSearchResponse
      * @param template instance to be copied

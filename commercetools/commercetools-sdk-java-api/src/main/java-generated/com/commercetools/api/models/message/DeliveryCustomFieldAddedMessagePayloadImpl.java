@@ -128,4 +128,8 @@ public class DeliveryCustomFieldAddedMessagePayloadImpl implements DeliveryCusto
                 .build();
     }
 
+    @Override
+    public DeliveryCustomFieldAddedMessagePayload copyDeep() {
+        return DeliveryCustomFieldAddedMessagePayload.deepCopy(this);
+    }
 }

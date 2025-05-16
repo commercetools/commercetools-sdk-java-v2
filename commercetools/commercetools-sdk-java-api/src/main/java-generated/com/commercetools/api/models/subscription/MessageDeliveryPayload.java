@@ -36,6 +36,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("Message")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MessageDeliveryPayloadImpl.class)
 public interface MessageDeliveryPayload extends DeliveryPayload, MessageDeliveryPayloadMixin {
@@ -177,6 +178,8 @@ public interface MessageDeliveryPayload extends DeliveryPayload, MessageDelivery
         instance.setPayloadNotIncluded(template.getPayloadNotIncluded());
         return instance;
     }
+
+    public MessageDeliveryPayload copyDeep();
 
     /**
      * factory method to create a deep copy of MessageDeliveryPayload

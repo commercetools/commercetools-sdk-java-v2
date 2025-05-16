@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("addAsset")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTailoringAddAssetActionImpl.class)
 public interface ProductTailoringAddAssetAction extends ProductTailoringUpdateAction {
@@ -136,6 +137,8 @@ public interface ProductTailoringAddAssetAction extends ProductTailoringUpdateAc
         instance.setPosition(template.getPosition());
         return instance;
     }
+
+    public ProductTailoringAddAssetAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductTailoringAddAssetAction

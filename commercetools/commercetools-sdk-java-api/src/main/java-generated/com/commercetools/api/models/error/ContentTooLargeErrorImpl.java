@@ -114,4 +114,8 @@ public class ContentTooLargeErrorImpl implements ContentTooLargeError, ModelBase
                 .build();
     }
 
+    @Override
+    public ContentTooLargeError copyDeep() {
+        return ContentTooLargeError.deepCopy(this);
+    }
 }

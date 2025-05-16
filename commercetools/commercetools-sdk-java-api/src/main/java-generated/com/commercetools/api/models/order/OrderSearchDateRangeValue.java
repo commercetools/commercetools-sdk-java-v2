@@ -83,6 +83,8 @@ public interface OrderSearchDateRangeValue extends OrderSearchQueryExpressionVal
         return instance;
     }
 
+    public OrderSearchDateRangeValue copyDeep();
+
     /**
      * factory method to create a deep copy of OrderSearchDateRangeValue
      * @param template instance to be copied

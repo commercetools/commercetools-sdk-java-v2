@@ -354,6 +354,8 @@ public interface ShippingMethod
         return instance;
     }
 
+    public ShippingMethod copyDeep();
+
     /**
      * factory method to create a deep copy of ShippingMethod
      * @param template instance to be copied

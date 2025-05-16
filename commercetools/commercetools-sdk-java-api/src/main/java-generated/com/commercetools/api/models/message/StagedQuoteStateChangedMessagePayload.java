@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("StagedQuoteStateChanged")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedQuoteStateChangedMessagePayloadImpl.class)
 public interface StagedQuoteStateChangedMessagePayload extends MessagePayload {
@@ -87,6 +88,8 @@ public interface StagedQuoteStateChangedMessagePayload extends MessagePayload {
         instance.setOldStagedQuoteState(template.getOldStagedQuoteState());
         return instance;
     }
+
+    public StagedQuoteStateChangedMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of StagedQuoteStateChangedMessagePayload

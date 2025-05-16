@@ -95,4 +95,8 @@ public class AttributionImpl implements Attribution, ModelBase {
                 .build();
     }
 
+    @Override
+    public Attribution copyDeep() {
+        return Attribution.deepCopy(this);
+    }
 }

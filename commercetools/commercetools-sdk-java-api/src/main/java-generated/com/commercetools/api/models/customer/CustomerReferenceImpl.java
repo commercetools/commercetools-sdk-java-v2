@@ -111,4 +111,8 @@ public class CustomerReferenceImpl implements CustomerReference, ModelBase {
                 .build();
     }
 
+    @Override
+    public CustomerReference copyDeep() {
+        return CustomerReference.deepCopy(this);
+    }
 }

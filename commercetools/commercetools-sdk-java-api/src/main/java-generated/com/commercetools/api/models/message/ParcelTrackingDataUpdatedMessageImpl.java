@@ -353,4 +353,8 @@ public class ParcelTrackingDataUpdatedMessageImpl implements ParcelTrackingDataU
                 .build();
     }
 
+    @Override
+    public ParcelTrackingDataUpdatedMessage copyDeep() {
+        return ParcelTrackingDataUpdatedMessage.deepCopy(this);
+    }
 }

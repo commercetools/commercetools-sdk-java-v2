@@ -92,4 +92,8 @@ public class DiscountCodeSetNameActionImpl implements DiscountCodeSetNameAction,
                 .build();
     }
 
+    @Override
+    public DiscountCodeSetNameAction copyDeep() {
+        return DiscountCodeSetNameAction.deepCopy(this);
+    }
 }

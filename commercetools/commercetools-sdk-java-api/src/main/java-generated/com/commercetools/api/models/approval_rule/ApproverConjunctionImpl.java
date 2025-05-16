@@ -78,4 +78,8 @@ public class ApproverConjunctionImpl implements ApproverConjunction, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("and", and).build();
     }
 
+    @Override
+    public ApproverConjunction copyDeep() {
+        return ApproverConjunction.deepCopy(this);
+    }
 }

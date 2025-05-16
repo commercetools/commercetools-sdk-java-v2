@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setDeleteDaysAfterLastModification")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartSetDeleteDaysAfterLastModificationActionImpl.class)
 public interface CartSetDeleteDaysAfterLastModificationAction extends CartUpdateAction {
@@ -68,6 +69,8 @@ public interface CartSetDeleteDaysAfterLastModificationAction extends CartUpdate
         instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
         return instance;
     }
+
+    public CartSetDeleteDaysAfterLastModificationAction copyDeep();
 
     /**
      * factory method to create a deep copy of CartSetDeleteDaysAfterLastModificationAction

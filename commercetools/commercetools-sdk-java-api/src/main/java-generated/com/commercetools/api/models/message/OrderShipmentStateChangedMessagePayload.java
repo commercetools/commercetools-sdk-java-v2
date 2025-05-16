@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("OrderShipmentStateChanged")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderShipmentStateChangedMessagePayloadImpl.class)
 public interface OrderShipmentStateChangedMessagePayload extends OrderMessagePayload {
@@ -86,6 +87,8 @@ public interface OrderShipmentStateChangedMessagePayload extends OrderMessagePay
         instance.setOldShipmentState(template.getOldShipmentState());
         return instance;
     }
+
+    public OrderShipmentStateChangedMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of OrderShipmentStateChangedMessagePayload

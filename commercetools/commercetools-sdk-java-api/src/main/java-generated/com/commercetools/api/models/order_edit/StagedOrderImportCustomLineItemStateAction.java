@@ -31,6 +31,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("importCustomLineItemState")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderImportCustomLineItemStateActionImpl.class)
 public interface StagedOrderImportCustomLineItemStateAction extends StagedOrderUpdateAction {
@@ -115,6 +116,8 @@ public interface StagedOrderImportCustomLineItemStateAction extends StagedOrderU
         instance.setState(template.getState());
         return instance;
     }
+
+    public StagedOrderImportCustomLineItemStateAction copyDeep();
 
     /**
      * factory method to create a deep copy of StagedOrderImportCustomLineItemStateAction

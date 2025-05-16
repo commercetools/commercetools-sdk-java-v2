@@ -51,4 +51,8 @@ public class OrderSearchCompoundExpressionImpl implements OrderSearchCompoundExp
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).build();
     }
 
+    @Override
+    public OrderSearchCompoundExpression copyDeep() {
+        return OrderSearchCompoundExpression.deepCopy(this);
+    }
 }

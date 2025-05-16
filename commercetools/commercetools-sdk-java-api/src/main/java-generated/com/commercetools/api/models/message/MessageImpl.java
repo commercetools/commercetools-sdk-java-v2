@@ -272,4 +272,8 @@ public class MessageImpl implements Message, ModelBase {
                 .build();
     }
 
+    @Override
+    public Message copyDeep() {
+        return Message.deepCopy(this);
+    }
 }

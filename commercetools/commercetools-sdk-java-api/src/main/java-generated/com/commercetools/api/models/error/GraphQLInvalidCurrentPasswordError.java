@@ -31,6 +31,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("InvalidCurrentPassword")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLInvalidCurrentPasswordErrorImpl.class)
 public interface GraphQLInvalidCurrentPasswordError extends GraphQLErrorObject {
@@ -66,6 +67,8 @@ public interface GraphQLInvalidCurrentPasswordError extends GraphQLErrorObject {
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
+
+    public GraphQLInvalidCurrentPasswordError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLInvalidCurrentPasswordError

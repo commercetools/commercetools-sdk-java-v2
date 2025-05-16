@@ -111,4 +111,8 @@ public class MyCustomerSetDefaultShippingAddressActionImpl
                 .build();
     }
 
+    @Override
+    public MyCustomerSetDefaultShippingAddressAction copyDeep() {
+        return MyCustomerSetDefaultShippingAddressAction.deepCopy(this);
+    }
 }

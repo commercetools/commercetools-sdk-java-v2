@@ -101,4 +101,8 @@ public class ProductSelectionUpdateImpl implements ProductSelectionUpdate, Model
                 .build();
     }
 
+    @Override
+    public ProductSelectionUpdate copyDeep() {
+        return ProductSelectionUpdate.deepCopy(this);
+    }
 }

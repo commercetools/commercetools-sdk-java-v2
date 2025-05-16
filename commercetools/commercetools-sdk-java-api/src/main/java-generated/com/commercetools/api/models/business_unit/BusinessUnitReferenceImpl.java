@@ -111,4 +111,8 @@ public class BusinessUnitReferenceImpl implements BusinessUnitReference, ModelBa
                 .build();
     }
 
+    @Override
+    public BusinessUnitReference copyDeep() {
+        return BusinessUnitReference.deepCopy(this);
+    }
 }

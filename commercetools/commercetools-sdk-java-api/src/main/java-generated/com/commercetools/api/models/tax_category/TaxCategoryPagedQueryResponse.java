@@ -144,6 +144,8 @@ public interface TaxCategoryPagedQueryResponse
         return instance;
     }
 
+    public TaxCategoryPagedQueryResponse copyDeep();
+
     /**
      * factory method to create a deep copy of TaxCategoryPagedQueryResponse
      * @param template instance to be copied

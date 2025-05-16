@@ -99,4 +99,8 @@ public class StoreSetSupplyChannelsActionImpl implements StoreSetSupplyChannelsA
                 .build();
     }
 
+    @Override
+    public StoreSetSupplyChannelsAction copyDeep() {
+        return StoreSetSupplyChannelsAction.deepCopy(this);
+    }
 }

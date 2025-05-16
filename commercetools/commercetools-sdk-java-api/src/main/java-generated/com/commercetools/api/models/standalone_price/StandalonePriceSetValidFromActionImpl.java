@@ -92,4 +92,8 @@ public class StandalonePriceSetValidFromActionImpl implements StandalonePriceSet
                 .build();
     }
 
+    @Override
+    public StandalonePriceSetValidFromAction copyDeep() {
+        return StandalonePriceSetValidFromAction.deepCopy(this);
+    }
 }

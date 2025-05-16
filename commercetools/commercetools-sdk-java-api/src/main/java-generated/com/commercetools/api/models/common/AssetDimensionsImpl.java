@@ -88,4 +88,8 @@ public class AssetDimensionsImpl implements AssetDimensions, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("w", w).append("h", h).build();
     }
 
+    @Override
+    public AssetDimensions copyDeep() {
+        return AssetDimensions.deepCopy(this);
+    }
 }

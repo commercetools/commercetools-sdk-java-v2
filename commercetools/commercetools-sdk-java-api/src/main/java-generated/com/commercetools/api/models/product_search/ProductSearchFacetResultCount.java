@@ -67,6 +67,8 @@ public interface ProductSearchFacetResultCount extends ProductSearchFacetResult 
         return instance;
     }
 
+    public ProductSearchFacetResultCount copyDeep();
+
     /**
      * factory method to create a deep copy of ProductSearchFacetResultCount
      * @param template instance to be copied

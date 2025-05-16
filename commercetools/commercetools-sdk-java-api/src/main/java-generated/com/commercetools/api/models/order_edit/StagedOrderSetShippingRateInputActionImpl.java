@@ -97,4 +97,8 @@ public class StagedOrderSetShippingRateInputActionImpl implements StagedOrderSet
                 .build();
     }
 
+    @Override
+    public StagedOrderSetShippingRateInputAction copyDeep() {
+        return StagedOrderSetShippingRateInputAction.deepCopy(this);
+    }
 }

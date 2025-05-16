@@ -300,4 +300,8 @@ public class CustomerGroupAssignmentsSetMessageImpl implements CustomerGroupAssi
                 .build();
     }
 
+    @Override
+    public CustomerGroupAssignmentsSetMessage copyDeep() {
+        return CustomerGroupAssignmentsSetMessage.deepCopy(this);
+    }
 }

@@ -293,4 +293,8 @@ public class CustomerFirstNameSetMessageImpl implements CustomerFirstNameSetMess
                 .build();
     }
 
+    @Override
+    public CustomerFirstNameSetMessage copyDeep() {
+        return CustomerFirstNameSetMessage.deepCopy(this);
+    }
 }

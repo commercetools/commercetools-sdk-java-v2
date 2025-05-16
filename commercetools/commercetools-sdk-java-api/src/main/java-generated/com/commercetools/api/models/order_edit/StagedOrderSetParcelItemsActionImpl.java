@@ -135,4 +135,8 @@ public class StagedOrderSetParcelItemsActionImpl implements StagedOrderSetParcel
                 .build();
     }
 
+    @Override
+    public StagedOrderSetParcelItemsAction copyDeep() {
+        return StagedOrderSetParcelItemsAction.deepCopy(this);
+    }
 }

@@ -46,6 +46,8 @@ public interface ProductSearchFacetExpression {
         return instance;
     }
 
+    public ProductSearchFacetExpression copyDeep();
+
     /**
      * factory method to create a deep copy of ProductSearchFacetExpression
      * @param template instance to be copied
@@ -56,17 +58,9 @@ public interface ProductSearchFacetExpression {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.product_search.ProductSearchFacetCountExpression) {
-            return com.commercetools.api.models.product_search.ProductSearchFacetCountExpression
-                    .deepCopy((com.commercetools.api.models.product_search.ProductSearchFacetCountExpression) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_search.ProductSearchFacetDistinctExpression) {
-            return com.commercetools.api.models.product_search.ProductSearchFacetDistinctExpression.deepCopy(
-                (com.commercetools.api.models.product_search.ProductSearchFacetDistinctExpression) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_search.ProductSearchFacetRangesExpression) {
-            return com.commercetools.api.models.product_search.ProductSearchFacetRangesExpression.deepCopy(
-                (com.commercetools.api.models.product_search.ProductSearchFacetRangesExpression) template);
+
+        if (!(template instanceof ProductSearchFacetExpressionImpl)) {
+            return template.copyDeep();
         }
         ProductSearchFacetExpressionImpl instance = new ProductSearchFacetExpressionImpl();
         return instance;

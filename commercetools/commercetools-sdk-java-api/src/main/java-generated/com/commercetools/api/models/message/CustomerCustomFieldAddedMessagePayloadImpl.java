@@ -110,4 +110,8 @@ public class CustomerCustomFieldAddedMessagePayloadImpl implements CustomerCusto
                 .build();
     }
 
+    @Override
+    public CustomerCustomFieldAddedMessagePayload copyDeep() {
+        return CustomerCustomFieldAddedMessagePayload.deepCopy(this);
+    }
 }

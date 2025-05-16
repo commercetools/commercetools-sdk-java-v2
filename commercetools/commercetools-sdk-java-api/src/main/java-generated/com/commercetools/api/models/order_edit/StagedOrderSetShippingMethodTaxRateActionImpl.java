@@ -111,4 +111,8 @@ public class StagedOrderSetShippingMethodTaxRateActionImpl
                 .build();
     }
 
+    @Override
+    public StagedOrderSetShippingMethodTaxRateAction copyDeep() {
+        return StagedOrderSetShippingMethodTaxRateAction.deepCopy(this);
+    }
 }

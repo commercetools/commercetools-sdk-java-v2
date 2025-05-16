@@ -114,4 +114,8 @@ public class ProductDeletedMessagePayloadImpl implements ProductDeletedMessagePa
                 .build();
     }
 
+    @Override
+    public ProductDeletedMessagePayload copyDeep() {
+        return ProductDeletedMessagePayload.deepCopy(this);
+    }
 }

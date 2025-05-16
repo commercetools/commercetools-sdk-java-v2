@@ -69,4 +69,8 @@ public class SubscriptionUpdateActionImpl implements SubscriptionUpdateAction, M
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action).build();
     }
 
+    @Override
+    public SubscriptionUpdateAction copyDeep() {
+        return SubscriptionUpdateAction.deepCopy(this);
+    }
 }

@@ -69,4 +69,8 @@ public class ShippingRateInputDraftImpl implements ShippingRateInputDraft, Model
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type).build();
     }
 
+    @Override
+    public ShippingRateInputDraft copyDeep() {
+        return ShippingRateInputDraft.deepCopy(this);
+    }
 }

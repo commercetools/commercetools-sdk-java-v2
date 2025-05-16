@@ -93,4 +93,8 @@ public class MyCartSetBusinessUnitActionImpl implements MyCartSetBusinessUnitAct
                 .build();
     }
 
+    @Override
+    public MyCartSetBusinessUnitAction copyDeep() {
+        return MyCartSetBusinessUnitAction.deepCopy(this);
+    }
 }

@@ -139,4 +139,8 @@ public class OrderSetDeliveryItemsActionImpl implements OrderSetDeliveryItemsAct
                 .build();
     }
 
+    @Override
+    public OrderSetDeliveryItemsAction copyDeep() {
+        return OrderSetDeliveryItemsAction.deepCopy(this);
+    }
 }

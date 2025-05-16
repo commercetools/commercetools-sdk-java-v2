@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("removePayment")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyCartRemovePaymentActionImpl.class)
 public interface MyCartRemovePaymentAction extends MyCartUpdateAction {
@@ -72,6 +73,8 @@ public interface MyCartRemovePaymentAction extends MyCartUpdateAction {
         instance.setPayment(template.getPayment());
         return instance;
     }
+
+    public MyCartRemovePaymentAction copyDeep();
 
     /**
      * factory method to create a deep copy of MyCartRemovePaymentAction

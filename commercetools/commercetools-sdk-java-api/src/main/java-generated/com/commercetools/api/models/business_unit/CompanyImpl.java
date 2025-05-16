@@ -607,4 +607,8 @@ public class CompanyImpl implements Company, ModelBase {
                 .build();
     }
 
+    @Override
+    public Company copyDeep() {
+        return Company.deepCopy(this);
+    }
 }

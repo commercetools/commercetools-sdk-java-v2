@@ -96,4 +96,8 @@ public class GraphQLSearchExecutionFailureErrorImpl implements GraphQLSearchExec
                 .build();
     }
 
+    @Override
+    public GraphQLSearchExecutionFailureError copyDeep() {
+        return GraphQLSearchExecutionFailureError.deepCopy(this);
+    }
 }

@@ -111,4 +111,8 @@ public class ChannelSetAddressCustomTypeActionImpl implements ChannelSetAddressC
                 .build();
     }
 
+    @Override
+    public ChannelSetAddressCustomTypeAction copyDeep() {
+        return ChannelSetAddressCustomTypeAction.deepCopy(this);
+    }
 }

@@ -315,4 +315,8 @@ public class OrderShippingRateInputSetMessageImpl implements OrderShippingRateIn
                 .build();
     }
 
+    @Override
+    public OrderShippingRateInputSetMessage copyDeep() {
+        return OrderShippingRateInputSetMessage.deepCopy(this);
+    }
 }

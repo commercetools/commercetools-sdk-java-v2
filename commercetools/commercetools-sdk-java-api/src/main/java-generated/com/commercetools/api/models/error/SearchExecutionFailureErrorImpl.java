@@ -114,4 +114,8 @@ public class SearchExecutionFailureErrorImpl implements SearchExecutionFailureEr
                 .build();
     }
 
+    @Override
+    public SearchExecutionFailureError copyDeep() {
+        return SearchExecutionFailureError.deepCopy(this);
+    }
 }

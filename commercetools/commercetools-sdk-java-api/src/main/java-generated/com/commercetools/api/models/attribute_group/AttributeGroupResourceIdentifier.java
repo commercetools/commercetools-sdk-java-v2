@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("attribute-group")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AttributeGroupResourceIdentifierImpl.class)
 public interface AttributeGroupResourceIdentifier
@@ -84,6 +85,8 @@ public interface AttributeGroupResourceIdentifier
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public AttributeGroupResourceIdentifier copyDeep();
 
     /**
      * factory method to create a deep copy of AttributeGroupResourceIdentifier

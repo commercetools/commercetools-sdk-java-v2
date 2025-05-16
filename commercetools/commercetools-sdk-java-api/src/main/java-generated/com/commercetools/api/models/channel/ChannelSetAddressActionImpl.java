@@ -92,4 +92,8 @@ public class ChannelSetAddressActionImpl implements ChannelSetAddressAction, Mod
                 .build();
     }
 
+    @Override
+    public ChannelSetAddressAction copyDeep() {
+        return ChannelSetAddressAction.deepCopy(this);
+    }
 }

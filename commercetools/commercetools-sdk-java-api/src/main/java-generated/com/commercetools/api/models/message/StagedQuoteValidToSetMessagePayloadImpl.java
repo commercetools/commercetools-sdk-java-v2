@@ -91,4 +91,8 @@ public class StagedQuoteValidToSetMessagePayloadImpl implements StagedQuoteValid
                 .build();
     }
 
+    @Override
+    public StagedQuoteValidToSetMessagePayload copyDeep() {
+        return StagedQuoteValidToSetMessagePayload.deepCopy(this);
+    }
 }

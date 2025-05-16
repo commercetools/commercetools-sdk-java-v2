@@ -143,6 +143,8 @@ public interface ChannelPagedQueryResponse extends com.commercetools.api.models.
         return instance;
     }
 
+    public ChannelPagedQueryResponse copyDeep();
+
     /**
      * factory method to create a deep copy of ChannelPagedQueryResponse
      * @param template instance to be copied

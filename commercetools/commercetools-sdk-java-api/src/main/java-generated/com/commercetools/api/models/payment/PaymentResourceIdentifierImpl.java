@@ -110,4 +110,8 @@ public class PaymentResourceIdentifierImpl implements PaymentResourceIdentifier,
                 .build();
     }
 
+    @Override
+    public PaymentResourceIdentifier copyDeep() {
+        return PaymentResourceIdentifier.deepCopy(this);
+    }
 }

@@ -92,4 +92,8 @@ public class ProductPriceModeSetMessagePayloadImpl implements ProductPriceModeSe
                 .build();
     }
 
+    @Override
+    public ProductPriceModeSetMessagePayload copyDeep() {
+        return ProductPriceModeSetMessagePayload.deepCopy(this);
+    }
 }

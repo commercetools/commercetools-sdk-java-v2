@@ -26,6 +26,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("InternalConstraintViolated")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLInternalConstraintViolatedErrorImpl.class)
 public interface GraphQLInternalConstraintViolatedError extends GraphQLErrorObject {
@@ -61,6 +62,8 @@ public interface GraphQLInternalConstraintViolatedError extends GraphQLErrorObje
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
+
+    public GraphQLInternalConstraintViolatedError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLInternalConstraintViolatedError

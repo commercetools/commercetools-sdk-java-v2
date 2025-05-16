@@ -144,6 +144,8 @@ public interface ApiClientPagedQueryResponse
         return instance;
     }
 
+    public ApiClientPagedQueryResponse copyDeep();
+
     /**
      * factory method to create a deep copy of ApiClientPagedQueryResponse
      * @param template instance to be copied

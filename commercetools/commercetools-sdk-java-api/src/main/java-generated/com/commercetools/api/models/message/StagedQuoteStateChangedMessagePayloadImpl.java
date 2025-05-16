@@ -115,4 +115,8 @@ public class StagedQuoteStateChangedMessagePayloadImpl implements StagedQuoteSta
                 .build();
     }
 
+    @Override
+    public StagedQuoteStateChangedMessagePayload copyDeep() {
+        return StagedQuoteStateChangedMessagePayload.deepCopy(this);
+    }
 }

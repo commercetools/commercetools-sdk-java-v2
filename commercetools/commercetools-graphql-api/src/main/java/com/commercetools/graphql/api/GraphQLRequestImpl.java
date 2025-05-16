@@ -116,4 +116,8 @@ public class GraphQLRequestImpl<T> implements GraphQLRequest<T>, ModelBase {
         this.dataMapper = dataMapper;
     }
 
+    @Override
+    public com.commercetools.api.models.graph_ql.GraphQLRequest copyDeep() {
+        return null;
+    }
 }

@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeIsSearchable")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTypeChangeIsSearchableActionImpl.class)
 public interface ProductTypeChangeIsSearchableAction extends ProductTypeUpdateAction {
@@ -86,6 +87,8 @@ public interface ProductTypeChangeIsSearchableAction extends ProductTypeUpdateAc
         instance.setIsSearchable(template.getIsSearchable());
         return instance;
     }
+
+    public ProductTypeChangeIsSearchableAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductTypeChangeIsSearchableAction

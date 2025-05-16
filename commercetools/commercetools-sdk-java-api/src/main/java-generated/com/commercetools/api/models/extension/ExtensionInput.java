@@ -85,6 +85,8 @@ public interface ExtensionInput {
         return instance;
     }
 
+    public ExtensionInput copyDeep();
+
     /**
      * factory method to create a deep copy of ExtensionInput
      * @param template instance to be copied

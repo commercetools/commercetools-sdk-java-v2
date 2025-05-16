@@ -184,6 +184,8 @@ public interface OrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<Order
         return instance;
     }
 
+    public OrderFromQuoteDraft copyDeep();
+
     /**
      * factory method to create a deep copy of OrderFromQuoteDraft
      * @param template instance to be copied

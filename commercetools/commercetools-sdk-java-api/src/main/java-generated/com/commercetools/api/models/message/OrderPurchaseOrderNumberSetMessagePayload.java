@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("OrderPurchaseOrderNumberSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderPurchaseOrderNumberSetMessagePayloadImpl.class)
 public interface OrderPurchaseOrderNumberSetMessagePayload extends OrderMessagePayload {
@@ -83,6 +84,8 @@ public interface OrderPurchaseOrderNumberSetMessagePayload extends OrderMessageP
         instance.setOldPurchaseOrderNumber(template.getOldPurchaseOrderNumber());
         return instance;
     }
+
+    public OrderPurchaseOrderNumberSetMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of OrderPurchaseOrderNumberSetMessagePayload

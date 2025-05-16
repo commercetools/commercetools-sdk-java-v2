@@ -137,4 +137,8 @@ public class OrderAddReturnInfoActionImpl implements OrderAddReturnInfoAction, M
                 .build();
     }
 
+    @Override
+    public OrderAddReturnInfoAction copyDeep() {
+        return OrderAddReturnInfoAction.deepCopy(this);
+    }
 }

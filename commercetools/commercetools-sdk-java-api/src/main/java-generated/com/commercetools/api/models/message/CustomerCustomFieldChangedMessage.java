@@ -34,6 +34,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("CustomerCustomFieldChanged")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerCustomFieldChangedMessageImpl.class)
 public interface CustomerCustomFieldChangedMessage extends Message {
@@ -118,6 +119,8 @@ public interface CustomerCustomFieldChangedMessage extends Message {
         instance.setPreviousValue(template.getPreviousValue());
         return instance;
     }
+
+    public CustomerCustomFieldChangedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of CustomerCustomFieldChangedMessage

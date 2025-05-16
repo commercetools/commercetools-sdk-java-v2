@@ -69,4 +69,8 @@ public class ProjectUpdateActionImpl implements ProjectUpdateAction, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action).build();
     }
 
+    @Override
+    public ProjectUpdateAction copyDeep() {
+        return ProjectUpdateAction.deepCopy(this);
+    }
 }

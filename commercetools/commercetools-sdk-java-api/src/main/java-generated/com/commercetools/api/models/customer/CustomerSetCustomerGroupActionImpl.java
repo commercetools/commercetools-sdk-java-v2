@@ -94,4 +94,8 @@ public class CustomerSetCustomerGroupActionImpl implements CustomerSetCustomerGr
                 .build();
     }
 
+    @Override
+    public CustomerSetCustomerGroupAction copyDeep() {
+        return CustomerSetCustomerGroupAction.deepCopy(this);
+    }
 }

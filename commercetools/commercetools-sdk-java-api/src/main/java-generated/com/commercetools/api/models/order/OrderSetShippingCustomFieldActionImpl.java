@@ -128,4 +128,8 @@ public class OrderSetShippingCustomFieldActionImpl implements OrderSetShippingCu
                 .build();
     }
 
+    @Override
+    public OrderSetShippingCustomFieldAction copyDeep() {
+        return OrderSetShippingCustomFieldAction.deepCopy(this);
+    }
 }

@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("boolean")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AttributeBooleanTypeImpl.class)
 public interface AttributeBooleanType extends AttributeType {
@@ -50,6 +51,8 @@ public interface AttributeBooleanType extends AttributeType {
         AttributeBooleanTypeImpl instance = new AttributeBooleanTypeImpl();
         return instance;
     }
+
+    public AttributeBooleanType copyDeep();
 
     /**
      * factory method to create a deep copy of AttributeBooleanType

@@ -74,4 +74,8 @@ public class SearchDateRangeExpressionImpl implements SearchDateRangeExpression,
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("range", range).build();
     }
 
+    @Override
+    public SearchDateRangeExpression copyDeep() {
+        return SearchDateRangeExpression.deepCopy(this);
+    }
 }

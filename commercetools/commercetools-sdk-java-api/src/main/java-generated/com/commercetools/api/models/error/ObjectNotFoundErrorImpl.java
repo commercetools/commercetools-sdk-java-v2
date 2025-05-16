@@ -115,4 +115,8 @@ public class ObjectNotFoundErrorImpl implements ObjectNotFoundError, ModelBase {
                 .build();
     }
 
+    @Override
+    public ObjectNotFoundError copyDeep() {
+        return ObjectNotFoundError.deepCopy(this);
+    }
 }

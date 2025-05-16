@@ -114,4 +114,8 @@ public class BusinessUnitTopLevelUnitSetMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public BusinessUnitTopLevelUnitSetMessagePayload copyDeep() {
+        return BusinessUnitTopLevelUnitSetMessagePayload.deepCopy(this);
+    }
 }

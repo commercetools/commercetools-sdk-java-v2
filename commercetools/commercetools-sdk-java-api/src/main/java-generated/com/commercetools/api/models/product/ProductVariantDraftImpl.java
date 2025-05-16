@@ -192,4 +192,8 @@ public class ProductVariantDraftImpl implements ProductVariantDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public ProductVariantDraft copyDeep() {
+        return ProductVariantDraft.deepCopy(this);
+    }
 }

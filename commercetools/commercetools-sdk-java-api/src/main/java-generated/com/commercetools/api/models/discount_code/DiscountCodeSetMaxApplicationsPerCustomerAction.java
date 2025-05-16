@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setMaxApplicationsPerCustomer")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DiscountCodeSetMaxApplicationsPerCustomerActionImpl.class)
 public interface DiscountCodeSetMaxApplicationsPerCustomerAction extends DiscountCodeUpdateAction {
@@ -69,6 +70,8 @@ public interface DiscountCodeSetMaxApplicationsPerCustomerAction extends Discoun
         instance.setMaxApplicationsPerCustomer(template.getMaxApplicationsPerCustomer());
         return instance;
     }
+
+    public DiscountCodeSetMaxApplicationsPerCustomerAction copyDeep();
 
     /**
      * factory method to create a deep copy of DiscountCodeSetMaxApplicationsPerCustomerAction

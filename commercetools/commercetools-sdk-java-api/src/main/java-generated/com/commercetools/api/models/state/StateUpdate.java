@@ -94,6 +94,8 @@ public interface StateUpdate
         return instance;
     }
 
+    public StateUpdate copyDeep();
+
     /**
      * factory method to create a deep copy of StateUpdate
      * @param template instance to be copied

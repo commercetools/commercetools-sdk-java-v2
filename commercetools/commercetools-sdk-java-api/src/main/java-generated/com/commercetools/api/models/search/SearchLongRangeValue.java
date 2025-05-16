@@ -114,6 +114,8 @@ public interface SearchLongRangeValue extends SearchQueryExpressionValue {
         return instance;
     }
 
+    public SearchLongRangeValue copyDeep();
+
     /**
      * factory method to create a deep copy of SearchLongRangeValue
      * @param template instance to be copied

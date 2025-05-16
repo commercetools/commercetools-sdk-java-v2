@@ -154,4 +154,8 @@ public class OrderSetParcelCustomFieldActionImpl implements OrderSetParcelCustom
                 .build();
     }
 
+    @Override
+    public OrderSetParcelCustomFieldAction copyDeep() {
+        return OrderSetParcelCustomFieldAction.deepCopy(this);
+    }
 }

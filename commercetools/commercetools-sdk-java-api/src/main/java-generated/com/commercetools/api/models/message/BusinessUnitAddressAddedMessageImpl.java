@@ -294,4 +294,8 @@ public class BusinessUnitAddressAddedMessageImpl implements BusinessUnitAddressA
                 .build();
     }
 
+    @Override
+    public BusinessUnitAddressAddedMessage copyDeep() {
+        return BusinessUnitAddressAddedMessage.deepCopy(this);
+    }
 }

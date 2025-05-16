@@ -275,4 +275,8 @@ public class CustomLineItemReturnItemImpl implements CustomLineItemReturnItem, M
                 .build();
     }
 
+    @Override
+    public CustomLineItemReturnItem copyDeep() {
+        return CustomLineItemReturnItem.deepCopy(this);
+    }
 }

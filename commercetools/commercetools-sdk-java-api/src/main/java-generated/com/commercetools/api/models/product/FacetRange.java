@@ -227,6 +227,8 @@ public interface FacetRange {
         return instance;
     }
 
+    public FacetRange copyDeep();
+
     /**
      * factory method to create a deep copy of FacetRange
      * @param template instance to be copied

@@ -102,4 +102,8 @@ public class MessageSubscriptionImpl implements MessageSubscription, ModelBase {
                 .build();
     }
 
+    @Override
+    public MessageSubscription copyDeep() {
+        return MessageSubscription.deepCopy(this);
+    }
 }

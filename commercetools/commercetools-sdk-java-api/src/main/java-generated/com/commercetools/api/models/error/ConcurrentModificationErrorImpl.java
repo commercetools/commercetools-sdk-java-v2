@@ -137,4 +137,8 @@ public class ConcurrentModificationErrorImpl implements ConcurrentModificationEr
                 .build();
     }
 
+    @Override
+    public ConcurrentModificationError copyDeep() {
+        return ConcurrentModificationError.deepCopy(this);
+    }
 }

@@ -111,4 +111,8 @@ public class ApprovalFlowApprovedMessagePayloadImpl implements ApprovalFlowAppro
                 .build();
     }
 
+    @Override
+    public ApprovalFlowApprovedMessagePayload copyDeep() {
+        return ApprovalFlowApprovedMessagePayload.deepCopy(this);
+    }
 }

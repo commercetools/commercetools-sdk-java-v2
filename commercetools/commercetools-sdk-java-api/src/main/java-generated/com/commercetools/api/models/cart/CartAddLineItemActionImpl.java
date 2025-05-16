@@ -386,4 +386,8 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
                 .build();
     }
 
+    @Override
+    public CartAddLineItemAction copyDeep() {
+        return CartAddLineItemAction.deepCopy(this);
+    }
 }

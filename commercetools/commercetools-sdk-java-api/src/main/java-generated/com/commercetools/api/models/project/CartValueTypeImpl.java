@@ -63,4 +63,8 @@ public class CartValueTypeImpl implements CartValueType, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type).build();
     }
 
+    @Override
+    public CartValueType copyDeep() {
+        return CartValueType.deepCopy(this);
+    }
 }

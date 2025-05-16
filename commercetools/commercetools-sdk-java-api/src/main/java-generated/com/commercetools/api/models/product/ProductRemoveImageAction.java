@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("removeImage")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductRemoveImageActionImpl.class)
 public interface ProductRemoveImageAction extends ProductUpdateAction {
@@ -117,6 +118,8 @@ public interface ProductRemoveImageAction extends ProductUpdateAction {
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public ProductRemoveImageAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductRemoveImageAction

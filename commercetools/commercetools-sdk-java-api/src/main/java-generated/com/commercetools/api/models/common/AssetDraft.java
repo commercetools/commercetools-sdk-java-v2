@@ -168,6 +168,8 @@ public interface AssetDraft extends com.commercetools.api.models.CustomizableDra
         return instance;
     }
 
+    public AssetDraft copyDeep();
+
     /**
      * factory method to create a deep copy of AssetDraft
      * @param template instance to be copied

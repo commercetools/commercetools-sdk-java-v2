@@ -135,4 +135,8 @@ public class StagedOrderSetParcelTrackingDataActionImpl implements StagedOrderSe
                 .build();
     }
 
+    @Override
+    public StagedOrderSetParcelTrackingDataAction copyDeep() {
+        return StagedOrderSetParcelTrackingDataAction.deepCopy(this);
+    }
 }

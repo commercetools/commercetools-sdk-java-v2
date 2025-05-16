@@ -91,4 +91,8 @@ public class ProductDiscountChangePredicateActionImpl implements ProductDiscount
                 .build();
     }
 
+    @Override
+    public ProductDiscountChangePredicateAction copyDeep() {
+        return ProductDiscountChangePredicateAction.deepCopy(this);
+    }
 }

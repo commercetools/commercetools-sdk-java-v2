@@ -35,6 +35,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setCustomShippingMethod")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderSetCustomShippingMethodActionImpl.class)
 public interface StagedOrderSetCustomShippingMethodAction extends StagedOrderUpdateAction {
@@ -142,6 +143,8 @@ public interface StagedOrderSetCustomShippingMethodAction extends StagedOrderUpd
         instance.setCustom(template.getCustom());
         return instance;
     }
+
+    public StagedOrderSetCustomShippingMethodAction copyDeep();
 
     /**
      * factory method to create a deep copy of StagedOrderSetCustomShippingMethodAction

@@ -111,4 +111,8 @@ public class ShippingMethodSetCustomTypeActionImpl implements ShippingMethodSetC
                 .build();
     }
 
+    @Override
+    public ShippingMethodSetCustomTypeAction copyDeep() {
+        return ShippingMethodSetCustomTypeAction.deepCopy(this);
+    }
 }

@@ -92,4 +92,8 @@ public class CategoryChangeParentActionImpl implements CategoryChangeParentActio
                 .build();
     }
 
+    @Override
+    public CategoryChangeParentAction copyDeep() {
+        return CategoryChangeParentAction.deepCopy(this);
+    }
 }

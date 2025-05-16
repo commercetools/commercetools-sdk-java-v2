@@ -315,4 +315,8 @@ public class OrderReturnShipmentStateChangedMessageImpl implements OrderReturnSh
                 .build();
     }
 
+    @Override
+    public OrderReturnShipmentStateChangedMessage copyDeep() {
+        return OrderReturnShipmentStateChangedMessage.deepCopy(this);
+    }
 }

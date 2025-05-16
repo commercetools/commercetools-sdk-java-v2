@@ -314,4 +314,8 @@ public class OrderShipmentStateChangedMessageImpl implements OrderShipmentStateC
                 .build();
     }
 
+    @Override
+    public OrderShipmentStateChangedMessage copyDeep() {
+        return OrderShipmentStateChangedMessage.deepCopy(this);
+    }
 }

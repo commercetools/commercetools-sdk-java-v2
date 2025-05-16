@@ -192,4 +192,8 @@ public class ProductTailoringSetAssetDescriptionActionImpl
                 .build();
     }
 
+    @Override
+    public ProductTailoringSetAssetDescriptionAction copyDeep() {
+        return ProductTailoringSetAssetDescriptionAction.deepCopy(this);
+    }
 }

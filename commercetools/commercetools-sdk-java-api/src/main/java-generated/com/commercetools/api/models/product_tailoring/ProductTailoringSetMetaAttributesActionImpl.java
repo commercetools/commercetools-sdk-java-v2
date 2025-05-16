@@ -154,4 +154,8 @@ public class ProductTailoringSetMetaAttributesActionImpl implements ProductTailo
                 .build();
     }
 
+    @Override
+    public ProductTailoringSetMetaAttributesAction copyDeep() {
+        return ProductTailoringSetMetaAttributesAction.deepCopy(this);
+    }
 }

@@ -174,4 +174,8 @@ public class ResourceCreatedDeliveryPayloadImpl implements ResourceCreatedDelive
                 .build();
     }
 
+    @Override
+    public ResourceCreatedDeliveryPayload copyDeep() {
+        return ResourceCreatedDeliveryPayload.deepCopy(this);
+    }
 }

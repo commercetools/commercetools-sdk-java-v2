@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("removeTextLineItem")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyShoppingListRemoveTextLineItemActionImpl.class)
 public interface MyShoppingListRemoveTextLineItemAction extends MyShoppingListUpdateAction {
@@ -98,6 +99,8 @@ public interface MyShoppingListRemoveTextLineItemAction extends MyShoppingListUp
         instance.setQuantity(template.getQuantity());
         return instance;
     }
+
+    public MyShoppingListRemoveTextLineItemAction copyDeep();
 
     /**
      * factory method to create a deep copy of MyShoppingListRemoveTextLineItemAction

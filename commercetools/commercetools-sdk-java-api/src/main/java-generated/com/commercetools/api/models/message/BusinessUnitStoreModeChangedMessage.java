@@ -41,6 +41,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("BusinessUnitStoreModeChanged")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = BusinessUnitStoreModeChangedMessageImpl.class)
 public interface BusinessUnitStoreModeChangedMessage extends Message {
@@ -159,6 +160,8 @@ public interface BusinessUnitStoreModeChangedMessage extends Message {
         instance.setOldStoreMode(template.getOldStoreMode());
         return instance;
     }
+
+    public BusinessUnitStoreModeChangedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of BusinessUnitStoreModeChangedMessage

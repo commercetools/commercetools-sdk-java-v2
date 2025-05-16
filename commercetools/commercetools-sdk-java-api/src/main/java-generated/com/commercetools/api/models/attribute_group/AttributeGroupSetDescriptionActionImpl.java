@@ -92,4 +92,8 @@ public class AttributeGroupSetDescriptionActionImpl implements AttributeGroupSet
                 .build();
     }
 
+    @Override
+    public AttributeGroupSetDescriptionAction copyDeep() {
+        return AttributeGroupSetDescriptionAction.deepCopy(this);
+    }
 }

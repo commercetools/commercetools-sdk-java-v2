@@ -110,6 +110,8 @@ public interface OrderEditUpdate extends
         return instance;
     }
 
+    public OrderEditUpdate copyDeep();
+
     /**
      * factory method to create a deep copy of OrderEditUpdate
      * @param template instance to be copied

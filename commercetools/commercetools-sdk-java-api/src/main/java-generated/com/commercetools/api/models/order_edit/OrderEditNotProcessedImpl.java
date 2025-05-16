@@ -62,4 +62,8 @@ public class OrderEditNotProcessedImpl implements OrderEditNotProcessed, ModelBa
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type).build();
     }
 
+    @Override
+    public OrderEditNotProcessed copyDeep() {
+        return OrderEditNotProcessed.deepCopy(this);
+    }
 }

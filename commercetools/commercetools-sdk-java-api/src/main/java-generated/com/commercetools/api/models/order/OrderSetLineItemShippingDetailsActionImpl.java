@@ -133,4 +133,8 @@ public class OrderSetLineItemShippingDetailsActionImpl implements OrderSetLineIt
                 .build();
     }
 
+    @Override
+    public OrderSetLineItemShippingDetailsAction copyDeep() {
+        return OrderSetLineItemShippingDetailsAction.deepCopy(this);
+    }
 }

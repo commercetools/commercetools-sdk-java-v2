@@ -130,4 +130,8 @@ public class ProductTailoringPublishedMessagePayloadImpl implements ProductTailo
                 .build();
     }
 
+    @Override
+    public ProductTailoringPublishedMessagePayload copyDeep() {
+        return ProductTailoringPublishedMessagePayload.deepCopy(this);
+    }
 }

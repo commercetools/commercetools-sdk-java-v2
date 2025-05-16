@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ExternalOAuthFailed")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ExternalOAuthFailedErrorImpl.class)
 public interface ExternalOAuthFailedError extends ErrorObject {
@@ -78,6 +79,8 @@ public interface ExternalOAuthFailedError extends ErrorObject {
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
+
+    public ExternalOAuthFailedError copyDeep();
 
     /**
      * factory method to create a deep copy of ExternalOAuthFailedError

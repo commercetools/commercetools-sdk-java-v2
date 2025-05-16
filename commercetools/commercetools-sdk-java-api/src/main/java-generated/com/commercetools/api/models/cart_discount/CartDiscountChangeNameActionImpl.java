@@ -92,4 +92,8 @@ public class CartDiscountChangeNameActionImpl implements CartDiscountChangeNameA
                 .build();
     }
 
+    @Override
+    public CartDiscountChangeNameAction copyDeep() {
+        return CartDiscountChangeNameAction.deepCopy(this);
+    }
 }

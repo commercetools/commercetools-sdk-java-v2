@@ -314,4 +314,8 @@ public class CustomerAddressCustomTypeRemovedMessageImpl implements CustomerAddr
                 .build();
     }
 
+    @Override
+    public CustomerAddressCustomTypeRemovedMessage copyDeep() {
+        return CustomerAddressCustomTypeRemovedMessage.deepCopy(this);
+    }
 }

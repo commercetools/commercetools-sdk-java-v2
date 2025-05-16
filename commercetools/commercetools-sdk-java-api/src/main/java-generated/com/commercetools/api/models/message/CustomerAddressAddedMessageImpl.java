@@ -293,4 +293,8 @@ public class CustomerAddressAddedMessageImpl implements CustomerAddressAddedMess
                 .build();
     }
 
+    @Override
+    public CustomerAddressAddedMessage copyDeep() {
+        return CustomerAddressAddedMessage.deepCopy(this);
+    }
 }

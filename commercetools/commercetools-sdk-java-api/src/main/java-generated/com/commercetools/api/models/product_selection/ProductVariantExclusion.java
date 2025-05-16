@@ -73,6 +73,8 @@ public interface ProductVariantExclusion {
         return instance;
     }
 
+    public ProductVariantExclusion copyDeep();
+
     /**
      * factory method to create a deep copy of ProductVariantExclusion
      * @param template instance to be copied

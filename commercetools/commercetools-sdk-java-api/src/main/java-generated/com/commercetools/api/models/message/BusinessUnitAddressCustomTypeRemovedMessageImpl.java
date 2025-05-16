@@ -314,4 +314,8 @@ public class BusinessUnitAddressCustomTypeRemovedMessageImpl
                 .build();
     }
 
+    @Override
+    public BusinessUnitAddressCustomTypeRemovedMessage copyDeep() {
+        return BusinessUnitAddressCustomTypeRemovedMessage.deepCopy(this);
+    }
 }

@@ -177,4 +177,8 @@ public class ProductVariantAvailabilityImpl implements ProductVariantAvailabilit
                 .build();
     }
 
+    @Override
+    public ProductVariantAvailability copyDeep() {
+        return ProductVariantAvailability.deepCopy(this);
+    }
 }

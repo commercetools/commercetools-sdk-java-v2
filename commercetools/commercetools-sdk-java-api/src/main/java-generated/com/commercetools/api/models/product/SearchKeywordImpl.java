@@ -95,4 +95,8 @@ public class SearchKeywordImpl implements SearchKeyword, ModelBase {
                 .build();
     }
 
+    @Override
+    public SearchKeyword copyDeep() {
+        return SearchKeyword.deepCopy(this);
+    }
 }

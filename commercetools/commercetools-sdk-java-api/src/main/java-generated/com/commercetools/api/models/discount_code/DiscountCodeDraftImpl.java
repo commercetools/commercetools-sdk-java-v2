@@ -329,4 +329,8 @@ public class DiscountCodeDraftImpl implements DiscountCodeDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public DiscountCodeDraft copyDeep() {
+        return DiscountCodeDraft.deepCopy(this);
+    }
 }

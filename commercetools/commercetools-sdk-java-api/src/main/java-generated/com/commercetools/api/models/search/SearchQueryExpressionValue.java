@@ -97,6 +97,8 @@ public interface SearchQueryExpressionValue {
         return instance;
     }
 
+    public SearchQueryExpressionValue copyDeep();
+
     /**
      * factory method to create a deep copy of SearchQueryExpressionValue
      * @param template instance to be copied
@@ -107,45 +109,9 @@ public interface SearchQueryExpressionValue {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.search.SearchAnyValue) {
-            return com.commercetools.api.models.search.SearchAnyValue
-                    .deepCopy((com.commercetools.api.models.search.SearchAnyValue) template);
-        }
-        if (template instanceof com.commercetools.api.models.search.SearchDateRangeValue) {
-            return com.commercetools.api.models.search.SearchDateRangeValue
-                    .deepCopy((com.commercetools.api.models.search.SearchDateRangeValue) template);
-        }
-        if (template instanceof com.commercetools.api.models.search.SearchDateTimeRangeValue) {
-            return com.commercetools.api.models.search.SearchDateTimeRangeValue
-                    .deepCopy((com.commercetools.api.models.search.SearchDateTimeRangeValue) template);
-        }
-        if (template instanceof com.commercetools.api.models.search.SearchExactValue) {
-            return com.commercetools.api.models.search.SearchExactValue
-                    .deepCopy((com.commercetools.api.models.search.SearchExactValue) template);
-        }
-        if (template instanceof com.commercetools.api.models.search.SearchExistsValue) {
-            return com.commercetools.api.models.search.SearchExistsValue
-                    .deepCopy((com.commercetools.api.models.search.SearchExistsValue) template);
-        }
-        if (template instanceof com.commercetools.api.models.search.SearchFullTextPrefixValue) {
-            return com.commercetools.api.models.search.SearchFullTextPrefixValue
-                    .deepCopy((com.commercetools.api.models.search.SearchFullTextPrefixValue) template);
-        }
-        if (template instanceof com.commercetools.api.models.search.SearchFullTextValue) {
-            return com.commercetools.api.models.search.SearchFullTextValue
-                    .deepCopy((com.commercetools.api.models.search.SearchFullTextValue) template);
-        }
-        if (template instanceof com.commercetools.api.models.search.SearchLongRangeValue) {
-            return com.commercetools.api.models.search.SearchLongRangeValue
-                    .deepCopy((com.commercetools.api.models.search.SearchLongRangeValue) template);
-        }
-        if (template instanceof com.commercetools.api.models.search.SearchNumberRangeValue) {
-            return com.commercetools.api.models.search.SearchNumberRangeValue
-                    .deepCopy((com.commercetools.api.models.search.SearchNumberRangeValue) template);
-        }
-        if (template instanceof com.commercetools.api.models.search.SearchTimeRangeValue) {
-            return com.commercetools.api.models.search.SearchTimeRangeValue
-                    .deepCopy((com.commercetools.api.models.search.SearchTimeRangeValue) template);
+
+        if (!(template instanceof SearchQueryExpressionValueImpl)) {
+            return template.copyDeep();
         }
         SearchQueryExpressionValueImpl instance = new SearchQueryExpressionValueImpl();
         instance.setField(template.getField());

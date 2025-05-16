@@ -142,4 +142,8 @@ public class ExtensionDraftImpl implements ExtensionDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public ExtensionDraft copyDeep() {
+        return ExtensionDraft.deepCopy(this);
+    }
 }

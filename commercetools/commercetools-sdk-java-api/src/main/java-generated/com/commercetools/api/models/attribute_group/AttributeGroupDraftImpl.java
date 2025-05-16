@@ -138,4 +138,8 @@ public class AttributeGroupDraftImpl implements AttributeGroupDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public AttributeGroupDraft copyDeep() {
+        return AttributeGroupDraft.deepCopy(this);
+    }
 }

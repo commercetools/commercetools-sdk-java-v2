@@ -36,6 +36,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("OrderReturnShipmentStateChanged")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderReturnShipmentStateChangedMessageImpl.class)
 public interface OrderReturnShipmentStateChangedMessage extends OrderMessage {
@@ -104,6 +105,8 @@ public interface OrderReturnShipmentStateChangedMessage extends OrderMessage {
         instance.setReturnShipmentState(template.getReturnShipmentState());
         return instance;
     }
+
+    public OrderReturnShipmentStateChangedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of OrderReturnShipmentStateChangedMessage

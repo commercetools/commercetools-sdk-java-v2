@@ -85,6 +85,8 @@ public interface StagedStandalonePrice {
         return instance;
     }
 
+    public StagedStandalonePrice copyDeep();
+
     /**
      * factory method to create a deep copy of StagedStandalonePrice
      * @param template instance to be copied

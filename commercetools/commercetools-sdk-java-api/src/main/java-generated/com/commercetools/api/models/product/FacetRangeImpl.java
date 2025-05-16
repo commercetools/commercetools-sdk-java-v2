@@ -257,4 +257,8 @@ public class FacetRangeImpl implements FacetRange, ModelBase {
                 .build();
     }
 
+    @Override
+    public FacetRange copyDeep() {
+        return FacetRange.deepCopy(this);
+    }
 }

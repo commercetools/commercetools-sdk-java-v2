@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeTextLineItemQuantity")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShoppingListChangeTextLineItemQuantityActionImpl.class)
 public interface ShoppingListChangeTextLineItemQuantityAction extends ShoppingListUpdateAction {
@@ -102,6 +103,8 @@ public interface ShoppingListChangeTextLineItemQuantityAction extends ShoppingLi
         instance.setQuantity(template.getQuantity());
         return instance;
     }
+
+    public ShoppingListChangeTextLineItemQuantityAction copyDeep();
 
     /**
      * factory method to create a deep copy of ShoppingListChangeTextLineItemQuantityAction

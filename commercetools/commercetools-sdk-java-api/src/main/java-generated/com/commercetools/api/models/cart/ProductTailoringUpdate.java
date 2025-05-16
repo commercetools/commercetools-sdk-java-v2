@@ -94,6 +94,8 @@ public interface ProductTailoringUpdate {
         return instance;
     }
 
+    public ProductTailoringUpdate copyDeep();
+
     /**
      * factory method to create a deep copy of ProductTailoringUpdate
      * @param template instance to be copied

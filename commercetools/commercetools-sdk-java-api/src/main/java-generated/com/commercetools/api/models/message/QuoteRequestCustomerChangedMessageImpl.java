@@ -314,4 +314,8 @@ public class QuoteRequestCustomerChangedMessageImpl implements QuoteRequestCusto
                 .build();
     }
 
+    @Override
+    public QuoteRequestCustomerChangedMessage copyDeep() {
+        return QuoteRequestCustomerChangedMessage.deepCopy(this);
+    }
 }

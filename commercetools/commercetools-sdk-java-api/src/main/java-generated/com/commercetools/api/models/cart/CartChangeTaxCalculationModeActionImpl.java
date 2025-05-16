@@ -92,4 +92,8 @@ public class CartChangeTaxCalculationModeActionImpl implements CartChangeTaxCalc
                 .build();
     }
 
+    @Override
+    public CartChangeTaxCalculationModeAction copyDeep() {
+        return CartChangeTaxCalculationModeAction.deepCopy(this);
+    }
 }

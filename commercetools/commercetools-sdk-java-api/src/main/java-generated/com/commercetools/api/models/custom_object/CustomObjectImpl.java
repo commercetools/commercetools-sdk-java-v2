@@ -238,4 +238,8 @@ public class CustomObjectImpl implements CustomObject, ModelBase {
                 .build();
     }
 
+    @Override
+    public CustomObject copyDeep() {
+        return CustomObject.deepCopy(this);
+    }
 }

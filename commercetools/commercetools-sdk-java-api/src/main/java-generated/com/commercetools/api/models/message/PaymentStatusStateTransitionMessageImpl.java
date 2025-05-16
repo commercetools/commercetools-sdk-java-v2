@@ -314,4 +314,8 @@ public class PaymentStatusStateTransitionMessageImpl implements PaymentStatusSta
                 .build();
     }
 
+    @Override
+    public PaymentStatusStateTransitionMessage copyDeep() {
+        return PaymentStatusStateTransitionMessage.deepCopy(this);
+    }
 }

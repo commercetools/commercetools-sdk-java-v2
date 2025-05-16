@@ -293,4 +293,8 @@ public class StandalonePriceDeletedMessageImpl implements StandalonePriceDeleted
                 .build();
     }
 
+    @Override
+    public StandalonePriceDeletedMessage copyDeep() {
+        return StandalonePriceDeletedMessage.deepCopy(this);
+    }
 }

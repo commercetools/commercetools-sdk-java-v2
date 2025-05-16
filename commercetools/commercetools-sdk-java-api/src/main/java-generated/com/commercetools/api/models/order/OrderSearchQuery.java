@@ -46,6 +46,8 @@ public interface OrderSearchQuery {
         return instance;
     }
 
+    public OrderSearchQuery copyDeep();
+
     /**
      * factory method to create a deep copy of OrderSearchQuery
      * @param template instance to be copied
@@ -56,13 +58,9 @@ public interface OrderSearchQuery {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.order.OrderSearchCompoundExpression) {
-            return com.commercetools.api.models.order.OrderSearchCompoundExpression
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchCompoundExpression) template);
-        }
-        if (template instanceof com.commercetools.api.models.order.OrderSearchQueryExpression) {
-            return com.commercetools.api.models.order.OrderSearchQueryExpression
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchQueryExpression) template);
+
+        if (!(template instanceof OrderSearchQueryImpl)) {
+            return template.copyDeep();
         }
         OrderSearchQueryImpl instance = new OrderSearchQueryImpl();
         return instance;

@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("standalone-price")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StandalonePriceResourceIdentifierImpl.class)
 public interface StandalonePriceResourceIdentifier extends ResourceIdentifier {
@@ -53,6 +54,8 @@ public interface StandalonePriceResourceIdentifier extends ResourceIdentifier {
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public StandalonePriceResourceIdentifier copyDeep();
 
     /**
      * factory method to create a deep copy of StandalonePriceResourceIdentifier

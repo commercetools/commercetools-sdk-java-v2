@@ -92,4 +92,8 @@ public class StagedQuoteChangeStagedQuoteStateActionImpl implements StagedQuoteC
                 .build();
     }
 
+    @Override
+    public StagedQuoteChangeStagedQuoteStateAction copyDeep() {
+        return StagedQuoteChangeStagedQuoteStateAction.deepCopy(this);
+    }
 }

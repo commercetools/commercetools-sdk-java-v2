@@ -91,4 +91,8 @@ public class ShippingMethodSetPredicateActionImpl implements ShippingMethodSetPr
                 .build();
     }
 
+    @Override
+    public ShippingMethodSetPredicateAction copyDeep() {
+        return ShippingMethodSetPredicateAction.deepCopy(this);
+    }
 }

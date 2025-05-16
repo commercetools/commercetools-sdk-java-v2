@@ -26,6 +26,7 @@ import jakarta.validation.Valid;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setExternalOAuth")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProjectSetExternalOAuthActionImpl.class)
 public interface ProjectSetExternalOAuthAction extends ProjectUpdateAction {
@@ -68,6 +69,8 @@ public interface ProjectSetExternalOAuthAction extends ProjectUpdateAction {
         instance.setExternalOAuth(template.getExternalOAuth());
         return instance;
     }
+
+    public ProjectSetExternalOAuthAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProjectSetExternalOAuthAction

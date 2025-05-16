@@ -137,4 +137,8 @@ public class StagedOrderAddReturnInfoActionImpl implements StagedOrderAddReturnI
                 .build();
     }
 
+    @Override
+    public StagedOrderAddReturnInfoAction copyDeep() {
+        return StagedOrderAddReturnInfoAction.deepCopy(this);
+    }
 }

@@ -93,4 +93,8 @@ public class ProductSelectionCreatedMessagePayloadImpl implements ProductSelecti
                 .build();
     }
 
+    @Override
+    public ProductSelectionCreatedMessagePayload copyDeep() {
+        return ProductSelectionCreatedMessagePayload.deepCopy(this);
+    }
 }

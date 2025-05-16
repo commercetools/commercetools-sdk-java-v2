@@ -78,4 +78,8 @@ public class ApproverHierarchyImpl implements ApproverHierarchy, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("tiers", tiers).build();
     }
 
+    @Override
+    public ApproverHierarchy copyDeep() {
+        return ApproverHierarchy.deepCopy(this);
+    }
 }

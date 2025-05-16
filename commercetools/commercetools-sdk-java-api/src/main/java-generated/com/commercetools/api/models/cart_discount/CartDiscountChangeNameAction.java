@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeName")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartDiscountChangeNameActionImpl.class)
 public interface CartDiscountChangeNameAction extends CartDiscountUpdateAction {
@@ -72,6 +73,8 @@ public interface CartDiscountChangeNameAction extends CartDiscountUpdateAction {
         instance.setName(template.getName());
         return instance;
     }
+
+    public CartDiscountChangeNameAction copyDeep();
 
     /**
      * factory method to create a deep copy of CartDiscountChangeNameAction

@@ -27,8 +27,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.warning.ImageProcessingOngoingWarningImpl.class, name = ImageProcessingOngoingWarning.IMAGE_PROCESSING_ONGOING) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "code", defaultImpl = WarningObjectImpl.class, visible = true)
 @JsonDeserialize(as = WarningObjectImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -57,6 +55,8 @@ public interface WarningObject {
 
     public void setMessage(final String message);
 
+    public WarningObject copyDeep();
+
     /**
      * factory method to create a deep copy of WarningObject
      * @param template instance to be copied
@@ -67,9 +67,9 @@ public interface WarningObject {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.warning.ImageProcessingOngoingWarning) {
-            return com.commercetools.api.models.warning.ImageProcessingOngoingWarning
-                    .deepCopy((com.commercetools.api.models.warning.ImageProcessingOngoingWarning) template);
+
+        if (!(template instanceof WarningObjectImpl)) {
+            return template.copyDeep();
         }
         WarningObjectImpl instance = new WarningObjectImpl();
         instance.setMessage(template.getMessage());

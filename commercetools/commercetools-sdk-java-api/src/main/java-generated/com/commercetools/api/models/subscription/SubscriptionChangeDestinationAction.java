@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeDestination")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SubscriptionChangeDestinationActionImpl.class)
 public interface SubscriptionChangeDestinationAction extends SubscriptionUpdateAction {
@@ -71,6 +72,8 @@ public interface SubscriptionChangeDestinationAction extends SubscriptionUpdateA
         instance.setDestination(template.getDestination());
         return instance;
     }
+
+    public SubscriptionChangeDestinationAction copyDeep();
 
     /**
      * factory method to create a deep copy of SubscriptionChangeDestinationAction

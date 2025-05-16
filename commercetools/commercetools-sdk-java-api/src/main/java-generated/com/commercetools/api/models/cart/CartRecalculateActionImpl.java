@@ -95,4 +95,8 @@ public class CartRecalculateActionImpl implements CartRecalculateAction, ModelBa
                 .build();
     }
 
+    @Override
+    public CartRecalculateAction copyDeep() {
+        return CartRecalculateAction.deepCopy(this);
+    }
 }

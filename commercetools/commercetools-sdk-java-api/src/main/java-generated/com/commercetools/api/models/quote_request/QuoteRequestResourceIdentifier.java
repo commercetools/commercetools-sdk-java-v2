@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("quote-request")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = QuoteRequestResourceIdentifierImpl.class)
 public interface QuoteRequestResourceIdentifier
@@ -54,6 +55,8 @@ public interface QuoteRequestResourceIdentifier
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public QuoteRequestResourceIdentifier copyDeep();
 
     /**
      * factory method to create a deep copy of QuoteRequestResourceIdentifier

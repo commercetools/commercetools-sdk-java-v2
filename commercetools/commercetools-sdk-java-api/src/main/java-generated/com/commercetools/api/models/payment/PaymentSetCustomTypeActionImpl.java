@@ -111,4 +111,8 @@ public class PaymentSetCustomTypeActionImpl implements PaymentSetCustomTypeActio
                 .build();
     }
 
+    @Override
+    public PaymentSetCustomTypeAction copyDeep() {
+        return PaymentSetCustomTypeAction.deepCopy(this);
+    }
 }

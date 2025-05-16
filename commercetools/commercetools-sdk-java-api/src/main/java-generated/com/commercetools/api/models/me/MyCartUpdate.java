@@ -94,6 +94,8 @@ public interface MyCartUpdate
         return instance;
     }
 
+    public MyCartUpdate copyDeep();
+
     /**
      * factory method to create a deep copy of MyCartUpdate
      * @param template instance to be copied

@@ -111,4 +111,8 @@ public class OrderBillingAddressSetMessagePayloadImpl implements OrderBillingAdd
                 .build();
     }
 
+    @Override
+    public OrderBillingAddressSetMessagePayload copyDeep() {
+        return OrderBillingAddressSetMessagePayload.deepCopy(this);
+    }
 }

@@ -111,4 +111,8 @@ public class StateReferenceImpl implements StateReference, ModelBase {
                 .build();
     }
 
+    @Override
+    public StateReference copyDeep() {
+        return StateReference.deepCopy(this);
+    }
 }

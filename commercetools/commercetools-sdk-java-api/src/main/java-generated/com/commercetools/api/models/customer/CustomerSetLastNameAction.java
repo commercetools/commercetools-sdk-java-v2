@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setLastName")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerSetLastNameActionImpl.class)
 public interface CustomerSetLastNameAction extends CustomerUpdateAction {
@@ -66,6 +67,8 @@ public interface CustomerSetLastNameAction extends CustomerUpdateAction {
         instance.setLastName(template.getLastName());
         return instance;
     }
+
+    public CustomerSetLastNameAction copyDeep();
 
     /**
      * factory method to create a deep copy of CustomerSetLastNameAction

@@ -1154,4 +1154,8 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
                 .build();
     }
 
+    @Override
+    public StagedOrder copyDeep() {
+        return StagedOrder.deepCopy(this);
+    }
 }

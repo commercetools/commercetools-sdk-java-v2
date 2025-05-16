@@ -155,4 +155,8 @@ public class OrderSetDeliveryAddressCustomTypeActionImpl implements OrderSetDeli
                 .build();
     }
 
+    @Override
+    public OrderSetDeliveryAddressCustomTypeAction copyDeep() {
+        return OrderSetDeliveryAddressCustomTypeAction.deepCopy(this);
+    }
 }

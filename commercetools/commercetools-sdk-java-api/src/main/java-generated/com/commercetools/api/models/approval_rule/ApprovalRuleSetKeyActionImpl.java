@@ -91,4 +91,8 @@ public class ApprovalRuleSetKeyActionImpl implements ApprovalRuleSetKeyAction, M
                 .build();
     }
 
+    @Override
+    public ApprovalRuleSetKeyAction copyDeep() {
+        return ApprovalRuleSetKeyAction.deepCopy(this);
+    }
 }

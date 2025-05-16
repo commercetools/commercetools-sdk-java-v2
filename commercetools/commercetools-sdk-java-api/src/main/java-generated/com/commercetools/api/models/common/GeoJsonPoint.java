@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("Point")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GeoJsonPointImpl.class)
 public interface GeoJsonPoint extends GeoJson {
@@ -77,6 +78,8 @@ public interface GeoJsonPoint extends GeoJson {
         instance.setCoordinates(template.getCoordinates());
         return instance;
     }
+
+    public GeoJsonPoint copyDeep();
 
     /**
      * factory method to create a deep copy of GeoJsonPoint

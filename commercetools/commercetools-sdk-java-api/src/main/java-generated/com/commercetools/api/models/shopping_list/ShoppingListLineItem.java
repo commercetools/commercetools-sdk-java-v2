@@ -282,6 +282,8 @@ public interface ShoppingListLineItem extends com.commercetools.api.models.Custo
         return instance;
     }
 
+    public ShoppingListLineItem copyDeep();
+
     /**
      * factory method to create a deep copy of ShoppingListLineItem
      * @param template instance to be copied

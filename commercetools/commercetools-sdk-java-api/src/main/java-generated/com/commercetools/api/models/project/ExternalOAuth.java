@@ -83,6 +83,8 @@ public interface ExternalOAuth {
         return instance;
     }
 
+    public ExternalOAuth copyDeep();
+
     /**
      * factory method to create a deep copy of ExternalOAuth
      * @param template instance to be copied

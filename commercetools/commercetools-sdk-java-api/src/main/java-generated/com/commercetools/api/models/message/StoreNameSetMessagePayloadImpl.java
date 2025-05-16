@@ -115,4 +115,8 @@ public class StoreNameSetMessagePayloadImpl implements StoreNameSetMessagePayloa
                 .build();
     }
 
+    @Override
+    public StoreNameSetMessagePayload copyDeep() {
+        return StoreNameSetMessagePayload.deepCopy(this);
+    }
 }

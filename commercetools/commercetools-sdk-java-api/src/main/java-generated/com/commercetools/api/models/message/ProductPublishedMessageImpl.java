@@ -337,4 +337,8 @@ public class ProductPublishedMessageImpl implements ProductPublishedMessage, Mod
                 .build();
     }
 
+    @Override
+    public ProductPublishedMessage copyDeep() {
+        return ProductPublishedMessage.deepCopy(this);
+    }
 }

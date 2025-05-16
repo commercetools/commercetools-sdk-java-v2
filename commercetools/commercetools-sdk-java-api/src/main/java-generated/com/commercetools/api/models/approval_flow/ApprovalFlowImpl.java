@@ -403,4 +403,8 @@ public class ApprovalFlowImpl implements ApprovalFlow, ModelBase {
                 .build();
     }
 
+    @Override
+    public ApprovalFlow copyDeep() {
+        return ApprovalFlow.deepCopy(this);
+    }
 }

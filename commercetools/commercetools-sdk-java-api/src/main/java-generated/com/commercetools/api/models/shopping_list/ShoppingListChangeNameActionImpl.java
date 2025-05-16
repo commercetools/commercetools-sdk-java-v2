@@ -92,4 +92,8 @@ public class ShoppingListChangeNameActionImpl implements ShoppingListChangeNameA
                 .build();
     }
 
+    @Override
+    public ShoppingListChangeNameAction copyDeep() {
+        return ShoppingListChangeNameAction.deepCopy(this);
+    }
 }

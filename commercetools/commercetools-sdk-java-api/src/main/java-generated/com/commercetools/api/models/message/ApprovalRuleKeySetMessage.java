@@ -31,6 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ApprovalRuleKeySet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ApprovalRuleKeySetMessageImpl.class)
 public interface ApprovalRuleKeySetMessage extends Message {
@@ -99,6 +100,8 @@ public interface ApprovalRuleKeySetMessage extends Message {
         instance.setOldKey(template.getOldKey());
         return instance;
     }
+
+    public ApprovalRuleKeySetMessage copyDeep();
 
     /**
      * factory method to create a deep copy of ApprovalRuleKeySetMessage

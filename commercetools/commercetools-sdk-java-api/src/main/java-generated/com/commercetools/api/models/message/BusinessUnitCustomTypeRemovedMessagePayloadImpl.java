@@ -92,4 +92,8 @@ public class BusinessUnitCustomTypeRemovedMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public BusinessUnitCustomTypeRemovedMessagePayload copyDeep() {
+        return BusinessUnitCustomTypeRemovedMessagePayload.deepCopy(this);
+    }
 }

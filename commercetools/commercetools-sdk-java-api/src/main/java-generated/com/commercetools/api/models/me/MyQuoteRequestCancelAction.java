@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("cancelQuoteRequest")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyQuoteRequestCancelActionImpl.class)
 public interface MyQuoteRequestCancelAction extends MyQuoteRequestUpdateAction {
@@ -50,6 +51,8 @@ public interface MyQuoteRequestCancelAction extends MyQuoteRequestUpdateAction {
         MyQuoteRequestCancelActionImpl instance = new MyQuoteRequestCancelActionImpl();
         return instance;
     }
+
+    public MyQuoteRequestCancelAction copyDeep();
 
     /**
      * factory method to create a deep copy of MyQuoteRequestCancelAction

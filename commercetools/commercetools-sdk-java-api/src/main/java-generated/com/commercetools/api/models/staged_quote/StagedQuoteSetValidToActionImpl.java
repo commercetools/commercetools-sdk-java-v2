@@ -91,4 +91,8 @@ public class StagedQuoteSetValidToActionImpl implements StagedQuoteSetValidToAct
                 .build();
     }
 
+    @Override
+    public StagedQuoteSetValidToAction copyDeep() {
+        return StagedQuoteSetValidToAction.deepCopy(this);
+    }
 }

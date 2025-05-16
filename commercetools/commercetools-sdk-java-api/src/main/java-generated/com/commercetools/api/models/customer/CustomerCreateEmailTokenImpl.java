@@ -113,4 +113,8 @@ public class CustomerCreateEmailTokenImpl implements CustomerCreateEmailToken, M
                 .build();
     }
 
+    @Override
+    public CustomerCreateEmailToken copyDeep() {
+        return CustomerCreateEmailToken.deepCopy(this);
+    }
 }

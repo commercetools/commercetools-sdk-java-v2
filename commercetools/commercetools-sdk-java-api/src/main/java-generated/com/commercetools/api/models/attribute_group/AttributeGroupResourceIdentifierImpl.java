@@ -110,4 +110,8 @@ public class AttributeGroupResourceIdentifierImpl implements AttributeGroupResou
                 .build();
     }
 
+    @Override
+    public AttributeGroupResourceIdentifier copyDeep() {
+        return AttributeGroupResourceIdentifier.deepCopy(this);
+    }
 }

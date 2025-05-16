@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("PreviewFailure")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderEditPreviewFailureImpl.class)
 public interface OrderEditPreviewFailure extends OrderEditResult {
@@ -81,6 +82,8 @@ public interface OrderEditPreviewFailure extends OrderEditResult {
         instance.setErrors(template.getErrors());
         return instance;
     }
+
+    public OrderEditPreviewFailure copyDeep();
 
     /**
      * factory method to create a deep copy of OrderEditPreviewFailure

@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("OrderCustomTypeSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderCustomTypeSetMessagePayloadImpl.class)
 public interface OrderCustomTypeSetMessagePayload extends OrderMessagePayload {
@@ -88,6 +89,8 @@ public interface OrderCustomTypeSetMessagePayload extends OrderMessagePayload {
         instance.setPreviousTypeId(template.getPreviousTypeId());
         return instance;
     }
+
+    public OrderCustomTypeSetMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of OrderCustomTypeSetMessagePayload

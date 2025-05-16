@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setLocale")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartSetLocaleActionImpl.class)
 public interface CartSetLocaleAction extends CartUpdateAction {
@@ -66,6 +67,8 @@ public interface CartSetLocaleAction extends CartUpdateAction {
         instance.setLocale(template.getLocale());
         return instance;
     }
+
+    public CartSetLocaleAction copyDeep();
 
     /**
      * factory method to create a deep copy of CartSetLocaleAction

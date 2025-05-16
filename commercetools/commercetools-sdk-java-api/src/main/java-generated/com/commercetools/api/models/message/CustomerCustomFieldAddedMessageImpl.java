@@ -313,4 +313,8 @@ public class CustomerCustomFieldAddedMessageImpl implements CustomerCustomFieldA
                 .build();
     }
 
+    @Override
+    public CustomerCustomFieldAddedMessage copyDeep() {
+        return CustomerCustomFieldAddedMessage.deepCopy(this);
+    }
 }

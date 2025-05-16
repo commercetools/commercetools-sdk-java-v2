@@ -95,4 +95,8 @@ public class CartChangeLineItemsOrderActionImpl implements CartChangeLineItemsOr
                 .build();
     }
 
+    @Override
+    public CartChangeLineItemsOrderAction copyDeep() {
+        return CartChangeLineItemsOrderAction.deepCopy(this);
+    }
 }

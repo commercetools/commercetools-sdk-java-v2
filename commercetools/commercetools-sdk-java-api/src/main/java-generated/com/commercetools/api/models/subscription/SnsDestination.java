@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SNS")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SnsDestinationImpl.class)
 public interface SnsDestination extends Destination {
@@ -120,6 +121,8 @@ public interface SnsDestination extends Destination {
         instance.setAuthenticationMode(template.getAuthenticationMode());
         return instance;
     }
+
+    public SnsDestination copyDeep();
 
     /**
      * factory method to create a deep copy of SnsDestination

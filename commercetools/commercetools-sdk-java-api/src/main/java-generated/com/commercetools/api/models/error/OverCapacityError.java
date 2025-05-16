@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("OverCapacity")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OverCapacityErrorImpl.class)
 public interface OverCapacityError extends ErrorObject {
@@ -79,6 +80,8 @@ public interface OverCapacityError extends ErrorObject {
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
+
+    public OverCapacityError copyDeep();
 
     /**
      * factory method to create a deep copy of OverCapacityError

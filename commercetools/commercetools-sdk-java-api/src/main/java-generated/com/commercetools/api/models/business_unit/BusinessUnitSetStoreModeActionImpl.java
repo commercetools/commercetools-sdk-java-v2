@@ -115,4 +115,8 @@ public class BusinessUnitSetStoreModeActionImpl implements BusinessUnitSetStoreM
                 .build();
     }
 
+    @Override
+    public BusinessUnitSetStoreModeAction copyDeep() {
+        return BusinessUnitSetStoreModeAction.deepCopy(this);
+    }
 }

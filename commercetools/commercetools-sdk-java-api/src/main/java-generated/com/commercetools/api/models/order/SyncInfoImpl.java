@@ -114,4 +114,8 @@ public class SyncInfoImpl implements SyncInfo, ModelBase {
                 .build();
     }
 
+    @Override
+    public SyncInfo copyDeep() {
+        return SyncInfo.deepCopy(this);
+    }
 }

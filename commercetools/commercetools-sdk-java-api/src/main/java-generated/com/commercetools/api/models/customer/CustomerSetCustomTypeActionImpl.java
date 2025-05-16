@@ -111,4 +111,8 @@ public class CustomerSetCustomTypeActionImpl implements CustomerSetCustomTypeAct
                 .build();
     }
 
+    @Override
+    public CustomerSetCustomTypeAction copyDeep() {
+        return CustomerSetCustomTypeAction.deepCopy(this);
+    }
 }

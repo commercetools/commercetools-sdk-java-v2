@@ -112,4 +112,8 @@ public class OrderRemoveDeliveryActionImpl implements OrderRemoveDeliveryAction,
                 .build();
     }
 
+    @Override
+    public OrderRemoveDeliveryAction copyDeep() {
+        return OrderRemoveDeliveryAction.deepCopy(this);
+    }
 }

@@ -36,6 +36,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("PaymentTransactionStateChanged")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PaymentTransactionStateChangedMessageImpl.class)
 public interface PaymentTransactionStateChangedMessage extends Message {
@@ -104,6 +105,8 @@ public interface PaymentTransactionStateChangedMessage extends Message {
         instance.setState(template.getState());
         return instance;
     }
+
+    public PaymentTransactionStateChangedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of PaymentTransactionStateChangedMessage

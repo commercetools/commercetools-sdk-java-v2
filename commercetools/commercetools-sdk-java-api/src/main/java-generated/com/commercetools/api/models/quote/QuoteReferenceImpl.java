@@ -111,4 +111,8 @@ public class QuoteReferenceImpl implements QuoteReference, ModelBase {
                 .build();
     }
 
+    @Override
+    public QuoteReference copyDeep() {
+        return QuoteReference.deepCopy(this);
+    }
 }

@@ -188,6 +188,8 @@ public interface ShippingDraft
         return instance;
     }
 
+    public ShippingDraft copyDeep();
+
     /**
      * factory method to create a deep copy of ShippingDraft
      * @param template instance to be copied

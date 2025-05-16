@@ -92,4 +92,8 @@ public class CategorySetMetaKeywordsActionImpl implements CategorySetMetaKeyword
                 .build();
     }
 
+    @Override
+    public CategorySetMetaKeywordsAction copyDeep() {
+        return CategorySetMetaKeywordsAction.deepCopy(this);
+    }
 }

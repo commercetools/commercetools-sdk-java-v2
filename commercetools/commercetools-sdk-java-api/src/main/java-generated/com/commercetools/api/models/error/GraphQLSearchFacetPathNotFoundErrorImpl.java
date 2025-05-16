@@ -96,4 +96,8 @@ public class GraphQLSearchFacetPathNotFoundErrorImpl implements GraphQLSearchFac
                 .build();
     }
 
+    @Override
+    public GraphQLSearchFacetPathNotFoundError copyDeep() {
+        return GraphQLSearchFacetPathNotFoundError.deepCopy(this);
+    }
 }

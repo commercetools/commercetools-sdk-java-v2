@@ -95,4 +95,8 @@ public class BusinessUnitSearchResultImpl implements BusinessUnitSearchResult, M
                 .build();
     }
 
+    @Override
+    public BusinessUnitSearchResult copyDeep() {
+        return BusinessUnitSearchResult.deepCopy(this);
+    }
 }

@@ -323,4 +323,8 @@ public class StoreCountriesChangedMessageImpl implements StoreCountriesChangedMe
                 .build();
     }
 
+    @Override
+    public StoreCountriesChangedMessage copyDeep() {
+        return StoreCountriesChangedMessage.deepCopy(this);
+    }
 }

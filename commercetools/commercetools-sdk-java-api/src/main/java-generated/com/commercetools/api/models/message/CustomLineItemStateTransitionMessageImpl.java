@@ -394,4 +394,8 @@ public class CustomLineItemStateTransitionMessageImpl implements CustomLineItemS
                 .build();
     }
 
+    @Override
+    public CustomLineItemStateTransitionMessage copyDeep() {
+        return CustomLineItemStateTransitionMessage.deepCopy(this);
+    }
 }

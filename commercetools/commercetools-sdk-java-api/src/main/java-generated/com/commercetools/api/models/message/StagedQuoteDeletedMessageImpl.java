@@ -273,4 +273,8 @@ public class StagedQuoteDeletedMessageImpl implements StagedQuoteDeletedMessage,
                 .build();
     }
 
+    @Override
+    public StagedQuoteDeletedMessage copyDeep() {
+        return StagedQuoteDeletedMessage.deepCopy(this);
+    }
 }

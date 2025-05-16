@@ -91,4 +91,8 @@ public class CategoryChangeOrderHintActionImpl implements CategoryChangeOrderHin
                 .build();
     }
 
+    @Override
+    public CategoryChangeOrderHintAction copyDeep() {
+        return CategoryChangeOrderHintAction.deepCopy(this);
+    }
 }

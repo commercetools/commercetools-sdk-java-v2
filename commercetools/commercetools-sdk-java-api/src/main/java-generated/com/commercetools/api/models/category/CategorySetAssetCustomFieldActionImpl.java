@@ -152,4 +152,8 @@ public class CategorySetAssetCustomFieldActionImpl implements CategorySetAssetCu
                 .build();
     }
 
+    @Override
+    public CategorySetAssetCustomFieldAction copyDeep() {
+        return CategorySetAssetCustomFieldAction.deepCopy(this);
+    }
 }

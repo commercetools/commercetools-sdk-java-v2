@@ -29,6 +29,7 @@ import jakarta.validation.Valid;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("addVariant")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTailoringAddVariantActionImpl.class)
 public interface ProductTailoringAddVariantAction extends ProductTailoringUpdateAction {
@@ -175,6 +176,8 @@ public interface ProductTailoringAddVariantAction extends ProductTailoringUpdate
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public ProductTailoringAddVariantAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductTailoringAddVariantAction

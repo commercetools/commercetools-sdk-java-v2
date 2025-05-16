@@ -169,6 +169,8 @@ public interface ReturnItemDraft extends com.commercetools.api.models.Customizab
         return instance;
     }
 
+    public ReturnItemDraft copyDeep();
+
     /**
      * factory method to create a deep copy of ReturnItemDraft
      * @param template instance to be copied

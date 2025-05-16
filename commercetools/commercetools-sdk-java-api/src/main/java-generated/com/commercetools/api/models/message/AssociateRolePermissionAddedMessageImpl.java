@@ -294,4 +294,8 @@ public class AssociateRolePermissionAddedMessageImpl implements AssociateRolePer
                 .build();
     }
 
+    @Override
+    public AssociateRolePermissionAddedMessage copyDeep() {
+        return AssociateRolePermissionAddedMessage.deepCopy(this);
+    }
 }

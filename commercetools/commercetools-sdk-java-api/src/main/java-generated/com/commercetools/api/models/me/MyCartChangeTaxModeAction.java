@@ -31,6 +31,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeTaxMode")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyCartChangeTaxModeActionImpl.class)
 public interface MyCartChangeTaxModeAction extends MyCartUpdateAction {
@@ -73,6 +74,8 @@ public interface MyCartChangeTaxModeAction extends MyCartUpdateAction {
         instance.setTaxMode(template.getTaxMode());
         return instance;
     }
+
+    public MyCartChangeTaxModeAction copyDeep();
 
     /**
      * factory method to create a deep copy of MyCartChangeTaxModeAction

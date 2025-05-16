@@ -607,4 +607,8 @@ public class BusinessUnitImpl implements BusinessUnit, ModelBase {
                 .build();
     }
 
+    @Override
+    public BusinessUnit copyDeep() {
+        return BusinessUnit.deepCopy(this);
+    }
 }

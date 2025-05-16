@@ -96,4 +96,8 @@ public class ChannelRemoveRolesActionImpl implements ChannelRemoveRolesAction, M
                 .build();
     }
 
+    @Override
+    public ChannelRemoveRolesAction copyDeep() {
+        return ChannelRemoveRolesAction.deepCopy(this);
+    }
 }

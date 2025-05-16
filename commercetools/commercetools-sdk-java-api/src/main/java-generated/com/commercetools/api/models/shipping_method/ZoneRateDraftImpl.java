@@ -101,4 +101,8 @@ public class ZoneRateDraftImpl implements ZoneRateDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public ZoneRateDraft copyDeep() {
+        return ZoneRateDraft.deepCopy(this);
+    }
 }

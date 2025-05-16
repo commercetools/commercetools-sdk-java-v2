@@ -97,4 +97,8 @@ public class ProductSelectionSettingDraftImpl implements ProductSelectionSetting
                 .build();
     }
 
+    @Override
+    public ProductSelectionSettingDraft copyDeep() {
+        return ProductSelectionSettingDraft.deepCopy(this);
+    }
 }

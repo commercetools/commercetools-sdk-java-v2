@@ -93,4 +93,8 @@ public class MyBusinessUnitChangeParentUnitActionImpl implements MyBusinessUnitC
                 .build();
     }
 
+    @Override
+    public MyBusinessUnitChangeParentUnitAction copyDeep() {
+        return MyBusinessUnitChangeParentUnitAction.deepCopy(this);
+    }
 }

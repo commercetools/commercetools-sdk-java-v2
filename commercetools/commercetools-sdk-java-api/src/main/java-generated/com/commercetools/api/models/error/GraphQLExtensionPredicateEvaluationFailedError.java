@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ExtensionPredicateEvaluationFailed")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLExtensionPredicateEvaluationFailedErrorImpl.class)
 public interface GraphQLExtensionPredicateEvaluationFailedError extends GraphQLErrorObject {
@@ -81,6 +82,8 @@ public interface GraphQLExtensionPredicateEvaluationFailedError extends GraphQLE
         instance.setErrorByExtension(template.getErrorByExtension());
         return instance;
     }
+
+    public GraphQLExtensionPredicateEvaluationFailedError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLExtensionPredicateEvaluationFailedError

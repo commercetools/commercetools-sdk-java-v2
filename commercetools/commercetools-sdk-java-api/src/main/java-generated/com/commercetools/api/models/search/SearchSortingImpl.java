@@ -176,4 +176,8 @@ public class SearchSortingImpl implements SearchSorting, ModelBase {
                 .build();
     }
 
+    @Override
+    public SearchSorting copyDeep() {
+        return SearchSorting.deepCopy(this);
+    }
 }

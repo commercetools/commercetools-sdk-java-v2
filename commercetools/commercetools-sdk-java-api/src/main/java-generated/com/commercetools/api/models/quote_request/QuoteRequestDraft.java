@@ -168,6 +168,8 @@ public interface QuoteRequestDraft
         return instance;
     }
 
+    public QuoteRequestDraft copyDeep();
+
     /**
      * factory method to create a deep copy of QuoteRequestDraft
      * @param template instance to be copied

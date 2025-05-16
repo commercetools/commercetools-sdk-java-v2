@@ -101,6 +101,8 @@ public interface MyCustomerChangePassword {
         return instance;
     }
 
+    public MyCustomerChangePassword copyDeep();
+
     /**
      * factory method to create a deep copy of MyCustomerChangePassword
      * @param template instance to be copied

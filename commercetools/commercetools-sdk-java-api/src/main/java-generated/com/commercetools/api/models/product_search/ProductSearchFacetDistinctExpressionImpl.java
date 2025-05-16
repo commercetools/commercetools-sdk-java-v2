@@ -75,4 +75,8 @@ public class ProductSearchFacetDistinctExpressionImpl implements ProductSearchFa
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("distinct", distinct).build();
     }
 
+    @Override
+    public ProductSearchFacetDistinctExpression copyDeep() {
+        return ProductSearchFacetDistinctExpression.deepCopy(this);
+    }
 }

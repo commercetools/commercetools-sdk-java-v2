@@ -67,6 +67,8 @@ public interface OrderSearchExistsExpression extends OrderSearchQueryExpression 
         return instance;
     }
 
+    public OrderSearchExistsExpression copyDeep();
+
     /**
      * factory method to create a deep copy of OrderSearchExistsExpression
      * @param template instance to be copied

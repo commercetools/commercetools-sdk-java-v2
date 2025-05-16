@@ -78,4 +78,8 @@ public class ApproverConjunctionDraftImpl implements ApproverConjunctionDraft, M
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("and", and).build();
     }
 
+    @Override
+    public ApproverConjunctionDraft copyDeep() {
+        return ApproverConjunctionDraft.deepCopy(this);
+    }
 }

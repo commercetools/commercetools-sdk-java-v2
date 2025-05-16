@@ -109,6 +109,8 @@ public interface ReturnInfo {
         return instance;
     }
 
+    public ReturnInfo copyDeep();
+
     /**
      * factory method to create a deep copy of ReturnInfo
      * @param template instance to be copied

@@ -118,4 +118,8 @@ public class CartDiscountValueFixedDraftImpl implements CartDiscountValueFixedDr
                 .build();
     }
 
+    @Override
+    public CartDiscountValueFixedDraft copyDeep() {
+        return CartDiscountValueFixedDraft.deepCopy(this);
+    }
 }

@@ -413,4 +413,8 @@ public class ReviewImpl implements Review, ModelBase {
                 .build();
     }
 
+    @Override
+    public Review copyDeep() {
+        return Review.deepCopy(this);
+    }
 }

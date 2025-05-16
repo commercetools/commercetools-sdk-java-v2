@@ -191,4 +191,8 @@ public class ProductTailoringChangeAssetNameActionImpl implements ProductTailori
                 .build();
     }
 
+    @Override
+    public ProductTailoringChangeAssetNameAction copyDeep() {
+        return ProductTailoringChangeAssetNameAction.deepCopy(this);
+    }
 }

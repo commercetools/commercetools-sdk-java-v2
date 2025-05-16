@@ -159,4 +159,8 @@ public class QuotePagedQueryResponseImpl implements QuotePagedQueryResponse, Mod
                 .build();
     }
 
+    @Override
+    public QuotePagedQueryResponse copyDeep() {
+        return QuotePagedQueryResponse.deepCopy(this);
+    }
 }

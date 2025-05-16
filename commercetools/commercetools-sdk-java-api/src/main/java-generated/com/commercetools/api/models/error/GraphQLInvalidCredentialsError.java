@@ -31,6 +31,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("InvalidCredentials")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLInvalidCredentialsErrorImpl.class)
 public interface GraphQLInvalidCredentialsError extends GraphQLErrorObject {
@@ -66,6 +67,8 @@ public interface GraphQLInvalidCredentialsError extends GraphQLErrorObject {
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
+
+    public GraphQLInvalidCredentialsError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLInvalidCredentialsError

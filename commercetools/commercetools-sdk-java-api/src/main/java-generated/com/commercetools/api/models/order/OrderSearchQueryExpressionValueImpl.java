@@ -114,4 +114,8 @@ public class OrderSearchQueryExpressionValueImpl implements OrderSearchQueryExpr
                 .build();
     }
 
+    @Override
+    public OrderSearchQueryExpressionValue copyDeep() {
+        return OrderSearchQueryExpressionValue.deepCopy(this);
+    }
 }

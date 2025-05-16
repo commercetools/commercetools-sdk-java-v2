@@ -133,4 +133,8 @@ public class CartSetLineItemPriceActionImpl implements CartSetLineItemPriceActio
                 .build();
     }
 
+    @Override
+    public CartSetLineItemPriceAction copyDeep() {
+        return CartSetLineItemPriceAction.deepCopy(this);
+    }
 }

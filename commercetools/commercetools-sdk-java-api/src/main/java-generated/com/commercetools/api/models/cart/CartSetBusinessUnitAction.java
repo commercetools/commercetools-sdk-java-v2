@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setBusinessUnit")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartSetBusinessUnitActionImpl.class)
 public interface CartSetBusinessUnitAction extends CartUpdateAction {
@@ -72,6 +73,8 @@ public interface CartSetBusinessUnitAction extends CartUpdateAction {
         instance.setBusinessUnit(template.getBusinessUnit());
         return instance;
     }
+
+    public CartSetBusinessUnitAction copyDeep();
 
     /**
      * factory method to create a deep copy of CartSetBusinessUnitAction

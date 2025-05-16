@@ -62,4 +62,8 @@ public class CustomerDeletedMessagePayloadImpl implements CustomerDeletedMessage
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type).build();
     }
 
+    @Override
+    public CustomerDeletedMessagePayload copyDeep() {
+        return CustomerDeletedMessagePayload.deepCopy(this);
+    }
 }

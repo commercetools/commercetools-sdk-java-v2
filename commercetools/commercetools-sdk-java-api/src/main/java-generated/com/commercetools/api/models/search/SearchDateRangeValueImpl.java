@@ -194,4 +194,8 @@ public class SearchDateRangeValueImpl implements SearchDateRangeValue, ModelBase
                 .build();
     }
 
+    @Override
+    public SearchDateRangeValue copyDeep() {
+        return SearchDateRangeValue.deepCopy(this);
+    }
 }

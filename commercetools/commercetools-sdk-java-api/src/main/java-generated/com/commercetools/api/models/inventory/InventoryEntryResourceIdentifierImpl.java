@@ -110,4 +110,8 @@ public class InventoryEntryResourceIdentifierImpl implements InventoryEntryResou
                 .build();
     }
 
+    @Override
+    public InventoryEntryResourceIdentifier copyDeep() {
+        return InventoryEntryResourceIdentifier.deepCopy(this);
+    }
 }

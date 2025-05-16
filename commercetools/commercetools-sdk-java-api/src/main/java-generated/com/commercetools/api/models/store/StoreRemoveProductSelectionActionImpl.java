@@ -93,4 +93,8 @@ public class StoreRemoveProductSelectionActionImpl implements StoreRemoveProduct
                 .build();
     }
 
+    @Override
+    public StoreRemoveProductSelectionAction copyDeep() {
+        return StoreRemoveProductSelectionAction.deepCopy(this);
+    }
 }

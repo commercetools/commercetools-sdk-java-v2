@@ -96,4 +96,8 @@ public class CustomFieldEnumTypeImpl implements CustomFieldEnumType, ModelBase {
                 .build();
     }
 
+    @Override
+    public CustomFieldEnumType copyDeep() {
+        return CustomFieldEnumType.deepCopy(this);
+    }
 }

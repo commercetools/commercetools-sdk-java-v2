@@ -313,4 +313,8 @@ public class DeliveryAddedMessageImpl implements DeliveryAddedMessage, ModelBase
                 .build();
     }
 
+    @Override
+    public DeliveryAddedMessage copyDeep() {
+        return DeliveryAddedMessage.deepCopy(this);
+    }
 }

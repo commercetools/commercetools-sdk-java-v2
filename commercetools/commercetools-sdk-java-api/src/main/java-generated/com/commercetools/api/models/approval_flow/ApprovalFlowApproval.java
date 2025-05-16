@@ -86,6 +86,8 @@ public interface ApprovalFlowApproval {
         return instance;
     }
 
+    public ApprovalFlowApproval copyDeep();
+
     /**
      * factory method to create a deep copy of ApprovalFlowApproval
      * @param template instance to be copied

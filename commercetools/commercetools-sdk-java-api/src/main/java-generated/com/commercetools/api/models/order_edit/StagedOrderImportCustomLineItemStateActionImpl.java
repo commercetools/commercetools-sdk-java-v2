@@ -138,4 +138,8 @@ public class StagedOrderImportCustomLineItemStateActionImpl
                 .build();
     }
 
+    @Override
+    public StagedOrderImportCustomLineItemStateAction copyDeep() {
+        return StagedOrderImportCustomLineItemStateAction.deepCopy(this);
+    }
 }

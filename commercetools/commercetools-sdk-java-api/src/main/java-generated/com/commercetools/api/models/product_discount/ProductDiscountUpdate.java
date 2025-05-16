@@ -94,6 +94,8 @@ public interface ProductDiscountUpdate extends
         return instance;
     }
 
+    public ProductDiscountUpdate copyDeep();
+
     /**
      * factory method to create a deep copy of ProductDiscountUpdate
      * @param template instance to be copied

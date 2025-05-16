@@ -157,4 +157,8 @@ public class EnumKeyAlreadyExistsErrorImpl implements EnumKeyAlreadyExistsError,
                 .build();
     }
 
+    @Override
+    public EnumKeyAlreadyExistsError copyDeep() {
+        return EnumKeyAlreadyExistsError.deepCopy(this);
+    }
 }

@@ -92,4 +92,8 @@ public class CartDiscountChangeIsActiveActionImpl implements CartDiscountChangeI
                 .build();
     }
 
+    @Override
+    public CartDiscountChangeIsActiveAction copyDeep() {
+        return CartDiscountChangeIsActiveAction.deepCopy(this);
+    }
 }

@@ -78,4 +78,8 @@ public class ChangeSubscriptionImpl implements ChangeSubscription, ModelBase {
                 .build();
     }
 
+    @Override
+    public ChangeSubscription copyDeep() {
+        return ChangeSubscription.deepCopy(this);
+    }
 }

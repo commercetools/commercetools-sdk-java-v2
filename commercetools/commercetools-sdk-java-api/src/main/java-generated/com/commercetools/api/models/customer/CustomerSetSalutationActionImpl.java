@@ -91,4 +91,8 @@ public class CustomerSetSalutationActionImpl implements CustomerSetSalutationAct
                 .build();
     }
 
+    @Override
+    public CustomerSetSalutationAction copyDeep() {
+        return CustomerSetSalutationAction.deepCopy(this);
+    }
 }

@@ -95,6 +95,8 @@ public interface InheritedAssociate {
         return instance;
     }
 
+    public InheritedAssociate copyDeep();
+
     /**
      * factory method to create a deep copy of InheritedAssociate
      * @param template instance to be copied

@@ -153,4 +153,8 @@ public class ProductPriceCustomFieldRemovedMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public ProductPriceCustomFieldRemovedMessagePayload copyDeep() {
+        return ProductPriceCustomFieldRemovedMessagePayload.deepCopy(this);
+    }
 }

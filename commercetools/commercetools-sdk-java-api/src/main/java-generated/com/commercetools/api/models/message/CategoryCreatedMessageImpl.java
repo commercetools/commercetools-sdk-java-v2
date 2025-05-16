@@ -293,4 +293,8 @@ public class CategoryCreatedMessageImpl implements CategoryCreatedMessage, Model
                 .build();
     }
 
+    @Override
+    public CategoryCreatedMessage copyDeep() {
+        return CategoryCreatedMessage.deepCopy(this);
+    }
 }

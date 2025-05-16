@@ -134,4 +134,8 @@ public class BusinessUnitAddressCustomTypeSetMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public BusinessUnitAddressCustomTypeSetMessagePayload copyDeep() {
+        return BusinessUnitAddressCustomTypeSetMessagePayload.deepCopy(this);
+    }
 }

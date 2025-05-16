@@ -112,4 +112,8 @@ public class ProductTypeChangeLocalizedEnumValueLabelActionImpl
                 .build();
     }
 
+    @Override
+    public ProductTypeChangeLocalizedEnumValueLabelAction copyDeep() {
+        return ProductTypeChangeLocalizedEnumValueLabelAction.deepCopy(this);
+    }
 }

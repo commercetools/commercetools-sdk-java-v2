@@ -74,4 +74,8 @@ public class SearchWildCardExpressionImpl implements SearchWildCardExpression, M
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("wildcard", wildcard).build();
     }
 
+    @Override
+    public SearchWildCardExpression copyDeep() {
+        return SearchWildCardExpression.deepCopy(this);
+    }
 }

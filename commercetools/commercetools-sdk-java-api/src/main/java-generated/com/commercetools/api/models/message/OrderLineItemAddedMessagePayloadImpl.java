@@ -111,4 +111,8 @@ public class OrderLineItemAddedMessagePayloadImpl implements OrderLineItemAddedM
                 .build();
     }
 
+    @Override
+    public OrderLineItemAddedMessagePayload copyDeep() {
+        return OrderLineItemAddedMessagePayload.deepCopy(this);
+    }
 }

@@ -31,6 +31,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("giftLineItem")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartDiscountValueGiftLineItemDraftImpl.class)
 public interface CartDiscountValueGiftLineItemDraft
@@ -125,6 +126,8 @@ public interface CartDiscountValueGiftLineItemDraft
         instance.setDistributionChannel(template.getDistributionChannel());
         return instance;
     }
+
+    public CartDiscountValueGiftLineItemDraft copyDeep();
 
     /**
      * factory method to create a deep copy of CartDiscountValueGiftLineItemDraft

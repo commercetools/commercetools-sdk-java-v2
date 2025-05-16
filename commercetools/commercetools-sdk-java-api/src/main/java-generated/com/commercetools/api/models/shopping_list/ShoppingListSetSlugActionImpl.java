@@ -92,4 +92,8 @@ public class ShoppingListSetSlugActionImpl implements ShoppingListSetSlugAction,
                 .build();
     }
 
+    @Override
+    public ShoppingListSetSlugAction copyDeep() {
+        return ShoppingListSetSlugAction.deepCopy(this);
+    }
 }

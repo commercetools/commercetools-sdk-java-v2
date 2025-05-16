@@ -111,4 +111,8 @@ public class StandalonePriceSetCustomTypeActionImpl implements StandalonePriceSe
                 .build();
     }
 
+    @Override
+    public StandalonePriceSetCustomTypeAction copyDeep() {
+        return StandalonePriceSetCustomTypeAction.deepCopy(this);
+    }
 }

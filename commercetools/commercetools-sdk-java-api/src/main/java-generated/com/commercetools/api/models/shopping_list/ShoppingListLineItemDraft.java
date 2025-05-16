@@ -164,6 +164,8 @@ public interface ShoppingListLineItemDraft
         return instance;
     }
 
+    public ShoppingListLineItemDraft copyDeep();
+
     /**
      * factory method to create a deep copy of ShoppingListLineItemDraft
      * @param template instance to be copied

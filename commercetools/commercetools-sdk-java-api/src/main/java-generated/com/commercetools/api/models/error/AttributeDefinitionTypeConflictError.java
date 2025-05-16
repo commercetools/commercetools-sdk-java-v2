@@ -31,6 +31,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("AttributeDefinitionTypeConflict")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AttributeDefinitionTypeConflictErrorImpl.class)
 public interface AttributeDefinitionTypeConflictError extends ErrorObject {
@@ -130,6 +131,8 @@ public interface AttributeDefinitionTypeConflictError extends ErrorObject {
         instance.setConflictingAttributeName(template.getConflictingAttributeName());
         return instance;
     }
+
+    public AttributeDefinitionTypeConflictError copyDeep();
 
     /**
      * factory method to create a deep copy of AttributeDefinitionTypeConflictError

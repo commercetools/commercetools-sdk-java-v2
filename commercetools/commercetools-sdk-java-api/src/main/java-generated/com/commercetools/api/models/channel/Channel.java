@@ -298,6 +298,8 @@ public interface Channel extends BaseResource, ChannelMixin, com.commercetools.a
         return instance;
     }
 
+    public Channel copyDeep();
+
     /**
      * factory method to create a deep copy of Channel
      * @param template instance to be copied

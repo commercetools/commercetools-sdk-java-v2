@@ -43,6 +43,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("MatchingPriceNotFound")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLMatchingPriceNotFoundErrorImpl.class)
 public interface GraphQLMatchingPriceNotFoundError extends GraphQLErrorObject {
@@ -174,6 +175,8 @@ public interface GraphQLMatchingPriceNotFoundError extends GraphQLErrorObject {
         instance.setChannel(template.getChannel());
         return instance;
     }
+
+    public GraphQLMatchingPriceNotFoundError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLMatchingPriceNotFoundError

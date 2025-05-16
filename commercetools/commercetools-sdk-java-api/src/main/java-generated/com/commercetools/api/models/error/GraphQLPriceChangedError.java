@@ -35,6 +35,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("PriceChanged")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLPriceChangedErrorImpl.class)
 public interface GraphQLPriceChangedError extends GraphQLErrorObject {
@@ -110,6 +111,8 @@ public interface GraphQLPriceChangedError extends GraphQLErrorObject {
         instance.setShipping(template.getShipping());
         return instance;
     }
+
+    public GraphQLPriceChangedError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLPriceChangedError

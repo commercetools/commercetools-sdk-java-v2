@@ -101,4 +101,8 @@ public class GraphQLInvalidCredentialsErrorImpl implements GraphQLInvalidCredent
                 .build();
     }
 
+    @Override
+    public GraphQLInvalidCredentialsError copyDeep() {
+        return GraphQLInvalidCredentialsError.deepCopy(this);
+    }
 }

@@ -27,6 +27,7 @@ import jakarta.validation.Valid;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setCustomer")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ReviewSetCustomerActionImpl.class)
 public interface ReviewSetCustomerAction extends ReviewUpdateAction {
@@ -69,6 +70,8 @@ public interface ReviewSetCustomerAction extends ReviewUpdateAction {
         instance.setCustomer(template.getCustomer());
         return instance;
     }
+
+    public ReviewSetCustomerAction copyDeep();
 
     /**
      * factory method to create a deep copy of ReviewSetCustomerAction

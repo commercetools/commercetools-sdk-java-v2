@@ -98,6 +98,8 @@ public interface MyOrderFromQuoteDraft extends io.vrap.rmf.base.client.Draft<MyO
         return instance;
     }
 
+    public MyOrderFromQuoteDraft copyDeep();
+
     /**
      * factory method to create a deep copy of MyOrderFromQuoteDraft
      * @param template instance to be copied

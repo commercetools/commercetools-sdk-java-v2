@@ -153,4 +153,8 @@ public class ProductSetProductPriceCustomTypeActionImpl implements ProductSetPro
                 .build();
     }
 
+    @Override
+    public ProductSetProductPriceCustomTypeAction copyDeep() {
+        return ProductSetProductPriceCustomTypeAction.deepCopy(this);
+    }
 }

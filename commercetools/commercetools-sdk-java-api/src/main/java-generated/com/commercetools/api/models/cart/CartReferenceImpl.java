@@ -111,4 +111,8 @@ public class CartReferenceImpl implements CartReference, ModelBase {
                 .build();
     }
 
+    @Override
+    public CartReference copyDeep() {
+        return CartReference.deepCopy(this);
+    }
 }

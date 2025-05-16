@@ -80,6 +80,8 @@ public interface CartsConfiguration {
         return instance;
     }
 
+    public CartsConfiguration copyDeep();
+
     /**
      * factory method to create a deep copy of CartsConfiguration
      * @param template instance to be copied

@@ -95,4 +95,8 @@ public class ItemStateImpl implements ItemState, ModelBase {
                 .build();
     }
 
+    @Override
+    public ItemState copyDeep() {
+        return ItemState.deepCopy(this);
+    }
 }

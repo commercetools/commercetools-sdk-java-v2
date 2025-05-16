@@ -92,4 +92,8 @@ public class InventoryEntrySetSupplyChannelActionImpl implements InventoryEntryS
                 .build();
     }
 
+    @Override
+    public InventoryEntrySetSupplyChannelAction copyDeep() {
+        return InventoryEntrySetSupplyChannelAction.deepCopy(this);
+    }
 }

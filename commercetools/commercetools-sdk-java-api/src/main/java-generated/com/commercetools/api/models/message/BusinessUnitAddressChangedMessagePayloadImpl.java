@@ -93,4 +93,8 @@ public class BusinessUnitAddressChangedMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public BusinessUnitAddressChangedMessagePayload copyDeep() {
+        return BusinessUnitAddressChangedMessagePayload.deepCopy(this);
+    }
 }

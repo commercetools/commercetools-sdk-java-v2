@@ -333,4 +333,8 @@ public class CustomerAddressCustomFieldAddedMessageImpl implements CustomerAddre
                 .build();
     }
 
+    @Override
+    public CustomerAddressCustomFieldAddedMessage copyDeep() {
+        return CustomerAddressCustomFieldAddedMessage.deepCopy(this);
+    }
 }

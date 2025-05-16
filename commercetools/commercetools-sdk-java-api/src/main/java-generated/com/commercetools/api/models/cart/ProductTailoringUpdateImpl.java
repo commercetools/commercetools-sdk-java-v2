@@ -101,4 +101,8 @@ public class ProductTailoringUpdateImpl implements ProductTailoringUpdate, Model
                 .build();
     }
 
+    @Override
+    public ProductTailoringUpdate copyDeep() {
+        return ProductTailoringUpdate.deepCopy(this);
+    }
 }

@@ -132,4 +132,8 @@ public class ShoppingListRemoveLineItemActionImpl implements ShoppingListRemoveL
                 .build();
     }
 
+    @Override
+    public ShoppingListRemoveLineItemAction copyDeep() {
+        return ShoppingListRemoveLineItemAction.deepCopy(this);
+    }
 }

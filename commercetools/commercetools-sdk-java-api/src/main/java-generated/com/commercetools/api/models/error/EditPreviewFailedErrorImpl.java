@@ -134,4 +134,8 @@ public class EditPreviewFailedErrorImpl implements EditPreviewFailedError, Model
                 .build();
     }
 
+    @Override
+    public EditPreviewFailedError copyDeep() {
+        return EditPreviewFailedError.deepCopy(this);
+    }
 }

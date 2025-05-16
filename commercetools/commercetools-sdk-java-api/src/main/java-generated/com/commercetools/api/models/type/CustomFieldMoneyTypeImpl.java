@@ -62,4 +62,8 @@ public class CustomFieldMoneyTypeImpl implements CustomFieldMoneyType, ModelBase
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("name", name).build();
     }
 
+    @Override
+    public CustomFieldMoneyType copyDeep() {
+        return CustomFieldMoneyType.deepCopy(this);
+    }
 }

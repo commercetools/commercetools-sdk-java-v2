@@ -283,4 +283,8 @@ public class ProductTailoringDraftImpl implements ProductTailoringDraft, ModelBa
                 .build();
     }
 
+    @Override
+    public ProductTailoringDraft copyDeep() {
+        return ProductTailoringDraft.deepCopy(this);
+    }
 }

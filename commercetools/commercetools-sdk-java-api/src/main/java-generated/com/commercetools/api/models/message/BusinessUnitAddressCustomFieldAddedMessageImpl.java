@@ -334,4 +334,8 @@ public class BusinessUnitAddressCustomFieldAddedMessageImpl
                 .build();
     }
 
+    @Override
+    public BusinessUnitAddressCustomFieldAddedMessage copyDeep() {
+        return BusinessUnitAddressCustomFieldAddedMessage.deepCopy(this);
+    }
 }

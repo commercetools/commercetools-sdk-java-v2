@@ -313,4 +313,8 @@ public class CustomerGroupCustomFieldAddedMessageImpl implements CustomerGroupCu
                 .build();
     }
 
+    @Override
+    public CustomerGroupCustomFieldAddedMessage copyDeep() {
+        return CustomerGroupCustomFieldAddedMessage.deepCopy(this);
+    }
 }

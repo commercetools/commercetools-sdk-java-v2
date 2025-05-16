@@ -28,6 +28,7 @@ import jakarta.validation.Valid;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setBusinessUnit")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderSetBusinessUnitActionImpl.class)
 public interface OrderSetBusinessUnitAction extends OrderUpdateAction {
@@ -72,6 +73,8 @@ public interface OrderSetBusinessUnitAction extends OrderUpdateAction {
         instance.setBusinessUnit(template.getBusinessUnit());
         return instance;
     }
+
+    public OrderSetBusinessUnitAction copyDeep();
 
     /**
      * factory method to create a deep copy of OrderSetBusinessUnitAction

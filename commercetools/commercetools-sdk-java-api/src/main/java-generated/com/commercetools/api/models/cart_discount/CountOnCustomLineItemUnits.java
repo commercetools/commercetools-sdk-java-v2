@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("CountOnCustomLineItemUnits")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CountOnCustomLineItemUnitsImpl.class)
 public interface CountOnCustomLineItemUnits extends PatternComponent {
@@ -123,6 +124,8 @@ public interface CountOnCustomLineItemUnits extends PatternComponent {
         instance.setExcludeCount(template.getExcludeCount());
         return instance;
     }
+
+    public CountOnCustomLineItemUnits copyDeep();
 
     /**
      * factory method to create a deep copy of CountOnCustomLineItemUnits

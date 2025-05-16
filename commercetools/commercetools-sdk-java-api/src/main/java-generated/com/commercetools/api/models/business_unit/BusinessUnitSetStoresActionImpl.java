@@ -96,4 +96,8 @@ public class BusinessUnitSetStoresActionImpl implements BusinessUnitSetStoresAct
                 .build();
     }
 
+    @Override
+    public BusinessUnitSetStoresAction copyDeep() {
+        return BusinessUnitSetStoresAction.deepCopy(this);
+    }
 }

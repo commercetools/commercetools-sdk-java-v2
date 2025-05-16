@@ -554,6 +554,8 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
         return instance;
     }
 
+    public LineItem copyDeep();
+
     /**
      * factory method to create a deep copy of LineItem
      * @param template instance to be copied

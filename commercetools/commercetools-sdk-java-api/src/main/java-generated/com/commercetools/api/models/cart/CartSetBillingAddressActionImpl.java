@@ -92,4 +92,8 @@ public class CartSetBillingAddressActionImpl implements CartSetBillingAddressAct
                 .build();
     }
 
+    @Override
+    public CartSetBillingAddressAction copyDeep() {
+        return CartSetBillingAddressAction.deepCopy(this);
+    }
 }

@@ -355,4 +355,8 @@ public class OrderCustomerSetMessageImpl implements OrderCustomerSetMessage, Mod
                 .build();
     }
 
+    @Override
+    public OrderCustomerSetMessage copyDeep() {
+        return OrderCustomerSetMessage.deepCopy(this);
+    }
 }

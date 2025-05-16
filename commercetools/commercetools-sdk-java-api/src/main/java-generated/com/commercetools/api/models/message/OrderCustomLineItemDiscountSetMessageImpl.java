@@ -360,4 +360,8 @@ public class OrderCustomLineItemDiscountSetMessageImpl implements OrderCustomLin
                 .build();
     }
 
+    @Override
+    public OrderCustomLineItemDiscountSetMessage copyDeep() {
+        return OrderCustomLineItemDiscountSetMessage.deepCopy(this);
+    }
 }

@@ -92,4 +92,8 @@ public class StagedOrderRemoveDiscountCodeActionImpl implements StagedOrderRemov
                 .build();
     }
 
+    @Override
+    public StagedOrderRemoveDiscountCodeAction copyDeep() {
+        return StagedOrderRemoveDiscountCodeAction.deepCopy(this);
+    }
 }

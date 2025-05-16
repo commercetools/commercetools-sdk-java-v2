@@ -62,4 +62,8 @@ public class CustomerEmailVerifiedMessagePayloadImpl implements CustomerEmailVer
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type).build();
     }
 
+    @Override
+    public CustomerEmailVerifiedMessagePayload copyDeep() {
+        return CustomerEmailVerifiedMessagePayload.deepCopy(this);
+    }
 }

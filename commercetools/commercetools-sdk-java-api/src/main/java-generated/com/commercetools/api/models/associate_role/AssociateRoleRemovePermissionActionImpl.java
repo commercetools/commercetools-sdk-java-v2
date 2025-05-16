@@ -92,4 +92,8 @@ public class AssociateRoleRemovePermissionActionImpl implements AssociateRoleRem
                 .build();
     }
 
+    @Override
+    public AssociateRoleRemovePermissionAction copyDeep() {
+        return AssociateRoleRemovePermissionAction.deepCopy(this);
+    }
 }

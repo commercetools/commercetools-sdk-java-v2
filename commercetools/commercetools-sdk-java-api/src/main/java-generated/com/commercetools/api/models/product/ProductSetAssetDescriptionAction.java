@@ -27,6 +27,7 @@ import jakarta.validation.Valid;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setAssetDescription")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSetAssetDescriptionActionImpl.class)
 public interface ProductSetAssetDescriptionAction extends ProductUpdateAction {
@@ -149,6 +150,8 @@ public interface ProductSetAssetDescriptionAction extends ProductUpdateAction {
         instance.setDescription(template.getDescription());
         return instance;
     }
+
+    public ProductSetAssetDescriptionAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductSetAssetDescriptionAction

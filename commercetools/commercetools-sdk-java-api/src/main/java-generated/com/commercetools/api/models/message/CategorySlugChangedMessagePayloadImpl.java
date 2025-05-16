@@ -111,4 +111,8 @@ public class CategorySlugChangedMessagePayloadImpl implements CategorySlugChange
                 .build();
     }
 
+    @Override
+    public CategorySlugChangedMessagePayload copyDeep() {
+        return CategorySlugChangedMessagePayload.deepCopy(this);
+    }
 }

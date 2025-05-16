@@ -160,4 +160,8 @@ public class ExtensionErrorImpl implements ExtensionError, ModelBase {
                 .build();
     }
 
+    @Override
+    public ExtensionError copyDeep() {
+        return ExtensionError.deepCopy(this);
+    }
 }

@@ -97,4 +97,8 @@ public class SubscriptionSetEventsActionImpl implements SubscriptionSetEventsAct
                 .build();
     }
 
+    @Override
+    public SubscriptionSetEventsAction copyDeep() {
+        return SubscriptionSetEventsAction.deepCopy(this);
+    }
 }

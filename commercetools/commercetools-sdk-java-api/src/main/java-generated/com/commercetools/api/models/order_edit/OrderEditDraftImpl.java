@@ -182,4 +182,8 @@ public class OrderEditDraftImpl implements OrderEditDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public OrderEditDraft copyDeep() {
+        return OrderEditDraft.deepCopy(this);
+    }
 }

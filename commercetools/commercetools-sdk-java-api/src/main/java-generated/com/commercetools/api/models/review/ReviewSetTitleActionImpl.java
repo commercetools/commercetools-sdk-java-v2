@@ -91,4 +91,8 @@ public class ReviewSetTitleActionImpl implements ReviewSetTitleAction, ModelBase
                 .build();
     }
 
+    @Override
+    public ReviewSetTitleAction copyDeep() {
+        return ReviewSetTitleAction.deepCopy(this);
+    }
 }

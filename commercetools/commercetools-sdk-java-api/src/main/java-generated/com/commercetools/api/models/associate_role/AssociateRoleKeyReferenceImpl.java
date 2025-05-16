@@ -92,4 +92,8 @@ public class AssociateRoleKeyReferenceImpl implements AssociateRoleKeyReference,
                 .build();
     }
 
+    @Override
+    public AssociateRoleKeyReference copyDeep() {
+        return AssociateRoleKeyReference.deepCopy(this);
+    }
 }

@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("CustomerTitleSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerTitleSetMessagePayloadImpl.class)
 public interface CustomerTitleSetMessagePayload extends MessagePayload {
@@ -66,6 +67,8 @@ public interface CustomerTitleSetMessagePayload extends MessagePayload {
         instance.setTitle(template.getTitle());
         return instance;
     }
+
+    public CustomerTitleSetMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of CustomerTitleSetMessagePayload

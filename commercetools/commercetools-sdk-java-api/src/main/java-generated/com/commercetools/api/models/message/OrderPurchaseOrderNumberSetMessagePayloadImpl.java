@@ -114,4 +114,8 @@ public class OrderPurchaseOrderNumberSetMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public OrderPurchaseOrderNumberSetMessagePayload copyDeep() {
+        return OrderPurchaseOrderNumberSetMessagePayload.deepCopy(this);
+    }
 }

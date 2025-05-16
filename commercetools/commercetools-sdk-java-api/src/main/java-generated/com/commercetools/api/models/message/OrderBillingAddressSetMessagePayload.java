@@ -27,6 +27,7 @@ import jakarta.validation.Valid;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("OrderBillingAddressSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderBillingAddressSetMessagePayloadImpl.class)
 public interface OrderBillingAddressSetMessagePayload extends OrderMessagePayload {
@@ -85,6 +86,8 @@ public interface OrderBillingAddressSetMessagePayload extends OrderMessagePayloa
         instance.setOldAddress(template.getOldAddress());
         return instance;
     }
+
+    public OrderBillingAddressSetMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of OrderBillingAddressSetMessagePayload

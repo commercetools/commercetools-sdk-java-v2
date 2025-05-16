@@ -111,4 +111,8 @@ public class ProductDiscountSetValidFromAndUntilActionImpl
                 .build();
     }
 
+    @Override
+    public ProductDiscountSetValidFromAndUntilAction copyDeep() {
+        return ProductDiscountSetValidFromAndUntilAction.deepCopy(this);
+    }
 }

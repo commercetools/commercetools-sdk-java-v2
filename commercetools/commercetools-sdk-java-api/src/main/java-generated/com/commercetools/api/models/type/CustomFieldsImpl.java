@@ -95,4 +95,8 @@ public class CustomFieldsImpl implements CustomFields, ModelBase {
                 .build();
     }
 
+    @Override
+    public CustomFields copyDeep() {
+        return CustomFields.deepCopy(this);
+    }
 }

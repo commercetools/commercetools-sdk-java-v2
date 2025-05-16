@@ -119,4 +119,8 @@ public class MaxStoreReferencesReachedErrorImpl implements MaxStoreReferencesRea
                 .build();
     }
 
+    @Override
+    public MaxStoreReferencesReachedError copyDeep() {
+        return MaxStoreReferencesReachedError.deepCopy(this);
+    }
 }

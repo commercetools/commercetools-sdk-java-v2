@@ -114,4 +114,8 @@ public class ProjectChangeProductSearchIndexingEnabledActionImpl
                 .build();
     }
 
+    @Override
+    public ProjectChangeProductSearchIndexingEnabledAction copyDeep() {
+        return ProjectChangeProductSearchIndexingEnabledAction.deepCopy(this);
+    }
 }

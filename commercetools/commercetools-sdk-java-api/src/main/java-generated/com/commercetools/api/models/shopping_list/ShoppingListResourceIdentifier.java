@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("shopping-list")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShoppingListResourceIdentifierImpl.class)
 public interface ShoppingListResourceIdentifier
@@ -84,6 +85,8 @@ public interface ShoppingListResourceIdentifier
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public ShoppingListResourceIdentifier copyDeep();
 
     /**
      * factory method to create a deep copy of ShoppingListResourceIdentifier

@@ -110,4 +110,8 @@ public class DiscountCodeSetCustomFieldActionImpl implements DiscountCodeSetCust
                 .build();
     }
 
+    @Override
+    public DiscountCodeSetCustomFieldAction copyDeep() {
+        return DiscountCodeSetCustomFieldAction.deepCopy(this);
+    }
 }

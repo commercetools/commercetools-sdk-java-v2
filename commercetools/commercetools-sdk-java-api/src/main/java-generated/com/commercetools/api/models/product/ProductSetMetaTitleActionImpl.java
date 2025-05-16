@@ -111,4 +111,8 @@ public class ProductSetMetaTitleActionImpl implements ProductSetMetaTitleAction,
                 .build();
     }
 
+    @Override
+    public ProductSetMetaTitleAction copyDeep() {
+        return ProductSetMetaTitleAction.deepCopy(this);
+    }
 }

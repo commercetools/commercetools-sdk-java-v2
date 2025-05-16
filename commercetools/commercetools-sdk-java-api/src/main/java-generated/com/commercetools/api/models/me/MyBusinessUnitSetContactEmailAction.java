@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setContactEmail")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyBusinessUnitSetContactEmailActionImpl.class)
 public interface MyBusinessUnitSetContactEmailAction extends MyBusinessUnitUpdateAction {
@@ -66,6 +67,8 @@ public interface MyBusinessUnitSetContactEmailAction extends MyBusinessUnitUpdat
         instance.setContactEmail(template.getContactEmail());
         return instance;
     }
+
+    public MyBusinessUnitSetContactEmailAction copyDeep();
 
     /**
      * factory method to create a deep copy of MyBusinessUnitSetContactEmailAction

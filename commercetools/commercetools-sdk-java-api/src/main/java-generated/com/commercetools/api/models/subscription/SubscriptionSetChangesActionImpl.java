@@ -96,4 +96,8 @@ public class SubscriptionSetChangesActionImpl implements SubscriptionSetChangesA
                 .build();
     }
 
+    @Override
+    public SubscriptionSetChangesAction copyDeep() {
+        return SubscriptionSetChangesAction.deepCopy(this);
+    }
 }

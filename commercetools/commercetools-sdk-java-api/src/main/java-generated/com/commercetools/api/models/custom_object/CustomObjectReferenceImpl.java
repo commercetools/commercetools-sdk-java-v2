@@ -111,4 +111,8 @@ public class CustomObjectReferenceImpl implements CustomObjectReference, ModelBa
                 .build();
     }
 
+    @Override
+    public CustomObjectReference copyDeep() {
+        return CustomObjectReference.deepCopy(this);
+    }
 }

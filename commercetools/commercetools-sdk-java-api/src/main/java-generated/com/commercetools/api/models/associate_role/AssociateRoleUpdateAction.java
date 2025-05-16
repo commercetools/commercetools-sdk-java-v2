@@ -27,14 +27,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.associate_role.AssociateRoleAddPermissionActionImpl.class, name = AssociateRoleAddPermissionAction.ADD_PERMISSION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.associate_role.AssociateRoleChangeBuyerAssignableActionImpl.class, name = AssociateRoleChangeBuyerAssignableAction.CHANGE_BUYER_ASSIGNABLE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.associate_role.AssociateRoleRemovePermissionActionImpl.class, name = AssociateRoleRemovePermissionAction.REMOVE_PERMISSION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.associate_role.AssociateRoleSetCustomFieldActionImpl.class, name = AssociateRoleSetCustomFieldAction.SET_CUSTOM_FIELD),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.associate_role.AssociateRoleSetCustomTypeActionImpl.class, name = AssociateRoleSetCustomTypeAction.SET_CUSTOM_TYPE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.associate_role.AssociateRoleSetNameActionImpl.class, name = AssociateRoleSetNameAction.SET_NAME),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.associate_role.AssociateRoleSetPermissionsActionImpl.class, name = AssociateRoleSetPermissionsAction.SET_PERMISSIONS) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = AssociateRoleUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = AssociateRoleUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -49,6 +41,8 @@ public interface AssociateRoleUpdateAction
     @JsonProperty("action")
     public String getAction();
 
+    public AssociateRoleUpdateAction copyDeep();
+
     /**
      * factory method to create a deep copy of AssociateRoleUpdateAction
      * @param template instance to be copied
@@ -59,33 +53,9 @@ public interface AssociateRoleUpdateAction
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.associate_role.AssociateRoleAddPermissionAction) {
-            return com.commercetools.api.models.associate_role.AssociateRoleAddPermissionAction
-                    .deepCopy((com.commercetools.api.models.associate_role.AssociateRoleAddPermissionAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.associate_role.AssociateRoleChangeBuyerAssignableAction) {
-            return com.commercetools.api.models.associate_role.AssociateRoleChangeBuyerAssignableAction.deepCopy(
-                (com.commercetools.api.models.associate_role.AssociateRoleChangeBuyerAssignableAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.associate_role.AssociateRoleRemovePermissionAction) {
-            return com.commercetools.api.models.associate_role.AssociateRoleRemovePermissionAction.deepCopy(
-                (com.commercetools.api.models.associate_role.AssociateRoleRemovePermissionAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.associate_role.AssociateRoleSetCustomFieldAction) {
-            return com.commercetools.api.models.associate_role.AssociateRoleSetCustomFieldAction
-                    .deepCopy((com.commercetools.api.models.associate_role.AssociateRoleSetCustomFieldAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.associate_role.AssociateRoleSetCustomTypeAction) {
-            return com.commercetools.api.models.associate_role.AssociateRoleSetCustomTypeAction
-                    .deepCopy((com.commercetools.api.models.associate_role.AssociateRoleSetCustomTypeAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.associate_role.AssociateRoleSetNameAction) {
-            return com.commercetools.api.models.associate_role.AssociateRoleSetNameAction
-                    .deepCopy((com.commercetools.api.models.associate_role.AssociateRoleSetNameAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.associate_role.AssociateRoleSetPermissionsAction) {
-            return com.commercetools.api.models.associate_role.AssociateRoleSetPermissionsAction
-                    .deepCopy((com.commercetools.api.models.associate_role.AssociateRoleSetPermissionsAction) template);
+
+        if (!(template instanceof AssociateRoleUpdateActionImpl)) {
+            return template.copyDeep();
         }
         AssociateRoleUpdateActionImpl instance = new AssociateRoleUpdateActionImpl();
         return instance;

@@ -92,4 +92,8 @@ public class MyQuoteChangeMyQuoteStateActionImpl implements MyQuoteChangeMyQuote
                 .build();
     }
 
+    @Override
+    public MyQuoteChangeMyQuoteStateAction copyDeep() {
+        return MyQuoteChangeMyQuoteStateAction.deepCopy(this);
+    }
 }

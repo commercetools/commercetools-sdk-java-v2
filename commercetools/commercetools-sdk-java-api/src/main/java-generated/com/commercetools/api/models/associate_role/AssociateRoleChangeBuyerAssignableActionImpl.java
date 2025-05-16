@@ -92,4 +92,8 @@ public class AssociateRoleChangeBuyerAssignableActionImpl
                 .build();
     }
 
+    @Override
+    public AssociateRoleChangeBuyerAssignableAction copyDeep() {
+        return AssociateRoleChangeBuyerAssignableAction.deepCopy(this);
+    }
 }

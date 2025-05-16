@@ -214,6 +214,8 @@ public interface ProductSearchProjectionParams {
         return instance;
     }
 
+    public ProductSearchProjectionParams copyDeep();
+
     /**
      * factory method to create a deep copy of ProductSearchProjectionParams
      * @param template instance to be copied

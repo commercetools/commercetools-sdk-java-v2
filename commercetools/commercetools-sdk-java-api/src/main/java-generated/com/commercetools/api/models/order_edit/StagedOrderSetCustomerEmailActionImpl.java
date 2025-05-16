@@ -92,4 +92,8 @@ public class StagedOrderSetCustomerEmailActionImpl implements StagedOrderSetCust
                 .build();
     }
 
+    @Override
+    public StagedOrderSetCustomerEmailAction copyDeep() {
+        return StagedOrderSetCustomerEmailAction.deepCopy(this);
+    }
 }

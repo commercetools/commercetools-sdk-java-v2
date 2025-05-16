@@ -27,16 +27,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductSelectionAddProductActionImpl.class, name = ProductSelectionAddProductAction.ADD_PRODUCT),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductSelectionChangeNameActionImpl.class, name = ProductSelectionChangeNameAction.CHANGE_NAME),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductSelectionExcludeProductActionImpl.class, name = ProductSelectionExcludeProductAction.EXCLUDE_PRODUCT),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductSelectionRemoveProductActionImpl.class, name = ProductSelectionRemoveProductAction.REMOVE_PRODUCT),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductSelectionSetCustomFieldActionImpl.class, name = ProductSelectionSetCustomFieldAction.SET_CUSTOM_FIELD),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductSelectionSetCustomTypeActionImpl.class, name = ProductSelectionSetCustomTypeAction.SET_CUSTOM_TYPE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductSelectionSetKeyActionImpl.class, name = ProductSelectionSetKeyAction.SET_KEY),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductSelectionSetVariantExclusionActionImpl.class, name = ProductSelectionSetVariantExclusionAction.SET_VARIANT_EXCLUSION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_selection.ProductSelectionSetVariantSelectionActionImpl.class, name = ProductSelectionSetVariantSelectionAction.SET_VARIANT_SELECTION) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = ProductSelectionUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = ProductSelectionUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -51,6 +41,8 @@ public interface ProductSelectionUpdateAction
     @JsonProperty("action")
     public String getAction();
 
+    public ProductSelectionUpdateAction copyDeep();
+
     /**
      * factory method to create a deep copy of ProductSelectionUpdateAction
      * @param template instance to be copied
@@ -61,41 +53,9 @@ public interface ProductSelectionUpdateAction
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.product_selection.ProductSelectionAddProductAction) {
-            return com.commercetools.api.models.product_selection.ProductSelectionAddProductAction.deepCopy(
-                (com.commercetools.api.models.product_selection.ProductSelectionAddProductAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_selection.ProductSelectionChangeNameAction) {
-            return com.commercetools.api.models.product_selection.ProductSelectionChangeNameAction.deepCopy(
-                (com.commercetools.api.models.product_selection.ProductSelectionChangeNameAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_selection.ProductSelectionExcludeProductAction) {
-            return com.commercetools.api.models.product_selection.ProductSelectionExcludeProductAction.deepCopy(
-                (com.commercetools.api.models.product_selection.ProductSelectionExcludeProductAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_selection.ProductSelectionRemoveProductAction) {
-            return com.commercetools.api.models.product_selection.ProductSelectionRemoveProductAction.deepCopy(
-                (com.commercetools.api.models.product_selection.ProductSelectionRemoveProductAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_selection.ProductSelectionSetCustomFieldAction) {
-            return com.commercetools.api.models.product_selection.ProductSelectionSetCustomFieldAction.deepCopy(
-                (com.commercetools.api.models.product_selection.ProductSelectionSetCustomFieldAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_selection.ProductSelectionSetCustomTypeAction) {
-            return com.commercetools.api.models.product_selection.ProductSelectionSetCustomTypeAction.deepCopy(
-                (com.commercetools.api.models.product_selection.ProductSelectionSetCustomTypeAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_selection.ProductSelectionSetKeyAction) {
-            return com.commercetools.api.models.product_selection.ProductSelectionSetKeyAction
-                    .deepCopy((com.commercetools.api.models.product_selection.ProductSelectionSetKeyAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_selection.ProductSelectionSetVariantExclusionAction) {
-            return com.commercetools.api.models.product_selection.ProductSelectionSetVariantExclusionAction.deepCopy(
-                (com.commercetools.api.models.product_selection.ProductSelectionSetVariantExclusionAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_selection.ProductSelectionSetVariantSelectionAction) {
-            return com.commercetools.api.models.product_selection.ProductSelectionSetVariantSelectionAction.deepCopy(
-                (com.commercetools.api.models.product_selection.ProductSelectionSetVariantSelectionAction) template);
+
+        if (!(template instanceof ProductSelectionUpdateActionImpl)) {
+            return template.copyDeep();
         }
         ProductSelectionUpdateActionImpl instance = new ProductSelectionUpdateActionImpl();
         return instance;

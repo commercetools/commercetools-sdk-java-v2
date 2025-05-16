@@ -36,6 +36,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("CategoryCreated")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CategoryCreatedMessageImpl.class)
 public interface CategoryCreatedMessage extends Message {
@@ -89,6 +90,8 @@ public interface CategoryCreatedMessage extends Message {
         instance.setCategory(template.getCategory());
         return instance;
     }
+
+    public CategoryCreatedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of CategoryCreatedMessage

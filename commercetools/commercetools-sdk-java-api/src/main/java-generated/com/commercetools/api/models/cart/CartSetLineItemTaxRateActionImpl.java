@@ -153,4 +153,8 @@ public class CartSetLineItemTaxRateActionImpl implements CartSetLineItemTaxRateA
                 .build();
     }
 
+    @Override
+    public CartSetLineItemTaxRateAction copyDeep() {
+        return CartSetLineItemTaxRateAction.deepCopy(this);
+    }
 }

@@ -133,4 +133,8 @@ public class CategorySetAssetDescriptionActionImpl implements CategorySetAssetDe
                 .build();
     }
 
+    @Override
+    public CategorySetAssetDescriptionAction copyDeep() {
+        return CategorySetAssetDescriptionAction.deepCopy(this);
+    }
 }

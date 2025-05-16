@@ -294,4 +294,8 @@ public class CustomerCustomTypeRemovedMessageImpl implements CustomerCustomTypeR
                 .build();
     }
 
+    @Override
+    public CustomerCustomTypeRemovedMessage copyDeep() {
+        return CustomerCustomTypeRemovedMessage.deepCopy(this);
+    }
 }

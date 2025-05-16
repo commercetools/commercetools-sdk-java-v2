@@ -119,4 +119,8 @@ public class MaxCartDiscountsReachedErrorImpl implements MaxCartDiscountsReached
                 .build();
     }
 
+    @Override
+    public MaxCartDiscountsReachedError copyDeep() {
+        return MaxCartDiscountsReachedError.deepCopy(this);
+    }
 }

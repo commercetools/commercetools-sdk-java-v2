@@ -347,4 +347,8 @@ public class StateImpl implements State, ModelBase {
                 .build();
     }
 
+    @Override
+    public State copyDeep() {
+        return State.deepCopy(this);
+    }
 }

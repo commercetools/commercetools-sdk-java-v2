@@ -27,6 +27,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ShoppingListMessagePayload extends MessagePayload {
 
+    public ShoppingListMessagePayload copyDeep();
+
     /**
      * factory method to create a deep copy of ShoppingListMessagePayload
      * @param template instance to be copied
@@ -37,13 +39,9 @@ public interface ShoppingListMessagePayload extends MessagePayload {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.message.ShoppingListLineItemAddedMessagePayload) {
-            return com.commercetools.api.models.message.ShoppingListLineItemAddedMessagePayload
-                    .deepCopy((com.commercetools.api.models.message.ShoppingListLineItemAddedMessagePayload) template);
-        }
-        if (template instanceof com.commercetools.api.models.message.ShoppingListLineItemRemovedMessagePayload) {
-            return com.commercetools.api.models.message.ShoppingListLineItemRemovedMessagePayload.deepCopy(
-                (com.commercetools.api.models.message.ShoppingListLineItemRemovedMessagePayload) template);
+
+        if (!(template instanceof ShoppingListMessagePayloadImpl)) {
+            return template.copyDeep();
         }
         ShoppingListMessagePayloadImpl instance = new ShoppingListMessagePayloadImpl();
         return instance;

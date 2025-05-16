@@ -160,4 +160,8 @@ public class OrderCustomLineItemDiscountSetMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public OrderCustomLineItemDiscountSetMessagePayload copyDeep() {
+        return OrderCustomLineItemDiscountSetMessagePayload.deepCopy(this);
+    }
 }

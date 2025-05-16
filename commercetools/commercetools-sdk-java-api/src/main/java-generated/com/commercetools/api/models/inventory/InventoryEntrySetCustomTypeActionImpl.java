@@ -111,4 +111,8 @@ public class InventoryEntrySetCustomTypeActionImpl implements InventoryEntrySetC
                 .build();
     }
 
+    @Override
+    public InventoryEntrySetCustomTypeAction copyDeep() {
+        return InventoryEntrySetCustomTypeAction.deepCopy(this);
+    }
 }

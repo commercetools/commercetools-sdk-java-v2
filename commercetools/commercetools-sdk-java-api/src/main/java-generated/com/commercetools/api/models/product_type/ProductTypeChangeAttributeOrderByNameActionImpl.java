@@ -97,4 +97,8 @@ public class ProductTypeChangeAttributeOrderByNameActionImpl
                 .build();
     }
 
+    @Override
+    public ProductTypeChangeAttributeOrderByNameAction copyDeep() {
+        return ProductTypeChangeAttributeOrderByNameAction.deepCopy(this);
+    }
 }

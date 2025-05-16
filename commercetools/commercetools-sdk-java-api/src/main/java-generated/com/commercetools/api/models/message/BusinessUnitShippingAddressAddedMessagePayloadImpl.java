@@ -93,4 +93,8 @@ public class BusinessUnitShippingAddressAddedMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public BusinessUnitShippingAddressAddedMessagePayload copyDeep() {
+        return BusinessUnitShippingAddressAddedMessagePayload.deepCopy(this);
+    }
 }

@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeName")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TaxCategoryChangeNameActionImpl.class)
 public interface TaxCategoryChangeNameAction extends TaxCategoryUpdateAction {
@@ -69,6 +70,8 @@ public interface TaxCategoryChangeNameAction extends TaxCategoryUpdateAction {
         instance.setName(template.getName());
         return instance;
     }
+
+    public TaxCategoryChangeNameAction copyDeep();
 
     /**
      * factory method to create a deep copy of TaxCategoryChangeNameAction

@@ -51,4 +51,8 @@ public class ProductSearchFacetExpressionImpl implements ProductSearchFacetExpre
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).build();
     }
 
+    @Override
+    public ProductSearchFacetExpression copyDeep() {
+        return ProductSearchFacetExpression.deepCopy(this);
+    }
 }

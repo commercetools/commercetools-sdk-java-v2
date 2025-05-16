@@ -92,4 +92,8 @@ public class PaymentStatusInterfaceCodeSetMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public PaymentStatusInterfaceCodeSetMessagePayload copyDeep() {
+        return PaymentStatusInterfaceCodeSetMessagePayload.deepCopy(this);
+    }
 }

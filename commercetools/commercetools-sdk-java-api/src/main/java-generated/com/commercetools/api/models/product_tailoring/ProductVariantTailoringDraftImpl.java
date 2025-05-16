@@ -174,4 +174,8 @@ public class ProductVariantTailoringDraftImpl implements ProductVariantTailoring
                 .build();
     }
 
+    @Override
+    public ProductVariantTailoringDraft copyDeep() {
+        return ProductVariantTailoringDraft.deepCopy(this);
+    }
 }

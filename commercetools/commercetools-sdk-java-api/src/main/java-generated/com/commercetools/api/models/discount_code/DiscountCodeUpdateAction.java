@@ -27,21 +27,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeChangeCartDiscountsActionImpl.class, name = DiscountCodeChangeCartDiscountsAction.CHANGE_CART_DISCOUNTS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeChangeGroupsActionImpl.class, name = DiscountCodeChangeGroupsAction.CHANGE_GROUPS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeChangeIsActiveActionImpl.class, name = DiscountCodeChangeIsActiveAction.CHANGE_IS_ACTIVE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeSetCartPredicateActionImpl.class, name = DiscountCodeSetCartPredicateAction.SET_CART_PREDICATE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeSetCustomFieldActionImpl.class, name = DiscountCodeSetCustomFieldAction.SET_CUSTOM_FIELD),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeSetCustomTypeActionImpl.class, name = DiscountCodeSetCustomTypeAction.SET_CUSTOM_TYPE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeSetDescriptionActionImpl.class, name = DiscountCodeSetDescriptionAction.SET_DESCRIPTION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeSetKeyActionImpl.class, name = DiscountCodeSetKeyAction.SET_KEY),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeSetMaxApplicationsActionImpl.class, name = DiscountCodeSetMaxApplicationsAction.SET_MAX_APPLICATIONS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeSetMaxApplicationsPerCustomerActionImpl.class, name = DiscountCodeSetMaxApplicationsPerCustomerAction.SET_MAX_APPLICATIONS_PER_CUSTOMER),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeSetNameActionImpl.class, name = DiscountCodeSetNameAction.SET_NAME),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeSetValidFromActionImpl.class, name = DiscountCodeSetValidFromAction.SET_VALID_FROM),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeSetValidFromAndUntilActionImpl.class, name = DiscountCodeSetValidFromAndUntilAction.SET_VALID_FROM_AND_UNTIL),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.discount_code.DiscountCodeSetValidUntilActionImpl.class, name = DiscountCodeSetValidUntilAction.SET_VALID_UNTIL) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = DiscountCodeUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = DiscountCodeUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -56,6 +41,8 @@ public interface DiscountCodeUpdateAction
     @JsonProperty("action")
     public String getAction();
 
+    public DiscountCodeUpdateAction copyDeep();
+
     /**
      * factory method to create a deep copy of DiscountCodeUpdateAction
      * @param template instance to be copied
@@ -66,61 +53,9 @@ public interface DiscountCodeUpdateAction
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.discount_code.DiscountCodeChangeCartDiscountsAction) {
-            return com.commercetools.api.models.discount_code.DiscountCodeChangeCartDiscountsAction.deepCopy(
-                (com.commercetools.api.models.discount_code.DiscountCodeChangeCartDiscountsAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.discount_code.DiscountCodeChangeGroupsAction) {
-            return com.commercetools.api.models.discount_code.DiscountCodeChangeGroupsAction
-                    .deepCopy((com.commercetools.api.models.discount_code.DiscountCodeChangeGroupsAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.discount_code.DiscountCodeChangeIsActiveAction) {
-            return com.commercetools.api.models.discount_code.DiscountCodeChangeIsActiveAction
-                    .deepCopy((com.commercetools.api.models.discount_code.DiscountCodeChangeIsActiveAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.discount_code.DiscountCodeSetCartPredicateAction) {
-            return com.commercetools.api.models.discount_code.DiscountCodeSetCartPredicateAction
-                    .deepCopy((com.commercetools.api.models.discount_code.DiscountCodeSetCartPredicateAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.discount_code.DiscountCodeSetCustomFieldAction) {
-            return com.commercetools.api.models.discount_code.DiscountCodeSetCustomFieldAction
-                    .deepCopy((com.commercetools.api.models.discount_code.DiscountCodeSetCustomFieldAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.discount_code.DiscountCodeSetCustomTypeAction) {
-            return com.commercetools.api.models.discount_code.DiscountCodeSetCustomTypeAction
-                    .deepCopy((com.commercetools.api.models.discount_code.DiscountCodeSetCustomTypeAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.discount_code.DiscountCodeSetDescriptionAction) {
-            return com.commercetools.api.models.discount_code.DiscountCodeSetDescriptionAction
-                    .deepCopy((com.commercetools.api.models.discount_code.DiscountCodeSetDescriptionAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.discount_code.DiscountCodeSetKeyAction) {
-            return com.commercetools.api.models.discount_code.DiscountCodeSetKeyAction
-                    .deepCopy((com.commercetools.api.models.discount_code.DiscountCodeSetKeyAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.discount_code.DiscountCodeSetMaxApplicationsAction) {
-            return com.commercetools.api.models.discount_code.DiscountCodeSetMaxApplicationsAction.deepCopy(
-                (com.commercetools.api.models.discount_code.DiscountCodeSetMaxApplicationsAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.discount_code.DiscountCodeSetMaxApplicationsPerCustomerAction) {
-            return com.commercetools.api.models.discount_code.DiscountCodeSetMaxApplicationsPerCustomerAction.deepCopy(
-                (com.commercetools.api.models.discount_code.DiscountCodeSetMaxApplicationsPerCustomerAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.discount_code.DiscountCodeSetNameAction) {
-            return com.commercetools.api.models.discount_code.DiscountCodeSetNameAction
-                    .deepCopy((com.commercetools.api.models.discount_code.DiscountCodeSetNameAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.discount_code.DiscountCodeSetValidFromAction) {
-            return com.commercetools.api.models.discount_code.DiscountCodeSetValidFromAction
-                    .deepCopy((com.commercetools.api.models.discount_code.DiscountCodeSetValidFromAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.discount_code.DiscountCodeSetValidFromAndUntilAction) {
-            return com.commercetools.api.models.discount_code.DiscountCodeSetValidFromAndUntilAction.deepCopy(
-                (com.commercetools.api.models.discount_code.DiscountCodeSetValidFromAndUntilAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.discount_code.DiscountCodeSetValidUntilAction) {
-            return com.commercetools.api.models.discount_code.DiscountCodeSetValidUntilAction
-                    .deepCopy((com.commercetools.api.models.discount_code.DiscountCodeSetValidUntilAction) template);
+
+        if (!(template instanceof DiscountCodeUpdateActionImpl)) {
+            return template.copyDeep();
         }
         DiscountCodeUpdateActionImpl instance = new DiscountCodeUpdateActionImpl();
         return instance;

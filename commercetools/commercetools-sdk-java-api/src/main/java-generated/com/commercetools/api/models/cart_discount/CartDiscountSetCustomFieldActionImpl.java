@@ -110,4 +110,8 @@ public class CartDiscountSetCustomFieldActionImpl implements CartDiscountSetCust
                 .build();
     }
 
+    @Override
+    public CartDiscountSetCustomFieldAction copyDeep() {
+        return CartDiscountSetCustomFieldAction.deepCopy(this);
+    }
 }

@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("filter")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = FilteredFacetResultImpl.class)
 public interface FilteredFacetResult extends FacetResult {
@@ -87,6 +88,8 @@ public interface FilteredFacetResult extends FacetResult {
         instance.setProductCount(template.getProductCount());
         return instance;
     }
+
+    public FilteredFacetResult copyDeep();
 
     /**
      * factory method to create a deep copy of FilteredFacetResult

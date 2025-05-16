@@ -130,4 +130,8 @@ public class OrderStateTransitionMessagePayloadImpl implements OrderStateTransit
                 .build();
     }
 
+    @Override
+    public OrderStateTransitionMessagePayload copyDeep() {
+        return OrderStateTransitionMessagePayload.deepCopy(this);
+    }
 }

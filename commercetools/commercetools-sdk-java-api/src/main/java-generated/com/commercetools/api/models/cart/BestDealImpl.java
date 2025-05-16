@@ -91,4 +91,8 @@ public class BestDealImpl implements BestDeal, ModelBase {
                 .build();
     }
 
+    @Override
+    public BestDeal copyDeep() {
+        return BestDeal.deepCopy(this);
+    }
 }

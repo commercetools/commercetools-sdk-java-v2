@@ -27,6 +27,7 @@ import jakarta.validation.Valid;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("OrderShippingRateInputSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderShippingRateInputSetMessagePayloadImpl.class)
 public interface OrderShippingRateInputSetMessagePayload extends OrderMessagePayload {
@@ -85,6 +86,8 @@ public interface OrderShippingRateInputSetMessagePayload extends OrderMessagePay
         instance.setOldShippingRateInput(template.getOldShippingRateInput());
         return instance;
     }
+
+    public OrderShippingRateInputSetMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of OrderShippingRateInputSetMessagePayload

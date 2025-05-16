@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("product-discount")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductDiscountReferenceImpl.class)
 public interface ProductDiscountReference extends Reference, com.commercetools.api.models.Identifiable<ProductDiscount>,
@@ -88,6 +89,8 @@ public interface ProductDiscountReference extends Reference, com.commercetools.a
         instance.setObj(template.getObj());
         return instance;
     }
+
+    public ProductDiscountReference copyDeep();
 
     /**
      * factory method to create a deep copy of ProductDiscountReference

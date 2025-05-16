@@ -203,6 +203,8 @@ public interface ProductDiscountDraft
         return instance;
     }
 
+    public ProductDiscountDraft copyDeep();
+
     /**
      * factory method to create a deep copy of ProductDiscountDraft
      * @param template instance to be copied

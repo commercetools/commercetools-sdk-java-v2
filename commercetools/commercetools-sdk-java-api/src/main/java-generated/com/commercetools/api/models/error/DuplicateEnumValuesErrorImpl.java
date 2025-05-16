@@ -137,4 +137,8 @@ public class DuplicateEnumValuesErrorImpl implements DuplicateEnumValuesError, M
                 .build();
     }
 
+    @Override
+    public DuplicateEnumValuesError copyDeep() {
+        return DuplicateEnumValuesError.deepCopy(this);
+    }
 }

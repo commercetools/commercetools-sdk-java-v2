@@ -352,4 +352,8 @@ public class ReviewRatingSetMessageImpl implements ReviewRatingSetMessage, Model
                 .build();
     }
 
+    @Override
+    public ReviewRatingSetMessage copyDeep() {
+        return ReviewRatingSetMessage.deepCopy(this);
+    }
 }

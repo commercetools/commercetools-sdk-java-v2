@@ -115,4 +115,8 @@ public class GraphQLLockedFieldErrorImpl implements GraphQLLockedFieldError, Mod
                 .build();
     }
 
+    @Override
+    public GraphQLLockedFieldError copyDeep() {
+        return GraphQLLockedFieldError.deepCopy(this);
+    }
 }

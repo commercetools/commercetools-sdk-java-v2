@@ -68,6 +68,8 @@ public interface StagedPriceDraft extends io.vrap.rmf.base.client.Draft<StagedPr
         return instance;
     }
 
+    public StagedPriceDraft copyDeep();
+
     /**
      * factory method to create a deep copy of StagedPriceDraft
      * @param template instance to be copied

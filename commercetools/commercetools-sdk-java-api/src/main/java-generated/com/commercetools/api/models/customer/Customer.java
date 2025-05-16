@@ -623,6 +623,8 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
         return instance;
     }
 
+    public Customer copyDeep();
+
     /**
      * factory method to create a deep copy of Customer
      * @param template instance to be copied

@@ -259,6 +259,8 @@ public interface Type extends BaseResource, TypeMixin, com.commercetools.api.mod
         return instance;
     }
 
+    public Type copyDeep();
+
     /**
      * factory method to create a deep copy of Type
      * @param template instance to be copied

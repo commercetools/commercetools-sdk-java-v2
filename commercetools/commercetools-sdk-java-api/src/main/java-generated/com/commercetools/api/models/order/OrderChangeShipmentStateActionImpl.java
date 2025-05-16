@@ -92,4 +92,8 @@ public class OrderChangeShipmentStateActionImpl implements OrderChangeShipmentSt
                 .build();
     }
 
+    @Override
+    public OrderChangeShipmentStateAction copyDeep() {
+        return OrderChangeShipmentStateAction.deepCopy(this);
+    }
 }

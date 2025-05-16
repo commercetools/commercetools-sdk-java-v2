@@ -91,4 +91,8 @@ public class CartDiscountSetValidFromActionImpl implements CartDiscountSetValidF
                 .build();
     }
 
+    @Override
+    public CartDiscountSetValidFromAction copyDeep() {
+        return CartDiscountSetValidFromAction.deepCopy(this);
+    }
 }

@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("zone")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ZoneResourceIdentifierImpl.class)
 public interface ZoneResourceIdentifier extends ResourceIdentifier, com.commercetools.api.models.Identifiable<Zone> {
@@ -83,6 +84,8 @@ public interface ZoneResourceIdentifier extends ResourceIdentifier, com.commerce
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public ZoneResourceIdentifier copyDeep();
 
     /**
      * factory method to create a deep copy of ZoneResourceIdentifier

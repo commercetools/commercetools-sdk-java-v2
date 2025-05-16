@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setCategoryOrderHint")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSetCategoryOrderHintActionImpl.class)
 public interface ProductSetCategoryOrderHintAction extends ProductUpdateAction {
@@ -101,6 +102,8 @@ public interface ProductSetCategoryOrderHintAction extends ProductUpdateAction {
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public ProductSetCategoryOrderHintAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductSetCategoryOrderHintAction

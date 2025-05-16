@@ -81,6 +81,8 @@ public interface SearchMatchingVariant {
         return instance;
     }
 
+    public SearchMatchingVariant copyDeep();
+
     /**
      * factory method to create a deep copy of SearchMatchingVariant
      * @param template instance to be copied

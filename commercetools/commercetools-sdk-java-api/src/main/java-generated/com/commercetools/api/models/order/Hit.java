@@ -98,6 +98,8 @@ public interface Hit {
         return instance;
     }
 
+    public Hit copyDeep();
+
     /**
      * factory method to create a deep copy of Hit
      * @param template instance to be copied

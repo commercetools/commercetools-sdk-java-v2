@@ -342,4 +342,8 @@ public class ProductImpl implements Product, ModelBase {
                 .build();
     }
 
+    @Override
+    public Product copyDeep() {
+        return Product.deepCopy(this);
+    }
 }

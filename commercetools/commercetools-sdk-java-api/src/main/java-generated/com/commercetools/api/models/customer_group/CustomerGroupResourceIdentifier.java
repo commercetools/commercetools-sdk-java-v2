@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("customer-group")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerGroupResourceIdentifierImpl.class)
 public interface CustomerGroupResourceIdentifier
@@ -84,6 +85,8 @@ public interface CustomerGroupResourceIdentifier
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public CustomerGroupResourceIdentifier copyDeep();
 
     /**
      * factory method to create a deep copy of CustomerGroupResourceIdentifier

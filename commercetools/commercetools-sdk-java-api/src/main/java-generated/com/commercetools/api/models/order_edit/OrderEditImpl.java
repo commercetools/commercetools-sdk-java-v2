@@ -301,4 +301,8 @@ public class OrderEditImpl implements OrderEdit, ModelBase {
                 .build();
     }
 
+    @Override
+    public OrderEdit copyDeep() {
+        return OrderEdit.deepCopy(this);
+    }
 }

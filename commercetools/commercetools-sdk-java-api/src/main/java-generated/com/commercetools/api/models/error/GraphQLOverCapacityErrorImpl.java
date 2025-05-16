@@ -96,4 +96,8 @@ public class GraphQLOverCapacityErrorImpl implements GraphQLOverCapacityError, M
                 .build();
     }
 
+    @Override
+    public GraphQLOverCapacityError copyDeep() {
+        return GraphQLOverCapacityError.deepCopy(this);
+    }
 }

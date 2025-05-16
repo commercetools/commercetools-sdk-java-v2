@@ -133,4 +133,8 @@ public class ParcelRemovedFromDeliveryMessagePayloadImpl implements ParcelRemove
                 .build();
     }
 
+    @Override
+    public ParcelRemovedFromDeliveryMessagePayload copyDeep() {
+        return ParcelRemovedFromDeliveryMessagePayload.deepCopy(this);
+    }
 }

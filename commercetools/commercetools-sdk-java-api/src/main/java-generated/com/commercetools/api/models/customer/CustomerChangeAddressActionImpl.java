@@ -134,4 +134,8 @@ public class CustomerChangeAddressActionImpl implements CustomerChangeAddressAct
                 .build();
     }
 
+    @Override
+    public CustomerChangeAddressAction copyDeep() {
+        return CustomerChangeAddressAction.deepCopy(this);
+    }
 }

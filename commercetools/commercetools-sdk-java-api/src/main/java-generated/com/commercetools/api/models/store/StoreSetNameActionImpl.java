@@ -91,4 +91,8 @@ public class StoreSetNameActionImpl implements StoreSetNameAction, ModelBase {
                 .build();
     }
 
+    @Override
+    public StoreSetNameAction copyDeep() {
+        return StoreSetNameAction.deepCopy(this);
+    }
 }

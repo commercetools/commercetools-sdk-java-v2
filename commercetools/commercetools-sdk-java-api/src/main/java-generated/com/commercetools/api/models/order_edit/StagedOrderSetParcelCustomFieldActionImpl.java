@@ -154,4 +154,8 @@ public class StagedOrderSetParcelCustomFieldActionImpl implements StagedOrderSet
                 .build();
     }
 
+    @Override
+    public StagedOrderSetParcelCustomFieldAction copyDeep() {
+        return StagedOrderSetParcelCustomFieldAction.deepCopy(this);
+    }
 }

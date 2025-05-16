@@ -92,4 +92,8 @@ public class CustomerPasswordTokenReferenceImpl implements CustomerPasswordToken
                 .build();
     }
 
+    @Override
+    public CustomerPasswordTokenReference copyDeep() {
+        return CustomerPasswordTokenReference.deepCopy(this);
+    }
 }

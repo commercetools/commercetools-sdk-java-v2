@@ -134,4 +134,8 @@ public class OrderDiscountCodeStateSetMessagePayloadImpl implements OrderDiscoun
                 .build();
     }
 
+    @Override
+    public OrderDiscountCodeStateSetMessagePayload copyDeep() {
+        return OrderDiscountCodeStateSetMessagePayload.deepCopy(this);
+    }
 }

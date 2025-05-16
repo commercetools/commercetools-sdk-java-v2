@@ -27,12 +27,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.quote_request.QuoteRequestChangeCustomerActionImpl.class, name = QuoteRequestChangeCustomerAction.CHANGE_CUSTOMER),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.quote_request.QuoteRequestChangeQuoteRequestStateActionImpl.class, name = QuoteRequestChangeQuoteRequestStateAction.CHANGE_QUOTE_REQUEST_STATE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.quote_request.QuoteRequestSetCustomFieldActionImpl.class, name = QuoteRequestSetCustomFieldAction.SET_CUSTOM_FIELD),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.quote_request.QuoteRequestSetCustomTypeActionImpl.class, name = QuoteRequestSetCustomTypeAction.SET_CUSTOM_TYPE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.quote_request.QuoteRequestTransitionStateActionImpl.class, name = QuoteRequestTransitionStateAction.TRANSITION_STATE) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = QuoteRequestUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = QuoteRequestUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -47,6 +41,8 @@ public interface QuoteRequestUpdateAction
     @JsonProperty("action")
     public String getAction();
 
+    public QuoteRequestUpdateAction copyDeep();
+
     /**
      * factory method to create a deep copy of QuoteRequestUpdateAction
      * @param template instance to be copied
@@ -57,25 +53,9 @@ public interface QuoteRequestUpdateAction
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.quote_request.QuoteRequestChangeCustomerAction) {
-            return com.commercetools.api.models.quote_request.QuoteRequestChangeCustomerAction
-                    .deepCopy((com.commercetools.api.models.quote_request.QuoteRequestChangeCustomerAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.quote_request.QuoteRequestChangeQuoteRequestStateAction) {
-            return com.commercetools.api.models.quote_request.QuoteRequestChangeQuoteRequestStateAction.deepCopy(
-                (com.commercetools.api.models.quote_request.QuoteRequestChangeQuoteRequestStateAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.quote_request.QuoteRequestSetCustomFieldAction) {
-            return com.commercetools.api.models.quote_request.QuoteRequestSetCustomFieldAction
-                    .deepCopy((com.commercetools.api.models.quote_request.QuoteRequestSetCustomFieldAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.quote_request.QuoteRequestSetCustomTypeAction) {
-            return com.commercetools.api.models.quote_request.QuoteRequestSetCustomTypeAction
-                    .deepCopy((com.commercetools.api.models.quote_request.QuoteRequestSetCustomTypeAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.quote_request.QuoteRequestTransitionStateAction) {
-            return com.commercetools.api.models.quote_request.QuoteRequestTransitionStateAction
-                    .deepCopy((com.commercetools.api.models.quote_request.QuoteRequestTransitionStateAction) template);
+
+        if (!(template instanceof QuoteRequestUpdateActionImpl)) {
+            return template.copyDeep();
         }
         QuoteRequestUpdateActionImpl instance = new QuoteRequestUpdateActionImpl();
         return instance;

@@ -38,6 +38,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ApprovalFlowApproved")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ApprovalFlowApprovedMessageImpl.class)
 public interface ApprovalFlowApprovedMessage extends Message {
@@ -108,6 +109,8 @@ public interface ApprovalFlowApprovedMessage extends Message {
         instance.setOrder(template.getOrder());
         return instance;
     }
+
+    public ApprovalFlowApprovedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of ApprovalFlowApprovedMessage

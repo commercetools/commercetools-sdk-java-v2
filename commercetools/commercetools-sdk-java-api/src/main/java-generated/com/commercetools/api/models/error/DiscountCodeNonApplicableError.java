@@ -38,6 +38,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("DiscountCodeNonApplicable")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DiscountCodeNonApplicableErrorImpl.class)
 public interface DiscountCodeNonApplicableError extends ErrorObject {
@@ -185,6 +186,8 @@ public interface DiscountCodeNonApplicableError extends ErrorObject {
         instance.setValidityCheckTime(template.getValidityCheckTime());
         return instance;
     }
+
+    public DiscountCodeNonApplicableError copyDeep();
 
     /**
      * factory method to create a deep copy of DiscountCodeNonApplicableError

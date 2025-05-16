@@ -94,4 +94,8 @@ public class CustomerGroupAssignmentAddedMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public CustomerGroupAssignmentAddedMessagePayload copyDeep() {
+        return CustomerGroupAssignmentAddedMessagePayload.deepCopy(this);
+    }
 }

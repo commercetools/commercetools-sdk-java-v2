@@ -115,4 +115,8 @@ public class GraphQLInvalidJsonInputErrorImpl implements GraphQLInvalidJsonInput
                 .build();
     }
 
+    @Override
+    public GraphQLInvalidJsonInputError copyDeep() {
+        return GraphQLInvalidJsonInputError.deepCopy(this);
+    }
 }

@@ -374,4 +374,8 @@ public class ProductVariantTailoringAddedMessageImpl implements ProductVariantTa
                 .build();
     }
 
+    @Override
+    public ProductVariantTailoringAddedMessage copyDeep() {
+        return ProductVariantTailoringAddedMessage.deepCopy(this);
+    }
 }

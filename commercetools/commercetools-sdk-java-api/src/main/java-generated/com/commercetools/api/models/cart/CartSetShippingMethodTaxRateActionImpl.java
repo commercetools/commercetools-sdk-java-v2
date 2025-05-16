@@ -110,4 +110,8 @@ public class CartSetShippingMethodTaxRateActionImpl implements CartSetShippingMe
                 .build();
     }
 
+    @Override
+    public CartSetShippingMethodTaxRateAction copyDeep() {
+        return CartSetShippingMethodTaxRateAction.deepCopy(this);
+    }
 }

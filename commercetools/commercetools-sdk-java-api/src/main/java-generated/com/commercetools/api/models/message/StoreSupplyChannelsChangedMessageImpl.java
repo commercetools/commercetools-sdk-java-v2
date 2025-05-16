@@ -326,4 +326,8 @@ public class StoreSupplyChannelsChangedMessageImpl implements StoreSupplyChannel
                 .build();
     }
 
+    @Override
+    public StoreSupplyChannelsChangedMessage copyDeep() {
+        return StoreSupplyChannelsChangedMessage.deepCopy(this);
+    }
 }

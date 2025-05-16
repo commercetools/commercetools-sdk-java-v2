@@ -100,4 +100,8 @@ public class TaxCategoryUpdateImpl implements TaxCategoryUpdate, ModelBase {
                 .build();
     }
 
+    @Override
+    public TaxCategoryUpdate copyDeep() {
+        return TaxCategoryUpdate.deepCopy(this);
+    }
 }

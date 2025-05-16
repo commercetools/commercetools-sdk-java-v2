@@ -290,6 +290,8 @@ public interface InventoryEntry
         return instance;
     }
 
+    public InventoryEntry copyDeep();
+
     /**
      * factory method to create a deep copy of InventoryEntry
      * @param template instance to be copied

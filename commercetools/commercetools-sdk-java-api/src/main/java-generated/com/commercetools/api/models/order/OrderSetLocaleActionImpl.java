@@ -91,4 +91,8 @@ public class OrderSetLocaleActionImpl implements OrderSetLocaleAction, ModelBase
                 .build();
     }
 
+    @Override
+    public OrderSetLocaleAction copyDeep() {
+        return OrderSetLocaleAction.deepCopy(this);
+    }
 }

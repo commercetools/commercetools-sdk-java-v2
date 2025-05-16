@@ -178,4 +178,8 @@ public class AttributeDefinitionAlreadyExistsErrorImpl implements AttributeDefin
                 .build();
     }
 
+    @Override
+    public AttributeDefinitionAlreadyExistsError copyDeep() {
+        return AttributeDefinitionAlreadyExistsError.deepCopy(this);
+    }
 }

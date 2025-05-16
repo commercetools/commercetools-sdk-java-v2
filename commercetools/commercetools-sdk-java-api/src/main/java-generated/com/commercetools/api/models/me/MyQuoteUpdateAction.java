@@ -27,8 +27,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyQuoteChangeMyQuoteStateActionImpl.class, name = MyQuoteChangeMyQuoteStateAction.CHANGE_MY_QUOTE_STATE) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = MyQuoteUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = MyQuoteUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -42,6 +40,8 @@ public interface MyQuoteUpdateAction extends com.commercetools.api.models.Resour
     @JsonProperty("action")
     public String getAction();
 
+    public MyQuoteUpdateAction copyDeep();
+
     /**
      * factory method to create a deep copy of MyQuoteUpdateAction
      * @param template instance to be copied
@@ -52,9 +52,9 @@ public interface MyQuoteUpdateAction extends com.commercetools.api.models.Resour
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.me.MyQuoteChangeMyQuoteStateAction) {
-            return com.commercetools.api.models.me.MyQuoteChangeMyQuoteStateAction
-                    .deepCopy((com.commercetools.api.models.me.MyQuoteChangeMyQuoteStateAction) template);
+
+        if (!(template instanceof MyQuoteUpdateActionImpl)) {
+            return template.copyDeep();
         }
         MyQuoteUpdateActionImpl instance = new MyQuoteUpdateActionImpl();
         return instance;

@@ -93,4 +93,8 @@ public class ShoppingListSetBusinessUnitActionImpl implements ShoppingListSetBus
                 .build();
     }
 
+    @Override
+    public ShoppingListSetBusinessUnitAction copyDeep() {
+        return ShoppingListSetBusinessUnitAction.deepCopy(this);
+    }
 }

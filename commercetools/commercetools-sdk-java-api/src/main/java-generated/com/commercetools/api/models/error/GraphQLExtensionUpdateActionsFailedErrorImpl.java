@@ -164,4 +164,8 @@ public class GraphQLExtensionUpdateActionsFailedErrorImpl
                 .build();
     }
 
+    @Override
+    public GraphQLExtensionUpdateActionsFailedError copyDeep() {
+        return GraphQLExtensionUpdateActionsFailedError.deepCopy(this);
+    }
 }

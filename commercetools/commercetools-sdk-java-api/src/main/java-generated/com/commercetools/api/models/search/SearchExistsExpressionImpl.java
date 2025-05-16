@@ -74,4 +74,8 @@ public class SearchExistsExpressionImpl implements SearchExistsExpression, Model
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("exists", exists).build();
     }
 
+    @Override
+    public SearchExistsExpression copyDeep() {
+        return SearchExistsExpression.deepCopy(this);
+    }
 }

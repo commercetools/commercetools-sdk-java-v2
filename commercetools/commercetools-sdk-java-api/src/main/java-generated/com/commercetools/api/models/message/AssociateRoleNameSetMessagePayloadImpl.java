@@ -91,4 +91,8 @@ public class AssociateRoleNameSetMessagePayloadImpl implements AssociateRoleName
                 .build();
     }
 
+    @Override
+    public AssociateRoleNameSetMessagePayload copyDeep() {
+        return AssociateRoleNameSetMessagePayload.deepCopy(this);
+    }
 }

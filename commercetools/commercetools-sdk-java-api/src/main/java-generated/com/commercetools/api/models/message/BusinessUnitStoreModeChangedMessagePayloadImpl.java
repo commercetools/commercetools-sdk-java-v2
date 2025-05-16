@@ -163,4 +163,8 @@ public class BusinessUnitStoreModeChangedMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public BusinessUnitStoreModeChangedMessagePayload copyDeep() {
+        return BusinessUnitStoreModeChangedMessagePayload.deepCopy(this);
+    }
 }

@@ -315,4 +315,8 @@ public class OrderBusinessUnitSetMessageImpl implements OrderBusinessUnitSetMess
                 .build();
     }
 
+    @Override
+    public OrderBusinessUnitSetMessage copyDeep() {
+        return OrderBusinessUnitSetMessage.deepCopy(this);
+    }
 }

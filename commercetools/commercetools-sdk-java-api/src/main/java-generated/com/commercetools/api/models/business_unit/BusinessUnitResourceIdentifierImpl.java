@@ -110,4 +110,8 @@ public class BusinessUnitResourceIdentifierImpl implements BusinessUnitResourceI
                 .build();
     }
 
+    @Override
+    public BusinessUnitResourceIdentifier copyDeep() {
+        return BusinessUnitResourceIdentifier.deepCopy(this);
+    }
 }

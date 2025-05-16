@@ -356,6 +356,8 @@ public interface Store extends BaseResource, StoreMixin, com.commercetools.api.m
         return instance;
     }
 
+    public Store copyDeep();
+
     /**
      * factory method to create a deep copy of Store
      * @param template instance to be copied

@@ -41,6 +41,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("LineItemStateTransition")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = LineItemStateTransitionMessageImpl.class)
 public interface LineItemStateTransitionMessage extends OrderMessage {
@@ -175,6 +176,8 @@ public interface LineItemStateTransitionMessage extends OrderMessage {
         instance.setToState(template.getToState());
         return instance;
     }
+
+    public LineItemStateTransitionMessage copyDeep();
 
     /**
      * factory method to create a deep copy of LineItemStateTransitionMessage

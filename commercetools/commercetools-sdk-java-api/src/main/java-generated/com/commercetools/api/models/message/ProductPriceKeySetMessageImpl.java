@@ -371,4 +371,8 @@ public class ProductPriceKeySetMessageImpl implements ProductPriceKeySetMessage,
                 .build();
     }
 
+    @Override
+    public ProductPriceKeySetMessage copyDeep() {
+        return ProductPriceKeySetMessage.deepCopy(this);
+    }
 }

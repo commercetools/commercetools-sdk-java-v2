@@ -92,4 +92,8 @@ public class CategorySetMetaDescriptionActionImpl implements CategorySetMetaDesc
                 .build();
     }
 
+    @Override
+    public CategorySetMetaDescriptionAction copyDeep() {
+        return CategorySetMetaDescriptionAction.deepCopy(this);
+    }
 }

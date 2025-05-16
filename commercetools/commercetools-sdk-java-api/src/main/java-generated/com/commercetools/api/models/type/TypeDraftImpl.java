@@ -167,4 +167,8 @@ public class TypeDraftImpl implements TypeDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public TypeDraft copyDeep() {
+        return TypeDraft.deepCopy(this);
+    }
 }

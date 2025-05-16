@@ -100,4 +100,8 @@ public class ApprovalRuleUpdateImpl implements ApprovalRuleUpdate, ModelBase {
                 .build();
     }
 
+    @Override
+    public ApprovalRuleUpdate copyDeep() {
+        return ApprovalRuleUpdate.deepCopy(this);
+    }
 }

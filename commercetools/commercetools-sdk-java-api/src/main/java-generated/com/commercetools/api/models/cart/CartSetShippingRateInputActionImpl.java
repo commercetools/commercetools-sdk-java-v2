@@ -97,4 +97,8 @@ public class CartSetShippingRateInputActionImpl implements CartSetShippingRateIn
                 .build();
     }
 
+    @Override
+    public CartSetShippingRateInputAction copyDeep() {
+        return CartSetShippingRateInputAction.deepCopy(this);
+    }
 }

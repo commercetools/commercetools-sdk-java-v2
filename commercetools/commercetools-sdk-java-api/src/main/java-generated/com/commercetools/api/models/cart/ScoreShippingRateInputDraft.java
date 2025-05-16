@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("Score")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ScoreShippingRateInputDraftImpl.class)
 public interface ScoreShippingRateInputDraft
@@ -70,6 +71,8 @@ public interface ScoreShippingRateInputDraft
         instance.setScore(template.getScore());
         return instance;
     }
+
+    public ScoreShippingRateInputDraft copyDeep();
 
     /**
      * factory method to create a deep copy of ScoreShippingRateInputDraft

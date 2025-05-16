@@ -220,6 +220,8 @@ public interface ScopedPrice extends com.commercetools.api.models.Customizable<S
         return instance;
     }
 
+    public ScopedPrice copyDeep();
+
     /**
      * factory method to create a deep copy of ScopedPrice
      * @param template instance to be copied

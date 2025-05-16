@@ -196,4 +196,8 @@ public class SearchDateTimeRangeValueImpl implements SearchDateTimeRangeValue, M
                 .build();
     }
 
+    @Override
+    public SearchDateTimeRangeValue copyDeep() {
+        return SearchDateTimeRangeValue.deepCopy(this);
+    }
 }

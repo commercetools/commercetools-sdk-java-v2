@@ -115,4 +115,8 @@ public class InvalidOperationErrorImpl implements InvalidOperationError, ModelBa
                 .build();
     }
 
+    @Override
+    public InvalidOperationError copyDeep() {
+        return InvalidOperationError.deepCopy(this);
+    }
 }

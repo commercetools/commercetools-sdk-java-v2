@@ -92,4 +92,8 @@ public class ApprovalRuleCreatedMessagePayloadImpl implements ApprovalRuleCreate
                 .build();
     }
 
+    @Override
+    public ApprovalRuleCreatedMessagePayload copyDeep() {
+        return ApprovalRuleCreatedMessagePayload.deepCopy(this);
+    }
 }

@@ -31,6 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("OrderCustomerEmailSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderCustomerEmailSetMessageImpl.class)
 public interface OrderCustomerEmailSetMessage extends OrderMessage {
@@ -99,6 +100,8 @@ public interface OrderCustomerEmailSetMessage extends OrderMessage {
         instance.setOldEmail(template.getOldEmail());
         return instance;
     }
+
+    public OrderCustomerEmailSetMessage copyDeep();
 
     /**
      * factory method to create a deep copy of OrderCustomerEmailSetMessage

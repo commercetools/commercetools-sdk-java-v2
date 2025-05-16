@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeParent")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CategoryChangeParentActionImpl.class)
 public interface CategoryChangeParentAction extends CategoryUpdateAction {
@@ -71,6 +72,8 @@ public interface CategoryChangeParentAction extends CategoryUpdateAction {
         instance.setParent(template.getParent());
         return instance;
     }
+
+    public CategoryChangeParentAction copyDeep();
 
     /**
      * factory method to create a deep copy of CategoryChangeParentAction

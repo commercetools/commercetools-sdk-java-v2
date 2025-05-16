@@ -293,4 +293,8 @@ public class OrderCreatedMessageImpl implements OrderCreatedMessage, ModelBase {
                 .build();
     }
 
+    @Override
+    public OrderCreatedMessage copyDeep() {
+        return OrderCreatedMessage.deepCopy(this);
+    }
 }

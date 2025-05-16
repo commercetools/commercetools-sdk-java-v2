@@ -91,4 +91,8 @@ public class CartSetLocaleActionImpl implements CartSetLocaleAction, ModelBase {
                 .build();
     }
 
+    @Override
+    public CartSetLocaleAction copyDeep() {
+        return CartSetLocaleAction.deepCopy(this);
+    }
 }

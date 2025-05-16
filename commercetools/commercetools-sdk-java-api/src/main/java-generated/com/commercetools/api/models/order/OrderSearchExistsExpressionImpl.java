@@ -74,4 +74,8 @@ public class OrderSearchExistsExpressionImpl implements OrderSearchExistsExpress
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("exists", exists).build();
     }
 
+    @Override
+    public OrderSearchExistsExpression copyDeep() {
+        return OrderSearchExistsExpression.deepCopy(this);
+    }
 }

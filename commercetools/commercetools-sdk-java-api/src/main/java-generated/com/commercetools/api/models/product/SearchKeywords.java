@@ -69,6 +69,8 @@ public interface SearchKeywords {
         return instance;
     }
 
+    public SearchKeywords copyDeep();
+
     /**
      * factory method to create a deep copy of SearchKeywords
      * @param template instance to be copied

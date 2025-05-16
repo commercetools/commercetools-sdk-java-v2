@@ -74,4 +74,8 @@ public class SearchDateTimeRangeExpressionImpl implements SearchDateTimeRangeExp
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("range", range).build();
     }
 
+    @Override
+    public SearchDateTimeRangeExpression copyDeep() {
+        return SearchDateTimeRangeExpression.deepCopy(this);
+    }
 }

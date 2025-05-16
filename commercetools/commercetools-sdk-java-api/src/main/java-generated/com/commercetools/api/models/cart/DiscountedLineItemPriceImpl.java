@@ -101,4 +101,8 @@ public class DiscountedLineItemPriceImpl implements DiscountedLineItemPrice, Mod
                 .build();
     }
 
+    @Override
+    public DiscountedLineItemPrice copyDeep() {
+        return DiscountedLineItemPrice.deepCopy(this);
+    }
 }

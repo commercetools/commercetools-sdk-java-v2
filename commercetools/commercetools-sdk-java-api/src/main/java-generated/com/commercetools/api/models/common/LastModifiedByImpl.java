@@ -177,4 +177,8 @@ public class LastModifiedByImpl implements LastModifiedBy, ModelBase {
                 .build();
     }
 
+    @Override
+    public LastModifiedBy copyDeep() {
+        return LastModifiedBy.deepCopy(this);
+    }
 }

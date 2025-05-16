@@ -95,4 +95,8 @@ public class ProductVariantSelectionIncludeOnlyImpl implements ProductVariantSel
                 .build();
     }
 
+    @Override
+    public ProductVariantSelectionIncludeOnly copyDeep() {
+        return ProductVariantSelectionIncludeOnly.deepCopy(this);
+    }
 }

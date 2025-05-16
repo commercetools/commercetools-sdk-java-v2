@@ -334,4 +334,8 @@ public class StandalonePriceValueChangedMessageImpl implements StandalonePriceVa
                 .build();
     }
 
+    @Override
+    public StandalonePriceValueChangedMessage copyDeep() {
+        return StandalonePriceValueChangedMessage.deepCopy(this);
+    }
 }

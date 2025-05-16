@@ -91,4 +91,8 @@ public class ShoppingListSetAnonymousIdActionImpl implements ShoppingListSetAnon
                 .build();
     }
 
+    @Override
+    public ShoppingListSetAnonymousIdAction copyDeep() {
+        return ShoppingListSetAnonymousIdAction.deepCopy(this);
+    }
 }

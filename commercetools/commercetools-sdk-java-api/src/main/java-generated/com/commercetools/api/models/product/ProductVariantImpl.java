@@ -313,4 +313,8 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
                 .build();
     }
 
+    @Override
+    public ProductVariant copyDeep() {
+        return ProductVariant.deepCopy(this);
+    }
 }

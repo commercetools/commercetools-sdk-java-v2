@@ -91,4 +91,8 @@ public class CustomerGroupSetKeyActionImpl implements CustomerGroupSetKeyAction,
                 .build();
     }
 
+    @Override
+    public CustomerGroupSetKeyAction copyDeep() {
+        return CustomerGroupSetKeyAction.deepCopy(this);
+    }
 }

@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("removeVariant")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTailoringRemoveVariantActionImpl.class)
 public interface ProductTailoringRemoveVariantAction extends ProductTailoringUpdateAction {
@@ -98,6 +99,8 @@ public interface ProductTailoringRemoveVariantAction extends ProductTailoringUpd
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public ProductTailoringRemoveVariantAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductTailoringRemoveVariantAction

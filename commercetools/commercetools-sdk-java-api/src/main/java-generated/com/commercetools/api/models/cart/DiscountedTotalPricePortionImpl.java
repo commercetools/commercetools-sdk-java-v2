@@ -96,4 +96,8 @@ public class DiscountedTotalPricePortionImpl implements DiscountedTotalPricePort
                 .build();
     }
 
+    @Override
+    public DiscountedTotalPricePortion copyDeep() {
+        return DiscountedTotalPricePortion.deepCopy(this);
+    }
 }

@@ -151,4 +151,8 @@ public class GraphQLCountryNotConfiguredInStoreErrorImpl implements GraphQLCount
                 .build();
     }
 
+    @Override
+    public GraphQLCountryNotConfiguredInStoreError copyDeep() {
+        return GraphQLCountryNotConfiguredInStoreError.deepCopy(this);
+    }
 }

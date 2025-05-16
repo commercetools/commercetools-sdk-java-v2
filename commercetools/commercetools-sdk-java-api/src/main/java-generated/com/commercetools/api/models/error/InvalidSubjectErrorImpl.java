@@ -114,4 +114,8 @@ public class InvalidSubjectErrorImpl implements InvalidSubjectError, ModelBase {
                 .build();
     }
 
+    @Override
+    public InvalidSubjectError copyDeep() {
+        return InvalidSubjectError.deepCopy(this);
+    }
 }

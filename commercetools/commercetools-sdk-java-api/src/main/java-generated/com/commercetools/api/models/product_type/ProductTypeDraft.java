@@ -125,6 +125,8 @@ public interface ProductTypeDraft
         return instance;
     }
 
+    public ProductTypeDraft copyDeep();
+
     /**
      * factory method to create a deep copy of ProductTypeDraft
      * @param template instance to be copied

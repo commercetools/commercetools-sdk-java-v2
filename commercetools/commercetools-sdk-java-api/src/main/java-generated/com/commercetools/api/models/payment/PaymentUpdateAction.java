@@ -27,27 +27,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentAddInterfaceInteractionActionImpl.class, name = PaymentAddInterfaceInteractionAction.ADD_INTERFACE_INTERACTION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentAddTransactionActionImpl.class, name = PaymentAddTransactionAction.ADD_TRANSACTION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentChangeAmountPlannedActionImpl.class, name = PaymentChangeAmountPlannedAction.CHANGE_AMOUNT_PLANNED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentChangeTransactionInteractionIdActionImpl.class, name = PaymentChangeTransactionInteractionIdAction.CHANGE_TRANSACTION_INTERACTION_ID),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentChangeTransactionStateActionImpl.class, name = PaymentChangeTransactionStateAction.CHANGE_TRANSACTION_STATE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentChangeTransactionTimestampActionImpl.class, name = PaymentChangeTransactionTimestampAction.CHANGE_TRANSACTION_TIMESTAMP),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetAnonymousIdActionImpl.class, name = PaymentSetAnonymousIdAction.SET_ANONYMOUS_ID),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetCustomFieldActionImpl.class, name = PaymentSetCustomFieldAction.SET_CUSTOM_FIELD),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetCustomTypeActionImpl.class, name = PaymentSetCustomTypeAction.SET_CUSTOM_TYPE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetCustomerActionImpl.class, name = PaymentSetCustomerAction.SET_CUSTOMER),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetInterfaceIdActionImpl.class, name = PaymentSetInterfaceIdAction.SET_INTERFACE_ID),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetKeyActionImpl.class, name = PaymentSetKeyAction.SET_KEY),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetMethodInfoInterfaceActionImpl.class, name = PaymentSetMethodInfoInterfaceAction.SET_METHOD_INFO_INTERFACE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetMethodInfoMethodActionImpl.class, name = PaymentSetMethodInfoMethodAction.SET_METHOD_INFO_METHOD),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetMethodInfoNameActionImpl.class, name = PaymentSetMethodInfoNameAction.SET_METHOD_INFO_NAME),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetStatusInterfaceCodeActionImpl.class, name = PaymentSetStatusInterfaceCodeAction.SET_STATUS_INTERFACE_CODE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetStatusInterfaceTextActionImpl.class, name = PaymentSetStatusInterfaceTextAction.SET_STATUS_INTERFACE_TEXT),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetTransactionCustomFieldActionImpl.class, name = PaymentSetTransactionCustomFieldAction.SET_TRANSACTION_CUSTOM_FIELD),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentSetTransactionCustomTypeActionImpl.class, name = PaymentSetTransactionCustomTypeAction.SET_TRANSACTION_CUSTOM_TYPE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.payment.PaymentTransitionStateActionImpl.class, name = PaymentTransitionStateAction.TRANSITION_STATE) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = PaymentUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = PaymentUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -61,6 +40,8 @@ public interface PaymentUpdateAction extends com.commercetools.api.models.Resour
     @JsonProperty("action")
     public String getAction();
 
+    public PaymentUpdateAction copyDeep();
+
     /**
      * factory method to create a deep copy of PaymentUpdateAction
      * @param template instance to be copied
@@ -71,85 +52,9 @@ public interface PaymentUpdateAction extends com.commercetools.api.models.Resour
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.payment.PaymentAddInterfaceInteractionAction) {
-            return com.commercetools.api.models.payment.PaymentAddInterfaceInteractionAction
-                    .deepCopy((com.commercetools.api.models.payment.PaymentAddInterfaceInteractionAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.payment.PaymentAddTransactionAction) {
-            return com.commercetools.api.models.payment.PaymentAddTransactionAction
-                    .deepCopy((com.commercetools.api.models.payment.PaymentAddTransactionAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.payment.PaymentChangeAmountPlannedAction) {
-            return com.commercetools.api.models.payment.PaymentChangeAmountPlannedAction
-                    .deepCopy((com.commercetools.api.models.payment.PaymentChangeAmountPlannedAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.payment.PaymentChangeTransactionInteractionIdAction) {
-            return com.commercetools.api.models.payment.PaymentChangeTransactionInteractionIdAction.deepCopy(
-                (com.commercetools.api.models.payment.PaymentChangeTransactionInteractionIdAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.payment.PaymentChangeTransactionStateAction) {
-            return com.commercetools.api.models.payment.PaymentChangeTransactionStateAction
-                    .deepCopy((com.commercetools.api.models.payment.PaymentChangeTransactionStateAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.payment.PaymentChangeTransactionTimestampAction) {
-            return com.commercetools.api.models.payment.PaymentChangeTransactionTimestampAction
-                    .deepCopy((com.commercetools.api.models.payment.PaymentChangeTransactionTimestampAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.payment.PaymentSetAnonymousIdAction) {
-            return com.commercetools.api.models.payment.PaymentSetAnonymousIdAction
-                    .deepCopy((com.commercetools.api.models.payment.PaymentSetAnonymousIdAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.payment.PaymentSetCustomFieldAction) {
-            return com.commercetools.api.models.payment.PaymentSetCustomFieldAction
-                    .deepCopy((com.commercetools.api.models.payment.PaymentSetCustomFieldAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.payment.PaymentSetCustomTypeAction) {
-            return com.commercetools.api.models.payment.PaymentSetCustomTypeAction
-                    .deepCopy((com.commercetools.api.models.payment.PaymentSetCustomTypeAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.payment.PaymentSetCustomerAction) {
-            return com.commercetools.api.models.payment.PaymentSetCustomerAction
-                    .deepCopy((com.commercetools.api.models.payment.PaymentSetCustomerAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.payment.PaymentSetInterfaceIdAction) {
-            return com.commercetools.api.models.payment.PaymentSetInterfaceIdAction
-                    .deepCopy((com.commercetools.api.models.payment.PaymentSetInterfaceIdAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.payment.PaymentSetKeyAction) {
-            return com.commercetools.api.models.payment.PaymentSetKeyAction
-                    .deepCopy((com.commercetools.api.models.payment.PaymentSetKeyAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.payment.PaymentSetMethodInfoInterfaceAction) {
-            return com.commercetools.api.models.payment.PaymentSetMethodInfoInterfaceAction
-                    .deepCopy((com.commercetools.api.models.payment.PaymentSetMethodInfoInterfaceAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.payment.PaymentSetMethodInfoMethodAction) {
-            return com.commercetools.api.models.payment.PaymentSetMethodInfoMethodAction
-                    .deepCopy((com.commercetools.api.models.payment.PaymentSetMethodInfoMethodAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.payment.PaymentSetMethodInfoNameAction) {
-            return com.commercetools.api.models.payment.PaymentSetMethodInfoNameAction
-                    .deepCopy((com.commercetools.api.models.payment.PaymentSetMethodInfoNameAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.payment.PaymentSetStatusInterfaceCodeAction) {
-            return com.commercetools.api.models.payment.PaymentSetStatusInterfaceCodeAction
-                    .deepCopy((com.commercetools.api.models.payment.PaymentSetStatusInterfaceCodeAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.payment.PaymentSetStatusInterfaceTextAction) {
-            return com.commercetools.api.models.payment.PaymentSetStatusInterfaceTextAction
-                    .deepCopy((com.commercetools.api.models.payment.PaymentSetStatusInterfaceTextAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.payment.PaymentSetTransactionCustomFieldAction) {
-            return com.commercetools.api.models.payment.PaymentSetTransactionCustomFieldAction
-                    .deepCopy((com.commercetools.api.models.payment.PaymentSetTransactionCustomFieldAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.payment.PaymentSetTransactionCustomTypeAction) {
-            return com.commercetools.api.models.payment.PaymentSetTransactionCustomTypeAction
-                    .deepCopy((com.commercetools.api.models.payment.PaymentSetTransactionCustomTypeAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.payment.PaymentTransitionStateAction) {
-            return com.commercetools.api.models.payment.PaymentTransitionStateAction
-                    .deepCopy((com.commercetools.api.models.payment.PaymentTransitionStateAction) template);
+
+        if (!(template instanceof PaymentUpdateActionImpl)) {
+            return template.copyDeep();
         }
         PaymentUpdateActionImpl instance = new PaymentUpdateActionImpl();
         return instance;

@@ -95,4 +95,8 @@ public class ProjectChangeCurrenciesActionImpl implements ProjectChangeCurrencie
                 .build();
     }
 
+    @Override
+    public ProjectChangeCurrenciesAction copyDeep() {
+        return ProjectChangeCurrenciesAction.deepCopy(this);
+    }
 }

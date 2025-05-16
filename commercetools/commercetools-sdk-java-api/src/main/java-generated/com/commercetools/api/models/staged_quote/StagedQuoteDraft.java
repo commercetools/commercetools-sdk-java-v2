@@ -160,6 +160,8 @@ public interface StagedQuoteDraft
         return instance;
     }
 
+    public StagedQuoteDraft copyDeep();
+
     /**
      * factory method to create a deep copy of StagedQuoteDraft
      * @param template instance to be copied

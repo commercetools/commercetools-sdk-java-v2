@@ -104,6 +104,8 @@ public interface AssignedProductReference {
         return instance;
     }
 
+    public AssignedProductReference copyDeep();
+
     /**
      * factory method to create a deep copy of AssignedProductReference
      * @param template instance to be copied

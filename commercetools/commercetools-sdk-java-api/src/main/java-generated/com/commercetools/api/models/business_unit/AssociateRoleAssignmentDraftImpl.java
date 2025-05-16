@@ -98,4 +98,8 @@ public class AssociateRoleAssignmentDraftImpl implements AssociateRoleAssignment
                 .build();
     }
 
+    @Override
+    public AssociateRoleAssignmentDraft copyDeep() {
+        return AssociateRoleAssignmentDraft.deepCopy(this);
+    }
 }

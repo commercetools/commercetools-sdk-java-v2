@@ -243,4 +243,8 @@ public class GraphQLExtensionBadResponseErrorImpl implements GraphQLExtensionBad
                 .build();
     }
 
+    @Override
+    public GraphQLExtensionBadResponseError copyDeep() {
+        return GraphQLExtensionBadResponseError.deepCopy(this);
+    }
 }

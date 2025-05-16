@@ -31,6 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("CustomerAddressCustomTypeRemoved")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerAddressCustomTypeRemovedMessageImpl.class)
 public interface CustomerAddressCustomTypeRemovedMessage extends Message {
@@ -99,6 +100,8 @@ public interface CustomerAddressCustomTypeRemovedMessage extends Message {
         instance.setAddressId(template.getAddressId());
         return instance;
     }
+
+    public CustomerAddressCustomTypeRemovedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of CustomerAddressCustomTypeRemovedMessage

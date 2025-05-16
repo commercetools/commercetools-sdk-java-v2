@@ -111,4 +111,8 @@ public class AttributeGroupReferenceImpl implements AttributeGroupReference, Mod
                 .build();
     }
 
+    @Override
+    public AttributeGroupReference copyDeep() {
+        return AttributeGroupReference.deepCopy(this);
+    }
 }

@@ -129,4 +129,8 @@ public class ProductChangePriceActionImpl implements ProductChangePriceAction, M
                 .build();
     }
 
+    @Override
+    public ProductChangePriceAction copyDeep() {
+        return ProductChangePriceAction.deepCopy(this);
+    }
 }

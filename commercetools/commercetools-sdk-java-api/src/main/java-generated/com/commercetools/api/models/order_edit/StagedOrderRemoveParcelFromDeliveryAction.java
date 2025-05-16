@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("removeParcelFromDelivery")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderRemoveParcelFromDeliveryActionImpl.class)
 public interface StagedOrderRemoveParcelFromDeliveryAction extends StagedOrderUpdateAction {
@@ -88,6 +89,8 @@ public interface StagedOrderRemoveParcelFromDeliveryAction extends StagedOrderUp
         instance.setParcelKey(template.getParcelKey());
         return instance;
     }
+
+    public StagedOrderRemoveParcelFromDeliveryAction copyDeep();
 
     /**
      * factory method to create a deep copy of StagedOrderRemoveParcelFromDeliveryAction

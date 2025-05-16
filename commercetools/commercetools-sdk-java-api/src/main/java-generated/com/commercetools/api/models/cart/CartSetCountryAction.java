@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setCountry")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartSetCountryActionImpl.class)
 public interface CartSetCountryAction extends CartUpdateAction {
@@ -68,6 +69,8 @@ public interface CartSetCountryAction extends CartUpdateAction {
         instance.setCountry(template.getCountry());
         return instance;
     }
+
+    public CartSetCountryAction copyDeep();
 
     /**
      * factory method to create a deep copy of CartSetCountryAction

@@ -76,6 +76,8 @@ public interface SearchOrExpression extends SearchCompoundExpression {
         return instance;
     }
 
+    public SearchOrExpression copyDeep();
+
     /**
      * factory method to create a deep copy of SearchOrExpression
      * @param template instance to be copied

@@ -84,6 +84,8 @@ public interface BusinessUnitConfiguration {
         return instance;
     }
 
+    public BusinessUnitConfiguration copyDeep();
+
     /**
      * factory method to create a deep copy of BusinessUnitConfiguration
      * @param template instance to be copied

@@ -130,4 +130,8 @@ public class BusinessUnitSetAddressCustomTypeActionImpl implements BusinessUnitS
                 .build();
     }
 
+    @Override
+    public BusinessUnitSetAddressCustomTypeAction copyDeep() {
+        return BusinessUnitSetAddressCustomTypeAction.deepCopy(this);
+    }
 }

@@ -79,4 +79,8 @@ public class ApproverHierarchyDraftImpl implements ApproverHierarchyDraft, Model
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("tiers", tiers).build();
     }
 
+    @Override
+    public ApproverHierarchyDraft copyDeep() {
+        return ApproverHierarchyDraft.deepCopy(this);
+    }
 }

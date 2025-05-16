@@ -96,4 +96,8 @@ public class ProductDiscountValueAbsoluteImpl implements ProductDiscountValueAbs
                 .build();
     }
 
+    @Override
+    public ProductDiscountValueAbsolute copyDeep() {
+        return ProductDiscountValueAbsolute.deepCopy(this);
+    }
 }

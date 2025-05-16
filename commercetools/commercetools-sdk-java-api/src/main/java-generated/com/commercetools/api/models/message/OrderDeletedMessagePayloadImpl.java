@@ -91,4 +91,8 @@ public class OrderDeletedMessagePayloadImpl implements OrderDeletedMessagePayloa
                 .build();
     }
 
+    @Override
+    public OrderDeletedMessagePayload copyDeep() {
+        return OrderDeletedMessagePayload.deepCopy(this);
+    }
 }

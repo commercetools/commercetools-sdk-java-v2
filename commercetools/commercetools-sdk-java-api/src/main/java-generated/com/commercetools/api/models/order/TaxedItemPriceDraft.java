@@ -86,6 +86,8 @@ public interface TaxedItemPriceDraft extends io.vrap.rmf.base.client.Draft<Taxed
         return instance;
     }
 
+    public TaxedItemPriceDraft copyDeep();
+
     /**
      * factory method to create a deep copy of TaxedItemPriceDraft
      * @param template instance to be copied

@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("removeCountry")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StoreRemoveCountryActionImpl.class)
 public interface StoreRemoveCountryAction extends StoreUpdateAction {
@@ -72,6 +73,8 @@ public interface StoreRemoveCountryAction extends StoreUpdateAction {
         instance.setCountry(template.getCountry());
         return instance;
     }
+
+    public StoreRemoveCountryAction copyDeep();
 
     /**
      * factory method to create a deep copy of StoreRemoveCountryAction

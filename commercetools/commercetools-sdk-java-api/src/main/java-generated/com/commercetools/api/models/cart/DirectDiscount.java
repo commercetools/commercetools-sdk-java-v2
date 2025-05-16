@@ -104,6 +104,8 @@ public interface DirectDiscount {
         return instance;
     }
 
+    public DirectDiscount copyDeep();
+
     /**
      * factory method to create a deep copy of DirectDiscount
      * @param template instance to be copied

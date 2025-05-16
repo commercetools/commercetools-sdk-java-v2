@@ -128,4 +128,8 @@ public class CustomerSetAddressCustomFieldActionImpl implements CustomerSetAddre
                 .build();
     }
 
+    @Override
+    public CustomerSetAddressCustomFieldAction copyDeep() {
+        return CustomerSetAddressCustomFieldAction.deepCopy(this);
+    }
 }

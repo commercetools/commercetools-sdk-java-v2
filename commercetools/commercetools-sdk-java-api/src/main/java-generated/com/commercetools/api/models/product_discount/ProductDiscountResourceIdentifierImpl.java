@@ -110,4 +110,8 @@ public class ProductDiscountResourceIdentifierImpl implements ProductDiscountRes
                 .build();
     }
 
+    @Override
+    public ProductDiscountResourceIdentifier copyDeep() {
+        return ProductDiscountResourceIdentifier.deepCopy(this);
+    }
 }

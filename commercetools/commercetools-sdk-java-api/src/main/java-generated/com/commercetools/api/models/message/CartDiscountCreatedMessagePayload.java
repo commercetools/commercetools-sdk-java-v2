@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("CartDiscountCreated")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartDiscountCreatedMessagePayloadImpl.class)
 public interface CartDiscountCreatedMessagePayload extends MessagePayload {
@@ -72,6 +73,8 @@ public interface CartDiscountCreatedMessagePayload extends MessagePayload {
         instance.setCartDiscount(template.getCartDiscount());
         return instance;
     }
+
+    public CartDiscountCreatedMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of CartDiscountCreatedMessagePayload

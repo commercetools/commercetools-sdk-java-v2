@@ -301,4 +301,8 @@ public class GraphQLOverlappingStandalonePriceValidityErrorImpl
                 .build();
     }
 
+    @Override
+    public GraphQLOverlappingStandalonePriceValidityError copyDeep() {
+        return GraphQLOverlappingStandalonePriceValidityError.deepCopy(this);
+    }
 }

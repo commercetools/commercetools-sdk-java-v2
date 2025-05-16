@@ -92,4 +92,8 @@ public class ProductDiscountChangeValueActionImpl implements ProductDiscountChan
                 .build();
     }
 
+    @Override
+    public ProductDiscountChangeValueAction copyDeep() {
+        return ProductDiscountChangeValueAction.deepCopy(this);
+    }
 }

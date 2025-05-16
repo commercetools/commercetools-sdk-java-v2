@@ -69,4 +69,8 @@ public class ShippingMethodUpdateActionImpl implements ShippingMethodUpdateActio
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action).build();
     }
 
+    @Override
+    public ShippingMethodUpdateAction copyDeep() {
+        return ShippingMethodUpdateAction.deepCopy(this);
+    }
 }

@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("applyDeltaToLineItemShippingDetailsTargets")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartApplyDeltaToLineItemShippingDetailsTargetsActionImpl.class)
 public interface CartApplyDeltaToLineItemShippingDetailsTargetsAction extends CartUpdateAction {
@@ -113,6 +114,8 @@ public interface CartApplyDeltaToLineItemShippingDetailsTargetsAction extends Ca
         instance.setTargetsDelta(template.getTargetsDelta());
         return instance;
     }
+
+    public CartApplyDeltaToLineItemShippingDetailsTargetsAction copyDeep();
 
     /**
      * factory method to create a deep copy of CartApplyDeltaToLineItemShippingDetailsTargetsAction

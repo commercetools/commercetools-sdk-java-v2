@@ -138,4 +138,8 @@ public class DuplicatePriceScopeErrorImpl implements DuplicatePriceScopeError, M
                 .build();
     }
 
+    @Override
+    public DuplicatePriceScopeError copyDeep() {
+        return DuplicatePriceScopeError.deepCopy(this);
+    }
 }

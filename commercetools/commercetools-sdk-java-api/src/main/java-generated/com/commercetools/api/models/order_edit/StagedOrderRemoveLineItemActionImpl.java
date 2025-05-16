@@ -194,4 +194,8 @@ public class StagedOrderRemoveLineItemActionImpl implements StagedOrderRemoveLin
                 .build();
     }
 
+    @Override
+    public StagedOrderRemoveLineItemAction copyDeep() {
+        return StagedOrderRemoveLineItemAction.deepCopy(this);
+    }
 }

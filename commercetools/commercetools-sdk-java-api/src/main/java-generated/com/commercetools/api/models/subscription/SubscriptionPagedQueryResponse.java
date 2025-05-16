@@ -144,6 +144,8 @@ public interface SubscriptionPagedQueryResponse
         return instance;
     }
 
+    public SubscriptionPagedQueryResponse copyDeep();
+
     /**
      * factory method to create a deep copy of SubscriptionPagedQueryResponse
      * @param template instance to be copied

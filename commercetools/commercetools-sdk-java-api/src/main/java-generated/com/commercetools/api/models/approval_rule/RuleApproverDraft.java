@@ -68,6 +68,8 @@ public interface RuleApproverDraft extends io.vrap.rmf.base.client.Draft<RuleApp
         return instance;
     }
 
+    public RuleApproverDraft copyDeep();
+
     /**
      * factory method to create a deep copy of RuleApproverDraft
      * @param template instance to be copied

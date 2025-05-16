@@ -91,4 +91,8 @@ public class CartDiscountSetValidUntilActionImpl implements CartDiscountSetValid
                 .build();
     }
 
+    @Override
+    public CartDiscountSetValidUntilAction copyDeep() {
+        return CartDiscountSetValidUntilAction.deepCopy(this);
+    }
 }

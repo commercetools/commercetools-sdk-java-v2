@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("channel")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChannelReferenceImpl.class)
 public interface ChannelReference extends Reference, com.commercetools.api.models.Identifiable<Channel>,
@@ -88,6 +89,8 @@ public interface ChannelReference extends Reference, com.commercetools.api.model
         instance.setObj(template.getObj());
         return instance;
     }
+
+    public ChannelReference copyDeep();
 
     /**
      * factory method to create a deep copy of ChannelReference

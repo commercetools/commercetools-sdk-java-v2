@@ -74,4 +74,8 @@ public class OrderSearchLongRangeExpressionImpl implements OrderSearchLongRangeE
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("range", range).build();
     }
 
+    @Override
+    public OrderSearchLongRangeExpression copyDeep() {
+        return OrderSearchLongRangeExpression.deepCopy(this);
+    }
 }

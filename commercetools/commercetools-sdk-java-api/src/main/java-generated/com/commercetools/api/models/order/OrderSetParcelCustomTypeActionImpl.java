@@ -155,4 +155,8 @@ public class OrderSetParcelCustomTypeActionImpl implements OrderSetParcelCustomT
                 .build();
     }
 
+    @Override
+    public OrderSetParcelCustomTypeAction copyDeep() {
+        return OrderSetParcelCustomTypeAction.deepCopy(this);
+    }
 }

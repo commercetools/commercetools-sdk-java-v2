@@ -273,4 +273,8 @@ public class CartDiscountDeletedMessageImpl implements CartDiscountDeletedMessag
                 .build();
     }
 
+    @Override
+    public CartDiscountDeletedMessage copyDeep() {
+        return CartDiscountDeletedMessage.deepCopy(this);
+    }
 }

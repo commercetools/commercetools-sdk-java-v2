@@ -94,4 +94,8 @@ public class StandalonePriceStagedChangesAppliedMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public StandalonePriceStagedChangesAppliedMessagePayload copyDeep() {
+        return StandalonePriceStagedChangesAppliedMessagePayload.deepCopy(this);
+    }
 }

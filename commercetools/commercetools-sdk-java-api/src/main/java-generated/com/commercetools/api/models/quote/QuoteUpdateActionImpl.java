@@ -69,4 +69,8 @@ public class QuoteUpdateActionImpl implements QuoteUpdateAction, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action).build();
     }
 
+    @Override
+    public QuoteUpdateAction copyDeep() {
+        return QuoteUpdateAction.deepCopy(this);
+    }
 }

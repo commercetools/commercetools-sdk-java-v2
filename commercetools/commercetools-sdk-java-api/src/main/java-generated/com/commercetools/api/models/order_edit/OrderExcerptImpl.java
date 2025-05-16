@@ -114,4 +114,8 @@ public class OrderExcerptImpl implements OrderExcerpt, ModelBase {
                 .build();
     }
 
+    @Override
+    public OrderExcerpt copyDeep() {
+        return OrderExcerpt.deepCopy(this);
+    }
 }

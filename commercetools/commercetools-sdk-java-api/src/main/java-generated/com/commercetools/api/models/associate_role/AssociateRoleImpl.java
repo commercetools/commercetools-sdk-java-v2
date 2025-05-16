@@ -280,4 +280,8 @@ public class AssociateRoleImpl implements AssociateRole, ModelBase {
                 .build();
     }
 
+    @Override
+    public AssociateRole copyDeep() {
+        return AssociateRole.deepCopy(this);
+    }
 }

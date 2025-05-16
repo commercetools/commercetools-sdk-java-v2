@@ -110,4 +110,8 @@ public class ChannelResourceIdentifierImpl implements ChannelResourceIdentifier,
                 .build();
     }
 
+    @Override
+    public ChannelResourceIdentifier copyDeep() {
+        return ChannelResourceIdentifier.deepCopy(this);
+    }
 }

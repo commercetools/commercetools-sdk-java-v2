@@ -115,4 +115,8 @@ public class SearchIndexingConfigurationValuesImpl implements SearchIndexingConf
                 .build();
     }
 
+    @Override
+    public SearchIndexingConfigurationValues copyDeep() {
+        return SearchIndexingConfigurationValues.deepCopy(this);
+    }
 }

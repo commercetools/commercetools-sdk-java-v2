@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setDescription")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StateSetDescriptionActionImpl.class)
 public interface StateSetDescriptionAction extends StateUpdateAction {
@@ -72,6 +73,8 @@ public interface StateSetDescriptionAction extends StateUpdateAction {
         instance.setDescription(template.getDescription());
         return instance;
     }
+
+    public StateSetDescriptionAction copyDeep();
 
     /**
      * factory method to create a deep copy of StateSetDescriptionAction

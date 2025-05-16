@@ -92,4 +92,8 @@ public class CartRemovePaymentActionImpl implements CartRemovePaymentAction, Mod
                 .build();
     }
 
+    @Override
+    public CartRemovePaymentAction copyDeep() {
+        return CartRemovePaymentAction.deepCopy(this);
+    }
 }

@@ -94,6 +94,8 @@ public interface TaxCategoryUpdate extends
         return instance;
     }
 
+    public TaxCategoryUpdate copyDeep();
+
     /**
      * factory method to create a deep copy of TaxCategoryUpdate
      * @param template instance to be copied

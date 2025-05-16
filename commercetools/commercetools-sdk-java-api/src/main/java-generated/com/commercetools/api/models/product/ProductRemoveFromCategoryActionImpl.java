@@ -111,4 +111,8 @@ public class ProductRemoveFromCategoryActionImpl implements ProductRemoveFromCat
                 .build();
     }
 
+    @Override
+    public ProductRemoveFromCategoryAction copyDeep() {
+        return ProductRemoveFromCategoryAction.deepCopy(this);
+    }
 }

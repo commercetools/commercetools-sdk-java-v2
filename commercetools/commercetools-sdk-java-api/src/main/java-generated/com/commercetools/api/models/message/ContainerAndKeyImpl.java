@@ -94,4 +94,8 @@ public class ContainerAndKeyImpl implements ContainerAndKey, ModelBase {
                 .build();
     }
 
+    @Override
+    public ContainerAndKey copyDeep() {
+        return ContainerAndKey.deepCopy(this);
+    }
 }

@@ -110,4 +110,8 @@ public class StoreSetCustomFieldActionImpl implements StoreSetCustomFieldAction,
                 .build();
     }
 
+    @Override
+    public StoreSetCustomFieldAction copyDeep() {
+        return StoreSetCustomFieldAction.deepCopy(this);
+    }
 }

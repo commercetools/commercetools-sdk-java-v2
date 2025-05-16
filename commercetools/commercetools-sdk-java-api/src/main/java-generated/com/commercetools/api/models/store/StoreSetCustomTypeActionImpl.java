@@ -111,4 +111,8 @@ public class StoreSetCustomTypeActionImpl implements StoreSetCustomTypeAction, M
                 .build();
     }
 
+    @Override
+    public StoreSetCustomTypeAction copyDeep() {
+        return StoreSetCustomTypeAction.deepCopy(this);
+    }
 }

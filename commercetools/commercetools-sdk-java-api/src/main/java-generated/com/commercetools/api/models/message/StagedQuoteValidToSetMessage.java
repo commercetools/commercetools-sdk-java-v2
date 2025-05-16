@@ -35,6 +35,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("StagedQuoteValidToSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedQuoteValidToSetMessageImpl.class)
 public interface StagedQuoteValidToSetMessage extends Message {
@@ -87,6 +88,8 @@ public interface StagedQuoteValidToSetMessage extends Message {
         instance.setValidTo(template.getValidTo());
         return instance;
     }
+
+    public StagedQuoteValidToSetMessage copyDeep();
 
     /**
      * factory method to create a deep copy of StagedQuoteValidToSetMessage

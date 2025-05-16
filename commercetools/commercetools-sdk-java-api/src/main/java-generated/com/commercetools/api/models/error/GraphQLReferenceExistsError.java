@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ReferenceExists")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLReferenceExistsErrorImpl.class)
 public interface GraphQLReferenceExistsError extends GraphQLErrorObject {
@@ -78,6 +79,8 @@ public interface GraphQLReferenceExistsError extends GraphQLErrorObject {
         instance.setReferencedBy(template.getReferencedBy());
         return instance;
     }
+
+    public GraphQLReferenceExistsError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLReferenceExistsError

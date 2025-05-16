@@ -91,4 +91,8 @@ public class CustomerSetMiddleNameActionImpl implements CustomerSetMiddleNameAct
                 .build();
     }
 
+    @Override
+    public CustomerSetMiddleNameAction copyDeep() {
+        return CustomerSetMiddleNameAction.deepCopy(this);
+    }
 }

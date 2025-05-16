@@ -91,4 +91,8 @@ public class CartSetKeyActionImpl implements CartSetKeyAction, ModelBase {
                 .build();
     }
 
+    @Override
+    public CartSetKeyAction copyDeep() {
+        return CartSetKeyAction.deepCopy(this);
+    }
 }

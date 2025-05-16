@@ -110,4 +110,8 @@ public class TaxCategoryRemoveTaxRateActionImpl implements TaxCategoryRemoveTaxR
                 .build();
     }
 
+    @Override
+    public TaxCategoryRemoveTaxRateAction copyDeep() {
+        return TaxCategoryRemoveTaxRateAction.deepCopy(this);
+    }
 }

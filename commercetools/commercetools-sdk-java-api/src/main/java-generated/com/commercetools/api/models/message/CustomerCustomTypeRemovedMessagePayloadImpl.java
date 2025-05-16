@@ -91,4 +91,8 @@ public class CustomerCustomTypeRemovedMessagePayloadImpl implements CustomerCust
                 .build();
     }
 
+    @Override
+    public CustomerCustomTypeRemovedMessagePayload copyDeep() {
+        return CustomerCustomTypeRemovedMessagePayload.deepCopy(this);
+    }
 }

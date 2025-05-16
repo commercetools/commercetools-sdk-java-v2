@@ -92,4 +92,8 @@ public class StagedOrderChangeTaxRoundingModeActionImpl implements StagedOrderCh
                 .build();
     }
 
+    @Override
+    public StagedOrderChangeTaxRoundingModeAction copyDeep() {
+        return StagedOrderChangeTaxRoundingModeAction.deepCopy(this);
+    }
 }

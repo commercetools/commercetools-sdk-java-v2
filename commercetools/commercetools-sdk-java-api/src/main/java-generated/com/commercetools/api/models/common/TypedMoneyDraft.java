@@ -29,9 +29,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.common.CentPrecisionMoneyDraftImpl.class, name = CentPrecisionMoneyDraft.CENT_PRECISION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.common.HighPrecisionMoneyDraftImpl.class, name = HighPrecisionMoneyDraft.HIGH_PRECISION) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = TypedMoneyDraftImpl.class, visible = true)
 @JsonDeserialize(as = TypedMoneyDraftImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -75,6 +72,8 @@ public interface TypedMoneyDraft extends Money {
 
     public void setCentAmount(final Long centAmount);
 
+    public TypedMoneyDraft copyDeep();
+
     /**
      * factory method to create a deep copy of TypedMoneyDraft
      * @param template instance to be copied
@@ -85,13 +84,9 @@ public interface TypedMoneyDraft extends Money {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.common.CentPrecisionMoneyDraft) {
-            return com.commercetools.api.models.common.CentPrecisionMoneyDraft
-                    .deepCopy((com.commercetools.api.models.common.CentPrecisionMoneyDraft) template);
-        }
-        if (template instanceof com.commercetools.api.models.common.HighPrecisionMoneyDraft) {
-            return com.commercetools.api.models.common.HighPrecisionMoneyDraft
-                    .deepCopy((com.commercetools.api.models.common.HighPrecisionMoneyDraft) template);
+
+        if (!(template instanceof TypedMoneyDraftImpl)) {
+            return template.copyDeep();
         }
         TypedMoneyDraftImpl instance = new TypedMoneyDraftImpl();
         instance.setCentAmount(template.getCentAmount());

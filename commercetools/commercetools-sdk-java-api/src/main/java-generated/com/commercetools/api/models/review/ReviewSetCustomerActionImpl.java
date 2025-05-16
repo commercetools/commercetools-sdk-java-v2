@@ -92,4 +92,8 @@ public class ReviewSetCustomerActionImpl implements ReviewSetCustomerAction, Mod
                 .build();
     }
 
+    @Override
+    public ReviewSetCustomerAction copyDeep() {
+        return ReviewSetCustomerAction.deepCopy(this);
+    }
 }

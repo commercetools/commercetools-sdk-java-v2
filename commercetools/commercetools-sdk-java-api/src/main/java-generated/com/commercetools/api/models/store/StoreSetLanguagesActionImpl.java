@@ -95,4 +95,8 @@ public class StoreSetLanguagesActionImpl implements StoreSetLanguagesAction, Mod
                 .build();
     }
 
+    @Override
+    public StoreSetLanguagesAction copyDeep() {
+        return StoreSetLanguagesAction.deepCopy(this);
+    }
 }

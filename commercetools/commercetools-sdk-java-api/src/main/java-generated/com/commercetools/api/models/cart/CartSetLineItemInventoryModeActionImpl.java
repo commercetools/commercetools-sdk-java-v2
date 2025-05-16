@@ -133,4 +133,8 @@ public class CartSetLineItemInventoryModeActionImpl implements CartSetLineItemIn
                 .build();
     }
 
+    @Override
+    public CartSetLineItemInventoryModeAction copyDeep() {
+        return CartSetLineItemInventoryModeAction.deepCopy(this);
+    }
 }

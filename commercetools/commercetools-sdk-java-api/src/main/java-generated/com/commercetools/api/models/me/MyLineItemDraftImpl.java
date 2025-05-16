@@ -258,4 +258,8 @@ public class MyLineItemDraftImpl implements MyLineItemDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public MyLineItemDraft copyDeep() {
+        return MyLineItemDraft.deepCopy(this);
+    }
 }

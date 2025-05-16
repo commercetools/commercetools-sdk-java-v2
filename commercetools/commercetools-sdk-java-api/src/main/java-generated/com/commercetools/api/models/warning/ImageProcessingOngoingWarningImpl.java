@@ -91,4 +91,8 @@ public class ImageProcessingOngoingWarningImpl implements ImageProcessingOngoing
                 .build();
     }
 
+    @Override
+    public ImageProcessingOngoingWarning copyDeep() {
+        return ImageProcessingOngoingWarning.deepCopy(this);
+    }
 }

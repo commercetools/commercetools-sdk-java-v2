@@ -114,4 +114,8 @@ public class SemanticErrorErrorImpl implements SemanticErrorError, ModelBase {
                 .build();
     }
 
+    @Override
+    public SemanticErrorError copyDeep() {
+        return SemanticErrorError.deepCopy(this);
+    }
 }

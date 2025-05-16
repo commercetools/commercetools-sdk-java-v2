@@ -80,6 +80,8 @@ public interface DeliveryPayload extends SubscriptionNotification {
 
     public void setResourceUserProvidedIdentifiers(final UserProvidedIdentifiers resourceUserProvidedIdentifiers);
 
+    public DeliveryPayload copyDeep();
+
     /**
      * factory method to create a deep copy of DeliveryPayload
      * @param template instance to be copied
@@ -90,21 +92,9 @@ public interface DeliveryPayload extends SubscriptionNotification {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.subscription.MessageDeliveryPayload) {
-            return com.commercetools.api.models.subscription.MessageDeliveryPayload
-                    .deepCopy((com.commercetools.api.models.subscription.MessageDeliveryPayload) template);
-        }
-        if (template instanceof com.commercetools.api.models.subscription.ResourceCreatedDeliveryPayload) {
-            return com.commercetools.api.models.subscription.ResourceCreatedDeliveryPayload
-                    .deepCopy((com.commercetools.api.models.subscription.ResourceCreatedDeliveryPayload) template);
-        }
-        if (template instanceof com.commercetools.api.models.subscription.ResourceDeletedDeliveryPayload) {
-            return com.commercetools.api.models.subscription.ResourceDeletedDeliveryPayload
-                    .deepCopy((com.commercetools.api.models.subscription.ResourceDeletedDeliveryPayload) template);
-        }
-        if (template instanceof com.commercetools.api.models.subscription.ResourceUpdatedDeliveryPayload) {
-            return com.commercetools.api.models.subscription.ResourceUpdatedDeliveryPayload
-                    .deepCopy((com.commercetools.api.models.subscription.ResourceUpdatedDeliveryPayload) template);
+
+        if (!(template instanceof DeliveryPayloadImpl)) {
+            return template.copyDeep();
         }
         DeliveryPayloadImpl instance = new DeliveryPayloadImpl();
         instance.setProjectKey(template.getProjectKey());

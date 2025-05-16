@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setMyBusinessUnitAssociateRoleOnCreation")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProjectSetBusinessUnitAssociateRoleOnCreationActionImpl.class)
 public interface ProjectSetBusinessUnitAssociateRoleOnCreationAction extends ProjectUpdateAction {
@@ -73,6 +74,8 @@ public interface ProjectSetBusinessUnitAssociateRoleOnCreationAction extends Pro
         instance.setAssociateRole(template.getAssociateRole());
         return instance;
     }
+
+    public ProjectSetBusinessUnitAssociateRoleOnCreationAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProjectSetBusinessUnitAssociateRoleOnCreationAction

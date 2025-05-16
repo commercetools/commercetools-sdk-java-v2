@@ -100,6 +100,8 @@ public interface SearchFullTextValue extends SearchQueryExpressionValue {
         return instance;
     }
 
+    public SearchFullTextValue copyDeep();
+
     /**
      * factory method to create a deep copy of SearchFullTextValue
      * @param template instance to be copied

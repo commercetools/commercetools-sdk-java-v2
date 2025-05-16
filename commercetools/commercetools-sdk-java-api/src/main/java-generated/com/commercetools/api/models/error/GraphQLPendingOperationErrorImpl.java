@@ -97,4 +97,8 @@ public class GraphQLPendingOperationErrorImpl implements GraphQLPendingOperation
                 .build();
     }
 
+    @Override
+    public GraphQLPendingOperationError copyDeep() {
+        return GraphQLPendingOperationError.deepCopy(this);
+    }
 }

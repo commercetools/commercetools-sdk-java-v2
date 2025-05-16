@@ -160,4 +160,8 @@ public class SearchIndexingConfigurationImpl implements SearchIndexingConfigurat
                 .build();
     }
 
+    @Override
+    public SearchIndexingConfiguration copyDeep() {
+        return SearchIndexingConfiguration.deepCopy(this);
+    }
 }

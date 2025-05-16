@@ -321,4 +321,8 @@ public class StandalonePriceTiersSetMessageImpl implements StandalonePriceTiersS
                 .build();
     }
 
+    @Override
+    public StandalonePriceTiersSetMessage copyDeep() {
+        return StandalonePriceTiersSetMessage.deepCopy(this);
+    }
 }

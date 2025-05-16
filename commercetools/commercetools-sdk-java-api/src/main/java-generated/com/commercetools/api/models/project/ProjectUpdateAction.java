@@ -27,23 +27,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeBusinessUnitSearchStatusActionImpl.class, name = ProjectChangeBusinessUnitSearchStatusAction.CHANGE_BUSINESS_UNIT_SEARCH_STATUS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeBusinessUnitStatusOnCreationActionImpl.class, name = ProjectChangeBusinessUnitStatusOnCreationAction.CHANGE_MY_BUSINESS_UNIT_STATUS_ON_CREATION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeCartsConfigurationActionImpl.class, name = ProjectChangeCartsConfigurationAction.CHANGE_CARTS_CONFIGURATION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeCountriesActionImpl.class, name = ProjectChangeCountriesAction.CHANGE_COUNTRIES),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeCountryTaxRateFallbackEnabledActionImpl.class, name = ProjectChangeCountryTaxRateFallbackEnabledAction.CHANGE_COUNTRY_TAX_RATE_FALLBACK_ENABLED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeCurrenciesActionImpl.class, name = ProjectChangeCurrenciesAction.CHANGE_CURRENCIES),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeCustomerSearchStatusActionImpl.class, name = ProjectChangeCustomerSearchStatusAction.CHANGE_CUSTOMER_SEARCH_STATUS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeLanguagesActionImpl.class, name = ProjectChangeLanguagesAction.CHANGE_LANGUAGES),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeMessagesConfigurationActionImpl.class, name = ProjectChangeMessagesConfigurationAction.CHANGE_MESSAGES_CONFIGURATION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeNameActionImpl.class, name = ProjectChangeNameAction.CHANGE_NAME),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeOrderSearchStatusActionImpl.class, name = ProjectChangeOrderSearchStatusAction.CHANGE_ORDER_SEARCH_STATUS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeProductSearchIndexingEnabledActionImpl.class, name = ProjectChangeProductSearchIndexingEnabledAction.CHANGE_PRODUCT_SEARCH_INDEXING_ENABLED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectChangeShoppingListsConfigurationActionImpl.class, name = ProjectChangeShoppingListsConfigurationAction.CHANGE_SHOPPING_LISTS_CONFIGURATION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectSetBusinessUnitAssociateRoleOnCreationActionImpl.class, name = ProjectSetBusinessUnitAssociateRoleOnCreationAction.SET_MY_BUSINESS_UNIT_ASSOCIATE_ROLE_ON_CREATION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectSetExternalOAuthActionImpl.class, name = ProjectSetExternalOAuthAction.SET_EXTERNAL_O_AUTH),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.project.ProjectSetShippingRateInputTypeActionImpl.class, name = ProjectSetShippingRateInputTypeAction.SET_SHIPPING_RATE_INPUT_TYPE) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = ProjectUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = ProjectUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -57,6 +40,8 @@ public interface ProjectUpdateAction extends com.commercetools.api.models.Resour
     @JsonProperty("action")
     public String getAction();
 
+    public ProjectUpdateAction copyDeep();
+
     /**
      * factory method to create a deep copy of ProjectUpdateAction
      * @param template instance to be copied
@@ -67,69 +52,9 @@ public interface ProjectUpdateAction extends com.commercetools.api.models.Resour
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.project.ProjectChangeBusinessUnitSearchStatusAction) {
-            return com.commercetools.api.models.project.ProjectChangeBusinessUnitSearchStatusAction.deepCopy(
-                (com.commercetools.api.models.project.ProjectChangeBusinessUnitSearchStatusAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.project.ProjectChangeBusinessUnitStatusOnCreationAction) {
-            return com.commercetools.api.models.project.ProjectChangeBusinessUnitStatusOnCreationAction.deepCopy(
-                (com.commercetools.api.models.project.ProjectChangeBusinessUnitStatusOnCreationAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.project.ProjectChangeCartsConfigurationAction) {
-            return com.commercetools.api.models.project.ProjectChangeCartsConfigurationAction
-                    .deepCopy((com.commercetools.api.models.project.ProjectChangeCartsConfigurationAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.project.ProjectChangeCountriesAction) {
-            return com.commercetools.api.models.project.ProjectChangeCountriesAction
-                    .deepCopy((com.commercetools.api.models.project.ProjectChangeCountriesAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.project.ProjectChangeCountryTaxRateFallbackEnabledAction) {
-            return com.commercetools.api.models.project.ProjectChangeCountryTaxRateFallbackEnabledAction.deepCopy(
-                (com.commercetools.api.models.project.ProjectChangeCountryTaxRateFallbackEnabledAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.project.ProjectChangeCurrenciesAction) {
-            return com.commercetools.api.models.project.ProjectChangeCurrenciesAction
-                    .deepCopy((com.commercetools.api.models.project.ProjectChangeCurrenciesAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.project.ProjectChangeCustomerSearchStatusAction) {
-            return com.commercetools.api.models.project.ProjectChangeCustomerSearchStatusAction
-                    .deepCopy((com.commercetools.api.models.project.ProjectChangeCustomerSearchStatusAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.project.ProjectChangeLanguagesAction) {
-            return com.commercetools.api.models.project.ProjectChangeLanguagesAction
-                    .deepCopy((com.commercetools.api.models.project.ProjectChangeLanguagesAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.project.ProjectChangeMessagesConfigurationAction) {
-            return com.commercetools.api.models.project.ProjectChangeMessagesConfigurationAction
-                    .deepCopy((com.commercetools.api.models.project.ProjectChangeMessagesConfigurationAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.project.ProjectChangeNameAction) {
-            return com.commercetools.api.models.project.ProjectChangeNameAction
-                    .deepCopy((com.commercetools.api.models.project.ProjectChangeNameAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.project.ProjectChangeOrderSearchStatusAction) {
-            return com.commercetools.api.models.project.ProjectChangeOrderSearchStatusAction
-                    .deepCopy((com.commercetools.api.models.project.ProjectChangeOrderSearchStatusAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.project.ProjectChangeProductSearchIndexingEnabledAction) {
-            return com.commercetools.api.models.project.ProjectChangeProductSearchIndexingEnabledAction.deepCopy(
-                (com.commercetools.api.models.project.ProjectChangeProductSearchIndexingEnabledAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.project.ProjectChangeShoppingListsConfigurationAction) {
-            return com.commercetools.api.models.project.ProjectChangeShoppingListsConfigurationAction.deepCopy(
-                (com.commercetools.api.models.project.ProjectChangeShoppingListsConfigurationAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.project.ProjectSetBusinessUnitAssociateRoleOnCreationAction) {
-            return com.commercetools.api.models.project.ProjectSetBusinessUnitAssociateRoleOnCreationAction.deepCopy(
-                (com.commercetools.api.models.project.ProjectSetBusinessUnitAssociateRoleOnCreationAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.project.ProjectSetExternalOAuthAction) {
-            return com.commercetools.api.models.project.ProjectSetExternalOAuthAction
-                    .deepCopy((com.commercetools.api.models.project.ProjectSetExternalOAuthAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.project.ProjectSetShippingRateInputTypeAction) {
-            return com.commercetools.api.models.project.ProjectSetShippingRateInputTypeAction
-                    .deepCopy((com.commercetools.api.models.project.ProjectSetShippingRateInputTypeAction) template);
+
+        if (!(template instanceof ProjectUpdateActionImpl)) {
+            return template.copyDeep();
         }
         ProjectUpdateActionImpl instance = new ProjectUpdateActionImpl();
         return instance;

@@ -92,4 +92,8 @@ public class ExtensionChangeDestinationActionImpl implements ExtensionChangeDest
                 .build();
     }
 
+    @Override
+    public ExtensionChangeDestinationAction copyDeep() {
+        return ExtensionChangeDestinationAction.deepCopy(this);
+    }
 }

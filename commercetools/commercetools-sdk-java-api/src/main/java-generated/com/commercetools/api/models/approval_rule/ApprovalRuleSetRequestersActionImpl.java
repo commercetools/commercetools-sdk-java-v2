@@ -97,4 +97,8 @@ public class ApprovalRuleSetRequestersActionImpl implements ApprovalRuleSetReque
                 .build();
     }
 
+    @Override
+    public ApprovalRuleSetRequestersAction copyDeep() {
+        return ApprovalRuleSetRequestersAction.deepCopy(this);
+    }
 }

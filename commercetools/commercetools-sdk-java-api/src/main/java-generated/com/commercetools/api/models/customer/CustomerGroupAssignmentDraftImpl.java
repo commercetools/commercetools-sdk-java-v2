@@ -78,4 +78,8 @@ public class CustomerGroupAssignmentDraftImpl implements CustomerGroupAssignment
                 .build();
     }
 
+    @Override
+    public CustomerGroupAssignmentDraft copyDeep() {
+        return CustomerGroupAssignmentDraft.deepCopy(this);
+    }
 }

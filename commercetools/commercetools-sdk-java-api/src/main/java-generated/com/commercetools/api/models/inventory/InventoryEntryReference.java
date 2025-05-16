@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("inventory-entry")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = InventoryEntryReferenceImpl.class)
 public interface InventoryEntryReference extends Reference, com.commercetools.api.models.Identifiable<InventoryEntry>,
@@ -88,6 +89,8 @@ public interface InventoryEntryReference extends Reference, com.commercetools.ap
         instance.setObj(template.getObj());
         return instance;
     }
+
+    public InventoryEntryReference copyDeep();
 
     /**
      * factory method to create a deep copy of InventoryEntryReference

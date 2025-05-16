@@ -293,4 +293,8 @@ public class CustomerAddressChangedMessageImpl implements CustomerAddressChanged
                 .build();
     }
 
+    @Override
+    public CustomerAddressChangedMessage copyDeep() {
+        return CustomerAddressChangedMessage.deepCopy(this);
+    }
 }

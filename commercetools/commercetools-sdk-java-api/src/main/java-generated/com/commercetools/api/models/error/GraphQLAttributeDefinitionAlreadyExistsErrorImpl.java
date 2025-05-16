@@ -160,4 +160,8 @@ public class GraphQLAttributeDefinitionAlreadyExistsErrorImpl
                 .build();
     }
 
+    @Override
+    public GraphQLAttributeDefinitionAlreadyExistsError copyDeep() {
+        return GraphQLAttributeDefinitionAlreadyExistsError.deepCopy(this);
+    }
 }

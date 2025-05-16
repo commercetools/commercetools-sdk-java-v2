@@ -133,4 +133,8 @@ public class TaxCategoryReplaceTaxRateActionImpl implements TaxCategoryReplaceTa
                 .build();
     }
 
+    @Override
+    public TaxCategoryReplaceTaxRateAction copyDeep() {
+        return TaxCategoryReplaceTaxRateAction.deepCopy(this);
+    }
 }

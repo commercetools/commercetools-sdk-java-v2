@@ -73,4 +73,8 @@ public class SearchExactExpressionImpl implements SearchExactExpression, ModelBa
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("exact", exact).build();
     }
 
+    @Override
+    public SearchExactExpression copyDeep() {
+        return SearchExactExpression.deepCopy(this);
+    }
 }

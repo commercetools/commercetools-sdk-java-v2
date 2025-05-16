@@ -155,4 +155,8 @@ public class StagedOrderSetDeliveryAddressCustomFieldActionImpl
                 .build();
     }
 
+    @Override
+    public StagedOrderSetDeliveryAddressCustomFieldAction copyDeep() {
+        return StagedOrderSetDeliveryAddressCustomFieldAction.deepCopy(this);
+    }
 }

@@ -186,6 +186,8 @@ public interface MyShoppingListDraft extends com.commercetools.api.models.Custom
         return instance;
     }
 
+    public MyShoppingListDraft copyDeep();
+
     /**
      * factory method to create a deep copy of MyShoppingListDraft
      * @param template instance to be copied

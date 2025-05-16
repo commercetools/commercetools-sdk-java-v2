@@ -69,4 +69,8 @@ public class SuggestTokenizerImpl implements SuggestTokenizer, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type).build();
     }
 
+    @Override
+    public SuggestTokenizer copyDeep() {
+        return SuggestTokenizer.deepCopy(this);
+    }
 }

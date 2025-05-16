@@ -362,4 +362,8 @@ public class BusinessUnitStoreModeChangedMessageImpl implements BusinessUnitStor
                 .build();
     }
 
+    @Override
+    public BusinessUnitStoreModeChangedMessage copyDeep() {
+        return BusinessUnitStoreModeChangedMessage.deepCopy(this);
+    }
 }

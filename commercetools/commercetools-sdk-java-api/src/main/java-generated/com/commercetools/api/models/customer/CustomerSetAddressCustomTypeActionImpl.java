@@ -129,4 +129,8 @@ public class CustomerSetAddressCustomTypeActionImpl implements CustomerSetAddres
                 .build();
     }
 
+    @Override
+    public CustomerSetAddressCustomTypeAction copyDeep() {
+        return CustomerSetAddressCustomTypeAction.deepCopy(this);
+    }
 }

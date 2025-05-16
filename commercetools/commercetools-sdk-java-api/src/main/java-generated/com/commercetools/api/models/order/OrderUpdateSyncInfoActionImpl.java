@@ -133,4 +133,8 @@ public class OrderUpdateSyncInfoActionImpl implements OrderUpdateSyncInfoAction,
                 .build();
     }
 
+    @Override
+    public OrderUpdateSyncInfoAction copyDeep() {
+        return OrderUpdateSyncInfoAction.deepCopy(this);
+    }
 }

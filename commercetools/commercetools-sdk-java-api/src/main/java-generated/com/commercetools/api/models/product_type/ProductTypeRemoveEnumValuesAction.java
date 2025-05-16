@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("removeEnumValues")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTypeRemoveEnumValuesActionImpl.class)
 public interface ProductTypeRemoveEnumValuesAction extends ProductTypeUpdateAction {
@@ -95,6 +96,8 @@ public interface ProductTypeRemoveEnumValuesAction extends ProductTypeUpdateActi
         instance.setKeys(template.getKeys());
         return instance;
     }
+
+    public ProductTypeRemoveEnumValuesAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductTypeRemoveEnumValuesAction

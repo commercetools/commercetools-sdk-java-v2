@@ -62,4 +62,8 @@ public class ProductRevertStagedChangesActionImpl implements ProductRevertStaged
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action).build();
     }
 
+    @Override
+    public ProductRevertStagedChangesAction copyDeep() {
+        return ProductRevertStagedChangesAction.deepCopy(this);
+    }
 }

@@ -111,4 +111,8 @@ public class OrderStateChangedMessagePayloadImpl implements OrderStateChangedMes
                 .build();
     }
 
+    @Override
+    public OrderStateChangedMessagePayload copyDeep() {
+        return OrderStateChangedMessagePayload.deepCopy(this);
+    }
 }

@@ -548,4 +548,8 @@ public class BaseAddressImpl implements BaseAddress, ModelBase {
                 .build();
     }
 
+    @Override
+    public BaseAddress copyDeep() {
+        return BaseAddress.deepCopy(this);
+    }
 }

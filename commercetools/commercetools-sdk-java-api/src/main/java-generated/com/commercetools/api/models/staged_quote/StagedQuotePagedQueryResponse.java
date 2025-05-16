@@ -144,6 +144,8 @@ public interface StagedQuotePagedQueryResponse
         return instance;
     }
 
+    public StagedQuotePagedQueryResponse copyDeep();
+
     /**
      * factory method to create a deep copy of StagedQuotePagedQueryResponse
      * @param template instance to be copied

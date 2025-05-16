@@ -369,4 +369,8 @@ public class ProjectImpl implements Project, ModelBase {
                 .build();
     }
 
+    @Override
+    public Project copyDeep() {
+        return Project.deepCopy(this);
+    }
 }

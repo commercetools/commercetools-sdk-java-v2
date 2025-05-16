@@ -84,6 +84,8 @@ public interface ProductSelectionSettingDraft extends io.vrap.rmf.base.client.Dr
         return instance;
     }
 
+    public ProductSelectionSettingDraft copyDeep();
+
     /**
      * factory method to create a deep copy of ProductSelectionSettingDraft
      * @param template instance to be copied

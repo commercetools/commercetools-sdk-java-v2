@@ -92,4 +92,8 @@ public class CartSetCountryActionImpl implements CartSetCountryAction, ModelBase
                 .build();
     }
 
+    @Override
+    public CartSetCountryAction copyDeep() {
+        return CartSetCountryAction.deepCopy(this);
+    }
 }

@@ -187,6 +187,8 @@ public interface Delivery extends DeliveryMixin, com.commercetools.api.models.Cu
         return instance;
     }
 
+    public Delivery copyDeep();
+
     /**
      * factory method to create a deep copy of Delivery
      * @param template instance to be copied

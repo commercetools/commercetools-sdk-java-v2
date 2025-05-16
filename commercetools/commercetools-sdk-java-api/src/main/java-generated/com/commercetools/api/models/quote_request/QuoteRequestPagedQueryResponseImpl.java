@@ -160,4 +160,8 @@ public class QuoteRequestPagedQueryResponseImpl implements QuoteRequestPagedQuer
                 .build();
     }
 
+    @Override
+    public QuoteRequestPagedQueryResponse copyDeep() {
+        return QuoteRequestPagedQueryResponse.deepCopy(this);
+    }
 }

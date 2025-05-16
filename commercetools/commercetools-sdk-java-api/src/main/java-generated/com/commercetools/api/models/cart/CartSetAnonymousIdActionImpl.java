@@ -91,4 +91,8 @@ public class CartSetAnonymousIdActionImpl implements CartSetAnonymousIdAction, M
                 .build();
     }
 
+    @Override
+    public CartSetAnonymousIdAction copyDeep() {
+        return CartSetAnonymousIdAction.deepCopy(this);
+    }
 }

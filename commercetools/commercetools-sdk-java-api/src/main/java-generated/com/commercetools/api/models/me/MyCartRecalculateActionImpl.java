@@ -95,4 +95,8 @@ public class MyCartRecalculateActionImpl implements MyCartRecalculateAction, Mod
                 .build();
     }
 
+    @Override
+    public MyCartRecalculateAction copyDeep() {
+        return MyCartRecalculateAction.deepCopy(this);
+    }
 }

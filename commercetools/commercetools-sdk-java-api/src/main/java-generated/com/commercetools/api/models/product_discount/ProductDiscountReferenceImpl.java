@@ -111,4 +111,8 @@ public class ProductDiscountReferenceImpl implements ProductDiscountReference, M
                 .build();
     }
 
+    @Override
+    public ProductDiscountReference copyDeep() {
+        return ProductDiscountReference.deepCopy(this);
+    }
 }

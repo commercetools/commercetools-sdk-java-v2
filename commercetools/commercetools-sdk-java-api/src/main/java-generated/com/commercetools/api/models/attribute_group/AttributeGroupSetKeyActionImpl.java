@@ -91,4 +91,8 @@ public class AttributeGroupSetKeyActionImpl implements AttributeGroupSetKeyActio
                 .build();
     }
 
+    @Override
+    public AttributeGroupSetKeyAction copyDeep() {
+        return AttributeGroupSetKeyAction.deepCopy(this);
+    }
 }

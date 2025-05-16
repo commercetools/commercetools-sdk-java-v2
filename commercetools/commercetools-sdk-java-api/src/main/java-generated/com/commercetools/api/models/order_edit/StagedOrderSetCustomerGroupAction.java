@@ -29,6 +29,7 @@ import jakarta.validation.Valid;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setCustomerGroup")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderSetCustomerGroupActionImpl.class)
 public interface StagedOrderSetCustomerGroupAction extends StagedOrderUpdateAction {
@@ -71,6 +72,8 @@ public interface StagedOrderSetCustomerGroupAction extends StagedOrderUpdateActi
         instance.setCustomerGroup(template.getCustomerGroup());
         return instance;
     }
+
+    public StagedOrderSetCustomerGroupAction copyDeep();
 
     /**
      * factory method to create a deep copy of StagedOrderSetCustomerGroupAction

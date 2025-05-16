@@ -235,4 +235,8 @@ public class ApiClientImpl implements ApiClient, ModelBase {
                 .build();
     }
 
+    @Override
+    public ApiClient copyDeep() {
+        return ApiClient.deepCopy(this);
+    }
 }

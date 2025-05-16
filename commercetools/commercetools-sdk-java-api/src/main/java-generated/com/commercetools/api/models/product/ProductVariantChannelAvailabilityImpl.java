@@ -156,4 +156,8 @@ public class ProductVariantChannelAvailabilityImpl implements ProductVariantChan
                 .build();
     }
 
+    @Override
+    public ProductVariantChannelAvailability copyDeep() {
+        return ProductVariantChannelAvailability.deepCopy(this);
+    }
 }

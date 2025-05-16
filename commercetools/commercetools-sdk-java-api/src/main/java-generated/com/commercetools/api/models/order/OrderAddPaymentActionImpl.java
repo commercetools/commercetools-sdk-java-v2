@@ -92,4 +92,8 @@ public class OrderAddPaymentActionImpl implements OrderAddPaymentAction, ModelBa
                 .build();
     }
 
+    @Override
+    public OrderAddPaymentAction copyDeep() {
+        return OrderAddPaymentAction.deepCopy(this);
+    }
 }

@@ -110,4 +110,8 @@ public class ProductLegacySetSkuActionImpl implements ProductLegacySetSkuAction,
                 .build();
     }
 
+    @Override
+    public ProductLegacySetSkuAction copyDeep() {
+        return ProductLegacySetSkuAction.deepCopy(this);
+    }
 }

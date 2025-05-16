@@ -202,4 +202,8 @@ public class ProductTailoringDataImpl implements ProductTailoringData, ModelBase
                 .build();
     }
 
+    @Override
+    public ProductTailoringData copyDeep() {
+        return ProductTailoringData.deepCopy(this);
+    }
 }

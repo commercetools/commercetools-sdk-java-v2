@@ -129,4 +129,8 @@ public class OrderSetItemShippingAddressCustomFieldActionImpl
                 .build();
     }
 
+    @Override
+    public OrderSetItemShippingAddressCustomFieldAction copyDeep() {
+        return OrderSetItemShippingAddressCustomFieldAction.deepCopy(this);
+    }
 }

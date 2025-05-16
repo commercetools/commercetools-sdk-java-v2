@@ -134,4 +134,8 @@ public class OrderCustomLineItemRemovedMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public OrderCustomLineItemRemovedMessagePayload copyDeep() {
+        return OrderCustomLineItemRemovedMessagePayload.deepCopy(this);
+    }
 }

@@ -156,4 +156,8 @@ public class CartDiscountValueGiftLineItemDraftImpl implements CartDiscountValue
                 .build();
     }
 
+    @Override
+    public CartDiscountValueGiftLineItemDraft copyDeep() {
+        return CartDiscountValueGiftLineItemDraft.deepCopy(this);
+    }
 }

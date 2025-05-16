@@ -27,6 +27,7 @@ import jakarta.validation.Valid;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setEvents")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SubscriptionSetEventsActionImpl.class)
 public interface SubscriptionSetEventsAction extends SubscriptionUpdateAction {
@@ -77,6 +78,8 @@ public interface SubscriptionSetEventsAction extends SubscriptionUpdateAction {
         instance.setMessages(template.getMessages());
         return instance;
     }
+
+    public SubscriptionSetEventsAction copyDeep();
 
     /**
      * factory method to create a deep copy of SubscriptionSetEventsAction

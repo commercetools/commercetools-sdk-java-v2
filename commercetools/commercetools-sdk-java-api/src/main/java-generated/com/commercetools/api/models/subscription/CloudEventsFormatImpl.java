@@ -91,4 +91,8 @@ public class CloudEventsFormatImpl implements CloudEventsFormat, ModelBase {
                 .build();
     }
 
+    @Override
+    public CloudEventsFormat copyDeep() {
+        return CloudEventsFormat.deepCopy(this);
+    }
 }

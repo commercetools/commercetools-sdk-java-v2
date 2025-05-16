@@ -28,21 +28,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.type.TypeAddEnumValueActionImpl.class, name = TypeAddEnumValueAction.ADD_ENUM_VALUE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.type.TypeAddFieldDefinitionActionImpl.class, name = TypeAddFieldDefinitionAction.ADD_FIELD_DEFINITION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.type.TypeAddLocalizedEnumValueActionImpl.class, name = TypeAddLocalizedEnumValueAction.ADD_LOCALIZED_ENUM_VALUE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.type.TypeChangeEnumValueLabelActionImpl.class, name = TypeChangeEnumValueLabelAction.CHANGE_ENUM_VALUE_LABEL),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.type.TypeChangeEnumValueOrderActionImpl.class, name = TypeChangeEnumValueOrderAction.CHANGE_ENUM_VALUE_ORDER),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.type.TypeChangeFieldDefinitionOrderActionImpl.class, name = TypeChangeFieldDefinitionOrderAction.CHANGE_FIELD_DEFINITION_ORDER),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.type.TypeChangeInputHintActionImpl.class, name = TypeChangeInputHintAction.CHANGE_INPUT_HINT),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.type.TypeChangeKeyActionImpl.class, name = TypeChangeKeyAction.CHANGE_KEY),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.type.TypeChangeLabelActionImpl.class, name = TypeChangeLabelAction.CHANGE_LABEL),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.type.TypeChangeLocalizedEnumValueLabelActionImpl.class, name = TypeChangeLocalizedEnumValueLabelAction.CHANGE_LOCALIZED_ENUM_VALUE_LABEL),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.type.TypeChangeLocalizedEnumValueOrderActionImpl.class, name = TypeChangeLocalizedEnumValueOrderAction.CHANGE_LOCALIZED_ENUM_VALUE_ORDER),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.type.TypeChangeNameActionImpl.class, name = TypeChangeNameAction.CHANGE_NAME),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.type.TypeRemoveFieldDefinitionActionImpl.class, name = TypeRemoveFieldDefinitionAction.REMOVE_FIELD_DEFINITION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.type.TypeSetDescriptionActionImpl.class, name = TypeSetDescriptionAction.SET_DESCRIPTION) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = TypeUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = TypeUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -56,6 +41,8 @@ public interface TypeUpdateAction extends com.commercetools.api.models.ResourceU
     @JsonProperty("action")
     public String getAction();
 
+    public TypeUpdateAction copyDeep();
+
     /**
      * factory method to create a deep copy of TypeUpdateAction
      * @param template instance to be copied
@@ -66,61 +53,9 @@ public interface TypeUpdateAction extends com.commercetools.api.models.ResourceU
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.type.TypeAddEnumValueAction) {
-            return com.commercetools.api.models.type.TypeAddEnumValueAction
-                    .deepCopy((com.commercetools.api.models.type.TypeAddEnumValueAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.type.TypeAddFieldDefinitionAction) {
-            return com.commercetools.api.models.type.TypeAddFieldDefinitionAction
-                    .deepCopy((com.commercetools.api.models.type.TypeAddFieldDefinitionAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.type.TypeAddLocalizedEnumValueAction) {
-            return com.commercetools.api.models.type.TypeAddLocalizedEnumValueAction
-                    .deepCopy((com.commercetools.api.models.type.TypeAddLocalizedEnumValueAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.type.TypeChangeEnumValueLabelAction) {
-            return com.commercetools.api.models.type.TypeChangeEnumValueLabelAction
-                    .deepCopy((com.commercetools.api.models.type.TypeChangeEnumValueLabelAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.type.TypeChangeEnumValueOrderAction) {
-            return com.commercetools.api.models.type.TypeChangeEnumValueOrderAction
-                    .deepCopy((com.commercetools.api.models.type.TypeChangeEnumValueOrderAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.type.TypeChangeFieldDefinitionOrderAction) {
-            return com.commercetools.api.models.type.TypeChangeFieldDefinitionOrderAction
-                    .deepCopy((com.commercetools.api.models.type.TypeChangeFieldDefinitionOrderAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.type.TypeChangeInputHintAction) {
-            return com.commercetools.api.models.type.TypeChangeInputHintAction
-                    .deepCopy((com.commercetools.api.models.type.TypeChangeInputHintAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.type.TypeChangeKeyAction) {
-            return com.commercetools.api.models.type.TypeChangeKeyAction
-                    .deepCopy((com.commercetools.api.models.type.TypeChangeKeyAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.type.TypeChangeLabelAction) {
-            return com.commercetools.api.models.type.TypeChangeLabelAction
-                    .deepCopy((com.commercetools.api.models.type.TypeChangeLabelAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.type.TypeChangeLocalizedEnumValueLabelAction) {
-            return com.commercetools.api.models.type.TypeChangeLocalizedEnumValueLabelAction
-                    .deepCopy((com.commercetools.api.models.type.TypeChangeLocalizedEnumValueLabelAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.type.TypeChangeLocalizedEnumValueOrderAction) {
-            return com.commercetools.api.models.type.TypeChangeLocalizedEnumValueOrderAction
-                    .deepCopy((com.commercetools.api.models.type.TypeChangeLocalizedEnumValueOrderAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.type.TypeChangeNameAction) {
-            return com.commercetools.api.models.type.TypeChangeNameAction
-                    .deepCopy((com.commercetools.api.models.type.TypeChangeNameAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.type.TypeRemoveFieldDefinitionAction) {
-            return com.commercetools.api.models.type.TypeRemoveFieldDefinitionAction
-                    .deepCopy((com.commercetools.api.models.type.TypeRemoveFieldDefinitionAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.type.TypeSetDescriptionAction) {
-            return com.commercetools.api.models.type.TypeSetDescriptionAction
-                    .deepCopy((com.commercetools.api.models.type.TypeSetDescriptionAction) template);
+
+        if (!(template instanceof TypeUpdateActionImpl)) {
+            return template.copyDeep();
         }
         TypeUpdateActionImpl instance = new TypeUpdateActionImpl();
         return instance;

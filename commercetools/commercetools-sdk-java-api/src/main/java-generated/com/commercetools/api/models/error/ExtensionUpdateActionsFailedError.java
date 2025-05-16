@@ -31,6 +31,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ExtensionUpdateActionsFailed")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ExtensionUpdateActionsFailedErrorImpl.class)
 public interface ExtensionUpdateActionsFailedError extends ErrorObject {
@@ -139,6 +140,8 @@ public interface ExtensionUpdateActionsFailedError extends ErrorObject {
         instance.setExtensionErrors(template.getExtensionErrors());
         return instance;
     }
+
+    public ExtensionUpdateActionsFailedError copyDeep();
 
     /**
      * factory method to create a deep copy of ExtensionUpdateActionsFailedError

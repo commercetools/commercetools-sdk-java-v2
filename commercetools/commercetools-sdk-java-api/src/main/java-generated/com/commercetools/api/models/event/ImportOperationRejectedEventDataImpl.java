@@ -73,4 +73,8 @@ public class ImportOperationRejectedEventDataImpl implements ImportOperationReje
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id).build();
     }
 
+    @Override
+    public ImportOperationRejectedEventData copyDeep() {
+        return ImportOperationRejectedEventData.deepCopy(this);
+    }
 }

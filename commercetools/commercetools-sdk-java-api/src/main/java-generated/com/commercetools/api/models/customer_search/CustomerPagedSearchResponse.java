@@ -127,6 +127,8 @@ public interface CustomerPagedSearchResponse {
         return instance;
     }
 
+    public CustomerPagedSearchResponse copyDeep();
+
     /**
      * factory method to create a deep copy of CustomerPagedSearchResponse
      * @param template instance to be copied

@@ -62,4 +62,8 @@ public class CartDiscountDeletedMessagePayloadImpl implements CartDiscountDelete
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type).build();
     }
 
+    @Override
+    public CartDiscountDeletedMessagePayload copyDeep() {
+        return CartDiscountDeletedMessagePayload.deepCopy(this);
+    }
 }

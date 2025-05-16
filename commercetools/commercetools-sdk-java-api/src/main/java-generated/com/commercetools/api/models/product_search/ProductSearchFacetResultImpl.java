@@ -73,4 +73,8 @@ public class ProductSearchFacetResultImpl implements ProductSearchFacetResult, M
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("name", name).build();
     }
 
+    @Override
+    public ProductSearchFacetResult copyDeep() {
+        return ProductSearchFacetResult.deepCopy(this);
+    }
 }

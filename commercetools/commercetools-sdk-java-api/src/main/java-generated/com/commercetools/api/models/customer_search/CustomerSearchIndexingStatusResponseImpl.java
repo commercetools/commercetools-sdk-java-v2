@@ -158,4 +158,8 @@ public class CustomerSearchIndexingStatusResponseImpl implements CustomerSearchI
                 .build();
     }
 
+    @Override
+    public CustomerSearchIndexingStatusResponse copyDeep() {
+        return CustomerSearchIndexingStatusResponse.deepCopy(this);
+    }
 }

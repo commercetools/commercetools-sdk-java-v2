@@ -91,4 +91,8 @@ public class OrderSetPurchaseOrderNumberActionImpl implements OrderSetPurchaseOr
                 .build();
     }
 
+    @Override
+    public OrderSetPurchaseOrderNumberAction copyDeep() {
+        return OrderSetPurchaseOrderNumberAction.deepCopy(this);
+    }
 }

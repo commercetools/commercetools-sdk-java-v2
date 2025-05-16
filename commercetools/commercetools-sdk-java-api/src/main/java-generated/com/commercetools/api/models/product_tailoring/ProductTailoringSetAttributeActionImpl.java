@@ -180,4 +180,8 @@ public class ProductTailoringSetAttributeActionImpl implements ProductTailoringS
                 .build();
     }
 
+    @Override
+    public ProductTailoringSetAttributeAction copyDeep() {
+        return ProductTailoringSetAttributeAction.deepCopy(this);
+    }
 }

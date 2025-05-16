@@ -98,4 +98,8 @@ public class ProductPriceDiscountsSetMessagePayloadImpl implements ProductPriceD
                 .build();
     }
 
+    @Override
+    public ProductPriceDiscountsSetMessagePayload copyDeep() {
+        return ProductPriceDiscountsSetMessagePayload.deepCopy(this);
+    }
 }

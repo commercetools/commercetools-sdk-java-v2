@@ -160,4 +160,8 @@ public class CustomObjectPagedQueryResponseImpl implements CustomObjectPagedQuer
                 .build();
     }
 
+    @Override
+    public CustomObjectPagedQueryResponse copyDeep() {
+        return CustomObjectPagedQueryResponse.deepCopy(this);
+    }
 }

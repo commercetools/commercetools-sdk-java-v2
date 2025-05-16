@@ -114,4 +114,8 @@ public class InternalConstraintViolatedErrorImpl implements InternalConstraintVi
                 .build();
     }
 
+    @Override
+    public InternalConstraintViolatedError copyDeep() {
+        return InternalConstraintViolatedError.deepCopy(this);
+    }
 }

@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ImageProcessingOngoing")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ImageProcessingOngoingWarningImpl.class)
 public interface ImageProcessingOngoingWarning extends WarningObject {
@@ -77,6 +78,8 @@ public interface ImageProcessingOngoingWarning extends WarningObject {
         instance.setMessage(template.getMessage());
         return instance;
     }
+
+    public ImageProcessingOngoingWarning copyDeep();
 
     /**
      * factory method to create a deep copy of ImageProcessingOngoingWarning

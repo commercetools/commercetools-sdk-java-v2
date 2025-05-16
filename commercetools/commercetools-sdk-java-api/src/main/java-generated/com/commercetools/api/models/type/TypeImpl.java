@@ -286,4 +286,8 @@ public class TypeImpl implements Type, ModelBase {
                 .build();
     }
 
+    @Override
+    public Type copyDeep() {
+        return Type.deepCopy(this);
+    }
 }

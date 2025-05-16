@@ -91,4 +91,8 @@ public class CartDiscountSetKeyActionImpl implements CartDiscountSetKeyAction, M
                 .build();
     }
 
+    @Override
+    public CartDiscountSetKeyAction copyDeep() {
+        return CartDiscountSetKeyAction.deepCopy(this);
+    }
 }

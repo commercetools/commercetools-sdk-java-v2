@@ -124,6 +124,8 @@ public interface OrderSearchRequest {
         return instance;
     }
 
+    public OrderSearchRequest copyDeep();
+
     /**
      * factory method to create a deep copy of OrderSearchRequest
      * @param template instance to be copied

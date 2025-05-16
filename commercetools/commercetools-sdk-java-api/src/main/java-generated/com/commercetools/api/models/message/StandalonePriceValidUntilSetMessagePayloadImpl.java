@@ -111,4 +111,8 @@ public class StandalonePriceValidUntilSetMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public StandalonePriceValidUntilSetMessagePayload copyDeep() {
+        return StandalonePriceValidUntilSetMessagePayload.deepCopy(this);
+    }
 }

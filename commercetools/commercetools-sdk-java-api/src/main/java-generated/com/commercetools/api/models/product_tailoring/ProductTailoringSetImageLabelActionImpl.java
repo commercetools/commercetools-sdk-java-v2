@@ -171,4 +171,8 @@ public class ProductTailoringSetImageLabelActionImpl implements ProductTailoring
                 .build();
     }
 
+    @Override
+    public ProductTailoringSetImageLabelAction copyDeep() {
+        return ProductTailoringSetImageLabelAction.deepCopy(this);
+    }
 }

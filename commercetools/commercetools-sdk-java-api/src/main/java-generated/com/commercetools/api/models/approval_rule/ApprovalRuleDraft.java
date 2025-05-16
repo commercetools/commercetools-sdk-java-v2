@@ -177,6 +177,8 @@ public interface ApprovalRuleDraft extends io.vrap.rmf.base.client.Draft<Approva
         return instance;
     }
 
+    public ApprovalRuleDraft copyDeep();
+
     /**
      * factory method to create a deep copy of ApprovalRuleDraft
      * @param template instance to be copied

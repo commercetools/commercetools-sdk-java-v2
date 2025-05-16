@@ -128,4 +128,8 @@ public class PaymentSetTransactionCustomFieldActionImpl implements PaymentSetTra
                 .build();
     }
 
+    @Override
+    public PaymentSetTransactionCustomFieldAction copyDeep() {
+        return PaymentSetTransactionCustomFieldAction.deepCopy(this);
+    }
 }

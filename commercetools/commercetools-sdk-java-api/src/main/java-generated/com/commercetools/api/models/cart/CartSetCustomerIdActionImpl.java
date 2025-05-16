@@ -92,4 +92,8 @@ public class CartSetCustomerIdActionImpl implements CartSetCustomerIdAction, Mod
                 .build();
     }
 
+    @Override
+    public CartSetCustomerIdAction copyDeep() {
+        return CartSetCustomerIdAction.deepCopy(this);
+    }
 }

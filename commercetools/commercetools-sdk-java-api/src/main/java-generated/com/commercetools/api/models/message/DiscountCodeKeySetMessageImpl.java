@@ -312,4 +312,8 @@ public class DiscountCodeKeySetMessageImpl implements DiscountCodeKeySetMessage,
                 .build();
     }
 
+    @Override
+    public DiscountCodeKeySetMessage copyDeep() {
+        return DiscountCodeKeySetMessage.deepCopy(this);
+    }
 }

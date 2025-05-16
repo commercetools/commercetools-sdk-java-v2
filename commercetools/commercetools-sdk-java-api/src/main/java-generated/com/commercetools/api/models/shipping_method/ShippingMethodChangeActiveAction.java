@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeActive")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShippingMethodChangeActiveActionImpl.class)
 public interface ShippingMethodChangeActiveAction extends ShippingMethodUpdateAction {
@@ -71,6 +72,8 @@ public interface ShippingMethodChangeActiveAction extends ShippingMethodUpdateAc
         instance.setActive(template.getActive());
         return instance;
     }
+
+    public ShippingMethodChangeActiveAction copyDeep();
 
     /**
      * factory method to create a deep copy of ShippingMethodChangeActiveAction

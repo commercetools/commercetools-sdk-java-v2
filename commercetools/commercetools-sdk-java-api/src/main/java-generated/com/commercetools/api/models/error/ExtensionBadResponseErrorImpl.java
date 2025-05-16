@@ -262,4 +262,8 @@ public class ExtensionBadResponseErrorImpl implements ExtensionBadResponseError,
                 .build();
     }
 
+    @Override
+    public ExtensionBadResponseError copyDeep() {
+        return ExtensionBadResponseError.deepCopy(this);
+    }
 }

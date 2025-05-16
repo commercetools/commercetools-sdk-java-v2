@@ -352,4 +352,8 @@ public class StoreProductSelectionsChangedMessageImpl implements StoreProductSel
                 .build();
     }
 
+    @Override
+    public StoreProductSelectionsChangedMessage copyDeep() {
+        return StoreProductSelectionsChangedMessage.deepCopy(this);
+    }
 }

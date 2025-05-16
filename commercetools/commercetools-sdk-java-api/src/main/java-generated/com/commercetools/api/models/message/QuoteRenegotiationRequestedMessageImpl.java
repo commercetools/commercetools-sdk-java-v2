@@ -294,4 +294,8 @@ public class QuoteRenegotiationRequestedMessageImpl implements QuoteRenegotiatio
                 .build();
     }
 
+    @Override
+    public QuoteRenegotiationRequestedMessage copyDeep() {
+        return QuoteRenegotiationRequestedMessage.deepCopy(this);
+    }
 }

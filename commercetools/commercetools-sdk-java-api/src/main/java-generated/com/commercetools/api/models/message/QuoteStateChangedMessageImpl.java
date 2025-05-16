@@ -313,4 +313,8 @@ public class QuoteStateChangedMessageImpl implements QuoteStateChangedMessage, M
                 .build();
     }
 
+    @Override
+    public QuoteStateChangedMessage copyDeep() {
+        return QuoteStateChangedMessage.deepCopy(this);
+    }
 }

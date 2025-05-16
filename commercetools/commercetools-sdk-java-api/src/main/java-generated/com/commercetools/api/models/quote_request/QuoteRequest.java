@@ -650,6 +650,8 @@ public interface QuoteRequest extends BaseResource, com.commercetools.api.models
         return instance;
     }
 
+    public QuoteRequest copyDeep();
+
     /**
      * factory method to create a deep copy of QuoteRequest
      * @param template instance to be copied

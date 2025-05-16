@@ -98,4 +98,8 @@ public class CartDiscountAddStoreActionImpl implements CartDiscountAddStoreActio
                 .build();
     }
 
+    @Override
+    public CartDiscountAddStoreAction copyDeep() {
+        return CartDiscountAddStoreAction.deepCopy(this);
+    }
 }

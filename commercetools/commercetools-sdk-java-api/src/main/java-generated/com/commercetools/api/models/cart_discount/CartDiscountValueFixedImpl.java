@@ -117,4 +117,8 @@ public class CartDiscountValueFixedImpl implements CartDiscountValueFixed, Model
                 .build();
     }
 
+    @Override
+    public CartDiscountValueFixed copyDeep() {
+        return CartDiscountValueFixed.deepCopy(this);
+    }
 }

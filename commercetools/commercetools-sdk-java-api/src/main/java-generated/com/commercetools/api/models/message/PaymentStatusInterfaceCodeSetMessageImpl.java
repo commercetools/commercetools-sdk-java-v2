@@ -294,4 +294,8 @@ public class PaymentStatusInterfaceCodeSetMessageImpl implements PaymentStatusIn
                 .build();
     }
 
+    @Override
+    public PaymentStatusInterfaceCodeSetMessage copyDeep() {
+        return PaymentStatusInterfaceCodeSetMessage.deepCopy(this);
+    }
 }

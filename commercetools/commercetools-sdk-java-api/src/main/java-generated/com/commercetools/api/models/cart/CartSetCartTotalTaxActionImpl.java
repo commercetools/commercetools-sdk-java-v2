@@ -119,4 +119,8 @@ public class CartSetCartTotalTaxActionImpl implements CartSetCartTotalTaxAction,
                 .build();
     }
 
+    @Override
+    public CartSetCartTotalTaxAction copyDeep() {
+        return CartSetCartTotalTaxAction.deepCopy(this);
+    }
 }

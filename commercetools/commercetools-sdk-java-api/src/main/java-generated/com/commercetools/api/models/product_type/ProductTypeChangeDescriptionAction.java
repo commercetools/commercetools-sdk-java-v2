@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeDescription")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTypeChangeDescriptionActionImpl.class)
 public interface ProductTypeChangeDescriptionAction extends ProductTypeUpdateAction {
@@ -69,6 +70,8 @@ public interface ProductTypeChangeDescriptionAction extends ProductTypeUpdateAct
         instance.setDescription(template.getDescription());
         return instance;
     }
+
+    public ProductTypeChangeDescriptionAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductTypeChangeDescriptionAction

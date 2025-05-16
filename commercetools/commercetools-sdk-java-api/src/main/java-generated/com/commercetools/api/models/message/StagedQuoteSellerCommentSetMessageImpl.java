@@ -294,4 +294,8 @@ public class StagedQuoteSellerCommentSetMessageImpl implements StagedQuoteSeller
                 .build();
     }
 
+    @Override
+    public StagedQuoteSellerCommentSetMessage copyDeep() {
+        return StagedQuoteSellerCommentSetMessage.deepCopy(this);
+    }
 }

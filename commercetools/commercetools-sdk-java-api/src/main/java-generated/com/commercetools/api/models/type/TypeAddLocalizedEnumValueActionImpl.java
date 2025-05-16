@@ -110,4 +110,8 @@ public class TypeAddLocalizedEnumValueActionImpl implements TypeAddLocalizedEnum
                 .build();
     }
 
+    @Override
+    public TypeAddLocalizedEnumValueAction copyDeep() {
+        return TypeAddLocalizedEnumValueAction.deepCopy(this);
+    }
 }

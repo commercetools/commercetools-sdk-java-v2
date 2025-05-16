@@ -97,6 +97,8 @@ public interface Attribute {
         return instance;
     }
 
+    public Attribute copyDeep();
+
     /**
      * factory method to create a deep copy of Attribute
      * @param template instance to be copied

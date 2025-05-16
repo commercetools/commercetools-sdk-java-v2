@@ -100,4 +100,8 @@ public class ZoneRateImpl implements ZoneRate, ModelBase {
                 .build();
     }
 
+    @Override
+    public ZoneRate copyDeep() {
+        return ZoneRate.deepCopy(this);
+    }
 }

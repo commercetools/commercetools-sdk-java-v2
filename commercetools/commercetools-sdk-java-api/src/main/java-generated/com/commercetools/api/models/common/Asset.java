@@ -184,6 +184,8 @@ public interface Asset extends com.commercetools.api.models.Customizable<Asset>,
         return instance;
     }
 
+    public Asset copyDeep();
+
     /**
      * factory method to create a deep copy of Asset
      * @param template instance to be copied

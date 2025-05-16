@@ -114,4 +114,8 @@ public class ResourceSizeLimitExceededErrorImpl implements ResourceSizeLimitExce
                 .build();
     }
 
+    @Override
+    public ResourceSizeLimitExceededError copyDeep() {
+        return ResourceSizeLimitExceededError.deepCopy(this);
+    }
 }

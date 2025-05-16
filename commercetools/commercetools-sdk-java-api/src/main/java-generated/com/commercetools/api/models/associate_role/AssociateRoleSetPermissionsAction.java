@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setPermissions")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AssociateRoleSetPermissionsActionImpl.class)
 public interface AssociateRoleSetPermissionsAction extends AssociateRoleUpdateAction {
@@ -74,6 +75,8 @@ public interface AssociateRoleSetPermissionsAction extends AssociateRoleUpdateAc
         instance.setPermissions(template.getPermissions());
         return instance;
     }
+
+    public AssociateRoleSetPermissionsAction copyDeep();
 
     /**
      * factory method to create a deep copy of AssociateRoleSetPermissionsAction

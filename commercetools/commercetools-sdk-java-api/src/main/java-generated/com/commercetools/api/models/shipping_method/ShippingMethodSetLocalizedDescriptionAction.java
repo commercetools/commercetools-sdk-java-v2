@@ -27,6 +27,7 @@ import jakarta.validation.Valid;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setLocalizedDescription")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShippingMethodSetLocalizedDescriptionActionImpl.class)
 public interface ShippingMethodSetLocalizedDescriptionAction extends ShippingMethodUpdateAction {
@@ -70,6 +71,8 @@ public interface ShippingMethodSetLocalizedDescriptionAction extends ShippingMet
         instance.setLocalizedDescription(template.getLocalizedDescription());
         return instance;
     }
+
+    public ShippingMethodSetLocalizedDescriptionAction copyDeep();
 
     /**
      * factory method to create a deep copy of ShippingMethodSetLocalizedDescriptionAction

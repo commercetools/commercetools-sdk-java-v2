@@ -94,6 +94,8 @@ public interface CategoryUpdate extends
         return instance;
     }
 
+    public CategoryUpdate copyDeep();
+
     /**
      * factory method to create a deep copy of CategoryUpdate
      * @param template instance to be copied

@@ -93,4 +93,8 @@ public class BusinessUnitDefaultBillingAddressSetMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public BusinessUnitDefaultBillingAddressSetMessagePayload copyDeep() {
+        return BusinessUnitDefaultBillingAddressSetMessagePayload.deepCopy(this);
+    }
 }

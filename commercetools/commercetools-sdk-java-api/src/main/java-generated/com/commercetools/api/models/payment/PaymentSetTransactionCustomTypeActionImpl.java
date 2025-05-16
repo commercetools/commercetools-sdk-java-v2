@@ -133,4 +133,8 @@ public class PaymentSetTransactionCustomTypeActionImpl implements PaymentSetTran
                 .build();
     }
 
+    @Override
+    public PaymentSetTransactionCustomTypeAction copyDeep() {
+        return PaymentSetTransactionCustomTypeAction.deepCopy(this);
+    }
 }

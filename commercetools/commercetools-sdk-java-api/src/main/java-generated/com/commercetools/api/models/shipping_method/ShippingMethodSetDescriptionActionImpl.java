@@ -92,4 +92,8 @@ public class ShippingMethodSetDescriptionActionImpl implements ShippingMethodSet
                 .build();
     }
 
+    @Override
+    public ShippingMethodSetDescriptionAction copyDeep() {
+        return ShippingMethodSetDescriptionAction.deepCopy(this);
+    }
 }

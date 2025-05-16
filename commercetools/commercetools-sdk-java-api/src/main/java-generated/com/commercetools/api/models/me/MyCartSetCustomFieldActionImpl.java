@@ -110,4 +110,8 @@ public class MyCartSetCustomFieldActionImpl implements MyCartSetCustomFieldActio
                 .build();
     }
 
+    @Override
+    public MyCartSetCustomFieldAction copyDeep() {
+        return MyCartSetCustomFieldAction.deepCopy(this);
+    }
 }

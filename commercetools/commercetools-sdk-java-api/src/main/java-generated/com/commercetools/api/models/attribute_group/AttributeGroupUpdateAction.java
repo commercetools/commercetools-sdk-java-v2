@@ -27,13 +27,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.attribute_group.AttributeGroupAddAttributeActionImpl.class, name = AttributeGroupAddAttributeAction.ADD_ATTRIBUTE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.attribute_group.AttributeGroupChangeNameActionImpl.class, name = AttributeGroupChangeNameAction.CHANGE_NAME),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.attribute_group.AttributeGroupRemoveAttributeActionImpl.class, name = AttributeGroupRemoveAttributeAction.REMOVE_ATTRIBUTE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.attribute_group.AttributeGroupSetAttributesActionImpl.class, name = AttributeGroupSetAttributesAction.SET_ATTRIBUTES),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.attribute_group.AttributeGroupSetDescriptionActionImpl.class, name = AttributeGroupSetDescriptionAction.SET_DESCRIPTION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.attribute_group.AttributeGroupSetKeyActionImpl.class, name = AttributeGroupSetKeyAction.SET_KEY) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = AttributeGroupUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = AttributeGroupUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -48,6 +41,8 @@ public interface AttributeGroupUpdateAction
     @JsonProperty("action")
     public String getAction();
 
+    public AttributeGroupUpdateAction copyDeep();
+
     /**
      * factory method to create a deep copy of AttributeGroupUpdateAction
      * @param template instance to be copied
@@ -58,29 +53,9 @@ public interface AttributeGroupUpdateAction
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.attribute_group.AttributeGroupAddAttributeAction) {
-            return com.commercetools.api.models.attribute_group.AttributeGroupAddAttributeAction
-                    .deepCopy((com.commercetools.api.models.attribute_group.AttributeGroupAddAttributeAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.attribute_group.AttributeGroupChangeNameAction) {
-            return com.commercetools.api.models.attribute_group.AttributeGroupChangeNameAction
-                    .deepCopy((com.commercetools.api.models.attribute_group.AttributeGroupChangeNameAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.attribute_group.AttributeGroupRemoveAttributeAction) {
-            return com.commercetools.api.models.attribute_group.AttributeGroupRemoveAttributeAction.deepCopy(
-                (com.commercetools.api.models.attribute_group.AttributeGroupRemoveAttributeAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.attribute_group.AttributeGroupSetAttributesAction) {
-            return com.commercetools.api.models.attribute_group.AttributeGroupSetAttributesAction.deepCopy(
-                (com.commercetools.api.models.attribute_group.AttributeGroupSetAttributesAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.attribute_group.AttributeGroupSetDescriptionAction) {
-            return com.commercetools.api.models.attribute_group.AttributeGroupSetDescriptionAction.deepCopy(
-                (com.commercetools.api.models.attribute_group.AttributeGroupSetDescriptionAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.attribute_group.AttributeGroupSetKeyAction) {
-            return com.commercetools.api.models.attribute_group.AttributeGroupSetKeyAction
-                    .deepCopy((com.commercetools.api.models.attribute_group.AttributeGroupSetKeyAction) template);
+
+        if (!(template instanceof AttributeGroupUpdateActionImpl)) {
+            return template.copyDeep();
         }
         AttributeGroupUpdateActionImpl instance = new AttributeGroupUpdateActionImpl();
         return instance;

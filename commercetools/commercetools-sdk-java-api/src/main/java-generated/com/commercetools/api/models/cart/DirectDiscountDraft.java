@@ -88,6 +88,8 @@ public interface DirectDiscountDraft extends io.vrap.rmf.base.client.Draft<Direc
         return instance;
     }
 
+    public DirectDiscountDraft copyDeep();
+
     /**
      * factory method to create a deep copy of DirectDiscountDraft
      * @param template instance to be copied

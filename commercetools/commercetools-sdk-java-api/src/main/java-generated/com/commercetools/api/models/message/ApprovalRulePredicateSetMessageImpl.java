@@ -314,4 +314,8 @@ public class ApprovalRulePredicateSetMessageImpl implements ApprovalRulePredicat
                 .build();
     }
 
+    @Override
+    public ApprovalRulePredicateSetMessage copyDeep() {
+        return ApprovalRulePredicateSetMessage.deepCopy(this);
+    }
 }

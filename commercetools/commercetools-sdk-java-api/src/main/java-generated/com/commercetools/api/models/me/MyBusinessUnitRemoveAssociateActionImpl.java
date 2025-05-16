@@ -92,4 +92,8 @@ public class MyBusinessUnitRemoveAssociateActionImpl implements MyBusinessUnitRe
                 .build();
     }
 
+    @Override
+    public MyBusinessUnitRemoveAssociateAction copyDeep() {
+        return MyBusinessUnitRemoveAssociateAction.deepCopy(this);
+    }
 }

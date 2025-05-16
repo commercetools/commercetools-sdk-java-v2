@@ -191,4 +191,8 @@ public class ProductSetAssetDescriptionActionImpl implements ProductSetAssetDesc
                 .build();
     }
 
+    @Override
+    public ProductSetAssetDescriptionAction copyDeep() {
+        return ProductSetAssetDescriptionAction.deepCopy(this);
+    }
 }

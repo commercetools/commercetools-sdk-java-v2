@@ -260,4 +260,8 @@ public class ProductTypeImpl implements ProductType, ModelBase {
                 .build();
     }
 
+    @Override
+    public ProductType copyDeep() {
+        return ProductType.deepCopy(this);
+    }
 }

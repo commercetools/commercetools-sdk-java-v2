@@ -27,6 +27,7 @@ import jakarta.validation.Valid;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setReturnInfo")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderSetReturnInfoActionImpl.class)
 public interface OrderSetReturnInfoAction extends OrderUpdateAction {
@@ -77,6 +78,8 @@ public interface OrderSetReturnInfoAction extends OrderUpdateAction {
         instance.setItems(template.getItems());
         return instance;
     }
+
+    public OrderSetReturnInfoAction copyDeep();
 
     /**
      * factory method to create a deep copy of OrderSetReturnInfoAction

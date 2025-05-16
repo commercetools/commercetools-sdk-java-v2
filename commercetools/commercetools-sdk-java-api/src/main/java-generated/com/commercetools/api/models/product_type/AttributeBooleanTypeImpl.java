@@ -62,4 +62,8 @@ public class AttributeBooleanTypeImpl implements AttributeBooleanType, ModelBase
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("name", name).build();
     }
 
+    @Override
+    public AttributeBooleanType copyDeep() {
+        return AttributeBooleanType.deepCopy(this);
+    }
 }

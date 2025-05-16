@@ -83,6 +83,8 @@ public interface MethodTaxRate {
         return instance;
     }
 
+    public MethodTaxRate copyDeep();
+
     /**
      * factory method to create a deep copy of MethodTaxRate
      * @param template instance to be copied

@@ -114,4 +114,8 @@ public class ProductSelectionSetVariantExclusionActionImpl
                 .build();
     }
 
+    @Override
+    public ProductSelectionSetVariantExclusionAction copyDeep() {
+        return ProductSelectionSetVariantExclusionAction.deepCopy(this);
+    }
 }

@@ -219,4 +219,8 @@ public class StagedOrderAddParcelToDeliveryActionImpl implements StagedOrderAddP
                 .build();
     }
 
+    @Override
+    public StagedOrderAddParcelToDeliveryAction copyDeep() {
+        return StagedOrderAddParcelToDeliveryAction.deepCopy(this);
+    }
 }

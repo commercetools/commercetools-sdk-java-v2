@@ -92,4 +92,8 @@ public class ApprovalRuleSetApproversActionImpl implements ApprovalRuleSetApprov
                 .build();
     }
 
+    @Override
+    public ApprovalRuleSetApproversAction copyDeep() {
+        return ApprovalRuleSetApproversAction.deepCopy(this);
+    }
 }

@@ -100,4 +100,8 @@ public class ProductDiscountUpdateImpl implements ProductDiscountUpdate, ModelBa
                 .build();
     }
 
+    @Override
+    public ProductDiscountUpdate copyDeep() {
+        return ProductDiscountUpdate.deepCopy(this);
+    }
 }

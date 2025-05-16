@@ -110,4 +110,8 @@ public class QuoteSetCustomFieldActionImpl implements QuoteSetCustomFieldAction,
                 .build();
     }
 
+    @Override
+    public QuoteSetCustomFieldAction copyDeep() {
+        return QuoteSetCustomFieldAction.deepCopy(this);
+    }
 }

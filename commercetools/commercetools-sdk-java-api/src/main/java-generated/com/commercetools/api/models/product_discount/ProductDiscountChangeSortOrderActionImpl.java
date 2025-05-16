@@ -91,4 +91,8 @@ public class ProductDiscountChangeSortOrderActionImpl implements ProductDiscount
                 .build();
     }
 
+    @Override
+    public ProductDiscountChangeSortOrderAction copyDeep() {
+        return ProductDiscountChangeSortOrderAction.deepCopy(this);
+    }
 }

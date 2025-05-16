@@ -101,4 +101,8 @@ public class GraphQLMaxCartDiscountsReachedErrorImpl implements GraphQLMaxCartDi
                 .build();
     }
 
+    @Override
+    public GraphQLMaxCartDiscountsReachedError copyDeep() {
+        return GraphQLMaxCartDiscountsReachedError.deepCopy(this);
+    }
 }

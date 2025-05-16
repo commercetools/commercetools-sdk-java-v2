@@ -31,6 +31,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("addTextLineItem")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyShoppingListAddTextLineItemActionImpl.class)
 public interface MyShoppingListAddTextLineItemAction extends MyShoppingListUpdateAction,
@@ -155,6 +156,8 @@ public interface MyShoppingListAddTextLineItemAction extends MyShoppingListUpdat
         instance.setCustom(template.getCustom());
         return instance;
     }
+
+    public MyShoppingListAddTextLineItemAction copyDeep();
 
     /**
      * factory method to create a deep copy of MyShoppingListAddTextLineItemAction

@@ -95,4 +95,8 @@ public class GraphQLInvalidInputErrorImpl implements GraphQLInvalidInputError, M
                 .build();
     }
 
+    @Override
+    public GraphQLInvalidInputError copyDeep() {
+        return GraphQLInvalidInputError.deepCopy(this);
+    }
 }

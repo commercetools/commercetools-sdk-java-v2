@@ -194,4 +194,8 @@ public class ReviewStateTransitionMessagePayloadImpl implements ReviewStateTrans
                 .build();
     }
 
+    @Override
+    public ReviewStateTransitionMessagePayload copyDeep() {
+        return ReviewStateTransitionMessagePayload.deepCopy(this);
+    }
 }

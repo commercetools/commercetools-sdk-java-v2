@@ -273,4 +273,8 @@ public class CustomerDeletedMessageImpl implements CustomerDeletedMessage, Model
                 .build();
     }
 
+    @Override
+    public CustomerDeletedMessage copyDeep() {
+        return CustomerDeletedMessage.deepCopy(this);
+    }
 }

@@ -337,4 +337,8 @@ public class ProductSelectionVariantExclusionChangedMessageImpl
                 .build();
     }
 
+    @Override
+    public ProductSelectionVariantExclusionChangedMessage copyDeep() {
+        return ProductSelectionVariantExclusionChangedMessage.deepCopy(this);
+    }
 }

@@ -100,4 +100,8 @@ public class StateSetTransitionsActionImpl implements StateSetTransitionsAction,
                 .build();
     }
 
+    @Override
+    public StateSetTransitionsAction copyDeep() {
+        return StateSetTransitionsAction.deepCopy(this);
+    }
 }

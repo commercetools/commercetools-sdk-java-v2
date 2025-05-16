@@ -188,4 +188,8 @@ public class MissingTaxRateForCountryErrorImpl implements MissingTaxRateForCount
                 .build();
     }
 
+    @Override
+    public MissingTaxRateForCountryError copyDeep() {
+        return MissingTaxRateForCountryError.deepCopy(this);
+    }
 }

@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("EnumKeyDoesNotExist")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = EnumKeyDoesNotExistErrorImpl.class)
 public interface EnumKeyDoesNotExistError extends ErrorObject {
@@ -113,6 +114,8 @@ public interface EnumKeyDoesNotExistError extends ErrorObject {
         instance.setConflictingAttributeName(template.getConflictingAttributeName());
         return instance;
     }
+
+    public EnumKeyDoesNotExistError copyDeep();
 
     /**
      * factory method to create a deep copy of EnumKeyDoesNotExistError

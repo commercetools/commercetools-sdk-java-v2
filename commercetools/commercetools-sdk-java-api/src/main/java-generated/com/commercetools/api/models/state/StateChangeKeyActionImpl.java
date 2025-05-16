@@ -91,4 +91,8 @@ public class StateChangeKeyActionImpl implements StateChangeKeyAction, ModelBase
                 .build();
     }
 
+    @Override
+    public StateChangeKeyAction copyDeep() {
+        return StateChangeKeyAction.deepCopy(this);
+    }
 }

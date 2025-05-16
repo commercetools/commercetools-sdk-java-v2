@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeLocalizedEnumValueLabel")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTypeChangeLocalizedEnumValueLabelActionImpl.class)
 public interface ProductTypeChangeLocalizedEnumValueLabelAction extends ProductTypeUpdateAction {
@@ -90,6 +91,8 @@ public interface ProductTypeChangeLocalizedEnumValueLabelAction extends ProductT
         instance.setNewValue(template.getNewValue());
         return instance;
     }
+
+    public ProductTypeChangeLocalizedEnumValueLabelAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductTypeChangeLocalizedEnumValueLabelAction

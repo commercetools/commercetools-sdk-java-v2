@@ -96,4 +96,8 @@ public class GraphQLInsufficientScopeErrorImpl implements GraphQLInsufficientSco
                 .build();
     }
 
+    @Override
+    public GraphQLInsufficientScopeError copyDeep() {
+        return GraphQLInsufficientScopeError.deepCopy(this);
+    }
 }

@@ -31,6 +31,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("DiscountCodeDeleted")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DiscountCodeDeletedMessageImpl.class)
 public interface DiscountCodeDeletedMessage extends Message {
@@ -67,6 +68,8 @@ public interface DiscountCodeDeletedMessage extends Message {
         instance.setResourceUserProvidedIdentifiers(template.getResourceUserProvidedIdentifiers());
         return instance;
     }
+
+    public DiscountCodeDeletedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of DiscountCodeDeletedMessage

@@ -97,4 +97,8 @@ public class AttributeLocalizedEnumTypeImpl implements AttributeLocalizedEnumTyp
                 .build();
     }
 
+    @Override
+    public AttributeLocalizedEnumType copyDeep() {
+        return AttributeLocalizedEnumType.deepCopy(this);
+    }
 }

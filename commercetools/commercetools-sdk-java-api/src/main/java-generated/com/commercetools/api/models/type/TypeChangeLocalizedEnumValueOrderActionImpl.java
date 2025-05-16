@@ -114,4 +114,8 @@ public class TypeChangeLocalizedEnumValueOrderActionImpl implements TypeChangeLo
                 .build();
     }
 
+    @Override
+    public TypeChangeLocalizedEnumValueOrderAction copyDeep() {
+        return TypeChangeLocalizedEnumValueOrderAction.deepCopy(this);
+    }
 }

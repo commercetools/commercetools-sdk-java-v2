@@ -193,4 +193,8 @@ public class ResourceUpdatedDeliveryPayloadImpl implements ResourceUpdatedDelive
                 .build();
     }
 
+    @Override
+    public ResourceUpdatedDeliveryPayload copyDeep() {
+        return ResourceUpdatedDeliveryPayload.deepCopy(this);
+    }
 }

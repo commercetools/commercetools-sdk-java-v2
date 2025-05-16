@@ -95,4 +95,8 @@ public class CategoryChangeAssetOrderActionImpl implements CategoryChangeAssetOr
                 .build();
     }
 
+    @Override
+    public CategoryChangeAssetOrderAction copyDeep() {
+        return CategoryChangeAssetOrderAction.deepCopy(this);
+    }
 }

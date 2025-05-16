@@ -113,4 +113,8 @@ public class ProductSelectionAddProductActionImpl implements ProductSelectionAdd
                 .build();
     }
 
+    @Override
+    public ProductSelectionAddProductAction copyDeep() {
+        return ProductSelectionAddProductAction.deepCopy(this);
+    }
 }

@@ -173,4 +173,8 @@ public class ProductPriceChangedMessagePayloadImpl implements ProductPriceChange
                 .build();
     }
 
+    @Override
+    public ProductPriceChangedMessagePayload copyDeep() {
+        return ProductPriceChangedMessagePayload.deepCopy(this);
+    }
 }

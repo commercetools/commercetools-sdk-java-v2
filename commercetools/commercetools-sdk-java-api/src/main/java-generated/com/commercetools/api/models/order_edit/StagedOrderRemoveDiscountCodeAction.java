@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("removeDiscountCode")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderRemoveDiscountCodeActionImpl.class)
 public interface StagedOrderRemoveDiscountCodeAction extends StagedOrderUpdateAction {
@@ -73,6 +74,8 @@ public interface StagedOrderRemoveDiscountCodeAction extends StagedOrderUpdateAc
         instance.setDiscountCode(template.getDiscountCode());
         return instance;
     }
+
+    public StagedOrderRemoveDiscountCodeAction copyDeep();
 
     /**
      * factory method to create a deep copy of StagedOrderRemoveDiscountCodeAction

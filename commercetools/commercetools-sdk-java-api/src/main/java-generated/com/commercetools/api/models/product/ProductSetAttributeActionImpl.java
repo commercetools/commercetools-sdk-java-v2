@@ -180,4 +180,8 @@ public class ProductSetAttributeActionImpl implements ProductSetAttributeAction,
                 .build();
     }
 
+    @Override
+    public ProductSetAttributeAction copyDeep() {
+        return ProductSetAttributeAction.deepCopy(this);
+    }
 }

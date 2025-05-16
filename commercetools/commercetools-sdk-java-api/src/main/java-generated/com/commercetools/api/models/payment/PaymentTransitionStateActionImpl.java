@@ -112,4 +112,8 @@ public class PaymentTransitionStateActionImpl implements PaymentTransitionStateA
                 .build();
     }
 
+    @Override
+    public PaymentTransitionStateAction copyDeep() {
+        return PaymentTransitionStateAction.deepCopy(this);
+    }
 }

@@ -82,6 +82,8 @@ public interface GraphQLErrorLocation {
         return instance;
     }
 
+    public GraphQLErrorLocation copyDeep();
+
     /**
      * factory method to create a deep copy of GraphQLErrorLocation
      * @param template instance to be copied

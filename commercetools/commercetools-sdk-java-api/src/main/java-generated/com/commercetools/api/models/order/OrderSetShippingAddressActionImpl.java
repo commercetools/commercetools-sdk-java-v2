@@ -93,4 +93,8 @@ public class OrderSetShippingAddressActionImpl implements OrderSetShippingAddres
                 .build();
     }
 
+    @Override
+    public OrderSetShippingAddressAction copyDeep() {
+        return OrderSetShippingAddressAction.deepCopy(this);
+    }
 }

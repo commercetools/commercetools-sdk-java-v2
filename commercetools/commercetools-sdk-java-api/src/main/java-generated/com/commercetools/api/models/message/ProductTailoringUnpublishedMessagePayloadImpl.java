@@ -131,4 +131,8 @@ public class ProductTailoringUnpublishedMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public ProductTailoringUnpublishedMessagePayload copyDeep() {
+        return ProductTailoringUnpublishedMessagePayload.deepCopy(this);
+    }
 }

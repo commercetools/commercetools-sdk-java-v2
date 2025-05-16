@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setName")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AssociateRoleSetNameActionImpl.class)
 public interface AssociateRoleSetNameAction extends AssociateRoleUpdateAction {
@@ -66,6 +67,8 @@ public interface AssociateRoleSetNameAction extends AssociateRoleUpdateAction {
         instance.setName(template.getName());
         return instance;
     }
+
+    public AssociateRoleSetNameAction copyDeep();
 
     /**
      * factory method to create a deep copy of AssociateRoleSetNameAction

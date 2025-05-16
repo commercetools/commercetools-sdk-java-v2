@@ -91,4 +91,8 @@ public class StateChangeTypeActionImpl implements StateChangeTypeAction, ModelBa
                 .build();
     }
 
+    @Override
+    public StateChangeTypeAction copyDeep() {
+        return StateChangeTypeAction.deepCopy(this);
+    }
 }

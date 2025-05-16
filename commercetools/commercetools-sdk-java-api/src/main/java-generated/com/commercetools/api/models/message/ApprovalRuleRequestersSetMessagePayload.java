@@ -31,6 +31,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ApprovalRuleRequestersSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ApprovalRuleRequestersSetMessagePayloadImpl.class)
 public interface ApprovalRuleRequestersSetMessagePayload extends MessagePayload {
@@ -107,6 +108,8 @@ public interface ApprovalRuleRequestersSetMessagePayload extends MessagePayload 
         instance.setOldRequesters(template.getOldRequesters());
         return instance;
     }
+
+    public ApprovalRuleRequestersSetMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of ApprovalRuleRequestersSetMessagePayload

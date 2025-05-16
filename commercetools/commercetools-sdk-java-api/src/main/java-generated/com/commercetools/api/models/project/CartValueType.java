@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("CartValue")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartValueTypeImpl.class)
 public interface CartValueType extends ShippingRateInputType {
@@ -50,6 +51,8 @@ public interface CartValueType extends ShippingRateInputType {
         CartValueTypeImpl instance = new CartValueTypeImpl();
         return instance;
     }
+
+    public CartValueType copyDeep();
 
     /**
      * factory method to create a deep copy of CartValueType

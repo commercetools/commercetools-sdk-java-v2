@@ -96,4 +96,8 @@ public class ExternalOAuthImpl implements ExternalOAuth, ModelBase {
                 .build();
     }
 
+    @Override
+    public ExternalOAuth copyDeep() {
+        return ExternalOAuth.deepCopy(this);
+    }
 }

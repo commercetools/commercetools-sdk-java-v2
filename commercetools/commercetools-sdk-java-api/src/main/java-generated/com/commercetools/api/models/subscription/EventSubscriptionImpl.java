@@ -101,4 +101,8 @@ public class EventSubscriptionImpl implements EventSubscription, ModelBase {
                 .build();
     }
 
+    @Override
+    public EventSubscription copyDeep() {
+        return EventSubscription.deepCopy(this);
+    }
 }

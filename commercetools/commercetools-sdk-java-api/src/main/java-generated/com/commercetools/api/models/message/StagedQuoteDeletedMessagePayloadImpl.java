@@ -62,4 +62,8 @@ public class StagedQuoteDeletedMessagePayloadImpl implements StagedQuoteDeletedM
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type).build();
     }
 
+    @Override
+    public StagedQuoteDeletedMessagePayload copyDeep() {
+        return StagedQuoteDeletedMessagePayload.deepCopy(this);
+    }
 }

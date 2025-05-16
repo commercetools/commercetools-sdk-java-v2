@@ -92,4 +92,8 @@ public class BusinessUnitKeyReferenceImpl implements BusinessUnitKeyReference, M
                 .build();
     }
 
+    @Override
+    public BusinessUnitKeyReference copyDeep() {
+        return BusinessUnitKeyReference.deepCopy(this);
+    }
 }

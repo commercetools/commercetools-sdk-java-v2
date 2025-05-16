@@ -91,4 +91,8 @@ public class ZoneSetDescriptionActionImpl implements ZoneSetDescriptionAction, M
                 .build();
     }
 
+    @Override
+    public ZoneSetDescriptionAction copyDeep() {
+        return ZoneSetDescriptionAction.deepCopy(this);
+    }
 }

@@ -81,6 +81,8 @@ public interface Attribution {
         return instance;
     }
 
+    public Attribution copyDeep();
+
     /**
      * factory method to create a deep copy of Attribution
      * @param template instance to be copied

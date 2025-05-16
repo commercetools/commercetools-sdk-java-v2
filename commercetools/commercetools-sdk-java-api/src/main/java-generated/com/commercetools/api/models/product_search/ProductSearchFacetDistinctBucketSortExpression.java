@@ -84,6 +84,8 @@ public interface ProductSearchFacetDistinctBucketSortExpression {
         return instance;
     }
 
+    public ProductSearchFacetDistinctBucketSortExpression copyDeep();
+
     /**
      * factory method to create a deep copy of ProductSearchFacetDistinctBucketSortExpression
      * @param template instance to be copied

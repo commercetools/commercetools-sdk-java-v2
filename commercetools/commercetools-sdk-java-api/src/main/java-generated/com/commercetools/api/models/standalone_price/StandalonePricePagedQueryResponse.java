@@ -144,6 +144,8 @@ public interface StandalonePricePagedQueryResponse
         return instance;
     }
 
+    public StandalonePricePagedQueryResponse copyDeep();
+
     /**
      * factory method to create a deep copy of StandalonePricePagedQueryResponse
      * @param template instance to be copied

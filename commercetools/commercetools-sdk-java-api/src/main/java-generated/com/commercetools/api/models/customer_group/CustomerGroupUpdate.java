@@ -94,6 +94,8 @@ public interface CustomerGroupUpdate extends
         return instance;
     }
 
+    public CustomerGroupUpdate copyDeep();
+
     /**
      * factory method to create a deep copy of CustomerGroupUpdate
      * @param template instance to be copied

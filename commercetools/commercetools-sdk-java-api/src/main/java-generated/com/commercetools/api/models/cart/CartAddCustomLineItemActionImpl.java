@@ -279,4 +279,8 @@ public class CartAddCustomLineItemActionImpl implements CartAddCustomLineItemAct
                 .build();
     }
 
+    @Override
+    public CartAddCustomLineItemAction copyDeep() {
+        return CartAddCustomLineItemAction.deepCopy(this);
+    }
 }

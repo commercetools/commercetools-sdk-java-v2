@@ -155,6 +155,8 @@ public interface BaseEvent {
         return instance;
     }
 
+    public BaseEvent copyDeep();
+
     /**
      * factory method to create a deep copy of BaseEvent
      * @param template instance to be copied

@@ -110,4 +110,8 @@ public class CategoryResourceIdentifierImpl implements CategoryResourceIdentifie
                 .build();
     }
 
+    @Override
+    public CategoryResourceIdentifier copyDeep() {
+        return CategoryResourceIdentifier.deepCopy(this);
+    }
 }

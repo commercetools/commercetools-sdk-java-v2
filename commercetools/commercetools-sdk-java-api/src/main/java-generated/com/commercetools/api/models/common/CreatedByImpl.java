@@ -177,4 +177,8 @@ public class CreatedByImpl implements CreatedBy, ModelBase {
                 .build();
     }
 
+    @Override
+    public CreatedBy copyDeep() {
+        return CreatedBy.deepCopy(this);
+    }
 }

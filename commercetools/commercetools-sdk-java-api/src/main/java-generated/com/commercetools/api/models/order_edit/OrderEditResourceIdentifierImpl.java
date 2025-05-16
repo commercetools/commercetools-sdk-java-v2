@@ -110,4 +110,8 @@ public class OrderEditResourceIdentifierImpl implements OrderEditResourceIdentif
                 .build();
     }
 
+    @Override
+    public OrderEditResourceIdentifier copyDeep() {
+        return OrderEditResourceIdentifier.deepCopy(this);
+    }
 }

@@ -27,6 +27,7 @@ import jakarta.validation.Valid;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setMetaDescription")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTailoringSetMetaDescriptionActionImpl.class)
 public interface ProductTailoringSetMetaDescriptionAction extends ProductTailoringUpdateAction {
@@ -85,6 +86,8 @@ public interface ProductTailoringSetMetaDescriptionAction extends ProductTailori
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public ProductTailoringSetMetaDescriptionAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductTailoringSetMetaDescriptionAction

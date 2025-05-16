@@ -101,6 +101,8 @@ public interface TaxPortion {
         return instance;
     }
 
+    public TaxPortion copyDeep();
+
     /**
      * factory method to create a deep copy of TaxPortion
      * @param template instance to be copied

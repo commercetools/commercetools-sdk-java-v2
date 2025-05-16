@@ -62,4 +62,8 @@ public class MyQuoteRequestCancelActionImpl implements MyQuoteRequestCancelActio
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action).build();
     }
 
+    @Override
+    public MyQuoteRequestCancelAction copyDeep() {
+        return MyQuoteRequestCancelAction.deepCopy(this);
+    }
 }

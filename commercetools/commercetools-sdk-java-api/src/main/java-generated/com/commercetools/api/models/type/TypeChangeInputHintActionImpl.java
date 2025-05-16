@@ -110,4 +110,8 @@ public class TypeChangeInputHintActionImpl implements TypeChangeInputHintAction,
                 .build();
     }
 
+    @Override
+    public TypeChangeInputHintAction copyDeep() {
+        return TypeChangeInputHintAction.deepCopy(this);
+    }
 }

@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setAttribute")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTailoringSetAttributeActionImpl.class)
 public interface ProductTailoringSetAttributeAction extends ProductTailoringUpdateAction {
@@ -151,6 +152,8 @@ public interface ProductTailoringSetAttributeAction extends ProductTailoringUpda
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public ProductTailoringSetAttributeAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductTailoringSetAttributeAction

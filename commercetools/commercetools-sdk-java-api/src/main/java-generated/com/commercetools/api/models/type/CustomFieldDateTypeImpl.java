@@ -62,4 +62,8 @@ public class CustomFieldDateTypeImpl implements CustomFieldDateType, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("name", name).build();
     }
 
+    @Override
+    public CustomFieldDateType copyDeep() {
+        return CustomFieldDateType.deepCopy(this);
+    }
 }

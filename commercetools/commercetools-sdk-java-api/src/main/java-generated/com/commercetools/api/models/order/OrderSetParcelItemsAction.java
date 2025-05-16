@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setParcelItems")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderSetParcelItemsActionImpl.class)
 public interface OrderSetParcelItemsAction extends OrderUpdateAction {
@@ -116,6 +117,8 @@ public interface OrderSetParcelItemsAction extends OrderUpdateAction {
         instance.setItems(template.getItems());
         return instance;
     }
+
+    public OrderSetParcelItemsAction copyDeep();
 
     /**
      * factory method to create a deep copy of OrderSetParcelItemsAction

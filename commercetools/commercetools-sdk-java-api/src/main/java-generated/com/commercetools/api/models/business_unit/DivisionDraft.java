@@ -31,6 +31,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("Division")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DivisionDraftImpl.class)
 public interface DivisionDraft extends BusinessUnitDraft, io.vrap.rmf.base.client.Draft<DivisionDraft> {
@@ -134,6 +135,8 @@ public interface DivisionDraft extends BusinessUnitDraft, io.vrap.rmf.base.clien
         instance.setParentUnit(template.getParentUnit());
         return instance;
     }
+
+    public DivisionDraft copyDeep();
 
     /**
      * factory method to create a deep copy of DivisionDraft

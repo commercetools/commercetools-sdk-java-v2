@@ -111,4 +111,8 @@ public class TaxCategoryReferenceImpl implements TaxCategoryReference, ModelBase
                 .build();
     }
 
+    @Override
+    public TaxCategoryReference copyDeep() {
+        return TaxCategoryReference.deepCopy(this);
+    }
 }

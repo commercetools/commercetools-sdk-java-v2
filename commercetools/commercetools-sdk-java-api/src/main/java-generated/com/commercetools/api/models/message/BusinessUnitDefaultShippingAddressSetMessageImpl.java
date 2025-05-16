@@ -295,4 +295,8 @@ public class BusinessUnitDefaultShippingAddressSetMessageImpl
                 .build();
     }
 
+    @Override
+    public BusinessUnitDefaultShippingAddressSetMessage copyDeep() {
+        return BusinessUnitDefaultShippingAddressSetMessage.deepCopy(this);
+    }
 }

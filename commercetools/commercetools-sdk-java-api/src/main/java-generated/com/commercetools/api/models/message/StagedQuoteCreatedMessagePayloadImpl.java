@@ -92,4 +92,8 @@ public class StagedQuoteCreatedMessagePayloadImpl implements StagedQuoteCreatedM
                 .build();
     }
 
+    @Override
+    public StagedQuoteCreatedMessagePayload copyDeep() {
+        return StagedQuoteCreatedMessagePayload.deepCopy(this);
+    }
 }

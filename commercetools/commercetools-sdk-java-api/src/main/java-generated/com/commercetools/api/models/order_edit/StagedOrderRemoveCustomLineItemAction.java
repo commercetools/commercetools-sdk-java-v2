@@ -26,6 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("removeCustomLineItem")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderRemoveCustomLineItemActionImpl.class)
 public interface StagedOrderRemoveCustomLineItemAction extends StagedOrderUpdateAction {
@@ -84,6 +85,8 @@ public interface StagedOrderRemoveCustomLineItemAction extends StagedOrderUpdate
         instance.setCustomLineItemKey(template.getCustomLineItemKey());
         return instance;
     }
+
+    public StagedOrderRemoveCustomLineItemAction copyDeep();
 
     /**
      * factory method to create a deep copy of StagedOrderRemoveCustomLineItemAction

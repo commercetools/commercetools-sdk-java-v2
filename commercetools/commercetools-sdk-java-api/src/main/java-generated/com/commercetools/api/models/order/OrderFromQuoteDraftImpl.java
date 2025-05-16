@@ -219,4 +219,8 @@ public class OrderFromQuoteDraftImpl implements OrderFromQuoteDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public OrderFromQuoteDraft copyDeep() {
+        return OrderFromQuoteDraft.deepCopy(this);
+    }
 }

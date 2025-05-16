@@ -175,4 +175,8 @@ public class OrderSearchFullTextValueImpl implements OrderSearchFullTextValue, M
                 .build();
     }
 
+    @Override
+    public OrderSearchFullTextValue copyDeep() {
+        return OrderSearchFullTextValue.deepCopy(this);
+    }
 }

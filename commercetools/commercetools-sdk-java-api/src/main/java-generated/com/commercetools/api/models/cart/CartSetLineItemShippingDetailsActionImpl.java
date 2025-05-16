@@ -133,4 +133,8 @@ public class CartSetLineItemShippingDetailsActionImpl implements CartSetLineItem
                 .build();
     }
 
+    @Override
+    public CartSetLineItemShippingDetailsAction copyDeep() {
+        return CartSetLineItemShippingDetailsAction.deepCopy(this);
+    }
 }

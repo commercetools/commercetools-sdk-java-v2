@@ -236,4 +236,8 @@ public class ProductDiscountDraftImpl implements ProductDiscountDraft, ModelBase
                 .build();
     }
 
+    @Override
+    public ProductDiscountDraft copyDeep() {
+        return ProductDiscountDraft.deepCopy(this);
+    }
 }

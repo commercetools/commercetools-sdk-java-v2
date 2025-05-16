@@ -28,9 +28,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.cart.ClassificationShippingRateInputImpl.class, name = ClassificationShippingRateInput.CLASSIFICATION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.cart.ScoreShippingRateInputImpl.class, name = ScoreShippingRateInput.SCORE) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = ShippingRateInputImpl.class, visible = true)
 @JsonDeserialize(as = ShippingRateInputImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -44,6 +41,8 @@ public interface ShippingRateInput {
     @JsonProperty("type")
     public String getType();
 
+    public ShippingRateInput copyDeep();
+
     /**
      * factory method to create a deep copy of ShippingRateInput
      * @param template instance to be copied
@@ -54,13 +53,9 @@ public interface ShippingRateInput {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.cart.ClassificationShippingRateInput) {
-            return com.commercetools.api.models.cart.ClassificationShippingRateInput
-                    .deepCopy((com.commercetools.api.models.cart.ClassificationShippingRateInput) template);
-        }
-        if (template instanceof com.commercetools.api.models.cart.ScoreShippingRateInput) {
-            return com.commercetools.api.models.cart.ScoreShippingRateInput
-                    .deepCopy((com.commercetools.api.models.cart.ScoreShippingRateInput) template);
+
+        if (!(template instanceof ShippingRateInputImpl)) {
+            return template.copyDeep();
         }
         ShippingRateInputImpl instance = new ShippingRateInputImpl();
         return instance;

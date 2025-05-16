@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("removePermission")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AssociateRoleRemovePermissionActionImpl.class)
 public interface AssociateRoleRemovePermissionAction extends AssociateRoleUpdateAction {
@@ -69,6 +70,8 @@ public interface AssociateRoleRemovePermissionAction extends AssociateRoleUpdate
         instance.setPermission(template.getPermission());
         return instance;
     }
+
+    public AssociateRoleRemovePermissionAction copyDeep();
 
     /**
      * factory method to create a deep copy of AssociateRoleRemovePermissionAction

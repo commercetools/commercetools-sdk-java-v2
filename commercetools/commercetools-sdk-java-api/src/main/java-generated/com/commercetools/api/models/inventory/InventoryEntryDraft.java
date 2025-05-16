@@ -169,6 +169,8 @@ public interface InventoryEntryDraft extends com.commercetools.api.models.Custom
         return instance;
     }
 
+    public InventoryEntryDraft copyDeep();
+
     /**
      * factory method to create a deep copy of InventoryEntryDraft
      * @param template instance to be copied

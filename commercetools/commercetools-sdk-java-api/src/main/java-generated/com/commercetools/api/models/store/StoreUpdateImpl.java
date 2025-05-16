@@ -99,4 +99,8 @@ public class StoreUpdateImpl implements StoreUpdate, ModelBase {
                 .build();
     }
 
+    @Override
+    public StoreUpdate copyDeep() {
+        return StoreUpdate.deepCopy(this);
+    }
 }

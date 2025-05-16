@@ -82,6 +82,8 @@ public interface AttributePlainEnumValue extends com.commercetools.api.models.Wi
         return instance;
     }
 
+    public AttributePlainEnumValue copyDeep();
+
     /**
      * factory method to create a deep copy of AttributePlainEnumValue
      * @param template instance to be copied

@@ -91,4 +91,8 @@ public class BusinessUnitNameChangedMessagePayloadImpl implements BusinessUnitNa
                 .build();
     }
 
+    @Override
+    public BusinessUnitNameChangedMessagePayload copyDeep() {
+        return BusinessUnitNameChangedMessagePayload.deepCopy(this);
+    }
 }

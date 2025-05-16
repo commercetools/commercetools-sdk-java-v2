@@ -91,4 +91,8 @@ public class ProductRevertStagedVariantChangesActionImpl implements ProductRever
                 .build();
     }
 
+    @Override
+    public ProductRevertStagedVariantChangesAction copyDeep() {
+        return ProductRevertStagedVariantChangesAction.deepCopy(this);
+    }
 }

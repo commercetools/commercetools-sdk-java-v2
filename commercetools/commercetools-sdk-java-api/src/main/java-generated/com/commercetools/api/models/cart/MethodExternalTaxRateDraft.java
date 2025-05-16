@@ -82,6 +82,8 @@ public interface MethodExternalTaxRateDraft extends io.vrap.rmf.base.client.Draf
         return instance;
     }
 
+    public MethodExternalTaxRateDraft copyDeep();
+
     /**
      * factory method to create a deep copy of MethodExternalTaxRateDraft
      * @param template instance to be copied

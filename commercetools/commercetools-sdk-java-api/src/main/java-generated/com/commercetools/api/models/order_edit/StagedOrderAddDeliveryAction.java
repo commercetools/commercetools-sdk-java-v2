@@ -33,6 +33,7 @@ import jakarta.validation.Valid;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("addDelivery")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderAddDeliveryActionImpl.class)
 public interface StagedOrderAddDeliveryAction
@@ -175,6 +176,8 @@ public interface StagedOrderAddDeliveryAction
         instance.setCustom(template.getCustom());
         return instance;
     }
+
+    public StagedOrderAddDeliveryAction copyDeep();
 
     /**
      * factory method to create a deep copy of StagedOrderAddDeliveryAction

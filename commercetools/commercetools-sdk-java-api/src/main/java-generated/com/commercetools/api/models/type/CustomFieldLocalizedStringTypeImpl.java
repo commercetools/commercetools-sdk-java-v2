@@ -62,4 +62,8 @@ public class CustomFieldLocalizedStringTypeImpl implements CustomFieldLocalizedS
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("name", name).build();
     }
 
+    @Override
+    public CustomFieldLocalizedStringType copyDeep() {
+        return CustomFieldLocalizedStringType.deepCopy(this);
+    }
 }

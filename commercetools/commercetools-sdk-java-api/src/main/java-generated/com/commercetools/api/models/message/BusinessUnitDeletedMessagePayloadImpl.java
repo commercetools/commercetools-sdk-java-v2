@@ -62,4 +62,8 @@ public class BusinessUnitDeletedMessagePayloadImpl implements BusinessUnitDelete
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type).build();
     }
 
+    @Override
+    public BusinessUnitDeletedMessagePayload copyDeep() {
+        return BusinessUnitDeletedMessagePayload.deepCopy(this);
+    }
 }

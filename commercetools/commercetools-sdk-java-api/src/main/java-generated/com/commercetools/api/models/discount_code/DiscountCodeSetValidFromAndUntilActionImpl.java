@@ -110,4 +110,8 @@ public class DiscountCodeSetValidFromAndUntilActionImpl implements DiscountCodeS
                 .build();
     }
 
+    @Override
+    public DiscountCodeSetValidFromAndUntilAction copyDeep() {
+        return DiscountCodeSetValidFromAndUntilAction.deepCopy(this);
+    }
 }

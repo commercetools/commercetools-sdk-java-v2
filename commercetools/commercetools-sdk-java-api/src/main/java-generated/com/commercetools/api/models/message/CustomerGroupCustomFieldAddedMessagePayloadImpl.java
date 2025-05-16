@@ -111,4 +111,8 @@ public class CustomerGroupCustomFieldAddedMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public CustomerGroupCustomFieldAddedMessagePayload copyDeep() {
+        return CustomerGroupCustomFieldAddedMessagePayload.deepCopy(this);
+    }
 }

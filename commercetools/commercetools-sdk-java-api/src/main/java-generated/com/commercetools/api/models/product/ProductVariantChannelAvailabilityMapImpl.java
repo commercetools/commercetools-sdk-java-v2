@@ -78,4 +78,8 @@ public class ProductVariantChannelAvailabilityMapImpl implements ProductVariantC
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("values", values).build();
     }
 
+    @Override
+    public ProductVariantChannelAvailabilityMap copyDeep() {
+        return ProductVariantChannelAvailabilityMap.deepCopy(this);
+    }
 }

@@ -94,6 +94,8 @@ public interface ExtensionUpdate extends
         return instance;
     }
 
+    public ExtensionUpdate copyDeep();
+
     /**
      * factory method to create a deep copy of ExtensionUpdate
      * @param template instance to be copied

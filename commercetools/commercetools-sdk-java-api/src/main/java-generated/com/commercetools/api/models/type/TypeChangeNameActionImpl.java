@@ -91,4 +91,8 @@ public class TypeChangeNameActionImpl implements TypeChangeNameAction, ModelBase
                 .build();
     }
 
+    @Override
+    public TypeChangeNameAction copyDeep() {
+        return TypeChangeNameAction.deepCopy(this);
+    }
 }

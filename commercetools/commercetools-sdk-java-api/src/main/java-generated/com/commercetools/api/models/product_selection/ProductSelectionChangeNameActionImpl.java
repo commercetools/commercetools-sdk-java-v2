@@ -92,4 +92,8 @@ public class ProductSelectionChangeNameActionImpl implements ProductSelectionCha
                 .build();
     }
 
+    @Override
+    public ProductSelectionChangeNameAction copyDeep() {
+        return ProductSelectionChangeNameAction.deepCopy(this);
+    }
 }

@@ -114,4 +114,8 @@ public class SearchNotReadyErrorImpl implements SearchNotReadyError, ModelBase {
                 .build();
     }
 
+    @Override
+    public SearchNotReadyError copyDeep() {
+        return SearchNotReadyError.deepCopy(this);
+    }
 }

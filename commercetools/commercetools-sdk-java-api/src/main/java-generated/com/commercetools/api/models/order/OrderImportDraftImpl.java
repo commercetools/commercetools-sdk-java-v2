@@ -618,4 +618,8 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public OrderImportDraft copyDeep() {
+        return OrderImportDraft.deepCopy(this);
+    }
 }

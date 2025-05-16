@@ -139,6 +139,8 @@ public interface ParcelDraft extends com.commercetools.api.models.CustomizableDr
         return instance;
     }
 
+    public ParcelDraft copyDeep();
+
     /**
      * factory method to create a deep copy of ParcelDraft
      * @param template instance to be copied

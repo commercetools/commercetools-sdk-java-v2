@@ -92,4 +92,8 @@ public class OrderDiscountCodeAddedMessagePayloadImpl implements OrderDiscountCo
                 .build();
     }
 
+    @Override
+    public OrderDiscountCodeAddedMessagePayload copyDeep() {
+        return OrderDiscountCodeAddedMessagePayload.deepCopy(this);
+    }
 }

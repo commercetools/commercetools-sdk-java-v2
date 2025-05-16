@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("EnumKeyDoesNotExist")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLEnumKeyDoesNotExistErrorImpl.class)
 public interface GraphQLEnumKeyDoesNotExistError extends GraphQLErrorObject {
@@ -96,6 +97,8 @@ public interface GraphQLEnumKeyDoesNotExistError extends GraphQLErrorObject {
         instance.setConflictingAttributeName(template.getConflictingAttributeName());
         return instance;
     }
+
+    public GraphQLEnumKeyDoesNotExistError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLEnumKeyDoesNotExistError

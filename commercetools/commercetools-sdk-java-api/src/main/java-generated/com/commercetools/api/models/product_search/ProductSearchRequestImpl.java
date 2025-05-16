@@ -226,4 +226,8 @@ public class ProductSearchRequestImpl implements ProductSearchRequest, ModelBase
                 .build();
     }
 
+    @Override
+    public ProductSearchRequest copyDeep() {
+        return ProductSearchRequest.deepCopy(this);
+    }
 }

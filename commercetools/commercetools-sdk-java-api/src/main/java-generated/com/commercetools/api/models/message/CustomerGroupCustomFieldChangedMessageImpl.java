@@ -333,4 +333,8 @@ public class CustomerGroupCustomFieldChangedMessageImpl implements CustomerGroup
                 .build();
     }
 
+    @Override
+    public CustomerGroupCustomFieldChangedMessage copyDeep() {
+        return CustomerGroupCustomFieldChangedMessage.deepCopy(this);
+    }
 }

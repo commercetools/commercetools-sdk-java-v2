@@ -2305,6 +2305,23 @@
             ]
         },
         {
+            "moduleName": "org.reflections:reflections",
+            "moduleVersion": "0.10.2",
+            "moduleUrls": [
+                "http://github.com/ronmamo/reflections"
+            ],
+            "moduleLicenses": [
+                {
+                    "moduleLicense": "Apache License, Version 2.0",
+                    "moduleLicenseUrl": "https://www.apache.org/licenses/LICENSE-2.0"
+                },
+                {
+                    "moduleLicense": "WTFPL",
+                    "moduleLicenseUrl": "http://www.wtfpl.net/"
+                }
+            ]
+        },
+        {
             "moduleName": "org.slf4j:slf4j-api",
             "moduleVersion": "2.0.17",
             "moduleUrls": [

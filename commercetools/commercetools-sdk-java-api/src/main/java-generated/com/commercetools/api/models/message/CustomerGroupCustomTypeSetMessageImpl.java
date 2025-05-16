@@ -314,4 +314,8 @@ public class CustomerGroupCustomTypeSetMessageImpl implements CustomerGroupCusto
                 .build();
     }
 
+    @Override
+    public CustomerGroupCustomTypeSetMessage copyDeep() {
+        return CustomerGroupCustomTypeSetMessage.deepCopy(this);
+    }
 }

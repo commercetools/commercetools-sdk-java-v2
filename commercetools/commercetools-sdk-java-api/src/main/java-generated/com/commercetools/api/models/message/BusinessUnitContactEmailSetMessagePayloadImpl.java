@@ -92,4 +92,8 @@ public class BusinessUnitContactEmailSetMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public BusinessUnitContactEmailSetMessagePayload copyDeep() {
+        return BusinessUnitContactEmailSetMessagePayload.deepCopy(this);
+    }
 }

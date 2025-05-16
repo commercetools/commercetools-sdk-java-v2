@@ -93,4 +93,8 @@ public class StagedOrderSetBillingAddressActionImpl implements StagedOrderSetBil
                 .build();
     }
 
+    @Override
+    public StagedOrderSetBillingAddressAction copyDeep() {
+        return StagedOrderSetBillingAddressAction.deepCopy(this);
+    }
 }

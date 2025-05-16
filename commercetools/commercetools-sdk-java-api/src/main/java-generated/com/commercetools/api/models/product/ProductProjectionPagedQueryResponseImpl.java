@@ -160,4 +160,8 @@ public class ProductProjectionPagedQueryResponseImpl implements ProductProjectio
                 .build();
     }
 
+    @Override
+    public ProductProjectionPagedQueryResponse copyDeep() {
+        return ProductProjectionPagedQueryResponse.deepCopy(this);
+    }
 }

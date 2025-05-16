@@ -27,11 +27,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountValueAbsoluteImpl.class, name = CartDiscountValueAbsolute.ABSOLUTE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountValueFixedImpl.class, name = CartDiscountValueFixed.FIXED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountValueGiftLineItemImpl.class, name = CartDiscountValueGiftLineItem.GIFT_LINE_ITEM),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.cart_discount.CartDiscountValueRelativeImpl.class, name = CartDiscountValueRelative.RELATIVE) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = CartDiscountValueImpl.class, visible = true)
 @JsonDeserialize(as = CartDiscountValueImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -45,6 +40,8 @@ public interface CartDiscountValue extends CartDiscountValueMixin {
     @JsonProperty("type")
     public String getType();
 
+    public CartDiscountValue copyDeep();
+
     /**
      * factory method to create a deep copy of CartDiscountValue
      * @param template instance to be copied
@@ -55,21 +52,9 @@ public interface CartDiscountValue extends CartDiscountValueMixin {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountValueAbsolute) {
-            return com.commercetools.api.models.cart_discount.CartDiscountValueAbsolute
-                    .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountValueAbsolute) template);
-        }
-        if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountValueFixed) {
-            return com.commercetools.api.models.cart_discount.CartDiscountValueFixed
-                    .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountValueFixed) template);
-        }
-        if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountValueGiftLineItem) {
-            return com.commercetools.api.models.cart_discount.CartDiscountValueGiftLineItem
-                    .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountValueGiftLineItem) template);
-        }
-        if (template instanceof com.commercetools.api.models.cart_discount.CartDiscountValueRelative) {
-            return com.commercetools.api.models.cart_discount.CartDiscountValueRelative
-                    .deepCopy((com.commercetools.api.models.cart_discount.CartDiscountValueRelative) template);
+
+        if (!(template instanceof CartDiscountValueImpl)) {
+            return template.copyDeep();
         }
         CartDiscountValueImpl instance = new CartDiscountValueImpl();
         return instance;

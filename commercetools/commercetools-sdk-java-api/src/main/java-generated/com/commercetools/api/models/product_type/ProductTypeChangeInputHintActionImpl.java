@@ -110,4 +110,8 @@ public class ProductTypeChangeInputHintActionImpl implements ProductTypeChangeIn
                 .build();
     }
 
+    @Override
+    public ProductTypeChangeInputHintAction copyDeep() {
+        return ProductTypeChangeInputHintAction.deepCopy(this);
+    }
 }

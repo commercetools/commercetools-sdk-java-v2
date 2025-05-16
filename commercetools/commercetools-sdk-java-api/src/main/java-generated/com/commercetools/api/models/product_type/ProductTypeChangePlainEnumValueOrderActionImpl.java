@@ -116,4 +116,8 @@ public class ProductTypeChangePlainEnumValueOrderActionImpl
                 .build();
     }
 
+    @Override
+    public ProductTypeChangePlainEnumValueOrderAction copyDeep() {
+        return ProductTypeChangePlainEnumValueOrderAction.deepCopy(this);
+    }
 }

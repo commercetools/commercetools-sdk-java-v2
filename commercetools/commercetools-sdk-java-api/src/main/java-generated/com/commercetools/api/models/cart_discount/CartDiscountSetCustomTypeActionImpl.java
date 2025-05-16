@@ -111,4 +111,8 @@ public class CartDiscountSetCustomTypeActionImpl implements CartDiscountSetCusto
                 .build();
     }
 
+    @Override
+    public CartDiscountSetCustomTypeAction copyDeep() {
+        return CartDiscountSetCustomTypeAction.deepCopy(this);
+    }
 }

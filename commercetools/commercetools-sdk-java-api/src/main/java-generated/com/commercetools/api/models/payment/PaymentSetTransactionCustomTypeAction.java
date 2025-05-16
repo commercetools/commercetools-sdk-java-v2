@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setTransactionCustomType")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PaymentSetTransactionCustomTypeActionImpl.class)
 public interface PaymentSetTransactionCustomTypeAction extends PaymentUpdateAction {
@@ -104,6 +105,8 @@ public interface PaymentSetTransactionCustomTypeAction extends PaymentUpdateActi
         instance.setFields(template.getFields());
         return instance;
     }
+
+    public PaymentSetTransactionCustomTypeAction copyDeep();
 
     /**
      * factory method to create a deep copy of PaymentSetTransactionCustomTypeAction

@@ -135,4 +135,8 @@ public class CustomObjectDraftImpl implements CustomObjectDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public CustomObjectDraft copyDeep() {
+        return CustomObjectDraft.deepCopy(this);
+    }
 }

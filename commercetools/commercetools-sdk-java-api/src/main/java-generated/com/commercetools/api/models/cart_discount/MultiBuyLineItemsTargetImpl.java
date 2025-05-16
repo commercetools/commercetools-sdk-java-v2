@@ -173,4 +173,8 @@ public class MultiBuyLineItemsTargetImpl implements MultiBuyLineItemsTarget, Mod
                 .build();
     }
 
+    @Override
+    public MultiBuyLineItemsTarget copyDeep() {
+        return MultiBuyLineItemsTarget.deepCopy(this);
+    }
 }

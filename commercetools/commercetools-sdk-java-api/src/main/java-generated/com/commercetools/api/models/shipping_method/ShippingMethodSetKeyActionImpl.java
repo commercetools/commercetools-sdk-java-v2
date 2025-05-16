@@ -91,4 +91,8 @@ public class ShippingMethodSetKeyActionImpl implements ShippingMethodSetKeyActio
                 .build();
     }
 
+    @Override
+    public ShippingMethodSetKeyAction copyDeep() {
+        return ShippingMethodSetKeyAction.deepCopy(this);
+    }
 }

@@ -81,6 +81,8 @@ public interface MessagesConfiguration {
         return instance;
     }
 
+    public MessagesConfiguration copyDeep();
+
     /**
      * factory method to create a deep copy of MessagesConfiguration
      * @param template instance to be copied

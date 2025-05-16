@@ -128,6 +128,8 @@ public interface SearchIndexingConfiguration {
         return instance;
     }
 
+    public SearchIndexingConfiguration copyDeep();
+
     /**
      * factory method to create a deep copy of SearchIndexingConfiguration
      * @param template instance to be copied

@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeAddress")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyCustomerChangeAddressActionImpl.class)
 public interface MyCustomerChangeAddressAction extends MyCustomerUpdateAction {
@@ -105,6 +106,8 @@ public interface MyCustomerChangeAddressAction extends MyCustomerUpdateAction {
         instance.setAddress(template.getAddress());
         return instance;
     }
+
+    public MyCustomerChangeAddressAction copyDeep();
 
     /**
      * factory method to create a deep copy of MyCustomerChangeAddressAction

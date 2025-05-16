@@ -36,6 +36,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("OverlappingStandalonePriceValidity")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OverlappingStandalonePriceValidityErrorImpl.class)
 public interface OverlappingStandalonePriceValidityError extends ErrorObject {
@@ -248,6 +249,8 @@ public interface OverlappingStandalonePriceValidityError extends ErrorObject {
         instance.setConflictingValidUntil(template.getConflictingValidUntil());
         return instance;
     }
+
+    public OverlappingStandalonePriceValidityError copyDeep();
 
     /**
      * factory method to create a deep copy of OverlappingStandalonePriceValidityError

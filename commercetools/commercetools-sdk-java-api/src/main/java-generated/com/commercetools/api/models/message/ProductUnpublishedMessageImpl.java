@@ -273,4 +273,8 @@ public class ProductUnpublishedMessageImpl implements ProductUnpublishedMessage,
                 .build();
     }
 
+    @Override
+    public ProductUnpublishedMessage copyDeep() {
+        return ProductUnpublishedMessage.deepCopy(this);
+    }
 }

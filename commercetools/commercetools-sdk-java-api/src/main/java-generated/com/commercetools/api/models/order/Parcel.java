@@ -174,6 +174,8 @@ public interface Parcel extends ParcelMixin, com.commercetools.api.models.Custom
         return instance;
     }
 
+    public Parcel copyDeep();
+
     /**
      * factory method to create a deep copy of Parcel
      * @param template instance to be copied

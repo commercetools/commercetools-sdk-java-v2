@@ -27,6 +27,7 @@ import jakarta.validation.Valid;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setDescription")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyShoppingListSetDescriptionActionImpl.class)
 public interface MyShoppingListSetDescriptionAction extends MyShoppingListUpdateAction {
@@ -69,6 +70,8 @@ public interface MyShoppingListSetDescriptionAction extends MyShoppingListUpdate
         instance.setDescription(template.getDescription());
         return instance;
     }
+
+    public MyShoppingListSetDescriptionAction copyDeep();
 
     /**
      * factory method to create a deep copy of MyShoppingListSetDescriptionAction

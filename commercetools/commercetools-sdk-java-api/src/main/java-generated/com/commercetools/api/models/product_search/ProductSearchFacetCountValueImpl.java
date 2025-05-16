@@ -133,4 +133,8 @@ public class ProductSearchFacetCountValueImpl implements ProductSearchFacetCount
                 .build();
     }
 
+    @Override
+    public ProductSearchFacetCountValue copyDeep() {
+        return ProductSearchFacetCountValue.deepCopy(this);
+    }
 }

@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setVatId")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyCustomerSetVatIdActionImpl.class)
 public interface MyCustomerSetVatIdAction extends MyCustomerUpdateAction {
@@ -66,6 +67,8 @@ public interface MyCustomerSetVatIdAction extends MyCustomerUpdateAction {
         instance.setVatId(template.getVatId());
         return instance;
     }
+
+    public MyCustomerSetVatIdAction copyDeep();
 
     /**
      * factory method to create a deep copy of MyCustomerSetVatIdAction

@@ -62,4 +62,8 @@ public class StandalonePriceApplyStagedChangesActionImpl implements StandalonePr
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action).build();
     }
 
+    @Override
+    public StandalonePriceApplyStagedChangesAction copyDeep() {
+        return StandalonePriceApplyStagedChangesAction.deepCopy(this);
+    }
 }

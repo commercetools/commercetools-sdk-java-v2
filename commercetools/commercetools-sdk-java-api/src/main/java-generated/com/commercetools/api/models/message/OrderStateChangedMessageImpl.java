@@ -313,4 +313,8 @@ public class OrderStateChangedMessageImpl implements OrderStateChangedMessage, M
                 .build();
     }
 
+    @Override
+    public OrderStateChangedMessage copyDeep() {
+        return OrderStateChangedMessage.deepCopy(this);
+    }
 }

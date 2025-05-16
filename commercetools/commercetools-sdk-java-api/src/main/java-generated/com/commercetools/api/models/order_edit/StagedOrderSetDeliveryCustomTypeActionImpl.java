@@ -155,4 +155,8 @@ public class StagedOrderSetDeliveryCustomTypeActionImpl implements StagedOrderSe
                 .build();
     }
 
+    @Override
+    public StagedOrderSetDeliveryCustomTypeAction copyDeep() {
+        return StagedOrderSetDeliveryCustomTypeAction.deepCopy(this);
+    }
 }

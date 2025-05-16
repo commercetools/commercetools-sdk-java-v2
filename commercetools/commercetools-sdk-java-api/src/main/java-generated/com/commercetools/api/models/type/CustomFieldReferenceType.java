@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("Reference")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomFieldReferenceTypeImpl.class)
 public interface CustomFieldReferenceType extends FieldType {
@@ -69,6 +70,8 @@ public interface CustomFieldReferenceType extends FieldType {
         instance.setReferenceTypeId(template.getReferenceTypeId());
         return instance;
     }
+
+    public CustomFieldReferenceType copyDeep();
 
     /**
      * factory method to create a deep copy of CustomFieldReferenceType

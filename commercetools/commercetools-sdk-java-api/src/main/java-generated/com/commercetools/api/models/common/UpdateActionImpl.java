@@ -73,4 +73,8 @@ public class UpdateActionImpl implements UpdateAction, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action).build();
     }
 
+    @Override
+    public UpdateAction copyDeep() {
+        return UpdateAction.deepCopy(this);
+    }
 }

@@ -77,4 +77,8 @@ public class SearchFullTextPrefixExpressionImpl implements SearchFullTextPrefixE
                 .build();
     }
 
+    @Override
+    public SearchFullTextPrefixExpression copyDeep() {
+        return SearchFullTextPrefixExpression.deepCopy(this);
+    }
 }

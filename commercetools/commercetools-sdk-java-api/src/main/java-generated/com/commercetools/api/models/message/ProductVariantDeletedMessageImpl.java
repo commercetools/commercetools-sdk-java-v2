@@ -337,4 +337,8 @@ public class ProductVariantDeletedMessageImpl implements ProductVariantDeletedMe
                 .build();
     }
 
+    @Override
+    public ProductVariantDeletedMessage copyDeep() {
+        return ProductVariantDeletedMessage.deepCopy(this);
+    }
 }

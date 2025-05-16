@@ -78,4 +78,8 @@ public class ApproverDisjunctionDraftImpl implements ApproverDisjunctionDraft, M
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("or", or).build();
     }
 
+    @Override
+    public ApproverDisjunctionDraft copyDeep() {
+        return ApproverDisjunctionDraft.deepCopy(this);
+    }
 }

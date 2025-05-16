@@ -92,4 +92,8 @@ public class BusinessUnitAddressAddedMessagePayloadImpl implements BusinessUnitA
                 .build();
     }
 
+    @Override
+    public BusinessUnitAddressAddedMessagePayload copyDeep() {
+        return BusinessUnitAddressAddedMessagePayload.deepCopy(this);
+    }
 }

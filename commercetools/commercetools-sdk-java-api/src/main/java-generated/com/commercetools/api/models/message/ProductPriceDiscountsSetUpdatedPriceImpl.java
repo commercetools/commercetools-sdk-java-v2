@@ -176,4 +176,8 @@ public class ProductPriceDiscountsSetUpdatedPriceImpl implements ProductPriceDis
                 .build();
     }
 
+    @Override
+    public ProductPriceDiscountsSetUpdatedPrice copyDeep() {
+        return ProductPriceDiscountsSetUpdatedPrice.deepCopy(this);
+    }
 }

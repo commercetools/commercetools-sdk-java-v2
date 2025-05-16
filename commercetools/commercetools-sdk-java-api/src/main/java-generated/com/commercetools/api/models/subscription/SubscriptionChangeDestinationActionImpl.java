@@ -92,4 +92,8 @@ public class SubscriptionChangeDestinationActionImpl implements SubscriptionChan
                 .build();
     }
 
+    @Override
+    public SubscriptionChangeDestinationAction copyDeep() {
+        return SubscriptionChangeDestinationAction.deepCopy(this);
+    }
 }

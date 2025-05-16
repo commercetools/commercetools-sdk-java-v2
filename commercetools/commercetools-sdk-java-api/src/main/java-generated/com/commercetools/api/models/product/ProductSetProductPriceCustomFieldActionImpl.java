@@ -152,4 +152,8 @@ public class ProductSetProductPriceCustomFieldActionImpl implements ProductSetPr
                 .build();
     }
 
+    @Override
+    public ProductSetProductPriceCustomFieldAction copyDeep() {
+        return ProductSetProductPriceCustomFieldAction.deepCopy(this);
+    }
 }

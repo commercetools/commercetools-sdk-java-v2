@@ -112,4 +112,8 @@ public class StandalonePriceSetValidFromAndUntilActionImpl
                 .build();
     }
 
+    @Override
+    public StandalonePriceSetValidFromAndUntilAction copyDeep() {
+        return StandalonePriceSetValidFromAndUntilAction.deepCopy(this);
+    }
 }

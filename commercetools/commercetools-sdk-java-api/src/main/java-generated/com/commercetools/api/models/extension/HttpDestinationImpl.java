@@ -111,4 +111,8 @@ public class HttpDestinationImpl implements HttpDestination, ModelBase {
                 .build();
     }
 
+    @Override
+    public HttpDestination copyDeep() {
+        return HttpDestination.deepCopy(this);
+    }
 }

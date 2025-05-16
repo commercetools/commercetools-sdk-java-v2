@@ -94,6 +94,8 @@ public interface TypeUpdate
         return instance;
     }
 
+    public TypeUpdate copyDeep();
+
     /**
      * factory method to create a deep copy of TypeUpdate
      * @param template instance to be copied

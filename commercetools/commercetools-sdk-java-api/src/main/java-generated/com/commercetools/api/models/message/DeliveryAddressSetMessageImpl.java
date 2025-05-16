@@ -353,4 +353,8 @@ public class DeliveryAddressSetMessageImpl implements DeliveryAddressSetMessage,
                 .build();
     }
 
+    @Override
+    public DeliveryAddressSetMessage copyDeep() {
+        return DeliveryAddressSetMessage.deepCopy(this);
+    }
 }

@@ -91,4 +91,8 @@ public class DiscountCodeSetValidFromActionImpl implements DiscountCodeSetValidF
                 .build();
     }
 
+    @Override
+    public DiscountCodeSetValidFromAction copyDeep() {
+        return DiscountCodeSetValidFromAction.deepCopy(this);
+    }
 }

@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setStatusInterfaceCode")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PaymentSetStatusInterfaceCodeActionImpl.class)
 public interface PaymentSetStatusInterfaceCodeAction extends PaymentUpdateAction {
@@ -66,6 +67,8 @@ public interface PaymentSetStatusInterfaceCodeAction extends PaymentUpdateAction
         instance.setInterfaceCode(template.getInterfaceCode());
         return instance;
     }
+
+    public PaymentSetStatusInterfaceCodeAction copyDeep();
 
     /**
      * factory method to create a deep copy of PaymentSetStatusInterfaceCodeAction

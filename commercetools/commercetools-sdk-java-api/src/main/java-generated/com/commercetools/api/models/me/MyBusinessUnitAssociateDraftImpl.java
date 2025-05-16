@@ -123,4 +123,8 @@ public class MyBusinessUnitAssociateDraftImpl implements MyBusinessUnitAssociate
                 .build();
     }
 
+    @Override
+    public MyBusinessUnitAssociateDraft copyDeep() {
+        return MyBusinessUnitAssociateDraft.deepCopy(this);
+    }
 }

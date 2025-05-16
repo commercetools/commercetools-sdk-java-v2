@@ -91,4 +91,8 @@ public class TypeRemoveFieldDefinitionActionImpl implements TypeRemoveFieldDefin
                 .build();
     }
 
+    @Override
+    public TypeRemoveFieldDefinitionAction copyDeep() {
+        return TypeRemoveFieldDefinitionAction.deepCopy(this);
+    }
 }

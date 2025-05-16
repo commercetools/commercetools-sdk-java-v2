@@ -96,4 +96,8 @@ public class MethodTaxedPriceImpl implements MethodTaxedPrice, ModelBase {
                 .build();
     }
 
+    @Override
+    public MethodTaxedPrice copyDeep() {
+        return MethodTaxedPrice.deepCopy(this);
+    }
 }

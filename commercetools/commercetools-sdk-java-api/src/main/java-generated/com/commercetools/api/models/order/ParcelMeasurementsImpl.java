@@ -138,4 +138,8 @@ public class ParcelMeasurementsImpl implements ParcelMeasurements, ModelBase {
                 .build();
     }
 
+    @Override
+    public ParcelMeasurements copyDeep() {
+        return ParcelMeasurements.deepCopy(this);
+    }
 }

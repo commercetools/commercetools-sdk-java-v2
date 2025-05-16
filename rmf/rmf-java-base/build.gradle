@@ -8,6 +8,7 @@ dependencies {
     api slf4j.api
     api failsafe.failsafe
     api spotify.completableFutures
+    api "org.reflections:reflections:0.10.2"
 }
 
 

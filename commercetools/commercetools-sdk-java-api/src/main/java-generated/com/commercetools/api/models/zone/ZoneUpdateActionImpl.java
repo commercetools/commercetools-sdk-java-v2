@@ -69,4 +69,8 @@ public class ZoneUpdateActionImpl implements ZoneUpdateAction, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action).build();
     }
 
+    @Override
+    public ZoneUpdateAction copyDeep() {
+        return ZoneUpdateAction.deepCopy(this);
+    }
 }

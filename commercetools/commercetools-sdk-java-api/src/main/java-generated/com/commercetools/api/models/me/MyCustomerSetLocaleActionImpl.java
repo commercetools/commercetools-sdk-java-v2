@@ -91,4 +91,8 @@ public class MyCustomerSetLocaleActionImpl implements MyCustomerSetLocaleAction,
                 .build();
     }
 
+    @Override
+    public MyCustomerSetLocaleAction copyDeep() {
+        return MyCustomerSetLocaleAction.deepCopy(this);
+    }
 }

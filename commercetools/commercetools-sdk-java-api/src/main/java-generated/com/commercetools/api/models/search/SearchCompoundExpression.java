@@ -46,6 +46,8 @@ public interface SearchCompoundExpression extends SearchQuery {
         return instance;
     }
 
+    public SearchCompoundExpression copyDeep();
+
     /**
      * factory method to create a deep copy of SearchCompoundExpression
      * @param template instance to be copied
@@ -56,21 +58,9 @@ public interface SearchCompoundExpression extends SearchQuery {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.search.SearchAndExpression) {
-            return com.commercetools.api.models.search.SearchAndExpression
-                    .deepCopy((com.commercetools.api.models.search.SearchAndExpression) template);
-        }
-        if (template instanceof com.commercetools.api.models.search.SearchFilterExpression) {
-            return com.commercetools.api.models.search.SearchFilterExpression
-                    .deepCopy((com.commercetools.api.models.search.SearchFilterExpression) template);
-        }
-        if (template instanceof com.commercetools.api.models.search.SearchNotExpression) {
-            return com.commercetools.api.models.search.SearchNotExpression
-                    .deepCopy((com.commercetools.api.models.search.SearchNotExpression) template);
-        }
-        if (template instanceof com.commercetools.api.models.search.SearchOrExpression) {
-            return com.commercetools.api.models.search.SearchOrExpression
-                    .deepCopy((com.commercetools.api.models.search.SearchOrExpression) template);
+
+        if (!(template instanceof SearchCompoundExpressionImpl)) {
+            return template.copyDeep();
         }
         SearchCompoundExpressionImpl instance = new SearchCompoundExpressionImpl();
         return instance;

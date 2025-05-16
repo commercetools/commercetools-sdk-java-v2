@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("HTTP")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = HttpDestinationImpl.class)
 public interface HttpDestination extends ExtensionDestination {
@@ -86,6 +87,8 @@ public interface HttpDestination extends ExtensionDestination {
         instance.setAuthentication(template.getAuthentication());
         return instance;
     }
+
+    public HttpDestination copyDeep();
 
     /**
      * factory method to create a deep copy of HttpDestination

@@ -97,4 +97,8 @@ public class GraphQLQueryComplexityLimitExceededErrorImpl
                 .build();
     }
 
+    @Override
+    public GraphQLQueryComplexityLimitExceededError copyDeep() {
+        return GraphQLQueryComplexityLimitExceededError.deepCopy(this);
+    }
 }

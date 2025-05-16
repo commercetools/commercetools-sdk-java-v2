@@ -153,4 +153,8 @@ public class ParcelMeasurementsUpdatedMessagePayloadImpl implements ParcelMeasur
                 .build();
     }
 
+    @Override
+    public ParcelMeasurementsUpdatedMessagePayload copyDeep() {
+        return ParcelMeasurementsUpdatedMessagePayload.deepCopy(this);
+    }
 }

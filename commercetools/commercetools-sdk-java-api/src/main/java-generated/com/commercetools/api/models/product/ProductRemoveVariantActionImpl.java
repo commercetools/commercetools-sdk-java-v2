@@ -128,4 +128,8 @@ public class ProductRemoveVariantActionImpl implements ProductRemoveVariantActio
                 .build();
     }
 
+    @Override
+    public ProductRemoveVariantAction copyDeep() {
+        return ProductRemoveVariantAction.deepCopy(this);
+    }
 }

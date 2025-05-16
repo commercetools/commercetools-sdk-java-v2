@@ -113,4 +113,8 @@ public class HitImpl implements Hit, ModelBase {
                 .build();
     }
 
+    @Override
+    public Hit copyDeep() {
+        return Hit.deepCopy(this);
+    }
 }

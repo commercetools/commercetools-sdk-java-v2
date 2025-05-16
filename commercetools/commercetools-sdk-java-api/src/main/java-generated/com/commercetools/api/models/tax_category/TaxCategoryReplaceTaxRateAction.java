@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("replaceTaxRate")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TaxCategoryReplaceTaxRateActionImpl.class)
 public interface TaxCategoryReplaceTaxRateAction extends TaxCategoryUpdateAction {
@@ -103,6 +104,8 @@ public interface TaxCategoryReplaceTaxRateAction extends TaxCategoryUpdateAction
         instance.setTaxRate(template.getTaxRate());
         return instance;
     }
+
+    public TaxCategoryReplaceTaxRateAction copyDeep();
 
     /**
      * factory method to create a deep copy of TaxCategoryReplaceTaxRateAction

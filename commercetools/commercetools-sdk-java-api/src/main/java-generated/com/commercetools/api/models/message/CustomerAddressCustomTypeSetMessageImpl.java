@@ -334,4 +334,8 @@ public class CustomerAddressCustomTypeSetMessageImpl implements CustomerAddressC
                 .build();
     }
 
+    @Override
+    public CustomerAddressCustomTypeSetMessage copyDeep() {
+        return CustomerAddressCustomTypeSetMessage.deepCopy(this);
+    }
 }

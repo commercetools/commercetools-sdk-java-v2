@@ -92,4 +92,8 @@ public class ProductSetPriceModeActionImpl implements ProductSetPriceModeAction,
                 .build();
     }
 
+    @Override
+    public ProductSetPriceModeAction copyDeep() {
+        return ProductSetPriceModeAction.deepCopy(this);
+    }
 }

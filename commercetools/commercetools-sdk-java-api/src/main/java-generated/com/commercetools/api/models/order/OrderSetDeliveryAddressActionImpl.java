@@ -135,4 +135,8 @@ public class OrderSetDeliveryAddressActionImpl implements OrderSetDeliveryAddres
                 .build();
     }
 
+    @Override
+    public OrderSetDeliveryAddressAction copyDeep() {
+        return OrderSetDeliveryAddressAction.deepCopy(this);
+    }
 }

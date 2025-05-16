@@ -110,4 +110,8 @@ public class AssociateRoleResourceIdentifierImpl implements AssociateRoleResourc
                 .build();
     }
 
+    @Override
+    public AssociateRoleResourceIdentifier copyDeep() {
+        return AssociateRoleResourceIdentifier.deepCopy(this);
+    }
 }

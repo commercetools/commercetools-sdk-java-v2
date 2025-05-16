@@ -91,4 +91,8 @@ public class OrderImportedMessagePayloadImpl implements OrderImportedMessagePayl
                 .build();
     }
 
+    @Override
+    public OrderImportedMessagePayload copyDeep() {
+        return OrderImportedMessagePayload.deepCopy(this);
+    }
 }

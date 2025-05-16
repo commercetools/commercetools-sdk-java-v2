@@ -113,4 +113,8 @@ public class CustomerResetPasswordImpl implements CustomerResetPassword, ModelBa
                 .build();
     }
 
+    @Override
+    public CustomerResetPassword copyDeep() {
+        return CustomerResetPassword.deepCopy(this);
+    }
 }

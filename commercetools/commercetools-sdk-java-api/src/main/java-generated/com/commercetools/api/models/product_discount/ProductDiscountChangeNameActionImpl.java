@@ -92,4 +92,8 @@ public class ProductDiscountChangeNameActionImpl implements ProductDiscountChang
                 .build();
     }
 
+    @Override
+    public ProductDiscountChangeNameAction copyDeep() {
+        return ProductDiscountChangeNameAction.deepCopy(this);
+    }
 }

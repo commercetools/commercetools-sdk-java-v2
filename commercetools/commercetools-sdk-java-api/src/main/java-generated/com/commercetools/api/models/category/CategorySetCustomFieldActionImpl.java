@@ -110,4 +110,8 @@ public class CategorySetCustomFieldActionImpl implements CategorySetCustomFieldA
                 .build();
     }
 
+    @Override
+    public CategorySetCustomFieldAction copyDeep() {
+        return CategorySetCustomFieldAction.deepCopy(this);
+    }
 }

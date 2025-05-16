@@ -95,4 +95,8 @@ public class ProductSearchFacetResultCountImpl implements ProductSearchFacetResu
                 .build();
     }
 
+    @Override
+    public ProductSearchFacetResultCount copyDeep() {
+        return ProductSearchFacetResultCount.deepCopy(this);
+    }
 }

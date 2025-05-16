@@ -93,6 +93,8 @@ public interface MyBusinessUnitUpdate {
         return instance;
     }
 
+    public MyBusinessUnitUpdate copyDeep();
+
     /**
      * factory method to create a deep copy of MyBusinessUnitUpdate
      * @param template instance to be copied

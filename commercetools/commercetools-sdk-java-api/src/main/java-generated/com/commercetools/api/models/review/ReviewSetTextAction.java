@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setText")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ReviewSetTextActionImpl.class)
 public interface ReviewSetTextAction extends ReviewUpdateAction {
@@ -66,6 +67,8 @@ public interface ReviewSetTextAction extends ReviewUpdateAction {
         instance.setText(template.getText());
         return instance;
     }
+
+    public ReviewSetTextAction copyDeep();
 
     /**
      * factory method to create a deep copy of ReviewSetTextAction

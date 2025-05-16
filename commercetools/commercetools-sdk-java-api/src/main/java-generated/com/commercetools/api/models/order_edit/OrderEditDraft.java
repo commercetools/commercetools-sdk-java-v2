@@ -162,6 +162,8 @@ public interface OrderEditDraft extends com.commercetools.api.models.Customizabl
         return instance;
     }
 
+    public OrderEditDraft copyDeep();
+
     /**
      * factory method to create a deep copy of OrderEditDraft
      * @param template instance to be copied

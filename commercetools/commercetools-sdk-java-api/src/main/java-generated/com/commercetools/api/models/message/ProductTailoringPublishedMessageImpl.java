@@ -334,4 +334,8 @@ public class ProductTailoringPublishedMessageImpl implements ProductTailoringPub
                 .build();
     }
 
+    @Override
+    public ProductTailoringPublishedMessage copyDeep() {
+        return ProductTailoringPublishedMessage.deepCopy(this);
+    }
 }

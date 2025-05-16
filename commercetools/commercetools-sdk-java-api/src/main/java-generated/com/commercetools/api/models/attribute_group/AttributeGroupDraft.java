@@ -128,6 +128,8 @@ public interface AttributeGroupDraft
         return instance;
     }
 
+    public AttributeGroupDraft copyDeep();
+
     /**
      * factory method to create a deep copy of AttributeGroupDraft
      * @param template instance to be copied

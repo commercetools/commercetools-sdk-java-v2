@@ -170,6 +170,8 @@ public interface ProductTailoringData {
         return instance;
     }
 
+    public ProductTailoringData copyDeep();
+
     /**
      * factory method to create a deep copy of ProductTailoringData
      * @param template instance to be copied

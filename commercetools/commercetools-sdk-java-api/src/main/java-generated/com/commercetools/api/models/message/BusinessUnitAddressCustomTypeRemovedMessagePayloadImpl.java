@@ -111,4 +111,8 @@ public class BusinessUnitAddressCustomTypeRemovedMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public BusinessUnitAddressCustomTypeRemovedMessagePayload copyDeep() {
+        return BusinessUnitAddressCustomTypeRemovedMessagePayload.deepCopy(this);
+    }
 }

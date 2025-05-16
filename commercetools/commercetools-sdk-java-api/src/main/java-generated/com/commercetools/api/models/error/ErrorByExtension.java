@@ -81,6 +81,8 @@ public interface ErrorByExtension {
         return instance;
     }
 
+    public ErrorByExtension copyDeep();
+
     /**
      * factory method to create a deep copy of ErrorByExtension
      * @param template instance to be copied

@@ -95,4 +95,8 @@ public class GraphQLErrorObjectImpl implements GraphQLErrorObject, ModelBase {
                 .build();
     }
 
+    @Override
+    public GraphQLErrorObject copyDeep() {
+        return GraphQLErrorObject.deepCopy(this);
+    }
 }

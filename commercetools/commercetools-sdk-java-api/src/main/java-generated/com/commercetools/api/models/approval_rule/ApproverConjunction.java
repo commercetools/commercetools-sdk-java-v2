@@ -76,6 +76,8 @@ public interface ApproverConjunction {
         return instance;
     }
 
+    public ApproverConjunction copyDeep();
+
     /**
      * factory method to create a deep copy of ApproverConjunction
      * @param template instance to be copied

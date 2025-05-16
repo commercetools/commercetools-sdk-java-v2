@@ -91,4 +91,8 @@ public class CategorySetKeyActionImpl implements CategorySetKeyAction, ModelBase
                 .build();
     }
 
+    @Override
+    public CategorySetKeyAction copyDeep() {
+        return CategorySetKeyAction.deepCopy(this);
+    }
 }

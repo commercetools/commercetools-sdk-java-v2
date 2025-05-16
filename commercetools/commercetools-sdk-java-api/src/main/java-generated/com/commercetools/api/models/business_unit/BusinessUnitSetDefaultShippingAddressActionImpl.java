@@ -111,4 +111,8 @@ public class BusinessUnitSetDefaultShippingAddressActionImpl
                 .build();
     }
 
+    @Override
+    public BusinessUnitSetDefaultShippingAddressAction copyDeep() {
+        return BusinessUnitSetDefaultShippingAddressAction.deepCopy(this);
+    }
 }

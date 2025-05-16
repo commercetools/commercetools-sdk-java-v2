@@ -121,4 +121,8 @@ public class StoreCountriesChangedMessagePayloadImpl implements StoreCountriesCh
                 .build();
     }
 
+    @Override
+    public StoreCountriesChangedMessagePayload copyDeep() {
+        return StoreCountriesChangedMessagePayload.deepCopy(this);
+    }
 }

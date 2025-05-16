@@ -191,4 +191,8 @@ public class ProductChangeAssetNameActionImpl implements ProductChangeAssetNameA
                 .build();
     }
 
+    @Override
+    public ProductChangeAssetNameAction copyDeep() {
+        return ProductChangeAssetNameAction.deepCopy(this);
+    }
 }

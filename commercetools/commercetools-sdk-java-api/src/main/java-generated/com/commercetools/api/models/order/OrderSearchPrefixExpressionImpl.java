@@ -74,4 +74,8 @@ public class OrderSearchPrefixExpressionImpl implements OrderSearchPrefixExpress
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("prefix", prefix).build();
     }
 
+    @Override
+    public OrderSearchPrefixExpression copyDeep() {
+        return OrderSearchPrefixExpression.deepCopy(this);
+    }
 }

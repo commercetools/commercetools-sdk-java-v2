@@ -92,4 +92,8 @@ public class CartDiscountChangeTargetActionImpl implements CartDiscountChangeTar
                 .build();
     }
 
+    @Override
+    public CartDiscountChangeTargetAction copyDeep() {
+        return CartDiscountChangeTargetAction.deepCopy(this);
+    }
 }

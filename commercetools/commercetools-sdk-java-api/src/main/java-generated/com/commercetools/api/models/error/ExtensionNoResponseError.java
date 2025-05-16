@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ExtensionNoResponse")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ExtensionNoResponseErrorImpl.class)
 public interface ExtensionNoResponseError extends ErrorObject {
@@ -111,6 +112,8 @@ public interface ExtensionNoResponseError extends ErrorObject {
         instance.setExtensionKey(template.getExtensionKey());
         return instance;
     }
+
+    public ExtensionNoResponseError copyDeep();
 
     /**
      * factory method to create a deep copy of ExtensionNoResponseError

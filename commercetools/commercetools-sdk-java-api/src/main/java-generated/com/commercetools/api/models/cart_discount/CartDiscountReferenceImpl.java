@@ -111,4 +111,8 @@ public class CartDiscountReferenceImpl implements CartDiscountReference, ModelBa
                 .build();
     }
 
+    @Override
+    public CartDiscountReference copyDeep() {
+        return CartDiscountReference.deepCopy(this);
+    }
 }

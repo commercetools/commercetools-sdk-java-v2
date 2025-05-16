@@ -118,6 +118,8 @@ public interface ProductSelectionDraft extends com.commercetools.api.models.Cust
         return instance;
     }
 
+    public ProductSelectionDraft copyDeep();
+
     /**
      * factory method to create a deep copy of ProductSelectionDraft
      * @param template instance to be copied

@@ -160,4 +160,8 @@ public class SubscriptionPagedQueryResponseImpl implements SubscriptionPagedQuer
                 .build();
     }
 
+    @Override
+    public SubscriptionPagedQueryResponse copyDeep() {
+        return SubscriptionPagedQueryResponse.deepCopy(this);
+    }
 }

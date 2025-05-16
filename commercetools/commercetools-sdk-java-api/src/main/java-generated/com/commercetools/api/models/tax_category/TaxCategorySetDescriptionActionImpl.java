@@ -91,4 +91,8 @@ public class TaxCategorySetDescriptionActionImpl implements TaxCategorySetDescri
                 .build();
     }
 
+    @Override
+    public TaxCategorySetDescriptionAction copyDeep() {
+        return TaxCategorySetDescriptionAction.deepCopy(this);
+    }
 }

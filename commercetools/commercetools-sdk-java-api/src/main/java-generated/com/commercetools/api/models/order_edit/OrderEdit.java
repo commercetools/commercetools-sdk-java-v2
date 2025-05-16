@@ -270,6 +270,8 @@ public interface OrderEdit extends BaseResource, OrderEditMixin, com.commercetoo
         return instance;
     }
 
+    public OrderEdit copyDeep();
+
     /**
      * factory method to create a deep copy of OrderEdit
      * @param template instance to be copied

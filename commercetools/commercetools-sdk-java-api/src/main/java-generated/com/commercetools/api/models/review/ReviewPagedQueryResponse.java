@@ -143,6 +143,8 @@ public interface ReviewPagedQueryResponse extends com.commercetools.api.models.R
         return instance;
     }
 
+    public ReviewPagedQueryResponse copyDeep();
+
     /**
      * factory method to create a deep copy of ReviewPagedQueryResponse
      * @param template instance to be copied

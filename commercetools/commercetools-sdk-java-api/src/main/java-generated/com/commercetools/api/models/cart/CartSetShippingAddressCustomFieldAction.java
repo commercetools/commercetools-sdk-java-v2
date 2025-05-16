@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setShippingAddressCustomField")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartSetShippingAddressCustomFieldActionImpl.class)
 public interface CartSetShippingAddressCustomFieldAction extends CartUpdateAction {
@@ -85,6 +86,8 @@ public interface CartSetShippingAddressCustomFieldAction extends CartUpdateActio
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public CartSetShippingAddressCustomFieldAction copyDeep();
 
     /**
      * factory method to create a deep copy of CartSetShippingAddressCustomFieldAction

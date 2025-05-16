@@ -352,6 +352,8 @@ public interface Review extends BaseResource, ReviewMixin, com.commercetools.api
         return instance;
     }
 
+    public Review copyDeep();
+
     /**
      * factory method to create a deep copy of Review
      * @param template instance to be copied

@@ -51,4 +51,8 @@ public class OrderSearchQueryExpressionImpl implements OrderSearchQueryExpressio
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).build();
     }
 
+    @Override
+    public OrderSearchQueryExpression copyDeep() {
+        return OrderSearchQueryExpression.deepCopy(this);
+    }
 }

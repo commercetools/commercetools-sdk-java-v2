@@ -361,4 +361,8 @@ public class ApprovalRuleImpl implements ApprovalRule, ModelBase {
                 .build();
     }
 
+    @Override
+    public ApprovalRule copyDeep() {
+        return ApprovalRule.deepCopy(this);
+    }
 }

@@ -92,4 +92,8 @@ public class CartDiscountSetDescriptionActionImpl implements CartDiscountSetDesc
                 .build();
     }
 
+    @Override
+    public CartDiscountSetDescriptionAction copyDeep() {
+        return CartDiscountSetDescriptionAction.deepCopy(this);
+    }
 }

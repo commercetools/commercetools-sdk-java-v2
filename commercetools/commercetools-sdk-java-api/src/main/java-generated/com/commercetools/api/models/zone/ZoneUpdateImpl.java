@@ -99,4 +99,8 @@ public class ZoneUpdateImpl implements ZoneUpdate, ModelBase {
                 .build();
     }
 
+    @Override
+    public ZoneUpdate copyDeep() {
+        return ZoneUpdate.deepCopy(this);
+    }
 }

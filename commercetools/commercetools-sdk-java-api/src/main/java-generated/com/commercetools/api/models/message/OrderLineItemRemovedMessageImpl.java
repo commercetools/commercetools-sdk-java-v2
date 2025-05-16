@@ -456,4 +456,8 @@ public class OrderLineItemRemovedMessageImpl implements OrderLineItemRemovedMess
                 .build();
     }
 
+    @Override
+    public OrderLineItemRemovedMessage copyDeep() {
+        return OrderLineItemRemovedMessage.deepCopy(this);
+    }
 }

@@ -153,4 +153,8 @@ public class DeliveryAddressSetMessagePayloadImpl implements DeliveryAddressSetM
                 .build();
     }
 
+    @Override
+    public DeliveryAddressSetMessagePayload copyDeep() {
+        return DeliveryAddressSetMessagePayload.deepCopy(this);
+    }
 }

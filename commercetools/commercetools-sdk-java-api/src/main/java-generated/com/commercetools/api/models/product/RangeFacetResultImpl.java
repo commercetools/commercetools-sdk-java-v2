@@ -96,4 +96,8 @@ public class RangeFacetResultImpl implements RangeFacetResult, ModelBase {
                 .build();
     }
 
+    @Override
+    public RangeFacetResult copyDeep() {
+        return RangeFacetResult.deepCopy(this);
+    }
 }

@@ -89,6 +89,8 @@ public interface GraphQLResponse {
         return instance;
     }
 
+    public GraphQLResponse copyDeep();
+
     /**
      * factory method to create a deep copy of GraphQLResponse
      * @param template instance to be copied

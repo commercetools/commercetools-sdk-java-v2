@@ -82,6 +82,8 @@ public interface PayloadNotIncluded {
         return instance;
     }
 
+    public PayloadNotIncluded copyDeep();
+
     /**
      * factory method to create a deep copy of PayloadNotIncluded
      * @param template instance to be copied

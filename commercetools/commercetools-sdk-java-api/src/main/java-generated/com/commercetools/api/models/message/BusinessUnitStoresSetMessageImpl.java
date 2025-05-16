@@ -297,4 +297,8 @@ public class BusinessUnitStoresSetMessageImpl implements BusinessUnitStoresSetMe
                 .build();
     }
 
+    @Override
+    public BusinessUnitStoresSetMessage copyDeep() {
+        return BusinessUnitStoresSetMessage.deepCopy(this);
+    }
 }

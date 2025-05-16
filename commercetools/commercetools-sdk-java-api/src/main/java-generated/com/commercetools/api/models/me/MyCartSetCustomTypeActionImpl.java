@@ -111,4 +111,8 @@ public class MyCartSetCustomTypeActionImpl implements MyCartSetCustomTypeAction,
                 .build();
     }
 
+    @Override
+    public MyCartSetCustomTypeAction copyDeep() {
+        return MyCartSetCustomTypeAction.deepCopy(this);
+    }
 }

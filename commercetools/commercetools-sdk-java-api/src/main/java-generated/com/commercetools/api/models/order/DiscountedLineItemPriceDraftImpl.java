@@ -101,4 +101,8 @@ public class DiscountedLineItemPriceDraftImpl implements DiscountedLineItemPrice
                 .build();
     }
 
+    @Override
+    public DiscountedLineItemPriceDraft copyDeep() {
+        return DiscountedLineItemPriceDraft.deepCopy(this);
+    }
 }

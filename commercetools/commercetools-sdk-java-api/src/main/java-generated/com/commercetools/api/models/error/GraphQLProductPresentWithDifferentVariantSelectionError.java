@@ -32,6 +32,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ProductPresentWithDifferentVariantSelection")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLProductPresentWithDifferentVariantSelectionErrorImpl.class)
 public interface GraphQLProductPresentWithDifferentVariantSelectionError extends GraphQLErrorObject {
@@ -102,6 +103,8 @@ public interface GraphQLProductPresentWithDifferentVariantSelectionError extends
         instance.setExistingVariantSelection(template.getExistingVariantSelection());
         return instance;
     }
+
+    public GraphQLProductPresentWithDifferentVariantSelectionError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLProductPresentWithDifferentVariantSelectionError

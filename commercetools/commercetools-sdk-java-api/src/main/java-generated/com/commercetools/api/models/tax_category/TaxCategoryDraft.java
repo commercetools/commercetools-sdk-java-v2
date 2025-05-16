@@ -124,6 +124,8 @@ public interface TaxCategoryDraft
         return instance;
     }
 
+    public TaxCategoryDraft copyDeep();
+
     /**
      * factory method to create a deep copy of TaxCategoryDraft
      * @param template instance to be copied

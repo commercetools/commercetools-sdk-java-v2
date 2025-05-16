@@ -195,4 +195,8 @@ public class ShoppingListLineItemDraftImpl implements ShoppingListLineItemDraft,
                 .build();
     }
 
+    @Override
+    public ShoppingListLineItemDraft copyDeep() {
+        return ShoppingListLineItemDraft.deepCopy(this);
+    }
 }

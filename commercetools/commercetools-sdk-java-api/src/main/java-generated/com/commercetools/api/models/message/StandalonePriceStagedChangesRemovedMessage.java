@@ -36,6 +36,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("StandalonePriceStagedChangesRemoved")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StandalonePriceStagedChangesRemovedMessageImpl.class)
 public interface StandalonePriceStagedChangesRemovedMessage extends Message {
@@ -90,6 +91,8 @@ public interface StandalonePriceStagedChangesRemovedMessage extends Message {
         instance.setStagedChanges(template.getStagedChanges());
         return instance;
     }
+
+    public StandalonePriceStagedChangesRemovedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of StandalonePriceStagedChangesRemovedMessage

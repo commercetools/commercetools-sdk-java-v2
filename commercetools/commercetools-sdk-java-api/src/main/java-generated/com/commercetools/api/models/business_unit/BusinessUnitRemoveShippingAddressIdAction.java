@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("removeShippingAddressId")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = BusinessUnitRemoveShippingAddressIdActionImpl.class)
 public interface BusinessUnitRemoveShippingAddressIdAction extends BusinessUnitUpdateAction {
@@ -83,6 +84,8 @@ public interface BusinessUnitRemoveShippingAddressIdAction extends BusinessUnitU
         instance.setAddressKey(template.getAddressKey());
         return instance;
     }
+
+    public BusinessUnitRemoveShippingAddressIdAction copyDeep();
 
     /**
      * factory method to create a deep copy of BusinessUnitRemoveShippingAddressIdAction

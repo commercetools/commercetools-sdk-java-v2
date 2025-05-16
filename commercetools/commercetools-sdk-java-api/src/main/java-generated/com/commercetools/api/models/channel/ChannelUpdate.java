@@ -94,6 +94,8 @@ public interface ChannelUpdate
         return instance;
     }
 
+    public ChannelUpdate copyDeep();
+
     /**
      * factory method to create a deep copy of ChannelUpdate
      * @param template instance to be copied

@@ -93,4 +93,8 @@ public class ProductSetTaxCategoryActionImpl implements ProductSetTaxCategoryAct
                 .build();
     }
 
+    @Override
+    public ProductSetTaxCategoryAction copyDeep() {
+        return ProductSetTaxCategoryAction.deepCopy(this);
+    }
 }

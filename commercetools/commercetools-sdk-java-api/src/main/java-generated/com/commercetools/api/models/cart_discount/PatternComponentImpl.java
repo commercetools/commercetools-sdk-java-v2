@@ -69,4 +69,8 @@ public class PatternComponentImpl implements PatternComponent, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type).build();
     }
 
+    @Override
+    public PatternComponent copyDeep() {
+        return PatternComponent.deepCopy(this);
+    }
 }

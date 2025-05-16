@@ -91,4 +91,8 @@ public class ZoneChangeNameActionImpl implements ZoneChangeNameAction, ModelBase
                 .build();
     }
 
+    @Override
+    public ZoneChangeNameAction copyDeep() {
+        return ZoneChangeNameAction.deepCopy(this);
+    }
 }

@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("payment")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PaymentReferenceImpl.class)
 public interface PaymentReference extends Reference, com.commercetools.api.models.Identifiable<Payment>,
@@ -88,6 +89,8 @@ public interface PaymentReference extends Reference, com.commercetools.api.model
         instance.setObj(template.getObj());
         return instance;
     }
+
+    public PaymentReference copyDeep();
 
     /**
      * factory method to create a deep copy of PaymentReference

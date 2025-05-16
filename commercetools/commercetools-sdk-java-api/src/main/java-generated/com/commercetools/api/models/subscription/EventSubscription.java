@@ -89,6 +89,8 @@ public interface EventSubscription {
         return instance;
     }
 
+    public EventSubscription copyDeep();
+
     /**
      * factory method to create a deep copy of EventSubscription
      * @param template instance to be copied

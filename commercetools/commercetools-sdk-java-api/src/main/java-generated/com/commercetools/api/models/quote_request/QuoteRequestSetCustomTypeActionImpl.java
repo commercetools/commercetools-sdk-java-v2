@@ -111,4 +111,8 @@ public class QuoteRequestSetCustomTypeActionImpl implements QuoteRequestSetCusto
                 .build();
     }
 
+    @Override
+    public QuoteRequestSetCustomTypeAction copyDeep() {
+        return QuoteRequestSetCustomTypeAction.deepCopy(this);
+    }
 }

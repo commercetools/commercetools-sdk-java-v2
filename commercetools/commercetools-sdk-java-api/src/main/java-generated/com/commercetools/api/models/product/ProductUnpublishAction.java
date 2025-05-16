@@ -29,6 +29,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("unpublish")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductUnpublishActionImpl.class)
 public interface ProductUnpublishAction extends ProductUpdateAction {
@@ -55,6 +56,8 @@ public interface ProductUnpublishAction extends ProductUpdateAction {
         ProductUnpublishActionImpl instance = new ProductUnpublishActionImpl();
         return instance;
     }
+
+    public ProductUnpublishAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductUnpublishAction

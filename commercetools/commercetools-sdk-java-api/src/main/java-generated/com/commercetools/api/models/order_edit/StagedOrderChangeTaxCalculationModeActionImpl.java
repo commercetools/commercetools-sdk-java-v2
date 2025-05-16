@@ -93,4 +93,8 @@ public class StagedOrderChangeTaxCalculationModeActionImpl
                 .build();
     }
 
+    @Override
+    public StagedOrderChangeTaxCalculationModeAction copyDeep() {
+        return StagedOrderChangeTaxCalculationModeAction.deepCopy(this);
+    }
 }

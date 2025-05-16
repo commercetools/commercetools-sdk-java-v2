@@ -74,4 +74,8 @@ public class OrderSearchNumberRangeExpressionImpl implements OrderSearchNumberRa
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("range", range).build();
     }
 
+    @Override
+    public OrderSearchNumberRangeExpression copyDeep() {
+        return OrderSearchNumberRangeExpression.deepCopy(this);
+    }
 }

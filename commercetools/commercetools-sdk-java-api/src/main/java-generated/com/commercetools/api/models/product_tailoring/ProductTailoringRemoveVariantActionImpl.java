@@ -128,4 +128,8 @@ public class ProductTailoringRemoveVariantActionImpl implements ProductTailoring
                 .build();
     }
 
+    @Override
+    public ProductTailoringRemoveVariantAction copyDeep() {
+        return ProductTailoringRemoveVariantAction.deepCopy(this);
+    }
 }

@@ -97,6 +97,8 @@ public interface OrderSearchQueryExpressionValue {
         return instance;
     }
 
+    public OrderSearchQueryExpressionValue copyDeep();
+
     /**
      * factory method to create a deep copy of OrderSearchQueryExpressionValue
      * @param template instance to be copied
@@ -107,29 +109,9 @@ public interface OrderSearchQueryExpressionValue {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.order.OrderSearchAnyValue) {
-            return com.commercetools.api.models.order.OrderSearchAnyValue
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchAnyValue) template);
-        }
-        if (template instanceof com.commercetools.api.models.order.OrderSearchDateRangeValue) {
-            return com.commercetools.api.models.order.OrderSearchDateRangeValue
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchDateRangeValue) template);
-        }
-        if (template instanceof com.commercetools.api.models.order.OrderSearchFullTextValue) {
-            return com.commercetools.api.models.order.OrderSearchFullTextValue
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchFullTextValue) template);
-        }
-        if (template instanceof com.commercetools.api.models.order.OrderSearchLongRangeValue) {
-            return com.commercetools.api.models.order.OrderSearchLongRangeValue
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchLongRangeValue) template);
-        }
-        if (template instanceof com.commercetools.api.models.order.OrderSearchNumberRangeValue) {
-            return com.commercetools.api.models.order.OrderSearchNumberRangeValue
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchNumberRangeValue) template);
-        }
-        if (template instanceof com.commercetools.api.models.order.OrderSearchStringValue) {
-            return com.commercetools.api.models.order.OrderSearchStringValue
-                    .deepCopy((com.commercetools.api.models.order.OrderSearchStringValue) template);
+
+        if (!(template instanceof OrderSearchQueryExpressionValueImpl)) {
+            return template.copyDeep();
         }
         OrderSearchQueryExpressionValueImpl instance = new OrderSearchQueryExpressionValueImpl();
         instance.setField(template.getField());

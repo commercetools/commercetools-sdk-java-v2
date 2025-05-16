@@ -65,6 +65,8 @@ public interface StoreCountry {
         return instance;
     }
 
+    public StoreCountry copyDeep();
+
     /**
      * factory method to create a deep copy of StoreCountry
      * @param template instance to be copied

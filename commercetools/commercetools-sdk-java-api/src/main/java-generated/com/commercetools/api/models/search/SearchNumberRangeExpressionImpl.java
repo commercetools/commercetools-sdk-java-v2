@@ -74,4 +74,8 @@ public class SearchNumberRangeExpressionImpl implements SearchNumberRangeExpress
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("range", range).build();
     }
 
+    @Override
+    public SearchNumberRangeExpression copyDeep() {
+        return SearchNumberRangeExpression.deepCopy(this);
+    }
 }

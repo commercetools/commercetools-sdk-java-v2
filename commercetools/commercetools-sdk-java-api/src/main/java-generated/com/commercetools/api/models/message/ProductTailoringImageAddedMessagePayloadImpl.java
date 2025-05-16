@@ -175,4 +175,8 @@ public class ProductTailoringImageAddedMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public ProductTailoringImageAddedMessagePayload copyDeep() {
+        return ProductTailoringImageAddedMessagePayload.deepCopy(this);
+    }
 }

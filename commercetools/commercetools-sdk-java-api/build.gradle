@@ -43,9 +43,10 @@ projectDir.toPath().resolve("src/main/java-generated/com/commercetools/api/model
         include "com/**/models/$dirname/**", "index-files/**", "legal/**", "resources/**", "script-dir/**", "*"
         archiveBaseName = project.name + "-models-$dirname"
     }
+    def publication
     publishing {
         publications {
-            it.create("Maven$dirname", org.gradle.api.publish.maven.MavenPublication, {
+            publication = it.create("Maven$dirname", org.gradle.api.publish.maven.MavenPublication, {
                 artifact modelTask
                 artifact javadocsTask
                 artifact modelSourcesTask
@@ -92,6 +93,9 @@ projectDir.toPath().resolve("src/main/java-generated/com/commercetools/api/model
                 }
             })
         }
+    }
+    signing {
+        sign publication
     }
     assemble.dependsOn("models_$dirname")
 }
@@ -319,6 +323,9 @@ publishing {
             }
         }
     }
+}
+signing {
+    sign publishing.publications.MavenModelsBase, publishing.publications.MavenBase, publishing.publications.MavenPredicates
 }
 
 tasks.register('runMainMethodThreadLeakTest', JavaExec) {

@@ -42,7 +42,7 @@ public class GenericReferenceImpl<T> implements GenericReference<T> {
     }
 
     @Override
-    public Reference copyDeep() {
-        return null;
+    public GenericReference<T> copyDeep() {
+        return GenericReference.deepCopy(this);
     }
 }

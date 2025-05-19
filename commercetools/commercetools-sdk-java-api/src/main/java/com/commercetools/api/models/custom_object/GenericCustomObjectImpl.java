@@ -175,6 +175,6 @@ public class GenericCustomObjectImpl<TValue> implements GenericCustomObject<TVal
 
     @Override
     public BaseResource copyDeep() {
-        return null;
+        return GenericCustomObject.deepCopy(this);
     }
 }

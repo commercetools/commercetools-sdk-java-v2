@@ -2,12 +2,10 @@
 package com.commercetools.api.models.order;
 
 import com.commercetools.api.models.common.ReferenceTypeId;
-import com.commercetools.api.models.common.ResourceIdentifier;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import io.vrap.rmf.base.client.ModelBase;
-import io.vrap.rmf.base.client.utils.Generated;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
@@ -15,11 +13,10 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 /**
  * OrderResourceIdentifier
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @Deprecated
 public class OrderResourceIdentifierImpl implements OrderResourceIdentifier, ModelBase {
 
-    private ReferenceTypeId typeId;
+    private final ReferenceTypeId typeId;
 
     private String id;
 
@@ -93,7 +90,7 @@ public class OrderResourceIdentifierImpl implements OrderResourceIdentifier, Mod
     }
 
     @Override
-    public ResourceIdentifier copyDeep() {
+    public OrderResourceIdentifier copyDeep() {
         return OrderResourceIdentifier.deepCopy(this);
     }
 }

@@ -117,7 +117,7 @@ public class GraphQLRequestImpl<T> implements GraphQLRequest<T>, ModelBase {
     }
 
     @Override
-    public com.commercetools.api.models.graph_ql.GraphQLRequest copyDeep() {
-        return null;
+    public GraphQLRequest<T> copyDeep() {
+        return GraphQLRequest.deepCopy(this);
     }
 }

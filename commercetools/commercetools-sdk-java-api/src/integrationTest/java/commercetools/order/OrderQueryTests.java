@@ -54,6 +54,12 @@ public class OrderQueryTests {
                     .orders()
                     .search()
                     .post(orderSearchRequestBuilder -> orderSearchRequestBuilder.query(new OrderSearchQuery() {
+
+                        @Override
+                        public OrderSearchQuery copyDeep() {
+                            return null;
+                        }
+
                         /*
                         {
                             "exists": {

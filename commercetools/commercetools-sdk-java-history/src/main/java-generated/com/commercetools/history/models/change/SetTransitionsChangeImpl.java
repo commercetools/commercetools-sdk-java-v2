@@ -142,4 +142,8 @@ public class SetTransitionsChangeImpl implements SetTransitionsChange, ModelBase
                 .build();
     }
 
+    @Override
+    public SetTransitionsChange copyDeep() {
+        return SetTransitionsChange.deepCopy(this);
+    }
 }

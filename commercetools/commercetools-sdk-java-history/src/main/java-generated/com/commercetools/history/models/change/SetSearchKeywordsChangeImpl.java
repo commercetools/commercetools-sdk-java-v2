@@ -156,4 +156,8 @@ public class SetSearchKeywordsChangeImpl implements SetSearchKeywordsChange, Mod
                 .build();
     }
 
+    @Override
+    public SetSearchKeywordsChange copyDeep() {
+        return SetSearchKeywordsChange.deepCopy(this);
+    }
 }

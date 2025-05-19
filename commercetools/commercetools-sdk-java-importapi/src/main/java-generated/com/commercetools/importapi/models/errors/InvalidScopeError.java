@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("invalid_scope")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = InvalidScopeErrorImpl.class)
 public interface InvalidScopeError extends ErrorObject {
@@ -52,6 +53,8 @@ public interface InvalidScopeError extends ErrorObject {
         instance.setMessage(template.getMessage());
         return instance;
     }
+
+    public InvalidScopeError copyDeep();
 
     /**
      * factory method to create a deep copy of InvalidScopeError

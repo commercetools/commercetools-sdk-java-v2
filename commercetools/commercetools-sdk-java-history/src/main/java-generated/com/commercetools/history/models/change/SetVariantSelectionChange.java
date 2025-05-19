@@ -33,6 +33,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SetVariantSelectionChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetVariantSelectionChangeImpl.class)
 public interface SetVariantSelectionChange extends Change {
@@ -134,6 +135,8 @@ public interface SetVariantSelectionChange extends Change {
         instance.setProduct(template.getProduct());
         return instance;
     }
+
+    public SetVariantSelectionChange copyDeep();
 
     /**
      * factory method to create a deep copy of SetVariantSelectionChange

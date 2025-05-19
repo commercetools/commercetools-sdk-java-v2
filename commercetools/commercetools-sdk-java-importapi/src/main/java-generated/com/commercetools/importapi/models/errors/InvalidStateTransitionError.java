@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("InvalidTransition")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = InvalidStateTransitionErrorImpl.class)
 public interface InvalidStateTransitionError extends ErrorObject {
@@ -89,6 +90,8 @@ public interface InvalidStateTransitionError extends ErrorObject {
         instance.setNewState(template.getNewState());
         return instance;
     }
+
+    public InvalidStateTransitionError copyDeep();
 
     /**
      * factory method to create a deep copy of InvalidStateTransitionError

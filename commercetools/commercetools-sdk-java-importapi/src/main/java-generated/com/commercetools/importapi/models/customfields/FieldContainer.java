@@ -69,6 +69,8 @@ public interface FieldContainer {
         return instance;
     }
 
+    public FieldContainer copyDeep();
+
     /**
      * factory method to create a deep copy of FieldContainer
      * @param template instance to be copied

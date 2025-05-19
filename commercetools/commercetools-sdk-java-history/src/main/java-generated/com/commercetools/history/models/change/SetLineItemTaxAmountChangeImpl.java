@@ -193,4 +193,8 @@ public class SetLineItemTaxAmountChangeImpl implements SetLineItemTaxAmountChang
                 .build();
     }
 
+    @Override
+    public SetLineItemTaxAmountChange copyDeep() {
+        return SetLineItemTaxAmountChange.deepCopy(this);
+    }
 }

@@ -144,6 +144,8 @@ public interface ImportContainerPagedResponse {
         return instance;
     }
 
+    public ImportContainerPagedResponse copyDeep();
+
     /**
      * factory method to create a deep copy of ImportContainerPagedResponse
      * @param template instance to be copied

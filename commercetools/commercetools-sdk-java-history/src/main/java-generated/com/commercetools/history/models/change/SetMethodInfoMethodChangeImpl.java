@@ -133,4 +133,8 @@ public class SetMethodInfoMethodChangeImpl implements SetMethodInfoMethodChange,
                 .build();
     }
 
+    @Override
+    public SetMethodInfoMethodChange copyDeep() {
+        return SetMethodInfoMethodChange.deepCopy(this);
+    }
 }

@@ -133,4 +133,8 @@ public class SetExpectedDeliveryChangeImpl implements SetExpectedDeliveryChange,
                 .build();
     }
 
+    @Override
+    public SetExpectedDeliveryChange copyDeep() {
+        return SetExpectedDeliveryChange.deepCopy(this);
+    }
 }

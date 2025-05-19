@@ -133,4 +133,8 @@ public class UpdateSyncInfoChangeImpl implements UpdateSyncInfoChange, ModelBase
                 .build();
     }
 
+    @Override
+    public UpdateSyncInfoChange copyDeep() {
+        return UpdateSyncInfoChange.deepCopy(this);
+    }
 }

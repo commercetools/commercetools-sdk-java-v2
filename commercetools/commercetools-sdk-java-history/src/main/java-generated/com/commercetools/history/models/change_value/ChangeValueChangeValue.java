@@ -27,11 +27,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.history.models.change_value.ChangeValueAbsoluteChangeValueImpl.class, name = ChangeValueAbsoluteChangeValue.ABSOLUTE),
-        @JsonSubTypes.Type(value = com.commercetools.history.models.change_value.ChangeValueExternalChangeValueImpl.class, name = ChangeValueExternalChangeValue.EXTERNAL),
-        @JsonSubTypes.Type(value = com.commercetools.history.models.change_value.ChangeValueGiftLineItemChangeValueImpl.class, name = ChangeValueGiftLineItemChangeValue.GIFT_LINE_ITEM),
-        @JsonSubTypes.Type(value = com.commercetools.history.models.change_value.ChangeValueRelativeChangeValueImpl.class, name = ChangeValueRelativeChangeValue.RELATIVE) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = ChangeValueChangeValueImpl.class, visible = true)
 @JsonDeserialize(as = ChangeValueChangeValueImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -45,6 +40,8 @@ public interface ChangeValueChangeValue {
     @JsonProperty("type")
     public String getType();
 
+    public ChangeValueChangeValue copyDeep();
+
     /**
      * factory method to create a deep copy of ChangeValueChangeValue
      * @param template instance to be copied
@@ -55,21 +52,9 @@ public interface ChangeValueChangeValue {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.history.models.change_value.ChangeValueAbsoluteChangeValue) {
-            return com.commercetools.history.models.change_value.ChangeValueAbsoluteChangeValue
-                    .deepCopy((com.commercetools.history.models.change_value.ChangeValueAbsoluteChangeValue) template);
-        }
-        if (template instanceof com.commercetools.history.models.change_value.ChangeValueExternalChangeValue) {
-            return com.commercetools.history.models.change_value.ChangeValueExternalChangeValue
-                    .deepCopy((com.commercetools.history.models.change_value.ChangeValueExternalChangeValue) template);
-        }
-        if (template instanceof com.commercetools.history.models.change_value.ChangeValueGiftLineItemChangeValue) {
-            return com.commercetools.history.models.change_value.ChangeValueGiftLineItemChangeValue.deepCopy(
-                (com.commercetools.history.models.change_value.ChangeValueGiftLineItemChangeValue) template);
-        }
-        if (template instanceof com.commercetools.history.models.change_value.ChangeValueRelativeChangeValue) {
-            return com.commercetools.history.models.change_value.ChangeValueRelativeChangeValue
-                    .deepCopy((com.commercetools.history.models.change_value.ChangeValueRelativeChangeValue) template);
+
+        if (!(template instanceof ChangeValueChangeValueImpl)) {
+            return template.copyDeep();
         }
         ChangeValueChangeValueImpl instance = new ChangeValueChangeValueImpl();
         return instance;

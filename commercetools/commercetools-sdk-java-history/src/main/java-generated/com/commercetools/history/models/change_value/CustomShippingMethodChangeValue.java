@@ -65,6 +65,8 @@ public interface CustomShippingMethodChangeValue {
         return instance;
     }
 
+    public CustomShippingMethodChangeValue copyDeep();
+
     /**
      * factory method to create a deep copy of CustomShippingMethodChangeValue
      * @param template instance to be copied

@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ResourceDeletion")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ResourceDeletionErrorImpl.class)
 public interface ResourceDeletionError extends ErrorObject {
@@ -68,6 +69,8 @@ public interface ResourceDeletionError extends ErrorObject {
         instance.setResource(template.getResource());
         return instance;
     }
+
+    public ResourceDeletionError copyDeep();
 
     /**
      * factory method to create a deep copy of ResourceDeletionError

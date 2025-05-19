@@ -286,6 +286,8 @@ public interface DiscountCodeImport extends ImportResource {
         return instance;
     }
 
+    public DiscountCodeImport copyDeep();
+
     /**
      * factory method to create a deep copy of DiscountCodeImport
      * @param template instance to be copied

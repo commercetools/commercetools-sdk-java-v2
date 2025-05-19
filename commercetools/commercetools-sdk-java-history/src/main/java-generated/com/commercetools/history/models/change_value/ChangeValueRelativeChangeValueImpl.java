@@ -91,4 +91,8 @@ public class ChangeValueRelativeChangeValueImpl implements ChangeValueRelativeCh
                 .build();
     }
 
+    @Override
+    public ChangeValueRelativeChangeValue copyDeep() {
+        return ChangeValueRelativeChangeValue.deepCopy(this);
+    }
 }

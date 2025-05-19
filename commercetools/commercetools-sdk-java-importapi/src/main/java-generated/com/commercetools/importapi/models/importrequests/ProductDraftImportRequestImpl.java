@@ -98,4 +98,8 @@ public class ProductDraftImportRequestImpl implements ProductDraftImportRequest,
                 .build();
     }
 
+    @Override
+    public ProductDraftImportRequest copyDeep() {
+        return ProductDraftImportRequest.deepCopy(this);
+    }
 }

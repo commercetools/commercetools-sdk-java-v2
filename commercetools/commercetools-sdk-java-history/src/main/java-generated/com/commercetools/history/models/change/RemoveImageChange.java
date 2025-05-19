@@ -33,6 +33,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("RemoveImageChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = RemoveImageChangeImpl.class)
 public interface RemoveImageChange extends Change {
@@ -155,6 +156,8 @@ public interface RemoveImageChange extends Change {
         instance.setCatalogData(template.getCatalogData());
         return instance;
     }
+
+    public RemoveImageChange copyDeep();
 
     /**
      * factory method to create a deep copy of RemoveImageChange

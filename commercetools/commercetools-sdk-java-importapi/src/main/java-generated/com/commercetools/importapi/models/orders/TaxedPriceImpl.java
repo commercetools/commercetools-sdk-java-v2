@@ -118,4 +118,8 @@ public class TaxedPriceImpl implements TaxedPrice, ModelBase {
                 .build();
     }
 
+    @Override
+    public TaxedPrice copyDeep() {
+        return TaxedPrice.deepCopy(this);
+    }
 }

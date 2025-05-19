@@ -98,4 +98,8 @@ public class CustomerImportRequestImpl implements CustomerImportRequest, ModelBa
                 .build();
     }
 
+    @Override
+    public CustomerImportRequest copyDeep() {
+        return CustomerImportRequest.deepCopy(this);
+    }
 }

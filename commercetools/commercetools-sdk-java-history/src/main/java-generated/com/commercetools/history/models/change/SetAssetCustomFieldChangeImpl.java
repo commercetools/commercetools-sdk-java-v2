@@ -196,4 +196,8 @@ public class SetAssetCustomFieldChangeImpl implements SetAssetCustomFieldChange,
                 .build();
     }
 
+    @Override
+    public SetAssetCustomFieldChange copyDeep() {
+        return SetAssetCustomFieldChange.deepCopy(this);
+    }
 }

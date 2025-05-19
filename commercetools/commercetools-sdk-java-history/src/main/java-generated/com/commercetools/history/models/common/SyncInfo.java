@@ -101,6 +101,8 @@ public interface SyncInfo {
         return instance;
     }
 
+    public SyncInfo copyDeep();
+
     /**
      * factory method to create a deep copy of SyncInfo
      * @param template instance to be copied

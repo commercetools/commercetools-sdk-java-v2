@@ -137,4 +137,8 @@ public class SetReturnShipmentStateChangeImpl implements SetReturnShipmentStateC
                 .build();
     }
 
+    @Override
+    public SetReturnShipmentStateChange copyDeep() {
+        return SetReturnShipmentStateChange.deepCopy(this);
+    }
 }

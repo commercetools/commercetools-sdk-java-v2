@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("PaymentLabel")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PaymentLabelImpl.class)
 public interface PaymentLabel extends Label {
@@ -97,6 +98,8 @@ public interface PaymentLabel extends Label {
         instance.setAmountPlanned(template.getAmountPlanned());
         return instance;
     }
+
+    public PaymentLabel copyDeep();
 
     /**
      * factory method to create a deep copy of PaymentLabel

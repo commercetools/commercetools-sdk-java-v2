@@ -115,4 +115,8 @@ public class SetCartClassificationShippingRateInputValueImpl
                 .build();
     }
 
+    @Override
+    public SetCartClassificationShippingRateInputValue copyDeep() {
+        return SetCartClassificationShippingRateInputValue.deepCopy(this);
+    }
 }

@@ -153,4 +153,8 @@ public class SetShippingMethodTaxRateChangeImpl implements SetShippingMethodTaxR
                 .build();
     }
 
+    @Override
+    public SetShippingMethodTaxRateChange copyDeep() {
+        return SetShippingMethodTaxRateChange.deepCopy(this);
+    }
 }

@@ -133,4 +133,8 @@ public class ChangeBuyerAssignableChangeImpl implements ChangeBuyerAssignableCha
                 .build();
     }
 
+    @Override
+    public ChangeBuyerAssignableChange copyDeep() {
+        return ChangeBuyerAssignableChange.deepCopy(this);
+    }
 }

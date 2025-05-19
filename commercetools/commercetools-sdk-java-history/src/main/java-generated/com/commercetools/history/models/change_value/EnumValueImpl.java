@@ -94,4 +94,8 @@ public class EnumValueImpl implements EnumValue, ModelBase {
                 .build();
     }
 
+    @Override
+    public EnumValue copyDeep() {
+        return EnumValue.deepCopy(this);
+    }
 }

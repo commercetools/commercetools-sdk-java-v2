@@ -110,4 +110,8 @@ public class OrderLabelImpl implements OrderLabel, ModelBase {
                 .build();
     }
 
+    @Override
+    public OrderLabel copyDeep() {
+        return OrderLabel.deepCopy(this);
+    }
 }

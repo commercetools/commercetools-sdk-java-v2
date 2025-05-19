@@ -95,4 +95,8 @@ public class ParcelTrackingDataImpl implements ParcelTrackingData, ModelBase {
                 .build();
     }
 
+    @Override
+    public ParcelTrackingData copyDeep() {
+        return ParcelTrackingData.deepCopy(this);
+    }
 }

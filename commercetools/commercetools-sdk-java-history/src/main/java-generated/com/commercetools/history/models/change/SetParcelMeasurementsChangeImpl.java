@@ -157,4 +157,8 @@ public class SetParcelMeasurementsChangeImpl implements SetParcelMeasurementsCha
                 .build();
     }
 
+    @Override
+    public SetParcelMeasurementsChange copyDeep() {
+        return SetParcelMeasurementsChange.deepCopy(this);
+    }
 }

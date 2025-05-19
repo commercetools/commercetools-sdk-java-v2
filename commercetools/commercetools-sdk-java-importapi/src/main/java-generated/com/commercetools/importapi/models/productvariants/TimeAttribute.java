@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("time")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TimeAttributeImpl.class)
 public interface TimeAttribute extends Attribute {
@@ -71,6 +72,8 @@ public interface TimeAttribute extends Attribute {
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public TimeAttribute copyDeep();
 
     /**
      * factory method to create a deep copy of TimeAttribute

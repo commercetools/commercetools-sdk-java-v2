@@ -91,4 +91,8 @@ public class ChangeTargetLineItemsChangeValueImpl implements ChangeTargetLineIte
                 .build();
     }
 
+    @Override
+    public ChangeTargetLineItemsChangeValue copyDeep() {
+        return ChangeTargetLineItemsChangeValue.deepCopy(this);
+    }
 }

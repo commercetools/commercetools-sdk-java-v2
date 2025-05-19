@@ -133,4 +133,8 @@ public class SetDateOfBirthChangeImpl implements SetDateOfBirthChange, ModelBase
                 .build();
     }
 
+    @Override
+    public SetDateOfBirthChange copyDeep() {
+        return SetDateOfBirthChange.deepCopy(this);
+    }
 }

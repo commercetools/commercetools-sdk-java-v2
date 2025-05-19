@@ -177,4 +177,8 @@ public class ChangeLabelChangeImpl implements ChangeLabelChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public ChangeLabelChange copyDeep() {
+        return ChangeLabelChange.deepCopy(this);
+    }
 }

@@ -31,6 +31,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("StagedQuoteLabel")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedQuoteLabelImpl.class)
 public interface StagedQuoteLabel extends Label {
@@ -115,6 +116,8 @@ public interface StagedQuoteLabel extends Label {
         instance.setQuoteRequest(template.getQuoteRequest());
         return instance;
     }
+
+    public StagedQuoteLabel copyDeep();
 
     /**
      * factory method to create a deep copy of StagedQuoteLabel

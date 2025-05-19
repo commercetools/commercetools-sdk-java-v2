@@ -99,4 +99,8 @@ public class ParcelItemsImpl implements ParcelItems, ModelBase {
                 .build();
     }
 
+    @Override
+    public ParcelItems copyDeep() {
+        return ParcelItems.deepCopy(this);
+    }
 }

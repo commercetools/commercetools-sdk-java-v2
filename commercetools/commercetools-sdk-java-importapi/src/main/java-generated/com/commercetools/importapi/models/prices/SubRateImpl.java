@@ -94,4 +94,8 @@ public class SubRateImpl implements SubRate, ModelBase {
                 .build();
     }
 
+    @Override
+    public SubRate copyDeep() {
+        return SubRate.deepCopy(this);
+    }
 }

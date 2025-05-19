@@ -110,4 +110,8 @@ public class CustomObjectKeyReferenceImpl implements CustomObjectKeyReference, M
                 .build();
     }
 
+    @Override
+    public CustomObjectKeyReference copyDeep() {
+        return CustomObjectKeyReference.deepCopy(this);
+    }
 }

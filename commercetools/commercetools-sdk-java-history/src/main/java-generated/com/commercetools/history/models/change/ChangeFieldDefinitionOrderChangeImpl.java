@@ -145,4 +145,8 @@ public class ChangeFieldDefinitionOrderChangeImpl implements ChangeFieldDefiniti
                 .build();
     }
 
+    @Override
+    public ChangeFieldDefinitionOrderChange copyDeep() {
+        return ChangeFieldDefinitionOrderChange.deepCopy(this);
+    }
 }

@@ -98,4 +98,8 @@ public class ProductTypeImportRequestImpl implements ProductTypeImportRequest, M
                 .build();
     }
 
+    @Override
+    public ProductTypeImportRequest copyDeep() {
+        return ProductTypeImportRequest.deepCopy(this);
+    }
 }

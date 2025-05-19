@@ -154,4 +154,8 @@ public class ChangeValueGiftLineItemChangeValueImpl implements ChangeValueGiftLi
                 .build();
     }
 
+    @Override
+    public ChangeValueGiftLineItemChangeValue copyDeep() {
+        return ChangeValueGiftLineItemChangeValue.deepCopy(this);
+    }
 }

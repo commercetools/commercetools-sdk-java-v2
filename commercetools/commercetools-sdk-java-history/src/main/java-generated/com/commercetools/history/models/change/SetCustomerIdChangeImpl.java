@@ -137,4 +137,8 @@ public class SetCustomerIdChangeImpl implements SetCustomerIdChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public SetCustomerIdChange copyDeep() {
+        return SetCustomerIdChange.deepCopy(this);
+    }
 }

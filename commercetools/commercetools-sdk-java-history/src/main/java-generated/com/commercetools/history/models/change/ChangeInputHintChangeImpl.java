@@ -177,4 +177,8 @@ public class ChangeInputHintChangeImpl implements ChangeInputHintChange, ModelBa
                 .build();
     }
 
+    @Override
+    public ChangeInputHintChange copyDeep() {
+        return ChangeInputHintChange.deepCopy(this);
+    }
 }

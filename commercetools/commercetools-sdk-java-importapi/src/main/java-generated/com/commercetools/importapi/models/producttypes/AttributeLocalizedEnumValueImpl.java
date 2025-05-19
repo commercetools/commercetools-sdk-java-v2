@@ -100,4 +100,8 @@ public class AttributeLocalizedEnumValueImpl implements AttributeLocalizedEnumVa
                 .build();
     }
 
+    @Override
+    public AttributeLocalizedEnumValue copyDeep() {
+        return AttributeLocalizedEnumValue.deepCopy(this);
+    }
 }

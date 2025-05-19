@@ -157,4 +157,8 @@ public class SetCustomLineItemShippingDetailsChangeImpl implements SetCustomLine
                 .build();
     }
 
+    @Override
+    public SetCustomLineItemShippingDetailsChange copyDeep() {
+        return SetCustomLineItemShippingDetailsChange.deepCopy(this);
+    }
 }

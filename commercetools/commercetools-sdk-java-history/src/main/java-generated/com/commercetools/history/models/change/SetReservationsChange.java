@@ -32,6 +32,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SetReservationsChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetReservationsChangeImpl.class)
 public interface SetReservationsChange extends Change {
@@ -132,6 +133,8 @@ public interface SetReservationsChange extends Change {
         instance.setNextValue(template.getNextValue());
         return instance;
     }
+
+    public SetReservationsChange copyDeep();
 
     /**
      * factory method to create a deep copy of SetReservationsChange

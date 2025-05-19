@@ -99,4 +99,8 @@ public class ProductVariantImportRequestImpl implements ProductVariantImportRequ
                 .build();
     }
 
+    @Override
+    public ProductVariantImportRequest copyDeep() {
+        return ProductVariantImportRequest.deepCopy(this);
+    }
 }

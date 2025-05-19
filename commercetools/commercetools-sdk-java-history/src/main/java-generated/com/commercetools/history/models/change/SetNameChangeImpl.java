@@ -133,4 +133,8 @@ public class SetNameChangeImpl implements SetNameChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public SetNameChange copyDeep() {
+        return SetNameChange.deepCopy(this);
+    }
 }

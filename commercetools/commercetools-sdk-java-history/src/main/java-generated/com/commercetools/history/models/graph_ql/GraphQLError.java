@@ -135,6 +135,8 @@ public interface GraphQLError {
         return instance;
     }
 
+    public GraphQLError copyDeep();
+
     /**
      * factory method to create a deep copy of GraphQLError
      * @param template instance to be copied

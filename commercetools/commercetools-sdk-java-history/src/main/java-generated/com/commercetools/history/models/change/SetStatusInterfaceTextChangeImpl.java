@@ -133,4 +133,8 @@ public class SetStatusInterfaceTextChangeImpl implements SetStatusInterfaceTextC
                 .build();
     }
 
+    @Override
+    public SetStatusInterfaceTextChange copyDeep() {
+        return SetStatusInterfaceTextChange.deepCopy(this);
+    }
 }

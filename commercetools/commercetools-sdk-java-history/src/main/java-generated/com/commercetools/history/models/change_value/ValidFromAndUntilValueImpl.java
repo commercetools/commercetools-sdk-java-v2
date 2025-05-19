@@ -95,4 +95,8 @@ public class ValidFromAndUntilValueImpl implements ValidFromAndUntilValue, Model
                 .build();
     }
 
+    @Override
+    public ValidFromAndUntilValue copyDeep() {
+        return ValidFromAndUntilValue.deepCopy(this);
+    }
 }

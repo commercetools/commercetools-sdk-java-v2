@@ -109,4 +109,8 @@ public class CustomObjectLabelImpl implements CustomObjectLabel, ModelBase {
                 .build();
     }
 
+    @Override
+    public CustomObjectLabel copyDeep() {
+        return CustomObjectLabel.deepCopy(this);
+    }
 }

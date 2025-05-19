@@ -110,4 +110,8 @@ public class AddAttributeDefinitionChangeImpl implements AddAttributeDefinitionC
                 .build();
     }
 
+    @Override
+    public AddAttributeDefinitionChange copyDeep() {
+        return AddAttributeDefinitionChange.deepCopy(this);
+    }
 }

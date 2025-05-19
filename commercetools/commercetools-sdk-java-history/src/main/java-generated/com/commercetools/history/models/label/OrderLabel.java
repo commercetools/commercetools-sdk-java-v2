@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("OrderLabel")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderLabelImpl.class)
 public interface OrderLabel extends Label {
@@ -94,6 +95,8 @@ public interface OrderLabel extends Label {
         instance.setOrderNumber(template.getOrderNumber());
         return instance;
     }
+
+    public OrderLabel copyDeep();
 
     /**
      * factory method to create a deep copy of OrderLabel

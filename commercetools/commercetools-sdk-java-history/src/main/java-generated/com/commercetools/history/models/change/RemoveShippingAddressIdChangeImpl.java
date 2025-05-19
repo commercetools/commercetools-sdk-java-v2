@@ -161,4 +161,8 @@ public class RemoveShippingAddressIdChangeImpl implements RemoveShippingAddressI
                 .build();
     }
 
+    @Override
+    public RemoveShippingAddressIdChange copyDeep() {
+        return RemoveShippingAddressIdChange.deepCopy(this);
+    }
 }

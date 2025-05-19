@@ -157,4 +157,8 @@ public class ImportContainerImpl implements ImportContainer, ModelBase {
                 .build();
     }
 
+    @Override
+    public ImportContainer copyDeep() {
+        return ImportContainer.deepCopy(this);
+    }
 }

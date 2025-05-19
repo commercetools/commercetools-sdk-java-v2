@@ -83,4 +83,8 @@ public class ImportResponseImpl implements ImportResponse, ModelBase {
                 .build();
     }
 
+    @Override
+    public ImportResponse copyDeep() {
+        return ImportResponse.deepCopy(this);
+    }
 }

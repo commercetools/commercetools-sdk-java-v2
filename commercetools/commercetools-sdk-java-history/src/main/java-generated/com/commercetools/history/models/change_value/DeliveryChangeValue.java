@@ -123,6 +123,8 @@ public interface DeliveryChangeValue {
         return instance;
     }
 
+    public DeliveryChangeValue copyDeep();
+
     /**
      * factory method to create a deep copy of DeliveryChangeValue
      * @param template instance to be copied

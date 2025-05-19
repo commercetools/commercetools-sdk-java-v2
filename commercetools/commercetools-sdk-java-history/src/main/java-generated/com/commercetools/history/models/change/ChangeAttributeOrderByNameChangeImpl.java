@@ -141,4 +141,8 @@ public class ChangeAttributeOrderByNameChangeImpl implements ChangeAttributeOrde
                 .build();
     }
 
+    @Override
+    public ChangeAttributeOrderByNameChange copyDeep() {
+        return ChangeAttributeOrderByNameChange.deepCopy(this);
+    }
 }

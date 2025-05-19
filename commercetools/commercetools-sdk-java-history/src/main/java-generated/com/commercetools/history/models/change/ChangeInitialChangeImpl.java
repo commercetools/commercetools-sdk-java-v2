@@ -133,4 +133,8 @@ public class ChangeInitialChangeImpl implements ChangeInitialChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public ChangeInitialChange copyDeep() {
+        return ChangeInitialChange.deepCopy(this);
+    }
 }

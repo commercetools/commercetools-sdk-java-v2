@@ -133,4 +133,8 @@ public class ChangeInheritedAssociateChangeImpl implements ChangeInheritedAssoci
                 .build();
     }
 
+    @Override
+    public ChangeInheritedAssociateChange copyDeep() {
+        return ChangeInheritedAssociateChange.deepCopy(this);
+    }
 }

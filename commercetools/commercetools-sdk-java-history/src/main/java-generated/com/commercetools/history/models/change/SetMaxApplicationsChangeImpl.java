@@ -133,4 +133,8 @@ public class SetMaxApplicationsChangeImpl implements SetMaxApplicationsChange, M
                 .build();
     }
 
+    @Override
+    public SetMaxApplicationsChange copyDeep() {
+        return SetMaxApplicationsChange.deepCopy(this);
+    }
 }

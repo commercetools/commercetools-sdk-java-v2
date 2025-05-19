@@ -37,6 +37,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SetOrderLineItemCustomFieldChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetOrderLineItemCustomFieldChangeImpl.class)
 public interface SetOrderLineItemCustomFieldChange extends Change {
@@ -184,6 +185,8 @@ public interface SetOrderLineItemCustomFieldChange extends Change {
         instance.setVariant(template.getVariant());
         return instance;
     }
+
+    public SetOrderLineItemCustomFieldChange copyDeep();
 
     /**
      * factory method to create a deep copy of SetOrderLineItemCustomFieldChange

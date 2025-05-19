@@ -110,4 +110,8 @@ public class RemoveAddressChangeImpl implements RemoveAddressChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public RemoveAddressChange copyDeep() {
+        return RemoveAddressChange.deepCopy(this);
+    }
 }

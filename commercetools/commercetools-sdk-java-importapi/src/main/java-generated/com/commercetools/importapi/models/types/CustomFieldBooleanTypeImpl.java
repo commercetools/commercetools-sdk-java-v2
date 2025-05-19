@@ -62,4 +62,8 @@ public class CustomFieldBooleanTypeImpl implements CustomFieldBooleanType, Model
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("name", name).build();
     }
 
+    @Override
+    public CustomFieldBooleanType copyDeep() {
+        return CustomFieldBooleanType.deepCopy(this);
+    }
 }

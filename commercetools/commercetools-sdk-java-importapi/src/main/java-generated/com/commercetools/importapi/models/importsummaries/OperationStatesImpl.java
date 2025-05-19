@@ -196,4 +196,8 @@ public class OperationStatesImpl implements OperationStates, ModelBase {
                 .build();
     }
 
+    @Override
+    public OperationStates copyDeep() {
+        return OperationStates.deepCopy(this);
+    }
 }

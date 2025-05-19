@@ -91,4 +91,8 @@ public class PublishChangeImpl implements PublishChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public PublishChange copyDeep() {
+        return PublishChange.deepCopy(this);
+    }
 }

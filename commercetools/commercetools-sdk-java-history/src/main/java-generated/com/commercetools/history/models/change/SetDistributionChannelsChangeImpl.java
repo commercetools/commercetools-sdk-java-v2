@@ -142,4 +142,8 @@ public class SetDistributionChannelsChangeImpl implements SetDistributionChannel
                 .build();
     }
 
+    @Override
+    public SetDistributionChannelsChange copyDeep() {
+        return SetDistributionChannelsChange.deepCopy(this);
+    }
 }

@@ -134,4 +134,8 @@ public class SetDeleteDaysAfterLastModificationChangeImpl
                 .build();
     }
 
+    @Override
+    public SetDeleteDaysAfterLastModificationChange copyDeep() {
+        return SetDeleteDaysAfterLastModificationChange.deepCopy(this);
+    }
 }

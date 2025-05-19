@@ -137,4 +137,8 @@ public class SetCustomerEmailChangeImpl implements SetCustomerEmailChange, Model
                 .build();
     }
 
+    @Override
+    public SetCustomerEmailChange copyDeep() {
+        return SetCustomerEmailChange.deepCopy(this);
+    }
 }

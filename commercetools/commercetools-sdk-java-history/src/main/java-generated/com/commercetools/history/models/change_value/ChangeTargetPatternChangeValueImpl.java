@@ -167,4 +167,8 @@ public class ChangeTargetPatternChangeValueImpl implements ChangeTargetPatternCh
                 .build();
     }
 
+    @Override
+    public ChangeTargetPatternChangeValue copyDeep() {
+        return ChangeTargetPatternChangeValue.deepCopy(this);
+    }
 }

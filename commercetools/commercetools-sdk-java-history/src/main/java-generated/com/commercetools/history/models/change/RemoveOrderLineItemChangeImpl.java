@@ -133,4 +133,8 @@ public class RemoveOrderLineItemChangeImpl implements RemoveOrderLineItemChange,
                 .build();
     }
 
+    @Override
+    public RemoveOrderLineItemChange copyDeep() {
+        return RemoveOrderLineItemChange.deepCopy(this);
+    }
 }

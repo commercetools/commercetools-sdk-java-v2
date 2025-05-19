@@ -92,4 +92,8 @@ public class AttributeSetTypeImpl implements AttributeSetType, ModelBase {
                 .build();
     }
 
+    @Override
+    public AttributeSetType copyDeep() {
+        return AttributeSetType.deepCopy(this);
+    }
 }

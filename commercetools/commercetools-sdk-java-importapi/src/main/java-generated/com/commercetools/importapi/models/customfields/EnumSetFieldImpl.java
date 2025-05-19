@@ -95,4 +95,8 @@ public class EnumSetFieldImpl implements EnumSetField, ModelBase {
                 .build();
     }
 
+    @Override
+    public EnumSetField copyDeep() {
+        return EnumSetField.deepCopy(this);
+    }
 }

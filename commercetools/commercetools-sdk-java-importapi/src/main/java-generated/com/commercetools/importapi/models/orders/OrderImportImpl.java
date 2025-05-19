@@ -558,4 +558,8 @@ public class OrderImportImpl implements OrderImport, ModelBase {
                 .build();
     }
 
+    @Override
+    public OrderImport copyDeep() {
+        return OrderImport.deepCopy(this);
+    }
 }

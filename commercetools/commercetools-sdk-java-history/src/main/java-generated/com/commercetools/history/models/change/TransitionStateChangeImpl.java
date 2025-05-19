@@ -144,4 +144,8 @@ public class TransitionStateChangeImpl implements TransitionStateChange, ModelBa
                 .build();
     }
 
+    @Override
+    public TransitionStateChange copyDeep() {
+        return TransitionStateChange.deepCopy(this);
+    }
 }

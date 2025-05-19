@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("reference")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ReferenceAttributeImpl.class)
 public interface ReferenceAttribute extends Attribute {
@@ -73,6 +74,8 @@ public interface ReferenceAttribute extends Attribute {
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public ReferenceAttribute copyDeep();
 
     /**
      * factory method to create a deep copy of ReferenceAttribute

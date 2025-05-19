@@ -195,4 +195,8 @@ public class SetDiscountedPriceChangeImpl implements SetDiscountedPriceChange, M
                 .build();
     }
 
+    @Override
+    public SetDiscountedPriceChange copyDeep() {
+        return SetDiscountedPriceChange.deepCopy(this);
+    }
 }

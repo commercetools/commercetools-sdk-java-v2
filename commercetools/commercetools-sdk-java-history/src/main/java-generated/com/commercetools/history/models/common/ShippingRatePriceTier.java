@@ -65,6 +65,8 @@ public interface ShippingRatePriceTier {
         return instance;
     }
 
+    public ShippingRatePriceTier copyDeep();
+
     /**
      * factory method to create a deep copy of ShippingRatePriceTier
      * @param template instance to be copied

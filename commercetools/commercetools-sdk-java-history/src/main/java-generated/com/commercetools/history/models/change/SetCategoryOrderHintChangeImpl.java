@@ -176,4 +176,8 @@ public class SetCategoryOrderHintChangeImpl implements SetCategoryOrderHintChang
                 .build();
     }
 
+    @Override
+    public SetCategoryOrderHintChange copyDeep() {
+        return SetCategoryOrderHintChange.deepCopy(this);
+    }
 }

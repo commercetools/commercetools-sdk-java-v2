@@ -92,4 +92,8 @@ public class ChangeImpl implements Change, ModelBase {
                 .build();
     }
 
+    @Override
+    public Change copyDeep() {
+        return Change.deepCopy(this);
+    }
 }

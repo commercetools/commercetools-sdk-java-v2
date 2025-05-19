@@ -133,4 +133,8 @@ public class SetStatusInterfaceCodeChangeImpl implements SetStatusInterfaceCodeC
                 .build();
     }
 
+    @Override
+    public SetStatusInterfaceCodeChange copyDeep() {
+        return SetStatusInterfaceCodeChange.deepCopy(this);
+    }
 }

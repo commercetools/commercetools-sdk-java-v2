@@ -110,4 +110,8 @@ public class RemoveFieldDefinitionChangeImpl implements RemoveFieldDefinitionCha
                 .build();
     }
 
+    @Override
+    public RemoveFieldDefinitionChange copyDeep() {
+        return RemoveFieldDefinitionChange.deepCopy(this);
+    }
 }

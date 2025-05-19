@@ -139,4 +139,8 @@ public class SetValidFromAndUntilChangeImpl implements SetValidFromAndUntilChang
                 .build();
     }
 
+    @Override
+    public SetValidFromAndUntilChange copyDeep() {
+        return SetValidFromAndUntilChange.deepCopy(this);
+    }
 }

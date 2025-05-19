@@ -77,6 +77,8 @@ public interface ImportResponse {
         return instance;
     }
 
+    public ImportResponse copyDeep();
+
     /**
      * factory method to create a deep copy of ImportResponse
      * @param template instance to be copied

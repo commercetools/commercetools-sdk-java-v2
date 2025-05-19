@@ -31,6 +31,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("AddEnumValueChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AddEnumValueChangeImpl.class)
 public interface AddEnumValueChange extends Change {
@@ -114,6 +115,8 @@ public interface AddEnumValueChange extends Change {
         instance.setFieldName(template.getFieldName());
         return instance;
     }
+
+    public AddEnumValueChange copyDeep();
 
     /**
      * factory method to create a deep copy of AddEnumValueChange

@@ -91,4 +91,8 @@ public class CustomerGroupKeyReferenceImpl implements CustomerGroupKeyReference,
                 .build();
     }
 
+    @Override
+    public CustomerGroupKeyReference copyDeep() {
+        return CustomerGroupKeyReference.deepCopy(this);
+    }
 }

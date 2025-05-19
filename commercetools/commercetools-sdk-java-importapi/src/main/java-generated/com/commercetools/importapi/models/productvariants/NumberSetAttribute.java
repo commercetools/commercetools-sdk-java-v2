@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("number-set")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = NumberSetAttributeImpl.class)
 public interface NumberSetAttribute extends Attribute {
@@ -78,6 +79,8 @@ public interface NumberSetAttribute extends Attribute {
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public NumberSetAttribute copyDeep();
 
     /**
      * factory method to create a deep copy of NumberSetAttribute

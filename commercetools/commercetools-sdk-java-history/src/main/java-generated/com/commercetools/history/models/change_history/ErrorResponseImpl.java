@@ -160,4 +160,8 @@ public class ErrorResponseImpl implements ErrorResponse, ModelBase {
                 .build();
     }
 
+    @Override
+    public ErrorResponse copyDeep() {
+        return ErrorResponse.deepCopy(this);
+    }
 }

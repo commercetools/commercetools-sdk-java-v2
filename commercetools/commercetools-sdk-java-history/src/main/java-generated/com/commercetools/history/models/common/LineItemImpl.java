@@ -257,4 +257,8 @@ public class LineItemImpl implements LineItem, ModelBase {
                 .build();
     }
 
+    @Override
+    public LineItem copyDeep() {
+        return LineItem.deepCopy(this);
+    }
 }

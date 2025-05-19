@@ -153,4 +153,8 @@ public class SetCustomTypeChangeImpl implements SetCustomTypeChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public SetCustomTypeChange copyDeep() {
+        return SetCustomTypeChange.deepCopy(this);
+    }
 }

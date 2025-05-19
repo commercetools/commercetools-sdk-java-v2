@@ -110,4 +110,8 @@ public class AddInterfaceInteractionChangeImpl implements AddInterfaceInteractio
                 .build();
     }
 
+    @Override
+    public AddInterfaceInteractionChange copyDeep() {
+        return AddInterfaceInteractionChange.deepCopy(this);
+    }
 }

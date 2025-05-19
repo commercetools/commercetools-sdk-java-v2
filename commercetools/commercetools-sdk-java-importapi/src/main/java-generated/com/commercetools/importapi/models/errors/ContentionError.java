@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("Contention")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ContentionErrorImpl.class)
 public interface ContentionError extends ErrorObject {
@@ -52,6 +53,8 @@ public interface ContentionError extends ErrorObject {
         instance.setMessage(template.getMessage());
         return instance;
     }
+
+    public ContentionError copyDeep();
 
     /**
      * factory method to create a deep copy of ContentionError

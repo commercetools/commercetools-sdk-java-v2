@@ -168,6 +168,8 @@ public interface InventoryImport extends ImportResource {
         return instance;
     }
 
+    public InventoryImport copyDeep();
+
     /**
      * factory method to create a deep copy of InventoryImport
      * @param template instance to be copied

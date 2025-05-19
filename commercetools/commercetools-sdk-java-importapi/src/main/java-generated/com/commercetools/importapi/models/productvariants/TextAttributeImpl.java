@@ -109,4 +109,8 @@ public class TextAttributeImpl implements TextAttribute, ModelBase {
                 .build();
     }
 
+    @Override
+    public TextAttribute copyDeep() {
+        return TextAttribute.deepCopy(this);
+    }
 }

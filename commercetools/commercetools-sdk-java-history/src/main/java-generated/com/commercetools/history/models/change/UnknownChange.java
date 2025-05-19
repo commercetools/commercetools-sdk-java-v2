@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("UnknownChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = UnknownChangeImpl.class)
 public interface UnknownChange extends Change {
@@ -109,6 +110,8 @@ public interface UnknownChange extends Change {
         instance.setNextValue(template.getNextValue());
         return instance;
     }
+
+    public UnknownChange copyDeep();
 
     /**
      * factory method to create a deep copy of UnknownChange

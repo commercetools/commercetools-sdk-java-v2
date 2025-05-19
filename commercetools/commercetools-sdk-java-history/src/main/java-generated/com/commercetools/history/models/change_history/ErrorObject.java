@@ -82,6 +82,8 @@ public interface ErrorObject {
         return instance;
     }
 
+    public ErrorObject copyDeep();
+
     /**
      * factory method to create a deep copy of ErrorObject
      * @param template instance to be copied

@@ -29,9 +29,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.common.HighPrecisionMoneyImpl.class, name = HighPrecisionMoney.HIGH_PRECISION),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.common.MoneyImpl.class, name = Money.CENT_PRECISION) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = TypedMoneyImpl.class, visible = true)
 @JsonDeserialize(as = TypedMoneyImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -90,6 +87,8 @@ public interface TypedMoney {
 
     public void setCurrencyCode(final String currencyCode);
 
+    public TypedMoney copyDeep();
+
     /**
      * factory method to create a deep copy of TypedMoney
      * @param template instance to be copied
@@ -100,13 +99,9 @@ public interface TypedMoney {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.importapi.models.common.HighPrecisionMoney) {
-            return com.commercetools.importapi.models.common.HighPrecisionMoney
-                    .deepCopy((com.commercetools.importapi.models.common.HighPrecisionMoney) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.common.Money) {
-            return com.commercetools.importapi.models.common.Money
-                    .deepCopy((com.commercetools.importapi.models.common.Money) template);
+
+        if (!(template instanceof TypedMoneyImpl)) {
+            return template.copyDeep();
         }
         TypedMoneyImpl instance = new TypedMoneyImpl();
         instance.setFractionDigits(template.getFractionDigits());

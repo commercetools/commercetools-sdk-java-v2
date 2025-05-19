@@ -167,6 +167,8 @@ public interface OperationStates {
         return instance;
     }
 
+    public OperationStates copyDeep();
+
     /**
      * factory method to create a deep copy of OperationStates
      * @param template instance to be copied

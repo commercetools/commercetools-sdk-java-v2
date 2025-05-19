@@ -173,4 +173,8 @@ public class SetCustomLineItemMoneyChangeImpl implements SetCustomLineItemMoneyC
                 .build();
     }
 
+    @Override
+    public SetCustomLineItemMoneyChange copyDeep() {
+        return SetCustomLineItemMoneyChange.deepCopy(this);
+    }
 }

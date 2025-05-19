@@ -110,4 +110,8 @@ public class ResourceUpdateErrorImpl implements ResourceUpdateError, ModelBase {
                 .build();
     }
 
+    @Override
+    public ResourceUpdateError copyDeep() {
+        return ResourceUpdateError.deepCopy(this);
+    }
 }

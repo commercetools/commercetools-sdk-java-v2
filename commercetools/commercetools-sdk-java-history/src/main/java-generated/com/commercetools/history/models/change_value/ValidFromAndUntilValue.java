@@ -82,6 +82,8 @@ public interface ValidFromAndUntilValue {
         return instance;
     }
 
+    public ValidFromAndUntilValue copyDeep();
+
     /**
      * factory method to create a deep copy of ValidFromAndUntilValue
      * @param template instance to be copied

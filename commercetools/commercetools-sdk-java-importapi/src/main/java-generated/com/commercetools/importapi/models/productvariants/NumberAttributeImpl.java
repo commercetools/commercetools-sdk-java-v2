@@ -109,4 +109,8 @@ public class NumberAttributeImpl implements NumberAttribute, ModelBase {
                 .build();
     }
 
+    @Override
+    public NumberAttribute copyDeep() {
+        return NumberAttribute.deepCopy(this);
+    }
 }

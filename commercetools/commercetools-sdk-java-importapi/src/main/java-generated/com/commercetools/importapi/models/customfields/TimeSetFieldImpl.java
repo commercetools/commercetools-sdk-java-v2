@@ -95,4 +95,8 @@ public class TimeSetFieldImpl implements TimeSetField, ModelBase {
                 .build();
     }
 
+    @Override
+    public TimeSetField copyDeep() {
+        return TimeSetField.deepCopy(this);
+    }
 }

@@ -31,6 +31,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ChangeAttributeConstraintChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeAttributeConstraintChangeImpl.class)
 public interface ChangeAttributeConstraintChange extends Change {
@@ -129,6 +130,8 @@ public interface ChangeAttributeConstraintChange extends Change {
         instance.setAttributeName(template.getAttributeName());
         return instance;
     }
+
+    public ChangeAttributeConstraintChange copyDeep();
 
     /**
      * factory method to create a deep copy of ChangeAttributeConstraintChange

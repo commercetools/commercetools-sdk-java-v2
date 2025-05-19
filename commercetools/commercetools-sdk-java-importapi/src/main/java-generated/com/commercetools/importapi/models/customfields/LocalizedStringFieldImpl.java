@@ -97,4 +97,8 @@ public class LocalizedStringFieldImpl implements LocalizedStringField, ModelBase
                 .build();
     }
 
+    @Override
+    public LocalizedStringField copyDeep() {
+        return LocalizedStringField.deepCopy(this);
+    }
 }

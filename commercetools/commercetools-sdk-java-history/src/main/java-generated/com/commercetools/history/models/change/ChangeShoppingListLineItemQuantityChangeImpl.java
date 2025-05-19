@@ -154,4 +154,8 @@ public class ChangeShoppingListLineItemQuantityChangeImpl
                 .build();
     }
 
+    @Override
+    public ChangeShoppingListLineItemQuantityChange copyDeep() {
+        return ChangeShoppingListLineItemQuantityChange.deepCopy(this);
+    }
 }

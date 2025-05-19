@@ -133,4 +133,8 @@ public class SetGeoLocationChangeImpl implements SetGeoLocationChange, ModelBase
                 .build();
     }
 
+    @Override
+    public SetGeoLocationChange copyDeep() {
+        return SetGeoLocationChange.deepCopy(this);
+    }
 }

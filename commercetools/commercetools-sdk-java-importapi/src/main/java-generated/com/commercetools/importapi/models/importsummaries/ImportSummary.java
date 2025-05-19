@@ -84,6 +84,8 @@ public interface ImportSummary {
         return instance;
     }
 
+    public ImportSummary copyDeep();
+
     /**
      * factory method to create a deep copy of ImportSummary
      * @param template instance to be copied

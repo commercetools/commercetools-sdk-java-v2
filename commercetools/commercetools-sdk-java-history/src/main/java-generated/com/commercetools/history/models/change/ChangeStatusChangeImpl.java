@@ -133,4 +133,8 @@ public class ChangeStatusChangeImpl implements ChangeStatusChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public ChangeStatusChange copyDeep() {
+        return ChangeStatusChange.deepCopy(this);
+    }
 }

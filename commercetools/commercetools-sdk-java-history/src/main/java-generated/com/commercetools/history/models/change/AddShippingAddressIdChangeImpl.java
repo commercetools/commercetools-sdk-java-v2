@@ -161,4 +161,8 @@ public class AddShippingAddressIdChangeImpl implements AddShippingAddressIdChang
                 .build();
     }
 
+    @Override
+    public AddShippingAddressIdChange copyDeep() {
+        return AddShippingAddressIdChange.deepCopy(this);
+    }
 }

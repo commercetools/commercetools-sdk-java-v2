@@ -91,4 +91,8 @@ public class InvalidInputImpl implements InvalidInput, ModelBase {
                 .build();
     }
 
+    @Override
+    public InvalidInput copyDeep() {
+        return InvalidInput.deepCopy(this);
+    }
 }

@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SetIsValidChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetIsValidChangeImpl.class)
 public interface SetIsValidChange extends Change {
@@ -111,6 +112,8 @@ public interface SetIsValidChange extends Change {
         instance.setNextValue(template.getNextValue());
         return instance;
     }
+
+    public SetIsValidChange copyDeep();
 
     /**
      * factory method to create a deep copy of SetIsValidChange

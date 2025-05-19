@@ -153,4 +153,8 @@ public class QuoteLabelImpl implements QuoteLabel, ModelBase {
                 .build();
     }
 
+    @Override
+    public QuoteLabel copyDeep() {
+        return QuoteLabel.deepCopy(this);
+    }
 }

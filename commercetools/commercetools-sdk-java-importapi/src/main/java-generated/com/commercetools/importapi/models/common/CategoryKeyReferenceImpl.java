@@ -91,4 +91,8 @@ public class CategoryKeyReferenceImpl implements CategoryKeyReference, ModelBase
                 .build();
     }
 
+    @Override
+    public CategoryKeyReference copyDeep() {
+        return CategoryKeyReference.deepCopy(this);
+    }
 }

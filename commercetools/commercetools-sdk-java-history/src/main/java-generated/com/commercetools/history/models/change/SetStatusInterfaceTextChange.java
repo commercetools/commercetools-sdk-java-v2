@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SetStatusInterfaceTextChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetStatusInterfaceTextChangeImpl.class)
 public interface SetStatusInterfaceTextChange extends Change {
@@ -111,6 +112,8 @@ public interface SetStatusInterfaceTextChange extends Change {
         instance.setNextValue(template.getNextValue());
         return instance;
     }
+
+    public SetStatusInterfaceTextChange copyDeep();
 
     /**
      * factory method to create a deep copy of SetStatusInterfaceTextChange

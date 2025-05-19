@@ -467,6 +467,8 @@ public interface Address {
         return instance;
     }
 
+    public Address copyDeep();
+
     /**
      * factory method to create a deep copy of Address
      * @param template instance to be copied

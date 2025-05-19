@@ -133,4 +133,8 @@ public class SetMaxApplicationsPerCustomerChangeImpl implements SetMaxApplicatio
                 .build();
     }
 
+    @Override
+    public SetMaxApplicationsPerCustomerChange copyDeep() {
+        return SetMaxApplicationsPerCustomerChange.deepCopy(this);
+    }
 }

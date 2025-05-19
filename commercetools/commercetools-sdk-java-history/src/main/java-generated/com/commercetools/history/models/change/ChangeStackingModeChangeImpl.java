@@ -133,4 +133,8 @@ public class ChangeStackingModeChangeImpl implements ChangeStackingModeChange, M
                 .build();
     }
 
+    @Override
+    public ChangeStackingModeChange copyDeep() {
+        return ChangeStackingModeChange.deepCopy(this);
+    }
 }

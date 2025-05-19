@@ -32,6 +32,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SetSearchKeywordsChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetSearchKeywordsChangeImpl.class)
 public interface SetSearchKeywordsChange extends Change {
@@ -138,6 +139,8 @@ public interface SetSearchKeywordsChange extends Change {
         instance.setCatalogData(template.getCatalogData());
         return instance;
     }
+
+    public SetSearchKeywordsChange copyDeep();
 
     /**
      * factory method to create a deep copy of SetSearchKeywordsChange

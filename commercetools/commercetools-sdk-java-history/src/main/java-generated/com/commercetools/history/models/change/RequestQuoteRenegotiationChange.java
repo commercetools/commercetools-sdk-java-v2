@@ -31,6 +31,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("RequestQuoteRenegotiationChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = RequestQuoteRenegotiationChangeImpl.class)
 public interface RequestQuoteRenegotiationChange extends Change {
@@ -129,6 +130,8 @@ public interface RequestQuoteRenegotiationChange extends Change {
         instance.setBuyerComment(template.getBuyerComment());
         return instance;
     }
+
+    public RequestQuoteRenegotiationChange copyDeep();
 
     /**
      * factory method to create a deep copy of RequestQuoteRenegotiationChange

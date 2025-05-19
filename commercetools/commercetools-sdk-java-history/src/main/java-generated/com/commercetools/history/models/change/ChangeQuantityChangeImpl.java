@@ -134,4 +134,8 @@ public class ChangeQuantityChangeImpl implements ChangeQuantityChange, ModelBase
                 .build();
     }
 
+    @Override
+    public ChangeQuantityChange copyDeep() {
+        return ChangeQuantityChange.deepCopy(this);
+    }
 }

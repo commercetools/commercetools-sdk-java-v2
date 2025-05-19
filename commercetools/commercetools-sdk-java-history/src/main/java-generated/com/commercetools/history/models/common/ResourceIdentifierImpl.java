@@ -113,4 +113,8 @@ public class ResourceIdentifierImpl implements ResourceIdentifier, ModelBase {
                 .build();
     }
 
+    @Override
+    public ResourceIdentifier copyDeep() {
+        return ResourceIdentifier.deepCopy(this);
+    }
 }

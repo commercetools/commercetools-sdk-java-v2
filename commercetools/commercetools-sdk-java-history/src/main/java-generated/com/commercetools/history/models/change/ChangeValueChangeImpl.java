@@ -138,4 +138,8 @@ public class ChangeValueChangeImpl implements ChangeValueChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public ChangeValueChange copyDeep() {
+        return ChangeValueChange.deepCopy(this);
+    }
 }

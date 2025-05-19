@@ -192,4 +192,8 @@ public class SetTextLineItemCustomFieldChangeImpl implements SetTextLineItemCust
                 .build();
     }
 
+    @Override
+    public SetTextLineItemCustomFieldChange copyDeep() {
+        return SetTextLineItemCustomFieldChange.deepCopy(this);
+    }
 }

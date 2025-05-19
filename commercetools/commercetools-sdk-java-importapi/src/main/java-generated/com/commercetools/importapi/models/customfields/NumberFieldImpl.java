@@ -91,4 +91,8 @@ public class NumberFieldImpl implements NumberField, ModelBase {
                 .build();
     }
 
+    @Override
+    public NumberField copyDeep() {
+        return NumberField.deepCopy(this);
+    }
 }

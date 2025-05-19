@@ -82,6 +82,8 @@ public interface ImageDimensions {
         return instance;
     }
 
+    public ImageDimensions copyDeep();
+
     /**
      * factory method to create a deep copy of ImageDimensions
      * @param template instance to be copied

@@ -110,4 +110,8 @@ public class MoneyAttributeImpl implements MoneyAttribute, ModelBase {
                 .build();
     }
 
+    @Override
+    public MoneyAttribute copyDeep() {
+        return MoneyAttribute.deepCopy(this);
+    }
 }

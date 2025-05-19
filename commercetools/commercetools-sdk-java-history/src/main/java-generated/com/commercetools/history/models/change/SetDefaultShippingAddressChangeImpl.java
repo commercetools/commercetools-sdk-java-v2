@@ -133,4 +133,8 @@ public class SetDefaultShippingAddressChangeImpl implements SetDefaultShippingAd
                 .build();
     }
 
+    @Override
+    public SetDefaultShippingAddressChange copyDeep() {
+        return SetDefaultShippingAddressChange.deepCopy(this);
+    }
 }

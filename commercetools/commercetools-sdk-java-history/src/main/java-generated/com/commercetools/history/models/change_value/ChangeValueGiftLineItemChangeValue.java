@@ -31,6 +31,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("giftLineItem")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeValueGiftLineItemChangeValueImpl.class)
 public interface ChangeValueGiftLineItemChangeValue extends ChangeValueChangeValue {
@@ -131,6 +132,8 @@ public interface ChangeValueGiftLineItemChangeValue extends ChangeValueChangeVal
         instance.setDistributionChannel(template.getDistributionChannel());
         return instance;
     }
+
+    public ChangeValueGiftLineItemChangeValue copyDeep();
 
     /**
      * factory method to create a deep copy of ChangeValueGiftLineItemChangeValue

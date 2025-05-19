@@ -133,4 +133,8 @@ public class TypedMoneyImpl implements TypedMoney, ModelBase {
                 .build();
     }
 
+    @Override
+    public TypedMoney copyDeep() {
+        return TypedMoney.deepCopy(this);
+    }
 }

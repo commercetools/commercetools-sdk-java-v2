@@ -133,4 +133,8 @@ public class RemoveLocalizedEnumValuesChangeImpl implements RemoveLocalizedEnumV
                 .build();
     }
 
+    @Override
+    public RemoveLocalizedEnumValuesChange copyDeep() {
+        return RemoveLocalizedEnumValuesChange.deepCopy(this);
+    }
 }

@@ -110,4 +110,8 @@ public class ProductLabelImpl implements ProductLabel, ModelBase {
                 .build();
     }
 
+    @Override
+    public ProductLabel copyDeep() {
+        return ProductLabel.deepCopy(this);
+    }
 }

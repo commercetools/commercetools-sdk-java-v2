@@ -110,4 +110,8 @@ public class ResourceDeletionErrorImpl implements ResourceDeletionError, ModelBa
                 .build();
     }
 
+    @Override
+    public ResourceDeletionError copyDeep() {
+        return ResourceDeletionError.deepCopy(this);
+    }
 }

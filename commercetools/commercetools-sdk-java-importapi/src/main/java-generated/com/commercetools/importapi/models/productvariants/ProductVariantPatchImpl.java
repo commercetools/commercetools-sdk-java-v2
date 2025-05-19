@@ -146,4 +146,8 @@ public class ProductVariantPatchImpl implements ProductVariantPatch, ModelBase {
                 .build();
     }
 
+    @Override
+    public ProductVariantPatch copyDeep() {
+        return ProductVariantPatch.deepCopy(this);
+    }
 }

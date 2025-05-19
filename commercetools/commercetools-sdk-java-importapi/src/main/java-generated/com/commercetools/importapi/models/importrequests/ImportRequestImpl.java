@@ -69,4 +69,8 @@ public class ImportRequestImpl implements ImportRequest, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type).build();
     }
 
+    @Override
+    public ImportRequest copyDeep() {
+        return ImportRequest.deepCopy(this);
+    }
 }

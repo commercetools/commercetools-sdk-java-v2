@@ -109,4 +109,8 @@ public class TimeAttributeImpl implements TimeAttribute, ModelBase {
                 .build();
     }
 
+    @Override
+    public TimeAttribute copyDeep() {
+        return TimeAttribute.deepCopy(this);
+    }
 }

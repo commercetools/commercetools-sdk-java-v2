@@ -157,4 +157,8 @@ public class AddLocalizedEnumValueChangeImpl implements AddLocalizedEnumValueCha
                 .build();
     }
 
+    @Override
+    public AddLocalizedEnumValueChange copyDeep() {
+        return AddLocalizedEnumValueChange.deepCopy(this);
+    }
 }

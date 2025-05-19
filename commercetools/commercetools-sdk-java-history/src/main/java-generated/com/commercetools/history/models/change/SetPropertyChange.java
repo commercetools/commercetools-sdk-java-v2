@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SetPropertyChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetPropertyChangeImpl.class)
 public interface SetPropertyChange extends Change {
@@ -126,6 +127,8 @@ public interface SetPropertyChange extends Change {
         instance.setPath(template.getPath());
         return instance;
     }
+
+    public SetPropertyChange copyDeep();
 
     /**
      * factory method to create a deep copy of SetPropertyChange

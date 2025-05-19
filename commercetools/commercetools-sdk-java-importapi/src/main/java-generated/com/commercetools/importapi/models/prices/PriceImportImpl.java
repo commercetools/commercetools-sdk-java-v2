@@ -326,4 +326,8 @@ public class PriceImportImpl implements PriceImport, ModelBase {
                 .build();
     }
 
+    @Override
+    public PriceImport copyDeep() {
+        return PriceImport.deepCopy(this);
+    }
 }

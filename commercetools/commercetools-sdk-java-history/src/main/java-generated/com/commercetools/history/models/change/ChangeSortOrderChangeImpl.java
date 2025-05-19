@@ -137,4 +137,8 @@ public class ChangeSortOrderChangeImpl implements ChangeSortOrderChange, ModelBa
                 .build();
     }
 
+    @Override
+    public ChangeSortOrderChange copyDeep() {
+        return ChangeSortOrderChange.deepCopy(this);
+    }
 }

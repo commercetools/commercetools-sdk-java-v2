@@ -182,6 +182,8 @@ public interface ProductVariantDraftImport {
         return instance;
     }
 
+    public ProductVariantDraftImport copyDeep();
+
     /**
      * factory method to create a deep copy of ProductVariantDraftImport
      * @param template instance to be copied

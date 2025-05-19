@@ -183,4 +183,8 @@ public class SetPricesChangeImpl implements SetPricesChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public SetPricesChange copyDeep() {
+        return SetPricesChange.deepCopy(this);
+    }
 }

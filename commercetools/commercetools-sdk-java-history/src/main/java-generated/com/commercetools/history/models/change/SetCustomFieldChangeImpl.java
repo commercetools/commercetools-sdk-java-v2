@@ -192,4 +192,8 @@ public class SetCustomFieldChangeImpl implements SetCustomFieldChange, ModelBase
                 .build();
     }
 
+    @Override
+    public SetCustomFieldChange copyDeep() {
+        return SetCustomFieldChange.deepCopy(this);
+    }
 }

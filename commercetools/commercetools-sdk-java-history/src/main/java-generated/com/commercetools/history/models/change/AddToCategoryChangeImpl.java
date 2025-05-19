@@ -162,4 +162,8 @@ public class AddToCategoryChangeImpl implements AddToCategoryChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public AddToCategoryChange copyDeep() {
+        return AddToCategoryChange.deepCopy(this);
+    }
 }

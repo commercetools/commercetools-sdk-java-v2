@@ -38,6 +38,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SetParcelItemsChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetParcelItemsChangeImpl.class)
 public interface SetParcelItemsChange extends Change {
@@ -155,6 +156,8 @@ public interface SetParcelItemsChange extends Change {
         instance.setParcel(template.getParcel());
         return instance;
     }
+
+    public SetParcelItemsChange copyDeep();
 
     /**
      * factory method to create a deep copy of SetParcelItemsChange

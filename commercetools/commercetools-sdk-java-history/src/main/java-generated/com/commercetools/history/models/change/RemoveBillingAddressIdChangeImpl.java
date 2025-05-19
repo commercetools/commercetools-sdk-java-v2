@@ -161,4 +161,8 @@ public class RemoveBillingAddressIdChangeImpl implements RemoveBillingAddressIdC
                 .build();
     }
 
+    @Override
+    public RemoveBillingAddressIdChange copyDeep() {
+        return RemoveBillingAddressIdChange.deepCopy(this);
+    }
 }

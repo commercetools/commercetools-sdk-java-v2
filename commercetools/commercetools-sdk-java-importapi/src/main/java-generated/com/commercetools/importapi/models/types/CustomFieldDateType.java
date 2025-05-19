@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("Date")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomFieldDateTypeImpl.class)
 public interface CustomFieldDateType extends FieldType {
@@ -50,6 +51,8 @@ public interface CustomFieldDateType extends FieldType {
         CustomFieldDateTypeImpl instance = new CustomFieldDateTypeImpl();
         return instance;
     }
+
+    public CustomFieldDateType copyDeep();
 
     /**
      * factory method to create a deep copy of CustomFieldDateType

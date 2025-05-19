@@ -91,4 +91,8 @@ public class PaymentKeyReferenceImpl implements PaymentKeyReference, ModelBase {
                 .build();
     }
 
+    @Override
+    public PaymentKeyReference copyDeep() {
+        return PaymentKeyReference.deepCopy(this);
+    }
 }

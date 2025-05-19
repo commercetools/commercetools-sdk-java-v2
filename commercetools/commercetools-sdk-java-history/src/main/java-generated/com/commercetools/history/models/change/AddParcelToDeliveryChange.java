@@ -35,6 +35,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("AddParcelToDeliveryChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AddParcelToDeliveryChangeImpl.class)
 public interface AddParcelToDeliveryChange extends Change {
@@ -118,6 +119,8 @@ public interface AddParcelToDeliveryChange extends Change {
         instance.setDeliveryId(template.getDeliveryId());
         return instance;
     }
+
+    public AddParcelToDeliveryChange copyDeep();
 
     /**
      * factory method to create a deep copy of AddParcelToDeliveryChange

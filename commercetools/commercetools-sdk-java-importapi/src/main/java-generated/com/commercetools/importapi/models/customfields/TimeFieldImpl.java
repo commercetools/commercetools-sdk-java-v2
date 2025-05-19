@@ -91,4 +91,8 @@ public class TimeFieldImpl implements TimeField, ModelBase {
                 .build();
     }
 
+    @Override
+    public TimeField copyDeep() {
+        return TimeField.deepCopy(this);
+    }
 }

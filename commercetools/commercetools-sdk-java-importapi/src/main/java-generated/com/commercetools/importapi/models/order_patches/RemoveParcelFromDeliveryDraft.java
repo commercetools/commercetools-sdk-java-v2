@@ -65,6 +65,8 @@ public interface RemoveParcelFromDeliveryDraft extends io.vrap.rmf.base.client.D
         return instance;
     }
 
+    public RemoveParcelFromDeliveryDraft copyDeep();
+
     /**
      * factory method to create a deep copy of RemoveParcelFromDeliveryDraft
      * @param template instance to be copied

@@ -26,6 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("centPrecision")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MoneyImpl.class)
 public interface Money extends TypedMoney {
@@ -55,6 +56,8 @@ public interface Money extends TypedMoney {
         instance.setCurrencyCode(template.getCurrencyCode());
         return instance;
     }
+
+    public Money copyDeep();
 
     /**
      * factory method to create a deep copy of Money

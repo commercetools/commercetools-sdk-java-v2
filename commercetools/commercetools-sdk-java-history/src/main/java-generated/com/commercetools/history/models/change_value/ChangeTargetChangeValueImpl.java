@@ -69,4 +69,8 @@ public class ChangeTargetChangeValueImpl implements ChangeTargetChangeValue, Mod
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type).build();
     }
 
+    @Override
+    public ChangeTargetChangeValue copyDeep() {
+        return ChangeTargetChangeValue.deepCopy(this);
+    }
 }

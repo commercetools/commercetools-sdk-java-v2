@@ -153,4 +153,8 @@ public class ChangeAttributeConstraintChangeImpl implements ChangeAttributeConst
                 .build();
     }
 
+    @Override
+    public ChangeAttributeConstraintChange copyDeep() {
+        return ChangeAttributeConstraintChange.deepCopy(this);
+    }
 }

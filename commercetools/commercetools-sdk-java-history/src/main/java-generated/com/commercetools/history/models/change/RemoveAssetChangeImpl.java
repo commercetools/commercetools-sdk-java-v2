@@ -114,4 +114,8 @@ public class RemoveAssetChangeImpl implements RemoveAssetChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public RemoveAssetChange copyDeep() {
+        return RemoveAssetChange.deepCopy(this);
+    }
 }

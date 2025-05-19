@@ -173,4 +173,8 @@ public class SetLineItemDistributionChannelChangeImpl implements SetLineItemDist
                 .build();
     }
 
+    @Override
+    public SetLineItemDistributionChannelChange copyDeep() {
+        return SetLineItemDistributionChannelChange.deepCopy(this);
+    }
 }

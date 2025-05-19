@@ -137,4 +137,8 @@ public class SetReturnPaymentStateChangeImpl implements SetReturnPaymentStateCha
                 .build();
     }
 
+    @Override
+    public SetReturnPaymentStateChange copyDeep() {
+        return SetReturnPaymentStateChange.deepCopy(this);
+    }
 }

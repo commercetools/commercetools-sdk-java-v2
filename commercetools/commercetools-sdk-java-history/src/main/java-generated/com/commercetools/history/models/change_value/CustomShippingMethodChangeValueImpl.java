@@ -73,4 +73,8 @@ public class CustomShippingMethodChangeValueImpl implements CustomShippingMethod
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("name", name).build();
     }
 
+    @Override
+    public CustomShippingMethodChangeValue copyDeep() {
+        return CustomShippingMethodChangeValue.deepCopy(this);
+    }
 }

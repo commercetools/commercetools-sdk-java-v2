@@ -109,4 +109,8 @@ public class AssociateRoleLabelImpl implements AssociateRoleLabel, ModelBase {
                 .build();
     }
 
+    @Override
+    public AssociateRoleLabel copyDeep() {
+        return AssociateRoleLabel.deepCopy(this);
+    }
 }

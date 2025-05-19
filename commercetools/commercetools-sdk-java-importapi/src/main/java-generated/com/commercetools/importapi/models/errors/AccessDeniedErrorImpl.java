@@ -91,4 +91,8 @@ public class AccessDeniedErrorImpl implements AccessDeniedError, ModelBase {
                 .build();
     }
 
+    @Override
+    public AccessDeniedError copyDeep() {
+        return AccessDeniedError.deepCopy(this);
+    }
 }

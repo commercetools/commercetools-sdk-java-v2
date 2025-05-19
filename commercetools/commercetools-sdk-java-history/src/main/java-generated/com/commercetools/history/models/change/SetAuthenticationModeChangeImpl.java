@@ -133,4 +133,8 @@ public class SetAuthenticationModeChangeImpl implements SetAuthenticationModeCha
                 .build();
     }
 
+    @Override
+    public SetAuthenticationModeChange copyDeep() {
+        return SetAuthenticationModeChange.deepCopy(this);
+    }
 }

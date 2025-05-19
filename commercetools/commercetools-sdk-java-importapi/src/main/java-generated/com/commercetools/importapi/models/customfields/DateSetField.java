@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("DateSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DateSetFieldImpl.class)
 public interface DateSetField extends CustomField {
@@ -78,6 +79,8 @@ public interface DateSetField extends CustomField {
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public DateSetField copyDeep();
 
     /**
      * factory method to create a deep copy of DateSetField

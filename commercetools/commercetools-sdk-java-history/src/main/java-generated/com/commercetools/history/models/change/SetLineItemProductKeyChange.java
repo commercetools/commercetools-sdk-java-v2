@@ -34,6 +34,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SetLineItemProductKeyChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetLineItemProductKeyChangeImpl.class)
 public interface SetLineItemProductKeyChange extends Change {
@@ -165,6 +166,8 @@ public interface SetLineItemProductKeyChange extends Change {
         instance.setVariant(template.getVariant());
         return instance;
     }
+
+    public SetLineItemProductKeyChange copyDeep();
 
     /**
      * factory method to create a deep copy of SetLineItemProductKeyChange

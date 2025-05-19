@@ -133,4 +133,8 @@ public class ChangeDescriptionChangeImpl implements ChangeDescriptionChange, Mod
                 .build();
     }
 
+    @Override
+    public ChangeDescriptionChange copyDeep() {
+        return ChangeDescriptionChange.deepCopy(this);
+    }
 }

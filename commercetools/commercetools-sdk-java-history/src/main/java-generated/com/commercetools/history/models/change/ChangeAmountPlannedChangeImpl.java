@@ -133,4 +133,8 @@ public class ChangeAmountPlannedChangeImpl implements ChangeAmountPlannedChange,
                 .build();
     }
 
+    @Override
+    public ChangeAmountPlannedChange copyDeep() {
+        return ChangeAmountPlannedChange.deepCopy(this);
+    }
 }

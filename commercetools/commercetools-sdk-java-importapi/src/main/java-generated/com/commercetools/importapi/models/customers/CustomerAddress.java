@@ -452,6 +452,8 @@ public interface CustomerAddress {
         return instance;
     }
 
+    public CustomerAddress copyDeep();
+
     /**
      * factory method to create a deep copy of CustomerAddress
      * @param template instance to be copied

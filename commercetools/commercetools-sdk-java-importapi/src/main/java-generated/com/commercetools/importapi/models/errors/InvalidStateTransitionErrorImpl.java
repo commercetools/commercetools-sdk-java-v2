@@ -133,4 +133,8 @@ public class InvalidStateTransitionErrorImpl implements InvalidStateTransitionEr
                 .build();
     }
 
+    @Override
+    public InvalidStateTransitionError copyDeep() {
+        return InvalidStateTransitionError.deepCopy(this);
+    }
 }

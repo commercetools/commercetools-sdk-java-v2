@@ -77,4 +77,8 @@ public class CategoryOrderHintsImpl implements CategoryOrderHints, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("values", values).build();
     }
 
+    @Override
+    public CategoryOrderHints copyDeep() {
+        return CategoryOrderHints.deepCopy(this);
+    }
 }

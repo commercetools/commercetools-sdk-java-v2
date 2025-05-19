@@ -548,4 +548,8 @@ public class CustomerAddressImpl implements CustomerAddress, ModelBase {
                 .build();
     }
 
+    @Override
+    public CustomerAddress copyDeep() {
+        return CustomerAddress.deepCopy(this);
+    }
 }

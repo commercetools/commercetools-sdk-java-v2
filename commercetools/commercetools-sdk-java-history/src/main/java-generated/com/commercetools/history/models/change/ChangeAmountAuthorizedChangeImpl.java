@@ -133,4 +133,8 @@ public class ChangeAmountAuthorizedChangeImpl implements ChangeAmountAuthorizedC
                 .build();
     }
 
+    @Override
+    public ChangeAmountAuthorizedChange copyDeep() {
+        return ChangeAmountAuthorizedChange.deepCopy(this);
+    }
 }

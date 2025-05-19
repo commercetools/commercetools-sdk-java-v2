@@ -133,4 +133,8 @@ public class SetMethodInfoInterfaceChangeImpl implements SetMethodInfoInterfaceC
                 .build();
     }
 
+    @Override
+    public SetMethodInfoInterfaceChange copyDeep() {
+        return SetMethodInfoInterfaceChange.deepCopy(this);
+    }
 }

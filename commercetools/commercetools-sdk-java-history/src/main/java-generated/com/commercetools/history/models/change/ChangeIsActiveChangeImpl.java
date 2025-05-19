@@ -138,4 +138,8 @@ public class ChangeIsActiveChangeImpl implements ChangeIsActiveChange, ModelBase
                 .build();
     }
 
+    @Override
+    public ChangeIsActiveChange copyDeep() {
+        return ChangeIsActiveChange.deepCopy(this);
+    }
 }

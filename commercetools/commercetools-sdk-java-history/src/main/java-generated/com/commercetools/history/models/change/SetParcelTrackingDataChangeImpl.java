@@ -157,4 +157,8 @@ public class SetParcelTrackingDataChangeImpl implements SetParcelTrackingDataCha
                 .build();
     }
 
+    @Override
+    public SetParcelTrackingDataChange copyDeep() {
+        return SetParcelTrackingDataChange.deepCopy(this);
+    }
 }

@@ -74,4 +74,8 @@ public class ShippingRatePriceTierImpl implements ShippingRatePriceTier, ModelBa
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type).build();
     }
 
+    @Override
+    public ShippingRatePriceTier copyDeep() {
+        return ShippingRatePriceTier.deepCopy(this);
+    }
 }

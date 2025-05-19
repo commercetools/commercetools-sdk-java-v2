@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("product-variant-patch")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductVariantPatchRequestImpl.class)
 public interface ProductVariantPatchRequest extends ImportRequest {
@@ -81,6 +82,8 @@ public interface ProductVariantPatchRequest extends ImportRequest {
         instance.setPatches(template.getPatches());
         return instance;
     }
+
+    public ProductVariantPatchRequest copyDeep();
 
     /**
      * factory method to create a deep copy of ProductVariantPatchRequest

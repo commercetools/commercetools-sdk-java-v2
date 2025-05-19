@@ -184,4 +184,8 @@ public class DeliveryImpl implements Delivery, ModelBase {
                 .build();
     }
 
+    @Override
+    public Delivery copyDeep() {
+        return Delivery.deepCopy(this);
+    }
 }

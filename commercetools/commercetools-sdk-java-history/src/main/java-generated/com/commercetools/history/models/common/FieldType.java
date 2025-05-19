@@ -65,6 +65,8 @@ public interface FieldType {
         return instance;
     }
 
+    public FieldType copyDeep();
+
     /**
      * factory method to create a deep copy of FieldType
      * @param template instance to be copied

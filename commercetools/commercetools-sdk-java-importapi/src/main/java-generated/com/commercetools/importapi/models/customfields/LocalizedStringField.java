@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("LocalizedString")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = LocalizedStringFieldImpl.class)
 public interface LocalizedStringField extends CustomField {
@@ -82,6 +83,8 @@ public interface LocalizedStringField extends CustomField {
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public LocalizedStringField copyDeep();
 
     /**
      * factory method to create a deep copy of LocalizedStringField

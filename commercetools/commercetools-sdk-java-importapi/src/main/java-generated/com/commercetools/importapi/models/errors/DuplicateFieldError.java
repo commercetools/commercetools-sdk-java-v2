@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("DuplicateField")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DuplicateFieldErrorImpl.class)
 public interface DuplicateFieldError extends ErrorObject {
@@ -84,6 +85,8 @@ public interface DuplicateFieldError extends ErrorObject {
         instance.setDuplicateValue(template.getDuplicateValue());
         return instance;
     }
+
+    public DuplicateFieldError copyDeep();
 
     /**
      * factory method to create a deep copy of DuplicateFieldError

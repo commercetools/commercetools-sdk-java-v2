@@ -95,4 +95,8 @@ public class ImportContainerDraftImpl implements ImportContainerDraft, ModelBase
                 .build();
     }
 
+    @Override
+    public ImportContainerDraft copyDeep() {
+        return ImportContainerDraft.deepCopy(this);
+    }
 }

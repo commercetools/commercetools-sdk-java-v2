@@ -180,4 +180,8 @@ public class ParcelImpl implements Parcel, ModelBase {
                 .build();
     }
 
+    @Override
+    public Parcel copyDeep() {
+        return Parcel.deepCopy(this);
+    }
 }

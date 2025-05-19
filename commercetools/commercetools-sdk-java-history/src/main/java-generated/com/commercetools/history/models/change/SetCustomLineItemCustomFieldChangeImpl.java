@@ -196,4 +196,8 @@ public class SetCustomLineItemCustomFieldChangeImpl implements SetCustomLineItem
                 .build();
     }
 
+    @Override
+    public SetCustomLineItemCustomFieldChange copyDeep() {
+        return SetCustomLineItemCustomFieldChange.deepCopy(this);
+    }
 }

@@ -73,4 +73,8 @@ public class ImportResourceImpl implements ImportResource, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("key", key).build();
     }
 
+    @Override
+    public ImportResource copyDeep() {
+        return ImportResource.deepCopy(this);
+    }
 }

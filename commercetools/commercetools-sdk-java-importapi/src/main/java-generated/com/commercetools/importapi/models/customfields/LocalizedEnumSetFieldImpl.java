@@ -95,4 +95,8 @@ public class LocalizedEnumSetFieldImpl implements LocalizedEnumSetField, ModelBa
                 .build();
     }
 
+    @Override
+    public LocalizedEnumSetField copyDeep() {
+        return LocalizedEnumSetField.deepCopy(this);
+    }
 }

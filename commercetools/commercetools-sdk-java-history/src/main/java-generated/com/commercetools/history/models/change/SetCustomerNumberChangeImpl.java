@@ -133,4 +133,8 @@ public class SetCustomerNumberChangeImpl implements SetCustomerNumberChange, Mod
                 .build();
     }
 
+    @Override
+    public SetCustomerNumberChange copyDeep() {
+        return SetCustomerNumberChange.deepCopy(this);
+    }
 }

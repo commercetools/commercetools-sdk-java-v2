@@ -252,6 +252,8 @@ public interface StandalonePriceImport extends ImportResource {
         return instance;
     }
 
+    public StandalonePriceImport copyDeep();
+
     /**
      * factory method to create a deep copy of StandalonePriceImport
      * @param template instance to be copied

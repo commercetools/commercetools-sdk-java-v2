@@ -82,6 +82,8 @@ public interface ImportContainerUpdateDraft extends io.vrap.rmf.base.client.Draf
         return instance;
     }
 
+    public ImportContainerUpdateDraft copyDeep();
+
     /**
      * factory method to create a deep copy of ImportContainerUpdateDraft
      * @param template instance to be copied

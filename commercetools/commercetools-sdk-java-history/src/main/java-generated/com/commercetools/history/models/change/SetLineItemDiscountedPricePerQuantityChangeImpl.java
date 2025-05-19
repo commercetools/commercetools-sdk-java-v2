@@ -176,4 +176,8 @@ public class SetLineItemDiscountedPricePerQuantityChangeImpl
                 .build();
     }
 
+    @Override
+    public SetLineItemDiscountedPricePerQuantityChange copyDeep() {
+        return SetLineItemDiscountedPricePerQuantityChange.deepCopy(this);
+    }
 }

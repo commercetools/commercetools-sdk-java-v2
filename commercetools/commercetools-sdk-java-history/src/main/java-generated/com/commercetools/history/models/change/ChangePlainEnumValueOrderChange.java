@@ -33,6 +33,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ChangePlainEnumValueOrderChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangePlainEnumValueOrderChangeImpl.class)
 public interface ChangePlainEnumValueOrderChange extends Change {
@@ -149,6 +150,8 @@ public interface ChangePlainEnumValueOrderChange extends Change {
         instance.setAttributeName(template.getAttributeName());
         return instance;
     }
+
+    public ChangePlainEnumValueOrderChange copyDeep();
 
     /**
      * factory method to create a deep copy of ChangePlainEnumValueOrderChange

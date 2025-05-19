@@ -133,4 +133,8 @@ public class SetTaxCategoryChangeImpl implements SetTaxCategoryChange, ModelBase
                 .build();
     }
 
+    @Override
+    public SetTaxCategoryChange copyDeep() {
+        return SetTaxCategoryChange.deepCopy(this);
+    }
 }

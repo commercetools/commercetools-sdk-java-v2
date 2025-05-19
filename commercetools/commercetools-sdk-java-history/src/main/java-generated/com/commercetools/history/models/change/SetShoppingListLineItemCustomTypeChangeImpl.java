@@ -153,4 +153,8 @@ public class SetShoppingListLineItemCustomTypeChangeImpl implements SetShoppingL
                 .build();
     }
 
+    @Override
+    public SetShoppingListLineItemCustomTypeChange copyDeep() {
+        return SetShoppingListLineItemCustomTypeChange.deepCopy(this);
+    }
 }

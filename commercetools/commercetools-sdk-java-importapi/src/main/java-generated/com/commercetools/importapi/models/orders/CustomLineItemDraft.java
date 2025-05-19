@@ -280,6 +280,8 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
         return instance;
     }
 
+    public CustomLineItemDraft copyDeep();
+
     /**
      * factory method to create a deep copy of CustomLineItemDraft
      * @param template instance to be copied

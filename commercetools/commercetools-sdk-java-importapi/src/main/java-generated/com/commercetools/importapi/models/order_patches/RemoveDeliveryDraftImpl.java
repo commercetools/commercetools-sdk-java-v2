@@ -73,4 +73,8 @@ public class RemoveDeliveryDraftImpl implements RemoveDeliveryDraft, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id).build();
     }
 
+    @Override
+    public RemoveDeliveryDraft copyDeep() {
+        return RemoveDeliveryDraft.deepCopy(this);
+    }
 }

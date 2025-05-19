@@ -137,4 +137,8 @@ public class MoneyImpl implements Money, ModelBase {
                 .build();
     }
 
+    @Override
+    public Money copyDeep() {
+        return Money.deepCopy(this);
+    }
 }

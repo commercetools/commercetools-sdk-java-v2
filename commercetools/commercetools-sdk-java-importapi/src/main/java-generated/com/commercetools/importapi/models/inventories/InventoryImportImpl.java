@@ -196,4 +196,8 @@ public class InventoryImportImpl implements InventoryImport, ModelBase {
                 .build();
     }
 
+    @Override
+    public InventoryImport copyDeep() {
+        return InventoryImport.deepCopy(this);
+    }
 }

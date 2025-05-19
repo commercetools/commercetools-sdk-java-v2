@@ -91,4 +91,8 @@ public class ProductVariantKeyReferenceImpl implements ProductVariantKeyReferenc
                 .build();
     }
 
+    @Override
+    public ProductVariantKeyReference copyDeep() {
+        return ProductVariantKeyReference.deepCopy(this);
+    }
 }

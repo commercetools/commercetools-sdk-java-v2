@@ -197,4 +197,8 @@ public class ChangeLocalizedEnumValueLabelChangeImpl implements ChangeLocalizedE
                 .build();
     }
 
+    @Override
+    public ChangeLocalizedEnumValueLabelChange copyDeep() {
+        return ChangeLocalizedEnumValueLabelChange.deepCopy(this);
+    }
 }

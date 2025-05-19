@@ -91,4 +91,8 @@ public class DateTimeFieldImpl implements DateTimeField, ModelBase {
                 .build();
     }
 
+    @Override
+    public DateTimeField copyDeep() {
+        return DateTimeField.deepCopy(this);
+    }
 }

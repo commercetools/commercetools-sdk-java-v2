@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("RequiredField")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = RequiredFieldErrorImpl.class)
 public interface RequiredFieldError extends ErrorObject {
@@ -71,6 +72,8 @@ public interface RequiredFieldError extends ErrorObject {
         instance.setField(template.getField());
         return instance;
     }
+
+    public RequiredFieldError copyDeep();
 
     /**
      * factory method to create a deep copy of RequiredFieldError

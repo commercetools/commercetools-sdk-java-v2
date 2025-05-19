@@ -137,4 +137,8 @@ public class SetTitleChangeImpl implements SetTitleChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public SetTitleChange copyDeep() {
+        return SetTitleChange.deepCopy(this);
+    }
 }

@@ -156,4 +156,8 @@ public class SetShippingRateInputChangeImpl implements SetShippingRateInputChang
                 .build();
     }
 
+    @Override
+    public SetShippingRateInputChange copyDeep() {
+        return SetShippingRateInputChange.deepCopy(this);
+    }
 }

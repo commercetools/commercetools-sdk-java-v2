@@ -73,4 +73,8 @@ public class FieldTypeImpl implements FieldType, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("name", name).build();
     }
 
+    @Override
+    public FieldType copyDeep() {
+        return FieldType.deepCopy(this);
+    }
 }

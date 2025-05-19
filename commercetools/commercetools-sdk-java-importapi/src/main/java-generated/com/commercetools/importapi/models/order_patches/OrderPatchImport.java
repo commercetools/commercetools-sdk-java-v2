@@ -84,6 +84,8 @@ public interface OrderPatchImport {
         return instance;
     }
 
+    public OrderPatchImport copyDeep();
+
     /**
      * factory method to create a deep copy of OrderPatchImport
      * @param template instance to be copied

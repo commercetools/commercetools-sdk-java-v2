@@ -156,4 +156,8 @@ public class SetAttributeChangeImpl implements SetAttributeChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public SetAttributeChange copyDeep() {
+        return SetAttributeChange.deepCopy(this);
+    }
 }

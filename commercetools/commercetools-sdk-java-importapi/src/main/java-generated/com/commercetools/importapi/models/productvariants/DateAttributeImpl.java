@@ -109,4 +109,8 @@ public class DateAttributeImpl implements DateAttribute, ModelBase {
                 .build();
     }
 
+    @Override
+    public DateAttribute copyDeep() {
+        return DateAttribute.deepCopy(this);
+    }
 }

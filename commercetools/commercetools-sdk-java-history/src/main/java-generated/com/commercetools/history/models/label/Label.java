@@ -28,20 +28,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.history.models.label.AssociateRoleLabelImpl.class, name = AssociateRoleLabel.ASSOCIATE_ROLE_LABEL),
-        @JsonSubTypes.Type(value = com.commercetools.history.models.label.BusinessUnitLabelImpl.class, name = BusinessUnitLabel.BUSINESS_UNIT_LABEL),
-        @JsonSubTypes.Type(value = com.commercetools.history.models.label.CustomObjectLabelImpl.class, name = CustomObjectLabel.CUSTOM_OBJECT_LABEL),
-        @JsonSubTypes.Type(value = com.commercetools.history.models.label.CustomerLabelImpl.class, name = CustomerLabel.CUSTOMER_LABEL),
-        @JsonSubTypes.Type(value = com.commercetools.history.models.label.LocalizedLabelImpl.class, name = LocalizedLabel.LOCALIZED_LABEL),
-        @JsonSubTypes.Type(value = com.commercetools.history.models.label.OrderLabelImpl.class, name = OrderLabel.ORDER_LABEL),
-        @JsonSubTypes.Type(value = com.commercetools.history.models.label.PaymentLabelImpl.class, name = PaymentLabel.PAYMENT_LABEL),
-        @JsonSubTypes.Type(value = com.commercetools.history.models.label.ProductLabelImpl.class, name = ProductLabel.PRODUCT_LABEL),
-        @JsonSubTypes.Type(value = com.commercetools.history.models.label.QuoteLabelImpl.class, name = QuoteLabel.QUOTE_LABEL),
-        @JsonSubTypes.Type(value = com.commercetools.history.models.label.QuoteRequestLabelImpl.class, name = QuoteRequestLabel.QUOTE_REQUEST_LABEL),
-        @JsonSubTypes.Type(value = com.commercetools.history.models.label.ReviewLabelImpl.class, name = ReviewLabel.REVIEW_LABEL),
-        @JsonSubTypes.Type(value = com.commercetools.history.models.label.StagedQuoteLabelImpl.class, name = StagedQuoteLabel.STAGED_QUOTE_LABEL),
-        @JsonSubTypes.Type(value = com.commercetools.history.models.label.StringLabelImpl.class, name = StringLabel.STRING_LABEL) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = LabelImpl.class, visible = true)
 @JsonDeserialize(as = LabelImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -55,6 +41,8 @@ public interface Label {
     @JsonProperty("type")
     public String getType();
 
+    public Label copyDeep();
+
     /**
      * factory method to create a deep copy of Label
      * @param template instance to be copied
@@ -65,57 +53,9 @@ public interface Label {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.history.models.label.AssociateRoleLabel) {
-            return com.commercetools.history.models.label.AssociateRoleLabel
-                    .deepCopy((com.commercetools.history.models.label.AssociateRoleLabel) template);
-        }
-        if (template instanceof com.commercetools.history.models.label.BusinessUnitLabel) {
-            return com.commercetools.history.models.label.BusinessUnitLabel
-                    .deepCopy((com.commercetools.history.models.label.BusinessUnitLabel) template);
-        }
-        if (template instanceof com.commercetools.history.models.label.CustomObjectLabel) {
-            return com.commercetools.history.models.label.CustomObjectLabel
-                    .deepCopy((com.commercetools.history.models.label.CustomObjectLabel) template);
-        }
-        if (template instanceof com.commercetools.history.models.label.CustomerLabel) {
-            return com.commercetools.history.models.label.CustomerLabel
-                    .deepCopy((com.commercetools.history.models.label.CustomerLabel) template);
-        }
-        if (template instanceof com.commercetools.history.models.label.LocalizedLabel) {
-            return com.commercetools.history.models.label.LocalizedLabel
-                    .deepCopy((com.commercetools.history.models.label.LocalizedLabel) template);
-        }
-        if (template instanceof com.commercetools.history.models.label.OrderLabel) {
-            return com.commercetools.history.models.label.OrderLabel
-                    .deepCopy((com.commercetools.history.models.label.OrderLabel) template);
-        }
-        if (template instanceof com.commercetools.history.models.label.PaymentLabel) {
-            return com.commercetools.history.models.label.PaymentLabel
-                    .deepCopy((com.commercetools.history.models.label.PaymentLabel) template);
-        }
-        if (template instanceof com.commercetools.history.models.label.ProductLabel) {
-            return com.commercetools.history.models.label.ProductLabel
-                    .deepCopy((com.commercetools.history.models.label.ProductLabel) template);
-        }
-        if (template instanceof com.commercetools.history.models.label.QuoteLabel) {
-            return com.commercetools.history.models.label.QuoteLabel
-                    .deepCopy((com.commercetools.history.models.label.QuoteLabel) template);
-        }
-        if (template instanceof com.commercetools.history.models.label.QuoteRequestLabel) {
-            return com.commercetools.history.models.label.QuoteRequestLabel
-                    .deepCopy((com.commercetools.history.models.label.QuoteRequestLabel) template);
-        }
-        if (template instanceof com.commercetools.history.models.label.ReviewLabel) {
-            return com.commercetools.history.models.label.ReviewLabel
-                    .deepCopy((com.commercetools.history.models.label.ReviewLabel) template);
-        }
-        if (template instanceof com.commercetools.history.models.label.StagedQuoteLabel) {
-            return com.commercetools.history.models.label.StagedQuoteLabel
-                    .deepCopy((com.commercetools.history.models.label.StagedQuoteLabel) template);
-        }
-        if (template instanceof com.commercetools.history.models.label.StringLabel) {
-            return com.commercetools.history.models.label.StringLabel
-                    .deepCopy((com.commercetools.history.models.label.StringLabel) template);
+
+        if (!(template instanceof LabelImpl)) {
+            return template.copyDeep();
         }
         LabelImpl instance = new LabelImpl();
         return instance;

@@ -133,4 +133,8 @@ public class SetLastNameChangeImpl implements SetLastNameChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public SetLastNameChange copyDeep() {
+        return SetLastNameChange.deepCopy(this);
+    }
 }

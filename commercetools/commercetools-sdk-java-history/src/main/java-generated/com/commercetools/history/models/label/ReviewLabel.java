@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ReviewLabel")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ReviewLabelImpl.class)
 public interface ReviewLabel extends Label {
@@ -94,6 +95,8 @@ public interface ReviewLabel extends Label {
         instance.setTitle(template.getTitle());
         return instance;
     }
+
+    public ReviewLabel copyDeep();
 
     /**
      * factory method to create a deep copy of ReviewLabel

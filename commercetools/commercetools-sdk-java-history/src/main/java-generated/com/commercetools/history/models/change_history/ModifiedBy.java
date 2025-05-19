@@ -180,6 +180,8 @@ public interface ModifiedBy {
         return instance;
     }
 
+    public ModifiedBy copyDeep();
+
     /**
      * factory method to create a deep copy of ModifiedBy
      * @param template instance to be copied

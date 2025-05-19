@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("key-value-document")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomObjectKeyReferenceImpl.class)
 public interface CustomObjectKeyReference extends KeyReference {
@@ -71,6 +72,8 @@ public interface CustomObjectKeyReference extends KeyReference {
         instance.setContainer(template.getContainer());
         return instance;
     }
+
+    public CustomObjectKeyReference copyDeep();
 
     /**
      * factory method to create a deep copy of CustomObjectKeyReference

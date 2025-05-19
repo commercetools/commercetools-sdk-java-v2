@@ -164,4 +164,8 @@ public class AddExternalImageChangeImpl implements AddExternalImageChange, Model
                 .build();
     }
 
+    @Override
+    public AddExternalImageChange copyDeep() {
+        return AddExternalImageChange.deepCopy(this);
+    }
 }

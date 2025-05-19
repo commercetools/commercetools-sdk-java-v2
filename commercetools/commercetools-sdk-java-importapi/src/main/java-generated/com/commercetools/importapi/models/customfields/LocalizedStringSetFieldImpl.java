@@ -96,4 +96,8 @@ public class LocalizedStringSetFieldImpl implements LocalizedStringSetField, Mod
                 .build();
     }
 
+    @Override
+    public LocalizedStringSetField copyDeep() {
+        return LocalizedStringSetField.deepCopy(this);
+    }
 }

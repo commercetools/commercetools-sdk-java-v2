@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ltext")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = LocalizableTextAttributeImpl.class)
 public interface LocalizableTextAttribute extends Attribute {
@@ -83,6 +84,8 @@ public interface LocalizableTextAttribute extends Attribute {
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public LocalizableTextAttribute copyDeep();
 
     /**
      * factory method to create a deep copy of LocalizableTextAttribute

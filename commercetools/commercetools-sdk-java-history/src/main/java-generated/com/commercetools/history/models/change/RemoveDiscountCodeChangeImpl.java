@@ -110,4 +110,8 @@ public class RemoveDiscountCodeChangeImpl implements RemoveDiscountCodeChange, M
                 .build();
     }
 
+    @Override
+    public RemoveDiscountCodeChange copyDeep() {
+        return RemoveDiscountCodeChange.deepCopy(this);
+    }
 }

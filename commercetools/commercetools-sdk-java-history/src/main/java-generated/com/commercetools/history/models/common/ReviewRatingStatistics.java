@@ -135,6 +135,8 @@ public interface ReviewRatingStatistics {
         return instance;
     }
 
+    public ReviewRatingStatistics copyDeep();
+
     /**
      * factory method to create a deep copy of ReviewRatingStatistics
      * @param template instance to be copied

@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ReferenceSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ReferenceSetFieldImpl.class)
 public interface ReferenceSetField extends CustomField {
@@ -81,6 +82,8 @@ public interface ReferenceSetField extends CustomField {
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public ReferenceSetField copyDeep();
 
     /**
      * factory method to create a deep copy of ReferenceSetField

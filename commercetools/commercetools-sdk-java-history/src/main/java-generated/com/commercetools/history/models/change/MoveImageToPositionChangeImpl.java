@@ -164,4 +164,8 @@ public class MoveImageToPositionChangeImpl implements MoveImageToPositionChange,
                 .build();
     }
 
+    @Override
+    public MoveImageToPositionChange copyDeep() {
+        return MoveImageToPositionChange.deepCopy(this);
+    }
 }

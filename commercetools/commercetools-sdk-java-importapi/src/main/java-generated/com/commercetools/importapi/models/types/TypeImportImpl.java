@@ -168,4 +168,8 @@ public class TypeImportImpl implements TypeImport, ModelBase {
                 .build();
     }
 
+    @Override
+    public TypeImport copyDeep() {
+        return TypeImport.deepCopy(this);
+    }
 }

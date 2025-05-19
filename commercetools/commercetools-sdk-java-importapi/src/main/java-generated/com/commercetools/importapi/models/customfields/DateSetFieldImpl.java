@@ -95,4 +95,8 @@ public class DateSetFieldImpl implements DateSetField, ModelBase {
                 .build();
     }
 
+    @Override
+    public DateSetField copyDeep() {
+        return DateSetField.deepCopy(this);
+    }
 }

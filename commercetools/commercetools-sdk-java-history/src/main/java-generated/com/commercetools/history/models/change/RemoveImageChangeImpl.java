@@ -164,4 +164,8 @@ public class RemoveImageChangeImpl implements RemoveImageChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public RemoveImageChange copyDeep() {
+        return RemoveImageChange.deepCopy(this);
+    }
 }

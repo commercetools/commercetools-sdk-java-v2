@@ -34,6 +34,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SetReturnPaymentStateChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetReturnPaymentStateChangeImpl.class)
 public interface SetReturnPaymentStateChange extends Change {
@@ -116,6 +117,8 @@ public interface SetReturnPaymentStateChange extends Change {
         instance.setNextValue(template.getNextValue());
         return instance;
     }
+
+    public SetReturnPaymentStateChange copyDeep();
 
     /**
      * factory method to create a deep copy of SetReturnPaymentStateChange

@@ -27,9 +27,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.products.CustomTokenizerImpl.class, name = CustomTokenizer.CUSTOM),
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.products.WhitespaceTokenizerImpl.class, name = WhitespaceTokenizer.WHITESPACE) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = SuggestTokenizerImpl.class, visible = true)
 @JsonDeserialize(as = SuggestTokenizerImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -43,6 +40,8 @@ public interface SuggestTokenizer {
     @JsonProperty("type")
     public String getType();
 
+    public SuggestTokenizer copyDeep();
+
     /**
      * factory method to create a deep copy of SuggestTokenizer
      * @param template instance to be copied
@@ -53,13 +52,9 @@ public interface SuggestTokenizer {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.importapi.models.products.CustomTokenizer) {
-            return com.commercetools.importapi.models.products.CustomTokenizer
-                    .deepCopy((com.commercetools.importapi.models.products.CustomTokenizer) template);
-        }
-        if (template instanceof com.commercetools.importapi.models.products.WhitespaceTokenizer) {
-            return com.commercetools.importapi.models.products.WhitespaceTokenizer
-                    .deepCopy((com.commercetools.importapi.models.products.WhitespaceTokenizer) template);
+
+        if (!(template instanceof SuggestTokenizerImpl)) {
+            return template.copyDeep();
         }
         SuggestTokenizerImpl instance = new SuggestTokenizerImpl();
         return instance;

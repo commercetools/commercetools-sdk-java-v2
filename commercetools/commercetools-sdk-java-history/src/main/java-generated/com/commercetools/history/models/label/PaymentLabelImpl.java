@@ -110,4 +110,8 @@ public class PaymentLabelImpl implements PaymentLabel, ModelBase {
                 .build();
     }
 
+    @Override
+    public PaymentLabel copyDeep() {
+        return PaymentLabel.deepCopy(this);
+    }
 }

@@ -133,4 +133,8 @@ public class RemoveShoppingListLineItemChangeImpl implements RemoveShoppingListL
                 .build();
     }
 
+    @Override
+    public RemoveShoppingListLineItemChange copyDeep() {
+        return RemoveShoppingListLineItemChange.deepCopy(this);
+    }
 }

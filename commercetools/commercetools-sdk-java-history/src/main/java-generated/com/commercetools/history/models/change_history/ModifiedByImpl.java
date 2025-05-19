@@ -203,4 +203,8 @@ public class ModifiedByImpl implements ModifiedBy, ModelBase {
                 .build();
     }
 
+    @Override
+    public ModifiedBy copyDeep() {
+        return ModifiedBy.deepCopy(this);
+    }
 }

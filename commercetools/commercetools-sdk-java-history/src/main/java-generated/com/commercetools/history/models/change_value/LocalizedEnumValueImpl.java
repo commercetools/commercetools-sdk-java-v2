@@ -95,4 +95,8 @@ public class LocalizedEnumValueImpl implements LocalizedEnumValue, ModelBase {
                 .build();
     }
 
+    @Override
+    public LocalizedEnumValue copyDeep() {
+        return LocalizedEnumValue.deepCopy(this);
+    }
 }

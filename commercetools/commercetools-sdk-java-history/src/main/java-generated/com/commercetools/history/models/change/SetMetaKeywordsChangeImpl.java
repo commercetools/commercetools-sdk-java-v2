@@ -137,4 +137,8 @@ public class SetMetaKeywordsChangeImpl implements SetMetaKeywordsChange, ModelBa
                 .build();
     }
 
+    @Override
+    public SetMetaKeywordsChange copyDeep() {
+        return SetMetaKeywordsChange.deepCopy(this);
+    }
 }

@@ -144,6 +144,8 @@ public interface RecordPagedQueryResponse {
         return instance;
     }
 
+    public RecordPagedQueryResponse copyDeep();
+
     /**
      * factory method to create a deep copy of RecordPagedQueryResponse
      * @param template instance to be copied

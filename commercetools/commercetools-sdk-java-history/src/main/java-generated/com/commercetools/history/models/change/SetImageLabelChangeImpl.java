@@ -156,4 +156,8 @@ public class SetImageLabelChangeImpl implements SetImageLabelChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public SetImageLabelChange copyDeep() {
+        return SetImageLabelChange.deepCopy(this);
+    }
 }

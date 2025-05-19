@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("Number")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = NumberFieldImpl.class)
 public interface NumberField extends CustomField {
@@ -69,6 +70,8 @@ public interface NumberField extends CustomField {
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public NumberField copyDeep();
 
     /**
      * factory method to create a deep copy of NumberField

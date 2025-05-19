@@ -138,4 +138,8 @@ public class ChangeKeyChangeImpl implements ChangeKeyChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public ChangeKeyChange copyDeep() {
+        return ChangeKeyChange.deepCopy(this);
+    }
 }

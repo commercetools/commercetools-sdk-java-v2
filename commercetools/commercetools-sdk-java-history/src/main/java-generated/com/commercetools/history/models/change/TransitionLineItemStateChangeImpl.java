@@ -185,4 +185,8 @@ public class TransitionLineItemStateChangeImpl implements TransitionLineItemStat
                 .build();
     }
 
+    @Override
+    public TransitionLineItemStateChange copyDeep() {
+        return TransitionLineItemStateChange.deepCopy(this);
+    }
 }

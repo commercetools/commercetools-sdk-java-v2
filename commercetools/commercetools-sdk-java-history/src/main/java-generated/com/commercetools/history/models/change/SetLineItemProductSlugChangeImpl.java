@@ -173,4 +173,8 @@ public class SetLineItemProductSlugChangeImpl implements SetLineItemProductSlugC
                 .build();
     }
 
+    @Override
+    public SetLineItemProductSlugChange copyDeep() {
+        return SetLineItemProductSlugChange.deepCopy(this);
+    }
 }

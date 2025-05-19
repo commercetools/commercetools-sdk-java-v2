@@ -254,6 +254,8 @@ public interface ImportOperation {
         return instance;
     }
 
+    public ImportOperation copyDeep();
+
     /**
      * factory method to create a deep copy of ImportOperation
      * @param template instance to be copied

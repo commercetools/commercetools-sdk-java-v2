@@ -95,4 +95,8 @@ public class CustomFieldLocalizedEnumValueImpl implements CustomFieldLocalizedEn
                 .build();
     }
 
+    @Override
+    public CustomFieldLocalizedEnumValue copyDeep() {
+        return CustomFieldLocalizedEnumValue.deepCopy(this);
+    }
 }

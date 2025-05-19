@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("LocalizedEnum")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomFieldLocalizedEnumTypeImpl.class)
 public interface CustomFieldLocalizedEnumType extends FieldType {
@@ -80,6 +81,8 @@ public interface CustomFieldLocalizedEnumType extends FieldType {
         instance.setValues(template.getValues());
         return instance;
     }
+
+    public CustomFieldLocalizedEnumType copyDeep();
 
     /**
      * factory method to create a deep copy of CustomFieldLocalizedEnumType

@@ -142,4 +142,8 @@ public class AddChannelRolesChangeImpl implements AddChannelRolesChange, ModelBa
                 .build();
     }
 
+    @Override
+    public AddChannelRolesChange copyDeep() {
+        return AddChannelRolesChange.deepCopy(this);
+    }
 }

@@ -91,4 +91,8 @@ public class GenericErrorImpl implements GenericError, ModelBase {
                 .build();
     }
 
+    @Override
+    public GenericError copyDeep() {
+        return GenericError.deepCopy(this);
+    }
 }

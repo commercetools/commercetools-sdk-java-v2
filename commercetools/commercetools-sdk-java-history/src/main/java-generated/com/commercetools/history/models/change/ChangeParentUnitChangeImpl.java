@@ -133,4 +133,8 @@ public class ChangeParentUnitChangeImpl implements ChangeParentUnitChange, Model
                 .build();
     }
 
+    @Override
+    public ChangeParentUnitChange copyDeep() {
+        return ChangeParentUnitChange.deepCopy(this);
+    }
 }

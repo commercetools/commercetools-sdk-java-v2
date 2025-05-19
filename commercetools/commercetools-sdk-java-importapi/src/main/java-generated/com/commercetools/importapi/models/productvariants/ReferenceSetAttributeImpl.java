@@ -114,4 +114,8 @@ public class ReferenceSetAttributeImpl implements ReferenceSetAttribute, ModelBa
                 .build();
     }
 
+    @Override
+    public ReferenceSetAttribute copyDeep() {
+        return ReferenceSetAttribute.deepCopy(this);
+    }
 }

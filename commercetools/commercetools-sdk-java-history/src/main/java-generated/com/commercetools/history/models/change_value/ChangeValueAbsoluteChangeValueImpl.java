@@ -96,4 +96,8 @@ public class ChangeValueAbsoluteChangeValueImpl implements ChangeValueAbsoluteCh
                 .build();
     }
 
+    @Override
+    public ChangeValueAbsoluteChangeValue copyDeep() {
+        return ChangeValueAbsoluteChangeValue.deepCopy(this);
+    }
 }

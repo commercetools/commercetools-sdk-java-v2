@@ -114,4 +114,8 @@ public class AddReturnInfoChangeImpl implements AddReturnInfoChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public AddReturnInfoChange copyDeep() {
+        return AddReturnInfoChange.deepCopy(this);
+    }
 }

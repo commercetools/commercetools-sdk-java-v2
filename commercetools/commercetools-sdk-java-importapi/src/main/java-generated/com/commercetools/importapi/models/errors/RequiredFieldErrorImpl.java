@@ -109,4 +109,8 @@ public class RequiredFieldErrorImpl implements RequiredFieldError, ModelBase {
                 .build();
     }
 
+    @Override
+    public RequiredFieldError copyDeep() {
+        return RequiredFieldError.deepCopy(this);
+    }
 }

@@ -69,6 +69,8 @@ public interface ProductVariantChannelAvailabilityMap {
         return instance;
     }
 
+    public ProductVariantChannelAvailabilityMap copyDeep();
+
     /**
      * factory method to create a deep copy of ProductVariantChannelAvailabilityMap
      * @param template instance to be copied

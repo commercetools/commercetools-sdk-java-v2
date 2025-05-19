@@ -133,4 +133,8 @@ public class ChangeStagedQuoteStateChangeImpl implements ChangeStagedQuoteStateC
                 .build();
     }
 
+    @Override
+    public ChangeStagedQuoteStateChange copyDeep() {
+        return ChangeStagedQuoteStateChange.deepCopy(this);
+    }
 }

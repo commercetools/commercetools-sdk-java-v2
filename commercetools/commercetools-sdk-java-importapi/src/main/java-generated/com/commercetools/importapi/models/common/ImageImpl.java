@@ -114,4 +114,8 @@ public class ImageImpl implements Image, ModelBase {
                 .build();
     }
 
+    @Override
+    public Image copyDeep() {
+        return Image.deepCopy(this);
+    }
 }

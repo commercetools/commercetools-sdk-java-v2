@@ -95,6 +95,8 @@ public interface DiscountedLineItemPriceDraft extends io.vrap.rmf.base.client.Dr
         return instance;
     }
 
+    public DiscountedLineItemPriceDraft copyDeep();
+
     /**
      * factory method to create a deep copy of DiscountedLineItemPriceDraft
      * @param template instance to be copied

@@ -128,4 +128,8 @@ public class AddPropertyChangeImpl implements AddPropertyChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public AddPropertyChange copyDeep() {
+        return AddPropertyChange.deepCopy(this);
+    }
 }

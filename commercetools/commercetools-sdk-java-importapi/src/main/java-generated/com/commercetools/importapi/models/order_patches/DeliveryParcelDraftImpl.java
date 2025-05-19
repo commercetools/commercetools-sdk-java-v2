@@ -119,4 +119,8 @@ public class DeliveryParcelDraftImpl implements DeliveryParcelDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public DeliveryParcelDraft copyDeep() {
+        return DeliveryParcelDraft.deepCopy(this);
+    }
 }

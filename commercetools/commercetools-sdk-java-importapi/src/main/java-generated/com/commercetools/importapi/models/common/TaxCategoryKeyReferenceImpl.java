@@ -91,4 +91,8 @@ public class TaxCategoryKeyReferenceImpl implements TaxCategoryKeyReference, Mod
                 .build();
     }
 
+    @Override
+    public TaxCategoryKeyReference copyDeep() {
+        return TaxCategoryKeyReference.deepCopy(this);
+    }
 }

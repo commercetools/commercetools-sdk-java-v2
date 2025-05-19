@@ -133,4 +133,8 @@ public class SetAddressChangeImpl implements SetAddressChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public SetAddressChange copyDeep() {
+        return SetAddressChange.deepCopy(this);
+    }
 }

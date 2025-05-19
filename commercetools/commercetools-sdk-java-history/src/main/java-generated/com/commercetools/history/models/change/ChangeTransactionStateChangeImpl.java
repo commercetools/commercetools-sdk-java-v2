@@ -153,4 +153,8 @@ public class ChangeTransactionStateChangeImpl implements ChangeTransactionStateC
                 .build();
     }
 
+    @Override
+    public ChangeTransactionStateChange copyDeep() {
+        return ChangeTransactionStateChange.deepCopy(this);
+    }
 }

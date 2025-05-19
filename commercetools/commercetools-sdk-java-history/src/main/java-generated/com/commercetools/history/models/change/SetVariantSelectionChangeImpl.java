@@ -153,4 +153,8 @@ public class SetVariantSelectionChangeImpl implements SetVariantSelectionChange,
                 .build();
     }
 
+    @Override
+    public SetVariantSelectionChange copyDeep() {
+        return SetVariantSelectionChange.deepCopy(this);
+    }
 }

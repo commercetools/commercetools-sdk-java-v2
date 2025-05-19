@@ -83,6 +83,8 @@ public interface ParcelMeasurementDraft extends io.vrap.rmf.base.client.Draft<Pa
         return instance;
     }
 
+    public ParcelMeasurementDraft copyDeep();
+
     /**
      * factory method to create a deep copy of ParcelMeasurementDraft
      * @param template instance to be copied

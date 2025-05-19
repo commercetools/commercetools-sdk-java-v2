@@ -92,4 +92,8 @@ public class CustomFieldSetTypeImpl implements CustomFieldSetType, ModelBase {
                 .build();
     }
 
+    @Override
+    public CustomFieldSetType copyDeep() {
+        return CustomFieldSetType.deepCopy(this);
+    }
 }

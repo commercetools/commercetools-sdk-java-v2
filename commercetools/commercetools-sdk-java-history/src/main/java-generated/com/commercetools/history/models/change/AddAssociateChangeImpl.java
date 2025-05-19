@@ -110,4 +110,8 @@ public class AddAssociateChangeImpl implements AddAssociateChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public AddAssociateChange copyDeep() {
+        return AddAssociateChange.deepCopy(this);
+    }
 }

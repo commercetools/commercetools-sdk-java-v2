@@ -184,6 +184,8 @@ public interface ReturnItem {
         return instance;
     }
 
+    public ReturnItem copyDeep();
+
     /**
      * factory method to create a deep copy of ReturnItem
      * @param template instance to be copied

@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ChangeStagedQuoteStateChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeStagedQuoteStateChangeImpl.class)
 public interface ChangeStagedQuoteStateChange extends Change {
@@ -112,6 +113,8 @@ public interface ChangeStagedQuoteStateChange extends Change {
         instance.setNextValue(template.getNextValue());
         return instance;
     }
+
+    public ChangeStagedQuoteStateChange copyDeep();
 
     /**
      * factory method to create a deep copy of ChangeStagedQuoteStateChange

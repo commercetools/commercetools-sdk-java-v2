@@ -92,6 +92,8 @@ public interface ParcelItems {
         return instance;
     }
 
+    public ParcelItems copyDeep();
+
     /**
      * factory method to create a deep copy of ParcelItems
      * @param template instance to be copied

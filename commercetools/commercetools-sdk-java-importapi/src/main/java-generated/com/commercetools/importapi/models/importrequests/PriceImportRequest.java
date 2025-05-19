@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("price")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PriceImportRequestImpl.class)
 public interface PriceImportRequest extends ImportRequest {
@@ -81,6 +82,8 @@ public interface PriceImportRequest extends ImportRequest {
         instance.setResources(template.getResources());
         return instance;
     }
+
+    public PriceImportRequest copyDeep();
 
     /**
      * factory method to create a deep copy of PriceImportRequest

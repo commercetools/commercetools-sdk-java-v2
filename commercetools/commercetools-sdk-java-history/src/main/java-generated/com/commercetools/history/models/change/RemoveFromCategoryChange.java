@@ -33,6 +33,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("RemoveFromCategoryChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = RemoveFromCategoryChangeImpl.class)
 public interface RemoveFromCategoryChange extends Change {
@@ -150,6 +151,8 @@ public interface RemoveFromCategoryChange extends Change {
         instance.setCategory(template.getCategory());
         return instance;
     }
+
+    public RemoveFromCategoryChange copyDeep();
 
     /**
      * factory method to create a deep copy of RemoveFromCategoryChange

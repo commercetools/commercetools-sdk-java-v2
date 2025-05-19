@@ -216,4 +216,8 @@ public class SetOrderLineItemCustomFieldChangeImpl implements SetOrderLineItemCu
                 .build();
     }
 
+    @Override
+    public SetOrderLineItemCustomFieldChange copyDeep() {
+        return SetOrderLineItemCustomFieldChange.deepCopy(this);
+    }
 }

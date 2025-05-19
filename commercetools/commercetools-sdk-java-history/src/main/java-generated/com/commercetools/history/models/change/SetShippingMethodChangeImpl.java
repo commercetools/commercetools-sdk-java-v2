@@ -134,4 +134,8 @@ public class SetShippingMethodChangeImpl implements SetShippingMethodChange, Mod
                 .build();
     }
 
+    @Override
+    public SetShippingMethodChange copyDeep() {
+        return SetShippingMethodChange.deepCopy(this);
+    }
 }

@@ -157,4 +157,8 @@ public class SetLineItemShippingDetailsChangeImpl implements SetLineItemShipping
                 .build();
     }
 
+    @Override
+    public SetLineItemShippingDetailsChange copyDeep() {
+        return SetLineItemShippingDetailsChange.deepCopy(this);
+    }
 }

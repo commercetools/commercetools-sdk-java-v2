@@ -91,4 +91,8 @@ public class NewMasterVariantAdditionNotAllowedErrorImpl implements NewMasterVar
                 .build();
     }
 
+    @Override
+    public NewMasterVariantAdditionNotAllowedError copyDeep() {
+        return NewMasterVariantAdditionNotAllowedError.deepCopy(this);
+    }
 }

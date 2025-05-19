@@ -118,6 +118,8 @@ public interface Reservation {
         return instance;
     }
 
+    public Reservation copyDeep();
+
     /**
      * factory method to create a deep copy of Reservation
      * @param template instance to be copied

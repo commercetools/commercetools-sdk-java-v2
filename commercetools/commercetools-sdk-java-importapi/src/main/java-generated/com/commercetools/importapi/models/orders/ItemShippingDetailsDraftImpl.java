@@ -78,4 +78,8 @@ public class ItemShippingDetailsDraftImpl implements ItemShippingDetailsDraft, M
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("targets", targets).build();
     }
 
+    @Override
+    public ItemShippingDetailsDraft copyDeep() {
+        return ItemShippingDetailsDraft.deepCopy(this);
+    }
 }

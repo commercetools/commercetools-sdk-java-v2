@@ -142,4 +142,8 @@ public class SetReservationsChangeImpl implements SetReservationsChange, ModelBa
                 .build();
     }
 
+    @Override
+    public SetReservationsChange copyDeep() {
+        return SetReservationsChange.deepCopy(this);
+    }
 }

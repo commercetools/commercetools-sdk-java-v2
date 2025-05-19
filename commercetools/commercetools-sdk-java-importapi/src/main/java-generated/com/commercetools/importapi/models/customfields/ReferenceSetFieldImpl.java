@@ -96,4 +96,8 @@ public class ReferenceSetFieldImpl implements ReferenceSetField, ModelBase {
                 .build();
     }
 
+    @Override
+    public ReferenceSetField copyDeep() {
+        return ReferenceSetField.deepCopy(this);
+    }
 }

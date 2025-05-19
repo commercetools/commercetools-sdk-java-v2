@@ -91,4 +91,8 @@ public class StringLabelImpl implements StringLabel, ModelBase {
                 .build();
     }
 
+    @Override
+    public StringLabel copyDeep() {
+        return StringLabel.deepCopy(this);
+    }
 }

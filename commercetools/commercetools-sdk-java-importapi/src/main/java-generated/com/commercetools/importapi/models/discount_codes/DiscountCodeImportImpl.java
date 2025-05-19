@@ -327,4 +327,8 @@ public class DiscountCodeImportImpl implements DiscountCodeImport, ModelBase {
                 .build();
     }
 
+    @Override
+    public DiscountCodeImport copyDeep() {
+        return DiscountCodeImport.deepCopy(this);
+    }
 }

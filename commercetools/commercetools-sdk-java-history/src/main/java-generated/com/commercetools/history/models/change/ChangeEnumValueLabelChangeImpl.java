@@ -172,4 +172,8 @@ public class ChangeEnumValueLabelChangeImpl implements ChangeEnumValueLabelChang
                 .build();
     }
 
+    @Override
+    public ChangeEnumValueLabelChange copyDeep() {
+        return ChangeEnumValueLabelChange.deepCopy(this);
+    }
 }

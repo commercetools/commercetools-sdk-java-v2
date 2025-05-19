@@ -78,4 +78,8 @@ public class AttributesImpl implements Attributes, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("values", values).build();
     }
 
+    @Override
+    public Attributes copyDeep() {
+        return Attributes.deepCopy(this);
+    }
 }

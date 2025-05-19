@@ -91,4 +91,8 @@ public class ProductTypeKeyReferenceImpl implements ProductTypeKeyReference, Mod
                 .build();
     }
 
+    @Override
+    public ProductTypeKeyReference copyDeep() {
+        return ProductTypeKeyReference.deepCopy(this);
+    }
 }

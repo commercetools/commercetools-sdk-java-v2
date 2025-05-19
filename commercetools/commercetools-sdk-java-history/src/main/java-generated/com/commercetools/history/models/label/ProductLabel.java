@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ProductLabel")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductLabelImpl.class)
 public interface ProductLabel extends Label {
@@ -98,6 +99,8 @@ public interface ProductLabel extends Label {
         instance.setName(template.getName());
         return instance;
     }
+
+    public ProductLabel copyDeep();
 
     /**
      * factory method to create a deep copy of ProductLabel

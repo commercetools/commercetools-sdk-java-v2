@@ -108,6 +108,8 @@ public interface ImportOperationStatus {
         return instance;
     }
 
+    public ImportOperationStatus copyDeep();
+
     /**
      * factory method to create a deep copy of ImportOperationStatus
      * @param template instance to be copied

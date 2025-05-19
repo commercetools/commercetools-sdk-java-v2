@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("Number")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomFieldNumberTypeImpl.class)
 public interface CustomFieldNumberType extends FieldType {
@@ -50,6 +51,8 @@ public interface CustomFieldNumberType extends FieldType {
         CustomFieldNumberTypeImpl instance = new CustomFieldNumberTypeImpl();
         return instance;
     }
+
+    public CustomFieldNumberType copyDeep();
 
     /**
      * factory method to create a deep copy of CustomFieldNumberType

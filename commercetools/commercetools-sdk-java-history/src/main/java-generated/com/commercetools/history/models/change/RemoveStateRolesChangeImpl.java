@@ -142,4 +142,8 @@ public class RemoveStateRolesChangeImpl implements RemoveStateRolesChange, Model
                 .build();
     }
 
+    @Override
+    public RemoveStateRolesChange copyDeep() {
+        return RemoveStateRolesChange.deepCopy(this);
+    }
 }

@@ -131,6 +131,8 @@ public interface ProductVariantPatch {
         return instance;
     }
 
+    public ProductVariantPatch copyDeep();
+
     /**
      * factory method to create a deep copy of ProductVariantPatch
      * @param template instance to be copied

@@ -155,4 +155,8 @@ public class SetSkuChangeImpl implements SetSkuChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public SetSkuChange copyDeep() {
+        return SetSkuChange.deepCopy(this);
+    }
 }

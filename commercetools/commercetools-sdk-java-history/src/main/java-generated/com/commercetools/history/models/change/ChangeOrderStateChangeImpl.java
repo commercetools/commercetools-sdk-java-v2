@@ -137,4 +137,8 @@ public class ChangeOrderStateChangeImpl implements ChangeOrderStateChange, Model
                 .build();
     }
 
+    @Override
+    public ChangeOrderStateChange copyDeep() {
+        return ChangeOrderStateChange.deepCopy(this);
+    }
 }

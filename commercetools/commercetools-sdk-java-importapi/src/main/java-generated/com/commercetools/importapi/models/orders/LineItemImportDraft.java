@@ -247,6 +247,8 @@ public interface LineItemImportDraft extends io.vrap.rmf.base.client.Draft<LineI
         return instance;
     }
 
+    public LineItemImportDraft copyDeep();
+
     /**
      * factory method to create a deep copy of LineItemImportDraft
      * @param template instance to be copied

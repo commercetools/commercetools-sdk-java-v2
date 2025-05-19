@@ -26,6 +26,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("external")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeValueExternalChangeValueImpl.class)
 public interface ChangeValueExternalChangeValue extends ChangeValueChangeValue {
@@ -60,6 +61,8 @@ public interface ChangeValueExternalChangeValue extends ChangeValueChangeValue {
         ChangeValueExternalChangeValueImpl instance = new ChangeValueExternalChangeValueImpl();
         return instance;
     }
+
+    public ChangeValueExternalChangeValue copyDeep();
 
     /**
      * factory method to create a deep copy of ChangeValueExternalChangeValue

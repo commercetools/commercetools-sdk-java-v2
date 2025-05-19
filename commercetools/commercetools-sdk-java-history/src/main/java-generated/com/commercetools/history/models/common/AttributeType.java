@@ -65,6 +65,8 @@ public interface AttributeType {
         return instance;
     }
 
+    public AttributeType copyDeep();
+
     /**
      * factory method to create a deep copy of AttributeType
      * @param template instance to be copied

@@ -98,4 +98,8 @@ public class CategoryImportRequestImpl implements CategoryImportRequest, ModelBa
                 .build();
     }
 
+    @Override
+    public CategoryImportRequest copyDeep() {
+        return CategoryImportRequest.deepCopy(this);
+    }
 }

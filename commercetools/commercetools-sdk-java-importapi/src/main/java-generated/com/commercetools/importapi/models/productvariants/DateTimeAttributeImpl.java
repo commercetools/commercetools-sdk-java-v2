@@ -110,4 +110,8 @@ public class DateTimeAttributeImpl implements DateTimeAttribute, ModelBase {
                 .build();
     }
 
+    @Override
+    public DateTimeAttribute copyDeep() {
+        return DateTimeAttribute.deepCopy(this);
+    }
 }

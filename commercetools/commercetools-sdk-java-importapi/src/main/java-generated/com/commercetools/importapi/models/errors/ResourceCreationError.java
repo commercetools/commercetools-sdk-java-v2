@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ResourceCreation")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ResourceCreationErrorImpl.class)
 public interface ResourceCreationError extends ErrorObject {
@@ -68,6 +69,8 @@ public interface ResourceCreationError extends ErrorObject {
         instance.setResource(template.getResource());
         return instance;
     }
+
+    public ResourceCreationError copyDeep();
 
     /**
      * factory method to create a deep copy of ResourceCreationError

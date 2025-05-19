@@ -91,4 +91,8 @@ public class CartKeyReferenceImpl implements CartKeyReference, ModelBase {
                 .build();
     }
 
+    @Override
+    public CartKeyReference copyDeep() {
+        return CartKeyReference.deepCopy(this);
+    }
 }

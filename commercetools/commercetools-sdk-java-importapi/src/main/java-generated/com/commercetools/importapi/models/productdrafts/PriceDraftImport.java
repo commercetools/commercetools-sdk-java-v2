@@ -228,6 +228,8 @@ public interface PriceDraftImport {
         return instance;
     }
 
+    public PriceDraftImport copyDeep();
+
     /**
      * factory method to create a deep copy of PriceDraftImport
      * @param template instance to be copied

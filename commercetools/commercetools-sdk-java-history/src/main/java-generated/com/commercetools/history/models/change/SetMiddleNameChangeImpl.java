@@ -133,4 +133,8 @@ public class SetMiddleNameChangeImpl implements SetMiddleNameChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public SetMiddleNameChange copyDeep() {
+        return SetMiddleNameChange.deepCopy(this);
+    }
 }

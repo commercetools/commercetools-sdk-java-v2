@@ -114,4 +114,8 @@ public class TextSetAttributeImpl implements TextSetAttribute, ModelBase {
                 .build();
     }
 
+    @Override
+    public TextSetAttribute copyDeep() {
+        return TextSetAttribute.deepCopy(this);
+    }
 }

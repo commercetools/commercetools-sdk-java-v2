@@ -129,4 +129,8 @@ public class StagedQuoteLabelImpl implements StagedQuoteLabel, ModelBase {
                 .build();
     }
 
+    @Override
+    public StagedQuoteLabel copyDeep() {
+        return StagedQuoteLabel.deepCopy(this);
+    }
 }

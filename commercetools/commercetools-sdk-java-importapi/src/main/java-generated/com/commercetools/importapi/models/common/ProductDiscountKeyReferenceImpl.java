@@ -91,4 +91,8 @@ public class ProductDiscountKeyReferenceImpl implements ProductDiscountKeyRefere
                 .build();
     }
 
+    @Override
+    public ProductDiscountKeyReference copyDeep() {
+        return ProductDiscountKeyReference.deepCopy(this);
+    }
 }

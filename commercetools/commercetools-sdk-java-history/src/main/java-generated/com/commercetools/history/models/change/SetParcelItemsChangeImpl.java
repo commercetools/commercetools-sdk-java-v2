@@ -166,4 +166,8 @@ public class SetParcelItemsChangeImpl implements SetParcelItemsChange, ModelBase
                 .build();
     }
 
+    @Override
+    public SetParcelItemsChange copyDeep() {
+        return SetParcelItemsChange.deepCopy(this);
+    }
 }

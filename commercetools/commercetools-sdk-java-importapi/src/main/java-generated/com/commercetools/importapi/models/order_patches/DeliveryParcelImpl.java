@@ -141,4 +141,8 @@ public class DeliveryParcelImpl implements DeliveryParcel, ModelBase {
                 .build();
     }
 
+    @Override
+    public DeliveryParcel copyDeep() {
+        return DeliveryParcel.deepCopy(this);
+    }
 }

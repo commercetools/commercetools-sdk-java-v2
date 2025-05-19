@@ -137,4 +137,8 @@ public class AddAssetChangeImpl implements AddAssetChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public AddAssetChange copyDeep() {
+        return AddAssetChange.deepCopy(this);
+    }
 }

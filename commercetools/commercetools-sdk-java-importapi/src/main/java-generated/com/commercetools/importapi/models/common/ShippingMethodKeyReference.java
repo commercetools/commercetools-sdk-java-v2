@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("shipping-method")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShippingMethodKeyReferenceImpl.class)
 public interface ShippingMethodKeyReference extends KeyReference {
@@ -52,6 +53,8 @@ public interface ShippingMethodKeyReference extends KeyReference {
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public ShippingMethodKeyReference copyDeep();
 
     /**
      * factory method to create a deep copy of ShippingMethodKeyReference

@@ -95,4 +95,8 @@ public class DeliveryAddressDraftImpl implements DeliveryAddressDraft, ModelBase
                 .build();
     }
 
+    @Override
+    public DeliveryAddressDraft copyDeep() {
+        return DeliveryAddressDraft.deepCopy(this);
+    }
 }

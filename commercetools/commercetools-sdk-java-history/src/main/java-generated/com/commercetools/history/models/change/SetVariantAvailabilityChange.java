@@ -33,6 +33,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SetVariantAvailabilityChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetVariantAvailabilityChangeImpl.class)
 public interface SetVariantAvailabilityChange extends Change {
@@ -155,6 +156,8 @@ public interface SetVariantAvailabilityChange extends Change {
         instance.setVariant(template.getVariant());
         return instance;
     }
+
+    public SetVariantAvailabilityChange copyDeep();
 
     /**
      * factory method to create a deep copy of SetVariantAvailabilityChange

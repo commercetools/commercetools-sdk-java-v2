@@ -120,6 +120,8 @@ public interface DeliveryDraft extends io.vrap.rmf.base.client.Draft<DeliveryDra
         return instance;
     }
 
+    public DeliveryDraft copyDeep();
+
     /**
      * factory method to create a deep copy of DeliveryDraft
      * @param template instance to be copied

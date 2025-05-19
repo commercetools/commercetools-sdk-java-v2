@@ -133,4 +133,8 @@ public class SetValueChangeImpl implements SetValueChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public SetValueChange copyDeep() {
+        return SetValueChange.deepCopy(this);
+    }
 }

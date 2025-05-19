@@ -133,4 +133,8 @@ public class AddPlainEnumValueChangeImpl implements AddPlainEnumValueChange, Mod
                 .build();
     }
 
+    @Override
+    public AddPlainEnumValueChange copyDeep() {
+        return AddPlainEnumValueChange.deepCopy(this);
+    }
 }

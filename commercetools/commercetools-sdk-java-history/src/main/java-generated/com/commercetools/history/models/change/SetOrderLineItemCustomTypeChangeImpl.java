@@ -177,4 +177,8 @@ public class SetOrderLineItemCustomTypeChangeImpl implements SetOrderLineItemCus
                 .build();
     }
 
+    @Override
+    public SetOrderLineItemCustomTypeChange copyDeep() {
+        return SetOrderLineItemCustomTypeChange.deepCopy(this);
+    }
 }

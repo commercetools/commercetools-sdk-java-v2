@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("BusinessUnitLabel")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = BusinessUnitLabelImpl.class)
 public interface BusinessUnitLabel extends Label {
@@ -94,6 +95,8 @@ public interface BusinessUnitLabel extends Label {
         instance.setName(template.getName());
         return instance;
     }
+
+    public BusinessUnitLabel copyDeep();
 
     /**
      * factory method to create a deep copy of BusinessUnitLabel

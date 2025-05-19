@@ -84,6 +84,8 @@ public interface DiscountCodeInfo {
         return instance;
     }
 
+    public DiscountCodeInfo copyDeep();
+
     /**
      * factory method to create a deep copy of DiscountCodeInfo
      * @param template instance to be copied

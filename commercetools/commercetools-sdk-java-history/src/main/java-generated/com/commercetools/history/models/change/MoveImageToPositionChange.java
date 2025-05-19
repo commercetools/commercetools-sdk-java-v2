@@ -33,6 +33,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("MoveImageToPositionChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MoveImageToPositionChangeImpl.class)
 public interface MoveImageToPositionChange extends Change {
@@ -155,6 +156,8 @@ public interface MoveImageToPositionChange extends Change {
         instance.setCatalogData(template.getCatalogData());
         return instance;
     }
+
+    public MoveImageToPositionChange copyDeep();
 
     /**
      * factory method to create a deep copy of MoveImageToPositionChange

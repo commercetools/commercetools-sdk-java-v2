@@ -173,4 +173,8 @@ public class SetLineItemDiscountedPriceChangeImpl implements SetLineItemDiscount
                 .build();
     }
 
+    @Override
+    public SetLineItemDiscountedPriceChange copyDeep() {
+        return SetLineItemDiscountedPriceChange.deepCopy(this);
+    }
 }

@@ -192,4 +192,8 @@ public class SetLineItemProductKeyChangeImpl implements SetLineItemProductKeyCha
                 .build();
     }
 
+    @Override
+    public SetLineItemProductKeyChange copyDeep() {
+        return SetLineItemProductKeyChange.deepCopy(this);
+    }
 }

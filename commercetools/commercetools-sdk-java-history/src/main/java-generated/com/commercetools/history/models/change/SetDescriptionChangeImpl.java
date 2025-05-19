@@ -137,4 +137,8 @@ public class SetDescriptionChangeImpl implements SetDescriptionChange, ModelBase
                 .build();
     }
 
+    @Override
+    public SetDescriptionChange copyDeep() {
+        return SetDescriptionChange.deepCopy(this);
+    }
 }

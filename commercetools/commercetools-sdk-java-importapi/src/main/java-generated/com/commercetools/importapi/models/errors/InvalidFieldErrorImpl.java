@@ -176,4 +176,8 @@ public class InvalidFieldErrorImpl implements InvalidFieldError, ModelBase {
                 .build();
     }
 
+    @Override
+    public InvalidFieldError copyDeep() {
+        return InvalidFieldError.deepCopy(this);
+    }
 }

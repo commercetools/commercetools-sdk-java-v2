@@ -134,6 +134,8 @@ public interface ImportContainer {
         return instance;
     }
 
+    public ImportContainer copyDeep();
+
     /**
      * factory method to create a deep copy of ImportContainer
      * @param template instance to be copied

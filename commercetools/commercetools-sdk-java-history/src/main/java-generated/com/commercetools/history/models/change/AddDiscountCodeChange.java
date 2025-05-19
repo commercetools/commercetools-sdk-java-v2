@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("AddDiscountCodeChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AddDiscountCodeChangeImpl.class)
 public interface AddDiscountCodeChange extends Change {
@@ -97,6 +98,8 @@ public interface AddDiscountCodeChange extends Change {
         instance.setNextValue(template.getNextValue());
         return instance;
     }
+
+    public AddDiscountCodeChange copyDeep();
 
     /**
      * factory method to create a deep copy of AddDiscountCodeChange

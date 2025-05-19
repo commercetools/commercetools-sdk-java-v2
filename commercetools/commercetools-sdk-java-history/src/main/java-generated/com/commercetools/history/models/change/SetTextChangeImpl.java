@@ -133,4 +133,8 @@ public class SetTextChangeImpl implements SetTextChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public SetTextChange copyDeep() {
+        return SetTextChange.deepCopy(this);
+    }
 }

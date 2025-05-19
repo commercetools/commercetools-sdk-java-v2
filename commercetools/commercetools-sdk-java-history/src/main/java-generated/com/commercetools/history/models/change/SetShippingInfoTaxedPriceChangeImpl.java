@@ -133,4 +133,8 @@ public class SetShippingInfoTaxedPriceChangeImpl implements SetShippingInfoTaxed
                 .build();
     }
 
+    @Override
+    public SetShippingInfoTaxedPriceChange copyDeep() {
+        return SetShippingInfoTaxedPriceChange.deepCopy(this);
+    }
 }

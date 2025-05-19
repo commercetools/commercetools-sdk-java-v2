@@ -147,4 +147,8 @@ public class SetKeyChangeImpl implements SetKeyChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public SetKeyChange copyDeep() {
+        return SetKeyChange.deepCopy(this);
+    }
 }

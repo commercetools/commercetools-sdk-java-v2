@@ -36,6 +36,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SetAssetTagsChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetAssetTagsChangeImpl.class)
 public interface SetAssetTagsChange extends Change {
@@ -151,6 +152,8 @@ public interface SetAssetTagsChange extends Change {
         instance.setAsset(template.getAsset());
         return instance;
     }
+
+    public SetAssetTagsChange copyDeep();
 
     /**
      * factory method to create a deep copy of SetAssetTagsChange

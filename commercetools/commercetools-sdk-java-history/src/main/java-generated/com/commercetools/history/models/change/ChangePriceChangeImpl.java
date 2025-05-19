@@ -175,4 +175,8 @@ public class ChangePriceChangeImpl implements ChangePriceChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public ChangePriceChange copyDeep() {
+        return ChangePriceChange.deepCopy(this);
+    }
 }

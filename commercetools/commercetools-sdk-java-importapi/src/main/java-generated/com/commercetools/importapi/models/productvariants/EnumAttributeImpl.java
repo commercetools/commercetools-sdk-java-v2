@@ -109,4 +109,8 @@ public class EnumAttributeImpl implements EnumAttribute, ModelBase {
                 .build();
     }
 
+    @Override
+    public EnumAttribute copyDeep() {
+        return EnumAttribute.deepCopy(this);
+    }
 }

@@ -118,4 +118,8 @@ public class ImportOperationStatusImpl implements ImportOperationStatus, ModelBa
                 .build();
     }
 
+    @Override
+    public ImportOperationStatus copyDeep() {
+        return ImportOperationStatus.deepCopy(this);
+    }
 }

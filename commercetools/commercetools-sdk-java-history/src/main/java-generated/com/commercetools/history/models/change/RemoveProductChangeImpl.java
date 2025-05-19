@@ -110,4 +110,8 @@ public class RemoveProductChangeImpl implements RemoveProductChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public RemoveProductChange copyDeep() {
+        return RemoveProductChange.deepCopy(this);
+    }
 }

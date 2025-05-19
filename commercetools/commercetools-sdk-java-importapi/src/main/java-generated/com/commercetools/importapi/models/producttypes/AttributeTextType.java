@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("text")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AttributeTextTypeImpl.class)
 public interface AttributeTextType extends AttributeType {
@@ -50,6 +51,8 @@ public interface AttributeTextType extends AttributeType {
         AttributeTextTypeImpl instance = new AttributeTextTypeImpl();
         return instance;
     }
+
+    public AttributeTextType copyDeep();
 
     /**
      * factory method to create a deep copy of AttributeTextType

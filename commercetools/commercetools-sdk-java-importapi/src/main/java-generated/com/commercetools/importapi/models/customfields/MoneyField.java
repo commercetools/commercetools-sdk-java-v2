@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("Money")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MoneyFieldImpl.class)
 public interface MoneyField extends CustomField {
@@ -72,6 +73,8 @@ public interface MoneyField extends CustomField {
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public MoneyField copyDeep();
 
     /**
      * factory method to create a deep copy of MoneyField

@@ -114,4 +114,8 @@ public class TransactionChangeValueImpl implements TransactionChangeValue, Model
                 .build();
     }
 
+    @Override
+    public TransactionChangeValue copyDeep() {
+        return TransactionChangeValue.deepCopy(this);
+    }
 }

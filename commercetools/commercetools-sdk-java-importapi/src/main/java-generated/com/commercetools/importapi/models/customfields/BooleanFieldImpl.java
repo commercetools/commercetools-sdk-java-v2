@@ -91,4 +91,8 @@ public class BooleanFieldImpl implements BooleanField, ModelBase {
                 .build();
     }
 
+    @Override
+    public BooleanField copyDeep() {
+        return BooleanField.deepCopy(this);
+    }
 }

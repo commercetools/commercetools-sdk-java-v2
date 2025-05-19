@@ -126,6 +126,8 @@ public interface DeliveryParcel {
         return instance;
     }
 
+    public DeliveryParcel copyDeep();
+
     /**
      * factory method to create a deep copy of DeliveryParcel
      * @param template instance to be copied

@@ -133,4 +133,8 @@ public class ChangeQuoteStateChangeImpl implements ChangeQuoteStateChange, Model
                 .build();
     }
 
+    @Override
+    public ChangeQuoteStateChange copyDeep() {
+        return ChangeQuoteStateChange.deepCopy(this);
+    }
 }

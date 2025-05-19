@@ -133,4 +133,8 @@ public class ChangeCartPredicateChangeImpl implements ChangeCartPredicateChange,
                 .build();
     }
 
+    @Override
+    public ChangeCartPredicateChange copyDeep() {
+        return ChangeCartPredicateChange.deepCopy(this);
+    }
 }

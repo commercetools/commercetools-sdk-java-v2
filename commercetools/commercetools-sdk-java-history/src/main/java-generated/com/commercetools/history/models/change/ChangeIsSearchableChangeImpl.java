@@ -153,4 +153,8 @@ public class ChangeIsSearchableChangeImpl implements ChangeIsSearchableChange, M
                 .build();
     }
 
+    @Override
+    public ChangeIsSearchableChange copyDeep() {
+        return ChangeIsSearchableChange.deepCopy(this);
+    }
 }

@@ -133,4 +133,8 @@ public class SetCompanyNameChangeImpl implements SetCompanyNameChange, ModelBase
                 .build();
     }
 
+    @Override
+    public SetCompanyNameChange copyDeep() {
+        return SetCompanyNameChange.deepCopy(this);
+    }
 }

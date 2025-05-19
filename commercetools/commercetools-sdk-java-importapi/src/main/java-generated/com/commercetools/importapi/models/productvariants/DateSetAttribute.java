@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("date-set")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DateSetAttributeImpl.class)
 public interface DateSetAttribute extends Attribute {
@@ -79,6 +80,8 @@ public interface DateSetAttribute extends Attribute {
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public DateSetAttribute copyDeep();
 
     /**
      * factory method to create a deep copy of DateSetAttribute

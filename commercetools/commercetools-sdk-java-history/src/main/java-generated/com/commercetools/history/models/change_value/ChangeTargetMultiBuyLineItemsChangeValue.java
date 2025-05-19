@@ -32,6 +32,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("multiBuyLineItems")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeTargetMultiBuyLineItemsChangeValueImpl.class)
 public interface ChangeTargetMultiBuyLineItemsChangeValue extends ChangeTargetChangeValue {
@@ -146,6 +147,8 @@ public interface ChangeTargetMultiBuyLineItemsChangeValue extends ChangeTargetCh
         instance.setSelectionMode(template.getSelectionMode());
         return instance;
     }
+
+    public ChangeTargetMultiBuyLineItemsChangeValue copyDeep();
 
     /**
      * factory method to create a deep copy of ChangeTargetMultiBuyLineItemsChangeValue

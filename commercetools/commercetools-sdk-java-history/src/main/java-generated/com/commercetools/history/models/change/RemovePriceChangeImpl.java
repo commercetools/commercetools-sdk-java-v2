@@ -175,4 +175,8 @@ public class RemovePriceChangeImpl implements RemovePriceChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public RemovePriceChange copyDeep() {
+        return RemovePriceChange.deepCopy(this);
+    }
 }

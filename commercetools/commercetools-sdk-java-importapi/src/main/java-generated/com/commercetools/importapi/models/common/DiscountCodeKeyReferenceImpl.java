@@ -91,4 +91,8 @@ public class DiscountCodeKeyReferenceImpl implements DiscountCodeKeyReference, M
                 .build();
     }
 
+    @Override
+    public DiscountCodeKeyReference copyDeep() {
+        return DiscountCodeKeyReference.deepCopy(this);
+    }
 }

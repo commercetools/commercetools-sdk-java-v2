@@ -132,4 +132,8 @@ public class DuplicateFieldErrorImpl implements DuplicateFieldError, ModelBase {
                 .build();
     }
 
+    @Override
+    public DuplicateFieldError copyDeep() {
+        return DuplicateFieldError.deepCopy(this);
+    }
 }

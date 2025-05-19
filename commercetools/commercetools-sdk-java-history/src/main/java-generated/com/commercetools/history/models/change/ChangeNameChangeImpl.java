@@ -139,4 +139,8 @@ public class ChangeNameChangeImpl implements ChangeNameChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public ChangeNameChange copyDeep() {
+        return ChangeNameChange.deepCopy(this);
+    }
 }

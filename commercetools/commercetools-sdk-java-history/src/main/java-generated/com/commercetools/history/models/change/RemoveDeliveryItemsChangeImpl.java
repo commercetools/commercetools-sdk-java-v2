@@ -110,4 +110,8 @@ public class RemoveDeliveryItemsChangeImpl implements RemoveDeliveryItemsChange,
                 .build();
     }
 
+    @Override
+    public RemoveDeliveryItemsChange copyDeep() {
+        return RemoveDeliveryItemsChange.deepCopy(this);
+    }
 }

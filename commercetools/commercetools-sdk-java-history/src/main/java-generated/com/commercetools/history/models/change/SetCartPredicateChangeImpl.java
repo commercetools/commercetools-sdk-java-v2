@@ -133,4 +133,8 @@ public class SetCartPredicateChangeImpl implements SetCartPredicateChange, Model
                 .build();
     }
 
+    @Override
+    public SetCartPredicateChange copyDeep() {
+        return SetCartPredicateChange.deepCopy(this);
+    }
 }

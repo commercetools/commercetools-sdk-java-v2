@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("product")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductKeyReferenceImpl.class)
 public interface ProductKeyReference extends KeyReference {
@@ -52,6 +53,8 @@ public interface ProductKeyReference extends KeyReference {
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public ProductKeyReference copyDeep();
 
     /**
      * factory method to create a deep copy of ProductKeyReference

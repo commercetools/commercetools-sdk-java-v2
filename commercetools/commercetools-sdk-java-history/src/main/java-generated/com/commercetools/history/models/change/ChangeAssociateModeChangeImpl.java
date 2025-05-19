@@ -134,4 +134,8 @@ public class ChangeAssociateModeChangeImpl implements ChangeAssociateModeChange,
                 .build();
     }
 
+    @Override
+    public ChangeAssociateModeChange copyDeep() {
+        return ChangeAssociateModeChange.deepCopy(this);
+    }
 }

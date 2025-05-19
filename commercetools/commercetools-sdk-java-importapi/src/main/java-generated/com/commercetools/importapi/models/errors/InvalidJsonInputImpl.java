@@ -91,4 +91,8 @@ public class InvalidJsonInputImpl implements InvalidJsonInput, ModelBase {
                 .build();
     }
 
+    @Override
+    public InvalidJsonInput copyDeep() {
+        return InvalidJsonInput.deepCopy(this);
+    }
 }

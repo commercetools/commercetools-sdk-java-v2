@@ -192,4 +192,8 @@ public class SetAddressCustomFieldChangeImpl implements SetAddressCustomFieldCha
                 .build();
     }
 
+    @Override
+    public SetAddressCustomFieldChange copyDeep() {
+        return SetAddressCustomFieldChange.deepCopy(this);
+    }
 }

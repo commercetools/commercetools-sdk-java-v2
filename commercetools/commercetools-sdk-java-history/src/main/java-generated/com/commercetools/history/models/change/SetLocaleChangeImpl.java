@@ -139,4 +139,8 @@ public class SetLocaleChangeImpl implements SetLocaleChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public SetLocaleChange copyDeep() {
+        return SetLocaleChange.deepCopy(this);
+    }
 }

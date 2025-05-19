@@ -110,4 +110,8 @@ public class RemoveAttributeDefinitionChangeImpl implements RemoveAttributeDefin
                 .build();
     }
 
+    @Override
+    public RemoveAttributeDefinitionChange copyDeep() {
+        return RemoveAttributeDefinitionChange.deepCopy(this);
+    }
 }

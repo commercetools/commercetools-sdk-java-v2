@@ -133,4 +133,8 @@ public class ChangeAssociateChangeImpl implements ChangeAssociateChange, ModelBa
                 .build();
     }
 
+    @Override
+    public ChangeAssociateChange copyDeep() {
+        return ChangeAssociateChange.deepCopy(this);
+    }
 }

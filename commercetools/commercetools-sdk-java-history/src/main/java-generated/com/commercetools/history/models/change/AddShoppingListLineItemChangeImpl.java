@@ -133,4 +133,8 @@ public class AddShoppingListLineItemChangeImpl implements AddShoppingListLineIte
                 .build();
     }
 
+    @Override
+    public AddShoppingListLineItemChange copyDeep() {
+        return AddShoppingListLineItemChange.deepCopy(this);
+    }
 }

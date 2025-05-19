@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SetPermissionsChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetPermissionsChangeImpl.class)
 public interface SetPermissionsChange extends Change {
@@ -128,6 +129,8 @@ public interface SetPermissionsChange extends Change {
         instance.setNextValue(template.getNextValue());
         return instance;
     }
+
+    public SetPermissionsChange copyDeep();
 
     /**
      * factory method to create a deep copy of SetPermissionsChange

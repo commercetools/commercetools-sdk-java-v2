@@ -137,4 +137,8 @@ public class SetExternalIdChangeImpl implements SetExternalIdChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public SetExternalIdChange copyDeep() {
+        return SetExternalIdChange.deepCopy(this);
+    }
 }

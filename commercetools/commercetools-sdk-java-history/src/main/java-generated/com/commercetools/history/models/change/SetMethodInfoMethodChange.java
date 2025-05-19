@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SetMethodInfoMethodChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetMethodInfoMethodChangeImpl.class)
 public interface SetMethodInfoMethodChange extends Change {
@@ -111,6 +112,8 @@ public interface SetMethodInfoMethodChange extends Change {
         instance.setNextValue(template.getNextValue());
         return instance;
     }
+
+    public SetMethodInfoMethodChange copyDeep();
 
     /**
      * factory method to create a deep copy of SetMethodInfoMethodChange

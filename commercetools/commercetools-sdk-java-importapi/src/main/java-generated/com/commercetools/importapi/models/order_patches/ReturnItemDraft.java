@@ -130,6 +130,8 @@ public interface ReturnItemDraft extends io.vrap.rmf.base.client.Draft<ReturnIte
         return instance;
     }
 
+    public ReturnItemDraft copyDeep();
+
     /**
      * factory method to create a deep copy of ReturnItemDraft
      * @param template instance to be copied

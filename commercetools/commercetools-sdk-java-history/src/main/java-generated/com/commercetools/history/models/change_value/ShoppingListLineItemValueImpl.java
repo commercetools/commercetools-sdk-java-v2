@@ -114,4 +114,8 @@ public class ShoppingListLineItemValueImpl implements ShoppingListLineItemValue,
                 .build();
     }
 
+    @Override
+    public ShoppingListLineItemValue copyDeep() {
+        return ShoppingListLineItemValue.deepCopy(this);
+    }
 }

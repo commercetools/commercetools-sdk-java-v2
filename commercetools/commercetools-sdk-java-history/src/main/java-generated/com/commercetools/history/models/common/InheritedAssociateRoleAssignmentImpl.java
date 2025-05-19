@@ -96,4 +96,8 @@ public class InheritedAssociateRoleAssignmentImpl implements InheritedAssociateR
                 .build();
     }
 
+    @Override
+    public InheritedAssociateRoleAssignment copyDeep() {
+        return InheritedAssociateRoleAssignment.deepCopy(this);
+    }
 }

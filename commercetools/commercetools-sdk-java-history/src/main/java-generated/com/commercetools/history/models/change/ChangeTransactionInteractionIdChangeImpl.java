@@ -153,4 +153,8 @@ public class ChangeTransactionInteractionIdChangeImpl implements ChangeTransacti
                 .build();
     }
 
+    @Override
+    public ChangeTransactionInteractionIdChange copyDeep() {
+        return ChangeTransactionInteractionIdChange.deepCopy(this);
+    }
 }

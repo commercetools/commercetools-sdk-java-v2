@@ -132,4 +132,8 @@ public class AssetSourceImpl implements AssetSource, ModelBase {
                 .build();
     }
 
+    @Override
+    public AssetSource copyDeep() {
+        return AssetSource.deepCopy(this);
+    }
 }

@@ -110,4 +110,8 @@ public class RemoveProductSelectionChangeImpl implements RemoveProductSelectionC
                 .build();
     }
 
+    @Override
+    public RemoveProductSelectionChange copyDeep() {
+        return RemoveProductSelectionChange.deepCopy(this);
+    }
 }

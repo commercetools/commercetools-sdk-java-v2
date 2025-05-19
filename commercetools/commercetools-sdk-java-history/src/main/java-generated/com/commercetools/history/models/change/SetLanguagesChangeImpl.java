@@ -141,4 +141,8 @@ public class SetLanguagesChangeImpl implements SetLanguagesChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public SetLanguagesChange copyDeep() {
+        return SetLanguagesChange.deepCopy(this);
+    }
 }

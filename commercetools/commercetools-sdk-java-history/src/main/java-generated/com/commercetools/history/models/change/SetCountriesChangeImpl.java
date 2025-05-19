@@ -142,4 +142,8 @@ public class SetCountriesChangeImpl implements SetCountriesChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public SetCountriesChange copyDeep() {
+        return SetCountriesChange.deepCopy(this);
+    }
 }

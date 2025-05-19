@@ -41,6 +41,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ChangeLocalizedNameChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeLocalizedNameChangeImpl.class)
 public interface ChangeLocalizedNameChange extends Change {
@@ -125,6 +126,8 @@ public interface ChangeLocalizedNameChange extends Change {
         instance.setNextValue(template.getNextValue());
         return instance;
     }
+
+    public ChangeLocalizedNameChange copyDeep();
 
     /**
      * factory method to create a deep copy of ChangeLocalizedNameChange

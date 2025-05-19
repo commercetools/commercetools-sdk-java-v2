@@ -62,4 +62,8 @@ public class CustomFieldDateTimeTypeImpl implements CustomFieldDateTimeType, Mod
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("name", name).build();
     }
 
+    @Override
+    public CustomFieldDateTimeType copyDeep() {
+        return CustomFieldDateTimeType.deepCopy(this);
+    }
 }

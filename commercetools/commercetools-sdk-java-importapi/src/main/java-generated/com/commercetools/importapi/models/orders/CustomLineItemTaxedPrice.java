@@ -86,6 +86,8 @@ public interface CustomLineItemTaxedPrice {
         return instance;
     }
 
+    public CustomLineItemTaxedPrice copyDeep();
+
     /**
      * factory method to create a deep copy of CustomLineItemTaxedPrice
      * @param template instance to be copied

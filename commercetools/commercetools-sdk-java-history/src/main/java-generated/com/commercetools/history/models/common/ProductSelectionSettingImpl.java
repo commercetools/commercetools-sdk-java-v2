@@ -96,4 +96,8 @@ public class ProductSelectionSettingImpl implements ProductSelectionSetting, Mod
                 .build();
     }
 
+    @Override
+    public ProductSelectionSetting copyDeep() {
+        return ProductSelectionSetting.deepCopy(this);
+    }
 }

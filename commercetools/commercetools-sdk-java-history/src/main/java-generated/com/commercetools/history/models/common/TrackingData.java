@@ -133,6 +133,8 @@ public interface TrackingData {
         return instance;
     }
 
+    public TrackingData copyDeep();
+
     /**
      * factory method to create a deep copy of TrackingData
      * @param template instance to be copied

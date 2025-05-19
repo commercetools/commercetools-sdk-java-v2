@@ -118,6 +118,8 @@ public interface AssetSource {
         return instance;
     }
 
+    public AssetSource copyDeep();
+
     /**
      * factory method to create a deep copy of AssetSource
      * @param template instance to be copied

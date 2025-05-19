@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ResourceUpdate")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ResourceUpdateErrorImpl.class)
 public interface ResourceUpdateError extends ErrorObject {
@@ -68,6 +69,8 @@ public interface ResourceUpdateError extends ErrorObject {
         instance.setResource(template.getResource());
         return instance;
     }
+
+    public ResourceUpdateError copyDeep();
 
     /**
      * factory method to create a deep copy of ResourceUpdateError

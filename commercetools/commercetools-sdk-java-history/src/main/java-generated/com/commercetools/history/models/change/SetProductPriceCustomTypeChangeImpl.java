@@ -156,4 +156,8 @@ public class SetProductPriceCustomTypeChangeImpl implements SetProductPriceCusto
                 .build();
     }
 
+    @Override
+    public SetProductPriceCustomTypeChange copyDeep() {
+        return SetProductPriceCustomTypeChange.deepCopy(this);
+    }
 }

@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("InvalidCredentials")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = InvalidCredentialsErrorImpl.class)
 public interface InvalidCredentialsError extends ErrorObject {
@@ -52,6 +53,8 @@ public interface InvalidCredentialsError extends ErrorObject {
         instance.setMessage(template.getMessage());
         return instance;
     }
+
+    public InvalidCredentialsError copyDeep();
 
     /**
      * factory method to create a deep copy of InvalidCredentialsError

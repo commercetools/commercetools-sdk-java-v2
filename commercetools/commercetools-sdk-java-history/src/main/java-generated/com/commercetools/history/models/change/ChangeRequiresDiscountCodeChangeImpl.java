@@ -133,4 +133,8 @@ public class ChangeRequiresDiscountCodeChangeImpl implements ChangeRequiresDisco
                 .build();
     }
 
+    @Override
+    public ChangeRequiresDiscountCodeChange copyDeep() {
+        return ChangeRequiresDiscountCodeChange.deepCopy(this);
+    }
 }

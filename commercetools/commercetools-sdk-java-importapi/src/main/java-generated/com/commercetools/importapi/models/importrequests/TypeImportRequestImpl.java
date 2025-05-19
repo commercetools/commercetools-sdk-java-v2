@@ -97,4 +97,8 @@ public class TypeImportRequestImpl implements TypeImportRequest, ModelBase {
                 .build();
     }
 
+    @Override
+    public TypeImportRequest copyDeep() {
+        return TypeImportRequest.deepCopy(this);
+    }
 }

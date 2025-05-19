@@ -229,4 +229,8 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
                 .build();
     }
 
+    @Override
+    public AttributeDefinition copyDeep() {
+        return AttributeDefinition.deepCopy(this);
+    }
 }

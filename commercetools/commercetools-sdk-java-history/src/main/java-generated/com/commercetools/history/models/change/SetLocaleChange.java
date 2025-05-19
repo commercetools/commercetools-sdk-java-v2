@@ -35,6 +35,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SetLocaleChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetLocaleChangeImpl.class)
 public interface SetLocaleChange extends Change {
@@ -117,6 +118,8 @@ public interface SetLocaleChange extends Change {
         instance.setNextValue(template.getNextValue());
         return instance;
     }
+
+    public SetLocaleChange copyDeep();
 
     /**
      * factory method to create a deep copy of SetLocaleChange

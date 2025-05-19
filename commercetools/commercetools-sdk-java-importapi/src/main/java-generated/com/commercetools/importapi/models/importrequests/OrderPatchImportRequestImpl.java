@@ -98,4 +98,8 @@ public class OrderPatchImportRequestImpl implements OrderPatchImportRequest, Mod
                 .build();
     }
 
+    @Override
+    public OrderPatchImportRequest copyDeep() {
+        return OrderPatchImportRequest.deepCopy(this);
+    }
 }

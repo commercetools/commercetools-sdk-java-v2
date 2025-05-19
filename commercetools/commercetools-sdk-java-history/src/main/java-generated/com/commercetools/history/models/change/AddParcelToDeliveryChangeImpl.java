@@ -137,4 +137,8 @@ public class AddParcelToDeliveryChangeImpl implements AddParcelToDeliveryChange,
                 .build();
     }
 
+    @Override
+    public AddParcelToDeliveryChange copyDeep() {
+        return AddParcelToDeliveryChange.deepCopy(this);
+    }
 }

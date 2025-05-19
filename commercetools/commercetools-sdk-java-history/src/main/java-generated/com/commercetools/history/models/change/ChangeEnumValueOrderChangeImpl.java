@@ -162,4 +162,8 @@ public class ChangeEnumValueOrderChangeImpl implements ChangeEnumValueOrderChang
                 .build();
     }
 
+    @Override
+    public ChangeEnumValueOrderChange copyDeep() {
+        return ChangeEnumValueOrderChange.deepCopy(this);
+    }
 }

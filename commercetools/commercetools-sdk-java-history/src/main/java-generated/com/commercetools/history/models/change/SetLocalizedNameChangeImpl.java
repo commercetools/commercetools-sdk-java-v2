@@ -138,4 +138,8 @@ public class SetLocalizedNameChangeImpl implements SetLocalizedNameChange, Model
                 .build();
     }
 
+    @Override
+    public SetLocalizedNameChange copyDeep() {
+        return SetLocalizedNameChange.deepCopy(this);
+    }
 }

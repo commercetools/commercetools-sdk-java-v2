@@ -91,4 +91,8 @@ public class InvalidScopeErrorImpl implements InvalidScopeError, ModelBase {
                 .build();
     }
 
+    @Override
+    public InvalidScopeError copyDeep() {
+        return InvalidScopeError.deepCopy(this);
+    }
 }

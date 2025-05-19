@@ -91,4 +91,8 @@ public class StringFieldImpl implements StringField, ModelBase {
                 .build();
     }
 
+    @Override
+    public StringField copyDeep() {
+        return StringField.deepCopy(this);
+    }
 }

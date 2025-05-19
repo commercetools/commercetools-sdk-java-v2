@@ -156,4 +156,8 @@ public class AddVariantChangeImpl implements AddVariantChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public AddVariantChange copyDeep() {
+        return AddVariantChange.deepCopy(this);
+    }
 }

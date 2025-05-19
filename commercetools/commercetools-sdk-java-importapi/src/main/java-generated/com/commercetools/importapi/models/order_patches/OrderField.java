@@ -209,6 +209,8 @@ public interface OrderField {
         return instance;
     }
 
+    public OrderField copyDeep();
+
     /**
      * factory method to create a deep copy of OrderField
      * @param template instance to be copied

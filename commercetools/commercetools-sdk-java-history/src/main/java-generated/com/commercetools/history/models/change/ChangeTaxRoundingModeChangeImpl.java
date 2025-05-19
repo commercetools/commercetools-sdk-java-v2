@@ -133,4 +133,8 @@ public class ChangeTaxRoundingModeChangeImpl implements ChangeTaxRoundingModeCha
                 .build();
     }
 
+    @Override
+    public ChangeTaxRoundingModeChange copyDeep() {
+        return ChangeTaxRoundingModeChange.deepCopy(this);
+    }
 }

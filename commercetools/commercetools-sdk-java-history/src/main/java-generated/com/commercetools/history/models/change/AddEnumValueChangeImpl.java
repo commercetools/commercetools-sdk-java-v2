@@ -129,4 +129,8 @@ public class AddEnumValueChangeImpl implements AddEnumValueChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public AddEnumValueChange copyDeep() {
+        return AddEnumValueChange.deepCopy(this);
+    }
 }

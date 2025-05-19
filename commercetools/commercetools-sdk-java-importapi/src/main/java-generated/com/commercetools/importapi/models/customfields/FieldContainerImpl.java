@@ -78,4 +78,8 @@ public class FieldContainerImpl implements FieldContainer, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("values", values).build();
     }
 
+    @Override
+    public FieldContainer copyDeep() {
+        return FieldContainer.deepCopy(this);
+    }
 }

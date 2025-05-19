@@ -137,4 +137,8 @@ public class SetAnonymousIdChangeImpl implements SetAnonymousIdChange, ModelBase
                 .build();
     }
 
+    @Override
+    public SetAnonymousIdChange copyDeep() {
+        return SetAnonymousIdChange.deepCopy(this);
+    }
 }

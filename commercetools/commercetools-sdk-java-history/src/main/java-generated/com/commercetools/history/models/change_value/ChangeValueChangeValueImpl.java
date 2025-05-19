@@ -69,4 +69,8 @@ public class ChangeValueChangeValueImpl implements ChangeValueChangeValue, Model
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type).build();
     }
 
+    @Override
+    public ChangeValueChangeValue copyDeep() {
+        return ChangeValueChangeValue.deepCopy(this);
+    }
 }

@@ -91,4 +91,8 @@ public class LocalizedLabelImpl implements LocalizedLabel, ModelBase {
                 .build();
     }
 
+    @Override
+    public LocalizedLabel copyDeep() {
+        return LocalizedLabel.deepCopy(this);
+    }
 }

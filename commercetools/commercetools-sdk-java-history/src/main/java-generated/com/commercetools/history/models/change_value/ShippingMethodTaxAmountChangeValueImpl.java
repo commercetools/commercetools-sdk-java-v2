@@ -96,4 +96,8 @@ public class ShippingMethodTaxAmountChangeValueImpl implements ShippingMethodTax
                 .build();
     }
 
+    @Override
+    public ShippingMethodTaxAmountChangeValue copyDeep() {
+        return ShippingMethodTaxAmountChangeValue.deepCopy(this);
+    }
 }

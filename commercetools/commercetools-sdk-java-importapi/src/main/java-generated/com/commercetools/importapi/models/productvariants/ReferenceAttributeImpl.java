@@ -110,4 +110,8 @@ public class ReferenceAttributeImpl implements ReferenceAttribute, ModelBase {
                 .build();
     }
 
+    @Override
+    public ReferenceAttribute copyDeep() {
+        return ReferenceAttribute.deepCopy(this);
+    }
 }

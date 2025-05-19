@@ -222,6 +222,8 @@ public interface ProductVariantImport extends ImportResource {
         return instance;
     }
 
+    public ProductVariantImport copyDeep();
+
     /**
      * factory method to create a deep copy of ProductVariantImport
      * @param template instance to be copied

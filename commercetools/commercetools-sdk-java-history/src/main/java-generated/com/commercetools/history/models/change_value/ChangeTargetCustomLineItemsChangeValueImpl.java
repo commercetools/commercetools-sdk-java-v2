@@ -91,4 +91,8 @@ public class ChangeTargetCustomLineItemsChangeValueImpl implements ChangeTargetC
                 .build();
     }
 
+    @Override
+    public ChangeTargetCustomLineItemsChangeValue copyDeep() {
+        return ChangeTargetCustomLineItemsChangeValue.deepCopy(this);
+    }
 }

@@ -153,4 +153,8 @@ public class SetTextLineItemDescriptionChangeImpl implements SetTextLineItemDesc
                 .build();
     }
 
+    @Override
+    public SetTextLineItemDescriptionChange copyDeep() {
+        return SetTextLineItemDescriptionChange.deepCopy(this);
+    }
 }

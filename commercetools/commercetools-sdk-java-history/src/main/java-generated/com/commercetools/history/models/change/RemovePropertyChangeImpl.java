@@ -129,4 +129,8 @@ public class RemovePropertyChangeImpl implements RemovePropertyChange, ModelBase
                 .build();
     }
 
+    @Override
+    public RemovePropertyChange copyDeep() {
+        return RemovePropertyChange.deepCopy(this);
+    }
 }

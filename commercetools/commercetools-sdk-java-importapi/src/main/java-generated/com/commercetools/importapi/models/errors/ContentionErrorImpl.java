@@ -91,4 +91,8 @@ public class ContentionErrorImpl implements ContentionError, ModelBase {
                 .build();
     }
 
+    @Override
+    public ContentionError copyDeep() {
+        return ContentionError.deepCopy(this);
+    }
 }

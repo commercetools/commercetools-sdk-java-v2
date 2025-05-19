@@ -308,4 +308,8 @@ public class RecordImpl implements Record, ModelBase {
                 .build();
     }
 
+    @Override
+    public Record copyDeep() {
+        return Record.deepCopy(this);
+    }
 }

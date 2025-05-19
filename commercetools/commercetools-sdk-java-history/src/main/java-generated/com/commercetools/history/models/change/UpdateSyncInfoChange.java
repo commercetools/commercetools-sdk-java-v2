@@ -35,6 +35,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("UpdateSyncInfoChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = UpdateSyncInfoChangeImpl.class)
 public interface UpdateSyncInfoChange extends Change {
@@ -118,6 +119,8 @@ public interface UpdateSyncInfoChange extends Change {
         instance.setChannelId(template.getChannelId());
         return instance;
     }
+
+    public UpdateSyncInfoChange copyDeep();
 
     /**
      * factory method to create a deep copy of UpdateSyncInfoChange

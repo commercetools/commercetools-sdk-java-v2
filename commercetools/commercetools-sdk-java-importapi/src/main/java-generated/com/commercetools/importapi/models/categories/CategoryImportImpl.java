@@ -300,4 +300,8 @@ public class CategoryImportImpl implements CategoryImport, ModelBase {
                 .build();
     }
 
+    @Override
+    public CategoryImport copyDeep() {
+        return CategoryImport.deepCopy(this);
+    }
 }

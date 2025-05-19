@@ -153,4 +153,8 @@ public class SetLineItemDeactivatedAtChangeImpl implements SetLineItemDeactivate
                 .build();
     }
 
+    @Override
+    public SetLineItemDeactivatedAtChange copyDeep() {
+        return SetLineItemDeactivatedAtChange.deepCopy(this);
+    }
 }

@@ -134,4 +134,8 @@ public class ChangeTargetChangeImpl implements ChangeTargetChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public ChangeTargetChange copyDeep() {
+        return ChangeTargetChange.deepCopy(this);
+    }
 }

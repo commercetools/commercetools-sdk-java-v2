@@ -133,4 +133,8 @@ public class UnknownChangeImpl implements UnknownChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public UnknownChange copyDeep() {
+        return UnknownChange.deepCopy(this);
+    }
 }

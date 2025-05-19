@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("RemovePropertyChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = RemovePropertyChangeImpl.class)
 public interface RemovePropertyChange extends Change {
@@ -110,6 +111,8 @@ public interface RemovePropertyChange extends Change {
         instance.setPath(template.getPath());
         return instance;
     }
+
+    public RemovePropertyChange copyDeep();
 
     /**
      * factory method to create a deep copy of RemovePropertyChange

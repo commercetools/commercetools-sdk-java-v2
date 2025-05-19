@@ -85,6 +85,8 @@ public interface CustomFields {
         return instance;
     }
 
+    public CustomFields copyDeep();
+
     /**
      * factory method to create a deep copy of CustomFields
      * @param template instance to be copied

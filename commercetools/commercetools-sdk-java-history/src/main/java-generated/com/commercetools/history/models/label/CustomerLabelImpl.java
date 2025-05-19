@@ -133,4 +133,8 @@ public class CustomerLabelImpl implements CustomerLabel, ModelBase {
                 .build();
     }
 
+    @Override
+    public CustomerLabel copyDeep() {
+        return CustomerLabel.deepCopy(this);
+    }
 }

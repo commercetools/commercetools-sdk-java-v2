@@ -199,4 +199,8 @@ public class TaxRateImpl implements TaxRate, ModelBase {
                 .build();
     }
 
+    @Override
+    public TaxRate copyDeep() {
+        return TaxRate.deepCopy(this);
+    }
 }

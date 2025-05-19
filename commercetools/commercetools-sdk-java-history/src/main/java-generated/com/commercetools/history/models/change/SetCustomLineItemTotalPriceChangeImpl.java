@@ -173,4 +173,8 @@ public class SetCustomLineItemTotalPriceChangeImpl implements SetCustomLineItemT
                 .build();
     }
 
+    @Override
+    public SetCustomLineItemTotalPriceChange copyDeep() {
+        return SetCustomLineItemTotalPriceChange.deepCopy(this);
+    }
 }

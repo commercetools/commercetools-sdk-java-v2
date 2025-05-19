@@ -88,4 +88,8 @@ public class ImageDimensionsImpl implements ImageDimensions, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("w", w).append("h", h).build();
     }
 
+    @Override
+    public ImageDimensions copyDeep() {
+        return ImageDimensions.deepCopy(this);
+    }
 }

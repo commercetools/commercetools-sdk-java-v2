@@ -62,4 +62,8 @@ public class AttributeNumberTypeImpl implements AttributeNumberType, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("name", name).build();
     }
 
+    @Override
+    public AttributeNumberType copyDeep() {
+        return AttributeNumberType.deepCopy(this);
+    }
 }

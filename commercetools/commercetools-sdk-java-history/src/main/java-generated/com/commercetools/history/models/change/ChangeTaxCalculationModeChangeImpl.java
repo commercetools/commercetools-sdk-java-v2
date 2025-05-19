@@ -133,4 +133,8 @@ public class ChangeTaxCalculationModeChangeImpl implements ChangeTaxCalculationM
                 .build();
     }
 
+    @Override
+    public ChangeTaxCalculationModeChange copyDeep() {
+        return ChangeTaxCalculationModeChange.deepCopy(this);
+    }
 }

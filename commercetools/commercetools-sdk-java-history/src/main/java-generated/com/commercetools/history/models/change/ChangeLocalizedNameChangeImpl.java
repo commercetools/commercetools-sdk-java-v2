@@ -143,4 +143,8 @@ public class ChangeLocalizedNameChangeImpl implements ChangeLocalizedNameChange,
                 .build();
     }
 
+    @Override
+    public ChangeLocalizedNameChange copyDeep() {
+        return ChangeLocalizedNameChange.deepCopy(this);
+    }
 }

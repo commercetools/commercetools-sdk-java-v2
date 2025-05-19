@@ -110,4 +110,8 @@ public class AddAddressChangeImpl implements AddAddressChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public AddAddressChange copyDeep() {
+        return AddAddressChange.deepCopy(this);
+    }
 }

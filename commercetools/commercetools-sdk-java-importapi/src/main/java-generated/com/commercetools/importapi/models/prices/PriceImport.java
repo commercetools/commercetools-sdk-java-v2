@@ -289,6 +289,8 @@ public interface PriceImport extends ImportResource {
         return instance;
     }
 
+    public PriceImport copyDeep();
+
     /**
      * factory method to create a deep copy of PriceImport
      * @param template instance to be copied

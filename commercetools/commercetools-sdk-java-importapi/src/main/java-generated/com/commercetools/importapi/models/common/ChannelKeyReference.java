@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("channel")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChannelKeyReferenceImpl.class)
 public interface ChannelKeyReference extends KeyReference {
@@ -52,6 +53,8 @@ public interface ChannelKeyReference extends KeyReference {
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public ChannelKeyReference copyDeep();
 
     /**
      * factory method to create a deep copy of ChannelKeyReference

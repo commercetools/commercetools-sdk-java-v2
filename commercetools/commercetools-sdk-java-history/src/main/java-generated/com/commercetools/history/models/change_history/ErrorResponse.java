@@ -140,6 +140,8 @@ public interface ErrorResponse {
         return instance;
     }
 
+    public ErrorResponse copyDeep();
+
     /**
      * factory method to create a deep copy of ErrorResponse
      * @param template instance to be copied

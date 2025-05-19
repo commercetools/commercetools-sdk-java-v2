@@ -110,4 +110,8 @@ public class ResourceNotFoundErrorImpl implements ResourceNotFoundError, ModelBa
                 .build();
     }
 
+    @Override
+    public ResourceNotFoundError copyDeep() {
+        return ResourceNotFoundError.deepCopy(this);
+    }
 }

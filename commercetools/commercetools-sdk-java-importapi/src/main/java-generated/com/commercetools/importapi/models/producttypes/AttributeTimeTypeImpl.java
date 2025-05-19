@@ -62,4 +62,8 @@ public class AttributeTimeTypeImpl implements AttributeTimeType, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("name", name).build();
     }
 
+    @Override
+    public AttributeTimeType copyDeep() {
+        return AttributeTimeType.deepCopy(this);
+    }
 }

@@ -31,6 +31,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SetShippingMethodChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetShippingMethodChangeImpl.class)
 public interface SetShippingMethodChange extends Change {
@@ -115,6 +116,8 @@ public interface SetShippingMethodChange extends Change {
         instance.setNextValue(template.getNextValue());
         return instance;
     }
+
+    public SetShippingMethodChange copyDeep();
 
     /**
      * factory method to create a deep copy of SetShippingMethodChange

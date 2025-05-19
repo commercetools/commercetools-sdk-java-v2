@@ -110,4 +110,8 @@ public class RemoveTaxRateChangeImpl implements RemoveTaxRateChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public RemoveTaxRateChange copyDeep() {
+        return RemoveTaxRateChange.deepCopy(this);
+    }
 }

@@ -137,4 +137,8 @@ public class SetBillingAddressChangeImpl implements SetBillingAddressChange, Mod
                 .build();
     }
 
+    @Override
+    public SetBillingAddressChange copyDeep() {
+        return SetBillingAddressChange.deepCopy(this);
+    }
 }

@@ -95,4 +95,8 @@ public class InventoryQuantityValueImpl implements InventoryQuantityValue, Model
                 .build();
     }
 
+    @Override
+    public InventoryQuantityValue copyDeep() {
+        return InventoryQuantityValue.deepCopy(this);
+    }
 }

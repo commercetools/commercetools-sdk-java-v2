@@ -102,4 +102,8 @@ public class AttributeValueImpl implements AttributeValue, ModelBase {
                 .build();
     }
 
+    @Override
+    public AttributeValue copyDeep() {
+        return AttributeValue.deepCopy(this);
+    }
 }

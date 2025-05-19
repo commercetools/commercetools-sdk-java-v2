@@ -137,4 +137,8 @@ public class AddPaymentChangeImpl implements AddPaymentChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public AddPaymentChange copyDeep() {
+        return AddPaymentChange.deepCopy(this);
+    }
 }

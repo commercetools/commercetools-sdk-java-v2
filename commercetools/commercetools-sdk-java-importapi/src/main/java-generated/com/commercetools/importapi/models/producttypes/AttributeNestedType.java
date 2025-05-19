@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("nested")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AttributeNestedTypeImpl.class)
 public interface AttributeNestedType extends AttributeType {
@@ -72,6 +73,8 @@ public interface AttributeNestedType extends AttributeType {
         instance.setTypeReference(template.getTypeReference());
         return instance;
     }
+
+    public AttributeNestedType copyDeep();
 
     /**
      * factory method to create a deep copy of AttributeNestedType

@@ -91,4 +91,8 @@ public class UnpublishChangeImpl implements UnpublishChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public UnpublishChange copyDeep() {
+        return UnpublishChange.deepCopy(this);
+    }
 }

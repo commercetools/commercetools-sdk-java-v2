@@ -152,4 +152,8 @@ public class SetPropertyChangeImpl implements SetPropertyChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public SetPropertyChange copyDeep() {
+        return SetPropertyChange.deepCopy(this);
+    }
 }

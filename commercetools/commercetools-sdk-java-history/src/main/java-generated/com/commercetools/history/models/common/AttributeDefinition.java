@@ -188,6 +188,8 @@ public interface AttributeDefinition {
         return instance;
     }
 
+    public AttributeDefinition copyDeep();
+
     /**
      * factory method to create a deep copy of AttributeDefinition
      * @param template instance to be copied

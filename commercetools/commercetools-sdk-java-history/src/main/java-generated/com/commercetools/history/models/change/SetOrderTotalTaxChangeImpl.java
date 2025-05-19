@@ -153,4 +153,8 @@ public class SetOrderTotalTaxChangeImpl implements SetOrderTotalTaxChange, Model
                 .build();
     }
 
+    @Override
+    public SetOrderTotalTaxChange copyDeep() {
+        return SetOrderTotalTaxChange.deepCopy(this);
+    }
 }

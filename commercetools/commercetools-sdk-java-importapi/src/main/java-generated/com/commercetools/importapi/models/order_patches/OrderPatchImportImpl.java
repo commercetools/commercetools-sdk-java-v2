@@ -95,4 +95,8 @@ public class OrderPatchImportImpl implements OrderPatchImport, ModelBase {
                 .build();
     }
 
+    @Override
+    public OrderPatchImport copyDeep() {
+        return OrderPatchImport.deepCopy(this);
+    }
 }

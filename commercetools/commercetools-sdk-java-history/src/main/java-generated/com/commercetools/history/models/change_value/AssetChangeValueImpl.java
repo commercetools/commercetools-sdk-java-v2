@@ -95,4 +95,8 @@ public class AssetChangeValueImpl implements AssetChangeValue, ModelBase {
                 .build();
     }
 
+    @Override
+    public AssetChangeValue copyDeep() {
+        return AssetChangeValue.deepCopy(this);
+    }
 }

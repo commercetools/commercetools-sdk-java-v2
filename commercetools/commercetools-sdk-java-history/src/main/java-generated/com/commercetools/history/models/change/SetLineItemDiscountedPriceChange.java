@@ -34,6 +34,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SetLineItemDiscountedPriceChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetLineItemDiscountedPriceChangeImpl.class)
 public interface SetLineItemDiscountedPriceChange extends Change {
@@ -151,6 +152,8 @@ public interface SetLineItemDiscountedPriceChange extends Change {
         instance.setVariant(template.getVariant());
         return instance;
     }
+
+    public SetLineItemDiscountedPriceChange copyDeep();
 
     /**
      * factory method to create a deep copy of SetLineItemDiscountedPriceChange

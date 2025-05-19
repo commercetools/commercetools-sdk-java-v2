@@ -133,4 +133,8 @@ public class AddOrderLineItemChangeImpl implements AddOrderLineItemChange, Model
                 .build();
     }
 
+    @Override
+    public AddOrderLineItemChange copyDeep() {
+        return AddOrderLineItemChange.deepCopy(this);
+    }
 }

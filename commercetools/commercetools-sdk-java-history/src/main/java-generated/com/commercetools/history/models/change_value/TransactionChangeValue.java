@@ -99,6 +99,8 @@ public interface TransactionChangeValue {
         return instance;
     }
 
+    public TransactionChangeValue copyDeep();
+
     /**
      * factory method to create a deep copy of TransactionChangeValue
      * @param template instance to be copied

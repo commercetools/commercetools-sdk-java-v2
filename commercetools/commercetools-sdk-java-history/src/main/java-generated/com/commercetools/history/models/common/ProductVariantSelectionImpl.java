@@ -100,4 +100,8 @@ public class ProductVariantSelectionImpl implements ProductVariantSelection, Mod
                 .build();
     }
 
+    @Override
+    public ProductVariantSelection copyDeep() {
+        return ProductVariantSelection.deepCopy(this);
+    }
 }

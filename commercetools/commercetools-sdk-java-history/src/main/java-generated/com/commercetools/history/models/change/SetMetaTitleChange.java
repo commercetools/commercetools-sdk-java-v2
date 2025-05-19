@@ -35,6 +35,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SetMetaTitleChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetMetaTitleChangeImpl.class)
 public interface SetMetaTitleChange extends Change {
@@ -119,6 +120,8 @@ public interface SetMetaTitleChange extends Change {
         instance.setNextValue(template.getNextValue());
         return instance;
     }
+
+    public SetMetaTitleChange copyDeep();
 
     /**
      * factory method to create a deep copy of SetMetaTitleChange

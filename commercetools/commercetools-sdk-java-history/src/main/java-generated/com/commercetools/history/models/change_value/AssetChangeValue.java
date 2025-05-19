@@ -85,6 +85,8 @@ public interface AssetChangeValue {
         return instance;
     }
 
+    public AssetChangeValue copyDeep();
+
     /**
      * factory method to create a deep copy of AssetChangeValue
      * @param template instance to be copied

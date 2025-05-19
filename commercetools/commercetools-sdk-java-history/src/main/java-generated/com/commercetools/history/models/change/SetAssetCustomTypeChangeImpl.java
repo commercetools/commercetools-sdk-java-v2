@@ -157,4 +157,8 @@ public class SetAssetCustomTypeChangeImpl implements SetAssetCustomTypeChange, M
                 .build();
     }
 
+    @Override
+    public SetAssetCustomTypeChange copyDeep() {
+        return SetAssetCustomTypeChange.deepCopy(this);
+    }
 }

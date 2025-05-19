@@ -99,6 +99,8 @@ public interface Variant {
         return instance;
     }
 
+    public Variant copyDeep();
+
     /**
      * factory method to create a deep copy of Variant
      * @param template instance to be copied

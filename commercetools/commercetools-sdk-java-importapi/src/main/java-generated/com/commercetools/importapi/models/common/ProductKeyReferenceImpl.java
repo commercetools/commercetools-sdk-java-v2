@@ -91,4 +91,8 @@ public class ProductKeyReferenceImpl implements ProductKeyReference, ModelBase {
                 .build();
     }
 
+    @Override
+    public ProductKeyReference copyDeep() {
+        return ProductKeyReference.deepCopy(this);
+    }
 }

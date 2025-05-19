@@ -29,8 +29,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.importapi.models.orders.CartClassificationTierImpl.class, name = CartClassificationTier.CART_CLASSIFICATION) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = ShippingRatePriceTierImpl.class, visible = true)
 @JsonDeserialize(as = ShippingRatePriceTierImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -44,6 +42,8 @@ public interface ShippingRatePriceTier {
     @JsonProperty("type")
     public ShippingRateTierType getType();
 
+    public ShippingRatePriceTier copyDeep();
+
     /**
      * factory method to create a deep copy of ShippingRatePriceTier
      * @param template instance to be copied
@@ -54,9 +54,9 @@ public interface ShippingRatePriceTier {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.importapi.models.orders.CartClassificationTier) {
-            return com.commercetools.importapi.models.orders.CartClassificationTier
-                    .deepCopy((com.commercetools.importapi.models.orders.CartClassificationTier) template);
+
+        if (!(template instanceof ShippingRatePriceTierImpl)) {
+            return template.copyDeep();
         }
         ShippingRatePriceTierImpl instance = new ShippingRatePriceTierImpl();
         return instance;

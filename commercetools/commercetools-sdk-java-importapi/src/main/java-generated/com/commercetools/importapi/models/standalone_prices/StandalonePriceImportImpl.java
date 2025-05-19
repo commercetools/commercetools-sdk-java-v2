@@ -284,4 +284,8 @@ public class StandalonePriceImportImpl implements StandalonePriceImport, ModelBa
                 .build();
     }
 
+    @Override
+    public StandalonePriceImport copyDeep() {
+        return StandalonePriceImport.deepCopy(this);
+    }
 }

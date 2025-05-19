@@ -137,4 +137,8 @@ public class SetMetaDescriptionChangeImpl implements SetMetaDescriptionChange, M
                 .build();
     }
 
+    @Override
+    public SetMetaDescriptionChange copyDeep() {
+        return SetMetaDescriptionChange.deepCopy(this);
+    }
 }

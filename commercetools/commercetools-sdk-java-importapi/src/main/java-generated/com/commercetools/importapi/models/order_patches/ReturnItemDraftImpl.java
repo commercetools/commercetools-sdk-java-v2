@@ -158,4 +158,8 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public ReturnItemDraft copyDeep() {
+        return ReturnItemDraft.deepCopy(this);
+    }
 }

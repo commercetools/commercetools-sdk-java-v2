@@ -567,4 +567,8 @@ public class AddressImpl implements Address, ModelBase {
                 .build();
     }
 
+    @Override
+    public Address copyDeep() {
+        return Address.deepCopy(this);
+    }
 }

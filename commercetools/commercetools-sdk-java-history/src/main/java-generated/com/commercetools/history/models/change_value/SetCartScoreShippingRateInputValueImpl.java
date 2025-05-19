@@ -95,4 +95,8 @@ public class SetCartScoreShippingRateInputValueImpl implements SetCartScoreShipp
                 .build();
     }
 
+    @Override
+    public SetCartScoreShippingRateInputValue copyDeep() {
+        return SetCartScoreShippingRateInputValue.deepCopy(this);
+    }
 }

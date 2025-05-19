@@ -260,6 +260,8 @@ public interface CategoryImport extends ImportResource {
         return instance;
     }
 
+    public CategoryImport copyDeep();
+
     /**
      * factory method to create a deep copy of CategoryImport
      * @param template instance to be copied

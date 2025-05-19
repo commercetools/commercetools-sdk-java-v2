@@ -133,4 +133,8 @@ public class SetStoreModeChangeImpl implements SetStoreModeChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public SetStoreModeChange copyDeep() {
+        return SetStoreModeChange.deepCopy(this);
+    }
 }

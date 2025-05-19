@@ -102,6 +102,8 @@ public interface ShoppingListLineItemValue {
         return instance;
     }
 
+    public ShoppingListLineItemValue copyDeep();
+
     /**
      * factory method to create a deep copy of ShoppingListLineItemValue
      * @param template instance to be copied

@@ -85,6 +85,8 @@ public interface FieldDefinitionOrderValue {
         return instance;
     }
 
+    public FieldDefinitionOrderValue copyDeep();
+
     /**
      * factory method to create a deep copy of FieldDefinitionOrderValue
      * @param template instance to be copied

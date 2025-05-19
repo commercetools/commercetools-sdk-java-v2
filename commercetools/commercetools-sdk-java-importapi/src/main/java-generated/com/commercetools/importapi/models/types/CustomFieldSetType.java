@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("Set")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomFieldSetTypeImpl.class)
 public interface CustomFieldSetType extends FieldType {
@@ -71,6 +72,8 @@ public interface CustomFieldSetType extends FieldType {
         instance.setElementType(template.getElementType());
         return instance;
     }
+
+    public CustomFieldSetType copyDeep();
 
     /**
      * factory method to create a deep copy of CustomFieldSetType

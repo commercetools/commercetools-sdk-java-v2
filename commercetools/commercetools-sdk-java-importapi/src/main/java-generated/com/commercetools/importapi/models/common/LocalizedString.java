@@ -72,6 +72,8 @@ public interface LocalizedString {
         return instance;
     }
 
+    public LocalizedString copyDeep();
+
     /**
      * factory method to create a deep copy of LocalizedString
      * @param template instance to be copied

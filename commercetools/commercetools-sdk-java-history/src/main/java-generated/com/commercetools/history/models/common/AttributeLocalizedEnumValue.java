@@ -84,6 +84,8 @@ public interface AttributeLocalizedEnumValue {
         return instance;
     }
 
+    public AttributeLocalizedEnumValue copyDeep();
+
     /**
      * factory method to create a deep copy of AttributeLocalizedEnumValue
      * @param template instance to be copied

@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("TimeSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TimeSetFieldImpl.class)
 public interface TimeSetField extends CustomField {
@@ -78,6 +79,8 @@ public interface TimeSetField extends CustomField {
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public TimeSetField copyDeep();
 
     /**
      * factory method to create a deep copy of TimeSetField

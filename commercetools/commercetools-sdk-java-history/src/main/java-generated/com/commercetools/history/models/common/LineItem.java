@@ -224,6 +224,8 @@ public interface LineItem {
         return instance;
     }
 
+    public LineItem copyDeep();
+
     /**
      * factory method to create a deep copy of LineItem
      * @param template instance to be copied

@@ -82,6 +82,8 @@ public interface KeyReference {
         return instance;
     }
 
+    public KeyReference copyDeep();
+
     /**
      * factory method to create a deep copy of KeyReference
      * @param template instance to be copied

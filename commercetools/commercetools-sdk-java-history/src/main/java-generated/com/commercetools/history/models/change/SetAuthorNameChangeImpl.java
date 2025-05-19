@@ -133,4 +133,8 @@ public class SetAuthorNameChangeImpl implements SetAuthorNameChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public SetAuthorNameChange copyDeep() {
+        return SetAuthorNameChange.deepCopy(this);
+    }
 }

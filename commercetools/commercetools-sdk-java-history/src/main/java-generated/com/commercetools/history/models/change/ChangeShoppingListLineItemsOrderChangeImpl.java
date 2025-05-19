@@ -145,4 +145,8 @@ public class ChangeShoppingListLineItemsOrderChangeImpl implements ChangeShoppin
                 .build();
     }
 
+    @Override
+    public ChangeShoppingListLineItemsOrderChange copyDeep() {
+        return ChangeShoppingListLineItemsOrderChange.deepCopy(this);
+    }
 }

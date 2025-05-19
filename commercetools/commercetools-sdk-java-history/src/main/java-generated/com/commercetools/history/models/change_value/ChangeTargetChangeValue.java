@@ -27,13 +27,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.history.models.change_value.ChangeTargetCustomLineItemsChangeValueImpl.class, name = ChangeTargetCustomLineItemsChangeValue.CUSTOM_LINE_ITEMS),
-        @JsonSubTypes.Type(value = com.commercetools.history.models.change_value.ChangeTargetLineItemsChangeValueImpl.class, name = ChangeTargetLineItemsChangeValue.LINE_ITEMS),
-        @JsonSubTypes.Type(value = com.commercetools.history.models.change_value.ChangeTargetMultiBuyCustomLineItemsChangeValueImpl.class, name = ChangeTargetMultiBuyCustomLineItemsChangeValue.MULTI_BUY_CUSTOM_LINE_ITEMS),
-        @JsonSubTypes.Type(value = com.commercetools.history.models.change_value.ChangeTargetMultiBuyLineItemsChangeValueImpl.class, name = ChangeTargetMultiBuyLineItemsChangeValue.MULTI_BUY_LINE_ITEMS),
-        @JsonSubTypes.Type(value = com.commercetools.history.models.change_value.ChangeTargetPatternChangeValueImpl.class, name = ChangeTargetPatternChangeValue.PATTERN),
-        @JsonSubTypes.Type(value = com.commercetools.history.models.change_value.ChangeTargetShippingChangeValueImpl.class, name = ChangeTargetShippingChangeValue.SHIPPING) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = ChangeTargetChangeValueImpl.class, visible = true)
 @JsonDeserialize(as = ChangeTargetChangeValueImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -47,6 +40,8 @@ public interface ChangeTargetChangeValue {
     @JsonProperty("type")
     public String getType();
 
+    public ChangeTargetChangeValue copyDeep();
+
     /**
      * factory method to create a deep copy of ChangeTargetChangeValue
      * @param template instance to be copied
@@ -57,30 +52,9 @@ public interface ChangeTargetChangeValue {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.history.models.change_value.ChangeTargetCustomLineItemsChangeValue) {
-            return com.commercetools.history.models.change_value.ChangeTargetCustomLineItemsChangeValue.deepCopy(
-                (com.commercetools.history.models.change_value.ChangeTargetCustomLineItemsChangeValue) template);
-        }
-        if (template instanceof com.commercetools.history.models.change_value.ChangeTargetLineItemsChangeValue) {
-            return com.commercetools.history.models.change_value.ChangeTargetLineItemsChangeValue.deepCopy(
-                (com.commercetools.history.models.change_value.ChangeTargetLineItemsChangeValue) template);
-        }
-        if (template instanceof com.commercetools.history.models.change_value.ChangeTargetMultiBuyCustomLineItemsChangeValue) {
-            return com.commercetools.history.models.change_value.ChangeTargetMultiBuyCustomLineItemsChangeValue
-                    .deepCopy(
-                        (com.commercetools.history.models.change_value.ChangeTargetMultiBuyCustomLineItemsChangeValue) template);
-        }
-        if (template instanceof com.commercetools.history.models.change_value.ChangeTargetMultiBuyLineItemsChangeValue) {
-            return com.commercetools.history.models.change_value.ChangeTargetMultiBuyLineItemsChangeValue.deepCopy(
-                (com.commercetools.history.models.change_value.ChangeTargetMultiBuyLineItemsChangeValue) template);
-        }
-        if (template instanceof com.commercetools.history.models.change_value.ChangeTargetPatternChangeValue) {
-            return com.commercetools.history.models.change_value.ChangeTargetPatternChangeValue
-                    .deepCopy((com.commercetools.history.models.change_value.ChangeTargetPatternChangeValue) template);
-        }
-        if (template instanceof com.commercetools.history.models.change_value.ChangeTargetShippingChangeValue) {
-            return com.commercetools.history.models.change_value.ChangeTargetShippingChangeValue
-                    .deepCopy((com.commercetools.history.models.change_value.ChangeTargetShippingChangeValue) template);
+
+        if (!(template instanceof ChangeTargetChangeValueImpl)) {
+            return template.copyDeep();
         }
         ChangeTargetChangeValueImpl instance = new ChangeTargetChangeValueImpl();
         return instance;

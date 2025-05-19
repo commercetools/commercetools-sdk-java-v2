@@ -137,4 +137,8 @@ public class SetPurchaseOrderNumberChangeImpl implements SetPurchaseOrderNumberC
                 .build();
     }
 
+    @Override
+    public SetPurchaseOrderNumberChange copyDeep() {
+        return SetPurchaseOrderNumberChange.deepCopy(this);
+    }
 }

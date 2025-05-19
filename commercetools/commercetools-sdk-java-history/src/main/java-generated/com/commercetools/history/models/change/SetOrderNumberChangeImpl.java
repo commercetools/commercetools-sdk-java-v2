@@ -137,4 +137,8 @@ public class SetOrderNumberChangeImpl implements SetOrderNumberChange, ModelBase
                 .build();
     }
 
+    @Override
+    public SetOrderNumberChange copyDeep() {
+        return SetOrderNumberChange.deepCopy(this);
+    }
 }

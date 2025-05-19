@@ -91,4 +91,8 @@ public class InsufficientScopeErrorImpl implements InsufficientScopeError, Model
                 .build();
     }
 
+    @Override
+    public InsufficientScopeError copyDeep() {
+        return InsufficientScopeError.deepCopy(this);
+    }
 }

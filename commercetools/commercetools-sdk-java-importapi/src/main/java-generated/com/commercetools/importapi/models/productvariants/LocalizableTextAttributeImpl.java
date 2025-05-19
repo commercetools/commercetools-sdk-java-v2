@@ -115,4 +115,8 @@ public class LocalizableTextAttributeImpl implements LocalizableTextAttribute, M
                 .build();
     }
 
+    @Override
+    public LocalizableTextAttribute copyDeep() {
+        return LocalizableTextAttribute.deepCopy(this);
+    }
 }

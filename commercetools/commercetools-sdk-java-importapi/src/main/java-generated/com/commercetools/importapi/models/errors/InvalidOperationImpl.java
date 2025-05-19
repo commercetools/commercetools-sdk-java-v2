@@ -91,4 +91,8 @@ public class InvalidOperationImpl implements InvalidOperation, ModelBase {
                 .build();
     }
 
+    @Override
+    public InvalidOperation copyDeep() {
+        return InvalidOperation.deepCopy(this);
+    }
 }

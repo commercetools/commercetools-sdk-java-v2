@@ -96,4 +96,8 @@ public class CustomLineItemTaxedPriceImpl implements CustomLineItemTaxedPrice, M
                 .build();
     }
 
+    @Override
+    public CustomLineItemTaxedPrice copyDeep() {
+        return CustomLineItemTaxedPrice.deepCopy(this);
+    }
 }

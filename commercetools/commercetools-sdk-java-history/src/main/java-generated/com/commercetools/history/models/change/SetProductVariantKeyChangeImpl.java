@@ -155,4 +155,8 @@ public class SetProductVariantKeyChangeImpl implements SetProductVariantKeyChang
                 .build();
     }
 
+    @Override
+    public SetProductVariantKeyChange copyDeep() {
+        return SetProductVariantKeyChange.deepCopy(this);
+    }
 }

@@ -82,6 +82,8 @@ public interface SetCartScoreShippingRateInputValue {
         return instance;
     }
 
+    public SetCartScoreShippingRateInputValue copyDeep();
+
     /**
      * factory method to create a deep copy of SetCartScoreShippingRateInputValue
      * @param template instance to be copied

@@ -138,4 +138,8 @@ public class SetValidUntilChangeImpl implements SetValidUntilChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public SetValidUntilChange copyDeep() {
+        return SetValidUntilChange.deepCopy(this);
+    }
 }

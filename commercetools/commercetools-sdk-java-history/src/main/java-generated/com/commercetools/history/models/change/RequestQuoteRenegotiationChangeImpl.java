@@ -153,4 +153,8 @@ public class RequestQuoteRenegotiationChangeImpl implements RequestQuoteRenegoti
                 .build();
     }
 
+    @Override
+    public RequestQuoteRenegotiationChange copyDeep() {
+        return RequestQuoteRenegotiationChange.deepCopy(this);
+    }
 }

@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("absolute")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeValueAbsoluteChangeValueImpl.class)
 public interface ChangeValueAbsoluteChangeValue extends ChangeValueChangeValue {
@@ -89,6 +90,8 @@ public interface ChangeValueAbsoluteChangeValue extends ChangeValueChangeValue {
         instance.setMoney(template.getMoney());
         return instance;
     }
+
+    public ChangeValueAbsoluteChangeValue copyDeep();
 
     /**
      * factory method to create a deep copy of ChangeValueAbsoluteChangeValue

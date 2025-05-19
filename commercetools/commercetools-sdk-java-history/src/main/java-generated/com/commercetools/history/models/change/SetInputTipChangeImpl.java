@@ -153,4 +153,8 @@ public class SetInputTipChangeImpl implements SetInputTipChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public SetInputTipChange copyDeep() {
+        return SetInputTipChange.deepCopy(this);
+    }
 }

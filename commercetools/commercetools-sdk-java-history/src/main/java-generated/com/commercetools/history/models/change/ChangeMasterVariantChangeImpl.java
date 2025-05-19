@@ -156,4 +156,8 @@ public class ChangeMasterVariantChangeImpl implements ChangeMasterVariantChange,
                 .build();
     }
 
+    @Override
+    public ChangeMasterVariantChange copyDeep() {
+        return ChangeMasterVariantChange.deepCopy(this);
+    }
 }

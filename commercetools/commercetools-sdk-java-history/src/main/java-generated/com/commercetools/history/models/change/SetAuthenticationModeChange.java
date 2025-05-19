@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SetAuthenticationModeChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetAuthenticationModeChangeImpl.class)
 public interface SetAuthenticationModeChange extends Change {
@@ -112,6 +113,8 @@ public interface SetAuthenticationModeChange extends Change {
         instance.setNextValue(template.getNextValue());
         return instance;
     }
+
+    public SetAuthenticationModeChange copyDeep();
 
     /**
      * factory method to create a deep copy of SetAuthenticationModeChange

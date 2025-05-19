@@ -91,4 +91,8 @@ public class VerifyEmailChangeImpl implements VerifyEmailChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public VerifyEmailChange copyDeep() {
+        return VerifyEmailChange.deepCopy(this);
+    }
 }

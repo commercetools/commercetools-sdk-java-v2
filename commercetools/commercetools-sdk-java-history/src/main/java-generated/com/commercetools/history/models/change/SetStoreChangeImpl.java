@@ -137,4 +137,8 @@ public class SetStoreChangeImpl implements SetStoreChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public SetStoreChange copyDeep() {
+        return SetStoreChange.deepCopy(this);
+    }
 }

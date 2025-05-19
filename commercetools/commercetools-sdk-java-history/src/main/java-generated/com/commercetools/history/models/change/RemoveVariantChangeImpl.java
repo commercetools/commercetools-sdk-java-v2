@@ -156,4 +156,8 @@ public class RemoveVariantChangeImpl implements RemoveVariantChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public RemoveVariantChange copyDeep() {
+        return RemoveVariantChange.deepCopy(this);
+    }
 }

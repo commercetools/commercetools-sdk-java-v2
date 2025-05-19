@@ -91,4 +91,8 @@ public class ErrorObjectImpl implements ErrorObject, ModelBase {
                 .build();
     }
 
+    @Override
+    public ErrorObject copyDeep() {
+        return ErrorObject.deepCopy(this);
+    }
 }

@@ -110,4 +110,8 @@ public class AddDiscountCodeChangeImpl implements AddDiscountCodeChange, ModelBa
                 .build();
     }
 
+    @Override
+    public AddDiscountCodeChange copyDeep() {
+        return AddDiscountCodeChange.deepCopy(this);
+    }
 }

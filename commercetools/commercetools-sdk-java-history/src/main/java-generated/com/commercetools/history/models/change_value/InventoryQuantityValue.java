@@ -82,6 +82,8 @@ public interface InventoryQuantityValue {
         return instance;
     }
 
+    public InventoryQuantityValue copyDeep();
+
     /**
      * factory method to create a deep copy of InventoryQuantityValue
      * @param template instance to be copied

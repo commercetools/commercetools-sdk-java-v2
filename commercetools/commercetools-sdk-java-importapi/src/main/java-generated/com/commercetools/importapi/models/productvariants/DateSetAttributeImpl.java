@@ -114,4 +114,8 @@ public class DateSetAttributeImpl implements DateSetAttribute, ModelBase {
                 .build();
     }
 
+    @Override
+    public DateSetAttribute copyDeep() {
+        return DateSetAttribute.deepCopy(this);
+    }
 }

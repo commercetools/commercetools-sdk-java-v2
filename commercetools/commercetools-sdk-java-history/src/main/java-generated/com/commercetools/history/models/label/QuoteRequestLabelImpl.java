@@ -110,4 +110,8 @@ public class QuoteRequestLabelImpl implements QuoteRequestLabel, ModelBase {
                 .build();
     }
 
+    @Override
+    public QuoteRequestLabel copyDeep() {
+        return QuoteRequestLabel.deepCopy(this);
+    }
 }

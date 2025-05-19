@@ -173,4 +173,8 @@ public class SetLineItemTaxedPriceChangeImpl implements SetLineItemTaxedPriceCha
                 .build();
     }
 
+    @Override
+    public SetLineItemTaxedPriceChange copyDeep() {
+        return SetLineItemTaxedPriceChange.deepCopy(this);
+    }
 }

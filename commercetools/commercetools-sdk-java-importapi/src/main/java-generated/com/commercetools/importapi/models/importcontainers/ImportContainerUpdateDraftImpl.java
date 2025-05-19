@@ -95,4 +95,8 @@ public class ImportContainerUpdateDraftImpl implements ImportContainerUpdateDraf
                 .build();
     }
 
+    @Override
+    public ImportContainerUpdateDraft copyDeep() {
+        return ImportContainerUpdateDraft.deepCopy(this);
+    }
 }

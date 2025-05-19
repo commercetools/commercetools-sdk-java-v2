@@ -153,4 +153,8 @@ public class SetOrderTaxedPriceChangeImpl implements SetOrderTaxedPriceChange, M
                 .build();
     }
 
+    @Override
+    public SetOrderTaxedPriceChange copyDeep() {
+        return SetOrderTaxedPriceChange.deepCopy(this);
+    }
 }

@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("inventory")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = InventoryImportRequestImpl.class)
 public interface InventoryImportRequest extends ImportRequest {
@@ -81,6 +82,8 @@ public interface InventoryImportRequest extends ImportRequest {
         instance.setResources(template.getResources());
         return instance;
     }
+
+    public InventoryImportRequest copyDeep();
 
     /**
      * factory method to create a deep copy of InventoryImportRequest

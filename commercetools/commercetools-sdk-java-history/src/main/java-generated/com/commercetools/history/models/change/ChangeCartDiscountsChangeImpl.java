@@ -142,4 +142,8 @@ public class ChangeCartDiscountsChangeImpl implements ChangeCartDiscountsChange,
                 .build();
     }
 
+    @Override
+    public ChangeCartDiscountsChange copyDeep() {
+        return ChangeCartDiscountsChange.deepCopy(this);
+    }
 }

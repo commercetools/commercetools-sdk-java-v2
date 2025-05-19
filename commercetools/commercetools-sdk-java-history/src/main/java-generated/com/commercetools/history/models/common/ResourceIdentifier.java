@@ -99,6 +99,8 @@ public interface ResourceIdentifier {
         return instance;
     }
 
+    public ResourceIdentifier copyDeep();
+
     /**
      * factory method to create a deep copy of ResourceIdentifier
      * @param template instance to be copied

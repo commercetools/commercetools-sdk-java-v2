@@ -114,4 +114,8 @@ public class BooleanSetAttributeImpl implements BooleanSetAttribute, ModelBase {
                 .build();
     }
 
+    @Override
+    public BooleanSetAttribute copyDeep() {
+        return BooleanSetAttribute.deepCopy(this);
+    }
 }

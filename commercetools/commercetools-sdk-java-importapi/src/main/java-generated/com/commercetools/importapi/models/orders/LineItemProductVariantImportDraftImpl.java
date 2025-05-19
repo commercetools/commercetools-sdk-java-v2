@@ -172,4 +172,8 @@ public class LineItemProductVariantImportDraftImpl implements LineItemProductVar
                 .build();
     }
 
+    @Override
+    public LineItemProductVariantImportDraft copyDeep() {
+        return LineItemProductVariantImportDraft.deepCopy(this);
+    }
 }

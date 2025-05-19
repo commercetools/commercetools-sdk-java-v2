@@ -156,4 +156,8 @@ public class SetProductPriceCustomFieldChangeImpl implements SetProductPriceCust
                 .build();
     }
 
+    @Override
+    public SetProductPriceCustomFieldChange copyDeep() {
+        return SetProductPriceCustomFieldChange.deepCopy(this);
+    }
 }

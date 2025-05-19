@@ -91,4 +91,8 @@ public class ReferenceFieldImpl implements ReferenceField, ModelBase {
                 .build();
     }
 
+    @Override
+    public ReferenceField copyDeep() {
+        return ReferenceField.deepCopy(this);
+    }
 }

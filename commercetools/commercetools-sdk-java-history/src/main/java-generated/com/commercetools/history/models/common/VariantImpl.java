@@ -113,4 +113,8 @@ public class VariantImpl implements Variant, ModelBase {
                 .build();
     }
 
+    @Override
+    public Variant copyDeep() {
+        return Variant.deepCopy(this);
+    }
 }

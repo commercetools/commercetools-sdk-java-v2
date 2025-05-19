@@ -138,4 +138,8 @@ public class SetCustomerChangeImpl implements SetCustomerChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public SetCustomerChange copyDeep() {
+        return SetCustomerChange.deepCopy(this);
+    }
 }

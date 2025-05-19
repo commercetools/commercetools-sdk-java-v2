@@ -94,4 +94,8 @@ public class DeliveryItemImpl implements DeliveryItem, ModelBase {
                 .build();
     }
 
+    @Override
+    public DeliveryItem copyDeep() {
+        return DeliveryItem.deepCopy(this);
+    }
 }

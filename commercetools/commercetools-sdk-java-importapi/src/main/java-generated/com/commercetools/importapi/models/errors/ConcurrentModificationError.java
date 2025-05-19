@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ConcurrentModification")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ConcurrentModificationErrorImpl.class)
 public interface ConcurrentModificationError extends ErrorObject {
@@ -103,6 +104,8 @@ public interface ConcurrentModificationError extends ErrorObject {
         instance.setConflictedResource(template.getConflictedResource());
         return instance;
     }
+
+    public ConcurrentModificationError copyDeep();
 
     /**
      * factory method to create a deep copy of ConcurrentModificationError

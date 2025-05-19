@@ -42,6 +42,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("TransitionStateChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TransitionStateChangeImpl.class)
 public interface TransitionStateChange extends Change {
@@ -126,6 +127,8 @@ public interface TransitionStateChange extends Change {
         instance.setNextValue(template.getNextValue());
         return instance;
     }
+
+    public TransitionStateChange copyDeep();
 
     /**
      * factory method to create a deep copy of TransitionStateChange

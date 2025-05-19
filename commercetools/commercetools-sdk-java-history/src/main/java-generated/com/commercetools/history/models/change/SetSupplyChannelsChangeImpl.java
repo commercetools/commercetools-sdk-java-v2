@@ -142,4 +142,8 @@ public class SetSupplyChannelsChangeImpl implements SetSupplyChannelsChange, Mod
                 .build();
     }
 
+    @Override
+    public SetSupplyChannelsChange copyDeep() {
+        return SetSupplyChannelsChange.deepCopy(this);
+    }
 }

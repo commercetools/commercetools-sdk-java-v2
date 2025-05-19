@@ -159,4 +159,8 @@ public class RecordPagedQueryResponseImpl implements RecordPagedQueryResponse, M
                 .build();
     }
 
+    @Override
+    public RecordPagedQueryResponse copyDeep() {
+        return RecordPagedQueryResponse.deepCopy(this);
+    }
 }

@@ -110,4 +110,8 @@ public class AddFieldDefinitionChangeImpl implements AddFieldDefinitionChange, M
                 .build();
     }
 
+    @Override
+    public AddFieldDefinitionChange copyDeep() {
+        return AddFieldDefinitionChange.deepCopy(this);
+    }
 }

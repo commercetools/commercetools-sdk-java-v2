@@ -133,4 +133,8 @@ public class SetOrderTotalPriceChangeImpl implements SetOrderTotalPriceChange, M
                 .build();
     }
 
+    @Override
+    public SetOrderTotalPriceChange copyDeep() {
+        return SetOrderTotalPriceChange.deepCopy(this);
+    }
 }

@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("CustomObjectLabel")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomObjectLabelImpl.class)
 public interface CustomObjectLabel extends Label {
@@ -94,6 +95,8 @@ public interface CustomObjectLabel extends Label {
         instance.setContainer(template.getContainer());
         return instance;
     }
+
+    public CustomObjectLabel copyDeep();
 
     /**
      * factory method to create a deep copy of CustomObjectLabel

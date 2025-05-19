@@ -82,6 +82,8 @@ public interface Reference {
         return instance;
     }
 
+    public Reference copyDeep();
+
     /**
      * factory method to create a deep copy of Reference
      * @param template instance to be copied

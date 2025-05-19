@@ -157,4 +157,8 @@ public class SetDeliveryAddressChangeImpl implements SetDeliveryAddressChange, M
                 .build();
     }
 
+    @Override
+    public SetDeliveryAddressChange copyDeep() {
+        return SetDeliveryAddressChange.deepCopy(this);
+    }
 }

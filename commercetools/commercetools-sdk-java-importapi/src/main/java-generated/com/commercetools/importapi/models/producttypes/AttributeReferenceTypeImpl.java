@@ -92,4 +92,8 @@ public class AttributeReferenceTypeImpl implements AttributeReferenceType, Model
                 .build();
     }
 
+    @Override
+    public AttributeReferenceType copyDeep() {
+        return AttributeReferenceType.deepCopy(this);
+    }
 }

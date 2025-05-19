@@ -211,6 +211,8 @@ public interface LineItemPrice {
         return instance;
     }
 
+    public LineItemPrice copyDeep();
+
     /**
      * factory method to create a deep copy of LineItemPrice
      * @param template instance to be copied

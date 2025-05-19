@@ -133,4 +133,8 @@ public class SetProductCountChangeImpl implements SetProductCountChange, ModelBa
                 .build();
     }
 
+    @Override
+    public SetProductCountChange copyDeep() {
+        return SetProductCountChange.deepCopy(this);
+    }
 }

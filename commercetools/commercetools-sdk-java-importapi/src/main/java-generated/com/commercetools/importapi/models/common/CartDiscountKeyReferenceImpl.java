@@ -91,4 +91,8 @@ public class CartDiscountKeyReferenceImpl implements CartDiscountKeyReference, M
                 .build();
     }
 
+    @Override
+    public CartDiscountKeyReference copyDeep() {
+        return CartDiscountKeyReference.deepCopy(this);
+    }
 }

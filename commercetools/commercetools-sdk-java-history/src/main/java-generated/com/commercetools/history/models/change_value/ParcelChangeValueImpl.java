@@ -94,4 +94,8 @@ public class ParcelChangeValueImpl implements ParcelChangeValue, ModelBase {
                 .build();
     }
 
+    @Override
+    public ParcelChangeValue copyDeep() {
+        return ParcelChangeValue.deepCopy(this);
+    }
 }

@@ -137,4 +137,8 @@ public class ChangePaymentStateChangeImpl implements ChangePaymentStateChange, M
                 .build();
     }
 
+    @Override
+    public ChangePaymentStateChange copyDeep() {
+        return ChangePaymentStateChange.deepCopy(this);
+    }
 }

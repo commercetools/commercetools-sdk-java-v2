@@ -91,4 +91,8 @@ public class InvalidTokenErrorImpl implements InvalidTokenError, ModelBase {
                 .build();
     }
 
+    @Override
+    public InvalidTokenError copyDeep() {
+        return InvalidTokenError.deepCopy(this);
+    }
 }

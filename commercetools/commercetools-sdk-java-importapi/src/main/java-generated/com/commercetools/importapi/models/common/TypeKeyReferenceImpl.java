@@ -91,4 +91,8 @@ public class TypeKeyReferenceImpl implements TypeKeyReference, ModelBase {
                 .build();
     }
 
+    @Override
+    public TypeKeyReference copyDeep() {
+        return TypeKeyReference.deepCopy(this);
+    }
 }

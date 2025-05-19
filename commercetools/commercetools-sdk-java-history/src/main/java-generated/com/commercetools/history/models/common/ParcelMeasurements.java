@@ -116,6 +116,8 @@ public interface ParcelMeasurements {
         return instance;
     }
 
+    public ParcelMeasurements copyDeep();
+
     /**
      * factory method to create a deep copy of ParcelMeasurements
      * @param template instance to be copied

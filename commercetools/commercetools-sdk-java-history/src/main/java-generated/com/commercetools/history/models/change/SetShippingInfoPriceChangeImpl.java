@@ -133,4 +133,8 @@ public class SetShippingInfoPriceChangeImpl implements SetShippingInfoPriceChang
                 .build();
     }
 
+    @Override
+    public SetShippingInfoPriceChange copyDeep() {
+        return SetShippingInfoPriceChange.deepCopy(this);
+    }
 }

@@ -84,6 +84,8 @@ public interface ItemState {
         return instance;
     }
 
+    public ItemState copyDeep();
+
     /**
      * factory method to create a deep copy of ItemState
      * @param template instance to be copied

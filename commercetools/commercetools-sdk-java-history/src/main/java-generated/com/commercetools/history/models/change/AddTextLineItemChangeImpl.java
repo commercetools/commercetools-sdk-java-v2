@@ -110,4 +110,8 @@ public class AddTextLineItemChangeImpl implements AddTextLineItemChange, ModelBa
                 .build();
     }
 
+    @Override
+    public AddTextLineItemChange copyDeep() {
+        return AddTextLineItemChange.deepCopy(this);
+    }
 }

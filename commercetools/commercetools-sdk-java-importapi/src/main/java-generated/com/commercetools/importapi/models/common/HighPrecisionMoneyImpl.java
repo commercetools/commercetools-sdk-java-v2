@@ -152,4 +152,8 @@ public class HighPrecisionMoneyImpl implements HighPrecisionMoney, ModelBase {
                 .build();
     }
 
+    @Override
+    public HighPrecisionMoney copyDeep() {
+        return HighPrecisionMoney.deepCopy(this);
+    }
 }

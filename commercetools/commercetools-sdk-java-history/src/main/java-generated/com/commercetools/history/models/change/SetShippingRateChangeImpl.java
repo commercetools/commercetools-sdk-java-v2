@@ -133,4 +133,8 @@ public class SetShippingRateChangeImpl implements SetShippingRateChange, ModelBa
                 .build();
     }
 
+    @Override
+    public SetShippingRateChange copyDeep() {
+        return SetShippingRateChange.deepCopy(this);
+    }
 }

@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("RemoveStateRolesChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = RemoveStateRolesChangeImpl.class)
 public interface RemoveStateRolesChange extends Change {
@@ -128,6 +129,8 @@ public interface RemoveStateRolesChange extends Change {
         instance.setNextValue(template.getNextValue());
         return instance;
     }
+
+    public RemoveStateRolesChange copyDeep();
 
     /**
      * factory method to create a deep copy of RemoveStateRolesChange

@@ -65,6 +65,8 @@ public interface PatternComponent {
         return instance;
     }
 
+    public PatternComponent copyDeep();
+
     /**
      * factory method to create a deep copy of PatternComponent
      * @param template instance to be copied

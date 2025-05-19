@@ -153,4 +153,8 @@ public class ChangeTextLineItemQuantityChangeImpl implements ChangeTextLineItemQ
                 .build();
     }
 
+    @Override
+    public ChangeTextLineItemQuantityChange copyDeep() {
+        return ChangeTextLineItemQuantityChange.deepCopy(this);
+    }
 }

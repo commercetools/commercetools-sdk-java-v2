@@ -116,6 +116,8 @@ public interface Money {
         return instance;
     }
 
+    public Money copyDeep();
+
     /**
      * factory method to create a deep copy of Money
      * @param template instance to be copied

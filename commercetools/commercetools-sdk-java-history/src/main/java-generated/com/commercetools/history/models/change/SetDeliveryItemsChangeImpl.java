@@ -166,4 +166,8 @@ public class SetDeliveryItemsChangeImpl implements SetDeliveryItemsChange, Model
                 .build();
     }
 
+    @Override
+    public SetDeliveryItemsChange copyDeep() {
+        return SetDeliveryItemsChange.deepCopy(this);
+    }
 }

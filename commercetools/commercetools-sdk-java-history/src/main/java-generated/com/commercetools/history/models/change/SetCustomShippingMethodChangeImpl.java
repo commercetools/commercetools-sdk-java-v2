@@ -135,4 +135,8 @@ public class SetCustomShippingMethodChangeImpl implements SetCustomShippingMetho
                 .build();
     }
 
+    @Override
+    public SetCustomShippingMethodChange copyDeep() {
+        return SetCustomShippingMethodChange.deepCopy(this);
+    }
 }

@@ -82,6 +82,8 @@ public interface EnumValue {
         return instance;
     }
 
+    public EnumValue copyDeep();
+
     /**
      * factory method to create a deep copy of EnumValue
      * @param template instance to be copied

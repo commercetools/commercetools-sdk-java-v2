@@ -142,4 +142,8 @@ public class RemoveChannelRolesChangeImpl implements RemoveChannelRolesChange, M
                 .build();
     }
 
+    @Override
+    public RemoveChannelRolesChange copyDeep() {
+        return RemoveChannelRolesChange.deepCopy(this);
+    }
 }

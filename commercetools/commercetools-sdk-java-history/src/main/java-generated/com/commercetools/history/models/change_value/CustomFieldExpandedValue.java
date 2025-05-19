@@ -101,6 +101,8 @@ public interface CustomFieldExpandedValue {
         return instance;
     }
 
+    public CustomFieldExpandedValue copyDeep();
+
     /**
      * factory method to create a deep copy of CustomFieldExpandedValue
      * @param template instance to be copied

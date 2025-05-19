@@ -119,6 +119,8 @@ public interface FieldDefinition {
         return instance;
     }
 
+    public FieldDefinition copyDeep();
+
     /**
      * factory method to create a deep copy of FieldDefinition
      * @param template instance to be copied

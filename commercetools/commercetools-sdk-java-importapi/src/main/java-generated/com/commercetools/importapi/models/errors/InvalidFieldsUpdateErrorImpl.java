@@ -114,4 +114,8 @@ public class InvalidFieldsUpdateErrorImpl implements InvalidFieldsUpdateError, M
                 .build();
     }
 
+    @Override
+    public InvalidFieldsUpdateError copyDeep() {
+        return InvalidFieldsUpdateError.deepCopy(this);
+    }
 }

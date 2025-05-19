@@ -123,4 +123,8 @@ public class DeliveryChangeValueImpl implements DeliveryChangeValue, ModelBase {
                 .build();
     }
 
+    @Override
+    public DeliveryChangeValue copyDeep() {
+        return DeliveryChangeValue.deepCopy(this);
+    }
 }

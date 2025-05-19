@@ -172,6 +172,8 @@ public interface CustomLineItem {
         return instance;
     }
 
+    public CustomLineItem copyDeep();
+
     /**
      * factory method to create a deep copy of CustomLineItem
      * @param template instance to be copied

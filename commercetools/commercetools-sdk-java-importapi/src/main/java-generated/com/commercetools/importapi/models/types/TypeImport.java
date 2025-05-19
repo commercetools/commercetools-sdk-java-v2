@@ -152,6 +152,8 @@ public interface TypeImport extends ImportResource {
         return instance;
     }
 
+    public TypeImport copyDeep();
+
     /**
      * factory method to create a deep copy of TypeImport
      * @param template instance to be copied

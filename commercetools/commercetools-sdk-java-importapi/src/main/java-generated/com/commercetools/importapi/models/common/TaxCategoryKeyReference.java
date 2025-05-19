@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("tax-category")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TaxCategoryKeyReferenceImpl.class)
 public interface TaxCategoryKeyReference extends KeyReference {
@@ -52,6 +53,8 @@ public interface TaxCategoryKeyReference extends KeyReference {
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public TaxCategoryKeyReference copyDeep();
 
     /**
      * factory method to create a deep copy of TaxCategoryKeyReference

@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("PublishChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PublishChangeImpl.class)
 public interface PublishChange extends Change {
@@ -77,6 +78,8 @@ public interface PublishChange extends Change {
         instance.setChange(template.getChange());
         return instance;
     }
+
+    public PublishChange copyDeep();
 
     /**
      * factory method to create a deep copy of PublishChange

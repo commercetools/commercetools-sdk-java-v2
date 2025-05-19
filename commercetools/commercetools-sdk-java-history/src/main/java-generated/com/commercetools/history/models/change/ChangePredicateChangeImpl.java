@@ -133,4 +133,8 @@ public class ChangePredicateChangeImpl implements ChangePredicateChange, ModelBa
                 .build();
     }
 
+    @Override
+    public ChangePredicateChange copyDeep() {
+        return ChangePredicateChange.deepCopy(this);
+    }
 }

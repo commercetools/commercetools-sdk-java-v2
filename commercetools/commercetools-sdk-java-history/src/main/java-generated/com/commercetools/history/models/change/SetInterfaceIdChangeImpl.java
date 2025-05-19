@@ -133,4 +133,8 @@ public class SetInterfaceIdChangeImpl implements SetInterfaceIdChange, ModelBase
                 .build();
     }
 
+    @Override
+    public SetInterfaceIdChange copyDeep() {
+        return SetInterfaceIdChange.deepCopy(this);
+    }
 }

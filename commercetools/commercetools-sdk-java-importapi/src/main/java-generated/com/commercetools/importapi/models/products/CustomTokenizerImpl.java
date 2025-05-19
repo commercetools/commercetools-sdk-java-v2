@@ -95,4 +95,8 @@ public class CustomTokenizerImpl implements CustomTokenizer, ModelBase {
                 .build();
     }
 
+    @Override
+    public CustomTokenizer copyDeep() {
+        return CustomTokenizer.deepCopy(this);
+    }
 }

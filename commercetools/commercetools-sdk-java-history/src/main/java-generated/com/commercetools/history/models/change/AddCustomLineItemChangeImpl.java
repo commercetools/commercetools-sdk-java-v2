@@ -133,4 +133,8 @@ public class AddCustomLineItemChangeImpl implements AddCustomLineItemChange, Mod
                 .build();
     }
 
+    @Override
+    public AddCustomLineItemChange copyDeep() {
+        return AddCustomLineItemChange.deepCopy(this);
+    }
 }

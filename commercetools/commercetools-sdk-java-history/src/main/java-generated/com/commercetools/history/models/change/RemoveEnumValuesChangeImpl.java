@@ -133,4 +133,8 @@ public class RemoveEnumValuesChangeImpl implements RemoveEnumValuesChange, Model
                 .build();
     }
 
+    @Override
+    public RemoveEnumValuesChange copyDeep() {
+        return RemoveEnumValuesChange.deepCopy(this);
+    }
 }

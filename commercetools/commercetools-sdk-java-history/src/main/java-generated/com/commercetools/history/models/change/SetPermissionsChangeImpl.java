@@ -142,4 +142,8 @@ public class SetPermissionsChangeImpl implements SetPermissionsChange, ModelBase
                 .build();
     }
 
+    @Override
+    public SetPermissionsChange copyDeep() {
+        return SetPermissionsChange.deepCopy(this);
+    }
 }

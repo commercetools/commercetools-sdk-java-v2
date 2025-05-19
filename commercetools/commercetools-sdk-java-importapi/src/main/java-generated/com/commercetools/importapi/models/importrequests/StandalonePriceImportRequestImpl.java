@@ -99,4 +99,8 @@ public class StandalonePriceImportRequestImpl implements StandalonePriceImportRe
                 .build();
     }
 
+    @Override
+    public StandalonePriceImportRequest copyDeep() {
+        return StandalonePriceImportRequest.deepCopy(this);
+    }
 }

@@ -133,4 +133,8 @@ public class SetRestockableInDaysChangeImpl implements SetRestockableInDaysChang
                 .build();
     }
 
+    @Override
+    public SetRestockableInDaysChange copyDeep() {
+        return SetRestockableInDaysChange.deepCopy(this);
+    }
 }

@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("number")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = NumberAttributeImpl.class)
 public interface NumberAttribute extends Attribute {
@@ -70,6 +71,8 @@ public interface NumberAttribute extends Attribute {
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public NumberAttribute copyDeep();
 
     /**
      * factory method to create a deep copy of NumberAttribute

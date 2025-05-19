@@ -153,4 +153,8 @@ public class SetLineItemPriceChangeImpl implements SetLineItemPriceChange, Model
                 .build();
     }
 
+    @Override
+    public SetLineItemPriceChange copyDeep() {
+        return SetLineItemPriceChange.deepCopy(this);
+    }
 }

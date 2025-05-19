@@ -32,6 +32,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ChangeTransactionInteractionIdChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeTransactionInteractionIdChangeImpl.class)
 public interface ChangeTransactionInteractionIdChange extends Change {
@@ -131,6 +132,8 @@ public interface ChangeTransactionInteractionIdChange extends Change {
         instance.setTransaction(template.getTransaction());
         return instance;
     }
+
+    public ChangeTransactionInteractionIdChange copyDeep();
 
     /**
      * factory method to create a deep copy of ChangeTransactionInteractionIdChange

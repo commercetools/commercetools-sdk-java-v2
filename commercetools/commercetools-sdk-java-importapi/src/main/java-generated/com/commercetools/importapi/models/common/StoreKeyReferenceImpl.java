@@ -91,4 +91,8 @@ public class StoreKeyReferenceImpl implements StoreKeyReference, ModelBase {
                 .build();
     }
 
+    @Override
+    public StoreKeyReference copyDeep() {
+        return StoreKeyReference.deepCopy(this);
+    }
 }

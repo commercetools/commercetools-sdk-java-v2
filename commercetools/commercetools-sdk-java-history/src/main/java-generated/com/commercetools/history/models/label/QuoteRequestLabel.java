@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("QuoteRequestLabel")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = QuoteRequestLabelImpl.class)
 public interface QuoteRequestLabel extends Label {
@@ -97,6 +98,8 @@ public interface QuoteRequestLabel extends Label {
         instance.setCustomer(template.getCustomer());
         return instance;
     }
+
+    public QuoteRequestLabel copyDeep();
 
     /**
      * factory method to create a deep copy of QuoteRequestLabel

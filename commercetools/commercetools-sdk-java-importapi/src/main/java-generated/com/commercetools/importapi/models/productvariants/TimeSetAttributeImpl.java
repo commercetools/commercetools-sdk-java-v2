@@ -114,4 +114,8 @@ public class TimeSetAttributeImpl implements TimeSetAttribute, ModelBase {
                 .build();
     }
 
+    @Override
+    public TimeSetAttribute copyDeep() {
+        return TimeSetAttribute.deepCopy(this);
+    }
 }

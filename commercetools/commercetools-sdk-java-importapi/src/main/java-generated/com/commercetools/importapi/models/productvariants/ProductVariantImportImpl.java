@@ -235,4 +235,8 @@ public class ProductVariantImportImpl implements ProductVariantImport, ModelBase
                 .build();
     }
 
+    @Override
+    public ProductVariantImport copyDeep() {
+        return ProductVariantImport.deepCopy(this);
+    }
 }

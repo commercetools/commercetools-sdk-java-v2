@@ -82,6 +82,8 @@ public interface Location {
         return instance;
     }
 
+    public Location copyDeep();
+
     /**
      * factory method to create a deep copy of Location
      * @param template instance to be copied

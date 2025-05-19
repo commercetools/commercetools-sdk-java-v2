@@ -141,4 +141,8 @@ public class ChangeGroupsChangeImpl implements ChangeGroupsChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public ChangeGroupsChange copyDeep() {
+        return ChangeGroupsChange.deepCopy(this);
+    }
 }

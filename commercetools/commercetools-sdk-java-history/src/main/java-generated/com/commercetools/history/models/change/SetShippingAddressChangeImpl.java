@@ -137,4 +137,8 @@ public class SetShippingAddressChangeImpl implements SetShippingAddressChange, M
                 .build();
     }
 
+    @Override
+    public SetShippingAddressChange copyDeep() {
+        return SetShippingAddressChange.deepCopy(this);
+    }
 }

@@ -93,4 +93,8 @@ public class CustomFieldReferenceTypeImpl implements CustomFieldReferenceType, M
                 .build();
     }
 
+    @Override
+    public CustomFieldReferenceType copyDeep() {
+        return CustomFieldReferenceType.deepCopy(this);
+    }
 }

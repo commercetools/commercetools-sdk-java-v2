@@ -153,4 +153,8 @@ public class SetTextLineItemCustomTypeChangeImpl implements SetTextLineItemCusto
                 .build();
     }
 
+    @Override
+    public SetTextLineItemCustomTypeChange copyDeep() {
+        return SetTextLineItemCustomTypeChange.deepCopy(this);
+    }
 }

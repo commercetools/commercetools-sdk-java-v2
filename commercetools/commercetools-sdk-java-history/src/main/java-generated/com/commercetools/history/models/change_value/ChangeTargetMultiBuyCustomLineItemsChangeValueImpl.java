@@ -174,4 +174,8 @@ public class ChangeTargetMultiBuyCustomLineItemsChangeValueImpl
                 .build();
     }
 
+    @Override
+    public ChangeTargetMultiBuyCustomLineItemsChangeValue copyDeep() {
+        return ChangeTargetMultiBuyCustomLineItemsChangeValue.deepCopy(this);
+    }
 }

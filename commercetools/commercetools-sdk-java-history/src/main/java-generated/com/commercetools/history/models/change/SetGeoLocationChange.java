@@ -31,6 +31,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SetGeoLocationChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetGeoLocationChangeImpl.class)
 public interface SetGeoLocationChange extends Change {
@@ -115,6 +116,8 @@ public interface SetGeoLocationChange extends Change {
         instance.setNextValue(template.getNextValue());
         return instance;
     }
+
+    public SetGeoLocationChange copyDeep();
 
     /**
      * factory method to create a deep copy of SetGeoLocationChange

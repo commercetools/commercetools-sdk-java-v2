@@ -133,4 +133,8 @@ public class SetCustomerGroupChangeImpl implements SetCustomerGroupChange, Model
                 .build();
     }
 
+    @Override
+    public SetCustomerGroupChange copyDeep() {
+        return SetCustomerGroupChange.deepCopy(this);
+    }
 }

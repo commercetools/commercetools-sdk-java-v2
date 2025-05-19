@@ -83,6 +83,8 @@ public interface ParcelTrackingData {
         return instance;
     }
 
+    public ParcelTrackingData copyDeep();
+
     /**
      * factory method to create a deep copy of ParcelTrackingData
      * @param template instance to be copied

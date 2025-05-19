@@ -133,4 +133,8 @@ public class RemoveTextLineItemChangeImpl implements RemoveTextLineItemChange, M
                 .build();
     }
 
+    @Override
+    public RemoveTextLineItemChange copyDeep() {
+        return RemoveTextLineItemChange.deepCopy(this);
+    }
 }

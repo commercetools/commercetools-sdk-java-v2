@@ -109,4 +109,8 @@ public class ReviewLabelImpl implements ReviewLabel, ModelBase {
                 .build();
     }
 
+    @Override
+    public ReviewLabel copyDeep() {
+        return ReviewLabel.deepCopy(this);
+    }
 }

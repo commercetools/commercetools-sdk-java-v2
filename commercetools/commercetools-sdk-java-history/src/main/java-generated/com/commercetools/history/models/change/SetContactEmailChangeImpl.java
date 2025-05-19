@@ -133,4 +133,8 @@ public class SetContactEmailChangeImpl implements SetContactEmailChange, ModelBa
                 .build();
     }
 
+    @Override
+    public SetContactEmailChange copyDeep() {
+        return SetContactEmailChange.deepCopy(this);
+    }
 }

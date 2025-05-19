@@ -62,4 +62,8 @@ public class AttributeDateTimeTypeImpl implements AttributeDateTimeType, ModelBa
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("name", name).build();
     }
 
+    @Override
+    public AttributeDateTimeType copyDeep() {
+        return AttributeDateTimeType.deepCopy(this);
+    }
 }

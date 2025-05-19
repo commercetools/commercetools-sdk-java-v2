@@ -133,4 +133,8 @@ public class ChangeStateTypeChangeImpl implements ChangeStateTypeChange, ModelBa
                 .build();
     }
 
+    @Override
+    public ChangeStateTypeChange copyDeep() {
+        return ChangeStateTypeChange.deepCopy(this);
+    }
 }

@@ -137,4 +137,8 @@ public class ReservationImpl implements Reservation, ModelBase {
                 .build();
     }
 
+    @Override
+    public Reservation copyDeep() {
+        return Reservation.deepCopy(this);
+    }
 }

@@ -256,4 +256,8 @@ public class OrderFieldImpl implements OrderField, ModelBase {
                 .build();
     }
 
+    @Override
+    public OrderField copyDeep() {
+        return OrderField.deepCopy(this);
+    }
 }

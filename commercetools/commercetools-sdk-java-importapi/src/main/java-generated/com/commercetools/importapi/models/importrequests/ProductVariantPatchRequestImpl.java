@@ -98,4 +98,8 @@ public class ProductVariantPatchRequestImpl implements ProductVariantPatchReques
                 .build();
     }
 
+    @Override
+    public ProductVariantPatchRequest copyDeep() {
+        return ProductVariantPatchRequest.deepCopy(this);
+    }
 }

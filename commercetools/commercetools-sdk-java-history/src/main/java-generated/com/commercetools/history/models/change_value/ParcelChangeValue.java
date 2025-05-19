@@ -82,6 +82,8 @@ public interface ParcelChangeValue {
         return instance;
     }
 
+    public ParcelChangeValue copyDeep();
+
     /**
      * factory method to create a deep copy of ParcelChangeValue
      * @param template instance to be copied

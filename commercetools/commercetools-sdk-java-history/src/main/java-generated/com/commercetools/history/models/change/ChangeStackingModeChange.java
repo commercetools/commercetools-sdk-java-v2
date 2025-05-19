@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ChangeStackingModeChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeStackingModeChangeImpl.class)
 public interface ChangeStackingModeChange extends Change {
@@ -112,6 +113,8 @@ public interface ChangeStackingModeChange extends Change {
         instance.setNextValue(template.getNextValue());
         return instance;
     }
+
+    public ChangeStackingModeChange copyDeep();
 
     /**
      * factory method to create a deep copy of ChangeStackingModeChange

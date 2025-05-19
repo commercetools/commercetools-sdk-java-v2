@@ -73,4 +73,8 @@ public class RemoveParcelFromDeliveryDraftImpl implements RemoveParcelFromDelive
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("parcelId", parcelId).build();
     }
 
+    @Override
+    public RemoveParcelFromDeliveryDraft copyDeep() {
+        return RemoveParcelFromDeliveryDraft.deepCopy(this);
+    }
 }

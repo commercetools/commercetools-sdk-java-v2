@@ -137,4 +137,8 @@ public class ProductTypeImportImpl implements ProductTypeImport, ModelBase {
                 .build();
     }
 
+    @Override
+    public ProductTypeImport copyDeep() {
+        return ProductTypeImport.deepCopy(this);
+    }
 }

@@ -114,4 +114,8 @@ public class EnumSetAttributeImpl implements EnumSetAttribute, ModelBase {
                 .build();
     }
 
+    @Override
+    public EnumSetAttribute copyDeep() {
+        return EnumSetAttribute.deepCopy(this);
+    }
 }

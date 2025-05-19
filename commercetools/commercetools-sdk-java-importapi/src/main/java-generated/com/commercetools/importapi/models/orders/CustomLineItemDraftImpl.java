@@ -313,4 +313,8 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public CustomLineItemDraft copyDeep() {
+        return CustomLineItemDraft.deepCopy(this);
+    }
 }

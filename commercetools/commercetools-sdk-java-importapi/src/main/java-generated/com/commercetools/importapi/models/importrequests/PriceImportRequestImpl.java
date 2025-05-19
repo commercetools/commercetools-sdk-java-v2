@@ -97,4 +97,8 @@ public class PriceImportRequestImpl implements PriceImportRequest, ModelBase {
                 .build();
     }
 
+    @Override
+    public PriceImportRequest copyDeep() {
+        return PriceImportRequest.deepCopy(this);
+    }
 }

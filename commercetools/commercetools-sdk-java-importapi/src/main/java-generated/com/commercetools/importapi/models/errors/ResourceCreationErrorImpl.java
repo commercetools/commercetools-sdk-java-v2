@@ -110,4 +110,8 @@ public class ResourceCreationErrorImpl implements ResourceCreationError, ModelBa
                 .build();
     }
 
+    @Override
+    public ResourceCreationError copyDeep() {
+        return ResourceCreationError.deepCopy(this);
+    }
 }

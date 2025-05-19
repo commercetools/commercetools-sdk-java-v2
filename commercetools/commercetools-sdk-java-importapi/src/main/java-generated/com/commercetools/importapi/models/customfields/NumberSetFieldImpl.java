@@ -95,4 +95,8 @@ public class NumberSetFieldImpl implements NumberSetField, ModelBase {
                 .build();
     }
 
+    @Override
+    public NumberSetField copyDeep() {
+        return NumberSetField.deepCopy(this);
+    }
 }

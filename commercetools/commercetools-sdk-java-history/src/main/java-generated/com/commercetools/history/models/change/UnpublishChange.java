@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("UnpublishChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = UnpublishChangeImpl.class)
 public interface UnpublishChange extends Change {
@@ -77,6 +78,8 @@ public interface UnpublishChange extends Change {
         instance.setChange(template.getChange());
         return instance;
     }
+
+    public UnpublishChange copyDeep();
 
     /**
      * factory method to create a deep copy of UnpublishChange

@@ -114,4 +114,8 @@ public class LocalizableEnumSetAttributeImpl implements LocalizableEnumSetAttrib
                 .build();
     }
 
+    @Override
+    public LocalizableEnumSetAttribute copyDeep() {
+        return LocalizableEnumSetAttribute.deepCopy(this);
+    }
 }

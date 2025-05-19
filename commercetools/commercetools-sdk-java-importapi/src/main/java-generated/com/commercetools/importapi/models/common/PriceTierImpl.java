@@ -95,4 +95,8 @@ public class PriceTierImpl implements PriceTier, ModelBase {
                 .build();
     }
 
+    @Override
+    public PriceTier copyDeep() {
+        return PriceTier.deepCopy(this);
+    }
 }

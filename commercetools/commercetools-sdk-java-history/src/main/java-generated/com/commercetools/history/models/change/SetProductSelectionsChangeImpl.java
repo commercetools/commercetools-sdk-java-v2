@@ -144,4 +144,8 @@ public class SetProductSelectionsChangeImpl implements SetProductSelectionsChang
                 .build();
     }
 
+    @Override
+    public SetProductSelectionsChange copyDeep() {
+        return SetProductSelectionsChange.deepCopy(this);
+    }
 }

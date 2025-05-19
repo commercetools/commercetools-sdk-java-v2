@@ -193,4 +193,8 @@ public class SetShoppingListLineItemCustomFieldChangeImpl
                 .build();
     }
 
+    @Override
+    public SetShoppingListLineItemCustomFieldChange copyDeep() {
+        return SetShoppingListLineItemCustomFieldChange.deepCopy(this);
+    }
 }

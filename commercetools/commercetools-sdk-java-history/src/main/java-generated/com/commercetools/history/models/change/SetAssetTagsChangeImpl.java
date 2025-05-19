@@ -165,4 +165,8 @@ public class SetAssetTagsChangeImpl implements SetAssetTagsChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public SetAssetTagsChange copyDeep() {
+        return SetAssetTagsChange.deepCopy(this);
+    }
 }

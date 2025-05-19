@@ -49,6 +49,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SetCustomFieldChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetCustomFieldChangeImpl.class)
 public interface SetCustomFieldChange extends Change {
@@ -163,6 +164,8 @@ public interface SetCustomFieldChange extends Change {
         instance.setCustomTypeId(template.getCustomTypeId());
         return instance;
     }
+
+    public SetCustomFieldChange copyDeep();
 
     /**
      * factory method to create a deep copy of SetCustomFieldChange

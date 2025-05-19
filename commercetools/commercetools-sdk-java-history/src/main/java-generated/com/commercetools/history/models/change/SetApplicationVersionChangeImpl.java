@@ -133,4 +133,8 @@ public class SetApplicationVersionChangeImpl implements SetApplicationVersionCha
                 .build();
     }
 
+    @Override
+    public SetApplicationVersionChange copyDeep() {
+        return SetApplicationVersionChange.deepCopy(this);
+    }
 }

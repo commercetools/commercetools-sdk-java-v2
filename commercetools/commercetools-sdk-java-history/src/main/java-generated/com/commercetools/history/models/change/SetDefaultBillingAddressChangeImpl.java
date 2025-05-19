@@ -133,4 +133,8 @@ public class SetDefaultBillingAddressChangeImpl implements SetDefaultBillingAddr
                 .build();
     }
 
+    @Override
+    public SetDefaultBillingAddressChange copyDeep() {
+        return SetDefaultBillingAddressChange.deepCopy(this);
+    }
 }

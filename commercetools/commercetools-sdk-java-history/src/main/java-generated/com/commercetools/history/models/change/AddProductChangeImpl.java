@@ -134,4 +134,8 @@ public class AddProductChangeImpl implements AddProductChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public AddProductChange copyDeep() {
+        return AddProductChange.deepCopy(this);
+    }
 }

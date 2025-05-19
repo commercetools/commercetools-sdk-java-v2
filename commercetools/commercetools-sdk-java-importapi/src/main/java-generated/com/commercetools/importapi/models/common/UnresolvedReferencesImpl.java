@@ -95,4 +95,8 @@ public class UnresolvedReferencesImpl implements UnresolvedReferences, ModelBase
                 .build();
     }
 
+    @Override
+    public UnresolvedReferences copyDeep() {
+        return UnresolvedReferences.deepCopy(this);
+    }
 }

@@ -161,4 +161,8 @@ public class ImportContainerPagedResponseImpl implements ImportContainerPagedRes
                 .build();
     }
 
+    @Override
+    public ImportContainerPagedResponse copyDeep() {
+        return ImportContainerPagedResponse.deepCopy(this);
+    }
 }

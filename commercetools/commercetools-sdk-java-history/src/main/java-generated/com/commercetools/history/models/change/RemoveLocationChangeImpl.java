@@ -110,4 +110,8 @@ public class RemoveLocationChangeImpl implements RemoveLocationChange, ModelBase
                 .build();
     }
 
+    @Override
+    public RemoveLocationChange copyDeep() {
+        return RemoveLocationChange.deepCopy(this);
+    }
 }

@@ -142,4 +142,8 @@ public class AddStateRolesChangeImpl implements AddStateRolesChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public AddStateRolesChange copyDeep() {
+        return AddStateRolesChange.deepCopy(this);
+    }
 }

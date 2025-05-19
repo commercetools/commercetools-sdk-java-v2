@@ -114,4 +114,8 @@ public class CustomFieldExpandedValueImpl implements CustomFieldExpandedValue, M
                 .build();
     }
 
+    @Override
+    public CustomFieldExpandedValue copyDeep() {
+        return CustomFieldExpandedValue.deepCopy(this);
+    }
 }

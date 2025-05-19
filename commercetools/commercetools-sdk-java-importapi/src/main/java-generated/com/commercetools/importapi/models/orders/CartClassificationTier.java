@@ -32,6 +32,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("CartClassification")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartClassificationTierImpl.class)
 public interface CartClassificationTier extends ShippingRatePriceTier {
@@ -132,6 +133,8 @@ public interface CartClassificationTier extends ShippingRatePriceTier {
         instance.setIsMatching(template.getIsMatching());
         return instance;
     }
+
+    public CartClassificationTier copyDeep();
 
     /**
      * factory method to create a deep copy of CartClassificationTier

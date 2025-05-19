@@ -95,4 +95,8 @@ public class TextLineItemValueImpl implements TextLineItemValue, ModelBase {
                 .build();
     }
 
+    @Override
+    public TextLineItemValue copyDeep() {
+        return TextLineItemValue.deepCopy(this);
+    }
 }

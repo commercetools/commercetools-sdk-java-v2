@@ -146,4 +146,8 @@ public class ChangeAssetOrderChangeImpl implements ChangeAssetOrderChange, Model
                 .build();
     }
 
+    @Override
+    public ChangeAssetOrderChange copyDeep() {
+        return ChangeAssetOrderChange.deepCopy(this);
+    }
 }

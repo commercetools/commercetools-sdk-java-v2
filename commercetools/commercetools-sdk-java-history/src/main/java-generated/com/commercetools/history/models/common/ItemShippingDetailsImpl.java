@@ -100,4 +100,8 @@ public class ItemShippingDetailsImpl implements ItemShippingDetails, ModelBase {
                 .build();
     }
 
+    @Override
+    public ItemShippingDetails copyDeep() {
+        return ItemShippingDetails.deepCopy(this);
+    }
 }

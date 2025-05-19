@@ -157,4 +157,8 @@ public class SetAssetKeyChangeImpl implements SetAssetKeyChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public SetAssetKeyChange copyDeep() {
+        return SetAssetKeyChange.deepCopy(this);
+    }
 }

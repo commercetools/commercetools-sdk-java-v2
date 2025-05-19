@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("customLineItems")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeTargetCustomLineItemsChangeValueImpl.class)
 public interface ChangeTargetCustomLineItemsChangeValue extends ChangeTargetChangeValue {
@@ -77,6 +78,8 @@ public interface ChangeTargetCustomLineItemsChangeValue extends ChangeTargetChan
         instance.setPredicate(template.getPredicate());
         return instance;
     }
+
+    public ChangeTargetCustomLineItemsChangeValue copyDeep();
 
     /**
      * factory method to create a deep copy of ChangeTargetCustomLineItemsChangeValue

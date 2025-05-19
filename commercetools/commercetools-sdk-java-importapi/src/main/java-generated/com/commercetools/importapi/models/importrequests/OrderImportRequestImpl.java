@@ -97,4 +97,8 @@ public class OrderImportRequestImpl implements OrderImportRequest, ModelBase {
                 .build();
     }
 
+    @Override
+    public OrderImportRequest copyDeep() {
+        return OrderImportRequest.deepCopy(this);
+    }
 }

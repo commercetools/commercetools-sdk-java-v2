@@ -84,6 +84,8 @@ public interface DiscountedLineItemPriceForQuantity {
         return instance;
     }
 
+    public DiscountedLineItemPriceForQuantity copyDeep();
+
     /**
      * factory method to create a deep copy of DiscountedLineItemPriceForQuantity
      * @param template instance to be copied

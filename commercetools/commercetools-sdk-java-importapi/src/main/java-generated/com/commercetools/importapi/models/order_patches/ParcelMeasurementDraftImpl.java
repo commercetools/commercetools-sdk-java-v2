@@ -95,4 +95,8 @@ public class ParcelMeasurementDraftImpl implements ParcelMeasurementDraft, Model
                 .build();
     }
 
+    @Override
+    public ParcelMeasurementDraft copyDeep() {
+        return ParcelMeasurementDraft.deepCopy(this);
+    }
 }

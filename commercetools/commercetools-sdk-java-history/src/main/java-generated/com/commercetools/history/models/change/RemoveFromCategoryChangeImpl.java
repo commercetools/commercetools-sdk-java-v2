@@ -162,4 +162,8 @@ public class RemoveFromCategoryChangeImpl implements RemoveFromCategoryChange, M
                 .build();
     }
 
+    @Override
+    public RemoveFromCategoryChange copyDeep() {
+        return RemoveFromCategoryChange.deepCopy(this);
+    }
 }

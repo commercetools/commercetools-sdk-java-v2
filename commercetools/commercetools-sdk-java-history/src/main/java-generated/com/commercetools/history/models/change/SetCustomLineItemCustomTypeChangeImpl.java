@@ -177,4 +177,8 @@ public class SetCustomLineItemCustomTypeChangeImpl implements SetCustomLineItemC
                 .build();
     }
 
+    @Override
+    public SetCustomLineItemCustomTypeChange copyDeep() {
+        return SetCustomLineItemCustomTypeChange.deepCopy(this);
+    }
 }

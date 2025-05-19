@@ -471,6 +471,8 @@ public interface OrderImport {
         return instance;
     }
 
+    public OrderImport copyDeep();
+
     /**
      * factory method to create a deep copy of OrderImport
      * @param template instance to be copied

@@ -91,4 +91,8 @@ public class StateKeyReferenceImpl implements StateKeyReference, ModelBase {
                 .build();
     }
 
+    @Override
+    public StateKeyReference copyDeep() {
+        return StateKeyReference.deepCopy(this);
+    }
 }

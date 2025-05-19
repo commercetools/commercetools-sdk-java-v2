@@ -242,4 +242,8 @@ public class LineItemPriceImpl implements LineItemPrice, ModelBase {
                 .build();
     }
 
+    @Override
+    public LineItemPrice copyDeep() {
+        return LineItemPrice.deepCopy(this);
+    }
 }

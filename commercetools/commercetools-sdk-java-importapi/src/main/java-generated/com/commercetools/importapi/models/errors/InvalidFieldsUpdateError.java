@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("InvalidFieldUpdate")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = InvalidFieldsUpdateErrorImpl.class)
 public interface InvalidFieldsUpdateError extends ErrorObject {
@@ -94,6 +95,8 @@ public interface InvalidFieldsUpdateError extends ErrorObject {
         instance.setFields(template.getFields());
         return instance;
     }
+
+    public InvalidFieldsUpdateError copyDeep();
 
     /**
      * factory method to create a deep copy of InvalidFieldsUpdateError

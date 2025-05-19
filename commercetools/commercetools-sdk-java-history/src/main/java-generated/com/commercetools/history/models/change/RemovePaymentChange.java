@@ -35,6 +35,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("RemovePaymentChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = RemovePaymentChangeImpl.class)
 public interface RemovePaymentChange extends Change {
@@ -119,6 +120,8 @@ public interface RemovePaymentChange extends Change {
         instance.setNextValue(template.getNextValue());
         return instance;
     }
+
+    public RemovePaymentChange copyDeep();
 
     /**
      * factory method to create a deep copy of RemovePaymentChange

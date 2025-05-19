@@ -133,4 +133,8 @@ public class SetSalutationChangeImpl implements SetSalutationChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public SetSalutationChange copyDeep() {
+        return SetSalutationChange.deepCopy(this);
+    }
 }

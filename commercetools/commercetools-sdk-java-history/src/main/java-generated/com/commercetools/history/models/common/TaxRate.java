@@ -178,6 +178,8 @@ public interface TaxRate {
         return instance;
     }
 
+    public TaxRate copyDeep();
+
     /**
      * factory method to create a deep copy of TaxRate
      * @param template instance to be copied

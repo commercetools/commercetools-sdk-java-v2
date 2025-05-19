@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("money")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MoneyAttributeImpl.class)
 public interface MoneyAttribute extends Attribute {
@@ -73,6 +74,8 @@ public interface MoneyAttribute extends Attribute {
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public MoneyAttribute copyDeep();
 
     /**
      * factory method to create a deep copy of MoneyAttribute

@@ -33,6 +33,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("AddToCategoryChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AddToCategoryChangeImpl.class)
 public interface AddToCategoryChange extends Change {
@@ -150,6 +151,8 @@ public interface AddToCategoryChange extends Change {
         instance.setCategory(template.getCategory());
         return instance;
     }
+
+    public AddToCategoryChange copyDeep();
 
     /**
      * factory method to create a deep copy of AddToCategoryChange

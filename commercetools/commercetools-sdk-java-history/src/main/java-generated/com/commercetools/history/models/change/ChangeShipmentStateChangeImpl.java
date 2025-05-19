@@ -137,4 +137,8 @@ public class ChangeShipmentStateChangeImpl implements ChangeShipmentStateChange,
                 .build();
     }
 
+    @Override
+    public ChangeShipmentStateChange copyDeep() {
+        return ChangeShipmentStateChange.deepCopy(this);
+    }
 }

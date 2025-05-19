@@ -84,6 +84,8 @@ public interface Custom {
         return instance;
     }
 
+    public Custom copyDeep();
+
     /**
      * factory method to create a deep copy of Custom
      * @param template instance to be copied

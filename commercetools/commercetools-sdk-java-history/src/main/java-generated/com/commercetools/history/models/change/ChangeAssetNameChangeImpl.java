@@ -157,4 +157,8 @@ public class ChangeAssetNameChangeImpl implements ChangeAssetNameChange, ModelBa
                 .build();
     }
 
+    @Override
+    public ChangeAssetNameChange copyDeep() {
+        return ChangeAssetNameChange.deepCopy(this);
+    }
 }

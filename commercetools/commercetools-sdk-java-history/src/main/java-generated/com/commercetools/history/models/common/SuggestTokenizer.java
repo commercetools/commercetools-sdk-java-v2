@@ -65,6 +65,8 @@ public interface SuggestTokenizer {
         return instance;
     }
 
+    public SuggestTokenizer copyDeep();
+
     /**
      * factory method to create a deep copy of SuggestTokenizer
      * @param template instance to be copied

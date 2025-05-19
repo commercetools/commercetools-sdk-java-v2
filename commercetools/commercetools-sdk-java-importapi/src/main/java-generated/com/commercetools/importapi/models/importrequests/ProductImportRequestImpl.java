@@ -98,4 +98,8 @@ public class ProductImportRequestImpl implements ProductImportRequest, ModelBase
                 .build();
     }
 
+    @Override
+    public ProductImportRequest copyDeep() {
+        return ProductImportRequest.deepCopy(this);
+    }
 }

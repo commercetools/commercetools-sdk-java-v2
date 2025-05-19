@@ -110,4 +110,8 @@ public class AddLocationChangeImpl implements AddLocationChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public AddLocationChange copyDeep() {
+        return AddLocationChange.deepCopy(this);
+    }
 }

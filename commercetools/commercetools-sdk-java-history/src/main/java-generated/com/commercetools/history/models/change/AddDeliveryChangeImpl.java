@@ -134,4 +134,8 @@ public class AddDeliveryChangeImpl implements AddDeliveryChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public AddDeliveryChange copyDeep() {
+        return AddDeliveryChange.deepCopy(this);
+    }
 }

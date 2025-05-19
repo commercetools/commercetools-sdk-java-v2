@@ -110,4 +110,8 @@ public class RemoveAssociateChangeImpl implements RemoveAssociateChange, ModelBa
                 .build();
     }
 
+    @Override
+    public RemoveAssociateChange copyDeep() {
+        return RemoveAssociateChange.deepCopy(this);
+    }
 }

@@ -95,4 +95,8 @@ public class ItemShippingTargetImpl implements ItemShippingTarget, ModelBase {
                 .build();
     }
 
+    @Override
+    public ItemShippingTarget copyDeep() {
+        return ItemShippingTarget.deepCopy(this);
+    }
 }

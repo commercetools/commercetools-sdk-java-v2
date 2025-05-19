@@ -96,4 +96,8 @@ public class MoneySetFieldImpl implements MoneySetField, ModelBase {
                 .build();
     }
 
+    @Override
+    public MoneySetField copyDeep() {
+        return MoneySetField.deepCopy(this);
+    }
 }

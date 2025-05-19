@@ -133,4 +133,8 @@ public class SetVatIdChangeImpl implements SetVatIdChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public SetVatIdChange copyDeep() {
+        return SetVatIdChange.deepCopy(this);
+    }
 }

@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("cart-discount")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartDiscountKeyReferenceImpl.class)
 public interface CartDiscountKeyReference extends KeyReference {
@@ -52,6 +53,8 @@ public interface CartDiscountKeyReference extends KeyReference {
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public CartDiscountKeyReference copyDeep();
 
     /**
      * factory method to create a deep copy of CartDiscountKeyReference

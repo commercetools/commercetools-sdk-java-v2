@@ -173,4 +173,8 @@ public class ChangeCustomLineItemQuantityChangeImpl implements ChangeCustomLineI
                 .build();
     }
 
+    @Override
+    public ChangeCustomLineItemQuantityChange copyDeep() {
+        return ChangeCustomLineItemQuantityChange.deepCopy(this);
+    }
 }

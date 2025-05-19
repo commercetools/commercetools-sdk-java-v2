@@ -90,6 +90,8 @@ public interface GeoLocation {
         return instance;
     }
 
+    public GeoLocation copyDeep();
+
     /**
      * factory method to create a deep copy of GeoLocation
      * @param template instance to be copied

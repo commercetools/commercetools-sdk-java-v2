@@ -176,4 +176,8 @@ public class SetVariantAvailabilityChangeImpl implements SetVariantAvailabilityC
                 .build();
     }
 
+    @Override
+    public SetVariantAvailabilityChange copyDeep() {
+        return SetVariantAvailabilityChange.deepCopy(this);
+    }
 }

@@ -137,4 +137,8 @@ public class RemovePaymentChangeImpl implements RemovePaymentChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public RemovePaymentChange copyDeep() {
+        return RemovePaymentChange.deepCopy(this);
+    }
 }

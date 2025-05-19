@@ -110,4 +110,8 @@ public class AddTaxRateChangeImpl implements AddTaxRateChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public AddTaxRateChange copyDeep() {
+        return AddTaxRateChange.deepCopy(this);
+    }
 }

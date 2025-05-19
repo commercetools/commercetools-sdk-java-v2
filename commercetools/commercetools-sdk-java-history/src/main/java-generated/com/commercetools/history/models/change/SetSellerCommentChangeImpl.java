@@ -133,4 +133,8 @@ public class SetSellerCommentChangeImpl implements SetSellerCommentChange, Model
                 .build();
     }
 
+    @Override
+    public SetSellerCommentChange copyDeep() {
+        return SetSellerCommentChange.deepCopy(this);
+    }
 }

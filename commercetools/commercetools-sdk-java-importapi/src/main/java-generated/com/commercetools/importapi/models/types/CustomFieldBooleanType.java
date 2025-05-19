@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("Boolean")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomFieldBooleanTypeImpl.class)
 public interface CustomFieldBooleanType extends FieldType {
@@ -50,6 +51,8 @@ public interface CustomFieldBooleanType extends FieldType {
         CustomFieldBooleanTypeImpl instance = new CustomFieldBooleanTypeImpl();
         return instance;
     }
+
+    public CustomFieldBooleanType copyDeep();
 
     /**
      * factory method to create a deep copy of CustomFieldBooleanType

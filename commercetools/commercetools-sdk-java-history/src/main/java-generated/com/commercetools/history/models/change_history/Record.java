@@ -287,6 +287,8 @@ public interface Record {
         return instance;
     }
 
+    public Record copyDeep();
+
     /**
      * factory method to create a deep copy of Record
      * @param template instance to be copied

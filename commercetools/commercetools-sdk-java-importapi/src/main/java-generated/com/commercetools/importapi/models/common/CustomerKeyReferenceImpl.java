@@ -91,4 +91,8 @@ public class CustomerKeyReferenceImpl implements CustomerKeyReference, ModelBase
                 .build();
     }
 
+    @Override
+    public CustomerKeyReference copyDeep() {
+        return CustomerKeyReference.deepCopy(this);
+    }
 }

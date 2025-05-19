@@ -133,4 +133,8 @@ public class SetRatingChangeImpl implements SetRatingChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public SetRatingChange copyDeep() {
+        return SetRatingChange.deepCopy(this);
+    }
 }

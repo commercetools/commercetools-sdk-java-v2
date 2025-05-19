@@ -36,6 +36,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SetLineItemTaxRateChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetLineItemTaxRateChangeImpl.class)
 public interface SetLineItemTaxRateChange extends Change {
@@ -169,6 +170,8 @@ public interface SetLineItemTaxRateChange extends Change {
         instance.setTaxMode(template.getTaxMode());
         return instance;
     }
+
+    public SetLineItemTaxRateChange copyDeep();
 
     /**
      * factory method to create a deep copy of SetLineItemTaxRateChange

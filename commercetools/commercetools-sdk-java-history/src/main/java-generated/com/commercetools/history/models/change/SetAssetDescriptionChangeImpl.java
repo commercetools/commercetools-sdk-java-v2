@@ -157,4 +157,8 @@ public class SetAssetDescriptionChangeImpl implements SetAssetDescriptionChange,
                 .build();
     }
 
+    @Override
+    public SetAssetDescriptionChange copyDeep() {
+        return SetAssetDescriptionChange.deepCopy(this);
+    }
 }

@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("DuplicateAttributeValue")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DuplicateAttributeValueErrorImpl.class)
 public interface DuplicateAttributeValueError extends ErrorObject {
@@ -74,6 +75,8 @@ public interface DuplicateAttributeValueError extends ErrorObject {
         instance.setAttribute(template.getAttribute());
         return instance;
     }
+
+    public DuplicateAttributeValueError copyDeep();
 
     /**
      * factory method to create a deep copy of DuplicateAttributeValueError

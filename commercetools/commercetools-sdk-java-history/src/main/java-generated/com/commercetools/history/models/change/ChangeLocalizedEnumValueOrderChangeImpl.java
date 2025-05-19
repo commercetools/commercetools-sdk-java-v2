@@ -188,4 +188,8 @@ public class ChangeLocalizedEnumValueOrderChangeImpl implements ChangeLocalizedE
                 .build();
     }
 
+    @Override
+    public ChangeLocalizedEnumValueOrderChange copyDeep() {
+        return ChangeLocalizedEnumValueOrderChange.deepCopy(this);
+    }
 }

@@ -133,4 +133,8 @@ public class SetSupplyChannelChangeImpl implements SetSupplyChannelChange, Model
                 .build();
     }
 
+    @Override
+    public SetSupplyChannelChange copyDeep() {
+        return SetSupplyChannelChange.deepCopy(this);
+    }
 }

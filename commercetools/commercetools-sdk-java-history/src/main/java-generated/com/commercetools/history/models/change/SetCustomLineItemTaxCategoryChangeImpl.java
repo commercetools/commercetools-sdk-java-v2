@@ -173,4 +173,8 @@ public class SetCustomLineItemTaxCategoryChangeImpl implements SetCustomLineItem
                 .build();
     }
 
+    @Override
+    public SetCustomLineItemTaxCategoryChange copyDeep() {
+        return SetCustomLineItemTaxCategoryChange.deepCopy(this);
+    }
 }

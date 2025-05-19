@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("state")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StateKeyReferenceImpl.class)
 public interface StateKeyReference extends KeyReference {
@@ -52,6 +53,8 @@ public interface StateKeyReference extends KeyReference {
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public StateKeyReference copyDeep();
 
     /**
      * factory method to create a deep copy of StateKeyReference

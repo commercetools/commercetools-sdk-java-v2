@@ -98,4 +98,8 @@ public class InventoryImportRequestImpl implements InventoryImportRequest, Model
                 .build();
     }
 
+    @Override
+    public InventoryImportRequest copyDeep() {
+        return InventoryImportRequest.deepCopy(this);
+    }
 }

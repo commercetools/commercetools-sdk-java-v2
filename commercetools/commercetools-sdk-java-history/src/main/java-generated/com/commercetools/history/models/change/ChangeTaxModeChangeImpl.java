@@ -133,4 +133,8 @@ public class ChangeTaxModeChangeImpl implements ChangeTaxModeChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public ChangeTaxModeChange copyDeep() {
+        return ChangeTaxModeChange.deepCopy(this);
+    }
 }

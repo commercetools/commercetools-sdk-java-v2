@@ -99,4 +99,8 @@ public class GeoLocationImpl implements GeoLocation, ModelBase {
                 .build();
     }
 
+    @Override
+    public GeoLocation copyDeep() {
+        return GeoLocation.deepCopy(this);
+    }
 }

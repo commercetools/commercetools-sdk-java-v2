@@ -143,4 +143,8 @@ public class SetLocalizedDescriptionChangeImpl implements SetLocalizedDescriptio
                 .build();
     }
 
+    @Override
+    public SetLocalizedDescriptionChange copyDeep() {
+        return SetLocalizedDescriptionChange.deepCopy(this);
+    }
 }

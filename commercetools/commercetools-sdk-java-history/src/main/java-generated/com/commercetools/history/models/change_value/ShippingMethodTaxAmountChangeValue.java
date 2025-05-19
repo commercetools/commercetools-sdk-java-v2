@@ -87,6 +87,8 @@ public interface ShippingMethodTaxAmountChangeValue {
         return instance;
     }
 
+    public ShippingMethodTaxAmountChangeValue copyDeep();
+
     /**
      * factory method to create a deep copy of ShippingMethodTaxAmountChangeValue
      * @param template instance to be copied

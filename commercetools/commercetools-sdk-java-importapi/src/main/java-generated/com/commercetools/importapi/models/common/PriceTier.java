@@ -84,6 +84,8 @@ public interface PriceTier {
         return instance;
     }
 
+    public PriceTier copyDeep();
+
     /**
      * factory method to create a deep copy of PriceTier
      * @param template instance to be copied

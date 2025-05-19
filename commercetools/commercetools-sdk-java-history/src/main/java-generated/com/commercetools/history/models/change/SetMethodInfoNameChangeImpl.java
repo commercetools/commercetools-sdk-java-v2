@@ -133,4 +133,8 @@ public class SetMethodInfoNameChangeImpl implements SetMethodInfoNameChange, Mod
                 .build();
     }
 
+    @Override
+    public SetMethodInfoNameChange copyDeep() {
+        return SetMethodInfoNameChange.deepCopy(this);
+    }
 }

@@ -158,6 +158,8 @@ public interface Parcel {
         return instance;
     }
 
+    public Parcel copyDeep();
+
     /**
      * factory method to create a deep copy of Parcel
      * @param template instance to be copied

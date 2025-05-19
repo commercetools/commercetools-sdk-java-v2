@@ -91,4 +91,8 @@ public class ShippingMethodKeyReferenceImpl implements ShippingMethodKeyReferenc
                 .build();
     }
 
+    @Override
+    public ShippingMethodKeyReference copyDeep() {
+        return ShippingMethodKeyReference.deepCopy(this);
+    }
 }

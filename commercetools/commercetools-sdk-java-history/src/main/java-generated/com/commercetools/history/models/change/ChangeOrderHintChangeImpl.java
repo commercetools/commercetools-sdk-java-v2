@@ -133,4 +133,8 @@ public class ChangeOrderHintChangeImpl implements ChangeOrderHintChange, ModelBa
                 .build();
     }
 
+    @Override
+    public ChangeOrderHintChange copyDeep() {
+        return ChangeOrderHintChange.deepCopy(this);
+    }
 }

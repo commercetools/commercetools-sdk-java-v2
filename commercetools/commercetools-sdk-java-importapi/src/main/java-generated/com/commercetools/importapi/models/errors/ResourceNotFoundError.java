@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ResourceNotFound")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ResourceNotFoundErrorImpl.class)
 public interface ResourceNotFoundError extends ErrorObject {
@@ -68,6 +69,8 @@ public interface ResourceNotFoundError extends ErrorObject {
         instance.setResource(template.getResource());
         return instance;
     }
+
+    public ResourceNotFoundError copyDeep();
 
     /**
      * factory method to create a deep copy of ResourceNotFoundError

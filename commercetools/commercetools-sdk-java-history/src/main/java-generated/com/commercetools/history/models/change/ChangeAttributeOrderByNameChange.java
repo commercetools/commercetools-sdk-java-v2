@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ChangeAttributeOrderByNameChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChangeAttributeOrderByNameChangeImpl.class)
 public interface ChangeAttributeOrderByNameChange extends Change {
@@ -127,6 +128,8 @@ public interface ChangeAttributeOrderByNameChange extends Change {
         instance.setNextValue(template.getNextValue());
         return instance;
     }
+
+    public ChangeAttributeOrderByNameChange copyDeep();
 
     /**
      * factory method to create a deep copy of ChangeAttributeOrderByNameChange

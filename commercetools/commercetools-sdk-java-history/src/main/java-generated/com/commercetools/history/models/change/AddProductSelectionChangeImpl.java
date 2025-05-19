@@ -133,4 +133,8 @@ public class AddProductSelectionChangeImpl implements AddProductSelectionChange,
                 .build();
     }
 
+    @Override
+    public AddProductSelectionChange copyDeep() {
+        return AddProductSelectionChange.deepCopy(this);
+    }
 }

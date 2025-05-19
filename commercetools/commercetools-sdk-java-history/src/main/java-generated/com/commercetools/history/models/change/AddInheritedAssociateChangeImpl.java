@@ -110,4 +110,8 @@ public class AddInheritedAssociateChangeImpl implements AddInheritedAssociateCha
                 .build();
     }
 
+    @Override
+    public AddInheritedAssociateChange copyDeep() {
+        return AddInheritedAssociateChange.deepCopy(this);
+    }
 }

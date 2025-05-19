@@ -33,6 +33,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SetOrderNumberChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetOrderNumberChangeImpl.class)
 public interface SetOrderNumberChange extends Change {
@@ -115,6 +116,8 @@ public interface SetOrderNumberChange extends Change {
         instance.setNextValue(template.getNextValue());
         return instance;
     }
+
+    public SetOrderNumberChange copyDeep();
 
     /**
      * factory method to create a deep copy of SetOrderNumberChange

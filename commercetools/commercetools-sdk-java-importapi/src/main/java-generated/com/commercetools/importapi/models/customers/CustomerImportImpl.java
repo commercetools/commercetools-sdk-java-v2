@@ -554,4 +554,8 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
                 .build();
     }
 
+    @Override
+    public CustomerImport copyDeep() {
+        return CustomerImport.deepCopy(this);
+    }
 }

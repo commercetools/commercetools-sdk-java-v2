@@ -479,6 +479,8 @@ public interface CustomerImport extends ImportResource {
         return instance;
     }
 
+    public CustomerImport copyDeep();
+
     /**
      * factory method to create a deep copy of CustomerImport
      * @param template instance to be copied

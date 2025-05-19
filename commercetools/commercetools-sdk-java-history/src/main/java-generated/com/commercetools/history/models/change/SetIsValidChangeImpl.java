@@ -133,4 +133,8 @@ public class SetIsValidChangeImpl implements SetIsValidChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public SetIsValidChange copyDeep() {
+        return SetIsValidChange.deepCopy(this);
+    }
 }

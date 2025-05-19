@@ -85,6 +85,8 @@ public interface TextLineItemValue {
         return instance;
     }
 
+    public TextLineItemValue copyDeep();
+
     /**
      * factory method to create a deep copy of TextLineItemValue
      * @param template instance to be copied

@@ -98,6 +98,8 @@ public interface GraphQLRequest {
         return instance;
     }
 
+    public GraphQLRequest copyDeep();
+
     /**
      * factory method to create a deep copy of GraphQLRequest
      * @param template instance to be copied

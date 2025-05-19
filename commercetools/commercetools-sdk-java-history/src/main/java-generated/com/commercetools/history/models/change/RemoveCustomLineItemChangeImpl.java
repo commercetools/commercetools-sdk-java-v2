@@ -133,4 +133,8 @@ public class RemoveCustomLineItemChangeImpl implements RemoveCustomLineItemChang
                 .build();
     }
 
+    @Override
+    public RemoveCustomLineItemChange copyDeep() {
+        return RemoveCustomLineItemChange.deepCopy(this);
+    }
 }

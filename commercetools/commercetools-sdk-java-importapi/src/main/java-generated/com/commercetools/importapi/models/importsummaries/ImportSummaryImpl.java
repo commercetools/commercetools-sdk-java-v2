@@ -96,4 +96,8 @@ public class ImportSummaryImpl implements ImportSummary, ModelBase {
                 .build();
     }
 
+    @Override
+    public ImportSummary copyDeep() {
+        return ImportSummary.deepCopy(this);
+    }
 }

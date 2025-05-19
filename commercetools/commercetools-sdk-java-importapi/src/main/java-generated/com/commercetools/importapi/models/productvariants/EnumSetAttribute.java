@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("enum-set")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = EnumSetAttributeImpl.class)
 public interface EnumSetAttribute extends Attribute {
@@ -78,6 +79,8 @@ public interface EnumSetAttribute extends Attribute {
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public EnumSetAttribute copyDeep();
 
     /**
      * factory method to create a deep copy of EnumSetAttribute

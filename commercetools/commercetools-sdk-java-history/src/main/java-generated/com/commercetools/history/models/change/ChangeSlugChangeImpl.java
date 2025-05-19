@@ -137,4 +137,8 @@ public class ChangeSlugChangeImpl implements ChangeSlugChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public ChangeSlugChange copyDeep() {
+        return ChangeSlugChange.deepCopy(this);
+    }
 }

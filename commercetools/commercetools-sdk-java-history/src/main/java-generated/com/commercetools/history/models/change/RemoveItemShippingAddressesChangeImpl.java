@@ -133,4 +133,8 @@ public class RemoveItemShippingAddressesChangeImpl implements RemoveItemShipping
                 .build();
     }
 
+    @Override
+    public RemoveItemShippingAddressesChange copyDeep() {
+        return RemoveItemShippingAddressesChange.deepCopy(this);
+    }
 }

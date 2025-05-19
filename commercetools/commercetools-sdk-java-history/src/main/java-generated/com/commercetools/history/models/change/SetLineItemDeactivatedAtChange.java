@@ -32,6 +32,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SetLineItemDeactivatedAtChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetLineItemDeactivatedAtChangeImpl.class)
 public interface SetLineItemDeactivatedAtChange extends Change {
@@ -131,6 +132,8 @@ public interface SetLineItemDeactivatedAtChange extends Change {
         instance.setLineItem(template.getLineItem());
         return instance;
     }
+
+    public SetLineItemDeactivatedAtChange copyDeep();
 
     /**
      * factory method to create a deep copy of SetLineItemDeactivatedAtChange

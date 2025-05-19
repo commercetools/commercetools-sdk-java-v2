@@ -95,4 +95,8 @@ public class FieldDefinitionOrderValueImpl implements FieldDefinitionOrderValue,
                 .build();
     }
 
+    @Override
+    public FieldDefinitionOrderValue copyDeep() {
+        return FieldDefinitionOrderValue.deepCopy(this);
+    }
 }

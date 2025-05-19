@@ -82,6 +82,8 @@ public interface UnresolvedReferences {
         return instance;
     }
 
+    public UnresolvedReferences copyDeep();
+
     /**
      * factory method to create a deep copy of UnresolvedReferences
      * @param template instance to be copied

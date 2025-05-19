@@ -98,4 +98,8 @@ public class DiscountCodeImportRequestImpl implements DiscountCodeImportRequest,
                 .build();
     }
 
+    @Override
+    public DiscountCodeImportRequest copyDeep() {
+        return DiscountCodeImportRequest.deepCopy(this);
+    }
 }

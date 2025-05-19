@@ -137,4 +137,8 @@ public class RemoveParcelFromDeliveryChangeImpl implements RemoveParcelFromDeliv
                 .build();
     }
 
+    @Override
+    public RemoveParcelFromDeliveryChange copyDeep() {
+        return RemoveParcelFromDeliveryChange.deepCopy(this);
+    }
 }

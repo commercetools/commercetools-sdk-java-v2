@@ -137,4 +137,8 @@ public class AddItemShippingAddressesChangeImpl implements AddItemShippingAddres
                 .build();
     }
 
+    @Override
+    public AddItemShippingAddressesChange copyDeep() {
+        return AddItemShippingAddressesChange.deepCopy(this);
+    }
 }

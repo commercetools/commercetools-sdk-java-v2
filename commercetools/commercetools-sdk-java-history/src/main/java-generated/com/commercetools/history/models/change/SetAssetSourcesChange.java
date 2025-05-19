@@ -38,6 +38,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SetAssetSourcesChange")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SetAssetSourcesChangeImpl.class)
 public interface SetAssetSourcesChange extends Change {
@@ -155,6 +156,8 @@ public interface SetAssetSourcesChange extends Change {
         instance.setAsset(template.getAsset());
         return instance;
     }
+
+    public SetAssetSourcesChange copyDeep();
 
     /**
      * factory method to create a deep copy of SetAssetSourcesChange

@@ -161,4 +161,8 @@ public class AddBillingAddressIdChangeImpl implements AddBillingAddressIdChange,
                 .build();
     }
 
+    @Override
+    public AddBillingAddressIdChange copyDeep() {
+        return AddBillingAddressIdChange.deepCopy(this);
+    }
 }

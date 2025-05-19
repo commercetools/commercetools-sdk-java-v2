@@ -91,4 +91,8 @@ public class PriceKeyReferenceImpl implements PriceKeyReference, ModelBase {
                 .build();
     }
 
+    @Override
+    public PriceKeyReference copyDeep() {
+        return PriceKeyReference.deepCopy(this);
+    }
 }

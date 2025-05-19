@@ -153,4 +153,8 @@ public class SetAddressCustomTypeChangeImpl implements SetAddressCustomTypeChang
                 .build();
     }
 
+    @Override
+    public SetAddressCustomTypeChange copyDeep() {
+        return SetAddressCustomTypeChange.deepCopy(this);
+    }
 }

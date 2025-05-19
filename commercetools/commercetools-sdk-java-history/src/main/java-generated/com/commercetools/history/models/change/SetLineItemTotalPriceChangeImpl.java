@@ -153,4 +153,8 @@ public class SetLineItemTotalPriceChangeImpl implements SetLineItemTotalPriceCha
                 .build();
     }
 
+    @Override
+    public SetLineItemTotalPriceChange copyDeep() {
+        return SetLineItemTotalPriceChange.deepCopy(this);
+    }
 }

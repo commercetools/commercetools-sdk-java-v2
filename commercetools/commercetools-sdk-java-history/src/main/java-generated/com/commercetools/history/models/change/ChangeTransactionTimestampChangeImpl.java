@@ -153,4 +153,8 @@ public class ChangeTransactionTimestampChangeImpl implements ChangeTransactionTi
                 .build();
     }
 
+    @Override
+    public ChangeTransactionTimestampChange copyDeep() {
+        return ChangeTransactionTimestampChange.deepCopy(this);
+    }
 }

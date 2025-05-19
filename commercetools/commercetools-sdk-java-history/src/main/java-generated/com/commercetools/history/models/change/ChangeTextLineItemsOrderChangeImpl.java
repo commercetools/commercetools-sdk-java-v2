@@ -144,4 +144,8 @@ public class ChangeTextLineItemsOrderChangeImpl implements ChangeTextLineItemsOr
                 .build();
     }
 
+    @Override
+    public ChangeTextLineItemsOrderChange copyDeep() {
+        return ChangeTextLineItemsOrderChange.deepCopy(this);
+    }
 }

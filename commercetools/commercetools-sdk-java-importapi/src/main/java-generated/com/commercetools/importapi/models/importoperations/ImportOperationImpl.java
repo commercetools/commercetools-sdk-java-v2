@@ -286,4 +286,8 @@ public class ImportOperationImpl implements ImportOperation, ModelBase {
                 .build();
     }
 
+    @Override
+    public ImportOperation copyDeep() {
+        return ImportOperation.deepCopy(this);
+    }
 }

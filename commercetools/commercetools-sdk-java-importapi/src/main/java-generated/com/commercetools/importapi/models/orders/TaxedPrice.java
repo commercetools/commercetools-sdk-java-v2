@@ -113,6 +113,8 @@ public interface TaxedPrice {
         return instance;
     }
 
+    public TaxedPrice copyDeep();
+
     /**
      * factory method to create a deep copy of TaxedPrice
      * @param template instance to be copied

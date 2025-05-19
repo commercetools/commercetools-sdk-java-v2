@@ -126,6 +126,8 @@ public interface ProductTypeImport extends ImportResource {
         return instance;
     }
 
+    public ProductTypeImport copyDeep();
+
     /**
      * factory method to create a deep copy of ProductTypeImport
      * @param template instance to be copied

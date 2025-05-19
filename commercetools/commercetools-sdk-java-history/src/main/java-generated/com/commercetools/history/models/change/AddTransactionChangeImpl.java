@@ -110,4 +110,8 @@ public class AddTransactionChangeImpl implements AddTransactionChange, ModelBase
                 .build();
     }
 
+    @Override
+    public AddTransactionChange copyDeep() {
+        return AddTransactionChange.deepCopy(this);
+    }
 }

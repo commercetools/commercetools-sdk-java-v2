@@ -109,4 +109,8 @@ public class BusinessUnitLabelImpl implements BusinessUnitLabel, ModelBase {
                 .build();
     }
 
+    @Override
+    public BusinessUnitLabel copyDeep() {
+        return BusinessUnitLabel.deepCopy(this);
+    }
 }

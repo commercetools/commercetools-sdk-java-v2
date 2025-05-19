@@ -95,4 +95,8 @@ public class CustomImpl implements Custom, ModelBase {
                 .build();
     }
 
+    @Override
+    public Custom copyDeep() {
+        return Custom.deepCopy(this);
+    }
 }

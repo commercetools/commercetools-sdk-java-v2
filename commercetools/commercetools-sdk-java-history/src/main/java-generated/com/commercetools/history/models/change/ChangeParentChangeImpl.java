@@ -133,4 +133,8 @@ public class ChangeParentChangeImpl implements ChangeParentChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public ChangeParentChange copyDeep() {
+        return ChangeParentChange.deepCopy(this);
+    }
 }

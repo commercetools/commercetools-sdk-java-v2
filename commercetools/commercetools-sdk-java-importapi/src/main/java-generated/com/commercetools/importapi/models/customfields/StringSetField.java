@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("StringSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StringSetFieldImpl.class)
 public interface StringSetField extends CustomField {
@@ -77,6 +78,8 @@ public interface StringSetField extends CustomField {
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public StringSetField copyDeep();
 
     /**
      * factory method to create a deep copy of StringSetField

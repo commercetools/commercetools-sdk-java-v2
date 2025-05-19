@@ -94,4 +94,8 @@ public class ShippingMethodChangeValueImpl implements ShippingMethodChangeValue,
                 .build();
     }
 
+    @Override
+    public ShippingMethodChangeValue copyDeep() {
+        return ShippingMethodChangeValue.deepCopy(this);
+    }
 }

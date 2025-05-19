@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("CustomerLabel")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerLabelImpl.class)
 public interface CustomerLabel extends Label {
@@ -111,6 +112,8 @@ public interface CustomerLabel extends Label {
         instance.setCustomerNumber(template.getCustomerNumber());
         return instance;
     }
+
+    public CustomerLabel copyDeep();
 
     /**
      * factory method to create a deep copy of CustomerLabel

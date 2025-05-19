@@ -166,4 +166,8 @@ public class SetAssetSourcesChangeImpl implements SetAssetSourcesChange, ModelBa
                 .build();
     }
 
+    @Override
+    public SetAssetSourcesChange copyDeep() {
+        return SetAssetSourcesChange.deepCopy(this);
+    }
 }

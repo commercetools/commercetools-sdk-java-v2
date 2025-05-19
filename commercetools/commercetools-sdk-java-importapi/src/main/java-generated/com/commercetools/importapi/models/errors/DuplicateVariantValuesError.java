@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("DuplicateVariantValues")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DuplicateVariantValuesErrorImpl.class)
 public interface DuplicateVariantValuesError extends ErrorObject {
@@ -73,6 +74,8 @@ public interface DuplicateVariantValuesError extends ErrorObject {
         instance.setVariantValues(template.getVariantValues());
         return instance;
     }
+
+    public DuplicateVariantValuesError copyDeep();
 
     /**
      * factory method to create a deep copy of DuplicateVariantValuesError

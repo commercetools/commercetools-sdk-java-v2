@@ -109,4 +109,8 @@ public class LocalizableEnumAttributeImpl implements LocalizableEnumAttribute, M
                 .build();
     }
 
+    @Override
+    public LocalizableEnumAttribute copyDeep() {
+        return LocalizableEnumAttribute.deepCopy(this);
+    }
 }

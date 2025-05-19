@@ -420,4 +420,8 @@ public class ProductDraftImportImpl implements ProductDraftImport, ModelBase {
                 .build();
     }
 
+    @Override
+    public ProductDraftImport copyDeep() {
+        return ProductDraftImport.deepCopy(this);
+    }
 }

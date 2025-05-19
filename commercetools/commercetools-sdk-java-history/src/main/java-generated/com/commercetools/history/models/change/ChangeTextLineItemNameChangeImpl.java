@@ -153,4 +153,8 @@ public class ChangeTextLineItemNameChangeImpl implements ChangeTextLineItemNameC
                 .build();
     }
 
+    @Override
+    public ChangeTextLineItemNameChange copyDeep() {
+        return ChangeTextLineItemNameChange.deepCopy(this);
+    }
 }

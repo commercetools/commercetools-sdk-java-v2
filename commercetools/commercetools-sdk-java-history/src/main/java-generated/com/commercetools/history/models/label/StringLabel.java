@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("StringLabel")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StringLabelImpl.class)
 public interface StringLabel extends Label {
@@ -77,6 +78,8 @@ public interface StringLabel extends Label {
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public StringLabel copyDeep();
 
     /**
      * factory method to create a deep copy of StringLabel

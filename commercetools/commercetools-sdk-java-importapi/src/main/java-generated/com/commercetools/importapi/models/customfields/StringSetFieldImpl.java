@@ -95,4 +95,8 @@ public class StringSetFieldImpl implements StringSetField, ModelBase {
                 .build();
     }
 
+    @Override
+    public StringSetField copyDeep() {
+        return StringSetField.deepCopy(this);
+    }
 }

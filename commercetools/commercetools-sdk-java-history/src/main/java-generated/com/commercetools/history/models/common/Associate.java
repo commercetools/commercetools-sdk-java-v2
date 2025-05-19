@@ -94,6 +94,8 @@ public interface Associate {
         return instance;
     }
 
+    public Associate copyDeep();
+
     /**
      * factory method to create a deep copy of Associate
      * @param template instance to be copied

@@ -133,4 +133,8 @@ public class ChangeReviewRatingStatisticsChangeImpl implements ChangeReviewRatin
                 .build();
     }
 
+    @Override
+    public ChangeReviewRatingStatisticsChange copyDeep() {
+        return ChangeReviewRatingStatisticsChange.deepCopy(this);
+    }
 }

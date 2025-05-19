@@ -138,4 +138,8 @@ public class SetValidFromChangeImpl implements SetValidFromChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public SetValidFromChange copyDeep() {
+        return SetValidFromChange.deepCopy(this);
+    }
 }

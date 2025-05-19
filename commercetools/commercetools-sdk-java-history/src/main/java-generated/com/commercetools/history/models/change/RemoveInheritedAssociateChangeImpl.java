@@ -110,4 +110,8 @@ public class RemoveInheritedAssociateChangeImpl implements RemoveInheritedAssoci
                 .build();
     }
 
+    @Override
+    public RemoveInheritedAssociateChange copyDeep() {
+        return RemoveInheritedAssociateChange.deepCopy(this);
+    }
 }

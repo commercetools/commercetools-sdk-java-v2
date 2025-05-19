@@ -114,4 +114,8 @@ public class NumberSetAttributeImpl implements NumberSetAttribute, ModelBase {
                 .build();
     }
 
+    @Override
+    public NumberSetAttribute copyDeep() {
+        return NumberSetAttribute.deepCopy(this);
+    }
 }

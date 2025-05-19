@@ -62,4 +62,8 @@ public class AttributeMoneyTypeImpl implements AttributeMoneyType, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("name", name).build();
     }
 
+    @Override
+    public AttributeMoneyType copyDeep() {
+        return AttributeMoneyType.deepCopy(this);
+    }
 }

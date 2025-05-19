@@ -133,4 +133,8 @@ public class ChangeEmailChangeImpl implements ChangeEmailChange, ModelBase {
                 .build();
     }
 
+    @Override
+    public ChangeEmailChange copyDeep() {
+        return ChangeEmailChange.deepCopy(this);
+    }
 }

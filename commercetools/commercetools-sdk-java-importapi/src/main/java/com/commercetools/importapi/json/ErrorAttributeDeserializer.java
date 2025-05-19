@@ -178,6 +178,11 @@ public class ErrorAttributeDeserializer extends JsonDeserializer<Attribute> {
             @Override
             public void setKey(String key) {
             }
+
+            @Override
+            public KeyReference copyDeep() {
+                return null;
+            }
         };
     }
 }

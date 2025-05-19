@@ -51,4 +51,8 @@ public class SearchQueryExpressionImpl implements SearchQueryExpression, ModelBa
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).build();
     }
 
+    @Override
+    public SearchQueryExpression copyDeep() {
+        return SearchQueryExpression.deepCopy(this);
+    }
 }

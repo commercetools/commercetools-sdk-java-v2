@@ -313,4 +313,8 @@ public class InventoryEntryDeletedMessageImpl implements InventoryEntryDeletedMe
                 .build();
     }
 
+    @Override
+    public InventoryEntryDeletedMessage copyDeep() {
+        return InventoryEntryDeletedMessage.deepCopy(this);
+    }
 }

@@ -192,4 +192,8 @@ public class ConfluentCloudDestinationImpl implements ConfluentCloudDestination,
                 .build();
     }
 
+    @Override
+    public ConfluentCloudDestination copyDeep() {
+        return ConfluentCloudDestination.deepCopy(this);
+    }
 }

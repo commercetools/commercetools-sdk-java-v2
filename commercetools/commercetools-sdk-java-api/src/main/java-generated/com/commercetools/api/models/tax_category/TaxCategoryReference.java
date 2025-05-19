@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("tax-category")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TaxCategoryReferenceImpl.class)
 public interface TaxCategoryReference extends Reference, com.commercetools.api.models.Identifiable<TaxCategory>,
@@ -88,6 +89,8 @@ public interface TaxCategoryReference extends Reference, com.commercetools.api.m
         instance.setObj(template.getObj());
         return instance;
     }
+
+    public TaxCategoryReference copyDeep();
 
     /**
      * factory method to create a deep copy of TaxCategoryReference

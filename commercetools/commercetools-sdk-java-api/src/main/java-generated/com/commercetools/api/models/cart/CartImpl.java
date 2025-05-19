@@ -983,4 +983,8 @@ public class CartImpl implements Cart, ModelBase {
                 .build();
     }
 
+    @Override
+    public Cart copyDeep() {
+        return Cart.deepCopy(this);
+    }
 }

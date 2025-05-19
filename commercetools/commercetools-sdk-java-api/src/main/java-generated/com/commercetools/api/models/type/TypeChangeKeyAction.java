@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeKey")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TypeChangeKeyActionImpl.class)
 public interface TypeChangeKeyAction extends TypeUpdateAction {
@@ -69,6 +70,8 @@ public interface TypeChangeKeyAction extends TypeUpdateAction {
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public TypeChangeKeyAction copyDeep();
 
     /**
      * factory method to create a deep copy of TypeChangeKeyAction

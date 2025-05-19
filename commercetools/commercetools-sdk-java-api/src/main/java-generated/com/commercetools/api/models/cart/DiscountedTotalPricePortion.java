@@ -87,6 +87,8 @@ public interface DiscountedTotalPricePortion {
         return instance;
     }
 
+    public DiscountedTotalPricePortion copyDeep();
+
     /**
      * factory method to create a deep copy of DiscountedTotalPricePortion
      * @param template instance to be copied

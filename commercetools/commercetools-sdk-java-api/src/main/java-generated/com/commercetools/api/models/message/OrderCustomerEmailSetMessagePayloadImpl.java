@@ -110,4 +110,8 @@ public class OrderCustomerEmailSetMessagePayloadImpl implements OrderCustomerEma
                 .build();
     }
 
+    @Override
+    public OrderCustomerEmailSetMessagePayload copyDeep() {
+        return OrderCustomerEmailSetMessagePayload.deepCopy(this);
+    }
 }

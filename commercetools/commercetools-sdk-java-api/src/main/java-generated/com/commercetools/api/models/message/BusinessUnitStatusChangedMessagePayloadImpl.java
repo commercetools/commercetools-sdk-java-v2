@@ -92,4 +92,8 @@ public class BusinessUnitStatusChangedMessagePayloadImpl implements BusinessUnit
                 .build();
     }
 
+    @Override
+    public BusinessUnitStatusChangedMessagePayload copyDeep() {
+        return BusinessUnitStatusChangedMessagePayload.deepCopy(this);
+    }
 }

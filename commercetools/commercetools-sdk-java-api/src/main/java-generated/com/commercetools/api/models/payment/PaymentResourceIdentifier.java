@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("payment")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PaymentResourceIdentifierImpl.class)
 public interface PaymentResourceIdentifier
@@ -84,6 +85,8 @@ public interface PaymentResourceIdentifier
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public PaymentResourceIdentifier copyDeep();
 
     /**
      * factory method to create a deep copy of PaymentResourceIdentifier

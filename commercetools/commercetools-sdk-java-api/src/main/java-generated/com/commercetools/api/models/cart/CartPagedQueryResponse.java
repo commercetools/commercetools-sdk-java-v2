@@ -143,6 +143,8 @@ public interface CartPagedQueryResponse extends com.commercetools.api.models.Res
         return instance;
     }
 
+    public CartPagedQueryResponse copyDeep();
+
     /**
      * factory method to create a deep copy of CartPagedQueryResponse
      * @param template instance to be copied

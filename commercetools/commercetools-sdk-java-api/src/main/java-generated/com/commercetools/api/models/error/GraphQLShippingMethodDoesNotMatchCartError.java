@@ -33,6 +33,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ShippingMethodDoesNotMatchCart")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLShippingMethodDoesNotMatchCartErrorImpl.class)
 public interface GraphQLShippingMethodDoesNotMatchCartError extends GraphQLErrorObject {
@@ -69,6 +70,8 @@ public interface GraphQLShippingMethodDoesNotMatchCartError extends GraphQLError
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
+
+    public GraphQLShippingMethodDoesNotMatchCartError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLShippingMethodDoesNotMatchCartError

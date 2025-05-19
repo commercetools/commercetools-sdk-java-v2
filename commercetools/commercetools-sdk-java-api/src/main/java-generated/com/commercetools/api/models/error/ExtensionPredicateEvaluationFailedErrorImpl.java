@@ -137,4 +137,8 @@ public class ExtensionPredicateEvaluationFailedErrorImpl implements ExtensionPre
                 .build();
     }
 
+    @Override
+    public ExtensionPredicateEvaluationFailedError copyDeep() {
+        return ExtensionPredicateEvaluationFailedError.deepCopy(this);
+    }
 }

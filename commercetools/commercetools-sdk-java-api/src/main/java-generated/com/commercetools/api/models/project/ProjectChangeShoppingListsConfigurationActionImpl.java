@@ -94,4 +94,8 @@ public class ProjectChangeShoppingListsConfigurationActionImpl
                 .build();
     }
 
+    @Override
+    public ProjectChangeShoppingListsConfigurationAction copyDeep() {
+        return ProjectChangeShoppingListsConfigurationAction.deepCopy(this);
+    }
 }

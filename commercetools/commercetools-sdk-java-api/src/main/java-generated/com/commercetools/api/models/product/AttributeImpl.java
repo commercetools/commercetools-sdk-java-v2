@@ -102,4 +102,8 @@ public class AttributeImpl implements Attribute, ModelBase {
                 .build();
     }
 
+    @Override
+    public Attribute copyDeep() {
+        return Attribute.deepCopy(this);
+    }
 }

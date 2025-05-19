@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("customer-email-token")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerEmailTokenReferenceImpl.class)
 public interface CustomerEmailTokenReference extends Reference {
@@ -70,6 +71,8 @@ public interface CustomerEmailTokenReference extends Reference {
         instance.setId(template.getId());
         return instance;
     }
+
+    public CustomerEmailTokenReference copyDeep();
 
     /**
      * factory method to create a deep copy of CustomerEmailTokenReference

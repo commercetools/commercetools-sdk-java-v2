@@ -197,4 +197,8 @@ public class TransactionImpl implements Transaction, ModelBase {
                 .build();
     }
 
+    @Override
+    public Transaction copyDeep() {
+        return Transaction.deepCopy(this);
+    }
 }

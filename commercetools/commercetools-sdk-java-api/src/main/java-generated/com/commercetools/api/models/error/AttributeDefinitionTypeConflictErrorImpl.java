@@ -178,4 +178,8 @@ public class AttributeDefinitionTypeConflictErrorImpl implements AttributeDefini
                 .build();
     }
 
+    @Override
+    public AttributeDefinitionTypeConflictError copyDeep() {
+        return AttributeDefinitionTypeConflictError.deepCopy(this);
+    }
 }

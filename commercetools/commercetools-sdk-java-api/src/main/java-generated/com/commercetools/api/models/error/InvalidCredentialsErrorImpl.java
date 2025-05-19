@@ -119,4 +119,8 @@ public class InvalidCredentialsErrorImpl implements InvalidCredentialsError, Mod
                 .build();
     }
 
+    @Override
+    public InvalidCredentialsError copyDeep() {
+        return InvalidCredentialsError.deepCopy(this);
+    }
 }

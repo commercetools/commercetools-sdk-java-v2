@@ -133,4 +133,8 @@ public class OrderEditAppliedImpl implements OrderEditApplied, ModelBase {
                 .build();
     }
 
+    @Override
+    public OrderEditApplied copyDeep() {
+        return OrderEditApplied.deepCopy(this);
+    }
 }

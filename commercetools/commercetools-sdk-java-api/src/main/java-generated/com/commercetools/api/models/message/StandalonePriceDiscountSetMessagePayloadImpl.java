@@ -93,4 +93,8 @@ public class StandalonePriceDiscountSetMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public StandalonePriceDiscountSetMessagePayload copyDeep() {
+        return StandalonePriceDiscountSetMessagePayload.deepCopy(this);
+    }
 }

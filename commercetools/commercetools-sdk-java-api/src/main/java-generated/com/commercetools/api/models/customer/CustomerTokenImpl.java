@@ -176,4 +176,8 @@ public class CustomerTokenImpl implements CustomerToken, ModelBase {
                 .build();
     }
 
+    @Override
+    public CustomerToken copyDeep() {
+        return CustomerToken.deepCopy(this);
+    }
 }

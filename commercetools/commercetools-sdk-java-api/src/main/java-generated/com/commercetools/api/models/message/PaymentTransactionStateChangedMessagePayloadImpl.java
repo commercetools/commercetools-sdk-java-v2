@@ -111,4 +111,8 @@ public class PaymentTransactionStateChangedMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public PaymentTransactionStateChangedMessagePayload copyDeep() {
+        return PaymentTransactionStateChangedMessagePayload.deepCopy(this);
+    }
 }

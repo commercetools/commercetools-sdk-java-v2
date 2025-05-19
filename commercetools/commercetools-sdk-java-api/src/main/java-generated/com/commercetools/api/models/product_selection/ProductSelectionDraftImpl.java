@@ -133,4 +133,8 @@ public class ProductSelectionDraftImpl implements ProductSelectionDraft, ModelBa
                 .build();
     }
 
+    @Override
+    public ProductSelectionDraft copyDeep() {
+        return ProductSelectionDraft.deepCopy(this);
+    }
 }

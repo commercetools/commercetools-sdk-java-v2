@@ -69,4 +69,8 @@ public class CustomerGroupUpdateActionImpl implements CustomerGroupUpdateAction,
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action).build();
     }
 
+    @Override
+    public CustomerGroupUpdateAction copyDeep() {
+        return CustomerGroupUpdateAction.deepCopy(this);
+    }
 }

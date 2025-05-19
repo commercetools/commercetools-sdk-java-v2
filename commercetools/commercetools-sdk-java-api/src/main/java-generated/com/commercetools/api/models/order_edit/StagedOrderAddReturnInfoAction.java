@@ -32,6 +32,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("addReturnInfo")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderAddReturnInfoActionImpl.class)
 public interface StagedOrderAddReturnInfoAction extends StagedOrderUpdateAction {
@@ -115,6 +116,8 @@ public interface StagedOrderAddReturnInfoAction extends StagedOrderUpdateAction 
         instance.setReturnDate(template.getReturnDate());
         return instance;
     }
+
+    public StagedOrderAddReturnInfoAction copyDeep();
 
     /**
      * factory method to create a deep copy of StagedOrderAddReturnInfoAction

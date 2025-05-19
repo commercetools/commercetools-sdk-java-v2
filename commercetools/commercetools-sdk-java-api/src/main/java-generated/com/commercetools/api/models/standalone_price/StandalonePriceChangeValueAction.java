@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeValue")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StandalonePriceChangeValueActionImpl.class)
 public interface StandalonePriceChangeValueAction extends StandalonePriceUpdateAction {
@@ -90,6 +91,8 @@ public interface StandalonePriceChangeValueAction extends StandalonePriceUpdateA
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public StandalonePriceChangeValueAction copyDeep();
 
     /**
      * factory method to create a deep copy of StandalonePriceChangeValueAction

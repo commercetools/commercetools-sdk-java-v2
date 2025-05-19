@@ -115,4 +115,8 @@ public class GraphQLDuplicatePriceKeyErrorImpl implements GraphQLDuplicatePriceK
                 .build();
     }
 
+    @Override
+    public GraphQLDuplicatePriceKeyError copyDeep() {
+        return GraphQLDuplicatePriceKeyError.deepCopy(this);
+    }
 }

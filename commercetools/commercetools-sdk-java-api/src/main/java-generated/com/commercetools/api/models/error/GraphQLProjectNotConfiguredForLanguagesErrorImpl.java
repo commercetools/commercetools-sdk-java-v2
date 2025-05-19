@@ -121,4 +121,8 @@ public class GraphQLProjectNotConfiguredForLanguagesErrorImpl
                 .build();
     }
 
+    @Override
+    public GraphQLProjectNotConfiguredForLanguagesError copyDeep() {
+        return GraphQLProjectNotConfiguredForLanguagesError.deepCopy(this);
+    }
 }

@@ -26,6 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setValidUntil")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StandalonePriceSetValidUntilActionImpl.class)
 public interface StandalonePriceSetValidUntilAction extends StandalonePriceUpdateAction {
@@ -68,6 +69,8 @@ public interface StandalonePriceSetValidUntilAction extends StandalonePriceUpdat
         instance.setValidUntil(template.getValidUntil());
         return instance;
     }
+
+    public StandalonePriceSetValidUntilAction copyDeep();
 
     /**
      * factory method to create a deep copy of StandalonePriceSetValidUntilAction

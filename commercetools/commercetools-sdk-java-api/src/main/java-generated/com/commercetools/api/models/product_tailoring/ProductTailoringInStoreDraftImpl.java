@@ -263,4 +263,8 @@ public class ProductTailoringInStoreDraftImpl implements ProductTailoringInStore
                 .build();
     }
 
+    @Override
+    public ProductTailoringInStoreDraft copyDeep() {
+        return ProductTailoringInStoreDraft.deepCopy(this);
+    }
 }

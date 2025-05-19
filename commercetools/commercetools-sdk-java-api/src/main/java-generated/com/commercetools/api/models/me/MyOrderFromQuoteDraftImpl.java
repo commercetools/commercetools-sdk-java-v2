@@ -113,4 +113,8 @@ public class MyOrderFromQuoteDraftImpl implements MyOrderFromQuoteDraft, ModelBa
                 .build();
     }
 
+    @Override
+    public MyOrderFromQuoteDraft copyDeep() {
+        return MyOrderFromQuoteDraft.deepCopy(this);
+    }
 }

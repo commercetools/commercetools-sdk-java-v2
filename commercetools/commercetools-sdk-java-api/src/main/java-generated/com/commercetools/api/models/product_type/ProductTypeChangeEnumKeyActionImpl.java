@@ -130,4 +130,8 @@ public class ProductTypeChangeEnumKeyActionImpl implements ProductTypeChangeEnum
                 .build();
     }
 
+    @Override
+    public ProductTypeChangeEnumKeyAction copyDeep() {
+        return ProductTypeChangeEnumKeyAction.deepCopy(this);
+    }
 }

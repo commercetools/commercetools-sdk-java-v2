@@ -82,6 +82,8 @@ public interface OrderEditApply {
         return instance;
     }
 
+    public OrderEditApply copyDeep();
+
     /**
      * factory method to create a deep copy of OrderEditApply
      * @param template instance to be copied

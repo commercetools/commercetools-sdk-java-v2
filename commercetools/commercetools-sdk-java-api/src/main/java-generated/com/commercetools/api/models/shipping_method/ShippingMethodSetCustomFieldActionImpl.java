@@ -110,4 +110,8 @@ public class ShippingMethodSetCustomFieldActionImpl implements ShippingMethodSet
                 .build();
     }
 
+    @Override
+    public ShippingMethodSetCustomFieldAction copyDeep() {
+        return ShippingMethodSetCustomFieldAction.deepCopy(this);
+    }
 }

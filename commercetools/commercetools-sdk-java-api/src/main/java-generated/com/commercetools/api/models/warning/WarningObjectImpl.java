@@ -90,4 +90,8 @@ public class WarningObjectImpl implements WarningObject, ModelBase {
                 .build();
     }
 
+    @Override
+    public WarningObject copyDeep() {
+        return WarningObject.deepCopy(this);
+    }
 }

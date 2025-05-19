@@ -111,4 +111,8 @@ public class QuoteRequestTransitionStateActionImpl implements QuoteRequestTransi
                 .build();
     }
 
+    @Override
+    public QuoteRequestTransitionStateAction copyDeep() {
+        return QuoteRequestTransitionStateAction.deepCopy(this);
+    }
 }

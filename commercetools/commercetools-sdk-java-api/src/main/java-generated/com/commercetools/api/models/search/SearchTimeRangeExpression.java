@@ -67,6 +67,8 @@ public interface SearchTimeRangeExpression extends SearchQueryExpression {
         return instance;
     }
 
+    public SearchTimeRangeExpression copyDeep();
+
     /**
      * factory method to create a deep copy of SearchTimeRangeExpression
      * @param template instance to be copied

@@ -153,4 +153,8 @@ public class MyShoppingListSetTextLineItemCustomFieldActionImpl
                 .build();
     }
 
+    @Override
+    public MyShoppingListSetTextLineItemCustomFieldAction copyDeep() {
+        return MyShoppingListSetTextLineItemCustomFieldAction.deepCopy(this);
+    }
 }

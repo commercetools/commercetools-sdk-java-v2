@@ -92,4 +92,8 @@ public class ApprovalFlowRejectActionImpl implements ApprovalFlowRejectAction, M
                 .build();
     }
 
+    @Override
+    public ApprovalFlowRejectAction copyDeep() {
+        return ApprovalFlowRejectAction.deepCopy(this);
+    }
 }

@@ -92,4 +92,8 @@ public class OrderSetCustomerEmailActionImpl implements OrderSetCustomerEmailAct
                 .build();
     }
 
+    @Override
+    public OrderSetCustomerEmailAction copyDeep() {
+        return OrderSetCustomerEmailAction.deepCopy(this);
+    }
 }

@@ -159,4 +159,8 @@ public class PaymentPagedQueryResponseImpl implements PaymentPagedQueryResponse,
                 .build();
     }
 
+    @Override
+    public PaymentPagedQueryResponse copyDeep() {
+        return PaymentPagedQueryResponse.deepCopy(this);
+    }
 }

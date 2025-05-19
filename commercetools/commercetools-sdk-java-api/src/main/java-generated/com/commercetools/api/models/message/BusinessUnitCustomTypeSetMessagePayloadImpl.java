@@ -111,4 +111,8 @@ public class BusinessUnitCustomTypeSetMessagePayloadImpl implements BusinessUnit
                 .build();
     }
 
+    @Override
+    public BusinessUnitCustomTypeSetMessagePayload copyDeep() {
+        return BusinessUnitCustomTypeSetMessagePayload.deepCopy(this);
+    }
 }

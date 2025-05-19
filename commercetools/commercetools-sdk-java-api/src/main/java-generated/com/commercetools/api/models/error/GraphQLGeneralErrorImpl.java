@@ -96,4 +96,8 @@ public class GraphQLGeneralErrorImpl implements GraphQLGeneralError, ModelBase {
                 .build();
     }
 
+    @Override
+    public GraphQLGeneralError copyDeep() {
+        return GraphQLGeneralError.deepCopy(this);
+    }
 }

@@ -157,4 +157,8 @@ public class GraphQLReferencedResourceNotFoundErrorImpl implements GraphQLRefere
                 .build();
     }
 
+    @Override
+    public GraphQLReferencedResourceNotFoundError copyDeep() {
+        return GraphQLReferencedResourceNotFoundError.deepCopy(this);
+    }
 }

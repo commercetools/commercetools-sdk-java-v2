@@ -62,4 +62,8 @@ public class CartDiscountShippingCostTargetImpl implements CartDiscountShippingC
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type).build();
     }
 
+    @Override
+    public CartDiscountShippingCostTarget copyDeep() {
+        return CartDiscountShippingCostTarget.deepCopy(this);
+    }
 }

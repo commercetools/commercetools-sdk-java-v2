@@ -81,6 +81,8 @@ public interface CustomerEmailVerify {
         return instance;
     }
 
+    public CustomerEmailVerify copyDeep();
+
     /**
      * factory method to create a deep copy of CustomerEmailVerify
      * @param template instance to be copied

@@ -36,6 +36,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("InventoryEntryDeleted")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = InventoryEntryDeletedMessageImpl.class)
 public interface InventoryEntryDeletedMessage extends Message {
@@ -104,6 +105,8 @@ public interface InventoryEntryDeletedMessage extends Message {
         instance.setSupplyChannel(template.getSupplyChannel());
         return instance;
     }
+
+    public InventoryEntryDeletedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of InventoryEntryDeletedMessage

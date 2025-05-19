@@ -94,6 +94,8 @@ public interface ShippingMethodUpdate extends
         return instance;
     }
 
+    public ShippingMethodUpdate copyDeep();
+
     /**
      * factory method to create a deep copy of ShippingMethodUpdate
      * @param template instance to be copied

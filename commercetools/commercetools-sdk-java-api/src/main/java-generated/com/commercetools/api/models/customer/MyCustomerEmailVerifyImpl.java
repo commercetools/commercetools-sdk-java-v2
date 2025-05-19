@@ -73,4 +73,8 @@ public class MyCustomerEmailVerifyImpl implements MyCustomerEmailVerify, ModelBa
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("tokenValue", tokenValue).build();
     }
 
+    @Override
+    public MyCustomerEmailVerify copyDeep() {
+        return MyCustomerEmailVerify.deepCopy(this);
+    }
 }

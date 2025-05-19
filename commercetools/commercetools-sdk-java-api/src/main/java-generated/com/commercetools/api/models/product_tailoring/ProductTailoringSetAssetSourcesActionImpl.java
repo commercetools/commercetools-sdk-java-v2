@@ -195,4 +195,8 @@ public class ProductTailoringSetAssetSourcesActionImpl implements ProductTailori
                 .build();
     }
 
+    @Override
+    public ProductTailoringSetAssetSourcesAction copyDeep() {
+        return ProductTailoringSetAssetSourcesAction.deepCopy(this);
+    }
 }

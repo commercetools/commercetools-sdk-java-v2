@@ -35,6 +35,7 @@ import jakarta.validation.Valid;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("StoreSupplyChannelsChanged")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StoreSupplyChannelsChangedMessageImpl.class)
 public interface StoreSupplyChannelsChangedMessage extends Message {
@@ -119,6 +120,8 @@ public interface StoreSupplyChannelsChangedMessage extends Message {
         instance.setRemovedSupplyChannels(template.getRemovedSupplyChannels());
         return instance;
     }
+
+    public StoreSupplyChannelsChangedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of StoreSupplyChannelsChangedMessage

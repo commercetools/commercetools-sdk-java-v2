@@ -130,4 +130,8 @@ public class QuoteStateTransitionMessagePayloadImpl implements QuoteStateTransit
                 .build();
     }
 
+    @Override
+    public QuoteStateTransitionMessagePayload copyDeep() {
+        return QuoteStateTransitionMessagePayload.deepCopy(this);
+    }
 }

@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setCustomerEmail")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderSetCustomerEmailActionImpl.class)
 public interface OrderSetCustomerEmailAction extends OrderUpdateAction {
@@ -67,6 +68,8 @@ public interface OrderSetCustomerEmailAction extends OrderUpdateAction {
         instance.setEmail(template.getEmail());
         return instance;
     }
+
+    public OrderSetCustomerEmailAction copyDeep();
 
     /**
      * factory method to create a deep copy of OrderSetCustomerEmailAction

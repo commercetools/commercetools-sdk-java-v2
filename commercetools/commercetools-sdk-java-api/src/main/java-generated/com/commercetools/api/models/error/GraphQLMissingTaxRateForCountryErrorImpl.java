@@ -169,4 +169,8 @@ public class GraphQLMissingTaxRateForCountryErrorImpl implements GraphQLMissingT
                 .build();
     }
 
+    @Override
+    public GraphQLMissingTaxRateForCountryError copyDeep() {
+        return GraphQLMissingTaxRateForCountryError.deepCopy(this);
+    }
 }

@@ -265,4 +265,8 @@ public class MyCompanyDraftImpl implements MyCompanyDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public MyCompanyDraft copyDeep() {
+        return MyCompanyDraft.deepCopy(this);
+    }
 }

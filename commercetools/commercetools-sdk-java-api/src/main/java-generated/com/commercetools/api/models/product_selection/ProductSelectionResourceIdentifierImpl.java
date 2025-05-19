@@ -110,4 +110,8 @@ public class ProductSelectionResourceIdentifierImpl implements ProductSelectionR
                 .build();
     }
 
+    @Override
+    public ProductSelectionResourceIdentifier copyDeep() {
+        return ProductSelectionResourceIdentifier.deepCopy(this);
+    }
 }

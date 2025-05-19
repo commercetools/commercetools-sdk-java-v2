@@ -354,4 +354,8 @@ public class CustomerAddressCustomFieldChangedMessageImpl
                 .build();
     }
 
+    @Override
+    public CustomerAddressCustomFieldChangedMessage copyDeep() {
+        return CustomerAddressCustomFieldChangedMessage.deepCopy(this);
+    }
 }

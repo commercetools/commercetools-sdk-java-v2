@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeBusinessUnitSearchStatus")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProjectChangeBusinessUnitSearchStatusActionImpl.class)
 public interface ProjectChangeBusinessUnitSearchStatusAction extends ProjectUpdateAction {
@@ -70,6 +71,8 @@ public interface ProjectChangeBusinessUnitSearchStatusAction extends ProjectUpda
         instance.setStatus(template.getStatus());
         return instance;
     }
+
+    public ProjectChangeBusinessUnitSearchStatusAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProjectChangeBusinessUnitSearchStatusAction

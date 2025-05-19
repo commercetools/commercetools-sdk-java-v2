@@ -160,4 +160,8 @@ public class ShippingMethodPagedQueryResponseImpl implements ShippingMethodPaged
                 .build();
     }
 
+    @Override
+    public ShippingMethodPagedQueryResponse copyDeep() {
+        return ShippingMethodPagedQueryResponse.deepCopy(this);
+    }
 }

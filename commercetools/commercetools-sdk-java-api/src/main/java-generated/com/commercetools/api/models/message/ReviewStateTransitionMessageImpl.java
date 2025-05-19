@@ -393,4 +393,8 @@ public class ReviewStateTransitionMessageImpl implements ReviewStateTransitionMe
                 .build();
     }
 
+    @Override
+    public ReviewStateTransitionMessage copyDeep() {
+        return ReviewStateTransitionMessage.deepCopy(this);
+    }
 }

@@ -195,4 +195,8 @@ public class UserProvidedIdentifiersImpl implements UserProvidedIdentifiers, Mod
                 .build();
     }
 
+    @Override
+    public UserProvidedIdentifiers copyDeep() {
+        return UserProvidedIdentifiers.deepCopy(this);
+    }
 }

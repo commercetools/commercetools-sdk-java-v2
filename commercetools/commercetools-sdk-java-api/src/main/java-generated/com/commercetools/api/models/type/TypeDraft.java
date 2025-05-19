@@ -151,6 +151,8 @@ public interface TypeDraft extends com.commercetools.api.models.WithKey, io.vrap
         return instance;
     }
 
+    public TypeDraft copyDeep();
+
     /**
      * factory method to create a deep copy of TypeDraft
      * @param template instance to be copied

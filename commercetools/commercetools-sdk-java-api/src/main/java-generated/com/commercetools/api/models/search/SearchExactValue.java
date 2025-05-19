@@ -122,6 +122,8 @@ public interface SearchExactValue extends SearchQueryExpressionValue {
         return instance;
     }
 
+    public SearchExactValue copyDeep();
+
     /**
      * factory method to create a deep copy of SearchExactValue
      * @param template instance to be copied

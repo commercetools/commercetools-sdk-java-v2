@@ -110,4 +110,8 @@ public class ProductChangeSlugActionImpl implements ProductChangeSlugAction, Mod
                 .build();
     }
 
+    @Override
+    public ProductChangeSlugAction copyDeep() {
+        return ProductChangeSlugAction.deepCopy(this);
+    }
 }

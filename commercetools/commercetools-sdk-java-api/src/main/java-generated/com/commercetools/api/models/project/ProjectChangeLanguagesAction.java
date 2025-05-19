@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeLanguages")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProjectChangeLanguagesActionImpl.class)
 public interface ProjectChangeLanguagesAction extends ProjectUpdateAction {
@@ -77,6 +78,8 @@ public interface ProjectChangeLanguagesAction extends ProjectUpdateAction {
         instance.setLanguages(template.getLanguages());
         return instance;
     }
+
+    public ProjectChangeLanguagesAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProjectChangeLanguagesAction

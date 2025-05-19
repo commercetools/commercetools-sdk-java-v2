@@ -98,6 +98,8 @@ public interface MyQuoteRequestDraft extends io.vrap.rmf.base.client.Draft<MyQuo
         return instance;
     }
 
+    public MyQuoteRequestDraft copyDeep();
+
     /**
      * factory method to create a deep copy of MyQuoteRequestDraft
      * @param template instance to be copied

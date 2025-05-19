@@ -110,4 +110,8 @@ public class ProductTypeChangeIsSearchableActionImpl implements ProductTypeChang
                 .build();
     }
 
+    @Override
+    public ProductTypeChangeIsSearchableAction copyDeep() {
+        return ProductTypeChangeIsSearchableAction.deepCopy(this);
+    }
 }

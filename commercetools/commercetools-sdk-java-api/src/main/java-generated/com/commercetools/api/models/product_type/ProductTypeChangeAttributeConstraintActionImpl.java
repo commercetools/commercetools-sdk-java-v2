@@ -111,4 +111,8 @@ public class ProductTypeChangeAttributeConstraintActionImpl
                 .build();
     }
 
+    @Override
+    public ProductTypeChangeAttributeConstraintAction copyDeep() {
+        return ProductTypeChangeAttributeConstraintAction.deepCopy(this);
+    }
 }

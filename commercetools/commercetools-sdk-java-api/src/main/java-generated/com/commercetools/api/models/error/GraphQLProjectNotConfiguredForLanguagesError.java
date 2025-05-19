@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ProjectNotConfiguredForLanguages")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLProjectNotConfiguredForLanguagesErrorImpl.class)
 public interface GraphQLProjectNotConfiguredForLanguagesError extends GraphQLErrorObject {
@@ -87,6 +88,8 @@ public interface GraphQLProjectNotConfiguredForLanguagesError extends GraphQLErr
         instance.setLanguages(template.getLanguages());
         return instance;
     }
+
+    public GraphQLProjectNotConfiguredForLanguagesError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLProjectNotConfiguredForLanguagesError

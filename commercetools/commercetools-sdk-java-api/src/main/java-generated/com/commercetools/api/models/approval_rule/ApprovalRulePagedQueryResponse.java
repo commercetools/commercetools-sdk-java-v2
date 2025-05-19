@@ -143,6 +143,8 @@ public interface ApprovalRulePagedQueryResponse {
         return instance;
     }
 
+    public ApprovalRulePagedQueryResponse copyDeep();
+
     /**
      * factory method to create a deep copy of ApprovalRulePagedQueryResponse
      * @param template instance to be copied

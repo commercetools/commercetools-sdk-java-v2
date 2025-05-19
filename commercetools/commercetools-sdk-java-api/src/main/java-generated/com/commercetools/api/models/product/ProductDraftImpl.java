@@ -412,4 +412,8 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public ProductDraft copyDeep() {
+        return ProductDraft.deepCopy(this);
+    }
 }

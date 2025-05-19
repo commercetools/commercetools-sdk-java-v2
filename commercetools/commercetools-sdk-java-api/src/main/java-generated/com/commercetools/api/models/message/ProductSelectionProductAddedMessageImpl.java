@@ -315,4 +315,8 @@ public class ProductSelectionProductAddedMessageImpl implements ProductSelection
                 .build();
     }
 
+    @Override
+    public ProductSelectionProductAddedMessage copyDeep() {
+        return ProductSelectionProductAddedMessage.deepCopy(this);
+    }
 }

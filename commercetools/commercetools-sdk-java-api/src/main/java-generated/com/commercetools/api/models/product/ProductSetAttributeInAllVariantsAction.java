@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setAttributeInAllVariants")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSetAttributeInAllVariantsActionImpl.class)
 public interface ProductSetAttributeInAllVariantsAction extends ProductUpdateAction {
@@ -119,6 +120,8 @@ public interface ProductSetAttributeInAllVariantsAction extends ProductUpdateAct
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public ProductSetAttributeInAllVariantsAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductSetAttributeInAllVariantsAction

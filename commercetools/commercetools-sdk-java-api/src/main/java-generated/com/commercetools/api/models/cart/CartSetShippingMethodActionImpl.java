@@ -113,4 +113,8 @@ public class CartSetShippingMethodActionImpl implements CartSetShippingMethodAct
                 .build();
     }
 
+    @Override
+    public CartSetShippingMethodAction copyDeep() {
+        return CartSetShippingMethodAction.deepCopy(this);
+    }
 }

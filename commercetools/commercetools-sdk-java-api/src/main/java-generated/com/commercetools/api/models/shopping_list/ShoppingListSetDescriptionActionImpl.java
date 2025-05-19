@@ -92,4 +92,8 @@ public class ShoppingListSetDescriptionActionImpl implements ShoppingListSetDesc
                 .build();
     }
 
+    @Override
+    public ShoppingListSetDescriptionAction copyDeep() {
+        return ShoppingListSetDescriptionAction.deepCopy(this);
+    }
 }

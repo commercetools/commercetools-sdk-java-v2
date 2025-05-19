@@ -92,4 +92,8 @@ public class StagedOrderRemoveItemShippingAddressActionImpl
                 .build();
     }
 
+    @Override
+    public StagedOrderRemoveItemShippingAddressAction copyDeep() {
+        return StagedOrderRemoveItemShippingAddressAction.deepCopy(this);
+    }
 }

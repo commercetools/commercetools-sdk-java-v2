@@ -111,4 +111,8 @@ public class CustomerCustomTypeSetMessagePayloadImpl implements CustomerCustomTy
                 .build();
     }
 
+    @Override
+    public CustomerCustomTypeSetMessagePayload copyDeep() {
+        return CustomerCustomTypeSetMessagePayload.deepCopy(this);
+    }
 }

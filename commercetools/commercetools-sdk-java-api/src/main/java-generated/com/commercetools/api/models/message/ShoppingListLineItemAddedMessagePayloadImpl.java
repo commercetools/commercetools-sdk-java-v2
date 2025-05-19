@@ -92,4 +92,8 @@ public class ShoppingListLineItemAddedMessagePayloadImpl implements ShoppingList
                 .build();
     }
 
+    @Override
+    public ShoppingListLineItemAddedMessagePayload copyDeep() {
+        return ShoppingListLineItemAddedMessagePayload.deepCopy(this);
+    }
 }

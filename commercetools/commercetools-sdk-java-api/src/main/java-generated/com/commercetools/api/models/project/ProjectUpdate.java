@@ -94,6 +94,8 @@ public interface ProjectUpdate
         return instance;
     }
 
+    public ProjectUpdate copyDeep();
+
     /**
      * factory method to create a deep copy of ProjectUpdate
      * @param template instance to be copied

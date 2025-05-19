@@ -98,4 +98,8 @@ public class AssociateRolePermissionsSetMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public AssociateRolePermissionsSetMessagePayload copyDeep() {
+        return AssociateRolePermissionsSetMessagePayload.deepCopy(this);
+    }
 }

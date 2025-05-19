@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ExtensionPredicateEvaluationFailed")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ExtensionPredicateEvaluationFailedErrorImpl.class)
 public interface ExtensionPredicateEvaluationFailedError extends ErrorObject {
@@ -97,6 +98,8 @@ public interface ExtensionPredicateEvaluationFailedError extends ErrorObject {
         instance.setErrorByExtension(template.getErrorByExtension());
         return instance;
     }
+
+    public ExtensionPredicateEvaluationFailedError copyDeep();
 
     /**
      * factory method to create a deep copy of ExtensionPredicateEvaluationFailedError

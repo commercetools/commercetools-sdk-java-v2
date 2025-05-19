@@ -259,4 +259,8 @@ public class ScopedPriceImpl implements ScopedPrice, ModelBase {
                 .build();
     }
 
+    @Override
+    public ScopedPrice copyDeep() {
+        return ScopedPrice.deepCopy(this);
+    }
 }

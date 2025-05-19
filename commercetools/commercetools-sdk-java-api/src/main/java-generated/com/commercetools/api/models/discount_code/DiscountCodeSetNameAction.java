@@ -27,6 +27,7 @@ import jakarta.validation.Valid;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setName")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DiscountCodeSetNameActionImpl.class)
 public interface DiscountCodeSetNameAction extends DiscountCodeUpdateAction {
@@ -69,6 +70,8 @@ public interface DiscountCodeSetNameAction extends DiscountCodeUpdateAction {
         instance.setName(template.getName());
         return instance;
     }
+
+    public DiscountCodeSetNameAction copyDeep();
 
     /**
      * factory method to create a deep copy of DiscountCodeSetNameAction

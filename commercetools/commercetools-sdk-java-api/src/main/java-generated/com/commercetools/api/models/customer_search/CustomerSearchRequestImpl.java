@@ -136,4 +136,8 @@ public class CustomerSearchRequestImpl implements CustomerSearchRequest, ModelBa
                 .build();
     }
 
+    @Override
+    public CustomerSearchRequest copyDeep() {
+        return CustomerSearchRequest.deepCopy(this);
+    }
 }

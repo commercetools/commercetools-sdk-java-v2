@@ -186,4 +186,8 @@ public class ExternalTaxRateDraftImpl implements ExternalTaxRateDraft, ModelBase
                 .build();
     }
 
+    @Override
+    public ExternalTaxRateDraft copyDeep() {
+        return ExternalTaxRateDraft.deepCopy(this);
+    }
 }

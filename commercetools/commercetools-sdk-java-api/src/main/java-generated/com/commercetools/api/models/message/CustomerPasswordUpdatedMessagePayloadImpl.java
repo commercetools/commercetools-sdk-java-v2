@@ -91,4 +91,8 @@ public class CustomerPasswordUpdatedMessagePayloadImpl implements CustomerPasswo
                 .build();
     }
 
+    @Override
+    public CustomerPasswordUpdatedMessagePayload copyDeep() {
+        return CustomerPasswordUpdatedMessagePayload.deepCopy(this);
+    }
 }

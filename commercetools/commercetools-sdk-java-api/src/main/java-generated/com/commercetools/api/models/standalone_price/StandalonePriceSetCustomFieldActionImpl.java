@@ -110,4 +110,8 @@ public class StandalonePriceSetCustomFieldActionImpl implements StandalonePriceS
                 .build();
     }
 
+    @Override
+    public StandalonePriceSetCustomFieldAction copyDeep() {
+        return StandalonePriceSetCustomFieldAction.deepCopy(this);
+    }
 }

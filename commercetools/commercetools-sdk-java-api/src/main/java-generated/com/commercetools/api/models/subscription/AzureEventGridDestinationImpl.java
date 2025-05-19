@@ -110,4 +110,8 @@ public class AzureEventGridDestinationImpl implements AzureEventGridDestination,
                 .build();
     }
 
+    @Override
+    public AzureEventGridDestination copyDeep() {
+        return AzureEventGridDestination.deepCopy(this);
+    }
 }

@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("invalid_token")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = InvalidTokenErrorImpl.class)
 public interface InvalidTokenError extends ErrorObject {
@@ -53,6 +54,8 @@ public interface InvalidTokenError extends ErrorObject {
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
+
+    public InvalidTokenError copyDeep();
 
     /**
      * factory method to create a deep copy of InvalidTokenError

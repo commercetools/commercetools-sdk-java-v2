@@ -418,4 +418,8 @@ public class DivisionDraftImpl implements DivisionDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public DivisionDraft copyDeep() {
+        return DivisionDraft.deepCopy(this);
+    }
 }

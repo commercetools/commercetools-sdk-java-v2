@@ -69,4 +69,8 @@ public class GeoJsonImpl implements GeoJson, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type).build();
     }
 
+    @Override
+    public GeoJson copyDeep() {
+        return GeoJson.deepCopy(this);
+    }
 }

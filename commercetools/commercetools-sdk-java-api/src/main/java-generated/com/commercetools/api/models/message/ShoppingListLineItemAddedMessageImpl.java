@@ -294,4 +294,8 @@ public class ShoppingListLineItemAddedMessageImpl implements ShoppingListLineIte
                 .build();
     }
 
+    @Override
+    public ShoppingListLineItemAddedMessage copyDeep() {
+        return ShoppingListLineItemAddedMessage.deepCopy(this);
+    }
 }

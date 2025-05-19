@@ -127,6 +127,8 @@ public interface BusinessUnitPagedSearchResponse {
         return instance;
     }
 
+    public BusinessUnitPagedSearchResponse copyDeep();
+
     /**
      * factory method to create a deep copy of BusinessUnitPagedSearchResponse
      * @param template instance to be copied

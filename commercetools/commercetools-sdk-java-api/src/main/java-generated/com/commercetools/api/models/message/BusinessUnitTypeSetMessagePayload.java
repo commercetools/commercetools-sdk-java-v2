@@ -31,6 +31,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("BusinessUnitTypeSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = BusinessUnitTypeSetMessagePayloadImpl.class)
 public interface BusinessUnitTypeSetMessagePayload extends MessagePayload {
@@ -121,6 +122,8 @@ public interface BusinessUnitTypeSetMessagePayload extends MessagePayload {
         instance.setOldUnitType(template.getOldUnitType());
         return instance;
     }
+
+    public BusinessUnitTypeSetMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of BusinessUnitTypeSetMessagePayload

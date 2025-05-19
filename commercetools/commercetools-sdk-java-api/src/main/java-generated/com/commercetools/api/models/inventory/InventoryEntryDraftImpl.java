@@ -197,4 +197,8 @@ public class InventoryEntryDraftImpl implements InventoryEntryDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public InventoryEntryDraft copyDeep() {
+        return InventoryEntryDraft.deepCopy(this);
+    }
 }

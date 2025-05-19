@@ -159,4 +159,8 @@ public class CategoryPagedQueryResponseImpl implements CategoryPagedQueryRespons
                 .build();
     }
 
+    @Override
+    public CategoryPagedQueryResponse copyDeep() {
+        return CategoryPagedQueryResponse.deepCopy(this);
+    }
 }

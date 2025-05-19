@@ -138,4 +138,8 @@ public class AttributeNameDoesNotExistErrorImpl implements AttributeNameDoesNotE
                 .build();
     }
 
+    @Override
+    public AttributeNameDoesNotExistError copyDeep() {
+        return AttributeNameDoesNotExistError.deepCopy(this);
+    }
 }

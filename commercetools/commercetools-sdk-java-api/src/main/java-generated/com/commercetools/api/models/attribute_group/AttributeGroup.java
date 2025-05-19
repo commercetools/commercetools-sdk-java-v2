@@ -232,6 +232,8 @@ public interface AttributeGroup extends BaseResource, com.commercetools.api.mode
         return instance;
     }
 
+    public AttributeGroup copyDeep();
+
     /**
      * factory method to create a deep copy of AttributeGroup
      * @param template instance to be copied

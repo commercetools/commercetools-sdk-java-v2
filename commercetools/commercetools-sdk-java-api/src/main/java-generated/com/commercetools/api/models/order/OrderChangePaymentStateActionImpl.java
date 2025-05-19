@@ -92,4 +92,8 @@ public class OrderChangePaymentStateActionImpl implements OrderChangePaymentStat
                 .build();
     }
 
+    @Override
+    public OrderChangePaymentStateAction copyDeep() {
+        return OrderChangePaymentStateAction.deepCopy(this);
+    }
 }

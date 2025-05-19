@@ -62,4 +62,8 @@ public class ProductDiscountValueExternalImpl implements ProductDiscountValueExt
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type).build();
     }
 
+    @Override
+    public ProductDiscountValueExternal copyDeep() {
+        return ProductDiscountValueExternal.deepCopy(this);
+    }
 }

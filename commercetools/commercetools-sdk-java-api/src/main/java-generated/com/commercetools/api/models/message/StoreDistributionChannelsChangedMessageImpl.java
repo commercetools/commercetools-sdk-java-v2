@@ -326,4 +326,8 @@ public class StoreDistributionChannelsChangedMessageImpl implements StoreDistrib
                 .build();
     }
 
+    @Override
+    public StoreDistributionChannelsChangedMessage copyDeep() {
+        return StoreDistributionChannelsChangedMessage.deepCopy(this);
+    }
 }

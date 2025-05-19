@@ -94,6 +94,8 @@ public interface InventoryEntryUpdate extends
         return instance;
     }
 
+    public InventoryEntryUpdate copyDeep();
+
     /**
      * factory method to create a deep copy of InventoryEntryUpdate
      * @param template instance to be copied

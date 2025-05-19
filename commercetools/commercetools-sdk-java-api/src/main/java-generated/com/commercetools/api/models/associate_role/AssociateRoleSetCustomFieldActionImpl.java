@@ -110,4 +110,8 @@ public class AssociateRoleSetCustomFieldActionImpl implements AssociateRoleSetCu
                 .build();
     }
 
+    @Override
+    public AssociateRoleSetCustomFieldAction copyDeep() {
+        return AssociateRoleSetCustomFieldAction.deepCopy(this);
+    }
 }

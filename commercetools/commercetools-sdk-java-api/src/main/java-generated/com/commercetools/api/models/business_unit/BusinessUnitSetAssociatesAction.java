@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setAssociates")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = BusinessUnitSetAssociatesActionImpl.class)
 public interface BusinessUnitSetAssociatesAction extends BusinessUnitUpdateAction {
@@ -80,6 +81,8 @@ public interface BusinessUnitSetAssociatesAction extends BusinessUnitUpdateActio
         instance.setAssociates(template.getAssociates());
         return instance;
     }
+
+    public BusinessUnitSetAssociatesAction copyDeep();
 
     /**
      * factory method to create a deep copy of BusinessUnitSetAssociatesAction

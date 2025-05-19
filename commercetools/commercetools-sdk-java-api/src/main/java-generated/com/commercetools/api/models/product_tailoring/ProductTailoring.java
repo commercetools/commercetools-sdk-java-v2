@@ -303,6 +303,8 @@ public interface ProductTailoring extends BaseResource {
         return instance;
     }
 
+    public ProductTailoring copyDeep();
+
     /**
      * factory method to create a deep copy of ProductTailoring
      * @param template instance to be copied

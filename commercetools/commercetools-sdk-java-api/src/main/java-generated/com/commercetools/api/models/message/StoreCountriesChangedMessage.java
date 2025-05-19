@@ -35,6 +35,7 @@ import jakarta.validation.Valid;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("StoreCountriesChanged")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StoreCountriesChangedMessageImpl.class)
 public interface StoreCountriesChangedMessage extends Message {
@@ -119,6 +120,8 @@ public interface StoreCountriesChangedMessage extends Message {
         instance.setRemovedCountries(template.getRemovedCountries());
         return instance;
     }
+
+    public StoreCountriesChangedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of StoreCountriesChangedMessage

@@ -427,4 +427,8 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
                 .build();
     }
 
+    @Override
+    public ShoppingList copyDeep() {
+        return ShoppingList.deepCopy(this);
+    }
 }

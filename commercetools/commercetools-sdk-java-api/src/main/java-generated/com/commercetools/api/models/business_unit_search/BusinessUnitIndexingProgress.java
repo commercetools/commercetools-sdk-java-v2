@@ -99,6 +99,8 @@ public interface BusinessUnitIndexingProgress {
         return instance;
     }
 
+    public BusinessUnitIndexingProgress copyDeep();
+
     /**
      * factory method to create a deep copy of BusinessUnitIndexingProgress
      * @param template instance to be copied

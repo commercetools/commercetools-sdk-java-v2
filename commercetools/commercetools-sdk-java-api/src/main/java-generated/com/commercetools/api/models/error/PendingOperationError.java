@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("PendingOperation")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PendingOperationErrorImpl.class)
 public interface PendingOperationError extends ErrorObject {
@@ -79,6 +80,8 @@ public interface PendingOperationError extends ErrorObject {
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
+
+    public PendingOperationError copyDeep();
 
     /**
      * factory method to create a deep copy of PendingOperationError

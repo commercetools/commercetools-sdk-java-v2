@@ -99,6 +99,8 @@ public interface CustomerIndexingProgress {
         return instance;
     }
 
+    public CustomerIndexingProgress copyDeep();
+
     /**
      * factory method to create a deep copy of CustomerIndexingProgress
      * @param template instance to be copied

@@ -104,4 +104,8 @@ public class GraphQLShippingMethodDoesNotMatchCartErrorImpl
                 .build();
     }
 
+    @Override
+    public GraphQLShippingMethodDoesNotMatchCartError copyDeep() {
+        return GraphQLShippingMethodDoesNotMatchCartError.deepCopy(this);
+    }
 }

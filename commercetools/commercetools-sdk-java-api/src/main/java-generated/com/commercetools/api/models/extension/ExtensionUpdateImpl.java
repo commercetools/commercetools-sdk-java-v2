@@ -99,4 +99,8 @@ public class ExtensionUpdateImpl implements ExtensionUpdate, ModelBase {
                 .build();
     }
 
+    @Override
+    public ExtensionUpdate copyDeep() {
+        return ExtensionUpdate.deepCopy(this);
+    }
 }

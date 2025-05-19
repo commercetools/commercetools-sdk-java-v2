@@ -62,4 +62,8 @@ public class CartFreezeCartActionImpl implements CartFreezeCartAction, ModelBase
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action).build();
     }
 
+    @Override
+    public CartFreezeCartAction copyDeep() {
+        return CartFreezeCartAction.deepCopy(this);
+    }
 }

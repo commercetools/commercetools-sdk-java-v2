@@ -181,4 +181,8 @@ public class ParcelItemsUpdatedMessagePayloadImpl implements ParcelItemsUpdatedM
                 .build();
     }
 
+    @Override
+    public ParcelItemsUpdatedMessagePayload copyDeep() {
+        return ParcelItemsUpdatedMessagePayload.deepCopy(this);
+    }
 }

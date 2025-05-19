@@ -92,4 +92,8 @@ public class ExtensionSetTimeoutInMsActionImpl implements ExtensionSetTimeoutInM
                 .build();
     }
 
+    @Override
+    public ExtensionSetTimeoutInMsAction copyDeep() {
+        return ExtensionSetTimeoutInMsAction.deepCopy(this);
+    }
 }

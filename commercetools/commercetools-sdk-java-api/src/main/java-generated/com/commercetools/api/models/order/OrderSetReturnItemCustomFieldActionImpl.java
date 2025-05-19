@@ -152,4 +152,8 @@ public class OrderSetReturnItemCustomFieldActionImpl implements OrderSetReturnIt
                 .build();
     }
 
+    @Override
+    public OrderSetReturnItemCustomFieldAction copyDeep() {
+        return OrderSetReturnItemCustomFieldAction.deepCopy(this);
+    }
 }

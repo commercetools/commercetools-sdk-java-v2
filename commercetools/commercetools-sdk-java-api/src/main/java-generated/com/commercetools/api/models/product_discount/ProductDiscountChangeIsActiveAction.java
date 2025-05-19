@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeIsActive")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductDiscountChangeIsActiveActionImpl.class)
 public interface ProductDiscountChangeIsActiveAction extends ProductDiscountUpdateAction {
@@ -69,6 +70,8 @@ public interface ProductDiscountChangeIsActiveAction extends ProductDiscountUpda
         instance.setIsActive(template.getIsActive());
         return instance;
     }
+
+    public ProductDiscountChangeIsActiveAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductDiscountChangeIsActiveAction

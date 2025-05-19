@@ -95,4 +95,8 @@ public class DiscountedLineItemPriceForQuantityImpl implements DiscountedLineIte
                 .build();
     }
 
+    @Override
+    public DiscountedLineItemPriceForQuantity copyDeep() {
+        return DiscountedLineItemPriceForQuantity.deepCopy(this);
+    }
 }

@@ -96,4 +96,8 @@ public class MethodTaxRateImpl implements MethodTaxRate, ModelBase {
                 .build();
     }
 
+    @Override
+    public MethodTaxRate copyDeep() {
+        return MethodTaxRate.deepCopy(this);
+    }
 }

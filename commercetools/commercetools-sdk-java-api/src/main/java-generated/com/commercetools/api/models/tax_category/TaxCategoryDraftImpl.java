@@ -136,4 +136,8 @@ public class TaxCategoryDraftImpl implements TaxCategoryDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public TaxCategoryDraft copyDeep() {
+        return TaxCategoryDraft.deepCopy(this);
+    }
 }

@@ -26,6 +26,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("NotProcessed")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderEditNotProcessedImpl.class)
 public interface OrderEditNotProcessed extends OrderEditResult {
@@ -60,6 +61,8 @@ public interface OrderEditNotProcessed extends OrderEditResult {
         OrderEditNotProcessedImpl instance = new OrderEditNotProcessedImpl();
         return instance;
     }
+
+    public OrderEditNotProcessed copyDeep();
 
     /**
      * factory method to create a deep copy of OrderEditNotProcessed

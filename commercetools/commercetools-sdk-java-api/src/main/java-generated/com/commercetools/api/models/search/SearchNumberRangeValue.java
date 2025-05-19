@@ -114,6 +114,8 @@ public interface SearchNumberRangeValue extends SearchQueryExpressionValue {
         return instance;
     }
 
+    public SearchNumberRangeValue copyDeep();
+
     /**
      * factory method to create a deep copy of SearchNumberRangeValue
      * @param template instance to be copied

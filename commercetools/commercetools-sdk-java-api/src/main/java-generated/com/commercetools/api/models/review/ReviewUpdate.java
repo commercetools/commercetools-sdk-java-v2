@@ -94,6 +94,8 @@ public interface ReviewUpdate
         return instance;
     }
 
+    public ReviewUpdate copyDeep();
+
     /**
      * factory method to create a deep copy of ReviewUpdate
      * @param template instance to be copied

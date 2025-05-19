@@ -246,4 +246,8 @@ public class DiscountCodeNonApplicableErrorImpl implements DiscountCodeNonApplic
                 .build();
     }
 
+    @Override
+    public DiscountCodeNonApplicableError copyDeep() {
+        return DiscountCodeNonApplicableError.deepCopy(this);
+    }
 }

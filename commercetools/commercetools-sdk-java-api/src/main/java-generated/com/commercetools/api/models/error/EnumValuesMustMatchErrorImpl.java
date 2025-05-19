@@ -115,4 +115,8 @@ public class EnumValuesMustMatchErrorImpl implements EnumValuesMustMatchError, M
                 .build();
     }
 
+    @Override
+    public EnumValuesMustMatchError copyDeep() {
+        return EnumValuesMustMatchError.deepCopy(this);
+    }
 }

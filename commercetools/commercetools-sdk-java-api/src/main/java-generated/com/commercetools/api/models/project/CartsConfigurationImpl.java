@@ -99,4 +99,8 @@ public class CartsConfigurationImpl implements CartsConfiguration, ModelBase {
                 .build();
     }
 
+    @Override
+    public CartsConfiguration copyDeep() {
+        return CartsConfiguration.deepCopy(this);
+    }
 }

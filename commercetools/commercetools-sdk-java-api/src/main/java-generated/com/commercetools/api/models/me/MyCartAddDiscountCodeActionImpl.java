@@ -93,4 +93,8 @@ public class MyCartAddDiscountCodeActionImpl implements MyCartAddDiscountCodeAct
                 .build();
     }
 
+    @Override
+    public MyCartAddDiscountCodeAction copyDeep() {
+        return MyCartAddDiscountCodeAction.deepCopy(this);
+    }
 }

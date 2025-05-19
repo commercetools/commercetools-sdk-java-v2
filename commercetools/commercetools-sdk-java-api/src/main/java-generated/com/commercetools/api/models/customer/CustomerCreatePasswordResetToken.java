@@ -81,6 +81,8 @@ public interface CustomerCreatePasswordResetToken {
         return instance;
     }
 
+    public CustomerCreatePasswordResetToken copyDeep();
+
     /**
      * factory method to create a deep copy of CustomerCreatePasswordResetToken
      * @param template instance to be copied

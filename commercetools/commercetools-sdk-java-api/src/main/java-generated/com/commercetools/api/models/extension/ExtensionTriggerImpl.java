@@ -119,4 +119,8 @@ public class ExtensionTriggerImpl implements ExtensionTrigger, ModelBase {
                 .build();
     }
 
+    @Override
+    public ExtensionTrigger copyDeep() {
+        return ExtensionTrigger.deepCopy(this);
+    }
 }

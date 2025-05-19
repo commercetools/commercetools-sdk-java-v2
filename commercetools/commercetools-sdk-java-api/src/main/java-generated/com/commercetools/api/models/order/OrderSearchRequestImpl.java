@@ -136,4 +136,8 @@ public class OrderSearchRequestImpl implements OrderSearchRequest, ModelBase {
                 .build();
     }
 
+    @Override
+    public OrderSearchRequest copyDeep() {
+        return OrderSearchRequest.deepCopy(this);
+    }
 }

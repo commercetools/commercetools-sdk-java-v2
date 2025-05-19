@@ -27,27 +27,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.ProductTypeAddAttributeDefinitionActionImpl.class, name = ProductTypeAddAttributeDefinitionAction.ADD_ATTRIBUTE_DEFINITION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.ProductTypeAddLocalizedEnumValueActionImpl.class, name = ProductTypeAddLocalizedEnumValueAction.ADD_LOCALIZED_ENUM_VALUE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.ProductTypeAddPlainEnumValueActionImpl.class, name = ProductTypeAddPlainEnumValueAction.ADD_PLAIN_ENUM_VALUE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.ProductTypeChangeAttributeConstraintActionImpl.class, name = ProductTypeChangeAttributeConstraintAction.CHANGE_ATTRIBUTE_CONSTRAINT),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.ProductTypeChangeAttributeNameActionImpl.class, name = ProductTypeChangeAttributeNameAction.CHANGE_ATTRIBUTE_NAME),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.ProductTypeChangeAttributeOrderByNameActionImpl.class, name = ProductTypeChangeAttributeOrderByNameAction.CHANGE_ATTRIBUTE_ORDER_BY_NAME),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.ProductTypeChangeDescriptionActionImpl.class, name = ProductTypeChangeDescriptionAction.CHANGE_DESCRIPTION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.ProductTypeChangeEnumKeyActionImpl.class, name = ProductTypeChangeEnumKeyAction.CHANGE_ENUM_KEY),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.ProductTypeChangeInputHintActionImpl.class, name = ProductTypeChangeInputHintAction.CHANGE_INPUT_HINT),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.ProductTypeChangeIsSearchableActionImpl.class, name = ProductTypeChangeIsSearchableAction.CHANGE_IS_SEARCHABLE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.ProductTypeChangeLabelActionImpl.class, name = ProductTypeChangeLabelAction.CHANGE_LABEL),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.ProductTypeChangeLocalizedEnumValueLabelActionImpl.class, name = ProductTypeChangeLocalizedEnumValueLabelAction.CHANGE_LOCALIZED_ENUM_VALUE_LABEL),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.ProductTypeChangeLocalizedEnumValueOrderActionImpl.class, name = ProductTypeChangeLocalizedEnumValueOrderAction.CHANGE_LOCALIZED_ENUM_VALUE_ORDER),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.ProductTypeChangeNameActionImpl.class, name = ProductTypeChangeNameAction.CHANGE_NAME),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.ProductTypeChangePlainEnumValueLabelActionImpl.class, name = ProductTypeChangePlainEnumValueLabelAction.CHANGE_PLAIN_ENUM_VALUE_LABEL),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.ProductTypeChangePlainEnumValueOrderActionImpl.class, name = ProductTypeChangePlainEnumValueOrderAction.CHANGE_PLAIN_ENUM_VALUE_ORDER),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.ProductTypeRemoveAttributeDefinitionActionImpl.class, name = ProductTypeRemoveAttributeDefinitionAction.REMOVE_ATTRIBUTE_DEFINITION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.ProductTypeRemoveEnumValuesActionImpl.class, name = ProductTypeRemoveEnumValuesAction.REMOVE_ENUM_VALUES),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.ProductTypeSetInputTipActionImpl.class, name = ProductTypeSetInputTipAction.SET_INPUT_TIP),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product_type.ProductTypeSetKeyActionImpl.class, name = ProductTypeSetKeyAction.SET_KEY) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = ProductTypeUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = ProductTypeUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -62,6 +41,8 @@ public interface ProductTypeUpdateAction
     @JsonProperty("action")
     public String getAction();
 
+    public ProductTypeUpdateAction copyDeep();
+
     /**
      * factory method to create a deep copy of ProductTypeUpdateAction
      * @param template instance to be copied
@@ -72,85 +53,9 @@ public interface ProductTypeUpdateAction
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.product_type.ProductTypeAddAttributeDefinitionAction) {
-            return com.commercetools.api.models.product_type.ProductTypeAddAttributeDefinitionAction.deepCopy(
-                (com.commercetools.api.models.product_type.ProductTypeAddAttributeDefinitionAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_type.ProductTypeAddLocalizedEnumValueAction) {
-            return com.commercetools.api.models.product_type.ProductTypeAddLocalizedEnumValueAction.deepCopy(
-                (com.commercetools.api.models.product_type.ProductTypeAddLocalizedEnumValueAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_type.ProductTypeAddPlainEnumValueAction) {
-            return com.commercetools.api.models.product_type.ProductTypeAddPlainEnumValueAction
-                    .deepCopy((com.commercetools.api.models.product_type.ProductTypeAddPlainEnumValueAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_type.ProductTypeChangeAttributeConstraintAction) {
-            return com.commercetools.api.models.product_type.ProductTypeChangeAttributeConstraintAction.deepCopy(
-                (com.commercetools.api.models.product_type.ProductTypeChangeAttributeConstraintAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_type.ProductTypeChangeAttributeNameAction) {
-            return com.commercetools.api.models.product_type.ProductTypeChangeAttributeNameAction.deepCopy(
-                (com.commercetools.api.models.product_type.ProductTypeChangeAttributeNameAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_type.ProductTypeChangeAttributeOrderByNameAction) {
-            return com.commercetools.api.models.product_type.ProductTypeChangeAttributeOrderByNameAction.deepCopy(
-                (com.commercetools.api.models.product_type.ProductTypeChangeAttributeOrderByNameAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_type.ProductTypeChangeDescriptionAction) {
-            return com.commercetools.api.models.product_type.ProductTypeChangeDescriptionAction
-                    .deepCopy((com.commercetools.api.models.product_type.ProductTypeChangeDescriptionAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_type.ProductTypeChangeEnumKeyAction) {
-            return com.commercetools.api.models.product_type.ProductTypeChangeEnumKeyAction
-                    .deepCopy((com.commercetools.api.models.product_type.ProductTypeChangeEnumKeyAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_type.ProductTypeChangeInputHintAction) {
-            return com.commercetools.api.models.product_type.ProductTypeChangeInputHintAction
-                    .deepCopy((com.commercetools.api.models.product_type.ProductTypeChangeInputHintAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_type.ProductTypeChangeIsSearchableAction) {
-            return com.commercetools.api.models.product_type.ProductTypeChangeIsSearchableAction
-                    .deepCopy((com.commercetools.api.models.product_type.ProductTypeChangeIsSearchableAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_type.ProductTypeChangeLabelAction) {
-            return com.commercetools.api.models.product_type.ProductTypeChangeLabelAction
-                    .deepCopy((com.commercetools.api.models.product_type.ProductTypeChangeLabelAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_type.ProductTypeChangeLocalizedEnumValueLabelAction) {
-            return com.commercetools.api.models.product_type.ProductTypeChangeLocalizedEnumValueLabelAction.deepCopy(
-                (com.commercetools.api.models.product_type.ProductTypeChangeLocalizedEnumValueLabelAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_type.ProductTypeChangeLocalizedEnumValueOrderAction) {
-            return com.commercetools.api.models.product_type.ProductTypeChangeLocalizedEnumValueOrderAction.deepCopy(
-                (com.commercetools.api.models.product_type.ProductTypeChangeLocalizedEnumValueOrderAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_type.ProductTypeChangeNameAction) {
-            return com.commercetools.api.models.product_type.ProductTypeChangeNameAction
-                    .deepCopy((com.commercetools.api.models.product_type.ProductTypeChangeNameAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_type.ProductTypeChangePlainEnumValueLabelAction) {
-            return com.commercetools.api.models.product_type.ProductTypeChangePlainEnumValueLabelAction.deepCopy(
-                (com.commercetools.api.models.product_type.ProductTypeChangePlainEnumValueLabelAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_type.ProductTypeChangePlainEnumValueOrderAction) {
-            return com.commercetools.api.models.product_type.ProductTypeChangePlainEnumValueOrderAction.deepCopy(
-                (com.commercetools.api.models.product_type.ProductTypeChangePlainEnumValueOrderAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_type.ProductTypeRemoveAttributeDefinitionAction) {
-            return com.commercetools.api.models.product_type.ProductTypeRemoveAttributeDefinitionAction.deepCopy(
-                (com.commercetools.api.models.product_type.ProductTypeRemoveAttributeDefinitionAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_type.ProductTypeRemoveEnumValuesAction) {
-            return com.commercetools.api.models.product_type.ProductTypeRemoveEnumValuesAction
-                    .deepCopy((com.commercetools.api.models.product_type.ProductTypeRemoveEnumValuesAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_type.ProductTypeSetInputTipAction) {
-            return com.commercetools.api.models.product_type.ProductTypeSetInputTipAction
-                    .deepCopy((com.commercetools.api.models.product_type.ProductTypeSetInputTipAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.product_type.ProductTypeSetKeyAction) {
-            return com.commercetools.api.models.product_type.ProductTypeSetKeyAction
-                    .deepCopy((com.commercetools.api.models.product_type.ProductTypeSetKeyAction) template);
+
+        if (!(template instanceof ProductTypeUpdateActionImpl)) {
+            return template.copyDeep();
         }
         ProductTypeUpdateActionImpl instance = new ProductTypeUpdateActionImpl();
         return instance;

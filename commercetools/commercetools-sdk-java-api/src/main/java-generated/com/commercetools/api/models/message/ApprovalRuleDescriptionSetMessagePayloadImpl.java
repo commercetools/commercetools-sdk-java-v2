@@ -111,4 +111,8 @@ public class ApprovalRuleDescriptionSetMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public ApprovalRuleDescriptionSetMessagePayload copyDeep() {
+        return ApprovalRuleDescriptionSetMessagePayload.deepCopy(this);
+    }
 }

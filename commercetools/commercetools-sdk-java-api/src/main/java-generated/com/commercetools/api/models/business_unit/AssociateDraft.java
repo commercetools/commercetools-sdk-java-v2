@@ -95,6 +95,8 @@ public interface AssociateDraft extends io.vrap.rmf.base.client.Draft<AssociateD
         return instance;
     }
 
+    public AssociateDraft copyDeep();
+
     /**
      * factory method to create a deep copy of AssociateDraft
      * @param template instance to be copied

@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeFieldDefinitionOrder")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TypeChangeFieldDefinitionOrderActionImpl.class)
 public interface TypeChangeFieldDefinitionOrderAction extends TypeUpdateAction {
@@ -77,6 +78,8 @@ public interface TypeChangeFieldDefinitionOrderAction extends TypeUpdateAction {
         instance.setFieldNames(template.getFieldNames());
         return instance;
     }
+
+    public TypeChangeFieldDefinitionOrderAction copyDeep();
 
     /**
      * factory method to create a deep copy of TypeChangeFieldDefinitionOrderAction

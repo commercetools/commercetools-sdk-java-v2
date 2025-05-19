@@ -231,6 +231,8 @@ public interface ReviewDraft extends com.commercetools.api.models.CustomizableDr
         return instance;
     }
 
+    public ReviewDraft copyDeep();
+
     /**
      * factory method to create a deep copy of ReviewDraft
      * @param template instance to be copied

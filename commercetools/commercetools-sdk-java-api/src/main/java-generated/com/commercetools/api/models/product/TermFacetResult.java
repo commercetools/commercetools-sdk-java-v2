@@ -33,6 +33,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("terms")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TermFacetResultImpl.class)
 public interface TermFacetResult extends FacetResult {
@@ -162,6 +163,8 @@ public interface TermFacetResult extends FacetResult {
         instance.setTerms(template.getTerms());
         return instance;
     }
+
+    public TermFacetResult copyDeep();
 
     /**
      * factory method to create a deep copy of TermFacetResult

@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("AnonymousIdAlreadyInUse")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLAnonymousIdAlreadyInUseErrorImpl.class)
 public interface GraphQLAnonymousIdAlreadyInUseError extends GraphQLErrorObject {
@@ -62,6 +63,8 @@ public interface GraphQLAnonymousIdAlreadyInUseError extends GraphQLErrorObject 
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
+
+    public GraphQLAnonymousIdAlreadyInUseError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLAnonymousIdAlreadyInUseError

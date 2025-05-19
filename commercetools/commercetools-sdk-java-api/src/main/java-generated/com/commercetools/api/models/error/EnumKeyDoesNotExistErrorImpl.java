@@ -158,4 +158,8 @@ public class EnumKeyDoesNotExistErrorImpl implements EnumKeyDoesNotExistError, M
                 .build();
     }
 
+    @Override
+    public EnumKeyDoesNotExistError copyDeep() {
+        return EnumKeyDoesNotExistError.deepCopy(this);
+    }
 }

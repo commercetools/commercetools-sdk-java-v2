@@ -73,4 +73,8 @@ public class StagedPriceDraftImpl implements StagedPriceDraft, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("value", value).build();
     }
 
+    @Override
+    public StagedPriceDraft copyDeep() {
+        return StagedPriceDraft.deepCopy(this);
+    }
 }

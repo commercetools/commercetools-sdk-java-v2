@@ -129,4 +129,8 @@ public class CategoryChangeAssetNameActionImpl implements CategoryChangeAssetNam
                 .build();
     }
 
+    @Override
+    public CategoryChangeAssetNameAction copyDeep() {
+        return CategoryChangeAssetNameAction.deepCopy(this);
+    }
 }

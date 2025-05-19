@@ -333,4 +333,8 @@ public class ProductPriceCustomFieldsRemovedMessageImpl implements ProductPriceC
                 .build();
     }
 
+    @Override
+    public ProductPriceCustomFieldsRemovedMessage copyDeep() {
+        return ProductPriceCustomFieldsRemovedMessage.deepCopy(this);
+    }
 }

@@ -110,4 +110,8 @@ public class MyShoppingListSetCustomFieldActionImpl implements MyShoppingListSet
                 .build();
     }
 
+    @Override
+    public MyShoppingListSetCustomFieldAction copyDeep() {
+        return MyShoppingListSetCustomFieldAction.deepCopy(this);
+    }
 }

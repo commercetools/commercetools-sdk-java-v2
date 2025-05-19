@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeMessagesConfiguration")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProjectChangeMessagesConfigurationActionImpl.class)
 public interface ProjectChangeMessagesConfigurationAction extends ProjectUpdateAction {
@@ -72,6 +73,8 @@ public interface ProjectChangeMessagesConfigurationAction extends ProjectUpdateA
         instance.setMessagesConfiguration(template.getMessagesConfiguration());
         return instance;
     }
+
+    public ProjectChangeMessagesConfigurationAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProjectChangeMessagesConfigurationAction

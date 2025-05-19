@@ -294,4 +294,8 @@ public class StandalonePriceTierRemovedMessageImpl implements StandalonePriceTie
                 .build();
     }
 
+    @Override
+    public StandalonePriceTierRemovedMessage copyDeep() {
+        return StandalonePriceTierRemovedMessage.deepCopy(this);
+    }
 }

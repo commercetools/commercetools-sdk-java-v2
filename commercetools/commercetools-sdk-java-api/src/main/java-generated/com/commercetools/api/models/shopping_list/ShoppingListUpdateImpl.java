@@ -100,4 +100,8 @@ public class ShoppingListUpdateImpl implements ShoppingListUpdate, ModelBase {
                 .build();
     }
 
+    @Override
+    public ShoppingListUpdate copyDeep() {
+        return ShoppingListUpdate.deepCopy(this);
+    }
 }

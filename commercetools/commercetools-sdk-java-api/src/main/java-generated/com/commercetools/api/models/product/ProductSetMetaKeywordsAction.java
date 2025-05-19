@@ -27,6 +27,7 @@ import jakarta.validation.Valid;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setMetaKeywords")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSetMetaKeywordsActionImpl.class)
 public interface ProductSetMetaKeywordsAction extends ProductUpdateAction {
@@ -85,6 +86,8 @@ public interface ProductSetMetaKeywordsAction extends ProductUpdateAction {
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public ProductSetMetaKeywordsAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductSetMetaKeywordsAction

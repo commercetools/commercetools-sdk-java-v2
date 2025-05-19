@@ -161,4 +161,8 @@ public class ProductDiscountPagedQueryResponseImpl implements ProductDiscountPag
                 .build();
     }
 
+    @Override
+    public ProductDiscountPagedQueryResponse copyDeep() {
+        return ProductDiscountPagedQueryResponse.deepCopy(this);
+    }
 }

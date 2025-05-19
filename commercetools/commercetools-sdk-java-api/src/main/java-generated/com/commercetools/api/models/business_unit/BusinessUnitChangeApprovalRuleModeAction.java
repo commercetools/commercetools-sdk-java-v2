@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeApprovalRuleMode")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = BusinessUnitChangeApprovalRuleModeActionImpl.class)
 public interface BusinessUnitChangeApprovalRuleModeAction extends BusinessUnitUpdateAction {
@@ -71,6 +72,8 @@ public interface BusinessUnitChangeApprovalRuleModeAction extends BusinessUnitUp
         instance.setApprovalRuleMode(template.getApprovalRuleMode());
         return instance;
     }
+
+    public BusinessUnitChangeApprovalRuleModeAction copyDeep();
 
     /**
      * factory method to create a deep copy of BusinessUnitChangeApprovalRuleModeAction

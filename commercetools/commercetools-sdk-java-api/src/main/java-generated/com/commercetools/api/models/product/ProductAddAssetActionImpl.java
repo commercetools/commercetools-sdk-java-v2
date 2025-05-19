@@ -172,4 +172,8 @@ public class ProductAddAssetActionImpl implements ProductAddAssetAction, ModelBa
                 .build();
     }
 
+    @Override
+    public ProductAddAssetAction copyDeep() {
+        return ProductAddAssetAction.deepCopy(this);
+    }
 }

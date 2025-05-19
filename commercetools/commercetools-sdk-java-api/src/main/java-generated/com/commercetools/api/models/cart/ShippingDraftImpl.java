@@ -207,4 +207,8 @@ public class ShippingDraftImpl implements ShippingDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public ShippingDraft copyDeep() {
+        return ShippingDraft.deepCopy(this);
+    }
 }

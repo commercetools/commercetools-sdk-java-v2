@@ -91,4 +91,8 @@ public class ReviewCreatedMessagePayloadImpl implements ReviewCreatedMessagePayl
                 .build();
     }
 
+    @Override
+    public ReviewCreatedMessagePayload copyDeep() {
+        return ReviewCreatedMessagePayload.deepCopy(this);
+    }
 }

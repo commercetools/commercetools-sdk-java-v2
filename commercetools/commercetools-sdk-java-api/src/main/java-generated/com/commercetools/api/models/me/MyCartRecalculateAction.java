@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("recalculate")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyCartRecalculateActionImpl.class)
 public interface MyCartRecalculateAction extends MyCartUpdateAction {
@@ -73,6 +74,8 @@ public interface MyCartRecalculateAction extends MyCartUpdateAction {
         instance.setUpdateProductData(template.getUpdateProductData());
         return instance;
     }
+
+    public MyCartRecalculateAction copyDeep();
 
     /**
      * factory method to create a deep copy of MyCartRecalculateAction

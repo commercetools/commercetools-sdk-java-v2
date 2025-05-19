@@ -438,4 +438,8 @@ public class StoreCreatedMessageImpl implements StoreCreatedMessage, ModelBase {
                 .build();
     }
 
+    @Override
+    public StoreCreatedMessage copyDeep() {
+        return StoreCreatedMessage.deepCopy(this);
+    }
 }

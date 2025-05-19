@@ -100,4 +100,8 @@ public class ProductTypeUpdateImpl implements ProductTypeUpdate, ModelBase {
                 .build();
     }
 
+    @Override
+    public ProductTypeUpdate copyDeep() {
+        return ProductTypeUpdate.deepCopy(this);
+    }
 }

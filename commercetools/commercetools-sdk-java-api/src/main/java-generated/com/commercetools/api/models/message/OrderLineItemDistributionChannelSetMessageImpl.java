@@ -335,4 +335,8 @@ public class OrderLineItemDistributionChannelSetMessageImpl
                 .build();
     }
 
+    @Override
+    public OrderLineItemDistributionChannelSetMessage copyDeep() {
+        return OrderLineItemDistributionChannelSetMessage.deepCopy(this);
+    }
 }

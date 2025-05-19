@@ -316,4 +316,8 @@ public class BusinessUnitTopLevelUnitSetMessageImpl implements BusinessUnitTopLe
                 .build();
     }
 
+    @Override
+    public BusinessUnitTopLevelUnitSetMessage copyDeep() {
+        return BusinessUnitTopLevelUnitSetMessage.deepCopy(this);
+    }
 }

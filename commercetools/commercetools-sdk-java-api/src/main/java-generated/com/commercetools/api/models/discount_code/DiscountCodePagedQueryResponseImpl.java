@@ -160,4 +160,8 @@ public class DiscountCodePagedQueryResponseImpl implements DiscountCodePagedQuer
                 .build();
     }
 
+    @Override
+    public DiscountCodePagedQueryResponse copyDeep() {
+        return DiscountCodePagedQueryResponse.deepCopy(this);
+    }
 }

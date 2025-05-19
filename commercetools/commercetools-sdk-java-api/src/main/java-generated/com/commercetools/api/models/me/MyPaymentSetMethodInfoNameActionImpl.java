@@ -92,4 +92,8 @@ public class MyPaymentSetMethodInfoNameActionImpl implements MyPaymentSetMethodI
                 .build();
     }
 
+    @Override
+    public MyPaymentSetMethodInfoNameAction copyDeep() {
+        return MyPaymentSetMethodInfoNameAction.deepCopy(this);
+    }
 }

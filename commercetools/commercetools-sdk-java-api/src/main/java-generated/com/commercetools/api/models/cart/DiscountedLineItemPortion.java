@@ -87,6 +87,8 @@ public interface DiscountedLineItemPortion {
         return instance;
     }
 
+    public DiscountedLineItemPortion copyDeep();
+
     /**
      * factory method to create a deep copy of DiscountedLineItemPortion
      * @param template instance to be copied

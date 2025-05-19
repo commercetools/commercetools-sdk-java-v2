@@ -135,4 +135,8 @@ public class OrderSetParcelMeasurementsActionImpl implements OrderSetParcelMeasu
                 .build();
     }
 
+    @Override
+    public OrderSetParcelMeasurementsAction copyDeep() {
+        return OrderSetParcelMeasurementsAction.deepCopy(this);
+    }
 }

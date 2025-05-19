@@ -313,4 +313,8 @@ public class ApprovalFlowCompletedMessageImpl implements ApprovalFlowCompletedMe
                 .build();
     }
 
+    @Override
+    public ApprovalFlowCompletedMessage copyDeep() {
+        return ApprovalFlowCompletedMessage.deepCopy(this);
+    }
 }

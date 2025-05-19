@@ -111,4 +111,8 @@ public class ApprovalFlowSetCustomTypeActionImpl implements ApprovalFlowSetCusto
                 .build();
     }
 
+    @Override
+    public ApprovalFlowSetCustomTypeAction copyDeep() {
+        return ApprovalFlowSetCustomTypeAction.deepCopy(this);
+    }
 }

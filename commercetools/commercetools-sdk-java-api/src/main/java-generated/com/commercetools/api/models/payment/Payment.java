@@ -345,6 +345,8 @@ public interface Payment extends BaseResource, PaymentMixin, com.commercetools.a
         return instance;
     }
 
+    public Payment copyDeep();
+
     /**
      * factory method to create a deep copy of Payment
      * @param template instance to be copied

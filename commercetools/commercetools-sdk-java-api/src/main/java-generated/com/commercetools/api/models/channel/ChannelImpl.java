@@ -341,4 +341,8 @@ public class ChannelImpl implements Channel, ModelBase {
                 .build();
     }
 
+    @Override
+    public Channel copyDeep() {
+        return Channel.deepCopy(this);
+    }
 }

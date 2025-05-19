@@ -110,4 +110,8 @@ public class CustomerEmailTokenCreatedMessagePayloadImpl implements CustomerEmai
                 .build();
     }
 
+    @Override
+    public CustomerEmailTokenCreatedMessagePayload copyDeep() {
+        return CustomerEmailTokenCreatedMessagePayload.deepCopy(this);
+    }
 }

@@ -94,6 +94,8 @@ public interface OrderUpdate
         return instance;
     }
 
+    public OrderUpdate copyDeep();
+
     /**
      * factory method to create a deep copy of OrderUpdate
      * @param template instance to be copied

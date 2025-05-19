@@ -110,4 +110,8 @@ public class BusinessUnitAddShippingAddressIdActionImpl implements BusinessUnitA
                 .build();
     }
 
+    @Override
+    public BusinessUnitAddShippingAddressIdAction copyDeep() {
+        return BusinessUnitAddShippingAddressIdAction.deepCopy(this);
+    }
 }

@@ -91,4 +91,8 @@ public class CustomerTitleSetMessagePayloadImpl implements CustomerTitleSetMessa
                 .build();
     }
 
+    @Override
+    public CustomerTitleSetMessagePayload copyDeep() {
+        return CustomerTitleSetMessagePayload.deepCopy(this);
+    }
 }

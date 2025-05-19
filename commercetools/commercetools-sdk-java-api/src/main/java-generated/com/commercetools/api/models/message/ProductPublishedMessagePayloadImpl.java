@@ -137,4 +137,8 @@ public class ProductPublishedMessagePayloadImpl implements ProductPublishedMessa
                 .build();
     }
 
+    @Override
+    public ProductPublishedMessagePayload copyDeep() {
+        return ProductPublishedMessagePayload.deepCopy(this);
+    }
 }

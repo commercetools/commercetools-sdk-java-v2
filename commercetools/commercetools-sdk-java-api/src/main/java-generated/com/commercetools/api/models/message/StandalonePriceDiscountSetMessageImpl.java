@@ -294,4 +294,8 @@ public class StandalonePriceDiscountSetMessageImpl implements StandalonePriceDis
                 .build();
     }
 
+    @Override
+    public StandalonePriceDiscountSetMessage copyDeep() {
+        return StandalonePriceDiscountSetMessage.deepCopy(this);
+    }
 }

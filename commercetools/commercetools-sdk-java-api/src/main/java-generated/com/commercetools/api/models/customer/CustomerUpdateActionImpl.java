@@ -69,4 +69,8 @@ public class CustomerUpdateActionImpl implements CustomerUpdateAction, ModelBase
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action).build();
     }
 
+    @Override
+    public CustomerUpdateAction copyDeep() {
+        return CustomerUpdateAction.deepCopy(this);
+    }
 }

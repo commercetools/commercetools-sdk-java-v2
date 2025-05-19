@@ -111,4 +111,8 @@ public class CustomerPasswordTokenCreatedMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public CustomerPasswordTokenCreatedMessagePayload copyDeep() {
+        return CustomerPasswordTokenCreatedMessagePayload.deepCopy(this);
+    }
 }

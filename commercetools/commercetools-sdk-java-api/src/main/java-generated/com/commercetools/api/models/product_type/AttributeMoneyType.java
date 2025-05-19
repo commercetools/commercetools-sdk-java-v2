@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("money")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AttributeMoneyTypeImpl.class)
 public interface AttributeMoneyType extends AttributeType {
@@ -50,6 +51,8 @@ public interface AttributeMoneyType extends AttributeType {
         AttributeMoneyTypeImpl instance = new AttributeMoneyTypeImpl();
         return instance;
     }
+
+    public AttributeMoneyType copyDeep();
 
     /**
      * factory method to create a deep copy of AttributeMoneyType

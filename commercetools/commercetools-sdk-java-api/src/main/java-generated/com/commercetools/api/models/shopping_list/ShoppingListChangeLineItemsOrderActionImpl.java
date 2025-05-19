@@ -96,4 +96,8 @@ public class ShoppingListChangeLineItemsOrderActionImpl implements ShoppingListC
                 .build();
     }
 
+    @Override
+    public ShoppingListChangeLineItemsOrderAction copyDeep() {
+        return ShoppingListChangeLineItemsOrderAction.deepCopy(this);
+    }
 }

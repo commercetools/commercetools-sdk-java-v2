@@ -69,4 +69,8 @@ public class TaxCategoryUpdateActionImpl implements TaxCategoryUpdateAction, Mod
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action).build();
     }
 
+    @Override
+    public TaxCategoryUpdateAction copyDeep() {
+        return TaxCategoryUpdateAction.deepCopy(this);
+    }
 }

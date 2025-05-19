@@ -298,4 +298,8 @@ public class BusinessUnitAssociatesSetMessageImpl implements BusinessUnitAssocia
                 .build();
     }
 
+    @Override
+    public BusinessUnitAssociatesSetMessage copyDeep() {
+        return BusinessUnitAssociatesSetMessage.deepCopy(this);
+    }
 }

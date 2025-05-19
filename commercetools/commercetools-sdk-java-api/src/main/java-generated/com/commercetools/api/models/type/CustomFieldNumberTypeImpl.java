@@ -62,4 +62,8 @@ public class CustomFieldNumberTypeImpl implements CustomFieldNumberType, ModelBa
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("name", name).build();
     }
 
+    @Override
+    public CustomFieldNumberType copyDeep() {
+        return CustomFieldNumberType.deepCopy(this);
+    }
 }

@@ -333,4 +333,8 @@ public class BusinessUnitCustomFieldChangedMessageImpl implements BusinessUnitCu
                 .build();
     }
 
+    @Override
+    public BusinessUnitCustomFieldChangedMessage copyDeep() {
+        return BusinessUnitCustomFieldChangedMessage.deepCopy(this);
+    }
 }

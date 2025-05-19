@@ -110,4 +110,8 @@ public class StagedOrderSetCustomFieldActionImpl implements StagedOrderSetCustom
                 .build();
     }
 
+    @Override
+    public StagedOrderSetCustomFieldAction copyDeep() {
+        return StagedOrderSetCustomFieldAction.deepCopy(this);
+    }
 }

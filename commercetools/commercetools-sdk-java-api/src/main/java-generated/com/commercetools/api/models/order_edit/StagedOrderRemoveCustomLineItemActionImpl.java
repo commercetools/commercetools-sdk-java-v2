@@ -114,4 +114,8 @@ public class StagedOrderRemoveCustomLineItemActionImpl implements StagedOrderRem
                 .build();
     }
 
+    @Override
+    public StagedOrderRemoveCustomLineItemAction copyDeep() {
+        return StagedOrderRemoveCustomLineItemAction.deepCopy(this);
+    }
 }

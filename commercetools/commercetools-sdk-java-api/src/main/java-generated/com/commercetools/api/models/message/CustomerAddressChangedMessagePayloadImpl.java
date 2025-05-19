@@ -92,4 +92,8 @@ public class CustomerAddressChangedMessagePayloadImpl implements CustomerAddress
                 .build();
     }
 
+    @Override
+    public CustomerAddressChangedMessagePayload copyDeep() {
+        return CustomerAddressChangedMessagePayload.deepCopy(this);
+    }
 }

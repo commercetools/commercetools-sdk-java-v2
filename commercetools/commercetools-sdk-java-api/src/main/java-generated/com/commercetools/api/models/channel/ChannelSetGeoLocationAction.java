@@ -27,6 +27,7 @@ import jakarta.validation.Valid;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setGeoLocation")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChannelSetGeoLocationActionImpl.class)
 public interface ChannelSetGeoLocationAction extends ChannelUpdateAction {
@@ -69,6 +70,8 @@ public interface ChannelSetGeoLocationAction extends ChannelUpdateAction {
         instance.setGeoLocation(template.getGeoLocation());
         return instance;
     }
+
+    public ChannelSetGeoLocationAction copyDeep();
 
     /**
      * factory method to create a deep copy of ChannelSetGeoLocationAction

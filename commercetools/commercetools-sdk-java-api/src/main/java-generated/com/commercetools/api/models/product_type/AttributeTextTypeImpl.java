@@ -62,4 +62,8 @@ public class AttributeTextTypeImpl implements AttributeTextType, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("name", name).build();
     }
 
+    @Override
+    public AttributeTextType copyDeep() {
+        return AttributeTextType.deepCopy(this);
+    }
 }

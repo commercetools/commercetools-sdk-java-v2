@@ -116,4 +116,8 @@ public class CartDiscountValueAbsoluteImpl implements CartDiscountValueAbsolute,
                 .build();
     }
 
+    @Override
+    public CartDiscountValueAbsolute copyDeep() {
+        return CartDiscountValueAbsolute.deepCopy(this);
+    }
 }

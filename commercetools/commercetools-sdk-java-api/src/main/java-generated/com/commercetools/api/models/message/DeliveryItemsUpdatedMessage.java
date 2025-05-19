@@ -39,6 +39,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("DeliveryItemsUpdated")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = DeliveryItemsUpdatedMessageImpl.class)
 public interface DeliveryItemsUpdatedMessage extends OrderMessage {
@@ -157,6 +158,8 @@ public interface DeliveryItemsUpdatedMessage extends OrderMessage {
         instance.setShippingKey(template.getShippingKey());
         return instance;
     }
+
+    public DeliveryItemsUpdatedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of DeliveryItemsUpdatedMessage

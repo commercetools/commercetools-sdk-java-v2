@@ -102,6 +102,8 @@ public interface TaxPortionDraft extends io.vrap.rmf.base.client.Draft<TaxPortio
         return instance;
     }
 
+    public TaxPortionDraft copyDeep();
+
     /**
      * factory method to create a deep copy of TaxPortionDraft
      * @param template instance to be copied

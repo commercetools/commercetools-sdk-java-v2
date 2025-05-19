@@ -145,6 +145,8 @@ public interface CreatedBy extends ClientLogging {
         return instance;
     }
 
+    public CreatedBy copyDeep();
+
     /**
      * factory method to create a deep copy of CreatedBy
      * @param template instance to be copied

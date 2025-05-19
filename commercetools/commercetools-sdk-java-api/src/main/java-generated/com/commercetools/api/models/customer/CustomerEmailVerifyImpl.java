@@ -95,4 +95,8 @@ public class CustomerEmailVerifyImpl implements CustomerEmailVerify, ModelBase {
                 .build();
     }
 
+    @Override
+    public CustomerEmailVerify copyDeep() {
+        return CustomerEmailVerify.deepCopy(this);
+    }
 }

@@ -263,4 +263,8 @@ public class QueryPriceImpl implements QueryPrice, ModelBase {
                 .build();
     }
 
+    @Override
+    public QueryPrice copyDeep() {
+        return QueryPrice.deepCopy(this);
+    }
 }

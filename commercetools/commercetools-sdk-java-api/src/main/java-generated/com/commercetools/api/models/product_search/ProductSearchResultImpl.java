@@ -115,4 +115,8 @@ public class ProductSearchResultImpl implements ProductSearchResult, ModelBase {
                 .build();
     }
 
+    @Override
+    public ProductSearchResult copyDeep() {
+        return ProductSearchResult.deepCopy(this);
+    }
 }

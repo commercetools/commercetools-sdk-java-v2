@@ -92,4 +92,8 @@ public class CustomerCustomFieldRemovedMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public CustomerCustomFieldRemovedMessagePayload copyDeep() {
+        return CustomerCustomFieldRemovedMessagePayload.deepCopy(this);
+    }
 }

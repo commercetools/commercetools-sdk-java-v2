@@ -159,4 +159,8 @@ public class ExtensionPagedQueryResponseImpl implements ExtensionPagedQueryRespo
                 .build();
     }
 
+    @Override
+    public ExtensionPagedQueryResponse copyDeep() {
+        return ExtensionPagedQueryResponse.deepCopy(this);
+    }
 }

@@ -121,4 +121,8 @@ public class ShippingMethodDoesNotMatchCartErrorImpl implements ShippingMethodDo
                 .build();
     }
 
+    @Override
+    public ShippingMethodDoesNotMatchCartError copyDeep() {
+        return ShippingMethodDoesNotMatchCartError.deepCopy(this);
+    }
 }

@@ -336,6 +336,8 @@ public interface ProductDiscount
         return instance;
     }
 
+    public ProductDiscount copyDeep();
+
     /**
      * factory method to create a deep copy of ProductDiscount
      * @param template instance to be copied

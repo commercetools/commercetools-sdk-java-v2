@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("Time")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomFieldTimeTypeImpl.class)
 public interface CustomFieldTimeType extends FieldType {
@@ -50,6 +51,8 @@ public interface CustomFieldTimeType extends FieldType {
         CustomFieldTimeTypeImpl instance = new CustomFieldTimeTypeImpl();
         return instance;
     }
+
+    public CustomFieldTimeType copyDeep();
 
     /**
      * factory method to create a deep copy of CustomFieldTimeType

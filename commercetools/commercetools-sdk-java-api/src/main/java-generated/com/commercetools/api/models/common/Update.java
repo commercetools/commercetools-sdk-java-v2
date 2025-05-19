@@ -93,6 +93,8 @@ public interface Update extends com.commercetools.api.models.ResourceUpdate<Upda
         return instance;
     }
 
+    public Update copyDeep();
+
     /**
      * factory method to create a deep copy of Update
      * @param template instance to be copied

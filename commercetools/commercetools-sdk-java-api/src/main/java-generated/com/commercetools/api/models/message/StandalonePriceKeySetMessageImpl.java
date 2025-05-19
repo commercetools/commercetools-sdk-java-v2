@@ -312,4 +312,8 @@ public class StandalonePriceKeySetMessageImpl implements StandalonePriceKeySetMe
                 .build();
     }
 
+    @Override
+    public StandalonePriceKeySetMessage copyDeep() {
+        return StandalonePriceKeySetMessage.deepCopy(this);
+    }
 }

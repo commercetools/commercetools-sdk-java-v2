@@ -111,4 +111,8 @@ public class MyBusinessUnitAddShippingAddressIdActionImpl
                 .build();
     }
 
+    @Override
+    public MyBusinessUnitAddShippingAddressIdAction copyDeep() {
+        return MyBusinessUnitAddShippingAddressIdAction.deepCopy(this);
+    }
 }

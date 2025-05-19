@@ -91,4 +91,8 @@ public class ProductDiscountValueRelativeDraftImpl implements ProductDiscountVal
                 .build();
     }
 
+    @Override
+    public ProductDiscountValueRelativeDraft copyDeep() {
+        return ProductDiscountValueRelativeDraft.deepCopy(this);
+    }
 }

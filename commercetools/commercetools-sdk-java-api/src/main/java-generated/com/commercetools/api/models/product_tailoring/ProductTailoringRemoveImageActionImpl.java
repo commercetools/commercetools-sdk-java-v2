@@ -152,4 +152,8 @@ public class ProductTailoringRemoveImageActionImpl implements ProductTailoringRe
                 .build();
     }
 
+    @Override
+    public ProductTailoringRemoveImageAction copyDeep() {
+        return ProductTailoringRemoveImageAction.deepCopy(this);
+    }
 }

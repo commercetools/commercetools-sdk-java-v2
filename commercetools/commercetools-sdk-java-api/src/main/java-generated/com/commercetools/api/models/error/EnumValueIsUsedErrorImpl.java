@@ -115,4 +115,8 @@ public class EnumValueIsUsedErrorImpl implements EnumValueIsUsedError, ModelBase
                 .build();
     }
 
+    @Override
+    public EnumValueIsUsedError copyDeep() {
+        return EnumValueIsUsedError.deepCopy(this);
+    }
 }

@@ -159,4 +159,8 @@ public class ZonePagedQueryResponseImpl implements ZonePagedQueryResponse, Model
                 .build();
     }
 
+    @Override
+    public ZonePagedQueryResponse copyDeep() {
+        return ZonePagedQueryResponse.deepCopy(this);
+    }
 }

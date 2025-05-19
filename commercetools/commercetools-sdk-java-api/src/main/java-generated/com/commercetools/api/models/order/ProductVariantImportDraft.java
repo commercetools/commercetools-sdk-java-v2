@@ -156,6 +156,8 @@ public interface ProductVariantImportDraft extends io.vrap.rmf.base.client.Draft
         return instance;
     }
 
+    public ProductVariantImportDraft copyDeep();
+
     /**
      * factory method to create a deep copy of ProductVariantImportDraft
      * @param template instance to be copied

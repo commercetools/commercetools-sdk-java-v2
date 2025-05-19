@@ -69,4 +69,8 @@ public class MyPaymentUpdateActionImpl implements MyPaymentUpdateAction, ModelBa
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action).build();
     }
 
+    @Override
+    public MyPaymentUpdateAction copyDeep() {
+        return MyPaymentUpdateAction.deepCopy(this);
+    }
 }

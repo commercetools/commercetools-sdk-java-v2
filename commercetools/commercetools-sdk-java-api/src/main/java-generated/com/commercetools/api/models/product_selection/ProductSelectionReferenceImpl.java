@@ -111,4 +111,8 @@ public class ProductSelectionReferenceImpl implements ProductSelectionReference,
                 .build();
     }
 
+    @Override
+    public ProductSelectionReference copyDeep() {
+        return ProductSelectionReference.deepCopy(this);
+    }
 }

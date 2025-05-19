@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ExtensionUpdateActionsFailed")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLExtensionUpdateActionsFailedErrorImpl.class)
 public interface GraphQLExtensionUpdateActionsFailedError extends GraphQLErrorObject {
@@ -122,6 +123,8 @@ public interface GraphQLExtensionUpdateActionsFailedError extends GraphQLErrorOb
         instance.setExtensionErrors(template.getExtensionErrors());
         return instance;
     }
+
+    public GraphQLExtensionUpdateActionsFailedError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLExtensionUpdateActionsFailedError

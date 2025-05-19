@@ -248,4 +248,8 @@ public class MatchingPriceNotFoundErrorImpl implements MatchingPriceNotFoundErro
                 .build();
     }
 
+    @Override
+    public MatchingPriceNotFoundError copyDeep() {
+        return MatchingPriceNotFoundError.deepCopy(this);
+    }
 }

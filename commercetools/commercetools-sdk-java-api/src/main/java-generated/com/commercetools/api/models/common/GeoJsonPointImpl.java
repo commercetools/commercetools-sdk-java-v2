@@ -95,4 +95,8 @@ public class GeoJsonPointImpl implements GeoJsonPoint, ModelBase {
                 .build();
     }
 
+    @Override
+    public GeoJsonPoint copyDeep() {
+        return GeoJsonPoint.deepCopy(this);
+    }
 }

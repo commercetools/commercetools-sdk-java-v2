@@ -91,4 +91,8 @@ public class MyCartRemoveItemShippingAddressActionImpl implements MyCartRemoveIt
                 .build();
     }
 
+    @Override
+    public MyCartRemoveItemShippingAddressAction copyDeep() {
+        return MyCartRemoveItemShippingAddressAction.deepCopy(this);
+    }
 }

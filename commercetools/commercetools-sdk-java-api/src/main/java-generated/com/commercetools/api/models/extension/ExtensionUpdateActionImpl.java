@@ -69,4 +69,8 @@ public class ExtensionUpdateActionImpl implements ExtensionUpdateAction, ModelBa
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action).build();
     }
 
+    @Override
+    public ExtensionUpdateAction copyDeep() {
+        return ExtensionUpdateAction.deepCopy(this);
+    }
 }

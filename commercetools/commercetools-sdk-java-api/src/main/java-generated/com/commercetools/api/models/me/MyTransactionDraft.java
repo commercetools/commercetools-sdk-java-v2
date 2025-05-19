@@ -137,6 +137,8 @@ public interface MyTransactionDraft extends com.commercetools.api.models.Customi
         return instance;
     }
 
+    public MyTransactionDraft copyDeep();
+
     /**
      * factory method to create a deep copy of MyTransactionDraft
      * @param template instance to be copied

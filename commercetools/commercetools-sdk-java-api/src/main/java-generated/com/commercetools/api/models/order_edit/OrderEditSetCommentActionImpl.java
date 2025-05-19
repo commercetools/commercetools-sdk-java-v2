@@ -91,4 +91,8 @@ public class OrderEditSetCommentActionImpl implements OrderEditSetCommentAction,
                 .build();
     }
 
+    @Override
+    public OrderEditSetCommentAction copyDeep() {
+        return OrderEditSetCommentAction.deepCopy(this);
+    }
 }

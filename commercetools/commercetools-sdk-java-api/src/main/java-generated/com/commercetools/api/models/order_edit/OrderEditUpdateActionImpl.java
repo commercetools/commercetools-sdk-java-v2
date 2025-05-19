@@ -69,4 +69,8 @@ public class OrderEditUpdateActionImpl implements OrderEditUpdateAction, ModelBa
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action).build();
     }
 
+    @Override
+    public OrderEditUpdateAction copyDeep() {
+        return OrderEditUpdateAction.deepCopy(this);
+    }
 }

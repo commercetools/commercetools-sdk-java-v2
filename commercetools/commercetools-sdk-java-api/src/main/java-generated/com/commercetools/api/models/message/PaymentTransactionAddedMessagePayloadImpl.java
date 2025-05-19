@@ -92,4 +92,8 @@ public class PaymentTransactionAddedMessagePayloadImpl implements PaymentTransac
                 .build();
     }
 
+    @Override
+    public PaymentTransactionAddedMessagePayload copyDeep() {
+        return PaymentTransactionAddedMessagePayload.deepCopy(this);
+    }
 }

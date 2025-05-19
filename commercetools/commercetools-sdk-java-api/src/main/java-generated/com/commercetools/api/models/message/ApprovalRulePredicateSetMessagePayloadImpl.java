@@ -110,4 +110,8 @@ public class ApprovalRulePredicateSetMessagePayloadImpl implements ApprovalRuleP
                 .build();
     }
 
+    @Override
+    public ApprovalRulePredicateSetMessagePayload copyDeep() {
+        return ApprovalRulePredicateSetMessagePayload.deepCopy(this);
+    }
 }

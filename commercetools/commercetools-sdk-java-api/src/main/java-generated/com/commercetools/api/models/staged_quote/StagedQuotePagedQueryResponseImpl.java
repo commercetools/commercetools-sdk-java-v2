@@ -160,4 +160,8 @@ public class StagedQuotePagedQueryResponseImpl implements StagedQuotePagedQueryR
                 .build();
     }
 
+    @Override
+    public StagedQuotePagedQueryResponse copyDeep() {
+        return StagedQuotePagedQueryResponse.deepCopy(this);
+    }
 }

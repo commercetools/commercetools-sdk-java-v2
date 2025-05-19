@@ -96,4 +96,8 @@ public class DiscountedPriceDraftImpl implements DiscountedPriceDraft, ModelBase
                 .build();
     }
 
+    @Override
+    public DiscountedPriceDraft copyDeep() {
+        return DiscountedPriceDraft.deepCopy(this);
+    }
 }

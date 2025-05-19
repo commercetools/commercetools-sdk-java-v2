@@ -134,4 +134,8 @@ public class StagedOrderSetReturnShipmentStateActionImpl implements StagedOrderS
                 .build();
     }
 
+    @Override
+    public StagedOrderSetReturnShipmentStateAction copyDeep() {
+        return StagedOrderSetReturnShipmentStateAction.deepCopy(this);
+    }
 }

@@ -91,4 +91,8 @@ public class PaymentSetAnonymousIdActionImpl implements PaymentSetAnonymousIdAct
                 .build();
     }
 
+    @Override
+    public PaymentSetAnonymousIdAction copyDeep() {
+        return PaymentSetAnonymousIdAction.deepCopy(this);
+    }
 }

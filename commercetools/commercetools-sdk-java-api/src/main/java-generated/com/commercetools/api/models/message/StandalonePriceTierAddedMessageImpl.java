@@ -294,4 +294,8 @@ public class StandalonePriceTierAddedMessageImpl implements StandalonePriceTierA
                 .build();
     }
 
+    @Override
+    public StandalonePriceTierAddedMessage copyDeep() {
+        return StandalonePriceTierAddedMessage.deepCopy(this);
+    }
 }

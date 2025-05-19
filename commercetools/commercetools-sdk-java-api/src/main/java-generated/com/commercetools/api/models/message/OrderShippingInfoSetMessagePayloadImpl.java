@@ -111,4 +111,8 @@ public class OrderShippingInfoSetMessagePayloadImpl implements OrderShippingInfo
                 .build();
     }
 
+    @Override
+    public OrderShippingInfoSetMessagePayload copyDeep() {
+        return OrderShippingInfoSetMessagePayload.deepCopy(this);
+    }
 }

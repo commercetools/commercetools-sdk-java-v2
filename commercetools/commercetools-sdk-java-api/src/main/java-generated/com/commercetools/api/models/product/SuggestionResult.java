@@ -69,6 +69,8 @@ public interface SuggestionResult {
         return instance;
     }
 
+    public SuggestionResult copyDeep();
+
     /**
      * factory method to create a deep copy of SuggestionResult
      * @param template instance to be copied

@@ -193,4 +193,8 @@ public class StagedOrderTransitionLineItemStateActionImpl
                 .build();
     }
 
+    @Override
+    public StagedOrderTransitionLineItemStateAction copyDeep() {
+        return StagedOrderTransitionLineItemStateAction.deepCopy(this);
+    }
 }

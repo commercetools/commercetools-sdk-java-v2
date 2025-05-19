@@ -91,4 +91,8 @@ public class SubscriptionSetKeyActionImpl implements SubscriptionSetKeyAction, M
                 .build();
     }
 
+    @Override
+    public SubscriptionSetKeyAction copyDeep() {
+        return SubscriptionSetKeyAction.deepCopy(this);
+    }
 }

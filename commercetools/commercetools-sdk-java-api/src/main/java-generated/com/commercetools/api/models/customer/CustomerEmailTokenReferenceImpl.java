@@ -92,4 +92,8 @@ public class CustomerEmailTokenReferenceImpl implements CustomerEmailTokenRefere
                 .build();
     }
 
+    @Override
+    public CustomerEmailTokenReference copyDeep() {
+        return CustomerEmailTokenReference.deepCopy(this);
+    }
 }

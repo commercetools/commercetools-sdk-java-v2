@@ -78,4 +78,8 @@ public class OrderSearchFilterExpressionImpl implements OrderSearchFilterExpress
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("filter", filter).build();
     }
 
+    @Override
+    public OrderSearchFilterExpression copyDeep() {
+        return OrderSearchFilterExpression.deepCopy(this);
+    }
 }

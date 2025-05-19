@@ -112,4 +112,8 @@ public class StoreChangeProductSelectionActionImpl implements StoreChangeProduct
                 .build();
     }
 
+    @Override
+    public StoreChangeProductSelectionAction copyDeep() {
+        return StoreChangeProductSelectionAction.deepCopy(this);
+    }
 }

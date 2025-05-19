@@ -94,4 +94,8 @@ public class CustomerSearchResultImpl implements CustomerSearchResult, ModelBase
                 .build();
     }
 
+    @Override
+    public CustomerSearchResult copyDeep() {
+        return CustomerSearchResult.deepCopy(this);
+    }
 }

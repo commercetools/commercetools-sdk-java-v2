@@ -102,6 +102,8 @@ public interface OrderExcerpt {
         return instance;
     }
 
+    public OrderExcerpt copyDeep();
+
     /**
      * factory method to create a deep copy of OrderExcerpt
      * @param template instance to be copied

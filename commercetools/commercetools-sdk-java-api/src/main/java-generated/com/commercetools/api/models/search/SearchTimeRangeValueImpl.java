@@ -194,4 +194,8 @@ public class SearchTimeRangeValueImpl implements SearchTimeRangeValue, ModelBase
                 .build();
     }
 
+    @Override
+    public SearchTimeRangeValue copyDeep() {
+        return SearchTimeRangeValue.deepCopy(this);
+    }
 }

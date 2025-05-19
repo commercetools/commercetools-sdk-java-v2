@@ -156,4 +156,8 @@ public class ProductTailoringChangeAssetOrderActionImpl implements ProductTailor
                 .build();
     }
 
+    @Override
+    public ProductTailoringChangeAssetOrderAction copyDeep() {
+        return ProductTailoringChangeAssetOrderAction.deepCopy(this);
+    }
 }

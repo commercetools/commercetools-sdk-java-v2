@@ -8,8 +8,6 @@ import javax.annotation.Nullable;
 import com.commercetools.api.models.common.ResourceIdentifier;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 
-import io.vrap.rmf.base.client.utils.Generated;
-
 /**
  * OrderResourceIdentifier
  *
@@ -22,7 +20,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
-@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @Deprecated
 @JsonDeserialize(as = OrderResourceIdentifierImpl.class)
 public interface OrderResourceIdentifier extends ResourceIdentifier, com.commercetools.api.models.Identifiable<Order> {

@@ -222,6 +222,8 @@ public interface CustomShippingDraft
         return instance;
     }
 
+    public CustomShippingDraft copyDeep();
+
     /**
      * factory method to create a deep copy of CustomShippingDraft
      * @param template instance to be copied

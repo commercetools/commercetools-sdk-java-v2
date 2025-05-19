@@ -143,6 +143,8 @@ public interface CategoryPagedQueryResponse extends com.commercetools.api.models
         return instance;
     }
 
+    public CategoryPagedQueryResponse copyDeep();
+
     /**
      * factory method to create a deep copy of CategoryPagedQueryResponse
      * @param template instance to be copied

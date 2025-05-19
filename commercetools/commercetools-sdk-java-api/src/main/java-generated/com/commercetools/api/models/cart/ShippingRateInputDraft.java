@@ -27,9 +27,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.cart.ClassificationShippingRateInputDraftImpl.class, name = ClassificationShippingRateInputDraft.CLASSIFICATION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.cart.ScoreShippingRateInputDraftImpl.class, name = ScoreShippingRateInputDraft.SCORE) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = ShippingRateInputDraftImpl.class, visible = true)
 @JsonDeserialize(as = ShippingRateInputDraftImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -43,6 +40,8 @@ public interface ShippingRateInputDraft {
     @JsonProperty("type")
     public String getType();
 
+    public ShippingRateInputDraft copyDeep();
+
     /**
      * factory method to create a deep copy of ShippingRateInputDraft
      * @param template instance to be copied
@@ -53,13 +52,9 @@ public interface ShippingRateInputDraft {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.cart.ClassificationShippingRateInputDraft) {
-            return com.commercetools.api.models.cart.ClassificationShippingRateInputDraft
-                    .deepCopy((com.commercetools.api.models.cart.ClassificationShippingRateInputDraft) template);
-        }
-        if (template instanceof com.commercetools.api.models.cart.ScoreShippingRateInputDraft) {
-            return com.commercetools.api.models.cart.ScoreShippingRateInputDraft
-                    .deepCopy((com.commercetools.api.models.cart.ScoreShippingRateInputDraft) template);
+
+        if (!(template instanceof ShippingRateInputDraftImpl)) {
+            return template.copyDeep();
         }
         ShippingRateInputDraftImpl instance = new ShippingRateInputDraftImpl();
         return instance;

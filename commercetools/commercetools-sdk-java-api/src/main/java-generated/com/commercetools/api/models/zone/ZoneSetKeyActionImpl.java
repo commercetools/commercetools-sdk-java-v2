@@ -91,4 +91,8 @@ public class ZoneSetKeyActionImpl implements ZoneSetKeyAction, ModelBase {
                 .build();
     }
 
+    @Override
+    public ZoneSetKeyAction copyDeep() {
+        return ZoneSetKeyAction.deepCopy(this);
+    }
 }

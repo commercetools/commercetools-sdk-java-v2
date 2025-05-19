@@ -111,4 +111,8 @@ public class FilteredFacetResultImpl implements FilteredFacetResult, ModelBase {
                 .build();
     }
 
+    @Override
+    public FilteredFacetResult copyDeep() {
+        return FilteredFacetResult.deepCopy(this);
+    }
 }

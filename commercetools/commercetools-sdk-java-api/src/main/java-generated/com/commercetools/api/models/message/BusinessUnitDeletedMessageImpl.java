@@ -273,4 +273,8 @@ public class BusinessUnitDeletedMessageImpl implements BusinessUnitDeletedMessag
                 .build();
     }
 
+    @Override
+    public BusinessUnitDeletedMessage copyDeep() {
+        return BusinessUnitDeletedMessage.deepCopy(this);
+    }
 }

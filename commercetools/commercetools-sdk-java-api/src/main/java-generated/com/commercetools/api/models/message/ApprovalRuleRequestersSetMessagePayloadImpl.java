@@ -121,4 +121,8 @@ public class ApprovalRuleRequestersSetMessagePayloadImpl implements ApprovalRule
                 .build();
     }
 
+    @Override
+    public ApprovalRuleRequestersSetMessagePayload copyDeep() {
+        return ApprovalRuleRequestersSetMessagePayload.deepCopy(this);
+    }
 }

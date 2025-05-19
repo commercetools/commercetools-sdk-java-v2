@@ -112,4 +112,8 @@ public class ProductTailoringSetMetaDescriptionActionImpl
                 .build();
     }
 
+    @Override
+    public ProductTailoringSetMetaDescriptionAction copyDeep() {
+        return ProductTailoringSetMetaDescriptionAction.deepCopy(this);
+    }
 }

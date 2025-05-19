@@ -51,4 +51,8 @@ public class SearchCompoundExpressionImpl implements SearchCompoundExpression, M
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).build();
     }
 
+    @Override
+    public SearchCompoundExpression copyDeep() {
+        return SearchCompoundExpression.deepCopy(this);
+    }
 }

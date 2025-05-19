@@ -99,4 +99,8 @@ public class UpdateImpl implements Update, ModelBase {
                 .build();
     }
 
+    @Override
+    public Update copyDeep() {
+        return Update.deepCopy(this);
+    }
 }

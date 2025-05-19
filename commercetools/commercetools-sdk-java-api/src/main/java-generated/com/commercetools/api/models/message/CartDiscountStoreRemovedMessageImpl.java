@@ -294,4 +294,8 @@ public class CartDiscountStoreRemovedMessageImpl implements CartDiscountStoreRem
                 .build();
     }
 
+    @Override
+    public CartDiscountStoreRemovedMessage copyDeep() {
+        return CartDiscountStoreRemovedMessage.deepCopy(this);
+    }
 }

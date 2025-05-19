@@ -27,13 +27,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.tax_category.TaxCategoryAddTaxRateActionImpl.class, name = TaxCategoryAddTaxRateAction.ADD_TAX_RATE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.tax_category.TaxCategoryChangeNameActionImpl.class, name = TaxCategoryChangeNameAction.CHANGE_NAME),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.tax_category.TaxCategoryRemoveTaxRateActionImpl.class, name = TaxCategoryRemoveTaxRateAction.REMOVE_TAX_RATE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.tax_category.TaxCategoryReplaceTaxRateActionImpl.class, name = TaxCategoryReplaceTaxRateAction.REPLACE_TAX_RATE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.tax_category.TaxCategorySetDescriptionActionImpl.class, name = TaxCategorySetDescriptionAction.SET_DESCRIPTION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.tax_category.TaxCategorySetKeyActionImpl.class, name = TaxCategorySetKeyAction.SET_KEY) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = TaxCategoryUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = TaxCategoryUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -48,6 +41,8 @@ public interface TaxCategoryUpdateAction
     @JsonProperty("action")
     public String getAction();
 
+    public TaxCategoryUpdateAction copyDeep();
+
     /**
      * factory method to create a deep copy of TaxCategoryUpdateAction
      * @param template instance to be copied
@@ -58,29 +53,9 @@ public interface TaxCategoryUpdateAction
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.tax_category.TaxCategoryAddTaxRateAction) {
-            return com.commercetools.api.models.tax_category.TaxCategoryAddTaxRateAction
-                    .deepCopy((com.commercetools.api.models.tax_category.TaxCategoryAddTaxRateAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.tax_category.TaxCategoryChangeNameAction) {
-            return com.commercetools.api.models.tax_category.TaxCategoryChangeNameAction
-                    .deepCopy((com.commercetools.api.models.tax_category.TaxCategoryChangeNameAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.tax_category.TaxCategoryRemoveTaxRateAction) {
-            return com.commercetools.api.models.tax_category.TaxCategoryRemoveTaxRateAction
-                    .deepCopy((com.commercetools.api.models.tax_category.TaxCategoryRemoveTaxRateAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.tax_category.TaxCategoryReplaceTaxRateAction) {
-            return com.commercetools.api.models.tax_category.TaxCategoryReplaceTaxRateAction
-                    .deepCopy((com.commercetools.api.models.tax_category.TaxCategoryReplaceTaxRateAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.tax_category.TaxCategorySetDescriptionAction) {
-            return com.commercetools.api.models.tax_category.TaxCategorySetDescriptionAction
-                    .deepCopy((com.commercetools.api.models.tax_category.TaxCategorySetDescriptionAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.tax_category.TaxCategorySetKeyAction) {
-            return com.commercetools.api.models.tax_category.TaxCategorySetKeyAction
-                    .deepCopy((com.commercetools.api.models.tax_category.TaxCategorySetKeyAction) template);
+
+        if (!(template instanceof TaxCategoryUpdateActionImpl)) {
+            return template.copyDeep();
         }
         TaxCategoryUpdateActionImpl instance = new TaxCategoryUpdateActionImpl();
         return instance;

@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("Platform")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PlatformFormatImpl.class)
 public interface PlatformFormat extends DeliveryFormat {
@@ -50,6 +51,8 @@ public interface PlatformFormat extends DeliveryFormat {
         PlatformFormatImpl instance = new PlatformFormatImpl();
         return instance;
     }
+
+    public PlatformFormat copyDeep();
 
     /**
      * factory method to create a deep copy of PlatformFormat

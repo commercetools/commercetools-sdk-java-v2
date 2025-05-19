@@ -114,4 +114,8 @@ public class ExternalOAuthFailedErrorImpl implements ExternalOAuthFailedError, M
                 .build();
     }
 
+    @Override
+    public ExternalOAuthFailedError copyDeep() {
+        return ExternalOAuthFailedError.deepCopy(this);
+    }
 }

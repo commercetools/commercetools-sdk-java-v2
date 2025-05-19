@@ -188,6 +188,8 @@ public interface AttributeDefinitionDraft extends io.vrap.rmf.base.client.Draft<
         return instance;
     }
 
+    public AttributeDefinitionDraft copyDeep();
+
     /**
      * factory method to create a deep copy of AttributeDefinitionDraft
      * @param template instance to be copied

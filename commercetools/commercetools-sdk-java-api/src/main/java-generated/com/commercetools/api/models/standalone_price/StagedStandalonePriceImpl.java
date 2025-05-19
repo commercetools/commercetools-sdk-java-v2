@@ -95,4 +95,8 @@ public class StagedStandalonePriceImpl implements StagedStandalonePrice, ModelBa
                 .build();
     }
 
+    @Override
+    public StagedStandalonePrice copyDeep() {
+        return StagedStandalonePrice.deepCopy(this);
+    }
 }

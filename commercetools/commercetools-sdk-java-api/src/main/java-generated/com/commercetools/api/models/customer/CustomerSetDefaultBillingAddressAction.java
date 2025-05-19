@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setDefaultBillingAddress")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerSetDefaultBillingAddressActionImpl.class)
 public interface CustomerSetDefaultBillingAddressAction extends CustomerUpdateAction {
@@ -82,6 +83,8 @@ public interface CustomerSetDefaultBillingAddressAction extends CustomerUpdateAc
         instance.setAddressKey(template.getAddressKey());
         return instance;
     }
+
+    public CustomerSetDefaultBillingAddressAction copyDeep();
 
     /**
      * factory method to create a deep copy of CustomerSetDefaultBillingAddressAction

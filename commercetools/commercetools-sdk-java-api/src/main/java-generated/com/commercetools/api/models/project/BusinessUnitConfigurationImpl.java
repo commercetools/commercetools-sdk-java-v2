@@ -101,4 +101,8 @@ public class BusinessUnitConfigurationImpl implements BusinessUnitConfiguration,
                 .build();
     }
 
+    @Override
+    public BusinessUnitConfiguration copyDeep() {
+        return BusinessUnitConfiguration.deepCopy(this);
+    }
 }

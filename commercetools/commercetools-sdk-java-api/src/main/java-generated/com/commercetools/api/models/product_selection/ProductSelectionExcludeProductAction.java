@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("excludeProduct")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSelectionExcludeProductActionImpl.class)
 public interface ProductSelectionExcludeProductAction extends ProductSelectionUpdateAction {
@@ -89,6 +90,8 @@ public interface ProductSelectionExcludeProductAction extends ProductSelectionUp
         instance.setVariantExclusion(template.getVariantExclusion());
         return instance;
     }
+
+    public ProductSelectionExcludeProductAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductSelectionExcludeProductAction

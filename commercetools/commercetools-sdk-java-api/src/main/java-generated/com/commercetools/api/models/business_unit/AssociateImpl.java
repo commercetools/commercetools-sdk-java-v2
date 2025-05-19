@@ -103,4 +103,8 @@ public class AssociateImpl implements Associate, ModelBase {
                 .build();
     }
 
+    @Override
+    public Associate copyDeep() {
+        return Associate.deepCopy(this);
+    }
 }

@@ -62,4 +62,8 @@ public class CustomFieldStringTypeImpl implements CustomFieldStringType, ModelBa
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("name", name).build();
     }
 
+    @Override
+    public CustomFieldStringType copyDeep() {
+        return CustomFieldStringType.deepCopy(this);
+    }
 }

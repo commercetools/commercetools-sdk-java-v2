@@ -92,4 +92,8 @@ public class StoreRemoveSupplyChannelActionImpl implements StoreRemoveSupplyChan
                 .build();
     }
 
+    @Override
+    public StoreRemoveSupplyChannelAction copyDeep() {
+        return StoreRemoveSupplyChannelAction.deepCopy(this);
+    }
 }

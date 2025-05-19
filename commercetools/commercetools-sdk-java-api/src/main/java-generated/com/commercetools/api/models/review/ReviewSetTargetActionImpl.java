@@ -104,4 +104,8 @@ public class ReviewSetTargetActionImpl implements ReviewSetTargetAction, ModelBa
                 .build();
     }
 
+    @Override
+    public ReviewSetTargetAction copyDeep() {
+        return ReviewSetTargetAction.deepCopy(this);
+    }
 }

@@ -26,6 +26,7 @@ import jakarta.validation.Valid;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setCustomLineItemTaxRate")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartSetCustomLineItemTaxRateActionImpl.class)
 public interface CartSetCustomLineItemTaxRateAction extends CartUpdateAction {
@@ -116,6 +117,8 @@ public interface CartSetCustomLineItemTaxRateAction extends CartUpdateAction {
         instance.setShippingKey(template.getShippingKey());
         return instance;
     }
+
+    public CartSetCustomLineItemTaxRateAction copyDeep();
 
     /**
      * factory method to create a deep copy of CartSetCustomLineItemTaxRateAction

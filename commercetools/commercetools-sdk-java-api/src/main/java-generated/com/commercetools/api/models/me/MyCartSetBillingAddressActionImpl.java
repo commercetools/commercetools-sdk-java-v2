@@ -92,4 +92,8 @@ public class MyCartSetBillingAddressActionImpl implements MyCartSetBillingAddres
                 .build();
     }
 
+    @Override
+    public MyCartSetBillingAddressAction copyDeep() {
+        return MyCartSetBillingAddressAction.deepCopy(this);
+    }
 }

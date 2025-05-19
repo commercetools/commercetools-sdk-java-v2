@@ -135,4 +135,8 @@ public class CartChangeCustomLineItemQuantityActionImpl implements CartChangeCus
                 .build();
     }
 
+    @Override
+    public CartChangeCustomLineItemQuantityAction copyDeep() {
+        return CartChangeCustomLineItemQuantityAction.deepCopy(this);
+    }
 }

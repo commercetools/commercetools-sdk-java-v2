@@ -122,4 +122,8 @@ public class VariantValuesImpl implements VariantValues, ModelBase {
                 .build();
     }
 
+    @Override
+    public VariantValues copyDeep() {
+        return VariantValues.deepCopy(this);
+    }
 }

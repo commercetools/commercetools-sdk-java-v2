@@ -134,4 +134,8 @@ public class ParcelAddedToDeliveryMessagePayloadImpl implements ParcelAddedToDel
                 .build();
     }
 
+    @Override
+    public ParcelAddedToDeliveryMessagePayload copyDeep() {
+        return ParcelAddedToDeliveryMessagePayload.deepCopy(this);
+    }
 }

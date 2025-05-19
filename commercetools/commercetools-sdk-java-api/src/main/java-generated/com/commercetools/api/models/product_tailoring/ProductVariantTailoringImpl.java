@@ -151,4 +151,8 @@ public class ProductVariantTailoringImpl implements ProductVariantTailoring, Mod
                 .build();
     }
 
+    @Override
+    public ProductVariantTailoring copyDeep() {
+        return ProductVariantTailoring.deepCopy(this);
+    }
 }

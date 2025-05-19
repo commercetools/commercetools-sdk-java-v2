@@ -74,4 +74,8 @@ public class OrderSearchExactExpressionImpl implements OrderSearchExactExpressio
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("exact", exact).build();
     }
 
+    @Override
+    public OrderSearchExactExpression copyDeep() {
+        return OrderSearchExactExpression.deepCopy(this);
+    }
 }

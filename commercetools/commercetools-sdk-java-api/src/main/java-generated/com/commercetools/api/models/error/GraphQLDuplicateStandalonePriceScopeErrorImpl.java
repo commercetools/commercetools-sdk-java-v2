@@ -261,4 +261,8 @@ public class GraphQLDuplicateStandalonePriceScopeErrorImpl
                 .build();
     }
 
+    @Override
+    public GraphQLDuplicateStandalonePriceScopeError copyDeep() {
+        return GraphQLDuplicateStandalonePriceScopeError.deepCopy(this);
+    }
 }

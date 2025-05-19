@@ -67,4 +67,8 @@ public class ProductUnpublishActionImpl implements ProductUnpublishAction, Model
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action).build();
     }
 
+    @Override
+    public ProductUnpublishAction copyDeep() {
+        return ProductUnpublishAction.deepCopy(this);
+    }
 }

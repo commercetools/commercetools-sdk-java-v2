@@ -136,4 +136,8 @@ public class BaseResourceImpl implements BaseResource, ModelBase {
                 .build();
     }
 
+    @Override
+    public BaseResource copyDeep() {
+        return BaseResource.deepCopy(this);
+    }
 }

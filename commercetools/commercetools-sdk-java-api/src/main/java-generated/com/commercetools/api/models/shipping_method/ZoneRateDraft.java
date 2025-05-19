@@ -95,6 +95,8 @@ public interface ZoneRateDraft extends io.vrap.rmf.base.client.Draft<ZoneRateDra
         return instance;
     }
 
+    public ZoneRateDraft copyDeep();
+
     /**
      * factory method to create a deep copy of ZoneRateDraft
      * @param template instance to be copied

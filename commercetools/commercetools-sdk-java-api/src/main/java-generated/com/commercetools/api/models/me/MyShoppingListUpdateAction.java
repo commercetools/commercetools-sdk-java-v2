@@ -26,26 +26,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyShoppingListAddLineItemActionImpl.class, name = MyShoppingListAddLineItemAction.ADD_LINE_ITEM),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyShoppingListAddTextLineItemActionImpl.class, name = MyShoppingListAddTextLineItemAction.ADD_TEXT_LINE_ITEM),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyShoppingListChangeLineItemQuantityActionImpl.class, name = MyShoppingListChangeLineItemQuantityAction.CHANGE_LINE_ITEM_QUANTITY),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyShoppingListChangeLineItemsOrderActionImpl.class, name = MyShoppingListChangeLineItemsOrderAction.CHANGE_LINE_ITEMS_ORDER),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyShoppingListChangeNameActionImpl.class, name = MyShoppingListChangeNameAction.CHANGE_NAME),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyShoppingListChangeTextLineItemNameActionImpl.class, name = MyShoppingListChangeTextLineItemNameAction.CHANGE_TEXT_LINE_ITEM_NAME),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyShoppingListChangeTextLineItemQuantityActionImpl.class, name = MyShoppingListChangeTextLineItemQuantityAction.CHANGE_TEXT_LINE_ITEM_QUANTITY),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyShoppingListChangeTextLineItemsOrderActionImpl.class, name = MyShoppingListChangeTextLineItemsOrderAction.CHANGE_TEXT_LINE_ITEMS_ORDER),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyShoppingListRemoveLineItemActionImpl.class, name = MyShoppingListRemoveLineItemAction.REMOVE_LINE_ITEM),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyShoppingListRemoveTextLineItemActionImpl.class, name = MyShoppingListRemoveTextLineItemAction.REMOVE_TEXT_LINE_ITEM),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyShoppingListSetCustomFieldActionImpl.class, name = MyShoppingListSetCustomFieldAction.SET_CUSTOM_FIELD),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyShoppingListSetCustomTypeActionImpl.class, name = MyShoppingListSetCustomTypeAction.SET_CUSTOM_TYPE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyShoppingListSetDeleteDaysAfterLastModificationActionImpl.class, name = MyShoppingListSetDeleteDaysAfterLastModificationAction.SET_DELETE_DAYS_AFTER_LAST_MODIFICATION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyShoppingListSetDescriptionActionImpl.class, name = MyShoppingListSetDescriptionAction.SET_DESCRIPTION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyShoppingListSetLineItemCustomFieldActionImpl.class, name = MyShoppingListSetLineItemCustomFieldAction.SET_LINE_ITEM_CUSTOM_FIELD),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyShoppingListSetLineItemCustomTypeActionImpl.class, name = MyShoppingListSetLineItemCustomTypeAction.SET_LINE_ITEM_CUSTOM_TYPE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyShoppingListSetTextLineItemCustomFieldActionImpl.class, name = MyShoppingListSetTextLineItemCustomFieldAction.SET_TEXT_LINE_ITEM_CUSTOM_FIELD),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyShoppingListSetTextLineItemCustomTypeActionImpl.class, name = MyShoppingListSetTextLineItemCustomTypeAction.SET_TEXT_LINE_ITEM_CUSTOM_TYPE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.me.MyShoppingListSetTextLineItemDescriptionActionImpl.class, name = MyShoppingListSetTextLineItemDescriptionAction.SET_TEXT_LINE_ITEM_DESCRIPTION) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = MyShoppingListUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = MyShoppingListUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -60,6 +40,8 @@ public interface MyShoppingListUpdateAction
     @JsonProperty("action")
     public String getAction();
 
+    public MyShoppingListUpdateAction copyDeep();
+
     /**
      * factory method to create a deep copy of MyShoppingListUpdateAction
      * @param template instance to be copied
@@ -70,81 +52,9 @@ public interface MyShoppingListUpdateAction
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.me.MyShoppingListAddLineItemAction) {
-            return com.commercetools.api.models.me.MyShoppingListAddLineItemAction
-                    .deepCopy((com.commercetools.api.models.me.MyShoppingListAddLineItemAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyShoppingListAddTextLineItemAction) {
-            return com.commercetools.api.models.me.MyShoppingListAddTextLineItemAction
-                    .deepCopy((com.commercetools.api.models.me.MyShoppingListAddTextLineItemAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyShoppingListChangeLineItemQuantityAction) {
-            return com.commercetools.api.models.me.MyShoppingListChangeLineItemQuantityAction
-                    .deepCopy((com.commercetools.api.models.me.MyShoppingListChangeLineItemQuantityAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyShoppingListChangeLineItemsOrderAction) {
-            return com.commercetools.api.models.me.MyShoppingListChangeLineItemsOrderAction
-                    .deepCopy((com.commercetools.api.models.me.MyShoppingListChangeLineItemsOrderAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyShoppingListChangeNameAction) {
-            return com.commercetools.api.models.me.MyShoppingListChangeNameAction
-                    .deepCopy((com.commercetools.api.models.me.MyShoppingListChangeNameAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyShoppingListChangeTextLineItemNameAction) {
-            return com.commercetools.api.models.me.MyShoppingListChangeTextLineItemNameAction
-                    .deepCopy((com.commercetools.api.models.me.MyShoppingListChangeTextLineItemNameAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyShoppingListChangeTextLineItemQuantityAction) {
-            return com.commercetools.api.models.me.MyShoppingListChangeTextLineItemQuantityAction.deepCopy(
-                (com.commercetools.api.models.me.MyShoppingListChangeTextLineItemQuantityAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyShoppingListChangeTextLineItemsOrderAction) {
-            return com.commercetools.api.models.me.MyShoppingListChangeTextLineItemsOrderAction
-                    .deepCopy((com.commercetools.api.models.me.MyShoppingListChangeTextLineItemsOrderAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyShoppingListRemoveLineItemAction) {
-            return com.commercetools.api.models.me.MyShoppingListRemoveLineItemAction
-                    .deepCopy((com.commercetools.api.models.me.MyShoppingListRemoveLineItemAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyShoppingListRemoveTextLineItemAction) {
-            return com.commercetools.api.models.me.MyShoppingListRemoveTextLineItemAction
-                    .deepCopy((com.commercetools.api.models.me.MyShoppingListRemoveTextLineItemAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyShoppingListSetCustomFieldAction) {
-            return com.commercetools.api.models.me.MyShoppingListSetCustomFieldAction
-                    .deepCopy((com.commercetools.api.models.me.MyShoppingListSetCustomFieldAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyShoppingListSetCustomTypeAction) {
-            return com.commercetools.api.models.me.MyShoppingListSetCustomTypeAction
-                    .deepCopy((com.commercetools.api.models.me.MyShoppingListSetCustomTypeAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyShoppingListSetDeleteDaysAfterLastModificationAction) {
-            return com.commercetools.api.models.me.MyShoppingListSetDeleteDaysAfterLastModificationAction.deepCopy(
-                (com.commercetools.api.models.me.MyShoppingListSetDeleteDaysAfterLastModificationAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyShoppingListSetDescriptionAction) {
-            return com.commercetools.api.models.me.MyShoppingListSetDescriptionAction
-                    .deepCopy((com.commercetools.api.models.me.MyShoppingListSetDescriptionAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyShoppingListSetLineItemCustomFieldAction) {
-            return com.commercetools.api.models.me.MyShoppingListSetLineItemCustomFieldAction
-                    .deepCopy((com.commercetools.api.models.me.MyShoppingListSetLineItemCustomFieldAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyShoppingListSetLineItemCustomTypeAction) {
-            return com.commercetools.api.models.me.MyShoppingListSetLineItemCustomTypeAction
-                    .deepCopy((com.commercetools.api.models.me.MyShoppingListSetLineItemCustomTypeAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyShoppingListSetTextLineItemCustomFieldAction) {
-            return com.commercetools.api.models.me.MyShoppingListSetTextLineItemCustomFieldAction.deepCopy(
-                (com.commercetools.api.models.me.MyShoppingListSetTextLineItemCustomFieldAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyShoppingListSetTextLineItemCustomTypeAction) {
-            return com.commercetools.api.models.me.MyShoppingListSetTextLineItemCustomTypeAction
-                    .deepCopy((com.commercetools.api.models.me.MyShoppingListSetTextLineItemCustomTypeAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.me.MyShoppingListSetTextLineItemDescriptionAction) {
-            return com.commercetools.api.models.me.MyShoppingListSetTextLineItemDescriptionAction.deepCopy(
-                (com.commercetools.api.models.me.MyShoppingListSetTextLineItemDescriptionAction) template);
+
+        if (!(template instanceof MyShoppingListUpdateActionImpl)) {
+            return template.copyDeep();
         }
         MyShoppingListUpdateActionImpl instance = new MyShoppingListUpdateActionImpl();
         return instance;

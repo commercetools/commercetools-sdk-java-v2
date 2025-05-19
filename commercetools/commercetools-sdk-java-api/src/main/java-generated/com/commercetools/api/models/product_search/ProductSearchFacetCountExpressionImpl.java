@@ -74,4 +74,8 @@ public class ProductSearchFacetCountExpressionImpl implements ProductSearchFacet
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("count", count).build();
     }
 
+    @Override
+    public ProductSearchFacetCountExpression copyDeep() {
+        return ProductSearchFacetCountExpression.deepCopy(this);
+    }
 }

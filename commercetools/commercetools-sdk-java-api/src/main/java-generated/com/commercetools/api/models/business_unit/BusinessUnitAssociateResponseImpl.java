@@ -154,4 +154,8 @@ public class BusinessUnitAssociateResponseImpl implements BusinessUnitAssociateR
                 .build();
     }
 
+    @Override
+    public BusinessUnitAssociateResponse copyDeep() {
+        return BusinessUnitAssociateResponse.deepCopy(this);
+    }
 }

@@ -111,4 +111,8 @@ public class CategoryReferenceImpl implements CategoryReference, ModelBase {
                 .build();
     }
 
+    @Override
+    public CategoryReference copyDeep() {
+        return CategoryReference.deepCopy(this);
+    }
 }

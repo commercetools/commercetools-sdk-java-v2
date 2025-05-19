@@ -111,4 +111,8 @@ public class ProductSlugChangedMessagePayloadImpl implements ProductSlugChangedM
                 .build();
     }
 
+    @Override
+    public ProductSlugChangedMessagePayload copyDeep() {
+        return ProductSlugChangedMessagePayload.deepCopy(this);
+    }
 }

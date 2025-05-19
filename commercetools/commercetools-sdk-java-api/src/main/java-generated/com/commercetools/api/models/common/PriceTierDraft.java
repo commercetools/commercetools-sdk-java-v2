@@ -88,6 +88,8 @@ public interface PriceTierDraft extends io.vrap.rmf.base.client.Draft<PriceTierD
         return instance;
     }
 
+    public PriceTierDraft copyDeep();
+
     /**
      * factory method to create a deep copy of PriceTierDraft
      * @param template instance to be copied

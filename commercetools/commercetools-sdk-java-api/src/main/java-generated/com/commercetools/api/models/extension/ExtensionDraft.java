@@ -129,6 +129,8 @@ public interface ExtensionDraft
         return instance;
     }
 
+    public ExtensionDraft copyDeep();
+
     /**
      * factory method to create a deep copy of ExtensionDraft
      * @param template instance to be copied

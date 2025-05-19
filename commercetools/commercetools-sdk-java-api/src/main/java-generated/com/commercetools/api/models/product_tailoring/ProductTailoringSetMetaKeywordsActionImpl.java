@@ -111,4 +111,8 @@ public class ProductTailoringSetMetaKeywordsActionImpl implements ProductTailori
                 .build();
     }
 
+    @Override
+    public ProductTailoringSetMetaKeywordsAction copyDeep() {
+        return ProductTailoringSetMetaKeywordsAction.deepCopy(this);
+    }
 }

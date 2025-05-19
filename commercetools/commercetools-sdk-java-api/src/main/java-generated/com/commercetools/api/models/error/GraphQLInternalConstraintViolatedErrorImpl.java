@@ -96,4 +96,8 @@ public class GraphQLInternalConstraintViolatedErrorImpl implements GraphQLIntern
                 .build();
     }
 
+    @Override
+    public GraphQLInternalConstraintViolatedError copyDeep() {
+        return GraphQLInternalConstraintViolatedError.deepCopy(this);
+    }
 }

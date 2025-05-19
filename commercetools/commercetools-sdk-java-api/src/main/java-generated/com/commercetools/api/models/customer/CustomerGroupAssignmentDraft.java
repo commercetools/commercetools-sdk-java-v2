@@ -68,6 +68,8 @@ public interface CustomerGroupAssignmentDraft extends io.vrap.rmf.base.client.Dr
         return instance;
     }
 
+    public CustomerGroupAssignmentDraft copyDeep();
+
     /**
      * factory method to create a deep copy of CustomerGroupAssignmentDraft
      * @param template instance to be copied

@@ -154,4 +154,8 @@ public class OrderSetDeliveryCustomFieldActionImpl implements OrderSetDeliveryCu
                 .build();
     }
 
+    @Override
+    public OrderSetDeliveryCustomFieldAction copyDeep() {
+        return OrderSetDeliveryCustomFieldAction.deepCopy(this);
+    }
 }

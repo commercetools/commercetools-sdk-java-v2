@@ -138,4 +138,8 @@ public class ProductVariantDeletedMessagePayloadImpl implements ProductVariantDe
                 .build();
     }
 
+    @Override
+    public ProductVariantDeletedMessagePayload copyDeep() {
+        return ProductVariantDeletedMessagePayload.deepCopy(this);
+    }
 }

@@ -242,6 +242,8 @@ public interface StoreDraft extends com.commercetools.api.models.CustomizableDra
         return instance;
     }
 
+    public StoreDraft copyDeep();
+
     /**
      * factory method to create a deep copy of StoreDraft
      * @param template instance to be copied

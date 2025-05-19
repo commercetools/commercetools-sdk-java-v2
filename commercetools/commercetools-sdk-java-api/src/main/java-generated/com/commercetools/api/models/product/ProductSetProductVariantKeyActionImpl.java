@@ -152,4 +152,8 @@ public class ProductSetProductVariantKeyActionImpl implements ProductSetProductV
                 .build();
     }
 
+    @Override
+    public ProductSetProductVariantKeyAction copyDeep() {
+        return ProductSetProductVariantKeyAction.deepCopy(this);
+    }
 }

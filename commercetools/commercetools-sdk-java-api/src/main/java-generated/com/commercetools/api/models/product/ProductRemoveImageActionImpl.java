@@ -151,4 +151,8 @@ public class ProductRemoveImageActionImpl implements ProductRemoveImageAction, M
                 .build();
     }
 
+    @Override
+    public ProductRemoveImageAction copyDeep() {
+        return ProductRemoveImageAction.deepCopy(this);
+    }
 }

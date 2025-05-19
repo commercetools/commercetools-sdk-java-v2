@@ -133,4 +133,8 @@ public class CentPrecisionMoneyDraftImpl implements CentPrecisionMoneyDraft, Mod
                 .build();
     }
 
+    @Override
+    public CentPrecisionMoneyDraft copyDeep() {
+        return CentPrecisionMoneyDraft.deepCopy(this);
+    }
 }

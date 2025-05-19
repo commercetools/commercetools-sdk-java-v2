@@ -144,6 +144,8 @@ public interface ShoppingListPagedQueryResponse
         return instance;
     }
 
+    public ShoppingListPagedQueryResponse copyDeep();
+
     /**
      * factory method to create a deep copy of ShoppingListPagedQueryResponse
      * @param template instance to be copied

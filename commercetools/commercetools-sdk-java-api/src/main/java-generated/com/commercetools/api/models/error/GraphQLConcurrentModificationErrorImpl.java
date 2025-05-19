@@ -115,4 +115,8 @@ public class GraphQLConcurrentModificationErrorImpl implements GraphQLConcurrent
                 .build();
     }
 
+    @Override
+    public GraphQLConcurrentModificationError copyDeep() {
+        return GraphQLConcurrentModificationError.deepCopy(this);
+    }
 }

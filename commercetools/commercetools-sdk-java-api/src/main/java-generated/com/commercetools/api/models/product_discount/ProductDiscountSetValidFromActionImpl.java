@@ -91,4 +91,8 @@ public class ProductDiscountSetValidFromActionImpl implements ProductDiscountSet
                 .build();
     }
 
+    @Override
+    public ProductDiscountSetValidFromAction copyDeep() {
+        return ProductDiscountSetValidFromAction.deepCopy(this);
+    }
 }

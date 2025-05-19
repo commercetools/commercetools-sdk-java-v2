@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeCountries")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProjectChangeCountriesActionImpl.class)
 public interface ProjectChangeCountriesAction extends ProjectUpdateAction {
@@ -77,6 +78,8 @@ public interface ProjectChangeCountriesAction extends ProjectUpdateAction {
         instance.setCountries(template.getCountries());
         return instance;
     }
+
+    public ProjectChangeCountriesAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProjectChangeCountriesAction

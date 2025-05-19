@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeLineItemsOrder")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyCartChangeLineItemsOrderActionImpl.class)
 public interface MyCartChangeLineItemsOrderAction extends MyCartUpdateAction {
@@ -77,6 +78,8 @@ public interface MyCartChangeLineItemsOrderAction extends MyCartUpdateAction {
         instance.setLineItemOrder(template.getLineItemOrder());
         return instance;
     }
+
+    public MyCartChangeLineItemsOrderAction copyDeep();
 
     /**
      * factory method to create a deep copy of MyCartChangeLineItemsOrderAction

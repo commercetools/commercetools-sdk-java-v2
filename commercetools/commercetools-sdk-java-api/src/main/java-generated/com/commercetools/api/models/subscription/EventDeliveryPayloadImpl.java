@@ -172,4 +172,8 @@ public class EventDeliveryPayloadImpl implements EventDeliveryPayload, ModelBase
                 .build();
     }
 
+    @Override
+    public EventDeliveryPayload copyDeep() {
+        return EventDeliveryPayload.deepCopy(this);
+    }
 }

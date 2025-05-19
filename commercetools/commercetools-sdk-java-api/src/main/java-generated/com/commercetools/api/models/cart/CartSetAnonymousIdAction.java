@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setAnonymousId")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartSetAnonymousIdActionImpl.class)
 public interface CartSetAnonymousIdAction extends CartUpdateAction {
@@ -66,6 +67,8 @@ public interface CartSetAnonymousIdAction extends CartUpdateAction {
         instance.setAnonymousId(template.getAnonymousId());
         return instance;
     }
+
+    public CartSetAnonymousIdAction copyDeep();
 
     /**
      * factory method to create a deep copy of CartSetAnonymousIdAction

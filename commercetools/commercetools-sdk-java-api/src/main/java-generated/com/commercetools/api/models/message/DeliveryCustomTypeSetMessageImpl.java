@@ -333,4 +333,8 @@ public class DeliveryCustomTypeSetMessageImpl implements DeliveryCustomTypeSetMe
                 .build();
     }
 
+    @Override
+    public DeliveryCustomTypeSetMessage copyDeep() {
+        return DeliveryCustomTypeSetMessage.deepCopy(this);
+    }
 }

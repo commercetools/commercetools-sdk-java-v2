@@ -32,6 +32,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("StandalonePriceValidFromAndUntilSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StandalonePriceValidFromAndUntilSetMessageImpl.class)
 public interface StandalonePriceValidFromAndUntilSetMessage extends Message {
@@ -133,6 +134,8 @@ public interface StandalonePriceValidFromAndUntilSetMessage extends Message {
         instance.setPreviousValidUntil(template.getPreviousValidUntil());
         return instance;
     }
+
+    public StandalonePriceValidFromAndUntilSetMessage copyDeep();
 
     /**
      * factory method to create a deep copy of StandalonePriceValidFromAndUntilSetMessage

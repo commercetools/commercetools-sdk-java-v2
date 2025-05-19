@@ -295,4 +295,8 @@ public class BusinessUnitDefaultBillingAddressSetMessageImpl
                 .build();
     }
 
+    @Override
+    public BusinessUnitDefaultBillingAddressSetMessage copyDeep() {
+        return BusinessUnitDefaultBillingAddressSetMessage.deepCopy(this);
+    }
 }

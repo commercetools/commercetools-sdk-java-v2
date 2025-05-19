@@ -111,4 +111,8 @@ public class PaymentAddInterfaceInteractionActionImpl implements PaymentAddInter
                 .build();
     }
 
+    @Override
+    public PaymentAddInterfaceInteractionAction copyDeep() {
+        return PaymentAddInterfaceInteractionAction.deepCopy(this);
+    }
 }

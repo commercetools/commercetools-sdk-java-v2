@@ -111,4 +111,8 @@ public class DeliveryRemovedMessagePayloadImpl implements DeliveryRemovedMessage
                 .build();
     }
 
+    @Override
+    public DeliveryRemovedMessagePayload copyDeep() {
+        return DeliveryRemovedMessagePayload.deepCopy(this);
+    }
 }

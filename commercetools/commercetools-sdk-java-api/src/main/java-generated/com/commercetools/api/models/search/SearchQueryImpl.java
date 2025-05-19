@@ -51,4 +51,8 @@ public class SearchQueryImpl implements SearchQuery, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).build();
     }
 
+    @Override
+    public SearchQuery copyDeep() {
+        return SearchQuery.deepCopy(this);
+    }
 }

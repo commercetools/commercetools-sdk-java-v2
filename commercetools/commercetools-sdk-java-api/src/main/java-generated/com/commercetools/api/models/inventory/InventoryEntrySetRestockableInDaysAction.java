@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setRestockableInDays")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = InventoryEntrySetRestockableInDaysActionImpl.class)
 public interface InventoryEntrySetRestockableInDaysAction extends InventoryEntryUpdateAction {
@@ -66,6 +67,8 @@ public interface InventoryEntrySetRestockableInDaysAction extends InventoryEntry
         instance.setRestockableInDays(template.getRestockableInDays());
         return instance;
     }
+
+    public InventoryEntrySetRestockableInDaysAction copyDeep();
 
     /**
      * factory method to create a deep copy of InventoryEntrySetRestockableInDaysAction

@@ -115,4 +115,8 @@ public class QueryTimedOutErrorImpl implements QueryTimedOutError, ModelBase {
                 .build();
     }
 
+    @Override
+    public QueryTimedOutError copyDeep() {
+        return QueryTimedOutError.deepCopy(this);
+    }
 }

@@ -91,4 +91,8 @@ public class ShippingMethodChangeNameActionImpl implements ShippingMethodChangeN
                 .build();
     }
 
+    @Override
+    public ShippingMethodChangeNameAction copyDeep() {
+        return ShippingMethodChangeNameAction.deepCopy(this);
+    }
 }

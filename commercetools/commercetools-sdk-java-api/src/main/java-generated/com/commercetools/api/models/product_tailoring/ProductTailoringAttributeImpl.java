@@ -103,4 +103,8 @@ public class ProductTailoringAttributeImpl implements ProductTailoringAttribute,
                 .build();
     }
 
+    @Override
+    public ProductTailoringAttribute copyDeep() {
+        return ProductTailoringAttribute.deepCopy(this);
+    }
 }

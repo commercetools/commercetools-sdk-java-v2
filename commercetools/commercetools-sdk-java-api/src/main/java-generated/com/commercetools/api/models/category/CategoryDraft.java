@@ -260,6 +260,8 @@ public interface CategoryDraft extends com.commercetools.api.models.Customizable
         return instance;
     }
 
+    public CategoryDraft copyDeep();
+
     /**
      * factory method to create a deep copy of CategoryDraft
      * @param template instance to be copied

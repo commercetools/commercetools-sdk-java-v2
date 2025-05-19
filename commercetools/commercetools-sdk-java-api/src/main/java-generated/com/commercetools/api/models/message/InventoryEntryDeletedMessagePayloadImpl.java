@@ -110,4 +110,8 @@ public class InventoryEntryDeletedMessagePayloadImpl implements InventoryEntryDe
                 .build();
     }
 
+    @Override
+    public InventoryEntryDeletedMessagePayload copyDeep() {
+        return InventoryEntryDeletedMessagePayload.deepCopy(this);
+    }
 }

@@ -96,4 +96,8 @@ public class GraphQLResourceSizeLimitExceededErrorImpl implements GraphQLResourc
                 .build();
     }
 
+    @Override
+    public GraphQLResourceSizeLimitExceededError copyDeep() {
+        return GraphQLResourceSizeLimitExceededError.deepCopy(this);
+    }
 }

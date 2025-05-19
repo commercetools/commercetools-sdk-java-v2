@@ -91,4 +91,8 @@ public class CustomerDateOfBirthSetMessagePayloadImpl implements CustomerDateOfB
                 .build();
     }
 
+    @Override
+    public CustomerDateOfBirthSetMessagePayload copyDeep() {
+        return CustomerDateOfBirthSetMessagePayload.deepCopy(this);
+    }
 }

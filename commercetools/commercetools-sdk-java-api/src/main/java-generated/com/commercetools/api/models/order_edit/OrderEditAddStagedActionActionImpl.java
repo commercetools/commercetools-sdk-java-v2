@@ -92,4 +92,8 @@ public class OrderEditAddStagedActionActionImpl implements OrderEditAddStagedAct
                 .build();
     }
 
+    @Override
+    public OrderEditAddStagedActionAction copyDeep() {
+        return OrderEditAddStagedActionAction.deepCopy(this);
+    }
 }

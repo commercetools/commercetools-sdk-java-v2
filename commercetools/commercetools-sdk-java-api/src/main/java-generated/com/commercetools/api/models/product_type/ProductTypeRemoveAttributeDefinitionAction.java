@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("removeAttributeDefinition")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTypeRemoveAttributeDefinitionActionImpl.class)
 public interface ProductTypeRemoveAttributeDefinitionAction extends ProductTypeUpdateAction {
@@ -71,6 +72,8 @@ public interface ProductTypeRemoveAttributeDefinitionAction extends ProductTypeU
         instance.setName(template.getName());
         return instance;
     }
+
+    public ProductTypeRemoveAttributeDefinitionAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductTypeRemoveAttributeDefinitionAction

@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("QuoteDeleted")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = QuoteDeletedMessagePayloadImpl.class)
 public interface QuoteDeletedMessagePayload extends MessagePayload {
@@ -50,6 +51,8 @@ public interface QuoteDeletedMessagePayload extends MessagePayload {
         QuoteDeletedMessagePayloadImpl instance = new QuoteDeletedMessagePayloadImpl();
         return instance;
     }
+
+    public QuoteDeletedMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of QuoteDeletedMessagePayload

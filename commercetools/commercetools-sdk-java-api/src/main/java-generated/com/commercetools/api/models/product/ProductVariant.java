@@ -281,6 +281,8 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
         return instance;
     }
 
+    public ProductVariant copyDeep();
+
     /**
      * factory method to create a deep copy of ProductVariant
      * @param template instance to be copied

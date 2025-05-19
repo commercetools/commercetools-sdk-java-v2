@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("Stacking")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StackingImpl.class)
 public interface Stacking extends DiscountTypeCombination {
@@ -50,6 +51,8 @@ public interface Stacking extends DiscountTypeCombination {
         StackingImpl instance = new StackingImpl();
         return instance;
     }
+
+    public Stacking copyDeep();
 
     /**
      * factory method to create a deep copy of Stacking

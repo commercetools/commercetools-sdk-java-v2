@@ -182,4 +182,8 @@ public class QuoteDraftImpl implements QuoteDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public QuoteDraft copyDeep() {
+        return QuoteDraft.deepCopy(this);
+    }
 }

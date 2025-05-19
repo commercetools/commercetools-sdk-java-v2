@@ -110,4 +110,8 @@ public class GoogleCloudPubSubDestinationImpl implements GoogleCloudPubSubDestin
                 .build();
     }
 
+    @Override
+    public GoogleCloudPubSubDestination copyDeep() {
+        return GoogleCloudPubSubDestination.deepCopy(this);
+    }
 }

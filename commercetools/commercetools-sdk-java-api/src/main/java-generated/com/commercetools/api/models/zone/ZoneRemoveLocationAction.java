@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("removeLocation")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ZoneRemoveLocationActionImpl.class)
 public interface ZoneRemoveLocationAction extends ZoneUpdateAction {
@@ -71,6 +72,8 @@ public interface ZoneRemoveLocationAction extends ZoneUpdateAction {
         instance.setLocation(template.getLocation());
         return instance;
     }
+
+    public ZoneRemoveLocationAction copyDeep();
 
     /**
      * factory method to create a deep copy of ZoneRemoveLocationAction

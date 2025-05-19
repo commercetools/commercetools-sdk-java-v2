@@ -95,4 +95,8 @@ public class ImportContainerDeletedEventDataImpl implements ImportContainerDelet
                 .build();
     }
 
+    @Override
+    public ImportContainerDeletedEventData copyDeep() {
+        return ImportContainerDeletedEventData.deepCopy(this);
+    }
 }

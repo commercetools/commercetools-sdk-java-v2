@@ -35,6 +35,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("AssociateRolePermissionAdded")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AssociateRolePermissionAddedMessageImpl.class)
 public interface AssociateRolePermissionAddedMessage extends Message {
@@ -87,6 +88,8 @@ public interface AssociateRolePermissionAddedMessage extends Message {
         instance.setPermission(template.getPermission());
         return instance;
     }
+
+    public AssociateRolePermissionAddedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of AssociateRolePermissionAddedMessage

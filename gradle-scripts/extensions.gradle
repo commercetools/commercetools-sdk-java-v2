@@ -10,6 +10,7 @@ ext {
     ]
 
     commons = [
+            lang3version: '3.17.0',
             text: 'org.apache.commons:commons-text:1.13.1',
             lang3: 'org.apache.commons:commons-lang3:3.17.0',
             io: 'commons-io:commons-io:2.19.0',
@@ -20,6 +21,7 @@ ext {
     ]
 
     slf4j = [
+            version: '2.0.17',
             api: 'org.slf4j:slf4j-api:2.0.17',
     ]
 
@@ -28,6 +30,7 @@ ext {
     ]
 
     jackson_core = [
+            version: '2.19.0',
             annotations: 'com.fasterxml.jackson.core:jackson-annotations:2.19.0',
             databind: 'com.fasterxml.jackson.core:jackson-databind:2.19.0',
             core: 'com.fasterxml.jackson.core:jackson-core:2.19.0',
@@ -35,6 +38,7 @@ ext {
     ]
 
     google = [
+            findbugsversion: '3.0.2',
             findbugs: 'com.google.code.findbugs:jsr305:3.0.2',
             gson: 'com.google.code.gson:gson:2.13.1',
     ]
@@ -47,6 +51,7 @@ ext {
     ]
 
     javax = [
+            validationVersion: '3.1.1',
             validation: 'jakarta.validation:jakarta.validation-api:3.1.1',
     ]
 

@@ -144,6 +144,8 @@ public interface OrderEditPagedQueryResponse
         return instance;
     }
 
+    public OrderEditPagedQueryResponse copyDeep();
+
     /**
      * factory method to create a deep copy of OrderEditPagedQueryResponse
      * @param template instance to be copied

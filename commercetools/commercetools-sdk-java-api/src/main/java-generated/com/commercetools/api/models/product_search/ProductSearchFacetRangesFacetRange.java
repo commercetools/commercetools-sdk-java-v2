@@ -94,6 +94,8 @@ public interface ProductSearchFacetRangesFacetRange {
         return instance;
     }
 
+    public ProductSearchFacetRangesFacetRange copyDeep();
+
     /**
      * factory method to create a deep copy of ProductSearchFacetRangesFacetRange
      * @param template instance to be copied

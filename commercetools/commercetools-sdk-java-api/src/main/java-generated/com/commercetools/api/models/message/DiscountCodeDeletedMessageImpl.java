@@ -273,4 +273,8 @@ public class DiscountCodeDeletedMessageImpl implements DiscountCodeDeletedMessag
                 .build();
     }
 
+    @Override
+    public DiscountCodeDeletedMessage copyDeep() {
+        return DiscountCodeDeletedMessage.deepCopy(this);
+    }
 }

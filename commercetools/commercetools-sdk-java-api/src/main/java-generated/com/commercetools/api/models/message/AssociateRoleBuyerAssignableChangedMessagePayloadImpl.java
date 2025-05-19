@@ -93,4 +93,8 @@ public class AssociateRoleBuyerAssignableChangedMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public AssociateRoleBuyerAssignableChangedMessagePayload copyDeep() {
+        return AssociateRoleBuyerAssignableChangedMessagePayload.deepCopy(this);
+    }
 }

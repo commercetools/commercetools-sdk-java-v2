@@ -27,9 +27,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.CloudEventsFormatImpl.class, name = CloudEventsFormat.CLOUD_EVENTS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.PlatformFormatImpl.class, name = PlatformFormat.PLATFORM) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = DeliveryFormatImpl.class, visible = true)
 @JsonDeserialize(as = DeliveryFormatImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -43,6 +40,8 @@ public interface DeliveryFormat {
     @JsonProperty("type")
     public String getType();
 
+    public DeliveryFormat copyDeep();
+
     /**
      * factory method to create a deep copy of DeliveryFormat
      * @param template instance to be copied
@@ -53,13 +52,9 @@ public interface DeliveryFormat {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.subscription.CloudEventsFormat) {
-            return com.commercetools.api.models.subscription.CloudEventsFormat
-                    .deepCopy((com.commercetools.api.models.subscription.CloudEventsFormat) template);
-        }
-        if (template instanceof com.commercetools.api.models.subscription.PlatformFormat) {
-            return com.commercetools.api.models.subscription.PlatformFormat
-                    .deepCopy((com.commercetools.api.models.subscription.PlatformFormat) template);
+
+        if (!(template instanceof DeliveryFormatImpl)) {
+            return template.copyDeep();
         }
         DeliveryFormatImpl instance = new DeliveryFormatImpl();
         return instance;

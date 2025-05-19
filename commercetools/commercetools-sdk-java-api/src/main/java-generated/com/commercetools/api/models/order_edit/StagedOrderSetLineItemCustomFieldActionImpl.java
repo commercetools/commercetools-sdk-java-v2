@@ -152,4 +152,8 @@ public class StagedOrderSetLineItemCustomFieldActionImpl implements StagedOrderS
                 .build();
     }
 
+    @Override
+    public StagedOrderSetLineItemCustomFieldAction copyDeep() {
+        return StagedOrderSetLineItemCustomFieldAction.deepCopy(this);
+    }
 }

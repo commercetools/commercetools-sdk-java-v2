@@ -294,4 +294,8 @@ public class CustomerCustomFieldRemovedMessageImpl implements CustomerCustomFiel
                 .build();
     }
 
+    @Override
+    public CustomerCustomFieldRemovedMessage copyDeep() {
+        return CustomerCustomFieldRemovedMessage.deepCopy(this);
+    }
 }

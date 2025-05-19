@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("associate-role")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AssociateRoleKeyReferenceImpl.class)
 public interface AssociateRoleKeyReference extends KeyReference {
@@ -70,6 +71,8 @@ public interface AssociateRoleKeyReference extends KeyReference {
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public AssociateRoleKeyReference copyDeep();
 
     /**
      * factory method to create a deep copy of AssociateRoleKeyReference

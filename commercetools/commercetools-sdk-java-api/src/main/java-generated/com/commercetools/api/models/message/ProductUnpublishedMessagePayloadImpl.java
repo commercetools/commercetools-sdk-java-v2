@@ -62,4 +62,8 @@ public class ProductUnpublishedMessagePayloadImpl implements ProductUnpublishedM
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type).build();
     }
 
+    @Override
+    public ProductUnpublishedMessagePayload copyDeep() {
+        return ProductUnpublishedMessagePayload.deepCopy(this);
+    }
 }

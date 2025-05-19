@@ -91,4 +91,8 @@ public class CategoryChangeNameActionImpl implements CategoryChangeNameAction, M
                 .build();
     }
 
+    @Override
+    public CategoryChangeNameAction copyDeep() {
+        return CategoryChangeNameAction.deepCopy(this);
+    }
 }

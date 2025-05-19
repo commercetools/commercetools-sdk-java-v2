@@ -100,4 +100,8 @@ public class ExternalTaxAmountDraftImpl implements ExternalTaxAmountDraft, Model
                 .build();
     }
 
+    @Override
+    public ExternalTaxAmountDraft copyDeep() {
+        return ExternalTaxAmountDraft.deepCopy(this);
+    }
 }

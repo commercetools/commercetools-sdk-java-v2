@@ -78,4 +78,8 @@ public class OrderSearchAndExpressionImpl implements OrderSearchAndExpression, M
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("and", and).build();
     }
 
+    @Override
+    public OrderSearchAndExpression copyDeep() {
+        return OrderSearchAndExpression.deepCopy(this);
+    }
 }

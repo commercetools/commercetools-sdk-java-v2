@@ -85,6 +85,8 @@ public interface CustomFieldLocalizedEnumValue extends com.commercetools.api.mod
         return instance;
     }
 
+    public CustomFieldLocalizedEnumValue copyDeep();
+
     /**
      * factory method to create a deep copy of CustomFieldLocalizedEnumValue
      * @param template instance to be copied

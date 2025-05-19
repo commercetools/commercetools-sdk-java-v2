@@ -114,4 +114,8 @@ public class ImportValidationFailedEventDataImpl implements ImportValidationFail
                 .build();
     }
 
+    @Override
+    public ImportValidationFailedEventData copyDeep() {
+        return ImportValidationFailedEventData.deepCopy(this);
+    }
 }

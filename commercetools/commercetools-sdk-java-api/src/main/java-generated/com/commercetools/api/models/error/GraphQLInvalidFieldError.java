@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("InvalidField")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLInvalidFieldErrorImpl.class)
 public interface GraphQLInvalidFieldError extends GraphQLErrorObject {
@@ -118,6 +119,8 @@ public interface GraphQLInvalidFieldError extends GraphQLErrorObject {
         instance.setAllowedValues(template.getAllowedValues());
         return instance;
     }
+
+    public GraphQLInvalidFieldError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLInvalidFieldError

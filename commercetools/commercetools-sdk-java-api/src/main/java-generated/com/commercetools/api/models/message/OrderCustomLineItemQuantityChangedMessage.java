@@ -36,6 +36,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("OrderCustomLineItemQuantityChanged")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderCustomLineItemQuantityChangedMessageImpl.class)
 public interface OrderCustomLineItemQuantityChangedMessage extends OrderMessage {
@@ -137,6 +138,8 @@ public interface OrderCustomLineItemQuantityChangedMessage extends OrderMessage 
         instance.setOldQuantity(template.getOldQuantity());
         return instance;
     }
+
+    public OrderCustomLineItemQuantityChangedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of OrderCustomLineItemQuantityChangedMessage

@@ -354,4 +354,8 @@ public class OrderCustomLineItemQuantityChangedMessageImpl
                 .build();
     }
 
+    @Override
+    public OrderCustomLineItemQuantityChangedMessage copyDeep() {
+        return OrderCustomLineItemQuantityChangedMessage.deepCopy(this);
+    }
 }

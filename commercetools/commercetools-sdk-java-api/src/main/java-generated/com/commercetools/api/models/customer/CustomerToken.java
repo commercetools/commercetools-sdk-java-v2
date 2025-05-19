@@ -150,6 +150,8 @@ public interface CustomerToken {
         return instance;
     }
 
+    public CustomerToken copyDeep();
+
     /**
      * factory method to create a deep copy of CustomerToken
      * @param template instance to be copied

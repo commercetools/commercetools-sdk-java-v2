@@ -110,4 +110,8 @@ public class PaymentChangeTransactionTimestampActionImpl implements PaymentChang
                 .build();
     }
 
+    @Override
+    public PaymentChangeTransactionTimestampAction copyDeep() {
+        return PaymentChangeTransactionTimestampAction.deepCopy(this);
+    }
 }

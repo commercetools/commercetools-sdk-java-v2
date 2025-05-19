@@ -153,4 +153,8 @@ public class CategorySetAssetCustomTypeActionImpl implements CategorySetAssetCus
                 .build();
     }
 
+    @Override
+    public CategorySetAssetCustomTypeAction copyDeep() {
+        return CategorySetAssetCustomTypeAction.deepCopy(this);
+    }
 }

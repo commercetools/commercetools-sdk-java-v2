@@ -138,4 +138,8 @@ public class InvalidJsonInputErrorImpl implements InvalidJsonInputError, ModelBa
                 .build();
     }
 
+    @Override
+    public InvalidJsonInputError copyDeep() {
+        return InvalidJsonInputError.deepCopy(this);
+    }
 }

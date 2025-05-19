@@ -110,4 +110,8 @@ public class StateResourceIdentifierImpl implements StateResourceIdentifier, Mod
                 .build();
     }
 
+    @Override
+    public StateResourceIdentifier copyDeep() {
+        return StateResourceIdentifier.deepCopy(this);
+    }
 }

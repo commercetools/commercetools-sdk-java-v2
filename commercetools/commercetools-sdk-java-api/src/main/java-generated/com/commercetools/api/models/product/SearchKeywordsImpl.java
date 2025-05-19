@@ -78,4 +78,8 @@ public class SearchKeywordsImpl implements SearchKeywords, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("values", values).build();
     }
 
+    @Override
+    public SearchKeywords copyDeep() {
+        return SearchKeywords.deepCopy(this);
+    }
 }

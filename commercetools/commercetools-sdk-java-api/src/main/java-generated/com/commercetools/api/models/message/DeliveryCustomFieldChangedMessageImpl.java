@@ -353,4 +353,8 @@ public class DeliveryCustomFieldChangedMessageImpl implements DeliveryCustomFiel
                 .build();
     }
 
+    @Override
+    public DeliveryCustomFieldChangedMessage copyDeep() {
+        return DeliveryCustomFieldChangedMessage.deepCopy(this);
+    }
 }

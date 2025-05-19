@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeParentUnit")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = BusinessUnitChangeParentUnitActionImpl.class)
 public interface BusinessUnitChangeParentUnitAction extends BusinessUnitUpdateAction {
@@ -73,6 +74,8 @@ public interface BusinessUnitChangeParentUnitAction extends BusinessUnitUpdateAc
         instance.setParentUnit(template.getParentUnit());
         return instance;
     }
+
+    public BusinessUnitChangeParentUnitAction copyDeep();
 
     /**
      * factory method to create a deep copy of BusinessUnitChangeParentUnitAction

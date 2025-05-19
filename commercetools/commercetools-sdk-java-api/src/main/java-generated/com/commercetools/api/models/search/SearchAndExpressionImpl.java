@@ -78,4 +78,8 @@ public class SearchAndExpressionImpl implements SearchAndExpression, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("and", and).build();
     }
 
+    @Override
+    public SearchAndExpression copyDeep() {
+        return SearchAndExpression.deepCopy(this);
+    }
 }

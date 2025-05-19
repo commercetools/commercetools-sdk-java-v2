@@ -92,4 +92,8 @@ public class StateSetDescriptionActionImpl implements StateSetDescriptionAction,
                 .build();
     }
 
+    @Override
+    public StateSetDescriptionAction copyDeep() {
+        return StateSetDescriptionAction.deepCopy(this);
+    }
 }

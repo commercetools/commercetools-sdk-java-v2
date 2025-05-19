@@ -131,4 +131,8 @@ public class MyBusinessUnitSetAddressCustomTypeActionImpl
                 .build();
     }
 
+    @Override
+    public MyBusinessUnitSetAddressCustomTypeAction copyDeep() {
+        return MyBusinessUnitSetAddressCustomTypeAction.deepCopy(this);
+    }
 }

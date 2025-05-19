@@ -242,6 +242,8 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
         return instance;
     }
 
+    public PriceDraft copyDeep();
+
     /**
      * factory method to create a deep copy of PriceDraft
      * @param template instance to be copied

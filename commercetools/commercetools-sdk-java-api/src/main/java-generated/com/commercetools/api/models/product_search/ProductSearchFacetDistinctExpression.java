@@ -67,6 +67,8 @@ public interface ProductSearchFacetDistinctExpression extends ProductSearchFacet
         return instance;
     }
 
+    public ProductSearchFacetDistinctExpression copyDeep();
+
     /**
      * factory method to create a deep copy of ProductSearchFacetDistinctExpression
      * @param template instance to be copied

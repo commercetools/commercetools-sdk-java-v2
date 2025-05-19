@@ -203,4 +203,8 @@ public class OrderAddDeliveryActionImpl implements OrderAddDeliveryAction, Model
                 .build();
     }
 
+    @Override
+    public OrderAddDeliveryAction copyDeep() {
+        return OrderAddDeliveryAction.deepCopy(this);
+    }
 }

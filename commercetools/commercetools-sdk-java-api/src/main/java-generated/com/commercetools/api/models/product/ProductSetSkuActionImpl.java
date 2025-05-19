@@ -128,4 +128,8 @@ public class ProductSetSkuActionImpl implements ProductSetSkuAction, ModelBase {
                 .build();
     }
 
+    @Override
+    public ProductSetSkuAction copyDeep() {
+        return ProductSetSkuAction.deepCopy(this);
+    }
 }

@@ -100,4 +100,8 @@ public class AssociateRoleUpdateImpl implements AssociateRoleUpdate, ModelBase {
                 .build();
     }
 
+    @Override
+    public AssociateRoleUpdate copyDeep() {
+        return AssociateRoleUpdate.deepCopy(this);
+    }
 }

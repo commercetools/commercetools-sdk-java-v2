@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("absolute")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductDiscountValueAbsoluteDraftImpl.class)
 public interface ProductDiscountValueAbsoluteDraft
@@ -85,6 +86,8 @@ public interface ProductDiscountValueAbsoluteDraft
         instance.setMoney(template.getMoney());
         return instance;
     }
+
+    public ProductDiscountValueAbsoluteDraft copyDeep();
 
     /**
      * factory method to create a deep copy of ProductDiscountValueAbsoluteDraft

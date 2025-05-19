@@ -91,4 +91,8 @@ public class CustomerSetFirstNameActionImpl implements CustomerSetFirstNameActio
                 .build();
     }
 
+    @Override
+    public CustomerSetFirstNameAction copyDeep() {
+        return CustomerSetFirstNameAction.deepCopy(this);
+    }
 }

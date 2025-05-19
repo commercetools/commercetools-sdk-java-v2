@@ -272,4 +272,8 @@ public class ShoppingListMessageImpl implements ShoppingListMessage, ModelBase {
                 .build();
     }
 
+    @Override
+    public ShoppingListMessage copyDeep() {
+        return ShoppingListMessage.deepCopy(this);
+    }
 }

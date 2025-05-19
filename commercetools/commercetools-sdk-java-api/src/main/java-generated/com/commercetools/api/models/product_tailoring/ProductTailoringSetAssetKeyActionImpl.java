@@ -171,4 +171,8 @@ public class ProductTailoringSetAssetKeyActionImpl implements ProductTailoringSe
                 .build();
     }
 
+    @Override
+    public ProductTailoringSetAssetKeyAction copyDeep() {
+        return ProductTailoringSetAssetKeyAction.deepCopy(this);
+    }
 }

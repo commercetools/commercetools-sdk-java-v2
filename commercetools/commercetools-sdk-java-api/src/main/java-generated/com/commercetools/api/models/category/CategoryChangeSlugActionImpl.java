@@ -91,4 +91,8 @@ public class CategoryChangeSlugActionImpl implements CategoryChangeSlugAction, M
                 .build();
     }
 
+    @Override
+    public CategoryChangeSlugAction copyDeep() {
+        return CategoryChangeSlugAction.deepCopy(this);
+    }
 }

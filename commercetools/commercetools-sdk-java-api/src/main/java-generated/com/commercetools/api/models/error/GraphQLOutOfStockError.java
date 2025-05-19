@@ -34,6 +34,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("OutOfStock")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLOutOfStockErrorImpl.class)
 public interface GraphQLOutOfStockError extends GraphQLErrorObject {
@@ -117,6 +118,8 @@ public interface GraphQLOutOfStockError extends GraphQLErrorObject {
         instance.setSkus(template.getSkus());
         return instance;
     }
+
+    public GraphQLOutOfStockError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLOutOfStockError

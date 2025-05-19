@@ -35,6 +35,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("OutOfStock")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OutOfStockErrorImpl.class)
 public interface OutOfStockError extends ErrorObject {
@@ -134,6 +135,8 @@ public interface OutOfStockError extends ErrorObject {
         instance.setSkus(template.getSkus());
         return instance;
     }
+
+    public OutOfStockError copyDeep();
 
     /**
      * factory method to create a deep copy of OutOfStockError

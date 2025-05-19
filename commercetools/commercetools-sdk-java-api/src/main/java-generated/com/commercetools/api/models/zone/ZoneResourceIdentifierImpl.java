@@ -110,4 +110,8 @@ public class ZoneResourceIdentifierImpl implements ZoneResourceIdentifier, Model
                 .build();
     }
 
+    @Override
+    public ZoneResourceIdentifier copyDeep() {
+        return ZoneResourceIdentifier.deepCopy(this);
+    }
 }

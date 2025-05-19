@@ -133,4 +133,8 @@ public class StagedOrderUpdateSyncInfoActionImpl implements StagedOrderUpdateSyn
                 .build();
     }
 
+    @Override
+    public StagedOrderUpdateSyncInfoAction copyDeep() {
+        return StagedOrderUpdateSyncInfoAction.deepCopy(this);
+    }
 }

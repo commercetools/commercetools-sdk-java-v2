@@ -232,6 +232,8 @@ public interface PaymentDraft extends com.commercetools.api.models.CustomizableD
         return instance;
     }
 
+    public PaymentDraft copyDeep();
+
     /**
      * factory method to create a deep copy of PaymentDraft
      * @param template instance to be copied

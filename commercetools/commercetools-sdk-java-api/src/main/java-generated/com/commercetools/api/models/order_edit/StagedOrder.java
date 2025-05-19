@@ -113,6 +113,8 @@ public interface StagedOrder extends Order {
         return instance;
     }
 
+    public StagedOrder copyDeep();
+
     /**
      * factory method to create a deep copy of StagedOrder
      * @param template instance to be copied

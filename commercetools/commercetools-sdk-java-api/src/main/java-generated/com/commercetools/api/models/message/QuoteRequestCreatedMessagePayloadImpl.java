@@ -92,4 +92,8 @@ public class QuoteRequestCreatedMessagePayloadImpl implements QuoteRequestCreate
                 .build();
     }
 
+    @Override
+    public QuoteRequestCreatedMessagePayload copyDeep() {
+        return QuoteRequestCreatedMessagePayload.deepCopy(this);
+    }
 }

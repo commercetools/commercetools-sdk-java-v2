@@ -374,6 +374,8 @@ public interface ApprovalFlow extends BaseResource {
         return instance;
     }
 
+    public ApprovalFlow copyDeep();
+
     /**
      * factory method to create a deep copy of ApprovalFlow
      * @param template instance to be copied

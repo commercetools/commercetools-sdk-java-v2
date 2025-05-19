@@ -97,4 +97,8 @@ public class GraphQLAnonymousIdAlreadyInUseErrorImpl implements GraphQLAnonymous
                 .build();
     }
 
+    @Override
+    public GraphQLAnonymousIdAlreadyInUseError copyDeep() {
+        return GraphQLAnonymousIdAlreadyInUseError.deepCopy(this);
+    }
 }

@@ -110,4 +110,8 @@ public class CustomerResourceIdentifierImpl implements CustomerResourceIdentifie
                 .build();
     }
 
+    @Override
+    public CustomerResourceIdentifier copyDeep() {
+        return CustomerResourceIdentifier.deepCopy(this);
+    }
 }

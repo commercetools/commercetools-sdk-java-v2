@@ -607,4 +607,8 @@ public class DivisionImpl implements Division, ModelBase {
                 .build();
     }
 
+    @Override
+    public Division copyDeep() {
+        return Division.deepCopy(this);
+    }
 }

@@ -299,4 +299,8 @@ public class AssociateRolePermissionsSetMessageImpl implements AssociateRolePerm
                 .build();
     }
 
+    @Override
+    public AssociateRolePermissionsSetMessage copyDeep() {
+        return AssociateRolePermissionsSetMessage.deepCopy(this);
+    }
 }

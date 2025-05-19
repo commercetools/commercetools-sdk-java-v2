@@ -131,4 +131,8 @@ public class StandalonePriceValueChangedMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public StandalonePriceValueChangedMessagePayload copyDeep() {
+        return StandalonePriceValueChangedMessagePayload.deepCopy(this);
+    }
 }

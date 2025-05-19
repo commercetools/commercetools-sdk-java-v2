@@ -273,4 +273,8 @@ public class ProductSelectionDeletedMessageImpl implements ProductSelectionDelet
                 .build();
     }
 
+    @Override
+    public ProductSelectionDeletedMessage copyDeep() {
+        return ProductSelectionDeletedMessage.deepCopy(this);
+    }
 }

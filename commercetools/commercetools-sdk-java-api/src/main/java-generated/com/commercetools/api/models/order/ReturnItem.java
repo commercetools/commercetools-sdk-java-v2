@@ -36,9 +36,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.order.CustomLineItemReturnItemImpl.class, name = CustomLineItemReturnItem.CUSTOM_LINE_ITEM_RETURN_ITEM),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.order.LineItemReturnItemImpl.class, name = LineItemReturnItem.LINE_ITEM_RETURN_ITEM) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = ReturnItemImpl.class, visible = true)
 @JsonDeserialize(as = ReturnItemImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -195,6 +192,8 @@ public interface ReturnItem extends com.commercetools.api.models.Customizable<Re
 
     public void setCreatedAt(final ZonedDateTime createdAt);
 
+    public ReturnItem copyDeep();
+
     /**
      * factory method to create a deep copy of ReturnItem
      * @param template instance to be copied
@@ -205,13 +204,9 @@ public interface ReturnItem extends com.commercetools.api.models.Customizable<Re
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.order.CustomLineItemReturnItem) {
-            return com.commercetools.api.models.order.CustomLineItemReturnItem
-                    .deepCopy((com.commercetools.api.models.order.CustomLineItemReturnItem) template);
-        }
-        if (template instanceof com.commercetools.api.models.order.LineItemReturnItem) {
-            return com.commercetools.api.models.order.LineItemReturnItem
-                    .deepCopy((com.commercetools.api.models.order.LineItemReturnItem) template);
+
+        if (!(template instanceof ReturnItemImpl)) {
+            return template.copyDeep();
         }
         ReturnItemImpl instance = new ReturnItemImpl();
         instance.setId(template.getId());

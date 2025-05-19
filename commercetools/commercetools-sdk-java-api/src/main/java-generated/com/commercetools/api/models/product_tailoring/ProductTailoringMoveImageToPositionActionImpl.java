@@ -172,4 +172,8 @@ public class ProductTailoringMoveImageToPositionActionImpl
                 .build();
     }
 
+    @Override
+    public ProductTailoringMoveImageToPositionAction copyDeep() {
+        return ProductTailoringMoveImageToPositionAction.deepCopy(this);
+    }
 }

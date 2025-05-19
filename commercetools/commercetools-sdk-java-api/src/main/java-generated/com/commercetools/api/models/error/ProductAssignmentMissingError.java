@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ProductAssignmentMissing")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductAssignmentMissingErrorImpl.class)
 public interface ProductAssignmentMissingError extends ErrorObject {
@@ -98,6 +99,8 @@ public interface ProductAssignmentMissingError extends ErrorObject {
         instance.setProduct(template.getProduct());
         return instance;
     }
+
+    public ProductAssignmentMissingError copyDeep();
 
     /**
      * factory method to create a deep copy of ProductAssignmentMissingError

@@ -36,6 +36,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ReviewRatingSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ReviewRatingSetMessageImpl.class)
 public interface ReviewRatingSetMessage extends Message {
@@ -136,6 +137,8 @@ public interface ReviewRatingSetMessage extends Message {
         instance.setTarget(template.getTarget());
         return instance;
     }
+
+    public ReviewRatingSetMessage copyDeep();
 
     /**
      * factory method to create a deep copy of ReviewRatingSetMessage

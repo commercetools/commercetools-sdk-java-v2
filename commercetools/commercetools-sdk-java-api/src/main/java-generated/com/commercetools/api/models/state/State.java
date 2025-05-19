@@ -317,6 +317,8 @@ public interface State extends BaseResource, StateMixin, com.commercetools.api.m
         return instance;
     }
 
+    public State copyDeep();
+
     /**
      * factory method to create a deep copy of State
      * @param template instance to be copied

@@ -186,4 +186,8 @@ public class AssetDraftImpl implements AssetDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public AssetDraft copyDeep() {
+        return AssetDraft.deepCopy(this);
+    }
 }

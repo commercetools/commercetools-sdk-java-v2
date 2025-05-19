@@ -294,4 +294,8 @@ public class StandalonePriceCreatedMessageImpl implements StandalonePriceCreated
                 .build();
     }
 
+    @Override
+    public StandalonePriceCreatedMessage copyDeep() {
+        return StandalonePriceCreatedMessage.deepCopy(this);
+    }
 }

@@ -113,4 +113,8 @@ public class BusinessUnitParentChangedMessagePayloadImpl implements BusinessUnit
                 .build();
     }
 
+    @Override
+    public BusinessUnitParentChangedMessagePayload copyDeep() {
+        return BusinessUnitParentChangedMessagePayload.deepCopy(this);
+    }
 }

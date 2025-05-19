@@ -155,4 +155,8 @@ public class StagedOrderSetParcelCustomTypeActionImpl implements StagedOrderSetP
                 .build();
     }
 
+    @Override
+    public StagedOrderSetParcelCustomTypeAction copyDeep() {
+        return StagedOrderSetParcelCustomTypeAction.deepCopy(this);
+    }
 }

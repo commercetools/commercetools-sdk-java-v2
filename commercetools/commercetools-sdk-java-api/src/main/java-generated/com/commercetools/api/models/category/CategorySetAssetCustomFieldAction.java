@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setAssetCustomField")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CategorySetAssetCustomFieldActionImpl.class)
 public interface CategorySetAssetCustomFieldAction extends CategoryUpdateAction {
@@ -117,6 +118,8 @@ public interface CategorySetAssetCustomFieldAction extends CategoryUpdateAction 
         instance.setValue(template.getValue());
         return instance;
     }
+
+    public CategorySetAssetCustomFieldAction copyDeep();
 
     /**
      * factory method to create a deep copy of CategorySetAssetCustomFieldAction

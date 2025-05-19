@@ -143,6 +143,8 @@ public interface ZonePagedQueryResponse extends com.commercetools.api.models.Res
         return instance;
     }
 
+    public ZonePagedQueryResponse copyDeep();
+
     /**
      * factory method to create a deep copy of ZonePagedQueryResponse
      * @param template instance to be copied

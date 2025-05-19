@@ -404,4 +404,8 @@ public class OrderLineItemDiscountSetMessageImpl implements OrderLineItemDiscoun
                 .build();
     }
 
+    @Override
+    public OrderLineItemDiscountSetMessage copyDeep() {
+        return OrderLineItemDiscountSetMessage.deepCopy(this);
+    }
 }

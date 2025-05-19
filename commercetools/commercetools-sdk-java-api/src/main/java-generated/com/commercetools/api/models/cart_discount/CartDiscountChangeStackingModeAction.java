@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeStackingMode")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartDiscountChangeStackingModeActionImpl.class)
 public interface CartDiscountChangeStackingModeAction extends CartDiscountUpdateAction {
@@ -69,6 +70,8 @@ public interface CartDiscountChangeStackingModeAction extends CartDiscountUpdate
         instance.setStackingMode(template.getStackingMode());
         return instance;
     }
+
+    public CartDiscountChangeStackingModeAction copyDeep();
 
     /**
      * factory method to create a deep copy of CartDiscountChangeStackingModeAction

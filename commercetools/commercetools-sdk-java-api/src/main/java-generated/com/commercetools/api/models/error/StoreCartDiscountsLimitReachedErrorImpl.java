@@ -142,4 +142,8 @@ public class StoreCartDiscountsLimitReachedErrorImpl implements StoreCartDiscoun
                 .build();
     }
 
+    @Override
+    public StoreCartDiscountsLimitReachedError copyDeep() {
+        return StoreCartDiscountsLimitReachedError.deepCopy(this);
+    }
 }

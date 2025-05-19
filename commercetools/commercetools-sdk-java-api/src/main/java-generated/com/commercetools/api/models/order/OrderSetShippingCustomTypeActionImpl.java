@@ -129,4 +129,8 @@ public class OrderSetShippingCustomTypeActionImpl implements OrderSetShippingCus
                 .build();
     }
 
+    @Override
+    public OrderSetShippingCustomTypeAction copyDeep() {
+        return OrderSetShippingCustomTypeAction.deepCopy(this);
+    }
 }

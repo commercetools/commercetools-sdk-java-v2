@@ -160,4 +160,8 @@ public class ProductTypePagedQueryResponseImpl implements ProductTypePagedQueryR
                 .build();
     }
 
+    @Override
+    public ProductTypePagedQueryResponse copyDeep() {
+        return ProductTypePagedQueryResponse.deepCopy(this);
+    }
 }

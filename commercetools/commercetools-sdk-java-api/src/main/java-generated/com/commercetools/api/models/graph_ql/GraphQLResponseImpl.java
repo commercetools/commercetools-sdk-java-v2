@@ -99,4 +99,8 @@ public class GraphQLResponseImpl implements GraphQLResponse, ModelBase {
                 .build();
     }
 
+    @Override
+    public GraphQLResponse copyDeep() {
+        return GraphQLResponse.deepCopy(this);
+    }
 }

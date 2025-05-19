@@ -313,4 +313,8 @@ public class OrderBillingAddressSetMessageImpl implements OrderBillingAddressSet
                 .build();
     }
 
+    @Override
+    public OrderBillingAddressSetMessage copyDeep() {
+        return OrderBillingAddressSetMessage.deepCopy(this);
+    }
 }

@@ -321,4 +321,8 @@ public class StoreLanguagesChangedMessageImpl implements StoreLanguagesChangedMe
                 .build();
     }
 
+    @Override
+    public StoreLanguagesChangedMessage copyDeep() {
+        return StoreLanguagesChangedMessage.deepCopy(this);
+    }
 }

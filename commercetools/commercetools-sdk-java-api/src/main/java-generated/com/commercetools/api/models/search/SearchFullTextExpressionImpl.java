@@ -74,4 +74,8 @@ public class SearchFullTextExpressionImpl implements SearchFullTextExpression, M
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("fullText", fullText).build();
     }
 
+    @Override
+    public SearchFullTextExpression copyDeep() {
+        return SearchFullTextExpression.deepCopy(this);
+    }
 }

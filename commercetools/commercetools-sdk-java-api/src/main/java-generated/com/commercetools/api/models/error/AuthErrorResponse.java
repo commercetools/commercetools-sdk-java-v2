@@ -113,6 +113,8 @@ public interface AuthErrorResponse extends ErrorResponse {
         return instance;
     }
 
+    public AuthErrorResponse copyDeep();
+
     /**
      * factory method to create a deep copy of AuthErrorResponse
      * @param template instance to be copied

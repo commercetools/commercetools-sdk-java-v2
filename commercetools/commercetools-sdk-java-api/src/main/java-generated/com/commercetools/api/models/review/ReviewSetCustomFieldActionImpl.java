@@ -110,4 +110,8 @@ public class ReviewSetCustomFieldActionImpl implements ReviewSetCustomFieldActio
                 .build();
     }
 
+    @Override
+    public ReviewSetCustomFieldAction copyDeep() {
+        return ReviewSetCustomFieldAction.deepCopy(this);
+    }
 }

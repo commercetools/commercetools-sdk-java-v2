@@ -91,4 +91,8 @@ public class InventoryEntryRemoveQuantityActionImpl implements InventoryEntryRem
                 .build();
     }
 
+    @Override
+    public InventoryEntryRemoveQuantityAction copyDeep() {
+        return InventoryEntryRemoveQuantityAction.deepCopy(this);
+    }
 }

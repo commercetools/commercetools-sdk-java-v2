@@ -443,4 +443,8 @@ public class CategoryImpl implements Category, ModelBase {
                 .build();
     }
 
+    @Override
+    public Category copyDeep() {
+        return Category.deepCopy(this);
+    }
 }

@@ -160,4 +160,8 @@ public class CartDiscountPagedQueryResponseImpl implements CartDiscountPagedQuer
                 .build();
     }
 
+    @Override
+    public CartDiscountPagedQueryResponse copyDeep() {
+        return CartDiscountPagedQueryResponse.deepCopy(this);
+    }
 }

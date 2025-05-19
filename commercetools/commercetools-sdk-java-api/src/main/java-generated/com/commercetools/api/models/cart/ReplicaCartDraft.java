@@ -85,6 +85,8 @@ public interface ReplicaCartDraft
         return instance;
     }
 
+    public ReplicaCartDraft copyDeep();
+
     /**
      * factory method to create a deep copy of ReplicaCartDraft
      * @param template instance to be copied

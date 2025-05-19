@@ -114,4 +114,8 @@ public class CustomerIndexingProgressImpl implements CustomerIndexingProgress, M
                 .build();
     }
 
+    @Override
+    public CustomerIndexingProgress copyDeep() {
+        return CustomerIndexingProgress.deepCopy(this);
+    }
 }

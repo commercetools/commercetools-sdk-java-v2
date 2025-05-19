@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("external")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductDiscountValueExternalDraftImpl.class)
 public interface ProductDiscountValueExternalDraft
@@ -51,6 +52,8 @@ public interface ProductDiscountValueExternalDraft
         ProductDiscountValueExternalDraftImpl instance = new ProductDiscountValueExternalDraftImpl();
         return instance;
     }
+
+    public ProductDiscountValueExternalDraft copyDeep();
 
     /**
      * factory method to create a deep copy of ProductDiscountValueExternalDraft

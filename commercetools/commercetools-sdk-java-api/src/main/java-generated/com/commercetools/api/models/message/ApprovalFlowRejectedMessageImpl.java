@@ -333,4 +333,8 @@ public class ApprovalFlowRejectedMessageImpl implements ApprovalFlowRejectedMess
                 .build();
     }
 
+    @Override
+    public ApprovalFlowRejectedMessage copyDeep() {
+        return ApprovalFlowRejectedMessage.deepCopy(this);
+    }
 }

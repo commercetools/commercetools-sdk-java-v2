@@ -96,4 +96,8 @@ public class PriceFunctionImpl implements PriceFunction, ModelBase {
                 .build();
     }
 
+    @Override
+    public PriceFunction copyDeep() {
+        return PriceFunction.deepCopy(this);
+    }
 }

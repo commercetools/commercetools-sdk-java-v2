@@ -110,4 +110,8 @@ public class CategoryAddAssetActionImpl implements CategoryAddAssetAction, Model
                 .build();
     }
 
+    @Override
+    public CategoryAddAssetAction copyDeep() {
+        return CategoryAddAssetAction.deepCopy(this);
+    }
 }

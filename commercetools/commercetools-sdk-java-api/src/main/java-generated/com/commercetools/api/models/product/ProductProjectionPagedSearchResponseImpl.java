@@ -181,4 +181,8 @@ public class ProductProjectionPagedSearchResponseImpl implements ProductProjecti
                 .build();
     }
 
+    @Override
+    public ProductProjectionPagedSearchResponse copyDeep() {
+        return ProductProjectionPagedSearchResponse.deepCopy(this);
+    }
 }

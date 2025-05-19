@@ -143,6 +143,8 @@ public interface ProductPagedQueryResponse extends com.commercetools.api.models.
         return instance;
     }
 
+    public ProductPagedQueryResponse copyDeep();
+
     /**
      * factory method to create a deep copy of ProductPagedQueryResponse
      * @param template instance to be copied

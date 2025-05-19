@@ -36,6 +36,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("PaymentInteractionAdded")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PaymentInteractionAddedMessageImpl.class)
 public interface PaymentInteractionAddedMessage extends Message {
@@ -89,6 +90,8 @@ public interface PaymentInteractionAddedMessage extends Message {
         instance.setInteraction(template.getInteraction());
         return instance;
     }
+
+    public PaymentInteractionAddedMessage copyDeep();
 
     /**
      * factory method to create a deep copy of PaymentInteractionAddedMessage

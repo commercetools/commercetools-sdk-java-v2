@@ -530,6 +530,8 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
         return instance;
     }
 
+    public OrderImportDraft copyDeep();
+
     /**
      * factory method to create a deep copy of OrderImportDraft
      * @param template instance to be copied

@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ShoppingListLineItemAdded")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShoppingListLineItemAddedMessagePayloadImpl.class)
 public interface ShoppingListLineItemAddedMessagePayload extends ShoppingListMessagePayload {
@@ -72,6 +73,8 @@ public interface ShoppingListLineItemAddedMessagePayload extends ShoppingListMes
         instance.setLineItem(template.getLineItem());
         return instance;
     }
+
+    public ShoppingListLineItemAddedMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of ShoppingListLineItemAddedMessagePayload

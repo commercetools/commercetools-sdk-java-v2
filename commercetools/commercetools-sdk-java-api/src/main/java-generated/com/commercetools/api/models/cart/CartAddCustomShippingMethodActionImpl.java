@@ -263,4 +263,8 @@ public class CartAddCustomShippingMethodActionImpl implements CartAddCustomShipp
                 .build();
     }
 
+    @Override
+    public CartAddCustomShippingMethodAction copyDeep() {
+        return CartAddCustomShippingMethodAction.deepCopy(this);
+    }
 }

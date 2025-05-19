@@ -97,6 +97,8 @@ public interface PaymentStatusDraft extends io.vrap.rmf.base.client.Draft<Paymen
         return instance;
     }
 
+    public PaymentStatusDraft copyDeep();
+
     /**
      * factory method to create a deep copy of PaymentStatusDraft
      * @param template instance to be copied

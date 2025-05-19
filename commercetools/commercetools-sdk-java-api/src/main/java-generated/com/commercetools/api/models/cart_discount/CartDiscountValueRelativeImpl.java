@@ -91,4 +91,8 @@ public class CartDiscountValueRelativeImpl implements CartDiscountValueRelative,
                 .build();
     }
 
+    @Override
+    public CartDiscountValueRelative copyDeep() {
+        return CartDiscountValueRelative.deepCopy(this);
+    }
 }

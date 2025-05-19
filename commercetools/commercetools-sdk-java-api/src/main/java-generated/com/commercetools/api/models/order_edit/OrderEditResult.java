@@ -29,11 +29,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.OrderEditAppliedImpl.class, name = OrderEditApplied.APPLIED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.OrderEditNotProcessedImpl.class, name = OrderEditNotProcessed.NOT_PROCESSED),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.OrderEditPreviewFailureImpl.class, name = OrderEditPreviewFailure.PREVIEW_FAILURE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.order_edit.OrderEditPreviewSuccessImpl.class, name = OrderEditPreviewSuccess.PREVIEW_SUCCESS) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = OrderEditResultImpl.class, visible = true)
 @JsonDeserialize(as = OrderEditResultImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -47,6 +42,8 @@ public interface OrderEditResult {
     @JsonProperty("type")
     public String getType();
 
+    public OrderEditResult copyDeep();
+
     /**
      * factory method to create a deep copy of OrderEditResult
      * @param template instance to be copied
@@ -57,21 +54,9 @@ public interface OrderEditResult {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.order_edit.OrderEditApplied) {
-            return com.commercetools.api.models.order_edit.OrderEditApplied
-                    .deepCopy((com.commercetools.api.models.order_edit.OrderEditApplied) template);
-        }
-        if (template instanceof com.commercetools.api.models.order_edit.OrderEditNotProcessed) {
-            return com.commercetools.api.models.order_edit.OrderEditNotProcessed
-                    .deepCopy((com.commercetools.api.models.order_edit.OrderEditNotProcessed) template);
-        }
-        if (template instanceof com.commercetools.api.models.order_edit.OrderEditPreviewFailure) {
-            return com.commercetools.api.models.order_edit.OrderEditPreviewFailure
-                    .deepCopy((com.commercetools.api.models.order_edit.OrderEditPreviewFailure) template);
-        }
-        if (template instanceof com.commercetools.api.models.order_edit.OrderEditPreviewSuccess) {
-            return com.commercetools.api.models.order_edit.OrderEditPreviewSuccess
-                    .deepCopy((com.commercetools.api.models.order_edit.OrderEditPreviewSuccess) template);
+
+        if (!(template instanceof OrderEditResultImpl)) {
+            return template.copyDeep();
         }
         OrderEditResultImpl instance = new OrderEditResultImpl();
         return instance;

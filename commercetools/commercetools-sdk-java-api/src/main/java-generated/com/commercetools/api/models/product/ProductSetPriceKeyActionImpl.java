@@ -128,4 +128,8 @@ public class ProductSetPriceKeyActionImpl implements ProductSetPriceKeyAction, M
                 .build();
     }
 
+    @Override
+    public ProductSetPriceKeyAction copyDeep() {
+        return ProductSetPriceKeyAction.deepCopy(this);
+    }
 }

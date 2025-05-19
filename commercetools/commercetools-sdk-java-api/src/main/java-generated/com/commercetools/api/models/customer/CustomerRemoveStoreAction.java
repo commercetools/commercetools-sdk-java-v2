@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("removeStore")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerRemoveStoreActionImpl.class)
 public interface CustomerRemoveStoreAction extends CustomerUpdateAction {
@@ -72,6 +73,8 @@ public interface CustomerRemoveStoreAction extends CustomerUpdateAction {
         instance.setStore(template.getStore());
         return instance;
     }
+
+    public CustomerRemoveStoreAction copyDeep();
 
     /**
      * factory method to create a deep copy of CustomerRemoveStoreAction

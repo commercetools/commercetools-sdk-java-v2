@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("attribute-group")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AttributeGroupReferenceImpl.class)
 public interface AttributeGroupReference extends Reference, com.commercetools.api.models.Identifiable<AttributeGroup>,
@@ -88,6 +89,8 @@ public interface AttributeGroupReference extends Reference, com.commercetools.ap
         instance.setObj(template.getObj());
         return instance;
     }
+
+    public AttributeGroupReference copyDeep();
 
     /**
      * factory method to create a deep copy of AttributeGroupReference

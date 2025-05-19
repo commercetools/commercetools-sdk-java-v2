@@ -110,4 +110,8 @@ public class DiscountCodeKeySetMessagePayloadImpl implements DiscountCodeKeySetM
                 .build();
     }
 
+    @Override
+    public DiscountCodeKeySetMessagePayload copyDeep() {
+        return DiscountCodeKeySetMessagePayload.deepCopy(this);
+    }
 }

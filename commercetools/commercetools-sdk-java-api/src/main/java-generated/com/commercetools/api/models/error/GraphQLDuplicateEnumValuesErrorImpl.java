@@ -119,4 +119,8 @@ public class GraphQLDuplicateEnumValuesErrorImpl implements GraphQLDuplicateEnum
                 .build();
     }
 
+    @Override
+    public GraphQLDuplicateEnumValuesError copyDeep() {
+        return GraphQLDuplicateEnumValuesError.deepCopy(this);
+    }
 }

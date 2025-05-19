@@ -278,4 +278,8 @@ public class StagedOrderAddCustomLineItemActionImpl implements StagedOrderAddCus
                 .build();
     }
 
+    @Override
+    public StagedOrderAddCustomLineItemAction copyDeep() {
+        return StagedOrderAddCustomLineItemAction.deepCopy(this);
+    }
 }

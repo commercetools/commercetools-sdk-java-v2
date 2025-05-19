@@ -92,4 +92,8 @@ public class AzureFunctionsAuthenticationImpl implements AzureFunctionsAuthentic
                 .build();
     }
 
+    @Override
+    public AzureFunctionsAuthentication copyDeep() {
+        return AzureFunctionsAuthentication.deepCopy(this);
+    }
 }

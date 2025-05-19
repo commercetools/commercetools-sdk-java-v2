@@ -91,4 +91,8 @@ public class BusinessUnitChangeNameActionImpl implements BusinessUnitChangeNameA
                 .build();
     }
 
+    @Override
+    public BusinessUnitChangeNameAction copyDeep() {
+        return BusinessUnitChangeNameAction.deepCopy(this);
+    }
 }

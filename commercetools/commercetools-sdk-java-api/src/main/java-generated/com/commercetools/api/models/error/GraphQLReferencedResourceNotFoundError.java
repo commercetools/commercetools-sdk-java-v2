@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ReferencedResourceNotFound")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLReferencedResourceNotFoundErrorImpl.class)
 public interface GraphQLReferencedResourceNotFoundError extends GraphQLErrorObject {
@@ -111,6 +112,8 @@ public interface GraphQLReferencedResourceNotFoundError extends GraphQLErrorObje
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public GraphQLReferencedResourceNotFoundError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLReferencedResourceNotFoundError

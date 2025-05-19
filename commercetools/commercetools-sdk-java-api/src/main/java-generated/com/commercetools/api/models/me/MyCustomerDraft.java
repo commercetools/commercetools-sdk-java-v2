@@ -329,6 +329,8 @@ public interface MyCustomerDraft extends com.commercetools.api.models.Customizab
         return instance;
     }
 
+    public MyCustomerDraft copyDeep();
+
     /**
      * factory method to create a deep copy of MyCustomerDraft
      * @param template instance to be copied

@@ -159,4 +159,8 @@ public class StatePagedQueryResponseImpl implements StatePagedQueryResponse, Mod
                 .build();
     }
 
+    @Override
+    public StatePagedQueryResponse copyDeep() {
+        return StatePagedQueryResponse.deepCopy(this);
+    }
 }

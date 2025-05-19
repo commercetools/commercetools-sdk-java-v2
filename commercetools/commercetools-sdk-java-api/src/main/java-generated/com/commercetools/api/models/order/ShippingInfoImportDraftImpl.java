@@ -246,4 +246,8 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
                 .build();
     }
 
+    @Override
+    public ShippingInfoImportDraft copyDeep() {
+        return ShippingInfoImportDraft.deepCopy(this);
+    }
 }

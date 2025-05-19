@@ -21,6 +21,313 @@ sourceSets.main.java.srcDirs += "src/main/java-generated"
 sourceSets.main.java.srcDirs += "src/main/java-predicates-generated"
 sourceSets.test.java.srcDirs += "src/test/java-generated"
 
+
+projectDir.toPath().resolve("src/main/java-generated/com/commercetools/api/models/").eachDir { dir ->
+    def dirname = dir.toFile().name
+    def modelTask = tasks.register("models_${dirname}Jar", Jar) {
+        from sourceSets.main.output
+
+        include "**/models/$dirname/**"
+        archiveBaseName = project.name + "-models-$dirname"
+    }
+    def modelSourcesTask = tasks.register("sources_${dirname}Jar", Jar) {
+        archiveClassifier = 'sources'
+        from sourceSets.main.allJava
+        include "**/models/$dirname/**"
+        archiveBaseName = project.name + "-models-$dirname"
+    }
+    def javadocsTask = tasks.register("javadoc_${dirname}Jar", Jar) {
+        dependsOn "javadoc"
+        archiveClassifier = 'javadoc'
+        from javadoc.destinationDir
+        include "com/**/models/$dirname/**", "index-files/**", "legal/**", "resources/**", "script-dir/**", "*"
+        archiveBaseName = project.name + "-models-$dirname"
+    }
+    def publication
+    publishing {
+        publications {
+            publication = it.create("Maven$dirname", org.gradle.api.publish.maven.MavenPublication, {
+                artifact modelTask
+                artifact javadocsTask
+                artifact modelSourcesTask
+                groupId group
+                artifactId project.name + "-models_$dirname"
+                version version
+
+                pom {
+                    name = project.name + "-models_$dirname"
+                    description = project.description
+                    developers {
+                        developer {
+                            id = "jenschude"
+                            name = "Jens Schulze"
+                            email = "jens.schulze@commercetools.com"
+                        }
+                    }
+                    url = scmHttpsUrl
+                    licenses {
+                        license {
+                            name = "The Apache Software License, Version 2.0"
+                            url = "http://www.apache.org/licenses/LICENSE-2.0.txt"
+                            distribution = "repo"
+                        }
+                    }
+                    scm {
+                        connection = "scm:git:$scmHttpsUrl"
+                        developerConnection = "scm:git:$scmSshUrl"
+                        url = "$scmProjectUrl"
+                    }
+                }
+                pom.withXml {
+                    def dependenciesNode = asNode().appendNode('dependencies')
+                    def base = dependenciesNode.appendNode('dependency')
+                    base.appendNode('groupId', group)
+                    base.appendNode('artifactId', 'commercetools-sdk-java-api-base')
+                    base.appendNode('version', version)
+                    base.appendNode('scope', 'compile')
+                    def modelsBase = dependenciesNode.appendNode('dependency')
+                    modelsBase.appendNode('groupId', group)
+                    modelsBase.appendNode('artifactId', 'commercetools-sdk-java-api-models-base')
+                    modelsBase.appendNode('version', version)
+                    modelsBase.appendNode('scope', 'compile')
+                }
+            })
+        }
+    }
+    signing {
+        sign publication
+    }
+    assemble.dependsOn("models_${dirname}Jar")
+}
+
+tasks.register("predicatesJar", Jar) {
+    from sourceSets.main.output
+
+    include "**/predicates/**"
+    archiveBaseName = project.name + "-predicates"
+}
+assemble.dependsOn("predicatesJar")
+tasks.register("javadocPredicatesJar", Jar) {
+    dependsOn "javadoc"
+    archiveClassifier = 'javadoc'
+    from javadoc.destinationDir
+    include "com/**/predicates/**", "index-files/**", "legal/**", "resources/**", "script-dir/**", "*"
+    archiveBaseName = project.name + "-predicates"
+}
+tasks.register("sourcesPredicatesJar", Jar) {
+    archiveClassifier = 'sources'
+    from sourceSets.main.allJava
+    include "**/predicates/**"
+    archiveBaseName = project.name + "-predicates"
+}
+tasks.register("baseJar", Jar) {
+    from sourceSets.main.output
+
+    exclude "**/predicates/**", "**/models/**"
+    archiveBaseName = project.name + "-base"
+}
+assemble.dependsOn("baseJar")
+tasks.register("javadocBaseJar", Jar) {
+    dependsOn "javadoc"
+    archiveClassifier = 'javadoc'
+    from javadoc.destinationDir
+    exclude "com/**/predicates/**", "com/**/models/**"
+    archiveBaseName = project.name + "-base"
+}
+tasks.register("sourcesBaseJar", Jar) {
+    archiveClassifier = 'sources'
+    from sourceSets.main.allJava
+    exclude "**/predicates/**", "**/models/**"
+    archiveBaseName = project.name + "-base"
+}
+
+tasks.register("modelsBaseJar", Jar) {
+    from sourceSets.main.output
+
+    include "**/models/*"
+    archiveBaseName = project.name + "-models-base"
+}
+assemble.dependsOn("modelsBaseJar")
+tasks.register("javadocModelsBaseJar", Jar) {
+    dependsOn "javadoc"
+    archiveClassifier = 'javadoc'
+    from javadoc.destinationDir
+    include "com/**/models/*", "index-files/**", "legal/**", "resources/**", "script-dir/**", "*"
+    archiveBaseName = project.name + "-models-base"
+}
+tasks.register("sourcesModelsBaseJar", Jar) {
+    archiveClassifier = 'sources'
+    from sourceSets.main.allJava
+    include "**/models/*"
+    archiveBaseName = project.name + "-models-base"
+}
+
+publishing {
+    publications {
+        MavenModelsBase(MavenPublication) {
+            artifact modelsBaseJar
+            artifact javadocModelsBaseJar
+            artifact sourcesModelsBaseJar
+            groupId group
+            artifactId project.name + "-models-base"
+            version version
+
+            pom {
+                name = project.name + "-models_base"
+                description = project.description
+                developers {
+                    developer {
+                        id = "jenschude"
+                        name = "Jens Schulze"
+                        email = "jens.schulze@commercetools.com"
+                    }
+                }
+                url = scmHttpsUrl
+                licenses {
+                    license {
+                        name = "The Apache Software License, Version 2.0"
+                        url = "http://www.apache.org/licenses/LICENSE-2.0.txt"
+                        distribution = "repo"
+                    }
+                }
+                scm {
+                    connection = "scm:git:$scmHttpsUrl"
+                    developerConnection = "scm:git:$scmSshUrl"
+                    url = "$scmProjectUrl"
+                }
+            }
+            pom.withXml {
+                def dependenciesNode = asNode().appendNode('dependencies')
+                def base = dependenciesNode.appendNode('dependency')
+                base.appendNode('groupId', group)
+                base.appendNode('artifactId', 'commercetools-sdk-java-api-base')
+                base.appendNode('version', version)
+                base.appendNode('scope', 'compile')
+            }
+        }
+        MavenBase(MavenPublication) {
+            artifact baseJar
+            artifact javadocBaseJar
+            artifact sourcesBaseJar
+            groupId group
+            artifactId project.name + "-base"
+            version version
+
+            pom {
+                name = project.name + "-base"
+                description = project.description
+                developers {
+                    developer {
+                        id = "jenschude"
+                        name = "Jens Schulze"
+                        email = "jens.schulze@commercetools.com"
+                    }
+                }
+                url = scmHttpsUrl
+                licenses {
+                    license {
+                        name = "The Apache Software License, Version 2.0"
+                        url = "http://www.apache.org/licenses/LICENSE-2.0.txt"
+                        distribution = "repo"
+                    }
+                }
+                scm {
+                    connection = "scm:git:$scmHttpsUrl"
+                    developerConnection = "scm:git:$scmSshUrl"
+                    url = "$scmProjectUrl"
+                }
+            }
+            pom.withXml {
+                def dependenciesNode = asNode().appendNode('dependencies')
+                def base = dependenciesNode.appendNode('dependency')
+                base.appendNode('groupId', group)
+                base.appendNode('artifactId', 'rmf-java-base')
+                base.appendNode('version', version)
+                base.appendNode('scope', 'compile')
+                def money = dependenciesNode.appendNode('dependency')
+                money.appendNode('groupId', group)
+                money.appendNode('artifactId', 'commercetools-money')
+                money.appendNode('version', version)
+                money.appendNode('scope', 'compile')
+                def jacksonAnno = dependenciesNode.appendNode('dependency')
+                jacksonAnno.appendNode('groupId', 'com.fasterxml.jackson.core')
+                jacksonAnno.appendNode('artifactId', 'jackson-annotations')
+                jacksonAnno.appendNode('version', jackson_core.version)
+                jacksonAnno.appendNode('scope', 'compile')
+                def jacksonDB = dependenciesNode.appendNode('dependency')
+                jacksonDB.appendNode('groupId', 'com.fasterxml.jackson.core')
+                jacksonDB.appendNode('artifactId', 'jackson-databind')
+                jacksonDB.appendNode('version', jackson_core.version)
+                jacksonDB.appendNode('scope', 'compile')
+                def slf4jDep = dependenciesNode.appendNode('dependency')
+                slf4jDep.appendNode('groupId', 'org.slf4j')
+                slf4jDep.appendNode('artifactId', 'slf4j-api')
+                slf4jDep.appendNode('version', slf4j.version)
+                slf4jDep.appendNode('scope', 'compile')
+                def commonsDep = dependenciesNode.appendNode('dependency')
+                commonsDep.appendNode('groupId', 'org.apache.commons')
+                commonsDep.appendNode('artifactId', 'commons-lang3')
+                commonsDep.appendNode('version', commons.lang3version)
+                commonsDep.appendNode('scope', 'compile')
+                def findBugs = dependenciesNode.appendNode('dependency')
+                findBugs.appendNode('groupId', 'com.google.code.findbugs')
+                findBugs.appendNode('artifactId', 'jsr305')
+                findBugs.appendNode('version', google.findbugsversion)
+                findBugs.appendNode('scope', 'runtime')
+                def validation = dependenciesNode.appendNode('dependency')
+                validation.appendNode('groupId', 'jakarta.validation')
+                validation.appendNode('artifactId', 'jakarta.validation-api')
+                validation.appendNode('version', javax.validationVersion)
+                validation.appendNode('scope', 'runtime')
+            }
+        }
+        MavenPredicates(MavenPublication) {
+            artifact predicatesJar
+            artifact javadocPredicatesJar
+            artifact sourcesPredicatesJar
+            groupId group
+            artifactId project.name + "-predicates"
+            version version
+
+            pom {
+                name = project.name + "-predicates"
+                description = project.description
+                developers {
+                    developer {
+                        id = "jenschude"
+                        name = "Jens Schulze"
+                        email = "jens.schulze@commercetools.com"
+                    }
+                }
+                url = scmHttpsUrl
+                licenses {
+                    license {
+                        name = "The Apache Software License, Version 2.0"
+                        url = "http://www.apache.org/licenses/LICENSE-2.0.txt"
+                        distribution = "repo"
+                    }
+                }
+                scm {
+                    connection = "scm:git:$scmHttpsUrl"
+                    developerConnection = "scm:git:$scmSshUrl"
+                    url = "$scmProjectUrl"
+                }
+            }
+            pom.withXml {
+                def dependenciesNode = asNode().appendNode('dependencies')
+                def base = dependenciesNode.appendNode('dependency')
+                base.appendNode('groupId', group)
+                base.appendNode('artifactId', 'commercetools-sdk-java-api-base')
+                base.appendNode('version', version)
+                base.appendNode('scope', 'compile')
+            }
+        }
+    }
+}
+signing {
+    sign publishing.publications.MavenModelsBase, publishing.publications.MavenBase, publishing.publications.MavenPredicates
+}
+
 tasks.register('runMainMethodThreadLeakTest', JavaExec) {
     group = "Execution"
     description = "Run the main method thread leak test class"

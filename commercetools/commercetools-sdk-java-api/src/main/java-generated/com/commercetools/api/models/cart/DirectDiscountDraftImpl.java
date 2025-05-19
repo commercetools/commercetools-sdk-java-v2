@@ -98,4 +98,8 @@ public class DirectDiscountDraftImpl implements DirectDiscountDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public DirectDiscountDraft copyDeep() {
+        return DirectDiscountDraft.deepCopy(this);
+    }
 }

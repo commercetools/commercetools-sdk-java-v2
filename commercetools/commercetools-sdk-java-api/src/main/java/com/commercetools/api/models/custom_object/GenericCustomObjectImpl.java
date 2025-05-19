@@ -3,6 +3,7 @@ package com.commercetools.api.models.custom_object;
 
 import java.time.ZonedDateTime;
 
+import com.commercetools.api.models.common.BaseResource;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -172,4 +173,8 @@ public class GenericCustomObjectImpl<TValue> implements GenericCustomObject<TVal
                 .toHashCode();
     }
 
+    @Override
+    public BaseResource copyDeep() {
+        return GenericCustomObject.deepCopy(this);
+    }
 }

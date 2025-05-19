@@ -333,4 +333,8 @@ public class QuoteStateTransitionMessageImpl implements QuoteStateTransitionMess
                 .build();
     }
 
+    @Override
+    public QuoteStateTransitionMessage copyDeep() {
+        return QuoteStateTransitionMessage.deepCopy(this);
+    }
 }

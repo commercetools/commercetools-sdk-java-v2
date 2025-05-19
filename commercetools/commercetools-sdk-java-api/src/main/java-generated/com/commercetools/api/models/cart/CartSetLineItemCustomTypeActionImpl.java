@@ -153,4 +153,8 @@ public class CartSetLineItemCustomTypeActionImpl implements CartSetLineItemCusto
                 .build();
     }
 
+    @Override
+    public CartSetLineItemCustomTypeAction copyDeep() {
+        return CartSetLineItemCustomTypeAction.deepCopy(this);
+    }
 }

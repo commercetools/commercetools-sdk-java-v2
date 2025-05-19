@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setExternalId")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CategorySetExternalIdActionImpl.class)
 public interface CategorySetExternalIdAction extends CategoryUpdateAction {
@@ -66,6 +67,8 @@ public interface CategorySetExternalIdAction extends CategoryUpdateAction {
         instance.setExternalId(template.getExternalId());
         return instance;
     }
+
+    public CategorySetExternalIdAction copyDeep();
 
     /**
      * factory method to create a deep copy of CategorySetExternalIdAction

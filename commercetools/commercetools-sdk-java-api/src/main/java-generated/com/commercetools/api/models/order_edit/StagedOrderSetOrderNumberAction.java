@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setOrderNumber")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StagedOrderSetOrderNumberActionImpl.class)
 public interface StagedOrderSetOrderNumberAction extends StagedOrderUpdateAction {
@@ -67,6 +68,8 @@ public interface StagedOrderSetOrderNumberAction extends StagedOrderUpdateAction
         instance.setOrderNumber(template.getOrderNumber());
         return instance;
     }
+
+    public StagedOrderSetOrderNumberAction copyDeep();
 
     /**
      * factory method to create a deep copy of StagedOrderSetOrderNumberAction

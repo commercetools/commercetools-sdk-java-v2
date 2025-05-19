@@ -875,6 +875,8 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
         return instance;
     }
 
+    public Cart copyDeep();
+
     /**
      * factory method to create a deep copy of Cart
      * @param template instance to be copied

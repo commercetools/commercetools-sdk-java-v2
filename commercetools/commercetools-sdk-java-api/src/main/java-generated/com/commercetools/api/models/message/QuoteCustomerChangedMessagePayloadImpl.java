@@ -111,4 +111,8 @@ public class QuoteCustomerChangedMessagePayloadImpl implements QuoteCustomerChan
                 .build();
     }
 
+    @Override
+    public QuoteCustomerChangedMessagePayload copyDeep() {
+        return QuoteCustomerChangedMessagePayload.deepCopy(this);
+    }
 }

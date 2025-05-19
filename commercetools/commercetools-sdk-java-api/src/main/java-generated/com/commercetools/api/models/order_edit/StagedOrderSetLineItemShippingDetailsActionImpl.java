@@ -134,4 +134,8 @@ public class StagedOrderSetLineItemShippingDetailsActionImpl
                 .build();
     }
 
+    @Override
+    public StagedOrderSetLineItemShippingDetailsAction copyDeep() {
+        return StagedOrderSetLineItemShippingDetailsAction.deepCopy(this);
+    }
 }

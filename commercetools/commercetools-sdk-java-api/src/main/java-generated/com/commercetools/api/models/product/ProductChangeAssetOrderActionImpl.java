@@ -156,4 +156,8 @@ public class ProductChangeAssetOrderActionImpl implements ProductChangeAssetOrde
                 .build();
     }
 
+    @Override
+    public ProductChangeAssetOrderAction copyDeep() {
+        return ProductChangeAssetOrderAction.deepCopy(this);
+    }
 }

@@ -294,4 +294,8 @@ public class OrderCustomLineItemAddedMessageImpl implements OrderCustomLineItemA
                 .build();
     }
 
+    @Override
+    public OrderCustomLineItemAddedMessage copyDeep() {
+        return OrderCustomLineItemAddedMessage.deepCopy(this);
+    }
 }

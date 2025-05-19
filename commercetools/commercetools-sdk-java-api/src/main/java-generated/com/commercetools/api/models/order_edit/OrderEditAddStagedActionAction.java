@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("addStagedAction")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderEditAddStagedActionActionImpl.class)
 public interface OrderEditAddStagedActionAction extends OrderEditUpdateAction {
@@ -72,6 +73,8 @@ public interface OrderEditAddStagedActionAction extends OrderEditUpdateAction {
         instance.setStagedAction(template.getStagedAction());
         return instance;
     }
+
+    public OrderEditAddStagedActionAction copyDeep();
 
     /**
      * factory method to create a deep copy of OrderEditAddStagedActionAction

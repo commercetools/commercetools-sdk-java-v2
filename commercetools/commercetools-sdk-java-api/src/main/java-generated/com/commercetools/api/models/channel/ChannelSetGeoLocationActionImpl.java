@@ -92,4 +92,8 @@ public class ChannelSetGeoLocationActionImpl implements ChannelSetGeoLocationAct
                 .build();
     }
 
+    @Override
+    public ChannelSetGeoLocationAction copyDeep() {
+        return ChannelSetGeoLocationAction.deepCopy(this);
+    }
 }

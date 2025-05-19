@@ -116,4 +116,8 @@ public class GraphQLRequestImpl<T> implements GraphQLRequest<T>, ModelBase {
         this.dataMapper = dataMapper;
     }
 
+    @Override
+    public GraphQLRequest<T> copyDeep() {
+        return GraphQLRequest.deepCopy(this);
+    }
 }

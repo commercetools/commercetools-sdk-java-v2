@@ -94,6 +94,8 @@ public interface AttributeGroupUpdate extends
         return instance;
     }
 
+    public AttributeGroupUpdate copyDeep();
+
     /**
      * factory method to create a deep copy of AttributeGroupUpdate
      * @param template instance to be copied

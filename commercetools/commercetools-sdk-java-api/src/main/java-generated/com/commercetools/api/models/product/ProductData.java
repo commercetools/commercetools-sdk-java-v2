@@ -256,6 +256,8 @@ public interface ProductData extends ProductDataLike {
         return instance;
     }
 
+    public ProductData copyDeep();
+
     /**
      * factory method to create a deep copy of ProductData
      * @param template instance to be copied

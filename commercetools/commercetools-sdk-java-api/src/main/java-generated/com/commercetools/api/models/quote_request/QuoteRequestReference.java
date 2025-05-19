@@ -28,6 +28,7 @@ import jakarta.validation.Valid;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("quote-request")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = QuoteRequestReferenceImpl.class)
 public interface QuoteRequestReference extends Reference, com.commercetools.api.models.Identifiable<QuoteRequest>,
@@ -72,6 +73,8 @@ public interface QuoteRequestReference extends Reference, com.commercetools.api.
         instance.setObj(template.getObj());
         return instance;
     }
+
+    public QuoteRequestReference copyDeep();
 
     /**
      * factory method to create a deep copy of QuoteRequestReference

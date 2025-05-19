@@ -27,9 +27,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.extension.AuthorizationHeaderAuthenticationImpl.class, name = AuthorizationHeaderAuthentication.AUTHORIZATION_HEADER),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.extension.AzureFunctionsAuthenticationImpl.class, name = AzureFunctionsAuthentication.AZURE_FUNCTIONS) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = HttpDestinationAuthenticationImpl.class, visible = true)
 @JsonDeserialize(as = HttpDestinationAuthenticationImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -43,6 +40,8 @@ public interface HttpDestinationAuthentication {
     @JsonProperty("type")
     public String getType();
 
+    public HttpDestinationAuthentication copyDeep();
+
     /**
      * factory method to create a deep copy of HttpDestinationAuthentication
      * @param template instance to be copied
@@ -53,13 +52,9 @@ public interface HttpDestinationAuthentication {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.extension.AuthorizationHeaderAuthentication) {
-            return com.commercetools.api.models.extension.AuthorizationHeaderAuthentication
-                    .deepCopy((com.commercetools.api.models.extension.AuthorizationHeaderAuthentication) template);
-        }
-        if (template instanceof com.commercetools.api.models.extension.AzureFunctionsAuthentication) {
-            return com.commercetools.api.models.extension.AzureFunctionsAuthentication
-                    .deepCopy((com.commercetools.api.models.extension.AzureFunctionsAuthentication) template);
+
+        if (!(template instanceof HttpDestinationAuthenticationImpl)) {
+            return template.copyDeep();
         }
         HttpDestinationAuthenticationImpl instance = new HttpDestinationAuthenticationImpl();
         return instance;

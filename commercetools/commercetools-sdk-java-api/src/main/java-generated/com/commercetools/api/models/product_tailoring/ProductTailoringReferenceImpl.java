@@ -111,4 +111,8 @@ public class ProductTailoringReferenceImpl implements ProductTailoringReference,
                 .build();
     }
 
+    @Override
+    public ProductTailoringReference copyDeep() {
+        return ProductTailoringReference.deepCopy(this);
+    }
 }

@@ -111,4 +111,8 @@ public class QuoteSetCustomTypeActionImpl implements QuoteSetCustomTypeAction, M
                 .build();
     }
 
+    @Override
+    public QuoteSetCustomTypeAction copyDeep() {
+        return QuoteSetCustomTypeAction.deepCopy(this);
+    }
 }

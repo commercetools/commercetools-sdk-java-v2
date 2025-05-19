@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("type")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = TypeResourceIdentifierImpl.class)
 public interface TypeResourceIdentifier extends ResourceIdentifier, com.commercetools.api.models.Identifiable<Type> {
@@ -83,6 +84,8 @@ public interface TypeResourceIdentifier extends ResourceIdentifier, com.commerce
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public TypeResourceIdentifier copyDeep();
 
     /**
      * factory method to create a deep copy of TypeResourceIdentifier

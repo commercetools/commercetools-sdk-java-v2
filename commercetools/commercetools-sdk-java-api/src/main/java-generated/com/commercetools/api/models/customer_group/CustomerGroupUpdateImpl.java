@@ -100,4 +100,8 @@ public class CustomerGroupUpdateImpl implements CustomerGroupUpdate, ModelBase {
                 .build();
     }
 
+    @Override
+    public CustomerGroupUpdate copyDeep() {
+        return CustomerGroupUpdate.deepCopy(this);
+    }
 }

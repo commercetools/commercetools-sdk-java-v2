@@ -110,4 +110,8 @@ public class TypeResourceIdentifierImpl implements TypeResourceIdentifier, Model
                 .build();
     }
 
+    @Override
+    public TypeResourceIdentifier copyDeep() {
+        return TypeResourceIdentifier.deepCopy(this);
+    }
 }

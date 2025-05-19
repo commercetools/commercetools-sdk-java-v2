@@ -241,6 +241,8 @@ public interface ProductTailoringDraft extends io.vrap.rmf.base.client.Draft<Pro
         return instance;
     }
 
+    public ProductTailoringDraft copyDeep();
+
     /**
      * factory method to create a deep copy of ProductTailoringDraft
      * @param template instance to be copied

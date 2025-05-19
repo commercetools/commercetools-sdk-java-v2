@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("removeZone")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ShippingMethodRemoveZoneActionImpl.class)
 public interface ShippingMethodRemoveZoneAction extends ShippingMethodUpdateAction {
@@ -72,6 +73,8 @@ public interface ShippingMethodRemoveZoneAction extends ShippingMethodUpdateActi
         instance.setZone(template.getZone());
         return instance;
     }
+
+    public ShippingMethodRemoveZoneAction copyDeep();
 
     /**
      * factory method to create a deep copy of ShippingMethodRemoveZoneAction

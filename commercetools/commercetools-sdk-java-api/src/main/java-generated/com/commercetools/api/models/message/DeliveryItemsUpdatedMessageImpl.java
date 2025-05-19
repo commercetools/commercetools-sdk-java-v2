@@ -361,4 +361,8 @@ public class DeliveryItemsUpdatedMessageImpl implements DeliveryItemsUpdatedMess
                 .build();
     }
 
+    @Override
+    public DeliveryItemsUpdatedMessage copyDeep() {
+        return DeliveryItemsUpdatedMessage.deepCopy(this);
+    }
 }

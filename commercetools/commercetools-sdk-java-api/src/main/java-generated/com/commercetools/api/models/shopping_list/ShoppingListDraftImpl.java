@@ -308,4 +308,8 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public ShoppingListDraft copyDeep() {
+        return ShoppingListDraft.deepCopy(this);
+    }
 }

@@ -69,4 +69,8 @@ public class ProductSelectionUpdateActionImpl implements ProductSelectionUpdateA
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action).build();
     }
 
+    @Override
+    public ProductSelectionUpdateAction copyDeep() {
+        return ProductSelectionUpdateAction.deepCopy(this);
+    }
 }

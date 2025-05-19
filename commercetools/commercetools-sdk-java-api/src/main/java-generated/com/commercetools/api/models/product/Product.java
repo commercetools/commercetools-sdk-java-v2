@@ -303,6 +303,8 @@ public interface Product extends BaseResource, ProductMixin, com.commercetools.a
         return instance;
     }
 
+    public Product copyDeep();
+
     /**
      * factory method to create a deep copy of Product
      * @param template instance to be copied

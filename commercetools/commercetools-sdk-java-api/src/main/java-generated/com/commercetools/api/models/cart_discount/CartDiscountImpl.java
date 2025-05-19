@@ -488,4 +488,8 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
                 .build();
     }
 
+    @Override
+    public CartDiscount copyDeep() {
+        return CartDiscount.deepCopy(this);
+    }
 }

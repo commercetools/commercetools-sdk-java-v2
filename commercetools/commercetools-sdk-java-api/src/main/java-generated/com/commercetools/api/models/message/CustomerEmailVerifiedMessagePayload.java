@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("CustomerEmailVerified")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerEmailVerifiedMessagePayloadImpl.class)
 public interface CustomerEmailVerifiedMessagePayload extends MessagePayload {
@@ -50,6 +51,8 @@ public interface CustomerEmailVerifiedMessagePayload extends MessagePayload {
         CustomerEmailVerifiedMessagePayloadImpl instance = new CustomerEmailVerifiedMessagePayloadImpl();
         return instance;
     }
+
+    public CustomerEmailVerifiedMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of CustomerEmailVerifiedMessagePayload

@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setExpectedDelivery")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = InventoryEntrySetExpectedDeliveryActionImpl.class)
 public interface InventoryEntrySetExpectedDeliveryAction extends InventoryEntryUpdateAction {
@@ -67,6 +68,8 @@ public interface InventoryEntrySetExpectedDeliveryAction extends InventoryEntryU
         instance.setExpectedDelivery(template.getExpectedDelivery());
         return instance;
     }
+
+    public InventoryEntrySetExpectedDeliveryAction copyDeep();
 
     /**
      * factory method to create a deep copy of InventoryEntrySetExpectedDeliveryAction

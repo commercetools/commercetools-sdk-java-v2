@@ -111,4 +111,8 @@ public class ShoppingListReferenceImpl implements ShoppingListReference, ModelBa
                 .build();
     }
 
+    @Override
+    public ShoppingListReference copyDeep() {
+        return ShoppingListReference.deepCopy(this);
+    }
 }

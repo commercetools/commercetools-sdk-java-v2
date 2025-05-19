@@ -149,6 +149,8 @@ public interface ProductPriceDiscountsSetUpdatedPrice {
         return instance;
     }
 
+    public ProductPriceDiscountsSetUpdatedPrice copyDeep();
+
     /**
      * factory method to create a deep copy of ProductPriceDiscountsSetUpdatedPrice
      * @param template instance to be copied

@@ -31,6 +31,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("MaxStoreReferencesReached")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLMaxStoreReferencesReachedErrorImpl.class)
 public interface GraphQLMaxStoreReferencesReachedError extends GraphQLErrorObject {
@@ -66,6 +67,8 @@ public interface GraphQLMaxStoreReferencesReachedError extends GraphQLErrorObjec
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
+
+    public GraphQLMaxStoreReferencesReachedError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLMaxStoreReferencesReachedError

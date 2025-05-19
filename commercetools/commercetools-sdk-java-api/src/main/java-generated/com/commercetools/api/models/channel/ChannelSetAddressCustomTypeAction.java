@@ -28,6 +28,7 @@ import jakarta.validation.Valid;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setAddressCustomType")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ChannelSetAddressCustomTypeActionImpl.class)
 public interface ChannelSetAddressCustomTypeAction extends ChannelUpdateAction {
@@ -86,6 +87,8 @@ public interface ChannelSetAddressCustomTypeAction extends ChannelUpdateAction {
         instance.setFields(template.getFields());
         return instance;
     }
+
+    public ChannelSetAddressCustomTypeAction copyDeep();
 
     /**
      * factory method to create a deep copy of ChannelSetAddressCustomTypeAction

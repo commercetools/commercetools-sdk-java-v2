@@ -94,4 +94,8 @@ public class DiscountCodeSetMaxApplicationsPerCustomerActionImpl
                 .build();
     }
 
+    @Override
+    public DiscountCodeSetMaxApplicationsPerCustomerAction copyDeep() {
+        return DiscountCodeSetMaxApplicationsPerCustomerAction.deepCopy(this);
+    }
 }

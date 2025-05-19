@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("SearchIndexingInProgress")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = SearchIndexingInProgressErrorImpl.class)
 public interface SearchIndexingInProgressError extends ErrorObject {
@@ -78,6 +79,8 @@ public interface SearchIndexingInProgressError extends ErrorObject {
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
+
+    public SearchIndexingInProgressError copyDeep();
 
     /**
      * factory method to create a deep copy of SearchIndexingInProgressError

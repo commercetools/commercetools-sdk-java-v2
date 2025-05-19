@@ -97,6 +97,8 @@ public interface PaymentMethodInfo {
         return instance;
     }
 
+    public PaymentMethodInfo copyDeep();
+
     /**
      * factory method to create a deep copy of PaymentMethodInfo
      * @param template instance to be copied

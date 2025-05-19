@@ -161,4 +161,8 @@ public class AuthErrorResponseImpl implements AuthErrorResponse, ModelBase {
                 .build();
     }
 
+    @Override
+    public AuthErrorResponse copyDeep() {
+        return AuthErrorResponse.deepCopy(this);
+    }
 }

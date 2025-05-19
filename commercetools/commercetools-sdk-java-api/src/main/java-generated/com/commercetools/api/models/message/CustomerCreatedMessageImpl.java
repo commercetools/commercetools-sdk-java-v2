@@ -293,4 +293,8 @@ public class CustomerCreatedMessageImpl implements CustomerCreatedMessage, Model
                 .build();
     }
 
+    @Override
+    public CustomerCreatedMessage copyDeep() {
+        return CustomerCreatedMessage.deepCopy(this);
+    }
 }

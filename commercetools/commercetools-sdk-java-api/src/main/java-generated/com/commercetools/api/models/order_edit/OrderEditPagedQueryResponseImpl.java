@@ -159,4 +159,8 @@ public class OrderEditPagedQueryResponseImpl implements OrderEditPagedQueryRespo
                 .build();
     }
 
+    @Override
+    public OrderEditPagedQueryResponse copyDeep() {
+        return OrderEditPagedQueryResponse.deepCopy(this);
+    }
 }

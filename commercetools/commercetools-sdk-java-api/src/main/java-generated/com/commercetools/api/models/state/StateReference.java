@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("state")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StateReferenceImpl.class)
 public interface StateReference extends Reference, com.commercetools.api.models.Identifiable<State>,
@@ -88,6 +89,8 @@ public interface StateReference extends Reference, com.commercetools.api.models.
         instance.setObj(template.getObj());
         return instance;
     }
+
+    public StateReference copyDeep();
 
     /**
      * factory method to create a deep copy of StateReference

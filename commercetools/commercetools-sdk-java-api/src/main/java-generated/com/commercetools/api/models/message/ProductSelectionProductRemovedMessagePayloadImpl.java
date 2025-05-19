@@ -93,4 +93,8 @@ public class ProductSelectionProductRemovedMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public ProductSelectionProductRemovedMessagePayload copyDeep() {
+        return ProductSelectionProductRemovedMessagePayload.deepCopy(this);
+    }
 }

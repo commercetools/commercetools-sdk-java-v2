@@ -133,4 +133,8 @@ public class ProductAddToCategoryActionImpl implements ProductAddToCategoryActio
                 .build();
     }
 
+    @Override
+    public ProductAddToCategoryAction copyDeep() {
+        return ProductAddToCategoryAction.deepCopy(this);
+    }
 }

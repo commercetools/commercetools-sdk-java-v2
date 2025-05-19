@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setImageLabel")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTailoringSetImageLabelActionImpl.class)
 public interface ProductTailoringSetImageLabelAction extends ProductTailoringUpdateAction {
@@ -133,6 +134,8 @@ public interface ProductTailoringSetImageLabelAction extends ProductTailoringUpd
         instance.setStaged(template.getStaged());
         return instance;
     }
+
+    public ProductTailoringSetImageLabelAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductTailoringSetImageLabelAction

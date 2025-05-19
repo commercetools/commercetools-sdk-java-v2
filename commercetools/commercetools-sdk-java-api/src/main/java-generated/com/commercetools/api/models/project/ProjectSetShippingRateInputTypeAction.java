@@ -26,6 +26,7 @@ import jakarta.validation.Valid;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setShippingRateInputType")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProjectSetShippingRateInputTypeActionImpl.class)
 public interface ProjectSetShippingRateInputTypeAction extends ProjectUpdateAction {
@@ -68,6 +69,8 @@ public interface ProjectSetShippingRateInputTypeAction extends ProjectUpdateActi
         instance.setShippingRateInputType(template.getShippingRateInputType());
         return instance;
     }
+
+    public ProjectSetShippingRateInputTypeAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProjectSetShippingRateInputTypeAction

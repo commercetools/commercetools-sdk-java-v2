@@ -153,4 +153,8 @@ public class ProductAddExternalImageActionImpl implements ProductAddExternalImag
                 .build();
     }
 
+    @Override
+    public ProductAddExternalImageAction copyDeep() {
+        return ProductAddExternalImageAction.deepCopy(this);
+    }
 }

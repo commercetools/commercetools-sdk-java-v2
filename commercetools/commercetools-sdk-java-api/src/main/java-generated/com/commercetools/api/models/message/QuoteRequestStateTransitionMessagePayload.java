@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("QuoteRequestStateTransition")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = QuoteRequestStateTransitionMessagePayloadImpl.class)
 public interface QuoteRequestStateTransitionMessagePayload extends MessagePayload {
@@ -106,6 +107,8 @@ public interface QuoteRequestStateTransitionMessagePayload extends MessagePayloa
         instance.setForce(template.getForce());
         return instance;
     }
+
+    public QuoteRequestStateTransitionMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of QuoteRequestStateTransitionMessagePayload

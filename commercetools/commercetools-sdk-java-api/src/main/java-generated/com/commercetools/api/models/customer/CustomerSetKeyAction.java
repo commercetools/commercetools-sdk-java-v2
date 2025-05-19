@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setKey")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerSetKeyActionImpl.class)
 public interface CustomerSetKeyAction extends CustomerUpdateAction {
@@ -66,6 +67,8 @@ public interface CustomerSetKeyAction extends CustomerUpdateAction {
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public CustomerSetKeyAction copyDeep();
 
     /**
      * factory method to create a deep copy of CustomerSetKeyAction

@@ -111,4 +111,8 @@ public class DeliveryCustomFieldRemovedMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public DeliveryCustomFieldRemovedMessagePayload copyDeep() {
+        return DeliveryCustomFieldRemovedMessagePayload.deepCopy(this);
+    }
 }

@@ -114,4 +114,8 @@ public class MoneyOverflowErrorImpl implements MoneyOverflowError, ModelBase {
                 .build();
     }
 
+    @Override
+    public MoneyOverflowError copyDeep() {
+        return MoneyOverflowError.deepCopy(this);
+    }
 }

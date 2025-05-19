@@ -141,4 +141,8 @@ public class GraphQLProductPresentWithDifferentVariantSelectionErrorImpl
                 .build();
     }
 
+    @Override
+    public GraphQLProductPresentWithDifferentVariantSelectionError copyDeep() {
+        return GraphQLProductPresentWithDifferentVariantSelectionError.deepCopy(this);
+    }
 }

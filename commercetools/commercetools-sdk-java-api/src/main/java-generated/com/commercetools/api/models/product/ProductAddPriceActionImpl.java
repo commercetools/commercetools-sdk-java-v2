@@ -152,4 +152,8 @@ public class ProductAddPriceActionImpl implements ProductAddPriceAction, ModelBa
                 .build();
     }
 
+    @Override
+    public ProductAddPriceAction copyDeep() {
+        return ProductAddPriceAction.deepCopy(this);
+    }
 }

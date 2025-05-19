@@ -111,4 +111,8 @@ public class ProductTailoringSetNameActionImpl implements ProductTailoringSetNam
                 .build();
     }
 
+    @Override
+    public ProductTailoringSetNameAction copyDeep() {
+        return ProductTailoringSetNameAction.deepCopy(this);
+    }
 }

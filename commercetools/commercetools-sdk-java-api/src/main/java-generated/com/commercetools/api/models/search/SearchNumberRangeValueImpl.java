@@ -194,4 +194,8 @@ public class SearchNumberRangeValueImpl implements SearchNumberRangeValue, Model
                 .build();
     }
 
+    @Override
+    public SearchNumberRangeValue copyDeep() {
+        return SearchNumberRangeValue.deepCopy(this);
+    }
 }

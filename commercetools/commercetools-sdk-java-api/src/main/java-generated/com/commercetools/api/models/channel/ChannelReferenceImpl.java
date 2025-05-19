@@ -111,4 +111,8 @@ public class ChannelReferenceImpl implements ChannelReference, ModelBase {
                 .build();
     }
 
+    @Override
+    public ChannelReference copyDeep() {
+        return ChannelReference.deepCopy(this);
+    }
 }

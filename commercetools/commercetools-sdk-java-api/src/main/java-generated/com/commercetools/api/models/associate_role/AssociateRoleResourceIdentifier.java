@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("associate-role")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = AssociateRoleResourceIdentifierImpl.class)
 public interface AssociateRoleResourceIdentifier
@@ -84,6 +85,8 @@ public interface AssociateRoleResourceIdentifier
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public AssociateRoleResourceIdentifier copyDeep();
 
     /**
      * factory method to create a deep copy of AssociateRoleResourceIdentifier

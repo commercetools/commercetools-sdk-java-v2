@@ -27,6 +27,7 @@ import jakarta.validation.Valid;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("StandalonePriceDiscountSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StandalonePriceDiscountSetMessagePayloadImpl.class)
 public interface StandalonePriceDiscountSetMessagePayload extends MessagePayload {
@@ -69,6 +70,8 @@ public interface StandalonePriceDiscountSetMessagePayload extends MessagePayload
         instance.setDiscounted(template.getDiscounted());
         return instance;
     }
+
+    public StandalonePriceDiscountSetMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of StandalonePriceDiscountSetMessagePayload

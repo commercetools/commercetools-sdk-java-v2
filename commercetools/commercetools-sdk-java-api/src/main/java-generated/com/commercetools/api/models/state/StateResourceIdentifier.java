@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("state")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = StateResourceIdentifierImpl.class)
 public interface StateResourceIdentifier extends ResourceIdentifier, com.commercetools.api.models.Identifiable<State> {
@@ -83,6 +84,8 @@ public interface StateResourceIdentifier extends ResourceIdentifier, com.commerc
         instance.setKey(template.getKey());
         return instance;
     }
+
+    public StateResourceIdentifier copyDeep();
 
     /**
      * factory method to create a deep copy of StateResourceIdentifier

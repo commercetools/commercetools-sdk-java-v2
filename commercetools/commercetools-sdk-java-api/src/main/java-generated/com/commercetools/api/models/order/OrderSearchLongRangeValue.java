@@ -82,6 +82,8 @@ public interface OrderSearchLongRangeValue extends OrderSearchQueryExpressionVal
         return instance;
     }
 
+    public OrderSearchLongRangeValue copyDeep();
+
     /**
      * factory method to create a deep copy of OrderSearchLongRangeValue
      * @param template instance to be copied

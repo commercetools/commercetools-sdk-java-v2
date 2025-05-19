@@ -40,6 +40,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("Company")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CompanyImpl.class)
 public interface Company extends BusinessUnit {
@@ -136,6 +137,8 @@ public interface Company extends BusinessUnit {
         instance.setApprovalRuleMode(template.getApprovalRuleMode());
         return instance;
     }
+
+    public Company copyDeep();
 
     /**
      * factory method to create a deep copy of Company

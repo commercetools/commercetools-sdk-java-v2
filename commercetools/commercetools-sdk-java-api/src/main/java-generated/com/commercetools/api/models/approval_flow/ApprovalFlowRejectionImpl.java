@@ -115,4 +115,8 @@ public class ApprovalFlowRejectionImpl implements ApprovalFlowRejection, ModelBa
                 .build();
     }
 
+    @Override
+    public ApprovalFlowRejection copyDeep() {
+        return ApprovalFlowRejection.deepCopy(this);
+    }
 }

@@ -137,4 +137,8 @@ public class TypedMoneyDraftImpl implements TypedMoneyDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public TypedMoneyDraft copyDeep() {
+        return TypedMoneyDraft.deepCopy(this);
+    }
 }

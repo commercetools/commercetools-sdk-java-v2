@@ -96,4 +96,8 @@ public class StoreSetCountriesActionImpl implements StoreSetCountriesAction, Mod
                 .build();
     }
 
+    @Override
+    public StoreSetCountriesAction copyDeep() {
+        return StoreSetCountriesAction.deepCopy(this);
+    }
 }

@@ -94,4 +94,8 @@ public class ShippingMethodSetLocalizedDescriptionActionImpl
                 .build();
     }
 
+    @Override
+    public ShippingMethodSetLocalizedDescriptionAction copyDeep() {
+        return ShippingMethodSetLocalizedDescriptionAction.deepCopy(this);
+    }
 }

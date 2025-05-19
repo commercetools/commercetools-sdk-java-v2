@@ -153,4 +153,8 @@ public class ProductTailoringAddExternalImageActionImpl implements ProductTailor
                 .build();
     }
 
+    @Override
+    public ProductTailoringAddExternalImageAction copyDeep() {
+        return ProductTailoringAddExternalImageAction.deepCopy(this);
+    }
 }

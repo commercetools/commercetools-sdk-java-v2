@@ -159,4 +159,8 @@ public class TypePagedQueryResponseImpl implements TypePagedQueryResponse, Model
                 .build();
     }
 
+    @Override
+    public TypePagedQueryResponse copyDeep() {
+        return TypePagedQueryResponse.deepCopy(this);
+    }
 }

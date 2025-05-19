@@ -118,4 +118,8 @@ public class ReturnInfoImpl implements ReturnInfo, ModelBase {
                 .build();
     }
 
+    @Override
+    public ReturnInfo copyDeep() {
+        return ReturnInfo.deepCopy(this);
+    }
 }

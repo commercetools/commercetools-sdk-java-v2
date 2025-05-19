@@ -200,4 +200,8 @@ public class SearchExactValueImpl implements SearchExactValue, ModelBase {
                 .build();
     }
 
+    @Override
+    public SearchExactValue copyDeep() {
+        return SearchExactValue.deepCopy(this);
+    }
 }

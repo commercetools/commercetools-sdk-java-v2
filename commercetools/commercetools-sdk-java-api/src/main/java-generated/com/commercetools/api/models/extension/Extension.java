@@ -231,6 +231,8 @@ public interface Extension extends BaseResource, com.commercetools.api.models.Do
         return instance;
     }
 
+    public Extension copyDeep();
+
     /**
      * factory method to create a deep copy of Extension
      * @param template instance to be copied

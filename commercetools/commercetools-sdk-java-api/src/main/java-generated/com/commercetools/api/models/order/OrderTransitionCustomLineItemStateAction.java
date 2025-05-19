@@ -32,6 +32,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("transitionCustomLineItemState")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderTransitionCustomLineItemStateActionImpl.class)
 public interface OrderTransitionCustomLineItemStateAction extends OrderUpdateAction {
@@ -156,6 +157,8 @@ public interface OrderTransitionCustomLineItemStateAction extends OrderUpdateAct
         instance.setActualTransitionDate(template.getActualTransitionDate());
         return instance;
     }
+
+    public OrderTransitionCustomLineItemStateAction copyDeep();
 
     /**
      * factory method to create a deep copy of OrderTransitionCustomLineItemStateAction

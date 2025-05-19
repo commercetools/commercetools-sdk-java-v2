@@ -93,4 +93,8 @@ public class StandalonePriceTierRemovedMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public StandalonePriceTierRemovedMessagePayload copyDeep() {
+        return StandalonePriceTierRemovedMessagePayload.deepCopy(this);
+    }
 }

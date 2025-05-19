@@ -76,6 +76,8 @@ public interface ApproverHierarchyDraft extends io.vrap.rmf.base.client.Draft<Ap
         return instance;
     }
 
+    public ApproverHierarchyDraft copyDeep();
+
     /**
      * factory method to create a deep copy of ApproverHierarchyDraft
      * @param template instance to be copied

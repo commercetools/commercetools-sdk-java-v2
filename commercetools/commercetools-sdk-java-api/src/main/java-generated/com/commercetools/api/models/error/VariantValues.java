@@ -120,6 +120,8 @@ public interface VariantValues {
         return instance;
     }
 
+    public VariantValues copyDeep();
+
     /**
      * factory method to create a deep copy of VariantValues
      * @param template instance to be copied

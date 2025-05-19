@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("OrderCustomLineItemRemoved")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderCustomLineItemRemovedMessagePayloadImpl.class)
 public interface OrderCustomLineItemRemovedMessagePayload extends OrderMessagePayload {
@@ -105,6 +106,8 @@ public interface OrderCustomLineItemRemovedMessagePayload extends OrderMessagePa
         instance.setCustomLineItem(template.getCustomLineItem());
         return instance;
     }
+
+    public OrderCustomLineItemRemovedMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of OrderCustomLineItemRemovedMessagePayload

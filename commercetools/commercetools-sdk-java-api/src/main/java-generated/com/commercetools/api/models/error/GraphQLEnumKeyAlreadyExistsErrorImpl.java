@@ -138,4 +138,8 @@ public class GraphQLEnumKeyAlreadyExistsErrorImpl implements GraphQLEnumKeyAlrea
                 .build();
     }
 
+    @Override
+    public GraphQLEnumKeyAlreadyExistsError copyDeep() {
+        return GraphQLEnumKeyAlreadyExistsError.deepCopy(this);
+    }
 }

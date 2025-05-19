@@ -91,4 +91,8 @@ public class CartDiscountChangeSortOrderActionImpl implements CartDiscountChange
                 .build();
     }
 
+    @Override
+    public CartDiscountChangeSortOrderAction copyDeep() {
+        return CartDiscountChangeSortOrderAction.deepCopy(this);
+    }
 }

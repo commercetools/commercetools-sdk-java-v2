@@ -133,4 +133,8 @@ public class ProductAssignmentMissingErrorImpl implements ProductAssignmentMissi
                 .build();
     }
 
+    @Override
+    public ProductAssignmentMissingError copyDeep() {
+        return ProductAssignmentMissingError.deepCopy(this);
+    }
 }

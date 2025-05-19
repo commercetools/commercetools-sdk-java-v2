@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changeCurrencies")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProjectChangeCurrenciesActionImpl.class)
 public interface ProjectChangeCurrenciesAction extends ProjectUpdateAction {
@@ -77,6 +78,8 @@ public interface ProjectChangeCurrenciesAction extends ProjectUpdateAction {
         instance.setCurrencies(template.getCurrencies());
         return instance;
     }
+
+    public ProjectChangeCurrenciesAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProjectChangeCurrenciesAction

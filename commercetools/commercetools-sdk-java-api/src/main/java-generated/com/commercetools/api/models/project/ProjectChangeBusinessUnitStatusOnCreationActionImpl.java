@@ -93,4 +93,8 @@ public class ProjectChangeBusinessUnitStatusOnCreationActionImpl
                 .build();
     }
 
+    @Override
+    public ProjectChangeBusinessUnitStatusOnCreationAction copyDeep() {
+        return ProjectChangeBusinessUnitStatusOnCreationAction.deepCopy(this);
+    }
 }

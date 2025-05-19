@@ -91,4 +91,8 @@ public class PaymentSetKeyActionImpl implements PaymentSetKeyAction, ModelBase {
                 .build();
     }
 
+    @Override
+    public PaymentSetKeyAction copyDeep() {
+        return PaymentSetKeyAction.deepCopy(this);
+    }
 }

@@ -92,4 +92,8 @@ public class CategorySetDescriptionActionImpl implements CategorySetDescriptionA
                 .build();
     }
 
+    @Override
+    public CategorySetDescriptionAction copyDeep() {
+        return CategorySetDescriptionAction.deepCopy(this);
+    }
 }

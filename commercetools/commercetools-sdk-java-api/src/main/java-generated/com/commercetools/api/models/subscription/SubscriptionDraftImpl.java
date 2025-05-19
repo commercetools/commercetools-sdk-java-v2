@@ -191,4 +191,8 @@ public class SubscriptionDraftImpl implements SubscriptionDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public SubscriptionDraft copyDeep() {
+        return SubscriptionDraft.deepCopy(this);
+    }
 }

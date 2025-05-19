@@ -114,4 +114,8 @@ public class SyntaxErrorErrorImpl implements SyntaxErrorError, ModelBase {
                 .build();
     }
 
+    @Override
+    public SyntaxErrorError copyDeep() {
+        return SyntaxErrorError.deepCopy(this);
+    }
 }

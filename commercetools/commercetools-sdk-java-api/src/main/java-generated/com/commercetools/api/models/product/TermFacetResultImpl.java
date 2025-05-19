@@ -183,4 +183,8 @@ public class TermFacetResultImpl implements TermFacetResult, ModelBase {
                 .build();
     }
 
+    @Override
+    public TermFacetResult copyDeep() {
+        return TermFacetResult.deepCopy(this);
+    }
 }

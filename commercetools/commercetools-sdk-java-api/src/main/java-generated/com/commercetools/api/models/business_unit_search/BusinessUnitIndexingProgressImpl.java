@@ -114,4 +114,8 @@ public class BusinessUnitIndexingProgressImpl implements BusinessUnitIndexingPro
                 .build();
     }
 
+    @Override
+    public BusinessUnitIndexingProgress copyDeep() {
+        return BusinessUnitIndexingProgress.deepCopy(this);
+    }
 }

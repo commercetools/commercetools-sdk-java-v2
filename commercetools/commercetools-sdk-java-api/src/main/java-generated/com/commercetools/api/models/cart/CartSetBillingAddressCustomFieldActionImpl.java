@@ -110,4 +110,8 @@ public class CartSetBillingAddressCustomFieldActionImpl implements CartSetBillin
                 .build();
     }
 
+    @Override
+    public CartSetBillingAddressCustomFieldAction copyDeep() {
+        return CartSetBillingAddressCustomFieldAction.deepCopy(this);
+    }
 }

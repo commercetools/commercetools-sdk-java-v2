@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("business-unit")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = BusinessUnitReferenceImpl.class)
 public interface BusinessUnitReference extends Reference, com.commercetools.api.models.Identifiable<BusinessUnit>,
@@ -88,6 +89,8 @@ public interface BusinessUnitReference extends Reference, com.commercetools.api.
         instance.setObj(template.getObj());
         return instance;
     }
+
+    public BusinessUnitReference copyDeep();
 
     /**
      * factory method to create a deep copy of BusinessUnitReference

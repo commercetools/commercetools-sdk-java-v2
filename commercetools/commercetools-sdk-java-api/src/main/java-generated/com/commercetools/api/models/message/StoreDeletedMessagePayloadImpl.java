@@ -62,4 +62,8 @@ public class StoreDeletedMessagePayloadImpl implements StoreDeletedMessagePayloa
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("type", type).build();
     }
 
+    @Override
+    public StoreDeletedMessagePayload copyDeep() {
+        return StoreDeletedMessagePayload.deepCopy(this);
+    }
 }

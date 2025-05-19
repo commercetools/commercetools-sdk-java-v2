@@ -31,6 +31,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ResourceDeleted")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ResourceDeletedDeliveryPayloadImpl.class)
 public interface ResourceDeletedDeliveryPayload extends DeliveryPayload {
@@ -108,6 +109,8 @@ public interface ResourceDeletedDeliveryPayload extends DeliveryPayload {
         instance.setDataErasure(template.getDataErasure());
         return instance;
     }
+
+    public ResourceDeletedDeliveryPayload copyDeep();
 
     /**
      * factory method to create a deep copy of ResourceDeletedDeliveryPayload

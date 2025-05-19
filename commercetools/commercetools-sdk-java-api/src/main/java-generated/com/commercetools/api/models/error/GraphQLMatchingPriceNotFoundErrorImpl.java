@@ -229,4 +229,8 @@ public class GraphQLMatchingPriceNotFoundErrorImpl implements GraphQLMatchingPri
                 .build();
     }
 
+    @Override
+    public GraphQLMatchingPriceNotFoundError copyDeep() {
+        return GraphQLMatchingPriceNotFoundError.deepCopy(this);
+    }
 }

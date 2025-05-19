@@ -131,6 +131,8 @@ public interface DiscountOnTotalPrice {
         return instance;
     }
 
+    public DiscountOnTotalPrice copyDeep();
+
     /**
      * factory method to create a deep copy of DiscountOnTotalPrice
      * @param template instance to be copied

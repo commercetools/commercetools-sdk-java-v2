@@ -69,4 +69,8 @@ public class AssociateRoleUpdateActionImpl implements AssociateRoleUpdateAction,
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action).build();
     }
 
+    @Override
+    public AssociateRoleUpdateAction copyDeep() {
+        return AssociateRoleUpdateAction.deepCopy(this);
+    }
 }

@@ -329,4 +329,8 @@ public class SubscriptionImpl implements Subscription, ModelBase {
                 .build();
     }
 
+    @Override
+    public Subscription copyDeep() {
+        return Subscription.deepCopy(this);
+    }
 }

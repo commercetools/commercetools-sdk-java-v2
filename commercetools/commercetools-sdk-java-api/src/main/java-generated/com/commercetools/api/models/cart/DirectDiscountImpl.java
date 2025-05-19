@@ -115,4 +115,8 @@ public class DirectDiscountImpl implements DirectDiscount, ModelBase {
                 .build();
     }
 
+    @Override
+    public DirectDiscount copyDeep() {
+        return DirectDiscount.deepCopy(this);
+    }
 }

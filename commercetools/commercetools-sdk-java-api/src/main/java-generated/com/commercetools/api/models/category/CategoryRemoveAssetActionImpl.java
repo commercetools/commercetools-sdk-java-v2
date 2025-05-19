@@ -110,4 +110,8 @@ public class CategoryRemoveAssetActionImpl implements CategoryRemoveAssetAction,
                 .build();
     }
 
+    @Override
+    public CategoryRemoveAssetAction copyDeep() {
+        return CategoryRemoveAssetAction.deepCopy(this);
+    }
 }

@@ -92,4 +92,8 @@ public class ReturnInfoAddedMessagePayloadImpl implements ReturnInfoAddedMessage
                 .build();
     }
 
+    @Override
+    public ReturnInfoAddedMessagePayload copyDeep() {
+        return ReturnInfoAddedMessagePayload.deepCopy(this);
+    }
 }

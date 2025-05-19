@@ -143,6 +143,8 @@ public interface PaymentPagedQueryResponse extends com.commercetools.api.models.
         return instance;
     }
 
+    public PaymentPagedQueryResponse copyDeep();
+
     /**
      * factory method to create a deep copy of PaymentPagedQueryResponse
      * @param template instance to be copied

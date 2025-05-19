@@ -323,4 +323,8 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
                 .build();
     }
 
+    @Override
+    public StandalonePriceDraft copyDeep() {
+        return StandalonePriceDraft.deepCopy(this);
+    }
 }

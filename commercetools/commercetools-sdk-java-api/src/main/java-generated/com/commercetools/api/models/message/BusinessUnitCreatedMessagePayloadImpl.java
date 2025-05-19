@@ -92,4 +92,8 @@ public class BusinessUnitCreatedMessagePayloadImpl implements BusinessUnitCreate
                 .build();
     }
 
+    @Override
+    public BusinessUnitCreatedMessagePayload copyDeep() {
+        return BusinessUnitCreatedMessagePayload.deepCopy(this);
+    }
 }

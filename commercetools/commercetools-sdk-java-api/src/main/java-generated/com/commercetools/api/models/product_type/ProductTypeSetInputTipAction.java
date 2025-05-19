@@ -29,6 +29,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setInputTip")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTypeSetInputTipActionImpl.class)
 public interface ProductTypeSetInputTipAction extends ProductTypeUpdateAction {
@@ -87,6 +88,8 @@ public interface ProductTypeSetInputTipAction extends ProductTypeUpdateAction {
         instance.setInputTip(template.getInputTip());
         return instance;
     }
+
+    public ProductTypeSetInputTipAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductTypeSetInputTipAction

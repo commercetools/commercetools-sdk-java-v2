@@ -175,4 +175,8 @@ public class SearchAnyValueImpl implements SearchAnyValue, ModelBase {
                 .build();
     }
 
+    @Override
+    public SearchAnyValue copyDeep() {
+        return SearchAnyValue.deepCopy(this);
+    }
 }

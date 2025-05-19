@@ -372,4 +372,8 @@ public class ProductPriceCustomFieldChangedMessageImpl implements ProductPriceCu
                 .build();
     }
 
+    @Override
+    public ProductPriceCustomFieldChangedMessage copyDeep() {
+        return ProductPriceCustomFieldChangedMessage.deepCopy(this);
+    }
 }

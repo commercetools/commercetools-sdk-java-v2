@@ -95,4 +95,8 @@ public class CustomFieldsDraftImpl implements CustomFieldsDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public CustomFieldsDraft copyDeep() {
+        return CustomFieldsDraft.deepCopy(this);
+    }
 }

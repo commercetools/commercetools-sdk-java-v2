@@ -417,4 +417,8 @@ public class StagedQuoteImpl implements StagedQuote, ModelBase {
                 .build();
     }
 
+    @Override
+    public StagedQuote copyDeep() {
+        return StagedQuote.deepCopy(this);
+    }
 }

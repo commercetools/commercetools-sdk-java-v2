@@ -334,4 +334,8 @@ public class OrderCustomLineItemRemovedMessageImpl implements OrderCustomLineIte
                 .build();
     }
 
+    @Override
+    public OrderCustomLineItemRemovedMessage copyDeep() {
+        return OrderCustomLineItemRemovedMessage.deepCopy(this);
+    }
 }

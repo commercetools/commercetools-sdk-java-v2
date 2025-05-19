@@ -118,4 +118,8 @@ public class CartDiscountValueAbsoluteDraftImpl implements CartDiscountValueAbso
                 .build();
     }
 
+    @Override
+    public CartDiscountValueAbsoluteDraft copyDeep() {
+        return CartDiscountValueAbsoluteDraft.deepCopy(this);
+    }
 }

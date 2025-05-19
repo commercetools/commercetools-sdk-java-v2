@@ -282,4 +282,8 @@ public class PriceImpl implements Price, ModelBase {
                 .build();
     }
 
+    @Override
+    public Price copyDeep() {
+        return Price.deepCopy(this);
+    }
 }

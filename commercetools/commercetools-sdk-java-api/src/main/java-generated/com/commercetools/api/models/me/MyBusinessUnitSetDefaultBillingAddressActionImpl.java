@@ -111,4 +111,8 @@ public class MyBusinessUnitSetDefaultBillingAddressActionImpl
                 .build();
     }
 
+    @Override
+    public MyBusinessUnitSetDefaultBillingAddressAction copyDeep() {
+        return MyBusinessUnitSetDefaultBillingAddressAction.deepCopy(this);
+    }
 }

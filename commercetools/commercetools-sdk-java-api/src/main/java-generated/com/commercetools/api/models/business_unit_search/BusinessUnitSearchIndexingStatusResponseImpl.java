@@ -159,4 +159,8 @@ public class BusinessUnitSearchIndexingStatusResponseImpl
                 .build();
     }
 
+    @Override
+    public BusinessUnitSearchIndexingStatusResponse copyDeep() {
+        return BusinessUnitSearchIndexingStatusResponse.deepCopy(this);
+    }
 }

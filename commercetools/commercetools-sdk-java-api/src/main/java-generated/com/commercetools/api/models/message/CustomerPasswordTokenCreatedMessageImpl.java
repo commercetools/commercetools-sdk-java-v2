@@ -314,4 +314,8 @@ public class CustomerPasswordTokenCreatedMessageImpl implements CustomerPassword
                 .build();
     }
 
+    @Override
+    public CustomerPasswordTokenCreatedMessage copyDeep() {
+        return CustomerPasswordTokenCreatedMessage.deepCopy(this);
+    }
 }

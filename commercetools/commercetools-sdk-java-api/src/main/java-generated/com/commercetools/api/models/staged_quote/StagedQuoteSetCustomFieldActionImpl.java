@@ -110,4 +110,8 @@ public class StagedQuoteSetCustomFieldActionImpl implements StagedQuoteSetCustom
                 .build();
     }
 
+    @Override
+    public StagedQuoteSetCustomFieldAction copyDeep() {
+        return StagedQuoteSetCustomFieldAction.deepCopy(this);
+    }
 }

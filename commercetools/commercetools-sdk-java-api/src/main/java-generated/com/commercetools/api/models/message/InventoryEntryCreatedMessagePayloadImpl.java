@@ -92,4 +92,8 @@ public class InventoryEntryCreatedMessagePayloadImpl implements InventoryEntryCr
                 .build();
     }
 
+    @Override
+    public InventoryEntryCreatedMessagePayload copyDeep() {
+        return InventoryEntryCreatedMessagePayload.deepCopy(this);
+    }
 }

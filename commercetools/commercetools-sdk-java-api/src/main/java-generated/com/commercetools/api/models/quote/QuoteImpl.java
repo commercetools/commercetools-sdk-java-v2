@@ -797,4 +797,8 @@ public class QuoteImpl implements Quote, ModelBase {
                 .build();
     }
 
+    @Override
+    public Quote copyDeep() {
+        return Quote.deepCopy(this);
+    }
 }

@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("DuplicateEnumValues")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLDuplicateEnumValuesErrorImpl.class)
 public interface GraphQLDuplicateEnumValuesError extends GraphQLErrorObject {
@@ -86,6 +87,8 @@ public interface GraphQLDuplicateEnumValuesError extends GraphQLErrorObject {
         instance.setDuplicates(template.getDuplicates());
         return instance;
     }
+
+    public GraphQLDuplicateEnumValuesError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLDuplicateEnumValuesError

@@ -137,4 +137,8 @@ public class GraphQLDuplicateFieldErrorImpl implements GraphQLDuplicateFieldErro
                 .build();
     }
 
+    @Override
+    public GraphQLDuplicateFieldError copyDeep() {
+        return GraphQLDuplicateFieldError.deepCopy(this);
+    }
 }

@@ -28,14 +28,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.AzureEventGridDestinationImpl.class, name = AzureEventGridDestination.EVENT_GRID),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.AzureServiceBusDestinationImpl.class, name = AzureServiceBusDestination.AZURE_SERVICE_BUS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.ConfluentCloudDestinationImpl.class, name = ConfluentCloudDestination.CONFLUENT_CLOUD),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.EventBridgeDestinationImpl.class, name = EventBridgeDestination.EVENT_BRIDGE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.GoogleCloudPubSubDestinationImpl.class, name = GoogleCloudPubSubDestination.GOOGLE_CLOUD_PUB_SUB),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.SnsDestinationImpl.class, name = SnsDestination.SNS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.SqsDestinationImpl.class, name = SqsDestination.SQS) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = DestinationImpl.class, visible = true)
 @JsonDeserialize(as = DestinationImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -49,6 +41,8 @@ public interface Destination {
     @JsonProperty("type")
     public String getType();
 
+    public Destination copyDeep();
+
     /**
      * factory method to create a deep copy of Destination
      * @param template instance to be copied
@@ -59,33 +53,9 @@ public interface Destination {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.subscription.AzureEventGridDestination) {
-            return com.commercetools.api.models.subscription.AzureEventGridDestination
-                    .deepCopy((com.commercetools.api.models.subscription.AzureEventGridDestination) template);
-        }
-        if (template instanceof com.commercetools.api.models.subscription.AzureServiceBusDestination) {
-            return com.commercetools.api.models.subscription.AzureServiceBusDestination
-                    .deepCopy((com.commercetools.api.models.subscription.AzureServiceBusDestination) template);
-        }
-        if (template instanceof com.commercetools.api.models.subscription.ConfluentCloudDestination) {
-            return com.commercetools.api.models.subscription.ConfluentCloudDestination
-                    .deepCopy((com.commercetools.api.models.subscription.ConfluentCloudDestination) template);
-        }
-        if (template instanceof com.commercetools.api.models.subscription.EventBridgeDestination) {
-            return com.commercetools.api.models.subscription.EventBridgeDestination
-                    .deepCopy((com.commercetools.api.models.subscription.EventBridgeDestination) template);
-        }
-        if (template instanceof com.commercetools.api.models.subscription.GoogleCloudPubSubDestination) {
-            return com.commercetools.api.models.subscription.GoogleCloudPubSubDestination
-                    .deepCopy((com.commercetools.api.models.subscription.GoogleCloudPubSubDestination) template);
-        }
-        if (template instanceof com.commercetools.api.models.subscription.SnsDestination) {
-            return com.commercetools.api.models.subscription.SnsDestination
-                    .deepCopy((com.commercetools.api.models.subscription.SnsDestination) template);
-        }
-        if (template instanceof com.commercetools.api.models.subscription.SqsDestination) {
-            return com.commercetools.api.models.subscription.SqsDestination
-                    .deepCopy((com.commercetools.api.models.subscription.SqsDestination) template);
+
+        if (!(template instanceof DestinationImpl)) {
+            return template.copyDeep();
         }
         DestinationImpl instance = new DestinationImpl();
         return instance;

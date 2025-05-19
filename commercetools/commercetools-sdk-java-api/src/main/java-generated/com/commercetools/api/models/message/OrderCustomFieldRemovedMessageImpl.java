@@ -293,4 +293,8 @@ public class OrderCustomFieldRemovedMessageImpl implements OrderCustomFieldRemov
                 .build();
     }
 
+    @Override
+    public OrderCustomFieldRemovedMessage copyDeep() {
+        return OrderCustomFieldRemovedMessage.deepCopy(this);
+    }
 }

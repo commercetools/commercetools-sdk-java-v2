@@ -297,4 +297,8 @@ public class CartDiscountStoresSetMessageImpl implements CartDiscountStoresSetMe
                 .build();
     }
 
+    @Override
+    public CartDiscountStoresSetMessage copyDeep() {
+        return CartDiscountStoresSetMessage.deepCopy(this);
+    }
 }

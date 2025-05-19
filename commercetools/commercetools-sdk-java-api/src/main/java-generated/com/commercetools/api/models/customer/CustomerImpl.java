@@ -699,4 +699,8 @@ public class CustomerImpl implements Customer, ModelBase {
                 .build();
     }
 
+    @Override
+    public Customer copyDeep() {
+        return Customer.deepCopy(this);
+    }
 }

@@ -74,4 +74,8 @@ public class SearchLongRangeExpressionImpl implements SearchLongRangeExpression,
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("range", range).build();
     }
 
+    @Override
+    public SearchLongRangeExpression copyDeep() {
+        return SearchLongRangeExpression.deepCopy(this);
+    }
 }

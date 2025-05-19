@@ -144,6 +144,8 @@ public interface CustomObjectPagedQueryResponse
         return instance;
     }
 
+    public CustomObjectPagedQueryResponse copyDeep();
+
     /**
      * factory method to create a deep copy of CustomObjectPagedQueryResponse
      * @param template instance to be copied

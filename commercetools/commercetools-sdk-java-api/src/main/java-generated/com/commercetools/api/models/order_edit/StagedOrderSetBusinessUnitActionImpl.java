@@ -95,4 +95,8 @@ public class StagedOrderSetBusinessUnitActionImpl implements StagedOrderSetBusin
                 .build();
     }
 
+    @Override
+    public StagedOrderSetBusinessUnitAction copyDeep() {
+        return StagedOrderSetBusinessUnitAction.deepCopy(this);
+    }
 }

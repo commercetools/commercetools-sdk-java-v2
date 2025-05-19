@@ -92,4 +92,8 @@ public class StoreRemoveCountryActionImpl implements StoreRemoveCountryAction, M
                 .build();
     }
 
+    @Override
+    public StoreRemoveCountryAction copyDeep() {
+        return StoreRemoveCountryAction.deepCopy(this);
+    }
 }

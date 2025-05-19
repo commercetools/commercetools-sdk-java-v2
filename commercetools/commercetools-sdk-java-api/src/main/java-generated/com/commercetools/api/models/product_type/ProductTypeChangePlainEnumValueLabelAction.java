@@ -30,6 +30,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("changePlainEnumValueLabel")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductTypeChangePlainEnumValueLabelActionImpl.class)
 public interface ProductTypeChangePlainEnumValueLabelAction extends ProductTypeUpdateAction {
@@ -90,6 +91,8 @@ public interface ProductTypeChangePlainEnumValueLabelAction extends ProductTypeU
         instance.setNewValue(template.getNewValue());
         return instance;
     }
+
+    public ProductTypeChangePlainEnumValueLabelAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductTypeChangePlainEnumValueLabelAction

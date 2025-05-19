@@ -92,4 +92,8 @@ public class InventoryEntrySetRestockableInDaysActionImpl
                 .build();
     }
 
+    @Override
+    public InventoryEntrySetRestockableInDaysAction copyDeep() {
+        return InventoryEntrySetRestockableInDaysAction.deepCopy(this);
+    }
 }

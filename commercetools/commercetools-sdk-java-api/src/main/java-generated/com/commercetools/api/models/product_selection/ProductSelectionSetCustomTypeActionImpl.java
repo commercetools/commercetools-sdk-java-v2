@@ -111,4 +111,8 @@ public class ProductSelectionSetCustomTypeActionImpl implements ProductSelection
                 .build();
     }
 
+    @Override
+    public ProductSelectionSetCustomTypeAction copyDeep() {
+        return ProductSelectionSetCustomTypeAction.deepCopy(this);
+    }
 }

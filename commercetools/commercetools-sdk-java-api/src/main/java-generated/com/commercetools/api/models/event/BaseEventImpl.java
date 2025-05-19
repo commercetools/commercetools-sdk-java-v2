@@ -177,4 +177,8 @@ public class BaseEventImpl implements BaseEvent, ModelBase {
                 .build();
     }
 
+    @Override
+    public BaseEvent copyDeep() {
+        return BaseEvent.deepCopy(this);
+    }
 }

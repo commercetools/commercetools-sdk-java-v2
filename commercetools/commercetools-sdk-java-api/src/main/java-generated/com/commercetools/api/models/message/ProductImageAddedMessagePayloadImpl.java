@@ -129,4 +129,8 @@ public class ProductImageAddedMessagePayloadImpl implements ProductImageAddedMes
                 .build();
     }
 
+    @Override
+    public ProductImageAddedMessagePayload copyDeep() {
+        return ProductImageAddedMessagePayload.deepCopy(this);
+    }
 }

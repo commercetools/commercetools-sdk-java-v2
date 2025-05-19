@@ -86,6 +86,8 @@ public interface InheritedAssociateRoleAssignment {
         return instance;
     }
 
+    public InheritedAssociateRoleAssignment copyDeep();
+
     /**
      * factory method to create a deep copy of InheritedAssociateRoleAssignment
      * @param template instance to be copied

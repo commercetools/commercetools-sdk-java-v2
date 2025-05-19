@@ -293,4 +293,8 @@ public class CustomerDateOfBirthSetMessageImpl implements CustomerDateOfBirthSet
                 .build();
     }
 
+    @Override
+    public CustomerDateOfBirthSetMessage copyDeep() {
+        return CustomerDateOfBirthSetMessage.deepCopy(this);
+    }
 }

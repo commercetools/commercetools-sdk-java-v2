@@ -194,4 +194,8 @@ public class SearchLongRangeValueImpl implements SearchLongRangeValue, ModelBase
                 .build();
     }
 
+    @Override
+    public SearchLongRangeValue copyDeep() {
+        return SearchLongRangeValue.deepCopy(this);
+    }
 }

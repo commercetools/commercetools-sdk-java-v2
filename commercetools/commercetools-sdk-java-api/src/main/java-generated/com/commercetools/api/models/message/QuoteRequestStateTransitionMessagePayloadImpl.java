@@ -131,4 +131,8 @@ public class QuoteRequestStateTransitionMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public QuoteRequestStateTransitionMessagePayload copyDeep() {
+        return QuoteRequestStateTransitionMessagePayload.deepCopy(this);
+    }
 }

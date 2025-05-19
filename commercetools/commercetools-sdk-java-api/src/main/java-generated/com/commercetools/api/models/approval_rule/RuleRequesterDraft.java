@@ -68,6 +68,8 @@ public interface RuleRequesterDraft extends io.vrap.rmf.base.client.Draft<RuleRe
         return instance;
     }
 
+    public RuleRequesterDraft copyDeep();
+
     /**
      * factory method to create a deep copy of RuleRequesterDraft
      * @param template instance to be copied

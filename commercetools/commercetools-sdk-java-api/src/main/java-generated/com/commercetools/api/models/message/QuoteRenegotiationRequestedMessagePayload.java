@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("QuoteRenegotiationRequested")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = QuoteRenegotiationRequestedMessagePayloadImpl.class)
 public interface QuoteRenegotiationRequestedMessagePayload extends MessagePayload {
@@ -67,6 +68,8 @@ public interface QuoteRenegotiationRequestedMessagePayload extends MessagePayloa
         instance.setBuyerComment(template.getBuyerComment());
         return instance;
     }
+
+    public QuoteRenegotiationRequestedMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of QuoteRenegotiationRequestedMessagePayload

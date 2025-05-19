@@ -153,4 +153,8 @@ public class CartScoreTierImpl implements CartScoreTier, ModelBase {
                 .build();
     }
 
+    @Override
+    public CartScoreTier copyDeep() {
+        return CartScoreTier.deepCopy(this);
+    }
 }

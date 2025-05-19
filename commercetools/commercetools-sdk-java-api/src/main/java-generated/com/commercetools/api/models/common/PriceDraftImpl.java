@@ -270,4 +270,8 @@ public class PriceDraftImpl implements PriceDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public PriceDraft copyDeep() {
+        return PriceDraft.deepCopy(this);
+    }
 }

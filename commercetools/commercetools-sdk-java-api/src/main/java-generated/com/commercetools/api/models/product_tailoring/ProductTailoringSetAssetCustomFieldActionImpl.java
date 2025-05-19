@@ -211,4 +211,8 @@ public class ProductTailoringSetAssetCustomFieldActionImpl
                 .build();
     }
 
+    @Override
+    public ProductTailoringSetAssetCustomFieldAction copyDeep() {
+        return ProductTailoringSetAssetCustomFieldAction.deepCopy(this);
+    }
 }

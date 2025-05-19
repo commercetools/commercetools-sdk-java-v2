@@ -111,4 +111,8 @@ public class ReviewReferenceImpl implements ReviewReference, ModelBase {
                 .build();
     }
 
+    @Override
+    public ReviewReference copyDeep() {
+        return ReviewReference.deepCopy(this);
+    }
 }

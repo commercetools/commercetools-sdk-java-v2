@@ -27,10 +27,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product.FilteredFacetResultImpl.class, name = FilteredFacetResult.FILTER),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product.RangeFacetResultImpl.class, name = RangeFacetResult.RANGE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.product.TermFacetResultImpl.class, name = TermFacetResult.TERMS) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "type", defaultImpl = FacetResultImpl.class, visible = true)
 @JsonDeserialize(as = FacetResultImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -44,6 +40,8 @@ public interface FacetResult {
     @JsonProperty("type")
     public FacetTypes getType();
 
+    public FacetResult copyDeep();
+
     /**
      * factory method to create a deep copy of FacetResult
      * @param template instance to be copied
@@ -54,17 +52,9 @@ public interface FacetResult {
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.product.FilteredFacetResult) {
-            return com.commercetools.api.models.product.FilteredFacetResult
-                    .deepCopy((com.commercetools.api.models.product.FilteredFacetResult) template);
-        }
-        if (template instanceof com.commercetools.api.models.product.RangeFacetResult) {
-            return com.commercetools.api.models.product.RangeFacetResult
-                    .deepCopy((com.commercetools.api.models.product.RangeFacetResult) template);
-        }
-        if (template instanceof com.commercetools.api.models.product.TermFacetResult) {
-            return com.commercetools.api.models.product.TermFacetResult
-                    .deepCopy((com.commercetools.api.models.product.TermFacetResult) template);
+
+        if (!(template instanceof FacetResultImpl)) {
+            return template.copyDeep();
         }
         FacetResultImpl instance = new FacetResultImpl();
         return instance;

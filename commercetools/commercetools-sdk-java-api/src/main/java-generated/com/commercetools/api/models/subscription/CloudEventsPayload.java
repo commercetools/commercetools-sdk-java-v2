@@ -35,6 +35,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("CloudEvents")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CloudEventsPayloadImpl.class)
 public interface CloudEventsPayload {
@@ -222,6 +223,8 @@ public interface CloudEventsPayload {
         instance.setData(template.getData());
         return instance;
     }
+
+    public CloudEventsPayload copyDeep();
 
     /**
      * factory method to create a deep copy of CloudEventsPayload

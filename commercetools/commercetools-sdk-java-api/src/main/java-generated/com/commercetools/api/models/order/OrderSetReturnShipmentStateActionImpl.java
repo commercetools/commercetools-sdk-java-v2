@@ -134,4 +134,8 @@ public class OrderSetReturnShipmentStateActionImpl implements OrderSetReturnShip
                 .build();
     }
 
+    @Override
+    public OrderSetReturnShipmentStateAction copyDeep() {
+        return OrderSetReturnShipmentStateAction.deepCopy(this);
+    }
 }

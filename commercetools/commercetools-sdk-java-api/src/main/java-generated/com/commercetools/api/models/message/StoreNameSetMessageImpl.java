@@ -318,4 +318,8 @@ public class StoreNameSetMessageImpl implements StoreNameSetMessage, ModelBase {
                 .build();
     }
 
+    @Override
+    public StoreNameSetMessage copyDeep() {
+        return StoreNameSetMessage.deepCopy(this);
+    }
 }

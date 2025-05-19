@@ -91,4 +91,8 @@ public class ZoneRemoveLocationActionImpl implements ZoneRemoveLocationAction, M
                 .build();
     }
 
+    @Override
+    public ZoneRemoveLocationAction copyDeep() {
+        return ZoneRemoveLocationAction.deepCopy(this);
+    }
 }

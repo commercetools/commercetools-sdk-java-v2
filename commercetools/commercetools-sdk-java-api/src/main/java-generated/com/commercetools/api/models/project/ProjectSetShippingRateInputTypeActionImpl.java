@@ -93,4 +93,8 @@ public class ProjectSetShippingRateInputTypeActionImpl implements ProjectSetShip
                 .build();
     }
 
+    @Override
+    public ProjectSetShippingRateInputTypeAction copyDeep() {
+        return ProjectSetShippingRateInputTypeAction.deepCopy(this);
+    }
 }

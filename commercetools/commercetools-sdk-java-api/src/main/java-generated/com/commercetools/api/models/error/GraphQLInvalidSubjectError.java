@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("InvalidSubject")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLInvalidSubjectErrorImpl.class)
 public interface GraphQLInvalidSubjectError extends GraphQLErrorObject {
@@ -51,6 +52,8 @@ public interface GraphQLInvalidSubjectError extends GraphQLErrorObject {
         Optional.ofNullable(template.values()).ifPresent(t -> t.forEach(instance::setValue));
         return instance;
     }
+
+    public GraphQLInvalidSubjectError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLInvalidSubjectError

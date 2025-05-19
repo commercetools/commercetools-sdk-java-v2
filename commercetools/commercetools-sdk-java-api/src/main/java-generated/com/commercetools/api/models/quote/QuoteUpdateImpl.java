@@ -99,4 +99,8 @@ public class QuoteUpdateImpl implements QuoteUpdate, ModelBase {
                 .build();
     }
 
+    @Override
+    public QuoteUpdate copyDeep() {
+        return QuoteUpdate.deepCopy(this);
+    }
 }

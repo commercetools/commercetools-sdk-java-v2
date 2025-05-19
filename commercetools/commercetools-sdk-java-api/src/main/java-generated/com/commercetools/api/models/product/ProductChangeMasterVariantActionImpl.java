@@ -128,4 +128,8 @@ public class ProductChangeMasterVariantActionImpl implements ProductChangeMaster
                 .build();
     }
 
+    @Override
+    public ProductChangeMasterVariantAction copyDeep() {
+        return ProductChangeMasterVariantAction.deepCopy(this);
+    }
 }

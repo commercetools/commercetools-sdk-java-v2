@@ -297,4 +297,8 @@ public class ReturnInfoSetMessageImpl implements ReturnInfoSetMessage, ModelBase
                 .build();
     }
 
+    @Override
+    public ReturnInfoSetMessage copyDeep() {
+        return ReturnInfoSetMessage.deepCopy(this);
+    }
 }

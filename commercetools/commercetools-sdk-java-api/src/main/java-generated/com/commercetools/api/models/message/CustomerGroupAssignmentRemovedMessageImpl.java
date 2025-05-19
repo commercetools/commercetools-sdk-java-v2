@@ -295,4 +295,8 @@ public class CustomerGroupAssignmentRemovedMessageImpl implements CustomerGroupA
                 .build();
     }
 
+    @Override
+    public CustomerGroupAssignmentRemovedMessage copyDeep() {
+        return CustomerGroupAssignmentRemovedMessage.deepCopy(this);
+    }
 }

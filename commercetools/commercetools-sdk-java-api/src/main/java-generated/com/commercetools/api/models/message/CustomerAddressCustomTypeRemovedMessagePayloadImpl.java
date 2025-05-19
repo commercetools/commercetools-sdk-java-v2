@@ -111,4 +111,8 @@ public class CustomerAddressCustomTypeRemovedMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public CustomerAddressCustomTypeRemovedMessagePayload copyDeep() {
+        return CustomerAddressCustomTypeRemovedMessagePayload.deepCopy(this);
+    }
 }

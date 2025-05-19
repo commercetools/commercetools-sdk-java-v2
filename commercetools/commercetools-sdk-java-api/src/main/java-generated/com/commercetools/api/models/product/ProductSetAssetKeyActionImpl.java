@@ -171,4 +171,8 @@ public class ProductSetAssetKeyActionImpl implements ProductSetAssetKeyAction, M
                 .build();
     }
 
+    @Override
+    public ProductSetAssetKeyAction copyDeep() {
+        return ProductSetAssetKeyAction.deepCopy(this);
+    }
 }

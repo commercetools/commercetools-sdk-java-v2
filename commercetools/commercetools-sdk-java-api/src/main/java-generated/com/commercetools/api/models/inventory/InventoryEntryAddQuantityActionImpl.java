@@ -91,4 +91,8 @@ public class InventoryEntryAddQuantityActionImpl implements InventoryEntryAddQua
                 .build();
     }
 
+    @Override
+    public InventoryEntryAddQuantityAction copyDeep() {
+        return InventoryEntryAddQuantityAction.deepCopy(this);
+    }
 }

@@ -95,4 +95,8 @@ public class ProductVariantSelectionIncludeAllExceptImpl implements ProductVaria
                 .build();
     }
 
+    @Override
+    public ProductVariantSelectionIncludeAllExcept copyDeep() {
+        return ProductVariantSelectionIncludeAllExcept.deepCopy(this);
+    }
 }

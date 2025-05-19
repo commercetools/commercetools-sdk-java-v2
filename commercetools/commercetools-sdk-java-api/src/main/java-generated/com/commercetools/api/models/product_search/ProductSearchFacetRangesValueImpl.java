@@ -223,4 +223,8 @@ public class ProductSearchFacetRangesValueImpl implements ProductSearchFacetRang
                 .build();
     }
 
+    @Override
+    public ProductSearchFacetRangesValue copyDeep() {
+        return ProductSearchFacetRangesValue.deepCopy(this);
+    }
 }

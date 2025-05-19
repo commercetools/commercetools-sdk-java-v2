@@ -313,4 +313,8 @@ public class ApprovalRuleStatusSetMessageImpl implements ApprovalRuleStatusSetMe
                 .build();
     }
 
+    @Override
+    public ApprovalRuleStatusSetMessage copyDeep() {
+        return ApprovalRuleStatusSetMessage.deepCopy(this);
+    }
 }

@@ -171,4 +171,8 @@ public class ProductPriceKeySetMessagePayloadImpl implements ProductPriceKeySetM
                 .build();
     }
 
+    @Override
+    public ProductPriceKeySetMessagePayload copyDeep() {
+        return ProductPriceKeySetMessagePayload.deepCopy(this);
+    }
 }

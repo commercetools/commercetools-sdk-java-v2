@@ -96,4 +96,8 @@ public class GraphQLBadGatewayErrorImpl implements GraphQLBadGatewayError, Model
                 .build();
     }
 
+    @Override
+    public GraphQLBadGatewayError copyDeep() {
+        return GraphQLBadGatewayError.deepCopy(this);
+    }
 }

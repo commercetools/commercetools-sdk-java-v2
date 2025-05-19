@@ -94,4 +94,8 @@ public class StoreAddSupplyChannelActionImpl implements StoreAddSupplyChannelAct
                 .build();
     }
 
+    @Override
+    public StoreAddSupplyChannelAction copyDeep() {
+        return StoreAddSupplyChannelAction.deepCopy(this);
+    }
 }

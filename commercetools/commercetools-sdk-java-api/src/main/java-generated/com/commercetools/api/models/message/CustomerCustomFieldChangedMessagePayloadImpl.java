@@ -130,4 +130,8 @@ public class CustomerCustomFieldChangedMessagePayloadImpl
                 .build();
     }
 
+    @Override
+    public CustomerCustomFieldChangedMessagePayload copyDeep() {
+        return CustomerCustomFieldChangedMessagePayload.deepCopy(this);
+    }
 }

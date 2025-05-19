@@ -35,6 +35,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("DuplicateStandalonePriceScope")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLDuplicateStandalonePriceScopeErrorImpl.class)
 public interface GraphQLDuplicateStandalonePriceScopeError extends GraphQLErrorObject {
@@ -200,6 +201,8 @@ public interface GraphQLDuplicateStandalonePriceScopeError extends GraphQLErrorO
         instance.setValidUntil(template.getValidUntil());
         return instance;
     }
+
+    public GraphQLDuplicateStandalonePriceScopeError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLDuplicateStandalonePriceScopeError

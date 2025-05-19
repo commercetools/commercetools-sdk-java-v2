@@ -114,4 +114,8 @@ public class TaxPortionDraftImpl implements TaxPortionDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public TaxPortionDraft copyDeep() {
+        return TaxPortionDraft.deepCopy(this);
+    }
 }

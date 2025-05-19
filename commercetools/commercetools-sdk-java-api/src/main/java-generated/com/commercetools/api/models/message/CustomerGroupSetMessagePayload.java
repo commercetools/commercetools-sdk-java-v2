@@ -27,6 +27,7 @@ import jakarta.validation.Valid;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("CustomerGroupSet")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CustomerGroupSetMessagePayloadImpl.class)
 public interface CustomerGroupSetMessagePayload extends MessagePayload {
@@ -69,6 +70,8 @@ public interface CustomerGroupSetMessagePayload extends MessagePayload {
         instance.setCustomerGroup(template.getCustomerGroup());
         return instance;
     }
+
+    public CustomerGroupSetMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of CustomerGroupSetMessagePayload

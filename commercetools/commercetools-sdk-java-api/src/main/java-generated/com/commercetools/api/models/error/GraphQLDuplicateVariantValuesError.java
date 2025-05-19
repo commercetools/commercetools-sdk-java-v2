@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("DuplicateVariantValues")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = GraphQLDuplicateVariantValuesErrorImpl.class)
 public interface GraphQLDuplicateVariantValuesError extends GraphQLErrorObject {
@@ -80,6 +81,8 @@ public interface GraphQLDuplicateVariantValuesError extends GraphQLErrorObject {
         instance.setVariantValues(template.getVariantValues());
         return instance;
     }
+
+    public GraphQLDuplicateVariantValuesError copyDeep();
 
     /**
      * factory method to create a deep copy of GraphQLDuplicateVariantValuesError

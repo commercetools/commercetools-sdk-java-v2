@@ -62,4 +62,8 @@ public class CustomFieldTimeTypeImpl implements CustomFieldTimeType, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("name", name).build();
     }
 
+    @Override
+    public CustomFieldTimeType copyDeep() {
+        return CustomFieldTimeType.deepCopy(this);
+    }
 }

@@ -211,6 +211,8 @@ public interface CustomObject
         return instance;
     }
 
+    public CustomObject copyDeep();
+
     /**
      * factory method to create a deep copy of CustomObject
      * @param template instance to be copied

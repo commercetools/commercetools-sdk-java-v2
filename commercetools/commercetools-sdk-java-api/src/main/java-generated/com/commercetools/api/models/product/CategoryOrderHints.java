@@ -67,6 +67,8 @@ public interface CategoryOrderHints {
         return instance;
     }
 
+    public CategoryOrderHints copyDeep();
+
     /**
      * factory method to create a deep copy of CategoryOrderHints
      * @param template instance to be copied

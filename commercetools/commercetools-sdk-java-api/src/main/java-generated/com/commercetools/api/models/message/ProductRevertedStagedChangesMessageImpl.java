@@ -298,4 +298,8 @@ public class ProductRevertedStagedChangesMessageImpl implements ProductRevertedS
                 .build();
     }
 
+    @Override
+    public ProductRevertedStagedChangesMessage copyDeep() {
+        return ProductRevertedStagedChangesMessage.deepCopy(this);
+    }
 }

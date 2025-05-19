@@ -82,6 +82,8 @@ public interface ProductSearchFacetResultBucketEntry {
         return instance;
     }
 
+    public ProductSearchFacetResultBucketEntry copyDeep();
+
     /**
      * factory method to create a deep copy of ProductSearchFacetResultBucketEntry
      * @param template instance to be copied

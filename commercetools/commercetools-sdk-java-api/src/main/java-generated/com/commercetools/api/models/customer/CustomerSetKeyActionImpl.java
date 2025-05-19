@@ -91,4 +91,8 @@ public class CustomerSetKeyActionImpl implements CustomerSetKeyAction, ModelBase
                 .build();
     }
 
+    @Override
+    public CustomerSetKeyAction copyDeep() {
+        return CustomerSetKeyAction.deepCopy(this);
+    }
 }

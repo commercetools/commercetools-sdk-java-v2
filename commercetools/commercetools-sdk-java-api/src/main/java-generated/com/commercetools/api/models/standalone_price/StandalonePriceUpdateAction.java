@@ -27,21 +27,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceAddPriceTierActionImpl.class, name = StandalonePriceAddPriceTierAction.ADD_PRICE_TIER),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceApplyStagedChangesActionImpl.class, name = StandalonePriceApplyStagedChangesAction.APPLY_STAGED_CHANGES),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceChangeActiveActionImpl.class, name = StandalonePriceChangeActiveAction.CHANGE_ACTIVE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceChangeValueActionImpl.class, name = StandalonePriceChangeValueAction.CHANGE_VALUE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceRemovePriceTierActionImpl.class, name = StandalonePriceRemovePriceTierAction.REMOVE_PRICE_TIER),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceRemoveStagedChangesActionImpl.class, name = StandalonePriceRemoveStagedChangesAction.REMOVE_STAGED_CHANGES),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceSetCustomFieldActionImpl.class, name = StandalonePriceSetCustomFieldAction.SET_CUSTOM_FIELD),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceSetCustomTypeActionImpl.class, name = StandalonePriceSetCustomTypeAction.SET_CUSTOM_TYPE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceSetDiscountedPriceActionImpl.class, name = StandalonePriceSetDiscountedPriceAction.SET_DISCOUNTED_PRICE),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceSetKeyActionImpl.class, name = StandalonePriceSetKeyAction.SET_KEY),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceSetPriceTiersActionImpl.class, name = StandalonePriceSetPriceTiersAction.SET_PRICE_TIERS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceSetValidFromActionImpl.class, name = StandalonePriceSetValidFromAction.SET_VALID_FROM),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceSetValidFromAndUntilActionImpl.class, name = StandalonePriceSetValidFromAndUntilAction.SET_VALID_FROM_AND_UNTIL),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.standalone_price.StandalonePriceSetValidUntilActionImpl.class, name = StandalonePriceSetValidUntilAction.SET_VALID_UNTIL) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = StandalonePriceUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = StandalonePriceUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -56,6 +41,8 @@ public interface StandalonePriceUpdateAction
     @JsonProperty("action")
     public String getAction();
 
+    public StandalonePriceUpdateAction copyDeep();
+
     /**
      * factory method to create a deep copy of StandalonePriceUpdateAction
      * @param template instance to be copied
@@ -66,61 +53,9 @@ public interface StandalonePriceUpdateAction
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.standalone_price.StandalonePriceAddPriceTierAction) {
-            return com.commercetools.api.models.standalone_price.StandalonePriceAddPriceTierAction.deepCopy(
-                (com.commercetools.api.models.standalone_price.StandalonePriceAddPriceTierAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.standalone_price.StandalonePriceApplyStagedChangesAction) {
-            return com.commercetools.api.models.standalone_price.StandalonePriceApplyStagedChangesAction.deepCopy(
-                (com.commercetools.api.models.standalone_price.StandalonePriceApplyStagedChangesAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.standalone_price.StandalonePriceChangeActiveAction) {
-            return com.commercetools.api.models.standalone_price.StandalonePriceChangeActiveAction.deepCopy(
-                (com.commercetools.api.models.standalone_price.StandalonePriceChangeActiveAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.standalone_price.StandalonePriceChangeValueAction) {
-            return com.commercetools.api.models.standalone_price.StandalonePriceChangeValueAction.deepCopy(
-                (com.commercetools.api.models.standalone_price.StandalonePriceChangeValueAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.standalone_price.StandalonePriceRemovePriceTierAction) {
-            return com.commercetools.api.models.standalone_price.StandalonePriceRemovePriceTierAction.deepCopy(
-                (com.commercetools.api.models.standalone_price.StandalonePriceRemovePriceTierAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.standalone_price.StandalonePriceRemoveStagedChangesAction) {
-            return com.commercetools.api.models.standalone_price.StandalonePriceRemoveStagedChangesAction.deepCopy(
-                (com.commercetools.api.models.standalone_price.StandalonePriceRemoveStagedChangesAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.standalone_price.StandalonePriceSetCustomFieldAction) {
-            return com.commercetools.api.models.standalone_price.StandalonePriceSetCustomFieldAction.deepCopy(
-                (com.commercetools.api.models.standalone_price.StandalonePriceSetCustomFieldAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.standalone_price.StandalonePriceSetCustomTypeAction) {
-            return com.commercetools.api.models.standalone_price.StandalonePriceSetCustomTypeAction.deepCopy(
-                (com.commercetools.api.models.standalone_price.StandalonePriceSetCustomTypeAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.standalone_price.StandalonePriceSetDiscountedPriceAction) {
-            return com.commercetools.api.models.standalone_price.StandalonePriceSetDiscountedPriceAction.deepCopy(
-                (com.commercetools.api.models.standalone_price.StandalonePriceSetDiscountedPriceAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.standalone_price.StandalonePriceSetKeyAction) {
-            return com.commercetools.api.models.standalone_price.StandalonePriceSetKeyAction
-                    .deepCopy((com.commercetools.api.models.standalone_price.StandalonePriceSetKeyAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.standalone_price.StandalonePriceSetPriceTiersAction) {
-            return com.commercetools.api.models.standalone_price.StandalonePriceSetPriceTiersAction.deepCopy(
-                (com.commercetools.api.models.standalone_price.StandalonePriceSetPriceTiersAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.standalone_price.StandalonePriceSetValidFromAction) {
-            return com.commercetools.api.models.standalone_price.StandalonePriceSetValidFromAction.deepCopy(
-                (com.commercetools.api.models.standalone_price.StandalonePriceSetValidFromAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.standalone_price.StandalonePriceSetValidFromAndUntilAction) {
-            return com.commercetools.api.models.standalone_price.StandalonePriceSetValidFromAndUntilAction.deepCopy(
-                (com.commercetools.api.models.standalone_price.StandalonePriceSetValidFromAndUntilAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.standalone_price.StandalonePriceSetValidUntilAction) {
-            return com.commercetools.api.models.standalone_price.StandalonePriceSetValidUntilAction.deepCopy(
-                (com.commercetools.api.models.standalone_price.StandalonePriceSetValidUntilAction) template);
+
+        if (!(template instanceof StandalonePriceUpdateActionImpl)) {
+            return template.copyDeep();
         }
         StandalonePriceUpdateActionImpl instance = new StandalonePriceUpdateActionImpl();
         return instance;

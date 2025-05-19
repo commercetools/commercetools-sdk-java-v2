@@ -217,6 +217,8 @@ public interface MyLineItemDraft extends com.commercetools.api.models.Customizab
         return instance;
     }
 
+    public MyLineItemDraft copyDeep();
+
     /**
      * factory method to create a deep copy of MyLineItemDraft
      * @param template instance to be copied

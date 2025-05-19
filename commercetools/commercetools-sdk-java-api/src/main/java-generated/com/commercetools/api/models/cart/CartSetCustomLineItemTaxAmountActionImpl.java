@@ -153,4 +153,8 @@ public class CartSetCustomLineItemTaxAmountActionImpl implements CartSetCustomLi
                 .build();
     }
 
+    @Override
+    public CartSetCustomLineItemTaxAmountAction copyDeep() {
+        return CartSetCustomLineItemTaxAmountAction.deepCopy(this);
+    }
 }

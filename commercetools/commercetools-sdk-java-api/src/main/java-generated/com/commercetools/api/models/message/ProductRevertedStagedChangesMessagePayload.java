@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("ProductRevertedStagedChanges")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductRevertedStagedChangesMessagePayloadImpl.class)
 public interface ProductRevertedStagedChangesMessagePayload extends MessagePayload {
@@ -78,6 +79,8 @@ public interface ProductRevertedStagedChangesMessagePayload extends MessagePaylo
         instance.setRemovedImageUrls(template.getRemovedImageUrls());
         return instance;
     }
+
+    public ProductRevertedStagedChangesMessagePayload copyDeep();
 
     /**
      * factory method to create a deep copy of ProductRevertedStagedChangesMessagePayload

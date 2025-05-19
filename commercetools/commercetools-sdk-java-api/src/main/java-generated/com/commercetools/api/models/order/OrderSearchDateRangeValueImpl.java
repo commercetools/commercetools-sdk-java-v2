@@ -156,4 +156,8 @@ public class OrderSearchDateRangeValueImpl implements OrderSearchDateRangeValue,
                 .build();
     }
 
+    @Override
+    public OrderSearchDateRangeValue copyDeep() {
+        return OrderSearchDateRangeValue.deepCopy(this);
+    }
 }

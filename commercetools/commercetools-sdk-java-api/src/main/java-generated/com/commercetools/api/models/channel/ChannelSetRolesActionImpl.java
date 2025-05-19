@@ -96,4 +96,8 @@ public class ChannelSetRolesActionImpl implements ChannelSetRolesAction, ModelBa
                 .build();
     }
 
+    @Override
+    public ChannelSetRolesAction copyDeep() {
+        return ChannelSetRolesAction.deepCopy(this);
+    }
 }

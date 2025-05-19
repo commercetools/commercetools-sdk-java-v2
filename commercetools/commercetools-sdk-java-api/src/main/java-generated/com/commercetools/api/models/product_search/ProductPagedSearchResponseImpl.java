@@ -166,4 +166,8 @@ public class ProductPagedSearchResponseImpl implements ProductPagedSearchRespons
                 .build();
     }
 
+    @Override
+    public ProductPagedSearchResponse copyDeep() {
+        return ProductPagedSearchResponse.deepCopy(this);
+    }
 }

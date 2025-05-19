@@ -286,4 +286,8 @@ public class MyDivisionDraftImpl implements MyDivisionDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public MyDivisionDraft copyDeep() {
+        return MyDivisionDraft.deepCopy(this);
+    }
 }

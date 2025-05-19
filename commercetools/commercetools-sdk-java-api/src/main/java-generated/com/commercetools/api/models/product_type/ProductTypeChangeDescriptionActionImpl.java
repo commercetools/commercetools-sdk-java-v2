@@ -91,4 +91,8 @@ public class ProductTypeChangeDescriptionActionImpl implements ProductTypeChange
                 .build();
     }
 
+    @Override
+    public ProductTypeChangeDescriptionAction copyDeep() {
+        return ProductTypeChangeDescriptionAction.deepCopy(this);
+    }
 }

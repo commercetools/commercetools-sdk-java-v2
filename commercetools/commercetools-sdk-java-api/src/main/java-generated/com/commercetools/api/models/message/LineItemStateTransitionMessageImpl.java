@@ -392,4 +392,8 @@ public class LineItemStateTransitionMessageImpl implements LineItemStateTransiti
                 .build();
     }
 
+    @Override
+    public LineItemStateTransitionMessage copyDeep() {
+        return LineItemStateTransitionMessage.deepCopy(this);
+    }
 }

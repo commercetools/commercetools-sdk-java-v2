@@ -313,4 +313,8 @@ public class DeliveryRemovedMessageImpl implements DeliveryRemovedMessage, Model
                 .build();
     }
 
+    @Override
+    public DeliveryRemovedMessage copyDeep() {
+        return DeliveryRemovedMessage.deepCopy(this);
+    }
 }

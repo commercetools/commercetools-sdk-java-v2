@@ -110,4 +110,8 @@ public class CategorySetAssetKeyActionImpl implements CategorySetAssetKeyAction,
                 .build();
     }
 
+    @Override
+    public CategorySetAssetKeyAction copyDeep() {
+        return CategorySetAssetKeyAction.deepCopy(this);
+    }
 }

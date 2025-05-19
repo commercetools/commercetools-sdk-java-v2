@@ -91,4 +91,8 @@ public class CartDiscountChangeCartPredicateActionImpl implements CartDiscountCh
                 .build();
     }
 
+    @Override
+    public CartDiscountChangeCartPredicateAction copyDeep() {
+        return CartDiscountChangeCartPredicateAction.deepCopy(this);
+    }
 }

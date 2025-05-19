@@ -111,4 +111,8 @@ public class ProductTailoringSetDescriptionActionImpl implements ProductTailorin
                 .build();
     }
 
+    @Override
+    public ProductTailoringSetDescriptionAction copyDeep() {
+        return ProductTailoringSetDescriptionAction.deepCopy(this);
+    }
 }

@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("removeCustomLineItem")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = CartRemoveCustomLineItemActionImpl.class)
 public interface CartRemoveCustomLineItemAction extends CartUpdateAction {
@@ -83,6 +84,8 @@ public interface CartRemoveCustomLineItemAction extends CartUpdateAction {
         instance.setCustomLineItemKey(template.getCustomLineItemKey());
         return instance;
     }
+
+    public CartRemoveCustomLineItemAction copyDeep();
 
     /**
      * factory method to create a deep copy of CartRemoveCustomLineItemAction

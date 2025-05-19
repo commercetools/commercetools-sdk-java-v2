@@ -253,4 +253,8 @@ public class CloudEventsPayloadImpl implements CloudEventsPayload, ModelBase {
                 .build();
     }
 
+    @Override
+    public CloudEventsPayload copyDeep() {
+        return CloudEventsPayload.deepCopy(this);
+    }
 }

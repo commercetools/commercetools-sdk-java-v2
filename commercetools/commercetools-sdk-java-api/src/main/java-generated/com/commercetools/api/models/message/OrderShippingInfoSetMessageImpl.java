@@ -313,4 +313,8 @@ public class OrderShippingInfoSetMessageImpl implements OrderShippingInfoSetMess
                 .build();
     }
 
+    @Override
+    public OrderShippingInfoSetMessage copyDeep() {
+        return OrderShippingInfoSetMessage.deepCopy(this);
+    }
 }

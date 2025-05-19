@@ -31,6 +31,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("Applied")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = OrderEditAppliedImpl.class)
 public interface OrderEditApplied extends OrderEditResult {
@@ -115,6 +116,8 @@ public interface OrderEditApplied extends OrderEditResult {
         instance.setExcerptAfterEdit(template.getExcerptAfterEdit());
         return instance;
     }
+
+    public OrderEditApplied copyDeep();
 
     /**
      * factory method to create a deep copy of OrderEditApplied

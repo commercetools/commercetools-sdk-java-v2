@@ -293,4 +293,8 @@ public class PaymentTransactionAddedMessageImpl implements PaymentTransactionAdd
                 .build();
     }
 
+    @Override
+    public PaymentTransactionAddedMessage copyDeep() {
+        return PaymentTransactionAddedMessage.deepCopy(this);
+    }
 }

@@ -92,4 +92,8 @@ public class MyCustomerAddAddressActionImpl implements MyCustomerAddAddressActio
                 .build();
     }
 
+    @Override
+    public MyCustomerAddAddressAction copyDeep() {
+        return MyCustomerAddAddressAction.deepCopy(this);
+    }
 }

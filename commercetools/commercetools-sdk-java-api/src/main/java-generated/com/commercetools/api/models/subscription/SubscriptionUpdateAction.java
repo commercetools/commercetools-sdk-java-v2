@@ -27,12 +27,6 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
-@JsonSubTypes({
-        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.SubscriptionChangeDestinationActionImpl.class, name = SubscriptionChangeDestinationAction.CHANGE_DESTINATION),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.SubscriptionSetChangesActionImpl.class, name = SubscriptionSetChangesAction.SET_CHANGES),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.SubscriptionSetEventsActionImpl.class, name = SubscriptionSetEventsAction.SET_EVENTS),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.SubscriptionSetKeyActionImpl.class, name = SubscriptionSetKeyAction.SET_KEY),
-        @JsonSubTypes.Type(value = com.commercetools.api.models.subscription.SubscriptionSetMessagesActionImpl.class, name = SubscriptionSetMessagesAction.SET_MESSAGES) })
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "action", defaultImpl = SubscriptionUpdateActionImpl.class, visible = true)
 @JsonDeserialize(as = SubscriptionUpdateActionImpl.class)
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
@@ -47,6 +41,8 @@ public interface SubscriptionUpdateAction
     @JsonProperty("action")
     public String getAction();
 
+    public SubscriptionUpdateAction copyDeep();
+
     /**
      * factory method to create a deep copy of SubscriptionUpdateAction
      * @param template instance to be copied
@@ -57,25 +53,9 @@ public interface SubscriptionUpdateAction
         if (template == null) {
             return null;
         }
-        if (template instanceof com.commercetools.api.models.subscription.SubscriptionChangeDestinationAction) {
-            return com.commercetools.api.models.subscription.SubscriptionChangeDestinationAction
-                    .deepCopy((com.commercetools.api.models.subscription.SubscriptionChangeDestinationAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.subscription.SubscriptionSetChangesAction) {
-            return com.commercetools.api.models.subscription.SubscriptionSetChangesAction
-                    .deepCopy((com.commercetools.api.models.subscription.SubscriptionSetChangesAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.subscription.SubscriptionSetEventsAction) {
-            return com.commercetools.api.models.subscription.SubscriptionSetEventsAction
-                    .deepCopy((com.commercetools.api.models.subscription.SubscriptionSetEventsAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.subscription.SubscriptionSetKeyAction) {
-            return com.commercetools.api.models.subscription.SubscriptionSetKeyAction
-                    .deepCopy((com.commercetools.api.models.subscription.SubscriptionSetKeyAction) template);
-        }
-        if (template instanceof com.commercetools.api.models.subscription.SubscriptionSetMessagesAction) {
-            return com.commercetools.api.models.subscription.SubscriptionSetMessagesAction
-                    .deepCopy((com.commercetools.api.models.subscription.SubscriptionSetMessagesAction) template);
+
+        if (!(template instanceof SubscriptionUpdateActionImpl)) {
+            return template.copyDeep();
         }
         SubscriptionUpdateActionImpl instance = new SubscriptionUpdateActionImpl();
         return instance;

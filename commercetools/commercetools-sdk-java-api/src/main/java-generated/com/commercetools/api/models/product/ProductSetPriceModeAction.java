@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setPriceMode")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ProductSetPriceModeActionImpl.class)
 public interface ProductSetPriceModeAction extends ProductUpdateAction {
@@ -66,6 +67,8 @@ public interface ProductSetPriceModeAction extends ProductUpdateAction {
         instance.setPriceMode(template.getPriceMode());
         return instance;
     }
+
+    public ProductSetPriceModeAction copyDeep();
 
     /**
      * factory method to create a deep copy of ProductSetPriceModeAction

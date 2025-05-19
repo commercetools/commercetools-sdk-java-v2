@@ -147,4 +147,8 @@ public class ProductSelectionAssignmentImpl implements ProductSelectionAssignmen
                 .build();
     }
 
+    @Override
+    public ProductSelectionAssignment copyDeep() {
+        return ProductSelectionAssignment.deepCopy(this);
+    }
 }

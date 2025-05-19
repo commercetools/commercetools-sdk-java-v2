@@ -153,6 +153,8 @@ public interface ProductVariantTailoring {
         return instance;
     }
 
+    public ProductVariantTailoring copyDeep();
+
     /**
      * factory method to create a deep copy of ProductVariantTailoring
      * @param template instance to be copied

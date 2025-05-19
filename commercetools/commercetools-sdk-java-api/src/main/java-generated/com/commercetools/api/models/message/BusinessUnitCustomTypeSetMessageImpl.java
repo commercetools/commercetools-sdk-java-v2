@@ -314,4 +314,8 @@ public class BusinessUnitCustomTypeSetMessageImpl implements BusinessUnitCustomT
                 .build();
     }
 
+    @Override
+    public BusinessUnitCustomTypeSetMessage copyDeep() {
+        return BusinessUnitCustomTypeSetMessage.deepCopy(this);
+    }
 }

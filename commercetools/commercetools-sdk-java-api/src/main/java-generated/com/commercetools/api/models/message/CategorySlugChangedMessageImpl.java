@@ -313,4 +313,8 @@ public class CategorySlugChangedMessageImpl implements CategorySlugChangedMessag
                 .build();
     }
 
+    @Override
+    public CategorySlugChangedMessage copyDeep() {
+        return CategorySlugChangedMessage.deepCopy(this);
+    }
 }

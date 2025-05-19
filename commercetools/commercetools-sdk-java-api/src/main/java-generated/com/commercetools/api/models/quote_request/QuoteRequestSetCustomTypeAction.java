@@ -28,6 +28,7 @@ import jakarta.validation.Valid;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setCustomType")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = QuoteRequestSetCustomTypeActionImpl.class)
 public interface QuoteRequestSetCustomTypeAction extends QuoteRequestUpdateAction {
@@ -86,6 +87,8 @@ public interface QuoteRequestSetCustomTypeAction extends QuoteRequestUpdateActio
         instance.setFields(template.getFields());
         return instance;
     }
+
+    public QuoteRequestSetCustomTypeAction copyDeep();
 
     /**
      * factory method to create a deep copy of QuoteRequestSetCustomTypeAction

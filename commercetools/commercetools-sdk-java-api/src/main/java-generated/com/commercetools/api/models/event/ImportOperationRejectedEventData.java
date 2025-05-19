@@ -65,6 +65,8 @@ public interface ImportOperationRejectedEventData {
         return instance;
     }
 
+    public ImportOperationRejectedEventData copyDeep();
+
     /**
      * factory method to create a deep copy of ImportOperationRejectedEventData
      * @param template instance to be copied

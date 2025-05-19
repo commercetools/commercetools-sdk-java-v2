@@ -157,4 +157,8 @@ public class ExtensionNoResponseErrorImpl implements ExtensionNoResponseError, M
                 .build();
     }
 
+    @Override
+    public ExtensionNoResponseError copyDeep() {
+        return ExtensionNoResponseError.deepCopy(this);
+    }
 }

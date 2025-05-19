@@ -269,4 +269,8 @@ public class PaymentDraftImpl implements PaymentDraft, ModelBase {
                 .build();
     }
 
+    @Override
+    public PaymentDraft copyDeep() {
+        return PaymentDraft.deepCopy(this);
+    }
 }

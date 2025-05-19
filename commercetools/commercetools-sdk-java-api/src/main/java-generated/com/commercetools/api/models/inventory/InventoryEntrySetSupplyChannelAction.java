@@ -27,6 +27,7 @@ import jakarta.validation.Valid;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setSupplyChannel")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = InventoryEntrySetSupplyChannelActionImpl.class)
 public interface InventoryEntrySetSupplyChannelAction extends InventoryEntryUpdateAction {
@@ -69,6 +70,8 @@ public interface InventoryEntrySetSupplyChannelAction extends InventoryEntryUpda
         instance.setSupplyChannel(template.getSupplyChannel());
         return instance;
     }
+
+    public InventoryEntrySetSupplyChannelAction copyDeep();
 
     /**
      * factory method to create a deep copy of InventoryEntrySetSupplyChannelAction

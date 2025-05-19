@@ -208,4 +208,8 @@ public class AssociateMissingPermissionErrorImpl implements AssociateMissingPerm
                 .build();
     }
 
+    @Override
+    public AssociateMissingPermissionError copyDeep() {
+        return AssociateMissingPermissionError.deepCopy(this);
+    }
 }

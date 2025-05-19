@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("setName")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = ApprovalRuleSetNameActionImpl.class)
 public interface ApprovalRuleSetNameAction extends ApprovalRuleUpdateAction {
@@ -69,6 +70,8 @@ public interface ApprovalRuleSetNameAction extends ApprovalRuleUpdateAction {
         instance.setName(template.getName());
         return instance;
     }
+
+    public ApprovalRuleSetNameAction copyDeep();
 
     /**
      * factory method to create a deep copy of ApprovalRuleSetNameAction

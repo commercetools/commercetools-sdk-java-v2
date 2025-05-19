@@ -92,4 +92,8 @@ public class OrderAddItemShippingAddressActionImpl implements OrderAddItemShippi
                 .build();
     }
 
+    @Override
+    public OrderAddItemShippingAddressAction copyDeep() {
+        return OrderAddItemShippingAddressAction.deepCopy(this);
+    }
 }

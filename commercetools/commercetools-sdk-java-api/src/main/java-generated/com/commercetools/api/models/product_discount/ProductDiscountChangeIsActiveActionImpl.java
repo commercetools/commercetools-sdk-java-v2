@@ -91,4 +91,8 @@ public class ProductDiscountChangeIsActiveActionImpl implements ProductDiscountC
                 .build();
     }
 
+    @Override
+    public ProductDiscountChangeIsActiveAction copyDeep() {
+        return ProductDiscountChangeIsActiveAction.deepCopy(this);
+    }
 }

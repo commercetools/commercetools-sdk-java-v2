@@ -110,4 +110,8 @@ public class BusinessUnitSetCustomFieldActionImpl implements BusinessUnitSetCust
                 .build();
     }
 
+    @Override
+    public BusinessUnitSetCustomFieldAction copyDeep() {
+        return BusinessUnitSetCustomFieldAction.deepCopy(this);
+    }
 }

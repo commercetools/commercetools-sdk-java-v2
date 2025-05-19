@@ -110,4 +110,8 @@ public class ChannelSetAddressCustomFieldActionImpl implements ChannelSetAddress
                 .build();
     }
 
+    @Override
+    public ChannelSetAddressCustomFieldAction copyDeep() {
+        return ChannelSetAddressCustomFieldAction.deepCopy(this);
+    }
 }

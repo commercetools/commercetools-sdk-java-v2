@@ -11,7 +11,7 @@ package com.commercetools.docs.meta;
  * <h3>Using split packages</h3>
  *
  * <p>For an application which covers the whole business logic and may act as a backend
- * for frontend it's advised to use the <code>commercetools-sdk-api</code> package.</p>
+ * for frontend it's advised to use the <code>commercetools-sdk-java-api</code> package.</p>
  *
  * <p>When developing small function applications which will be used in a size constrained environment
  * the SDK offers packages split by their domain. Due to the connections between the different domains

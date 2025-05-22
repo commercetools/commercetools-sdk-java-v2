@@ -123,7 +123,7 @@ jobs:
 
       - name: Run integration tests
         if: github.event_name != 'pull_request' && github.event_name != 'merge_group'
-        run: ./gradlew clean build publishMavenPublicationToMavenLocal runMainMethodThreadLeakTest runMainMethodMemoryLeakTest writeVersionToExamples
+        run: ./gradlew clean build publishToMavenLocal runMainMethodThreadLeakTest runMainMethodMemoryLeakTest writeVersionToExamples
         env:
             CTP_CLIENT_ID: ${{ secrets.CTP_CLIENT_ID }}
             CTP_CLIENT_SECRET: ${{ secrets.CTP_CLIENT_SECRET }}

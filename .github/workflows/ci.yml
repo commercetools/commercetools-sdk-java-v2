@@ -135,6 +135,7 @@ jobs:
         run: |
           cd examples/maven-okhttp3 && mvn verify --no-transfer-progress
           cd ../maven-okhttp4 && mvn verify --no-transfer-progress
+          cd ../split-packages && mvn verify --no-transfer-progress
 
       - name: Collect code coverage
         run: ./gradlew codeCoverageReport

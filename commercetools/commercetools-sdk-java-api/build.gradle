@@ -34,6 +34,7 @@ projectDir.toPath().resolve("src/main/java-generated/com/commercetools/api/model
         archiveClassifier = 'sources'
         from sourceSets.main.allJava
         include "**/models/$dirname/**"
+        exclude "com/**/models/message/MessagesConfiguration*"
         archiveBaseName = project.name + "-models-$dirname"
     }
     def javadocsTask = tasks.register("javadoc_${dirname}Jar", Jar) {
@@ -90,6 +91,20 @@ projectDir.toPath().resolve("src/main/java-generated/com/commercetools/api/model
                     modelsBase.appendNode('artifactId', 'commercetools-sdk-java-api-models-base')
                     modelsBase.appendNode('version', version)
                     modelsBase.appendNode('scope', 'compile')
+                    if (dirname != "common") {
+                        def common = dependenciesNode.appendNode('dependency')
+                        common.appendNode('groupId', group)
+                        common.appendNode('artifactId', 'commercetools-sdk-java-api-models_common')
+                        common.appendNode('version', version)
+                        common.appendNode('scope', 'compile')
+                    }
+                    if (dirname != "type") {
+                        def type = dependenciesNode.appendNode('dependency')
+                        type.appendNode('groupId', group)
+                        type.appendNode('artifactId', 'commercetools-sdk-java-api-models_type')
+                        type.appendNode('version', version)
+                        type.appendNode('scope', 'compile')
+                    }
                 }
             })
         }
@@ -144,7 +159,7 @@ tasks.register("sourcesBaseJar", Jar) {
 tasks.register("modelsBaseJar", Jar) {
     from sourceSets.main.output
 
-    include "**/models/*"
+    include "**/models/*", "com/**/models/message/MessagesConfiguration*",
     archiveBaseName = project.name + "-models-base"
 }
 assemble.dependsOn("modelsBaseJar")
@@ -152,13 +167,13 @@ tasks.register("javadocModelsBaseJar", Jar) {
     dependsOn "javadoc"
     archiveClassifier = 'javadoc'
     from javadoc.destinationDir
-    include "com/**/models/*", "index-files/**", "legal/**", "resources/**", "script-dir/**", "*"
+    include "com/**/models/*", "com/**/models/message/MessagesConfiguration*", "index-files/**", "legal/**", "resources/**", "script-dir/**", "*"
     archiveBaseName = project.name + "-models-base"
 }
 tasks.register("sourcesModelsBaseJar", Jar) {
     archiveClassifier = 'sources'
     from sourceSets.main.allJava
-    include "**/models/*"
+    include "**/models/*", "com/**/models/message/MessagesConfiguration*",
     archiveBaseName = project.name + "-models-base"
 }
 

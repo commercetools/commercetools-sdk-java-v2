@@ -20,7 +20,18 @@ package com.commercetools.docs.meta;
  *
  * <p>We provide an {@see <a href=https://github.com/commercetools/commercetools-sdk-java-v2/tree/main/examples/split-packages>example</a>} for using split packages</p>
  *
- * <p>The packages always start with the prefix <code>commercetools-sdk-java-api-models</code></p>
+ * <p>Please see the list for the split packages and their artifact IDs</p>
+ *
+ * <p><dl>
+ *     <dt>Base</dt>
+ *     <dd>com.commercetools.sdk:commercetools-sdk-java-api-base</dd>
+ *     <dt>Models Base</dt>
+ *     <dd>com.commercetools.sdk:commercetools-sdk-java-api-models-base</dd>
+ *     <dt>Models by domain</dt>
+ *     <dd>com.commercetools.sdk:commercetools-sdk-java-api-models-{domain}</dd>
+ *     <dt>Predicates</dt>
+ *     <dd>com.commercetools.sdk:commercetools-sdk-java-api-predicates</dd>
+ * </dl></p>
  */
 public class SizeOptimization {
 }

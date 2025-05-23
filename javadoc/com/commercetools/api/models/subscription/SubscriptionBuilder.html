@@ -92,9 +92,9 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
              .version(0.3)
              .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
              .lastModifiedAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
-             .plusChanges(changesBuilder -> changesBuilder)
              .destination(destinationBuilder -> destinationBuilder)
              .plusMessages(messagesBuilder -> messagesBuilder)
+             .plusChanges(changesBuilder -> changesBuilder)
              .plusEvents(eventsBuilder -> eventsBuilder)
              .format(formatBuilder -> formatBuilder)
              .status(SubscriptionHealthStatus.HEALTHY)
@@ -562,97 +562,6 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
-<section class="detail" id="changes(com.commercetools.api.models.subscription.ChangeSubscription...)">
-<h3>changes</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">changes</span><wbr><span class="parameters">(<a href="ChangeSubscription.html" title="interface in com.commercetools.api.models.subscription">ChangeSubscription</a>...&nbsp;changes)</span></div>
-<div class="block"><p>Changes subscribed to.</p></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>changes</code> - value to be set</dd>
-<dt>Returns:</dt>
-<dd>Builder</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="changes(java.util.List)">
-<h3>changes</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">changes</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ChangeSubscription.html" title="interface in com.commercetools.api.models.subscription">ChangeSubscription</a>&gt;&nbsp;changes)</span></div>
-<div class="block"><p>Changes subscribed to.</p></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>changes</code> - value to be set</dd>
-<dt>Returns:</dt>
-<dd>Builder</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="plusChanges(com.commercetools.api.models.subscription.ChangeSubscription...)">
-<h3>plusChanges</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">plusChanges</span><wbr><span class="parameters">(<a href="ChangeSubscription.html" title="interface in com.commercetools.api.models.subscription">ChangeSubscription</a>...&nbsp;changes)</span></div>
-<div class="block"><p>Changes subscribed to.</p></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>changes</code> - value to be set</dd>
-<dt>Returns:</dt>
-<dd>Builder</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="plusChanges(java.util.function.Function)">
-<h3>plusChanges</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">plusChanges</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ChangeSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">ChangeSubscriptionBuilder</a>,<wbr><a href="ChangeSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">ChangeSubscriptionBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Changes subscribed to.</p></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>builder</code> - function to build the changes value</dd>
-<dt>Returns:</dt>
-<dd>Builder</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="withChanges(java.util.function.Function)">
-<h3>withChanges</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">withChanges</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ChangeSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">ChangeSubscriptionBuilder</a>,<wbr><a href="ChangeSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">ChangeSubscriptionBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Changes subscribed to.</p></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>builder</code> - function to build the changes value</dd>
-<dt>Returns:</dt>
-<dd>Builder</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="addChanges(java.util.function.Function)">
-<h3>addChanges</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">addChanges</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ChangeSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">ChangeSubscriptionBuilder</a>,<wbr><a href="ChangeSubscription.html" title="interface in com.commercetools.api.models.subscription">ChangeSubscription</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Changes subscribed to.</p></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>builder</code> - function to build the changes value</dd>
-<dt>Returns:</dt>
-<dd>Builder</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setChanges(java.util.function.Function)">
-<h3>setChanges</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">setChanges</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ChangeSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">ChangeSubscriptionBuilder</a>,<wbr><a href="ChangeSubscription.html" title="interface in com.commercetools.api.models.subscription">ChangeSubscription</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Changes subscribed to.</p></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>builder</code> - function to build the changes value</dd>
-<dt>Returns:</dt>
-<dd>Builder</dd>
-</dl>
-</section>
-</li>
-<li>
 <section class="detail" id="destination(com.commercetools.api.models.subscription.Destination)">
 <h3>destination</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">destination</span><wbr><span class="parameters">(<a href="Destination.html" title="interface in com.commercetools.api.models.subscription">Destination</a>&nbsp;destination)</span></div>
@@ -778,6 +687,97 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the messages value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="changes(com.commercetools.api.models.subscription.ChangeSubscription...)">
+<h3>changes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">changes</span><wbr><span class="parameters">(<a href="ChangeSubscription.html" title="interface in com.commercetools.api.models.subscription">ChangeSubscription</a>...&nbsp;changes)</span></div>
+<div class="block"><p>Changes subscribed to.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>changes</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="changes(java.util.List)">
+<h3>changes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">changes</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ChangeSubscription.html" title="interface in com.commercetools.api.models.subscription">ChangeSubscription</a>&gt;&nbsp;changes)</span></div>
+<div class="block"><p>Changes subscribed to.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>changes</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="plusChanges(com.commercetools.api.models.subscription.ChangeSubscription...)">
+<h3>plusChanges</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">plusChanges</span><wbr><span class="parameters">(<a href="ChangeSubscription.html" title="interface in com.commercetools.api.models.subscription">ChangeSubscription</a>...&nbsp;changes)</span></div>
+<div class="block"><p>Changes subscribed to.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>changes</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="plusChanges(java.util.function.Function)">
+<h3>plusChanges</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">plusChanges</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ChangeSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">ChangeSubscriptionBuilder</a>,<wbr><a href="ChangeSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">ChangeSubscriptionBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Changes subscribed to.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the changes value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="withChanges(java.util.function.Function)">
+<h3>withChanges</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">withChanges</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ChangeSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">ChangeSubscriptionBuilder</a>,<wbr><a href="ChangeSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">ChangeSubscriptionBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Changes subscribed to.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the changes value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="addChanges(java.util.function.Function)">
+<h3>addChanges</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">addChanges</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ChangeSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">ChangeSubscriptionBuilder</a>,<wbr><a href="ChangeSubscription.html" title="interface in com.commercetools.api.models.subscription">ChangeSubscription</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Changes subscribed to.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the changes value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setChanges(java.util.function.Function)">
+<h3>setChanges</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">SubscriptionBuilder</a></span>&nbsp;<span class="element-name">setChanges</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ChangeSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">ChangeSubscriptionBuilder</a>,<wbr><a href="ChangeSubscription.html" title="interface in com.commercetools.api.models.subscription">ChangeSubscription</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Changes subscribed to.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the changes value</dd>
 <dt>Returns:</dt>
 <dd>Builder</dd>
 </dl>
@@ -982,17 +982,6 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
-<section class="detail" id="getChanges()">
-<h3>getChanges</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ChangeSubscription.html" title="interface in com.commercetools.api.models.subscription">ChangeSubscription</a>&gt;</span>&nbsp;<span class="element-name">getChanges</span>()</div>
-<div class="block"><p>Changes subscribed to.</p></div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>changes</dd>
-</dl>
-</section>
-</li>
-<li>
 <section class="detail" id="getDestination()">
 <h3>getDestination</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Destination.html" title="interface in com.commercetools.api.models.subscription">Destination</a></span>&nbsp;<span class="element-name">getDestination</span>()</div>
@@ -1023,6 +1012,17 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>messages</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getChanges()">
+<h3>getChanges</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ChangeSubscription.html" title="interface in com.commercetools.api.models.subscription">ChangeSubscription</a>&gt;</span>&nbsp;<span class="element-name">getChanges</span>()</div>
+<div class="block"><p>Changes subscribed to.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>changes</dd>
 </dl>
 </section>
 </li>

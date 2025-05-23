@@ -2056,6 +2056,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">factory method to create a deep copy of DiscountedPriceDraft</div>
 </dd>
+<dt><a href="../com/commercetools/api/models/common/GenericReference.html#deepCopy(com.commercetools.api.models.common.GenericReference)" class="member-name-link">deepCopy(GenericReference&lt;T&gt;)</a> - Static method in interface com.commercetools.api.models.common.<a href="../com/commercetools/api/models/common/GenericReference.html" title="interface in com.commercetools.api.models.common">GenericReference</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of Reference</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/common/GeoJson.html#deepCopy(com.commercetools.api.models.common.GeoJson)" class="member-name-link">deepCopy(GeoJson)</a> - Static method in interface com.commercetools.api.models.common.<a href="../com/commercetools/api/models/common/GeoJson.html" title="interface in com.commercetools.api.models.common">GeoJson</a></dt>
 <dd>
 <div class="block">factory method to create a deep copy of GeoJson</div>
@@ -2159,6 +2163,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/api/models/custom_object/CustomObjectReference.html#deepCopy(com.commercetools.api.models.custom_object.CustomObjectReference)" class="member-name-link">deepCopy(CustomObjectReference)</a> - Static method in interface com.commercetools.api.models.custom_object.<a href="../com/commercetools/api/models/custom_object/CustomObjectReference.html" title="interface in com.commercetools.api.models.custom_object">CustomObjectReference</a></dt>
 <dd>
 <div class="block">factory method to create a deep copy of CustomObjectReference</div>
+</dd>
+<dt><a href="../com/commercetools/api/models/custom_object/GenericCustomObject.html#deepCopy(com.commercetools.api.models.custom_object.GenericCustomObject)" class="member-name-link">deepCopy(GenericCustomObject&lt;TValue&gt;)</a> - Static method in interface com.commercetools.api.models.custom_object.<a href="../com/commercetools/api/models/custom_object/GenericCustomObject.html" title="interface in com.commercetools.api.models.custom_object">GenericCustomObject</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of CustomObject</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/customer_group/CustomerGroup.html#deepCopy(com.commercetools.api.models.customer_group.CustomerGroup)" class="member-name-link">deepCopy(CustomerGroup)</a> - Static method in interface com.commercetools.api.models.customer_group.<a href="../com/commercetools/api/models/customer_group/CustomerGroup.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroup</a></dt>
 <dd>
@@ -9378,6 +9386,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">factory method to create a deep copy of GraphQLResponse</div>
 </dd>
+<dt><a href="../com/commercetools/graphql/api/GraphQLRequest.html#deepCopy(com.commercetools.graphql.api.GraphQLRequest)" class="member-name-link">deepCopy(GraphQLRequest&lt;T&gt;)</a> - Static method in interface com.commercetools.graphql.api.<a href="../com/commercetools/graphql/api/GraphQLRequest.html" title="interface in com.commercetools.graphql.api">GraphQLRequest</a></dt>
+<dd>
+<div class="block">factory method to create a deep copy of GraphQLRequest</div>
+</dd>
 <dt><a href="../com/commercetools/history/models/cart_discount/PatternComponent.html#deepCopy(com.commercetools.history.models.cart_discount.PatternComponent)" class="member-name-link">deepCopy(PatternComponent)</a> - Static method in interface com.commercetools.history.models.cart_discount.<a href="../com/commercetools/history/models/cart_discount/PatternComponent.html" title="interface in com.commercetools.history.models.cart_discount">PatternComponent</a></dt>
 <dd>
 <div class="block">factory method to create a deep copy of PatternComponent</div>
@@ -12676,7 +12688,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/cart/CartBuilder.html#deleteDaysAfterLastModification(java.lang.Integer)" class="member-name-link">deleteDaysAfterLastModification(Integer)</a> - Method in class com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/CartBuilder.html" title="class in com.commercetools.api.models.cart">CartBuilder</a></dt>
 <dd>
-<div class="block">Number of days after which an active Cart is deleted since its last modification.</div>
+<div class="block">Number of days after the last modification before a Cart is deleted.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/cart/CartSetDeleteDaysAfterLastModificationActionBuilder.html#deleteDaysAfterLastModification(java.lang.Integer)" class="member-name-link">deleteDaysAfterLastModification(Integer)</a> - Method in class com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/CartSetDeleteDaysAfterLastModificationActionBuilder.html" title="class in com.commercetools.api.models.cart">CartSetDeleteDaysAfterLastModificationActionBuilder</a></dt>
 <dd>
@@ -12688,11 +12700,11 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/api/models/cart/CartDraftBuilder.html#deleteDaysAfterLastModification(java.lang.Long)" class="member-name-link">deleteDaysAfterLastModification(Long)</a> - Method in class com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/CartDraftBuilder.html" title="class in com.commercetools.api.models.cart">CartDraftBuilder</a></dt>
 <dd>
-<div class="block">Number of days after which an active Cart is deleted since its last modification.</div>
+<div class="block">Number of days after the last modification before a Cart is deleted.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/me/MyCartDraftBuilder.html#deleteDaysAfterLastModification(java.lang.Long)" class="member-name-link">deleteDaysAfterLastModification(Long)</a> - Method in class com.commercetools.api.models.me.<a href="../com/commercetools/api/models/me/MyCartDraftBuilder.html" title="class in com.commercetools.api.models.me">MyCartDraftBuilder</a></dt>
 <dd>
-<div class="block">Number of days after which a Cart with <code>Active</code> CartState is deleted since its last modification.</div>
+<div class="block">Number of days after the last modification before a Cart is deleted.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/me/MyShoppingListDraftBuilder.html#deleteDaysAfterLastModification(java.lang.Long)" class="member-name-link">deleteDaysAfterLastModification(Long)</a> - Method in class com.commercetools.api.models.me.<a href="../com/commercetools/api/models/me/MyShoppingListDraftBuilder.html" title="class in com.commercetools.api.models.me">MyShoppingListDraftBuilder</a></dt>
 <dd>

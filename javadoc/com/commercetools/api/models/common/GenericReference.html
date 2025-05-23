@@ -91,26 +91,31 @@ extends <a href="Reference.html" title="interface in com.commercetools.api.model
 <section class="method-summary" id="method-summary">
 <h2>Method Summary</h2>
 <div id="method-summary-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button><button id="method-summary-table-tab5" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab5', 3)" class="table-tab">Default Methods</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="method-summary-table-tab0" role="tab" aria-selected="true" aria-controls="method-summary-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table', 3)" class="active-table-tab">All Methods</button><button id="method-summary-table-tab1" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab1', 3)" class="table-tab">Static Methods</button><button id="method-summary-table-tab2" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab2', 3)" class="table-tab">Instance Methods</button><button id="method-summary-table-tab3" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab3', 3)" class="table-tab">Abstract Methods</button><button id="method-summary-table-tab5" role="tab" aria-selected="false" aria-controls="method-summary-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('method-summary-table', 'method-summary-table-tab5', 3)" class="table-tab">Default Methods</button></div>
 <div id="method-summary-table.tabpanel" role="tabpanel" aria-labelledby="method-summary-table-tab0">
 <div class="summary-table three-column-summary">
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="GenericReference.html" title="type parameter in GenericReference">T</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getObj()" class="member-name-link">getObj</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="GenericReference.html" title="interface in com.commercetools.api.models.common">GenericReference</a>&lt;<a href="GenericReference.html" title="type parameter in GenericReference">T</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#of(com.commercetools.api.models.common.ReferenceTypeId,java.lang.String,T)" class="member-name-link">of</a><wbr>(<a href="ReferenceTypeId.html" title="interface in com.commercetools.api.models.common">ReferenceTypeId</a>&nbsp;typeId,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static &lt;T&gt;&nbsp;<a href="GenericReference.html" title="interface in com.commercetools.api.models.common">GenericReference</a>&lt;T&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#deepCopy(com.commercetools.api.models.common.GenericReference)" class="member-name-link">deepCopy</a><wbr>(<a href="GenericReference.html" title="interface in com.commercetools.api.models.common">GenericReference</a>&lt;T&gt;&nbsp;template)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="block">factory method to create a deep copy of Reference</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="GenericReference.html" title="type parameter in GenericReference">T</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getObj()" class="member-name-link">getObj</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="GenericReference.html" title="interface in com.commercetools.api.models.common">GenericReference</a>&lt;<a href="GenericReference.html" title="type parameter in GenericReference">T</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#of(com.commercetools.api.models.common.ReferenceTypeId,java.lang.String,T)" class="member-name-link">of</a><wbr>(<a href="ReferenceTypeId.html" title="interface in com.commercetools.api.models.common">ReferenceTypeId</a>&nbsp;typeId,
  <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id,
  <a href="GenericReference.html" title="type parameter in GenericReference">T</a>&nbsp;obj)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
 </div>
 </div>
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.commercetools.api.models.common.Reference">Methods inherited from interface&nbsp;com.commercetools.api.models.common.<a href="Reference.html" title="interface in com.commercetools.api.models.common">Reference</a></h3>
-<code><a href="Reference.html#getId()">getId</a>, <a href="Reference.html#getTypeId()">getTypeId</a>, <a href="Reference.html#setId(java.lang.String)">setId</a>, <a href="Reference.html#withReference(java.util.function.Function)">withReference</a></code></div>
+<code><a href="Reference.html#copyDeep()">copyDeep</a>, <a href="Reference.html#getId()">getId</a>, <a href="Reference.html#getTypeId()">getTypeId</a>, <a href="Reference.html#setId(java.lang.String)">setId</a>, <a href="Reference.html#withReference(java.util.function.Function)">withReference</a></code></div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.commercetools.api.models.common.ReferenceMixin">Methods inherited from interface&nbsp;com.commercetools.api.models.common.<a href="ReferenceMixin.html" title="interface in com.commercetools.api.models.common">ReferenceMixin</a></h3>
 <code><a href="ReferenceMixin.html#toResourceIdentifier()">toResourceIdentifier</a></code></div>
@@ -137,6 +142,21 @@ extends <a href="Reference.html" title="interface in com.commercetools.api.model
 <div class="member-signature"><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="GenericReference.html" title="interface in com.commercetools.api.models.common">GenericReference</a>&lt;<a href="GenericReference.html" title="type parameter in GenericReference">T</a>&gt;</span>&nbsp;<span class="element-name">of</span><wbr><span class="parameters">(<a href="ReferenceTypeId.html" title="interface in com.commercetools.api.models.common">ReferenceTypeId</a>&nbsp;typeId,
  <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id,
  <a href="GenericReference.html" title="type parameter in GenericReference">T</a>&nbsp;obj)</span></div>
+</section>
+</li>
+<li>
+<section class="detail" id="deepCopy(com.commercetools.api.models.common.GenericReference)">
+<h3>deepCopy</h3>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">static</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type"><a href="GenericReference.html" title="interface in com.commercetools.api.models.common">GenericReference</a>&lt;T&gt;</span>&nbsp;<span class="element-name">deepCopy</span><wbr><span class="parameters">(@Nullable
+ <a href="GenericReference.html" title="interface in com.commercetools.api.models.common">GenericReference</a>&lt;T&gt;&nbsp;template)</span></div>
+<div class="block">factory method to create a deep copy of Reference</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>template</code> - instance to be copied</dd>
+<dt>Returns:</dt>
+<dd>copy instance</dd>
+</dl>
 </section>
 </li>
 </ul>

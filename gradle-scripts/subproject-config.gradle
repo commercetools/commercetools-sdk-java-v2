@@ -32,7 +32,7 @@ javadoc {
         splitIndex = true
         noTree = true
         title = "commercetools Java SDK"
-        links 'https://docs.oracle.com/javase/11/docs/api/', "https://fasterxml.github.io/jackson-databind/javadoc/2.14/", 'https://commercetools.github.io/commercetools-jvm-sdk/apidocs/', 'https://newrelic.github.io/java-agent-api/javadoc/'
+        links 'https://docs.oracle.com/en/java/javase/11/docs/api/', "https://fasterxml.github.io/jackson-databind/javadoc/2.14/", 'https://commercetools.github.io/commercetools-jvm-sdk/apidocs/', 'https://newrelic.github.io/java-agent-api/javadoc/'
         maxMemory = '2g'
         addBooleanOption('-allow-script-in-comments', true)
         addStringOption('Xdoclint:missing,accessibility,reference', '-quiet')

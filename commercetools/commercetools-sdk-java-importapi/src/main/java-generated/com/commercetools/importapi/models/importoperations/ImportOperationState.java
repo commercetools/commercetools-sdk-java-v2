@@ -17,7 +17,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface ImportOperationState extends JsonEnum {
 
     /**
-    <p>This is an initial state of import resource and is currently processing.</p> */
+    <p>The import is in process. This is the initial state of the ImportOperation.</p> */
     ImportOperationState PROCESSING = ImportOperationStateEnum.PROCESSING;
     /**
     <p>The validation of the import resource failed.</p> */

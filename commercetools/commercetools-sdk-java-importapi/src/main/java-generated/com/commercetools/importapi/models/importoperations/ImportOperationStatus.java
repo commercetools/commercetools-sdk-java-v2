@@ -18,7 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- * ImportOperationStatus
+ *  <p>The ID and validation status of a new ImportOperation.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

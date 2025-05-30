@@ -1,7 +1,7 @@
 dependencies {
     api project(":rmf:rmf-java-base")
     implementation "com.datadoghq:java-dogstatsd-client:4.4.4"
-    implementation "com.datadoghq:datadog-api-client:2.34.1"
+    implementation "com.datadoghq:datadog-api-client:2.35.0"
 
     testImplementation project(":commercetools:commercetools-sdk-java-api")
 }

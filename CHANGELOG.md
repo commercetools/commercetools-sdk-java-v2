@@ -1,4 +1,43 @@
 
+# 18.1.0 (2025-06-03)
+
+## New features
+
+### Split packages
+
+Additionally to the package `commercetools-sdk-java-api` we also release packages split by domain. This allows package size optimization for deployment targets with size constrains. See also https://commercetools.github.io/commercetools-sdk-java-v2/javadoc/com/commercetools/docs/meta/SizeOptimization.html
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/891
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/894
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/897
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/898
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/899
+* Package split by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/900
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/901
+* Package split example by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/902
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/905
+
+**Import changes**
+
+<details>
+<summary>Removed Property(s)</summary>
+
+- :warning: removed property `/^[a-z]{2}(-[A-Z]{2})?$/` from type `SearchKeywords`
+- :warning: removed property `/^[a-z]{2}(-[A-Z]{2})?$/` from type `LocalizedString`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `/^[a-zA-Z]{2,3}(?:-[a-zA-Z]{4})?(?:-(?:[a-zA-Z]{2}|\d{3}))?$/` to type `SearchKeywords`
+- added property `/^[a-zA-Z]{2,3}(?:-[a-zA-Z]{4})?(?:-(?:[a-zA-Z]{2}|\d{3}))?$/` to type `LocalizedString`
+</details>
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/18.0.0...18.1.0
+
 # 18.0.0 (2025-05-02)
 
 ## New Features

@@ -18,7 +18,7 @@ package com.commercetools.docs.meta;
  * the split is realized after compilation and doesn't reflect the whole dependency graph of all packages.
  * You will have to explicitly define the packages you intend to use.</p>
  *
- * <p>We provide an {@see <a href=https://github.com/commercetools/commercetools-sdk-java-v2/tree/main/examples/split-packages>example</a>} for using split packages</p>
+ * <p>We provide an <a href=https://github.com/commercetools/commercetools-sdk-java-v2/tree/main/examples/split-packages>example</a> for using split packages</p>
  *
  * <p>Please see the list for the split packages and their artifact IDs</p>
  *

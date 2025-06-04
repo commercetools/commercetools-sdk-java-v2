@@ -28,6 +28,9 @@ public class CustomerCreatePasswordResetTokenBuilder implements Builder<Customer
     @Nullable
     private Long ttlMinutes;
 
+    @Nullable
+    private Boolean invalidateOlderTokens;
+
     /**
      *  <p>Email address of the Customer treated as case-insensitive.</p>
      * @param email value to be set
@@ -51,6 +54,18 @@ public class CustomerCreatePasswordResetTokenBuilder implements Builder<Customer
     }
 
     /**
+     *  <p>If set to <code>true</code>, all password tokens issued previously for the Customer will be invalidated.</p>
+     * @param invalidateOlderTokens value to be set
+     * @return Builder
+     */
+
+    public CustomerCreatePasswordResetTokenBuilder invalidateOlderTokens(
+            @Nullable final Boolean invalidateOlderTokens) {
+        this.invalidateOlderTokens = invalidateOlderTokens;
+        return this;
+    }
+
+    /**
      *  <p>Email address of the Customer treated as case-insensitive.</p>
      * @return email
      */
@@ -70,12 +85,22 @@ public class CustomerCreatePasswordResetTokenBuilder implements Builder<Customer
     }
 
     /**
+     *  <p>If set to <code>true</code>, all password tokens issued previously for the Customer will be invalidated.</p>
+     * @return invalidateOlderTokens
+     */
+
+    @Nullable
+    public Boolean getInvalidateOlderTokens() {
+        return this.invalidateOlderTokens;
+    }
+
+    /**
      * builds CustomerCreatePasswordResetToken with checking for non-null required values
      * @return CustomerCreatePasswordResetToken
      */
     public CustomerCreatePasswordResetToken build() {
         Objects.requireNonNull(email, CustomerCreatePasswordResetToken.class + ": email is missing");
-        return new CustomerCreatePasswordResetTokenImpl(email, ttlMinutes);
+        return new CustomerCreatePasswordResetTokenImpl(email, ttlMinutes, invalidateOlderTokens);
     }
 
     /**
@@ -83,7 +108,7 @@ public class CustomerCreatePasswordResetTokenBuilder implements Builder<Customer
      * @return CustomerCreatePasswordResetToken
      */
     public CustomerCreatePasswordResetToken buildUnchecked() {
-        return new CustomerCreatePasswordResetTokenImpl(email, ttlMinutes);
+        return new CustomerCreatePasswordResetTokenImpl(email, ttlMinutes, invalidateOlderTokens);
     }
 
     /**
@@ -103,6 +128,7 @@ public class CustomerCreatePasswordResetTokenBuilder implements Builder<Customer
         CustomerCreatePasswordResetTokenBuilder builder = new CustomerCreatePasswordResetTokenBuilder();
         builder.email = template.getEmail();
         builder.ttlMinutes = template.getTtlMinutes();
+        builder.invalidateOlderTokens = template.getInvalidateOlderTokens();
         return builder;
     }
 

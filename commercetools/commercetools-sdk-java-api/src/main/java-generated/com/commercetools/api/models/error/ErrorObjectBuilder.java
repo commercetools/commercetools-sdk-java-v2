@@ -107,6 +107,14 @@ public class ErrorObjectBuilder {
         return com.commercetools.api.models.error.EnumValuesMustMatchErrorBuilder.of();
     }
 
+    public com.commercetools.api.models.error.ExpiredCustomerEmailTokenErrorBuilder expiredCustomerEmailTokenBuilder() {
+        return com.commercetools.api.models.error.ExpiredCustomerEmailTokenErrorBuilder.of();
+    }
+
+    public com.commercetools.api.models.error.ExpiredCustomerPasswordTokenErrorBuilder expiredCustomerPasswordTokenBuilder() {
+        return com.commercetools.api.models.error.ExpiredCustomerPasswordTokenErrorBuilder.of();
+    }
+
     public com.commercetools.api.models.error.ExtensionBadResponseErrorBuilder extensionBadResponseBuilder() {
         return com.commercetools.api.models.error.ExtensionBadResponseErrorBuilder.of();
     }

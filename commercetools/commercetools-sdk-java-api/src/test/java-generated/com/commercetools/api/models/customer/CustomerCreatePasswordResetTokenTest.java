@@ -17,7 +17,9 @@ public class CustomerCreatePasswordResetTokenTest {
 
     public static Object[][] objectBuilder() {
         return new Object[][] { new Object[] { "email", CustomerCreatePasswordResetToken.builder().email("email") },
-                new Object[] { "ttlMinutes", CustomerCreatePasswordResetToken.builder().ttlMinutes(1L) } };
+                new Object[] { "ttlMinutes", CustomerCreatePasswordResetToken.builder().ttlMinutes(1L) },
+                new Object[] { "invalidateOlderTokens",
+                        CustomerCreatePasswordResetToken.builder().invalidateOlderTokens(true) } };
     }
 
     @Test
@@ -32,5 +34,12 @@ public class CustomerCreatePasswordResetTokenTest {
         CustomerCreatePasswordResetToken value = CustomerCreatePasswordResetToken.of();
         value.setTtlMinutes(1L);
         Assertions.assertThat(value.getTtlMinutes()).isEqualTo(1L);
+    }
+
+    @Test
+    public void invalidateOlderTokens() {
+        CustomerCreatePasswordResetToken value = CustomerCreatePasswordResetToken.of();
+        value.setInvalidateOlderTokens(true);
+        Assertions.assertThat(value.getInvalidateOlderTokens()).isEqualTo(true);
     }
 }

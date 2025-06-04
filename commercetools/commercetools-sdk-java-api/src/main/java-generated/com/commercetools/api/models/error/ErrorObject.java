@@ -288,6 +288,22 @@ public interface ErrorObject {
     }
 
     /**
+     * builder for expiredCustomerEmailToken subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.ExpiredCustomerEmailTokenErrorBuilder expiredCustomerEmailTokenBuilder() {
+        return com.commercetools.api.models.error.ExpiredCustomerEmailTokenErrorBuilder.of();
+    }
+
+    /**
+     * builder for expiredCustomerPasswordToken subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.ExpiredCustomerPasswordTokenErrorBuilder expiredCustomerPasswordTokenBuilder() {
+        return com.commercetools.api.models.error.ExpiredCustomerPasswordTokenErrorBuilder.of();
+    }
+
+    /**
      * builder for extensionBadResponse subtype
      * @return builder
      */

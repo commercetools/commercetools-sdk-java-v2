@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Generated after a successful Create email token for Customer request. The <code>resource</code> property of the Message is a CustomerEmailTokenReference.</p>
+ *  <p>Generated after a successful Create email token for Customer or Create email token for Customer in Store request. The <code>resource</code> property of the Message is a CustomerEmailTokenReference.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomerEmailTokenCreatedMessageImpl implements CustomerEmailTokenCreatedMessage, ModelBase {
@@ -48,6 +48,10 @@ public class CustomerEmailTokenCreatedMessageImpl implements CustomerEmailTokenC
 
     private java.time.ZonedDateTime expiresAt;
 
+    private String value;
+
+    private Boolean invalidateOlderTokens;
+
     /**
      * create instance with all properties
      */
@@ -63,7 +67,9 @@ public class CustomerEmailTokenCreatedMessageImpl implements CustomerEmailTokenC
             @JsonProperty("resourceVersion") final Long resourceVersion,
             @JsonProperty("resourceUserProvidedIdentifiers") final com.commercetools.api.models.message.UserProvidedIdentifiers resourceUserProvidedIdentifiers,
             @JsonProperty("customerId") final String customerId,
-            @JsonProperty("expiresAt") final java.time.ZonedDateTime expiresAt) {
+            @JsonProperty("expiresAt") final java.time.ZonedDateTime expiresAt,
+            @JsonProperty("value") final String value,
+            @JsonProperty("invalidateOlderTokens") final Boolean invalidateOlderTokens) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -76,6 +82,8 @@ public class CustomerEmailTokenCreatedMessageImpl implements CustomerEmailTokenC
         this.resourceUserProvidedIdentifiers = resourceUserProvidedIdentifiers;
         this.customerId = customerId;
         this.expiresAt = expiresAt;
+        this.value = value;
+        this.invalidateOlderTokens = invalidateOlderTokens;
         this.type = CUSTOMER_EMAIL_TOKEN_CREATED;
     }
 
@@ -190,6 +198,22 @@ public class CustomerEmailTokenCreatedMessageImpl implements CustomerEmailTokenC
         return this.expiresAt;
     }
 
+    /**
+     *  <p>Value of the token, present only if the token's validity is 60 minutes or less.</p>
+     */
+
+    public String getValue() {
+        return this.value;
+    }
+
+    /**
+     *  <p>If <code>true</code>, all email tokens issued previously for the Customer are invalidated.</p>
+     */
+
+    public Boolean getInvalidateOlderTokens() {
+        return this.invalidateOlderTokens;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -239,6 +263,14 @@ public class CustomerEmailTokenCreatedMessageImpl implements CustomerEmailTokenC
         this.expiresAt = expiresAt;
     }
 
+    public void setValue(final String value) {
+        this.value = value;
+    }
+
+    public void setInvalidateOlderTokens(final Boolean invalidateOlderTokens) {
+        this.invalidateOlderTokens = invalidateOlderTokens;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -262,6 +294,8 @@ public class CustomerEmailTokenCreatedMessageImpl implements CustomerEmailTokenC
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(customerId, that.customerId)
                 .append(expiresAt, that.expiresAt)
+                .append(value, that.value)
+                .append(invalidateOlderTokens, that.invalidateOlderTokens)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -275,6 +309,8 @@ public class CustomerEmailTokenCreatedMessageImpl implements CustomerEmailTokenC
                 .append(resourceUserProvidedIdentifiers, that.resourceUserProvidedIdentifiers)
                 .append(customerId, that.customerId)
                 .append(expiresAt, that.expiresAt)
+                .append(value, that.value)
+                .append(invalidateOlderTokens, that.invalidateOlderTokens)
                 .isEquals();
     }
 
@@ -293,6 +329,8 @@ public class CustomerEmailTokenCreatedMessageImpl implements CustomerEmailTokenC
                 .append(resourceUserProvidedIdentifiers)
                 .append(customerId)
                 .append(expiresAt)
+                .append(value)
+                .append(invalidateOlderTokens)
                 .toHashCode();
     }
 
@@ -311,6 +349,8 @@ public class CustomerEmailTokenCreatedMessageImpl implements CustomerEmailTokenC
                 .append("resourceUserProvidedIdentifiers", resourceUserProvidedIdentifiers)
                 .append("customerId", customerId)
                 .append("expiresAt", expiresAt)
+                .append("value", value)
+                .append("invalidateOlderTokens", invalidateOlderTokens)
                 .build();
     }
 

@@ -23,6 +23,7 @@ public class CustomerTokenTest {
                 new Object[] { "value", CustomerToken.builder().value("value") },
                 new Object[] { "expiresAt",
                         CustomerToken.builder().expiresAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "invalidateOlderTokens", CustomerToken.builder().invalidateOlderTokens(true) },
                 new Object[] { "createdAt",
                         CustomerToken.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
                 new Object[] { "lastModifiedAt",
@@ -55,6 +56,13 @@ public class CustomerTokenTest {
         CustomerToken value = CustomerToken.of();
         value.setExpiresAt(ZonedDateTime.parse("2023-06-01T12:00Z"));
         Assertions.assertThat(value.getExpiresAt()).isEqualTo(ZonedDateTime.parse("2023-06-01T12:00Z"));
+    }
+
+    @Test
+    public void invalidateOlderTokens() {
+        CustomerToken value = CustomerToken.of();
+        value.setInvalidateOlderTokens(true);
+        Assertions.assertThat(value.getInvalidateOlderTokens()).isEqualTo(true);
     }
 
     @Test

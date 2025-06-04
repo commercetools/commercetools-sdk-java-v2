@@ -19,6 +19,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 /**
  *  <p>Use this method to verify a global Customer's email during their email verification process.</p>
  *  <p>Verifying the email of the Customer produces the CustomerEmailVerified Message.</p>
+ *  <p>After the email is verified, all email tokens issued previously through the email verification flow are invalidated. This invalidation of tokens is eventually consistent.</p>
  *
  * <hr>
  * <div class=code-example>

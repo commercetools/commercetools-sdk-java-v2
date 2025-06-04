@@ -19,6 +19,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 /**
  *  <p>This is the last step in the password reset process of a Customer.</p>
  *  <p>Resetting a password of the Customer produces the CustomerPasswordUpdated Message with <code>reset=true</code>.</p>
+ *  <p>After the password is reset, all password tokens issued previously through the password reset flow are invalidated. In addition, any access and refresh tokens issued previously through the password flow and refresh token flow are invalidated. This invalidation of tokens is eventually consistent.</p>
  *
  * <hr>
  * <div class=code-example>

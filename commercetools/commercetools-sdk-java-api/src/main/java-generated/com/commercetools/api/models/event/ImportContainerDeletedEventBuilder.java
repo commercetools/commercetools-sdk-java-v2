@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *     ImportContainerDeletedEvent importContainerDeletedEvent = ImportContainerDeletedEvent.builder()
  *             .id("{id}")
  *             .notificationType("{notificationType}")
- *             .resourceType(EventSubscriptionResourceTypeId.IMPORT_API)
+ *             .resourceType(EventSubscriptionResourceTypeId.CHECKOUT)
  *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .data(dataBuilder -> dataBuilder)
  *             .build()

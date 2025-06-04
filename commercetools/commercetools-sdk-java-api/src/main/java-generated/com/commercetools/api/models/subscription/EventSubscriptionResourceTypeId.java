@@ -17,6 +17,9 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface EventSubscriptionResourceTypeId extends JsonEnum {
 
     /**
+    <p>Events related to Checkout.</p> */
+    EventSubscriptionResourceTypeId CHECKOUT = EventSubscriptionResourceTypeIdEnum.CHECKOUT;
+    /**
     <p>Events related to the Import API.</p> */
     EventSubscriptionResourceTypeId IMPORT_API = EventSubscriptionResourceTypeIdEnum.IMPORT_API;
 
@@ -24,6 +27,11 @@ public interface EventSubscriptionResourceTypeId extends JsonEnum {
      * possible values of EventSubscriptionResourceTypeId
      */
     enum EventSubscriptionResourceTypeIdEnum implements EventSubscriptionResourceTypeId {
+        /**
+         * checkout
+         */
+        CHECKOUT("checkout"),
+
         /**
          * import-api
          */

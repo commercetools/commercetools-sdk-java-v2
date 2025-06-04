@@ -44,7 +44,7 @@ public class EventSubscriptionImpl implements EventSubscription, ModelBase {
     }
 
     /**
-     *  <p>Unique identifier for the type of resource, for example, <code>import-api</code>.</p>
+     *  <p>Unique identifier for the type of resource.</p>
      */
 
     public com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId getResourceTypeId() {
@@ -52,7 +52,7 @@ public class EventSubscriptionImpl implements EventSubscription, ModelBase {
     }
 
     /**
-     *  <p>Must contain valid event types for the resource. For example, for resource type <code>import-api</code> the event type <code>ImportContainerCreated</code> is valid. If no <code>types</code> are given, the Subscription will receive all events for this resource.</p>
+     *  <p>Must contain valid event types for the resource. For example, for resource type <code>import-api</code> the event type <code>ImportContainerCreated</code> is valid. If no <code>types</code> are given, the Subscription will receive all events for the defined resource type.</p>
      */
 
     public java.util.List<com.commercetools.api.models.subscription.EventType> getTypes() {

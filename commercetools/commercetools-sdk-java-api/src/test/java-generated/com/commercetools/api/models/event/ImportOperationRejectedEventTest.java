@@ -20,7 +20,7 @@ public class ImportOperationRejectedEventTest {
                 new Object[] { "resourceType",
                         ImportOperationRejectedEvent.builder()
                                 .resourceType(com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId
-                                        .findEnum("import-api")) },
+                                        .findEnum("checkout")) },
                 new Object[] { "data", ImportOperationRejectedEvent.builder()
                         .data(new com.commercetools.api.models.event.ImportOperationRejectedEventDataImpl()) } };
     }
@@ -29,10 +29,10 @@ public class ImportOperationRejectedEventTest {
     public void resourceType() {
         ImportOperationRejectedEvent value = ImportOperationRejectedEvent.of();
         value.setResourceType(
-            com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId.findEnum("import-api"));
+            com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId.findEnum("checkout"));
         Assertions.assertThat(value.getResourceType())
                 .isEqualTo(
-                    com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId.findEnum("import-api"));
+                    com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId.findEnum("checkout"));
     }
 
     @Test

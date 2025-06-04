@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * <div class=code-example>
  * <pre><code class='java'>
  *     EventSubscription eventSubscription = EventSubscription.builder()
- *             .resourceTypeId(EventSubscriptionResourceTypeId.IMPORT_API)
+ *             .resourceTypeId(EventSubscriptionResourceTypeId.CHECKOUT)
  *             .build()
  * </code></pre>
  * </div>
@@ -29,7 +29,7 @@ public class EventSubscriptionBuilder implements Builder<EventSubscription> {
     private java.util.List<com.commercetools.api.models.subscription.EventType> types;
 
     /**
-     *  <p>Unique identifier for the type of resource, for example, <code>import-api</code>.</p>
+     *  <p>Unique identifier for the type of resource.</p>
      * @param resourceTypeId value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class EventSubscriptionBuilder implements Builder<EventSubscription> {
     }
 
     /**
-     *  <p>Must contain valid event types for the resource. For example, for resource type <code>import-api</code> the event type <code>ImportContainerCreated</code> is valid. If no <code>types</code> are given, the Subscription will receive all events for this resource.</p>
+     *  <p>Must contain valid event types for the resource. For example, for resource type <code>import-api</code> the event type <code>ImportContainerCreated</code> is valid. If no <code>types</code> are given, the Subscription will receive all events for the defined resource type.</p>
      * @param types value to be set
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class EventSubscriptionBuilder implements Builder<EventSubscription> {
     }
 
     /**
-     *  <p>Must contain valid event types for the resource. For example, for resource type <code>import-api</code> the event type <code>ImportContainerCreated</code> is valid. If no <code>types</code> are given, the Subscription will receive all events for this resource.</p>
+     *  <p>Must contain valid event types for the resource. For example, for resource type <code>import-api</code> the event type <code>ImportContainerCreated</code> is valid. If no <code>types</code> are given, the Subscription will receive all events for the defined resource type.</p>
      * @param types value to be set
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class EventSubscriptionBuilder implements Builder<EventSubscription> {
     }
 
     /**
-     *  <p>Must contain valid event types for the resource. For example, for resource type <code>import-api</code> the event type <code>ImportContainerCreated</code> is valid. If no <code>types</code> are given, the Subscription will receive all events for this resource.</p>
+     *  <p>Must contain valid event types for the resource. For example, for resource type <code>import-api</code> the event type <code>ImportContainerCreated</code> is valid. If no <code>types</code> are given, the Subscription will receive all events for the defined resource type.</p>
      * @param types value to be set
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class EventSubscriptionBuilder implements Builder<EventSubscription> {
     }
 
     /**
-     *  <p>Unique identifier for the type of resource, for example, <code>import-api</code>.</p>
+     *  <p>Unique identifier for the type of resource.</p>
      * @return resourceTypeId
      */
 
@@ -89,7 +89,7 @@ public class EventSubscriptionBuilder implements Builder<EventSubscription> {
     }
 
     /**
-     *  <p>Must contain valid event types for the resource. For example, for resource type <code>import-api</code> the event type <code>ImportContainerCreated</code> is valid. If no <code>types</code> are given, the Subscription will receive all events for this resource.</p>
+     *  <p>Must contain valid event types for the resource. For example, for resource type <code>import-api</code> the event type <code>ImportContainerCreated</code> is valid. If no <code>types</code> are given, the Subscription will receive all events for the defined resource type.</p>
      * @return types
      */
 

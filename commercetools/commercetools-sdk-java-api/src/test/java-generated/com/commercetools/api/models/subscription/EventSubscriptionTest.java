@@ -21,30 +21,30 @@ public class EventSubscriptionTest {
         return new Object[][] {
                 new Object[] { "resourceTypeId", EventSubscription.builder()
                         .resourceTypeId(com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId
-                                .findEnum("import-api")) },
+                                .findEnum("checkout")) },
                 new Object[] { "types",
                         EventSubscription.builder()
                                 .types(Collections.singletonList(com.commercetools.api.models.subscription.EventType
-                                        .findEnum("ImportContainerCreated"))) } };
+                                        .findEnum("CheckoutOrderCreationFailed"))) } };
     }
 
     @Test
     public void resourceTypeId() {
         EventSubscription value = EventSubscription.of();
         value.setResourceTypeId(
-            com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId.findEnum("import-api"));
+            com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId.findEnum("checkout"));
         Assertions.assertThat(value.getResourceTypeId())
                 .isEqualTo(
-                    com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId.findEnum("import-api"));
+                    com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId.findEnum("checkout"));
     }
 
     @Test
     public void types() {
         EventSubscription value = EventSubscription.of();
-        value.setTypes(Collections
-                .singletonList(com.commercetools.api.models.subscription.EventType.findEnum("ImportContainerCreated")));
+        value.setTypes(Collections.singletonList(
+            com.commercetools.api.models.subscription.EventType.findEnum("CheckoutOrderCreationFailed")));
         Assertions.assertThat(value.getTypes())
                 .isEqualTo(Collections.singletonList(
-                    com.commercetools.api.models.subscription.EventType.findEnum("ImportContainerCreated")));
+                    com.commercetools.api.models.subscription.EventType.findEnum("CheckoutOrderCreationFailed")));
     }
 }

@@ -23,8 +23,12 @@ public class CustomerPasswordTokenCreatedMessagePayloadTest {
         return new Object[][] {
                 new Object[] { "customerId",
                         CustomerPasswordTokenCreatedMessagePayload.builder().customerId("customerId") },
-                new Object[] { "expiresAt", CustomerPasswordTokenCreatedMessagePayload.builder()
-                        .expiresAt(ZonedDateTime.parse("2023-06-01T12:00Z")) } };
+                new Object[] { "expiresAt",
+                        CustomerPasswordTokenCreatedMessagePayload.builder()
+                                .expiresAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "value", CustomerPasswordTokenCreatedMessagePayload.builder().value("value") },
+                new Object[] { "invalidateOlderTokens",
+                        CustomerPasswordTokenCreatedMessagePayload.builder().invalidateOlderTokens(true) } };
     }
 
     @Test
@@ -39,5 +43,19 @@ public class CustomerPasswordTokenCreatedMessagePayloadTest {
         CustomerPasswordTokenCreatedMessagePayload value = CustomerPasswordTokenCreatedMessagePayload.of();
         value.setExpiresAt(ZonedDateTime.parse("2023-06-01T12:00Z"));
         Assertions.assertThat(value.getExpiresAt()).isEqualTo(ZonedDateTime.parse("2023-06-01T12:00Z"));
+    }
+
+    @Test
+    public void value() {
+        CustomerPasswordTokenCreatedMessagePayload value = CustomerPasswordTokenCreatedMessagePayload.of();
+        value.setValue("value");
+        Assertions.assertThat(value.getValue()).isEqualTo("value");
+    }
+
+    @Test
+    public void invalidateOlderTokens() {
+        CustomerPasswordTokenCreatedMessagePayload value = CustomerPasswordTokenCreatedMessagePayload.of();
+        value.setInvalidateOlderTokens(true);
+        Assertions.assertThat(value.getInvalidateOlderTokens()).isEqualTo(true);
     }
 }

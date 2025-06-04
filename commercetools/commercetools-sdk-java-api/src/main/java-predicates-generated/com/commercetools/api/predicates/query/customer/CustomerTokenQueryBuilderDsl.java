@@ -34,6 +34,12 @@ public class CustomerTokenQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, CustomerTokenQueryBuilderDsl::of));
     }
 
+    public BooleanComparisonPredicateBuilder<CustomerTokenQueryBuilderDsl> invalidateOlderTokens() {
+        return new BooleanComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("invalidateOlderTokens")),
+            p -> new CombinationQueryPredicate<>(p, CustomerTokenQueryBuilderDsl::of));
+    }
+
     public DateTimeComparisonPredicateBuilder<CustomerTokenQueryBuilderDsl> createdAt() {
         return new DateTimeComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("createdAt")),

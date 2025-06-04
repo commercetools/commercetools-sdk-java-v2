@@ -57,6 +57,14 @@ public interface CustomerCreateEmailToken {
     public Long getTtlMinutes();
 
     /**
+     *  <p>If set to <code>true</code>, all email tokens issued previously for the Customer will be invalidated.</p>
+     * @return invalidateOlderTokens
+     */
+
+    @JsonProperty("invalidateOlderTokens")
+    public Boolean getInvalidateOlderTokens();
+
+    /**
      *  <p>Unique identifier of the Customer.</p>
      * @param id value to be set
      */
@@ -78,6 +86,13 @@ public interface CustomerCreateEmailToken {
     public void setTtlMinutes(final Long ttlMinutes);
 
     /**
+     *  <p>If set to <code>true</code>, all email tokens issued previously for the Customer will be invalidated.</p>
+     * @param invalidateOlderTokens value to be set
+     */
+
+    public void setInvalidateOlderTokens(final Boolean invalidateOlderTokens);
+
+    /**
      * factory method
      * @return instance of CustomerCreateEmailToken
      */
@@ -95,6 +110,7 @@ public interface CustomerCreateEmailToken {
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
         instance.setTtlMinutes(template.getTtlMinutes());
+        instance.setInvalidateOlderTokens(template.getInvalidateOlderTokens());
         return instance;
     }
 
@@ -114,6 +130,7 @@ public interface CustomerCreateEmailToken {
         instance.setId(template.getId());
         instance.setVersion(template.getVersion());
         instance.setTtlMinutes(template.getTtlMinutes());
+        instance.setInvalidateOlderTokens(template.getInvalidateOlderTokens());
         return instance;
     }
 

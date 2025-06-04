@@ -48,6 +48,14 @@ public interface CustomerCreatePasswordResetToken {
     public Long getTtlMinutes();
 
     /**
+     *  <p>If set to <code>true</code>, all password tokens issued previously for the Customer will be invalidated.</p>
+     * @return invalidateOlderTokens
+     */
+
+    @JsonProperty("invalidateOlderTokens")
+    public Boolean getInvalidateOlderTokens();
+
+    /**
      *  <p>Email address of the Customer treated as case-insensitive.</p>
      * @param email value to be set
      */
@@ -60,6 +68,13 @@ public interface CustomerCreatePasswordResetToken {
      */
 
     public void setTtlMinutes(final Long ttlMinutes);
+
+    /**
+     *  <p>If set to <code>true</code>, all password tokens issued previously for the Customer will be invalidated.</p>
+     * @param invalidateOlderTokens value to be set
+     */
+
+    public void setInvalidateOlderTokens(final Boolean invalidateOlderTokens);
 
     /**
      * factory method
@@ -78,6 +93,7 @@ public interface CustomerCreatePasswordResetToken {
         CustomerCreatePasswordResetTokenImpl instance = new CustomerCreatePasswordResetTokenImpl();
         instance.setEmail(template.getEmail());
         instance.setTtlMinutes(template.getTtlMinutes());
+        instance.setInvalidateOlderTokens(template.getInvalidateOlderTokens());
         return instance;
     }
 
@@ -96,6 +112,7 @@ public interface CustomerCreatePasswordResetToken {
         CustomerCreatePasswordResetTokenImpl instance = new CustomerCreatePasswordResetTokenImpl();
         instance.setEmail(template.getEmail());
         instance.setTtlMinutes(template.getTtlMinutes());
+        instance.setInvalidateOlderTokens(template.getInvalidateOlderTokens());
         return instance;
     }
 

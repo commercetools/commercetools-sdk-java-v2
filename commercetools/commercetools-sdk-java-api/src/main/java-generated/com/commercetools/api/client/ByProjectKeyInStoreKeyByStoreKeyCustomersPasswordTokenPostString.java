@@ -18,8 +18,8 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>Use this method to create a password reset token for a Store-specific Customer during their password reset process.</p>
- *  <p>Creating a password reset token does not invalidate existing tokens.</p>
  *  <p>If the Customer exists in the Project but the <code>stores</code> field references a different Store, this method returns a ResourceNotFound error.</p>
+ *  <p>Creating a password reset token for the Customer produces the CustomerPasswordTokenCreated Message. The Message will include the token's value, if the token's validity is 60 minutes or less.</p>
  *
  * <hr>
  * <div class=code-example>

@@ -31,6 +31,9 @@ public class CustomerCreateEmailTokenBuilder implements Builder<CustomerCreateEm
 
     private Long ttlMinutes;
 
+    @Nullable
+    private Boolean invalidateOlderTokens;
+
     /**
      *  <p>Unique identifier of the Customer.</p>
      * @param id value to be set
@@ -65,6 +68,17 @@ public class CustomerCreateEmailTokenBuilder implements Builder<CustomerCreateEm
     }
 
     /**
+     *  <p>If set to <code>true</code>, all email tokens issued previously for the Customer will be invalidated.</p>
+     * @param invalidateOlderTokens value to be set
+     * @return Builder
+     */
+
+    public CustomerCreateEmailTokenBuilder invalidateOlderTokens(@Nullable final Boolean invalidateOlderTokens) {
+        this.invalidateOlderTokens = invalidateOlderTokens;
+        return this;
+    }
+
+    /**
      *  <p>Unique identifier of the Customer.</p>
      * @return id
      */
@@ -93,13 +107,23 @@ public class CustomerCreateEmailTokenBuilder implements Builder<CustomerCreateEm
     }
 
     /**
+     *  <p>If set to <code>true</code>, all email tokens issued previously for the Customer will be invalidated.</p>
+     * @return invalidateOlderTokens
+     */
+
+    @Nullable
+    public Boolean getInvalidateOlderTokens() {
+        return this.invalidateOlderTokens;
+    }
+
+    /**
      * builds CustomerCreateEmailToken with checking for non-null required values
      * @return CustomerCreateEmailToken
      */
     public CustomerCreateEmailToken build() {
         Objects.requireNonNull(id, CustomerCreateEmailToken.class + ": id is missing");
         Objects.requireNonNull(ttlMinutes, CustomerCreateEmailToken.class + ": ttlMinutes is missing");
-        return new CustomerCreateEmailTokenImpl(id, version, ttlMinutes);
+        return new CustomerCreateEmailTokenImpl(id, version, ttlMinutes, invalidateOlderTokens);
     }
 
     /**
@@ -107,7 +131,7 @@ public class CustomerCreateEmailTokenBuilder implements Builder<CustomerCreateEm
      * @return CustomerCreateEmailToken
      */
     public CustomerCreateEmailToken buildUnchecked() {
-        return new CustomerCreateEmailTokenImpl(id, version, ttlMinutes);
+        return new CustomerCreateEmailTokenImpl(id, version, ttlMinutes, invalidateOlderTokens);
     }
 
     /**
@@ -128,6 +152,7 @@ public class CustomerCreateEmailTokenBuilder implements Builder<CustomerCreateEm
         builder.id = template.getId();
         builder.version = template.getVersion();
         builder.ttlMinutes = template.getTtlMinutes();
+        builder.invalidateOlderTokens = template.getInvalidateOlderTokens();
         return builder;
     }
 

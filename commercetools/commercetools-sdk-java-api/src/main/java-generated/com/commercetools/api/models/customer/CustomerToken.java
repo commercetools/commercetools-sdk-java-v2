@@ -27,6 +27,7 @@ import jakarta.validation.constraints.NotNull;
  *             .customerId("{customerId}")
  *             .value("{value}")
  *             .expiresAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .invalidateOlderTokens(true)
  *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .build()
  * </code></pre>
@@ -67,6 +68,14 @@ public interface CustomerToken {
     @NotNull
     @JsonProperty("expiresAt")
     public ZonedDateTime getExpiresAt();
+
+    /**
+     *  <p>If <code>true</code>, all tokens issued previously for the Customer will be invalidated.</p>
+     * @return invalidateOlderTokens
+     */
+    @NotNull
+    @JsonProperty("invalidateOlderTokens")
+    public Boolean getInvalidateOlderTokens();
 
     /**
      *  <p>Date and time (UTC) the token was initially created.</p>
@@ -113,6 +122,13 @@ public interface CustomerToken {
     public void setExpiresAt(final ZonedDateTime expiresAt);
 
     /**
+     *  <p>If <code>true</code>, all tokens issued previously for the Customer will be invalidated.</p>
+     * @param invalidateOlderTokens value to be set
+     */
+
+    public void setInvalidateOlderTokens(final Boolean invalidateOlderTokens);
+
+    /**
      *  <p>Date and time (UTC) the token was initially created.</p>
      * @param createdAt value to be set
      */
@@ -145,6 +161,7 @@ public interface CustomerToken {
         instance.setCustomerId(template.getCustomerId());
         instance.setValue(template.getValue());
         instance.setExpiresAt(template.getExpiresAt());
+        instance.setInvalidateOlderTokens(template.getInvalidateOlderTokens());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
         return instance;
@@ -167,6 +184,7 @@ public interface CustomerToken {
         instance.setCustomerId(template.getCustomerId());
         instance.setValue(template.getValue());
         instance.setExpiresAt(template.getExpiresAt());
+        instance.setInvalidateOlderTokens(template.getInvalidateOlderTokens());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
         return instance;

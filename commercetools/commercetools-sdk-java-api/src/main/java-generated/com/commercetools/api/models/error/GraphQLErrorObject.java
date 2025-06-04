@@ -270,6 +270,22 @@ public interface GraphQLErrorObject {
     }
 
     /**
+     * builder for expiredCustomerEmailToken subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.GraphQLExpiredCustomerEmailTokenErrorBuilder expiredCustomerEmailTokenBuilder() {
+        return com.commercetools.api.models.error.GraphQLExpiredCustomerEmailTokenErrorBuilder.of();
+    }
+
+    /**
+     * builder for expiredCustomerPasswordToken subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.error.GraphQLExpiredCustomerPasswordTokenErrorBuilder expiredCustomerPasswordTokenBuilder() {
+        return com.commercetools.api.models.error.GraphQLExpiredCustomerPasswordTokenErrorBuilder.of();
+    }
+
+    /**
      * builder for extensionBadResponse subtype
      * @return builder
      */

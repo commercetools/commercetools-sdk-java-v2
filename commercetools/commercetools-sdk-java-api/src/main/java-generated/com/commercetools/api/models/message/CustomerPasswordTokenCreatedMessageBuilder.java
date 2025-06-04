@@ -25,6 +25,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .resourceVersion(0.3)
  *             .customerId("{customerId}")
  *             .expiresAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .invalidateOlderTokens(true)
  *             .build()
  * </code></pre>
  * </div>
@@ -58,6 +59,11 @@ public class CustomerPasswordTokenCreatedMessageBuilder implements Builder<Custo
     private String customerId;
 
     private java.time.ZonedDateTime expiresAt;
+
+    @Nullable
+    private String value;
+
+    private Boolean invalidateOlderTokens;
 
     /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
@@ -283,6 +289,28 @@ public class CustomerPasswordTokenCreatedMessageBuilder implements Builder<Custo
     }
 
     /**
+     *  <p>Value of the token, present only if the token's validity is 60 minutes or less.</p>
+     * @param value value to be set
+     * @return Builder
+     */
+
+    public CustomerPasswordTokenCreatedMessageBuilder value(@Nullable final String value) {
+        this.value = value;
+        return this;
+    }
+
+    /**
+     *  <p>If <code>true</code>, all password tokens issued previously for the Customer are invalidated.</p>
+     * @param invalidateOlderTokens value to be set
+     * @return Builder
+     */
+
+    public CustomerPasswordTokenCreatedMessageBuilder invalidateOlderTokens(final Boolean invalidateOlderTokens) {
+        this.invalidateOlderTokens = invalidateOlderTokens;
+        return this;
+    }
+
+    /**
      *  <p>Unique identifier of the Message. Can be used to track which Messages have been processed.</p>
      * @return id
      */
@@ -394,6 +422,25 @@ public class CustomerPasswordTokenCreatedMessageBuilder implements Builder<Custo
     }
 
     /**
+     *  <p>Value of the token, present only if the token's validity is 60 minutes or less.</p>
+     * @return value
+     */
+
+    @Nullable
+    public String getValue() {
+        return this.value;
+    }
+
+    /**
+     *  <p>If <code>true</code>, all password tokens issued previously for the Customer are invalidated.</p>
+     * @return invalidateOlderTokens
+     */
+
+    public Boolean getInvalidateOlderTokens() {
+        return this.invalidateOlderTokens;
+    }
+
+    /**
      * builds CustomerPasswordTokenCreatedMessage with checking for non-null required values
      * @return CustomerPasswordTokenCreatedMessage
      */
@@ -410,9 +457,11 @@ public class CustomerPasswordTokenCreatedMessageBuilder implements Builder<Custo
             CustomerPasswordTokenCreatedMessage.class + ": resourceVersion is missing");
         Objects.requireNonNull(customerId, CustomerPasswordTokenCreatedMessage.class + ": customerId is missing");
         Objects.requireNonNull(expiresAt, CustomerPasswordTokenCreatedMessage.class + ": expiresAt is missing");
+        Objects.requireNonNull(invalidateOlderTokens,
+            CustomerPasswordTokenCreatedMessage.class + ": invalidateOlderTokens is missing");
         return new CustomerPasswordTokenCreatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, customerId,
-            expiresAt);
+            expiresAt, value, invalidateOlderTokens);
     }
 
     /**
@@ -422,7 +471,7 @@ public class CustomerPasswordTokenCreatedMessageBuilder implements Builder<Custo
     public CustomerPasswordTokenCreatedMessage buildUnchecked() {
         return new CustomerPasswordTokenCreatedMessageImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy,
             createdBy, sequenceNumber, resource, resourceVersion, resourceUserProvidedIdentifiers, customerId,
-            expiresAt);
+            expiresAt, value, invalidateOlderTokens);
     }
 
     /**
@@ -452,6 +501,8 @@ public class CustomerPasswordTokenCreatedMessageBuilder implements Builder<Custo
         builder.resourceUserProvidedIdentifiers = template.getResourceUserProvidedIdentifiers();
         builder.customerId = template.getCustomerId();
         builder.expiresAt = template.getExpiresAt();
+        builder.value = template.getValue();
+        builder.invalidateOlderTokens = template.getInvalidateOlderTokens();
         return builder;
     }
 

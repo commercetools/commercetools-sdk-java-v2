@@ -103,4 +103,16 @@ public class CustomerEmailTokenCreatedMessageQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, CustomerEmailTokenCreatedMessageQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<CustomerEmailTokenCreatedMessageQueryBuilderDsl> value() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("value")),
+            p -> new CombinationQueryPredicate<>(p, CustomerEmailTokenCreatedMessageQueryBuilderDsl::of));
+    }
+
+    public BooleanComparisonPredicateBuilder<CustomerEmailTokenCreatedMessageQueryBuilderDsl> invalidateOlderTokens() {
+        return new BooleanComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("invalidateOlderTokens")),
+            p -> new CombinationQueryPredicate<>(p, CustomerEmailTokenCreatedMessageQueryBuilderDsl::of));
+    }
+
 }

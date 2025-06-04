@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Generated after a successful Create email token for Customer request. The <code>resource</code> property of the Message is a CustomerEmailTokenReference.</p>
+ *  <p>Generated after a successful Create email token for Customer or Create email token for Customer in Store request. The <code>resource</code> property of the Message is a CustomerEmailTokenReference.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -25,6 +25,7 @@ import jakarta.validation.constraints.NotNull;
  *     CustomerEmailTokenCreatedMessagePayload customerEmailTokenCreatedMessagePayload = CustomerEmailTokenCreatedMessagePayload.builder()
  *             .customerId("{customerId}")
  *             .expiresAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .invalidateOlderTokens(true)
  *             .build()
  * </code></pre>
  * </div>
@@ -56,6 +57,22 @@ public interface CustomerEmailTokenCreatedMessagePayload extends MessagePayload 
     public ZonedDateTime getExpiresAt();
 
     /**
+     *  <p>Value of the token, present only if the token's validity is 60 minutes or less.</p>
+     * @return value
+     */
+
+    @JsonProperty("value")
+    public String getValue();
+
+    /**
+     *  <p>If <code>true</code>, all email tokens issued previously for the Customer are invalidated.</p>
+     * @return invalidateOlderTokens
+     */
+    @NotNull
+    @JsonProperty("invalidateOlderTokens")
+    public Boolean getInvalidateOlderTokens();
+
+    /**
      *  <p>Unique identifier of the Customer.</p>
      * @param customerId value to be set
      */
@@ -68,6 +85,20 @@ public interface CustomerEmailTokenCreatedMessagePayload extends MessagePayload 
      */
 
     public void setExpiresAt(final ZonedDateTime expiresAt);
+
+    /**
+     *  <p>Value of the token, present only if the token's validity is 60 minutes or less.</p>
+     * @param value value to be set
+     */
+
+    public void setValue(final String value);
+
+    /**
+     *  <p>If <code>true</code>, all email tokens issued previously for the Customer are invalidated.</p>
+     * @param invalidateOlderTokens value to be set
+     */
+
+    public void setInvalidateOlderTokens(final Boolean invalidateOlderTokens);
 
     /**
      * factory method
@@ -86,6 +117,8 @@ public interface CustomerEmailTokenCreatedMessagePayload extends MessagePayload 
         CustomerEmailTokenCreatedMessagePayloadImpl instance = new CustomerEmailTokenCreatedMessagePayloadImpl();
         instance.setCustomerId(template.getCustomerId());
         instance.setExpiresAt(template.getExpiresAt());
+        instance.setValue(template.getValue());
+        instance.setInvalidateOlderTokens(template.getInvalidateOlderTokens());
         return instance;
     }
 
@@ -105,6 +138,8 @@ public interface CustomerEmailTokenCreatedMessagePayload extends MessagePayload 
         CustomerEmailTokenCreatedMessagePayloadImpl instance = new CustomerEmailTokenCreatedMessagePayloadImpl();
         instance.setCustomerId(template.getCustomerId());
         instance.setExpiresAt(template.getExpiresAt());
+        instance.setValue(template.getValue());
+        instance.setInvalidateOlderTokens(template.getInvalidateOlderTokens());
         return instance;
     }
 

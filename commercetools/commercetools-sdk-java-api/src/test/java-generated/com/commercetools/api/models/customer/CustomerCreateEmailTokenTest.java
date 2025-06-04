@@ -18,7 +18,8 @@ public class CustomerCreateEmailTokenTest {
     public static Object[][] objectBuilder() {
         return new Object[][] { new Object[] { "id", CustomerCreateEmailToken.builder().id("id") },
                 new Object[] { "version", CustomerCreateEmailToken.builder().version(2L) },
-                new Object[] { "ttlMinutes", CustomerCreateEmailToken.builder().ttlMinutes(1L) } };
+                new Object[] { "ttlMinutes", CustomerCreateEmailToken.builder().ttlMinutes(1L) }, new Object[] {
+                        "invalidateOlderTokens", CustomerCreateEmailToken.builder().invalidateOlderTokens(true) } };
     }
 
     @Test
@@ -40,5 +41,12 @@ public class CustomerCreateEmailTokenTest {
         CustomerCreateEmailToken value = CustomerCreateEmailToken.of();
         value.setTtlMinutes(1L);
         Assertions.assertThat(value.getTtlMinutes()).isEqualTo(1L);
+    }
+
+    @Test
+    public void invalidateOlderTokens() {
+        CustomerCreateEmailToken value = CustomerCreateEmailToken.of();
+        value.setInvalidateOlderTokens(true);
+        Assertions.assertThat(value.getInvalidateOlderTokens()).isEqualTo(true);
     }
 }

@@ -19,6 +19,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .customerId("{customerId}")
  *             .value("{value}")
  *             .expiresAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+ *             .invalidateOlderTokens(true)
  *             .createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             .build()
  * </code></pre>
@@ -34,6 +35,8 @@ public class CustomerTokenBuilder implements Builder<CustomerToken> {
     private String value;
 
     private java.time.ZonedDateTime expiresAt;
+
+    private Boolean invalidateOlderTokens;
 
     private java.time.ZonedDateTime createdAt;
 
@@ -81,6 +84,17 @@ public class CustomerTokenBuilder implements Builder<CustomerToken> {
 
     public CustomerTokenBuilder expiresAt(final java.time.ZonedDateTime expiresAt) {
         this.expiresAt = expiresAt;
+        return this;
+    }
+
+    /**
+     *  <p>If <code>true</code>, all tokens issued previously for the Customer will be invalidated.</p>
+     * @param invalidateOlderTokens value to be set
+     * @return Builder
+     */
+
+    public CustomerTokenBuilder invalidateOlderTokens(final Boolean invalidateOlderTokens) {
+        this.invalidateOlderTokens = invalidateOlderTokens;
         return this;
     }
 
@@ -143,6 +157,15 @@ public class CustomerTokenBuilder implements Builder<CustomerToken> {
     }
 
     /**
+     *  <p>If <code>true</code>, all tokens issued previously for the Customer will be invalidated.</p>
+     * @return invalidateOlderTokens
+     */
+
+    public Boolean getInvalidateOlderTokens() {
+        return this.invalidateOlderTokens;
+    }
+
+    /**
      *  <p>Date and time (UTC) the token was initially created.</p>
      * @return createdAt
      */
@@ -170,8 +193,10 @@ public class CustomerTokenBuilder implements Builder<CustomerToken> {
         Objects.requireNonNull(customerId, CustomerToken.class + ": customerId is missing");
         Objects.requireNonNull(value, CustomerToken.class + ": value is missing");
         Objects.requireNonNull(expiresAt, CustomerToken.class + ": expiresAt is missing");
+        Objects.requireNonNull(invalidateOlderTokens, CustomerToken.class + ": invalidateOlderTokens is missing");
         Objects.requireNonNull(createdAt, CustomerToken.class + ": createdAt is missing");
-        return new CustomerTokenImpl(id, customerId, value, expiresAt, createdAt, lastModifiedAt);
+        return new CustomerTokenImpl(id, customerId, value, expiresAt, invalidateOlderTokens, createdAt,
+            lastModifiedAt);
     }
 
     /**
@@ -179,7 +204,8 @@ public class CustomerTokenBuilder implements Builder<CustomerToken> {
      * @return CustomerToken
      */
     public CustomerToken buildUnchecked() {
-        return new CustomerTokenImpl(id, customerId, value, expiresAt, createdAt, lastModifiedAt);
+        return new CustomerTokenImpl(id, customerId, value, expiresAt, invalidateOlderTokens, createdAt,
+            lastModifiedAt);
     }
 
     /**
@@ -201,6 +227,7 @@ public class CustomerTokenBuilder implements Builder<CustomerToken> {
         builder.customerId = template.getCustomerId();
         builder.value = template.getValue();
         builder.expiresAt = template.getExpiresAt();
+        builder.invalidateOlderTokens = template.getInvalidateOlderTokens();
         builder.createdAt = template.getCreatedAt();
         builder.lastModifiedAt = template.getLastModifiedAt();
         return builder;

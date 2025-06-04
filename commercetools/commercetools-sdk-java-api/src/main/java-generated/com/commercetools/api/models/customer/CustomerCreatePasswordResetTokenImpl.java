@@ -26,14 +26,18 @@ public class CustomerCreatePasswordResetTokenImpl implements CustomerCreatePassw
 
     private Long ttlMinutes;
 
+    private Boolean invalidateOlderTokens;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
     CustomerCreatePasswordResetTokenImpl(@JsonProperty("email") final String email,
-            @JsonProperty("ttlMinutes") final Long ttlMinutes) {
+            @JsonProperty("ttlMinutes") final Long ttlMinutes,
+            @JsonProperty("invalidateOlderTokens") final Boolean invalidateOlderTokens) {
         this.email = email;
         this.ttlMinutes = ttlMinutes;
+        this.invalidateOlderTokens = invalidateOlderTokens;
     }
 
     /**
@@ -58,12 +62,24 @@ public class CustomerCreatePasswordResetTokenImpl implements CustomerCreatePassw
         return this.ttlMinutes;
     }
 
+    /**
+     *  <p>If set to <code>true</code>, all password tokens issued previously for the Customer will be invalidated.</p>
+     */
+
+    public Boolean getInvalidateOlderTokens() {
+        return this.invalidateOlderTokens;
+    }
+
     public void setEmail(final String email) {
         this.email = email;
     }
 
     public void setTtlMinutes(final Long ttlMinutes) {
         this.ttlMinutes = ttlMinutes;
+    }
+
+    public void setInvalidateOlderTokens(final Boolean invalidateOlderTokens) {
+        this.invalidateOlderTokens = invalidateOlderTokens;
     }
 
     @Override
@@ -78,20 +94,23 @@ public class CustomerCreatePasswordResetTokenImpl implements CustomerCreatePassw
 
         return new EqualsBuilder().append(email, that.email)
                 .append(ttlMinutes, that.ttlMinutes)
+                .append(invalidateOlderTokens, that.invalidateOlderTokens)
                 .append(email, that.email)
                 .append(ttlMinutes, that.ttlMinutes)
+                .append(invalidateOlderTokens, that.invalidateOlderTokens)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(email).append(ttlMinutes).toHashCode();
+        return new HashCodeBuilder(17, 37).append(email).append(ttlMinutes).append(invalidateOlderTokens).toHashCode();
     }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("email", email)
                 .append("ttlMinutes", ttlMinutes)
+                .append("invalidateOlderTokens", invalidateOlderTokens)
                 .build();
     }
 

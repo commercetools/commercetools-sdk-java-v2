@@ -28,15 +28,19 @@ public class CustomerCreateEmailTokenImpl implements CustomerCreateEmailToken, M
 
     private Long ttlMinutes;
 
+    private Boolean invalidateOlderTokens;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
     CustomerCreateEmailTokenImpl(@JsonProperty("id") final String id, @JsonProperty("version") final Long version,
-            @JsonProperty("ttlMinutes") final Long ttlMinutes) {
+            @JsonProperty("ttlMinutes") final Long ttlMinutes,
+            @JsonProperty("invalidateOlderTokens") final Boolean invalidateOlderTokens) {
         this.id = id;
         this.version = version;
         this.ttlMinutes = ttlMinutes;
+        this.invalidateOlderTokens = invalidateOlderTokens;
     }
 
     /**
@@ -69,6 +73,14 @@ public class CustomerCreateEmailTokenImpl implements CustomerCreateEmailToken, M
         return this.ttlMinutes;
     }
 
+    /**
+     *  <p>If set to <code>true</code>, all email tokens issued previously for the Customer will be invalidated.</p>
+     */
+
+    public Boolean getInvalidateOlderTokens() {
+        return this.invalidateOlderTokens;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -79,6 +91,10 @@ public class CustomerCreateEmailTokenImpl implements CustomerCreateEmailToken, M
 
     public void setTtlMinutes(final Long ttlMinutes) {
         this.ttlMinutes = ttlMinutes;
+    }
+
+    public void setInvalidateOlderTokens(final Boolean invalidateOlderTokens) {
+        this.invalidateOlderTokens = invalidateOlderTokens;
     }
 
     @Override
@@ -94,15 +110,21 @@ public class CustomerCreateEmailTokenImpl implements CustomerCreateEmailToken, M
         return new EqualsBuilder().append(id, that.id)
                 .append(version, that.version)
                 .append(ttlMinutes, that.ttlMinutes)
+                .append(invalidateOlderTokens, that.invalidateOlderTokens)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(ttlMinutes, that.ttlMinutes)
+                .append(invalidateOlderTokens, that.invalidateOlderTokens)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(id).append(version).append(ttlMinutes).toHashCode();
+        return new HashCodeBuilder(17, 37).append(id)
+                .append(version)
+                .append(ttlMinutes)
+                .append(invalidateOlderTokens)
+                .toHashCode();
     }
 
     @Override
@@ -110,6 +132,7 @@ public class CustomerCreateEmailTokenImpl implements CustomerCreateEmailToken, M
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("id", id)
                 .append("version", version)
                 .append("ttlMinutes", ttlMinutes)
+                .append("invalidateOlderTokens", invalidateOlderTokens)
                 .build();
     }
 

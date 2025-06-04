@@ -19,6 +19,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  *  <p>Use this method to verify a Store-specific Customer's email during their email verification process.</p>
  *  <p>Verifying the email of the Customer produces the CustomerEmailVerified Message.</p>
  *  <p>If the Customer exists in the Project but the <code>stores</code> field references a different Store, this method returns a ResourceNotFound error.</p>
+ *  <p>After the email is verified, all email tokens issued previously through the email verification flow are invalidated. This invalidation of tokens is eventually consistent.</p>
  *
  * <hr>
  * <div class=code-example>

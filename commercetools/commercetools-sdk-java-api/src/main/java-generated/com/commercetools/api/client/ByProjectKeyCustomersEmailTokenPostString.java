@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
  *  <p>Use this method to create an email token for a global Customer during their email verification process.</p>
- *  <p>Creating an email token for the Customer produces the CustomerEmailTokenCreated Message.</p>
+ *  <p>Creating an email token for the Customer produces the CustomerEmailTokenCreated Message. The Message will include the token's value, if the token's validity is 60 minutes or less.</p>
  *
  * <hr>
  * <div class=code-example>

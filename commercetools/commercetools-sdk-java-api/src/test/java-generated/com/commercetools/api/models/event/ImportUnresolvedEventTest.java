@@ -20,7 +20,7 @@ public class ImportUnresolvedEventTest {
                 new Object[] { "resourceType",
                         ImportUnresolvedEvent.builder()
                                 .resourceType(com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId
-                                        .findEnum("import-api")) },
+                                        .findEnum("checkout")) },
                 new Object[] { "data", ImportUnresolvedEvent.builder()
                         .data(new com.commercetools.api.models.event.ImportUnresolvedEventDataImpl()) } };
     }
@@ -29,10 +29,10 @@ public class ImportUnresolvedEventTest {
     public void resourceType() {
         ImportUnresolvedEvent value = ImportUnresolvedEvent.of();
         value.setResourceType(
-            com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId.findEnum("import-api"));
+            com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId.findEnum("checkout"));
         Assertions.assertThat(value.getResourceType())
                 .isEqualTo(
-                    com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId.findEnum("import-api"));
+                    com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId.findEnum("checkout"));
     }
 
     @Test

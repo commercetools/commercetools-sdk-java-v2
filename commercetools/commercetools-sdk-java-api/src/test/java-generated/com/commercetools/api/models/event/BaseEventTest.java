@@ -23,11 +23,11 @@ public class BaseEventTest {
                 new Object[] { "resourceType",
                         BaseEvent.builder()
                                 .resourceType(com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId
-                                        .findEnum("import-api")) },
+                                        .findEnum("checkout")) },
                 new Object[] { "type",
                         BaseEvent.builder()
                                 .type(com.commercetools.api.models.subscription.EventType
-                                        .findEnum("ImportContainerCreated")) },
+                                        .findEnum("CheckoutOrderCreationFailed")) },
                 new Object[] { "data", BaseEvent.builder().data("data") },
                 new Object[] { "createdAt", BaseEvent.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) } };
     }
@@ -50,18 +50,18 @@ public class BaseEventTest {
     public void resourceType() {
         BaseEvent value = BaseEvent.of();
         value.setResourceType(
-            com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId.findEnum("import-api"));
+            com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId.findEnum("checkout"));
         Assertions.assertThat(value.getResourceType())
                 .isEqualTo(
-                    com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId.findEnum("import-api"));
+                    com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId.findEnum("checkout"));
     }
 
     @Test
     public void type() {
         BaseEvent value = BaseEvent.of();
-        value.setType(com.commercetools.api.models.subscription.EventType.findEnum("ImportContainerCreated"));
+        value.setType(com.commercetools.api.models.subscription.EventType.findEnum("CheckoutOrderCreationFailed"));
         Assertions.assertThat(value.getType())
-                .isEqualTo(com.commercetools.api.models.subscription.EventType.findEnum("ImportContainerCreated"));
+                .isEqualTo(com.commercetools.api.models.subscription.EventType.findEnum("CheckoutOrderCreationFailed"));
     }
 
     @Test

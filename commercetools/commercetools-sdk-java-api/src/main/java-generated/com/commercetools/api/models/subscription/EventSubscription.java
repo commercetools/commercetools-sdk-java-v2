@@ -22,7 +22,7 @@ import jakarta.validation.constraints.NotNull;
  * <div class=code-example>
  * <pre><code class='java'>
  *     EventSubscription eventSubscription = EventSubscription.builder()
- *             .resourceTypeId(EventSubscriptionResourceTypeId.IMPORT_API)
+ *             .resourceTypeId(EventSubscriptionResourceTypeId.CHECKOUT)
  *             .build()
  * </code></pre>
  * </div>
@@ -32,7 +32,7 @@ import jakarta.validation.constraints.NotNull;
 public interface EventSubscription {
 
     /**
-     *  <p>Unique identifier for the type of resource, for example, <code>import-api</code>.</p>
+     *  <p>Unique identifier for the type of resource.</p>
      * @return resourceTypeId
      */
     @NotNull
@@ -40,7 +40,7 @@ public interface EventSubscription {
     public EventSubscriptionResourceTypeId getResourceTypeId();
 
     /**
-     *  <p>Must contain valid event types for the resource. For example, for resource type <code>import-api</code> the event type <code>ImportContainerCreated</code> is valid. If no <code>types</code> are given, the Subscription will receive all events for this resource.</p>
+     *  <p>Must contain valid event types for the resource. For example, for resource type <code>import-api</code> the event type <code>ImportContainerCreated</code> is valid. If no <code>types</code> are given, the Subscription will receive all events for the defined resource type.</p>
      * @return types
      */
 
@@ -48,14 +48,14 @@ public interface EventSubscription {
     public List<EventType> getTypes();
 
     /**
-     *  <p>Unique identifier for the type of resource, for example, <code>import-api</code>.</p>
+     *  <p>Unique identifier for the type of resource.</p>
      * @param resourceTypeId value to be set
      */
 
     public void setResourceTypeId(final EventSubscriptionResourceTypeId resourceTypeId);
 
     /**
-     *  <p>Must contain valid event types for the resource. For example, for resource type <code>import-api</code> the event type <code>ImportContainerCreated</code> is valid. If no <code>types</code> are given, the Subscription will receive all events for this resource.</p>
+     *  <p>Must contain valid event types for the resource. For example, for resource type <code>import-api</code> the event type <code>ImportContainerCreated</code> is valid. If no <code>types</code> are given, the Subscription will receive all events for the defined resource type.</p>
      * @param types values to be set
      */
 
@@ -63,7 +63,7 @@ public interface EventSubscription {
     public void setTypes(final EventType... types);
 
     /**
-     *  <p>Must contain valid event types for the resource. For example, for resource type <code>import-api</code> the event type <code>ImportContainerCreated</code> is valid. If no <code>types</code> are given, the Subscription will receive all events for this resource.</p>
+     *  <p>Must contain valid event types for the resource. For example, for resource type <code>import-api</code> the event type <code>ImportContainerCreated</code> is valid. If no <code>types</code> are given, the Subscription will receive all events for the defined resource type.</p>
      * @param types values to be set
      */
 

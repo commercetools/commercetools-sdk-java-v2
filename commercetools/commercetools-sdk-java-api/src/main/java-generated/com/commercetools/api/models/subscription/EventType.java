@@ -17,6 +17,33 @@ import io.vrap.rmf.base.client.utils.Generated;
 public interface EventType extends JsonEnum {
 
     /**
+    <p>Indicates a Checkout Order Creation Failed Event.</p> */
+    EventType CHECKOUT_ORDER_CREATION_FAILED = EventTypeEnum.CHECKOUT_ORDER_CREATION_FAILED;
+    /**
+    <p>Indicates a Checkout Payment Authorization Cancelled Event.</p> */
+    EventType CHECKOUT_PAYMENT_AUTHORIZATION_CANCELLED = EventTypeEnum.CHECKOUT_PAYMENT_AUTHORIZATION_CANCELLED;
+    /**
+    <p>Indicates a Checkout Payment Authorization Failed Event.</p> */
+    EventType CHECKOUT_PAYMENT_AUTHORIZATION_FAILED = EventTypeEnum.CHECKOUT_PAYMENT_AUTHORIZATION_FAILED;
+    /**
+    <p>Indicates a Checkout PaymentAuthorized Event.</p> */
+    EventType CHECKOUT_PAYMENT_AUTHORIZED = EventTypeEnum.CHECKOUT_PAYMENT_AUTHORIZED;
+    /**
+    <p>Indicates a Checkout Payment Cancel Authorization Failed Event.</p> */
+    EventType CHECKOUT_PAYMENT_CANCEL_AUTHORIZATION_FAILED = EventTypeEnum.CHECKOUT_PAYMENT_CANCEL_AUTHORIZATION_FAILED;
+    /**
+    <p>Indicates a Checkout Payment Charged Event.</p> */
+    EventType CHECKOUT_PAYMENT_CHARGED = EventTypeEnum.CHECKOUT_PAYMENT_CHARGED;
+    /**
+    <p>Indicates a Checkout Payment Charge Failed Event.</p> */
+    EventType CHECKOUT_PAYMENT_CHARGE_FAILED = EventTypeEnum.CHECKOUT_PAYMENT_CHARGE_FAILED;
+    /**
+    <p>Indicates a Checkout Payment Refunded Event.</p> */
+    EventType CHECKOUT_PAYMENT_REFUNDED = EventTypeEnum.CHECKOUT_PAYMENT_REFUNDED;
+    /**
+    <p>Indicates a Checkout Payment Refund Failed Event.</p> */
+    EventType CHECKOUT_PAYMENT_REFUND_FAILED = EventTypeEnum.CHECKOUT_PAYMENT_REFUND_FAILED;
+    /**
     <p>Indicates an Import Container Created Event.</p> */
     EventType IMPORT_CONTAINER_CREATED = EventTypeEnum.IMPORT_CONTAINER_CREATED;
     /**
@@ -39,6 +66,51 @@ public interface EventType extends JsonEnum {
      * possible values of EventType
      */
     enum EventTypeEnum implements EventType {
+        /**
+         * CheckoutOrderCreationFailed
+         */
+        CHECKOUT_ORDER_CREATION_FAILED("CheckoutOrderCreationFailed"),
+
+        /**
+         * CheckoutPaymentAuthorizationCancelled
+         */
+        CHECKOUT_PAYMENT_AUTHORIZATION_CANCELLED("CheckoutPaymentAuthorizationCancelled"),
+
+        /**
+         * CheckoutPaymentAuthorizationFailed
+         */
+        CHECKOUT_PAYMENT_AUTHORIZATION_FAILED("CheckoutPaymentAuthorizationFailed"),
+
+        /**
+         * CheckoutPaymentAuthorized
+         */
+        CHECKOUT_PAYMENT_AUTHORIZED("CheckoutPaymentAuthorized"),
+
+        /**
+         * CheckoutPaymentCancelAuthorizationFailed
+         */
+        CHECKOUT_PAYMENT_CANCEL_AUTHORIZATION_FAILED("CheckoutPaymentCancelAuthorizationFailed"),
+
+        /**
+         * CheckoutPaymentCharged
+         */
+        CHECKOUT_PAYMENT_CHARGED("CheckoutPaymentCharged"),
+
+        /**
+         * CheckoutPaymentChargeFailed
+         */
+        CHECKOUT_PAYMENT_CHARGE_FAILED("CheckoutPaymentChargeFailed"),
+
+        /**
+         * CheckoutPaymentRefunded
+         */
+        CHECKOUT_PAYMENT_REFUNDED("CheckoutPaymentRefunded"),
+
+        /**
+         * CheckoutPaymentRefundFailed
+         */
+        CHECKOUT_PAYMENT_REFUND_FAILED("CheckoutPaymentRefundFailed"),
+
         /**
          * ImportContainerCreated
          */

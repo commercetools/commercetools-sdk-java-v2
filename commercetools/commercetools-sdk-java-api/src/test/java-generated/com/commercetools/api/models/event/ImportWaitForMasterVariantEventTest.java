@@ -20,7 +20,7 @@ public class ImportWaitForMasterVariantEventTest {
                 new Object[] { "resourceType",
                         ImportWaitForMasterVariantEvent.builder()
                                 .resourceType(com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId
-                                        .findEnum("import-api")) },
+                                        .findEnum("checkout")) },
                 new Object[] { "data", ImportWaitForMasterVariantEvent.builder()
                         .data(new com.commercetools.api.models.event.ImportWaitForMasterVariantEventDataImpl()) } };
     }
@@ -29,10 +29,10 @@ public class ImportWaitForMasterVariantEventTest {
     public void resourceType() {
         ImportWaitForMasterVariantEvent value = ImportWaitForMasterVariantEvent.of();
         value.setResourceType(
-            com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId.findEnum("import-api"));
+            com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId.findEnum("checkout"));
         Assertions.assertThat(value.getResourceType())
                 .isEqualTo(
-                    com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId.findEnum("import-api"));
+                    com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId.findEnum("checkout"));
     }
 
     @Test

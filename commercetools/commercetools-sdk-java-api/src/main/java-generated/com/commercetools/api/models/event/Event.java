@@ -24,10 +24,10 @@ import jakarta.validation.constraints.NotNull;
  * Example to create a subtype instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     Event event = Event.importContainerCreatedBuilder()
+ *     Event event = Event.checkoutOrderCreationFailedBuilder()
  *             id("{id}")
  *             notificationType("{notificationType}")
- *             resourceType(EventSubscriptionResourceTypeId.IMPORT_API)
+ *             resourceType(EventSubscriptionResourceTypeId.CHECKOUT)
  *             createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
  *             data(dataBuilder -> dataBuilder)
  *             .build()
@@ -129,6 +129,78 @@ public interface Event {
         instance.setResourceType(template.getResourceType());
         instance.setCreatedAt(template.getCreatedAt());
         return instance;
+    }
+
+    /**
+     * builder for checkoutOrderCreationFailed subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.event.CheckoutOrderCreationFailedEventBuilder checkoutOrderCreationFailedBuilder() {
+        return com.commercetools.api.models.event.CheckoutOrderCreationFailedEventBuilder.of();
+    }
+
+    /**
+     * builder for checkoutPaymentAuthorizationCancelled subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.event.CheckoutPaymentAuthorizationCancelledEventBuilder checkoutPaymentAuthorizationCancelledBuilder() {
+        return com.commercetools.api.models.event.CheckoutPaymentAuthorizationCancelledEventBuilder.of();
+    }
+
+    /**
+     * builder for checkoutPaymentAuthorizationFailed subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.event.CheckoutPaymentAuthorizationFailedEventBuilder checkoutPaymentAuthorizationFailedBuilder() {
+        return com.commercetools.api.models.event.CheckoutPaymentAuthorizationFailedEventBuilder.of();
+    }
+
+    /**
+     * builder for checkoutPaymentAuthorized subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.event.CheckoutPaymentAuthorizedEventBuilder checkoutPaymentAuthorizedBuilder() {
+        return com.commercetools.api.models.event.CheckoutPaymentAuthorizedEventBuilder.of();
+    }
+
+    /**
+     * builder for checkoutPaymentCancelAuthorizationFailed subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.event.CheckoutPaymentCancelAuthorizationFailedEventBuilder checkoutPaymentCancelAuthorizationFailedBuilder() {
+        return com.commercetools.api.models.event.CheckoutPaymentCancelAuthorizationFailedEventBuilder.of();
+    }
+
+    /**
+     * builder for checkoutPaymentChargeFailed subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.event.CheckoutPaymentChargeFailedEventBuilder checkoutPaymentChargeFailedBuilder() {
+        return com.commercetools.api.models.event.CheckoutPaymentChargeFailedEventBuilder.of();
+    }
+
+    /**
+     * builder for checkoutPaymentCharged subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.event.CheckoutPaymentChargedEventBuilder checkoutPaymentChargedBuilder() {
+        return com.commercetools.api.models.event.CheckoutPaymentChargedEventBuilder.of();
+    }
+
+    /**
+     * builder for checkoutPaymentRefundFailed subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.event.CheckoutPaymentRefundFailedEventBuilder checkoutPaymentRefundFailedBuilder() {
+        return com.commercetools.api.models.event.CheckoutPaymentRefundFailedEventBuilder.of();
+    }
+
+    /**
+     * builder for checkoutPaymentRefunded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.event.CheckoutPaymentRefundedEventBuilder checkoutPaymentRefundedBuilder() {
+        return com.commercetools.api.models.event.CheckoutPaymentRefundedEventBuilder.of();
     }
 
     /**

@@ -18,9 +18,11 @@ public class EventDeliveryPayloadTest {
     }
 
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { "id", EventDeliveryPayload.builder().id("id") }, new Object[] { "type",
-                EventDeliveryPayload.builder()
-                        .type(com.commercetools.api.models.subscription.EventType.findEnum("ImportContainerCreated")) },
+        return new Object[][] { new Object[] { "id", EventDeliveryPayload.builder().id("id") },
+                new Object[] { "type",
+                        EventDeliveryPayload.builder()
+                                .type(com.commercetools.api.models.subscription.EventType
+                                        .findEnum("CheckoutOrderCreationFailed")) },
                 new Object[] { "resourceType", EventDeliveryPayload.builder().resourceType("resourceType") },
                 new Object[] { "data", EventDeliveryPayload.builder().data("data") }, new Object[] { "createdAt",
                         EventDeliveryPayload.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) } };
@@ -36,9 +38,9 @@ public class EventDeliveryPayloadTest {
     @Test
     public void type() {
         EventDeliveryPayload value = EventDeliveryPayload.of();
-        value.setType(com.commercetools.api.models.subscription.EventType.findEnum("ImportContainerCreated"));
+        value.setType(com.commercetools.api.models.subscription.EventType.findEnum("CheckoutOrderCreationFailed"));
         Assertions.assertThat(value.getType())
-                .isEqualTo(com.commercetools.api.models.subscription.EventType.findEnum("ImportContainerCreated"));
+                .isEqualTo(com.commercetools.api.models.subscription.EventType.findEnum("CheckoutOrderCreationFailed"));
     }
 
     @Test

@@ -42,6 +42,71 @@ public class EventQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, EventQueryBuilderDsl::of));
     }
 
+    public CombinationQueryPredicate<EventQueryBuilderDsl> asCheckoutOrderCreationFailed(
+            Function<com.commercetools.api.predicates.query.event.CheckoutOrderCreationFailedEventQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.event.CheckoutOrderCreationFailedEventQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.event.CheckoutOrderCreationFailedEventQueryBuilderDsl.of()),
+            EventQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<EventQueryBuilderDsl> asCheckoutPaymentAuthorizationCancelled(
+            Function<com.commercetools.api.predicates.query.event.CheckoutPaymentAuthorizationCancelledEventQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.event.CheckoutPaymentAuthorizationCancelledEventQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.event.CheckoutPaymentAuthorizationCancelledEventQueryBuilderDsl
+                    .of()),
+            EventQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<EventQueryBuilderDsl> asCheckoutPaymentAuthorizationFailed(
+            Function<com.commercetools.api.predicates.query.event.CheckoutPaymentAuthorizationFailedEventQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.event.CheckoutPaymentAuthorizationFailedEventQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.event.CheckoutPaymentAuthorizationFailedEventQueryBuilderDsl.of()),
+            EventQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<EventQueryBuilderDsl> asCheckoutPaymentAuthorized(
+            Function<com.commercetools.api.predicates.query.event.CheckoutPaymentAuthorizedEventQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.event.CheckoutPaymentAuthorizedEventQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.event.CheckoutPaymentAuthorizedEventQueryBuilderDsl.of()),
+            EventQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<EventQueryBuilderDsl> asCheckoutPaymentCancelAuthorizationFailed(
+            Function<com.commercetools.api.predicates.query.event.CheckoutPaymentCancelAuthorizationFailedEventQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.event.CheckoutPaymentCancelAuthorizationFailedEventQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.event.CheckoutPaymentCancelAuthorizationFailedEventQueryBuilderDsl
+                    .of()),
+            EventQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<EventQueryBuilderDsl> asCheckoutPaymentChargeFailed(
+            Function<com.commercetools.api.predicates.query.event.CheckoutPaymentChargeFailedEventQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.event.CheckoutPaymentChargeFailedEventQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.event.CheckoutPaymentChargeFailedEventQueryBuilderDsl.of()),
+            EventQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<EventQueryBuilderDsl> asCheckoutPaymentCharged(
+            Function<com.commercetools.api.predicates.query.event.CheckoutPaymentChargedEventQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.event.CheckoutPaymentChargedEventQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.event.CheckoutPaymentChargedEventQueryBuilderDsl.of()),
+            EventQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<EventQueryBuilderDsl> asCheckoutPaymentRefundFailed(
+            Function<com.commercetools.api.predicates.query.event.CheckoutPaymentRefundFailedEventQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.event.CheckoutPaymentRefundFailedEventQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.event.CheckoutPaymentRefundFailedEventQueryBuilderDsl.of()),
+            EventQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<EventQueryBuilderDsl> asCheckoutPaymentRefunded(
+            Function<com.commercetools.api.predicates.query.event.CheckoutPaymentRefundedEventQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.event.CheckoutPaymentRefundedEventQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.event.CheckoutPaymentRefundedEventQueryBuilderDsl.of()),
+            EventQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<EventQueryBuilderDsl> asImportContainerCreated(
             Function<com.commercetools.api.predicates.query.event.ImportContainerCreatedEventQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.event.ImportContainerCreatedEventQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

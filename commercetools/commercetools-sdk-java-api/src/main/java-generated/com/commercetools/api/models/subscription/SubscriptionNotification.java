@@ -23,7 +23,7 @@ import jakarta.validation.constraints.NotNull;
  * <pre><code class='java'>
  *     SubscriptionNotification subscriptionNotification = SubscriptionNotification.eventBuilder()
  *             id("{id}")
- *             type(EventType.IMPORT_CONTAINER_CREATED)
+ *             type(EventType.CHECKOUT_ORDER_CREATION_FAILED)
  *             resourceType("{resourceType}")
  *             data(dataBuilder -> dataBuilder)
  *             createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))

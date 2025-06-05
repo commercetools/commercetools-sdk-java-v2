@@ -12,7 +12,7 @@ public class SolutionInfoTest {
     public void version() {
         String version = new AsyncHttpClientSolutionInfo().getVersion();
 
-        Assertions.assertThat(new Semver(version).compareTo(new Semver("2.12.0"))).isGreaterThanOrEqualTo(0);
+        Assertions.assertThat(new Semver(version, Semver.SemverType.LOOSE).compareTo(new Semver("2.12.0"))).isGreaterThanOrEqualTo(0);
         Assertions.assertThat(version).startsWith("2.");
     }
 }

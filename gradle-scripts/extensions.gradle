@@ -56,14 +56,14 @@ ext {
     ]
 
     junit = [
-            junit: 'org.junit.jupiter:junit-jupiter:5.12.2',
+            junit: 'org.junit.jupiter:junit-jupiter:5.13.0',
             jsonassert: 'org.skyscreamer:jsonassert:1.5.3',
             assertj: 'org.assertj:assertj-core:3.27.3'
     ]
 
     mockito = [
             inline: 'org.mockito:mockito-inline:5.2.0',
-            junit: 'org.mockito:mockito-junit-jupiter:5.17.0',
+            junit: 'org.mockito:mockito-junit-jupiter:5.18.0',
     ]
 
     failsafe = [

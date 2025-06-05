@@ -8,4 +8,5 @@ dependencies {
     testImplementation mockito.inline
     testImplementation mockito.junit
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    testImplementation 'com.vdurmont:semver4j:3.1.0'
 }

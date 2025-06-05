@@ -89,6 +89,7 @@ loadScripts(document, 'script');</script>
 <span class="extends-implements">extends <a href="../../../../io/vrap/rmf/base/client/TypeBodyApiMethod.html" title="class in io.vrap.rmf.base.client">TypeBodyApiMethod</a>&lt;<a href="ByProjectKeyMeEmailConfirmPost.html" title="class in com.commercetools.api.client">ByProjectKeyMeEmailConfirmPost</a>,<wbr><a href="../models/customer/Customer.html" title="interface in com.commercetools.api.models.customer">Customer</a>,<wbr><a href="../models/customer/MyCustomerEmailVerify.html" title="interface in com.commercetools.api.models.customer">MyCustomerEmailVerify</a>&gt;
 implements <a href="ErrorableTrait.html" title="interface in com.commercetools.api.client">ErrorableTrait</a>&lt;<a href="ByProjectKeyMeEmailConfirmPost.html" title="class in com.commercetools.api.client">ByProjectKeyMeEmailConfirmPost</a>&gt;</span></div>
 <div class="block"><p>This is the last step in the email verification process of a Customer.</p>
+  <p>After the email is verified, all email tokens issued previously through the email verification flow are invalidated. This invalidation of tokens is eventually consistent.</p>
 
  <hr>
  <div class=code-example>

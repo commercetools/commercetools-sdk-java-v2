@@ -88,7 +88,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
  <div class=code-example>
  <pre><code class='java'>
      EventSubscription eventSubscription = EventSubscription.builder()
-             .resourceTypeId(EventSubscriptionResourceTypeId.IMPORT_API)
+             .resourceTypeId(EventSubscriptionResourceTypeId.CHECKOUT)
              .build()
  </code></pre>
  </div></div>
@@ -132,7 +132,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="EventSubscriptionResourceTypeId.html" title="interface in com.commercetools.api.models.subscription">EventSubscriptionResourceTypeId</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getResourceTypeId()" class="member-name-link">getResourceTypeId</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Unique identifier for the type of resource, for example, <code>import-api</code>.</div>
+<div class="block">Unique identifier for the type of resource.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="EventType.html" title="interface in com.commercetools.api.models.subscription">EventType</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTypes()" class="member-name-link">getTypes</a>()</code></div>
@@ -157,7 +157,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="EventSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">EventSubscriptionBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#resourceTypeId(com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId)" class="member-name-link">resourceTypeId</a><wbr>(<a href="EventSubscriptionResourceTypeId.html" title="interface in com.commercetools.api.models.subscription">EventSubscriptionResourceTypeId</a>&nbsp;resourceTypeId)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Unique identifier for the type of resource, for example, <code>import-api</code>.</div>
+<div class="block">Unique identifier for the type of resource.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="EventSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">EventSubscriptionBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#types(com.commercetools.api.models.subscription.EventType...)" class="member-name-link">types</a><wbr>(<a href="EventType.html" title="interface in com.commercetools.api.models.subscription">EventType</a>...&nbsp;types)</code></div>
@@ -204,7 +204,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="resourceTypeId(com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId)">
 <h3>resourceTypeId</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="EventSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">EventSubscriptionBuilder</a></span>&nbsp;<span class="element-name">resourceTypeId</span><wbr><span class="parameters">(<a href="EventSubscriptionResourceTypeId.html" title="interface in com.commercetools.api.models.subscription">EventSubscriptionResourceTypeId</a>&nbsp;resourceTypeId)</span></div>
-<div class="block"><p>Unique identifier for the type of resource, for example, <code>import-api</code>.</p></div>
+<div class="block"><p>Unique identifier for the type of resource.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>resourceTypeId</code> - value to be set</dd>
@@ -218,7 +218,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>types</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="EventSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">EventSubscriptionBuilder</a></span>&nbsp;<span class="element-name">types</span><wbr><span class="parameters">(@Nullable
  <a href="EventType.html" title="interface in com.commercetools.api.models.subscription">EventType</a>...&nbsp;types)</span></div>
-<div class="block"><p>Must contain valid event types for the resource. For example, for resource type <code>import-api</code> the event type <code>ImportContainerCreated</code> is valid. If no <code>types</code> are given, the Subscription will receive all events for this resource.</p></div>
+<div class="block"><p>Must contain valid event types for the resource. For example, for resource type <code>import-api</code> the event type <code>ImportContainerCreated</code> is valid. If no <code>types</code> are given, the Subscription will receive all events for the defined resource type.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>types</code> - value to be set</dd>
@@ -232,7 +232,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>types</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="EventSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">EventSubscriptionBuilder</a></span>&nbsp;<span class="element-name">types</span><wbr><span class="parameters">(@Nullable
  <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="EventType.html" title="interface in com.commercetools.api.models.subscription">EventType</a>&gt;&nbsp;types)</span></div>
-<div class="block"><p>Must contain valid event types for the resource. For example, for resource type <code>import-api</code> the event type <code>ImportContainerCreated</code> is valid. If no <code>types</code> are given, the Subscription will receive all events for this resource.</p></div>
+<div class="block"><p>Must contain valid event types for the resource. For example, for resource type <code>import-api</code> the event type <code>ImportContainerCreated</code> is valid. If no <code>types</code> are given, the Subscription will receive all events for the defined resource type.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>types</code> - value to be set</dd>
@@ -246,7 +246,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>plusTypes</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="EventSubscriptionBuilder.html" title="class in com.commercetools.api.models.subscription">EventSubscriptionBuilder</a></span>&nbsp;<span class="element-name">plusTypes</span><wbr><span class="parameters">(@Nullable
  <a href="EventType.html" title="interface in com.commercetools.api.models.subscription">EventType</a>...&nbsp;types)</span></div>
-<div class="block"><p>Must contain valid event types for the resource. For example, for resource type <code>import-api</code> the event type <code>ImportContainerCreated</code> is valid. If no <code>types</code> are given, the Subscription will receive all events for this resource.</p></div>
+<div class="block"><p>Must contain valid event types for the resource. For example, for resource type <code>import-api</code> the event type <code>ImportContainerCreated</code> is valid. If no <code>types</code> are given, the Subscription will receive all events for the defined resource type.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>types</code> - value to be set</dd>
@@ -259,7 +259,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getResourceTypeId()">
 <h3>getResourceTypeId</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="EventSubscriptionResourceTypeId.html" title="interface in com.commercetools.api.models.subscription">EventSubscriptionResourceTypeId</a></span>&nbsp;<span class="element-name">getResourceTypeId</span>()</div>
-<div class="block"><p>Unique identifier for the type of resource, for example, <code>import-api</code>.</p></div>
+<div class="block"><p>Unique identifier for the type of resource.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>resourceTypeId</dd>
@@ -271,7 +271,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getTypes</h3>
 <div class="member-signature"><span class="annotations">@Nullable
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="EventType.html" title="interface in com.commercetools.api.models.subscription">EventType</a>&gt;</span>&nbsp;<span class="element-name">getTypes</span>()</div>
-<div class="block"><p>Must contain valid event types for the resource. For example, for resource type <code>import-api</code> the event type <code>ImportContainerCreated</code> is valid. If no <code>types</code> are given, the Subscription will receive all events for this resource.</p></div>
+<div class="block"><p>Must contain valid event types for the resource. For example, for resource type <code>import-api</code> the event type <code>ImportContainerCreated</code> is valid. If no <code>types</code> are given, the Subscription will receive all events for the defined resource type.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>types</dd>

@@ -73,7 +73,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Known Subinterfaces:</dt>
-<dd><code><a href="ImportContainerCreatedEvent.html" title="interface in com.commercetools.api.models.event">ImportContainerCreatedEvent</a></code>, <code><a href="ImportContainerDeletedEvent.html" title="interface in com.commercetools.api.models.event">ImportContainerDeletedEvent</a></code>, <code><a href="ImportOperationRejectedEvent.html" title="interface in com.commercetools.api.models.event">ImportOperationRejectedEvent</a></code>, <code><a href="ImportUnresolvedEvent.html" title="interface in com.commercetools.api.models.event">ImportUnresolvedEvent</a></code>, <code><a href="ImportValidationFailedEvent.html" title="interface in com.commercetools.api.models.event">ImportValidationFailedEvent</a></code>, <code><a href="ImportWaitForMasterVariantEvent.html" title="interface in com.commercetools.api.models.event">ImportWaitForMasterVariantEvent</a></code></dd>
+<dd><code><a href="CheckoutOrderCreationFailedEvent.html" title="interface in com.commercetools.api.models.event">CheckoutOrderCreationFailedEvent</a></code>, <code><a href="CheckoutPaymentAuthorizationCancelledEvent.html" title="interface in com.commercetools.api.models.event">CheckoutPaymentAuthorizationCancelledEvent</a></code>, <code><a href="CheckoutPaymentAuthorizationFailedEvent.html" title="interface in com.commercetools.api.models.event">CheckoutPaymentAuthorizationFailedEvent</a></code>, <code><a href="CheckoutPaymentAuthorizedEvent.html" title="interface in com.commercetools.api.models.event">CheckoutPaymentAuthorizedEvent</a></code>, <code><a href="CheckoutPaymentCancelAuthorizationFailedEvent.html" title="interface in com.commercetools.api.models.event">CheckoutPaymentCancelAuthorizationFailedEvent</a></code>, <code><a href="CheckoutPaymentChargedEvent.html" title="interface in com.commercetools.api.models.event">CheckoutPaymentChargedEvent</a></code>, <code><a href="CheckoutPaymentChargeFailedEvent.html" title="interface in com.commercetools.api.models.event">CheckoutPaymentChargeFailedEvent</a></code>, <code><a href="CheckoutPaymentRefundedEvent.html" title="interface in com.commercetools.api.models.event">CheckoutPaymentRefundedEvent</a></code>, <code><a href="CheckoutPaymentRefundFailedEvent.html" title="interface in com.commercetools.api.models.event">CheckoutPaymentRefundFailedEvent</a></code>, <code><a href="ImportContainerCreatedEvent.html" title="interface in com.commercetools.api.models.event">ImportContainerCreatedEvent</a></code>, <code><a href="ImportContainerDeletedEvent.html" title="interface in com.commercetools.api.models.event">ImportContainerDeletedEvent</a></code>, <code><a href="ImportOperationRejectedEvent.html" title="interface in com.commercetools.api.models.event">ImportOperationRejectedEvent</a></code>, <code><a href="ImportUnresolvedEvent.html" title="interface in com.commercetools.api.models.event">ImportUnresolvedEvent</a></code>, <code><a href="ImportValidationFailedEvent.html" title="interface in com.commercetools.api.models.event">ImportValidationFailedEvent</a></code>, <code><a href="ImportWaitForMasterVariantEvent.html" title="interface in com.commercetools.api.models.event">ImportWaitForMasterVariantEvent</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">Event</span></div>
@@ -83,10 +83,10 @@ loadScripts(document, 'script');</script>
  Example to create a subtype instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-     Event event = Event.importContainerCreatedBuilder()
+     Event event = Event.checkoutOrderCreationFailedBuilder()
              id("{id}")
              notificationType("{notificationType}")
-             resourceType(EventSubscriptionResourceTypeId.IMPORT_API)
+             resourceType(EventSubscriptionResourceTypeId.CHECKOUT)
              createdAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
              data(dataBuilder -> dataBuilder)
              .build()
@@ -106,95 +106,140 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Event.html" title="interface in com.commercetools.api.models.event">Event</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#copyDeep()" class="member-name-link">copyDeep</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="Event.html" title="interface in com.commercetools.api.models.event">Event</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#deepCopy(com.commercetools.api.models.event.Event)" class="member-name-link">deepCopy</a><wbr>(<a href="Event.html" title="interface in com.commercetools.api.models.event">Event</a>&nbsp;template)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="CheckoutOrderCreationFailedEventBuilder.html" title="class in com.commercetools.api.models.event">CheckoutOrderCreationFailedEventBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#checkoutOrderCreationFailedBuilder()" class="member-name-link">checkoutOrderCreationFailedBuilder</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="block">builder for checkoutOrderCreationFailed subtype</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="CheckoutPaymentAuthorizationCancelledEventBuilder.html" title="class in com.commercetools.api.models.event">CheckoutPaymentAuthorizationCancelledEventBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#checkoutPaymentAuthorizationCancelledBuilder()" class="member-name-link">checkoutPaymentAuthorizationCancelledBuilder</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="block">builder for checkoutPaymentAuthorizationCancelled subtype</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="CheckoutPaymentAuthorizationFailedEventBuilder.html" title="class in com.commercetools.api.models.event">CheckoutPaymentAuthorizationFailedEventBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#checkoutPaymentAuthorizationFailedBuilder()" class="member-name-link">checkoutPaymentAuthorizationFailedBuilder</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="block">builder for checkoutPaymentAuthorizationFailed subtype</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="CheckoutPaymentAuthorizedEventBuilder.html" title="class in com.commercetools.api.models.event">CheckoutPaymentAuthorizedEventBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#checkoutPaymentAuthorizedBuilder()" class="member-name-link">checkoutPaymentAuthorizedBuilder</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="block">builder for checkoutPaymentAuthorized subtype</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="CheckoutPaymentCancelAuthorizationFailedEventBuilder.html" title="class in com.commercetools.api.models.event">CheckoutPaymentCancelAuthorizationFailedEventBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#checkoutPaymentCancelAuthorizationFailedBuilder()" class="member-name-link">checkoutPaymentCancelAuthorizationFailedBuilder</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="block">builder for checkoutPaymentCancelAuthorizationFailed subtype</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="CheckoutPaymentChargedEventBuilder.html" title="class in com.commercetools.api.models.event">CheckoutPaymentChargedEventBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#checkoutPaymentChargedBuilder()" class="member-name-link">checkoutPaymentChargedBuilder</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="block">builder for checkoutPaymentCharged subtype</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="CheckoutPaymentChargeFailedEventBuilder.html" title="class in com.commercetools.api.models.event">CheckoutPaymentChargeFailedEventBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#checkoutPaymentChargeFailedBuilder()" class="member-name-link">checkoutPaymentChargeFailedBuilder</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="block">builder for checkoutPaymentChargeFailed subtype</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="CheckoutPaymentRefundedEventBuilder.html" title="class in com.commercetools.api.models.event">CheckoutPaymentRefundedEventBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#checkoutPaymentRefundedBuilder()" class="member-name-link">checkoutPaymentRefundedBuilder</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="block">builder for checkoutPaymentRefunded subtype</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="CheckoutPaymentRefundFailedEventBuilder.html" title="class in com.commercetools.api.models.event">CheckoutPaymentRefundFailedEventBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#checkoutPaymentRefundFailedBuilder()" class="member-name-link">checkoutPaymentRefundFailedBuilder</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="block">builder for checkoutPaymentRefundFailed subtype</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="Event.html" title="interface in com.commercetools.api.models.event">Event</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#copyDeep()" class="member-name-link">copyDeep</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="Event.html" title="interface in com.commercetools.api.models.event">Event</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#deepCopy(com.commercetools.api.models.event.Event)" class="member-name-link">deepCopy</a><wbr>(<a href="Event.html" title="interface in com.commercetools.api.models.event">Event</a>&nbsp;template)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a deep copy of Event</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCreatedAt()" class="member-name-link">getCreatedAt</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Date and time (UTC) the Event was generated.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getId()" class="member-name-link">getId</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCreatedAt()" class="member-name-link">getCreatedAt</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Unique identifier of the Event.</div>
+<div class="block">Date and time (UTC) the Event was generated.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getNotificationType()" class="member-name-link">getNotificationType</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="../subscription/EventSubscriptionResourceTypeId.html" title="interface in com.commercetools.api.models.subscription">EventSubscriptionResourceTypeId</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getResourceType()" class="member-name-link">getResourceType</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The type of resource targeted by the Event.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="../subscription/EventType.html" title="interface in com.commercetools.api.models.subscription">EventType</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getType()" class="member-name-link">getType</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The type of Event that has occurred.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ImportContainerCreatedEventBuilder.html" title="class in com.commercetools.api.models.event">ImportContainerCreatedEventBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#importContainerCreatedBuilder()" class="member-name-link">importContainerCreatedBuilder</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
-<div class="block">builder for importContainerCreated subtype</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ImportContainerDeletedEventBuilder.html" title="class in com.commercetools.api.models.event">ImportContainerDeletedEventBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#importContainerDeletedBuilder()" class="member-name-link">importContainerDeletedBuilder</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
-<div class="block">builder for importContainerDeleted subtype</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ImportOperationRejectedEventBuilder.html" title="class in com.commercetools.api.models.event">ImportOperationRejectedEventBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#importOperationRejectedBuilder()" class="member-name-link">importOperationRejectedBuilder</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
-<div class="block">builder for importOperationRejected subtype</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ImportUnresolvedEventBuilder.html" title="class in com.commercetools.api.models.event">ImportUnresolvedEventBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#importUnresolvedBuilder()" class="member-name-link">importUnresolvedBuilder</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
-<div class="block">builder for importUnresolved subtype</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ImportValidationFailedEventBuilder.html" title="class in com.commercetools.api.models.event">ImportValidationFailedEventBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#importValidationFailedBuilder()" class="member-name-link">importValidationFailedBuilder</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
-<div class="block">builder for importValidationFailed subtype</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ImportWaitForMasterVariantEventBuilder.html" title="class in com.commercetools.api.models.event">ImportWaitForMasterVariantEventBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#importWaitForMasterVariantBuilder()" class="member-name-link">importWaitForMasterVariantBuilder</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
-<div class="block">builder for importWaitForMasterVariant subtype</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCreatedAt(java.time.ZonedDateTime)" class="member-name-link">setCreatedAt</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Date and time (UTC) the Event was generated.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setId(java.lang.String)" class="member-name-link">setId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getId()" class="member-name-link">getId</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Unique identifier of the Event.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setNotificationType(java.lang.String)" class="member-name-link">setNotificationType</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;notificationType)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set notificationType</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setResourceType(com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId)" class="member-name-link">setResourceType</a><wbr>(<a href="../subscription/EventSubscriptionResourceTypeId.html" title="interface in com.commercetools.api.models.subscription">EventSubscriptionResourceTypeId</a>&nbsp;resourceType)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getNotificationType()" class="member-name-link">getNotificationType</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="../subscription/EventSubscriptionResourceTypeId.html" title="interface in com.commercetools.api.models.subscription">EventSubscriptionResourceTypeId</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getResourceType()" class="member-name-link">getResourceType</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">The type of resource targeted by the Event.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="Event.html" title="interface in com.commercetools.api.models.event">Event</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="../subscription/EventType.html" title="interface in com.commercetools.api.models.subscription">EventType</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getType()" class="member-name-link">getType</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">The type of Event that has occurred.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ImportContainerCreatedEventBuilder.html" title="class in com.commercetools.api.models.event">ImportContainerCreatedEventBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#importContainerCreatedBuilder()" class="member-name-link">importContainerCreatedBuilder</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="block">builder for importContainerCreated subtype</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ImportContainerDeletedEventBuilder.html" title="class in com.commercetools.api.models.event">ImportContainerDeletedEventBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#importContainerDeletedBuilder()" class="member-name-link">importContainerDeletedBuilder</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="block">builder for importContainerDeleted subtype</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ImportOperationRejectedEventBuilder.html" title="class in com.commercetools.api.models.event">ImportOperationRejectedEventBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#importOperationRejectedBuilder()" class="member-name-link">importOperationRejectedBuilder</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="block">builder for importOperationRejected subtype</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ImportUnresolvedEventBuilder.html" title="class in com.commercetools.api.models.event">ImportUnresolvedEventBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#importUnresolvedBuilder()" class="member-name-link">importUnresolvedBuilder</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="block">builder for importUnresolved subtype</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ImportValidationFailedEventBuilder.html" title="class in com.commercetools.api.models.event">ImportValidationFailedEventBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#importValidationFailedBuilder()" class="member-name-link">importValidationFailedBuilder</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="block">builder for importValidationFailed subtype</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ImportWaitForMasterVariantEventBuilder.html" title="class in com.commercetools.api.models.event">ImportWaitForMasterVariantEventBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#importWaitForMasterVariantBuilder()" class="member-name-link">importWaitForMasterVariantBuilder</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="block">builder for importWaitForMasterVariant subtype</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCreatedAt(java.time.ZonedDateTime)" class="member-name-link">setCreatedAt</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Date and time (UTC) the Event was generated.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setId(java.lang.String)" class="member-name-link">setId</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;id)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Unique identifier of the Event.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setNotificationType(java.lang.String)" class="member-name-link">setNotificationType</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;notificationType)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">set notificationType</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setResourceType(com.commercetools.api.models.subscription.EventSubscriptionResourceTypeId)" class="member-name-link">setResourceType</a><wbr>(<a href="../subscription/EventSubscriptionResourceTypeId.html" title="interface in com.commercetools.api.models.subscription">EventSubscriptionResourceTypeId</a>&nbsp;resourceType)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">The type of resource targeted by the Event.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="Event.html" title="interface in com.commercetools.api.models.event">Event</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">gives a TypeReference for usage with Jackson DataBind</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;T&gt;&nbsp;T</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#withEvent(java.util.function.Function)" class="member-name-link">withEvent</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="Event.html" title="interface in com.commercetools.api.models.event">Event</a>,<wbr>T&gt;&nbsp;helper)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default &lt;T&gt;&nbsp;T</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#withEvent(java.util.function.Function)" class="member-name-link">withEvent</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="Event.html" title="interface in com.commercetools.api.models.event">Event</a>,<wbr>T&gt;&nbsp;helper)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
 <div class="block">accessor map function</div>
 </div>
 </div>
@@ -332,6 +377,105 @@ loadScripts(document, 'script');</script>
 <dd><code>template</code> - instance to be copied</dd>
 <dt>Returns:</dt>
 <dd>copy instance</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="checkoutOrderCreationFailedBuilder()">
+<h3>checkoutOrderCreationFailedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CheckoutOrderCreationFailedEventBuilder.html" title="class in com.commercetools.api.models.event">CheckoutOrderCreationFailedEventBuilder</a></span>&nbsp;<span class="element-name">checkoutOrderCreationFailedBuilder</span>()</div>
+<div class="block">builder for checkoutOrderCreationFailed subtype</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="checkoutPaymentAuthorizationCancelledBuilder()">
+<h3>checkoutPaymentAuthorizationCancelledBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CheckoutPaymentAuthorizationCancelledEventBuilder.html" title="class in com.commercetools.api.models.event">CheckoutPaymentAuthorizationCancelledEventBuilder</a></span>&nbsp;<span class="element-name">checkoutPaymentAuthorizationCancelledBuilder</span>()</div>
+<div class="block">builder for checkoutPaymentAuthorizationCancelled subtype</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="checkoutPaymentAuthorizationFailedBuilder()">
+<h3>checkoutPaymentAuthorizationFailedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CheckoutPaymentAuthorizationFailedEventBuilder.html" title="class in com.commercetools.api.models.event">CheckoutPaymentAuthorizationFailedEventBuilder</a></span>&nbsp;<span class="element-name">checkoutPaymentAuthorizationFailedBuilder</span>()</div>
+<div class="block">builder for checkoutPaymentAuthorizationFailed subtype</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="checkoutPaymentAuthorizedBuilder()">
+<h3>checkoutPaymentAuthorizedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CheckoutPaymentAuthorizedEventBuilder.html" title="class in com.commercetools.api.models.event">CheckoutPaymentAuthorizedEventBuilder</a></span>&nbsp;<span class="element-name">checkoutPaymentAuthorizedBuilder</span>()</div>
+<div class="block">builder for checkoutPaymentAuthorized subtype</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="checkoutPaymentCancelAuthorizationFailedBuilder()">
+<h3>checkoutPaymentCancelAuthorizationFailedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CheckoutPaymentCancelAuthorizationFailedEventBuilder.html" title="class in com.commercetools.api.models.event">CheckoutPaymentCancelAuthorizationFailedEventBuilder</a></span>&nbsp;<span class="element-name">checkoutPaymentCancelAuthorizationFailedBuilder</span>()</div>
+<div class="block">builder for checkoutPaymentCancelAuthorizationFailed subtype</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="checkoutPaymentChargeFailedBuilder()">
+<h3>checkoutPaymentChargeFailedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CheckoutPaymentChargeFailedEventBuilder.html" title="class in com.commercetools.api.models.event">CheckoutPaymentChargeFailedEventBuilder</a></span>&nbsp;<span class="element-name">checkoutPaymentChargeFailedBuilder</span>()</div>
+<div class="block">builder for checkoutPaymentChargeFailed subtype</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="checkoutPaymentChargedBuilder()">
+<h3>checkoutPaymentChargedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CheckoutPaymentChargedEventBuilder.html" title="class in com.commercetools.api.models.event">CheckoutPaymentChargedEventBuilder</a></span>&nbsp;<span class="element-name">checkoutPaymentChargedBuilder</span>()</div>
+<div class="block">builder for checkoutPaymentCharged subtype</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="checkoutPaymentRefundFailedBuilder()">
+<h3>checkoutPaymentRefundFailedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CheckoutPaymentRefundFailedEventBuilder.html" title="class in com.commercetools.api.models.event">CheckoutPaymentRefundFailedEventBuilder</a></span>&nbsp;<span class="element-name">checkoutPaymentRefundFailedBuilder</span>()</div>
+<div class="block">builder for checkoutPaymentRefundFailed subtype</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="checkoutPaymentRefundedBuilder()">
+<h3>checkoutPaymentRefundedBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="CheckoutPaymentRefundedEventBuilder.html" title="class in com.commercetools.api.models.event">CheckoutPaymentRefundedEventBuilder</a></span>&nbsp;<span class="element-name">checkoutPaymentRefundedBuilder</span>()</div>
+<div class="block">builder for checkoutPaymentRefunded subtype</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>builder</dd>
 </dl>
 </section>
 </li>

@@ -78,7 +78,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">CustomerEmailTokenCreatedMessagePayload</span><span class="extends-implements">
 extends <a href="MessagePayload.html" title="interface in com.commercetools.api.models.message">MessagePayload</a></span></div>
-<div class="block"><p>Generated after a successful Create email token for Customer request. The <code>resource</code> property of the Message is a CustomerEmailTokenReference.</p>
+<div class="block"><p>Generated after a successful Create email token for Customer or Create email token for Customer in Store request. The <code>resource</code> property of the Message is a CustomerEmailTokenReference.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -87,6 +87,7 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
      CustomerEmailTokenCreatedMessagePayload customerEmailTokenCreatedMessagePayload = CustomerEmailTokenCreatedMessagePayload.builder()
              .customerId("{customerId}")
              .expiresAt(ZonedDateTime.parse("2022-01-01T12:00:00.301Z"))
+             .invalidateOlderTokens(true)
              .build()
  </code></pre>
  </div></div>
@@ -149,6 +150,16 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Date and time (UTC) the email token expires.</div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getInvalidateOlderTokens()" class="member-name-link">getInvalidateOlderTokens</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">If <code>true</code>, all email tokens issued previously for the Customer are invalidated.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getValue()" class="member-name-link">getValue</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Value of the token, present only if the token's validity is 60 minutes or less.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="CustomerEmailTokenCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">CustomerEmailTokenCreatedMessagePayload</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1">
@@ -168,6 +179,16 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setExpiresAt(java.time.ZonedDateTime)" class="member-name-link">setExpiresAt</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;expiresAt)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Date and time (UTC) the email token expires.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setInvalidateOlderTokens(java.lang.Boolean)" class="member-name-link">setInvalidateOlderTokens</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;invalidateOlderTokens)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">If <code>true</code>, all email tokens issued previously for the Customer are invalidated.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setValue(java.lang.String)" class="member-name-link">setValue</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Value of the token, present only if the token's validity is 60 minutes or less.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="CustomerEmailTokenCreatedMessagePayload.html" title="interface in com.commercetools.api.models.message">CustomerEmailTokenCreatedMessagePayload</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -247,6 +268,29 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 </section>
 </li>
 <li>
+<section class="detail" id="getValue()">
+<h3>getValue</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getValue</span>()</div>
+<div class="block"><p>Value of the token, present only if the token's validity is 60 minutes or less.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>value</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getInvalidateOlderTokens()">
+<h3>getInvalidateOlderTokens</h3>
+<div class="member-signature"><span class="annotations">@NotNull
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name">getInvalidateOlderTokens</span>()</div>
+<div class="block"><p>If <code>true</code>, all email tokens issued previously for the Customer are invalidated.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>invalidateOlderTokens</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="setCustomerId(java.lang.String)">
 <h3>setCustomerId</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCustomerId</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;customerId)</span></div>
@@ -265,6 +309,28 @@ extends <a href="MessagePayload.html" title="interface in com.commercetools.api.
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>expiresAt</code> - value to be set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setValue(java.lang.String)">
+<h3>setValue</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setValue</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;value)</span></div>
+<div class="block"><p>Value of the token, present only if the token's validity is 60 minutes or less.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>value</code> - value to be set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setInvalidateOlderTokens(java.lang.Boolean)">
+<h3>setInvalidateOlderTokens</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setInvalidateOlderTokens</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;invalidateOlderTokens)</span></div>
+<div class="block"><p>If <code>true</code>, all email tokens issued previously for the Customer are invalidated.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>invalidateOlderTokens</code> - value to be set</dd>
 </dl>
 </section>
 </li>

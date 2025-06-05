@@ -89,7 +89,7 @@ loadScripts(document, 'script');</script>
 <span class="extends-implements">extends <a href="../../../../io/vrap/rmf/base/client/TypeBodyApiMethod.html" title="class in io.vrap.rmf.base.client">TypeBodyApiMethod</a>&lt;<a href="ByProjectKeyCustomersEmailTokenPost.html" title="class in com.commercetools.api.client">ByProjectKeyCustomersEmailTokenPost</a>,<wbr><a href="../models/customer/CustomerToken.html" title="interface in com.commercetools.api.models.customer">CustomerToken</a>,<wbr><a href="../models/customer/CustomerCreateEmailToken.html" title="interface in com.commercetools.api.models.customer">CustomerCreateEmailToken</a>&gt;
 implements <a href="ErrorableTrait.html" title="interface in com.commercetools.api.client">ErrorableTrait</a>&lt;<a href="ByProjectKeyCustomersEmailTokenPost.html" title="class in com.commercetools.api.client">ByProjectKeyCustomersEmailTokenPost</a>&gt;</span></div>
 <div class="block"><p>Use this method to create an email token for a global Customer during their email verification process.</p>
-  <p>Creating an email token for the Customer produces the CustomerEmailTokenCreated Message.</p>
+  <p>Creating an email token for the Customer produces the CustomerEmailTokenCreated Message. The Message will include the token's value, if the token's validity is 60 minutes or less.</p>
 
  <hr>
  <div class=code-example>

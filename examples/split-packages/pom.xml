@@ -33,12 +33,12 @@
         <dependency>
             <groupId>com.commercetools.sdk</groupId>
             <artifactId>commercetools-sdk-java-api-models_project</artifactId>
-            <version>18.1.0-SNAPSHOT</version>
+            <version>${commercetools.version}</version>
         </dependency>
         <dependency>
             <groupId>com.commercetools.sdk</groupId>
             <artifactId>commercetools-sdk-java-api-models_customer</artifactId>
-            <version>18.1.0-SNAPSHOT</version>
+            <version>${commercetools.version}</version>
         </dependency>
         <dependency>
             <groupId>com.commercetools.sdk</groupId>

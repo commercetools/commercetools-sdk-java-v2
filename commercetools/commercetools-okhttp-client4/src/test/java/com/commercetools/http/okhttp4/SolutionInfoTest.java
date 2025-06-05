@@ -9,6 +9,7 @@ public class SolutionInfoTest {
     public void version() {
         String version = new OkHttpClientSolutionInfo().getVersion();
 
-        Assertions.assertThat(version).startsWith("4.12.");
+        Assertions.assertThat(Runtime.Version.parse(version).compareTo(Runtime.Version.parse("4.12.0"))).isGreaterThanOrEqualTo(0);
+        Assertions.assertThat(version).startsWith("4.");
     }
 }

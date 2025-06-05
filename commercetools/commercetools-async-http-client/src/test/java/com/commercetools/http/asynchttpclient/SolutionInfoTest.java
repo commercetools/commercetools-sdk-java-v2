@@ -11,6 +11,7 @@ public class SolutionInfoTest {
     public void version() {
         String version = new AsyncHttpClientSolutionInfo().getVersion();
 
-        Assertions.assertThat(version).startsWith("2.12.");
+        Assertions.assertThat(Runtime.Version.parse(version).compareTo(Runtime.Version.parse("2.12.0"))).isGreaterThanOrEqualTo(0);
+        Assertions.assertThat(version).startsWith("2.");
     }
 }

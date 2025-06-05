@@ -14,7 +14,7 @@ dependencies {
 
     implementation "com.squareup.okio:okio:3.11.0"
     api "com.squareup.okhttp3:okhttp:3.14.9" version {
-        strictly "[3.0,4.0["
+        strictly "[3.0,3.99999]"
         prefer "3.14.9"
     }
 

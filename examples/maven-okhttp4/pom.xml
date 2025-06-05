@@ -37,7 +37,7 @@
         </dependency>
         <dependency>
             <groupId>com.commercetools.sdk</groupId>
-            <artifactId>commercetools-http-client</artifactId>
+            <artifactId>commercetools-okhttp-client4</artifactId>
             <version>${commercetools.version}</version>
         </dependency>
         <dependency>

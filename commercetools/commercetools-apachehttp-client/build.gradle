@@ -2,7 +2,7 @@
 dependencies {
     api project(":rmf:rmf-java-base")
     api "org.apache.httpcomponents.client5:httpclient5:5.4.4" version {
-        strictly "[5.4.4,6.0["
+        strictly "[5.4.4,5.99999]"
         prefer "5.4.4"
     }
 

@@ -1,4 +1,127 @@
 
+# 18.2.0 (2025-06-05)
+
+## Fixes
+
+Fixed version ranges for OkHttp and Apache clients to prevent the resolution of next major alpha versions using Maven.
+
+## What's Changed
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/908
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/909
+
+**Api changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `ExpiredCustomerEmailTokenError`
+- added type `ExpiredCustomerPasswordTokenError`
+- added type `GraphQLExpiredCustomerEmailTokenError`
+- added type `GraphQLExpiredCustomerPasswordTokenError`
+- added type `CheckoutOrderCreationFailedEvent`
+- added type `CheckoutPaymentAuthorizationCancelledEvent`
+- added type `CheckoutPaymentAuthorizationFailedEvent`
+- added type `CheckoutPaymentAuthorizedEvent`
+- added type `CheckoutPaymentCancelAuthorizationFailedEvent`
+- added type `CheckoutPaymentChargeFailedEvent`
+- added type `CheckoutPaymentChargedEvent`
+- added type `CheckoutPaymentRefundFailedEvent`
+- added type `CheckoutPaymentRefundedEvent`
+- added type `CheckoutMessageOrderPayloadBaseData`
+- added type `CheckoutMessagePaymentsPayloadBaseData`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `invalidateOlderTokens` to type `CustomerCreateEmailToken`
+- added property `invalidateOlderTokens` to type `CustomerCreatePasswordResetToken`
+- added property `invalidateOlderTokens` to type `CustomerToken`
+- added property `value` to type `CustomerEmailTokenCreatedMessage`
+- added property `invalidateOlderTokens` to type `CustomerEmailTokenCreatedMessage`
+- added property `value` to type `CustomerPasswordTokenCreatedMessage`
+- added property `invalidateOlderTokens` to type `CustomerPasswordTokenCreatedMessage`
+- added property `value` to type `CustomerEmailTokenCreatedMessagePayload`
+- added property `invalidateOlderTokens` to type `CustomerEmailTokenCreatedMessagePayload`
+- added property `value` to type `CustomerPasswordTokenCreatedMessagePayload`
+- added property `invalidateOlderTokens` to type `CustomerPasswordTokenCreatedMessagePayload`
+</details>
+
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `checkout` to type `EventSubscriptionResourceTypeId`
+- added enum `CheckoutOrderCreationFailed` to type `EventType`
+- added enum `CheckoutPaymentAuthorizationCancelled` to type `EventType`
+- added enum `CheckoutPaymentAuthorizationFailed` to type `EventType`
+- added enum `CheckoutPaymentAuthorized` to type `EventType`
+- added enum `CheckoutPaymentCancelAuthorizationFailed` to type `EventType`
+- added enum `CheckoutPaymentCharged` to type `EventType`
+- added enum `CheckoutPaymentChargeFailed` to type `EventType`
+- added enum `CheckoutPaymentRefunded` to type `EventType`
+- added enum `CheckoutPaymentRefundFailed` to type `EventType`
+</details>
+
+**Import changes**
+
+<details>
+<summary>Removed Property(s)</summary>
+
+- :warning: removed property `/^[a-z]{2}(-[A-Z]{2})?$/` from type `SearchKeywords`
+- :warning: removed property `/^[a-z]{2}(-[A-Z]{2})?$/` from type `LocalizedString`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `/^[a-zA-Z]{2,3}(?:-[a-zA-Z]{4})?(?:-(?:[a-zA-Z]{2}|\d{3}))?$/` to type `SearchKeywords`
+- added property `/^[a-zA-Z]{2,3}(?:-[a-zA-Z]{4})?(?:-(?:[a-zA-Z]{2}|\d{3}))?$/` to type `LocalizedString`
+</details>
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/18.1.0...18.2.0
+
+# 18.1.0 (2025-06-03)
+
+## New features
+
+### Split packages
+
+Additionally to the package `commercetools-sdk-java-api` we also release packages split by domain. This allows package size optimization for deployment targets with size constrains. See also https://commercetools.github.io/commercetools-sdk-java-v2/javadoc/com/commercetools/docs/meta/SizeOptimization.html
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/891
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/894
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/897
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/898
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/899
+* Package split by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/900
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/901
+* Package split example by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/902
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/905
+
+**Import changes**
+
+<details>
+<summary>Removed Property(s)</summary>
+
+- :warning: removed property `/^[a-z]{2}(-[A-Z]{2})?$/` from type `SearchKeywords`
+- :warning: removed property `/^[a-z]{2}(-[A-Z]{2})?$/` from type `LocalizedString`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `/^[a-zA-Z]{2,3}(?:-[a-zA-Z]{4})?(?:-(?:[a-zA-Z]{2}|\d{3}))?$/` to type `SearchKeywords`
+- added property `/^[a-zA-Z]{2,3}(?:-[a-zA-Z]{4})?(?:-(?:[a-zA-Z]{2}|\d{3}))?$/` to type `LocalizedString`
+</details>
+
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/18.0.0...18.1.0
+
 # 18.0.0 (2025-05-02)
 
 ## New Features

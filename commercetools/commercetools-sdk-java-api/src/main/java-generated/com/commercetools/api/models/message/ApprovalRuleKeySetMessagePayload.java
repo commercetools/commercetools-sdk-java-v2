@@ -35,7 +35,7 @@ public interface ApprovalRuleKeySetMessagePayload extends MessagePayload {
     String APPROVAL_RULE_KEY_SET = "ApprovalRuleKeySet";
 
     /**
-     *  <p>Description of the ApprovalRule after the Set Key update action.</p>
+     *  <p><code>key</code> value of the ApprovalRule after the Set Key update action.</p>
      * @return key
      */
 
@@ -43,7 +43,7 @@ public interface ApprovalRuleKeySetMessagePayload extends MessagePayload {
     public String getKey();
 
     /**
-     *  <p>Description of the ApprovalRule before the Set Key update action.</p>
+     *  <p><code>key</code> value of the ApprovalRule before the Set Key update action.</p>
      * @return oldKey
      */
 
@@ -51,14 +51,14 @@ public interface ApprovalRuleKeySetMessagePayload extends MessagePayload {
     public String getOldKey();
 
     /**
-     *  <p>Description of the ApprovalRule after the Set Key update action.</p>
+     *  <p><code>key</code> value of the ApprovalRule after the Set Key update action.</p>
      * @param key value to be set
      */
 
     public void setKey(final String key);
 
     /**
-     *  <p>Description of the ApprovalRule before the Set Key update action.</p>
+     *  <p><code>key</code> value of the ApprovalRule before the Set Key update action.</p>
      * @param oldKey value to be set
      */
 

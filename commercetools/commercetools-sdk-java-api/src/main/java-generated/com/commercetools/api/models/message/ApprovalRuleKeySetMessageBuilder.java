@@ -260,7 +260,7 @@ public class ApprovalRuleKeySetMessageBuilder implements Builder<ApprovalRuleKey
     }
 
     /**
-     *  <p>Description of the ApprovalRule after the Set Key update action.</p>
+     *  <p><code>key</code> value of the ApprovalRule after the Set Key update action.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -271,7 +271,7 @@ public class ApprovalRuleKeySetMessageBuilder implements Builder<ApprovalRuleKey
     }
 
     /**
-     *  <p>Description of the ApprovalRule before the Set Key update action.</p>
+     *  <p><code>key</code> value of the ApprovalRule before the Set Key update action.</p>
      * @param oldKey value to be set
      * @return Builder
      */
@@ -375,7 +375,7 @@ public class ApprovalRuleKeySetMessageBuilder implements Builder<ApprovalRuleKey
     }
 
     /**
-     *  <p>Description of the ApprovalRule after the Set Key update action.</p>
+     *  <p><code>key</code> value of the ApprovalRule after the Set Key update action.</p>
      * @return key
      */
 
@@ -385,7 +385,7 @@ public class ApprovalRuleKeySetMessageBuilder implements Builder<ApprovalRuleKey
     }
 
     /**
-     *  <p>Description of the ApprovalRule before the Set Key update action.</p>
+     *  <p><code>key</code> value of the ApprovalRule before the Set Key update action.</p>
      * @return oldKey
      */
 

@@ -173,7 +173,7 @@ public class ApprovalRuleKeySetMessageImpl implements ApprovalRuleKeySetMessage,
     }
 
     /**
-     *  <p>Description of the ApprovalRule after the Set Key update action.</p>
+     *  <p><code>key</code> value of the ApprovalRule after the Set Key update action.</p>
      */
 
     public String getKey() {
@@ -181,7 +181,7 @@ public class ApprovalRuleKeySetMessageImpl implements ApprovalRuleKeySetMessage,
     }
 
     /**
-     *  <p>Description of the ApprovalRule before the Set Key update action.</p>
+     *  <p><code>key</code> value of the ApprovalRule before the Set Key update action.</p>
      */
 
     public String getOldKey() {

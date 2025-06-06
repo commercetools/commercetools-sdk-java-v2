@@ -55,7 +55,7 @@ public class ApprovalRuleKeySetMessagePayloadImpl implements ApprovalRuleKeySetM
     }
 
     /**
-     *  <p>Description of the ApprovalRule after the Set Key update action.</p>
+     *  <p><code>key</code> value of the ApprovalRule after the Set Key update action.</p>
      */
 
     public String getKey() {
@@ -63,7 +63,7 @@ public class ApprovalRuleKeySetMessagePayloadImpl implements ApprovalRuleKeySetM
     }
 
     /**
-     *  <p>Description of the ApprovalRule before the Set Key update action.</p>
+     *  <p><code>key</code> value of the ApprovalRule before the Set Key update action.</p>
      */
 
     public String getOldKey() {

@@ -142,7 +142,7 @@
         },
         {
             "moduleName": "org.apache.httpcomponents.client5:httpclient5",
-            "moduleVersion": "5.4.4",
+            "moduleVersion": "5.5",
             "moduleLicenses": [
                 {
                     "moduleLicense": "Apache License, Version 2.0",

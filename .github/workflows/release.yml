@@ -39,8 +39,8 @@ jobs:
       - run: ./gradlew -Pversion=$REF_NAME clean test javadoc publishToSonatype closeAndReleaseSonatypeStagingRepository
         env:
           REF_NAME: ${{ github.ref_name }}
-          CTP_OSS_USER: ${{ secrets.OSS_USER }}
-          CTP_OSS_SECRET: ${{ secrets.OSS_SECRET }}
+          SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
+          SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_ACTOR: ${{ secrets.GITHUB_ACTOR }}
 

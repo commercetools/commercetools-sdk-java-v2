@@ -49,7 +49,7 @@ jobs:
       - name: Release
         run: ./gradlew --build-cache publishToSonatype
         env:
-          CTP_OSS_USER: ${{ secrets.OSS_USER }}
-          CTP_OSS_SECRET: ${{ secrets.OSS_SECRET }}
+          SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
+          SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
 
       - run: rm -rf ~/.gradle/gradle.properties

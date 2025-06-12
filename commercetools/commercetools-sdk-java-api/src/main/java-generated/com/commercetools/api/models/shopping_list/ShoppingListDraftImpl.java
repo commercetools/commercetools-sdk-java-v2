@@ -131,7 +131,7 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
     }
 
     /**
-     *  <p>Number of days after which the ShoppingList will be automatically deleted if it has not been modified. If not set, the default value configured in the Project is used.</p>
+     *  <p>Number of days after the last modification before a ShoppingList is deleted. If not set, the default value configured in the Project is used.</p>
      */
 
     public Long getDeleteDaysAfterLastModification() {

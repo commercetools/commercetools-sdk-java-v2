@@ -27,7 +27,7 @@ public class ShoppingListSetDeleteDaysAfterLastModificationActionBuilder
     private Long deleteDaysAfterLastModification;
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If not provided, the default value for this field configured in Project settings is assigned.</p>
      * @param deleteDaysAfterLastModification value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class ShoppingListSetDeleteDaysAfterLastModificationActionBuilder
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If not provided, the default value for this field configured in Project settings is assigned.</p>
      * @return deleteDaysAfterLastModification
      */
 

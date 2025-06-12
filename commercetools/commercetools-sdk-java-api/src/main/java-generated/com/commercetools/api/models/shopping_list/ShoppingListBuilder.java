@@ -458,7 +458,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     *  <p>Number of days after which the ShoppingList will be automatically deleted if it has not been modified.</p>
+     *  <p>Number of days after the last modification before a ShoppingList is deleted. If not set, the default value configured in the Project is used.</p>
      * @param deleteDaysAfterLastModification value to be set
      * @return Builder
      */
@@ -763,7 +763,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     }
 
     /**
-     *  <p>Number of days after which the ShoppingList will be automatically deleted if it has not been modified.</p>
+     *  <p>Number of days after the last modification before a ShoppingList is deleted. If not set, the default value configured in the Project is used.</p>
      * @return deleteDaysAfterLastModification
      */
 

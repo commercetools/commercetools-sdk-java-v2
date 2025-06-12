@@ -128,7 +128,7 @@ public interface ShoppingList
     public List<TextLineItem> getTextLineItems();
 
     /**
-     *  <p>Number of days after which the ShoppingList will be automatically deleted if it has not been modified.</p>
+     *  <p>Number of days after the last modification before a ShoppingList is deleted. If not set, the default value configured in the Project is used.</p>
      * @return deleteDaysAfterLastModification
      */
 
@@ -279,7 +279,7 @@ public interface ShoppingList
     public void setTextLineItems(final List<TextLineItem> textLineItems);
 
     /**
-     *  <p>Number of days after which the ShoppingList will be automatically deleted if it has not been modified.</p>
+     *  <p>Number of days after the last modification before a ShoppingList is deleted. If not set, the default value configured in the Project is used.</p>
      * @param deleteDaysAfterLastModification value to be set
      */
 

@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * ShoppingListSetDeleteDaysAfterLastModificationAction
+ *  <p>Number of days after the last modification before a Shopping List is deleted.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,7 +35,7 @@ public interface ShoppingListSetDeleteDaysAfterLastModificationAction extends Sh
     String SET_DELETE_DAYS_AFTER_LAST_MODIFICATION = "setDeleteDaysAfterLastModification";
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If not provided, the default value for this field configured in Project settings is assigned.</p>
      * @return deleteDaysAfterLastModification
      */
 
@@ -43,7 +43,7 @@ public interface ShoppingListSetDeleteDaysAfterLastModificationAction extends Sh
     public Long getDeleteDaysAfterLastModification();
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If not provided, the default value for this field configured in Project settings is assigned.</p>
      * @param deleteDaysAfterLastModification value to be set
      */
 

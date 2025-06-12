@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * MyShoppingListSetDeleteDaysAfterLastModificationAction
+ *  <p>Number of days after the last modification before a Shopping List is deleted.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class MyShoppingListSetDeleteDaysAfterLastModificationActionImpl
@@ -53,7 +53,7 @@ public class MyShoppingListSetDeleteDaysAfterLastModificationActionImpl
     }
 
     /**
-     *  <p>Value to set. If empty, any existing value will be removed.</p>
+     *  <p>Value to set. If not provided, the default value for this field configured in Project settings is assigned.</p>
      */
 
     public Long getDeleteDaysAfterLastModification() {

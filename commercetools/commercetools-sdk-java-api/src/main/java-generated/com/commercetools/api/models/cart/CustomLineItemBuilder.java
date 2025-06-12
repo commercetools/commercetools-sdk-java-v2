@@ -342,7 +342,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     *  <p>State of the Custom Line Item in the Cart or Order.</p>
+     *  <p>Tracks specific quantities of the Custom Line Item within a given State. When a Custom Line Item is added to a Cart, its full quantity is set to the built-in "Initial" state. State transitions for Custom Line Items are managed on the Order.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -353,7 +353,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     *  <p>State of the Custom Line Item in the Cart or Order.</p>
+     *  <p>Tracks specific quantities of the Custom Line Item within a given State. When a Custom Line Item is added to a Cart, its full quantity is set to the built-in "Initial" state. State transitions for Custom Line Items are managed on the Order.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -364,7 +364,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     *  <p>State of the Custom Line Item in the Cart or Order.</p>
+     *  <p>Tracks specific quantities of the Custom Line Item within a given State. When a Custom Line Item is added to a Cart, its full quantity is set to the built-in "Initial" state. State transitions for Custom Line Items are managed on the Order.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -378,7 +378,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     *  <p>State of the Custom Line Item in the Cart or Order.</p>
+     *  <p>Tracks specific quantities of the Custom Line Item within a given State. When a Custom Line Item is added to a Cart, its full quantity is set to the built-in "Initial" state. State transitions for Custom Line Items are managed on the Order.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -393,7 +393,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     *  <p>State of the Custom Line Item in the Cart or Order.</p>
+     *  <p>Tracks specific quantities of the Custom Line Item within a given State. When a Custom Line Item is added to a Cart, its full quantity is set to the built-in "Initial" state. State transitions for Custom Line Items are managed on the Order.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -406,7 +406,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     *  <p>State of the Custom Line Item in the Cart or Order.</p>
+     *  <p>Tracks specific quantities of the Custom Line Item within a given State. When a Custom Line Item is added to a Cart, its full quantity is set to the built-in "Initial" state. State transitions for Custom Line Items are managed on the Order.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -417,7 +417,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     *  <p>State of the Custom Line Item in the Cart or Order.</p>
+     *  <p>Tracks specific quantities of the Custom Line Item within a given State. When a Custom Line Item is added to a Cart, its full quantity is set to the built-in "Initial" state. State transitions for Custom Line Items are managed on the Order.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -857,7 +857,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
-     *  <p>State of the Custom Line Item in the Cart or Order.</p>
+     *  <p>Tracks specific quantities of the Custom Line Item within a given State. When a Custom Line Item is added to a Cart, its full quantity is set to the built-in "Initial" state. State transitions for Custom Line Items are managed on the Order.</p>
      * @return state
      */
 

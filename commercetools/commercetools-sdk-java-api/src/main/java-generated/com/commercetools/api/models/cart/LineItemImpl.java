@@ -257,7 +257,7 @@ public class LineItemImpl implements LineItem, ModelBase {
     }
 
     /**
-     *  <p>State of the Line Item in the Cart or the Order.</p>
+     *  <p>Tracks specific quantities of the Line Item within a given State. When a Line Item is added to a Cart, its full quantity is set to the built-in "Initial" state. State transitions for Line Items are managed on the Order.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.ItemState> getState() {

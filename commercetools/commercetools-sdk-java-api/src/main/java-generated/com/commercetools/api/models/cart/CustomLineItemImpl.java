@@ -174,7 +174,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
     }
 
     /**
-     *  <p>State of the Custom Line Item in the Cart or Order.</p>
+     *  <p>Tracks specific quantities of the Custom Line Item within a given State. When a Custom Line Item is added to a Cart, its full quantity is set to the built-in "Initial" state. State transitions for Custom Line Items are managed on the Order.</p>
      */
 
     public java.util.List<com.commercetools.api.models.order.ItemState> getState() {

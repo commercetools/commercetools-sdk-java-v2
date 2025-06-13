@@ -57,7 +57,7 @@ public class CartSetShippingMethodActionImpl implements CartSetShippingMethodAct
 
     /**
      *  <p>Value to set. If empty, any existing value is removed.</p>
-     *  <p>If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
+     *  <p>If the referenced Shipping Method is inactive, or has a predicate that does not match the Cart, an InvalidOperation error is returned.</p>
      */
 
     public com.commercetools.api.models.shipping_method.ShippingMethodResourceIdentifier getShippingMethod() {

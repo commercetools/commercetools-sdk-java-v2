@@ -21,8 +21,10 @@ def excludeProjects = [
 nexusPublishing {
     repositories {
         sonatype {
-            username = System.getenv('CTP_OSS_USER')
-            password = System.getenv('CTP_OSS_SECRET')
+            nexusUrl.set(uri("https://ossrh-staging-api.central.sonatype.com/service/local/"))
+            snapshotRepositoryUrl.set(uri("https://central.sonatype.com/repository/maven-snapshots/"))
+            username = System.getenv('SONATYPE_USERNAME')
+            password = System.getenv('SONATYPE_PASSWORD')
         }
     }
 }

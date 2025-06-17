@@ -16,7 +16,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Search keywords are JSON objects primarily used by Product Suggestions, but are also considered for a full text search. The keys are of type Locale, and the values are an array of SearchKeyword.</p>
+ *  <p>Although search keywords are primarily used by Product Suggestions, they are also considered for a full text search. The keys are of type Locale, and the values are an array of SearchKeyword.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,7 +33,7 @@ import jakarta.validation.constraints.NotNull;
 public interface SearchKeywords {
 
     /**
-     *
+     *  <p>Key-value pair where the keys are of type Locale and the values are an array of SearchKeyword.</p>
      * @return map of the pattern property values
      */
     @NotNull
@@ -42,7 +42,7 @@ public interface SearchKeywords {
     public Map<String, List<SearchKeyword>> values();
 
     /**
-     * set pattern property
+     *  <p>Key-value pair where the keys are of type Locale and the values are an array of SearchKeyword.</p>
      * @param key property name
      * @param value property value
      */

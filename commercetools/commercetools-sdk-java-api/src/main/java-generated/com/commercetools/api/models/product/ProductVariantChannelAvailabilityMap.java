@@ -16,14 +16,14 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>JSON object where the key is a supply Channel <code>id</code> and the value is the ProductVariantChannelAvailability of the InventoryEntry.</p>
+ *  <p>JSON object where the keys are supply Channel <code>id</code>, and the values are ProductVariantChannelAvailability.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
  *     ProductVariantChannelAvailabilityMap productVariantChannelAvailabilityMap = ProductVariantChannelAvailabilityMap.builder()
- *             .//(//Builder -> //Builder)
+ *             ./^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/(/^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/Builder -> /^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/Builder)
  *             .build()
  * </code></pre>
  * </div>
@@ -33,7 +33,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ProductVariantChannelAvailabilityMap {
 
     /**
-     *
+     *  <p>JSON object where the keys are supply Channel <code>id</code>, and the values are ProductVariantChannelAvailability.</p>
      * @return map of the pattern property values
      */
     @NotNull
@@ -42,7 +42,7 @@ public interface ProductVariantChannelAvailabilityMap {
     public Map<String, ProductVariantChannelAvailability> values();
 
     /**
-     * set pattern property
+     *  <p>JSON object where the keys are supply Channel <code>id</code>, and the values are ProductVariantChannelAvailability.</p>
      * @param key property name
      * @param value property value
      */

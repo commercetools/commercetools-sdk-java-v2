@@ -15,14 +15,14 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>JSON object where the key is a Category <code>id</code> and the value is an order hint. Allows controlling the order of Products and how they appear in Categories. Products with no order hint have an order score below <code>0</code>. Order hints are non-unique. If a subset of Products have the same value for order hint in a specific category, the behavior is undetermined.</p>
+ *  <p>JSON object where the keys are Category <code>id</code>, and the values are order hint values: strings representing a number between <code>0</code> and <code>1</code>, but not ending in <code>0</code>. Order hints allow controlling the order of Products and how they appear in Categories. Products without order hints have an order score below <code>0</code>. Order hints are not unique. If a subset of Products have the same value for order hint in a specific category, the behavior is undetermined.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
  *     CategoryOrderHints categoryOrderHints = CategoryOrderHints.builder()
- *             ./[0-9].[0-9]*[1-9]/("{/[0-9].[0-9]*[1-9]/}")
+ *             ./^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/("{/^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/}")
  *             .build()
  * </code></pre>
  * </div>
@@ -32,7 +32,7 @@ import jakarta.validation.constraints.NotNull;
 public interface CategoryOrderHints {
 
     /**
-     *  <p>A string representing a number between 0 and 1 that must start with <code>0.</code> and cannot end with <code>0</code>.</p>
+     *  <p>A string representing a number between <code>0</code> and <code>1</code>, but not ending in <code>0</code>.</p>
      * @return map of the pattern property values
      */
     @NotNull
@@ -40,7 +40,7 @@ public interface CategoryOrderHints {
     public Map<String, String> values();
 
     /**
-     *  <p>A string representing a number between 0 and 1 that must start with <code>0.</code> and cannot end with <code>0</code>.</p>
+     *  <p>A string representing a number between <code>0</code> and <code>1</code>, but not ending in <code>0</code>.</p>
      * @param key property name
      * @param value property value
      */

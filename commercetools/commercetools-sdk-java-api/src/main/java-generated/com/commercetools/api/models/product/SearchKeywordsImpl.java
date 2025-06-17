@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Search keywords are JSON objects primarily used by Product Suggestions, but are also considered for a full text search. The keys are of type Locale, and the values are an array of SearchKeyword.</p>
+ *  <p>Although search keywords are primarily used by Product Suggestions, they are also considered for a full text search. The keys are of type Locale, and the values are an array of SearchKeyword.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SearchKeywordsImpl implements SearchKeywords, ModelBase {
@@ -41,7 +41,7 @@ public class SearchKeywordsImpl implements SearchKeywords, ModelBase {
     }
 
     /**
-     *
+     *  <p>Key-value pair where the keys are of type Locale and the values are an array of SearchKeyword.</p>
      */
 
     public Map<String, java.util.List<com.commercetools.api.models.product.SearchKeyword>> values() {

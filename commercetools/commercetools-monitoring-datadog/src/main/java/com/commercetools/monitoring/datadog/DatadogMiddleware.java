@@ -2,11 +2,16 @@
 package com.commercetools.monitoring.datadog;
 
 import static com.commercetools.monitoring.datadog.DatadogUtils.*;
+import static java.lang.String.format;
 
 import java.time.Duration;
 import java.time.Instant;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import com.datadog.api.client.ApiClient;
 import com.datadog.api.client.ApiException;
@@ -40,12 +45,24 @@ public class DatadogMiddleware implements TelemetryMiddleware {
 
     private final MetricsApi apiInstance;
 
+    private final Collection<String> tags;
+
     public DatadogMiddleware(final ApiClient ddApiClient) {
-        this.apiInstance = new MetricsApi(ddApiClient);
+        this(new MetricsApi(ddApiClient));
+    }
+
+    public DatadogMiddleware(final ApiClient ddApiClient, final Map<String, String> tags) {
+        this(new MetricsApi(ddApiClient), tags);
     }
 
     public DatadogMiddleware(final MetricsApi apiInstance) {
+        this(apiInstance, Collections.emptyMap());
+    }
+
+    public DatadogMiddleware(final MetricsApi apiInstance, final Map<String, String> tags) {
         this.apiInstance = apiInstance;
+        this.tags = tags.entrySet().stream().map(entry -> format("%s:%s", entry.getKey(), entry.getValue())).collect(
+                Collectors.toList());
     }
 
     @Override
@@ -65,10 +82,10 @@ public class DatadogMiddleware implements TelemetryMiddleware {
             }
             try {
                 submitClientDurationMetric(request, apiInstance, Duration.between(start, Instant.now()).toMillis(),
-                    statusCode);
-                submitTotalRequestsMetric(request, apiInstance, statusCode);
+                    statusCode, tags);
+                submitTotalRequestsMetric(request, apiInstance, statusCode, tags);
                 if (statusCode >= 400 || throwable != null) {
-                    submitErrorRequestsMetric(request, apiInstance, statusCode);
+                    submitErrorRequestsMetric(request, apiInstance, statusCode, tags);
                 }
             }
             catch (ApiException e) {

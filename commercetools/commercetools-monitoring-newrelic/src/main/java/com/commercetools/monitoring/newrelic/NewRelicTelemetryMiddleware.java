@@ -2,12 +2,14 @@
 package com.commercetools.monitoring.newrelic;
 
 import static com.commercetools.monitoring.newrelic.NewrelicInfo.*;
+import static java.lang.String.format;
 
 import java.time.Duration;
 import java.time.Instant;
-import java.util.Optional;
+import java.util.*;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import com.newrelic.api.agent.*;
 
@@ -52,6 +54,17 @@ import io.vrap.rmf.base.client.http.TelemetryMiddleware;
  * See also the Spring MVC example application in the examples folder for further details.
  */
 public class NewRelicTelemetryMiddleware implements TelemetryMiddleware {
+
+    private final Map<String, Object> attributes;
+
+    public NewRelicTelemetryMiddleware() {
+        this.attributes = Collections.emptyMap();
+    }
+
+    public NewRelicTelemetryMiddleware(final Map<String, String> attributes) {
+        this.attributes = Collections.unmodifiableMap(attributes);
+    }
+
     @Trace(async = true)
     @Override
     public CompletableFuture<ApiHttpResponse<byte[]>> invoke(ApiHttpRequest request,
@@ -62,6 +75,7 @@ public class NewRelicTelemetryMiddleware implements TelemetryMiddleware {
         Optional<Token> token = context.map(NewRelicContext::getTransaction).map(Transaction::getToken);
         Optional<Segment> segment = context.map(c -> c.getTransaction()
                 .startSegment("commercetools", request.getMethod() + " " + request.getUri().getPath()));
+        segment.ifPresent(s -> s.addCustomAttributes(this.attributes));
         return next.apply(request).handle((response, throwable) -> {
             token.ifPresent(Token::linkAndExpire);
 

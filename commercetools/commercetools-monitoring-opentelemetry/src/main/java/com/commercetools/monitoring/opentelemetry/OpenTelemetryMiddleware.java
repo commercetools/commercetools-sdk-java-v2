@@ -3,6 +3,8 @@ package com.commercetools.monitoring.opentelemetry;
 
 import java.time.Duration;
 import java.time.Instant;
+import java.util.Collections;
+import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
@@ -41,6 +43,8 @@ public class OpenTelemetryMiddleware implements TelemetryMiddleware {
     private final LongCounter errorCounter;
     private final LongCounter requestCounter;
 
+    private final Attributes attributes;
+
     public OpenTelemetryMiddleware(final OpenTelemetry otel) {
         this(otel, true, OpenTelemetryInfo.PREFIX);
     }
@@ -50,6 +54,15 @@ public class OpenTelemetryMiddleware implements TelemetryMiddleware {
     }
 
     public OpenTelemetryMiddleware(final OpenTelemetry otel, final boolean enableHistogram, final String prefix) {
+        this(otel, enableHistogram, prefix, Collections.emptyMap());
+    }
+
+    public OpenTelemetryMiddleware(final OpenTelemetry otel, final boolean enableHistogram, final String prefix,
+            final Map<String, String> attributes) {
+        AttributesBuilder attrBuilder = Attributes.builder();
+        attributes.forEach(attrBuilder::put);
+        this.attributes = attrBuilder.build();
+
         Meter meter = otel.meterBuilder(OpenTelemetryResponseSerializer.class.getPackage().getName()).build();
         if (enableHistogram) {
             histogram = meter.histogramBuilder(prefix + "." + OpenTelemetryInfo.CLIENT_DURATION)
@@ -79,7 +92,7 @@ public class OpenTelemetryMiddleware implements TelemetryMiddleware {
             else {
                 statusCode = 0;
             }
-            AttributesBuilder builder = Attributes.builder()
+            AttributesBuilder builder = this.attributes.toBuilder()
                     .put(OpenTelemetryInfo.HTTP_RESPONSE_STATUS_CODE, statusCode)
                     .put(OpenTelemetryInfo.HTTP_REQUEST_METHOD, request.getMethod().name())
                     .put(OpenTelemetryInfo.SERVER_ADDRESS, request.getUri().getHost());

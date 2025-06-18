@@ -5,7 +5,7 @@ import static com.commercetools.monitoring.newrelic.NewrelicInfo.*;
 
 import java.time.Duration;
 import java.time.Instant;
-import java.util.Optional;
+import java.util.*;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
 
@@ -52,6 +52,17 @@ import io.vrap.rmf.base.client.http.TelemetryMiddleware;
  * See also the Spring MVC example application in the examples folder for further details.
  */
 public class NewRelicTelemetryMiddleware implements TelemetryMiddleware {
+
+    private final Map<String, Object> attributes;
+
+    public NewRelicTelemetryMiddleware() {
+        this.attributes = Collections.emptyMap();
+    }
+
+    public NewRelicTelemetryMiddleware(final Map<String, String> attributes) {
+        this.attributes = Collections.unmodifiableMap(attributes);
+    }
+
     @Trace(async = true)
     @Override
     public CompletableFuture<ApiHttpResponse<byte[]>> invoke(ApiHttpRequest request,
@@ -87,6 +98,7 @@ public class NewRelicTelemetryMiddleware implements TelemetryMiddleware {
                     .noInboundHeaders()
                     .status(statusCode, message)
                     .build()));
+            segment.ifPresent(s -> s.addCustomAttributes(this.attributes));
             segment.ifPresent(Segment::end);
 
             NewRelic.incrementCounter(PREFIX + CLIENT_REQUEST_TOTAL);

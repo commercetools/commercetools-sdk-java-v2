@@ -6,10 +6,10 @@ import static java.lang.String.format;
 
 import java.time.Duration;
 import java.time.Instant;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 import com.timgroup.statsd.StatsDClient;
 
@@ -41,8 +41,18 @@ public class DatadogMiddleware implements TelemetryMiddleware {
 
     private final StatsDClient statsDClient;
 
+    private final Collection<String> tags;
+
     public DatadogMiddleware(final StatsDClient datadogStatsDClient) {
+        this(datadogStatsDClient, Collections.emptyMap());
+    }
+
+    public DatadogMiddleware(final StatsDClient datadogStatsDClient, final Map<String, String> tags) {
         this.statsDClient = datadogStatsDClient;
+        this.tags = tags.entrySet()
+                .stream()
+                .map(entry -> format("%s:%s", entry.getKey(), entry.getValue()))
+                .collect(Collectors.toList());
     }
 
     @Override
@@ -65,6 +75,7 @@ public class DatadogMiddleware implements TelemetryMiddleware {
             tags.add(format("%s:%s", HTTP_RESPONSE_STATUS_CODE, statusCode));
             tags.add(format("%s:%s", HTTP_REQUEST_METHOD, request.getMethod().name()));
             tags.add(format("%s:%s", SERVER_ADDRESS, request.getUri().getHost()));
+            tags.addAll(this.tags);
             if (request.getUri().getPort() > 0) {
                 tags.add(format("%s:%s", SERVER_PORT, request.getUri().getPort()));
             }

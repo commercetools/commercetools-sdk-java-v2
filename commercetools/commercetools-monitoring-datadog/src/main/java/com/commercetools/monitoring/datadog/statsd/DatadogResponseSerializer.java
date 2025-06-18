@@ -6,6 +6,8 @@ import static java.lang.String.format;
 
 import java.time.Duration;
 import java.time.Instant;
+import java.util.*;
+import java.util.stream.Collectors;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -24,9 +26,20 @@ public class DatadogResponseSerializer implements ResponseSerializer {
 
     private final StatsDClient statsDClient;
 
+    private final Collection<String> tags;
+
     public DatadogResponseSerializer(final ResponseSerializer serializer, final StatsDClient datadogStatsDClient) {
+        this(serializer, datadogStatsDClient, Collections.emptyMap());
+    }
+
+    public DatadogResponseSerializer(final ResponseSerializer serializer, final StatsDClient datadogStatsDClient,
+            final Map<String, String> tags) {
         this.serializer = serializer;
         this.statsDClient = datadogStatsDClient;
+        this.tags = tags.entrySet()
+                .stream()
+                .map(entry -> format("%s:%s", entry.getKey(), entry.getValue()))
+                .collect(Collectors.toList());
     }
 
     @Override
@@ -34,8 +47,11 @@ public class DatadogResponseSerializer implements ResponseSerializer {
         Instant start = Instant.now();
         ApiHttpResponse<O> result = serializer.convertResponse(response, outputType);
         double durationInMillis = Duration.between(start, Instant.now()).toNanos() / 1_000_000.0;
+        final Collection<String> tags = new ArrayList<>(this.tags);
+        tags.add(format("%s:%s", RESPONSE_BODY_TYPE, outputType.getCanonicalName()));
+
         this.statsDClient.recordHistogramValue(PREFIX + "." + JSON_DESERIALIZATION, durationInMillis,
-            format("%s:%s", RESPONSE_BODY_TYPE, outputType.getCanonicalName()));
+            tags.toArray(new String[0]));
         return result;
     }
 
@@ -44,8 +60,11 @@ public class DatadogResponseSerializer implements ResponseSerializer {
         Instant start = Instant.now();
         ApiHttpResponse<O> result = serializer.convertResponse(response, outputType);
         double durationInMillis = Duration.between(start, Instant.now()).toNanos() / 1_000_000.0;
+        final Collection<String> tags = new ArrayList<>(this.tags);
+        tags.add(format("%s:%s", RESPONSE_BODY_TYPE, outputType.toString()));
+
         this.statsDClient.recordHistogramValue(PREFIX + "." + JSON_DESERIALIZATION, durationInMillis,
-            format("%s:%s", RESPONSE_BODY_TYPE, outputType.toString()));
+            tags.toArray(new String[0]));
         return result;
     }
 
@@ -54,8 +73,11 @@ public class DatadogResponseSerializer implements ResponseSerializer {
         Instant start = Instant.now();
         ApiHttpResponse<O> result = serializer.convertResponse(response, outputType);
         double durationInMillis = Duration.between(start, Instant.now()).toNanos() / 1_000_000.0;
+        final Collection<String> tags = new ArrayList<>(this.tags);
+        tags.add(format("%s:%s", RESPONSE_BODY_TYPE, outputType.getType().getTypeName()));
+
         this.statsDClient.recordHistogramValue(PREFIX + "." + JSON_DESERIALIZATION, durationInMillis,
-            format("%s:%s", RESPONSE_BODY_TYPE, outputType.getType().getTypeName()));
+            tags.toArray(new String[0]));
         return result;
     }
 
@@ -64,8 +86,11 @@ public class DatadogResponseSerializer implements ResponseSerializer {
         Instant start = Instant.now();
         byte[] result = serializer.toJsonByteArray(value);
         double durationInMillis = Duration.between(start, Instant.now()).toNanos() / 1_000_000.0;
+        final Collection<String> tags = new ArrayList<>(this.tags);
+        tags.add(format("%s:%s", RESPONSE_BODY_TYPE, value.getClass().getCanonicalName()));
+
         this.statsDClient.recordHistogramValue(PREFIX + "." + JSON_SERIALIZATION, durationInMillis,
-            format("%s:%s", REQUEST_BODY_TYPE, value.getClass().getCanonicalName()));
+            tags.toArray(new String[0]));
         return result;
     }
 

@@ -25,7 +25,8 @@ public class DatadogUtils {
     private static final Logger logger = LoggerFactory.getLogger(DatadogMiddleware.class);
 
     protected static void submitClientDurationMetric(final ApiHttpRequest request, final MetricsApi apiInstance,
-            final double durationInMillis, final ApiHttpResponse<byte[]> response, final Collection<String> tags) throws ApiException {
+            final double durationInMillis, final ApiHttpResponse<byte[]> response, final Collection<String> tags)
+            throws ApiException {
         submitClientDurationMetric(request, apiInstance, durationInMillis, response.getStatusCode(), tags);
     }
 
@@ -67,8 +68,8 @@ public class DatadogUtils {
     }
 
     private static void submitMetricWithHttpTags(final String name, final double value, final MetricIntakeType type,
-            final String unit, final ApiHttpRequest request, final MetricsApi apiInstance, final int statusCode, final Collection<String> tags)
-            throws ApiException {
+            final String unit, final ApiHttpRequest request, final MetricsApi apiInstance, final int statusCode,
+            final Collection<String> tags) throws ApiException {
         final List<String> currentTags = new ArrayList<>(tags);
         currentTags.add(format("%s:%s", HTTP_RESPONSE_STATUS_CODE, statusCode));
         currentTags.add(format("%s:%s", HTTP_REQUEST_METHOD, request.getMethod().name()));

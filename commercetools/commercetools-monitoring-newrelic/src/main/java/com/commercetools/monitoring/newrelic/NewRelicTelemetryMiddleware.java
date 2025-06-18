@@ -2,14 +2,12 @@
 package com.commercetools.monitoring.newrelic;
 
 import static com.commercetools.monitoring.newrelic.NewrelicInfo.*;
-import static java.lang.String.format;
 
 import java.time.Duration;
 import java.time.Instant;
 import java.util.*;
 import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
-import java.util.stream.Collectors;
 
 import com.newrelic.api.agent.*;
 

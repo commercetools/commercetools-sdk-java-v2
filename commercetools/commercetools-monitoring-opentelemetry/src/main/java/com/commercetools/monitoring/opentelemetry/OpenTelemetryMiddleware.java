@@ -10,7 +10,6 @@ import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
 
 import io.opentelemetry.api.OpenTelemetry;
-import io.opentelemetry.api.common.AttributeKey;
 import io.opentelemetry.api.common.Attributes;
 import io.opentelemetry.api.common.AttributesBuilder;
 import io.opentelemetry.api.metrics.LongCounter;
@@ -57,7 +56,9 @@ public class OpenTelemetryMiddleware implements TelemetryMiddleware {
     public OpenTelemetryMiddleware(final OpenTelemetry otel, final boolean enableHistogram, final String prefix) {
         this(otel, enableHistogram, prefix, Collections.emptyMap());
     }
-    public OpenTelemetryMiddleware(final OpenTelemetry otel, final boolean enableHistogram, final String prefix, final Map<String, String> attributes) {
+
+    public OpenTelemetryMiddleware(final OpenTelemetry otel, final boolean enableHistogram, final String prefix,
+            final Map<String, String> attributes) {
         AttributesBuilder attrBuilder = Attributes.builder();
         attributes.forEach(attrBuilder::put);
         this.attributes = attrBuilder.build();

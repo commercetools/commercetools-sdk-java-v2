@@ -61,8 +61,10 @@ public class DatadogMiddleware implements TelemetryMiddleware {
 
     public DatadogMiddleware(final MetricsApi apiInstance, final Map<String, String> tags) {
         this.apiInstance = apiInstance;
-        this.tags = tags.entrySet().stream().map(entry -> format("%s:%s", entry.getKey(), entry.getValue())).collect(
-                Collectors.toList());
+        this.tags = tags.entrySet()
+                .stream()
+                .map(entry -> format("%s:%s", entry.getKey(), entry.getValue()))
+                .collect(Collectors.toList());
     }
 
     @Override

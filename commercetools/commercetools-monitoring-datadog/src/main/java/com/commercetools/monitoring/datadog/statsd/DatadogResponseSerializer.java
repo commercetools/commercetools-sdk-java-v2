@@ -28,20 +28,21 @@ public class DatadogResponseSerializer implements ResponseSerializer {
 
     private final Collection<String> tags;
 
-
     public DatadogResponseSerializer(final ResponseSerializer serializer, final StatsDClient datadogStatsDClient) {
         this.serializer = serializer;
         this.statsDClient = datadogStatsDClient;
         this.tags = Collections.emptyList();
     }
 
-    public DatadogResponseSerializer(final ResponseSerializer serializer, final StatsDClient datadogStatsDClient, final Map<String, String> tags) {
+    public DatadogResponseSerializer(final ResponseSerializer serializer, final StatsDClient datadogStatsDClient,
+            final Map<String, String> tags) {
         this.serializer = serializer;
         this.statsDClient = datadogStatsDClient;
-        this.tags = tags.entrySet().stream().map(entry -> format("%s:%s", entry.getKey(), entry.getValue())).collect(
-                Collectors.toList());
+        this.tags = tags.entrySet()
+                .stream()
+                .map(entry -> format("%s:%s", entry.getKey(), entry.getValue()))
+                .collect(Collectors.toList());
     }
-
 
     @Override
     public <O> ApiHttpResponse<O> convertResponse(ApiHttpResponse<byte[]> response, Class<O> outputType) {
@@ -51,7 +52,8 @@ public class DatadogResponseSerializer implements ResponseSerializer {
         final Collection<String> tags = new ArrayList<>(this.tags);
         tags.add(format("%s:%s", RESPONSE_BODY_TYPE, outputType.getCanonicalName()));
 
-        this.statsDClient.recordHistogramValue(PREFIX + "." + JSON_DESERIALIZATION, durationInMillis, tags.toArray(new String[0]));
+        this.statsDClient.recordHistogramValue(PREFIX + "." + JSON_DESERIALIZATION, durationInMillis,
+            tags.toArray(new String[0]));
         return result;
     }
 
@@ -63,7 +65,8 @@ public class DatadogResponseSerializer implements ResponseSerializer {
         final Collection<String> tags = new ArrayList<>(this.tags);
         tags.add(format("%s:%s", RESPONSE_BODY_TYPE, outputType.toString()));
 
-        this.statsDClient.recordHistogramValue(PREFIX + "." + JSON_DESERIALIZATION, durationInMillis, tags.toArray(new String[0]));
+        this.statsDClient.recordHistogramValue(PREFIX + "." + JSON_DESERIALIZATION, durationInMillis,
+            tags.toArray(new String[0]));
         return result;
     }
 
@@ -75,7 +78,8 @@ public class DatadogResponseSerializer implements ResponseSerializer {
         final Collection<String> tags = new ArrayList<>(this.tags);
         tags.add(format("%s:%s", RESPONSE_BODY_TYPE, outputType.getType().getTypeName()));
 
-        this.statsDClient.recordHistogramValue(PREFIX + "." + JSON_DESERIALIZATION, durationInMillis, tags.toArray(new String[0]));
+        this.statsDClient.recordHistogramValue(PREFIX + "." + JSON_DESERIALIZATION, durationInMillis,
+            tags.toArray(new String[0]));
         return result;
     }
 
@@ -87,7 +91,8 @@ public class DatadogResponseSerializer implements ResponseSerializer {
         final Collection<String> tags = new ArrayList<>(this.tags);
         tags.add(format("%s:%s", RESPONSE_BODY_TYPE, value.getClass().getCanonicalName()));
 
-        this.statsDClient.recordHistogramValue(PREFIX + "." + JSON_SERIALIZATION, durationInMillis, tags.toArray(new String[0]));
+        this.statsDClient.recordHistogramValue(PREFIX + "." + JSON_SERIALIZATION, durationInMillis,
+            tags.toArray(new String[0]));
         return result;
     }
 

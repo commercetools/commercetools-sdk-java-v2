@@ -32,21 +32,25 @@ public class DatadogResponseSerializer implements ResponseSerializer {
 
     private final Collection<String> tags;
 
-
-    public DatadogResponseSerializer(final ResponseSerializer serializer, final MetricsApi apiInstance, final Map<String, String> tags) {
+    public DatadogResponseSerializer(final ResponseSerializer serializer, final MetricsApi apiInstance,
+            final Map<String, String> tags) {
         this.serializer = serializer;
         this.apiInstance = apiInstance;
-        this.tags = tags.entrySet().stream().map(entry -> format("%s:%s", entry.getKey(), entry.getValue())).collect(
-                Collectors.toList());
+        this.tags = tags.entrySet()
+                .stream()
+                .map(entry -> format("%s:%s", entry.getKey(), entry.getValue()))
+                .collect(Collectors.toList());
     }
 
     public DatadogResponseSerializer(final ResponseSerializer serializer, final MetricsApi apiInstance) {
-       this(serializer, apiInstance, Collections.emptyMap());
+        this(serializer, apiInstance, Collections.emptyMap());
     }
 
-    public DatadogResponseSerializer(final ResponseSerializer serializer, final ApiClient ddApiClient, final Map<String, String> tags) {
+    public DatadogResponseSerializer(final ResponseSerializer serializer, final ApiClient ddApiClient,
+            final Map<String, String> tags) {
         this(serializer, new MetricsApi(ddApiClient), tags);
     }
+
     public DatadogResponseSerializer(final ResponseSerializer serializer, final ApiClient ddApiClient) {
         this(serializer, new MetricsApi(ddApiClient), Collections.emptyMap());
     }

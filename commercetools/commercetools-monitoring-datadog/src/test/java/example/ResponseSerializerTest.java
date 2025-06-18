@@ -1,6 +1,9 @@
 
 package example;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import com.commercetools.api.models.common.Reference;
 import com.commercetools.api.models.product.ProductReference;
 import com.commercetools.monitoring.datadog.DatadogResponseSerializer;
@@ -15,9 +18,6 @@ import io.vrap.rmf.base.client.ResponseSerializer;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
-
-import java.util.HashMap;
-import java.util.Map;
 
 public class ResponseSerializerTest {
 
@@ -58,7 +58,8 @@ public class ResponseSerializerTest {
                     .isEqualTo("commercetools.json.serialization");
             Assertions.assertThat(metricPayload.getSeries().get(0).getTags().size()).isEqualTo(2);
             Assertions.assertThat(metricPayload.getSeries().get(0).getTags().get(0)).isEqualTo("foo:bar");
-            Assertions.assertThat(metricPayload.getSeries().get(0).getTags().get(1)).isEqualTo("response.body.type:com.commercetools.api.models.product.ProductReferenceImpl");
+            Assertions.assertThat(metricPayload.getSeries().get(0).getTags().get(1))
+                    .isEqualTo("response.body.type:com.commercetools.api.models.product.ProductReferenceImpl");
 
             return true;
         }));
@@ -105,7 +106,8 @@ public class ResponseSerializerTest {
                     .isEqualTo("commercetools.json.deserialization");
             Assertions.assertThat(metricPayload.getSeries().get(0).getTags().size()).isEqualTo(2);
             Assertions.assertThat(metricPayload.getSeries().get(0).getTags().get(0)).isEqualTo("foo:bar");
-            Assertions.assertThat(metricPayload.getSeries().get(0).getTags().get(1)).isEqualTo("request.body.type:com.commercetools.api.models.common.Reference");
+            Assertions.assertThat(metricPayload.getSeries().get(0).getTags().get(1))
+                    .isEqualTo("request.body.type:com.commercetools.api.models.common.Reference");
             return true;
         }));
     }

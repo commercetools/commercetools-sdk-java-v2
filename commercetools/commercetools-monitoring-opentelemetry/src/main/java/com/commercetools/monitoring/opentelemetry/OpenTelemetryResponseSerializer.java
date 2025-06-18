@@ -11,7 +11,6 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.JavaType;
 
 import io.opentelemetry.api.OpenTelemetry;
-import io.opentelemetry.api.common.AttributeKey;
 import io.opentelemetry.api.common.Attributes;
 import io.opentelemetry.api.common.AttributesBuilder;
 import io.opentelemetry.api.metrics.DoubleHistogram;
@@ -67,8 +66,9 @@ public class OpenTelemetryResponseSerializer implements ResponseSerializer {
     public <O> ApiHttpResponse<O> convertResponse(ApiHttpResponse<byte[]> response, Class<O> outputType) {
         Instant start = Instant.now();
         ApiHttpResponse<O> result = serializer.convertResponse(response, outputType);
-        Attributes attributes = this.attributes.toBuilder().put(OpenTelemetryInfo.RESPONSE_BODY_TYPE,
-            outputType.getCanonicalName()).build();
+        Attributes attributes = this.attributes.toBuilder()
+                .put(OpenTelemetryInfo.RESPONSE_BODY_TYPE, outputType.getCanonicalName())
+                .build();
         double durationMs = Duration.between(start, Instant.now()).toNanos() / 1_000_000.0;
         deserializerHistogram.record(durationMs, attributes);
         return result;
@@ -78,8 +78,9 @@ public class OpenTelemetryResponseSerializer implements ResponseSerializer {
     public <O> ApiHttpResponse<O> convertResponse(ApiHttpResponse<byte[]> response, JavaType outputType) {
         Instant start = Instant.now();
         ApiHttpResponse<O> result = serializer.convertResponse(response, outputType);
-        Attributes attributes = this.attributes.toBuilder().put(OpenTelemetryInfo.RESPONSE_BODY_TYPE,
-                outputType.toString()).build();
+        Attributes attributes = this.attributes.toBuilder()
+                .put(OpenTelemetryInfo.RESPONSE_BODY_TYPE, outputType.toString())
+                .build();
         double duration = Duration.between(start, Instant.now()).toNanos() / 1_000_000.0;
         deserializerHistogram.record(duration, attributes);
         return result;
@@ -89,8 +90,9 @@ public class OpenTelemetryResponseSerializer implements ResponseSerializer {
     public <O> ApiHttpResponse<O> convertResponse(ApiHttpResponse<byte[]> response, TypeReference<O> outputType) {
         Instant start = Instant.now();
         ApiHttpResponse<O> result = serializer.convertResponse(response, outputType);
-        Attributes attributes = this.attributes.toBuilder().put(OpenTelemetryInfo.RESPONSE_BODY_TYPE,
-                outputType.getType().getTypeName()).build();
+        Attributes attributes = this.attributes.toBuilder()
+                .put(OpenTelemetryInfo.RESPONSE_BODY_TYPE, outputType.getType().getTypeName())
+                .build();
         double duration = Duration.between(start, Instant.now()).toNanos() / 1_000_000.0;
         deserializerHistogram.record(duration, attributes);
         return result;
@@ -100,8 +102,9 @@ public class OpenTelemetryResponseSerializer implements ResponseSerializer {
     public byte[] toJsonByteArray(Object value) throws JsonProcessingException {
         Instant start = Instant.now();
         byte[] result = serializer.toJsonByteArray(value);
-        Attributes attributes = this.attributes.toBuilder().put(OpenTelemetryInfo.REQUEST_BODY_TYPE,
-                value.getClass().getCanonicalName()).build();
+        Attributes attributes = this.attributes.toBuilder()
+                .put(OpenTelemetryInfo.REQUEST_BODY_TYPE, value.getClass().getCanonicalName())
+                .build();
         double duration = Duration.between(start, Instant.now()).toNanos() / 1_000_000.0;
         serializerHistogram.record(duration, attributes);
         return result;

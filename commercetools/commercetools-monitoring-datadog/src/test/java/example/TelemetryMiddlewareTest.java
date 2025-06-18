@@ -51,8 +51,10 @@ public class TelemetryMiddlewareTest {
                     .isIn("commercetools.client.duration", "commercetools.client.request.total",
                         "commercetools.client.request.error");
             Assertions.assertThat(metricPayload.getSeries().get(0).getTags().size()).isEqualTo(3);
-            Assertions.assertThat(metricPayload.getSeries().get(0).getTags().get(0)).isEqualTo("http.response.status_code:" + statusCode);
-            Assertions.assertThat(metricPayload.getSeries().get(0).getTags().get(1)).isEqualTo("http.request.method:GET");
+            Assertions.assertThat(metricPayload.getSeries().get(0).getTags().get(0))
+                    .isEqualTo("http.response.status_code:" + statusCode);
+            Assertions.assertThat(metricPayload.getSeries().get(0).getTags().get(1))
+                    .isEqualTo("http.request.method:GET");
             Assertions.assertThat(metricPayload.getSeries().get(0).getTags().get(2)).isEqualTo("server.address:null");
 
             return true;
@@ -88,8 +90,10 @@ public class TelemetryMiddlewareTest {
                     .isIn("commercetools.client.duration", "commercetools.client.request.total",
                         "commercetools.client.request.error");
             Assertions.assertThat(metricPayload.getSeries().get(0).getTags().size()).isEqualTo(3);
-            Assertions.assertThat(metricPayload.getSeries().get(0).getTags().get(0)).isEqualTo("http.response.status_code:" + statusCode);
-            Assertions.assertThat(metricPayload.getSeries().get(0).getTags().get(1)).isEqualTo("http.request.method:GET");
+            Assertions.assertThat(metricPayload.getSeries().get(0).getTags().get(0))
+                    .isEqualTo("http.response.status_code:" + statusCode);
+            Assertions.assertThat(metricPayload.getSeries().get(0).getTags().get(1))
+                    .isEqualTo("http.request.method:GET");
             Assertions.assertThat(metricPayload.getSeries().get(0).getTags().get(2)).isEqualTo("server.address:null");
             return true;
         }));
@@ -106,23 +110,25 @@ public class TelemetryMiddlewareTest {
         DatadogMiddleware middleware = new DatadogMiddleware(metricsApi, tags);
 
         final ApiHttpRequest request = new ApiHttpRequest(ApiHttpMethod.GET, URI.create("/"), new ApiHttpHeaders(),
-                "".getBytes());
+            "".getBytes());
 
         blockingWait(
-                middleware.invoke(request,
-                        request1 -> CompletableFuture
-                                .completedFuture(new ApiHttpResponse<>(statusCode, new ApiHttpHeaders(), "".getBytes()))),
-                Duration.ofSeconds(1));
+            middleware.invoke(request,
+                request1 -> CompletableFuture
+                        .completedFuture(new ApiHttpResponse<>(statusCode, new ApiHttpHeaders(), "".getBytes()))),
+            Duration.ofSeconds(1));
 
         Mockito.verify(metricsApi, Mockito.times(count)).submitMetrics(Mockito.argThat(metricPayload -> {
             Assertions.assertThat(metricPayload).isNotNull();
             Assertions.assertThat(metricPayload.getSeries().get(0).getMetric())
                     .isIn("commercetools.client.duration", "commercetools.client.request.total",
-                            "commercetools.client.request.error");
+                        "commercetools.client.request.error");
             Assertions.assertThat(metricPayload.getSeries().get(0).getTags().size()).isEqualTo(4);
             Assertions.assertThat(metricPayload.getSeries().get(0).getTags().get(0)).isEqualTo("foo:bar");
-            Assertions.assertThat(metricPayload.getSeries().get(0).getTags().get(1)).isEqualTo("http.response.status_code:" + statusCode);
-            Assertions.assertThat(metricPayload.getSeries().get(0).getTags().get(2)).isEqualTo("http.request.method:GET");
+            Assertions.assertThat(metricPayload.getSeries().get(0).getTags().get(1))
+                    .isEqualTo("http.response.status_code:" + statusCode);
+            Assertions.assertThat(metricPayload.getSeries().get(0).getTags().get(2))
+                    .isEqualTo("http.request.method:GET");
             Assertions.assertThat(metricPayload.getSeries().get(0).getTags().get(3)).isEqualTo("server.address:null");
 
             return true;
@@ -148,7 +154,7 @@ public class TelemetryMiddlewareTest {
                 .build();
 
         final ApiHttpRequest request = new ApiHttpRequest(ApiHttpMethod.GET, URI.create("/"), new ApiHttpHeaders(),
-                "".getBytes());
+            "".getBytes());
         try {
             blockingWait(client.execute(request), Duration.ofSeconds(1));
         }
@@ -159,11 +165,13 @@ public class TelemetryMiddlewareTest {
             Assertions.assertThat(metricPayload).isNotNull();
             Assertions.assertThat(metricPayload.getSeries().get(0).getMetric())
                     .isIn("commercetools.client.duration", "commercetools.client.request.total",
-                            "commercetools.client.request.error");
+                        "commercetools.client.request.error");
             Assertions.assertThat(metricPayload.getSeries().get(0).getTags().size()).isEqualTo(4);
             Assertions.assertThat(metricPayload.getSeries().get(0).getTags().get(0)).isEqualTo("foo:bar");
-            Assertions.assertThat(metricPayload.getSeries().get(0).getTags().get(1)).isEqualTo("http.response.status_code:" + statusCode);
-            Assertions.assertThat(metricPayload.getSeries().get(0).getTags().get(2)).isEqualTo("http.request.method:GET");
+            Assertions.assertThat(metricPayload.getSeries().get(0).getTags().get(1))
+                    .isEqualTo("http.response.status_code:" + statusCode);
+            Assertions.assertThat(metricPayload.getSeries().get(0).getTags().get(2))
+                    .isEqualTo("http.request.method:GET");
             Assertions.assertThat(metricPayload.getSeries().get(0).getTags().get(3)).isEqualTo("server.address:null");
 
             return true;

@@ -50,8 +50,10 @@ public class DatadogMiddleware implements TelemetryMiddleware {
 
     public DatadogMiddleware(final StatsDClient datadogStatsDClient, final Map<String, String> tags) {
         this.statsDClient = datadogStatsDClient;
-        this.tags = tags.entrySet().stream().map(entry -> format("%s:%s", entry.getKey(), entry.getValue())).collect(
-                Collectors.toList());
+        this.tags = tags.entrySet()
+                .stream()
+                .map(entry -> format("%s:%s", entry.getKey(), entry.getValue()))
+                .collect(Collectors.toList());
     }
 
     @Override

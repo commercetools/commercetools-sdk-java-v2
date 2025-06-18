@@ -73,7 +73,6 @@ public class NewRelicTelemetryMiddleware implements TelemetryMiddleware {
         Optional<Token> token = context.map(NewRelicContext::getTransaction).map(Transaction::getToken);
         Optional<Segment> segment = context.map(c -> c.getTransaction()
                 .startSegment("commercetools", request.getMethod() + " " + request.getUri().getPath()));
-        segment.ifPresent(s -> s.addCustomAttributes(this.attributes));
         return next.apply(request).handle((response, throwable) -> {
             token.ifPresent(Token::linkAndExpire);
 
@@ -99,6 +98,7 @@ public class NewRelicTelemetryMiddleware implements TelemetryMiddleware {
                     .noInboundHeaders()
                     .status(statusCode, message)
                     .build()));
+            segment.ifPresent(s -> s.addCustomAttributes(this.attributes));
             segment.ifPresent(Segment::end);
 
             NewRelic.incrementCounter(PREFIX + CLIENT_REQUEST_TOTAL);

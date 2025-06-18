@@ -44,8 +44,7 @@ public class DatadogMiddleware implements TelemetryMiddleware {
     private final Collection<String> tags;
 
     public DatadogMiddleware(final StatsDClient datadogStatsDClient) {
-        this.statsDClient = datadogStatsDClient;
-        this.tags = Collections.emptyList();
+        this(datadogStatsDClient, Collections.emptyMap());
     }
 
     public DatadogMiddleware(final StatsDClient datadogStatsDClient, final Map<String, String> tags) {

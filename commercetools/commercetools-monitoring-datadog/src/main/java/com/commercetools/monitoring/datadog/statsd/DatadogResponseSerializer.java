@@ -29,9 +29,7 @@ public class DatadogResponseSerializer implements ResponseSerializer {
     private final Collection<String> tags;
 
     public DatadogResponseSerializer(final ResponseSerializer serializer, final StatsDClient datadogStatsDClient) {
-        this.serializer = serializer;
-        this.statsDClient = datadogStatsDClient;
-        this.tags = Collections.emptyList();
+        this(serializer, datadogStatsDClient, Collections.emptyMap());
     }
 
     public DatadogResponseSerializer(final ResponseSerializer serializer, final StatsDClient datadogStatsDClient,

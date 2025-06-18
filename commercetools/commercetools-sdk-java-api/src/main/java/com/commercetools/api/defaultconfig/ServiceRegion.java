@@ -14,9 +14,7 @@ public enum ServiceRegion implements ServiceRegionConfig {
     AWS_US_EAST_2(new RegionHosts("https://api.us-east-2.aws.commercetools.com/",
         "https://auth.us-east-2.aws.commercetools.com")),
     AWS_EU_CENTRAL_1(new RegionHosts("https://api.eu-central-1.aws.commercetools.com/",
-        "https://auth.eu-central-1.aws.commercetools.com")),
-    AZURE_EASTUS(new RegionHosts("https://api.eastus.azure.commercetools.com/",
-        "https://auth.eastus.azure.commercetools.com")),;
+        "https://auth.eu-central-1.aws.commercetools.com")),;
 
     public static class RegionHosts {
         private final String apiUrl;

@@ -39,7 +39,7 @@ public class SearchSortingBuilder implements Builder<SearchSorting> {
     private com.commercetools.api.models.search.SearchFieldType fieldType;
 
     @Nullable
-    private com.commercetools.api.models.search.SearchQueryExpression filter;
+    private com.commercetools.api.models.search.SearchQuery filter;
 
     /**
      *  <p>Use any searchable field of the resource as sort criterion, or <code>"score"</code> to sort by relevance score calculated by the API.</p>
@@ -104,8 +104,8 @@ public class SearchSortingBuilder implements Builder<SearchSorting> {
      */
 
     public SearchSortingBuilder filter(
-            Function<com.commercetools.api.models.search.SearchQueryExpressionBuilder, com.commercetools.api.models.search.SearchQueryExpressionBuilder> builder) {
-        this.filter = builder.apply(com.commercetools.api.models.search.SearchQueryExpressionBuilder.of()).build();
+            Function<com.commercetools.api.models.search.SearchQueryBuilder, com.commercetools.api.models.search.SearchQueryBuilder> builder) {
+        this.filter = builder.apply(com.commercetools.api.models.search.SearchQueryBuilder.of()).build();
         return this;
     }
 
@@ -116,8 +116,8 @@ public class SearchSortingBuilder implements Builder<SearchSorting> {
      */
 
     public SearchSortingBuilder withFilter(
-            Function<com.commercetools.api.models.search.SearchQueryExpressionBuilder, com.commercetools.api.models.search.SearchQueryExpression> builder) {
-        this.filter = builder.apply(com.commercetools.api.models.search.SearchQueryExpressionBuilder.of());
+            Function<com.commercetools.api.models.search.SearchQueryBuilder, com.commercetools.api.models.search.SearchQuery> builder) {
+        this.filter = builder.apply(com.commercetools.api.models.search.SearchQueryBuilder.of());
         return this;
     }
 
@@ -127,8 +127,7 @@ public class SearchSortingBuilder implements Builder<SearchSorting> {
      * @return Builder
      */
 
-    public SearchSortingBuilder filter(
-            @Nullable final com.commercetools.api.models.search.SearchQueryExpression filter) {
+    public SearchSortingBuilder filter(@Nullable final com.commercetools.api.models.search.SearchQuery filter) {
         this.filter = filter;
         return this;
     }
@@ -187,7 +186,7 @@ public class SearchSortingBuilder implements Builder<SearchSorting> {
      */
 
     @Nullable
-    public com.commercetools.api.models.search.SearchQueryExpression getFilter() {
+    public com.commercetools.api.models.search.SearchQuery getFilter() {
         return this.filter;
     }
 

@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>The number of resources in each Processing State.</p>
+ *  <p>The number of resources in each ProcessingState.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

@@ -28,7 +28,7 @@ public class ImportSummaryBuilder implements Builder<ImportSummary> {
     private Long total;
 
     /**
-     *  <p>The import status of an ImportContainer given by the number of resources in each Processing State.</p>
+     *  <p>The import status of an ImportContainer given by the number of resources in each ProcessingState.</p>
      * @param builder function to build the states value
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class ImportSummaryBuilder implements Builder<ImportSummary> {
     }
 
     /**
-     *  <p>The import status of an ImportContainer given by the number of resources in each Processing State.</p>
+     *  <p>The import status of an ImportContainer given by the number of resources in each ProcessingState.</p>
      * @param builder function to build the states value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class ImportSummaryBuilder implements Builder<ImportSummary> {
     }
 
     /**
-     *  <p>The import status of an ImportContainer given by the number of resources in each Processing State.</p>
+     *  <p>The import status of an ImportContainer given by the number of resources in each ProcessingState.</p>
      * @param states value to be set
      * @return Builder
      */
@@ -76,7 +76,7 @@ public class ImportSummaryBuilder implements Builder<ImportSummary> {
     }
 
     /**
-     *  <p>The import status of an ImportContainer given by the number of resources in each Processing State.</p>
+     *  <p>The import status of an ImportContainer given by the number of resources in each ProcessingState.</p>
      * @return states
      */
 

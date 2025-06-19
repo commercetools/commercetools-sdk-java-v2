@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Describes the status of an ImportContainer by the number of resources in each Processing State. Can be used to monitor the import progress per Import Container.</p>
+ *  <p>Describes the status of an ImportContainer by the number of resources in each ProcessingState. Can be used to monitor the import progress per Import Container.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImportSummaryImpl implements ImportSummary, ModelBase {
@@ -44,7 +44,7 @@ public class ImportSummaryImpl implements ImportSummary, ModelBase {
     }
 
     /**
-     *  <p>The import status of an ImportContainer given by the number of resources in each Processing State.</p>
+     *  <p>The import status of an ImportContainer given by the number of resources in each ProcessingState.</p>
      */
 
     public com.commercetools.importapi.models.importsummaries.OperationStates getStates() {

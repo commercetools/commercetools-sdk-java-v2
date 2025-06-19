@@ -79,7 +79,7 @@ public interface SearchSorting {
      */
     @Valid
     @JsonProperty("filter")
-    public SearchQueryExpression getFilter();
+    public SearchQuery getFilter();
 
     /**
      *  <p>Use any searchable field of the resource as sort criterion, or <code>"score"</code> to sort by relevance score calculated by the API.</p>
@@ -121,7 +121,7 @@ public interface SearchSorting {
      * @param filter value to be set
      */
 
-    public void setFilter(final SearchQueryExpression filter);
+    public void setFilter(final SearchQuery filter);
 
     /**
      * factory method
@@ -165,7 +165,7 @@ public interface SearchSorting {
         instance.setOrder(template.getOrder());
         instance.setMode(template.getMode());
         instance.setFieldType(template.getFieldType());
-        instance.setFilter(com.commercetools.api.models.search.SearchQueryExpression.deepCopy(template.getFilter()));
+        instance.setFilter(com.commercetools.api.models.search.SearchQuery.deepCopy(template.getFilter()));
         return instance;
     }
 

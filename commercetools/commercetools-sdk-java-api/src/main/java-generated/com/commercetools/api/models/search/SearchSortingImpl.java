@@ -32,7 +32,7 @@ public class SearchSortingImpl implements SearchSorting, ModelBase {
 
     private com.commercetools.api.models.search.SearchFieldType fieldType;
 
-    private com.commercetools.api.models.search.SearchQueryExpression filter;
+    private com.commercetools.api.models.search.SearchQuery filter;
 
     /**
      * create instance with all properties
@@ -42,7 +42,7 @@ public class SearchSortingImpl implements SearchSorting, ModelBase {
             @JsonProperty("order") final com.commercetools.api.models.search.SearchSortOrder order,
             @JsonProperty("mode") final com.commercetools.api.models.search.SearchSortMode mode,
             @JsonProperty("fieldType") final com.commercetools.api.models.search.SearchFieldType fieldType,
-            @JsonProperty("filter") final com.commercetools.api.models.search.SearchQueryExpression filter) {
+            @JsonProperty("filter") final com.commercetools.api.models.search.SearchQuery filter) {
         this.field = field;
         this.language = language;
         this.order = order;
@@ -101,7 +101,7 @@ public class SearchSortingImpl implements SearchSorting, ModelBase {
      *  <p>Allows you to apply a sort filter.</p>
      */
 
-    public com.commercetools.api.models.search.SearchQueryExpression getFilter() {
+    public com.commercetools.api.models.search.SearchQuery getFilter() {
         return this.filter;
     }
 
@@ -125,7 +125,7 @@ public class SearchSortingImpl implements SearchSorting, ModelBase {
         this.fieldType = fieldType;
     }
 
-    public void setFilter(final com.commercetools.api.models.search.SearchQueryExpression filter) {
+    public void setFilter(final com.commercetools.api.models.search.SearchQuery filter) {
         this.filter = filter;
     }
 

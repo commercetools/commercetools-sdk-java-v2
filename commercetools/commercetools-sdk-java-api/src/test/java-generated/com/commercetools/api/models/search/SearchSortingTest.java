@@ -27,8 +27,8 @@ public class SearchSortingTest {
                 new Object[] { "fieldType",
                         SearchSorting.builder()
                                 .fieldType(com.commercetools.api.models.search.SearchFieldType.findEnum("boolean")) },
-                new Object[] { "filter", SearchSorting.builder()
-                        .filter(new com.commercetools.api.models.search.SearchQueryExpressionImpl()) } };
+                new Object[] { "filter",
+                        SearchSorting.builder().filter(new com.commercetools.api.models.search.SearchQueryImpl()) } };
     }
 
     @Test
@@ -72,8 +72,7 @@ public class SearchSortingTest {
     @Test
     public void filter() {
         SearchSorting value = SearchSorting.of();
-        value.setFilter(new com.commercetools.api.models.search.SearchQueryExpressionImpl());
-        Assertions.assertThat(value.getFilter())
-                .isEqualTo(new com.commercetools.api.models.search.SearchQueryExpressionImpl());
+        value.setFilter(new com.commercetools.api.models.search.SearchQueryImpl());
+        Assertions.assertThat(value.getFilter()).isEqualTo(new com.commercetools.api.models.search.SearchQueryImpl());
     }
 }

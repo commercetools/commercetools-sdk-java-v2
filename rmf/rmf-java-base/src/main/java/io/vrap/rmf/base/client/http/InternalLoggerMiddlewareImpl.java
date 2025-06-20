@@ -112,8 +112,7 @@ class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
                     final ApiHttpResponse<byte[]> errorResponse = ((ApiHttpException) cause).getResponse();
                     final Level level = exceptionLogEvents.entrySet()
                             .stream()
-                            .filter(classLevelEntry -> classLevelEntry.getKey()
-                                    .isAssignableFrom(throwable.getCause().getClass()))
+                            .filter(classLevelEntry -> classLevelEntry.getKey().isAssignableFrom(cause.getClass()))
                             .findFirst()
                             .map(Map.Entry::getValue)
                             .orElse(defaultExceptionLogEvent);

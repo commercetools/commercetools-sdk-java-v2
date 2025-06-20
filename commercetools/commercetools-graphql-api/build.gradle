@@ -1,7 +1,7 @@
 import com.commercetools.sdk.plugins.GraphQLPlugin
 
 plugins {
-    id "com.netflix.dgs.codegen" version "6.3.0"
+    id "com.netflix.dgs.codegen" version "8.1.0"
 }
 
 apply plugin:'com.netflix.dgs.codegen'

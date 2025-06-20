@@ -109,8 +109,7 @@ class InternalLoggerMiddlewareImpl implements InternalLoggerMiddleware {
                 requestContext.ifPresent(c -> MDC.setContextMap(c.getValue()));
                 Throwable cause = throwable instanceof CompletionException ? throwable.getCause() : throwable;
                 if (cause instanceof ApiHttpException) {
-                    final ApiHttpResponse<byte[]> errorResponse = ((ApiHttpException) throwable.getCause())
-                            .getResponse();
+                    final ApiHttpResponse<byte[]> errorResponse = ((ApiHttpException) cause).getResponse();
                     final Level level = exceptionLogEvents.entrySet()
                             .stream()
                             .filter(classLevelEntry -> classLevelEntry.getKey()

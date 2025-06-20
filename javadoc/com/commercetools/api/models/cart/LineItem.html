@@ -232,7 +232,7 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/ItemState.html" title="interface in com.commercetools.api.models.order">ItemState</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getState()" class="member-name-link">getState</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">State of the Line Item in the Cart or the Order.</div>
+<div class="block">Tracks specific quantities of the Line Item within a given State.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSupplyChannel()" class="member-name-link">getSupplyChannel</a>()</code></div>
@@ -383,12 +383,12 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setState(com.commercetools.api.models.order.ItemState...)" class="member-name-link">setState</a><wbr>(<a href="../order/ItemState.html" title="interface in com.commercetools.api.models.order">ItemState</a>...&nbsp;state)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">State of the Line Item in the Cart or the Order.</div>
+<div class="block">Tracks specific quantities of the Line Item within a given State.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setState(java.util.List)" class="member-name-link">setState</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/ItemState.html" title="interface in com.commercetools.api.models.order">ItemState</a>&gt;&nbsp;state)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">State of the Line Item in the Cart or the Order.</div>
+<div class="block">Tracks specific quantities of the Line Item within a given State.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setSupplyChannel(com.commercetools.api.models.channel.ChannelReference)" class="member-name-link">setSupplyChannel</a><wbr>(<a href="../channel/ChannelReference.html" title="interface in com.commercetools.api.models.channel">ChannelReference</a>&nbsp;supplyChannel)</code></div>
@@ -640,7 +640,7 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
 </span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/ItemState.html" title="interface in com.commercetools.api.models.order">ItemState</a>&gt;</span>&nbsp;<span class="element-name">getState</span>()</div>
-<div class="block"><p>State of the Line Item in the Cart or the Order.</p></div>
+<div class="block"><p>Tracks specific quantities of the Line Item within a given State. When a Line Item is added to a Cart, its full quantity is set to the built-in "Initial" state. State transitions for Line Items are managed on the Order.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>state</dd>
@@ -970,7 +970,7 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <section class="detail" id="setState(com.commercetools.api.models.order.ItemState...)">
 <h3>setState</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setState</span><wbr><span class="parameters">(<a href="../order/ItemState.html" title="interface in com.commercetools.api.models.order">ItemState</a>...&nbsp;state)</span></div>
-<div class="block"><p>State of the Line Item in the Cart or the Order.</p></div>
+<div class="block"><p>Tracks specific quantities of the Line Item within a given State. When a Line Item is added to a Cart, its full quantity is set to the built-in "Initial" state. State transitions for Line Items are managed on the Order.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>state</code> - values to be set</dd>
@@ -981,7 +981,7 @@ extends <a href="../Customizable.html" title="interface in com.commercetools.api
 <section class="detail" id="setState(java.util.List)">
 <h3>setState</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setState</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../order/ItemState.html" title="interface in com.commercetools.api.models.order">ItemState</a>&gt;&nbsp;state)</span></div>
-<div class="block"><p>State of the Line Item in the Cart or the Order.</p></div>
+<div class="block"><p>Tracks specific quantities of the Line Item within a given State. When a Line Item is added to a Cart, its full quantity is set to the built-in "Initial" state. State transitions for Line Items are managed on the Order.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>state</code> - values to be set</dd>

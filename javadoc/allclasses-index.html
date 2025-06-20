@@ -11800,7 +11800,7 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab1">&nbsp;</div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="com/commercetools/api/models/product/CategoryOrderHints.html" title="interface in com.commercetools.api.models.product">CategoryOrderHints</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab1">
-<div class="block">JSON object where the key is a Category <code>id</code> and the value is an order hint.</div>
+<div class="block">JSON object where the keys are Category <code>id</code>, and the values are order hint values: strings representing a number between <code>0</code> and <code>1</code>, but not ending in <code>0</code>.</div>
 </div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="com/commercetools/history/models/common/CategoryOrderHints.html" title="interface in com.commercetools.history.models.common">CategoryOrderHints</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
@@ -20514,7 +20514,7 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 </div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="com/commercetools/importapi/models/importsummaries/ImportSummary.html" title="interface in com.commercetools.importapi.models.importsummaries">ImportSummary</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
-<div class="block">Describes the status of an ImportContainer by the number of resources in each Processing State.</div>
+<div class="block">Describes the status of an ImportContainer by the number of resources in each ProcessingState.</div>
 </div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/commercetools/importapi/models/importsummaries/ImportSummaryBuilder.html" title="class in com.commercetools.importapi.models.importsummaries">ImportSummaryBuilder</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">
@@ -23847,11 +23847,7 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 </div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="com/commercetools/api/models/me/MyShoppingListSetDeleteDaysAfterLastModificationAction.html" title="interface in com.commercetools.api.models.me">MyShoppingListSetDeleteDaysAfterLastModificationAction</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
-<div class="block">MyShoppingListSetDeleteDaysAfterLastModificationAction
-
- 
- Example to create an instance using the builder pattern
- </div>
+<div class="block">Number of days after the last modification before a Shopping List is deleted.</div>
 </div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/commercetools/api/models/me/MyShoppingListSetDeleteDaysAfterLastModificationActionBuilder.html" title="class in com.commercetools.api.models.me">MyShoppingListSetDeleteDaysAfterLastModificationActionBuilder</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">
@@ -24131,7 +24127,7 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">&nbsp;</div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="com/commercetools/importapi/models/importsummaries/OperationStates.html" title="interface in com.commercetools.importapi.models.importsummaries">OperationStates</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
-<div class="block">The number of resources in each Processing State.</div>
+<div class="block">The number of resources in each ProcessingState.</div>
 </div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/commercetools/importapi/models/importsummaries/OperationStatesBuilder.html" title="class in com.commercetools.importapi.models.importsummaries">OperationStatesBuilder</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">
@@ -31711,7 +31707,7 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 </div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="com/commercetools/api/models/product/ProductVariantChannelAvailabilityMap.html" title="interface in com.commercetools.api.models.product">ProductVariantChannelAvailabilityMap</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
-<div class="block">JSON object where the key is a supply Channel <code>id</code> and the value is the ProductVariantChannelAvailability of the InventoryEntry.</div>
+<div class="block">JSON object where the keys are supply Channel <code>id</code>, and the values are ProductVariantChannelAvailability.</div>
 </div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="com/commercetools/history/models/common/ProductVariantChannelAvailabilityMap.html" title="interface in com.commercetools.history.models.common">ProductVariantChannelAvailabilityMap</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab1">
@@ -34971,7 +34967,7 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 </div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="com/commercetools/api/models/product/SearchKeywords.html" title="interface in com.commercetools.api.models.product">SearchKeywords</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab1">
-<div class="block">Search keywords are JSON objects primarily used by Product Suggestions, but are also considered for a full text search.</div>
+<div class="block">Although search keywords are primarily used by Product Suggestions, they are also considered for a full text search.</div>
 </div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="com/commercetools/history/models/common/SearchKeywords.html" title="interface in com.commercetools.history.models.common">SearchKeywords</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
@@ -38101,11 +38097,7 @@ CartsFixtures.withUpdateableCart(cart -&gt; {
 </div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab1"><a href="com/commercetools/api/models/shopping_list/ShoppingListSetDeleteDaysAfterLastModificationAction.html" title="interface in com.commercetools.api.models.shopping_list">ShoppingListSetDeleteDaysAfterLastModificationAction</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab1">
-<div class="block">ShoppingListSetDeleteDaysAfterLastModificationAction
-
- 
- Example to create an instance using the builder pattern
- </div>
+<div class="block">Number of days after the last modification before a Shopping List is deleted.</div>
 </div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/commercetools/api/models/shopping_list/ShoppingListSetDeleteDaysAfterLastModificationActionBuilder.html" title="class in com.commercetools.api.models.shopping_list">ShoppingListSetDeleteDaysAfterLastModificationActionBuilder</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">

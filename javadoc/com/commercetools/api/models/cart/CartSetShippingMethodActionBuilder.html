@@ -214,7 +214,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>shippingMethod</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartSetShippingMethodActionBuilder.html" title="class in com.commercetools.api.models.cart">CartSetShippingMethodActionBuilder</a></span>&nbsp;<span class="element-name">shippingMethod</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../shipping_method/ShippingMethodResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingMethodResourceIdentifierBuilder</a>,<wbr><a href="../shipping_method/ShippingMethodResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingMethodResourceIdentifierBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Value to set. If empty, any existing value is removed.</p>
-  <p>If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p></div>
+  <p>If the referenced Shipping Method is inactive, or has a predicate that does not match the Cart, an InvalidOperation error is returned.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the shippingMethod value</dd>
@@ -228,7 +228,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>withShippingMethod</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartSetShippingMethodActionBuilder.html" title="class in com.commercetools.api.models.cart">CartSetShippingMethodActionBuilder</a></span>&nbsp;<span class="element-name">withShippingMethod</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../shipping_method/ShippingMethodResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.shipping_method">ShippingMethodResourceIdentifierBuilder</a>,<wbr><a href="../shipping_method/ShippingMethodResourceIdentifier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodResourceIdentifier</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Value to set. If empty, any existing value is removed.</p>
-  <p>If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p></div>
+  <p>If the referenced Shipping Method is inactive, or has a predicate that does not match the Cart, an InvalidOperation error is returned.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the shippingMethod value</dd>
@@ -243,7 +243,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartSetShippingMethodActionBuilder.html" title="class in com.commercetools.api.models.cart">CartSetShippingMethodActionBuilder</a></span>&nbsp;<span class="element-name">shippingMethod</span><wbr><span class="parameters">(@Nullable
  <a href="../shipping_method/ShippingMethodResourceIdentifier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodResourceIdentifier</a>&nbsp;shippingMethod)</span></div>
 <div class="block"><p>Value to set. If empty, any existing value is removed.</p>
-  <p>If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p></div>
+  <p>If the referenced Shipping Method is inactive, or has a predicate that does not match the Cart, an InvalidOperation error is returned.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>shippingMethod</code> - value to be set</dd>
@@ -298,7 +298,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="member-signature"><span class="annotations">@Nullable
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../shipping_method/ShippingMethodResourceIdentifier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodResourceIdentifier</a></span>&nbsp;<span class="element-name">getShippingMethod</span>()</div>
 <div class="block"><p>Value to set. If empty, any existing value is removed.</p>
-  <p>If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p></div>
+  <p>If the referenced Shipping Method is inactive, or has a predicate that does not match the Cart, an InvalidOperation error is returned.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>shippingMethod</dd>

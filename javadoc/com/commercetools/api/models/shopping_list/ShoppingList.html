@@ -160,7 +160,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDeleteDaysAfterLastModification()" class="member-name-link">getDeleteDaysAfterLastModification</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Number of days after which the ShoppingList will be automatically deleted if it has not been modified.</div>
+<div class="block">Number of days after the last modification before a ShoppingList is deleted.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDescription()" class="member-name-link">getDescription</a>()</code></div>
@@ -263,7 +263,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setDeleteDaysAfterLastModification(java.lang.Long)" class="member-name-link">setDeleteDaysAfterLastModification</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;deleteDaysAfterLastModification)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Number of days after which the ShoppingList will be automatically deleted if it has not been modified.</div>
+<div class="block">Number of days after the last modification before a ShoppingList is deleted.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setDescription(com.commercetools.api.models.common.LocalizedString)" class="member-name-link">setDescription</a><wbr>(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;description)</code></div>
@@ -496,7 +496,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <section class="detail" id="getDeleteDaysAfterLastModification()">
 <h3>getDeleteDaysAfterLastModification</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">getDeleteDaysAfterLastModification</span>()</div>
-<div class="block"><p>Number of days after which the ShoppingList will be automatically deleted if it has not been modified.</p></div>
+<div class="block"><p>Number of days after the last modification before a ShoppingList is deleted. If not set, the default value configured in the Project is used.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>deleteDaysAfterLastModification</dd>
@@ -733,7 +733,7 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <section class="detail" id="setDeleteDaysAfterLastModification(java.lang.Long)">
 <h3>setDeleteDaysAfterLastModification</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setDeleteDaysAfterLastModification</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;deleteDaysAfterLastModification)</span></div>
-<div class="block"><p>Number of days after which the ShoppingList will be automatically deleted if it has not been modified.</p></div>
+<div class="block"><p>Number of days after the last modification before a ShoppingList is deleted. If not set, the default value configured in the Project is used.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>deleteDaysAfterLastModification</code> - value to be set</dd>

@@ -2737,7 +2737,7 @@ the order they are declared.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/CategoryOrderHints.html#values()" class="member-name-link">values()</a> - Method in interface com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/CategoryOrderHints.html" title="interface in com.commercetools.api.models.product">CategoryOrderHints</a></dt>
 <dd>
-<div class="block">A string representing a number between 0 and 1 that must start with <code>0.</code> and cannot end with <code>0</code>.</div>
+<div class="block">A string representing a number between <code>0</code> and <code>1</code>, but not ending in <code>0</code>.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/FacetResults.html#values()" class="member-name-link">values()</a> - Method in interface com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/FacetResults.html" title="interface in com.commercetools.api.models.product">FacetResults</a></dt>
 <dd>&nbsp;</dd>
@@ -2765,9 +2765,13 @@ the order they are declared.</div>
 the order they are declared.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/ProductVariantChannelAvailabilityMap.html#values()" class="member-name-link">values()</a> - Method in interface com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/ProductVariantChannelAvailabilityMap.html" title="interface in com.commercetools.api.models.product">ProductVariantChannelAvailabilityMap</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">JSON object where the keys are supply Channel <code>id</code>, and the values are ProductVariantChannelAvailability.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/product/SearchKeywords.html#values()" class="member-name-link">values()</a> - Method in interface com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/SearchKeywords.html" title="interface in com.commercetools.api.models.product">SearchKeywords</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Key-value pair where the keys are of type Locale and the values are an array of SearchKeyword.</div>
+</dd>
 <dt><a href="../com/commercetools/api/models/product/SuggestionResult.html#values()" class="member-name-link">values()</a> - Method in interface com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/SuggestionResult.html" title="interface in com.commercetools.api.models.product">SuggestionResult</a></dt>
 <dd>
 <div class="block">The result may contain multiple Suggestions identified by their Locale.</div>
@@ -3735,7 +3739,7 @@ the order they are declared.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/ProductVariantChannelAvailabilityMapBuilder.html#values(java.util.Map)" class="member-name-link">values(Map&lt;String, ProductVariantChannelAvailability&gt;)</a> - Method in class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/ProductVariantChannelAvailabilityMapBuilder.html" title="class in com.commercetools.api.models.product">ProductVariantChannelAvailabilityMapBuilder</a></dt>
 <dd>
-<div class="block">assign pattern properties to the builder</div>
+<div class="block">JSON object where the keys are supply Channel <code>id</code>, and the values are ProductVariantChannelAvailability.</div>
 </dd>
 <dt><a href="../com/commercetools/history/models/common/ProductVariantChannelAvailabilityMapBuilder.html#values(java.util.Map)" class="member-name-link">values(Map&lt;String, ProductVariantChannelAvailability&gt;)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/ProductVariantChannelAvailabilityMapBuilder.html" title="class in com.commercetools.history.models.common">ProductVariantChannelAvailabilityMapBuilder</a></dt>
 <dd>
@@ -4401,7 +4405,7 @@ the order they are declared.</div>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/product/CategoryOrderHintsBuilder.html#values(java.util.Map)" class="member-name-link">values(Map&lt;String, String&gt;)</a> - Method in class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/CategoryOrderHintsBuilder.html" title="class in com.commercetools.api.models.product">CategoryOrderHintsBuilder</a></dt>
 <dd>
-<div class="block">A string representing a number between 0 and 1 that must start with <code>0.</code> and cannot end with <code>0</code>.</div>
+<div class="block">A string representing a number between <code>0</code> and <code>1</code>, but not ending in <code>0</code>.</div>
 </dd>
 <dt><a href="../com/commercetools/history/models/common/CategoryOrderHintsBuilder.html#values(java.util.Map)" class="member-name-link">values(Map&lt;String, String&gt;)</a> - Method in class com.commercetools.history.models.common.<a href="../com/commercetools/history/models/common/CategoryOrderHintsBuilder.html" title="class in com.commercetools.history.models.common">CategoryOrderHintsBuilder</a></dt>
 <dd>
@@ -4417,7 +4421,7 @@ the order they are declared.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/SearchKeywordsBuilder.html#values(java.util.Map)" class="member-name-link">values(Map&lt;String, List&lt;SearchKeyword&gt;&gt;)</a> - Method in class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/SearchKeywordsBuilder.html" title="class in com.commercetools.api.models.product">SearchKeywordsBuilder</a></dt>
 <dd>
-<div class="block">assign pattern properties to the builder</div>
+<div class="block">Key-value pair where the keys are of type Locale and the values are an array of SearchKeyword.</div>
 </dd>
 <dt><a href="../com/commercetools/api/models/product/SuggestionResultBuilder.html#values(java.util.Map)" class="member-name-link">values(Map&lt;String, List&lt;Suggestion&gt;&gt;)</a> - Method in class com.commercetools.api.models.product.<a href="../com/commercetools/api/models/product/SuggestionResultBuilder.html" title="class in com.commercetools.api.models.product">SuggestionResultBuilder</a></dt>
 <dd>

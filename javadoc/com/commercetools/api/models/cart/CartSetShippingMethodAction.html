@@ -226,7 +226,7 @@ extends <a href="CartUpdateAction.html" title="interface in com.commercetools.ap
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../shipping_method/ShippingMethodResourceIdentifier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodResourceIdentifier</a></span>&nbsp;<span class="element-name">getShippingMethod</span>()</div>
 <div class="block"><p>Value to set. If empty, any existing value is removed.</p>
-  <p>If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p></div>
+  <p>If the referenced Shipping Method is inactive, or has a predicate that does not match the Cart, an InvalidOperation error is returned.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>shippingMethod</dd>
@@ -250,7 +250,7 @@ extends <a href="CartUpdateAction.html" title="interface in com.commercetools.ap
 <h3>setShippingMethod</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setShippingMethod</span><wbr><span class="parameters">(<a href="../shipping_method/ShippingMethodResourceIdentifier.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodResourceIdentifier</a>&nbsp;shippingMethod)</span></div>
 <div class="block"><p>Value to set. If empty, any existing value is removed.</p>
-  <p>If the referenced Shipping Method has a predicate that does not match the Cart, an InvalidOperation error is returned.</p></div>
+  <p>If the referenced Shipping Method is inactive, or has a predicate that does not match the Cart, an InvalidOperation error is returned.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>shippingMethod</code> - value to be set</dd>

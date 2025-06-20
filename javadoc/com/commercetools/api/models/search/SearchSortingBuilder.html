@@ -141,12 +141,12 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="block">Provide the data type of the given <code>field</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SearchSortingBuilder.html" title="class in com.commercetools.api.models.search">SearchSortingBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#filter(com.commercetools.api.models.search.SearchQueryExpression)" class="member-name-link">filter</a><wbr>(<a href="SearchQueryExpression.html" title="interface in com.commercetools.api.models.search">SearchQueryExpression</a>&nbsp;filter)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#filter(com.commercetools.api.models.search.SearchQuery)" class="member-name-link">filter</a><wbr>(<a href="SearchQuery.html" title="interface in com.commercetools.api.models.search">SearchQuery</a>&nbsp;filter)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Allows you to apply a sort filter.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SearchSortingBuilder.html" title="class in com.commercetools.api.models.search">SearchSortingBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#filter(java.util.function.Function)" class="member-name-link">filter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SearchQueryExpressionBuilder.html" title="class in com.commercetools.api.models.search">SearchQueryExpressionBuilder</a>,<wbr><a href="SearchQueryExpressionBuilder.html" title="class in com.commercetools.api.models.search">SearchQueryExpressionBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#filter(java.util.function.Function)" class="member-name-link">filter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SearchQueryBuilder.html" title="class in com.commercetools.api.models.search">SearchQueryBuilder</a>,<wbr><a href="SearchQueryBuilder.html" title="class in com.commercetools.api.models.search">SearchQueryBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Allows you to apply a sort filter.</div>
 </div>
@@ -160,7 +160,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Provide the data type of the given <code>field</code>.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SearchQueryExpression.html" title="interface in com.commercetools.api.models.search">SearchQueryExpression</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SearchQuery.html" title="interface in com.commercetools.api.models.search">SearchQuery</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getFilter()" class="member-name-link">getFilter</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Allows you to apply a sort filter.</div>
@@ -206,7 +206,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="block">Specify the order in which the search results should be sorted.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SearchSortingBuilder.html" title="class in com.commercetools.api.models.search">SearchSortingBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withFilter(java.util.function.Function)" class="member-name-link">withFilter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SearchQueryExpressionBuilder.html" title="class in com.commercetools.api.models.search">SearchQueryExpressionBuilder</a>,<wbr><a href="SearchQueryExpression.html" title="interface in com.commercetools.api.models.search">SearchQueryExpression</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withFilter(java.util.function.Function)" class="member-name-link">withFilter</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SearchQueryBuilder.html" title="class in com.commercetools.api.models.search">SearchQueryBuilder</a>,<wbr><a href="SearchQuery.html" title="interface in com.commercetools.api.models.search">SearchQuery</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Allows you to apply a sort filter.</div>
 </div>
@@ -312,7 +312,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="filter(java.util.function.Function)">
 <h3>filter</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SearchSortingBuilder.html" title="class in com.commercetools.api.models.search">SearchSortingBuilder</a></span>&nbsp;<span class="element-name">filter</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SearchQueryExpressionBuilder.html" title="class in com.commercetools.api.models.search">SearchQueryExpressionBuilder</a>,<wbr><a href="SearchQueryExpressionBuilder.html" title="class in com.commercetools.api.models.search">SearchQueryExpressionBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SearchSortingBuilder.html" title="class in com.commercetools.api.models.search">SearchSortingBuilder</a></span>&nbsp;<span class="element-name">filter</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SearchQueryBuilder.html" title="class in com.commercetools.api.models.search">SearchQueryBuilder</a>,<wbr><a href="SearchQueryBuilder.html" title="class in com.commercetools.api.models.search">SearchQueryBuilder</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Allows you to apply a sort filter.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -325,7 +325,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <li>
 <section class="detail" id="withFilter(java.util.function.Function)">
 <h3>withFilter</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SearchSortingBuilder.html" title="class in com.commercetools.api.models.search">SearchSortingBuilder</a></span>&nbsp;<span class="element-name">withFilter</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SearchQueryExpressionBuilder.html" title="class in com.commercetools.api.models.search">SearchQueryExpressionBuilder</a>,<wbr><a href="SearchQueryExpression.html" title="interface in com.commercetools.api.models.search">SearchQueryExpression</a>&gt;&nbsp;builder)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SearchSortingBuilder.html" title="class in com.commercetools.api.models.search">SearchSortingBuilder</a></span>&nbsp;<span class="element-name">withFilter</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SearchQueryBuilder.html" title="class in com.commercetools.api.models.search">SearchQueryBuilder</a>,<wbr><a href="SearchQuery.html" title="interface in com.commercetools.api.models.search">SearchQuery</a>&gt;&nbsp;builder)</span></div>
 <div class="block"><p>Allows you to apply a sort filter.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -336,10 +336,10 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
-<section class="detail" id="filter(com.commercetools.api.models.search.SearchQueryExpression)">
+<section class="detail" id="filter(com.commercetools.api.models.search.SearchQuery)">
 <h3>filter</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SearchSortingBuilder.html" title="class in com.commercetools.api.models.search">SearchSortingBuilder</a></span>&nbsp;<span class="element-name">filter</span><wbr><span class="parameters">(@Nullable
- <a href="SearchQueryExpression.html" title="interface in com.commercetools.api.models.search">SearchQueryExpression</a>&nbsp;filter)</span></div>
+ <a href="SearchQuery.html" title="interface in com.commercetools.api.models.search">SearchQuery</a>&nbsp;filter)</span></div>
 <div class="block"><p>Allows you to apply a sort filter.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -411,7 +411,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getFilter()">
 <h3>getFilter</h3>
 <div class="member-signature"><span class="annotations">@Nullable
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SearchQueryExpression.html" title="interface in com.commercetools.api.models.search">SearchQueryExpression</a></span>&nbsp;<span class="element-name">getFilter</span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SearchQuery.html" title="interface in com.commercetools.api.models.search">SearchQuery</a></span>&nbsp;<span class="element-name">getFilter</span>()</div>
 <div class="block"><p>Allows you to apply a sort filter.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>

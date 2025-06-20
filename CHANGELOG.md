@@ -1,4 +1,52 @@
 
+# 18.3.0 (2025-06-20)
+
+## What's Changed
+* Update changelog by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/910
+* chore(deps): lock file maintenance by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/904
+* chore(deps): update gradle/actions digest to 8379f6a by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/906
+* fix(deps): update all dependencies by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/895
+* chore(deps): update actions/create-github-app-token digest to df432ce by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/892
+* fix(deps): update dependency lint-staged to v16 by @renovate in https://github.com/commercetools/commercetools-sdk-java-v2/pull/903
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/911
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/915
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/916
+* update Maven Release process by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/917
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/918
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/921
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/922
+* update service regions by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/923
+* support custom attributes for metrics by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/924
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/925
+* Update generated SDKs by @ct-sdks in https://github.com/commercetools/commercetools-sdk-java-v2/pull/926
+* Fix Logger with unwrapped CompletionExceptions by @jenschude in https://github.com/commercetools/commercetools-sdk-java-v2/pull/927
+
+**Api changes**
+
+<details>
+<summary>Removed Property(s)</summary>
+
+- :warning: removed property `/[0-9].[0-9]*[1-9]/` from type `CategoryOrderHints`
+- :warning: removed property `//` from type `ProductVariantChannelAvailabilityMap`
+</details>
+
+
+<details>
+<summary>Changed Property(s)</summary>
+
+- :warning: changed property `filter` of type `SearchSorting` from type `SearchQueryExpression` to `SearchQuery`
+</details>
+
+
+<details>
+<summary>Added Property(s)</summary>
+
+- added property `/^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/` to type `CategoryOrderHints`
+- added property `/^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/` to type `ProductVariantChannelAvailabilityMap`
+</details>
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/18.2.0...18.3.0
+
 # 18.2.0 (2025-06-05)
 
 ## Fixes

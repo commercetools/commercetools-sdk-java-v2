@@ -51,6 +51,10 @@ public class ResourceIdentifierBuilder implements ResourceIdentifierBuilderMixin
         return com.commercetools.api.models.discount_code.DiscountCodeResourceIdentifierBuilder.of();
     }
 
+    public com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifierBuilder discountGroupBuilder() {
+        return com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifierBuilder.of();
+    }
+
     public com.commercetools.api.models.inventory.InventoryEntryResourceIdentifierBuilder inventoryEntryBuilder() {
         return com.commercetools.api.models.inventory.InventoryEntryResourceIdentifierBuilder.of();
     }

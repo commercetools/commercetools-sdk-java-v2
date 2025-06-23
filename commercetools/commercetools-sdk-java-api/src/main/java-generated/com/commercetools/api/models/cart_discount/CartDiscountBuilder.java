@@ -86,6 +86,9 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
     @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
 
+    @Nullable
+    private com.commercetools.api.models.discount_group.DiscountGroupReference discountGroup;
+
     /**
      *  <p>Unique identifier of the CartDiscount.</p>
      * @param id value to be set
@@ -344,7 +347,9 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
     }
 
     /**
-     *  <p>Value between <code>0</code> and <code>1</code>. All matching CartDiscounts are applied to a Cart in the order defined by this field. A Discount with a higher sortOrder is prioritized. The sort order is unambiguous among all CartDiscounts.</p>
+     *  <p>Value between <code>0</code> and <code>1</code> that determines the order in which the CartDiscounts are applied; a CartDiscount with a higher value is prioritized.</p>
+     *  <p>It is unique among all CartDiscounts and DiscountGroups.</p>
+     *  <p>If the CartDiscount is part of a DiscountGroup, it uses the sort order of the DiscountGroup.</p>
      * @param sortOrder value to be set
      * @return Builder
      */
@@ -619,6 +624,45 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
     }
 
     /**
+     *  <p>Reference to a DiscountGroup that the CartDiscount belongs to.</p>
+     * @param builder function to build the discountGroup value
+     * @return Builder
+     */
+
+    public CartDiscountBuilder discountGroup(
+            Function<com.commercetools.api.models.discount_group.DiscountGroupReferenceBuilder, com.commercetools.api.models.discount_group.DiscountGroupReferenceBuilder> builder) {
+        this.discountGroup = builder
+                .apply(com.commercetools.api.models.discount_group.DiscountGroupReferenceBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>Reference to a DiscountGroup that the CartDiscount belongs to.</p>
+     * @param builder function to build the discountGroup value
+     * @return Builder
+     */
+
+    public CartDiscountBuilder withDiscountGroup(
+            Function<com.commercetools.api.models.discount_group.DiscountGroupReferenceBuilder, com.commercetools.api.models.discount_group.DiscountGroupReference> builder) {
+        this.discountGroup = builder
+                .apply(com.commercetools.api.models.discount_group.DiscountGroupReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Reference to a DiscountGroup that the CartDiscount belongs to.</p>
+     * @param discountGroup value to be set
+     * @return Builder
+     */
+
+    public CartDiscountBuilder discountGroup(
+            @Nullable final com.commercetools.api.models.discount_group.DiscountGroupReference discountGroup) {
+        this.discountGroup = discountGroup;
+        return this;
+    }
+
+    /**
      *  <p>Unique identifier of the CartDiscount.</p>
      * @return id
      */
@@ -733,7 +777,9 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
     }
 
     /**
-     *  <p>Value between <code>0</code> and <code>1</code>. All matching CartDiscounts are applied to a Cart in the order defined by this field. A Discount with a higher sortOrder is prioritized. The sort order is unambiguous among all CartDiscounts.</p>
+     *  <p>Value between <code>0</code> and <code>1</code> that determines the order in which the CartDiscounts are applied; a CartDiscount with a higher value is prioritized.</p>
+     *  <p>It is unique among all CartDiscounts and DiscountGroups.</p>
+     *  <p>If the CartDiscount is part of a DiscountGroup, it uses the sort order of the DiscountGroup.</p>
      * @return sortOrder
      */
 
@@ -820,6 +866,16 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
     }
 
     /**
+     *  <p>Reference to a DiscountGroup that the CartDiscount belongs to.</p>
+     * @return discountGroup
+     */
+
+    @Nullable
+    public com.commercetools.api.models.discount_group.DiscountGroupReference getDiscountGroup() {
+        return this.discountGroup;
+    }
+
+    /**
      * builds CartDiscount with checking for non-null required values
      * @return CartDiscount
      */
@@ -839,7 +895,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
         Objects.requireNonNull(stackingMode, CartDiscount.class + ": stackingMode is missing");
         return new CartDiscountImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name, key,
             description, value, cartPredicate, target, sortOrder, stores, isActive, validFrom, validUntil,
-            requiresDiscountCode, references, stackingMode, custom);
+            requiresDiscountCode, references, stackingMode, custom, discountGroup);
     }
 
     /**
@@ -849,7 +905,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
     public CartDiscount buildUnchecked() {
         return new CartDiscountImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, name, key,
             description, value, cartPredicate, target, sortOrder, stores, isActive, validFrom, validUntil,
-            requiresDiscountCode, references, stackingMode, custom);
+            requiresDiscountCode, references, stackingMode, custom, discountGroup);
     }
 
     /**
@@ -888,6 +944,7 @@ public class CartDiscountBuilder implements Builder<CartDiscount> {
         builder.references = template.getReferences();
         builder.stackingMode = template.getStackingMode();
         builder.custom = template.getCustom();
+        builder.discountGroup = template.getDiscountGroup();
         return builder;
     }
 

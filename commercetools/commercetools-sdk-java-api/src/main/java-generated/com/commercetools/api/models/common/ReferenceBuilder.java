@@ -67,6 +67,10 @@ public class ReferenceBuilder {
         return com.commercetools.api.models.discount_code.DiscountCodeReferenceBuilder.of();
     }
 
+    public com.commercetools.api.models.discount_group.DiscountGroupReferenceBuilder discountGroupBuilder() {
+        return com.commercetools.api.models.discount_group.DiscountGroupReferenceBuilder.of();
+    }
+
     public com.commercetools.api.models.inventory.InventoryEntryReferenceBuilder inventoryEntryBuilder() {
         return com.commercetools.api.models.inventory.InventoryEntryReferenceBuilder.of();
     }

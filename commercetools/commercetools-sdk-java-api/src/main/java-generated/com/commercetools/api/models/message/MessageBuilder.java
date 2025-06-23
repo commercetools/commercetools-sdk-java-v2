@@ -451,6 +451,22 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.DiscountCodeKeySetMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.DiscountGroupCreatedMessageBuilder discountGroupCreatedBuilder() {
+        return com.commercetools.api.models.message.DiscountGroupCreatedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.DiscountGroupDeletedMessageBuilder discountGroupDeletedBuilder() {
+        return com.commercetools.api.models.message.DiscountGroupDeletedMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.DiscountGroupKeySetMessageBuilder discountGroupKeySetBuilder() {
+        return com.commercetools.api.models.message.DiscountGroupKeySetMessageBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.DiscountGroupSortOrderSetMessageBuilder discountGroupSortOrderSetBuilder() {
+        return com.commercetools.api.models.message.DiscountGroupSortOrderSetMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.InventoryEntryCreatedMessageBuilder inventoryEntryCreatedBuilder() {
         return com.commercetools.api.models.message.InventoryEntryCreatedMessageBuilder.of();
     }

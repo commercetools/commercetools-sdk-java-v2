@@ -1118,6 +1118,38 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     }
 
     /**
+     * builder for discountGroupCreated subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.DiscountGroupCreatedMessageBuilder discountGroupCreatedBuilder() {
+        return com.commercetools.api.models.message.DiscountGroupCreatedMessageBuilder.of();
+    }
+
+    /**
+     * builder for discountGroupDeleted subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.DiscountGroupDeletedMessageBuilder discountGroupDeletedBuilder() {
+        return com.commercetools.api.models.message.DiscountGroupDeletedMessageBuilder.of();
+    }
+
+    /**
+     * builder for discountGroupKeySet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.DiscountGroupKeySetMessageBuilder discountGroupKeySetBuilder() {
+        return com.commercetools.api.models.message.DiscountGroupKeySetMessageBuilder.of();
+    }
+
+    /**
+     * builder for discountGroupSortOrderSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.DiscountGroupSortOrderSetMessageBuilder discountGroupSortOrderSetBuilder() {
+        return com.commercetools.api.models.message.DiscountGroupSortOrderSetMessageBuilder.of();
+    }
+
+    /**
      * builder for inventoryEntryCreated subtype
      * @return builder
      */

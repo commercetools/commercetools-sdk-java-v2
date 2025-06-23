@@ -26,6 +26,8 @@ public interface DiscountCodeState extends JsonEnum {
 
     DiscountCodeState APPLICATION_STOPPED_BY_PREVIOUS_DISCOUNT = DiscountCodeStateEnum.APPLICATION_STOPPED_BY_PREVIOUS_DISCOUNT;
 
+    DiscountCodeState APPLICATION_STOPPED_BY_GROUP_BEST_DEAL = DiscountCodeStateEnum.APPLICATION_STOPPED_BY_GROUP_BEST_DEAL;
+
     DiscountCodeState NOT_VALID = DiscountCodeStateEnum.NOT_VALID;
 
     /**
@@ -56,6 +58,11 @@ public interface DiscountCodeState extends JsonEnum {
          * ApplicationStoppedByPreviousDiscount
          */
         APPLICATION_STOPPED_BY_PREVIOUS_DISCOUNT("ApplicationStoppedByPreviousDiscount"),
+
+        /**
+         * ApplicationStoppedByGroupBestDeal
+         */
+        APPLICATION_STOPPED_BY_GROUP_BEST_DEAL("ApplicationStoppedByGroupBestDeal"),
 
         /**
          * NotValid

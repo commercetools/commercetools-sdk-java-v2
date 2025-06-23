@@ -189,6 +189,14 @@ public interface Reference extends ReferenceMixin {
     }
 
     /**
+     * builder for discountGroup subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.discount_group.DiscountGroupReferenceBuilder discountGroupBuilder() {
+        return com.commercetools.api.models.discount_group.DiscountGroupReferenceBuilder.of();
+    }
+
+    /**
      * builder for inventoryEntry subtype
      * @return builder
      */

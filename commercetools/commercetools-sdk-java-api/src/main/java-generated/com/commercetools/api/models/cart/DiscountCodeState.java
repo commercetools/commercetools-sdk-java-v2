@@ -12,7 +12,8 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Indicates the state of a Discount Code in a Cart.</p>
- *  <p>If an Order is created from a Cart with a state other than <code>MatchesCart</code>, a DiscountCodeNonApplicable error is returned.</p>
+ *  <p>If an Order is created from a Cart with a state other than <code>MatchesCart</code> or <code>ApplicationStoppedByGroupBestDeal</code>, a DiscountCodeNonApplicable error is returned.</p>
+ *  <p>For Orders created from a Cart with a <code>ApplicationStoppedByGroupBestDeal</code> state, the discount code is not applied.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface DiscountCodeState extends JsonEnum {
@@ -33,8 +34,11 @@ public interface DiscountCodeState extends JsonEnum {
     <p>The <code>maxApplications</code> or <code>maxApplicationsPerCustomer</code> for a DiscountCode has been reached.</p> */
     DiscountCodeState MAX_APPLICATION_REACHED = DiscountCodeStateEnum.MAX_APPLICATION_REACHED;
     /**
-    <p>The Discount Code is active and no discounts are applied after a discount with <code>StopAfterThisDiscount</code> StackingMode is defined.</p> */
+    <p>The Discount Code is active, but further Cart Discounts are not applied as a Cart Discount with <code>StopAfterThisDiscount</code> StackingMode is applied.</p> */
     DiscountCodeState APPLICATION_STOPPED_BY_PREVIOUS_DISCOUNT = DiscountCodeStateEnum.APPLICATION_STOPPED_BY_PREVIOUS_DISCOUNT;
+    /**
+    <p>The Discount Code is active, but Cart Discounts from a Discount Group are not applied as another Cart Discount from that Discount Group, offering a better deal, is applied.</p> */
+    DiscountCodeState APPLICATION_STOPPED_BY_GROUP_BEST_DEAL = DiscountCodeStateEnum.APPLICATION_STOPPED_BY_GROUP_BEST_DEAL;
 
     /**
      * possible values of DiscountCodeState
@@ -68,7 +72,12 @@ public interface DiscountCodeState extends JsonEnum {
         /**
          * ApplicationStoppedByPreviousDiscount
          */
-        APPLICATION_STOPPED_BY_PREVIOUS_DISCOUNT("ApplicationStoppedByPreviousDiscount");
+        APPLICATION_STOPPED_BY_PREVIOUS_DISCOUNT("ApplicationStoppedByPreviousDiscount"),
+
+        /**
+         * ApplicationStoppedByGroupBestDeal
+         */
+        APPLICATION_STOPPED_BY_GROUP_BEST_DEAL("ApplicationStoppedByGroupBestDeal");
         private final String jsonName;
 
         private DiscountCodeStateEnum(final String jsonName) {

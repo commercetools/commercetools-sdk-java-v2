@@ -166,6 +166,14 @@ public interface CartDiscountUpdateAction
     }
 
     /**
+     * builder for setDiscountGroup subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.cart_discount.CartDiscountSetDiscountGroupActionBuilder setDiscountGroupBuilder() {
+        return com.commercetools.api.models.cart_discount.CartDiscountSetDiscountGroupActionBuilder.of();
+    }
+
+    /**
      * builder for setKey subtype
      * @return builder
      */

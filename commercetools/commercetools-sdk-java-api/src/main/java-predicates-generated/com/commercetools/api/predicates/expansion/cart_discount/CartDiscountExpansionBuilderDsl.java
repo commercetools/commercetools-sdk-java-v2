@@ -53,4 +53,9 @@ public class CartDiscountExpansionBuilderDsl implements ExpansionDsl {
         return com.commercetools.api.predicates.expansion.type.CustomFieldsExpansionBuilderDsl
                 .of(appendOne(path, "custom"));
     }
+
+    public com.commercetools.api.predicates.expansion.discount_group.DiscountGroupReferenceExpansionBuilderDsl discountGroup() {
+        return com.commercetools.api.predicates.expansion.discount_group.DiscountGroupReferenceExpansionBuilderDsl
+                .of(appendOne(path, "discountGroup"));
+    }
 }

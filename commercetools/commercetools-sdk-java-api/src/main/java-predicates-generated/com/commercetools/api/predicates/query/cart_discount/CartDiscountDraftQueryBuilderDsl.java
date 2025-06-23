@@ -121,4 +121,14 @@ public class CartDiscountDraftQueryBuilderDsl {
             CartDiscountDraftQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<CartDiscountDraftQueryBuilderDsl> discountGroup(
+            Function<com.commercetools.api.predicates.query.discount_group.DiscountGroupResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.discount_group.DiscountGroupResourceIdentifierQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("discountGroup"))
+                .inner(fn.apply(
+                    com.commercetools.api.predicates.query.discount_group.DiscountGroupResourceIdentifierQueryBuilderDsl
+                            .of())),
+            CartDiscountDraftQueryBuilderDsl::of);
+    }
+
 }

@@ -212,11 +212,21 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>Sets the CustomerGroup for the Customer.</p>
+     *  <p>For new projects, use <code>customerGroupAssignments</code> instead. It supports assigning Customers to multiple Customer Groups and provides greater flexibility in complex pricing scenarios.</p>
      * @return customerGroup
      */
     @Valid
     @JsonProperty("customerGroup")
     public CustomerGroupResourceIdentifier getCustomerGroup();
+
+    /**
+     *  <p>Customer Groups to assign the Customer to.</p>
+     *  <p>Used for Line Item price selection.</p>
+     * @return customerGroupAssignments
+     */
+    @Valid
+    @JsonProperty("customerGroupAssignments")
+    public List<CustomerGroupAssignmentDraft> getCustomerGroupAssignments();
 
     /**
      *  <p>Custom Fields for the Customer.</p>
@@ -264,14 +274,6 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
 
     @JsonProperty("authenticationMode")
     public AuthenticationMode getAuthenticationMode();
-
-    /**
-     *  <p>Customer Groups to assign the Customer to.</p>
-     * @return customerGroupAssignments
-     */
-    @Valid
-    @JsonProperty("customerGroupAssignments")
-    public List<CustomerGroupAssignmentDraft> getCustomerGroupAssignments();
 
     /**
      *  <p>User-defined unique identifier for the Customer. The <code>key</code> field is preferred over <code>customerNumber</code> as it is mutable and provides more flexibility.</p>
@@ -448,10 +450,28 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>Sets the CustomerGroup for the Customer.</p>
+     *  <p>For new projects, use <code>customerGroupAssignments</code> instead. It supports assigning Customers to multiple Customer Groups and provides greater flexibility in complex pricing scenarios.</p>
      * @param customerGroup value to be set
      */
 
     public void setCustomerGroup(final CustomerGroupResourceIdentifier customerGroup);
+
+    /**
+     *  <p>Customer Groups to assign the Customer to.</p>
+     *  <p>Used for Line Item price selection.</p>
+     * @param customerGroupAssignments values to be set
+     */
+
+    @JsonIgnore
+    public void setCustomerGroupAssignments(final CustomerGroupAssignmentDraft... customerGroupAssignments);
+
+    /**
+     *  <p>Customer Groups to assign the Customer to.</p>
+     *  <p>Used for Line Item price selection.</p>
+     * @param customerGroupAssignments values to be set
+     */
+
+    public void setCustomerGroupAssignments(final List<CustomerGroupAssignmentDraft> customerGroupAssignments);
 
     /**
      *  <p>Custom Fields for the Customer.</p>
@@ -508,21 +528,6 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
     public void setAuthenticationMode(final AuthenticationMode authenticationMode);
 
     /**
-     *  <p>Customer Groups to assign the Customer to.</p>
-     * @param customerGroupAssignments values to be set
-     */
-
-    @JsonIgnore
-    public void setCustomerGroupAssignments(final CustomerGroupAssignmentDraft... customerGroupAssignments);
-
-    /**
-     *  <p>Customer Groups to assign the Customer to.</p>
-     * @param customerGroupAssignments values to be set
-     */
-
-    public void setCustomerGroupAssignments(final List<CustomerGroupAssignmentDraft> customerGroupAssignments);
-
-    /**
      * factory method
      * @return instance of CustomerDraft
      */
@@ -559,12 +564,12 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
         instance.setBillingAddresses(template.getBillingAddresses());
         instance.setIsEmailVerified(template.getIsEmailVerified());
         instance.setCustomerGroup(template.getCustomerGroup());
+        instance.setCustomerGroupAssignments(template.getCustomerGroupAssignments());
         instance.setCustom(template.getCustom());
         instance.setLocale(template.getLocale());
         instance.setSalutation(template.getSalutation());
         instance.setStores(template.getStores());
         instance.setAuthenticationMode(template.getAuthenticationMode());
-        instance.setCustomerGroupAssignments(template.getCustomerGroupAssignments());
         return instance;
     }
 
@@ -611,6 +616,11 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
         instance.setIsEmailVerified(template.getIsEmailVerified());
         instance.setCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier
                 .deepCopy(template.getCustomerGroup()));
+        instance.setCustomerGroupAssignments(Optional.ofNullable(template.getCustomerGroupAssignments())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.customer.CustomerGroupAssignmentDraft::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         instance.setLocale(template.getLocale());
         instance.setSalutation(template.getSalutation());
@@ -620,11 +630,6 @@ public interface CustomerDraft extends com.commercetools.api.models.Customizable
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setAuthenticationMode(template.getAuthenticationMode());
-        instance.setCustomerGroupAssignments(Optional.ofNullable(template.getCustomerGroupAssignments())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.customer.CustomerGroupAssignmentDraft::deepCopy)
-                        .collect(Collectors.toList()))
-                .orElse(null));
         return instance;
     }
 

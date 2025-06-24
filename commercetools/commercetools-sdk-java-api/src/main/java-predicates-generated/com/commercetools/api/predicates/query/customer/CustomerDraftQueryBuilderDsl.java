@@ -160,6 +160,21 @@ public class CustomerDraftQueryBuilderDsl {
             CustomerDraftQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<CustomerDraftQueryBuilderDsl> customerGroupAssignments(
+            Function<com.commercetools.api.predicates.query.customer.CustomerGroupAssignmentDraftQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.customer.CustomerGroupAssignmentDraftQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("customerGroupAssignments"))
+                .inner(fn.apply(
+                    com.commercetools.api.predicates.query.customer.CustomerGroupAssignmentDraftQueryBuilderDsl.of())),
+            CustomerDraftQueryBuilderDsl::of);
+    }
+
+    public CollectionPredicateBuilder<CustomerDraftQueryBuilderDsl> customerGroupAssignments() {
+        return new CollectionPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("customerGroupAssignments")),
+            p -> new CombinationQueryPredicate<>(p, CustomerDraftQueryBuilderDsl::of));
+    }
+
     public CombinationQueryPredicate<CustomerDraftQueryBuilderDsl> custom(
             Function<com.commercetools.api.predicates.query.type.CustomFieldsDraftQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.type.CustomFieldsDraftQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
@@ -199,21 +214,6 @@ public class CustomerDraftQueryBuilderDsl {
     public StringComparisonPredicateBuilder<CustomerDraftQueryBuilderDsl> authenticationMode() {
         return new StringComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("authenticationMode")),
-            p -> new CombinationQueryPredicate<>(p, CustomerDraftQueryBuilderDsl::of));
-    }
-
-    public CombinationQueryPredicate<CustomerDraftQueryBuilderDsl> customerGroupAssignments(
-            Function<com.commercetools.api.predicates.query.customer.CustomerGroupAssignmentDraftQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.customer.CustomerGroupAssignmentDraftQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
-                .parent(ConstantQueryPredicate.of().constant("customerGroupAssignments"))
-                .inner(fn.apply(
-                    com.commercetools.api.predicates.query.customer.CustomerGroupAssignmentDraftQueryBuilderDsl.of())),
-            CustomerDraftQueryBuilderDsl::of);
-    }
-
-    public CollectionPredicateBuilder<CustomerDraftQueryBuilderDsl> customerGroupAssignments() {
-        return new CollectionPredicateBuilder<>(
-            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("customerGroupAssignments")),
             p -> new CombinationQueryPredicate<>(p, CustomerDraftQueryBuilderDsl::of));
     }
 

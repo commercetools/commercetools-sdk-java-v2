@@ -256,6 +256,15 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
     public CustomerGroupReference getCustomerGroup();
 
     /**
+     *  <p>Customer Groups that the Customer belongs to.</p>
+     *  <p>Used for Line Item price selection.</p>
+     * @return customerGroupAssignments
+     */
+    @Valid
+    @JsonProperty("customerGroupAssignments")
+    public List<CustomerGroupAssignment> getCustomerGroupAssignments();
+
+    /**
      *  <p>Custom Fields for the Customer.</p>
      * @return custom
      */
@@ -299,14 +308,6 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
     @NotNull
     @JsonProperty("authenticationMode")
     public AuthenticationMode getAuthenticationMode();
-
-    /**
-     *  <p>Customer Groups that the Customer belongs to.</p>
-     * @return customerGroupAssignments
-     */
-    @Valid
-    @JsonProperty("customerGroupAssignments")
-    public List<CustomerGroupAssignment> getCustomerGroupAssignments();
 
     /**
      *  <p>Unique identifier of the Customer.</p>
@@ -509,6 +510,23 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
     public void setCustomerGroup(final CustomerGroupReference customerGroup);
 
     /**
+     *  <p>Customer Groups that the Customer belongs to.</p>
+     *  <p>Used for Line Item price selection.</p>
+     * @param customerGroupAssignments values to be set
+     */
+
+    @JsonIgnore
+    public void setCustomerGroupAssignments(final CustomerGroupAssignment... customerGroupAssignments);
+
+    /**
+     *  <p>Customer Groups that the Customer belongs to.</p>
+     *  <p>Used for Line Item price selection.</p>
+     * @param customerGroupAssignments values to be set
+     */
+
+    public void setCustomerGroupAssignments(final List<CustomerGroupAssignment> customerGroupAssignments);
+
+    /**
      *  <p>Custom Fields for the Customer.</p>
      * @param custom value to be set
      */
@@ -560,21 +578,6 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
     public void setAuthenticationMode(final AuthenticationMode authenticationMode);
 
     /**
-     *  <p>Customer Groups that the Customer belongs to.</p>
-     * @param customerGroupAssignments values to be set
-     */
-
-    @JsonIgnore
-    public void setCustomerGroupAssignments(final CustomerGroupAssignment... customerGroupAssignments);
-
-    /**
-     *  <p>Customer Groups that the Customer belongs to.</p>
-     * @param customerGroupAssignments values to be set
-     */
-
-    public void setCustomerGroupAssignments(final List<CustomerGroupAssignment> customerGroupAssignments);
-
-    /**
      * factory method
      * @return instance of Customer
      */
@@ -614,12 +617,12 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
         instance.setBillingAddressIds(template.getBillingAddressIds());
         instance.setIsEmailVerified(template.getIsEmailVerified());
         instance.setCustomerGroup(template.getCustomerGroup());
+        instance.setCustomerGroupAssignments(template.getCustomerGroupAssignments());
         instance.setCustom(template.getCustom());
         instance.setLocale(template.getLocale());
         instance.setSalutation(template.getSalutation());
         instance.setStores(template.getStores());
         instance.setAuthenticationMode(template.getAuthenticationMode());
-        instance.setCustomerGroupAssignments(template.getCustomerGroupAssignments());
         return instance;
     }
 
@@ -669,6 +672,11 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
         instance.setIsEmailVerified(template.getIsEmailVerified());
         instance.setCustomerGroup(
             com.commercetools.api.models.customer_group.CustomerGroupReference.deepCopy(template.getCustomerGroup()));
+        instance.setCustomerGroupAssignments(Optional.ofNullable(template.getCustomerGroupAssignments())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.customer.CustomerGroupAssignment::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         instance.setLocale(template.getLocale());
         instance.setSalutation(template.getSalutation());
@@ -678,11 +686,6 @@ public interface Customer extends BaseResource, CustomerMixin, com.commercetools
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setAuthenticationMode(template.getAuthenticationMode());
-        instance.setCustomerGroupAssignments(Optional.ofNullable(template.getCustomerGroupAssignments())
-                .map(t -> t.stream()
-                        .map(com.commercetools.api.models.customer.CustomerGroupAssignment::deepCopy)
-                        .collect(Collectors.toList()))
-                .orElse(null));
         return instance;
     }
 

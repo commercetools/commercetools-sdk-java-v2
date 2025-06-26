@@ -169,7 +169,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
     public LocalizedString getMetaKeywords();
 
     /**
-     *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
+     *  <p>Used by Search Term Suggestions, but is also considered for a full text search in the Product Projection Search API.</p>
      * @return searchKeywords
      */
     @Valid
@@ -358,7 +358,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
     public void setMetaKeywords(final LocalizedString metaKeywords);
 
     /**
-     *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
+     *  <p>Used by Search Term Suggestions, but is also considered for a full text search in the Product Projection Search API.</p>
      * @param searchKeywords value to be set
      */
 

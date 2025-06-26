@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>The tokenizer defines the tokens that are used to match against the Suggest Query input.</p>
+ *  <p>The tokenizer defines the tokens that are used for search term suggestions.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SuggestTokenizerImpl implements SuggestTokenizer, ModelBase {

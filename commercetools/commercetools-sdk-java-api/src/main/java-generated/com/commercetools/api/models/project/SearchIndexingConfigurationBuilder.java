@@ -39,7 +39,7 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     private com.commercetools.api.models.project.SearchIndexingConfigurationValues businessUnits;
 
     /**
-     *  <p>Configuration for the Product Projection Search and Product Suggestions endpoints.</p>
+     *  <p>Configuration for the Product Projection Search and Search Term Suggestions APIs.</p>
      * @param builder function to build the products value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     }
 
     /**
-     *  <p>Configuration for the Product Projection Search and Product Suggestions endpoints.</p>
+     *  <p>Configuration for the Product Projection Search and Search Term Suggestions APIs.</p>
      * @param builder function to build the products value
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     }
 
     /**
-     *  <p>Configuration for the Product Projection Search and Product Suggestions endpoints.</p>
+     *  <p>Configuration for the Product Projection Search and Search Term Suggestions APIs.</p>
      * @param products value to be set
      * @return Builder
      */
@@ -232,7 +232,7 @@ public class SearchIndexingConfigurationBuilder implements Builder<SearchIndexin
     }
 
     /**
-     *  <p>Configuration for the Product Projection Search and Product Suggestions endpoints.</p>
+     *  <p>Configuration for the Product Projection Search and Search Term Suggestions APIs.</p>
      * @return products
      */
 

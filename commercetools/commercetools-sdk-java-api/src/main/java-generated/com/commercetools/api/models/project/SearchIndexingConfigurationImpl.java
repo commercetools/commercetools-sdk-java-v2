@@ -56,7 +56,7 @@ public class SearchIndexingConfigurationImpl implements SearchIndexingConfigurat
     }
 
     /**
-     *  <p>Configuration for the Product Projection Search and Product Suggestions endpoints.</p>
+     *  <p>Configuration for the Product Projection Search and Search Term Suggestions APIs.</p>
      */
 
     public com.commercetools.api.models.project.SearchIndexingConfigurationValues getProducts() {

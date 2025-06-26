@@ -214,7 +214,7 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
     }
 
     /**
-     *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
+     *  <p>Used by Search Term Suggestions, but is also considered for a full text search in the Product Projection Search API.</p>
      */
 
     public com.commercetools.api.models.product.SearchKeywords getSearchKeywords() {

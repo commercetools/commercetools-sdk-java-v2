@@ -16,7 +16,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Although search keywords are primarily used by Product Suggestions, they are also considered for a full text search. The keys are of type Locale, and the values are an array of SearchKeyword.</p>
+ *  <p>Search keywords are JSON objects primarily used by Search Term Suggestions, but are also considered for a full text search in the Product Projection Search API. The keys are of type Locale, and the values are an array of SearchKeyword.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

@@ -520,7 +520,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-     *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
+     *  <p>Used by Search Term Suggestions, but is also considered for a full text search in the Product Projection Search API.</p>
      * @param builder function to build the searchKeywords value
      * @return Builder
      */
@@ -532,7 +532,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-     *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
+     *  <p>Used by Search Term Suggestions, but is also considered for a full text search in the Product Projection Search API.</p>
      * @param builder function to build the searchKeywords value
      * @return Builder
      */
@@ -544,7 +544,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-     *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
+     *  <p>Used by Search Term Suggestions, but is also considered for a full text search in the Product Projection Search API.</p>
      * @param searchKeywords value to be set
      * @return Builder
      */
@@ -737,7 +737,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-     *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
+     *  <p>Used by Search Term Suggestions, but is also considered for a full text search in the Product Projection Search API.</p>
      * @return searchKeywords
      */
 

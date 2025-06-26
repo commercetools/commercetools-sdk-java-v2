@@ -38,6 +38,8 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
 
     private Boolean isSearchable;
 
+    private com.commercetools.importapi.models.producttypes.AttributeLevel level;
+
     /**
      * create instance with all properties
      */
@@ -50,7 +52,8 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
             @JsonProperty("attributeConstraint") final com.commercetools.importapi.models.producttypes.AttributeConstraintEnum attributeConstraint,
             @JsonProperty("inputTip") final com.commercetools.importapi.models.common.LocalizedString inputTip,
             @JsonProperty("inputHint") final com.commercetools.importapi.models.producttypes.TextInputHint inputHint,
-            @JsonProperty("isSearchable") final Boolean isSearchable) {
+            @JsonProperty("isSearchable") final Boolean isSearchable,
+            @JsonProperty("level") final com.commercetools.importapi.models.producttypes.AttributeLevel level) {
         this.type = type;
         this.name = name;
         this.label = label;
@@ -59,6 +62,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
         this.inputTip = inputTip;
         this.inputHint = inputHint;
         this.isSearchable = isSearchable;
+        this.level = level;
     }
 
     /**
@@ -141,6 +145,14 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
         return this.isSearchable;
     }
 
+    /**
+     *
+     */
+
+    public com.commercetools.importapi.models.producttypes.AttributeLevel getLevel() {
+        return this.level;
+    }
+
     public void setType(final com.commercetools.importapi.models.producttypes.AttributeType type) {
         this.type = type;
     }
@@ -174,6 +186,10 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
         this.isSearchable = isSearchable;
     }
 
+    public void setLevel(final com.commercetools.importapi.models.producttypes.AttributeLevel level) {
+        this.level = level;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -192,6 +208,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
                 .append(inputTip, that.inputTip)
                 .append(inputHint, that.inputHint)
                 .append(isSearchable, that.isSearchable)
+                .append(level, that.level)
                 .append(type, that.type)
                 .append(name, that.name)
                 .append(label, that.label)
@@ -200,6 +217,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
                 .append(inputTip, that.inputTip)
                 .append(inputHint, that.inputHint)
                 .append(isSearchable, that.isSearchable)
+                .append(level, that.level)
                 .isEquals();
     }
 
@@ -213,6 +231,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
                 .append(inputTip)
                 .append(inputHint)
                 .append(isSearchable)
+                .append(level)
                 .toHashCode();
     }
 
@@ -226,6 +245,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
                 .append("inputTip", inputTip)
                 .append("inputHint", inputHint)
                 .append("isSearchable", isSearchable)
+                .append("level", level)
                 .build();
     }
 

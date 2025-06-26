@@ -15,6 +15,7 @@ import com.commercetools.importapi.models.common.ProductPriceModeEnum;
 import com.commercetools.importapi.models.common.ProductTypeKeyReference;
 import com.commercetools.importapi.models.common.StateKeyReference;
 import com.commercetools.importapi.models.common.TaxCategoryKeyReference;
+import com.commercetools.importapi.models.productvariants.Attribute;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -94,6 +95,14 @@ public interface ProductImport extends ImportResource {
     @Valid
     @JsonProperty("categories")
     public List<CategoryKeyReference> getCategories();
+
+    /**
+     *
+     * @return attributes
+     */
+    @Valid
+    @JsonProperty("attributes")
+    public List<Attribute> getAttributes();
 
     /**
      *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
@@ -241,6 +250,21 @@ public interface ProductImport extends ImportResource {
     public void setCategories(final List<CategoryKeyReference> categories);
 
     /**
+     * set attributes
+     * @param attributes values to be set
+     */
+
+    @JsonIgnore
+    public void setAttributes(final Attribute... attributes);
+
+    /**
+     * set attributes
+     * @param attributes values to be set
+     */
+
+    public void setAttributes(final List<Attribute> attributes);
+
+    /**
      *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
      *  <pre><code>{
      *    "de": "Hundefutter",
@@ -348,6 +372,7 @@ public interface ProductImport extends ImportResource {
         instance.setSlug(template.getSlug());
         instance.setDescription(template.getDescription());
         instance.setCategories(template.getCategories());
+        instance.setAttributes(template.getAttributes());
         instance.setMetaTitle(template.getMetaTitle());
         instance.setMetaDescription(template.getMetaDescription());
         instance.setMetaKeywords(template.getMetaKeywords());
@@ -382,6 +407,11 @@ public interface ProductImport extends ImportResource {
         instance.setCategories(Optional.ofNullable(template.getCategories())
                 .map(t -> t.stream()
                         .map(com.commercetools.importapi.models.common.CategoryKeyReference::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setAttributes(Optional.ofNullable(template.getAttributes())
+                .map(t -> t.stream()
+                        .map(com.commercetools.importapi.models.productvariants.Attribute::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setMetaTitle(

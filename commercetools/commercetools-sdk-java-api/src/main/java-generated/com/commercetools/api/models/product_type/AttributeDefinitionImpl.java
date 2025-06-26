@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Describes a Product Attribute and allows you to define meta-information associated with the Attribute (like whether it should be searchable, or its constraints).</p>
+ *  <p>Describes an Attribute and allows you to define meta-information associated with the Attribute (like whether it should be searchable, or its constraints).</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
@@ -29,6 +29,8 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
     private com.commercetools.api.models.common.LocalizedString label;
 
     private Boolean isRequired;
+
+    private com.commercetools.api.models.product_type.AttributeLevelEnum level;
 
     private com.commercetools.api.models.product_type.AttributeConstraintEnum attributeConstraint;
 
@@ -46,6 +48,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
             @JsonProperty("name") final String name,
             @JsonProperty("label") final com.commercetools.api.models.common.LocalizedString label,
             @JsonProperty("isRequired") final Boolean isRequired,
+            @JsonProperty("level") final com.commercetools.api.models.product_type.AttributeLevelEnum level,
             @JsonProperty("attributeConstraint") final com.commercetools.api.models.product_type.AttributeConstraintEnum attributeConstraint,
             @JsonProperty("inputTip") final com.commercetools.api.models.common.LocalizedString inputTip,
             @JsonProperty("inputHint") final com.commercetools.api.models.product_type.TextInputHint inputHint,
@@ -54,6 +57,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
         this.name = name;
         this.label = label;
         this.isRequired = isRequired;
+        this.level = level;
         this.attributeConstraint = attributeConstraint;
         this.inputTip = inputTip;
         this.inputHint = inputHint;
@@ -96,6 +100,14 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
 
     public Boolean getIsRequired() {
         return this.isRequired;
+    }
+
+    /**
+     *  <p>Specifies whether the Attribute is defined at the Product or Variant level.</p>
+     */
+
+    public com.commercetools.api.models.product_type.AttributeLevelEnum getLevel() {
+        return this.level;
     }
 
     /**
@@ -147,6 +159,10 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
         this.isRequired = isRequired;
     }
 
+    public void setLevel(final com.commercetools.api.models.product_type.AttributeLevelEnum level) {
+        this.level = level;
+    }
+
     public void setAttributeConstraint(
             final com.commercetools.api.models.product_type.AttributeConstraintEnum attributeConstraint) {
         this.attributeConstraint = attributeConstraint;
@@ -178,6 +194,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
                 .append(name, that.name)
                 .append(label, that.label)
                 .append(isRequired, that.isRequired)
+                .append(level, that.level)
                 .append(attributeConstraint, that.attributeConstraint)
                 .append(inputTip, that.inputTip)
                 .append(inputHint, that.inputHint)
@@ -186,6 +203,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
                 .append(name, that.name)
                 .append(label, that.label)
                 .append(isRequired, that.isRequired)
+                .append(level, that.level)
                 .append(attributeConstraint, that.attributeConstraint)
                 .append(inputTip, that.inputTip)
                 .append(inputHint, that.inputHint)
@@ -199,6 +217,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
                 .append(name)
                 .append(label)
                 .append(isRequired)
+                .append(level)
                 .append(attributeConstraint)
                 .append(inputTip)
                 .append(inputHint)
@@ -212,6 +231,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
                 .append("name", name)
                 .append("label", label)
                 .append("isRequired", isRequired)
+                .append("level", level)
                 .append("attributeConstraint", attributeConstraint)
                 .append("inputTip", inputTip)
                 .append("inputHint", inputHint)

@@ -73,7 +73,15 @@ public interface AttributeDefinitionDraft extends io.vrap.rmf.base.client.Draft<
     public Boolean getIsRequired();
 
     /**
-     *  <p>Specifies how an Attribute or a combination of Attributes should be validated across all variants of a Product.</p>
+     *  <p>Specifies whether the Attribute is defined at the Product or Variant level.</p>
+     * @return level
+     */
+
+    @JsonProperty("level")
+    public AttributeLevelEnum getLevel();
+
+    /**
+     *  <p>Specifies how an Attribute or a combination of Attributes should be validated across all variants of a Product. If the Attribute is defined at Product level, then <code>attributeConstraint</code> must be <code>None</code>. Otherwise, an InvalidOperation error is returned.</p>
      * @return attributeConstraint
      */
 
@@ -135,7 +143,14 @@ public interface AttributeDefinitionDraft extends io.vrap.rmf.base.client.Draft<
     public void setIsRequired(final Boolean isRequired);
 
     /**
-     *  <p>Specifies how an Attribute or a combination of Attributes should be validated across all variants of a Product.</p>
+     *  <p>Specifies whether the Attribute is defined at the Product or Variant level.</p>
+     * @param level value to be set
+     */
+
+    public void setLevel(final AttributeLevelEnum level);
+
+    /**
+     *  <p>Specifies how an Attribute or a combination of Attributes should be validated across all variants of a Product. If the Attribute is defined at Product level, then <code>attributeConstraint</code> must be <code>None</code>. Otherwise, an InvalidOperation error is returned.</p>
      * @param attributeConstraint value to be set
      */
 
@@ -181,6 +196,7 @@ public interface AttributeDefinitionDraft extends io.vrap.rmf.base.client.Draft<
         instance.setName(template.getName());
         instance.setLabel(template.getLabel());
         instance.setIsRequired(template.getIsRequired());
+        instance.setLevel(template.getLevel());
         instance.setAttributeConstraint(template.getAttributeConstraint());
         instance.setInputTip(template.getInputTip());
         instance.setInputHint(template.getInputHint());
@@ -205,6 +221,7 @@ public interface AttributeDefinitionDraft extends io.vrap.rmf.base.client.Draft<
         instance.setName(template.getName());
         instance.setLabel(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getLabel()));
         instance.setIsRequired(template.getIsRequired());
+        instance.setLevel(template.getLevel());
         instance.setAttributeConstraint(template.getAttributeConstraint());
         instance.setInputTip(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getInputTip()));
         instance.setInputHint(template.getInputHint());

@@ -66,6 +66,8 @@ public class ProductTailoringCreatedMessageImpl implements ProductTailoringCreat
 
     private java.util.List<com.commercetools.api.models.product_tailoring.ProductVariantTailoring> variants;
 
+    private java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> attributes;
+
     private Boolean published;
 
     /**
@@ -92,6 +94,7 @@ public class ProductTailoringCreatedMessageImpl implements ProductTailoringCreat
             @JsonProperty("metaDescription") final com.commercetools.api.models.common.LocalizedString metaDescription,
             @JsonProperty("metaKeywords") final com.commercetools.api.models.common.LocalizedString metaKeywords,
             @JsonProperty("variants") final java.util.List<com.commercetools.api.models.product_tailoring.ProductVariantTailoring> variants,
+            @JsonProperty("attributes") final java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> attributes,
             @JsonProperty("published") final Boolean published) {
         this.id = id;
         this.version = version;
@@ -114,6 +117,7 @@ public class ProductTailoringCreatedMessageImpl implements ProductTailoringCreat
         this.metaDescription = metaDescription;
         this.metaKeywords = metaKeywords;
         this.variants = variants;
+        this.attributes = attributes;
         this.published = published;
         this.type = PRODUCT_TAILORING_CREATED;
     }
@@ -302,6 +306,14 @@ public class ProductTailoringCreatedMessageImpl implements ProductTailoringCreat
     }
 
     /**
+     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding Product. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> getAttributes() {
+        return this.attributes;
+    }
+
+    /**
      *  <p><code>true</code> if the ProductTailoring is published.</p>
      */
 
@@ -399,6 +411,16 @@ public class ProductTailoringCreatedMessageImpl implements ProductTailoringCreat
         this.variants = variants;
     }
 
+    public void setAttributes(
+            final com.commercetools.api.models.product_tailoring.ProductTailoringAttribute... attributes) {
+        this.attributes = new ArrayList<>(Arrays.asList(attributes));
+    }
+
+    public void setAttributes(
+            final java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> attributes) {
+        this.attributes = attributes;
+    }
+
     public void setPublished(final Boolean published) {
         this.published = published;
     }
@@ -435,6 +457,7 @@ public class ProductTailoringCreatedMessageImpl implements ProductTailoringCreat
                 .append(metaDescription, that.metaDescription)
                 .append(metaKeywords, that.metaKeywords)
                 .append(variants, that.variants)
+                .append(attributes, that.attributes)
                 .append(published, that.published)
                 .append(id, that.id)
                 .append(version, that.version)
@@ -458,6 +481,7 @@ public class ProductTailoringCreatedMessageImpl implements ProductTailoringCreat
                 .append(metaDescription, that.metaDescription)
                 .append(metaKeywords, that.metaKeywords)
                 .append(variants, that.variants)
+                .append(attributes, that.attributes)
                 .append(published, that.published)
                 .isEquals();
     }
@@ -486,6 +510,7 @@ public class ProductTailoringCreatedMessageImpl implements ProductTailoringCreat
                 .append(metaDescription)
                 .append(metaKeywords)
                 .append(variants)
+                .append(attributes)
                 .append(published)
                 .toHashCode();
     }
@@ -514,6 +539,7 @@ public class ProductTailoringCreatedMessageImpl implements ProductTailoringCreat
                 .append("metaDescription", metaDescription)
                 .append("metaKeywords", metaKeywords)
                 .append("variants", variants)
+                .append("attributes", attributes)
                 .append("published", published)
                 .build();
     }

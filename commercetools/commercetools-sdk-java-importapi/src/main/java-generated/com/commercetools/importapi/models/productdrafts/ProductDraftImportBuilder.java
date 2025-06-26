@@ -42,6 +42,9 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
     private java.util.List<com.commercetools.importapi.models.common.CategoryKeyReference> categories;
 
     @Nullable
+    private java.util.List<com.commercetools.importapi.models.productvariants.Attribute> attributes;
+
+    @Nullable
     private com.commercetools.importapi.models.common.LocalizedString metaTitle;
 
     @Nullable
@@ -315,6 +318,75 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
     public ProductDraftImportBuilder setCategories(
             Function<com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder, com.commercetools.importapi.models.common.CategoryKeyReference> builder) {
         return categories(builder.apply(com.commercetools.importapi.models.common.CategoryKeyReferenceBuilder.of()));
+    }
+
+    /**
+     * set values to the attributes
+     * @param attributes value to be set
+     * @return Builder
+     */
+
+    public ProductDraftImportBuilder attributes(
+            @Nullable final com.commercetools.importapi.models.productvariants.Attribute... attributes) {
+        this.attributes = new ArrayList<>(Arrays.asList(attributes));
+        return this;
+    }
+
+    /**
+     * set value to the attributes
+     * @param attributes value to be set
+     * @return Builder
+     */
+
+    public ProductDraftImportBuilder attributes(
+            @Nullable final java.util.List<com.commercetools.importapi.models.productvariants.Attribute> attributes) {
+        this.attributes = attributes;
+        return this;
+    }
+
+    /**
+     * add values to the attributes
+     * @param attributes value to be set
+     * @return Builder
+     */
+
+    public ProductDraftImportBuilder plusAttributes(
+            @Nullable final com.commercetools.importapi.models.productvariants.Attribute... attributes) {
+        if (this.attributes == null) {
+            this.attributes = new ArrayList<>();
+        }
+        this.attributes.addAll(Arrays.asList(attributes));
+        return this;
+    }
+
+    /**
+     * add a value to the attributes using the builder function
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductDraftImportBuilder plusAttributes(
+            Function<com.commercetools.importapi.models.productvariants.AttributeBuilder, Builder<? extends com.commercetools.importapi.models.productvariants.Attribute>> builder) {
+        if (this.attributes == null) {
+            this.attributes = new ArrayList<>();
+        }
+        this.attributes
+                .add(builder.apply(com.commercetools.importapi.models.productvariants.AttributeBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     * set the value to the attributes using the builder function
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductDraftImportBuilder withAttributes(
+            Function<com.commercetools.importapi.models.productvariants.AttributeBuilder, Builder<? extends com.commercetools.importapi.models.productvariants.Attribute>> builder) {
+        this.attributes = new ArrayList<>();
+        this.attributes
+                .add(builder.apply(com.commercetools.importapi.models.productvariants.AttributeBuilder.of()).build());
+        return this;
     }
 
     /**
@@ -844,6 +916,16 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
     }
 
     /**
+     * value of attributes}
+     * @return attributes
+     */
+
+    @Nullable
+    public java.util.List<com.commercetools.importapi.models.productvariants.Attribute> getAttributes() {
+        return this.attributes;
+    }
+
+    /**
      *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
      *  <pre><code>{
      *    "de": "Hundefutter",
@@ -983,7 +1065,7 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
         Objects.requireNonNull(productType, ProductDraftImport.class + ": productType is missing");
         Objects.requireNonNull(name, ProductDraftImport.class + ": name is missing");
         Objects.requireNonNull(slug, ProductDraftImport.class + ": slug is missing");
-        return new ProductDraftImportImpl(key, productType, name, slug, description, categories, metaTitle,
+        return new ProductDraftImportImpl(key, productType, name, slug, description, categories, attributes, metaTitle,
             metaDescription, metaKeywords, masterVariant, variants, taxCategory, searchKeywords, state, publish,
             priceMode);
     }
@@ -993,7 +1075,7 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
      * @return ProductDraftImport
      */
     public ProductDraftImport buildUnchecked() {
-        return new ProductDraftImportImpl(key, productType, name, slug, description, categories, metaTitle,
+        return new ProductDraftImportImpl(key, productType, name, slug, description, categories, attributes, metaTitle,
             metaDescription, metaKeywords, masterVariant, variants, taxCategory, searchKeywords, state, publish,
             priceMode);
     }
@@ -1019,6 +1101,7 @@ public class ProductDraftImportBuilder implements Builder<ProductDraftImport> {
         builder.slug = template.getSlug();
         builder.description = template.getDescription();
         builder.categories = template.getCategories();
+        builder.attributes = template.getAttributes();
         builder.metaTitle = template.getMetaTitle();
         builder.metaDescription = template.getMetaDescription();
         builder.metaKeywords = template.getMetaKeywords();

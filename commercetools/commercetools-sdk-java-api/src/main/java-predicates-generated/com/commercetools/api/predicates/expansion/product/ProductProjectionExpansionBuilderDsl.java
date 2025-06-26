@@ -69,4 +69,14 @@ public class ProductProjectionExpansionBuilderDsl implements ExpansionDsl {
         return com.commercetools.api.predicates.expansion.state.StateReferenceExpansionBuilderDsl
                 .of(appendOne(path, "state"));
     }
+
+    public com.commercetools.api.predicates.expansion.product.AttributeExpansionBuilderDsl attributes() {
+        return com.commercetools.api.predicates.expansion.product.AttributeExpansionBuilderDsl
+                .of(appendOne(path, "attributes[*]"));
+    }
+
+    public com.commercetools.api.predicates.expansion.product.AttributeExpansionBuilderDsl attributes(long index) {
+        return com.commercetools.api.predicates.expansion.product.AttributeExpansionBuilderDsl
+                .of(appendOne(path, "attributes[" + index + "]"));
+    }
 }

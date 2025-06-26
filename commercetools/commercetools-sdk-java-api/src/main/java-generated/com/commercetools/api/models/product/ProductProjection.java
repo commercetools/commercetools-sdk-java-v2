@@ -42,6 +42,7 @@ import jakarta.validation.constraints.NotNull;
  *             .plusCategories(categoriesBuilder -> categoriesBuilder)
  *             .masterVariant(masterVariantBuilder -> masterVariantBuilder)
  *             .plusVariants(variantsBuilder -> variantsBuilder)
+ *             .plusAttributes(attributesBuilder -> attributesBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -242,6 +243,15 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
     public ProductPriceModeEnum getPriceMode();
 
     /**
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     * @return attributes
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("attributes")
+    public List<Attribute> getAttributes();
+
+    /**
      *  <p>Unique identifier of the Product.</p>
      * @param id value to be set
      */
@@ -419,6 +429,21 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
     public void setPriceMode(final ProductPriceModeEnum priceMode);
 
     /**
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     * @param attributes values to be set
+     */
+
+    @JsonIgnore
+    public void setAttributes(final Attribute... attributes);
+
+    /**
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     * @param attributes values to be set
+     */
+
+    public void setAttributes(final List<Attribute> attributes);
+
+    /**
      * factory method
      * @return instance of ProductProjection
      */
@@ -456,6 +481,7 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
         instance.setState(template.getState());
         instance.setReviewRatingStatistics(template.getReviewRatingStatistics());
         instance.setPriceMode(template.getPriceMode());
+        instance.setAttributes(template.getAttributes());
         return instance;
     }
 
@@ -512,6 +538,11 @@ public interface ProductProjection extends BaseResource, ProductDataLike, Produc
         instance.setReviewRatingStatistics(
             com.commercetools.api.models.review.ReviewRatingStatistics.deepCopy(template.getReviewRatingStatistics()));
         instance.setPriceMode(template.getPriceMode());
+        instance.setAttributes(Optional.ofNullable(template.getAttributes())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.product.Attribute::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

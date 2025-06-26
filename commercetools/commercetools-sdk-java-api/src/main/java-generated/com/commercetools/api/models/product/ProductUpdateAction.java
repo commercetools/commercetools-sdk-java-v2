@@ -381,6 +381,14 @@ public interface ProductUpdateAction extends com.commercetools.api.models.Resour
     }
 
     /**
+     * builder for setProductAttribute subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.product.ProductSetProductAttributeActionBuilder setProductAttributeBuilder() {
+        return com.commercetools.api.models.product.ProductSetProductAttributeActionBuilder.of();
+    }
+
+    /**
      * builder for setProductPriceCustomField subtype
      * @return builder
      */

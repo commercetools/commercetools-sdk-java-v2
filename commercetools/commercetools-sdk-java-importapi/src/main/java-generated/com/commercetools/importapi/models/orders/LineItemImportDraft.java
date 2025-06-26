@@ -23,7 +23,7 @@ import jakarta.validation.constraints.NotNull;
 
 /**
  *  <p>Represents an individual Line Item in an Order. A line item is a snapshot of a product at the time it was added to the order.</p>
- *  <p>You cannot create an Order that includes line item operations that do not exist in the Project or have been deleted. Products and Product Variants referenced by a line item must already exist in the Project.</p>
+ *  <p>You cannot create an Order that includes line item operations that do not exist in the Project or have been deleted. Products and Product Variants referenced by a line item must already exist in the Project. Product Attributes are merged with Variant Attributes to ensure the full Attribute context of the Product Variant.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

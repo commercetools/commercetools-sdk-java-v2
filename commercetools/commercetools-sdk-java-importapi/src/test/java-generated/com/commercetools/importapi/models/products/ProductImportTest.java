@@ -34,6 +34,10 @@ public class ProductImportTest {
                         ProductImport.builder()
                                 .categories(Collections.singletonList(
                                     new com.commercetools.importapi.models.common.CategoryKeyReferenceImpl())) },
+                new Object[] { "attributes",
+                        ProductImport.builder()
+                                .attributes(Collections.singletonList(
+                                    new com.commercetools.importapi.models.productvariants.AttributeImpl())) },
                 new Object[] { "metaTitle",
                         ProductImport.builder()
                                 .metaTitle(new com.commercetools.importapi.models.common.LocalizedStringImpl()) },
@@ -104,6 +108,16 @@ public class ProductImportTest {
         Assertions.assertThat(value.getCategories())
                 .isEqualTo(Collections
                         .singletonList(new com.commercetools.importapi.models.common.CategoryKeyReferenceImpl()));
+    }
+
+    @Test
+    public void attributes() {
+        ProductImport value = ProductImport.of();
+        value.setAttributes(
+            Collections.singletonList(new com.commercetools.importapi.models.productvariants.AttributeImpl()));
+        Assertions.assertThat(value.getAttributes())
+                .isEqualTo(
+                    Collections.singletonList(new com.commercetools.importapi.models.productvariants.AttributeImpl()));
     }
 
     @Test

@@ -30,6 +30,8 @@ public class AttributeDefinitionDraftImpl implements AttributeDefinitionDraft, M
 
     private Boolean isRequired;
 
+    private com.commercetools.api.models.product_type.AttributeLevelEnum level;
+
     private com.commercetools.api.models.product_type.AttributeConstraintEnum attributeConstraint;
 
     private com.commercetools.api.models.common.LocalizedString inputTip;
@@ -47,6 +49,7 @@ public class AttributeDefinitionDraftImpl implements AttributeDefinitionDraft, M
             @JsonProperty("name") final String name,
             @JsonProperty("label") final com.commercetools.api.models.common.LocalizedString label,
             @JsonProperty("isRequired") final Boolean isRequired,
+            @JsonProperty("level") final com.commercetools.api.models.product_type.AttributeLevelEnum level,
             @JsonProperty("attributeConstraint") final com.commercetools.api.models.product_type.AttributeConstraintEnum attributeConstraint,
             @JsonProperty("inputTip") final com.commercetools.api.models.common.LocalizedString inputTip,
             @JsonProperty("inputHint") final com.commercetools.api.models.product_type.TextInputHint inputHint,
@@ -55,6 +58,7 @@ public class AttributeDefinitionDraftImpl implements AttributeDefinitionDraft, M
         this.name = name;
         this.label = label;
         this.isRequired = isRequired;
+        this.level = level;
         this.attributeConstraint = attributeConstraint;
         this.inputTip = inputTip;
         this.inputHint = inputHint;
@@ -102,7 +106,15 @@ public class AttributeDefinitionDraftImpl implements AttributeDefinitionDraft, M
     }
 
     /**
-     *  <p>Specifies how an Attribute or a combination of Attributes should be validated across all variants of a Product.</p>
+     *  <p>Specifies whether the Attribute is defined at the Product or Variant level.</p>
+     */
+
+    public com.commercetools.api.models.product_type.AttributeLevelEnum getLevel() {
+        return this.level;
+    }
+
+    /**
+     *  <p>Specifies how an Attribute or a combination of Attributes should be validated across all variants of a Product. If the Attribute is defined at Product level, then <code>attributeConstraint</code> must be <code>None</code>. Otherwise, an InvalidOperation error is returned.</p>
      */
 
     public com.commercetools.api.models.product_type.AttributeConstraintEnum getAttributeConstraint() {
@@ -149,6 +161,10 @@ public class AttributeDefinitionDraftImpl implements AttributeDefinitionDraft, M
         this.isRequired = isRequired;
     }
 
+    public void setLevel(final com.commercetools.api.models.product_type.AttributeLevelEnum level) {
+        this.level = level;
+    }
+
     public void setAttributeConstraint(
             final com.commercetools.api.models.product_type.AttributeConstraintEnum attributeConstraint) {
         this.attributeConstraint = attributeConstraint;
@@ -180,6 +196,7 @@ public class AttributeDefinitionDraftImpl implements AttributeDefinitionDraft, M
                 .append(name, that.name)
                 .append(label, that.label)
                 .append(isRequired, that.isRequired)
+                .append(level, that.level)
                 .append(attributeConstraint, that.attributeConstraint)
                 .append(inputTip, that.inputTip)
                 .append(inputHint, that.inputHint)
@@ -188,6 +205,7 @@ public class AttributeDefinitionDraftImpl implements AttributeDefinitionDraft, M
                 .append(name, that.name)
                 .append(label, that.label)
                 .append(isRequired, that.isRequired)
+                .append(level, that.level)
                 .append(attributeConstraint, that.attributeConstraint)
                 .append(inputTip, that.inputTip)
                 .append(inputHint, that.inputHint)
@@ -201,6 +219,7 @@ public class AttributeDefinitionDraftImpl implements AttributeDefinitionDraft, M
                 .append(name)
                 .append(label)
                 .append(isRequired)
+                .append(level)
                 .append(attributeConstraint)
                 .append(inputTip)
                 .append(inputHint)
@@ -214,6 +233,7 @@ public class AttributeDefinitionDraftImpl implements AttributeDefinitionDraft, M
                 .append("name", name)
                 .append("label", label)
                 .append("isRequired", isRequired)
+                .append("level", level)
                 .append("attributeConstraint", attributeConstraint)
                 .append("inputTip", inputTip)
                 .append("inputHint", inputHint)

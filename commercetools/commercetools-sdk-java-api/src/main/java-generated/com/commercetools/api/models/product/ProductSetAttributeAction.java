@@ -54,7 +54,7 @@ public interface ProductSetAttributeAction extends ProductUpdateAction {
     public String getSku();
 
     /**
-     *  <p>The name of the Attribute to set.</p>
+     *  <p>Name of the Attribute to set.</p>
      * @return name
      */
     @NotNull
@@ -65,7 +65,7 @@ public interface ProductSetAttributeAction extends ProductUpdateAction {
      *  <p>Value to set for the Attribute. If empty, any existing value will be removed.</p>
      *  <p>The AttributeType determines the format of the Attribute <code>value</code> to be provided:</p>
      *  <ul>
-     *   <li>For Enum Type and Localized Enum Type, use the <code>key</code> of the Plain Enum Value or Localized Enum Value objects, or the complete objects as <code>value</code>.</li>
+     *   <li>For Enum Type and Localized Enum Type, use the <code>key</code> of the Plain Enum Value or Localized Enum Value object or the complete object as <code>value</code>.</li>
      *   <li>For Localizable Text Type, use the LocalizedString object as <code>value</code>.</li>
      *   <li>For Money Type Attributes, use the Money object as <code>value</code>.</li>
      *   <li>For Set Type Attributes, use the entire <code>set</code> object as <code>value</code>.</li>
@@ -79,7 +79,7 @@ public interface ProductSetAttributeAction extends ProductUpdateAction {
     public Object getValue();
 
     /**
-     *  <p>If <code>true</code>, only the staged Attribute is set. If <code>false</code>, both current and staged Attribute is set.</p>
+     *  <p>If <code>true</code>, only the staged Attribute is set. If <code>false</code>, both the current and staged Attributes are set.</p>
      * @return staged
      */
 
@@ -101,7 +101,7 @@ public interface ProductSetAttributeAction extends ProductUpdateAction {
     public void setSku(final String sku);
 
     /**
-     *  <p>The name of the Attribute to set.</p>
+     *  <p>Name of the Attribute to set.</p>
      * @param name value to be set
      */
 
@@ -111,7 +111,7 @@ public interface ProductSetAttributeAction extends ProductUpdateAction {
      *  <p>Value to set for the Attribute. If empty, any existing value will be removed.</p>
      *  <p>The AttributeType determines the format of the Attribute <code>value</code> to be provided:</p>
      *  <ul>
-     *   <li>For Enum Type and Localized Enum Type, use the <code>key</code> of the Plain Enum Value or Localized Enum Value objects, or the complete objects as <code>value</code>.</li>
+     *   <li>For Enum Type and Localized Enum Type, use the <code>key</code> of the Plain Enum Value or Localized Enum Value object or the complete object as <code>value</code>.</li>
      *   <li>For Localizable Text Type, use the LocalizedString object as <code>value</code>.</li>
      *   <li>For Money Type Attributes, use the Money object as <code>value</code>.</li>
      *   <li>For Set Type Attributes, use the entire <code>set</code> object as <code>value</code>.</li>
@@ -124,7 +124,7 @@ public interface ProductSetAttributeAction extends ProductUpdateAction {
     public void setValue(final Object value);
 
     /**
-     *  <p>If <code>true</code>, only the staged Attribute is set. If <code>false</code>, both current and staged Attribute is set.</p>
+     *  <p>If <code>true</code>, only the staged Attribute is set. If <code>false</code>, both the current and staged Attributes are set.</p>
      * @param staged value to be set
      */
 

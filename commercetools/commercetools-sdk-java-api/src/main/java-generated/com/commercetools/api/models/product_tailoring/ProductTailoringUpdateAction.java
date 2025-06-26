@@ -270,6 +270,14 @@ public interface ProductTailoringUpdateAction {
     }
 
     /**
+     * builder for setProductAttribute subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.product_tailoring.ProductTailoringSetProductAttributeActionBuilder setProductAttributeBuilder() {
+        return com.commercetools.api.models.product_tailoring.ProductTailoringSetProductAttributeActionBuilder.of();
+    }
+
+    /**
      * builder for setSlug subtype
      * @return builder
      */

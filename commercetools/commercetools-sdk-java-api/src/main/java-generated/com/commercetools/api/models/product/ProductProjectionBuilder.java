@@ -26,6 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusCategories(categoriesBuilder -> categoriesBuilder)
  *             .masterVariant(masterVariantBuilder -> masterVariantBuilder)
  *             .plusVariants(variantsBuilder -> variantsBuilder)
+ *             .plusAttributes(attributesBuilder -> attributesBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -91,6 +92,8 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
 
     @Nullable
     private com.commercetools.api.models.product.ProductPriceModeEnum priceMode;
+
+    private java.util.List<com.commercetools.api.models.product.Attribute> attributes;
 
     /**
      *  <p>Unique identifier of the Product.</p>
@@ -830,6 +833,93 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     * @param attributes value to be set
+     * @return Builder
+     */
+
+    public ProductProjectionBuilder attributes(final com.commercetools.api.models.product.Attribute... attributes) {
+        this.attributes = new ArrayList<>(Arrays.asList(attributes));
+        return this;
+    }
+
+    /**
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     * @param attributes value to be set
+     * @return Builder
+     */
+
+    public ProductProjectionBuilder attributes(
+            final java.util.List<com.commercetools.api.models.product.Attribute> attributes) {
+        this.attributes = attributes;
+        return this;
+    }
+
+    /**
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     * @param attributes value to be set
+     * @return Builder
+     */
+
+    public ProductProjectionBuilder plusAttributes(final com.commercetools.api.models.product.Attribute... attributes) {
+        if (this.attributes == null) {
+            this.attributes = new ArrayList<>();
+        }
+        this.attributes.addAll(Arrays.asList(attributes));
+        return this;
+    }
+
+    /**
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductProjectionBuilder plusAttributes(
+            Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.AttributeBuilder> builder) {
+        if (this.attributes == null) {
+            this.attributes = new ArrayList<>();
+        }
+        this.attributes.add(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductProjectionBuilder withAttributes(
+            Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.AttributeBuilder> builder) {
+        this.attributes = new ArrayList<>();
+        this.attributes.add(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductProjectionBuilder addAttributes(
+            Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.Attribute> builder) {
+        return plusAttributes(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()));
+    }
+
+    /**
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductProjectionBuilder setAttributes(
+            Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.Attribute> builder) {
+        return attributes(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()));
+    }
+
+    /**
      *  <p>Unique identifier of the Product.</p>
      * @return id
      */
@@ -1050,6 +1140,15 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     }
 
     /**
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     * @return attributes
+     */
+
+    public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes() {
+        return this.attributes;
+    }
+
+    /**
      * builds ProductProjection with checking for non-null required values
      * @return ProductProjection
      */
@@ -1064,10 +1163,11 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
         Objects.requireNonNull(categories, ProductProjection.class + ": categories is missing");
         Objects.requireNonNull(masterVariant, ProductProjection.class + ": masterVariant is missing");
         Objects.requireNonNull(variants, ProductProjection.class + ": variants is missing");
+        Objects.requireNonNull(attributes, ProductProjection.class + ": attributes is missing");
         return new ProductProjectionImpl(id, version, createdAt, lastModifiedAt, key, productType, name, description,
             slug, categories, categoryOrderHints, metaTitle, metaDescription, metaKeywords, searchKeywords,
-            hasStagedChanges, published, masterVariant, variants, taxCategory, state, reviewRatingStatistics,
-            priceMode);
+            hasStagedChanges, published, masterVariant, variants, taxCategory, state, reviewRatingStatistics, priceMode,
+            attributes);
     }
 
     /**
@@ -1077,8 +1177,8 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
     public ProductProjection buildUnchecked() {
         return new ProductProjectionImpl(id, version, createdAt, lastModifiedAt, key, productType, name, description,
             slug, categories, categoryOrderHints, metaTitle, metaDescription, metaKeywords, searchKeywords,
-            hasStagedChanges, published, masterVariant, variants, taxCategory, state, reviewRatingStatistics,
-            priceMode);
+            hasStagedChanges, published, masterVariant, variants, taxCategory, state, reviewRatingStatistics, priceMode,
+            attributes);
     }
 
     /**
@@ -1119,6 +1219,7 @@ public class ProductProjectionBuilder implements Builder<ProductProjection> {
         builder.state = template.getState();
         builder.reviewRatingStatistics = template.getReviewRatingStatistics();
         builder.priceMode = template.getPriceMode();
+        builder.attributes = template.getAttributes();
         return builder;
     }
 

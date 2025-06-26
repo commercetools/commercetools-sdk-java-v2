@@ -74,6 +74,9 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     @Nullable
     private com.commercetools.api.models.product.ProductPriceModeEnum priceMode;
 
+    @Nullable
+    private java.util.List<com.commercetools.api.models.product.Attribute> attributes;
+
     /**
      *  <p>The Product Type defining the Attributes for the Product. Cannot be changed later.</p>
      * @param builder function to build the productType value
@@ -729,6 +732,95 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     * @param attributes value to be set
+     * @return Builder
+     */
+
+    public ProductDraftBuilder attributes(
+            @Nullable final com.commercetools.api.models.product.Attribute... attributes) {
+        this.attributes = new ArrayList<>(Arrays.asList(attributes));
+        return this;
+    }
+
+    /**
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     * @param attributes value to be set
+     * @return Builder
+     */
+
+    public ProductDraftBuilder attributes(
+            @Nullable final java.util.List<com.commercetools.api.models.product.Attribute> attributes) {
+        this.attributes = attributes;
+        return this;
+    }
+
+    /**
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     * @param attributes value to be set
+     * @return Builder
+     */
+
+    public ProductDraftBuilder plusAttributes(
+            @Nullable final com.commercetools.api.models.product.Attribute... attributes) {
+        if (this.attributes == null) {
+            this.attributes = new ArrayList<>();
+        }
+        this.attributes.addAll(Arrays.asList(attributes));
+        return this;
+    }
+
+    /**
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductDraftBuilder plusAttributes(
+            Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.AttributeBuilder> builder) {
+        if (this.attributes == null) {
+            this.attributes = new ArrayList<>();
+        }
+        this.attributes.add(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductDraftBuilder withAttributes(
+            Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.AttributeBuilder> builder) {
+        this.attributes = new ArrayList<>();
+        this.attributes.add(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductDraftBuilder addAttributes(
+            Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.Attribute> builder) {
+        return plusAttributes(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()));
+    }
+
+    /**
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductDraftBuilder setAttributes(
+            Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.Attribute> builder) {
+        return attributes(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()));
+    }
+
+    /**
      *  <p>The Product Type defining the Attributes for the Product. Cannot be changed later.</p>
      * @return productType
      */
@@ -898,6 +990,16 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     * @return attributes
+     */
+
+    @Nullable
+    public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes() {
+        return this.attributes;
+    }
+
+    /**
      * builds ProductDraft with checking for non-null required values
      * @return ProductDraft
      */
@@ -907,7 +1009,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
         Objects.requireNonNull(slug, ProductDraft.class + ": slug is missing");
         return new ProductDraftImpl(productType, name, slug, key, description, categories, categoryOrderHints,
             metaTitle, metaDescription, metaKeywords, masterVariant, variants, taxCategory, searchKeywords, state,
-            publish, priceMode);
+            publish, priceMode, attributes);
     }
 
     /**
@@ -917,7 +1019,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     public ProductDraft buildUnchecked() {
         return new ProductDraftImpl(productType, name, slug, key, description, categories, categoryOrderHints,
             metaTitle, metaDescription, metaKeywords, masterVariant, variants, taxCategory, searchKeywords, state,
-            publish, priceMode);
+            publish, priceMode, attributes);
     }
 
     /**
@@ -952,6 +1054,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
         builder.state = template.getState();
         builder.publish = template.getPublish();
         builder.priceMode = template.getPriceMode();
+        builder.attributes = template.getAttributes();
         return builder;
     }
 

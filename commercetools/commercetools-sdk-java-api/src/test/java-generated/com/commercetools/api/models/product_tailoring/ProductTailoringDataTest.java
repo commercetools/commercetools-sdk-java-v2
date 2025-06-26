@@ -39,7 +39,10 @@ public class ProductTailoringDataTest {
                                 .slug(new com.commercetools.api.models.common.LocalizedStringImpl()) },
                 new Object[] { "variants", ProductTailoringData.builder()
                         .variants(Collections.singletonList(
-                            new com.commercetools.api.models.product_tailoring.ProductVariantTailoringImpl())) } };
+                            new com.commercetools.api.models.product_tailoring.ProductVariantTailoringImpl())) },
+                new Object[] { "attributes", ProductTailoringData.builder()
+                        .attributes(Collections.singletonList(
+                            new com.commercetools.api.models.product_tailoring.ProductTailoringAttributeImpl())) } };
     }
 
     @Test
@@ -96,5 +99,15 @@ public class ProductTailoringDataTest {
         Assertions.assertThat(value.getVariants())
                 .isEqualTo(Collections.singletonList(
                     new com.commercetools.api.models.product_tailoring.ProductVariantTailoringImpl()));
+    }
+
+    @Test
+    public void attributes() {
+        ProductTailoringData value = ProductTailoringData.of();
+        value.setAttributes(Collections
+                .singletonList(new com.commercetools.api.models.product_tailoring.ProductTailoringAttributeImpl()));
+        Assertions.assertThat(value.getAttributes())
+                .isEqualTo(Collections.singletonList(
+                    new com.commercetools.api.models.product_tailoring.ProductTailoringAttributeImpl()));
     }
 }

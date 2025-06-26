@@ -47,6 +47,9 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     @Nullable
     private Boolean isSearchable;
 
+    @Nullable
+    private com.commercetools.importapi.models.producttypes.AttributeLevel level;
+
     /**
      * set the value to the type
      * @param type value to be set
@@ -229,6 +232,18 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
+     * set the value to the level
+     * @param level value to be set
+     * @return Builder
+     */
+
+    public AttributeDefinitionBuilder level(
+            @Nullable final com.commercetools.importapi.models.producttypes.AttributeLevel level) {
+        this.level = level;
+        return this;
+    }
+
+    /**
      * value of type}
      * @return type
      */
@@ -315,6 +330,16 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
+     * value of level}
+     * @return level
+     */
+
+    @Nullable
+    public com.commercetools.importapi.models.producttypes.AttributeLevel getLevel() {
+        return this.level;
+    }
+
+    /**
      * builds AttributeDefinition with checking for non-null required values
      * @return AttributeDefinition
      */
@@ -324,7 +349,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
         Objects.requireNonNull(label, AttributeDefinition.class + ": label is missing");
         Objects.requireNonNull(isRequired, AttributeDefinition.class + ": isRequired is missing");
         return new AttributeDefinitionImpl(type, name, label, isRequired, attributeConstraint, inputTip, inputHint,
-            isSearchable);
+            isSearchable, level);
     }
 
     /**
@@ -333,7 +358,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
      */
     public AttributeDefinition buildUnchecked() {
         return new AttributeDefinitionImpl(type, name, label, isRequired, attributeConstraint, inputTip, inputHint,
-            isSearchable);
+            isSearchable, level);
     }
 
     /**
@@ -359,6 +384,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
         builder.inputTip = template.getInputTip();
         builder.inputHint = template.getInputHint();
         builder.isSearchable = template.getIsSearchable();
+        builder.level = template.getLevel();
         return builder;
     }
 

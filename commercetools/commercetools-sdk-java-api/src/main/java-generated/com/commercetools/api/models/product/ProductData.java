@@ -32,6 +32,7 @@ import jakarta.validation.constraints.NotNull;
  *             .masterVariant(masterVariantBuilder -> masterVariantBuilder)
  *             .plusVariants(variantsBuilder -> variantsBuilder)
  *             .searchKeywords(searchKeywordsBuilder -> searchKeywordsBuilder)
+ *             .plusAttributes(attributesBuilder -> attributesBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -135,6 +136,15 @@ public interface ProductData extends ProductDataLike {
     public SearchKeywords getSearchKeywords();
 
     /**
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     * @return attributes
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("attributes")
+    public List<Attribute> getAttributes();
+
+    /**
      *  <p>Name of the Product.</p>
      * @param name value to be set
      */
@@ -228,6 +238,21 @@ public interface ProductData extends ProductDataLike {
     public void setSearchKeywords(final SearchKeywords searchKeywords);
 
     /**
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     * @param attributes values to be set
+     */
+
+    @JsonIgnore
+    public void setAttributes(final Attribute... attributes);
+
+    /**
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     * @param attributes values to be set
+     */
+
+    public void setAttributes(final List<Attribute> attributes);
+
+    /**
      * factory method
      * @return instance of ProductData
      */
@@ -253,6 +278,7 @@ public interface ProductData extends ProductDataLike {
         instance.setMasterVariant(template.getMasterVariant());
         instance.setVariants(template.getVariants());
         instance.setSearchKeywords(template.getSearchKeywords());
+        instance.setAttributes(template.getAttributes());
         return instance;
     }
 
@@ -294,6 +320,11 @@ public interface ProductData extends ProductDataLike {
                 .orElse(null));
         instance.setSearchKeywords(
             com.commercetools.api.models.product.SearchKeywords.deepCopy(template.getSearchKeywords()));
+        instance.setAttributes(Optional.ofNullable(template.getAttributes())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.product.Attribute::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

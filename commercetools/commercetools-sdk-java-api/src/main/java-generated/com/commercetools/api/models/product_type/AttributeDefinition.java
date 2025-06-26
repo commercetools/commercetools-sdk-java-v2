@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Describes a Product Attribute and allows you to define meta-information associated with the Attribute (like whether it should be searchable, or its constraints).</p>
+ *  <p>Describes an Attribute and allows you to define meta-information associated with the Attribute (like whether it should be searchable, or its constraints).</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -28,6 +28,7 @@ import jakarta.validation.constraints.NotNull;
  *             .name("{name}")
  *             .label(labelBuilder -> labelBuilder)
  *             .isRequired(true)
+ *             .level(AttributeLevelEnum.PRODUCT)
  *             .attributeConstraint(AttributeConstraintEnum.NONE)
  *             .inputHint(TextInputHint.SINGLE_LINE)
  *             .isSearchable(true)
@@ -72,6 +73,14 @@ public interface AttributeDefinition {
     @NotNull
     @JsonProperty("isRequired")
     public Boolean getIsRequired();
+
+    /**
+     *  <p>Specifies whether the Attribute is defined at the Product or Variant level.</p>
+     * @return level
+     */
+    @NotNull
+    @JsonProperty("level")
+    public AttributeLevelEnum getLevel();
 
     /**
      *  <p>Specifies how Attributes are validated across all variants of a Product.</p>
@@ -135,6 +144,13 @@ public interface AttributeDefinition {
     public void setIsRequired(final Boolean isRequired);
 
     /**
+     *  <p>Specifies whether the Attribute is defined at the Product or Variant level.</p>
+     * @param level value to be set
+     */
+
+    public void setLevel(final AttributeLevelEnum level);
+
+    /**
      *  <p>Specifies how Attributes are validated across all variants of a Product.</p>
      * @param attributeConstraint value to be set
      */
@@ -182,6 +198,7 @@ public interface AttributeDefinition {
         instance.setName(template.getName());
         instance.setLabel(template.getLabel());
         instance.setIsRequired(template.getIsRequired());
+        instance.setLevel(template.getLevel());
         instance.setAttributeConstraint(template.getAttributeConstraint());
         instance.setInputTip(template.getInputTip());
         instance.setInputHint(template.getInputHint());
@@ -206,6 +223,7 @@ public interface AttributeDefinition {
         instance.setName(template.getName());
         instance.setLabel(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getLabel()));
         instance.setIsRequired(template.getIsRequired());
+        instance.setLevel(template.getLevel());
         instance.setAttributeConstraint(template.getAttributeConstraint());
         instance.setInputTip(com.commercetools.api.models.common.LocalizedString.deepCopy(template.getInputTip()));
         instance.setInputHint(template.getInputHint());

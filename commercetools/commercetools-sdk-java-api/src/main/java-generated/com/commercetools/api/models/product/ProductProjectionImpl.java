@@ -68,6 +68,8 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
 
     private com.commercetools.api.models.product.ProductPriceModeEnum priceMode;
 
+    private java.util.List<com.commercetools.api.models.product.Attribute> attributes;
+
     /**
      * create instance with all properties
      */
@@ -93,7 +95,8 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
             @JsonProperty("taxCategory") final com.commercetools.api.models.tax_category.TaxCategoryReference taxCategory,
             @JsonProperty("state") final com.commercetools.api.models.state.StateReference state,
             @JsonProperty("reviewRatingStatistics") final com.commercetools.api.models.review.ReviewRatingStatistics reviewRatingStatistics,
-            @JsonProperty("priceMode") final com.commercetools.api.models.product.ProductPriceModeEnum priceMode) {
+            @JsonProperty("priceMode") final com.commercetools.api.models.product.ProductPriceModeEnum priceMode,
+            @JsonProperty("attributes") final java.util.List<com.commercetools.api.models.product.Attribute> attributes) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -117,6 +120,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
         this.state = state;
         this.reviewRatingStatistics = reviewRatingStatistics;
         this.priceMode = priceMode;
+        this.attributes = attributes;
     }
 
     /**
@@ -309,6 +313,14 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
         return this.priceMode;
     }
 
+    /**
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes() {
+        return this.attributes;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -412,6 +424,14 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
         this.priceMode = priceMode;
     }
 
+    public void setAttributes(final com.commercetools.api.models.product.Attribute... attributes) {
+        this.attributes = new ArrayList<>(Arrays.asList(attributes));
+    }
+
+    public void setAttributes(final java.util.List<com.commercetools.api.models.product.Attribute> attributes) {
+        this.attributes = attributes;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -445,6 +465,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
                 .append(state, that.state)
                 .append(reviewRatingStatistics, that.reviewRatingStatistics)
                 .append(priceMode, that.priceMode)
+                .append(attributes, that.attributes)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -468,6 +489,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
                 .append(state, that.state)
                 .append(reviewRatingStatistics, that.reviewRatingStatistics)
                 .append(priceMode, that.priceMode)
+                .append(attributes, that.attributes)
                 .isEquals();
     }
 
@@ -496,6 +518,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
                 .append(state)
                 .append(reviewRatingStatistics)
                 .append(priceMode)
+                .append(attributes)
                 .toHashCode();
     }
 
@@ -524,6 +547,7 @@ public class ProductProjectionImpl implements ProductProjection, ModelBase {
                 .append("state", state)
                 .append("reviewRatingStatistics", reviewRatingStatistics)
                 .append("priceMode", priceMode)
+                .append("attributes", attributes)
                 .build();
     }
 

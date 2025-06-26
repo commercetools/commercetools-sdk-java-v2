@@ -89,6 +89,14 @@ public interface ProductTailoringData {
     public List<ProductVariantTailoring> getVariants();
 
     /**
+     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding Product. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     * @return attributes
+     */
+    @Valid
+    @JsonProperty("attributes")
+    public List<ProductTailoringAttribute> getAttributes();
+
+    /**
      *  <p>Tailored name of the Product.</p>
      * @param name value to be set
      */
@@ -146,6 +154,21 @@ public interface ProductTailoringData {
     public void setVariants(final List<ProductVariantTailoring> variants);
 
     /**
+     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding Product. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     * @param attributes values to be set
+     */
+
+    @JsonIgnore
+    public void setAttributes(final ProductTailoringAttribute... attributes);
+
+    /**
+     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding Product. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     * @param attributes values to be set
+     */
+
+    public void setAttributes(final List<ProductTailoringAttribute> attributes);
+
+    /**
      * factory method
      * @return instance of ProductTailoringData
      */
@@ -167,6 +190,7 @@ public interface ProductTailoringData {
         instance.setMetaKeywords(template.getMetaKeywords());
         instance.setSlug(template.getSlug());
         instance.setVariants(template.getVariants());
+        instance.setAttributes(template.getAttributes());
         return instance;
     }
 
@@ -195,6 +219,11 @@ public interface ProductTailoringData {
         instance.setVariants(Optional.ofNullable(template.getVariants())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.product_tailoring.ProductVariantTailoring::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setAttributes(Optional.ofNullable(template.getAttributes())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.product_tailoring.ProductTailoringAttribute::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
         return instance;

@@ -43,7 +43,10 @@ public class ProductTailoringInStoreDraftTest {
                 new Object[] { "publish", ProductTailoringInStoreDraft.builder().publish(true) },
                 new Object[] { "variants", ProductTailoringInStoreDraft.builder()
                         .variants(Collections.singletonList(
-                            new com.commercetools.api.models.product_tailoring.ProductVariantTailoringDraftImpl())) } };
+                            new com.commercetools.api.models.product_tailoring.ProductVariantTailoringDraftImpl())) },
+                new Object[] { "attributes", ProductTailoringInStoreDraft.builder()
+                        .attributes(Collections.singletonList(
+                            new com.commercetools.api.models.product_tailoring.ProductTailoringAttributeImpl())) } };
     }
 
     @Test
@@ -122,5 +125,15 @@ public class ProductTailoringInStoreDraftTest {
         Assertions.assertThat(value.getVariants())
                 .isEqualTo(Collections.singletonList(
                     new com.commercetools.api.models.product_tailoring.ProductVariantTailoringDraftImpl()));
+    }
+
+    @Test
+    public void attributes() {
+        ProductTailoringInStoreDraft value = ProductTailoringInStoreDraft.of();
+        value.setAttributes(Collections
+                .singletonList(new com.commercetools.api.models.product_tailoring.ProductTailoringAttributeImpl()));
+        Assertions.assertThat(value.getAttributes())
+                .isEqualTo(Collections.singletonList(
+                    new com.commercetools.api.models.product_tailoring.ProductTailoringAttributeImpl()));
     }
 }

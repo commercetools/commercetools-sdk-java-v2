@@ -56,6 +56,8 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
 
     private com.commercetools.api.models.product.ProductPriceModeEnum priceMode;
 
+    private java.util.List<com.commercetools.api.models.product.Attribute> attributes;
+
     /**
      * create instance with all properties
      */
@@ -77,7 +79,8 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
             @JsonProperty("searchKeywords") final com.commercetools.api.models.product.SearchKeywords searchKeywords,
             @JsonProperty("state") final com.commercetools.api.models.state.StateResourceIdentifier state,
             @JsonProperty("publish") final Boolean publish,
-            @JsonProperty("priceMode") final com.commercetools.api.models.product.ProductPriceModeEnum priceMode) {
+            @JsonProperty("priceMode") final com.commercetools.api.models.product.ProductPriceModeEnum priceMode,
+            @JsonProperty("attributes") final java.util.List<com.commercetools.api.models.product.Attribute> attributes) {
         this.productType = productType;
         this.name = name;
         this.slug = slug;
@@ -95,6 +98,7 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
         this.state = state;
         this.publish = publish;
         this.priceMode = priceMode;
+        this.attributes = attributes;
     }
 
     /**
@@ -241,6 +245,14 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
         return this.priceMode;
     }
 
+    /**
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes() {
+        return this.attributes;
+    }
+
     public void setProductType(
             final com.commercetools.api.models.product_type.ProductTypeResourceIdentifier productType) {
         this.productType = productType;
@@ -321,6 +333,14 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
         this.priceMode = priceMode;
     }
 
+    public void setAttributes(final com.commercetools.api.models.product.Attribute... attributes) {
+        this.attributes = new ArrayList<>(Arrays.asList(attributes));
+    }
+
+    public void setAttributes(final java.util.List<com.commercetools.api.models.product.Attribute> attributes) {
+        this.attributes = attributes;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -348,6 +368,7 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
                 .append(state, that.state)
                 .append(publish, that.publish)
                 .append(priceMode, that.priceMode)
+                .append(attributes, that.attributes)
                 .append(productType, that.productType)
                 .append(name, that.name)
                 .append(slug, that.slug)
@@ -365,6 +386,7 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
                 .append(state, that.state)
                 .append(publish, that.publish)
                 .append(priceMode, that.priceMode)
+                .append(attributes, that.attributes)
                 .isEquals();
     }
 
@@ -387,6 +409,7 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
                 .append(state)
                 .append(publish)
                 .append(priceMode)
+                .append(attributes)
                 .toHashCode();
     }
 
@@ -409,6 +432,7 @@ public class ProductDraftImpl implements ProductDraft, ModelBase {
                 .append("state", state)
                 .append("publish", publish)
                 .append("priceMode", priceMode)
+                .append("attributes", attributes)
                 .build();
     }
 

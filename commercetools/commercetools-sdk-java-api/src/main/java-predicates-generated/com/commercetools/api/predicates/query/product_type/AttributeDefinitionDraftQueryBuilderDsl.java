@@ -44,6 +44,12 @@ public class AttributeDefinitionDraftQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, AttributeDefinitionDraftQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<AttributeDefinitionDraftQueryBuilderDsl> level() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("level")),
+            p -> new CombinationQueryPredicate<>(p, AttributeDefinitionDraftQueryBuilderDsl::of));
+    }
+
     public StringComparisonPredicateBuilder<AttributeDefinitionDraftQueryBuilderDsl> attributeConstraint() {
         return new StringComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("attributeConstraint")),

@@ -113,6 +113,14 @@ public interface AttributeDefinition {
     public Boolean getIsSearchable();
 
     /**
+     *
+     * @return level
+     */
+
+    @JsonProperty("level")
+    public AttributeLevel getLevel();
+
+    /**
      * set type
      * @param type value to be set
      */
@@ -179,6 +187,13 @@ public interface AttributeDefinition {
     public void setIsSearchable(final Boolean isSearchable);
 
     /**
+     * set level
+     * @param level value to be set
+     */
+
+    public void setLevel(final AttributeLevel level);
+
+    /**
      * factory method
      * @return instance of AttributeDefinition
      */
@@ -201,6 +216,7 @@ public interface AttributeDefinition {
         instance.setInputTip(template.getInputTip());
         instance.setInputHint(template.getInputHint());
         instance.setIsSearchable(template.getIsSearchable());
+        instance.setLevel(template.getLevel());
         return instance;
     }
 
@@ -226,6 +242,7 @@ public interface AttributeDefinition {
             com.commercetools.importapi.models.common.LocalizedString.deepCopy(template.getInputTip()));
         instance.setInputHint(template.getInputHint());
         instance.setIsSearchable(template.getIsSearchable());
+        instance.setLevel(template.getLevel());
         return instance;
     }
 

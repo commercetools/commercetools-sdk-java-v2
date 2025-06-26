@@ -116,6 +116,10 @@ public class ProductTailoringUpdateActionBuilder {
         return com.commercetools.api.models.product_tailoring.ProductTailoringSetNameActionBuilder.of();
     }
 
+    public com.commercetools.api.models.product_tailoring.ProductTailoringSetProductAttributeActionBuilder setProductAttributeBuilder() {
+        return com.commercetools.api.models.product_tailoring.ProductTailoringSetProductAttributeActionBuilder.of();
+    }
+
     public com.commercetools.api.models.product_tailoring.ProductTailoringSetSlugActionBuilder setSlugBuilder() {
         return com.commercetools.api.models.product_tailoring.ProductTailoringSetSlugActionBuilder.of();
     }

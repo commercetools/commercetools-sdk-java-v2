@@ -35,6 +35,8 @@ public class ProductImportImpl implements ProductImport, ModelBase {
 
     private java.util.List<com.commercetools.importapi.models.common.CategoryKeyReference> categories;
 
+    private java.util.List<com.commercetools.importapi.models.productvariants.Attribute> attributes;
+
     private com.commercetools.importapi.models.common.LocalizedString metaTitle;
 
     private com.commercetools.importapi.models.common.LocalizedString metaDescription;
@@ -61,6 +63,7 @@ public class ProductImportImpl implements ProductImport, ModelBase {
             @JsonProperty("slug") final com.commercetools.importapi.models.common.LocalizedString slug,
             @JsonProperty("description") final com.commercetools.importapi.models.common.LocalizedString description,
             @JsonProperty("categories") final java.util.List<com.commercetools.importapi.models.common.CategoryKeyReference> categories,
+            @JsonProperty("attributes") final java.util.List<com.commercetools.importapi.models.productvariants.Attribute> attributes,
             @JsonProperty("metaTitle") final com.commercetools.importapi.models.common.LocalizedString metaTitle,
             @JsonProperty("metaDescription") final com.commercetools.importapi.models.common.LocalizedString metaDescription,
             @JsonProperty("metaKeywords") final com.commercetools.importapi.models.common.LocalizedString metaKeywords,
@@ -75,6 +78,7 @@ public class ProductImportImpl implements ProductImport, ModelBase {
         this.slug = slug;
         this.description = description;
         this.categories = categories;
+        this.attributes = attributes;
         this.metaTitle = metaTitle;
         this.metaDescription = metaDescription;
         this.metaKeywords = metaKeywords;
@@ -137,6 +141,14 @@ public class ProductImportImpl implements ProductImport, ModelBase {
 
     public java.util.List<com.commercetools.importapi.models.common.CategoryKeyReference> getCategories() {
         return this.categories;
+    }
+
+    /**
+     *
+     */
+
+    public java.util.List<com.commercetools.importapi.models.productvariants.Attribute> getAttributes() {
+        return this.attributes;
     }
 
     /**
@@ -263,6 +275,15 @@ public class ProductImportImpl implements ProductImport, ModelBase {
         this.categories = categories;
     }
 
+    public void setAttributes(final com.commercetools.importapi.models.productvariants.Attribute... attributes) {
+        this.attributes = new ArrayList<>(Arrays.asList(attributes));
+    }
+
+    public void setAttributes(
+            final java.util.List<com.commercetools.importapi.models.productvariants.Attribute> attributes) {
+        this.attributes = attributes;
+    }
+
     public void setMetaTitle(final com.commercetools.importapi.models.common.LocalizedString metaTitle) {
         this.metaTitle = metaTitle;
     }
@@ -311,6 +332,7 @@ public class ProductImportImpl implements ProductImport, ModelBase {
                 .append(slug, that.slug)
                 .append(description, that.description)
                 .append(categories, that.categories)
+                .append(attributes, that.attributes)
                 .append(metaTitle, that.metaTitle)
                 .append(metaDescription, that.metaDescription)
                 .append(metaKeywords, that.metaKeywords)
@@ -325,6 +347,7 @@ public class ProductImportImpl implements ProductImport, ModelBase {
                 .append(slug, that.slug)
                 .append(description, that.description)
                 .append(categories, that.categories)
+                .append(attributes, that.attributes)
                 .append(metaTitle, that.metaTitle)
                 .append(metaDescription, that.metaDescription)
                 .append(metaKeywords, that.metaKeywords)
@@ -344,6 +367,7 @@ public class ProductImportImpl implements ProductImport, ModelBase {
                 .append(slug)
                 .append(description)
                 .append(categories)
+                .append(attributes)
                 .append(metaTitle)
                 .append(metaDescription)
                 .append(metaKeywords)
@@ -363,6 +387,7 @@ public class ProductImportImpl implements ProductImport, ModelBase {
                 .append("slug", slug)
                 .append("description", description)
                 .append("categories", categories)
+                .append("attributes", attributes)
                 .append("metaTitle", metaTitle)
                 .append("metaDescription", metaDescription)
                 .append("metaKeywords", metaKeywords)

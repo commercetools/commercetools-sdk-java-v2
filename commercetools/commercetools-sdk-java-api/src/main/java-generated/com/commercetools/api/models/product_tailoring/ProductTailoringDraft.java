@@ -128,6 +128,14 @@ public interface ProductTailoringDraft extends io.vrap.rmf.base.client.Draft<Pro
     public List<ProductVariantTailoringDraft> getVariants();
 
     /**
+     *  <p>Attributes of the tailored Product. If provided, these Attributes are selectively merged into the <code>attributes</code> of the corresponding Product. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     * @return attributes
+     */
+    @Valid
+    @JsonProperty("attributes")
+    public List<ProductTailoringAttribute> getAttributes();
+
+    /**
      *  <p>User-defined unique identifier of the ProductTailoring.</p>
      * @param key value to be set
      */
@@ -213,6 +221,21 @@ public interface ProductTailoringDraft extends io.vrap.rmf.base.client.Draft<Pro
     public void setVariants(final List<ProductVariantTailoringDraft> variants);
 
     /**
+     *  <p>Attributes of the tailored Product. If provided, these Attributes are selectively merged into the <code>attributes</code> of the corresponding Product. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     * @param attributes values to be set
+     */
+
+    @JsonIgnore
+    public void setAttributes(final ProductTailoringAttribute... attributes);
+
+    /**
+     *  <p>Attributes of the tailored Product. If provided, these Attributes are selectively merged into the <code>attributes</code> of the corresponding Product. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     * @param attributes values to be set
+     */
+
+    public void setAttributes(final List<ProductTailoringAttribute> attributes);
+
+    /**
      * factory method
      * @return instance of ProductTailoringDraft
      */
@@ -238,6 +261,7 @@ public interface ProductTailoringDraft extends io.vrap.rmf.base.client.Draft<Pro
         instance.setSlug(template.getSlug());
         instance.setPublish(template.getPublish());
         instance.setVariants(template.getVariants());
+        instance.setAttributes(template.getAttributes());
         return instance;
     }
 
@@ -271,6 +295,11 @@ public interface ProductTailoringDraft extends io.vrap.rmf.base.client.Draft<Pro
         instance.setVariants(Optional.ofNullable(template.getVariants())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.product_tailoring.ProductVariantTailoringDraft::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
+        instance.setAttributes(Optional.ofNullable(template.getAttributes())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.product_tailoring.ProductTailoringAttribute::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
         return instance;

@@ -183,6 +183,14 @@ public interface ProductDraft
     public ProductPriceModeEnum getPriceMode();
 
     /**
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     * @return attributes
+     */
+    @Valid
+    @JsonProperty("attributes")
+    public List<Attribute> getAttributes();
+
+    /**
      *  <p>The Product Type defining the Attributes for the Product. Cannot be changed later.</p>
      * @param productType value to be set
      */
@@ -320,6 +328,21 @@ public interface ProductDraft
     public void setPriceMode(final ProductPriceModeEnum priceMode);
 
     /**
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     * @param attributes values to be set
+     */
+
+    @JsonIgnore
+    public void setAttributes(final Attribute... attributes);
+
+    /**
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     * @param attributes values to be set
+     */
+
+    public void setAttributes(final List<Attribute> attributes);
+
+    /**
      * factory method
      * @return instance of ProductDraft
      */
@@ -351,6 +374,7 @@ public interface ProductDraft
         instance.setState(template.getState());
         instance.setPublish(template.getPublish());
         instance.setPriceMode(template.getPriceMode());
+        instance.setAttributes(template.getAttributes());
         return instance;
     }
 
@@ -400,6 +424,11 @@ public interface ProductDraft
         instance.setState(com.commercetools.api.models.state.StateResourceIdentifier.deepCopy(template.getState()));
         instance.setPublish(template.getPublish());
         instance.setPriceMode(template.getPriceMode());
+        instance.setAttributes(Optional.ofNullable(template.getAttributes())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.product.Attribute::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

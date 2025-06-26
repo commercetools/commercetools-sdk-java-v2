@@ -25,6 +25,8 @@ public class AttributeDefinitionDraftTest {
                         AttributeDefinitionDraft.builder()
                                 .label(new com.commercetools.api.models.common.LocalizedStringImpl()) },
                 new Object[] { "isRequired", AttributeDefinitionDraft.builder().isRequired(true) },
+                new Object[] { "level", AttributeDefinitionDraft.builder()
+                        .level(com.commercetools.api.models.product_type.AttributeLevelEnum.findEnum("Product")) },
                 new Object[] { "attributeConstraint",
                         AttributeDefinitionDraft.builder()
                                 .attributeConstraint(com.commercetools.api.models.product_type.AttributeConstraintEnum
@@ -65,6 +67,14 @@ public class AttributeDefinitionDraftTest {
         AttributeDefinitionDraft value = AttributeDefinitionDraft.of();
         value.setIsRequired(true);
         Assertions.assertThat(value.getIsRequired()).isEqualTo(true);
+    }
+
+    @Test
+    public void level() {
+        AttributeDefinitionDraft value = AttributeDefinitionDraft.of();
+        value.setLevel(com.commercetools.api.models.product_type.AttributeLevelEnum.findEnum("Product"));
+        Assertions.assertThat(value.getLevel())
+                .isEqualTo(com.commercetools.api.models.product_type.AttributeLevelEnum.findEnum("Product"));
     }
 
     @Test

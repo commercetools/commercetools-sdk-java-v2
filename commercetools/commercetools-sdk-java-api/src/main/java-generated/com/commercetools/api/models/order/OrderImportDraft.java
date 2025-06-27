@@ -140,6 +140,14 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
     public TaxedPriceDraft getTaxedPrice();
 
     /**
+     *  <p>Determines how the total prices on LineItems and CustomLineItems are rounded when calculated.</p>
+     * @return priceRoundingMode
+     */
+
+    @JsonProperty("priceRoundingMode")
+    public RoundingMode getPriceRoundingMode();
+
+    /**
      *  <p>Determines how monetary values are rounded when calculating taxes for <code>taxedPrice</code>.</p>
      * @return taxRoundingMode
      */
@@ -366,6 +374,13 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
     public void setTaxedPrice(final TaxedPriceDraft taxedPrice);
 
     /**
+     *  <p>Determines how the total prices on LineItems and CustomLineItems are rounded when calculated.</p>
+     * @param priceRoundingMode value to be set
+     */
+
+    public void setPriceRoundingMode(final RoundingMode priceRoundingMode);
+
+    /**
      *  <p>Determines how monetary values are rounded when calculating taxes for <code>taxedPrice</code>.</p>
      * @param taxRoundingMode value to be set
      */
@@ -511,6 +526,7 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
         instance.setCustomLineItems(template.getCustomLineItems());
         instance.setTotalPrice(template.getTotalPrice());
         instance.setTaxedPrice(template.getTaxedPrice());
+        instance.setPriceRoundingMode(template.getPriceRoundingMode());
         instance.setTaxRoundingMode(template.getTaxRoundingMode());
         instance.setTaxCalculationMode(template.getTaxCalculationMode());
         instance.setInventoryMode(template.getInventoryMode());
@@ -564,6 +580,7 @@ public interface OrderImportDraft extends com.commercetools.api.models.Customiza
                 .orElse(null));
         instance.setTotalPrice(com.commercetools.api.models.common.Money.deepCopy(template.getTotalPrice()));
         instance.setTaxedPrice(com.commercetools.api.models.cart.TaxedPriceDraft.deepCopy(template.getTaxedPrice()));
+        instance.setPriceRoundingMode(template.getPriceRoundingMode());
         instance.setTaxRoundingMode(template.getTaxRoundingMode());
         instance.setTaxCalculationMode(template.getTaxCalculationMode());
         instance.setInventoryMode(template.getInventoryMode());

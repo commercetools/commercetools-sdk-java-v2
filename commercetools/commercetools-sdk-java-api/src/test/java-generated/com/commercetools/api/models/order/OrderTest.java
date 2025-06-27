@@ -46,6 +46,8 @@ public class OrderTest {
                         Order.builder().taxedShippingPrice(new com.commercetools.api.models.cart.TaxedPriceImpl()) },
                 new Object[] { "discountOnTotalPrice", Order.builder()
                         .discountOnTotalPrice(new com.commercetools.api.models.cart.DiscountOnTotalPriceImpl()) },
+                new Object[] { "priceRoundingMode", Order.builder()
+                        .priceRoundingMode(com.commercetools.api.models.cart.RoundingMode.findEnum("HalfEven")) },
                 new Object[] { "taxMode",
                         Order.builder().taxMode(com.commercetools.api.models.cart.TaxMode.findEnum("Platform")) },
                 new Object[] { "taxRoundingMode",
@@ -251,6 +253,14 @@ public class OrderTest {
         value.setDiscountOnTotalPrice(new com.commercetools.api.models.cart.DiscountOnTotalPriceImpl());
         Assertions.assertThat(value.getDiscountOnTotalPrice())
                 .isEqualTo(new com.commercetools.api.models.cart.DiscountOnTotalPriceImpl());
+    }
+
+    @Test
+    public void priceRoundingMode() {
+        Order value = Order.of();
+        value.setPriceRoundingMode(com.commercetools.api.models.cart.RoundingMode.findEnum("HalfEven"));
+        Assertions.assertThat(value.getPriceRoundingMode())
+                .isEqualTo(com.commercetools.api.models.cart.RoundingMode.findEnum("HalfEven"));
     }
 
     @Test

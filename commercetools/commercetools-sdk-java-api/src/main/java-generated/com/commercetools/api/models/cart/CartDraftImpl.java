@@ -46,6 +46,8 @@ public class CartDraftImpl implements CartDraft, ModelBase {
 
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRateForShippingMethod;
 
+    private com.commercetools.api.models.cart.RoundingMode priceRoundingMode;
+
     private com.commercetools.api.models.cart.RoundingMode taxRoundingMode;
 
     private com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode;
@@ -95,6 +97,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
             @JsonProperty("customLineItems") final java.util.List<com.commercetools.api.models.cart.CustomLineItemDraft> customLineItems,
             @JsonProperty("taxMode") final com.commercetools.api.models.cart.TaxMode taxMode,
             @JsonProperty("externalTaxRateForShippingMethod") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRateForShippingMethod,
+            @JsonProperty("priceRoundingMode") final com.commercetools.api.models.cart.RoundingMode priceRoundingMode,
             @JsonProperty("taxRoundingMode") final com.commercetools.api.models.cart.RoundingMode taxRoundingMode,
             @JsonProperty("taxCalculationMode") final com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode,
             @JsonProperty("inventoryMode") final com.commercetools.api.models.cart.InventoryMode inventoryMode,
@@ -123,6 +126,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
         this.customLineItems = customLineItems;
         this.taxMode = taxMode;
         this.externalTaxRateForShippingMethod = externalTaxRateForShippingMethod;
+        this.priceRoundingMode = priceRoundingMode;
         this.taxRoundingMode = taxRoundingMode;
         this.taxCalculationMode = taxCalculationMode;
         this.inventoryMode = inventoryMode;
@@ -246,7 +250,15 @@ public class CartDraftImpl implements CartDraft, ModelBase {
     }
 
     /**
-     *  <p>Determines how monetary values are rounded when calculating taxes for <code>taxedPrice</code>.</p>
+     *  <p>Determines how the total prices on LineItems and CustomLineItems are rounded when calculated. If not set, the default value configured in the Project is used.</p>
+     */
+
+    public com.commercetools.api.models.cart.RoundingMode getPriceRoundingMode() {
+        return this.priceRoundingMode;
+    }
+
+    /**
+     *  <p>Determines how monetary values are rounded when calculating taxes for <code>taxedPrice</code>. If not set, the default value configured in the Project is used.</p>
      */
 
     public com.commercetools.api.models.cart.RoundingMode getTaxRoundingMode() {
@@ -451,6 +463,10 @@ public class CartDraftImpl implements CartDraft, ModelBase {
         this.externalTaxRateForShippingMethod = externalTaxRateForShippingMethod;
     }
 
+    public void setPriceRoundingMode(final com.commercetools.api.models.cart.RoundingMode priceRoundingMode) {
+        this.priceRoundingMode = priceRoundingMode;
+    }
+
     public void setTaxRoundingMode(final com.commercetools.api.models.cart.RoundingMode taxRoundingMode) {
         this.taxRoundingMode = taxRoundingMode;
     }
@@ -561,6 +577,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
                 .append(customLineItems, that.customLineItems)
                 .append(taxMode, that.taxMode)
                 .append(externalTaxRateForShippingMethod, that.externalTaxRateForShippingMethod)
+                .append(priceRoundingMode, that.priceRoundingMode)
                 .append(taxRoundingMode, that.taxRoundingMode)
                 .append(taxCalculationMode, that.taxCalculationMode)
                 .append(inventoryMode, that.inventoryMode)
@@ -590,6 +607,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
                 .append(customLineItems, that.customLineItems)
                 .append(taxMode, that.taxMode)
                 .append(externalTaxRateForShippingMethod, that.externalTaxRateForShippingMethod)
+                .append(priceRoundingMode, that.priceRoundingMode)
                 .append(taxRoundingMode, that.taxRoundingMode)
                 .append(taxCalculationMode, that.taxCalculationMode)
                 .append(inventoryMode, that.inventoryMode)
@@ -624,6 +642,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
                 .append(customLineItems)
                 .append(taxMode)
                 .append(externalTaxRateForShippingMethod)
+                .append(priceRoundingMode)
                 .append(taxRoundingMode)
                 .append(taxCalculationMode)
                 .append(inventoryMode)
@@ -658,6 +677,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
                 .append("customLineItems", customLineItems)
                 .append("taxMode", taxMode)
                 .append("externalTaxRateForShippingMethod", externalTaxRateForShippingMethod)
+                .append("priceRoundingMode", priceRoundingMode)
                 .append("taxRoundingMode", taxRoundingMode)
                 .append("taxCalculationMode", taxCalculationMode)
                 .append("inventoryMode", inventoryMode)

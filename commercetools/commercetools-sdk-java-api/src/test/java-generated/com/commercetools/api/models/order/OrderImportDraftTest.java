@@ -46,6 +46,8 @@ public class OrderImportDraftTest {
                 new Object[] { "taxedPrice",
                         OrderImportDraft.builder()
                                 .taxedPrice(new com.commercetools.api.models.cart.TaxedPriceDraftImpl()) },
+                new Object[] { "priceRoundingMode", OrderImportDraft.builder()
+                        .priceRoundingMode(com.commercetools.api.models.cart.RoundingMode.findEnum("HalfEven")) },
                 new Object[] { "taxRoundingMode",
                         OrderImportDraft.builder()
                                 .taxRoundingMode(com.commercetools.api.models.cart.RoundingMode.findEnum("HalfEven")) },
@@ -176,6 +178,14 @@ public class OrderImportDraftTest {
         value.setTaxedPrice(new com.commercetools.api.models.cart.TaxedPriceDraftImpl());
         Assertions.assertThat(value.getTaxedPrice())
                 .isEqualTo(new com.commercetools.api.models.cart.TaxedPriceDraftImpl());
+    }
+
+    @Test
+    public void priceRoundingMode() {
+        OrderImportDraft value = OrderImportDraft.of();
+        value.setPriceRoundingMode(com.commercetools.api.models.cart.RoundingMode.findEnum("HalfEven"));
+        Assertions.assertThat(value.getPriceRoundingMode())
+                .isEqualTo(com.commercetools.api.models.cart.RoundingMode.findEnum("HalfEven"));
     }
 
     @Test

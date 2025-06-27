@@ -128,6 +128,13 @@ public class CartUpdateActionQueryBuilderDsl {
             CartUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl> asChangePriceRoundingMode(
+            Function<com.commercetools.api.predicates.query.cart.CartChangePriceRoundingModeActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.CartChangePriceRoundingModeActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.cart.CartChangePriceRoundingModeActionQueryBuilderDsl.of()),
+            CartUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<CartUpdateActionQueryBuilderDsl> asChangeTaxCalculationMode(
             Function<com.commercetools.api.predicates.query.cart.CartChangeTaxCalculationModeActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart.CartChangeTaxCalculationModeActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

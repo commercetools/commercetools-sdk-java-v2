@@ -28,6 +28,12 @@ public class CartsConfigurationBuilder implements Builder<CartsConfiguration> {
     @Nullable
     private Boolean countryTaxRateFallbackEnabled;
 
+    @Nullable
+    private com.commercetools.api.models.cart.RoundingMode priceRoundingMode;
+
+    @Nullable
+    private com.commercetools.api.models.cart.RoundingMode taxRoundingMode;
+
     /**
      *  <p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the CartDraft and MyCartDraft. If a ChangeSubscription for Carts exists, a ResourceDeletedDeliveryPayload is sent upon deletion of a Cart.</p>
      *  <p>This field may not be present on Projects created before January 2020.</p>
@@ -54,6 +60,30 @@ public class CartsConfigurationBuilder implements Builder<CartsConfiguration> {
     }
 
     /**
+     *  <p>Default value for the <code>priceRoundingMode</code> parameter of the CartDraft. Indicates how the total prices on LineItems and CustomLineItems are rounded when calculated.</p>
+     * @param priceRoundingMode value to be set
+     * @return Builder
+     */
+
+    public CartsConfigurationBuilder priceRoundingMode(
+            @Nullable final com.commercetools.api.models.cart.RoundingMode priceRoundingMode) {
+        this.priceRoundingMode = priceRoundingMode;
+        return this;
+    }
+
+    /**
+     *  <p>Default value for the <code>taxRoundingMode</code> parameter of the CartDraft. Indicates how monetary values are rounded when calculating taxes for <code>taxedPrice</code>.</p>
+     * @param taxRoundingMode value to be set
+     * @return Builder
+     */
+
+    public CartsConfigurationBuilder taxRoundingMode(
+            @Nullable final com.commercetools.api.models.cart.RoundingMode taxRoundingMode) {
+        this.taxRoundingMode = taxRoundingMode;
+        return this;
+    }
+
+    /**
      *  <p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the CartDraft and MyCartDraft. If a ChangeSubscription for Carts exists, a ResourceDeletedDeliveryPayload is sent upon deletion of a Cart.</p>
      *  <p>This field may not be present on Projects created before January 2020.</p>
      * @return deleteDaysAfterLastModification
@@ -75,11 +105,32 @@ public class CartsConfigurationBuilder implements Builder<CartsConfiguration> {
     }
 
     /**
+     *  <p>Default value for the <code>priceRoundingMode</code> parameter of the CartDraft. Indicates how the total prices on LineItems and CustomLineItems are rounded when calculated.</p>
+     * @return priceRoundingMode
+     */
+
+    @Nullable
+    public com.commercetools.api.models.cart.RoundingMode getPriceRoundingMode() {
+        return this.priceRoundingMode;
+    }
+
+    /**
+     *  <p>Default value for the <code>taxRoundingMode</code> parameter of the CartDraft. Indicates how monetary values are rounded when calculating taxes for <code>taxedPrice</code>.</p>
+     * @return taxRoundingMode
+     */
+
+    @Nullable
+    public com.commercetools.api.models.cart.RoundingMode getTaxRoundingMode() {
+        return this.taxRoundingMode;
+    }
+
+    /**
      * builds CartsConfiguration with checking for non-null required values
      * @return CartsConfiguration
      */
     public CartsConfiguration build() {
-        return new CartsConfigurationImpl(deleteDaysAfterLastModification, countryTaxRateFallbackEnabled);
+        return new CartsConfigurationImpl(deleteDaysAfterLastModification, countryTaxRateFallbackEnabled,
+            priceRoundingMode, taxRoundingMode);
     }
 
     /**
@@ -87,7 +138,8 @@ public class CartsConfigurationBuilder implements Builder<CartsConfiguration> {
      * @return CartsConfiguration
      */
     public CartsConfiguration buildUnchecked() {
-        return new CartsConfigurationImpl(deleteDaysAfterLastModification, countryTaxRateFallbackEnabled);
+        return new CartsConfigurationImpl(deleteDaysAfterLastModification, countryTaxRateFallbackEnabled,
+            priceRoundingMode, taxRoundingMode);
     }
 
     /**
@@ -107,6 +159,8 @@ public class CartsConfigurationBuilder implements Builder<CartsConfiguration> {
         CartsConfigurationBuilder builder = new CartsConfigurationBuilder();
         builder.deleteDaysAfterLastModification = template.getDeleteDaysAfterLastModification();
         builder.countryTaxRateFallbackEnabled = template.getCountryTaxRateFallbackEnabled();
+        builder.priceRoundingMode = template.getPriceRoundingMode();
+        builder.taxRoundingMode = template.getTaxRoundingMode();
         return builder;
     }
 

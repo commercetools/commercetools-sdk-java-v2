@@ -149,6 +149,14 @@ public interface ProjectUpdateAction extends com.commercetools.api.models.Resour
     }
 
     /**
+     * builder for changePriceRoundingMode subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.project.ProjectChangePriceRoundingModeActionBuilder changePriceRoundingModeBuilder() {
+        return com.commercetools.api.models.project.ProjectChangePriceRoundingModeActionBuilder.of();
+    }
+
+    /**
      * builder for changeProductSearchIndexingEnabled subtype
      * @return builder
      */
@@ -162,6 +170,14 @@ public interface ProjectUpdateAction extends com.commercetools.api.models.Resour
      */
     public static com.commercetools.api.models.project.ProjectChangeShoppingListsConfigurationActionBuilder changeShoppingListsConfigurationBuilder() {
         return com.commercetools.api.models.project.ProjectChangeShoppingListsConfigurationActionBuilder.of();
+    }
+
+    /**
+     * builder for changeTaxRoundingMode subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.project.ProjectChangeTaxRoundingModeActionBuilder changeTaxRoundingModeBuilder() {
+        return com.commercetools.api.models.project.ProjectChangeTaxRoundingModeActionBuilder.of();
     }
 
     /**

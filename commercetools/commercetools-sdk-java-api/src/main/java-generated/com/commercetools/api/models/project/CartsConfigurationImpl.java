@@ -26,14 +26,22 @@ public class CartsConfigurationImpl implements CartsConfiguration, ModelBase {
 
     private Boolean countryTaxRateFallbackEnabled;
 
+    private com.commercetools.api.models.cart.RoundingMode priceRoundingMode;
+
+    private com.commercetools.api.models.cart.RoundingMode taxRoundingMode;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
     CartsConfigurationImpl(@JsonProperty("deleteDaysAfterLastModification") final Long deleteDaysAfterLastModification,
-            @JsonProperty("countryTaxRateFallbackEnabled") final Boolean countryTaxRateFallbackEnabled) {
+            @JsonProperty("countryTaxRateFallbackEnabled") final Boolean countryTaxRateFallbackEnabled,
+            @JsonProperty("priceRoundingMode") final com.commercetools.api.models.cart.RoundingMode priceRoundingMode,
+            @JsonProperty("taxRoundingMode") final com.commercetools.api.models.cart.RoundingMode taxRoundingMode) {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
         this.countryTaxRateFallbackEnabled = countryTaxRateFallbackEnabled;
+        this.priceRoundingMode = priceRoundingMode;
+        this.taxRoundingMode = taxRoundingMode;
     }
 
     /**
@@ -59,12 +67,36 @@ public class CartsConfigurationImpl implements CartsConfiguration, ModelBase {
         return this.countryTaxRateFallbackEnabled;
     }
 
+    /**
+     *  <p>Default value for the <code>priceRoundingMode</code> parameter of the CartDraft. Indicates how the total prices on LineItems and CustomLineItems are rounded when calculated.</p>
+     */
+
+    public com.commercetools.api.models.cart.RoundingMode getPriceRoundingMode() {
+        return this.priceRoundingMode;
+    }
+
+    /**
+     *  <p>Default value for the <code>taxRoundingMode</code> parameter of the CartDraft. Indicates how monetary values are rounded when calculating taxes for <code>taxedPrice</code>.</p>
+     */
+
+    public com.commercetools.api.models.cart.RoundingMode getTaxRoundingMode() {
+        return this.taxRoundingMode;
+    }
+
     public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification) {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
     }
 
     public void setCountryTaxRateFallbackEnabled(final Boolean countryTaxRateFallbackEnabled) {
         this.countryTaxRateFallbackEnabled = countryTaxRateFallbackEnabled;
+    }
+
+    public void setPriceRoundingMode(final com.commercetools.api.models.cart.RoundingMode priceRoundingMode) {
+        this.priceRoundingMode = priceRoundingMode;
+    }
+
+    public void setTaxRoundingMode(final com.commercetools.api.models.cart.RoundingMode taxRoundingMode) {
+        this.taxRoundingMode = taxRoundingMode;
     }
 
     @Override
@@ -79,8 +111,12 @@ public class CartsConfigurationImpl implements CartsConfiguration, ModelBase {
 
         return new EqualsBuilder().append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
                 .append(countryTaxRateFallbackEnabled, that.countryTaxRateFallbackEnabled)
+                .append(priceRoundingMode, that.priceRoundingMode)
+                .append(taxRoundingMode, that.taxRoundingMode)
                 .append(deleteDaysAfterLastModification, that.deleteDaysAfterLastModification)
                 .append(countryTaxRateFallbackEnabled, that.countryTaxRateFallbackEnabled)
+                .append(priceRoundingMode, that.priceRoundingMode)
+                .append(taxRoundingMode, that.taxRoundingMode)
                 .isEquals();
     }
 
@@ -88,6 +124,8 @@ public class CartsConfigurationImpl implements CartsConfiguration, ModelBase {
     public int hashCode() {
         return new HashCodeBuilder(17, 37).append(deleteDaysAfterLastModification)
                 .append(countryTaxRateFallbackEnabled)
+                .append(priceRoundingMode)
+                .append(taxRoundingMode)
                 .toHashCode();
     }
 
@@ -96,6 +134,8 @@ public class CartsConfigurationImpl implements CartsConfiguration, ModelBase {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE)
                 .append("deleteDaysAfterLastModification", deleteDaysAfterLastModification)
                 .append("countryTaxRateFallbackEnabled", countryTaxRateFallbackEnabled)
+                .append("priceRoundingMode", priceRoundingMode)
+                .append("taxRoundingMode", taxRoundingMode)
                 .build();
     }
 

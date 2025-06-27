@@ -23,4 +23,16 @@ public class CartsConfigurationQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, CartsConfigurationQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<CartsConfigurationQueryBuilderDsl> priceRoundingMode() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("priceRoundingMode")),
+            p -> new CombinationQueryPredicate<>(p, CartsConfigurationQueryBuilderDsl::of));
+    }
+
+    public StringComparisonPredicateBuilder<CartsConfigurationQueryBuilderDsl> taxRoundingMode() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("taxRoundingMode")),
+            p -> new CombinationQueryPredicate<>(p, CartsConfigurationQueryBuilderDsl::of));
+    }
+
 }

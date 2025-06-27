@@ -67,6 +67,10 @@ public class StagedOrderUpdateActionBuilder {
         return com.commercetools.api.models.order_edit.StagedOrderChangePaymentStateActionBuilder.of();
     }
 
+    public com.commercetools.api.models.order_edit.StagedOrderChangePriceRoundingModeActionBuilder changePriceRoundingModeBuilder() {
+        return com.commercetools.api.models.order_edit.StagedOrderChangePriceRoundingModeActionBuilder.of();
+    }
+
     public com.commercetools.api.models.order_edit.StagedOrderChangeShipmentStateActionBuilder changeShipmentStateBuilder() {
         return com.commercetools.api.models.order_edit.StagedOrderChangeShipmentStateActionBuilder.of();
     }

@@ -60,6 +60,9 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     private com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRateForShippingMethod;
 
     @Nullable
+    private com.commercetools.api.models.cart.RoundingMode priceRoundingMode;
+
+    @Nullable
     private com.commercetools.api.models.cart.RoundingMode taxRoundingMode;
 
     @Nullable
@@ -511,7 +514,19 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-     *  <p>Determines how monetary values are rounded when calculating taxes for <code>taxedPrice</code>.</p>
+     *  <p>Determines how the total prices on LineItems and CustomLineItems are rounded when calculated. If not set, the default value configured in the Project is used.</p>
+     * @param priceRoundingMode value to be set
+     * @return Builder
+     */
+
+    public CartDraftBuilder priceRoundingMode(
+            @Nullable final com.commercetools.api.models.cart.RoundingMode priceRoundingMode) {
+        this.priceRoundingMode = priceRoundingMode;
+        return this;
+    }
+
+    /**
+     *  <p>Determines how monetary values are rounded when calculating taxes for <code>taxedPrice</code>. If not set, the default value configured in the Project is used.</p>
      * @param taxRoundingMode value to be set
      * @return Builder
      */
@@ -1219,7 +1234,17 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     }
 
     /**
-     *  <p>Determines how monetary values are rounded when calculating taxes for <code>taxedPrice</code>.</p>
+     *  <p>Determines how the total prices on LineItems and CustomLineItems are rounded when calculated. If not set, the default value configured in the Project is used.</p>
+     * @return priceRoundingMode
+     */
+
+    @Nullable
+    public com.commercetools.api.models.cart.RoundingMode getPriceRoundingMode() {
+        return this.priceRoundingMode;
+    }
+
+    /**
+     *  <p>Determines how monetary values are rounded when calculating taxes for <code>taxedPrice</code>. If not set, the default value configured in the Project is used.</p>
      * @return taxRoundingMode
      */
 
@@ -1405,10 +1430,10 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     public CartDraft build() {
         Objects.requireNonNull(currency, CartDraft.class + ": currency is missing");
         return new CartDraftImpl(currency, key, customerId, customerEmail, customerGroup, anonymousId, businessUnit,
-            store, lineItems, customLineItems, taxMode, externalTaxRateForShippingMethod, taxRoundingMode,
-            taxCalculationMode, inventoryMode, billingAddress, shippingAddress, shippingMethod, shippingRateInput,
-            shippingMode, customShipping, shipping, itemShippingAddresses, discountCodes, country, locale, origin,
-            deleteDaysAfterLastModification, custom);
+            store, lineItems, customLineItems, taxMode, externalTaxRateForShippingMethod, priceRoundingMode,
+            taxRoundingMode, taxCalculationMode, inventoryMode, billingAddress, shippingAddress, shippingMethod,
+            shippingRateInput, shippingMode, customShipping, shipping, itemShippingAddresses, discountCodes, country,
+            locale, origin, deleteDaysAfterLastModification, custom);
     }
 
     /**
@@ -1417,10 +1442,10 @@ public class CartDraftBuilder implements Builder<CartDraft> {
      */
     public CartDraft buildUnchecked() {
         return new CartDraftImpl(currency, key, customerId, customerEmail, customerGroup, anonymousId, businessUnit,
-            store, lineItems, customLineItems, taxMode, externalTaxRateForShippingMethod, taxRoundingMode,
-            taxCalculationMode, inventoryMode, billingAddress, shippingAddress, shippingMethod, shippingRateInput,
-            shippingMode, customShipping, shipping, itemShippingAddresses, discountCodes, country, locale, origin,
-            deleteDaysAfterLastModification, custom);
+            store, lineItems, customLineItems, taxMode, externalTaxRateForShippingMethod, priceRoundingMode,
+            taxRoundingMode, taxCalculationMode, inventoryMode, billingAddress, shippingAddress, shippingMethod,
+            shippingRateInput, shippingMode, customShipping, shipping, itemShippingAddresses, discountCodes, country,
+            locale, origin, deleteDaysAfterLastModification, custom);
     }
 
     /**
@@ -1450,6 +1475,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
         builder.customLineItems = template.getCustomLineItems();
         builder.taxMode = template.getTaxMode();
         builder.externalTaxRateForShippingMethod = template.getExternalTaxRateForShippingMethod();
+        builder.priceRoundingMode = template.getPriceRoundingMode();
         builder.taxRoundingMode = template.getTaxRoundingMode();
         builder.taxCalculationMode = template.getTaxCalculationMode();
         builder.inventoryMode = template.getInventoryMode();

@@ -55,12 +55,20 @@ public class ProjectUpdateActionBuilder {
         return com.commercetools.api.models.project.ProjectChangeOrderSearchStatusActionBuilder.of();
     }
 
+    public com.commercetools.api.models.project.ProjectChangePriceRoundingModeActionBuilder changePriceRoundingModeBuilder() {
+        return com.commercetools.api.models.project.ProjectChangePriceRoundingModeActionBuilder.of();
+    }
+
     public com.commercetools.api.models.project.ProjectChangeProductSearchIndexingEnabledActionBuilder changeProductSearchIndexingEnabledBuilder() {
         return com.commercetools.api.models.project.ProjectChangeProductSearchIndexingEnabledActionBuilder.of();
     }
 
     public com.commercetools.api.models.project.ProjectChangeShoppingListsConfigurationActionBuilder changeShoppingListsConfigurationBuilder() {
         return com.commercetools.api.models.project.ProjectChangeShoppingListsConfigurationActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.project.ProjectChangeTaxRoundingModeActionBuilder changeTaxRoundingModeBuilder() {
+        return com.commercetools.api.models.project.ProjectChangeTaxRoundingModeActionBuilder.of();
     }
 
     public com.commercetools.api.models.project.ProjectSetBusinessUnitAssociateRoleOnCreationActionBuilder setMyBusinessUnitAssociateRoleOnCreationBuilder() {

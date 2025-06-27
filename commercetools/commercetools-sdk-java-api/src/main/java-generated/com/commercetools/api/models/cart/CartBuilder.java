@@ -24,6 +24,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusCustomLineItems(customLineItemsBuilder -> customLineItemsBuilder)
  *             .totalPrice(totalPriceBuilder -> totalPriceBuilder)
  *             .taxMode(TaxMode.PLATFORM)
+ *             .priceRoundingMode(RoundingMode.HALF_EVEN)
  *             .taxRoundingMode(RoundingMode.HALF_EVEN)
  *             .taxCalculationMode(TaxCalculationMode.LINE_ITEM_LEVEL)
  *             .inventoryMode(InventoryMode.NONE)
@@ -90,6 +91,8 @@ public class CartBuilder implements Builder<Cart> {
     private com.commercetools.api.models.cart.DiscountOnTotalPrice discountOnTotalPrice;
 
     private com.commercetools.api.models.cart.TaxMode taxMode;
+
+    private com.commercetools.api.models.cart.RoundingMode priceRoundingMode;
 
     private com.commercetools.api.models.cart.RoundingMode taxRoundingMode;
 
@@ -710,7 +713,18 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Indicates how monetary values are rounded when calculating taxes for <code>taxedPrice</code>.</p>
+     *  <p>Indicates how the total prices on LineItems and CustomLineItems are rounded when calculated. Configured in Project settings.</p>
+     * @param priceRoundingMode value to be set
+     * @return Builder
+     */
+
+    public CartBuilder priceRoundingMode(final com.commercetools.api.models.cart.RoundingMode priceRoundingMode) {
+        this.priceRoundingMode = priceRoundingMode;
+        return this;
+    }
+
+    /**
+     *  <p>Indicates how monetary values are rounded when calculating taxes for <code>taxedPrice</code>. Configured in Project settings.</p>
      * @param taxRoundingMode value to be set
      * @return Builder
      */
@@ -1799,7 +1813,16 @@ public class CartBuilder implements Builder<Cart> {
     }
 
     /**
-     *  <p>Indicates how monetary values are rounded when calculating taxes for <code>taxedPrice</code>.</p>
+     *  <p>Indicates how the total prices on LineItems and CustomLineItems are rounded when calculated. Configured in Project settings.</p>
+     * @return priceRoundingMode
+     */
+
+    public com.commercetools.api.models.cart.RoundingMode getPriceRoundingMode() {
+        return this.priceRoundingMode;
+    }
+
+    /**
+     *  <p>Indicates how monetary values are rounded when calculating taxes for <code>taxedPrice</code>. Configured in Project settings.</p>
      * @return taxRoundingMode
      */
 
@@ -2056,6 +2079,7 @@ public class CartBuilder implements Builder<Cart> {
         Objects.requireNonNull(customLineItems, Cart.class + ": customLineItems is missing");
         Objects.requireNonNull(totalPrice, Cart.class + ": totalPrice is missing");
         Objects.requireNonNull(taxMode, Cart.class + ": taxMode is missing");
+        Objects.requireNonNull(priceRoundingMode, Cart.class + ": priceRoundingMode is missing");
         Objects.requireNonNull(taxRoundingMode, Cart.class + ": taxRoundingMode is missing");
         Objects.requireNonNull(taxCalculationMode, Cart.class + ": taxCalculationMode is missing");
         Objects.requireNonNull(inventoryMode, Cart.class + ": inventoryMode is missing");
@@ -2069,11 +2093,11 @@ public class CartBuilder implements Builder<Cart> {
         Objects.requireNonNull(origin, Cart.class + ": origin is missing");
         return new CartImpl(id, version, createdAt, lastModifiedAt, key, customerId, customerEmail, customerGroup,
             anonymousId, businessUnit, store, lineItems, customLineItems, totalLineItemQuantity, totalPrice, taxedPrice,
-            taxedShippingPrice, discountOnTotalPrice, taxMode, taxRoundingMode, taxCalculationMode, inventoryMode,
-            cartState, billingAddress, shippingAddress, shippingMode, shippingKey, shippingInfo, shippingRateInput,
-            shippingCustomFields, shipping, itemShippingAddresses, discountCodes, directDiscounts, refusedGifts,
-            paymentInfo, country, locale, origin, custom, discountTypeCombination, deleteDaysAfterLastModification,
-            lastModifiedBy, createdBy);
+            taxedShippingPrice, discountOnTotalPrice, taxMode, priceRoundingMode, taxRoundingMode, taxCalculationMode,
+            inventoryMode, cartState, billingAddress, shippingAddress, shippingMode, shippingKey, shippingInfo,
+            shippingRateInput, shippingCustomFields, shipping, itemShippingAddresses, discountCodes, directDiscounts,
+            refusedGifts, paymentInfo, country, locale, origin, custom, discountTypeCombination,
+            deleteDaysAfterLastModification, lastModifiedBy, createdBy);
     }
 
     /**
@@ -2083,11 +2107,11 @@ public class CartBuilder implements Builder<Cart> {
     public Cart buildUnchecked() {
         return new CartImpl(id, version, createdAt, lastModifiedAt, key, customerId, customerEmail, customerGroup,
             anonymousId, businessUnit, store, lineItems, customLineItems, totalLineItemQuantity, totalPrice, taxedPrice,
-            taxedShippingPrice, discountOnTotalPrice, taxMode, taxRoundingMode, taxCalculationMode, inventoryMode,
-            cartState, billingAddress, shippingAddress, shippingMode, shippingKey, shippingInfo, shippingRateInput,
-            shippingCustomFields, shipping, itemShippingAddresses, discountCodes, directDiscounts, refusedGifts,
-            paymentInfo, country, locale, origin, custom, discountTypeCombination, deleteDaysAfterLastModification,
-            lastModifiedBy, createdBy);
+            taxedShippingPrice, discountOnTotalPrice, taxMode, priceRoundingMode, taxRoundingMode, taxCalculationMode,
+            inventoryMode, cartState, billingAddress, shippingAddress, shippingMode, shippingKey, shippingInfo,
+            shippingRateInput, shippingCustomFields, shipping, itemShippingAddresses, discountCodes, directDiscounts,
+            refusedGifts, paymentInfo, country, locale, origin, custom, discountTypeCombination,
+            deleteDaysAfterLastModification, lastModifiedBy, createdBy);
     }
 
     /**
@@ -2124,6 +2148,7 @@ public class CartBuilder implements Builder<Cart> {
         builder.taxedShippingPrice = template.getTaxedShippingPrice();
         builder.discountOnTotalPrice = template.getDiscountOnTotalPrice();
         builder.taxMode = template.getTaxMode();
+        builder.priceRoundingMode = template.getPriceRoundingMode();
         builder.taxRoundingMode = template.getTaxRoundingMode();
         builder.taxCalculationMode = template.getTaxCalculationMode();
         builder.inventoryMode = template.getInventoryMode();

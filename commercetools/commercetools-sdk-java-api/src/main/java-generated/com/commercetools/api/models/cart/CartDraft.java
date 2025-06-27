@@ -138,7 +138,15 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public ExternalTaxRateDraft getExternalTaxRateForShippingMethod();
 
     /**
-     *  <p>Determines how monetary values are rounded when calculating taxes for <code>taxedPrice</code>.</p>
+     *  <p>Determines how the total prices on LineItems and CustomLineItems are rounded when calculated. If not set, the default value configured in the Project is used.</p>
+     * @return priceRoundingMode
+     */
+
+    @JsonProperty("priceRoundingMode")
+    public RoundingMode getPriceRoundingMode();
+
+    /**
+     *  <p>Determines how monetary values are rounded when calculating taxes for <code>taxedPrice</code>. If not set, the default value configured in the Project is used.</p>
      * @return taxRoundingMode
      */
 
@@ -385,7 +393,14 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
     public void setExternalTaxRateForShippingMethod(final ExternalTaxRateDraft externalTaxRateForShippingMethod);
 
     /**
-     *  <p>Determines how monetary values are rounded when calculating taxes for <code>taxedPrice</code>.</p>
+     *  <p>Determines how the total prices on LineItems and CustomLineItems are rounded when calculated. If not set, the default value configured in the Project is used.</p>
+     * @param priceRoundingMode value to be set
+     */
+
+    public void setPriceRoundingMode(final RoundingMode priceRoundingMode);
+
+    /**
+     *  <p>Determines how monetary values are rounded when calculating taxes for <code>taxedPrice</code>. If not set, the default value configured in the Project is used.</p>
      * @param taxRoundingMode value to be set
      */
 
@@ -573,6 +588,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
         instance.setCustomLineItems(template.getCustomLineItems());
         instance.setTaxMode(template.getTaxMode());
         instance.setExternalTaxRateForShippingMethod(template.getExternalTaxRateForShippingMethod());
+        instance.setPriceRoundingMode(template.getPriceRoundingMode());
         instance.setTaxRoundingMode(template.getTaxRoundingMode());
         instance.setTaxCalculationMode(template.getTaxCalculationMode());
         instance.setInventoryMode(template.getInventoryMode());
@@ -629,6 +645,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
         instance.setTaxMode(template.getTaxMode());
         instance.setExternalTaxRateForShippingMethod(com.commercetools.api.models.cart.ExternalTaxRateDraft
                 .deepCopy(template.getExternalTaxRateForShippingMethod()));
+        instance.setPriceRoundingMode(template.getPriceRoundingMode());
         instance.setTaxRoundingMode(template.getTaxRoundingMode());
         instance.setTaxCalculationMode(template.getTaxCalculationMode());
         instance.setInventoryMode(template.getInventoryMode());

@@ -200,6 +200,12 @@ public class QuoteQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, QuoteQueryBuilderDsl::of));
     }
 
+    public StringComparisonPredicateBuilder<QuoteQueryBuilderDsl> priceRoundingMode() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("priceRoundingMode")),
+            p -> new CombinationQueryPredicate<>(p, QuoteQueryBuilderDsl::of));
+    }
+
     public StringComparisonPredicateBuilder<QuoteQueryBuilderDsl> taxRoundingMode() {
         return new StringComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("taxRoundingMode")),

@@ -155,6 +155,12 @@ public class StagedOrderQueryBuilderDsl {
             StagedOrderQueryBuilderDsl::of);
     }
 
+    public StringComparisonPredicateBuilder<StagedOrderQueryBuilderDsl> priceRoundingMode() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("priceRoundingMode")),
+            p -> new CombinationQueryPredicate<>(p, StagedOrderQueryBuilderDsl::of));
+    }
+
     public StringComparisonPredicateBuilder<StagedOrderQueryBuilderDsl> taxMode() {
         return new StringComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("taxMode")),

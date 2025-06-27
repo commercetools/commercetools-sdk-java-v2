@@ -100,6 +100,13 @@ public class ProjectUpdateActionQueryBuilderDsl {
             ProjectUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl> asChangePriceRoundingMode(
+            Function<com.commercetools.api.predicates.query.project.ProjectChangePriceRoundingModeActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.project.ProjectChangePriceRoundingModeActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.project.ProjectChangePriceRoundingModeActionQueryBuilderDsl.of()),
+            ProjectUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl> asChangeProductSearchIndexingEnabled(
             Function<com.commercetools.api.predicates.query.project.ProjectChangeProductSearchIndexingEnabledActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.project.ProjectChangeProductSearchIndexingEnabledActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(
@@ -113,6 +120,14 @@ public class ProjectUpdateActionQueryBuilderDsl {
         return new CombinationQueryPredicate<>(fn.apply(
             com.commercetools.api.predicates.query.project.ProjectChangeShoppingListsConfigurationActionQueryBuilderDsl
                     .of()),
+            ProjectUpdateActionQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<ProjectUpdateActionQueryBuilderDsl> asChangeTaxRoundingMode(
+            Function<com.commercetools.api.predicates.query.project.ProjectChangeTaxRoundingModeActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.project.ProjectChangeTaxRoundingModeActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.project.ProjectChangeTaxRoundingModeActionQueryBuilderDsl.of()),
             ProjectUpdateActionQueryBuilderDsl::of);
     }
 

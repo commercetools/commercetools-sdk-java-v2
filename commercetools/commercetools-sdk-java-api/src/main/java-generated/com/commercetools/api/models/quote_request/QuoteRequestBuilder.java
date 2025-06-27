@@ -26,6 +26,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .plusCustomLineItems(customLineItemsBuilder -> customLineItemsBuilder)
  *             .totalPrice(totalPriceBuilder -> totalPriceBuilder)
  *             .taxMode(TaxMode.PLATFORM)
+ *             .priceRoundingMode(RoundingMode.HALF_EVEN)
  *             .taxRoundingMode(RoundingMode.HALF_EVEN)
  *             .taxCalculationMode(TaxCalculationMode.LINE_ITEM_LEVEL)
  *             .build()
@@ -84,6 +85,8 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     private com.commercetools.api.models.cart.InventoryMode inventoryMode;
 
     private com.commercetools.api.models.cart.TaxMode taxMode;
+
+    private com.commercetools.api.models.cart.RoundingMode priceRoundingMode;
 
     private com.commercetools.api.models.cart.RoundingMode taxRoundingMode;
 
@@ -705,6 +708,18 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
 
     public QuoteRequestBuilder taxMode(final com.commercetools.api.models.cart.TaxMode taxMode) {
         this.taxMode = taxMode;
+        return this;
+    }
+
+    /**
+     *  <p>When calculating total prices on LineItems and CustomLineItems, the selected mode is used for rounding.</p>
+     * @param priceRoundingMode value to be set
+     * @return Builder
+     */
+
+    public QuoteRequestBuilder priceRoundingMode(
+            final com.commercetools.api.models.cart.RoundingMode priceRoundingMode) {
+        this.priceRoundingMode = priceRoundingMode;
         return this;
     }
 
@@ -1361,6 +1376,15 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     }
 
     /**
+     *  <p>When calculating total prices on LineItems and CustomLineItems, the selected mode is used for rounding.</p>
+     * @return priceRoundingMode
+     */
+
+    public com.commercetools.api.models.cart.RoundingMode getPriceRoundingMode() {
+        return this.priceRoundingMode;
+    }
+
+    /**
      *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for rounding.</p>
      * @return taxRoundingMode
      */
@@ -1503,13 +1527,14 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
         Objects.requireNonNull(customLineItems, QuoteRequest.class + ": customLineItems is missing");
         Objects.requireNonNull(totalPrice, QuoteRequest.class + ": totalPrice is missing");
         Objects.requireNonNull(taxMode, QuoteRequest.class + ": taxMode is missing");
+        Objects.requireNonNull(priceRoundingMode, QuoteRequest.class + ": priceRoundingMode is missing");
         Objects.requireNonNull(taxRoundingMode, QuoteRequest.class + ": taxRoundingMode is missing");
         Objects.requireNonNull(taxCalculationMode, QuoteRequest.class + ": taxCalculationMode is missing");
         return new QuoteRequestImpl(id, version, createdAt, lastModifiedAt, key, lastModifiedBy, createdBy,
             quoteRequestState, comment, customer, customerGroup, store, lineItems, customLineItems, totalPrice,
-            taxedPrice, shippingAddress, billingAddress, inventoryMode, taxMode, taxRoundingMode, taxCalculationMode,
-            country, shippingInfo, paymentInfo, shippingRateInput, itemShippingAddresses, directDiscounts, custom,
-            state, purchaseOrderNumber, cart, businessUnit);
+            taxedPrice, shippingAddress, billingAddress, inventoryMode, taxMode, priceRoundingMode, taxRoundingMode,
+            taxCalculationMode, country, shippingInfo, paymentInfo, shippingRateInput, itemShippingAddresses,
+            directDiscounts, custom, state, purchaseOrderNumber, cart, businessUnit);
     }
 
     /**
@@ -1519,9 +1544,9 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
     public QuoteRequest buildUnchecked() {
         return new QuoteRequestImpl(id, version, createdAt, lastModifiedAt, key, lastModifiedBy, createdBy,
             quoteRequestState, comment, customer, customerGroup, store, lineItems, customLineItems, totalPrice,
-            taxedPrice, shippingAddress, billingAddress, inventoryMode, taxMode, taxRoundingMode, taxCalculationMode,
-            country, shippingInfo, paymentInfo, shippingRateInput, itemShippingAddresses, directDiscounts, custom,
-            state, purchaseOrderNumber, cart, businessUnit);
+            taxedPrice, shippingAddress, billingAddress, inventoryMode, taxMode, priceRoundingMode, taxRoundingMode,
+            taxCalculationMode, country, shippingInfo, paymentInfo, shippingRateInput, itemShippingAddresses,
+            directDiscounts, custom, state, purchaseOrderNumber, cart, businessUnit);
     }
 
     /**
@@ -1559,6 +1584,7 @@ public class QuoteRequestBuilder implements Builder<QuoteRequest> {
         builder.billingAddress = template.getBillingAddress();
         builder.inventoryMode = template.getInventoryMode();
         builder.taxMode = template.getTaxMode();
+        builder.priceRoundingMode = template.getPriceRoundingMode();
         builder.taxRoundingMode = template.getTaxRoundingMode();
         builder.taxCalculationMode = template.getTaxCalculationMode();
         builder.country = template.getCountry();

@@ -176,6 +176,14 @@ public interface StagedOrderUpdateAction
     }
 
     /**
+     * builder for changePriceRoundingMode subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.order_edit.StagedOrderChangePriceRoundingModeActionBuilder changePriceRoundingModeBuilder() {
+        return com.commercetools.api.models.order_edit.StagedOrderChangePriceRoundingModeActionBuilder.of();
+    }
+
+    /**
      * builder for changeShipmentState subtype
      * @return builder
      */

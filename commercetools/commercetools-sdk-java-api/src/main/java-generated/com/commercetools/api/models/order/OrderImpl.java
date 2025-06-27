@@ -58,6 +58,8 @@ public class OrderImpl implements Order, ModelBase {
 
     private com.commercetools.api.models.cart.DiscountOnTotalPrice discountOnTotalPrice;
 
+    private com.commercetools.api.models.cart.RoundingMode priceRoundingMode;
+
     private com.commercetools.api.models.cart.TaxMode taxMode;
 
     private com.commercetools.api.models.cart.RoundingMode taxRoundingMode;
@@ -148,6 +150,7 @@ public class OrderImpl implements Order, ModelBase {
             @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedPrice taxedPrice,
             @JsonProperty("taxedShippingPrice") final com.commercetools.api.models.cart.TaxedPrice taxedShippingPrice,
             @JsonProperty("discountOnTotalPrice") final com.commercetools.api.models.cart.DiscountOnTotalPrice discountOnTotalPrice,
+            @JsonProperty("priceRoundingMode") final com.commercetools.api.models.cart.RoundingMode priceRoundingMode,
             @JsonProperty("taxMode") final com.commercetools.api.models.cart.TaxMode taxMode,
             @JsonProperty("taxRoundingMode") final com.commercetools.api.models.cart.RoundingMode taxRoundingMode,
             @JsonProperty("taxCalculationMode") final com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode,
@@ -199,6 +202,7 @@ public class OrderImpl implements Order, ModelBase {
         this.taxedPrice = taxedPrice;
         this.taxedShippingPrice = taxedShippingPrice;
         this.discountOnTotalPrice = discountOnTotalPrice;
+        this.priceRoundingMode = priceRoundingMode;
         this.taxMode = taxMode;
         this.taxRoundingMode = taxRoundingMode;
         this.taxCalculationMode = taxCalculationMode;
@@ -389,6 +393,14 @@ public class OrderImpl implements Order, ModelBase {
 
     public com.commercetools.api.models.cart.DiscountOnTotalPrice getDiscountOnTotalPrice() {
         return this.discountOnTotalPrice;
+    }
+
+    /**
+     *  <p>Indicates how the total prices on LineItems and CustomLineItems are rounded when calculated.</p>
+     */
+
+    public com.commercetools.api.models.cart.RoundingMode getPriceRoundingMode() {
+        return this.priceRoundingMode;
     }
 
     /**
@@ -752,6 +764,10 @@ public class OrderImpl implements Order, ModelBase {
         this.discountOnTotalPrice = discountOnTotalPrice;
     }
 
+    public void setPriceRoundingMode(final com.commercetools.api.models.cart.RoundingMode priceRoundingMode) {
+        this.priceRoundingMode = priceRoundingMode;
+    }
+
     public void setTaxMode(final com.commercetools.api.models.cart.TaxMode taxMode) {
         this.taxMode = taxMode;
     }
@@ -951,6 +967,7 @@ public class OrderImpl implements Order, ModelBase {
                 .append(taxedPrice, that.taxedPrice)
                 .append(taxedShippingPrice, that.taxedShippingPrice)
                 .append(discountOnTotalPrice, that.discountOnTotalPrice)
+                .append(priceRoundingMode, that.priceRoundingMode)
                 .append(taxMode, that.taxMode)
                 .append(taxRoundingMode, that.taxRoundingMode)
                 .append(taxCalculationMode, that.taxCalculationMode)
@@ -1003,6 +1020,7 @@ public class OrderImpl implements Order, ModelBase {
                 .append(taxedPrice, that.taxedPrice)
                 .append(taxedShippingPrice, that.taxedShippingPrice)
                 .append(discountOnTotalPrice, that.discountOnTotalPrice)
+                .append(priceRoundingMode, that.priceRoundingMode)
                 .append(taxMode, that.taxMode)
                 .append(taxRoundingMode, that.taxRoundingMode)
                 .append(taxCalculationMode, that.taxCalculationMode)
@@ -1060,6 +1078,7 @@ public class OrderImpl implements Order, ModelBase {
                 .append(taxedPrice)
                 .append(taxedShippingPrice)
                 .append(discountOnTotalPrice)
+                .append(priceRoundingMode)
                 .append(taxMode)
                 .append(taxRoundingMode)
                 .append(taxCalculationMode)
@@ -1117,6 +1136,7 @@ public class OrderImpl implements Order, ModelBase {
                 .append("taxedPrice", taxedPrice)
                 .append("taxedShippingPrice", taxedShippingPrice)
                 .append("discountOnTotalPrice", discountOnTotalPrice)
+                .append("priceRoundingMode", priceRoundingMode)
                 .append("taxMode", taxMode)
                 .append("taxRoundingMode", taxRoundingMode)
                 .append("taxCalculationMode", taxCalculationMode)

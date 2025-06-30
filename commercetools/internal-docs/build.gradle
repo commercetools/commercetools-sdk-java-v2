@@ -18,3 +18,9 @@ dependencies {
     testImplementation commons.io version commons.io_version
 
 }
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}

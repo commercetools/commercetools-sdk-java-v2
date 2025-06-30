@@ -1,7 +1,7 @@
 
 dependencies {
     api project(":rmf:rmf-java-base")
-    implementation 'io.opentelemetry:opentelemetry-api:1.50.0'
+    implementation 'io.opentelemetry:opentelemetry-api:1.51.0'
 
     testImplementation project(":commercetools:commercetools-sdk-java-api")
 }

@@ -308,6 +308,7 @@ public class ProjectApiRoot implements Closeable, ProjectScopedApiRoot {
         return with().productTailoring();
     }
 
+    @Override
     public ByProjectKeyDiscountGroupsRequestBuilder discountGroups() {
         return with().discountGroups();
     }

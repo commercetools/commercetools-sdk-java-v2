@@ -43,6 +43,13 @@
 
 
 <details>
+<summary>Removed Property(s)</summary>
+
+- :warning: removed property `messages` from type `SubscriptionSetEventsAction`
+</details>
+
+
+<details>
 <summary>Required Property(s)</summary>
 
 - changed property `sortOrder` of type `CartDiscountDraft` to be optional
@@ -73,6 +80,7 @@
 - added property `taxRoundingMode` to type `CartsConfiguration`
 - added property `priceRoundingMode` to type `QuoteRequest`
 - added property `priceRoundingMode` to type `Quote`
+- added property `events` to type `SubscriptionSetEventsAction`
 </details>
 
 

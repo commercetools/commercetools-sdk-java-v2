@@ -39,26 +39,26 @@ public interface SubscriptionSetEventsAction extends SubscriptionUpdateAction {
 
     /**
      *  <p>Value to set. Can only be unset if either <code>messages</code> or <code>changes</code> is set.</p>
-     * @return messages
+     * @return events
      */
     @Valid
-    @JsonProperty("messages")
-    public List<EventSubscription> getMessages();
+    @JsonProperty("events")
+    public List<EventSubscription> getEvents();
 
     /**
      *  <p>Value to set. Can only be unset if either <code>messages</code> or <code>changes</code> is set.</p>
-     * @param messages values to be set
+     * @param events values to be set
      */
 
     @JsonIgnore
-    public void setMessages(final EventSubscription... messages);
+    public void setEvents(final EventSubscription... events);
 
     /**
      *  <p>Value to set. Can only be unset if either <code>messages</code> or <code>changes</code> is set.</p>
-     * @param messages values to be set
+     * @param events values to be set
      */
 
-    public void setMessages(final List<EventSubscription> messages);
+    public void setEvents(final List<EventSubscription> events);
 
     /**
      * factory method
@@ -75,7 +75,7 @@ public interface SubscriptionSetEventsAction extends SubscriptionUpdateAction {
      */
     public static SubscriptionSetEventsAction of(final SubscriptionSetEventsAction template) {
         SubscriptionSetEventsActionImpl instance = new SubscriptionSetEventsActionImpl();
-        instance.setMessages(template.getMessages());
+        instance.setEvents(template.getEvents());
         return instance;
     }
 
@@ -92,7 +92,7 @@ public interface SubscriptionSetEventsAction extends SubscriptionUpdateAction {
             return null;
         }
         SubscriptionSetEventsActionImpl instance = new SubscriptionSetEventsActionImpl();
-        instance.setMessages(Optional.ofNullable(template.getMessages())
+        instance.setEvents(Optional.ofNullable(template.getEvents())
                 .map(t -> t.stream()
                         .map(com.commercetools.api.models.subscription.EventSubscription::deepCopy)
                         .collect(Collectors.toList()))

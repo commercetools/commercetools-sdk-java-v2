@@ -19,18 +19,18 @@ public class SubscriptionSetEventsActionQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, SubscriptionSetEventsActionQueryBuilderDsl::of));
     }
 
-    public CombinationQueryPredicate<SubscriptionSetEventsActionQueryBuilderDsl> messages(
+    public CombinationQueryPredicate<SubscriptionSetEventsActionQueryBuilderDsl> events(
             Function<com.commercetools.api.predicates.query.subscription.EventSubscriptionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.subscription.EventSubscriptionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
             ContainerQueryPredicate.of()
-                    .parent(ConstantQueryPredicate.of().constant("messages"))
+                    .parent(ConstantQueryPredicate.of().constant("events"))
                     .inner(fn.apply(
                         com.commercetools.api.predicates.query.subscription.EventSubscriptionQueryBuilderDsl.of())),
             SubscriptionSetEventsActionQueryBuilderDsl::of);
     }
 
-    public CollectionPredicateBuilder<SubscriptionSetEventsActionQueryBuilderDsl> messages() {
-        return new CollectionPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("messages")),
+    public CollectionPredicateBuilder<SubscriptionSetEventsActionQueryBuilderDsl> events() {
+        return new CollectionPredicateBuilder<>(BinaryQueryPredicate.of().left(new ConstantQueryPredicate("events")),
             p -> new CombinationQueryPredicate<>(p, SubscriptionSetEventsActionQueryBuilderDsl::of));
     }
 

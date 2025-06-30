@@ -24,107 +24,105 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class SubscriptionSetEventsActionBuilder implements Builder<SubscriptionSetEventsAction> {
 
     @Nullable
-    private java.util.List<com.commercetools.api.models.subscription.EventSubscription> messages;
+    private java.util.List<com.commercetools.api.models.subscription.EventSubscription> events;
 
     /**
      *  <p>Value to set. Can only be unset if either <code>messages</code> or <code>changes</code> is set.</p>
-     * @param messages value to be set
+     * @param events value to be set
      * @return Builder
      */
 
-    public SubscriptionSetEventsActionBuilder messages(
-            @Nullable final com.commercetools.api.models.subscription.EventSubscription... messages) {
-        this.messages = new ArrayList<>(Arrays.asList(messages));
+    public SubscriptionSetEventsActionBuilder events(
+            @Nullable final com.commercetools.api.models.subscription.EventSubscription... events) {
+        this.events = new ArrayList<>(Arrays.asList(events));
         return this;
     }
 
     /**
      *  <p>Value to set. Can only be unset if either <code>messages</code> or <code>changes</code> is set.</p>
-     * @param messages value to be set
+     * @param events value to be set
      * @return Builder
      */
 
-    public SubscriptionSetEventsActionBuilder messages(
-            @Nullable final java.util.List<com.commercetools.api.models.subscription.EventSubscription> messages) {
-        this.messages = messages;
+    public SubscriptionSetEventsActionBuilder events(
+            @Nullable final java.util.List<com.commercetools.api.models.subscription.EventSubscription> events) {
+        this.events = events;
         return this;
     }
 
     /**
      *  <p>Value to set. Can only be unset if either <code>messages</code> or <code>changes</code> is set.</p>
-     * @param messages value to be set
+     * @param events value to be set
      * @return Builder
      */
 
-    public SubscriptionSetEventsActionBuilder plusMessages(
-            @Nullable final com.commercetools.api.models.subscription.EventSubscription... messages) {
-        if (this.messages == null) {
-            this.messages = new ArrayList<>();
+    public SubscriptionSetEventsActionBuilder plusEvents(
+            @Nullable final com.commercetools.api.models.subscription.EventSubscription... events) {
+        if (this.events == null) {
+            this.events = new ArrayList<>();
         }
-        this.messages.addAll(Arrays.asList(messages));
+        this.events.addAll(Arrays.asList(events));
         return this;
     }
 
     /**
      *  <p>Value to set. Can only be unset if either <code>messages</code> or <code>changes</code> is set.</p>
-     * @param builder function to build the messages value
+     * @param builder function to build the events value
      * @return Builder
      */
 
-    public SubscriptionSetEventsActionBuilder plusMessages(
+    public SubscriptionSetEventsActionBuilder plusEvents(
             Function<com.commercetools.api.models.subscription.EventSubscriptionBuilder, com.commercetools.api.models.subscription.EventSubscriptionBuilder> builder) {
-        if (this.messages == null) {
-            this.messages = new ArrayList<>();
+        if (this.events == null) {
+            this.events = new ArrayList<>();
         }
-        this.messages
-                .add(builder.apply(com.commercetools.api.models.subscription.EventSubscriptionBuilder.of()).build());
+        this.events.add(builder.apply(com.commercetools.api.models.subscription.EventSubscriptionBuilder.of()).build());
         return this;
     }
 
     /**
      *  <p>Value to set. Can only be unset if either <code>messages</code> or <code>changes</code> is set.</p>
-     * @param builder function to build the messages value
+     * @param builder function to build the events value
      * @return Builder
      */
 
-    public SubscriptionSetEventsActionBuilder withMessages(
+    public SubscriptionSetEventsActionBuilder withEvents(
             Function<com.commercetools.api.models.subscription.EventSubscriptionBuilder, com.commercetools.api.models.subscription.EventSubscriptionBuilder> builder) {
-        this.messages = new ArrayList<>();
-        this.messages
-                .add(builder.apply(com.commercetools.api.models.subscription.EventSubscriptionBuilder.of()).build());
+        this.events = new ArrayList<>();
+        this.events.add(builder.apply(com.commercetools.api.models.subscription.EventSubscriptionBuilder.of()).build());
         return this;
     }
 
     /**
      *  <p>Value to set. Can only be unset if either <code>messages</code> or <code>changes</code> is set.</p>
-     * @param builder function to build the messages value
+     * @param builder function to build the events value
      * @return Builder
      */
 
-    public SubscriptionSetEventsActionBuilder addMessages(
+    public SubscriptionSetEventsActionBuilder addEvents(
             Function<com.commercetools.api.models.subscription.EventSubscriptionBuilder, com.commercetools.api.models.subscription.EventSubscription> builder) {
-        return plusMessages(builder.apply(com.commercetools.api.models.subscription.EventSubscriptionBuilder.of()));
+        return plusEvents(builder.apply(com.commercetools.api.models.subscription.EventSubscriptionBuilder.of()));
     }
 
     /**
      *  <p>Value to set. Can only be unset if either <code>messages</code> or <code>changes</code> is set.</p>
-     * @param builder function to build the messages value
+     * @param builder function to build the events value
      * @return Builder
      */
 
-    public SubscriptionSetEventsActionBuilder setMessages(
+    public SubscriptionSetEventsActionBuilder setEvents(
             Function<com.commercetools.api.models.subscription.EventSubscriptionBuilder, com.commercetools.api.models.subscription.EventSubscription> builder) {
-        return messages(builder.apply(com.commercetools.api.models.subscription.EventSubscriptionBuilder.of()));
+        return events(builder.apply(com.commercetools.api.models.subscription.EventSubscriptionBuilder.of()));
     }
 
     /**
      *  <p>Value to set. Can only be unset if either <code>messages</code> or <code>changes</code> is set.</p>
-     * @return messages
+     * @return events
      */
 
     @Nullable
-    public java.util.List<com.commercetools.api.models.subscription.EventSubscription> getMessages() {
-        return this.messages;
+    public java.util.List<com.commercetools.api.models.subscription.EventSubscription> getEvents() {
+        return this.events;
     }
 
     /**
@@ -132,7 +130,7 @@ public class SubscriptionSetEventsActionBuilder implements Builder<SubscriptionS
      * @return SubscriptionSetEventsAction
      */
     public SubscriptionSetEventsAction build() {
-        return new SubscriptionSetEventsActionImpl(messages);
+        return new SubscriptionSetEventsActionImpl(events);
     }
 
     /**
@@ -140,7 +138,7 @@ public class SubscriptionSetEventsActionBuilder implements Builder<SubscriptionS
      * @return SubscriptionSetEventsAction
      */
     public SubscriptionSetEventsAction buildUnchecked() {
-        return new SubscriptionSetEventsActionImpl(messages);
+        return new SubscriptionSetEventsActionImpl(events);
     }
 
     /**
@@ -158,7 +156,7 @@ public class SubscriptionSetEventsActionBuilder implements Builder<SubscriptionS
      */
     public static SubscriptionSetEventsActionBuilder of(final SubscriptionSetEventsAction template) {
         SubscriptionSetEventsActionBuilder builder = new SubscriptionSetEventsActionBuilder();
-        builder.messages = template.getMessages();
+        builder.events = template.getEvents();
         return builder;
     }
 

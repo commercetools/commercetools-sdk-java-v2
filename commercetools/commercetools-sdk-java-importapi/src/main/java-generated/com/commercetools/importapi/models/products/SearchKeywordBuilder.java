@@ -41,7 +41,7 @@ public class SearchKeywordBuilder implements Builder<SearchKeyword> {
     }
 
     /**
-     *  <p>The tokenizer defines the tokens that are used to match against the Suggest Query input.</p>
+     *  <p>The tokenizer defines the tokens that are used for search term suggestions.</p>
      * @param suggestTokenizer value to be set
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class SearchKeywordBuilder implements Builder<SearchKeyword> {
     }
 
     /**
-     *  <p>The tokenizer defines the tokens that are used to match against the Suggest Query input.</p>
+     *  <p>The tokenizer defines the tokens that are used for search term suggestions.</p>
      * @param builder function to build the suggestTokenizer value
      * @return Builder
      */
@@ -75,7 +75,7 @@ public class SearchKeywordBuilder implements Builder<SearchKeyword> {
     }
 
     /**
-     *  <p>The tokenizer defines the tokens that are used to match against the Suggest Query input.</p>
+     *  <p>The tokenizer defines the tokens that are used for search term suggestions.</p>
      * @return suggestTokenizer
      */
 

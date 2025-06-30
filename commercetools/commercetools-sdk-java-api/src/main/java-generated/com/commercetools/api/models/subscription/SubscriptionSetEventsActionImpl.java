@@ -24,15 +24,15 @@ public class SubscriptionSetEventsActionImpl implements SubscriptionSetEventsAct
 
     private String action;
 
-    private java.util.List<com.commercetools.api.models.subscription.EventSubscription> messages;
+    private java.util.List<com.commercetools.api.models.subscription.EventSubscription> events;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     SubscriptionSetEventsActionImpl(
-            @JsonProperty("messages") final java.util.List<com.commercetools.api.models.subscription.EventSubscription> messages) {
-        this.messages = messages;
+            @JsonProperty("events") final java.util.List<com.commercetools.api.models.subscription.EventSubscription> events) {
+        this.events = events;
         this.action = SET_EVENTS;
     }
 
@@ -55,17 +55,16 @@ public class SubscriptionSetEventsActionImpl implements SubscriptionSetEventsAct
      *  <p>Value to set. Can only be unset if either <code>messages</code> or <code>changes</code> is set.</p>
      */
 
-    public java.util.List<com.commercetools.api.models.subscription.EventSubscription> getMessages() {
-        return this.messages;
+    public java.util.List<com.commercetools.api.models.subscription.EventSubscription> getEvents() {
+        return this.events;
     }
 
-    public void setMessages(final com.commercetools.api.models.subscription.EventSubscription... messages) {
-        this.messages = new ArrayList<>(Arrays.asList(messages));
+    public void setEvents(final com.commercetools.api.models.subscription.EventSubscription... events) {
+        this.events = new ArrayList<>(Arrays.asList(events));
     }
 
-    public void setMessages(
-            final java.util.List<com.commercetools.api.models.subscription.EventSubscription> messages) {
-        this.messages = messages;
+    public void setEvents(final java.util.List<com.commercetools.api.models.subscription.EventSubscription> events) {
+        this.events = events;
     }
 
     @Override
@@ -79,21 +78,21 @@ public class SubscriptionSetEventsActionImpl implements SubscriptionSetEventsAct
         SubscriptionSetEventsActionImpl that = (SubscriptionSetEventsActionImpl) o;
 
         return new EqualsBuilder().append(action, that.action)
-                .append(messages, that.messages)
+                .append(events, that.events)
                 .append(action, that.action)
-                .append(messages, that.messages)
+                .append(events, that.events)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(messages).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action).append(events).toHashCode();
     }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
-                .append("messages", messages)
+                .append("events", events)
                 .build();
     }
 

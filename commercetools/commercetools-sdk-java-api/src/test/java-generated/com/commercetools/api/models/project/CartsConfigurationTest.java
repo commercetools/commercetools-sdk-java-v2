@@ -20,7 +20,11 @@ public class CartsConfigurationTest {
                 new Object[] { "deleteDaysAfterLastModification",
                         CartsConfiguration.builder().deleteDaysAfterLastModification(3L) },
                 new Object[] { "countryTaxRateFallbackEnabled",
-                        CartsConfiguration.builder().countryTaxRateFallbackEnabled(true) } };
+                        CartsConfiguration.builder().countryTaxRateFallbackEnabled(true) },
+                new Object[] { "priceRoundingMode", CartsConfiguration.builder()
+                        .priceRoundingMode(com.commercetools.api.models.cart.RoundingMode.findEnum("HalfEven")) },
+                new Object[] { "taxRoundingMode", CartsConfiguration.builder()
+                        .taxRoundingMode(com.commercetools.api.models.cart.RoundingMode.findEnum("HalfEven")) } };
     }
 
     @Test
@@ -35,5 +39,21 @@ public class CartsConfigurationTest {
         CartsConfiguration value = CartsConfiguration.of();
         value.setCountryTaxRateFallbackEnabled(true);
         Assertions.assertThat(value.getCountryTaxRateFallbackEnabled()).isEqualTo(true);
+    }
+
+    @Test
+    public void priceRoundingMode() {
+        CartsConfiguration value = CartsConfiguration.of();
+        value.setPriceRoundingMode(com.commercetools.api.models.cart.RoundingMode.findEnum("HalfEven"));
+        Assertions.assertThat(value.getPriceRoundingMode())
+                .isEqualTo(com.commercetools.api.models.cart.RoundingMode.findEnum("HalfEven"));
+    }
+
+    @Test
+    public void taxRoundingMode() {
+        CartsConfiguration value = CartsConfiguration.of();
+        value.setTaxRoundingMode(com.commercetools.api.models.cart.RoundingMode.findEnum("HalfEven"));
+        Assertions.assertThat(value.getTaxRoundingMode())
+                .isEqualTo(com.commercetools.api.models.cart.RoundingMode.findEnum("HalfEven"));
     }
 }

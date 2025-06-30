@@ -31,8 +31,8 @@ public class ProjectChangeProductSearchIndexingEnabledActionBuilder
 
     /**
      *  <ul>
-     *   <li>If <code>false</code>, the indexing of Product information will stop and the Product Projection Search as well as the Product Suggestions endpoint will not be available anymore for this Project. The Project's SearchIndexingConfiguration <code>status</code> for <code>products</code> will be changed to <code>"Deactivated"</code>.</li>
-     *   <li>If <code>true</code>, the indexing of Product information will start and the Product Projection Search as well as the Product Suggestions endpoint will become available soon after for this Project. Proportional to the amount of information being indexed, the Project's SearchIndexingConfiguration <code>status</code> for <code>products</code> will be shown as <code>"Indexing"</code> during this time. As soon as the indexing has finished, the configuration status will be changed to <code>"Activated"</code> making the aforementioned endpoints fully available for this Project.</li>
+     *   <li>If <code>false</code>, the indexing of Product information will stop and the Product Projection Search as well as the Search Term Suggestions API will no longer be available for this Project. The Project's SearchIndexingConfiguration <code>status</code> for <code>products</code> will be changed to <code>"Deactivated"</code>.</li>
+     *   <li>If <code>true</code>, the indexing of Product information will start and the Product Projection Search as well as the Search Term Suggestions API will become available soon after for this Project. Proportional to the amount of information being indexed, the Project's SearchIndexingConfiguration <code>status</code> for <code>products</code> will be shown as <code>"Indexing"</code> during this time. As soon as the indexing has finished, the configuration status will be changed to <code>"Activated"</code> making the aforementioned APIs fully available for this Project.</li>
      *  </ul>
      * @param enabled value to be set
      * @return Builder
@@ -57,8 +57,8 @@ public class ProjectChangeProductSearchIndexingEnabledActionBuilder
 
     /**
      *  <ul>
-     *   <li>If <code>false</code>, the indexing of Product information will stop and the Product Projection Search as well as the Product Suggestions endpoint will not be available anymore for this Project. The Project's SearchIndexingConfiguration <code>status</code> for <code>products</code> will be changed to <code>"Deactivated"</code>.</li>
-     *   <li>If <code>true</code>, the indexing of Product information will start and the Product Projection Search as well as the Product Suggestions endpoint will become available soon after for this Project. Proportional to the amount of information being indexed, the Project's SearchIndexingConfiguration <code>status</code> for <code>products</code> will be shown as <code>"Indexing"</code> during this time. As soon as the indexing has finished, the configuration status will be changed to <code>"Activated"</code> making the aforementioned endpoints fully available for this Project.</li>
+     *   <li>If <code>false</code>, the indexing of Product information will stop and the Product Projection Search as well as the Search Term Suggestions API will no longer be available for this Project. The Project's SearchIndexingConfiguration <code>status</code> for <code>products</code> will be changed to <code>"Deactivated"</code>.</li>
+     *   <li>If <code>true</code>, the indexing of Product information will start and the Product Projection Search as well as the Search Term Suggestions API will become available soon after for this Project. Proportional to the amount of information being indexed, the Project's SearchIndexingConfiguration <code>status</code> for <code>products</code> will be shown as <code>"Indexing"</code> during this time. As soon as the indexing has finished, the configuration status will be changed to <code>"Activated"</code> making the aforementioned APIs fully available for this Project.</li>
      *  </ul>
      * @return enabled
      */

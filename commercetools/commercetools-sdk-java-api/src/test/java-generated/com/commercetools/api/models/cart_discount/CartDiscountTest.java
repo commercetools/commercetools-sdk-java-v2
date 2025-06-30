@@ -61,7 +61,11 @@ public class CartDiscountTest {
                 new Object[] { "stackingMode", CartDiscount.builder()
                         .stackingMode(com.commercetools.api.models.cart_discount.StackingMode.findEnum("Stacking")) },
                 new Object[] { "custom",
-                        CartDiscount.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) } };
+                        CartDiscount.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) },
+                new Object[] { "discountGroup",
+                        CartDiscount.builder()
+                                .discountGroup(
+                                    new com.commercetools.api.models.discount_group.DiscountGroupReferenceImpl()) } };
     }
 
     @Test
@@ -216,5 +220,13 @@ public class CartDiscountTest {
         CartDiscount value = CartDiscount.of();
         value.setCustom(new com.commercetools.api.models.type.CustomFieldsImpl());
         Assertions.assertThat(value.getCustom()).isEqualTo(new com.commercetools.api.models.type.CustomFieldsImpl());
+    }
+
+    @Test
+    public void discountGroup() {
+        CartDiscount value = CartDiscount.of();
+        value.setDiscountGroup(new com.commercetools.api.models.discount_group.DiscountGroupReferenceImpl());
+        Assertions.assertThat(value.getDiscountGroup())
+                .isEqualTo(new com.commercetools.api.models.discount_group.DiscountGroupReferenceImpl());
     }
 }

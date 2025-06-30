@@ -61,6 +61,8 @@ public class QuoteTest {
                                 .inventoryMode(com.commercetools.api.models.cart.InventoryMode.findEnum("None")) },
                 new Object[] { "taxMode",
                         Quote.builder().taxMode(com.commercetools.api.models.cart.TaxMode.findEnum("Platform")) },
+                new Object[] { "priceRoundingMode", Quote.builder()
+                        .priceRoundingMode(com.commercetools.api.models.cart.RoundingMode.findEnum("HalfEven")) },
                 new Object[] { "taxRoundingMode",
                         Quote.builder()
                                 .taxRoundingMode(com.commercetools.api.models.cart.RoundingMode.findEnum("HalfEven")) },
@@ -269,6 +271,14 @@ public class QuoteTest {
         value.setTaxMode(com.commercetools.api.models.cart.TaxMode.findEnum("Platform"));
         Assertions.assertThat(value.getTaxMode())
                 .isEqualTo(com.commercetools.api.models.cart.TaxMode.findEnum("Platform"));
+    }
+
+    @Test
+    public void priceRoundingMode() {
+        Quote value = Quote.of();
+        value.setPriceRoundingMode(com.commercetools.api.models.cart.RoundingMode.findEnum("HalfEven"));
+        Assertions.assertThat(value.getPriceRoundingMode())
+                .isEqualTo(com.commercetools.api.models.cart.RoundingMode.findEnum("HalfEven"));
     }
 
     @Test

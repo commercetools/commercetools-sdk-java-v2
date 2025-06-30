@@ -72,7 +72,10 @@ public class ProductProjectionTest {
                 new Object[] { "reviewRatingStatistics", ProductProjection.builder()
                         .reviewRatingStatistics(new com.commercetools.api.models.review.ReviewRatingStatisticsImpl()) },
                 new Object[] { "priceMode", ProductProjection.builder()
-                        .priceMode(com.commercetools.api.models.product.ProductPriceModeEnum.findEnum("Embedded")) } };
+                        .priceMode(com.commercetools.api.models.product.ProductPriceModeEnum.findEnum("Embedded")) },
+                new Object[] { "attributes", ProductProjection.builder()
+                        .attributes(
+                            Collections.singletonList(new com.commercetools.api.models.product.AttributeImpl())) } };
     }
 
     @Test
@@ -249,5 +252,13 @@ public class ProductProjectionTest {
         value.setPriceMode(com.commercetools.api.models.product.ProductPriceModeEnum.findEnum("Embedded"));
         Assertions.assertThat(value.getPriceMode())
                 .isEqualTo(com.commercetools.api.models.product.ProductPriceModeEnum.findEnum("Embedded"));
+    }
+
+    @Test
+    public void attributes() {
+        ProductProjection value = ProductProjection.of();
+        value.setAttributes(Collections.singletonList(new com.commercetools.api.models.product.AttributeImpl()));
+        Assertions.assertThat(value.getAttributes())
+                .isEqualTo(Collections.singletonList(new com.commercetools.api.models.product.AttributeImpl()));
     }
 }

@@ -76,6 +76,7 @@ public interface StagedOrder extends Order {
         instance.setTaxedPrice(template.getTaxedPrice());
         instance.setTaxedShippingPrice(template.getTaxedShippingPrice());
         instance.setDiscountOnTotalPrice(template.getDiscountOnTotalPrice());
+        instance.setPriceRoundingMode(template.getPriceRoundingMode());
         instance.setTaxMode(template.getTaxMode());
         instance.setTaxRoundingMode(template.getTaxRoundingMode());
         instance.setTaxCalculationMode(template.getTaxCalculationMode());
@@ -157,6 +158,7 @@ public interface StagedOrder extends Order {
             com.commercetools.api.models.cart.TaxedPrice.deepCopy(template.getTaxedShippingPrice()));
         instance.setDiscountOnTotalPrice(
             com.commercetools.api.models.cart.DiscountOnTotalPrice.deepCopy(template.getDiscountOnTotalPrice()));
+        instance.setPriceRoundingMode(template.getPriceRoundingMode());
         instance.setTaxMode(template.getTaxMode());
         instance.setTaxRoundingMode(template.getTaxRoundingMode());
         instance.setTaxCalculationMode(template.getTaxCalculationMode());

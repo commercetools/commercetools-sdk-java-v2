@@ -72,6 +72,8 @@ public class CustomerImpl implements Customer, ModelBase {
 
     private com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup;
 
+    private java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> customerGroupAssignments;
+
     private com.commercetools.api.models.type.CustomFields custom;
 
     private String locale;
@@ -81,8 +83,6 @@ public class CustomerImpl implements Customer, ModelBase {
     private java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores;
 
     private com.commercetools.api.models.customer.AuthenticationMode authenticationMode;
-
-    private java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> customerGroupAssignments;
 
     /**
      * create instance with all properties
@@ -107,11 +107,11 @@ public class CustomerImpl implements Customer, ModelBase {
             @JsonProperty("billingAddressIds") final java.util.List<String> billingAddressIds,
             @JsonProperty("isEmailVerified") final Boolean isEmailVerified,
             @JsonProperty("customerGroup") final com.commercetools.api.models.customer_group.CustomerGroupReference customerGroup,
+            @JsonProperty("customerGroupAssignments") final java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> customerGroupAssignments,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
             @JsonProperty("locale") final String locale, @JsonProperty("salutation") final String salutation,
             @JsonProperty("stores") final java.util.List<com.commercetools.api.models.store.StoreKeyReference> stores,
-            @JsonProperty("authenticationMode") final com.commercetools.api.models.customer.AuthenticationMode authenticationMode,
-            @JsonProperty("customerGroupAssignments") final java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> customerGroupAssignments) {
+            @JsonProperty("authenticationMode") final com.commercetools.api.models.customer.AuthenticationMode authenticationMode) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -137,12 +137,12 @@ public class CustomerImpl implements Customer, ModelBase {
         this.billingAddressIds = billingAddressIds;
         this.isEmailVerified = isEmailVerified;
         this.customerGroup = customerGroup;
+        this.customerGroupAssignments = customerGroupAssignments;
         this.custom = custom;
         this.locale = locale;
         this.salutation = salutation;
         this.stores = stores;
         this.authenticationMode = authenticationMode;
-        this.customerGroupAssignments = customerGroupAssignments;
     }
 
     /**
@@ -353,6 +353,15 @@ public class CustomerImpl implements Customer, ModelBase {
     }
 
     /**
+     *  <p>Customer Groups that the Customer belongs to.</p>
+     *  <p>Used for Line Item price selection.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> getCustomerGroupAssignments() {
+        return this.customerGroupAssignments;
+    }
+
+    /**
      *  <p>Custom Fields for the Customer.</p>
      */
 
@@ -394,14 +403,6 @@ public class CustomerImpl implements Customer, ModelBase {
 
     public com.commercetools.api.models.customer.AuthenticationMode getAuthenticationMode() {
         return this.authenticationMode;
-    }
-
-    /**
-     *  <p>Customer Groups that the Customer belongs to.</p>
-     */
-
-    public java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> getCustomerGroupAssignments() {
-        return this.customerGroupAssignments;
     }
 
     public void setId(final String id) {
@@ -517,6 +518,16 @@ public class CustomerImpl implements Customer, ModelBase {
         this.customerGroup = customerGroup;
     }
 
+    public void setCustomerGroupAssignments(
+            final com.commercetools.api.models.customer.CustomerGroupAssignment... customerGroupAssignments) {
+        this.customerGroupAssignments = new ArrayList<>(Arrays.asList(customerGroupAssignments));
+    }
+
+    public void setCustomerGroupAssignments(
+            final java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> customerGroupAssignments) {
+        this.customerGroupAssignments = customerGroupAssignments;
+    }
+
     public void setCustom(final com.commercetools.api.models.type.CustomFields custom) {
         this.custom = custom;
     }
@@ -540,16 +551,6 @@ public class CustomerImpl implements Customer, ModelBase {
     public void setAuthenticationMode(
             final com.commercetools.api.models.customer.AuthenticationMode authenticationMode) {
         this.authenticationMode = authenticationMode;
-    }
-
-    public void setCustomerGroupAssignments(
-            final com.commercetools.api.models.customer.CustomerGroupAssignment... customerGroupAssignments) {
-        this.customerGroupAssignments = new ArrayList<>(Arrays.asList(customerGroupAssignments));
-    }
-
-    public void setCustomerGroupAssignments(
-            final java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignment> customerGroupAssignments) {
-        this.customerGroupAssignments = customerGroupAssignments;
     }
 
     @Override
@@ -587,12 +588,12 @@ public class CustomerImpl implements Customer, ModelBase {
                 .append(billingAddressIds, that.billingAddressIds)
                 .append(isEmailVerified, that.isEmailVerified)
                 .append(customerGroup, that.customerGroup)
+                .append(customerGroupAssignments, that.customerGroupAssignments)
                 .append(custom, that.custom)
                 .append(locale, that.locale)
                 .append(salutation, that.salutation)
                 .append(stores, that.stores)
                 .append(authenticationMode, that.authenticationMode)
-                .append(customerGroupAssignments, that.customerGroupAssignments)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -618,12 +619,12 @@ public class CustomerImpl implements Customer, ModelBase {
                 .append(billingAddressIds, that.billingAddressIds)
                 .append(isEmailVerified, that.isEmailVerified)
                 .append(customerGroup, that.customerGroup)
+                .append(customerGroupAssignments, that.customerGroupAssignments)
                 .append(custom, that.custom)
                 .append(locale, that.locale)
                 .append(salutation, that.salutation)
                 .append(stores, that.stores)
                 .append(authenticationMode, that.authenticationMode)
-                .append(customerGroupAssignments, that.customerGroupAssignments)
                 .isEquals();
     }
 
@@ -654,12 +655,12 @@ public class CustomerImpl implements Customer, ModelBase {
                 .append(billingAddressIds)
                 .append(isEmailVerified)
                 .append(customerGroup)
+                .append(customerGroupAssignments)
                 .append(custom)
                 .append(locale)
                 .append(salutation)
                 .append(stores)
                 .append(authenticationMode)
-                .append(customerGroupAssignments)
                 .toHashCode();
     }
 
@@ -690,12 +691,12 @@ public class CustomerImpl implements Customer, ModelBase {
                 .append("billingAddressIds", billingAddressIds)
                 .append("isEmailVerified", isEmailVerified)
                 .append("customerGroup", customerGroup)
+                .append("customerGroupAssignments", customerGroupAssignments)
                 .append("custom", custom)
                 .append("locale", locale)
                 .append("salutation", salutation)
                 .append("stores", stores)
                 .append("authenticationMode", authenticationMode)
-                .append("customerGroupAssignments", customerGroupAssignments)
                 .build();
     }
 

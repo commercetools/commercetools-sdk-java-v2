@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Although search keywords are primarily used by Product Suggestions, they are also considered for a full text search. The keys are of type Locale, and the values are an array of SearchKeyword.</p>
+ *  <p>Search keywords are JSON objects primarily used by Search Term Suggestions, but are also considered for a full text search in the Product Projection Search API. The keys are of type Locale, and the values are an array of SearchKeyword.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class SearchKeywordsImpl implements SearchKeywords, ModelBase {

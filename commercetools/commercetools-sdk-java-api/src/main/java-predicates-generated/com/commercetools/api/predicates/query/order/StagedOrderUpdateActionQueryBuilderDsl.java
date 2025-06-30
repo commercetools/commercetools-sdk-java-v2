@@ -126,6 +126,14 @@ public class StagedOrderUpdateActionQueryBuilderDsl {
             StagedOrderUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<StagedOrderUpdateActionQueryBuilderDsl> asChangePriceRoundingMode(
+            Function<com.commercetools.api.predicates.query.order_edit.StagedOrderChangePriceRoundingModeActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.order_edit.StagedOrderChangePriceRoundingModeActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.order_edit.StagedOrderChangePriceRoundingModeActionQueryBuilderDsl
+                    .of()),
+            StagedOrderUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<StagedOrderUpdateActionQueryBuilderDsl> asChangeShipmentState(
             Function<com.commercetools.api.predicates.query.order_edit.StagedOrderChangeShipmentStateActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.order_edit.StagedOrderChangeShipmentStateActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(

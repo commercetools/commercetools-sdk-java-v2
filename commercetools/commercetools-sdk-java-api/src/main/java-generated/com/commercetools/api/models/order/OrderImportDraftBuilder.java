@@ -57,6 +57,9 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     private com.commercetools.api.models.cart.TaxedPriceDraft taxedPrice;
 
     @Nullable
+    private com.commercetools.api.models.cart.RoundingMode priceRoundingMode;
+
+    @Nullable
     private com.commercetools.api.models.cart.RoundingMode taxRoundingMode;
 
     @Nullable
@@ -528,6 +531,18 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     public OrderImportDraftBuilder taxedPrice(
             @Nullable final com.commercetools.api.models.cart.TaxedPriceDraft taxedPrice) {
         this.taxedPrice = taxedPrice;
+        return this;
+    }
+
+    /**
+     *  <p>Determines how the total prices on LineItems and CustomLineItems are rounded when calculated.</p>
+     * @param priceRoundingMode value to be set
+     * @return Builder
+     */
+
+    public OrderImportDraftBuilder priceRoundingMode(
+            @Nullable final com.commercetools.api.models.cart.RoundingMode priceRoundingMode) {
+        this.priceRoundingMode = priceRoundingMode;
         return this;
     }
 
@@ -1055,6 +1070,16 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     }
 
     /**
+     *  <p>Determines how the total prices on LineItems and CustomLineItems are rounded when calculated.</p>
+     * @return priceRoundingMode
+     */
+
+    @Nullable
+    public com.commercetools.api.models.cart.RoundingMode getPriceRoundingMode() {
+        return this.priceRoundingMode;
+    }
+
+    /**
      *  <p>Determines how monetary values are rounded when calculating taxes for <code>taxedPrice</code>.</p>
      * @return taxRoundingMode
      */
@@ -1221,7 +1246,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
     public OrderImportDraft build() {
         Objects.requireNonNull(totalPrice, OrderImportDraft.class + ": totalPrice is missing");
         return new OrderImportDraftImpl(orderNumber, purchaseOrderNumber, customerId, customerEmail, customerGroup,
-            businessUnit, store, lineItems, customLineItems, totalPrice, taxedPrice, taxRoundingMode,
+            businessUnit, store, lineItems, customLineItems, totalPrice, taxedPrice, priceRoundingMode, taxRoundingMode,
             taxCalculationMode, inventoryMode, billingAddress, shippingAddress, itemShippingAddresses, shippingInfo,
             paymentInfo, paymentState, shipmentState, orderState, state, country, origin, completedAt, custom);
     }
@@ -1232,7 +1257,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
      */
     public OrderImportDraft buildUnchecked() {
         return new OrderImportDraftImpl(orderNumber, purchaseOrderNumber, customerId, customerEmail, customerGroup,
-            businessUnit, store, lineItems, customLineItems, totalPrice, taxedPrice, taxRoundingMode,
+            businessUnit, store, lineItems, customLineItems, totalPrice, taxedPrice, priceRoundingMode, taxRoundingMode,
             taxCalculationMode, inventoryMode, billingAddress, shippingAddress, itemShippingAddresses, shippingInfo,
             paymentInfo, paymentState, shipmentState, orderState, state, country, origin, completedAt, custom);
     }
@@ -1263,6 +1288,7 @@ public class OrderImportDraftBuilder implements Builder<OrderImportDraft> {
         builder.customLineItems = template.getCustomLineItems();
         builder.totalPrice = template.getTotalPrice();
         builder.taxedPrice = template.getTaxedPrice();
+        builder.priceRoundingMode = template.getPriceRoundingMode();
         builder.taxRoundingMode = template.getTaxRoundingMode();
         builder.taxCalculationMode = template.getTaxCalculationMode();
         builder.inventoryMode = template.getInventoryMode();

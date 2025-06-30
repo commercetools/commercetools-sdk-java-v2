@@ -125,4 +125,19 @@ public class ProductDataQueryBuilderDsl {
             ProductDataQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ProductDataQueryBuilderDsl> attributes(
+            Function<com.commercetools.api.predicates.query.product.AttributeQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product.AttributeQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("attributes"))
+                    .inner(fn.apply(com.commercetools.api.predicates.query.product.AttributeQueryBuilderDsl.of())),
+            ProductDataQueryBuilderDsl::of);
+    }
+
+    public CollectionPredicateBuilder<ProductDataQueryBuilderDsl> attributes() {
+        return new CollectionPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("attributes")),
+            p -> new CombinationQueryPredicate<>(p, ProductDataQueryBuilderDsl::of));
+    }
+
 }

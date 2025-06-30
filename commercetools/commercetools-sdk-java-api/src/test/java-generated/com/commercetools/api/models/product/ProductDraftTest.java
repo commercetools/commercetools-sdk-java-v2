@@ -61,7 +61,10 @@ public class ProductDraftTest {
                                 .state(new com.commercetools.api.models.state.StateResourceIdentifierImpl()) },
                 new Object[] { "publish", ProductDraft.builder().publish(true) },
                 new Object[] { "priceMode", ProductDraft.builder()
-                        .priceMode(com.commercetools.api.models.product.ProductPriceModeEnum.findEnum("Embedded")) } };
+                        .priceMode(com.commercetools.api.models.product.ProductPriceModeEnum.findEnum("Embedded")) },
+                new Object[] { "attributes", ProductDraft.builder()
+                        .attributes(
+                            Collections.singletonList(new com.commercetools.api.models.product.AttributeImpl())) } };
     }
 
     @Test
@@ -198,5 +201,13 @@ public class ProductDraftTest {
         value.setPriceMode(com.commercetools.api.models.product.ProductPriceModeEnum.findEnum("Embedded"));
         Assertions.assertThat(value.getPriceMode())
                 .isEqualTo(com.commercetools.api.models.product.ProductPriceModeEnum.findEnum("Embedded"));
+    }
+
+    @Test
+    public void attributes() {
+        ProductDraft value = ProductDraft.of();
+        value.setAttributes(Collections.singletonList(new com.commercetools.api.models.product.AttributeImpl()));
+        Assertions.assertThat(value.getAttributes())
+                .isEqualTo(Collections.singletonList(new com.commercetools.api.models.product.AttributeImpl()));
     }
 }

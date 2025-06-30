@@ -22,6 +22,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .masterVariant(masterVariantBuilder -> masterVariantBuilder)
  *             .plusVariants(variantsBuilder -> variantsBuilder)
  *             .searchKeywords(searchKeywordsBuilder -> searchKeywordsBuilder)
+ *             .plusAttributes(attributesBuilder -> attributesBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -55,6 +56,8 @@ public class ProductDataBuilder implements Builder<ProductData> {
     private java.util.List<com.commercetools.api.models.product.ProductVariant> variants;
 
     private com.commercetools.api.models.product.SearchKeywords searchKeywords;
+
+    private java.util.List<com.commercetools.api.models.product.Attribute> attributes;
 
     /**
      *  <p>Name of the Product.</p>
@@ -517,7 +520,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-     *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
+     *  <p>Used by Search Term Suggestions, but is also considered for a full text search in the Product Projection Search API.</p>
      * @param builder function to build the searchKeywords value
      * @return Builder
      */
@@ -529,7 +532,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-     *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
+     *  <p>Used by Search Term Suggestions, but is also considered for a full text search in the Product Projection Search API.</p>
      * @param builder function to build the searchKeywords value
      * @return Builder
      */
@@ -541,7 +544,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-     *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
+     *  <p>Used by Search Term Suggestions, but is also considered for a full text search in the Product Projection Search API.</p>
      * @param searchKeywords value to be set
      * @return Builder
      */
@@ -549,6 +552,93 @@ public class ProductDataBuilder implements Builder<ProductData> {
     public ProductDataBuilder searchKeywords(final com.commercetools.api.models.product.SearchKeywords searchKeywords) {
         this.searchKeywords = searchKeywords;
         return this;
+    }
+
+    /**
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     * @param attributes value to be set
+     * @return Builder
+     */
+
+    public ProductDataBuilder attributes(final com.commercetools.api.models.product.Attribute... attributes) {
+        this.attributes = new ArrayList<>(Arrays.asList(attributes));
+        return this;
+    }
+
+    /**
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     * @param attributes value to be set
+     * @return Builder
+     */
+
+    public ProductDataBuilder attributes(
+            final java.util.List<com.commercetools.api.models.product.Attribute> attributes) {
+        this.attributes = attributes;
+        return this;
+    }
+
+    /**
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     * @param attributes value to be set
+     * @return Builder
+     */
+
+    public ProductDataBuilder plusAttributes(final com.commercetools.api.models.product.Attribute... attributes) {
+        if (this.attributes == null) {
+            this.attributes = new ArrayList<>();
+        }
+        this.attributes.addAll(Arrays.asList(attributes));
+        return this;
+    }
+
+    /**
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductDataBuilder plusAttributes(
+            Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.AttributeBuilder> builder) {
+        if (this.attributes == null) {
+            this.attributes = new ArrayList<>();
+        }
+        this.attributes.add(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductDataBuilder withAttributes(
+            Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.AttributeBuilder> builder) {
+        this.attributes = new ArrayList<>();
+        this.attributes.add(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductDataBuilder addAttributes(
+            Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.Attribute> builder) {
+        return plusAttributes(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()));
+    }
+
+    /**
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductDataBuilder setAttributes(
+            Function<com.commercetools.api.models.product.AttributeBuilder, com.commercetools.api.models.product.Attribute> builder) {
+        return attributes(builder.apply(com.commercetools.api.models.product.AttributeBuilder.of()));
     }
 
     /**
@@ -647,12 +737,21 @@ public class ProductDataBuilder implements Builder<ProductData> {
     }
 
     /**
-     *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
+     *  <p>Used by Search Term Suggestions, but is also considered for a full text search in the Product Projection Search API.</p>
      * @return searchKeywords
      */
 
     public com.commercetools.api.models.product.SearchKeywords getSearchKeywords() {
         return this.searchKeywords;
+    }
+
+    /**
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     * @return attributes
+     */
+
+    public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes() {
+        return this.attributes;
     }
 
     /**
@@ -666,8 +765,9 @@ public class ProductDataBuilder implements Builder<ProductData> {
         Objects.requireNonNull(masterVariant, ProductData.class + ": masterVariant is missing");
         Objects.requireNonNull(variants, ProductData.class + ": variants is missing");
         Objects.requireNonNull(searchKeywords, ProductData.class + ": searchKeywords is missing");
+        Objects.requireNonNull(attributes, ProductData.class + ": attributes is missing");
         return new ProductDataImpl(name, categories, categoryOrderHints, description, slug, metaTitle, metaDescription,
-            metaKeywords, masterVariant, variants, searchKeywords);
+            metaKeywords, masterVariant, variants, searchKeywords, attributes);
     }
 
     /**
@@ -676,7 +776,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
      */
     public ProductData buildUnchecked() {
         return new ProductDataImpl(name, categories, categoryOrderHints, description, slug, metaTitle, metaDescription,
-            metaKeywords, masterVariant, variants, searchKeywords);
+            metaKeywords, masterVariant, variants, searchKeywords, attributes);
     }
 
     /**
@@ -705,6 +805,7 @@ public class ProductDataBuilder implements Builder<ProductData> {
         builder.masterVariant = template.getMasterVariant();
         builder.variants = template.getVariants();
         builder.searchKeywords = template.getSearchKeywords();
+        builder.attributes = template.getAttributes();
         return builder;
     }
 

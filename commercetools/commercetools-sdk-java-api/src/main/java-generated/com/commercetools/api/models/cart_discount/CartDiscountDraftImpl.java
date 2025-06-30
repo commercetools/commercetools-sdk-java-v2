@@ -50,6 +50,8 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    private com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifier discountGroup;
+
     /**
      * create instance with all properties
      */
@@ -67,7 +69,8 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
             @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil,
             @JsonProperty("requiresDiscountCode") final Boolean requiresDiscountCode,
             @JsonProperty("stackingMode") final com.commercetools.api.models.cart_discount.StackingMode stackingMode,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
+            @JsonProperty("discountGroup") final com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifier discountGroup) {
         this.name = name;
         this.key = key;
         this.description = description;
@@ -82,6 +85,7 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
         this.requiresDiscountCode = requiresDiscountCode;
         this.stackingMode = stackingMode;
         this.custom = custom;
+        this.discountGroup = discountGroup;
     }
 
     /**
@@ -140,7 +144,9 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
     }
 
     /**
-     *  <p>Value between <code>0</code> and <code>1</code>. A Discount with a higher sortOrder is prioritized. The sort order must be unambiguous among all CartDiscounts.</p>
+     *  <p>Value between <code>0</code> and <code>1</code> that determines the order in which the CartDiscounts will be applied; a CartDiscount with a higher value will be prioritized.</p>
+     *  <p>It must be unique among all CartDiscounts and DiscountGroups.</p>
+     *  <p>If the CartDiscount is part of a DiscountGroup, it will use the sort order of the DiscountGroup.</p>
      */
 
     public String getSortOrder() {
@@ -208,6 +214,14 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
         return this.custom;
     }
 
+    /**
+     *  <p>Reference to a DiscountGroup that the CartDiscount must belong to.</p>
+     */
+
+    public com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifier getDiscountGroup() {
+        return this.discountGroup;
+    }
+
     public void setName(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
     }
@@ -268,6 +282,11 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
         this.custom = custom;
     }
 
+    public void setDiscountGroup(
+            final com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifier discountGroup) {
+        this.discountGroup = discountGroup;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -292,6 +311,7 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
                 .append(requiresDiscountCode, that.requiresDiscountCode)
                 .append(stackingMode, that.stackingMode)
                 .append(custom, that.custom)
+                .append(discountGroup, that.discountGroup)
                 .append(name, that.name)
                 .append(key, that.key)
                 .append(description, that.description)
@@ -306,6 +326,7 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
                 .append(requiresDiscountCode, that.requiresDiscountCode)
                 .append(stackingMode, that.stackingMode)
                 .append(custom, that.custom)
+                .append(discountGroup, that.discountGroup)
                 .isEquals();
     }
 
@@ -325,6 +346,7 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
                 .append(requiresDiscountCode)
                 .append(stackingMode)
                 .append(custom)
+                .append(discountGroup)
                 .toHashCode();
     }
 
@@ -344,6 +366,7 @@ public class CartDiscountDraftImpl implements CartDiscountDraft, ModelBase {
                 .append("requiresDiscountCode", requiresDiscountCode)
                 .append("stackingMode", stackingMode)
                 .append("custom", custom)
+                .append("discountGroup", discountGroup)
                 .build();
     }
 

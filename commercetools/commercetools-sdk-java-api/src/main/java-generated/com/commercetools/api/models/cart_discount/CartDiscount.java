@@ -14,6 +14,7 @@ import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.Reference;
+import com.commercetools.api.models.discount_group.DiscountGroupReference;
 import com.commercetools.api.models.store.StoreKeyReference;
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
@@ -157,7 +158,9 @@ public interface CartDiscount
     public CartDiscountTarget getTarget();
 
     /**
-     *  <p>Value between <code>0</code> and <code>1</code>. All matching CartDiscounts are applied to a Cart in the order defined by this field. A Discount with a higher sortOrder is prioritized. The sort order is unambiguous among all CartDiscounts.</p>
+     *  <p>Value between <code>0</code> and <code>1</code> that determines the order in which the CartDiscounts are applied; a CartDiscount with a higher value is prioritized.</p>
+     *  <p>It is unique among all CartDiscounts and DiscountGroups.</p>
+     *  <p>If the CartDiscount is part of a DiscountGroup, it uses the sort order of the DiscountGroup.</p>
      * @return sortOrder
      */
     @NotNull
@@ -232,6 +235,14 @@ public interface CartDiscount
     @Valid
     @JsonProperty("custom")
     public CustomFields getCustom();
+
+    /**
+     *  <p>Reference to a DiscountGroup that the CartDiscount belongs to.</p>
+     * @return discountGroup
+     */
+    @Valid
+    @JsonProperty("discountGroup")
+    public DiscountGroupReference getDiscountGroup();
 
     /**
      *  <p>Unique identifier of the CartDiscount.</p>
@@ -319,7 +330,9 @@ public interface CartDiscount
     public void setTarget(final CartDiscountTarget target);
 
     /**
-     *  <p>Value between <code>0</code> and <code>1</code>. All matching CartDiscounts are applied to a Cart in the order defined by this field. A Discount with a higher sortOrder is prioritized. The sort order is unambiguous among all CartDiscounts.</p>
+     *  <p>Value between <code>0</code> and <code>1</code> that determines the order in which the CartDiscounts are applied; a CartDiscount with a higher value is prioritized.</p>
+     *  <p>It is unique among all CartDiscounts and DiscountGroups.</p>
+     *  <p>If the CartDiscount is part of a DiscountGroup, it uses the sort order of the DiscountGroup.</p>
      * @param sortOrder value to be set
      */
 
@@ -404,6 +417,13 @@ public interface CartDiscount
     public void setCustom(final CustomFields custom);
 
     /**
+     *  <p>Reference to a DiscountGroup that the CartDiscount belongs to.</p>
+     * @param discountGroup value to be set
+     */
+
+    public void setDiscountGroup(final DiscountGroupReference discountGroup);
+
+    /**
      * factory method
      * @return instance of CartDiscount
      */
@@ -439,6 +459,7 @@ public interface CartDiscount
         instance.setReferences(template.getReferences());
         instance.setStackingMode(template.getStackingMode());
         instance.setCustom(template.getCustom());
+        instance.setDiscountGroup(template.getDiscountGroup());
         return instance;
     }
 
@@ -487,6 +508,8 @@ public interface CartDiscount
                 .orElse(null));
         instance.setStackingMode(template.getStackingMode());
         instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
+        instance.setDiscountGroup(
+            com.commercetools.api.models.discount_group.DiscountGroupReference.deepCopy(template.getDiscountGroup()));
         return instance;
     }
 

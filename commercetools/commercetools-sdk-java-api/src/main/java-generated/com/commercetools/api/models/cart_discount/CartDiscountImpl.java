@@ -64,6 +64,8 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
 
     private com.commercetools.api.models.type.CustomFields custom;
 
+    private com.commercetools.api.models.discount_group.DiscountGroupReference discountGroup;
+
     /**
      * create instance with all properties
      */
@@ -87,7 +89,8 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
             @JsonProperty("requiresDiscountCode") final Boolean requiresDiscountCode,
             @JsonProperty("references") final java.util.List<com.commercetools.api.models.common.Reference> references,
             @JsonProperty("stackingMode") final com.commercetools.api.models.cart_discount.StackingMode stackingMode,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
+            @JsonProperty("discountGroup") final com.commercetools.api.models.discount_group.DiscountGroupReference discountGroup) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -109,6 +112,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
         this.references = references;
         this.stackingMode = stackingMode;
         this.custom = custom;
+        this.discountGroup = discountGroup;
     }
 
     /**
@@ -215,7 +219,9 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
     }
 
     /**
-     *  <p>Value between <code>0</code> and <code>1</code>. All matching CartDiscounts are applied to a Cart in the order defined by this field. A Discount with a higher sortOrder is prioritized. The sort order is unambiguous among all CartDiscounts.</p>
+     *  <p>Value between <code>0</code> and <code>1</code> that determines the order in which the CartDiscounts are applied; a CartDiscount with a higher value is prioritized.</p>
+     *  <p>It is unique among all CartDiscounts and DiscountGroups.</p>
+     *  <p>If the CartDiscount is part of a DiscountGroup, it uses the sort order of the DiscountGroup.</p>
      */
 
     public String getSortOrder() {
@@ -287,6 +293,14 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
 
     public com.commercetools.api.models.type.CustomFields getCustom() {
         return this.custom;
+    }
+
+    /**
+     *  <p>Reference to a DiscountGroup that the CartDiscount belongs to.</p>
+     */
+
+    public com.commercetools.api.models.discount_group.DiscountGroupReference getDiscountGroup() {
+        return this.discountGroup;
     }
 
     public void setId(final String id) {
@@ -381,6 +395,11 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
         this.custom = custom;
     }
 
+    public void setDiscountGroup(
+            final com.commercetools.api.models.discount_group.DiscountGroupReference discountGroup) {
+        this.discountGroup = discountGroup;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -412,6 +431,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
                 .append(references, that.references)
                 .append(stackingMode, that.stackingMode)
                 .append(custom, that.custom)
+                .append(discountGroup, that.discountGroup)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -433,6 +453,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
                 .append(references, that.references)
                 .append(stackingMode, that.stackingMode)
                 .append(custom, that.custom)
+                .append(discountGroup, that.discountGroup)
                 .isEquals();
     }
 
@@ -459,6 +480,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
                 .append(references)
                 .append(stackingMode)
                 .append(custom)
+                .append(discountGroup)
                 .toHashCode();
     }
 
@@ -485,6 +507,7 @@ public class CartDiscountImpl implements CartDiscount, ModelBase {
                 .append("references", references)
                 .append("stackingMode", stackingMode)
                 .append("custom", custom)
+                .append("discountGroup", discountGroup)
                 .build();
     }
 

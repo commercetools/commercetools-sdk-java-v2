@@ -56,6 +56,9 @@ public class ProductTailoringDraftBuilder implements Builder<ProductTailoringDra
     @Nullable
     private java.util.List<com.commercetools.api.models.product_tailoring.ProductVariantTailoringDraft> variants;
 
+    @Nullable
+    private java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> attributes;
+
     /**
      *  <p>User-defined unique identifier of the ProductTailoring.</p>
      * @param key value to be set
@@ -460,6 +463,101 @@ public class ProductTailoringDraftBuilder implements Builder<ProductTailoringDra
     }
 
     /**
+     *  <p>Attributes of the tailored Product. If provided, these Attributes are selectively merged into the <code>attributes</code> of the corresponding Product. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     * @param attributes value to be set
+     * @return Builder
+     */
+
+    public ProductTailoringDraftBuilder attributes(
+            @Nullable final com.commercetools.api.models.product_tailoring.ProductTailoringAttribute... attributes) {
+        this.attributes = new ArrayList<>(Arrays.asList(attributes));
+        return this;
+    }
+
+    /**
+     *  <p>Attributes of the tailored Product. If provided, these Attributes are selectively merged into the <code>attributes</code> of the corresponding Product. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     * @param attributes value to be set
+     * @return Builder
+     */
+
+    public ProductTailoringDraftBuilder attributes(
+            @Nullable final java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> attributes) {
+        this.attributes = attributes;
+        return this;
+    }
+
+    /**
+     *  <p>Attributes of the tailored Product. If provided, these Attributes are selectively merged into the <code>attributes</code> of the corresponding Product. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     * @param attributes value to be set
+     * @return Builder
+     */
+
+    public ProductTailoringDraftBuilder plusAttributes(
+            @Nullable final com.commercetools.api.models.product_tailoring.ProductTailoringAttribute... attributes) {
+        if (this.attributes == null) {
+            this.attributes = new ArrayList<>();
+        }
+        this.attributes.addAll(Arrays.asList(attributes));
+        return this;
+    }
+
+    /**
+     *  <p>Attributes of the tailored Product. If provided, these Attributes are selectively merged into the <code>attributes</code> of the corresponding Product. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductTailoringDraftBuilder plusAttributes(
+            Function<com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder, com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder> builder) {
+        if (this.attributes == null) {
+            this.attributes = new ArrayList<>();
+        }
+        this.attributes
+                .add(builder.apply(com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder.of())
+                        .build());
+        return this;
+    }
+
+    /**
+     *  <p>Attributes of the tailored Product. If provided, these Attributes are selectively merged into the <code>attributes</code> of the corresponding Product. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductTailoringDraftBuilder withAttributes(
+            Function<com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder, com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder> builder) {
+        this.attributes = new ArrayList<>();
+        this.attributes
+                .add(builder.apply(com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder.of())
+                        .build());
+        return this;
+    }
+
+    /**
+     *  <p>Attributes of the tailored Product. If provided, these Attributes are selectively merged into the <code>attributes</code> of the corresponding Product. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductTailoringDraftBuilder addAttributes(
+            Function<com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder, com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> builder) {
+        return plusAttributes(
+            builder.apply(com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder.of()));
+    }
+
+    /**
+     *  <p>Attributes of the tailored Product. If provided, these Attributes are selectively merged into the <code>attributes</code> of the corresponding Product. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductTailoringDraftBuilder setAttributes(
+            Function<com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder, com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> builder) {
+        return attributes(
+            builder.apply(com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder.of()));
+    }
+
+    /**
      *  <p>User-defined unique identifier of the ProductTailoring.</p>
      * @return key
      */
@@ -568,6 +666,16 @@ public class ProductTailoringDraftBuilder implements Builder<ProductTailoringDra
     }
 
     /**
+     *  <p>Attributes of the tailored Product. If provided, these Attributes are selectively merged into the <code>attributes</code> of the corresponding Product. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     * @return attributes
+     */
+
+    @Nullable
+    public java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> getAttributes() {
+        return this.attributes;
+    }
+
+    /**
      * builds ProductTailoringDraft with checking for non-null required values
      * @return ProductTailoringDraft
      */
@@ -575,7 +683,7 @@ public class ProductTailoringDraftBuilder implements Builder<ProductTailoringDra
         Objects.requireNonNull(store, ProductTailoringDraft.class + ": store is missing");
         Objects.requireNonNull(product, ProductTailoringDraft.class + ": product is missing");
         return new ProductTailoringDraftImpl(key, store, product, name, description, metaTitle, metaDescription,
-            metaKeywords, slug, publish, variants);
+            metaKeywords, slug, publish, variants, attributes);
     }
 
     /**
@@ -584,7 +692,7 @@ public class ProductTailoringDraftBuilder implements Builder<ProductTailoringDra
      */
     public ProductTailoringDraft buildUnchecked() {
         return new ProductTailoringDraftImpl(key, store, product, name, description, metaTitle, metaDescription,
-            metaKeywords, slug, publish, variants);
+            metaKeywords, slug, publish, variants, attributes);
     }
 
     /**
@@ -613,6 +721,7 @@ public class ProductTailoringDraftBuilder implements Builder<ProductTailoringDra
         builder.slug = template.getSlug();
         builder.publish = template.getPublish();
         builder.variants = template.getVariants();
+        builder.attributes = template.getAttributes();
         return builder;
     }
 

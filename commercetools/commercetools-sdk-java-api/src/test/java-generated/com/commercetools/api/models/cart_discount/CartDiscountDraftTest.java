@@ -47,8 +47,12 @@ public class CartDiscountDraftTest {
                 new Object[] { "requiresDiscountCode", CartDiscountDraft.builder().requiresDiscountCode(true) },
                 new Object[] { "stackingMode", CartDiscountDraft.builder()
                         .stackingMode(com.commercetools.api.models.cart_discount.StackingMode.findEnum("Stacking")) },
-                new Object[] { "custom", CartDiscountDraft.builder()
-                        .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) } };
+                new Object[] { "custom",
+                        CartDiscountDraft.builder()
+                                .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) },
+                new Object[] { "discountGroup", CartDiscountDraft.builder()
+                        .discountGroup(
+                            new com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifierImpl()) } };
     }
 
     @Test
@@ -155,5 +159,13 @@ public class CartDiscountDraftTest {
         value.setCustom(new com.commercetools.api.models.type.CustomFieldsDraftImpl());
         Assertions.assertThat(value.getCustom())
                 .isEqualTo(new com.commercetools.api.models.type.CustomFieldsDraftImpl());
+    }
+
+    @Test
+    public void discountGroup() {
+        CartDiscountDraft value = CartDiscountDraft.of();
+        value.setDiscountGroup(new com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifierImpl());
+        Assertions.assertThat(value.getDiscountGroup())
+                .isEqualTo(new com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifierImpl());
     }
 }

@@ -115,6 +115,22 @@ public class ProductTailoringCreatedMessagePayloadQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, ProductTailoringCreatedMessagePayloadQueryBuilderDsl::of));
     }
 
+    public CombinationQueryPredicate<ProductTailoringCreatedMessagePayloadQueryBuilderDsl> attributes(
+            Function<com.commercetools.api.predicates.query.product_tailoring.ProductTailoringAttributeQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product_tailoring.ProductTailoringAttributeQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("attributes"))
+                .inner(fn.apply(
+                    com.commercetools.api.predicates.query.product_tailoring.ProductTailoringAttributeQueryBuilderDsl
+                            .of())),
+            ProductTailoringCreatedMessagePayloadQueryBuilderDsl::of);
+    }
+
+    public CollectionPredicateBuilder<ProductTailoringCreatedMessagePayloadQueryBuilderDsl> attributes() {
+        return new CollectionPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("attributes")),
+            p -> new CombinationQueryPredicate<>(p, ProductTailoringCreatedMessagePayloadQueryBuilderDsl::of));
+    }
+
     public BooleanComparisonPredicateBuilder<ProductTailoringCreatedMessagePayloadQueryBuilderDsl> published() {
         return new BooleanComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("published")),

@@ -55,6 +55,10 @@ public class CustomerTest {
                 new Object[] { "isEmailVerified", Customer.builder().isEmailVerified(true) },
                 new Object[] { "customerGroup", Customer.builder()
                         .customerGroup(new com.commercetools.api.models.customer_group.CustomerGroupReferenceImpl()) },
+                new Object[] { "customerGroupAssignments",
+                        Customer.builder()
+                                .customerGroupAssignments(Collections.singletonList(
+                                    new com.commercetools.api.models.customer.CustomerGroupAssignmentImpl())) },
                 new Object[] { "custom",
                         Customer.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) },
                 new Object[] { "locale", Customer.builder().locale("locale") },
@@ -66,11 +70,7 @@ public class CustomerTest {
                 new Object[] { "authenticationMode",
                         Customer.builder()
                                 .authenticationMode(
-                                    com.commercetools.api.models.customer.AuthenticationMode.findEnum("Password")) },
-                new Object[] { "customerGroupAssignments",
-                        Customer.builder()
-                                .customerGroupAssignments(Collections.singletonList(
-                                    new com.commercetools.api.models.customer.CustomerGroupAssignmentImpl())) } };
+                                    com.commercetools.api.models.customer.AuthenticationMode.findEnum("Password")) } };
     }
 
     @Test
@@ -252,6 +252,16 @@ public class CustomerTest {
     }
 
     @Test
+    public void customerGroupAssignments() {
+        Customer value = Customer.of();
+        value.setCustomerGroupAssignments(
+            Collections.singletonList(new com.commercetools.api.models.customer.CustomerGroupAssignmentImpl()));
+        Assertions.assertThat(value.getCustomerGroupAssignments())
+                .isEqualTo(
+                    Collections.singletonList(new com.commercetools.api.models.customer.CustomerGroupAssignmentImpl()));
+    }
+
+    @Test
     public void custom() {
         Customer value = Customer.of();
         value.setCustom(new com.commercetools.api.models.type.CustomFieldsImpl());
@@ -286,15 +296,5 @@ public class CustomerTest {
         value.setAuthenticationMode(com.commercetools.api.models.customer.AuthenticationMode.findEnum("Password"));
         Assertions.assertThat(value.getAuthenticationMode())
                 .isEqualTo(com.commercetools.api.models.customer.AuthenticationMode.findEnum("Password"));
-    }
-
-    @Test
-    public void customerGroupAssignments() {
-        Customer value = Customer.of();
-        value.setCustomerGroupAssignments(
-            Collections.singletonList(new com.commercetools.api.models.customer.CustomerGroupAssignmentImpl()));
-        Assertions.assertThat(value.getCustomerGroupAssignments())
-                .isEqualTo(
-                    Collections.singletonList(new com.commercetools.api.models.customer.CustomerGroupAssignmentImpl()));
     }
 }

@@ -171,6 +171,14 @@ public interface ResourceIdentifier extends com.commercetools.api.models.WithKey
     }
 
     /**
+     * builder for discountGroup subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifierBuilder discountGroupBuilder() {
+        return com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifierBuilder.of();
+    }
+
+    /**
      * builder for inventoryEntry subtype
      * @return builder
      */

@@ -18,18 +18,18 @@ public class SubscriptionSetEventsActionTest {
     }
 
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { "messages",
+        return new Object[][] { new Object[] { "events",
                 SubscriptionSetEventsAction.builder()
-                        .messages(Collections.singletonList(
+                        .events(Collections.singletonList(
                             new com.commercetools.api.models.subscription.EventSubscriptionImpl())) } };
     }
 
     @Test
-    public void messages() {
+    public void events() {
         SubscriptionSetEventsAction value = SubscriptionSetEventsAction.of();
-        value.setMessages(
+        value.setEvents(
             Collections.singletonList(new com.commercetools.api.models.subscription.EventSubscriptionImpl()));
-        Assertions.assertThat(value.getMessages())
+        Assertions.assertThat(value.getEvents())
                 .isEqualTo(
                     Collections.singletonList(new com.commercetools.api.models.subscription.EventSubscriptionImpl()));
     }

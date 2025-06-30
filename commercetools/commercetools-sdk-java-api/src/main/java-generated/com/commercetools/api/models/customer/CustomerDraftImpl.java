@@ -67,6 +67,8 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
 
     private com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup;
 
+    private java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignmentDraft> customerGroupAssignments;
+
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     private String locale;
@@ -76,8 +78,6 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
     private java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores;
 
     private com.commercetools.api.models.customer.AuthenticationMode authenticationMode;
-
-    private java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignmentDraft> customerGroupAssignments;
 
     /**
      * create instance with all properties
@@ -100,11 +100,11 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
             @JsonProperty("billingAddresses") final java.util.List<Integer> billingAddresses,
             @JsonProperty("isEmailVerified") final Boolean isEmailVerified,
             @JsonProperty("customerGroup") final com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier customerGroup,
+            @JsonProperty("customerGroupAssignments") final java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignmentDraft> customerGroupAssignments,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
             @JsonProperty("locale") final String locale, @JsonProperty("salutation") final String salutation,
             @JsonProperty("stores") final java.util.List<com.commercetools.api.models.store.StoreResourceIdentifier> stores,
-            @JsonProperty("authenticationMode") final com.commercetools.api.models.customer.AuthenticationMode authenticationMode,
-            @JsonProperty("customerGroupAssignments") final java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignmentDraft> customerGroupAssignments) {
+            @JsonProperty("authenticationMode") final com.commercetools.api.models.customer.AuthenticationMode authenticationMode) {
         this.key = key;
         this.customerNumber = customerNumber;
         this.externalId = externalId;
@@ -127,12 +127,12 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
         this.billingAddresses = billingAddresses;
         this.isEmailVerified = isEmailVerified;
         this.customerGroup = customerGroup;
+        this.customerGroupAssignments = customerGroupAssignments;
         this.custom = custom;
         this.locale = locale;
         this.salutation = salutation;
         this.stores = stores;
         this.authenticationMode = authenticationMode;
-        this.customerGroupAssignments = customerGroupAssignments;
     }
 
     /**
@@ -313,10 +313,20 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
 
     /**
      *  <p>Sets the CustomerGroup for the Customer.</p>
+     *  <p>For new projects, use <code>customerGroupAssignments</code> instead. It supports assigning Customers to multiple Customer Groups and provides greater flexibility in complex pricing scenarios.</p>
      */
 
     public com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier getCustomerGroup() {
         return this.customerGroup;
+    }
+
+    /**
+     *  <p>Customer Groups to assign the Customer to.</p>
+     *  <p>Used for Line Item price selection.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignmentDraft> getCustomerGroupAssignments() {
+        return this.customerGroupAssignments;
     }
 
     /**
@@ -364,14 +374,6 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
 
     public com.commercetools.api.models.customer.AuthenticationMode getAuthenticationMode() {
         return this.authenticationMode;
-    }
-
-    /**
-     *  <p>Customer Groups to assign the Customer to.</p>
-     */
-
-    public java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignmentDraft> getCustomerGroupAssignments() {
-        return this.customerGroupAssignments;
     }
 
     public void setKey(final String key) {
@@ -476,6 +478,16 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
         this.customerGroup = customerGroup;
     }
 
+    public void setCustomerGroupAssignments(
+            final com.commercetools.api.models.customer.CustomerGroupAssignmentDraft... customerGroupAssignments) {
+        this.customerGroupAssignments = new ArrayList<>(Arrays.asList(customerGroupAssignments));
+    }
+
+    public void setCustomerGroupAssignments(
+            final java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignmentDraft> customerGroupAssignments) {
+        this.customerGroupAssignments = customerGroupAssignments;
+    }
+
     public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
     }
@@ -499,16 +511,6 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
     public void setAuthenticationMode(
             final com.commercetools.api.models.customer.AuthenticationMode authenticationMode) {
         this.authenticationMode = authenticationMode;
-    }
-
-    public void setCustomerGroupAssignments(
-            final com.commercetools.api.models.customer.CustomerGroupAssignmentDraft... customerGroupAssignments) {
-        this.customerGroupAssignments = new ArrayList<>(Arrays.asList(customerGroupAssignments));
-    }
-
-    public void setCustomerGroupAssignments(
-            final java.util.List<com.commercetools.api.models.customer.CustomerGroupAssignmentDraft> customerGroupAssignments) {
-        this.customerGroupAssignments = customerGroupAssignments;
     }
 
     @Override
@@ -543,12 +545,12 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
                 .append(billingAddresses, that.billingAddresses)
                 .append(isEmailVerified, that.isEmailVerified)
                 .append(customerGroup, that.customerGroup)
+                .append(customerGroupAssignments, that.customerGroupAssignments)
                 .append(custom, that.custom)
                 .append(locale, that.locale)
                 .append(salutation, that.salutation)
                 .append(stores, that.stores)
                 .append(authenticationMode, that.authenticationMode)
-                .append(customerGroupAssignments, that.customerGroupAssignments)
                 .append(key, that.key)
                 .append(customerNumber, that.customerNumber)
                 .append(externalId, that.externalId)
@@ -571,12 +573,12 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
                 .append(billingAddresses, that.billingAddresses)
                 .append(isEmailVerified, that.isEmailVerified)
                 .append(customerGroup, that.customerGroup)
+                .append(customerGroupAssignments, that.customerGroupAssignments)
                 .append(custom, that.custom)
                 .append(locale, that.locale)
                 .append(salutation, that.salutation)
                 .append(stores, that.stores)
                 .append(authenticationMode, that.authenticationMode)
-                .append(customerGroupAssignments, that.customerGroupAssignments)
                 .isEquals();
     }
 
@@ -604,12 +606,12 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
                 .append(billingAddresses)
                 .append(isEmailVerified)
                 .append(customerGroup)
+                .append(customerGroupAssignments)
                 .append(custom)
                 .append(locale)
                 .append(salutation)
                 .append(stores)
                 .append(authenticationMode)
-                .append(customerGroupAssignments)
                 .toHashCode();
     }
 
@@ -637,12 +639,12 @@ public class CustomerDraftImpl implements CustomerDraft, ModelBase {
                 .append("billingAddresses", billingAddresses)
                 .append("isEmailVerified", isEmailVerified)
                 .append("customerGroup", customerGroup)
+                .append("customerGroupAssignments", customerGroupAssignments)
                 .append("custom", custom)
                 .append("locale", locale)
                 .append("salutation", salutation)
                 .append("stores", stores)
                 .append("authenticationMode", authenticationMode)
-                .append("customerGroupAssignments", customerGroupAssignments)
                 .build();
     }
 

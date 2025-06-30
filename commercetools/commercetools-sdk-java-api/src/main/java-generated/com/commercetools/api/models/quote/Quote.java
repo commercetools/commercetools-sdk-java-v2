@@ -59,6 +59,7 @@ import jakarta.validation.constraints.NotNull;
  *             .plusCustomLineItems(customLineItemsBuilder -> customLineItemsBuilder)
  *             .totalPrice(totalPriceBuilder -> totalPriceBuilder)
  *             .taxMode(TaxMode.PLATFORM)
+ *             .priceRoundingMode(RoundingMode.HALF_EVEN)
  *             .taxRoundingMode(RoundingMode.HALF_EVEN)
  *             .taxCalculationMode(TaxCalculationMode.LINE_ITEM_LEVEL)
  *             .quoteState(QuoteState.PENDING)
@@ -260,6 +261,14 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
     @NotNull
     @JsonProperty("taxMode")
     public TaxMode getTaxMode();
+
+    /**
+     *  <p>When calculating total prices on LineItems and CustomLineItems, the selected mode is used for rounding.</p>
+     * @return priceRoundingMode
+     */
+    @NotNull
+    @JsonProperty("priceRoundingMode")
+    public RoundingMode getPriceRoundingMode();
 
     /**
      *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for rounding.</p>
@@ -543,6 +552,13 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
     public void setTaxMode(final TaxMode taxMode);
 
     /**
+     *  <p>When calculating total prices on LineItems and CustomLineItems, the selected mode is used for rounding.</p>
+     * @param priceRoundingMode value to be set
+     */
+
+    public void setPriceRoundingMode(final RoundingMode priceRoundingMode);
+
+    /**
      *  <p>When calculating taxes for <code>taxedPrice</code>, the selected mode is used for rounding.</p>
      * @param taxRoundingMode value to be set
      */
@@ -687,6 +703,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
         instance.setBillingAddress(template.getBillingAddress());
         instance.setInventoryMode(template.getInventoryMode());
         instance.setTaxMode(template.getTaxMode());
+        instance.setPriceRoundingMode(template.getPriceRoundingMode());
         instance.setTaxRoundingMode(template.getTaxRoundingMode());
         instance.setTaxCalculationMode(template.getTaxCalculationMode());
         instance.setCountry(template.getCountry());
@@ -752,6 +769,7 @@ public interface Quote extends BaseResource, QuoteMixin, com.commercetools.api.m
         instance.setBillingAddress(com.commercetools.api.models.common.Address.deepCopy(template.getBillingAddress()));
         instance.setInventoryMode(template.getInventoryMode());
         instance.setTaxMode(template.getTaxMode());
+        instance.setPriceRoundingMode(template.getPriceRoundingMode());
         instance.setTaxRoundingMode(template.getTaxRoundingMode());
         instance.setTaxCalculationMode(template.getTaxCalculationMode());
         instance.setCountry(template.getCountry());

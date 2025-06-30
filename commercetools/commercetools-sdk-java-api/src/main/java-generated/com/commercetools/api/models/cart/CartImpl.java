@@ -60,6 +60,8 @@ public class CartImpl implements Cart, ModelBase {
 
     private com.commercetools.api.models.cart.TaxMode taxMode;
 
+    private com.commercetools.api.models.cart.RoundingMode priceRoundingMode;
+
     private com.commercetools.api.models.cart.RoundingMode taxRoundingMode;
 
     private com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode;
@@ -131,6 +133,7 @@ public class CartImpl implements Cart, ModelBase {
             @JsonProperty("taxedShippingPrice") final com.commercetools.api.models.cart.TaxedPrice taxedShippingPrice,
             @JsonProperty("discountOnTotalPrice") final com.commercetools.api.models.cart.DiscountOnTotalPrice discountOnTotalPrice,
             @JsonProperty("taxMode") final com.commercetools.api.models.cart.TaxMode taxMode,
+            @JsonProperty("priceRoundingMode") final com.commercetools.api.models.cart.RoundingMode priceRoundingMode,
             @JsonProperty("taxRoundingMode") final com.commercetools.api.models.cart.RoundingMode taxRoundingMode,
             @JsonProperty("taxCalculationMode") final com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode,
             @JsonProperty("inventoryMode") final com.commercetools.api.models.cart.InventoryMode inventoryMode,
@@ -174,6 +177,7 @@ public class CartImpl implements Cart, ModelBase {
         this.taxedShippingPrice = taxedShippingPrice;
         this.discountOnTotalPrice = discountOnTotalPrice;
         this.taxMode = taxMode;
+        this.priceRoundingMode = priceRoundingMode;
         this.taxRoundingMode = taxRoundingMode;
         this.taxCalculationMode = taxCalculationMode;
         this.inventoryMode = inventoryMode;
@@ -365,7 +369,15 @@ public class CartImpl implements Cart, ModelBase {
     }
 
     /**
-     *  <p>Indicates how monetary values are rounded when calculating taxes for <code>taxedPrice</code>.</p>
+     *  <p>Indicates how the total prices on LineItems and CustomLineItems are rounded when calculated. Configured in Project settings.</p>
+     */
+
+    public com.commercetools.api.models.cart.RoundingMode getPriceRoundingMode() {
+        return this.priceRoundingMode;
+    }
+
+    /**
+     *  <p>Indicates how monetary values are rounded when calculating taxes for <code>taxedPrice</code>. Configured in Project settings.</p>
      */
 
     public com.commercetools.api.models.cart.RoundingMode getTaxRoundingMode() {
@@ -658,6 +670,10 @@ public class CartImpl implements Cart, ModelBase {
         this.taxMode = taxMode;
     }
 
+    public void setPriceRoundingMode(final com.commercetools.api.models.cart.RoundingMode priceRoundingMode) {
+        this.priceRoundingMode = priceRoundingMode;
+    }
+
     public void setTaxRoundingMode(final com.commercetools.api.models.cart.RoundingMode taxRoundingMode) {
         this.taxRoundingMode = taxRoundingMode;
     }
@@ -813,6 +829,7 @@ public class CartImpl implements Cart, ModelBase {
                 .append(taxedShippingPrice, that.taxedShippingPrice)
                 .append(discountOnTotalPrice, that.discountOnTotalPrice)
                 .append(taxMode, that.taxMode)
+                .append(priceRoundingMode, that.priceRoundingMode)
                 .append(taxRoundingMode, that.taxRoundingMode)
                 .append(taxCalculationMode, that.taxCalculationMode)
                 .append(inventoryMode, that.inventoryMode)
@@ -857,6 +874,7 @@ public class CartImpl implements Cart, ModelBase {
                 .append(taxedShippingPrice, that.taxedShippingPrice)
                 .append(discountOnTotalPrice, that.discountOnTotalPrice)
                 .append(taxMode, that.taxMode)
+                .append(priceRoundingMode, that.priceRoundingMode)
                 .append(taxRoundingMode, that.taxRoundingMode)
                 .append(taxCalculationMode, that.taxCalculationMode)
                 .append(inventoryMode, that.inventoryMode)
@@ -906,6 +924,7 @@ public class CartImpl implements Cart, ModelBase {
                 .append(taxedShippingPrice)
                 .append(discountOnTotalPrice)
                 .append(taxMode)
+                .append(priceRoundingMode)
                 .append(taxRoundingMode)
                 .append(taxCalculationMode)
                 .append(inventoryMode)
@@ -955,6 +974,7 @@ public class CartImpl implements Cart, ModelBase {
                 .append("taxedShippingPrice", taxedShippingPrice)
                 .append("discountOnTotalPrice", discountOnTotalPrice)
                 .append("taxMode", taxMode)
+                .append("priceRoundingMode", priceRoundingMode)
                 .append("taxRoundingMode", taxRoundingMode)
                 .append("taxCalculationMode", taxCalculationMode)
                 .append("inventoryMode", inventoryMode)

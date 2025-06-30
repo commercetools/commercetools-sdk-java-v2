@@ -309,6 +309,11 @@ public class ProjectApiRoot implements Closeable, ProjectScopedApiRoot {
     }
 
     @Override
+    public ByProjectKeyDiscountGroupsRequestBuilder discountGroups() {
+        return with().discountGroups();
+    }
+
+    @Override
     public <R> R with(Function<ProjectApiRoot, R> op) {
         return op.apply(this);
     }

@@ -46,6 +46,8 @@ public class CartDraftTest {
                         CartDraft.builder()
                                 .externalTaxRateForShippingMethod(
                                     new com.commercetools.api.models.cart.ExternalTaxRateDraftImpl()) },
+                new Object[] { "priceRoundingMode", CartDraft.builder()
+                        .priceRoundingMode(com.commercetools.api.models.cart.RoundingMode.findEnum("HalfEven")) },
                 new Object[] { "taxRoundingMode",
                         CartDraft.builder()
                                 .taxRoundingMode(com.commercetools.api.models.cart.RoundingMode.findEnum("HalfEven")) },
@@ -183,6 +185,14 @@ public class CartDraftTest {
         value.setExternalTaxRateForShippingMethod(new com.commercetools.api.models.cart.ExternalTaxRateDraftImpl());
         Assertions.assertThat(value.getExternalTaxRateForShippingMethod())
                 .isEqualTo(new com.commercetools.api.models.cart.ExternalTaxRateDraftImpl());
+    }
+
+    @Test
+    public void priceRoundingMode() {
+        CartDraft value = CartDraft.of();
+        value.setPriceRoundingMode(com.commercetools.api.models.cart.RoundingMode.findEnum("HalfEven"));
+        Assertions.assertThat(value.getPriceRoundingMode())
+                .isEqualTo(com.commercetools.api.models.cart.RoundingMode.findEnum("HalfEven"));
     }
 
     @Test

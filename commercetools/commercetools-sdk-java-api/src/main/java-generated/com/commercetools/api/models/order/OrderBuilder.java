@@ -84,6 +84,9 @@ public class OrderBuilder implements Builder<Order> {
     private com.commercetools.api.models.cart.DiscountOnTotalPrice discountOnTotalPrice;
 
     @Nullable
+    private com.commercetools.api.models.cart.RoundingMode priceRoundingMode;
+
+    @Nullable
     private com.commercetools.api.models.cart.TaxMode taxMode;
 
     @Nullable
@@ -721,6 +724,18 @@ public class OrderBuilder implements Builder<Order> {
     public OrderBuilder discountOnTotalPrice(
             @Nullable final com.commercetools.api.models.cart.DiscountOnTotalPrice discountOnTotalPrice) {
         this.discountOnTotalPrice = discountOnTotalPrice;
+        return this;
+    }
+
+    /**
+     *  <p>Indicates how the total prices on LineItems and CustomLineItems are rounded when calculated.</p>
+     * @param priceRoundingMode value to be set
+     * @return Builder
+     */
+
+    public OrderBuilder priceRoundingMode(
+            @Nullable final com.commercetools.api.models.cart.RoundingMode priceRoundingMode) {
+        this.priceRoundingMode = priceRoundingMode;
         return this;
     }
 
@@ -2126,6 +2141,16 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
+     *  <p>Indicates how the total prices on LineItems and CustomLineItems are rounded when calculated.</p>
+     * @return priceRoundingMode
+     */
+
+    @Nullable
+    public com.commercetools.api.models.cart.RoundingMode getPriceRoundingMode() {
+        return this.priceRoundingMode;
+    }
+
+    /**
      *  <p>Indicates how Tax Rates are set.</p>
      * @return taxMode
      */
@@ -2484,12 +2509,12 @@ public class OrderBuilder implements Builder<Order> {
         Objects.requireNonNull(syncInfo, Order.class + ": syncInfo is missing");
         return new OrderImpl(id, version, createdAt, lastModifiedAt, orderNumber, purchaseOrderNumber, customerId,
             customerEmail, customerGroup, anonymousId, businessUnit, store, lineItems, customLineItems, totalPrice,
-            taxedPrice, taxedShippingPrice, discountOnTotalPrice, taxMode, taxRoundingMode, taxCalculationMode,
-            inventoryMode, billingAddress, shippingAddress, shippingMode, shippingKey, shippingInfo, shippingRateInput,
-            shippingCustomFields, shipping, itemShippingAddresses, discountCodes, directDiscounts, refusedGifts,
-            paymentInfo, country, locale, origin, cart, quote, orderState, shipmentState, paymentState, state, syncInfo,
-            returnInfo, discountTypeCombination, lastMessageSequenceNumber, custom, completedAt, lastModifiedBy,
-            createdBy);
+            taxedPrice, taxedShippingPrice, discountOnTotalPrice, priceRoundingMode, taxMode, taxRoundingMode,
+            taxCalculationMode, inventoryMode, billingAddress, shippingAddress, shippingMode, shippingKey, shippingInfo,
+            shippingRateInput, shippingCustomFields, shipping, itemShippingAddresses, discountCodes, directDiscounts,
+            refusedGifts, paymentInfo, country, locale, origin, cart, quote, orderState, shipmentState, paymentState,
+            state, syncInfo, returnInfo, discountTypeCombination, lastMessageSequenceNumber, custom, completedAt,
+            lastModifiedBy, createdBy);
     }
 
     /**
@@ -2499,12 +2524,12 @@ public class OrderBuilder implements Builder<Order> {
     public Order buildUnchecked() {
         return new OrderImpl(id, version, createdAt, lastModifiedAt, orderNumber, purchaseOrderNumber, customerId,
             customerEmail, customerGroup, anonymousId, businessUnit, store, lineItems, customLineItems, totalPrice,
-            taxedPrice, taxedShippingPrice, discountOnTotalPrice, taxMode, taxRoundingMode, taxCalculationMode,
-            inventoryMode, billingAddress, shippingAddress, shippingMode, shippingKey, shippingInfo, shippingRateInput,
-            shippingCustomFields, shipping, itemShippingAddresses, discountCodes, directDiscounts, refusedGifts,
-            paymentInfo, country, locale, origin, cart, quote, orderState, shipmentState, paymentState, state, syncInfo,
-            returnInfo, discountTypeCombination, lastMessageSequenceNumber, custom, completedAt, lastModifiedBy,
-            createdBy);
+            taxedPrice, taxedShippingPrice, discountOnTotalPrice, priceRoundingMode, taxMode, taxRoundingMode,
+            taxCalculationMode, inventoryMode, billingAddress, shippingAddress, shippingMode, shippingKey, shippingInfo,
+            shippingRateInput, shippingCustomFields, shipping, itemShippingAddresses, discountCodes, directDiscounts,
+            refusedGifts, paymentInfo, country, locale, origin, cart, quote, orderState, shipmentState, paymentState,
+            state, syncInfo, returnInfo, discountTypeCombination, lastMessageSequenceNumber, custom, completedAt,
+            lastModifiedBy, createdBy);
     }
 
     /**
@@ -2540,6 +2565,7 @@ public class OrderBuilder implements Builder<Order> {
         builder.taxedPrice = template.getTaxedPrice();
         builder.taxedShippingPrice = template.getTaxedShippingPrice();
         builder.discountOnTotalPrice = template.getDiscountOnTotalPrice();
+        builder.priceRoundingMode = template.getPriceRoundingMode();
         builder.taxMode = template.getTaxMode();
         builder.taxRoundingMode = template.getTaxRoundingMode();
         builder.taxCalculationMode = template.getTaxCalculationMode();

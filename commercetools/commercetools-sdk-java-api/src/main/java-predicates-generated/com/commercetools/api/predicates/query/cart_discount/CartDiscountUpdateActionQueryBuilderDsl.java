@@ -117,6 +117,14 @@ public class CartDiscountUpdateActionQueryBuilderDsl {
             CartDiscountUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<CartDiscountUpdateActionQueryBuilderDsl> asSetDiscountGroup(
+            Function<com.commercetools.api.predicates.query.cart_discount.CartDiscountSetDiscountGroupActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart_discount.CartDiscountSetDiscountGroupActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.cart_discount.CartDiscountSetDiscountGroupActionQueryBuilderDsl
+                    .of()),
+            CartDiscountUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<CartDiscountUpdateActionQueryBuilderDsl> asSetKey(
             Function<com.commercetools.api.predicates.query.cart_discount.CartDiscountSetKeyActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.cart_discount.CartDiscountSetKeyActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

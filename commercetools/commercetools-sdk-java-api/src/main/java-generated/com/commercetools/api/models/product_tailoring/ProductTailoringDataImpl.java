@@ -36,6 +36,8 @@ public class ProductTailoringDataImpl implements ProductTailoringData, ModelBase
 
     private java.util.List<com.commercetools.api.models.product_tailoring.ProductVariantTailoring> variants;
 
+    private java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> attributes;
+
     /**
      * create instance with all properties
      */
@@ -46,7 +48,8 @@ public class ProductTailoringDataImpl implements ProductTailoringData, ModelBase
             @JsonProperty("metaDescription") final com.commercetools.api.models.common.LocalizedString metaDescription,
             @JsonProperty("metaKeywords") final com.commercetools.api.models.common.LocalizedString metaKeywords,
             @JsonProperty("slug") final com.commercetools.api.models.common.LocalizedString slug,
-            @JsonProperty("variants") final java.util.List<com.commercetools.api.models.product_tailoring.ProductVariantTailoring> variants) {
+            @JsonProperty("variants") final java.util.List<com.commercetools.api.models.product_tailoring.ProductVariantTailoring> variants,
+            @JsonProperty("attributes") final java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> attributes) {
         this.name = name;
         this.description = description;
         this.metaTitle = metaTitle;
@@ -54,6 +57,7 @@ public class ProductTailoringDataImpl implements ProductTailoringData, ModelBase
         this.metaKeywords = metaKeywords;
         this.slug = slug;
         this.variants = variants;
+        this.attributes = attributes;
     }
 
     /**
@@ -118,6 +122,14 @@ public class ProductTailoringDataImpl implements ProductTailoringData, ModelBase
         return this.variants;
     }
 
+    /**
+     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding Product. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> getAttributes() {
+        return this.attributes;
+    }
+
     public void setName(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
     }
@@ -151,6 +163,16 @@ public class ProductTailoringDataImpl implements ProductTailoringData, ModelBase
         this.variants = variants;
     }
 
+    public void setAttributes(
+            final com.commercetools.api.models.product_tailoring.ProductTailoringAttribute... attributes) {
+        this.attributes = new ArrayList<>(Arrays.asList(attributes));
+    }
+
+    public void setAttributes(
+            final java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> attributes) {
+        this.attributes = attributes;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -168,6 +190,7 @@ public class ProductTailoringDataImpl implements ProductTailoringData, ModelBase
                 .append(metaKeywords, that.metaKeywords)
                 .append(slug, that.slug)
                 .append(variants, that.variants)
+                .append(attributes, that.attributes)
                 .append(name, that.name)
                 .append(description, that.description)
                 .append(metaTitle, that.metaTitle)
@@ -175,6 +198,7 @@ public class ProductTailoringDataImpl implements ProductTailoringData, ModelBase
                 .append(metaKeywords, that.metaKeywords)
                 .append(slug, that.slug)
                 .append(variants, that.variants)
+                .append(attributes, that.attributes)
                 .isEquals();
     }
 
@@ -187,6 +211,7 @@ public class ProductTailoringDataImpl implements ProductTailoringData, ModelBase
                 .append(metaKeywords)
                 .append(slug)
                 .append(variants)
+                .append(attributes)
                 .toHashCode();
     }
 
@@ -199,6 +224,7 @@ public class ProductTailoringDataImpl implements ProductTailoringData, ModelBase
                 .append("metaKeywords", metaKeywords)
                 .append("slug", slug)
                 .append("variants", variants)
+                .append("attributes", attributes)
                 .build();
     }
 

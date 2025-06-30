@@ -44,6 +44,7 @@ import jakarta.validation.constraints.NotNull;
  *             .plusCustomLineItems(customLineItemsBuilder -> customLineItemsBuilder)
  *             .totalPrice(totalPriceBuilder -> totalPriceBuilder)
  *             .taxMode(TaxMode.PLATFORM)
+ *             .priceRoundingMode(RoundingMode.HALF_EVEN)
  *             .taxRoundingMode(RoundingMode.HALF_EVEN)
  *             .taxCalculationMode(TaxCalculationMode.LINE_ITEM_LEVEL)
  *             .inventoryMode(InventoryMode.NONE)
@@ -211,7 +212,15 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public TaxMode getTaxMode();
 
     /**
-     *  <p>Indicates how monetary values are rounded when calculating taxes for <code>taxedPrice</code>.</p>
+     *  <p>Indicates how the total prices on LineItems and CustomLineItems are rounded when calculated. Configured in Project settings.</p>
+     * @return priceRoundingMode
+     */
+    @NotNull
+    @JsonProperty("priceRoundingMode")
+    public RoundingMode getPriceRoundingMode();
+
+    /**
+     *  <p>Indicates how monetary values are rounded when calculating taxes for <code>taxedPrice</code>. Configured in Project settings.</p>
      * @return taxRoundingMode
      */
     @NotNull
@@ -578,7 +587,14 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
     public void setTaxMode(final TaxMode taxMode);
 
     /**
-     *  <p>Indicates how monetary values are rounded when calculating taxes for <code>taxedPrice</code>.</p>
+     *  <p>Indicates how the total prices on LineItems and CustomLineItems are rounded when calculated. Configured in Project settings.</p>
+     * @param priceRoundingMode value to be set
+     */
+
+    public void setPriceRoundingMode(final RoundingMode priceRoundingMode);
+
+    /**
+     *  <p>Indicates how monetary values are rounded when calculating taxes for <code>taxedPrice</code>. Configured in Project settings.</p>
      * @param taxRoundingMode value to be set
      */
 
@@ -847,6 +863,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
         instance.setTaxedShippingPrice(template.getTaxedShippingPrice());
         instance.setDiscountOnTotalPrice(template.getDiscountOnTotalPrice());
         instance.setTaxMode(template.getTaxMode());
+        instance.setPriceRoundingMode(template.getPriceRoundingMode());
         instance.setTaxRoundingMode(template.getTaxRoundingMode());
         instance.setTaxCalculationMode(template.getTaxCalculationMode());
         instance.setInventoryMode(template.getInventoryMode());
@@ -920,6 +937,7 @@ public interface Cart extends BaseResource, CartMixin, com.commercetools.api.mod
         instance.setDiscountOnTotalPrice(
             com.commercetools.api.models.cart.DiscountOnTotalPrice.deepCopy(template.getDiscountOnTotalPrice()));
         instance.setTaxMode(template.getTaxMode());
+        instance.setPriceRoundingMode(template.getPriceRoundingMode());
         instance.setTaxRoundingMode(template.getTaxRoundingMode());
         instance.setTaxCalculationMode(template.getTaxCalculationMode());
         instance.setInventoryMode(template.getInventoryMode());

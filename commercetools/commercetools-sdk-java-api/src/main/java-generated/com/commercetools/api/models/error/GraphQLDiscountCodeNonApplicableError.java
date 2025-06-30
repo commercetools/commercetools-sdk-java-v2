@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Returned when the Cart contains a Discount Code with a DiscountCodeState other than <code>MatchesCart</code>.</p>
+ *  <p>Returned when the Cart contains a Discount Code with a DiscountCodeState other than <code>MatchesCart</code> or <code>ApplicationStoppedByGroupBestDeal</code>.</p>
  *  <p>The error is returned as a failed response to:</p>
  *  <ul>
  *   <li>Create Cart and Create Cart in Store requests and Add DiscountCode update action on Carts.</li>

@@ -98,5 +98,7 @@ public interface ProjectScopedApiRoot {
 
     ByProjectKeyProductTailoringRequestBuilder productTailoring();
 
+    ByProjectKeyDiscountGroupsRequestBuilder discountGroups();
+
     <R> R with(Function<ProjectApiRoot, R> op);
 }

@@ -81,7 +81,7 @@ public class ProductSetAttributeActionImpl implements ProductSetAttributeAction,
     }
 
     /**
-     *  <p>The name of the Attribute to set.</p>
+     *  <p>Name of the Attribute to set.</p>
      */
 
     public String getName() {
@@ -92,7 +92,7 @@ public class ProductSetAttributeActionImpl implements ProductSetAttributeAction,
      *  <p>Value to set for the Attribute. If empty, any existing value will be removed.</p>
      *  <p>The AttributeType determines the format of the Attribute <code>value</code> to be provided:</p>
      *  <ul>
-     *   <li>For Enum Type and Localized Enum Type, use the <code>key</code> of the Plain Enum Value or Localized Enum Value objects, or the complete objects as <code>value</code>.</li>
+     *   <li>For Enum Type and Localized Enum Type, use the <code>key</code> of the Plain Enum Value or Localized Enum Value object or the complete object as <code>value</code>.</li>
      *   <li>For Localizable Text Type, use the LocalizedString object as <code>value</code>.</li>
      *   <li>For Money Type Attributes, use the Money object as <code>value</code>.</li>
      *   <li>For Set Type Attributes, use the entire <code>set</code> object as <code>value</code>.</li>
@@ -106,7 +106,7 @@ public class ProductSetAttributeActionImpl implements ProductSetAttributeAction,
     }
 
     /**
-     *  <p>If <code>true</code>, only the staged Attribute is set. If <code>false</code>, both current and staged Attribute is set.</p>
+     *  <p>If <code>true</code>, only the staged Attribute is set. If <code>false</code>, both the current and staged Attributes are set.</p>
      */
 
     public Boolean getStaged() {

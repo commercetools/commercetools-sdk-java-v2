@@ -198,7 +198,6 @@ input AddCustomerBillingAddressId {
   addressKey: String
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 input AddCustomerGroupAssignment {
   customerGroupAssignment: CustomerGroupAssignmentDraft!
 }
@@ -1746,6 +1745,7 @@ type Cart implements Versioned & ReferenceExpandable {
   billingAddress: Address
   inventoryMode: InventoryMode!
   taxMode: TaxMode!
+  priceRoundingMode: RoundingMode!
   taxRoundingMode: RoundingMode!
   taxCalculationMode: TaxCalculationMode!
   customerGroup: CustomerGroup
@@ -1810,6 +1810,7 @@ type CartDiscount implements Versioned & ReferenceExpandable {
   requiresDiscountCode: Boolean!
   sortOrder: String!
   key: String
+  discountGroupRef: Reference
   name(
     "String is defined for different locales. This argument specifies the desired locale."
     locale: Locale,
@@ -1828,6 +1829,8 @@ type CartDiscount implements Versioned & ReferenceExpandable {
   custom: CustomFieldsType
   storesRef: [KeyReference!]!
   stores: [Store!]!
+  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+  discountGroup: DiscountGroup
   value: CartDiscountValue!
   target: CartDiscountTarget
   id: String!
@@ -1851,7 +1854,7 @@ input CartDiscountDraft {
   value: CartDiscountValueInput!
   cartPredicate: String!
   target: CartDiscountTargetInput
-  sortOrder: String!
+  sortOrder: String
   name: [LocalizedStringItemInputType!]!
   description: [LocalizedStringItemInputType!]
   validFrom: DateTime
@@ -1862,6 +1865,8 @@ input CartDiscountDraft {
   custom: CustomFieldsDraft
   key: String
   stores: [ResourceIdentifierInput!]
+  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+  discountGroup: ResourceIdentifierInput
 }
 
 type CartDiscountLimitWithCurrent implements LimitWithCurrent {
@@ -1966,6 +1971,7 @@ input CartDiscountUpdateAction {
   setValidFrom: SetCartDiscountValidFrom
   setValidFromAndUntil: SetCartDiscountValidFromAndUntil
   setValidUntil: SetCartDiscountValidUntil
+  setDiscountGroup: SetCartDiscountDiscountGroup
 }
 
 interface CartDiscountValue {
@@ -2037,6 +2043,7 @@ input CartDraft {
   customerId: String
   externalTaxRateForShippingMethod: ExternalTaxRateDraft
   anonymousId: String
+  priceRoundingMode: RoundingMode = HalfEven
   taxRoundingMode: RoundingMode = HalfEven
   taxCalculationMode: TaxCalculationMode = LineItemLevel
   customerGroup: ResourceIdentifierInput
@@ -2115,6 +2122,7 @@ input CartUpdateAction {
   changeCustomLineItemPriceMode: ChangeCartCustomLineItemPriceMode
   changeCustomLineItemQuantity: ChangeCartCustomLineItemQuantity
   changeLineItemsOrder: ChangeCartLineItemsOrder
+  changePriceRoundingMode: ChangeCartPriceRoundingMode
   changeTaxCalculationMode: ChangeCartTaxCalculationMode
   changeTaxMode: ChangeCartTaxMode
   changeTaxRoundingMode: ChangeCartTaxRoundingMode
@@ -2186,10 +2194,15 @@ type CartsConfiguration {
   deleteDaysAfterLastModification: Int
   allowAddingUnpublishedProducts: Boolean!
   countryTaxRateFallbackEnabled: Boolean!
+  priceRoundingMode: RoundingMode!
+  taxRoundingMode: RoundingMode!
 }
 
 input CartsConfigurationInput {
   deleteDaysAfterLastModification: Int
+  countryTaxRateFallbackEnabled: Boolean
+  priceRoundingMode: RoundingMode
+  taxRoundingMode: RoundingMode
 }
 
 type Category implements Versioned & ReferenceExpandable {
@@ -2461,6 +2474,10 @@ input ChangeCartTaxCalculationMode {
 
 input ChangeCartTaxMode {
   taxMode: TaxMode!
+}
+
+input ChangeCartPriceRoundingMode {
+  priceRoundingMode: RoundingMode!
 }
 
 input ChangeCartTaxRoundingMode {
@@ -2744,6 +2761,14 @@ input ChangeProjectSettingsShoppingListsConfiguration {
   shoppingListsConfiguration: ShoppingListsConfigurationInput!
 }
 
+input ChangeProjectSettingsTaxRoundingMode {
+  taxRoundingMode: RoundingMode!
+}
+
+input ChangeProjectSettingsPriceRoundingMode {
+  priceRoundingMode: RoundingMode!
+}
+
 input ChangeQuoteCustomer {
   customer: ResourceIdentifierInput!
 }
@@ -2892,6 +2917,15 @@ input ChangeStagedOrderTaxMode {
 type ChangeStagedOrderTaxModeOutput implements StagedOrderUpdateActionOutput {
   type: String!
   taxMode: TaxMode!
+}
+
+input ChangeStagedOrderPriceRoundingMode {
+  priceRoundingMode: RoundingMode!
+}
+
+type ChangeStagedOrderPriceRoundingModeOutput implements StagedOrderUpdateActionOutput {
+  type: String!
+  priceRoundingMode: RoundingMode!
 }
 
 input ChangeStagedOrderTaxRoundingMode {
@@ -3538,7 +3572,6 @@ type Customer implements Versioned & ReferenceExpandable {
   storesRef: [KeyReference!]!
   stores: [Store!]!
 
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   customerGroupAssignments: [CustomerGroupAssignment!]
   custom: CustomFieldsType
   id: String!
@@ -3699,30 +3732,25 @@ type CustomerGroup implements Versioned & ReferenceExpandable {
   lastModifiedBy: Initiator
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 type CustomerGroupAssignment {
   customerGroupRef: Reference
   customerGroup: CustomerGroup
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 type CustomerGroupAssignmentAdded implements MessagePayload {
   customerGroupAssignment: CustomerGroupAssignment!
   type: String!
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 input CustomerGroupAssignmentDraft {
   customerGroup: ResourceIdentifierInput!
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 type CustomerGroupAssignmentRemoved implements MessagePayload {
   customerGroupAssignment: CustomerGroupAssignment!
   type: String!
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 type CustomerGroupAssignmentsSet implements MessagePayload {
   customerGroupAssignments: [CustomerGroupAssignment!]!
   type: String!
@@ -3964,8 +3992,6 @@ input CustomerSignUpDraft {
   anonymousCart: ResourceIdentifierInput
   externalId: String
   customerGroup: ResourceIdentifierInput
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   customerGroupAssignments: [CustomerGroupAssignmentDraft!]
   isEmailVerified: Boolean
   anonymousId: String
@@ -3980,8 +4006,6 @@ type CustomerTitleSet implements MessagePayload {
 input CustomerUpdateAction {
   addAddress: AddCustomerAddress
   addBillingAddressId: AddCustomerBillingAddressId
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   addCustomerGroupAssignment: AddCustomerGroupAssignment
   addShippingAddressId: AddCustomerShippingAddressId
   addStore: AddCustomerStore
@@ -3989,8 +4013,6 @@ input CustomerUpdateAction {
   changeEmail: ChangeCustomerEmail
   removeAddress: RemoveCustomerAddress
   removeBillingAddressId: RemoveCustomerBillingAddressId
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   removeCustomerGroupAssignment: RemoveCustomerGroupAssignment
   removeShippingAddressId: RemoveCustomerShippingAddressId
   removeStore: RemoveCustomerStore
@@ -4001,8 +4023,6 @@ input CustomerUpdateAction {
   setCustomField: SetCustomerCustomField
   setCustomType: SetCustomerCustomType
   setCustomerGroup: SetCustomerGroup
-
-  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
   setCustomerGroupAssignments: SetCustomerGroupAssignments
   setKey: SetCustomerKey
   setLocale: SetCustomerLocale
@@ -4259,6 +4279,8 @@ enum DiscountCodeState {
   "The discount code is active and none of the discounts were applied because the discount application was stopped by one discount that has the StackingMode of StopAfterThisDiscount defined"
   ApplicationStoppedByPreviousDiscount
 
+  ApplicationStoppedByGroupBestDeal
+
   "The discount code is active and it contains at least one active and valid CartDiscount. But its cart predicate does not match the cart or none of the contained active discount\u2019s cart predicates match the cart"
   DoesNotMatchCart
 
@@ -4290,6 +4312,89 @@ input DiscountCodeUpdateAction {
   setValidFrom: SetDiscountCodeValidFrom
   setValidFromAndUntil: SetDiscountCodeValidFromAndUntil
   setValidUntil: SetDiscountCodeValidUntil
+}
+
+"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+type DiscountGroup implements Versioned {
+  id: String!
+  version: Long!
+  key: String!
+  sortOrder: String!
+  name(
+    "String is defined for different locales. This argument specifies the desired locale."
+    locale: Locale,
+
+    "List of languages the client is able to understand, and which locale variant is preferred."
+    acceptLanguage: [Locale!]): String
+  nameAllLocales: [LocalizedString!]
+  description(
+    "String is defined for different locales. This argument specifies the desired locale."
+    locale: Locale,
+
+    "List of languages the client is able to understand, and which locale variant is preferred."
+    acceptLanguage: [Locale!]): String
+  descriptionAllLocales: [LocalizedString!]
+  createdAt: DateTime!
+  lastModifiedAt: DateTime!
+  createdBy: Initiator
+  lastModifiedBy: Initiator
+}
+
+"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+input DiscountGroupDraft {
+  key: String!
+  sortOrder: String!
+  name: [LocalizedStringItemInputType!]
+  description: [LocalizedStringItemInputType!]
+}
+
+type DiscountGroupCreated implements MessagePayload {
+  discountGroup: DiscountGroup!
+  type: String!
+}
+
+type DiscountGroupDeleted implements MessagePayload {
+  discountGroupId: String!
+  type: String!
+}
+
+type DiscountGroupKeySet implements MessagePayload {
+  key: String!
+  discountGroupId: String!
+  oldKey: String
+  type: String!
+}
+
+type DiscountGroupSortOrderSet implements MessagePayload {
+  sortOrder: String!
+  discountGroupId: String!
+  oldSortOrder: String
+  type: String!
+}
+
+type DiscountGroupLimitWithCurrent implements LimitWithCurrent {
+  limit: Long
+  current: Long!
+}
+
+type DiscountGroupLimitsProjection {
+  totalActive: DiscountGroupLimitWithCurrent!
+}
+
+type DiscountGroupQueryResult {
+  offset: Int!
+  count: Int!
+  total: Long!
+  exists: Boolean!
+  results: [DiscountGroup!]!
+}
+
+"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+input DiscountGroupUpdateAction {
+  setKey: SetDiscountGroupKey
+  setSortOrder: SetDiscountGroupSortOrder
+  setName: SetDiscountGroupName
+  setDescription: SetDiscountGroupDescription
 }
 
 type DiscountOnTotalPrice {
@@ -4726,6 +4831,7 @@ interface HasProductTailoringData {
     acceptLanguage: [Locale!]): String
   metaKeywordsAllLocales: [LocalizedString!]
   variants: [ProductVariantTailoring!]!
+  attributesRaw: [RawProductAttribute!]!
 }
 
 type HighPrecisionMoney implements BaseMoney {
@@ -5169,6 +5275,15 @@ type KeyReference {
 
 "A key that references a resource."
 scalar KeyReferenceInput
+
+"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+enum Level {
+  "The attribute can be used on the variant level"
+  Variant
+
+  "The attribute can be used on the product level"
+  Product
+}
 
 type Limit {
   limit: Long
@@ -5907,6 +6022,31 @@ type Mutation {
 
     "Queries with specified key"
     key: String): ProductDiscount
+
+  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+    createDiscountGroup(
+      "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+      draft: DiscountGroupDraft!): DiscountGroup
+
+  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+  updateDiscountGroup(version: Long!,
+      "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+      actions: [DiscountGroupUpdateAction!]!,
+
+      "Queries with specified ID"
+      id: String,
+
+      "Queries with specified key"
+      key: String): DiscountGroup
+
+    "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+    deleteDiscountGroup(version: Long!,
+
+      "Queries with specified ID"
+      id: String,
+
+      "Queries with specified key"
+      key: String): DiscountGroup
   createAttributeGroup(draft: AttributeGroupDraft!): AttributeGroup
   updateAttributeGroup(version: Long!, actions: [AttributeGroupUpdateAction!]!,
 
@@ -6919,6 +7059,7 @@ type Order implements Versioned & ReferenceExpandable {
   billingAddress: Address
   inventoryMode: InventoryMode!
   taxMode: TaxMode!
+  priceRoundingMode: RoundingMode!
   taxRoundingMode: RoundingMode!
   taxCalculationMode: TaxCalculationMode!
   customerGroup: CustomerGroup
@@ -7964,6 +8105,9 @@ type ProductData {
     "Queries for a [ProductVariant](https://docs.commercetools.com/api/projects/products#productvariant) with specified `key`"
     key: String): ProductVariant
   skus: [String!]!
+
+  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+  attributesRaw: [RawProductAttribute!]!
 }
 
 type ProductDeleted implements MessagePayload {
@@ -8069,6 +8213,9 @@ input ProductDraft {
   metaDescription: [LocalizedStringItemInputType!]
   metaKeywords: [LocalizedStringItemInputType!]
   masterVariant: ProductVariantInput
+
+  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+  attributes: [ProductAttributeInput!] = []
   variants: [ProductVariantInput!] = []
   taxCategory: ResourceIdentifierInput
   state: ResourceIdentifierInput
@@ -8082,6 +8229,37 @@ type ProductImageAdded implements MessagePayload {
   image: Image!
   staged: Boolean!
   type: String!
+}
+
+"""
+An input object used to define a ProductAttribute. You should pass `value` in the form of an escaped JSON.
+
+
+Here are a few examples for `value`:
+
+* FieldType `String`: `"\"This is a string\""`
+* FieldType `DateTimeType`: `"\"2018-10-12T14:00:00.000Z\""`
+* FieldType `Number`: `"4"`
+* FieldType `Set` with an elementType of `String`: `"[\"This is a string\", \"This is another string\"]"`
+* FieldType `Reference`: `"{\"id\": \"b911b62d-353a-4388-93ee-8d488d9af962\", \"typeId\": \"product\"}"`
+"""
+input ProductLevelAttributeInput {
+  name: String!
+
+  """
+  An input object used to define a ProductLevelAttribute. You should pass `value` in the form of an escaped JSON.
+
+
+  Here are a few examples for `value`:
+
+  * FieldType `String`: `"\"This is a string\""`
+  * FieldType `DateTimeType`: `"\"2018-10-12T14:00:00.000Z\""`
+  * FieldType `Number`: `"4"`
+  * FieldType `Set` with an elementType of `String`: `"[\"This is a string\", \"This is another string\"]"`
+  * FieldType `Reference`: `"{\"id\": \"b911b62d-353a-4388-93ee-8d488d9af962\", \"typeId\": \"product\"}"`
+  """
+  value: String
+  staged: Boolean = true
 }
 
 type ProductLimitsProjection {
@@ -8397,6 +8575,9 @@ type ProductProjectionMessagePayload {
   published: Boolean!
   masterVariant: ProductVariant!
   variants: [ProductVariant!]!
+
+  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+  attributes: [RawProductAttribute!]!
   taxCategoryRef: Reference
   taxCategory: TaxCategory
   stateRef: Reference
@@ -8730,6 +8911,7 @@ type ProductTailoringCreated implements MessagePayload & HasProductTailoringData
     acceptLanguage: [Locale!]): String
   metaKeywordsAllLocales: [LocalizedString!]
   variants: [ProductVariantTailoring!]!
+  attributesRaw: [RawProductAttribute!]!
 }
 
 type ProductTailoringData implements HasProductTailoringData {
@@ -8776,6 +8958,7 @@ type ProductTailoringData implements HasProductTailoringData {
     acceptLanguage: [Locale!]): String
   metaKeywordsAllLocales: [LocalizedString!]
   variants: [ProductVariantTailoring!]!
+  attributesRaw: [RawProductAttribute!]!
 }
 
 type ProductTailoringDeleted implements MessagePayload {
@@ -8817,6 +9000,9 @@ input ProductTailoringDraft {
   metaKeywords: [LocalizedStringItemInputType!]
   publish: Boolean
   variants: [ProductVariantTailoringInput!] = []
+
+  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+  attributes: [ProductAttributeInput!] = []
 }
 
 type ProductTailoringImageAdded implements MessagePayload {
@@ -8908,6 +9094,9 @@ input ProductTailoringUpdateAction {
   removeVariant: RemoveProductVariantTailoring
   publish: PublishTailoring
   unpublish: UnpublishTailoring
+
+  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+  setProductAttribute: SetProductLevelTailoringAttribute
   addAsset: AddProductTailoringAsset
   addExternalImage: AddProductTailoringExternalImage
   changeAssetName: ChangeProductTailoringAssetName
@@ -9016,6 +9205,9 @@ input ProductUpdateAction {
   revertStagedChanges: RevertStagedChanges
   revertStagedVariantChanges: RevertStagedVariantChanges
   publish: PublishProduct
+
+  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+  setProductAttribute: ProductLevelAttributeInput
   unpublish: UnpublishProduct
   transitionState: TransitionProductState
   removePrice: RemoveProductPrice
@@ -9232,6 +9424,7 @@ type ProjectCustomLimitsProjection {
   subscriptions: SubscriptionsLimitsProjection!
   productDiscounts: ProductDiscountLimitsProjection!
   cartDiscounts: CartDiscountLimitsProjection!
+  discountGroups: DiscountGroupLimitsProjection!
   orderEdits: OrderEditLimitsProjection!
   stores: StoreLimitsProjection!
   customers: CustomerLimitsProjection!
@@ -9278,7 +9471,9 @@ input ProjectSettingsUpdateAction {
   changeMyBusinessUnitStatusOnCreation: ChangeProjectSettingsMyBusinessUnitStatusOnCreation
   changeName: ChangeProjectSettingsName
   changeOrderSearchStatus: ChangeProjectSettingsOrderSearchStatus
+  changePriceRoundingMode: ChangeProjectSettingsPriceRoundingMode
   changeShoppingListsConfiguration: ChangeProjectSettingsShoppingListsConfiguration
+  changeTaxRoundingMode: ChangeProjectSettingsTaxRoundingMode
   setExternalOAuth: SetProjectSettingsExternalOAuth
   setShippingRateInputType: SetProjectSettingsShippingRateInputType
 
@@ -9413,6 +9608,16 @@ type Query {
     "Queries with specified key"
     key: String): ProductDiscount
   productDiscounts(where: String, sort: [String!], limit: Int, offset: Int): ProductDiscountQueryResult!
+  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+  discountGroup(
+    "Queries with specified ID"
+    id: String,
+
+    "Queries with specified key"
+    key: String): DiscountGroup
+
+  "BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+  discountGroups(where: String, sort: [String!], limit: Int, offset: Int): DiscountGroupQueryResult!
   attributeGroup(
     "Queries with specified ID"
     id: String,
@@ -9634,6 +9839,7 @@ type Quote implements Versioned {
   itemShippingAddresses: [Address!]!
   inventoryMode: InventoryMode!
   taxMode: TaxMode!
+  priceRoundingMode: RoundingMode!
   taxRoundingMode: RoundingMode!
   taxCalculationMode: TaxCalculationMode!
   country: Country
@@ -9734,6 +9940,7 @@ type QuoteRequest implements Versioned {
   itemShippingAddresses: [Address!]!
   inventoryMode: InventoryMode!
   taxMode: TaxMode!
+  priceRoundingMode: RoundingMode!
   taxRoundingMode: RoundingMode!
   taxCalculationMode: TaxCalculationMode!
   country: Country
@@ -10108,7 +10315,6 @@ input RemoveCustomerBillingAddressId {
   addressKey: String
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 input RemoveCustomerGroupAssignment {
   customerGroup: ResourceIdentifierInput!
 }
@@ -11021,6 +11227,11 @@ input SetCartDiscountDescription {
   description: [LocalizedStringItemInputType!]
 }
 
+input SetCartDiscountDiscountGroup {
+  discountGroup: ResourceIdentifierInput
+  sortOrder: String
+}
+
 input SetCartDiscountKey {
   key: String
 }
@@ -11356,7 +11567,6 @@ input SetCustomerGroup {
   customerGroup: ResourceIdentifierInput
 }
 
-"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
 input SetCustomerGroupAssignments {
   customerGroupAssignments: [CustomerGroupAssignmentDraft!]!
 }
@@ -11460,6 +11670,26 @@ input SetDiscountCodeValidFromAndUntil {
 
 input SetDiscountCodeValidUntil {
   validUntil: DateTime
+}
+
+"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+input SetDiscountGroupDescription {
+  description: [LocalizedStringItemInputType!]
+}
+
+"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+input SetDiscountGroupKey {
+  key: String!
+}
+
+"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+input SetDiscountGroupName {
+  name: [LocalizedStringItemInputType!]
+}
+
+"BETA: This feature can be subject to change and should be used carefully in production. https://docs.commercetools.com/api/contract#public-beta"
+input SetDiscountGroupSortOrder {
+  sortOrder: String!
 }
 
 input SetExtensionKey {
@@ -12028,6 +12258,12 @@ input SetProductImageLabel {
 
 input SetProductKey {
   key: String
+}
+
+input SetProductLevelTailoringAttribute {
+  name: String!
+  value: String
+  staged: Boolean = true
 }
 
 input SetProductMetaAttributes {
@@ -13825,6 +14061,7 @@ input StagedOrderUpdateAction {
   changeOrderState: ChangeStagedOrderOrderState
   changePaymentState: ChangeStagedOrderPaymentState
   changeShipmentState: ChangeStagedOrderShipmentState
+  changePriceRoundingMode: ChangeStagedOrderPriceRoundingMode
   changeTaxCalculationMode: ChangeStagedOrderTaxCalculationMode
   changeTaxMode: ChangeStagedOrderTaxMode
   changeTaxRoundingMode: ChangeStagedOrderTaxRoundingMode

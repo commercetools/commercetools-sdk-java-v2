@@ -309,6 +309,14 @@ public class ProductUpdateActionQueryBuilderDsl {
             ProductUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ProductUpdateActionQueryBuilderDsl> asSetProductAttribute(
+            Function<com.commercetools.api.predicates.query.product.ProductSetProductAttributeActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product.ProductSetProductAttributeActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.product.ProductSetProductAttributeActionQueryBuilderDsl.of()),
+            ProductUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ProductUpdateActionQueryBuilderDsl> asSetProductPriceCustomField(
             Function<com.commercetools.api.predicates.query.product.ProductSetProductPriceCustomFieldActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product.ProductSetProductPriceCustomFieldActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(

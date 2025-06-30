@@ -31,7 +31,7 @@ import jakarta.validation.Valid;
 public interface SearchIndexingConfiguration {
 
     /**
-     *  <p>Configuration for the Product Projection Search and Product Suggestions endpoints.</p>
+     *  <p>Configuration for the Product Projection Search and Search Term Suggestions APIs.</p>
      * @return products
      */
     @Valid
@@ -71,7 +71,7 @@ public interface SearchIndexingConfiguration {
     public SearchIndexingConfigurationValues getBusinessUnits();
 
     /**
-     *  <p>Configuration for the Product Projection Search and Product Suggestions endpoints.</p>
+     *  <p>Configuration for the Product Projection Search and Search Term Suggestions APIs.</p>
      * @param products value to be set
      */
 

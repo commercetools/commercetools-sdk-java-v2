@@ -124,6 +124,13 @@ public class ReferenceQueryBuilderDsl {
             ReferenceQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ReferenceQueryBuilderDsl> asDiscountGroup(
+            Function<com.commercetools.api.predicates.query.discount_group.DiscountGroupReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.discount_group.DiscountGroupReferenceQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.discount_group.DiscountGroupReferenceQueryBuilderDsl.of()),
+            ReferenceQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ReferenceQueryBuilderDsl> asInventoryEntry(
             Function<com.commercetools.api.predicates.query.inventory.InventoryEntryReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.inventory.InventoryEntryReferenceQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

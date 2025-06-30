@@ -793,6 +793,37 @@ public class MessagePayloadQueryBuilderDsl {
             MessagePayloadQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asDiscountGroupCreated(
+            Function<com.commercetools.api.predicates.query.message.DiscountGroupCreatedMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.DiscountGroupCreatedMessagePayloadQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.message.DiscountGroupCreatedMessagePayloadQueryBuilderDsl.of()),
+            MessagePayloadQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asDiscountGroupDeleted(
+            Function<com.commercetools.api.predicates.query.message.DiscountGroupDeletedMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.DiscountGroupDeletedMessagePayloadQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.message.DiscountGroupDeletedMessagePayloadQueryBuilderDsl.of()),
+            MessagePayloadQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asDiscountGroupKeySet(
+            Function<com.commercetools.api.predicates.query.message.DiscountGroupKeySetMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.DiscountGroupKeySetMessagePayloadQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.message.DiscountGroupKeySetMessagePayloadQueryBuilderDsl.of()),
+            MessagePayloadQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asDiscountGroupSortOrderSet(
+            Function<com.commercetools.api.predicates.query.message.DiscountGroupSortOrderSetMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.DiscountGroupSortOrderSetMessagePayloadQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.message.DiscountGroupSortOrderSetMessagePayloadQueryBuilderDsl.of()),
+            MessagePayloadQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asInventoryEntryCreated(
             Function<com.commercetools.api.predicates.query.message.InventoryEntryCreatedMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.InventoryEntryCreatedMessagePayloadQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

@@ -68,6 +68,8 @@ public class QuoteImpl implements Quote, ModelBase {
 
     private com.commercetools.api.models.cart.TaxMode taxMode;
 
+    private com.commercetools.api.models.cart.RoundingMode priceRoundingMode;
+
     private com.commercetools.api.models.cart.RoundingMode taxRoundingMode;
 
     private com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode;
@@ -120,6 +122,7 @@ public class QuoteImpl implements Quote, ModelBase {
             @JsonProperty("billingAddress") final com.commercetools.api.models.common.Address billingAddress,
             @JsonProperty("inventoryMode") final com.commercetools.api.models.cart.InventoryMode inventoryMode,
             @JsonProperty("taxMode") final com.commercetools.api.models.cart.TaxMode taxMode,
+            @JsonProperty("priceRoundingMode") final com.commercetools.api.models.cart.RoundingMode priceRoundingMode,
             @JsonProperty("taxRoundingMode") final com.commercetools.api.models.cart.RoundingMode taxRoundingMode,
             @JsonProperty("taxCalculationMode") final com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode,
             @JsonProperty("country") final String country,
@@ -156,6 +159,7 @@ public class QuoteImpl implements Quote, ModelBase {
         this.billingAddress = billingAddress;
         this.inventoryMode = inventoryMode;
         this.taxMode = taxMode;
+        this.priceRoundingMode = priceRoundingMode;
         this.taxRoundingMode = taxRoundingMode;
         this.taxCalculationMode = taxCalculationMode;
         this.country = country;
@@ -359,6 +363,14 @@ public class QuoteImpl implements Quote, ModelBase {
 
     public com.commercetools.api.models.cart.TaxMode getTaxMode() {
         return this.taxMode;
+    }
+
+    /**
+     *  <p>When calculating total prices on LineItems and CustomLineItems, the selected mode is used for rounding.</p>
+     */
+
+    public com.commercetools.api.models.cart.RoundingMode getPriceRoundingMode() {
+        return this.priceRoundingMode;
     }
 
     /**
@@ -567,6 +579,10 @@ public class QuoteImpl implements Quote, ModelBase {
         this.taxMode = taxMode;
     }
 
+    public void setPriceRoundingMode(final com.commercetools.api.models.cart.RoundingMode priceRoundingMode) {
+        this.priceRoundingMode = priceRoundingMode;
+    }
+
     public void setTaxRoundingMode(final com.commercetools.api.models.cart.RoundingMode taxRoundingMode) {
         this.taxRoundingMode = taxRoundingMode;
     }
@@ -663,6 +679,7 @@ public class QuoteImpl implements Quote, ModelBase {
                 .append(billingAddress, that.billingAddress)
                 .append(inventoryMode, that.inventoryMode)
                 .append(taxMode, that.taxMode)
+                .append(priceRoundingMode, that.priceRoundingMode)
                 .append(taxRoundingMode, that.taxRoundingMode)
                 .append(taxCalculationMode, that.taxCalculationMode)
                 .append(country, that.country)
@@ -699,6 +716,7 @@ public class QuoteImpl implements Quote, ModelBase {
                 .append(billingAddress, that.billingAddress)
                 .append(inventoryMode, that.inventoryMode)
                 .append(taxMode, that.taxMode)
+                .append(priceRoundingMode, that.priceRoundingMode)
                 .append(taxRoundingMode, that.taxRoundingMode)
                 .append(taxCalculationMode, that.taxCalculationMode)
                 .append(country, that.country)
@@ -740,6 +758,7 @@ public class QuoteImpl implements Quote, ModelBase {
                 .append(billingAddress)
                 .append(inventoryMode)
                 .append(taxMode)
+                .append(priceRoundingMode)
                 .append(taxRoundingMode)
                 .append(taxCalculationMode)
                 .append(country)
@@ -781,6 +800,7 @@ public class QuoteImpl implements Quote, ModelBase {
                 .append("billingAddress", billingAddress)
                 .append("inventoryMode", inventoryMode)
                 .append("taxMode", taxMode)
+                .append("priceRoundingMode", priceRoundingMode)
                 .append("taxRoundingMode", taxRoundingMode)
                 .append("taxCalculationMode", taxCalculationMode)
                 .append("country", country)

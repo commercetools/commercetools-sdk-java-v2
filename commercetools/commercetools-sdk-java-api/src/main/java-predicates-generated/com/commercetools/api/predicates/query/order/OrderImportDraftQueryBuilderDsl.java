@@ -114,6 +114,12 @@ public class OrderImportDraftQueryBuilderDsl {
             OrderImportDraftQueryBuilderDsl::of);
     }
 
+    public StringComparisonPredicateBuilder<OrderImportDraftQueryBuilderDsl> priceRoundingMode() {
+        return new StringComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("priceRoundingMode")),
+            p -> new CombinationQueryPredicate<>(p, OrderImportDraftQueryBuilderDsl::of));
+    }
+
     public StringComparisonPredicateBuilder<OrderImportDraftQueryBuilderDsl> taxRoundingMode() {
         return new StringComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("taxRoundingMode")),

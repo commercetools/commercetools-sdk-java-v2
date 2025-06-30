@@ -20,7 +20,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.Valid;
 
 /**
- *  <p>For Product Variant identification, either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided.</p>
+ *  <p>For Product Variant identification, either the <code>productId</code> and <code>variantId</code>, or <code>sku</code> must be provided. Product Attributes are merged with Variant Attributes to ensure the full Attribute context of the Product Variant.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

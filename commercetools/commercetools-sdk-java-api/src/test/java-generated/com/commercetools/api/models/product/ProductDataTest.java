@@ -48,8 +48,12 @@ public class ProductDataTest {
                         ProductData.builder()
                                 .variants(Collections.singletonList(
                                     new com.commercetools.api.models.product.ProductVariantImpl())) },
-                new Object[] { "searchKeywords", ProductData.builder()
-                        .searchKeywords(new com.commercetools.api.models.product.SearchKeywordsImpl()) } };
+                new Object[] { "searchKeywords",
+                        ProductData.builder()
+                                .searchKeywords(new com.commercetools.api.models.product.SearchKeywordsImpl()) },
+                new Object[] { "attributes", ProductData.builder()
+                        .attributes(
+                            Collections.singletonList(new com.commercetools.api.models.product.AttributeImpl())) } };
     }
 
     @Test
@@ -138,5 +142,13 @@ public class ProductDataTest {
         value.setSearchKeywords(new com.commercetools.api.models.product.SearchKeywordsImpl());
         Assertions.assertThat(value.getSearchKeywords())
                 .isEqualTo(new com.commercetools.api.models.product.SearchKeywordsImpl());
+    }
+
+    @Test
+    public void attributes() {
+        ProductData value = ProductData.of();
+        value.setAttributes(Collections.singletonList(new com.commercetools.api.models.product.AttributeImpl()));
+        Assertions.assertThat(value.getAttributes())
+                .isEqualTo(Collections.singletonList(new com.commercetools.api.models.product.AttributeImpl()));
     }
 }

@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Adds, removes, or changes a Product Attribute in all Product Variants at the same time. This action is useful for setting values for Attributes with the Constraint <code>SameForAll</code>.</p>
+ *  <p>Adds, removes, or changes a Variant Attribute in all Product Variants at the same time. This action is useful for setting values for Attributes with the Constraint <code>SameForAll</code>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +38,7 @@ public interface ProductSetAttributeInAllVariantsAction extends ProductUpdateAct
     String SET_ATTRIBUTE_IN_ALL_VARIANTS = "setAttributeInAllVariants";
 
     /**
-     *  <p>The name of the Attribute to set.</p>
+     *  <p>Name of the Attribute to set.</p>
      * @return name
      */
     @NotNull
@@ -71,7 +71,7 @@ public interface ProductSetAttributeInAllVariantsAction extends ProductUpdateAct
     public Boolean getStaged();
 
     /**
-     *  <p>The name of the Attribute to set.</p>
+     *  <p>Name of the Attribute to set.</p>
      * @param name value to be set
      */
 

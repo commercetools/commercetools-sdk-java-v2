@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Adds, removes, or changes a Product Attribute in all Product Variants at the same time. This action is useful for setting values for Attributes with the Constraint <code>SameForAll</code>.</p>
+ *  <p>Adds, removes, or changes a Variant Attribute in all Product Variants at the same time. This action is useful for setting values for Attributes with the Constraint <code>SameForAll</code>.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductSetAttributeInAllVariantsActionImpl implements ProductSetAttributeInAllVariantsAction, ModelBase {
@@ -58,7 +58,7 @@ public class ProductSetAttributeInAllVariantsActionImpl implements ProductSetAtt
     }
 
     /**
-     *  <p>The name of the Attribute to set.</p>
+     *  <p>Name of the Attribute to set.</p>
      */
 
     public String getName() {

@@ -44,6 +44,8 @@ public class ProductDataImpl implements ProductData, ModelBase {
 
     private com.commercetools.api.models.product.SearchKeywords searchKeywords;
 
+    private java.util.List<com.commercetools.api.models.product.Attribute> attributes;
+
     /**
      * create instance with all properties
      */
@@ -58,7 +60,8 @@ public class ProductDataImpl implements ProductData, ModelBase {
             @JsonProperty("metaKeywords") final com.commercetools.api.models.common.LocalizedString metaKeywords,
             @JsonProperty("masterVariant") final com.commercetools.api.models.product.ProductVariant masterVariant,
             @JsonProperty("variants") final java.util.List<com.commercetools.api.models.product.ProductVariant> variants,
-            @JsonProperty("searchKeywords") final com.commercetools.api.models.product.SearchKeywords searchKeywords) {
+            @JsonProperty("searchKeywords") final com.commercetools.api.models.product.SearchKeywords searchKeywords,
+            @JsonProperty("attributes") final java.util.List<com.commercetools.api.models.product.Attribute> attributes) {
         this.name = name;
         this.categories = categories;
         this.categoryOrderHints = categoryOrderHints;
@@ -70,6 +73,7 @@ public class ProductDataImpl implements ProductData, ModelBase {
         this.masterVariant = masterVariant;
         this.variants = variants;
         this.searchKeywords = searchKeywords;
+        this.attributes = attributes;
     }
 
     /**
@@ -159,11 +163,19 @@ public class ProductDataImpl implements ProductData, ModelBase {
     }
 
     /**
-     *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
+     *  <p>Used by Search Term Suggestions, but is also considered for a full text search in the Product Projection Search API.</p>
      */
 
     public com.commercetools.api.models.product.SearchKeywords getSearchKeywords() {
         return this.searchKeywords;
+    }
+
+    /**
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes() {
+        return this.attributes;
     }
 
     public void setName(final com.commercetools.api.models.common.LocalizedString name) {
@@ -220,6 +232,14 @@ public class ProductDataImpl implements ProductData, ModelBase {
         this.searchKeywords = searchKeywords;
     }
 
+    public void setAttributes(final com.commercetools.api.models.product.Attribute... attributes) {
+        this.attributes = new ArrayList<>(Arrays.asList(attributes));
+    }
+
+    public void setAttributes(final java.util.List<com.commercetools.api.models.product.Attribute> attributes) {
+        this.attributes = attributes;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -241,6 +261,7 @@ public class ProductDataImpl implements ProductData, ModelBase {
                 .append(masterVariant, that.masterVariant)
                 .append(variants, that.variants)
                 .append(searchKeywords, that.searchKeywords)
+                .append(attributes, that.attributes)
                 .append(name, that.name)
                 .append(categories, that.categories)
                 .append(categoryOrderHints, that.categoryOrderHints)
@@ -252,6 +273,7 @@ public class ProductDataImpl implements ProductData, ModelBase {
                 .append(masterVariant, that.masterVariant)
                 .append(variants, that.variants)
                 .append(searchKeywords, that.searchKeywords)
+                .append(attributes, that.attributes)
                 .isEquals();
     }
 
@@ -268,6 +290,7 @@ public class ProductDataImpl implements ProductData, ModelBase {
                 .append(masterVariant)
                 .append(variants)
                 .append(searchKeywords)
+                .append(attributes)
                 .toHashCode();
     }
 
@@ -284,6 +307,7 @@ public class ProductDataImpl implements ProductData, ModelBase {
                 .append("masterVariant", masterVariant)
                 .append("variants", variants)
                 .append("searchKeywords", searchKeywords)
+                .append("attributes", attributes)
                 .build();
     }
 

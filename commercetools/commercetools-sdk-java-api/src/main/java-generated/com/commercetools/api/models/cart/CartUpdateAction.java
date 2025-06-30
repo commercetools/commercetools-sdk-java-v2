@@ -183,6 +183,14 @@ public interface CartUpdateAction extends com.commercetools.api.models.ResourceU
     }
 
     /**
+     * builder for changePriceRoundingMode subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.cart.CartChangePriceRoundingModeActionBuilder changePriceRoundingModeBuilder() {
+        return com.commercetools.api.models.cart.CartChangePriceRoundingModeActionBuilder.of();
+    }
+
+    /**
      * builder for changeTaxCalculationMode subtype
      * @return builder
      */

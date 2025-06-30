@@ -62,6 +62,9 @@ public interface ReferenceTypeId extends JsonEnum {
     <p>References a DiscountCode.</p> */
     ReferenceTypeId DISCOUNT_CODE = ReferenceTypeIdEnum.DISCOUNT_CODE;
     /**
+    <p>References a DiscountGroup.</p> */
+    ReferenceTypeId DISCOUNT_GROUP = ReferenceTypeIdEnum.DISCOUNT_GROUP;
+    /**
     <p>References an Extension.</p> */
     ReferenceTypeId EXTENSION = ReferenceTypeIdEnum.EXTENSION;
     /**
@@ -215,6 +218,11 @@ public interface ReferenceTypeId extends JsonEnum {
          * discount-code
          */
         DISCOUNT_CODE("discount-code"),
+
+        /**
+         * discount-group
+         */
+        DISCOUNT_GROUP("discount-group"),
 
         /**
          * extension

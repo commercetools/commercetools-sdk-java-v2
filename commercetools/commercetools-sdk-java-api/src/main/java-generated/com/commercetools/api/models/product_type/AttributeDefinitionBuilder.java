@@ -20,6 +20,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name("{name}")
  *             .label(labelBuilder -> labelBuilder)
  *             .isRequired(true)
+ *             .level(AttributeLevelEnum.PRODUCT)
  *             .attributeConstraint(AttributeConstraintEnum.NONE)
  *             .inputHint(TextInputHint.SINGLE_LINE)
  *             .isSearchable(true)
@@ -37,6 +38,8 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     private com.commercetools.api.models.common.LocalizedString label;
 
     private Boolean isRequired;
+
+    private com.commercetools.api.models.product_type.AttributeLevelEnum level;
 
     private com.commercetools.api.models.product_type.AttributeConstraintEnum attributeConstraint;
 
@@ -124,6 +127,17 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
 
     public AttributeDefinitionBuilder isRequired(final Boolean isRequired) {
         this.isRequired = isRequired;
+        return this;
+    }
+
+    /**
+     *  <p>Specifies whether the Attribute is defined at the Product or Variant level.</p>
+     * @param level value to be set
+     * @return Builder
+     */
+
+    public AttributeDefinitionBuilder level(final com.commercetools.api.models.product_type.AttributeLevelEnum level) {
+        this.level = level;
         return this;
     }
 
@@ -236,6 +250,15 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
     }
 
     /**
+     *  <p>Specifies whether the Attribute is defined at the Product or Variant level.</p>
+     * @return level
+     */
+
+    public com.commercetools.api.models.product_type.AttributeLevelEnum getLevel() {
+        return this.level;
+    }
+
+    /**
      *  <p>Specifies how Attributes are validated across all variants of a Product.</p>
      * @return attributeConstraint
      */
@@ -282,11 +305,12 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
         Objects.requireNonNull(name, AttributeDefinition.class + ": name is missing");
         Objects.requireNonNull(label, AttributeDefinition.class + ": label is missing");
         Objects.requireNonNull(isRequired, AttributeDefinition.class + ": isRequired is missing");
+        Objects.requireNonNull(level, AttributeDefinition.class + ": level is missing");
         Objects.requireNonNull(attributeConstraint, AttributeDefinition.class + ": attributeConstraint is missing");
         Objects.requireNonNull(inputHint, AttributeDefinition.class + ": inputHint is missing");
         Objects.requireNonNull(isSearchable, AttributeDefinition.class + ": isSearchable is missing");
-        return new AttributeDefinitionImpl(type, name, label, isRequired, attributeConstraint, inputTip, inputHint,
-            isSearchable);
+        return new AttributeDefinitionImpl(type, name, label, isRequired, level, attributeConstraint, inputTip,
+            inputHint, isSearchable);
     }
 
     /**
@@ -294,8 +318,8 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
      * @return AttributeDefinition
      */
     public AttributeDefinition buildUnchecked() {
-        return new AttributeDefinitionImpl(type, name, label, isRequired, attributeConstraint, inputTip, inputHint,
-            isSearchable);
+        return new AttributeDefinitionImpl(type, name, label, isRequired, level, attributeConstraint, inputTip,
+            inputHint, isSearchable);
     }
 
     /**
@@ -317,6 +341,7 @@ public class AttributeDefinitionBuilder implements Builder<AttributeDefinition> 
         builder.name = template.getName();
         builder.label = template.getLabel();
         builder.isRequired = template.getIsRequired();
+        builder.level = template.getLevel();
         builder.attributeConstraint = template.getAttributeConstraint();
         builder.inputTip = template.getInputTip();
         builder.inputHint = template.getInputHint();

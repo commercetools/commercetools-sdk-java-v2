@@ -215,6 +215,14 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public DiscountOnTotalPrice getDiscountOnTotalPrice();
 
     /**
+     *  <p>Indicates how the total prices on LineItems and CustomLineItems are rounded when calculated.</p>
+     * @return priceRoundingMode
+     */
+
+    @JsonProperty("priceRoundingMode")
+    public RoundingMode getPriceRoundingMode();
+
+    /**
      *  <p>Indicates how Tax Rates are set.</p>
      * @return taxMode
      */
@@ -645,6 +653,13 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public void setDiscountOnTotalPrice(final DiscountOnTotalPrice discountOnTotalPrice);
 
     /**
+     *  <p>Indicates how the total prices on LineItems and CustomLineItems are rounded when calculated.</p>
+     * @param priceRoundingMode value to be set
+     */
+
+    public void setPriceRoundingMode(final RoundingMode priceRoundingMode);
+
+    /**
      *  <p>Indicates how Tax Rates are set.</p>
      * @param taxMode value to be set
      */
@@ -990,6 +1005,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
         instance.setTaxedPrice(template.getTaxedPrice());
         instance.setTaxedShippingPrice(template.getTaxedShippingPrice());
         instance.setDiscountOnTotalPrice(template.getDiscountOnTotalPrice());
+        instance.setPriceRoundingMode(template.getPriceRoundingMode());
         instance.setTaxMode(template.getTaxMode());
         instance.setTaxRoundingMode(template.getTaxRoundingMode());
         instance.setTaxCalculationMode(template.getTaxCalculationMode());
@@ -1075,6 +1091,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
             com.commercetools.api.models.cart.TaxedPrice.deepCopy(template.getTaxedShippingPrice()));
         instance.setDiscountOnTotalPrice(
             com.commercetools.api.models.cart.DiscountOnTotalPrice.deepCopy(template.getDiscountOnTotalPrice()));
+        instance.setPriceRoundingMode(template.getPriceRoundingMode());
         instance.setTaxMode(template.getTaxMode());
         instance.setTaxRoundingMode(template.getTaxRoundingMode());
         instance.setTaxCalculationMode(template.getTaxCalculationMode());

@@ -7,6 +7,7 @@ import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
+import com.commercetools.api.models.cart.RoundingMode;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -46,6 +47,22 @@ public interface CartsConfiguration {
     public Boolean getCountryTaxRateFallbackEnabled();
 
     /**
+     *  <p>Default value for the <code>priceRoundingMode</code> parameter of the CartDraft. Indicates how the total prices on LineItems and CustomLineItems are rounded when calculated.</p>
+     * @return priceRoundingMode
+     */
+
+    @JsonProperty("priceRoundingMode")
+    public RoundingMode getPriceRoundingMode();
+
+    /**
+     *  <p>Default value for the <code>taxRoundingMode</code> parameter of the CartDraft. Indicates how monetary values are rounded when calculating taxes for <code>taxedPrice</code>.</p>
+     * @return taxRoundingMode
+     */
+
+    @JsonProperty("taxRoundingMode")
+    public RoundingMode getTaxRoundingMode();
+
+    /**
      *  <p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the CartDraft and MyCartDraft. If a ChangeSubscription for Carts exists, a ResourceDeletedDeliveryPayload is sent upon deletion of a Cart.</p>
      *  <p>This field may not be present on Projects created before January 2020.</p>
      * @param deleteDaysAfterLastModification value to be set
@@ -59,6 +76,20 @@ public interface CartsConfiguration {
      */
 
     public void setCountryTaxRateFallbackEnabled(final Boolean countryTaxRateFallbackEnabled);
+
+    /**
+     *  <p>Default value for the <code>priceRoundingMode</code> parameter of the CartDraft. Indicates how the total prices on LineItems and CustomLineItems are rounded when calculated.</p>
+     * @param priceRoundingMode value to be set
+     */
+
+    public void setPriceRoundingMode(final RoundingMode priceRoundingMode);
+
+    /**
+     *  <p>Default value for the <code>taxRoundingMode</code> parameter of the CartDraft. Indicates how monetary values are rounded when calculating taxes for <code>taxedPrice</code>.</p>
+     * @param taxRoundingMode value to be set
+     */
+
+    public void setTaxRoundingMode(final RoundingMode taxRoundingMode);
 
     /**
      * factory method
@@ -77,6 +108,8 @@ public interface CartsConfiguration {
         CartsConfigurationImpl instance = new CartsConfigurationImpl();
         instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
         instance.setCountryTaxRateFallbackEnabled(template.getCountryTaxRateFallbackEnabled());
+        instance.setPriceRoundingMode(template.getPriceRoundingMode());
+        instance.setTaxRoundingMode(template.getTaxRoundingMode());
         return instance;
     }
 
@@ -95,6 +128,8 @@ public interface CartsConfiguration {
         CartsConfigurationImpl instance = new CartsConfigurationImpl();
         instance.setDeleteDaysAfterLastModification(template.getDeleteDaysAfterLastModification());
         instance.setCountryTaxRateFallbackEnabled(template.getCountryTaxRateFallbackEnabled());
+        instance.setPriceRoundingMode(template.getPriceRoundingMode());
+        instance.setTaxRoundingMode(template.getTaxRoundingMode());
         return instance;
     }
 

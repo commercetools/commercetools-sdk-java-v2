@@ -53,8 +53,8 @@ public class CartRecalculateActionImpl implements CartRecalculateAction, ModelBa
 
     /**
      *  <ul>
-     *   <li>Leave empty or set to <code>false</code> to only update the Prices and TaxRates of the Line Items.</li>
-     *   <li>Set to <code>true</code> to update the Line Items' product data (like <code>name</code>, <code>variant</code> and <code>productType</code>) also.</li>
+     *   <li>Leave empty or set as <code>false</code> to update only the Prices and TaxRates of the Line Items.</li>
+     *   <li>Set as <code>true</code> to update the Product data (such as <code>name</code>, <code>variant</code>, <code>productType</code>, and Product Attributes) of the Line Items.</li>
      *  </ul>
      */
 

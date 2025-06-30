@@ -18,6 +18,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>The ProductVariant to be included in the ShoppingListLineItem must be specified using the <code>productID</code> and <code>variantID</code>, or by the <code>sku</code>. If the ShoppingList already contains a ShoppingListLineItem for the same Product Variant with the same Custom Fields, then only the quantity of the existing ShoppingListLineItem is increased. A ShoppingListLineItem with an empty <code>variantId</code> is not considered the same as a ShoppingListLineItem with a <code>variantId</code> currently referring to the Master Variant.</p>
+ *  <p>Product Attributes are merged with Variant Attributes to ensure the full Attribute context of the Product Variant.</p>
  *  <p>Produces the Shopping List Line Item Added Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")

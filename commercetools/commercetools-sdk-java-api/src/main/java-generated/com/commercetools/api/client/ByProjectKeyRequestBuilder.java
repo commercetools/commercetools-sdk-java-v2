@@ -81,6 +81,10 @@ public class ByProjectKeyRequestBuilder {
         return new ByProjectKeyDiscountCodesRequestBuilder(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyDiscountGroupsRequestBuilder discountGroups() {
+        return new ByProjectKeyDiscountGroupsRequestBuilder(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyGraphqlRequestBuilder graphql() {
         return new ByProjectKeyGraphqlRequestBuilder(apiHttpClient, projectKey);
     }

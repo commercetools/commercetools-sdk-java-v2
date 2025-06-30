@@ -42,6 +42,8 @@ public class ProductTailoringInStoreDraftImpl implements ProductTailoringInStore
 
     private java.util.List<com.commercetools.api.models.product_tailoring.ProductVariantTailoringDraft> variants;
 
+    private java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> attributes;
+
     /**
      * create instance with all properties
      */
@@ -55,7 +57,8 @@ public class ProductTailoringInStoreDraftImpl implements ProductTailoringInStore
             @JsonProperty("metaKeywords") final com.commercetools.api.models.common.LocalizedString metaKeywords,
             @JsonProperty("slug") final com.commercetools.api.models.common.LocalizedString slug,
             @JsonProperty("publish") final Boolean publish,
-            @JsonProperty("variants") final java.util.List<com.commercetools.api.models.product_tailoring.ProductVariantTailoringDraft> variants) {
+            @JsonProperty("variants") final java.util.List<com.commercetools.api.models.product_tailoring.ProductVariantTailoringDraft> variants,
+            @JsonProperty("attributes") final java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> attributes) {
         this.key = key;
         this.product = product;
         this.name = name;
@@ -66,6 +69,7 @@ public class ProductTailoringInStoreDraftImpl implements ProductTailoringInStore
         this.slug = slug;
         this.publish = publish;
         this.variants = variants;
+        this.attributes = attributes;
     }
 
     /**
@@ -154,6 +158,14 @@ public class ProductTailoringInStoreDraftImpl implements ProductTailoringInStore
         return this.variants;
     }
 
+    /**
+     *  <p>Attributes of the tailored Product. If provided, these Attributes are selectively merged into the <code>attributes</code> of the corresponding Product. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> getAttributes() {
+        return this.attributes;
+    }
+
     public void setKey(final String key) {
         this.key = key;
     }
@@ -200,6 +212,16 @@ public class ProductTailoringInStoreDraftImpl implements ProductTailoringInStore
         this.variants = variants;
     }
 
+    public void setAttributes(
+            final com.commercetools.api.models.product_tailoring.ProductTailoringAttribute... attributes) {
+        this.attributes = new ArrayList<>(Arrays.asList(attributes));
+    }
+
+    public void setAttributes(
+            final java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> attributes) {
+        this.attributes = attributes;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -220,6 +242,7 @@ public class ProductTailoringInStoreDraftImpl implements ProductTailoringInStore
                 .append(slug, that.slug)
                 .append(publish, that.publish)
                 .append(variants, that.variants)
+                .append(attributes, that.attributes)
                 .append(key, that.key)
                 .append(product, that.product)
                 .append(name, that.name)
@@ -230,6 +253,7 @@ public class ProductTailoringInStoreDraftImpl implements ProductTailoringInStore
                 .append(slug, that.slug)
                 .append(publish, that.publish)
                 .append(variants, that.variants)
+                .append(attributes, that.attributes)
                 .isEquals();
     }
 
@@ -245,6 +269,7 @@ public class ProductTailoringInStoreDraftImpl implements ProductTailoringInStore
                 .append(slug)
                 .append(publish)
                 .append(variants)
+                .append(attributes)
                 .toHashCode();
     }
 
@@ -260,6 +285,7 @@ public class ProductTailoringInStoreDraftImpl implements ProductTailoringInStore
                 .append("slug", slug)
                 .append("publish", publish)
                 .append("variants", variants)
+                .append("attributes", attributes)
                 .build();
     }
 

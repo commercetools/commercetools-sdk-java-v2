@@ -151,7 +151,7 @@ public interface ProductDraft
     public TaxCategoryResourceIdentifier getTaxCategory();
 
     /**
-     *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
+     *  <p>Used by Search Term Suggestions, but is also considered for a full text search in the Product Projection Search API.</p>
      * @return searchKeywords
      */
     @Valid
@@ -181,6 +181,14 @@ public interface ProductDraft
 
     @JsonProperty("priceMode")
     public ProductPriceModeEnum getPriceMode();
+
+    /**
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     * @return attributes
+     */
+    @Valid
+    @JsonProperty("attributes")
+    public List<Attribute> getAttributes();
 
     /**
      *  <p>The Product Type defining the Attributes for the Product. Cannot be changed later.</p>
@@ -292,7 +300,7 @@ public interface ProductDraft
     public void setTaxCategory(final TaxCategoryResourceIdentifier taxCategory);
 
     /**
-     *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
+     *  <p>Used by Search Term Suggestions, but is also considered for a full text search in the Product Projection Search API.</p>
      * @param searchKeywords value to be set
      */
 
@@ -318,6 +326,21 @@ public interface ProductDraft
      */
 
     public void setPriceMode(final ProductPriceModeEnum priceMode);
+
+    /**
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     * @param attributes values to be set
+     */
+
+    @JsonIgnore
+    public void setAttributes(final Attribute... attributes);
+
+    /**
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     * @param attributes values to be set
+     */
+
+    public void setAttributes(final List<Attribute> attributes);
 
     /**
      * factory method
@@ -351,6 +374,7 @@ public interface ProductDraft
         instance.setState(template.getState());
         instance.setPublish(template.getPublish());
         instance.setPriceMode(template.getPriceMode());
+        instance.setAttributes(template.getAttributes());
         return instance;
     }
 
@@ -400,6 +424,11 @@ public interface ProductDraft
         instance.setState(com.commercetools.api.models.state.StateResourceIdentifier.deepCopy(template.getState()));
         instance.setPublish(template.getPublish());
         instance.setPriceMode(template.getPriceMode());
+        instance.setAttributes(Optional.ofNullable(template.getAttributes())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.product.Attribute::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

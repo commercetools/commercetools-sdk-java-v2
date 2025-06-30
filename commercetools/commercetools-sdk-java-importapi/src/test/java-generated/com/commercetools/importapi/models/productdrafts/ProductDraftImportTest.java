@@ -34,6 +34,10 @@ public class ProductDraftImportTest {
                         ProductDraftImport.builder()
                                 .categories(Collections.singletonList(
                                     new com.commercetools.importapi.models.common.CategoryKeyReferenceImpl())) },
+                new Object[] { "attributes",
+                        ProductDraftImport.builder()
+                                .attributes(Collections.singletonList(
+                                    new com.commercetools.importapi.models.productvariants.AttributeImpl())) },
                 new Object[] { "metaTitle",
                         ProductDraftImport.builder()
                                 .metaTitle(new com.commercetools.importapi.models.common.LocalizedStringImpl()) },
@@ -110,6 +114,16 @@ public class ProductDraftImportTest {
         Assertions.assertThat(value.getCategories())
                 .isEqualTo(Collections
                         .singletonList(new com.commercetools.importapi.models.common.CategoryKeyReferenceImpl()));
+    }
+
+    @Test
+    public void attributes() {
+        ProductDraftImport value = ProductDraftImport.of();
+        value.setAttributes(
+            Collections.singletonList(new com.commercetools.importapi.models.productvariants.AttributeImpl()));
+        Assertions.assertThat(value.getAttributes())
+                .isEqualTo(
+                    Collections.singletonList(new com.commercetools.importapi.models.productvariants.AttributeImpl()));
     }
 
     @Test

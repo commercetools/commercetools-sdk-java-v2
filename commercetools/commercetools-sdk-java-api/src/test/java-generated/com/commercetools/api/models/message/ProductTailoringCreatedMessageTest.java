@@ -47,6 +47,9 @@ public class ProductTailoringCreatedMessageTest {
                 new Object[] { "variants", ProductTailoringCreatedMessage.builder()
                         .variants(Collections.singletonList(
                             new com.commercetools.api.models.product_tailoring.ProductVariantTailoringImpl())) },
+                new Object[] { "attributes", ProductTailoringCreatedMessage.builder()
+                        .attributes(Collections.singletonList(
+                            new com.commercetools.api.models.product_tailoring.ProductTailoringAttributeImpl())) },
                 new Object[] { "published", ProductTailoringCreatedMessage.builder().published(true) } };
     }
 
@@ -134,6 +137,16 @@ public class ProductTailoringCreatedMessageTest {
         Assertions.assertThat(value.getVariants())
                 .isEqualTo(Collections.singletonList(
                     new com.commercetools.api.models.product_tailoring.ProductVariantTailoringImpl()));
+    }
+
+    @Test
+    public void attributes() {
+        ProductTailoringCreatedMessage value = ProductTailoringCreatedMessage.of();
+        value.setAttributes(Collections
+                .singletonList(new com.commercetools.api.models.product_tailoring.ProductTailoringAttributeImpl()));
+        Assertions.assertThat(value.getAttributes())
+                .isEqualTo(Collections.singletonList(
+                    new com.commercetools.api.models.product_tailoring.ProductTailoringAttributeImpl()));
     }
 
     @Test

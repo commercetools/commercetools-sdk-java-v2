@@ -10,6 +10,7 @@ import java.util.stream.Collectors;
 import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.LocalizedString;
+import com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifier;
 import com.commercetools.api.models.store.StoreResourceIdentifier;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
@@ -31,7 +32,6 @@ import jakarta.validation.constraints.NotNull;
  *             .name(nameBuilder -> nameBuilder)
  *             .value(valueBuilder -> valueBuilder)
  *             .cartPredicate("{cartPredicate}")
- *             .sortOrder("{sortOrder}")
  *             .build()
  * </code></pre>
  * </div>
@@ -93,10 +93,12 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
     public CartDiscountTarget getTarget();
 
     /**
-     *  <p>Value between <code>0</code> and <code>1</code>. A Discount with a higher sortOrder is prioritized. The sort order must be unambiguous among all CartDiscounts.</p>
+     *  <p>Value between <code>0</code> and <code>1</code> that determines the order in which the CartDiscounts will be applied; a CartDiscount with a higher value will be prioritized.</p>
+     *  <p>It must be unique among all CartDiscounts and DiscountGroups.</p>
+     *  <p>If the CartDiscount is part of a DiscountGroup, it will use the sort order of the DiscountGroup.</p>
      * @return sortOrder
      */
-    @NotNull
+
     @JsonProperty("sortOrder")
     public String getSortOrder();
 
@@ -162,6 +164,14 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
     public CustomFieldsDraft getCustom();
 
     /**
+     *  <p>Reference to a DiscountGroup that the CartDiscount must belong to.</p>
+     * @return discountGroup
+     */
+    @Valid
+    @JsonProperty("discountGroup")
+    public DiscountGroupResourceIdentifier getDiscountGroup();
+
+    /**
      *  <p>Name of the CartDiscount.</p>
      * @param name value to be set
      */
@@ -205,7 +215,9 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
     public void setTarget(final CartDiscountTarget target);
 
     /**
-     *  <p>Value between <code>0</code> and <code>1</code>. A Discount with a higher sortOrder is prioritized. The sort order must be unambiguous among all CartDiscounts.</p>
+     *  <p>Value between <code>0</code> and <code>1</code> that determines the order in which the CartDiscounts will be applied; a CartDiscount with a higher value will be prioritized.</p>
+     *  <p>It must be unique among all CartDiscounts and DiscountGroups.</p>
+     *  <p>If the CartDiscount is part of a DiscountGroup, it will use the sort order of the DiscountGroup.</p>
      * @param sortOrder value to be set
      */
 
@@ -279,6 +291,13 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
     public void setCustom(final CustomFieldsDraft custom);
 
     /**
+     *  <p>Reference to a DiscountGroup that the CartDiscount must belong to.</p>
+     * @param discountGroup value to be set
+     */
+
+    public void setDiscountGroup(final DiscountGroupResourceIdentifier discountGroup);
+
+    /**
      * factory method
      * @return instance of CartDiscountDraft
      */
@@ -307,6 +326,7 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
         instance.setRequiresDiscountCode(template.getRequiresDiscountCode());
         instance.setStackingMode(template.getStackingMode());
         instance.setCustom(template.getCustom());
+        instance.setDiscountGroup(template.getDiscountGroup());
         return instance;
     }
 
@@ -344,6 +364,8 @@ public interface CartDiscountDraft extends com.commercetools.api.models.Customiz
         instance.setRequiresDiscountCode(template.getRequiresDiscountCode());
         instance.setStackingMode(template.getStackingMode());
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
+        instance.setDiscountGroup(com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifier
+                .deepCopy(template.getDiscountGroup()));
         return instance;
     }
 

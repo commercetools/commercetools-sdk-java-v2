@@ -32,6 +32,7 @@ import jakarta.validation.constraints.NotNull;
  *             .masterVariant(masterVariantBuilder -> masterVariantBuilder)
  *             .plusVariants(variantsBuilder -> variantsBuilder)
  *             .searchKeywords(searchKeywordsBuilder -> searchKeywordsBuilder)
+ *             .plusAttributes(attributesBuilder -> attributesBuilder)
  *             .build()
  * </code></pre>
  * </div>
@@ -126,13 +127,22 @@ public interface ProductData extends ProductDataLike {
     public List<ProductVariant> getVariants();
 
     /**
-     *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
+     *  <p>Used by Search Term Suggestions, but is also considered for a full text search in the Product Projection Search API.</p>
      * @return searchKeywords
      */
     @NotNull
     @Valid
     @JsonProperty("searchKeywords")
     public SearchKeywords getSearchKeywords();
+
+    /**
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     * @return attributes
+     */
+    @NotNull
+    @Valid
+    @JsonProperty("attributes")
+    public List<Attribute> getAttributes();
 
     /**
      *  <p>Name of the Product.</p>
@@ -221,11 +231,26 @@ public interface ProductData extends ProductDataLike {
     public void setVariants(final List<ProductVariant> variants);
 
     /**
-     *  <p>Used by Product Suggestions, but is also considered for a full text search.</p>
+     *  <p>Used by Search Term Suggestions, but is also considered for a full text search in the Product Projection Search API.</p>
      * @param searchKeywords value to be set
      */
 
     public void setSearchKeywords(final SearchKeywords searchKeywords);
+
+    /**
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     * @param attributes values to be set
+     */
+
+    @JsonIgnore
+    public void setAttributes(final Attribute... attributes);
+
+    /**
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     * @param attributes values to be set
+     */
+
+    public void setAttributes(final List<Attribute> attributes);
 
     /**
      * factory method
@@ -253,6 +278,7 @@ public interface ProductData extends ProductDataLike {
         instance.setMasterVariant(template.getMasterVariant());
         instance.setVariants(template.getVariants());
         instance.setSearchKeywords(template.getSearchKeywords());
+        instance.setAttributes(template.getAttributes());
         return instance;
     }
 
@@ -294,6 +320,11 @@ public interface ProductData extends ProductDataLike {
                 .orElse(null));
         instance.setSearchKeywords(
             com.commercetools.api.models.product.SearchKeywords.deepCopy(template.getSearchKeywords()));
+        instance.setAttributes(Optional.ofNullable(template.getAttributes())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.product.Attribute::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

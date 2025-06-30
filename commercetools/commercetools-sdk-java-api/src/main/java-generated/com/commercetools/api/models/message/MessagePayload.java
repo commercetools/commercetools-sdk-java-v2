@@ -942,6 +942,38 @@ public interface MessagePayload extends MessagePayloadMixin {
     }
 
     /**
+     * builder for discountGroupCreated subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.DiscountGroupCreatedMessagePayloadBuilder discountGroupCreatedBuilder() {
+        return com.commercetools.api.models.message.DiscountGroupCreatedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for discountGroupDeleted subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.DiscountGroupDeletedMessagePayloadBuilder discountGroupDeletedBuilder() {
+        return com.commercetools.api.models.message.DiscountGroupDeletedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for discountGroupKeySet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.DiscountGroupKeySetMessagePayloadBuilder discountGroupKeySetBuilder() {
+        return com.commercetools.api.models.message.DiscountGroupKeySetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for discountGroupSortOrderSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.DiscountGroupSortOrderSetMessagePayloadBuilder discountGroupSortOrderSetBuilder() {
+        return com.commercetools.api.models.message.DiscountGroupSortOrderSetMessagePayloadBuilder.of();
+    }
+
+    /**
      * builder for inventoryEntryCreated subtype
      * @return builder
      */

@@ -32,7 +32,7 @@ public class ProductSetAttributeInAllVariantsActionBuilder implements Builder<Pr
     private Boolean staged;
 
     /**
-     *  <p>The name of the Attribute to set.</p>
+     *  <p>Name of the Attribute to set.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -74,7 +74,7 @@ public class ProductSetAttributeInAllVariantsActionBuilder implements Builder<Pr
     }
 
     /**
-     *  <p>The name of the Attribute to set.</p>
+     *  <p>Name of the Attribute to set.</p>
      * @return name
      */
 

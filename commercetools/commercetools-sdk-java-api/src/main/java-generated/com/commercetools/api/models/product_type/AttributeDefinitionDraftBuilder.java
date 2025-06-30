@@ -36,6 +36,9 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
     private Boolean isRequired;
 
     @Nullable
+    private com.commercetools.api.models.product_type.AttributeLevelEnum level;
+
+    @Nullable
     private com.commercetools.api.models.product_type.AttributeConstraintEnum attributeConstraint;
 
     @Nullable
@@ -131,7 +134,19 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
     }
 
     /**
-     *  <p>Specifies how an Attribute or a combination of Attributes should be validated across all variants of a Product.</p>
+     *  <p>Specifies whether the Attribute is defined at the Product or Variant level.</p>
+     * @param level value to be set
+     * @return Builder
+     */
+
+    public AttributeDefinitionDraftBuilder level(
+            @Nullable final com.commercetools.api.models.product_type.AttributeLevelEnum level) {
+        this.level = level;
+        return this;
+    }
+
+    /**
+     *  <p>Specifies how an Attribute or a combination of Attributes should be validated across all variants of a Product. If the Attribute is defined at Product level, then <code>attributeConstraint</code> must be <code>None</code>. Otherwise, an InvalidOperation error is returned.</p>
      * @param attributeConstraint value to be set
      * @return Builder
      */
@@ -240,7 +255,17 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
     }
 
     /**
-     *  <p>Specifies how an Attribute or a combination of Attributes should be validated across all variants of a Product.</p>
+     *  <p>Specifies whether the Attribute is defined at the Product or Variant level.</p>
+     * @return level
+     */
+
+    @Nullable
+    public com.commercetools.api.models.product_type.AttributeLevelEnum getLevel() {
+        return this.level;
+    }
+
+    /**
+     *  <p>Specifies how an Attribute or a combination of Attributes should be validated across all variants of a Product. If the Attribute is defined at Product level, then <code>attributeConstraint</code> must be <code>None</code>. Otherwise, an InvalidOperation error is returned.</p>
      * @return attributeConstraint
      */
 
@@ -288,8 +313,8 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
         Objects.requireNonNull(name, AttributeDefinitionDraft.class + ": name is missing");
         Objects.requireNonNull(label, AttributeDefinitionDraft.class + ": label is missing");
         Objects.requireNonNull(isRequired, AttributeDefinitionDraft.class + ": isRequired is missing");
-        return new AttributeDefinitionDraftImpl(type, name, label, isRequired, attributeConstraint, inputTip, inputHint,
-            isSearchable);
+        return new AttributeDefinitionDraftImpl(type, name, label, isRequired, level, attributeConstraint, inputTip,
+            inputHint, isSearchable);
     }
 
     /**
@@ -297,8 +322,8 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
      * @return AttributeDefinitionDraft
      */
     public AttributeDefinitionDraft buildUnchecked() {
-        return new AttributeDefinitionDraftImpl(type, name, label, isRequired, attributeConstraint, inputTip, inputHint,
-            isSearchable);
+        return new AttributeDefinitionDraftImpl(type, name, label, isRequired, level, attributeConstraint, inputTip,
+            inputHint, isSearchable);
     }
 
     /**
@@ -320,6 +345,7 @@ public class AttributeDefinitionDraftBuilder implements Builder<AttributeDefinit
         builder.name = template.getName();
         builder.label = template.getLabel();
         builder.isRequired = template.getIsRequired();
+        builder.level = template.getLevel();
         builder.attributeConstraint = template.getAttributeConstraint();
         builder.inputTip = template.getInputTip();
         builder.inputHint = template.getInputHint();

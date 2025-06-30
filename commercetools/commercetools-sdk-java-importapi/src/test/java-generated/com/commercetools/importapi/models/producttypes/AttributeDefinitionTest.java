@@ -35,7 +35,9 @@ public class AttributeDefinitionTest {
                         AttributeDefinition.builder()
                                 .inputHint(com.commercetools.importapi.models.producttypes.TextInputHint
                                         .findEnum("SingleLine")) },
-                new Object[] { "isSearchable", AttributeDefinition.builder().isSearchable(true) } };
+                new Object[] { "isSearchable", AttributeDefinition.builder().isSearchable(true) },
+                new Object[] { "level", AttributeDefinition.builder()
+                        .level(com.commercetools.importapi.models.producttypes.AttributeLevel.findEnum("Variant")) } };
     }
 
     @Test
@@ -98,5 +100,13 @@ public class AttributeDefinitionTest {
         AttributeDefinition value = AttributeDefinition.of();
         value.setIsSearchable(true);
         Assertions.assertThat(value.getIsSearchable()).isEqualTo(true);
+    }
+
+    @Test
+    public void level() {
+        AttributeDefinition value = AttributeDefinition.of();
+        value.setLevel(com.commercetools.importapi.models.producttypes.AttributeLevel.findEnum("Variant"));
+        Assertions.assertThat(value.getLevel())
+                .isEqualTo(com.commercetools.importapi.models.producttypes.AttributeLevel.findEnum("Variant"));
     }
 }

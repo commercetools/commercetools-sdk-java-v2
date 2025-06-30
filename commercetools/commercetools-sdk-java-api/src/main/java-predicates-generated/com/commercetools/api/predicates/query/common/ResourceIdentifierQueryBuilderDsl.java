@@ -100,6 +100,13 @@ public class ResourceIdentifierQueryBuilderDsl {
             ResourceIdentifierQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ResourceIdentifierQueryBuilderDsl> asDiscountGroup(
+            Function<com.commercetools.api.predicates.query.discount_group.DiscountGroupResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.discount_group.DiscountGroupResourceIdentifierQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.discount_group.DiscountGroupResourceIdentifierQueryBuilderDsl.of()),
+            ResourceIdentifierQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ResourceIdentifierQueryBuilderDsl> asInventoryEntry(
             Function<com.commercetools.api.predicates.query.inventory.InventoryEntryResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.inventory.InventoryEntryResourceIdentifierQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

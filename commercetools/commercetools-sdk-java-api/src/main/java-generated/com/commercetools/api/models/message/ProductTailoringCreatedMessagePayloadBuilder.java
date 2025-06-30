@@ -57,6 +57,9 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     @Nullable
     private java.util.List<com.commercetools.api.models.product_tailoring.ProductVariantTailoring> variants;
 
+    @Nullable
+    private java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> attributes;
+
     private Boolean published;
 
     /**
@@ -463,6 +466,101 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
+     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding Product. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     * @param attributes value to be set
+     * @return Builder
+     */
+
+    public ProductTailoringCreatedMessagePayloadBuilder attributes(
+            @Nullable final com.commercetools.api.models.product_tailoring.ProductTailoringAttribute... attributes) {
+        this.attributes = new ArrayList<>(Arrays.asList(attributes));
+        return this;
+    }
+
+    /**
+     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding Product. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     * @param attributes value to be set
+     * @return Builder
+     */
+
+    public ProductTailoringCreatedMessagePayloadBuilder attributes(
+            @Nullable final java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> attributes) {
+        this.attributes = attributes;
+        return this;
+    }
+
+    /**
+     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding Product. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     * @param attributes value to be set
+     * @return Builder
+     */
+
+    public ProductTailoringCreatedMessagePayloadBuilder plusAttributes(
+            @Nullable final com.commercetools.api.models.product_tailoring.ProductTailoringAttribute... attributes) {
+        if (this.attributes == null) {
+            this.attributes = new ArrayList<>();
+        }
+        this.attributes.addAll(Arrays.asList(attributes));
+        return this;
+    }
+
+    /**
+     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding Product. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductTailoringCreatedMessagePayloadBuilder plusAttributes(
+            Function<com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder, com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder> builder) {
+        if (this.attributes == null) {
+            this.attributes = new ArrayList<>();
+        }
+        this.attributes
+                .add(builder.apply(com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder.of())
+                        .build());
+        return this;
+    }
+
+    /**
+     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding Product. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductTailoringCreatedMessagePayloadBuilder withAttributes(
+            Function<com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder, com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder> builder) {
+        this.attributes = new ArrayList<>();
+        this.attributes
+                .add(builder.apply(com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder.of())
+                        .build());
+        return this;
+    }
+
+    /**
+     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding Product. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductTailoringCreatedMessagePayloadBuilder addAttributes(
+            Function<com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder, com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> builder) {
+        return plusAttributes(
+            builder.apply(com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder.of()));
+    }
+
+    /**
+     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding Product. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     * @param builder function to build the attributes value
+     * @return Builder
+     */
+
+    public ProductTailoringCreatedMessagePayloadBuilder setAttributes(
+            Function<com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder, com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> builder) {
+        return attributes(
+            builder.apply(com.commercetools.api.models.product_tailoring.ProductTailoringAttributeBuilder.of()));
+    }
+
+    /**
      *  <p><code>true</code> if the ProductTailoring is published.</p>
      * @param published value to be set
      * @return Builder
@@ -582,6 +680,16 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
     }
 
     /**
+     *  <p>Attributes of the tailored Product. If available, these Attributes are selectively merged into the <code>attributes</code> of the corresponding Product. If the Product contains an Attribute with the same <code>name</code>, then its <code>value</code> is overwritten. Otherwise, the Attribute and its <code>value</code> are added to the Product.</p>
+     * @return attributes
+     */
+
+    @Nullable
+    public java.util.List<com.commercetools.api.models.product_tailoring.ProductTailoringAttribute> getAttributes() {
+        return this.attributes;
+    }
+
+    /**
      *  <p><code>true</code> if the ProductTailoring is published.</p>
      * @return published
      */
@@ -599,7 +707,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
         Objects.requireNonNull(product, ProductTailoringCreatedMessagePayload.class + ": product is missing");
         Objects.requireNonNull(published, ProductTailoringCreatedMessagePayload.class + ": published is missing");
         return new ProductTailoringCreatedMessagePayloadImpl(key, store, productKey, product, description, name, slug,
-            metaTitle, metaDescription, metaKeywords, variants, published);
+            metaTitle, metaDescription, metaKeywords, variants, attributes, published);
     }
 
     /**
@@ -608,7 +716,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
      */
     public ProductTailoringCreatedMessagePayload buildUnchecked() {
         return new ProductTailoringCreatedMessagePayloadImpl(key, store, productKey, product, description, name, slug,
-            metaTitle, metaDescription, metaKeywords, variants, published);
+            metaTitle, metaDescription, metaKeywords, variants, attributes, published);
     }
 
     /**
@@ -638,6 +746,7 @@ public class ProductTailoringCreatedMessagePayloadBuilder implements Builder<Pro
         builder.metaDescription = template.getMetaDescription();
         builder.metaKeywords = template.getMetaKeywords();
         builder.variants = template.getVariants();
+        builder.attributes = template.getAttributes();
         builder.published = template.getPublished();
         return builder;
     }

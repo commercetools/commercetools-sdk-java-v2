@@ -44,6 +44,8 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
 
     private com.commercetools.api.models.cart.TaxedPriceDraft taxedPrice;
 
+    private com.commercetools.api.models.cart.RoundingMode priceRoundingMode;
+
     private com.commercetools.api.models.cart.RoundingMode taxRoundingMode;
 
     private com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode;
@@ -91,6 +93,7 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
             @JsonProperty("customLineItems") final java.util.List<com.commercetools.api.models.order.CustomLineItemImportDraft> customLineItems,
             @JsonProperty("totalPrice") final com.commercetools.api.models.common.Money totalPrice,
             @JsonProperty("taxedPrice") final com.commercetools.api.models.cart.TaxedPriceDraft taxedPrice,
+            @JsonProperty("priceRoundingMode") final com.commercetools.api.models.cart.RoundingMode priceRoundingMode,
             @JsonProperty("taxRoundingMode") final com.commercetools.api.models.cart.RoundingMode taxRoundingMode,
             @JsonProperty("taxCalculationMode") final com.commercetools.api.models.cart.TaxCalculationMode taxCalculationMode,
             @JsonProperty("inventoryMode") final com.commercetools.api.models.cart.InventoryMode inventoryMode,
@@ -118,6 +121,7 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
         this.customLineItems = customLineItems;
         this.totalPrice = totalPrice;
         this.taxedPrice = taxedPrice;
+        this.priceRoundingMode = priceRoundingMode;
         this.taxRoundingMode = taxRoundingMode;
         this.taxCalculationMode = taxCalculationMode;
         this.inventoryMode = inventoryMode;
@@ -231,6 +235,14 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
 
     public com.commercetools.api.models.cart.TaxedPriceDraft getTaxedPrice() {
         return this.taxedPrice;
+    }
+
+    /**
+     *  <p>Determines how the total prices on LineItems and CustomLineItems are rounded when calculated.</p>
+     */
+
+    public com.commercetools.api.models.cart.RoundingMode getPriceRoundingMode() {
+        return this.priceRoundingMode;
     }
 
     /**
@@ -417,6 +429,10 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
         this.taxedPrice = taxedPrice;
     }
 
+    public void setPriceRoundingMode(final com.commercetools.api.models.cart.RoundingMode priceRoundingMode) {
+        this.priceRoundingMode = priceRoundingMode;
+    }
+
     public void setTaxRoundingMode(final com.commercetools.api.models.cart.RoundingMode taxRoundingMode) {
         this.taxRoundingMode = taxRoundingMode;
     }
@@ -508,6 +524,7 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
                 .append(customLineItems, that.customLineItems)
                 .append(totalPrice, that.totalPrice)
                 .append(taxedPrice, that.taxedPrice)
+                .append(priceRoundingMode, that.priceRoundingMode)
                 .append(taxRoundingMode, that.taxRoundingMode)
                 .append(taxCalculationMode, that.taxCalculationMode)
                 .append(inventoryMode, that.inventoryMode)
@@ -535,6 +552,7 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
                 .append(customLineItems, that.customLineItems)
                 .append(totalPrice, that.totalPrice)
                 .append(taxedPrice, that.taxedPrice)
+                .append(priceRoundingMode, that.priceRoundingMode)
                 .append(taxRoundingMode, that.taxRoundingMode)
                 .append(taxCalculationMode, that.taxCalculationMode)
                 .append(inventoryMode, that.inventoryMode)
@@ -567,6 +585,7 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
                 .append(customLineItems)
                 .append(totalPrice)
                 .append(taxedPrice)
+                .append(priceRoundingMode)
                 .append(taxRoundingMode)
                 .append(taxCalculationMode)
                 .append(inventoryMode)
@@ -599,6 +618,7 @@ public class OrderImportDraftImpl implements OrderImportDraft, ModelBase {
                 .append("customLineItems", customLineItems)
                 .append("totalPrice", totalPrice)
                 .append("taxedPrice", taxedPrice)
+                .append("priceRoundingMode", priceRoundingMode)
                 .append("taxRoundingMode", taxRoundingMode)
                 .append("taxCalculationMode", taxCalculationMode)
                 .append("inventoryMode", inventoryMode)

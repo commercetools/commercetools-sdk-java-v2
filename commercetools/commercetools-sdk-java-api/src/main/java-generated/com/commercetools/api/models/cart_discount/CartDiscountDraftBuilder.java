@@ -19,7 +19,6 @@ import io.vrap.rmf.base.client.utils.Generated;
  *             .name(nameBuilder -> nameBuilder)
  *             .value(valueBuilder -> valueBuilder)
  *             .cartPredicate("{cartPredicate}")
- *             .sortOrder("{sortOrder}")
  *             .build()
  * </code></pre>
  * </div>
@@ -42,6 +41,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     @Nullable
     private com.commercetools.api.models.cart_discount.CartDiscountTarget target;
 
+    @Nullable
     private String sortOrder;
 
     @Nullable
@@ -64,6 +64,9 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
 
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
+
+    @Nullable
+    private com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifier discountGroup;
 
     /**
      *  <p>Name of the CartDiscount.</p>
@@ -210,12 +213,14 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     }
 
     /**
-     *  <p>Value between <code>0</code> and <code>1</code>. A Discount with a higher sortOrder is prioritized. The sort order must be unambiguous among all CartDiscounts.</p>
+     *  <p>Value between <code>0</code> and <code>1</code> that determines the order in which the CartDiscounts will be applied; a CartDiscount with a higher value will be prioritized.</p>
+     *  <p>It must be unique among all CartDiscounts and DiscountGroups.</p>
+     *  <p>If the CartDiscount is part of a DiscountGroup, it will use the sort order of the DiscountGroup.</p>
      * @param sortOrder value to be set
      * @return Builder
      */
 
-    public CartDiscountDraftBuilder sortOrder(final String sortOrder) {
+    public CartDiscountDraftBuilder sortOrder(@Nullable final String sortOrder) {
         this.sortOrder = sortOrder;
         return this;
     }
@@ -436,6 +441,45 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     }
 
     /**
+     *  <p>Reference to a DiscountGroup that the CartDiscount must belong to.</p>
+     * @param builder function to build the discountGroup value
+     * @return Builder
+     */
+
+    public CartDiscountDraftBuilder discountGroup(
+            Function<com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifierBuilder, com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifierBuilder> builder) {
+        this.discountGroup = builder
+                .apply(com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifierBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>Reference to a DiscountGroup that the CartDiscount must belong to.</p>
+     * @param builder function to build the discountGroup value
+     * @return Builder
+     */
+
+    public CartDiscountDraftBuilder withDiscountGroup(
+            Function<com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifierBuilder, com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifier> builder) {
+        this.discountGroup = builder
+                .apply(com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Reference to a DiscountGroup that the CartDiscount must belong to.</p>
+     * @param discountGroup value to be set
+     * @return Builder
+     */
+
+    public CartDiscountDraftBuilder discountGroup(
+            @Nullable final com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifier discountGroup) {
+        this.discountGroup = discountGroup;
+        return this;
+    }
+
+    /**
      *  <p>Name of the CartDiscount.</p>
      * @return name
      */
@@ -494,10 +538,13 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     }
 
     /**
-     *  <p>Value between <code>0</code> and <code>1</code>. A Discount with a higher sortOrder is prioritized. The sort order must be unambiguous among all CartDiscounts.</p>
+     *  <p>Value between <code>0</code> and <code>1</code> that determines the order in which the CartDiscounts will be applied; a CartDiscount with a higher value will be prioritized.</p>
+     *  <p>It must be unique among all CartDiscounts and DiscountGroups.</p>
+     *  <p>If the CartDiscount is part of a DiscountGroup, it will use the sort order of the DiscountGroup.</p>
      * @return sortOrder
      */
 
+    @Nullable
     public String getSortOrder() {
         return this.sortOrder;
     }
@@ -578,6 +625,16 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
     }
 
     /**
+     *  <p>Reference to a DiscountGroup that the CartDiscount must belong to.</p>
+     * @return discountGroup
+     */
+
+    @Nullable
+    public com.commercetools.api.models.discount_group.DiscountGroupResourceIdentifier getDiscountGroup() {
+        return this.discountGroup;
+    }
+
+    /**
      * builds CartDiscountDraft with checking for non-null required values
      * @return CartDiscountDraft
      */
@@ -585,9 +642,8 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
         Objects.requireNonNull(name, CartDiscountDraft.class + ": name is missing");
         Objects.requireNonNull(value, CartDiscountDraft.class + ": value is missing");
         Objects.requireNonNull(cartPredicate, CartDiscountDraft.class + ": cartPredicate is missing");
-        Objects.requireNonNull(sortOrder, CartDiscountDraft.class + ": sortOrder is missing");
         return new CartDiscountDraftImpl(name, key, description, value, cartPredicate, target, sortOrder, stores,
-            isActive, validFrom, validUntil, requiresDiscountCode, stackingMode, custom);
+            isActive, validFrom, validUntil, requiresDiscountCode, stackingMode, custom, discountGroup);
     }
 
     /**
@@ -596,7 +652,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
      */
     public CartDiscountDraft buildUnchecked() {
         return new CartDiscountDraftImpl(name, key, description, value, cartPredicate, target, sortOrder, stores,
-            isActive, validFrom, validUntil, requiresDiscountCode, stackingMode, custom);
+            isActive, validFrom, validUntil, requiresDiscountCode, stackingMode, custom, discountGroup);
     }
 
     /**
@@ -628,6 +684,7 @@ public class CartDiscountDraftBuilder implements Builder<CartDiscountDraft> {
         builder.requiresDiscountCode = template.getRequiresDiscountCode();
         builder.stackingMode = template.getStackingMode();
         builder.custom = template.getCustom();
+        builder.discountGroup = template.getDiscountGroup();
         return builder;
     }
 

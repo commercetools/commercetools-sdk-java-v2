@@ -171,6 +171,10 @@ public class ProductUpdateActionBuilder {
         return com.commercetools.api.models.product.ProductSetPricesActionBuilder.of();
     }
 
+    public com.commercetools.api.models.product.ProductSetProductAttributeActionBuilder setProductAttributeBuilder() {
+        return com.commercetools.api.models.product.ProductSetProductAttributeActionBuilder.of();
+    }
+
     public com.commercetools.api.models.product.ProductSetProductPriceCustomFieldActionBuilder setProductPriceCustomFieldBuilder() {
         return com.commercetools.api.models.product.ProductSetProductPriceCustomFieldActionBuilder.of();
     }

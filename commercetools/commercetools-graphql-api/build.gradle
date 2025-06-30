@@ -1,11 +1,17 @@
 import com.commercetools.sdk.plugins.GraphQLPlugin
 
 plugins {
-    id "com.netflix.dgs.codegen" version "6.3.0"
+    id "com.netflix.dgs.codegen" version "8.1.0"
 }
 
 apply plugin:'com.netflix.dgs.codegen'
 apply plugin: GraphQLPlugin
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
 
 dependencies {
     api project(':commercetools:commercetools-sdk-java-api')
@@ -16,7 +22,7 @@ dependencies {
     api jackson_core.databind
     api jackson_core.core
     api jackson_core.datatype
-    api 'com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-shared-core:6.3.0'
+    api 'com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-shared-core:8.1.0'
 
 }
 

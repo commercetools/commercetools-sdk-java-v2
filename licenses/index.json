@@ -72,7 +72,7 @@
         },
         {
             "moduleName": "com.datadoghq:datadog-api-client",
-            "moduleVersion": "2.35.0",
+            "moduleVersion": "2.38.0",
             "moduleUrls": [
                 "https://github.com/DataDog/datadog-api-client-java"
             ],
@@ -102,7 +102,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-annotations",
-            "moduleVersion": "2.19.0",
+            "moduleVersion": "2.19.1",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson"
             ],
@@ -115,7 +115,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-core",
-            "moduleVersion": "2.19.0",
+            "moduleVersion": "2.19.1",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-core"
             ],
@@ -128,7 +128,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-databind",
-            "moduleVersion": "2.19.0",
+            "moduleVersion": "2.19.1",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson"
             ],
@@ -141,7 +141,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.dataformat:jackson-dataformat-cbor",
-            "moduleVersion": "2.19.0",
+            "moduleVersion": "2.19.1",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-dataformats-binary"
             ],
@@ -154,7 +154,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.datatype:jackson-datatype-jsr310",
-            "moduleVersion": "2.19.0",
+            "moduleVersion": "2.19.1",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-modules-java8/jackson-datatype-jsr310"
             ],
@@ -167,7 +167,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.module:jackson-module-jakarta-xmlbind-annotations",
-            "moduleVersion": "2.19.0",
+            "moduleVersion": "2.19.1",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-modules-base"
             ],
@@ -180,7 +180,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.module:jackson-module-parameter-names",
-            "moduleVersion": "2.19.0",
+            "moduleVersion": "2.19.1",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-modules-java8/jackson-module-parameter-names"
             ],
@@ -340,7 +340,7 @@
         },
         {
             "moduleName": "com.graphql-java:graphql-java",
-            "moduleVersion": "19.11",
+            "moduleVersion": "22.3",
             "moduleUrls": [
                 "https://github.com/graphql-java/graphql-java"
             ],
@@ -357,7 +357,7 @@
         },
         {
             "moduleName": "com.graphql-java:java-dataloader",
-            "moduleVersion": "3.2.0",
+            "moduleVersion": "3.3.0",
             "moduleUrls": [
                 "https://github.com/graphql-java/java-dataloader"
             ],
@@ -383,7 +383,7 @@
         },
         {
             "moduleName": "com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-shared-core",
-            "moduleVersion": "6.3.0",
+            "moduleVersion": "8.1.0",
             "moduleUrls": [
                 "https://github.com/Netflix/dgs-codegen"
             ],
@@ -396,11 +396,11 @@
         },
         {
             "moduleName": "com.netflix.graphql.dgs:graphql-dgs-platform",
-            "moduleVersion": "5.5.1"
+            "moduleVersion": "10.0.4"
         },
         {
             "moduleName": "com.netflix.graphql.dgs:graphql-dgs-platform-dependencies",
-            "moduleVersion": "5.5.1"
+            "moduleVersion": "10.0.4"
         },
         {
             "moduleName": "com.newrelic.agent.java:newrelic-api",
@@ -453,7 +453,7 @@
         },
         {
             "moduleName": "com.squareup.okio:okio",
-            "moduleVersion": "3.12.0"
+            "moduleVersion": "3.14.0"
         },
         {
             "moduleName": "com.squareup.okio:okio",
@@ -461,7 +461,7 @@
         },
         {
             "moduleName": "com.squareup.okio:okio-jvm",
-            "moduleVersion": "3.12.0",
+            "moduleVersion": "3.14.0",
             "moduleUrls": [
                 "https://github.com/square/okio/"
             ],
@@ -592,7 +592,7 @@
         },
         {
             "moduleName": "io.netty:netty-buffer",
-            "moduleVersion": "4.1.121.Final",
+            "moduleVersion": "4.1.122.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -618,7 +618,7 @@
         },
         {
             "moduleName": "io.netty:netty-codec",
-            "moduleVersion": "4.1.121.Final",
+            "moduleVersion": "4.1.122.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -670,7 +670,7 @@
         },
         {
             "moduleName": "io.netty:netty-codec-dns",
-            "moduleVersion": "4.1.121.Final",
+            "moduleVersion": "4.1.122.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -683,7 +683,7 @@
         },
         {
             "moduleName": "io.netty:netty-codec-http",
-            "moduleVersion": "4.1.121.Final",
+            "moduleVersion": "4.1.122.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -709,7 +709,7 @@
         },
         {
             "moduleName": "io.netty:netty-codec-http2",
-            "moduleVersion": "4.1.121.Final",
+            "moduleVersion": "4.1.122.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -748,7 +748,7 @@
         },
         {
             "moduleName": "io.netty:netty-codec-socks",
-            "moduleVersion": "4.1.121.Final",
+            "moduleVersion": "4.1.122.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -774,7 +774,7 @@
         },
         {
             "moduleName": "io.netty:netty-common",
-            "moduleVersion": "4.1.121.Final",
+            "moduleVersion": "4.1.122.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -800,7 +800,7 @@
         },
         {
             "moduleName": "io.netty:netty-handler",
-            "moduleVersion": "4.1.121.Final",
+            "moduleVersion": "4.1.122.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -826,7 +826,7 @@
         },
         {
             "moduleName": "io.netty:netty-handler-proxy",
-            "moduleVersion": "4.1.121.Final",
+            "moduleVersion": "4.1.122.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -852,7 +852,7 @@
         },
         {
             "moduleName": "io.netty:netty-resolver",
-            "moduleVersion": "4.1.121.Final",
+            "moduleVersion": "4.1.122.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -878,7 +878,7 @@
         },
         {
             "moduleName": "io.netty:netty-resolver-dns",
-            "moduleVersion": "4.1.121.Final",
+            "moduleVersion": "4.1.122.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -891,7 +891,7 @@
         },
         {
             "moduleName": "io.netty:netty-resolver-dns-classes-macos",
-            "moduleVersion": "4.1.121.Final",
+            "moduleVersion": "4.1.122.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -904,7 +904,7 @@
         },
         {
             "moduleName": "io.netty:netty-resolver-dns-native-macos",
-            "moduleVersion": "4.1.121.Final",
+            "moduleVersion": "4.1.122.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -917,7 +917,7 @@
         },
         {
             "moduleName": "io.netty:netty-transport",
-            "moduleVersion": "4.1.121.Final",
+            "moduleVersion": "4.1.122.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -943,7 +943,7 @@
         },
         {
             "moduleName": "io.netty:netty-transport-classes-epoll",
-            "moduleVersion": "4.1.121.Final",
+            "moduleVersion": "4.1.122.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -969,7 +969,7 @@
         },
         {
             "moduleName": "io.netty:netty-transport-native-epoll",
-            "moduleVersion": "4.1.121.Final",
+            "moduleVersion": "4.1.122.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -1008,7 +1008,7 @@
         },
         {
             "moduleName": "io.netty:netty-transport-native-unix-common",
-            "moduleVersion": "4.1.121.Final",
+            "moduleVersion": "4.1.122.Final",
             "moduleUrls": [
                 "https://netty.io/"
             ],
@@ -1034,7 +1034,7 @@
         },
         {
             "moduleName": "io.opentelemetry:opentelemetry-api",
-            "moduleVersion": "1.50.0",
+            "moduleVersion": "1.51.0",
             "moduleUrls": [
                 "https://github.com/open-telemetry/opentelemetry-java"
             ],
@@ -1047,7 +1047,7 @@
         },
         {
             "moduleName": "io.opentelemetry:opentelemetry-context",
-            "moduleVersion": "1.50.0",
+            "moduleVersion": "1.51.0",
             "moduleUrls": [
                 "https://github.com/open-telemetry/opentelemetry-java"
             ],
@@ -1060,7 +1060,7 @@
         },
         {
             "moduleName": "io.projectreactor.netty:reactor-netty-core",
-            "moduleVersion": "1.2.6",
+            "moduleVersion": "1.2.7",
             "moduleUrls": [
                 "https://github.com/reactor/reactor-netty"
             ],
@@ -1073,7 +1073,7 @@
         },
         {
             "moduleName": "io.projectreactor.netty:reactor-netty-http",
-            "moduleVersion": "1.2.6",
+            "moduleVersion": "1.2.7",
             "moduleUrls": [
                 "https://github.com/reactor/reactor-netty"
             ],
@@ -1086,7 +1086,7 @@
         },
         {
             "moduleName": "io.projectreactor:reactor-core",
-            "moduleVersion": "3.7.6",
+            "moduleVersion": "3.7.7",
             "moduleUrls": [
                 "https://github.com/reactor/reactor-core"
             ],
@@ -1979,7 +1979,7 @@
         },
         {
             "moduleName": "org.jetbrains.kotlin:kotlin-reflect",
-            "moduleVersion": "1.9.25",
+            "moduleVersion": "2.0.21",
             "moduleUrls": [
                 "https://kotlinlang.org/"
             ],
@@ -2005,7 +2005,7 @@
         },
         {
             "moduleName": "org.jetbrains.kotlin:kotlin-stdlib",
-            "moduleVersion": "1.9.25",
+            "moduleVersion": "2.0.21",
             "moduleUrls": [
                 "https://kotlinlang.org/"
             ],
@@ -2070,7 +2070,7 @@
         },
         {
             "moduleName": "org.jetbrains.kotlin:kotlin-stdlib-jdk7",
-            "moduleVersion": "1.9.25",
+            "moduleVersion": "2.0.21",
             "moduleUrls": [
                 "https://kotlinlang.org/"
             ],
@@ -2109,7 +2109,7 @@
         },
         {
             "moduleName": "org.jetbrains.kotlin:kotlin-stdlib-jdk8",
-            "moduleVersion": "1.9.25",
+            "moduleVersion": "2.0.21",
             "moduleUrls": [
                 "https://kotlinlang.org/"
             ],

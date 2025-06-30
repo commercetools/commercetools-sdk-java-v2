@@ -2,7 +2,7 @@
     "dependencies": [
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-annotations",
-            "moduleVersion": "2.19.0",
+            "moduleVersion": "2.19.1",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson"
             ],
@@ -15,7 +15,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-core",
-            "moduleVersion": "2.19.0",
+            "moduleVersion": "2.19.1",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-core"
             ],
@@ -28,7 +28,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.core:jackson-databind",
-            "moduleVersion": "2.19.0",
+            "moduleVersion": "2.19.1",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson"
             ],
@@ -41,7 +41,7 @@
         },
         {
             "moduleName": "com.fasterxml.jackson.datatype:jackson-datatype-jsr310",
-            "moduleVersion": "2.19.0",
+            "moduleVersion": "2.19.1",
             "moduleUrls": [
                 "https://github.com/FasterXML/jackson-modules-java8/jackson-datatype-jsr310"
             ],
@@ -67,7 +67,7 @@
         },
         {
             "moduleName": "com.graphql-java:graphql-java",
-            "moduleVersion": "19.11",
+            "moduleVersion": "22.3",
             "moduleUrls": [
                 "https://github.com/graphql-java/graphql-java"
             ],
@@ -84,7 +84,7 @@
         },
         {
             "moduleName": "com.graphql-java:java-dataloader",
-            "moduleVersion": "3.2.0",
+            "moduleVersion": "3.3.0",
             "moduleUrls": [
                 "https://github.com/graphql-java/java-dataloader"
             ],
@@ -97,7 +97,7 @@
         },
         {
             "moduleName": "com.netflix.graphql.dgs.codegen:graphql-dgs-codegen-shared-core",
-            "moduleVersion": "6.3.0",
+            "moduleVersion": "8.1.0",
             "moduleUrls": [
                 "https://github.com/Netflix/dgs-codegen"
             ],
@@ -110,11 +110,11 @@
         },
         {
             "moduleName": "com.netflix.graphql.dgs:graphql-dgs-platform",
-            "moduleVersion": "5.5.1"
+            "moduleVersion": "10.0.4"
         },
         {
             "moduleName": "com.netflix.graphql.dgs:graphql-dgs-platform-dependencies",
-            "moduleVersion": "5.5.1"
+            "moduleVersion": "10.0.4"
         },
         {
             "moduleName": "com.spotify:completable-futures",
@@ -255,7 +255,7 @@
         },
         {
             "moduleName": "org.jetbrains.kotlin:kotlin-reflect",
-            "moduleVersion": "1.9.25",
+            "moduleVersion": "2.0.21",
             "moduleUrls": [
                 "https://kotlinlang.org/"
             ],
@@ -268,7 +268,7 @@
         },
         {
             "moduleName": "org.jetbrains.kotlin:kotlin-stdlib",
-            "moduleVersion": "1.9.25",
+            "moduleVersion": "2.0.21",
             "moduleUrls": [
                 "https://kotlinlang.org/"
             ],

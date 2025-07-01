@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * PaymentSetMethodInfoMethodAction
+ *  <p>This action generates the PaymentMethodInfoMethodSet Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentSetMethodInfoMethodActionImpl implements PaymentSetMethodInfoMethodAction, ModelBase {

@@ -76,7 +76,7 @@ public interface PaymentDraft extends com.commercetools.api.models.CustomizableD
      */
     @Valid
     @JsonProperty("paymentMethodInfo")
-    public PaymentMethodInfo getPaymentMethodInfo();
+    public PaymentMethodInfoDraft getPaymentMethodInfo();
 
     /**
      *  <p>Current status of the Payment.</p>
@@ -151,7 +151,7 @@ public interface PaymentDraft extends com.commercetools.api.models.CustomizableD
      * @param paymentMethodInfo value to be set
      */
 
-    public void setPaymentMethodInfo(final PaymentMethodInfo paymentMethodInfo);
+    public void setPaymentMethodInfo(final PaymentMethodInfoDraft paymentMethodInfo);
 
     /**
      *  <p>Current status of the Payment.</p>
@@ -251,7 +251,7 @@ public interface PaymentDraft extends com.commercetools.api.models.CustomizableD
         instance.setInterfaceId(template.getInterfaceId());
         instance.setAmountPlanned(com.commercetools.api.models.common.Money.deepCopy(template.getAmountPlanned()));
         instance.setPaymentMethodInfo(
-            com.commercetools.api.models.payment.PaymentMethodInfo.deepCopy(template.getPaymentMethodInfo()));
+            com.commercetools.api.models.payment.PaymentMethodInfoDraft.deepCopy(template.getPaymentMethodInfo()));
         instance.setPaymentStatus(
             com.commercetools.api.models.payment.PaymentStatusDraft.deepCopy(template.getPaymentStatus()));
         instance.setTransactions(Optional.ofNullable(template.getTransactions())

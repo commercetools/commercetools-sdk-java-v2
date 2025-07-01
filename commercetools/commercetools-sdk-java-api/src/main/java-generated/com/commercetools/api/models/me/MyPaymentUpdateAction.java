@@ -86,6 +86,30 @@ public interface MyPaymentUpdateAction
     }
 
     /**
+     * builder for setMethodInfoCustomField subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.me.MyPaymentSetMethodInfoCustomFieldActionBuilder setMethodInfoCustomFieldBuilder() {
+        return com.commercetools.api.models.me.MyPaymentSetMethodInfoCustomFieldActionBuilder.of();
+    }
+
+    /**
+     * builder for setMethodInfoCustomType subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.me.MyPaymentSetMethodInfoCustomTypeActionBuilder setMethodInfoCustomTypeBuilder() {
+        return com.commercetools.api.models.me.MyPaymentSetMethodInfoCustomTypeActionBuilder.of();
+    }
+
+    /**
+     * builder for setMethodInfoInterfaceAccount subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.me.MyPaymentSetMethodInfoInterfaceAccountActionBuilder setMethodInfoInterfaceAccountBuilder() {
+        return com.commercetools.api.models.me.MyPaymentSetMethodInfoInterfaceAccountActionBuilder.of();
+    }
+
+    /**
      * builder for setMethodInfoInterface subtype
      * @return builder
      */

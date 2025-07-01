@@ -19,9 +19,8 @@ public class MyPaymentDraftTest {
         return new Object[][] {
                 new Object[] { "amountPlanned",
                         MyPaymentDraft.builder().amountPlanned(new com.commercetools.api.models.common.MoneyImpl()) },
-                new Object[] { "paymentMethodInfo",
-                        MyPaymentDraft.builder()
-                                .paymentMethodInfo(new com.commercetools.api.models.payment.PaymentMethodInfoImpl()) },
+                new Object[] { "paymentMethodInfo", MyPaymentDraft.builder()
+                        .paymentMethodInfo(new com.commercetools.api.models.payment.PaymentMethodInfoDraftImpl()) },
                 new Object[] { "custom",
                         MyPaymentDraft.builder()
                                 .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) },
@@ -39,9 +38,9 @@ public class MyPaymentDraftTest {
     @Test
     public void paymentMethodInfo() {
         MyPaymentDraft value = MyPaymentDraft.of();
-        value.setPaymentMethodInfo(new com.commercetools.api.models.payment.PaymentMethodInfoImpl());
+        value.setPaymentMethodInfo(new com.commercetools.api.models.payment.PaymentMethodInfoDraftImpl());
         Assertions.assertThat(value.getPaymentMethodInfo())
-                .isEqualTo(new com.commercetools.api.models.payment.PaymentMethodInfoImpl());
+                .isEqualTo(new com.commercetools.api.models.payment.PaymentMethodInfoDraftImpl());
     }
 
     @Test

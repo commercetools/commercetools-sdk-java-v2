@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * PaymentSetInterfaceIdAction
+ *  <p>This action generates the PaymentInterfaceIdSet Message.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentSetInterfaceIdActionImpl implements PaymentSetInterfaceIdAction, ModelBase {
@@ -51,7 +51,8 @@ public class PaymentSetInterfaceIdActionImpl implements PaymentSetInterfaceIdAct
     }
 
     /**
-     *  <p>Value to set. Once set, the <code>interfaceId</code> cannot be changed.</p>
+     *  <p>Value to set. The combination of <code>interfaceId</code> and <code>paymentInterface</code> of a PaymentMethodInfo must be unique.</p>
+     *  <p>The value cannot be modified after it is set.</p>
      */
 
     public String getInterfaceId() {

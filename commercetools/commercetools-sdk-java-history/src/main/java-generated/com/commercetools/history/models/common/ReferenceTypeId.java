@@ -48,6 +48,8 @@ public interface ReferenceTypeId extends JsonEnum {
 
     ReferenceTypeId ORDER_EDIT = ReferenceTypeIdEnum.ORDER_EDIT;
 
+    ReferenceTypeId PAYMENT_METHOD = ReferenceTypeIdEnum.PAYMENT_METHOD;
+
     ReferenceTypeId PAYMENT = ReferenceTypeIdEnum.PAYMENT;
 
     ReferenceTypeId PRODUCT = ReferenceTypeIdEnum.PRODUCT;
@@ -165,6 +167,11 @@ public interface ReferenceTypeId extends JsonEnum {
          * order-edit
          */
         ORDER_EDIT("order-edit"),
+
+        /**
+         * payment-method
+         */
+        PAYMENT_METHOD("payment-method"),
 
         /**
          * payment

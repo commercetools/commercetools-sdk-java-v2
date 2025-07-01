@@ -176,6 +176,13 @@ public class BaseResourceQueryBuilderDsl {
             BaseResourceQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<BaseResourceQueryBuilderDsl> asPaymentMethod(
+            Function<com.commercetools.api.predicates.query.payment_method.PaymentMethodQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.payment_method.PaymentMethodQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.payment_method.PaymentMethodQueryBuilderDsl.of()),
+            BaseResourceQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<BaseResourceQueryBuilderDsl> asProduct(
             Function<com.commercetools.api.predicates.query.product.ProductQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.product.ProductQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

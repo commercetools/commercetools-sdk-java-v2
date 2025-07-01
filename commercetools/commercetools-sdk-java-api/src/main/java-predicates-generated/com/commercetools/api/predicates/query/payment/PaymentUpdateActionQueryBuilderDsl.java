@@ -106,6 +106,35 @@ public class PaymentUpdateActionQueryBuilderDsl {
             PaymentUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<PaymentUpdateActionQueryBuilderDsl> asSetMethodInfo(
+            Function<com.commercetools.api.predicates.query.payment.PaymentSetMethodInfoActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.payment.PaymentSetMethodInfoActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(com.commercetools.api.predicates.query.payment.PaymentSetMethodInfoActionQueryBuilderDsl.of()),
+            PaymentUpdateActionQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<PaymentUpdateActionQueryBuilderDsl> asSetMethodInfoCustomField(
+            Function<com.commercetools.api.predicates.query.payment.PaymentSetMethodInfoCustomFieldActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.payment.PaymentSetMethodInfoCustomFieldActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.payment.PaymentSetMethodInfoCustomFieldActionQueryBuilderDsl.of()),
+            PaymentUpdateActionQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<PaymentUpdateActionQueryBuilderDsl> asSetMethodInfoCustomType(
+            Function<com.commercetools.api.predicates.query.payment.PaymentSetMethodInfoCustomTypeActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.payment.PaymentSetMethodInfoCustomTypeActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.payment.PaymentSetMethodInfoCustomTypeActionQueryBuilderDsl.of()),
+            PaymentUpdateActionQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<PaymentUpdateActionQueryBuilderDsl> asSetMethodInfoInterfaceAccount(
+            Function<com.commercetools.api.predicates.query.payment.PaymentSetMethodInfoInterfaceAccountActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.payment.PaymentSetMethodInfoInterfaceAccountActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.payment.PaymentSetMethodInfoInterfaceAccountActionQueryBuilderDsl
+                    .of()),
+            PaymentUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<PaymentUpdateActionQueryBuilderDsl> asSetMethodInfoInterface(
             Function<com.commercetools.api.predicates.query.payment.PaymentSetMethodInfoInterfaceActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.payment.PaymentSetMethodInfoInterfaceActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
@@ -126,6 +155,14 @@ public class PaymentUpdateActionQueryBuilderDsl {
             Function<com.commercetools.api.predicates.query.payment.PaymentSetMethodInfoNameActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.payment.PaymentSetMethodInfoNameActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
             fn.apply(com.commercetools.api.predicates.query.payment.PaymentSetMethodInfoNameActionQueryBuilderDsl.of()),
+            PaymentUpdateActionQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<PaymentUpdateActionQueryBuilderDsl> asSetMethodInfoToken(
+            Function<com.commercetools.api.predicates.query.payment.PaymentSetMethodInfoTokenActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.payment.PaymentSetMethodInfoTokenActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.payment.PaymentSetMethodInfoTokenActionQueryBuilderDsl.of()),
             PaymentUpdateActionQueryBuilderDsl::of);
     }
 

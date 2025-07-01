@@ -26,9 +26,8 @@ public class PaymentDraftTest {
                 new Object[] { "interfaceId", PaymentDraft.builder().interfaceId("interfaceId") },
                 new Object[] { "amountPlanned",
                         PaymentDraft.builder().amountPlanned(new com.commercetools.api.models.common.MoneyImpl()) },
-                new Object[] { "paymentMethodInfo",
-                        PaymentDraft.builder()
-                                .paymentMethodInfo(new com.commercetools.api.models.payment.PaymentMethodInfoImpl()) },
+                new Object[] { "paymentMethodInfo", PaymentDraft.builder()
+                        .paymentMethodInfo(new com.commercetools.api.models.payment.PaymentMethodInfoDraftImpl()) },
                 new Object[] { "paymentStatus",
                         PaymentDraft.builder()
                                 .paymentStatus(new com.commercetools.api.models.payment.PaymentStatusDraftImpl()) },
@@ -77,9 +76,9 @@ public class PaymentDraftTest {
     @Test
     public void paymentMethodInfo() {
         PaymentDraft value = PaymentDraft.of();
-        value.setPaymentMethodInfo(new com.commercetools.api.models.payment.PaymentMethodInfoImpl());
+        value.setPaymentMethodInfo(new com.commercetools.api.models.payment.PaymentMethodInfoDraftImpl());
         Assertions.assertThat(value.getPaymentMethodInfo())
-                .isEqualTo(new com.commercetools.api.models.payment.PaymentMethodInfoImpl());
+                .isEqualTo(new com.commercetools.api.models.payment.PaymentMethodInfoDraftImpl());
     }
 
     @Test

@@ -30,7 +30,7 @@ public class PaymentDraftImpl implements PaymentDraft, ModelBase {
 
     private com.commercetools.api.models.common.Money amountPlanned;
 
-    private com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo;
+    private com.commercetools.api.models.payment.PaymentMethodInfoDraft paymentMethodInfo;
 
     private com.commercetools.api.models.payment.PaymentStatusDraft paymentStatus;
 
@@ -51,7 +51,7 @@ public class PaymentDraftImpl implements PaymentDraft, ModelBase {
             @JsonProperty("anonymousId") final String anonymousId,
             @JsonProperty("interfaceId") final String interfaceId,
             @JsonProperty("amountPlanned") final com.commercetools.api.models.common.Money amountPlanned,
-            @JsonProperty("paymentMethodInfo") final com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo,
+            @JsonProperty("paymentMethodInfo") final com.commercetools.api.models.payment.PaymentMethodInfoDraft paymentMethodInfo,
             @JsonProperty("paymentStatus") final com.commercetools.api.models.payment.PaymentStatusDraft paymentStatus,
             @JsonProperty("transactions") final java.util.List<com.commercetools.api.models.payment.TransactionDraft> transactions,
             @JsonProperty("interfaceInteractions") final java.util.List<com.commercetools.api.models.type.CustomFieldsDraft> interfaceInteractions,
@@ -111,7 +111,7 @@ public class PaymentDraftImpl implements PaymentDraft, ModelBase {
      *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
      */
 
-    public com.commercetools.api.models.payment.PaymentMethodInfo getPaymentMethodInfo() {
+    public com.commercetools.api.models.payment.PaymentMethodInfoDraft getPaymentMethodInfo() {
         return this.paymentMethodInfo;
     }
 
@@ -171,7 +171,8 @@ public class PaymentDraftImpl implements PaymentDraft, ModelBase {
         this.amountPlanned = amountPlanned;
     }
 
-    public void setPaymentMethodInfo(final com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo) {
+    public void setPaymentMethodInfo(
+            final com.commercetools.api.models.payment.PaymentMethodInfoDraft paymentMethodInfo) {
         this.paymentMethodInfo = paymentMethodInfo;
     }
 

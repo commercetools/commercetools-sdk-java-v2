@@ -157,6 +157,38 @@ public interface PaymentUpdateAction extends com.commercetools.api.models.Resour
     }
 
     /**
+     * builder for setMethodInfo subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.payment.PaymentSetMethodInfoActionBuilder setMethodInfoBuilder() {
+        return com.commercetools.api.models.payment.PaymentSetMethodInfoActionBuilder.of();
+    }
+
+    /**
+     * builder for setMethodInfoCustomField subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.payment.PaymentSetMethodInfoCustomFieldActionBuilder setMethodInfoCustomFieldBuilder() {
+        return com.commercetools.api.models.payment.PaymentSetMethodInfoCustomFieldActionBuilder.of();
+    }
+
+    /**
+     * builder for setMethodInfoCustomType subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.payment.PaymentSetMethodInfoCustomTypeActionBuilder setMethodInfoCustomTypeBuilder() {
+        return com.commercetools.api.models.payment.PaymentSetMethodInfoCustomTypeActionBuilder.of();
+    }
+
+    /**
+     * builder for setMethodInfoInterfaceAccount subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.payment.PaymentSetMethodInfoInterfaceAccountActionBuilder setMethodInfoInterfaceAccountBuilder() {
+        return com.commercetools.api.models.payment.PaymentSetMethodInfoInterfaceAccountActionBuilder.of();
+    }
+
+    /**
      * builder for setMethodInfoInterface subtype
      * @return builder
      */
@@ -178,6 +210,14 @@ public interface PaymentUpdateAction extends com.commercetools.api.models.Resour
      */
     public static com.commercetools.api.models.payment.PaymentSetMethodInfoNameActionBuilder setMethodInfoNameBuilder() {
         return com.commercetools.api.models.payment.PaymentSetMethodInfoNameActionBuilder.of();
+    }
+
+    /**
+     * builder for setMethodInfoToken subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.payment.PaymentSetMethodInfoTokenActionBuilder setMethodInfoTokenBuilder() {
+        return com.commercetools.api.models.payment.PaymentSetMethodInfoTokenActionBuilder.of();
     }
 
     /**

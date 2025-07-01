@@ -32,8 +32,17 @@ public class PaymentMethodInfoBuilder implements Builder<PaymentMethodInfo> {
     @Nullable
     private com.commercetools.api.models.common.LocalizedString name;
 
+    @Nullable
+    private com.commercetools.api.models.payment_method.PaymentMethodToken token;
+
+    @Nullable
+    private String interfaceAccount;
+
+    @Nullable
+    private com.commercetools.api.models.type.CustomFields custom;
+
     /**
-     *  <p>Payment service that processes the Payment (for example, a PSP). Once set, it cannot be changed. The combination of <code>paymentInterface</code> and the <code>interfaceId</code> of a Payment must be unique.</p>
+     *  <p>Payment service that processes the Payment—for example, a PSP. The combination of <code>paymentInterface</code> and the <code>interfaceId</code> of a Payment is unique.</p>
      * @param paymentInterface value to be set
      * @return Builder
      */
@@ -44,7 +53,7 @@ public class PaymentMethodInfoBuilder implements Builder<PaymentMethodInfo> {
     }
 
     /**
-     *  <p>Payment method used, for example, credit card, or cash advance.</p>
+     *  <p>Payment method used—for example, a credit card or cash advance.</p>
      * @param method value to be set
      * @return Builder
      */
@@ -55,7 +64,7 @@ public class PaymentMethodInfoBuilder implements Builder<PaymentMethodInfo> {
     }
 
     /**
-     *  <p>Localizable name of the payment method.</p>
+     *  <p>Name of the Payment Method.</p>
      * @param builder function to build the name value
      * @return Builder
      */
@@ -67,7 +76,7 @@ public class PaymentMethodInfoBuilder implements Builder<PaymentMethodInfo> {
     }
 
     /**
-     *  <p>Localizable name of the payment method.</p>
+     *  <p>Name of the Payment Method.</p>
      * @param builder function to build the name value
      * @return Builder
      */
@@ -79,7 +88,7 @@ public class PaymentMethodInfoBuilder implements Builder<PaymentMethodInfo> {
     }
 
     /**
-     *  <p>Localizable name of the payment method.</p>
+     *  <p>Name of the Payment Method.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -90,7 +99,89 @@ public class PaymentMethodInfoBuilder implements Builder<PaymentMethodInfo> {
     }
 
     /**
-     *  <p>Payment service that processes the Payment (for example, a PSP). Once set, it cannot be changed. The combination of <code>paymentInterface</code> and the <code>interfaceId</code> of a Payment must be unique.</p>
+     *  <p>Tokenized representation of the Payment Method used by the payment interface.</p>
+     * @param builder function to build the token value
+     * @return Builder
+     */
+
+    public PaymentMethodInfoBuilder token(
+            Function<com.commercetools.api.models.payment_method.PaymentMethodTokenBuilder, com.commercetools.api.models.payment_method.PaymentMethodTokenBuilder> builder) {
+        this.token = builder.apply(com.commercetools.api.models.payment_method.PaymentMethodTokenBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Tokenized representation of the Payment Method used by the payment interface.</p>
+     * @param builder function to build the token value
+     * @return Builder
+     */
+
+    public PaymentMethodInfoBuilder withToken(
+            Function<com.commercetools.api.models.payment_method.PaymentMethodTokenBuilder, com.commercetools.api.models.payment_method.PaymentMethodToken> builder) {
+        this.token = builder.apply(com.commercetools.api.models.payment_method.PaymentMethodTokenBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Tokenized representation of the Payment Method used by the payment interface.</p>
+     * @param token value to be set
+     * @return Builder
+     */
+
+    public PaymentMethodInfoBuilder token(
+            @Nullable final com.commercetools.api.models.payment_method.PaymentMethodToken token) {
+        this.token = token;
+        return this;
+    }
+
+    /**
+     *  <p>Account or instance of the payment interface when multiple accounts are used (per interface).</p>
+     * @param interfaceAccount value to be set
+     * @return Builder
+     */
+
+    public PaymentMethodInfoBuilder interfaceAccount(@Nullable final String interfaceAccount) {
+        this.interfaceAccount = interfaceAccount;
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields of the PaymentMethodInfo.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public PaymentMethodInfoBuilder custom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFieldsBuilder> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields of the PaymentMethodInfo.</p>
+     * @param builder function to build the custom value
+     * @return Builder
+     */
+
+    public PaymentMethodInfoBuilder withCustom(
+            Function<com.commercetools.api.models.type.CustomFieldsBuilder, com.commercetools.api.models.type.CustomFields> builder) {
+        this.custom = builder.apply(com.commercetools.api.models.type.CustomFieldsBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Custom Fields of the PaymentMethodInfo.</p>
+     * @param custom value to be set
+     * @return Builder
+     */
+
+    public PaymentMethodInfoBuilder custom(@Nullable final com.commercetools.api.models.type.CustomFields custom) {
+        this.custom = custom;
+        return this;
+    }
+
+    /**
+     *  <p>Payment service that processes the Payment—for example, a PSP. The combination of <code>paymentInterface</code> and the <code>interfaceId</code> of a Payment is unique.</p>
      * @return paymentInterface
      */
 
@@ -100,7 +191,7 @@ public class PaymentMethodInfoBuilder implements Builder<PaymentMethodInfo> {
     }
 
     /**
-     *  <p>Payment method used, for example, credit card, or cash advance.</p>
+     *  <p>Payment method used—for example, a credit card or cash advance.</p>
      * @return method
      */
 
@@ -110,7 +201,7 @@ public class PaymentMethodInfoBuilder implements Builder<PaymentMethodInfo> {
     }
 
     /**
-     *  <p>Localizable name of the payment method.</p>
+     *  <p>Name of the Payment Method.</p>
      * @return name
      */
 
@@ -120,11 +211,41 @@ public class PaymentMethodInfoBuilder implements Builder<PaymentMethodInfo> {
     }
 
     /**
+     *  <p>Tokenized representation of the Payment Method used by the payment interface.</p>
+     * @return token
+     */
+
+    @Nullable
+    public com.commercetools.api.models.payment_method.PaymentMethodToken getToken() {
+        return this.token;
+    }
+
+    /**
+     *  <p>Account or instance of the payment interface when multiple accounts are used (per interface).</p>
+     * @return interfaceAccount
+     */
+
+    @Nullable
+    public String getInterfaceAccount() {
+        return this.interfaceAccount;
+    }
+
+    /**
+     *  <p>Custom Fields of the PaymentMethodInfo.</p>
+     * @return custom
+     */
+
+    @Nullable
+    public com.commercetools.api.models.type.CustomFields getCustom() {
+        return this.custom;
+    }
+
+    /**
      * builds PaymentMethodInfo with checking for non-null required values
      * @return PaymentMethodInfo
      */
     public PaymentMethodInfo build() {
-        return new PaymentMethodInfoImpl(paymentInterface, method, name);
+        return new PaymentMethodInfoImpl(paymentInterface, method, name, token, interfaceAccount, custom);
     }
 
     /**
@@ -132,7 +253,7 @@ public class PaymentMethodInfoBuilder implements Builder<PaymentMethodInfo> {
      * @return PaymentMethodInfo
      */
     public PaymentMethodInfo buildUnchecked() {
-        return new PaymentMethodInfoImpl(paymentInterface, method, name);
+        return new PaymentMethodInfoImpl(paymentInterface, method, name, token, interfaceAccount, custom);
     }
 
     /**
@@ -153,6 +274,9 @@ public class PaymentMethodInfoBuilder implements Builder<PaymentMethodInfo> {
         builder.paymentInterface = template.getPaymentInterface();
         builder.method = template.getMethod();
         builder.name = template.getName();
+        builder.token = template.getToken();
+        builder.interfaceAccount = template.getInterfaceAccount();
+        builder.custom = template.getCustom();
         return builder;
     }
 

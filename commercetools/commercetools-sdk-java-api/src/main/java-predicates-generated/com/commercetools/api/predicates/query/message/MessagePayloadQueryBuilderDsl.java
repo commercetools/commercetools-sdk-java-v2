@@ -876,6 +876,202 @@ public class MessagePayloadQueryBuilderDsl {
             MessagePayloadQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asPaymentInterfaceIdSet(
+            Function<com.commercetools.api.predicates.query.message.PaymentInterfaceIdSetMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.PaymentInterfaceIdSetMessagePayloadQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.message.PaymentInterfaceIdSetMessagePayloadQueryBuilderDsl.of()),
+            MessagePayloadQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asPaymentMethodCreated(
+            Function<com.commercetools.api.predicates.query.message.PaymentMethodCreatedMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.PaymentMethodCreatedMessagePayloadQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.message.PaymentMethodCreatedMessagePayloadQueryBuilderDsl.of()),
+            MessagePayloadQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asPaymentMethodCustomFieldAdded(
+            Function<com.commercetools.api.predicates.query.message.PaymentMethodCustomFieldAddedMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.PaymentMethodCustomFieldAddedMessagePayloadQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.message.PaymentMethodCustomFieldAddedMessagePayloadQueryBuilderDsl
+                    .of()),
+            MessagePayloadQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asPaymentMethodCustomFieldChanged(
+            Function<com.commercetools.api.predicates.query.message.PaymentMethodCustomFieldChangedMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.PaymentMethodCustomFieldChangedMessagePayloadQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.message.PaymentMethodCustomFieldChangedMessagePayloadQueryBuilderDsl
+                    .of()),
+            MessagePayloadQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asPaymentMethodCustomFieldRemoved(
+            Function<com.commercetools.api.predicates.query.message.PaymentMethodCustomFieldRemovedMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.PaymentMethodCustomFieldRemovedMessagePayloadQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.message.PaymentMethodCustomFieldRemovedMessagePayloadQueryBuilderDsl
+                    .of()),
+            MessagePayloadQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asPaymentMethodCustomTypeRemoved(
+            Function<com.commercetools.api.predicates.query.message.PaymentMethodCustomTypeRemovedMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.PaymentMethodCustomTypeRemovedMessagePayloadQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.message.PaymentMethodCustomTypeRemovedMessagePayloadQueryBuilderDsl
+                    .of()),
+            MessagePayloadQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asPaymentMethodCustomTypeSet(
+            Function<com.commercetools.api.predicates.query.message.PaymentMethodCustomTypeSetMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.PaymentMethodCustomTypeSetMessagePayloadQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.message.PaymentMethodCustomTypeSetMessagePayloadQueryBuilderDsl
+                    .of()),
+            MessagePayloadQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asPaymentMethodDefaultSet(
+            Function<com.commercetools.api.predicates.query.message.PaymentMethodDefaultSetMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.PaymentMethodDefaultSetMessagePayloadQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.message.PaymentMethodDefaultSetMessagePayloadQueryBuilderDsl.of()),
+            MessagePayloadQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asPaymentMethodDeleted(
+            Function<com.commercetools.api.predicates.query.message.PaymentMethodDeletedMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.PaymentMethodDeletedMessagePayloadQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.message.PaymentMethodDeletedMessagePayloadQueryBuilderDsl.of()),
+            MessagePayloadQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asPaymentMethodInfoCustomFieldAdded(
+            Function<com.commercetools.api.predicates.query.message.PaymentMethodInfoCustomFieldAddedMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.PaymentMethodInfoCustomFieldAddedMessagePayloadQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.message.PaymentMethodInfoCustomFieldAddedMessagePayloadQueryBuilderDsl
+                    .of()),
+            MessagePayloadQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asPaymentMethodInfoCustomFieldChanged(
+            Function<com.commercetools.api.predicates.query.message.PaymentMethodInfoCustomFieldChangedMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.PaymentMethodInfoCustomFieldChangedMessagePayloadQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.message.PaymentMethodInfoCustomFieldChangedMessagePayloadQueryBuilderDsl
+                    .of()),
+            MessagePayloadQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asPaymentMethodInfoCustomFieldRemoved(
+            Function<com.commercetools.api.predicates.query.message.PaymentMethodInfoCustomFieldRemovedMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.PaymentMethodInfoCustomFieldRemovedMessagePayloadQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.message.PaymentMethodInfoCustomFieldRemovedMessagePayloadQueryBuilderDsl
+                    .of()),
+            MessagePayloadQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asPaymentMethodInfoCustomTypeRemoved(
+            Function<com.commercetools.api.predicates.query.message.PaymentMethodInfoCustomTypeRemovedMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.PaymentMethodInfoCustomTypeRemovedMessagePayloadQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.message.PaymentMethodInfoCustomTypeRemovedMessagePayloadQueryBuilderDsl
+                    .of()),
+            MessagePayloadQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asPaymentMethodInfoCustomTypeSet(
+            Function<com.commercetools.api.predicates.query.message.PaymentMethodInfoCustomTypeSetMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.PaymentMethodInfoCustomTypeSetMessagePayloadQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.message.PaymentMethodInfoCustomTypeSetMessagePayloadQueryBuilderDsl
+                    .of()),
+            MessagePayloadQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asPaymentMethodInfoInterfaceAccountSet(
+            Function<com.commercetools.api.predicates.query.message.PaymentMethodInfoInterfaceAccountSetMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.PaymentMethodInfoInterfaceAccountSetMessagePayloadQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.message.PaymentMethodInfoInterfaceAccountSetMessagePayloadQueryBuilderDsl
+                    .of()),
+            MessagePayloadQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asPaymentMethodInfoInterfaceSet(
+            Function<com.commercetools.api.predicates.query.message.PaymentMethodInfoInterfaceSetMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.PaymentMethodInfoInterfaceSetMessagePayloadQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.message.PaymentMethodInfoInterfaceSetMessagePayloadQueryBuilderDsl
+                    .of()),
+            MessagePayloadQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asPaymentMethodInfoMethodSet(
+            Function<com.commercetools.api.predicates.query.message.PaymentMethodInfoMethodSetMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.PaymentMethodInfoMethodSetMessagePayloadQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.message.PaymentMethodInfoMethodSetMessagePayloadQueryBuilderDsl
+                    .of()),
+            MessagePayloadQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asPaymentMethodInfoNameSet(
+            Function<com.commercetools.api.predicates.query.message.PaymentMethodInfoNameSetMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.PaymentMethodInfoNameSetMessagePayloadQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.message.PaymentMethodInfoNameSetMessagePayloadQueryBuilderDsl.of()),
+            MessagePayloadQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asPaymentMethodInfoTokenSet(
+            Function<com.commercetools.api.predicates.query.message.PaymentMethodInfoTokenSetMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.PaymentMethodInfoTokenSetMessagePayloadQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.message.PaymentMethodInfoTokenSetMessagePayloadQueryBuilderDsl.of()),
+            MessagePayloadQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asPaymentMethodInterfaceAccountSet(
+            Function<com.commercetools.api.predicates.query.message.PaymentMethodInterfaceAccountSetMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.PaymentMethodInterfaceAccountSetMessagePayloadQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.message.PaymentMethodInterfaceAccountSetMessagePayloadQueryBuilderDsl
+                    .of()),
+            MessagePayloadQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asPaymentMethodKeySet(
+            Function<com.commercetools.api.predicates.query.message.PaymentMethodKeySetMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.PaymentMethodKeySetMessagePayloadQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.message.PaymentMethodKeySetMessagePayloadQueryBuilderDsl.of()),
+            MessagePayloadQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asPaymentMethodMethodSet(
+            Function<com.commercetools.api.predicates.query.message.PaymentMethodMethodSetMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.PaymentMethodMethodSetMessagePayloadQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.message.PaymentMethodMethodSetMessagePayloadQueryBuilderDsl.of()),
+            MessagePayloadQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asPaymentMethodNameSet(
+            Function<com.commercetools.api.predicates.query.message.PaymentMethodNameSetMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.PaymentMethodNameSetMessagePayloadQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.message.PaymentMethodNameSetMessagePayloadQueryBuilderDsl.of()),
+            MessagePayloadQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asPaymentMethodPaymentInterfaceSet(
+            Function<com.commercetools.api.predicates.query.message.PaymentMethodPaymentInterfaceSetMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.PaymentMethodPaymentInterfaceSetMessagePayloadQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.message.PaymentMethodPaymentInterfaceSetMessagePayloadQueryBuilderDsl
+                    .of()),
+            MessagePayloadQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asPaymentMethodPaymentMethodStatusSet(
+            Function<com.commercetools.api.predicates.query.message.PaymentMethodPaymentMethodStatusSetMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.PaymentMethodPaymentMethodStatusSetMessagePayloadQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.message.PaymentMethodPaymentMethodStatusSetMessagePayloadQueryBuilderDsl
+                    .of()),
+            MessagePayloadQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<MessagePayloadQueryBuilderDsl> asPaymentStatusInterfaceCodeSet(
             Function<com.commercetools.api.predicates.query.message.PaymentStatusInterfaceCodeSetMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.PaymentStatusInterfaceCodeSetMessagePayloadQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(

@@ -1350,6 +1350,206 @@ public interface MessagePayload extends MessagePayloadMixin {
     }
 
     /**
+     * builder for paymentInterfaceIdSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentInterfaceIdSetMessagePayloadBuilder paymentInterfaceIdSetBuilder() {
+        return com.commercetools.api.models.message.PaymentInterfaceIdSetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodCreated subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodCreatedMessagePayloadBuilder paymentMethodCreatedBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodCreatedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodCustomFieldAdded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodCustomFieldAddedMessagePayloadBuilder paymentMethodCustomFieldAddedBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodCustomFieldAddedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodCustomFieldChanged subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodCustomFieldChangedMessagePayloadBuilder paymentMethodCustomFieldChangedBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodCustomFieldChangedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodCustomFieldRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodCustomFieldRemovedMessagePayloadBuilder paymentMethodCustomFieldRemovedBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodCustomFieldRemovedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodCustomTypeRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodCustomTypeRemovedMessagePayloadBuilder paymentMethodCustomTypeRemovedBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodCustomTypeRemovedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodCustomTypeSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodCustomTypeSetMessagePayloadBuilder paymentMethodCustomTypeSetBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodCustomTypeSetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodDefaultSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodDefaultSetMessagePayloadBuilder paymentMethodDefaultSetBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodDefaultSetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodDeleted subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodDeletedMessagePayloadBuilder paymentMethodDeletedBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodDeletedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodInfoCustomFieldAdded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodInfoCustomFieldAddedMessagePayloadBuilder paymentMethodInfoCustomFieldAddedBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodInfoCustomFieldAddedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodInfoCustomFieldChanged subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodInfoCustomFieldChangedMessagePayloadBuilder paymentMethodInfoCustomFieldChangedBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodInfoCustomFieldChangedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodInfoCustomFieldRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodInfoCustomFieldRemovedMessagePayloadBuilder paymentMethodInfoCustomFieldRemovedBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodInfoCustomFieldRemovedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodInfoCustomTypeRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodInfoCustomTypeRemovedMessagePayloadBuilder paymentMethodInfoCustomTypeRemovedBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodInfoCustomTypeRemovedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodInfoCustomTypeSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodInfoCustomTypeSetMessagePayloadBuilder paymentMethodInfoCustomTypeSetBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodInfoCustomTypeSetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodInfoInterfaceAccountSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodInfoInterfaceAccountSetMessagePayloadBuilder paymentMethodInfoInterfaceAccountSetBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodInfoInterfaceAccountSetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodInfoInterfaceSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodInfoInterfaceSetMessagePayloadBuilder paymentMethodInfoInterfaceSetBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodInfoInterfaceSetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodInfoMethodSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodInfoMethodSetMessagePayloadBuilder paymentMethodInfoMethodSetBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodInfoMethodSetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodInfoNameSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodInfoNameSetMessagePayloadBuilder paymentMethodInfoNameSetBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodInfoNameSetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodInfoTokenSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodInfoTokenSetMessagePayloadBuilder paymentMethodInfoTokenSetBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodInfoTokenSetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodInterfaceAccountSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodInterfaceAccountSetMessagePayloadBuilder paymentMethodInterfaceAccountSetBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodInterfaceAccountSetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodKeySet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodKeySetMessagePayloadBuilder paymentMethodKeySetBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodKeySetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodMethodSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodMethodSetMessagePayloadBuilder paymentMethodMethodSetBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodMethodSetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodNameSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodNameSetMessagePayloadBuilder paymentMethodNameSetBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodNameSetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodPaymentInterfaceSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodPaymentInterfaceSetMessagePayloadBuilder paymentMethodPaymentInterfaceSetBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodPaymentInterfaceSetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for paymentMethodPaymentMethodStatusSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.PaymentMethodPaymentMethodStatusSetMessagePayloadBuilder paymentMethodPaymentMethodStatusSetBuilder() {
+        return com.commercetools.api.models.message.PaymentMethodPaymentMethodStatusSetMessagePayloadBuilder.of();
+    }
+
+    /**
      * builder for paymentStatusInterfaceCodeSet subtype
      * @return builder
      */

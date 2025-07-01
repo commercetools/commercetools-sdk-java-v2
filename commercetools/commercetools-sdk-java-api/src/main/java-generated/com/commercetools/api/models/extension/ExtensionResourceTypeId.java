@@ -26,6 +26,9 @@ public interface ExtensionResourceTypeId extends JsonEnum {
     <p>Extension triggered for operations on Payments.</p> */
     ExtensionResourceTypeId PAYMENT = ExtensionResourceTypeIdEnum.PAYMENT;
     /**
+    <p>Extension triggered for operations on PaymentMethods</p> */
+    ExtensionResourceTypeId PAYMENT_METHOD = ExtensionResourceTypeIdEnum.PAYMENT_METHOD;
+    /**
     <p>Extension triggered for operations on Customers.</p> */
     ExtensionResourceTypeId CUSTOMER = ExtensionResourceTypeIdEnum.CUSTOMER;
     /**
@@ -65,6 +68,11 @@ public interface ExtensionResourceTypeId extends JsonEnum {
          * payment
          */
         PAYMENT("payment"),
+
+        /**
+         * payment-method
+         */
+        PAYMENT_METHOD("payment-method"),
 
         /**
          * customer

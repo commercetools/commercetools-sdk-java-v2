@@ -8,7 +8,7 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.Money;
-import com.commercetools.api.models.payment.PaymentMethodInfo;
+import com.commercetools.api.models.payment.PaymentMethodInfoDraft;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -51,7 +51,7 @@ public interface MyPaymentDraft extends com.commercetools.api.models.Customizabl
      */
     @Valid
     @JsonProperty("paymentMethodInfo")
-    public PaymentMethodInfo getPaymentMethodInfo();
+    public PaymentMethodInfoDraft getPaymentMethodInfo();
 
     /**
      *  <p>Custom Fields for the Payment.</p>
@@ -81,7 +81,7 @@ public interface MyPaymentDraft extends com.commercetools.api.models.Customizabl
      * @param paymentMethodInfo value to be set
      */
 
-    public void setPaymentMethodInfo(final PaymentMethodInfo paymentMethodInfo);
+    public void setPaymentMethodInfo(final PaymentMethodInfoDraft paymentMethodInfo);
 
     /**
      *  <p>Custom Fields for the Payment.</p>
@@ -134,7 +134,7 @@ public interface MyPaymentDraft extends com.commercetools.api.models.Customizabl
         MyPaymentDraftImpl instance = new MyPaymentDraftImpl();
         instance.setAmountPlanned(com.commercetools.api.models.common.Money.deepCopy(template.getAmountPlanned()));
         instance.setPaymentMethodInfo(
-            com.commercetools.api.models.payment.PaymentMethodInfo.deepCopy(template.getPaymentMethodInfo()));
+            com.commercetools.api.models.payment.PaymentMethodInfoDraft.deepCopy(template.getPaymentMethodInfo()));
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         instance.setTransaction(com.commercetools.api.models.me.MyTransactionDraft.deepCopy(template.getTransaction()));
         return instance;

@@ -23,10 +23,12 @@ public class MyPaymentDraftQueryBuilderDsl {
     }
 
     public CombinationQueryPredicate<MyPaymentDraftQueryBuilderDsl> paymentMethodInfo(
-            Function<com.commercetools.api.predicates.query.payment.PaymentMethodInfoQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.payment.PaymentMethodInfoQueryBuilderDsl>> fn) {
-        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
-                .parent(ConstantQueryPredicate.of().constant("paymentMethodInfo"))
-                .inner(fn.apply(com.commercetools.api.predicates.query.payment.PaymentMethodInfoQueryBuilderDsl.of())),
+            Function<com.commercetools.api.predicates.query.payment.PaymentMethodInfoDraftQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.payment.PaymentMethodInfoDraftQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("paymentMethodInfo"))
+                    .inner(fn.apply(
+                        com.commercetools.api.predicates.query.payment.PaymentMethodInfoDraftQueryBuilderDsl.of())),
             MyPaymentDraftQueryBuilderDsl::of);
     }
 

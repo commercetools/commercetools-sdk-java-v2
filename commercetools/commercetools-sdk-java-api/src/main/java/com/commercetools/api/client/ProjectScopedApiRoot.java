@@ -100,5 +100,7 @@ public interface ProjectScopedApiRoot {
 
     ByProjectKeyDiscountGroupsRequestBuilder discountGroups();
 
+    ByProjectKeyPaymentMethodsRequestBuilder paymentMethods();
+
     <R> R with(Function<ProjectApiRoot, R> op);
 }

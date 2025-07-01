@@ -59,6 +59,22 @@ public class PaymentUpdateActionBuilder {
         return com.commercetools.api.models.payment.PaymentSetKeyActionBuilder.of();
     }
 
+    public com.commercetools.api.models.payment.PaymentSetMethodInfoActionBuilder setMethodInfoBuilder() {
+        return com.commercetools.api.models.payment.PaymentSetMethodInfoActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.payment.PaymentSetMethodInfoCustomFieldActionBuilder setMethodInfoCustomFieldBuilder() {
+        return com.commercetools.api.models.payment.PaymentSetMethodInfoCustomFieldActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.payment.PaymentSetMethodInfoCustomTypeActionBuilder setMethodInfoCustomTypeBuilder() {
+        return com.commercetools.api.models.payment.PaymentSetMethodInfoCustomTypeActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.payment.PaymentSetMethodInfoInterfaceAccountActionBuilder setMethodInfoInterfaceAccountBuilder() {
+        return com.commercetools.api.models.payment.PaymentSetMethodInfoInterfaceAccountActionBuilder.of();
+    }
+
     public com.commercetools.api.models.payment.PaymentSetMethodInfoInterfaceActionBuilder setMethodInfoInterfaceBuilder() {
         return com.commercetools.api.models.payment.PaymentSetMethodInfoInterfaceActionBuilder.of();
     }
@@ -69,6 +85,10 @@ public class PaymentUpdateActionBuilder {
 
     public com.commercetools.api.models.payment.PaymentSetMethodInfoNameActionBuilder setMethodInfoNameBuilder() {
         return com.commercetools.api.models.payment.PaymentSetMethodInfoNameActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.payment.PaymentSetMethodInfoTokenActionBuilder setMethodInfoTokenBuilder() {
+        return com.commercetools.api.models.payment.PaymentSetMethodInfoTokenActionBuilder.of();
     }
 
     public com.commercetools.api.models.payment.PaymentSetStatusInterfaceCodeActionBuilder setStatusInterfaceCodeBuilder() {

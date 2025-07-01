@@ -23,6 +23,18 @@ public class MyPaymentUpdateActionBuilder {
         return com.commercetools.api.models.me.MyPaymentSetCustomFieldActionBuilder.of();
     }
 
+    public com.commercetools.api.models.me.MyPaymentSetMethodInfoCustomFieldActionBuilder setMethodInfoCustomFieldBuilder() {
+        return com.commercetools.api.models.me.MyPaymentSetMethodInfoCustomFieldActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.me.MyPaymentSetMethodInfoCustomTypeActionBuilder setMethodInfoCustomTypeBuilder() {
+        return com.commercetools.api.models.me.MyPaymentSetMethodInfoCustomTypeActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.me.MyPaymentSetMethodInfoInterfaceAccountActionBuilder setMethodInfoInterfaceAccountBuilder() {
+        return com.commercetools.api.models.me.MyPaymentSetMethodInfoInterfaceAccountActionBuilder.of();
+    }
+
     public com.commercetools.api.models.me.MyPaymentSetMethodInfoInterfaceActionBuilder setMethodInfoInterfaceBuilder() {
         return com.commercetools.api.models.me.MyPaymentSetMethodInfoInterfaceActionBuilder.of();
     }

@@ -221,6 +221,14 @@ public interface Reference extends ReferenceMixin {
     }
 
     /**
+     * builder for paymentMethod subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.payment_method.PaymentMethodReferenceBuilder paymentMethodBuilder() {
+        return com.commercetools.api.models.payment_method.PaymentMethodReferenceBuilder.of();
+    }
+
+    /**
      * builder for payment subtype
      * @return builder
      */

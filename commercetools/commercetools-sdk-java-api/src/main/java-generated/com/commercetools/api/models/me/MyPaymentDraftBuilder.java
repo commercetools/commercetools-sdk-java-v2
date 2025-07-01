@@ -27,7 +27,7 @@ public class MyPaymentDraftBuilder implements Builder<MyPaymentDraft> {
     private com.commercetools.api.models.common.Money amountPlanned;
 
     @Nullable
-    private com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo;
+    private com.commercetools.api.models.payment.PaymentMethodInfoDraft paymentMethodInfo;
 
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
@@ -77,8 +77,8 @@ public class MyPaymentDraftBuilder implements Builder<MyPaymentDraft> {
      */
 
     public MyPaymentDraftBuilder paymentMethodInfo(
-            Function<com.commercetools.api.models.payment.PaymentMethodInfoBuilder, com.commercetools.api.models.payment.PaymentMethodInfoBuilder> builder) {
-        this.paymentMethodInfo = builder.apply(com.commercetools.api.models.payment.PaymentMethodInfoBuilder.of())
+            Function<com.commercetools.api.models.payment.PaymentMethodInfoDraftBuilder, com.commercetools.api.models.payment.PaymentMethodInfoDraftBuilder> builder) {
+        this.paymentMethodInfo = builder.apply(com.commercetools.api.models.payment.PaymentMethodInfoDraftBuilder.of())
                 .build();
         return this;
     }
@@ -90,8 +90,8 @@ public class MyPaymentDraftBuilder implements Builder<MyPaymentDraft> {
      */
 
     public MyPaymentDraftBuilder withPaymentMethodInfo(
-            Function<com.commercetools.api.models.payment.PaymentMethodInfoBuilder, com.commercetools.api.models.payment.PaymentMethodInfo> builder) {
-        this.paymentMethodInfo = builder.apply(com.commercetools.api.models.payment.PaymentMethodInfoBuilder.of());
+            Function<com.commercetools.api.models.payment.PaymentMethodInfoDraftBuilder, com.commercetools.api.models.payment.PaymentMethodInfoDraft> builder) {
+        this.paymentMethodInfo = builder.apply(com.commercetools.api.models.payment.PaymentMethodInfoDraftBuilder.of());
         return this;
     }
 
@@ -102,7 +102,7 @@ public class MyPaymentDraftBuilder implements Builder<MyPaymentDraft> {
      */
 
     public MyPaymentDraftBuilder paymentMethodInfo(
-            @Nullable final com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo) {
+            @Nullable final com.commercetools.api.models.payment.PaymentMethodInfoDraft paymentMethodInfo) {
         this.paymentMethodInfo = paymentMethodInfo;
         return this;
     }
@@ -193,7 +193,7 @@ public class MyPaymentDraftBuilder implements Builder<MyPaymentDraft> {
      */
 
     @Nullable
-    public com.commercetools.api.models.payment.PaymentMethodInfo getPaymentMethodInfo() {
+    public com.commercetools.api.models.payment.PaymentMethodInfoDraft getPaymentMethodInfo() {
         return this.paymentMethodInfo;
     }
 

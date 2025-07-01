@@ -24,7 +24,7 @@ public class MyPaymentDraftImpl implements MyPaymentDraft, ModelBase {
 
     private com.commercetools.api.models.common.Money amountPlanned;
 
-    private com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo;
+    private com.commercetools.api.models.payment.PaymentMethodInfoDraft paymentMethodInfo;
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
@@ -35,7 +35,7 @@ public class MyPaymentDraftImpl implements MyPaymentDraft, ModelBase {
      */
     @JsonCreator
     MyPaymentDraftImpl(@JsonProperty("amountPlanned") final com.commercetools.api.models.common.Money amountPlanned,
-            @JsonProperty("paymentMethodInfo") final com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo,
+            @JsonProperty("paymentMethodInfo") final com.commercetools.api.models.payment.PaymentMethodInfoDraft paymentMethodInfo,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
             @JsonProperty("transaction") final com.commercetools.api.models.me.MyTransactionDraft transaction) {
         this.amountPlanned = amountPlanned;
@@ -62,7 +62,7 @@ public class MyPaymentDraftImpl implements MyPaymentDraft, ModelBase {
      *  <p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p>
      */
 
-    public com.commercetools.api.models.payment.PaymentMethodInfo getPaymentMethodInfo() {
+    public com.commercetools.api.models.payment.PaymentMethodInfoDraft getPaymentMethodInfo() {
         return this.paymentMethodInfo;
     }
 
@@ -86,7 +86,8 @@ public class MyPaymentDraftImpl implements MyPaymentDraft, ModelBase {
         this.amountPlanned = amountPlanned;
     }
 
-    public void setPaymentMethodInfo(final com.commercetools.api.models.payment.PaymentMethodInfo paymentMethodInfo) {
+    public void setPaymentMethodInfo(
+            final com.commercetools.api.models.payment.PaymentMethodInfoDraft paymentMethodInfo) {
         this.paymentMethodInfo = paymentMethodInfo;
     }
 

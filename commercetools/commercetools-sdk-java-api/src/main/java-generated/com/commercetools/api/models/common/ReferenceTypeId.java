@@ -80,6 +80,9 @@ public interface ReferenceTypeId extends JsonEnum {
     <p>References an Order Edit.</p> */
     ReferenceTypeId ORDER_EDIT = ReferenceTypeIdEnum.ORDER_EDIT;
     /**
+    <p>References a PaymentMethod.</p> */
+    ReferenceTypeId PAYMENT_METHOD = ReferenceTypeIdEnum.PAYMENT_METHOD;
+    /**
     <p>References a Payment.</p> */
     ReferenceTypeId PAYMENT = ReferenceTypeIdEnum.PAYMENT;
     /**
@@ -248,6 +251,11 @@ public interface ReferenceTypeId extends JsonEnum {
          * order-edit
          */
         ORDER_EDIT("order-edit"),
+
+        /**
+         * payment-method
+         */
+        PAYMENT_METHOD("payment-method"),
 
         /**
          * payment

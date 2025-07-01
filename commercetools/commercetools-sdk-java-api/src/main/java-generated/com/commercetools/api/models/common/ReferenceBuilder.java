@@ -83,6 +83,10 @@ public class ReferenceBuilder {
         return com.commercetools.api.models.order.OrderReferenceBuilder.of();
     }
 
+    public com.commercetools.api.models.payment_method.PaymentMethodReferenceBuilder paymentMethodBuilder() {
+        return com.commercetools.api.models.payment_method.PaymentMethodReferenceBuilder.of();
+    }
+
     public com.commercetools.api.models.payment.PaymentReferenceBuilder paymentBuilder() {
         return com.commercetools.api.models.payment.PaymentReferenceBuilder.of();
     }

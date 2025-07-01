@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- * PaymentSetMethodInfoMethodAction
+ *  <p>This action generates the PaymentMethodInfoMethodSet Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

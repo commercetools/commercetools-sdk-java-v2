@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.Valid;
 
 /**
- * PaymentSetMethodInfoNameAction
+ *  <p>This action generates the PaymentMethodInfoNameSet Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

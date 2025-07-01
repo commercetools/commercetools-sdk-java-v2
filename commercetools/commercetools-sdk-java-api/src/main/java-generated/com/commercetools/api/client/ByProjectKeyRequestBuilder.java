@@ -105,6 +105,10 @@ public class ByProjectKeyRequestBuilder {
         return new ByProjectKeyOrdersRequestBuilder(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyPaymentMethodsRequestBuilder paymentMethods() {
+        return new ByProjectKeyPaymentMethodsRequestBuilder(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyPaymentsRequestBuilder payments() {
         return new ByProjectKeyPaymentsRequestBuilder(apiHttpClient, projectKey);
     }

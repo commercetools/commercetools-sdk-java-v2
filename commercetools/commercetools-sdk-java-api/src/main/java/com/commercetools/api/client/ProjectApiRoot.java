@@ -314,6 +314,11 @@ public class ProjectApiRoot implements Closeable, ProjectScopedApiRoot {
     }
 
     @Override
+    public ByProjectKeyPaymentMethodsRequestBuilder paymentMethods() {
+        return with().paymentMethods();
+    }
+
+    @Override
     public <R> R with(Function<ProjectApiRoot, R> op) {
         return op.apply(this);
     }

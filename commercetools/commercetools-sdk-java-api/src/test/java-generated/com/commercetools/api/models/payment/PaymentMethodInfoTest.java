@@ -19,8 +19,15 @@ public class PaymentMethodInfoTest {
         return new Object[][] {
                 new Object[] { "paymentInterface", PaymentMethodInfo.builder().paymentInterface("paymentInterface") },
                 new Object[] { "method", PaymentMethodInfo.builder().method("method") },
-                new Object[] { "name", PaymentMethodInfo.builder()
-                        .name(new com.commercetools.api.models.common.LocalizedStringImpl()) } };
+                new Object[] { "name",
+                        PaymentMethodInfo.builder()
+                                .name(new com.commercetools.api.models.common.LocalizedStringImpl()) },
+                new Object[] { "token",
+                        PaymentMethodInfo.builder()
+                                .token(new com.commercetools.api.models.payment_method.PaymentMethodTokenImpl()) },
+                new Object[] { "interfaceAccount", PaymentMethodInfo.builder().interfaceAccount("interfaceAccount") },
+                new Object[] { "custom", PaymentMethodInfo.builder()
+                        .custom(new com.commercetools.api.models.type.CustomFieldsImpl()) } };
     }
 
     @Test
@@ -42,5 +49,27 @@ public class PaymentMethodInfoTest {
         PaymentMethodInfo value = PaymentMethodInfo.of();
         value.setName(new com.commercetools.api.models.common.LocalizedStringImpl());
         Assertions.assertThat(value.getName()).isEqualTo(new com.commercetools.api.models.common.LocalizedStringImpl());
+    }
+
+    @Test
+    public void token() {
+        PaymentMethodInfo value = PaymentMethodInfo.of();
+        value.setToken(new com.commercetools.api.models.payment_method.PaymentMethodTokenImpl());
+        Assertions.assertThat(value.getToken())
+                .isEqualTo(new com.commercetools.api.models.payment_method.PaymentMethodTokenImpl());
+    }
+
+    @Test
+    public void interfaceAccount() {
+        PaymentMethodInfo value = PaymentMethodInfo.of();
+        value.setInterfaceAccount("interfaceAccount");
+        Assertions.assertThat(value.getInterfaceAccount()).isEqualTo("interfaceAccount");
+    }
+
+    @Test
+    public void custom() {
+        PaymentMethodInfo value = PaymentMethodInfo.of();
+        value.setCustom(new com.commercetools.api.models.type.CustomFieldsImpl());
+        Assertions.assertThat(value.getCustom()).isEqualTo(new com.commercetools.api.models.type.CustomFieldsImpl());
     }
 }

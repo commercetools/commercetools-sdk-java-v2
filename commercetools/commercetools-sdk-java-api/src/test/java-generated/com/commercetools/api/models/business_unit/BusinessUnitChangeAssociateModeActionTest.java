@@ -17,9 +17,13 @@ public class BusinessUnitChangeAssociateModeActionTest {
     }
 
     public static Object[][] objectBuilder() {
-        return new Object[][] { new Object[] { "associateMode", BusinessUnitChangeAssociateModeAction.builder()
-                .associateMode(
-                    com.commercetools.api.models.business_unit.BusinessUnitAssociateMode.findEnum("Explicit")) } };
+        return new Object[][] {
+                new Object[] { "associateMode",
+                        BusinessUnitChangeAssociateModeAction.builder()
+                                .associateMode(com.commercetools.api.models.business_unit.BusinessUnitAssociateMode
+                                        .findEnum("Explicit")) },
+                new Object[] { "makeInheritedAssociatesExplicit",
+                        BusinessUnitChangeAssociateModeAction.builder().makeInheritedAssociatesExplicit(true) } };
     }
 
     @Test
@@ -29,5 +33,12 @@ public class BusinessUnitChangeAssociateModeActionTest {
             com.commercetools.api.models.business_unit.BusinessUnitAssociateMode.findEnum("Explicit"));
         Assertions.assertThat(value.getAssociateMode())
                 .isEqualTo(com.commercetools.api.models.business_unit.BusinessUnitAssociateMode.findEnum("Explicit"));
+    }
+
+    @Test
+    public void makeInheritedAssociatesExplicit() {
+        BusinessUnitChangeAssociateModeAction value = BusinessUnitChangeAssociateModeAction.of();
+        value.setMakeInheritedAssociatesExplicit(true);
+        Assertions.assertThat(value.getMakeInheritedAssociatesExplicit()).isEqualTo(true);
     }
 }

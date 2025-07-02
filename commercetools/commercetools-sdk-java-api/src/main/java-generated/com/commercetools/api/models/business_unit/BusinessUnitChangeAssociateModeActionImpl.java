@@ -26,13 +26,17 @@ public class BusinessUnitChangeAssociateModeActionImpl implements BusinessUnitCh
 
     private com.commercetools.api.models.business_unit.BusinessUnitAssociateMode associateMode;
 
+    private Boolean makeInheritedAssociatesExplicit;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
     BusinessUnitChangeAssociateModeActionImpl(
-            @JsonProperty("associateMode") final com.commercetools.api.models.business_unit.BusinessUnitAssociateMode associateMode) {
+            @JsonProperty("associateMode") final com.commercetools.api.models.business_unit.BusinessUnitAssociateMode associateMode,
+            @JsonProperty("makeInheritedAssociatesExplicit") final Boolean makeInheritedAssociatesExplicit) {
         this.associateMode = associateMode;
+        this.makeInheritedAssociatesExplicit = makeInheritedAssociatesExplicit;
         this.action = CHANGE_ASSOCIATE_MODE;
     }
 
@@ -59,9 +63,21 @@ public class BusinessUnitChangeAssociateModeActionImpl implements BusinessUnitCh
         return this.associateMode;
     }
 
+    /**
+     *  <p>If set to <code>true</code> during a change to <code>associateMode="Explicit"</code>, all inherited Associates will be converted to explicit Associates.</p>
+     */
+
+    public Boolean getMakeInheritedAssociatesExplicit() {
+        return this.makeInheritedAssociatesExplicit;
+    }
+
     public void setAssociateMode(
             final com.commercetools.api.models.business_unit.BusinessUnitAssociateMode associateMode) {
         this.associateMode = associateMode;
+    }
+
+    public void setMakeInheritedAssociatesExplicit(final Boolean makeInheritedAssociatesExplicit) {
+        this.makeInheritedAssociatesExplicit = makeInheritedAssociatesExplicit;
     }
 
     @Override
@@ -76,20 +92,26 @@ public class BusinessUnitChangeAssociateModeActionImpl implements BusinessUnitCh
 
         return new EqualsBuilder().append(action, that.action)
                 .append(associateMode, that.associateMode)
+                .append(makeInheritedAssociatesExplicit, that.makeInheritedAssociatesExplicit)
                 .append(action, that.action)
                 .append(associateMode, that.associateMode)
+                .append(makeInheritedAssociatesExplicit, that.makeInheritedAssociatesExplicit)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(action).append(associateMode).toHashCode();
+        return new HashCodeBuilder(17, 37).append(action)
+                .append(associateMode)
+                .append(makeInheritedAssociatesExplicit)
+                .toHashCode();
     }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("action", action)
                 .append("associateMode", associateMode)
+                .append("makeInheritedAssociatesExplicit", makeInheritedAssociatesExplicit)
                 .build();
     }
 

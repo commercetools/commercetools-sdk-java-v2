@@ -23,6 +23,7 @@ import jakarta.validation.constraints.NotNull;
  * <pre><code class='java'>
  *     BusinessUnitChangeAssociateModeAction businessUnitChangeAssociateModeAction = BusinessUnitChangeAssociateModeAction.builder()
  *             .associateMode(BusinessUnitAssociateMode.EXPLICIT)
+ *             .makeInheritedAssociatesExplicit(true)
  *             .build()
  * </code></pre>
  * </div>
@@ -46,11 +47,26 @@ public interface BusinessUnitChangeAssociateModeAction extends BusinessUnitUpdat
     public BusinessUnitAssociateMode getAssociateMode();
 
     /**
+     *  <p>If set to <code>true</code> during a change to <code>associateMode="Explicit"</code>, all inherited Associates will be converted to explicit Associates.</p>
+     * @return makeInheritedAssociatesExplicit
+     */
+    @NotNull
+    @JsonProperty("makeInheritedAssociatesExplicit")
+    public Boolean getMakeInheritedAssociatesExplicit();
+
+    /**
      *  <p>The new value for <code>associateMode</code>.</p>
      * @param associateMode value to be set
      */
 
     public void setAssociateMode(final BusinessUnitAssociateMode associateMode);
+
+    /**
+     *  <p>If set to <code>true</code> during a change to <code>associateMode="Explicit"</code>, all inherited Associates will be converted to explicit Associates.</p>
+     * @param makeInheritedAssociatesExplicit value to be set
+     */
+
+    public void setMakeInheritedAssociatesExplicit(final Boolean makeInheritedAssociatesExplicit);
 
     /**
      * factory method
@@ -68,6 +84,7 @@ public interface BusinessUnitChangeAssociateModeAction extends BusinessUnitUpdat
     public static BusinessUnitChangeAssociateModeAction of(final BusinessUnitChangeAssociateModeAction template) {
         BusinessUnitChangeAssociateModeActionImpl instance = new BusinessUnitChangeAssociateModeActionImpl();
         instance.setAssociateMode(template.getAssociateMode());
+        instance.setMakeInheritedAssociatesExplicit(template.getMakeInheritedAssociatesExplicit());
         return instance;
     }
 
@@ -86,6 +103,7 @@ public interface BusinessUnitChangeAssociateModeAction extends BusinessUnitUpdat
         }
         BusinessUnitChangeAssociateModeActionImpl instance = new BusinessUnitChangeAssociateModeActionImpl();
         instance.setAssociateMode(template.getAssociateMode());
+        instance.setMakeInheritedAssociatesExplicit(template.getMakeInheritedAssociatesExplicit());
         return instance;
     }
 

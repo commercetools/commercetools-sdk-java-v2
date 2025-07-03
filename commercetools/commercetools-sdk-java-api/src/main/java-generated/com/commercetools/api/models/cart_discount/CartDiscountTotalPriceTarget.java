@@ -13,7 +13,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>Discount is applied to the total price of the Cart. The same percentage of discount applies on the Cart or Order <code>taxedPrice</code>.</p>
+ *  <p>Discount is applied to the total price of the Cart. The same percentage of discount applies on the Cart or Order <code>taxedPrice</code> and <code>taxedShippingPrice</code>.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

@@ -24,10 +24,16 @@ public class ImportContainerTest {
                                 .resourceType(com.commercetools.importapi.models.common.ImportResourceType
                                         .findEnum("category")) },
                 new Object[] { "version", ImportContainer.builder().version(2L) },
+                new Object[] { "retentionPolicy",
+                        ImportContainer.builder()
+                                .retentionPolicy(
+                                    new com.commercetools.importapi.models.importcontainers.RetentionPolicyImpl()) },
                 new Object[] { "createdAt",
                         ImportContainer.builder().createdAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
                 new Object[] { "lastModifiedAt",
-                        ImportContainer.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) } };
+                        ImportContainer.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "expiresAt",
+                        ImportContainer.builder().expiresAt(ZonedDateTime.parse("2023-06-01T12:00Z")) } };
     }
 
     @Test
@@ -53,6 +59,14 @@ public class ImportContainerTest {
     }
 
     @Test
+    public void retentionPolicy() {
+        ImportContainer value = ImportContainer.of();
+        value.setRetentionPolicy(new com.commercetools.importapi.models.importcontainers.RetentionPolicyImpl());
+        Assertions.assertThat(value.getRetentionPolicy())
+                .isEqualTo(new com.commercetools.importapi.models.importcontainers.RetentionPolicyImpl());
+    }
+
+    @Test
     public void createdAt() {
         ImportContainer value = ImportContainer.of();
         value.setCreatedAt(ZonedDateTime.parse("2023-06-01T12:00Z"));
@@ -64,5 +78,12 @@ public class ImportContainerTest {
         ImportContainer value = ImportContainer.of();
         value.setLastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z"));
         Assertions.assertThat(value.getLastModifiedAt()).isEqualTo(ZonedDateTime.parse("2023-06-01T12:00Z"));
+    }
+
+    @Test
+    public void expiresAt() {
+        ImportContainer value = ImportContainer.of();
+        value.setExpiresAt(ZonedDateTime.parse("2023-06-01T12:00Z"));
+        Assertions.assertThat(value.getExpiresAt()).isEqualTo(ZonedDateTime.parse("2023-06-01T12:00Z"));
     }
 }

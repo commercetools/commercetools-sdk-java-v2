@@ -14,6 +14,7 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
@@ -37,7 +38,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ImportContainer {
 
     /**
-     *  <p>User-defined unique identifier for the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
+     *  <p>User-defined unique identifier for the ImportContainer.</p>
      * @return key
      */
     @NotNull
@@ -61,7 +62,15 @@ public interface ImportContainer {
     public Long getVersion();
 
     /**
-     *  <p>The time when the ImportContainer was created.</p>
+     *  <p>The retention policy of the ImportContainer.</p>
+     * @return retentionPolicy
+     */
+    @Valid
+    @JsonProperty("retentionPolicy")
+    public RetentionPolicy getRetentionPolicy();
+
+    /**
+     *  <p>Date and time (UTC) the ImportContainer was initially created.</p>
      * @return createdAt
      */
     @NotNull
@@ -69,7 +78,7 @@ public interface ImportContainer {
     public ZonedDateTime getCreatedAt();
 
     /**
-     *  <p>The last time when the ImportContainer was modified.</p>
+     *  <p>Date and time (UTC) the ImportContainer was last updated.</p>
      * @return lastModifiedAt
      */
     @NotNull
@@ -77,7 +86,15 @@ public interface ImportContainer {
     public ZonedDateTime getLastModifiedAt();
 
     /**
-     *  <p>User-defined unique identifier for the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
+     *  <p>Date and time (UTC) the ImportContainer is automatically deleted. Only present if a <code>retentionPolicy</code> is set. ImportContainers without <code>expiresAt</code> are permanent until manually deleted.</p>
+     * @return expiresAt
+     */
+
+    @JsonProperty("expiresAt")
+    public ZonedDateTime getExpiresAt();
+
+    /**
+     *  <p>User-defined unique identifier for the ImportContainer.</p>
      * @param key value to be set
      */
 
@@ -98,18 +115,32 @@ public interface ImportContainer {
     public void setVersion(final Long version);
 
     /**
-     *  <p>The time when the ImportContainer was created.</p>
+     *  <p>The retention policy of the ImportContainer.</p>
+     * @param retentionPolicy value to be set
+     */
+
+    public void setRetentionPolicy(final RetentionPolicy retentionPolicy);
+
+    /**
+     *  <p>Date and time (UTC) the ImportContainer was initially created.</p>
      * @param createdAt value to be set
      */
 
     public void setCreatedAt(final ZonedDateTime createdAt);
 
     /**
-     *  <p>The last time when the ImportContainer was modified.</p>
+     *  <p>Date and time (UTC) the ImportContainer was last updated.</p>
      * @param lastModifiedAt value to be set
      */
 
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
+
+    /**
+     *  <p>Date and time (UTC) the ImportContainer is automatically deleted. Only present if a <code>retentionPolicy</code> is set. ImportContainers without <code>expiresAt</code> are permanent until manually deleted.</p>
+     * @param expiresAt value to be set
+     */
+
+    public void setExpiresAt(final ZonedDateTime expiresAt);
 
     /**
      * factory method
@@ -129,8 +160,10 @@ public interface ImportContainer {
         instance.setKey(template.getKey());
         instance.setResourceType(template.getResourceType());
         instance.setVersion(template.getVersion());
+        instance.setRetentionPolicy(template.getRetentionPolicy());
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setExpiresAt(template.getExpiresAt());
         return instance;
     }
 
@@ -150,8 +183,11 @@ public interface ImportContainer {
         instance.setKey(template.getKey());
         instance.setResourceType(template.getResourceType());
         instance.setVersion(template.getVersion());
+        instance.setRetentionPolicy(com.commercetools.importapi.models.importcontainers.RetentionPolicy
+                .deepCopy(template.getRetentionPolicy()));
         instance.setCreatedAt(template.getCreatedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setExpiresAt(template.getExpiresAt());
         return instance;
     }
 

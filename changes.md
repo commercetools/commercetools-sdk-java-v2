@@ -217,6 +217,9 @@
 <details>
 <summary>Added Property(s)</summary>
 
+- added property `retentionPolicy` to type `ImportContainer`
+- added property `expiresAt` to type `ImportContainer`
+- added property `retentionPolicy` to type `ImportContainerDraft`
 - added property `attributes` to type `ProductImport`
 - added property `attributes` to type `ProductDraftImport`
 - added property `level` to type `AttributeDefinition`
@@ -226,6 +229,10 @@
 <details>
 <summary>Added Type(s)</summary>
 
+- added type `StrategyEnum`
+- added type `RetentionPolicy`
+- added type `TimeToLiveConfig`
+- added type `TimeToLiveRetentionPolicy`
 - added type `AttributeLevel`
 </details>
 

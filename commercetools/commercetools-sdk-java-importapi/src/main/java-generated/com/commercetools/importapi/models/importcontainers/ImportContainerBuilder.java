@@ -2,6 +2,7 @@
 package com.commercetools.importapi.models.importcontainers;
 
 import java.util.*;
+import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
@@ -33,12 +34,18 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
 
     private Long version;
 
+    @Nullable
+    private com.commercetools.importapi.models.importcontainers.RetentionPolicy retentionPolicy;
+
     private java.time.ZonedDateTime createdAt;
 
     private java.time.ZonedDateTime lastModifiedAt;
 
+    @Nullable
+    private java.time.ZonedDateTime expiresAt;
+
     /**
-     *  <p>User-defined unique identifier for the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
+     *  <p>User-defined unique identifier for the ImportContainer.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -72,7 +79,33 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
     }
 
     /**
-     *  <p>The time when the ImportContainer was created.</p>
+     *  <p>The retention policy of the ImportContainer.</p>
+     * @param retentionPolicy value to be set
+     * @return Builder
+     */
+
+    public ImportContainerBuilder retentionPolicy(
+            @Nullable final com.commercetools.importapi.models.importcontainers.RetentionPolicy retentionPolicy) {
+        this.retentionPolicy = retentionPolicy;
+        return this;
+    }
+
+    /**
+     *  <p>The retention policy of the ImportContainer.</p>
+     * @param builder function to build the retentionPolicy value
+     * @return Builder
+     */
+
+    public ImportContainerBuilder retentionPolicy(
+            Function<com.commercetools.importapi.models.importcontainers.RetentionPolicyBuilder, Builder<? extends com.commercetools.importapi.models.importcontainers.RetentionPolicy>> builder) {
+        this.retentionPolicy = builder
+                .apply(com.commercetools.importapi.models.importcontainers.RetentionPolicyBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>Date and time (UTC) the ImportContainer was initially created.</p>
      * @param createdAt value to be set
      * @return Builder
      */
@@ -83,7 +116,7 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
     }
 
     /**
-     *  <p>The last time when the ImportContainer was modified.</p>
+     *  <p>Date and time (UTC) the ImportContainer was last updated.</p>
      * @param lastModifiedAt value to be set
      * @return Builder
      */
@@ -94,7 +127,18 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
     }
 
     /**
-     *  <p>User-defined unique identifier for the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
+     *  <p>Date and time (UTC) the ImportContainer is automatically deleted. Only present if a <code>retentionPolicy</code> is set. ImportContainers without <code>expiresAt</code> are permanent until manually deleted.</p>
+     * @param expiresAt value to be set
+     * @return Builder
+     */
+
+    public ImportContainerBuilder expiresAt(@Nullable final java.time.ZonedDateTime expiresAt) {
+        this.expiresAt = expiresAt;
+        return this;
+    }
+
+    /**
+     *  <p>User-defined unique identifier for the ImportContainer.</p>
      * @return key
      */
 
@@ -122,7 +166,17 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
     }
 
     /**
-     *  <p>The time when the ImportContainer was created.</p>
+     *  <p>The retention policy of the ImportContainer.</p>
+     * @return retentionPolicy
+     */
+
+    @Nullable
+    public com.commercetools.importapi.models.importcontainers.RetentionPolicy getRetentionPolicy() {
+        return this.retentionPolicy;
+    }
+
+    /**
+     *  <p>Date and time (UTC) the ImportContainer was initially created.</p>
      * @return createdAt
      */
 
@@ -131,12 +185,22 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
     }
 
     /**
-     *  <p>The last time when the ImportContainer was modified.</p>
+     *  <p>Date and time (UTC) the ImportContainer was last updated.</p>
      * @return lastModifiedAt
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
         return this.lastModifiedAt;
+    }
+
+    /**
+     *  <p>Date and time (UTC) the ImportContainer is automatically deleted. Only present if a <code>retentionPolicy</code> is set. ImportContainers without <code>expiresAt</code> are permanent until manually deleted.</p>
+     * @return expiresAt
+     */
+
+    @Nullable
+    public java.time.ZonedDateTime getExpiresAt() {
+        return this.expiresAt;
     }
 
     /**
@@ -148,7 +212,8 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
         Objects.requireNonNull(version, ImportContainer.class + ": version is missing");
         Objects.requireNonNull(createdAt, ImportContainer.class + ": createdAt is missing");
         Objects.requireNonNull(lastModifiedAt, ImportContainer.class + ": lastModifiedAt is missing");
-        return new ImportContainerImpl(key, resourceType, version, createdAt, lastModifiedAt);
+        return new ImportContainerImpl(key, resourceType, version, retentionPolicy, createdAt, lastModifiedAt,
+            expiresAt);
     }
 
     /**
@@ -156,7 +221,8 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
      * @return ImportContainer
      */
     public ImportContainer buildUnchecked() {
-        return new ImportContainerImpl(key, resourceType, version, createdAt, lastModifiedAt);
+        return new ImportContainerImpl(key, resourceType, version, retentionPolicy, createdAt, lastModifiedAt,
+            expiresAt);
     }
 
     /**
@@ -177,8 +243,10 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
         builder.key = template.getKey();
         builder.resourceType = template.getResourceType();
         builder.version = template.getVersion();
+        builder.retentionPolicy = template.getRetentionPolicy();
         builder.createdAt = template.getCreatedAt();
         builder.lastModifiedAt = template.getLastModifiedAt();
+        builder.expiresAt = template.getExpiresAt();
         return builder;
     }
 

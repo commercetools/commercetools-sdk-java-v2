@@ -26,14 +26,18 @@ public class ImportContainerDraftImpl implements ImportContainerDraft, ModelBase
 
     private com.commercetools.importapi.models.common.ImportResourceType resourceType;
 
+    private com.commercetools.importapi.models.importcontainers.RetentionPolicy retentionPolicy;
+
     /**
      * create instance with all properties
      */
     @JsonCreator
     ImportContainerDraftImpl(@JsonProperty("key") final String key,
-            @JsonProperty("resourceType") final com.commercetools.importapi.models.common.ImportResourceType resourceType) {
+            @JsonProperty("resourceType") final com.commercetools.importapi.models.common.ImportResourceType resourceType,
+            @JsonProperty("retentionPolicy") final com.commercetools.importapi.models.importcontainers.RetentionPolicy retentionPolicy) {
         this.key = key;
         this.resourceType = resourceType;
+        this.retentionPolicy = retentionPolicy;
     }
 
     /**
@@ -43,7 +47,7 @@ public class ImportContainerDraftImpl implements ImportContainerDraft, ModelBase
     }
 
     /**
-     *  <p>User-defined unique identifier of the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p>
+     *  <p>User-defined unique identifier of the ImportContainer.</p>
      */
 
     public String getKey() {
@@ -58,12 +62,25 @@ public class ImportContainerDraftImpl implements ImportContainerDraft, ModelBase
         return this.resourceType;
     }
 
+    /**
+     *  <p>Set a retention policy to automatically delete the ImportContainer after a defined period.</p>
+     */
+
+    public com.commercetools.importapi.models.importcontainers.RetentionPolicy getRetentionPolicy() {
+        return this.retentionPolicy;
+    }
+
     public void setKey(final String key) {
         this.key = key;
     }
 
     public void setResourceType(final com.commercetools.importapi.models.common.ImportResourceType resourceType) {
         this.resourceType = resourceType;
+    }
+
+    public void setRetentionPolicy(
+            final com.commercetools.importapi.models.importcontainers.RetentionPolicy retentionPolicy) {
+        this.retentionPolicy = retentionPolicy;
     }
 
     @Override
@@ -78,20 +95,23 @@ public class ImportContainerDraftImpl implements ImportContainerDraft, ModelBase
 
         return new EqualsBuilder().append(key, that.key)
                 .append(resourceType, that.resourceType)
+                .append(retentionPolicy, that.retentionPolicy)
                 .append(key, that.key)
                 .append(resourceType, that.resourceType)
+                .append(retentionPolicy, that.retentionPolicy)
                 .isEquals();
     }
 
     @Override
     public int hashCode() {
-        return new HashCodeBuilder(17, 37).append(key).append(resourceType).toHashCode();
+        return new HashCodeBuilder(17, 37).append(key).append(resourceType).append(retentionPolicy).toHashCode();
     }
 
     @Override
     public String toString() {
         return new ToStringBuilder(this, ToStringStyle.SHORT_PREFIX_STYLE).append("key", key)
                 .append("resourceType", resourceType)
+                .append("retentionPolicy", retentionPolicy)
                 .build();
     }
 

@@ -17,9 +17,14 @@ public class ImportContainerDraftTest {
 
     public static Object[][] objectBuilder() {
         return new Object[][] { new Object[] { "key", ImportContainerDraft.builder().key("key") },
-                new Object[] { "resourceType", ImportContainerDraft.builder()
-                        .resourceType(
-                            com.commercetools.importapi.models.common.ImportResourceType.findEnum("category")) } };
+                new Object[] { "resourceType",
+                        ImportContainerDraft.builder()
+                                .resourceType(com.commercetools.importapi.models.common.ImportResourceType
+                                        .findEnum("category")) },
+                new Object[] { "retentionPolicy",
+                        ImportContainerDraft.builder()
+                                .retentionPolicy(
+                                    new com.commercetools.importapi.models.importcontainers.RetentionPolicyImpl()) } };
     }
 
     @Test
@@ -35,5 +40,13 @@ public class ImportContainerDraftTest {
         value.setResourceType(com.commercetools.importapi.models.common.ImportResourceType.findEnum("category"));
         Assertions.assertThat(value.getResourceType())
                 .isEqualTo(com.commercetools.importapi.models.common.ImportResourceType.findEnum("category"));
+    }
+
+    @Test
+    public void retentionPolicy() {
+        ImportContainerDraft value = ImportContainerDraft.of();
+        value.setRetentionPolicy(new com.commercetools.importapi.models.importcontainers.RetentionPolicyImpl());
+        Assertions.assertThat(value.getRetentionPolicy())
+                .isEqualTo(new com.commercetools.importapi.models.importcontainers.RetentionPolicyImpl());
     }
 }

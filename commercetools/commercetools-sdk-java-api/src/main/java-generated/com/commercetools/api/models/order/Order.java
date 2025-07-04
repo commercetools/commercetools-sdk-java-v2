@@ -191,7 +191,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
      *   <li>For <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
      *   <li>For <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
      *  </ul>
-     *  <p>If a discount applies on <code>totalPrice</code>, this field holds the discounted values.</p>
+     *  <p>If a discount applies on <code>totalPrice</code>, this field holds the proportionally discounted value.</p>
      * @return taxedPrice
      */
     @Valid
@@ -200,6 +200,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *  <p>Sum of the <code>taxedPrice</code> field of ShippingInfo across all Shipping Methods.</p>
+     *  <p>If a discount applies on <code>totalPrice</code>, this field holds the proportionally discounted value.</p>
      * @return taxedShippingPrice
      */
     @Valid
@@ -632,7 +633,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
      *   <li>For <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
      *   <li>For <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
      *  </ul>
-     *  <p>If a discount applies on <code>totalPrice</code>, this field holds the discounted values.</p>
+     *  <p>If a discount applies on <code>totalPrice</code>, this field holds the proportionally discounted value.</p>
      * @param taxedPrice value to be set
      */
 
@@ -640,6 +641,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
 
     /**
      *  <p>Sum of the <code>taxedPrice</code> field of ShippingInfo across all Shipping Methods.</p>
+     *  <p>If a discount applies on <code>totalPrice</code>, this field holds the proportionally discounted value.</p>
      * @param taxedShippingPrice value to be set
      */
 

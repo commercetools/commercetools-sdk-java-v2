@@ -34,7 +34,7 @@ import jakarta.validation.constraints.NotNull;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PaymentDraftImpl.class)
-public interface PaymentDraft extends com.commercetools.api.models.CustomizableDraft<PaymentDraft>,
+public interface PaymentDraft extends PaymentDraftMixin, com.commercetools.api.models.CustomizableDraft<PaymentDraft>,
         com.commercetools.api.models.WithKey, io.vrap.rmf.base.client.Draft<PaymentDraft> {
 
     /**

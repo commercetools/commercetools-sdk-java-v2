@@ -424,7 +424,9 @@ types:
           return com.commercetools.api.models.common.ReferenceTypeId.PAYMENT;
       }
   PaymentDraft:
-    (java-extends): 'com.commercetools.api.models.CustomizableDraft<PaymentDraft>, com.commercetools.api.models.WithKey'
+    (java-extends): 'PaymentDraftMixin, com.commercetools.api.models.CustomizableDraft<PaymentDraft>, com.commercetools.api.models.WithKey'
+  PaymentMethodInfo:
+    (java-extends): 'PaymentMethodInfoMixin'
   PaymentPagedQueryResponse:
     (java-extends): 'com.commercetools.api.models.ResourcePagedQueryResponse<Payment>'
   PaymentReference:

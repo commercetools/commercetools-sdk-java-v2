@@ -33,7 +33,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     private java.util.List<com.commercetools.importapi.models.order_patches.DeliveryParcelDraft> parcels;
 
     /**
-     * set values to the items
+     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each Parcel.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -44,7 +44,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     * set value to the items
+     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each Parcel.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -56,7 +56,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     * add values to the items
+     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each Parcel.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -70,7 +70,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     * add the value to the items using the builder function
+     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each Parcel.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -85,7 +85,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     * set the value to the items using the builder function
+     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each Parcel.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -98,7 +98,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     * add the value to the items using the builder function
+     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each Parcel.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -109,7 +109,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     * set the value to the items using the builder function
+     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each Parcel.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -120,7 +120,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     * set the value to the address using the builder function
+     *  <p>Address to which the Parcels are delivered.</p>
      * @param builder function to build the address value
      * @return Builder
      */
@@ -132,7 +132,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     * set the value to the address using the builder function
+     *  <p>Address to which the Parcels are delivered.</p>
      * @param builder function to build the address value
      * @return Builder
      */
@@ -144,7 +144,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     * set the value to the address
+     *  <p>Address to which the Parcels are delivered.</p>
      * @param address value to be set
      * @return Builder
      */
@@ -155,7 +155,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     * set values to the parcels
+     *  <p>Information regarding the appearance, content, and shipment of a parcel.</p>
      * @param parcels value to be set
      * @return Builder
      */
@@ -167,7 +167,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     * set value to the parcels
+     *  <p>Information regarding the appearance, content, and shipment of a parcel.</p>
      * @param parcels value to be set
      * @return Builder
      */
@@ -179,7 +179,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     * add values to the parcels
+     *  <p>Information regarding the appearance, content, and shipment of a parcel.</p>
      * @param parcels value to be set
      * @return Builder
      */
@@ -194,7 +194,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     * add the value to the parcels using the builder function
+     *  <p>Information regarding the appearance, content, and shipment of a parcel.</p>
      * @param builder function to build the parcels value
      * @return Builder
      */
@@ -210,7 +210,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     * set the value to the parcels using the builder function
+     *  <p>Information regarding the appearance, content, and shipment of a parcel.</p>
      * @param builder function to build the parcels value
      * @return Builder
      */
@@ -224,7 +224,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     * add the value to the parcels using the builder function
+     *  <p>Information regarding the appearance, content, and shipment of a parcel.</p>
      * @param builder function to build the parcels value
      * @return Builder
      */
@@ -236,7 +236,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     * set the value to the parcels using the builder function
+     *  <p>Information regarding the appearance, content, and shipment of a parcel.</p>
      * @param builder function to build the parcels value
      * @return Builder
      */
@@ -247,7 +247,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     * value of items}
+     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each Parcel.</p>
      * @return items
      */
 
@@ -256,7 +256,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     * value of address}
+     *  <p>Address to which the Parcels are delivered.</p>
      * @return address
      */
 
@@ -266,7 +266,7 @@ public class DeliveryDraftBuilder implements Builder<DeliveryDraft> {
     }
 
     /**
-     * value of parcels}
+     *  <p>Information regarding the appearance, content, and shipment of a parcel.</p>
      * @return parcels
      */
 

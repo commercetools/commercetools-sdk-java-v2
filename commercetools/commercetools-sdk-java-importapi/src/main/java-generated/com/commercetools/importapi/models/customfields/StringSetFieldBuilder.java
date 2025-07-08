@@ -24,7 +24,7 @@ public class StringSetFieldBuilder implements Builder<StringSetField> {
     private java.util.List<String> value;
 
     /**
-     * set values to the value
+     *  <p>JSON array of strings. The order of items in the array is not fixed.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class StringSetFieldBuilder implements Builder<StringSetField> {
     }
 
     /**
-     * set value to the value
+     *  <p>JSON array of strings. The order of items in the array is not fixed.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -46,7 +46,7 @@ public class StringSetFieldBuilder implements Builder<StringSetField> {
     }
 
     /**
-     * add values to the value
+     *  <p>JSON array of strings. The order of items in the array is not fixed.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -60,7 +60,7 @@ public class StringSetFieldBuilder implements Builder<StringSetField> {
     }
 
     /**
-     * value of value}
+     *  <p>JSON array of strings. The order of items in the array is not fixed.</p>
      * @return value
      */
 

@@ -48,7 +48,7 @@ public class DeliveryParcelDraftImpl implements DeliveryParcelDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Information about the dimensions for the Parcel.</p>
      */
 
     public com.commercetools.importapi.models.orders.ParcelMeasurements getMeasurements() {
@@ -56,7 +56,7 @@ public class DeliveryParcelDraftImpl implements DeliveryParcelDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Shipment tracking information for the Parcel.</p>
      */
 
     public com.commercetools.importapi.models.orders.TrackingData getTrackingData() {
@@ -64,7 +64,7 @@ public class DeliveryParcelDraftImpl implements DeliveryParcelDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.orders.DeliveryItem> getItems() {

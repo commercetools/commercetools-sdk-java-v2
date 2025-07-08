@@ -51,7 +51,7 @@ public class StringFieldImpl implements StringField, ModelBase {
     }
 
     /**
-     *
+     *  <p>A text value.</p>
      */
 
     public String getValue() {

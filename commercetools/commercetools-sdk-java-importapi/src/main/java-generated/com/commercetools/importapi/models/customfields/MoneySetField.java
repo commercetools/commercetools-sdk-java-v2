@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 import javax.annotation.Nullable;
 
-import com.commercetools.importapi.models.common.Money;
+import com.commercetools.importapi.models.common.TypedMoney;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
 
@@ -41,28 +41,28 @@ public interface MoneySetField extends CustomField {
     String MONEY_SET = "MoneySet";
 
     /**
-     *
+     *  <p>JSON array of money values in cent precision format. The order of items in the array is not fixed.</p>
      * @return value
      */
     @NotNull
     @Valid
     @JsonProperty("value")
-    public List<Money> getValue();
+    public List<TypedMoney> getValue();
 
     /**
-     * set value
+     *  <p>JSON array of money values in cent precision format. The order of items in the array is not fixed.</p>
      * @param value values to be set
      */
 
     @JsonIgnore
-    public void setValue(final Money... value);
+    public void setValue(final TypedMoney... value);
 
     /**
-     * set value
+     *  <p>JSON array of money values in cent precision format. The order of items in the array is not fixed.</p>
      * @param value values to be set
      */
 
-    public void setValue(final List<Money> value);
+    public void setValue(final List<TypedMoney> value);
 
     /**
      * factory method
@@ -98,7 +98,7 @@ public interface MoneySetField extends CustomField {
         MoneySetFieldImpl instance = new MoneySetFieldImpl();
         instance.setValue(Optional.ofNullable(template.getValue())
                 .map(t -> t.stream()
-                        .map(com.commercetools.importapi.models.common.Money::deepCopy)
+                        .map(com.commercetools.importapi.models.common.TypedMoney::deepCopy)
                         .collect(Collectors.toList()))
                 .orElse(null));
         return instance;

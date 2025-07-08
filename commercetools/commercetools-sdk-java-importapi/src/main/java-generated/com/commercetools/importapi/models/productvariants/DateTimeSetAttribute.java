@@ -39,7 +39,7 @@ public interface DateTimeSetAttribute extends Attribute {
     String DATETIME_SET = "datetime-set";
 
     /**
-     *
+     *  <p>A set of dates with time in the format <code>YYYY-MM-DDTHH:mm:ss.SSSZ</code>. The time zone is optional and defaults to UTC if not specified. If the time zone is specified, it must be in the format <code>±HH:mm</code> or <code>Z</code> for UTC.</p>
      * @return value
      */
     @NotNull
@@ -47,7 +47,7 @@ public interface DateTimeSetAttribute extends Attribute {
     public List<ZonedDateTime> getValue();
 
     /**
-     * set value
+     *  <p>A set of dates with time in the format <code>YYYY-MM-DDTHH:mm:ss.SSSZ</code>. The time zone is optional and defaults to UTC if not specified. If the time zone is specified, it must be in the format <code>±HH:mm</code> or <code>Z</code> for UTC.</p>
      * @param value values to be set
      */
 
@@ -55,7 +55,7 @@ public interface DateTimeSetAttribute extends Attribute {
     public void setValue(final ZonedDateTime... value);
 
     /**
-     * set value
+     *  <p>A set of dates with time in the format <code>YYYY-MM-DDTHH:mm:ss.SSSZ</code>. The time zone is optional and defaults to UTC if not specified. If the time zone is specified, it must be in the format <code>±HH:mm</code> or <code>Z</code> for UTC.</p>
      * @param value values to be set
      */
 

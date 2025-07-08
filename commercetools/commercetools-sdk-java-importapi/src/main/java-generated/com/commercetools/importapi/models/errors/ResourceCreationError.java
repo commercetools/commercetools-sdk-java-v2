@@ -36,7 +36,7 @@ public interface ResourceCreationError extends ErrorObject {
     String RESOURCE_CREATION = "ResourceCreation";
 
     /**
-     *
+     *  <p>The resource that was created.</p>
      * @return resource
      */
 
@@ -44,7 +44,7 @@ public interface ResourceCreationError extends ErrorObject {
     public Object getResource();
 
     /**
-     * set resource
+     *  <p>The resource that was created.</p>
      * @param resource value to be set
      */
 

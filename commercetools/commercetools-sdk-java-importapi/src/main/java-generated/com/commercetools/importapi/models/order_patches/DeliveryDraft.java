@@ -37,7 +37,7 @@ import jakarta.validation.constraints.NotNull;
 public interface DeliveryDraft extends io.vrap.rmf.base.client.Draft<DeliveryDraft> {
 
     /**
-     *
+     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each Parcel.</p>
      * @return items
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface DeliveryDraft extends io.vrap.rmf.base.client.Draft<DeliveryDra
     public List<DeliveryItem> getItems();
 
     /**
-     *
+     *  <p>Address to which the Parcels are delivered.</p>
      * @return address
      */
     @Valid
@@ -54,7 +54,7 @@ public interface DeliveryDraft extends io.vrap.rmf.base.client.Draft<DeliveryDra
     public Address getAddress();
 
     /**
-     *
+     *  <p>Information regarding the appearance, content, and shipment of a parcel.</p>
      * @return parcels
      */
     @NotNull
@@ -63,7 +63,7 @@ public interface DeliveryDraft extends io.vrap.rmf.base.client.Draft<DeliveryDra
     public List<DeliveryParcelDraft> getParcels();
 
     /**
-     * set items
+     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each Parcel.</p>
      * @param items values to be set
      */
 
@@ -71,21 +71,21 @@ public interface DeliveryDraft extends io.vrap.rmf.base.client.Draft<DeliveryDra
     public void setItems(final DeliveryItem... items);
 
     /**
-     * set items
+     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each Parcel.</p>
      * @param items values to be set
      */
 
     public void setItems(final List<DeliveryItem> items);
 
     /**
-     * set address
+     *  <p>Address to which the Parcels are delivered.</p>
      * @param address value to be set
      */
 
     public void setAddress(final Address address);
 
     /**
-     * set parcels
+     *  <p>Information regarding the appearance, content, and shipment of a parcel.</p>
      * @param parcels values to be set
      */
 
@@ -93,7 +93,7 @@ public interface DeliveryDraft extends io.vrap.rmf.base.client.Draft<DeliveryDra
     public void setParcels(final DeliveryParcelDraft... parcels);
 
     /**
-     * set parcels
+     *  <p>Information regarding the appearance, content, and shipment of a parcel.</p>
      * @param parcels values to be set
      */
 

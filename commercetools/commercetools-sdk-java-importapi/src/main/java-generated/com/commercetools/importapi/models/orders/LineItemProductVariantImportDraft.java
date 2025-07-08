@@ -36,7 +36,7 @@ public interface LineItemProductVariantImportDraft
         extends io.vrap.rmf.base.client.Draft<LineItemProductVariantImportDraft> {
 
     /**
-     *  <p>Maps to <code>ProductVariant.product</code>.</p>
+     *  <p>Maps to <code>ProductVariant.product</code>. If the referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced ProductVariant is created.</p>
      * @return productVariant
      */
     @Valid
@@ -76,7 +76,7 @@ public interface LineItemProductVariantImportDraft
     public List<Image> getImages();
 
     /**
-     *  <p>Maps to <code>ProductVariant.product</code>.</p>
+     *  <p>Maps to <code>ProductVariant.product</code>. If the referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced ProductVariant is created.</p>
      * @param productVariant value to be set
      */
 

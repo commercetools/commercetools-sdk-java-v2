@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Creates a new Import Container.</p>
+ *  <p>Creates an Import Container in the Project.</p>
  *  <p>Generates the ImportContainerCreated Event.</p>
  *
  * <hr>

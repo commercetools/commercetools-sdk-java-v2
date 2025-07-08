@@ -28,7 +28,7 @@ public class OrderPatchImportBuilder implements Builder<OrderPatchImport> {
     private com.commercetools.importapi.models.order_patches.OrderField fields;
 
     /**
-     *  <p>Maps to <code>Order.orderNumber</code>, String that uniquely identifies an order, unique across a project.</p>
+     *  <p>User-defined unique identifier. If an Order with this <code>orderNumber</code> exists, it is updated with the imported data.</p>
      * @param orderNumber value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class OrderPatchImportBuilder implements Builder<OrderPatchImport> {
     }
 
     /**
-     *  <p>Each field referenced must be defined in an already existing order in the project or the import operation state is set to <code>validationFailed</code>.</p>
+     *  <p>Each field referenced must be defined in an existing Order or the ImportOperationState is set to <code>validationFailed</code>.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class OrderPatchImportBuilder implements Builder<OrderPatchImport> {
     }
 
     /**
-     *  <p>Each field referenced must be defined in an already existing order in the project or the import operation state is set to <code>validationFailed</code>.</p>
+     *  <p>Each field referenced must be defined in an existing Order or the ImportOperationState is set to <code>validationFailed</code>.</p>
      * @param builder function to build the fields value
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class OrderPatchImportBuilder implements Builder<OrderPatchImport> {
     }
 
     /**
-     *  <p>Each field referenced must be defined in an already existing order in the project or the import operation state is set to <code>validationFailed</code>.</p>
+     *  <p>Each field referenced must be defined in an existing Order or the ImportOperationState is set to <code>validationFailed</code>.</p>
      * @param fields value to be set
      * @return Builder
      */
@@ -74,7 +74,7 @@ public class OrderPatchImportBuilder implements Builder<OrderPatchImport> {
     }
 
     /**
-     *  <p>Maps to <code>Order.orderNumber</code>, String that uniquely identifies an order, unique across a project.</p>
+     *  <p>User-defined unique identifier. If an Order with this <code>orderNumber</code> exists, it is updated with the imported data.</p>
      * @return orderNumber
      */
 
@@ -83,7 +83,7 @@ public class OrderPatchImportBuilder implements Builder<OrderPatchImport> {
     }
 
     /**
-     *  <p>Each field referenced must be defined in an already existing order in the project or the import operation state is set to <code>validationFailed</code>.</p>
+     *  <p>Each field referenced must be defined in an existing Order or the ImportOperationState is set to <code>validationFailed</code>.</p>
      * @return fields
      */
 

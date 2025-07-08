@@ -51,7 +51,7 @@ public class NumberFieldImpl implements NumberField, ModelBase {
     }
 
     /**
-     *
+     *  <p>A number value. Can be an integer or a floating-point number.</p>
      */
 
     public Double getValue() {

@@ -21,7 +21,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Retrieves all ImportOperations of a given ImportContainer key.</p>
+ *  <p>Retrieves all ImportOperations within an ImportContainer.</p>
  *
  * <hr>
  * <div class=code-example>

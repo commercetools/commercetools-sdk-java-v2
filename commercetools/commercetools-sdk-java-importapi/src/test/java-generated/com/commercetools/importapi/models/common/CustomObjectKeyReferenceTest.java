@@ -16,8 +16,15 @@ public class CustomObjectKeyReferenceTest {
     }
 
     public static Object[][] objectBuilder() {
-        return new Object[][] {
+        return new Object[][] { new Object[] { "key", CustomObjectKeyReference.builder().key("key") },
                 new Object[] { "container", CustomObjectKeyReference.builder().container("container") } };
+    }
+
+    @Test
+    public void key() {
+        CustomObjectKeyReference value = CustomObjectKeyReference.of();
+        value.setKey("key");
+        Assertions.assertThat(value.getKey()).isEqualTo("key");
     }
 
     @Test

@@ -35,7 +35,7 @@ import jakarta.validation.constraints.NotNull;
 public interface TaxPortion {
 
     /**
-     *
+     *  <p>Name of the tax portion.</p>
      * @return name
      */
 
@@ -43,7 +43,7 @@ public interface TaxPortion {
     public String getName();
 
     /**
-     *
+     *  <p>A number in the range 0-1.</p>
      * @return rate
      */
     @NotNull
@@ -51,7 +51,7 @@ public interface TaxPortion {
     public Double getRate();
 
     /**
-     *
+     *  <p>Money value of the tax portion.</p>
      * @return amount
      */
     @NotNull
@@ -60,21 +60,21 @@ public interface TaxPortion {
     public TypedMoney getAmount();
 
     /**
-     * set name
+     *  <p>Name of the tax portion.</p>
      * @param name value to be set
      */
 
     public void setName(final String name);
 
     /**
-     * set rate
+     *  <p>A number in the range 0-1.</p>
      * @param rate value to be set
      */
 
     public void setRate(final Double rate);
 
     /**
-     * set amount
+     *  <p>Money value of the tax portion.</p>
      * @param amount value to be set
      */
 

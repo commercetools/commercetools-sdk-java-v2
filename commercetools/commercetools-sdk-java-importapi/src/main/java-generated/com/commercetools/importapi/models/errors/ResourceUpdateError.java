@@ -36,7 +36,7 @@ public interface ResourceUpdateError extends ErrorObject {
     String RESOURCE_UPDATE = "ResourceUpdate";
 
     /**
-     *
+     *  <p>The resource that was updated.</p>
      * @return resource
      */
 
@@ -44,7 +44,7 @@ public interface ResourceUpdateError extends ErrorObject {
     public Object getResource();
 
     /**
-     * set resource
+     *  <p>The resource that was updated.</p>
      * @param resource value to be set
      */
 

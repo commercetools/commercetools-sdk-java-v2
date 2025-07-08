@@ -24,7 +24,7 @@ public class NumberFieldBuilder implements Builder<NumberField> {
     private Double value;
 
     /**
-     * set the value to the value
+     *  <p>A number value. Can be an integer or a floating-point number.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class NumberFieldBuilder implements Builder<NumberField> {
     }
 
     /**
-     * value of value}
+     *  <p>A number value. Can be an integer or a floating-point number.</p>
      * @return value
      */
 

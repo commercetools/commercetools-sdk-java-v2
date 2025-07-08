@@ -33,7 +33,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ReturnItemDraft extends io.vrap.rmf.base.client.Draft<ReturnItemDraft> {
 
     /**
-     *
+     *  <p>Number of Line Items or Custom Line Items to return.</p>
      * @return quantity
      */
     @NotNull
@@ -41,7 +41,8 @@ public interface ReturnItemDraft extends io.vrap.rmf.base.client.Draft<ReturnIte
     public Long getQuantity();
 
     /**
-     *
+     *  <p><code>id</code> of the LineItem to return.</p>
+     *  <p>Required if Line Items are returned, to create a LineItemReturnItem.</p>
      * @return lineItemId
      */
 
@@ -49,7 +50,8 @@ public interface ReturnItemDraft extends io.vrap.rmf.base.client.Draft<ReturnIte
     public String getLineItemId();
 
     /**
-     *
+     *  <p><code>id</code> of the CustomLineItem to return.</p>
+     *  <p>Required if Custom Line Items are returned, to create a CustomLineItemReturnItem.</p>
      * @return customLineItemId
      */
 
@@ -57,7 +59,7 @@ public interface ReturnItemDraft extends io.vrap.rmf.base.client.Draft<ReturnIte
     public String getCustomLineItemId();
 
     /**
-     *
+     *  <p>User-defined description for the return.</p>
      * @return comment
      */
 
@@ -65,7 +67,7 @@ public interface ReturnItemDraft extends io.vrap.rmf.base.client.Draft<ReturnIte
     public String getComment();
 
     /**
-     *  <p>Maps to <code>ReturnItem.shipmentState</code></p>
+     *  <p>Shipment status of the item to be returned.</p>
      * @return shipmentState
      */
     @NotNull
@@ -73,35 +75,37 @@ public interface ReturnItemDraft extends io.vrap.rmf.base.client.Draft<ReturnIte
     public ReturnShipmentState getShipmentState();
 
     /**
-     * set quantity
+     *  <p>Number of Line Items or Custom Line Items to return.</p>
      * @param quantity value to be set
      */
 
     public void setQuantity(final Long quantity);
 
     /**
-     * set lineItemId
+     *  <p><code>id</code> of the LineItem to return.</p>
+     *  <p>Required if Line Items are returned, to create a LineItemReturnItem.</p>
      * @param lineItemId value to be set
      */
 
     public void setLineItemId(final String lineItemId);
 
     /**
-     * set customLineItemId
+     *  <p><code>id</code> of the CustomLineItem to return.</p>
+     *  <p>Required if Custom Line Items are returned, to create a CustomLineItemReturnItem.</p>
      * @param customLineItemId value to be set
      */
 
     public void setCustomLineItemId(final String customLineItemId);
 
     /**
-     * set comment
+     *  <p>User-defined description for the return.</p>
      * @param comment value to be set
      */
 
     public void setComment(final String comment);
 
     /**
-     *  <p>Maps to <code>ReturnItem.shipmentState</code></p>
+     *  <p>Shipment status of the item to be returned.</p>
      * @param shipmentState value to be set
      */
 

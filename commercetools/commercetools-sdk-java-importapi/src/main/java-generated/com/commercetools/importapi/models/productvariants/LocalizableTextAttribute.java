@@ -40,12 +40,7 @@ public interface LocalizableTextAttribute extends Attribute {
     String LTEXT = "ltext";
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>A localized string.</p>
      * @return value
      */
     @NotNull
@@ -54,12 +49,7 @@ public interface LocalizableTextAttribute extends Attribute {
     public LocalizedString getValue();
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>A localized string.</p>
      * @param value value to be set
      */
 

@@ -55,7 +55,7 @@ public class DeliveryImpl implements Delivery, ModelBase {
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Delivery.</p>
      */
 
     public String getId() {
@@ -63,7 +63,7 @@ public class DeliveryImpl implements Delivery, ModelBase {
     }
 
     /**
-     *
+     *  <p>Date and time (UTC) the Delivery was created.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -71,7 +71,7 @@ public class DeliveryImpl implements Delivery, ModelBase {
     }
 
     /**
-     *
+     *  <p>Line Items or Custom Line Items that are delivered.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.orders.DeliveryItem> getItems() {
@@ -79,7 +79,7 @@ public class DeliveryImpl implements Delivery, ModelBase {
     }
 
     /**
-     *
+     *  <p>Information regarding the appearance, content, and shipment of a Parcel.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.orders.Parcel> getParcels() {
@@ -87,7 +87,7 @@ public class DeliveryImpl implements Delivery, ModelBase {
     }
 
     /**
-     *
+     *  <p>Address to which Parcels are delivered.</p>
      */
 
     public com.commercetools.importapi.models.common.Address getAddress() {

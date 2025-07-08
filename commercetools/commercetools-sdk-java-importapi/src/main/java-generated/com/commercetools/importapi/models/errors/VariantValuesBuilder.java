@@ -33,7 +33,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     private java.util.List<com.commercetools.importapi.models.productvariants.Attribute> attributes;
 
     /**
-     * set the value to the sku
+     *  <p>The SKU of the Product Variant.</p>
      * @param sku value to be set
      * @return Builder
      */
@@ -200,7 +200,7 @@ public class VariantValuesBuilder implements Builder<VariantValues> {
     }
 
     /**
-     * value of sku}
+     *  <p>The SKU of the Product Variant.</p>
      * @return sku
      */
 

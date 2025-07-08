@@ -38,7 +38,7 @@ public interface NumberAttribute extends Attribute {
     String NUMBER = "number";
 
     /**
-     *
+     *  <p>A number value. Can be an integer or a floating-point number.</p>
      * @return value
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface NumberAttribute extends Attribute {
     public Double getValue();
 
     /**
-     * set value
+     *  <p>A number value. Can be an integer or a floating-point number.</p>
      * @param value value to be set
      */
 

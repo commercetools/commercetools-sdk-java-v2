@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Representation for an update of an Order. Use this type to import updates for existing Orders in a Project.</p>
+ *  <p>Represents the data used to update an Order in a Project.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OrderPatchImportImpl implements OrderPatchImport, ModelBase {
@@ -43,7 +43,7 @@ public class OrderPatchImportImpl implements OrderPatchImport, ModelBase {
     }
 
     /**
-     *  <p>Maps to <code>Order.orderNumber</code>, String that uniquely identifies an order, unique across a project.</p>
+     *  <p>User-defined unique identifier. If an Order with this <code>orderNumber</code> exists, it is updated with the imported data.</p>
      */
 
     public String getOrderNumber() {
@@ -51,7 +51,7 @@ public class OrderPatchImportImpl implements OrderPatchImport, ModelBase {
     }
 
     /**
-     *  <p>Each field referenced must be defined in an already existing order in the project or the import operation state is set to <code>validationFailed</code>.</p>
+     *  <p>Each field referenced must be defined in an existing Order or the ImportOperationState is set to <code>validationFailed</code>.</p>
      */
 
     public com.commercetools.importapi.models.order_patches.OrderField getFields() {

@@ -47,7 +47,7 @@ public class ShippingRateDraftImpl implements ShippingRateDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Currency amount of the ShippingRate.</p>
      */
 
     public com.commercetools.importapi.models.common.Money getPrice() {
@@ -55,7 +55,7 @@ public class ShippingRateDraftImpl implements ShippingRateDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Free shipping is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
      */
 
     public com.commercetools.importapi.models.common.Money getFreeAbove() {
@@ -63,7 +63,7 @@ public class ShippingRateDraftImpl implements ShippingRateDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Price tiers for the ShippingRate.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.orders.ShippingRatePriceTier> getTiers() {

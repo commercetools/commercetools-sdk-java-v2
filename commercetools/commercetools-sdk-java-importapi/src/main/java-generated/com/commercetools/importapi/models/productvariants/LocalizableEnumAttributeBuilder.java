@@ -29,7 +29,8 @@ public class LocalizableEnumAttributeBuilder implements Builder<LocalizableEnumA
     private String value;
 
     /**
-     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     *  <p>Required if used for ProductVariantImport. Must not be set if used for ProductVariantPatch.</p>
+     *  <p>Must match <code>name</code> of an AttributeDefinition of the Product Type.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -40,7 +41,7 @@ public class LocalizableEnumAttributeBuilder implements Builder<LocalizableEnumA
     }
 
     /**
-     * set the value to the value
+     *  <p>The key of the localized enum value. Must match the key of an AttributeLocalizedEnumValue in the Product Type.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -51,7 +52,8 @@ public class LocalizableEnumAttributeBuilder implements Builder<LocalizableEnumA
     }
 
     /**
-     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     *  <p>Required if used for ProductVariantImport. Must not be set if used for ProductVariantPatch.</p>
+     *  <p>Must match <code>name</code> of an AttributeDefinition of the Product Type.</p>
      * @return name
      */
 
@@ -61,7 +63,7 @@ public class LocalizableEnumAttributeBuilder implements Builder<LocalizableEnumA
     }
 
     /**
-     * value of value}
+     *  <p>The key of the localized enum value. Must match the key of an AttributeLocalizedEnumValue in the Product Type.</p>
      * @return value
      */
 

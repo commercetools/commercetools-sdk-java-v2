@@ -60,7 +60,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     private com.commercetools.importapi.models.customfields.Custom custom;
 
     /**
-     *  <p>User-defined unique identifier. If a Category with this <code>key</code> exists, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If a Category with this <code>key</code> exists, it is updated with the imported data.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -106,7 +106,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     *  <p>Maps to <code>Category.slug</code>. Must match the pattern <code>[-a-zA-Z0-9_]{2,256}</code>.</p>
+     *  <p>Maps to <code>Category.slug</code>. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
      * @param builder function to build the slug value
      * @return Builder
      */
@@ -118,7 +118,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     *  <p>Maps to <code>Category.slug</code>. Must match the pattern <code>[-a-zA-Z0-9_]{2,256}</code>.</p>
+     *  <p>Maps to <code>Category.slug</code>. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
      * @param builder function to build the slug value
      * @return Builder
      */
@@ -130,7 +130,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     *  <p>Maps to <code>Category.slug</code>. Must match the pattern <code>[-a-zA-Z0-9_]{2,256}</code>.</p>
+     *  <p>Maps to <code>Category.slug</code>. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
      * @param slug value to be set
      * @return Builder
      */
@@ -177,7 +177,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     *  <p>Maps to <code>Category.parent</code>. The Reference to the parent Category with which the Category is associated. If referenced Category does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Category is created.</p>
+     *  <p>Maps to <code>Category.parent</code>. If the referenced Category does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Category is created.</p>
      * @param builder function to build the parent value
      * @return Builder
      */
@@ -189,7 +189,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     *  <p>Maps to <code>Category.parent</code>. The Reference to the parent Category with which the Category is associated. If referenced Category does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Category is created.</p>
+     *  <p>Maps to <code>Category.parent</code>. If the referenced Category does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Category is created.</p>
      * @param builder function to build the parent value
      * @return Builder
      */
@@ -201,7 +201,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     *  <p>Maps to <code>Category.parent</code>. The Reference to the parent Category with which the Category is associated. If referenced Category does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Category is created.</p>
+     *  <p>Maps to <code>Category.parent</code>. If the referenced Category does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Category is created.</p>
      * @param parent value to be set
      * @return Builder
      */
@@ -432,7 +432,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     *  <p>The custom fields for this Category.</p>
+     *  <p>Maps to <code>Category.custom</code>.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -444,7 +444,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     *  <p>The custom fields for this Category.</p>
+     *  <p>Maps to <code>Category.custom</code>.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -456,7 +456,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     *  <p>The custom fields for this Category.</p>
+     *  <p>Maps to <code>Category.custom</code>.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -467,7 +467,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     *  <p>User-defined unique identifier. If a Category with this <code>key</code> exists, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If a Category with this <code>key</code> exists, it is updated with the imported data.</p>
      * @return key
      */
 
@@ -485,7 +485,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     *  <p>Maps to <code>Category.slug</code>. Must match the pattern <code>[-a-zA-Z0-9_]{2,256}</code>.</p>
+     *  <p>Maps to <code>Category.slug</code>. Must match the pattern <code>^[A-Za-z0-9_-]{2,256}+$</code>.</p>
      * @return slug
      */
 
@@ -504,7 +504,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     *  <p>Maps to <code>Category.parent</code>. The Reference to the parent Category with which the Category is associated. If referenced Category does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Category is created.</p>
+     *  <p>Maps to <code>Category.parent</code>. If the referenced Category does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Category is created.</p>
      * @return parent
      */
 
@@ -574,7 +574,7 @@ public class CategoryImportBuilder implements Builder<CategoryImport> {
     }
 
     /**
-     *  <p>The custom fields for this Category.</p>
+     *  <p>Maps to <code>Category.custom</code>.</p>
      * @return custom
      */
 

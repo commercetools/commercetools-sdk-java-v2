@@ -38,7 +38,7 @@ public interface NumberSetField extends CustomField {
     String NUMBER_SET = "NumberSet";
 
     /**
-     *
+     *  <p>JSON array of integer or floating-point number values. The order of items in the array is not fixed.</p>
      * @return value
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface NumberSetField extends CustomField {
     public List<Double> getValue();
 
     /**
-     * set value
+     *  <p>JSON array of integer or floating-point number values. The order of items in the array is not fixed.</p>
      * @param value values to be set
      */
 
@@ -54,7 +54,7 @@ public interface NumberSetField extends CustomField {
     public void setValue(final Double... value);
 
     /**
-     * set value
+     *  <p>JSON array of integer or floating-point number values. The order of items in the array is not fixed.</p>
      * @param value values to be set
      */
 

@@ -33,7 +33,7 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
     private java.time.ZonedDateTime syncedAt;
 
     /**
-     *  <p>Maps to <code>SyncInfo.channel</code></p>
+     *  <p>Maps to <code>SyncInfo.channel</code>. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      * @param builder function to build the channel value
      * @return Builder
      */
@@ -45,7 +45,7 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
     }
 
     /**
-     *  <p>Maps to <code>SyncInfo.channel</code></p>
+     *  <p>Maps to <code>SyncInfo.channel</code>. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      * @param builder function to build the channel value
      * @return Builder
      */
@@ -57,7 +57,7 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
     }
 
     /**
-     *  <p>Maps to <code>SyncInfo.channel</code></p>
+     *  <p>Maps to <code>SyncInfo.channel</code>. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      * @param channel value to be set
      * @return Builder
      */
@@ -90,7 +90,7 @@ public class SyncInfoBuilder implements Builder<SyncInfo> {
     }
 
     /**
-     *  <p>Maps to <code>SyncInfo.channel</code></p>
+     *  <p>Maps to <code>SyncInfo.channel</code>. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      * @return channel
      */
 

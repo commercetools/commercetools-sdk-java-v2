@@ -40,7 +40,7 @@ public class ResourceUpdateErrorBuilder implements Builder<ResourceUpdateError> 
     }
 
     /**
-     * set the value to the resource
+     *  <p>The resource that was updated.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -60,7 +60,7 @@ public class ResourceUpdateErrorBuilder implements Builder<ResourceUpdateError> 
     }
 
     /**
-     * value of resource}
+     *  <p>The resource that was updated.</p>
      * @return resource
      */
 

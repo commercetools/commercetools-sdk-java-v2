@@ -37,7 +37,7 @@ import jakarta.validation.constraints.NotNull;
 public interface DeliveryParcel {
 
     /**
-     *
+     *  <p>Unique identifier of the Delivery.</p>
      * @return deliveryId
      */
     @NotNull
@@ -45,7 +45,7 @@ public interface DeliveryParcel {
     public String getDeliveryId();
 
     /**
-     *
+     *  <p>Information about the dimensions of the Parcel.</p>
      * @return measurements
      */
     @Valid
@@ -53,7 +53,7 @@ public interface DeliveryParcel {
     public ParcelMeasurements getMeasurements();
 
     /**
-     *
+     *  <p>Shipment tracking information of the Parcel.</p>
      * @return trackingData
      */
     @Valid
@@ -61,7 +61,7 @@ public interface DeliveryParcel {
     public TrackingData getTrackingData();
 
     /**
-     *
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      * @return items
      */
     @Valid
@@ -69,28 +69,28 @@ public interface DeliveryParcel {
     public List<DeliveryItem> getItems();
 
     /**
-     * set deliveryId
+     *  <p>Unique identifier of the Delivery.</p>
      * @param deliveryId value to be set
      */
 
     public void setDeliveryId(final String deliveryId);
 
     /**
-     * set measurements
+     *  <p>Information about the dimensions of the Parcel.</p>
      * @param measurements value to be set
      */
 
     public void setMeasurements(final ParcelMeasurements measurements);
 
     /**
-     * set trackingData
+     *  <p>Shipment tracking information of the Parcel.</p>
      * @param trackingData value to be set
      */
 
     public void setTrackingData(final TrackingData trackingData);
 
     /**
-     * set items
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      * @param items values to be set
      */
 
@@ -98,7 +98,7 @@ public interface DeliveryParcel {
     public void setItems(final DeliveryItem... items);
 
     /**
-     * set items
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      * @param items values to be set
      */
 

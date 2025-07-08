@@ -35,7 +35,7 @@ import jakarta.validation.constraints.NotNull;
 public interface CustomerAddress {
 
     /**
-     *  <p>User-defined identifier for the address. Must follow the pattern <code>[a-zA-Z0-9_\-]{2,256}</code> and must be unique per customer.</p>
+     *  <p>User-defined identifier for the address. Must be unique per customer.</p>
      * @return key
      */
     @NotNull
@@ -235,7 +235,7 @@ public interface CustomerAddress {
     public Custom getCustom();
 
     /**
-     *  <p>User-defined identifier for the address. Must follow the pattern <code>[a-zA-Z0-9_\-]{2,256}</code> and must be unique per customer.</p>
+     *  <p>User-defined identifier for the address. Must be unique per customer.</p>
      * @param key value to be set
      */
 

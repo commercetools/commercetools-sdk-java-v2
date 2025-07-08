@@ -24,7 +24,7 @@ public class OrderKeyReferenceBuilder implements Builder<OrderKeyReference> {
     private String key;
 
     /**
-     * set the value to the key
+     *  <p>User-defined unique identifier of the referenced resource. If the referenced resource does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced resource is created.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class OrderKeyReferenceBuilder implements Builder<OrderKeyReference> {
     }
 
     /**
-     * value of key}
+     *  <p>User-defined unique identifier of the referenced resource. If the referenced resource does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced resource is created.</p>
      * @return key
      */
 

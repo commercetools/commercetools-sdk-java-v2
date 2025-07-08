@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>References a product variant by key.</p>
+ *  <p>Used by the Import API to identify a ProductVariant.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantKeyReferenceImpl implements ProductVariantKeyReference, ModelBase {
@@ -43,7 +43,7 @@ public class ProductVariantKeyReferenceImpl implements ProductVariantKeyReferenc
     }
 
     /**
-     *
+     *  <p>User-defined unique identifier of the referenced ProductVariant.</p>
      */
 
     public String getKey() {
@@ -51,7 +51,7 @@ public class ProductVariantKeyReferenceImpl implements ProductVariantKeyReferenc
     }
 
     /**
-     *  <p>The type of the referenced resource.</p>
+     *  <p>Type of referenced resource.</p>
      */
 
     public com.commercetools.importapi.models.common.ReferenceType getTypeId() {

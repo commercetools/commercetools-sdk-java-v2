@@ -51,7 +51,7 @@ public class TimeFieldImpl implements TimeField, ModelBase {
     }
 
     /**
-     *
+     *  <p>A time value in the format <code>HH:mm:ss.SSS</code>. The time zone is optional and defaults to UTC if not specified. If the time zone is specified, it must be in the format <code>±HH:mm</code> or <code>Z</code> for UTC.</p>
      */
 
     public java.time.LocalTime getValue() {

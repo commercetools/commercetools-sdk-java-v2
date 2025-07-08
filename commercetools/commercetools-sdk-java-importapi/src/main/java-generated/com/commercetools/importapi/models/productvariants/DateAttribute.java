@@ -39,7 +39,7 @@ public interface DateAttribute extends Attribute {
     String DATE = "date";
 
     /**
-     *
+     *  <p>A date in the format <code>YYYY-MM-DD</code>.</p>
      * @return value
      */
     @NotNull
@@ -47,7 +47,7 @@ public interface DateAttribute extends Attribute {
     public LocalDate getValue();
 
     /**
-     * set value
+     *  <p>A date in the format <code>YYYY-MM-DD</code>.</p>
      * @param value value to be set
      */
 

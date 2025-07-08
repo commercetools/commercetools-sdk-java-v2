@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>The representation sent to the server when creating an ImportContainer.</p>
+ *  <p>The representation sent to the server to create an ImportContainer.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -42,7 +42,7 @@ public interface ImportContainerDraft extends io.vrap.rmf.base.client.Draft<Impo
     public String getKey();
 
     /**
-     *  <p>The resource type to be imported. If not given, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
+     *  <p>The resource type the ImportContainer will accept. If not specified, the ImportContainer can import all of the supported ImportResourceTypes.</p>
      * @return resourceType
      */
 
@@ -65,7 +65,7 @@ public interface ImportContainerDraft extends io.vrap.rmf.base.client.Draft<Impo
     public void setKey(final String key);
 
     /**
-     *  <p>The resource type to be imported. If not given, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
+     *  <p>The resource type the ImportContainer will accept. If not specified, the ImportContainer can import all of the supported ImportResourceTypes.</p>
      * @param resourceType value to be set
      */
 

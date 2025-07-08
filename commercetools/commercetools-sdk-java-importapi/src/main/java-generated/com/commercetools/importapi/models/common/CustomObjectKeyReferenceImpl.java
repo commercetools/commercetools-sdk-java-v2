@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>References a key value document by key.</p>
+ *  <p>Used by the Import API to identify a CustomObject.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CustomObjectKeyReferenceImpl implements CustomObjectKeyReference, ModelBase {
@@ -47,7 +47,7 @@ public class CustomObjectKeyReferenceImpl implements CustomObjectKeyReference, M
     }
 
     /**
-     *
+     *  <p>User-defined unique identifier of the referenced CustomObject.</p>
      */
 
     public String getKey() {
@@ -55,7 +55,7 @@ public class CustomObjectKeyReferenceImpl implements CustomObjectKeyReference, M
     }
 
     /**
-     *  <p>The type of the referenced resource.</p>
+     *  <p>Type of referenced resource.</p>
      */
 
     public com.commercetools.importapi.models.common.ReferenceType getTypeId() {
@@ -63,7 +63,7 @@ public class CustomObjectKeyReferenceImpl implements CustomObjectKeyReference, M
     }
 
     /**
-     *
+     *  <p>The <code>container</code> of the referenced CustomObject.</p>
      */
 
     public String getContainer() {

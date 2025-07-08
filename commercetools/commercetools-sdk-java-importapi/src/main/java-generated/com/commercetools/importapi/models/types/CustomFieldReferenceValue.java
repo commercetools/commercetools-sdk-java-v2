@@ -16,34 +16,50 @@ import io.vrap.rmf.base.client.utils.Generated;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface CustomFieldReferenceValue extends JsonEnum {
 
+    /**
+    <p>AssociateRole</p> */
     CustomFieldReferenceValue ASSOCIATE_ROLE = CustomFieldReferenceValueEnum.ASSOCIATE_ROLE;
-
+    /**
+    <p>BusinessUnit</p> */
     CustomFieldReferenceValue BUSINESS_UNIT = CustomFieldReferenceValueEnum.BUSINESS_UNIT;
-
+    /**
+    <p>Cart</p> */
     CustomFieldReferenceValue CART = CustomFieldReferenceValueEnum.CART;
-
+    /**
+    <p>Category</p> */
     CustomFieldReferenceValue CATEGORY = CustomFieldReferenceValueEnum.CATEGORY;
-
+    /**
+    <p>Channel</p> */
     CustomFieldReferenceValue CHANNEL = CustomFieldReferenceValueEnum.CHANNEL;
-
+    /**
+    <p>Customer</p> */
     CustomFieldReferenceValue CUSTOMER = CustomFieldReferenceValueEnum.CUSTOMER;
-
+    /**
+    <p>CustomerGroup</p> */
     CustomFieldReferenceValue CUSTOMER_GROUP = CustomFieldReferenceValueEnum.CUSTOMER_GROUP;
-
+    /**
+    <p>CustomObject</p> */
     CustomFieldReferenceValue KEY_VALUE_DOCUMENT = CustomFieldReferenceValueEnum.KEY_VALUE_DOCUMENT;
-
+    /**
+    <p>Order</p> */
     CustomFieldReferenceValue ORDER = CustomFieldReferenceValueEnum.ORDER;
-
+    /**
+    <p>Product</p> */
     CustomFieldReferenceValue PRODUCT = CustomFieldReferenceValueEnum.PRODUCT;
-
+    /**
+    <p>ProductType</p> */
     CustomFieldReferenceValue PRODUCT_TYPE = CustomFieldReferenceValueEnum.PRODUCT_TYPE;
-
+    /**
+    <p>Review</p> */
     CustomFieldReferenceValue REVIEW = CustomFieldReferenceValueEnum.REVIEW;
-
+    /**
+    <p>State</p> */
     CustomFieldReferenceValue STATE = CustomFieldReferenceValueEnum.STATE;
-
+    /**
+    <p>ShippingMethod</p> */
     CustomFieldReferenceValue SHIPPING_METHOD = CustomFieldReferenceValueEnum.SHIPPING_METHOD;
-
+    /**
+    <p>Zone</p> */
     CustomFieldReferenceValue ZONE = CustomFieldReferenceValueEnum.ZONE;
 
     /**

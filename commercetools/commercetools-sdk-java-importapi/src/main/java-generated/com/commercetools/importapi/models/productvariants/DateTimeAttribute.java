@@ -39,7 +39,7 @@ public interface DateTimeAttribute extends Attribute {
     String DATETIME = "datetime";
 
     /**
-     *
+     *  <p>A date with time in the format <code>YYYY-MM-DDTHH:mm:ss.SSSZ</code>. The time zone is optional and defaults to UTC if not specified. If the time zone is specified, it must be in the format <code>±HH:mm</code> or <code>Z</code> for UTC.</p>
      * @return value
      */
     @NotNull
@@ -47,7 +47,7 @@ public interface DateTimeAttribute extends Attribute {
     public ZonedDateTime getValue();
 
     /**
-     * set value
+     *  <p>A date with time in the format <code>YYYY-MM-DDTHH:mm:ss.SSSZ</code>. The time zone is optional and defaults to UTC if not specified. If the time zone is specified, it must be in the format <code>±HH:mm</code> or <code>Z</code> for UTC.</p>
      * @param value value to be set
      */
 

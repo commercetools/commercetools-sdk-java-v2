@@ -25,7 +25,7 @@ public class MoneyFieldBuilder implements Builder<MoneyField> {
     private com.commercetools.importapi.models.common.TypedMoney value;
 
     /**
-     * set the value to the value
+     *  <p>A money value in cent precision format.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -36,7 +36,7 @@ public class MoneyFieldBuilder implements Builder<MoneyField> {
     }
 
     /**
-     * set the value to the value using the builder function
+     *  <p>A money value in cent precision format.</p>
      * @param builder function to build the value value
      * @return Builder
      */
@@ -48,7 +48,7 @@ public class MoneyFieldBuilder implements Builder<MoneyField> {
     }
 
     /**
-     * value of value}
+     *  <p>A money value in cent precision format.</p>
      * @return value
      */
 

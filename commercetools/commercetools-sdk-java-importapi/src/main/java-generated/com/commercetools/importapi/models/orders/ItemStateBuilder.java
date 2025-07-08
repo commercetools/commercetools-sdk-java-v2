@@ -28,7 +28,7 @@ public class ItemStateBuilder implements Builder<ItemState> {
     private com.commercetools.importapi.models.common.StateKeyReference state;
 
     /**
-     * set the value to the quantity
+     *  <p>Number of Line Items or Custom Line Items in this State.</p>
      * @param quantity value to be set
      * @return Builder
      */
@@ -39,7 +39,7 @@ public class ItemStateBuilder implements Builder<ItemState> {
     }
 
     /**
-     *  <p>Maps to <code>ItemState.state</code>.</p>
+     *  <p>State of the Line Items or Custom Line Items in a custom workflow. If the referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced State is created.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -51,7 +51,7 @@ public class ItemStateBuilder implements Builder<ItemState> {
     }
 
     /**
-     *  <p>Maps to <code>ItemState.state</code>.</p>
+     *  <p>State of the Line Items or Custom Line Items in a custom workflow. If the referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced State is created.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class ItemStateBuilder implements Builder<ItemState> {
     }
 
     /**
-     *  <p>Maps to <code>ItemState.state</code>.</p>
+     *  <p>State of the Line Items or Custom Line Items in a custom workflow. If the referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced State is created.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -74,7 +74,7 @@ public class ItemStateBuilder implements Builder<ItemState> {
     }
 
     /**
-     * value of quantity}
+     *  <p>Number of Line Items or Custom Line Items in this State.</p>
      * @return quantity
      */
 
@@ -83,7 +83,7 @@ public class ItemStateBuilder implements Builder<ItemState> {
     }
 
     /**
-     *  <p>Maps to <code>ItemState.state</code>.</p>
+     *  <p>State of the Line Items or Custom Line Items in a custom workflow. If the referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced State is created.</p>
      * @return state
      */
 

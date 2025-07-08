@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>The representation sent to the server when creating an ImportContainer.</p>
+ *  <p>The representation sent to the server to create an ImportContainer.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImportContainerDraftImpl implements ImportContainerDraft, ModelBase {
@@ -55,7 +55,7 @@ public class ImportContainerDraftImpl implements ImportContainerDraft, ModelBase
     }
 
     /**
-     *  <p>The resource type to be imported. If not given, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
+     *  <p>The resource type the ImportContainer will accept. If not specified, the ImportContainer can import all of the supported ImportResourceTypes.</p>
      */
 
     public com.commercetools.importapi.models.common.ImportResourceType getResourceType() {

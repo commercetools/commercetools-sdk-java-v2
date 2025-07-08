@@ -28,7 +28,7 @@ public class ImportSummaryBuilder implements Builder<ImportSummary> {
     private Long total;
 
     /**
-     *  <p>The import status of an ImportContainer given by the number of resources in each ProcessingState.</p>
+     *  <p>The current ProcessingStates of ImportOperations in an ImportContainer.</p>
      * @param builder function to build the states value
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class ImportSummaryBuilder implements Builder<ImportSummary> {
     }
 
     /**
-     *  <p>The import status of an ImportContainer given by the number of resources in each ProcessingState.</p>
+     *  <p>The current ProcessingStates of ImportOperations in an ImportContainer.</p>
      * @param builder function to build the states value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class ImportSummaryBuilder implements Builder<ImportSummary> {
     }
 
     /**
-     *  <p>The import status of an ImportContainer given by the number of resources in each ProcessingState.</p>
+     *  <p>The current ProcessingStates of ImportOperations in an ImportContainer.</p>
      * @param states value to be set
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class ImportSummaryBuilder implements Builder<ImportSummary> {
     }
 
     /**
-     *  <p>The total number of ImportOperations received for this Import Summary.</p>
+     *  <p>The total number of ImportOperations in <code>states</code>.</p>
      * @param total value to be set
      * @return Builder
      */
@@ -76,7 +76,7 @@ public class ImportSummaryBuilder implements Builder<ImportSummary> {
     }
 
     /**
-     *  <p>The import status of an ImportContainer given by the number of resources in each ProcessingState.</p>
+     *  <p>The current ProcessingStates of ImportOperations in an ImportContainer.</p>
      * @return states
      */
 
@@ -85,7 +85,7 @@ public class ImportSummaryBuilder implements Builder<ImportSummary> {
     }
 
     /**
-     *  <p>The total number of ImportOperations received for this Import Summary.</p>
+     *  <p>The total number of ImportOperations in <code>states</code>.</p>
      * @return total
      */
 

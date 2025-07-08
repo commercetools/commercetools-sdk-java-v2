@@ -38,7 +38,7 @@ public interface StringField extends CustomField {
     String STRING = "String";
 
     /**
-     *
+     *  <p>A text value.</p>
      * @return value
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface StringField extends CustomField {
     public String getValue();
 
     /**
-     * set value
+     *  <p>A text value.</p>
      * @param value value to be set
      */
 

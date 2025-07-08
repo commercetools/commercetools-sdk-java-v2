@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Import Operation describes the import status of a specific resource.</p>
+ *  <p>Represents the import status of a resource.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImportOperationImpl implements ImportOperation, ModelBase {
@@ -78,7 +78,7 @@ public class ImportOperationImpl implements ImportOperation, ModelBase {
     }
 
     /**
-     *  <p>The version of the ImportOperation.</p>
+     *  <p>Current version of the ImportOperation.</p>
      */
 
     public Long getVersion() {
@@ -86,7 +86,7 @@ public class ImportOperationImpl implements ImportOperation, ModelBase {
     }
 
     /**
-     *  <p>The key of the ImportContainer.</p>
+     *  <p><code>key</code> of the ImportContainer.</p>
      */
 
     public String getImportContainerKey() {
@@ -94,7 +94,7 @@ public class ImportOperationImpl implements ImportOperation, ModelBase {
     }
 
     /**
-     *  <p>The key of the resource.</p>
+     *  <p><code>key</code> of the resource being imported.</p>
      */
 
     public String getResourceKey() {
@@ -102,7 +102,7 @@ public class ImportOperationImpl implements ImportOperation, ModelBase {
     }
 
     /**
-     *  <p>The ID of the ImportOperation.</p>
+     *  <p>Unique identifier of the ImportOperation.</p>
      */
 
     public String getId() {
@@ -110,7 +110,7 @@ public class ImportOperationImpl implements ImportOperation, ModelBase {
     }
 
     /**
-     *  <p>The import status of the resource. Set to <code>rejected</code> or <code>validationFailed</code> if the import of the resource was not successful.</p>
+     *  <p>The import status of the resource. If <code>rejected</code> or <code>validationFailed</code>, the import was unsuccessful.</p>
      */
 
     public com.commercetools.importapi.models.common.ProcessingState getState() {
@@ -118,7 +118,7 @@ public class ImportOperationImpl implements ImportOperation, ModelBase {
     }
 
     /**
-     *  <p>The version of the imported resource when the import was successful.</p>
+     *  <p>The <code>version</code> of the imported resource when the import was successful.</p>
      */
 
     public Long getResourceVersion() {
@@ -126,7 +126,7 @@ public class ImportOperationImpl implements ImportOperation, ModelBase {
     }
 
     /**
-     *  <p>Contains an error if the import of the resource was not successful. See Errors.</p>
+     *  <p>Contains errors if the import was unsuccessful. See Errors.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.errors.ErrorObject> getErrors() {
@@ -134,7 +134,7 @@ public class ImportOperationImpl implements ImportOperation, ModelBase {
     }
 
     /**
-     *  <p>In case of unresolved status this array will show the unresolved references</p>
+     *  <p>If the resource being imported contains references to resources which do not exist, these references are contained within this array.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.common.UnresolvedReferences> getUnresolvedReferences() {
@@ -142,7 +142,7 @@ public class ImportOperationImpl implements ImportOperation, ModelBase {
     }
 
     /**
-     *  <p>The time when the ImportOperation was created.</p>
+     *  <p>Date and time (UTC) the ImportOperation was created.</p>
      */
 
     public java.time.ZonedDateTime getCreatedAt() {
@@ -150,7 +150,7 @@ public class ImportOperationImpl implements ImportOperation, ModelBase {
     }
 
     /**
-     *  <p>The last time When the ImportOperation was modified.</p>
+     *  <p>Date and time (UTC) the ImportOperation was last updated.</p>
      */
 
     public java.time.ZonedDateTime getLastModifiedAt() {
@@ -158,7 +158,7 @@ public class ImportOperationImpl implements ImportOperation, ModelBase {
     }
 
     /**
-     *  <p>The expiration time of the ImportOperation.</p>
+     *  <p>Date and time (UTC) the ImportOperation will be deleted.</p>
      */
 
     public java.time.ZonedDateTime getExpiresAt() {

@@ -34,7 +34,7 @@ import jakarta.validation.constraints.NotNull;
 public interface DeliveryAddressDraft extends io.vrap.rmf.base.client.Draft<DeliveryAddressDraft> {
 
     /**
-     *
+     *  <p>Unique identifier of the Delivery.</p>
      * @return deliveryId
      */
     @NotNull
@@ -42,7 +42,7 @@ public interface DeliveryAddressDraft extends io.vrap.rmf.base.client.Draft<Deli
     public String getDeliveryId();
 
     /**
-     *
+     *  <p>Address to which Parcels are delivered.</p>
      * @return address
      */
     @Valid
@@ -50,14 +50,14 @@ public interface DeliveryAddressDraft extends io.vrap.rmf.base.client.Draft<Deli
     public Address getAddress();
 
     /**
-     * set deliveryId
+     *  <p>Unique identifier of the Delivery.</p>
      * @param deliveryId value to be set
      */
 
     public void setDeliveryId(final String deliveryId);
 
     /**
-     * set address
+     *  <p>Address to which Parcels are delivered.</p>
      * @param address value to be set
      */
 

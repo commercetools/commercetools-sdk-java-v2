@@ -12,8 +12,10 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+
 /**
- *  <p>References a cart discount by key.</p>
+ *  <p>Used by the Import API to identify a CartDiscount.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,6 +36,21 @@ public interface CartDiscountKeyReference extends KeyReference {
      * discriminator value for CartDiscountKeyReference
      */
     String CART_DISCOUNT = "cart-discount";
+
+    /**
+     *  <p>User-defined unique identifier of the referenced CartDiscount.</p>
+     * @return key
+     */
+    @NotNull
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
+     *  <p>User-defined unique identifier of the referenced CartDiscount.</p>
+     * @param key value to be set
+     */
+
+    public void setKey(final String key);
 
     /**
      * factory method

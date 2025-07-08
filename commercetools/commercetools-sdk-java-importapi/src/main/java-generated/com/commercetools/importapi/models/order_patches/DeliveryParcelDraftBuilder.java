@@ -33,7 +33,7 @@ public class DeliveryParcelDraftBuilder implements Builder<DeliveryParcelDraft> 
     private java.util.List<com.commercetools.importapi.models.orders.DeliveryItem> items;
 
     /**
-     * set the value to the measurements using the builder function
+     *  <p>Information about the dimensions for the Parcel.</p>
      * @param builder function to build the measurements value
      * @return Builder
      */
@@ -46,7 +46,7 @@ public class DeliveryParcelDraftBuilder implements Builder<DeliveryParcelDraft> 
     }
 
     /**
-     * set the value to the measurements using the builder function
+     *  <p>Information about the dimensions for the Parcel.</p>
      * @param builder function to build the measurements value
      * @return Builder
      */
@@ -58,7 +58,7 @@ public class DeliveryParcelDraftBuilder implements Builder<DeliveryParcelDraft> 
     }
 
     /**
-     * set the value to the measurements
+     *  <p>Information about the dimensions for the Parcel.</p>
      * @param measurements value to be set
      * @return Builder
      */
@@ -70,7 +70,7 @@ public class DeliveryParcelDraftBuilder implements Builder<DeliveryParcelDraft> 
     }
 
     /**
-     * set the value to the trackingData using the builder function
+     *  <p>Shipment tracking information for the Parcel.</p>
      * @param builder function to build the trackingData value
      * @return Builder
      */
@@ -82,7 +82,7 @@ public class DeliveryParcelDraftBuilder implements Builder<DeliveryParcelDraft> 
     }
 
     /**
-     * set the value to the trackingData using the builder function
+     *  <p>Shipment tracking information for the Parcel.</p>
      * @param builder function to build the trackingData value
      * @return Builder
      */
@@ -94,7 +94,7 @@ public class DeliveryParcelDraftBuilder implements Builder<DeliveryParcelDraft> 
     }
 
     /**
-     * set the value to the trackingData
+     *  <p>Shipment tracking information for the Parcel.</p>
      * @param trackingData value to be set
      * @return Builder
      */
@@ -106,7 +106,7 @@ public class DeliveryParcelDraftBuilder implements Builder<DeliveryParcelDraft> 
     }
 
     /**
-     * set values to the items
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -118,7 +118,7 @@ public class DeliveryParcelDraftBuilder implements Builder<DeliveryParcelDraft> 
     }
 
     /**
-     * set value to the items
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -130,7 +130,7 @@ public class DeliveryParcelDraftBuilder implements Builder<DeliveryParcelDraft> 
     }
 
     /**
-     * add values to the items
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -145,7 +145,7 @@ public class DeliveryParcelDraftBuilder implements Builder<DeliveryParcelDraft> 
     }
 
     /**
-     * add the value to the items using the builder function
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -160,7 +160,7 @@ public class DeliveryParcelDraftBuilder implements Builder<DeliveryParcelDraft> 
     }
 
     /**
-     * set the value to the items using the builder function
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -173,7 +173,7 @@ public class DeliveryParcelDraftBuilder implements Builder<DeliveryParcelDraft> 
     }
 
     /**
-     * add the value to the items using the builder function
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -184,7 +184,7 @@ public class DeliveryParcelDraftBuilder implements Builder<DeliveryParcelDraft> 
     }
 
     /**
-     * set the value to the items using the builder function
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -195,7 +195,7 @@ public class DeliveryParcelDraftBuilder implements Builder<DeliveryParcelDraft> 
     }
 
     /**
-     * value of measurements}
+     *  <p>Information about the dimensions for the Parcel.</p>
      * @return measurements
      */
 
@@ -205,7 +205,7 @@ public class DeliveryParcelDraftBuilder implements Builder<DeliveryParcelDraft> 
     }
 
     /**
-     * value of trackingData}
+     *  <p>Shipment tracking information for the Parcel.</p>
      * @return trackingData
      */
 
@@ -215,7 +215,7 @@ public class DeliveryParcelDraftBuilder implements Builder<DeliveryParcelDraft> 
     }
 
     /**
-     * value of items}
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      * @return items
      */
 

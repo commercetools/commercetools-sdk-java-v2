@@ -30,7 +30,7 @@ public class DiscountCodeInfoBuilder implements Builder<DiscountCodeInfo> {
     private com.commercetools.importapi.models.orders.DiscountCodeState state;
 
     /**
-     *  <p>References a discount code by key.</p>
+     *  <p>References a DiscountCode by key. If the referenced DiscountCode does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced DiscountCode is created.</p>
      * @param builder function to build the discountCode value
      * @return Builder
      */
@@ -44,7 +44,7 @@ public class DiscountCodeInfoBuilder implements Builder<DiscountCodeInfo> {
     }
 
     /**
-     *  <p>References a discount code by key.</p>
+     *  <p>References a DiscountCode by key. If the referenced DiscountCode does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced DiscountCode is created.</p>
      * @param builder function to build the discountCode value
      * @return Builder
      */
@@ -57,7 +57,7 @@ public class DiscountCodeInfoBuilder implements Builder<DiscountCodeInfo> {
     }
 
     /**
-     *  <p>References a discount code by key.</p>
+     *  <p>References a DiscountCode by key. If the referenced DiscountCode does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced DiscountCode is created.</p>
      * @param discountCode value to be set
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class DiscountCodeInfoBuilder implements Builder<DiscountCodeInfo> {
     }
 
     /**
-     *  <p>References a discount code by key.</p>
+     *  <p>References a DiscountCode by key. If the referenced DiscountCode does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced DiscountCode is created.</p>
      * @return discountCode
      */
 

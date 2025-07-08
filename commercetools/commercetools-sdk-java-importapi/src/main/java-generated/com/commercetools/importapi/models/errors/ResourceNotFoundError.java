@@ -36,7 +36,7 @@ public interface ResourceNotFoundError extends ErrorObject {
     String RESOURCE_NOT_FOUND = "ResourceNotFound";
 
     /**
-     *
+     *  <p>The resource that was not found.</p>
      * @return resource
      */
 
@@ -44,7 +44,7 @@ public interface ResourceNotFoundError extends ErrorObject {
     public Object getResource();
 
     /**
-     * set resource
+     *  <p>The resource that was not found.</p>
      * @param resource value to be set
      */
 

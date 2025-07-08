@@ -47,7 +47,8 @@ public class DateSetAttributeImpl implements DateSetAttribute, ModelBase {
     }
 
     /**
-     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     *  <p>Required if used for ProductVariantImport. Must not be set if used for ProductVariantPatch.</p>
+     *  <p>Must match <code>name</code> of an AttributeDefinition of the Product Type.</p>
      */
 
     public String getName() {
@@ -55,7 +56,7 @@ public class DateSetAttributeImpl implements DateSetAttribute, ModelBase {
     }
 
     /**
-     *
+     *  <p>Must match <code>type</code> of an AttributeDefinition of the Product Type. The type is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
      */
 
     public String getType() {
@@ -63,7 +64,7 @@ public class DateSetAttributeImpl implements DateSetAttribute, ModelBase {
     }
 
     /**
-     *
+     *  <p>A set of dates in the format <code>YYYY-MM-DD</code>.</p>
      */
 
     public java.util.List<java.time.LocalDate> getValue() {

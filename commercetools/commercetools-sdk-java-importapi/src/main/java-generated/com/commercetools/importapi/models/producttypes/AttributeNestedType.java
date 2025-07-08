@@ -40,7 +40,7 @@ public interface AttributeNestedType extends AttributeType {
     String NESTED = "nested";
 
     /**
-     *  <p>References a product type by key.</p>
+     *  <p>References a ProductType by <code>key</code>.</p>
      * @return typeReference
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface AttributeNestedType extends AttributeType {
     public ProductTypeKeyReference getTypeReference();
 
     /**
-     *  <p>References a product type by key.</p>
+     *  <p>References a ProductType by <code>key</code>.</p>
      * @param typeReference value to be set
      */
 

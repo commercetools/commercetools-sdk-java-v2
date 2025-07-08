@@ -39,7 +39,7 @@ public class RemoveParcelFromDeliveryDraftImpl implements RemoveParcelFromDelive
     }
 
     /**
-     *
+     *  <p><code>id</code> of the Parcel to be removed from the Delivery.</p>
      */
 
     public String getParcelId() {

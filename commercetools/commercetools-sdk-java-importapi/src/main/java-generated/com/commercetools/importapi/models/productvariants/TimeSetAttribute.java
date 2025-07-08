@@ -39,7 +39,7 @@ public interface TimeSetAttribute extends Attribute {
     String TIME_SET = "time-set";
 
     /**
-     *
+     *  <p>A set of time values in the format <code>HH:mm:ss.SSS</code>. The time zone is optional and defaults to UTC if not specified. If the time zone is specified, it must be in the format <code>±HH:mm</code> or <code>Z</code> for UTC.</p>
      * @return value
      */
     @NotNull
@@ -47,7 +47,7 @@ public interface TimeSetAttribute extends Attribute {
     public List<LocalTime> getValue();
 
     /**
-     * set value
+     *  <p>A set of time values in the format <code>HH:mm:ss.SSS</code>. The time zone is optional and defaults to UTC if not specified. If the time zone is specified, it must be in the format <code>±HH:mm</code> or <code>Z</code> for UTC.</p>
      * @param value values to be set
      */
 
@@ -55,7 +55,7 @@ public interface TimeSetAttribute extends Attribute {
     public void setValue(final LocalTime... value);
 
     /**
-     * set value
+     *  <p>A set of time values in the format <code>HH:mm:ss.SSS</code>. The time zone is optional and defaults to UTC if not specified. If the time zone is specified, it must be in the format <code>±HH:mm</code> or <code>Z</code> for UTC.</p>
      * @param value values to be set
      */
 

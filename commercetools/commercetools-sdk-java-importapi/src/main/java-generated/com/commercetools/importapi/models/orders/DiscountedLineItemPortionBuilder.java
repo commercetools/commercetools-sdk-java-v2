@@ -28,7 +28,7 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
     private com.commercetools.importapi.models.common.Money discountedAmount;
 
     /**
-     *  <p>References a cart discount by key.</p>
+     *  <p>References a cart discount by key. If the referenced CartDiscount does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CartDiscount is created.</p>
      * @param builder function to build the discount value
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
     }
 
     /**
-     *  <p>References a cart discount by key.</p>
+     *  <p>References a cart discount by key. If the referenced CartDiscount does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CartDiscount is created.</p>
      * @param builder function to build the discount value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
     }
 
     /**
-     *  <p>References a cart discount by key.</p>
+     *  <p>References a cart discount by key. If the referenced CartDiscount does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CartDiscount is created.</p>
      * @param discount value to be set
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
     }
 
     /**
-     * set the value to the discountedAmount using the builder function
+     *  <p>Money value for the discount applicable.</p>
      * @param builder function to build the discountedAmount value
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
     }
 
     /**
-     * set the value to the discountedAmount using the builder function
+     *  <p>Money value for the discount applicable.</p>
      * @param builder function to build the discountedAmount value
      * @return Builder
      */
@@ -89,7 +89,7 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
     }
 
     /**
-     * set the value to the discountedAmount
+     *  <p>Money value for the discount applicable.</p>
      * @param discountedAmount value to be set
      * @return Builder
      */
@@ -101,7 +101,7 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
     }
 
     /**
-     *  <p>References a cart discount by key.</p>
+     *  <p>References a cart discount by key. If the referenced CartDiscount does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CartDiscount is created.</p>
      * @return discount
      */
 
@@ -110,7 +110,7 @@ public class DiscountedLineItemPortionBuilder implements Builder<DiscountedLineI
     }
 
     /**
-     * value of discountedAmount}
+     *  <p>Money value for the discount applicable.</p>
      * @return discountedAmount
      */
 

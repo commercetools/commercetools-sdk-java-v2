@@ -24,7 +24,7 @@ public class ShippingMethodKeyReferenceBuilder implements Builder<ShippingMethod
     private String key;
 
     /**
-     * set the value to the key
+     *  <p>User-defined unique identifier of the referenced ShippingMethod.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class ShippingMethodKeyReferenceBuilder implements Builder<ShippingMethod
     }
 
     /**
-     * value of key}
+     *  <p>User-defined unique identifier of the referenced ShippingMethod.</p>
      * @return key
      */
 

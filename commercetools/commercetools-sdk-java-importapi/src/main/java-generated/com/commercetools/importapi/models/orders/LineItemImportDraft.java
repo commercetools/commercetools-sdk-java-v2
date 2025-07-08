@@ -43,7 +43,7 @@ import jakarta.validation.constraints.NotNull;
 public interface LineItemImportDraft extends io.vrap.rmf.base.client.Draft<LineItemImportDraft> {
 
     /**
-     *  <p>Maps to <code>LineItem.productId</code>.</p>
+     *  <p>Maps to <code>LineItem.productId</code>. If the referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Product is created.</p>
      * @return product
      */
     @Valid
@@ -86,7 +86,7 @@ public interface LineItemImportDraft extends io.vrap.rmf.base.client.Draft<LineI
     public Long getQuantity();
 
     /**
-     *
+     *  <p>Maps to <code>LineItem.state</code>.</p>
      * @return state
      */
     @Valid
@@ -94,7 +94,7 @@ public interface LineItemImportDraft extends io.vrap.rmf.base.client.Draft<LineI
     public List<ItemState> getState();
 
     /**
-     *  <p>Maps to <code>LineItem.supplyChannel</code>. The Reference to the Supply Channel with which the LineItem is associated. If referenced Supply Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Supply Channel is created.</p>
+     *  <p>Maps to <code>LineItem.supplyChannel</code>. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      * @return supplyChannel
      */
     @Valid
@@ -102,7 +102,7 @@ public interface LineItemImportDraft extends io.vrap.rmf.base.client.Draft<LineI
     public ChannelKeyReference getSupplyChannel();
 
     /**
-     *  <p>Maps to <code>LineItem.distributionChannel</code>. The Reference to the Distribution Channel with which the LineItem is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Distribution Channel is created.</p>
+     *  <p>Maps to <code>LineItem.distributionChannel</code>. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      * @return distributionChannel
      */
     @Valid
@@ -118,7 +118,7 @@ public interface LineItemImportDraft extends io.vrap.rmf.base.client.Draft<LineI
     public TaxRate getTaxRate();
 
     /**
-     *  <p>Maps to LineItem.shippingDetails.</p>
+     *  <p>Maps to <code>LineItem.shippingDetails</code>.</p>
      * @return shippingDetails
      */
     @Valid
@@ -126,7 +126,7 @@ public interface LineItemImportDraft extends io.vrap.rmf.base.client.Draft<LineI
     public ItemShippingDetailsDraft getShippingDetails();
 
     /**
-     *  <p>Custom Fields for this Line Item.</p>
+     *  <p>Maps to <code>LineItem.custom</code>.</p>
      * @return custom
      */
     @Valid
@@ -134,7 +134,7 @@ public interface LineItemImportDraft extends io.vrap.rmf.base.client.Draft<LineI
     public Custom getCustom();
 
     /**
-     *  <p>Maps to <code>LineItem.productId</code>.</p>
+     *  <p>Maps to <code>LineItem.productId</code>. If the referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Product is created.</p>
      * @param product value to be set
      */
 
@@ -169,7 +169,7 @@ public interface LineItemImportDraft extends io.vrap.rmf.base.client.Draft<LineI
     public void setQuantity(final Long quantity);
 
     /**
-     * set state
+     *  <p>Maps to <code>LineItem.state</code>.</p>
      * @param state values to be set
      */
 
@@ -177,21 +177,21 @@ public interface LineItemImportDraft extends io.vrap.rmf.base.client.Draft<LineI
     public void setState(final ItemState... state);
 
     /**
-     * set state
+     *  <p>Maps to <code>LineItem.state</code>.</p>
      * @param state values to be set
      */
 
     public void setState(final List<ItemState> state);
 
     /**
-     *  <p>Maps to <code>LineItem.supplyChannel</code>. The Reference to the Supply Channel with which the LineItem is associated. If referenced Supply Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Supply Channel is created.</p>
+     *  <p>Maps to <code>LineItem.supplyChannel</code>. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      * @param supplyChannel value to be set
      */
 
     public void setSupplyChannel(final ChannelKeyReference supplyChannel);
 
     /**
-     *  <p>Maps to <code>LineItem.distributionChannel</code>. The Reference to the Distribution Channel with which the LineItem is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Distribution Channel is created.</p>
+     *  <p>Maps to <code>LineItem.distributionChannel</code>. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      * @param distributionChannel value to be set
      */
 
@@ -205,14 +205,14 @@ public interface LineItemImportDraft extends io.vrap.rmf.base.client.Draft<LineI
     public void setTaxRate(final TaxRate taxRate);
 
     /**
-     *  <p>Maps to LineItem.shippingDetails.</p>
+     *  <p>Maps to <code>LineItem.shippingDetails</code>.</p>
      * @param shippingDetails value to be set
      */
 
     public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);
 
     /**
-     *  <p>Custom Fields for this Line Item.</p>
+     *  <p>Maps to <code>LineItem.custom</code>.</p>
      * @param custom value to be set
      */
 

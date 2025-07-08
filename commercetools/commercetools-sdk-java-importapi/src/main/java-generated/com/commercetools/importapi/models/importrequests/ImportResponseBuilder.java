@@ -25,7 +25,7 @@ public class ImportResponseBuilder implements Builder<ImportResponse> {
     private java.util.List<com.commercetools.importapi.models.importoperations.ImportOperationStatus> operationStatus;
 
     /**
-     *  <p>A list of the ID's and validation statuses of new ImportOperations.</p>
+     *  <p>The identifiers and status of the ImportOperations created by the ImportRequest.</p>
      * @param operationStatus value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class ImportResponseBuilder implements Builder<ImportResponse> {
     }
 
     /**
-     *  <p>A list of the ID's and validation statuses of new ImportOperations.</p>
+     *  <p>The identifiers and status of the ImportOperations created by the ImportRequest.</p>
      * @param operationStatus value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class ImportResponseBuilder implements Builder<ImportResponse> {
     }
 
     /**
-     *  <p>A list of the ID's and validation statuses of new ImportOperations.</p>
+     *  <p>The identifiers and status of the ImportOperations created by the ImportRequest.</p>
      * @param operationStatus value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class ImportResponseBuilder implements Builder<ImportResponse> {
     }
 
     /**
-     *  <p>A list of the ID's and validation statuses of new ImportOperations.</p>
+     *  <p>The identifiers and status of the ImportOperations created by the ImportRequest.</p>
      * @param builder function to build the operationStatus value
      * @return Builder
      */
@@ -81,7 +81,7 @@ public class ImportResponseBuilder implements Builder<ImportResponse> {
     }
 
     /**
-     *  <p>A list of the ID's and validation statuses of new ImportOperations.</p>
+     *  <p>The identifiers and status of the ImportOperations created by the ImportRequest.</p>
      * @param builder function to build the operationStatus value
      * @return Builder
      */
@@ -96,7 +96,7 @@ public class ImportResponseBuilder implements Builder<ImportResponse> {
     }
 
     /**
-     *  <p>A list of the ID's and validation statuses of new ImportOperations.</p>
+     *  <p>The identifiers and status of the ImportOperations created by the ImportRequest.</p>
      * @param builder function to build the operationStatus value
      * @return Builder
      */
@@ -108,7 +108,7 @@ public class ImportResponseBuilder implements Builder<ImportResponse> {
     }
 
     /**
-     *  <p>A list of the ID's and validation statuses of new ImportOperations.</p>
+     *  <p>The identifiers and status of the ImportOperations created by the ImportRequest.</p>
      * @param builder function to build the operationStatus value
      * @return Builder
      */
@@ -120,7 +120,7 @@ public class ImportResponseBuilder implements Builder<ImportResponse> {
     }
 
     /**
-     *  <p>A list of the ID's and validation statuses of new ImportOperations.</p>
+     *  <p>The identifiers and status of the ImportOperations created by the ImportRequest.</p>
      * @return operationStatus
      */
 

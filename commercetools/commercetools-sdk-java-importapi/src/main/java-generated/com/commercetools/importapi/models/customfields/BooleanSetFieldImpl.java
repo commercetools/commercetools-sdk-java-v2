@@ -51,7 +51,7 @@ public class BooleanSetFieldImpl implements BooleanSetField, ModelBase {
     }
 
     /**
-     *
+     *  <p>JSON array of boolean values without duplicates. The order of items in the array is not fixed.</p>
      */
 
     public java.util.List<Boolean> getValue() {

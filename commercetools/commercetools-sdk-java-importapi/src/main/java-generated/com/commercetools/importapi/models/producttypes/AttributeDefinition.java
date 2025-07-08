@@ -37,7 +37,7 @@ import jakarta.validation.constraints.NotNull;
 public interface AttributeDefinition {
 
     /**
-     *
+     *  <p>Describes the Type of the Attribute.</p>
      * @return type
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface AttributeDefinition {
     public AttributeType getType();
 
     /**
-     *
+     *  <p>User-defined name of the Attribute that is unique within the Project.</p>
      * @return name
      */
     @NotNull
@@ -54,12 +54,7 @@ public interface AttributeDefinition {
     public String getName();
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Human-readable label for the Attribute.</p>
      * @return label
      */
     @NotNull
@@ -68,7 +63,7 @@ public interface AttributeDefinition {
     public LocalizedString getLabel();
 
     /**
-     *
+     *  <p>If <code>true</code>, the Attribute must have a value on a ProductVariant.</p>
      * @return isRequired
      */
     @NotNull
@@ -76,7 +71,7 @@ public interface AttributeDefinition {
     public Boolean getIsRequired();
 
     /**
-     *
+     *  <p>Specifies how Attributes are validated across all variants of a Product.</p>
      * @return attributeConstraint
      */
 
@@ -84,12 +79,7 @@ public interface AttributeDefinition {
     public AttributeConstraintEnum getAttributeConstraint();
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Provides additional Attribute information to aid content managers configure Product details.</p>
      * @return inputTip
      */
     @Valid
@@ -97,7 +87,7 @@ public interface AttributeDefinition {
     public LocalizedString getInputTip();
 
     /**
-     *
+     *  <p>Provides a visual representation directive for values of this Attribute (only relevant for AttributeTextType and AttributeLocalizableTextType).</p>
      * @return inputHint
      */
 
@@ -105,7 +95,7 @@ public interface AttributeDefinition {
     public TextInputHint getInputHint();
 
     /**
-     *
+     *  <p>If <code>true</code>, the Attribute's values are available in the Product Search or the Product Projection Search API for use in full-text search queries, filters, and facets.</p>
      * @return isSearchable
      */
 
@@ -121,66 +111,56 @@ public interface AttributeDefinition {
     public AttributeLevel getLevel();
 
     /**
-     * set type
+     *  <p>Describes the Type of the Attribute.</p>
      * @param type value to be set
      */
 
     public void setType(final AttributeType type);
 
     /**
-     * set name
+     *  <p>User-defined name of the Attribute that is unique within the Project.</p>
      * @param name value to be set
      */
 
     public void setName(final String name);
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Human-readable label for the Attribute.</p>
      * @param label value to be set
      */
 
     public void setLabel(final LocalizedString label);
 
     /**
-     * set isRequired
+     *  <p>If <code>true</code>, the Attribute must have a value on a ProductVariant.</p>
      * @param isRequired value to be set
      */
 
     public void setIsRequired(final Boolean isRequired);
 
     /**
-     * set attributeConstraint
+     *  <p>Specifies how Attributes are validated across all variants of a Product.</p>
      * @param attributeConstraint value to be set
      */
 
     public void setAttributeConstraint(final AttributeConstraintEnum attributeConstraint);
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Provides additional Attribute information to aid content managers configure Product details.</p>
      * @param inputTip value to be set
      */
 
     public void setInputTip(final LocalizedString inputTip);
 
     /**
-     * set inputHint
+     *  <p>Provides a visual representation directive for values of this Attribute (only relevant for AttributeTextType and AttributeLocalizableTextType).</p>
      * @param inputHint value to be set
      */
 
     public void setInputHint(final TextInputHint inputHint);
 
     /**
-     * set isSearchable
+     *  <p>If <code>true</code>, the Attribute's values are available in the Product Search or the Product Projection Search API for use in full-text search queries, filters, and facets.</p>
      * @param isSearchable value to be set
      */
 

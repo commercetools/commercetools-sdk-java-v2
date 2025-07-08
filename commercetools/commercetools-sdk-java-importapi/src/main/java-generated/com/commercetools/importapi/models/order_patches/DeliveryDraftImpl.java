@@ -48,7 +48,7 @@ public class DeliveryDraftImpl implements DeliveryDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Line Items or Custom Line Items to deliver. It can also be specified individually for each Parcel.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.orders.DeliveryItem> getItems() {
@@ -56,7 +56,7 @@ public class DeliveryDraftImpl implements DeliveryDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Address to which the Parcels are delivered.</p>
      */
 
     public com.commercetools.importapi.models.common.Address getAddress() {
@@ -64,7 +64,7 @@ public class DeliveryDraftImpl implements DeliveryDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Information regarding the appearance, content, and shipment of a parcel.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.order_patches.DeliveryParcelDraft> getParcels() {

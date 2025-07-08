@@ -106,7 +106,7 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
     }
 
     /**
-     * set the value to the resourceIndex
+     *  <p>The index of the resource in the import request that contains the invalid field.</p>
      * @param resourceIndex value to be set
      * @return Builder
      */
@@ -154,7 +154,7 @@ public class InvalidFieldErrorBuilder implements Builder<InvalidFieldError> {
     }
 
     /**
-     * value of resourceIndex}
+     *  <p>The index of the resource in the import request that contains the invalid field.</p>
      * @return resourceIndex
      */
 

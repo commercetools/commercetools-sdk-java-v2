@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>PagedQueryResult for ImportContainers. Used as a response to a query request for ImportContainers.</p>
+ *  <p>PagedQueryResult with results containing an array of ImportContainer.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -54,7 +54,7 @@ public interface ImportContainerPagedResponse {
     public Long getOffset();
 
     /**
-     *  <p>The actual number of results returned.</p>
+     *  <p>Actual number of results returned.</p>
      * @return count
      */
     @NotNull
@@ -62,7 +62,7 @@ public interface ImportContainerPagedResponse {
     public Long getCount();
 
     /**
-     *  <p>The total number of results matching the query.</p>
+     *  <p>Total number of results matching the query.</p>
      * @return total
      */
     @NotNull
@@ -70,7 +70,7 @@ public interface ImportContainerPagedResponse {
     public Long getTotal();
 
     /**
-     *  <p>The array of Import Containers matching the query.</p>
+     *  <p>ImportContainers matching the query.</p>
      * @return results
      */
     @NotNull
@@ -93,21 +93,21 @@ public interface ImportContainerPagedResponse {
     public void setOffset(final Long offset);
 
     /**
-     *  <p>The actual number of results returned.</p>
+     *  <p>Actual number of results returned.</p>
      * @param count value to be set
      */
 
     public void setCount(final Long count);
 
     /**
-     *  <p>The total number of results matching the query.</p>
+     *  <p>Total number of results matching the query.</p>
      * @param total value to be set
      */
 
     public void setTotal(final Long total);
 
     /**
-     *  <p>The array of Import Containers matching the query.</p>
+     *  <p>ImportContainers matching the query.</p>
      * @param results values to be set
      */
 
@@ -115,7 +115,7 @@ public interface ImportContainerPagedResponse {
     public void setResults(final ImportContainer... results);
 
     /**
-     *  <p>The array of Import Containers matching the query.</p>
+     *  <p>ImportContainers matching the query.</p>
      * @param results values to be set
      */
 

@@ -34,7 +34,8 @@ import jakarta.validation.constraints.NotNull;
 public interface Address {
 
     /**
-     *
+     *  <p>Unique identifier of the Address.</p>
+     *  <p>It is not recommended to set it manually since the API overwrites this ID when creating an Address for a Customer. Use <code>key</code> instead and omit this field from the request to let the API generate the ID for the Address.</p>
      * @return id
      */
 
@@ -42,7 +43,7 @@ public interface Address {
     public String getId();
 
     /**
-     *
+     *  <p>User-defined identifier of the Address that must be unique when multiple addresses are referenced in BusinessUnits, Customers, and <code>itemShippingAddresses</code> (LineItem-specific addresses) of a Cart, Order, QuoteRequest, or Quote.</p>
      * @return key
      */
 
@@ -50,7 +51,7 @@ public interface Address {
     public String getKey();
 
     /**
-     *
+     *  <p>Title of the contact, for example 'Dr.'</p>
      * @return title
      */
 
@@ -58,7 +59,7 @@ public interface Address {
     public String getTitle();
 
     /**
-     *
+     *  <p>Salutation of the contact, for example 'Mr.' or 'Ms.'</p>
      * @return salutation
      */
 
@@ -66,7 +67,7 @@ public interface Address {
     public String getSalutation();
 
     /**
-     *
+     *  <p>Given name (first name) of the contact.</p>
      * @return firstName
      */
 
@@ -74,7 +75,7 @@ public interface Address {
     public String getFirstName();
 
     /**
-     *
+     *  <p>Family name (last name) of the contact.</p>
      * @return lastName
      */
 
@@ -82,7 +83,7 @@ public interface Address {
     public String getLastName();
 
     /**
-     *
+     *  <p>Name of the street.</p>
      * @return streetName
      */
 
@@ -90,7 +91,7 @@ public interface Address {
     public String getStreetName();
 
     /**
-     *
+     *  <p>Street number.</p>
      * @return streetNumber
      */
 
@@ -98,7 +99,7 @@ public interface Address {
     public String getStreetNumber();
 
     /**
-     *
+     *  <p>Further information on the street address.</p>
      * @return additionalStreetInfo
      */
 
@@ -106,7 +107,7 @@ public interface Address {
     public String getAdditionalStreetInfo();
 
     /**
-     *
+     *  <p>Postal code.</p>
      * @return postalCode
      */
 
@@ -114,7 +115,7 @@ public interface Address {
     public String getPostalCode();
 
     /**
-     *
+     *  <p>Name of the city.</p>
      * @return city
      */
 
@@ -122,7 +123,7 @@ public interface Address {
     public String getCity();
 
     /**
-     *
+     *  <p>Name of the region.</p>
      * @return region
      */
 
@@ -130,7 +131,7 @@ public interface Address {
     public String getRegion();
 
     /**
-     *
+     *  <p>Name of the state, for example, Colorado.</p>
      * @return state
      */
 
@@ -138,7 +139,7 @@ public interface Address {
     public String getState();
 
     /**
-     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
+     *  <p>Name of the country.</p>
      * @return country
      */
     @NotNull
@@ -146,7 +147,7 @@ public interface Address {
     public String getCountry();
 
     /**
-     *
+     *  <p>Name of the company.</p>
      * @return company
      */
 
@@ -154,7 +155,7 @@ public interface Address {
     public String getCompany();
 
     /**
-     *
+     *  <p>Name of the department.</p>
      * @return department
      */
 
@@ -162,7 +163,7 @@ public interface Address {
     public String getDepartment();
 
     /**
-     *
+     *  <p>Number or name of the building.</p>
      * @return building
      */
 
@@ -170,7 +171,7 @@ public interface Address {
     public String getBuilding();
 
     /**
-     *
+     *  <p>Number or name of the apartment.</p>
      * @return apartment
      */
 
@@ -178,7 +179,7 @@ public interface Address {
     public String getApartment();
 
     /**
-     *
+     *  <p>Post office box number.</p>
      * @return pOBox
      */
 
@@ -186,7 +187,7 @@ public interface Address {
     public String getPOBox();
 
     /**
-     *
+     *  <p>Phone number of the contact.</p>
      * @return phone
      */
 
@@ -194,7 +195,7 @@ public interface Address {
     public String getPhone();
 
     /**
-     *
+     *  <p>Mobile phone number of the contact.</p>
      * @return mobile
      */
 
@@ -202,7 +203,7 @@ public interface Address {
     public String getMobile();
 
     /**
-     *
+     *  <p>Email address of the contact.</p>
      * @return email
      */
 
@@ -210,7 +211,7 @@ public interface Address {
     public String getEmail();
 
     /**
-     *
+     *  <p>Fax number of the contact.</p>
      * @return fax
      */
 
@@ -218,7 +219,7 @@ public interface Address {
     public String getFax();
 
     /**
-     *
+     *  <p>Further information on the Address.</p>
      * @return additionalAddressInfo
      */
 
@@ -226,7 +227,7 @@ public interface Address {
     public String getAdditionalAddressInfo();
 
     /**
-     *
+     *  <p>ID for the contact used in an external system.</p>
      * @return externalId
      */
 
@@ -234,7 +235,7 @@ public interface Address {
     public String getExternalId();
 
     /**
-     *  <p>Custom Fields defined for the Address. Custom Fields can only be applied to <code>shippingAddress</code>.</p>
+     *  <p>Custom Fields defined for the Address.</p>
      * @return custom
      */
     @Valid
@@ -242,182 +243,183 @@ public interface Address {
     public Custom getCustom();
 
     /**
-     * set id
+     *  <p>Unique identifier of the Address.</p>
+     *  <p>It is not recommended to set it manually since the API overwrites this ID when creating an Address for a Customer. Use <code>key</code> instead and omit this field from the request to let the API generate the ID for the Address.</p>
      * @param id value to be set
      */
 
     public void setId(final String id);
 
     /**
-     * set key
+     *  <p>User-defined identifier of the Address that must be unique when multiple addresses are referenced in BusinessUnits, Customers, and <code>itemShippingAddresses</code> (LineItem-specific addresses) of a Cart, Order, QuoteRequest, or Quote.</p>
      * @param key value to be set
      */
 
     public void setKey(final String key);
 
     /**
-     * set title
+     *  <p>Title of the contact, for example 'Dr.'</p>
      * @param title value to be set
      */
 
     public void setTitle(final String title);
 
     /**
-     * set salutation
+     *  <p>Salutation of the contact, for example 'Mr.' or 'Ms.'</p>
      * @param salutation value to be set
      */
 
     public void setSalutation(final String salutation);
 
     /**
-     * set firstName
+     *  <p>Given name (first name) of the contact.</p>
      * @param firstName value to be set
      */
 
     public void setFirstName(final String firstName);
 
     /**
-     * set lastName
+     *  <p>Family name (last name) of the contact.</p>
      * @param lastName value to be set
      */
 
     public void setLastName(final String lastName);
 
     /**
-     * set streetName
+     *  <p>Name of the street.</p>
      * @param streetName value to be set
      */
 
     public void setStreetName(final String streetName);
 
     /**
-     * set streetNumber
+     *  <p>Street number.</p>
      * @param streetNumber value to be set
      */
 
     public void setStreetNumber(final String streetNumber);
 
     /**
-     * set additionalStreetInfo
+     *  <p>Further information on the street address.</p>
      * @param additionalStreetInfo value to be set
      */
 
     public void setAdditionalStreetInfo(final String additionalStreetInfo);
 
     /**
-     * set postalCode
+     *  <p>Postal code.</p>
      * @param postalCode value to be set
      */
 
     public void setPostalCode(final String postalCode);
 
     /**
-     * set city
+     *  <p>Name of the city.</p>
      * @param city value to be set
      */
 
     public void setCity(final String city);
 
     /**
-     * set region
+     *  <p>Name of the region.</p>
      * @param region value to be set
      */
 
     public void setRegion(final String region);
 
     /**
-     * set state
+     *  <p>Name of the state, for example, Colorado.</p>
      * @param state value to be set
      */
 
     public void setState(final String state);
 
     /**
-     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
+     *  <p>Name of the country.</p>
      * @param country value to be set
      */
 
     public void setCountry(final String country);
 
     /**
-     * set company
+     *  <p>Name of the company.</p>
      * @param company value to be set
      */
 
     public void setCompany(final String company);
 
     /**
-     * set department
+     *  <p>Name of the department.</p>
      * @param department value to be set
      */
 
     public void setDepartment(final String department);
 
     /**
-     * set building
+     *  <p>Number or name of the building.</p>
      * @param building value to be set
      */
 
     public void setBuilding(final String building);
 
     /**
-     * set apartment
+     *  <p>Number or name of the apartment.</p>
      * @param apartment value to be set
      */
 
     public void setApartment(final String apartment);
 
     /**
-     * set pOBox
+     *  <p>Post office box number.</p>
      * @param pOBox value to be set
      */
 
     public void setPOBox(final String pOBox);
 
     /**
-     * set phone
+     *  <p>Phone number of the contact.</p>
      * @param phone value to be set
      */
 
     public void setPhone(final String phone);
 
     /**
-     * set mobile
+     *  <p>Mobile phone number of the contact.</p>
      * @param mobile value to be set
      */
 
     public void setMobile(final String mobile);
 
     /**
-     * set email
+     *  <p>Email address of the contact.</p>
      * @param email value to be set
      */
 
     public void setEmail(final String email);
 
     /**
-     * set fax
+     *  <p>Fax number of the contact.</p>
      * @param fax value to be set
      */
 
     public void setFax(final String fax);
 
     /**
-     * set additionalAddressInfo
+     *  <p>Further information on the Address.</p>
      * @param additionalAddressInfo value to be set
      */
 
     public void setAdditionalAddressInfo(final String additionalAddressInfo);
 
     /**
-     * set externalId
+     *  <p>ID for the contact used in an external system.</p>
      * @param externalId value to be set
      */
 
     public void setExternalId(final String externalId);
 
     /**
-     *  <p>Custom Fields defined for the Address. Custom Fields can only be applied to <code>shippingAddress</code>.</p>
+     *  <p>Custom Fields defined for the Address.</p>
      * @param custom value to be set
      */
 

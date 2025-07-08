@@ -38,7 +38,7 @@ public interface NumberSetAttribute extends Attribute {
     String NUMBER_SET = "number-set";
 
     /**
-     *
+     *  <p>A set of number values. Each value can be an integer or a floating-point number.</p>
      * @return value
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface NumberSetAttribute extends Attribute {
     public List<Double> getValue();
 
     /**
-     * set value
+     *  <p>A set of number values. Each value can be an integer or a floating-point number.</p>
      * @param value values to be set
      */
 
@@ -54,7 +54,7 @@ public interface NumberSetAttribute extends Attribute {
     public void setValue(final Double... value);
 
     /**
-     * set value
+     *  <p>A set of number values. Each value can be an integer or a floating-point number.</p>
      * @param value values to be set
      */
 

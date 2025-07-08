@@ -24,7 +24,7 @@ public class PaymentKeyReferenceBuilder implements Builder<PaymentKeyReference> 
     private String key;
 
     /**
-     * set the value to the key
+     *  <p>User-defined unique identifier of the referenced Payment.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class PaymentKeyReferenceBuilder implements Builder<PaymentKeyReference> 
     }
 
     /**
-     * value of key}
+     *  <p>User-defined unique identifier of the referenced Payment.</p>
      * @return key
      */
 

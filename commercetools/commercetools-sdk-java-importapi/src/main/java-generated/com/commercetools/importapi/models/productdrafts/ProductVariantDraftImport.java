@@ -37,7 +37,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ProductVariantDraftImport {
 
     /**
-     *
+     *  <p>User-defined unique SKU of the Product Variant.</p>
      * @return sku
      */
 
@@ -45,7 +45,7 @@ public interface ProductVariantDraftImport {
     public String getSku();
 
     /**
-     *
+     *  <p>User-defined unique identifier for the ProductVariant.</p>
      * @return key
      */
     @NotNull
@@ -53,7 +53,7 @@ public interface ProductVariantDraftImport {
     public String getKey();
 
     /**
-     *
+     *  <p>The Embedded Prices for the Product Variant. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      * @return prices
      */
     @Valid
@@ -61,7 +61,7 @@ public interface ProductVariantDraftImport {
     public List<PriceDraftImport> getPrices();
 
     /**
-     *
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
      * @return attributes
      */
     @Valid
@@ -69,7 +69,7 @@ public interface ProductVariantDraftImport {
     public List<Attribute> getAttributes();
 
     /**
-     *
+     *  <p>Images for the Product Variant.</p>
      * @return images
      */
     @Valid
@@ -77,7 +77,7 @@ public interface ProductVariantDraftImport {
     public List<Image> getImages();
 
     /**
-     *
+     *  <p>Media assets for the Product Variant.</p>
      * @return assets
      */
     @Valid
@@ -85,21 +85,21 @@ public interface ProductVariantDraftImport {
     public List<Asset> getAssets();
 
     /**
-     * set sku
+     *  <p>User-defined unique SKU of the Product Variant.</p>
      * @param sku value to be set
      */
 
     public void setSku(final String sku);
 
     /**
-     * set key
+     *  <p>User-defined unique identifier for the ProductVariant.</p>
      * @param key value to be set
      */
 
     public void setKey(final String key);
 
     /**
-     * set prices
+     *  <p>The Embedded Prices for the Product Variant. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      * @param prices values to be set
      */
 
@@ -107,14 +107,14 @@ public interface ProductVariantDraftImport {
     public void setPrices(final PriceDraftImport... prices);
 
     /**
-     * set prices
+     *  <p>The Embedded Prices for the Product Variant. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      * @param prices values to be set
      */
 
     public void setPrices(final List<PriceDraftImport> prices);
 
     /**
-     * set attributes
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
      * @param attributes values to be set
      */
 
@@ -122,14 +122,14 @@ public interface ProductVariantDraftImport {
     public void setAttributes(final Attribute... attributes);
 
     /**
-     * set attributes
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
      * @param attributes values to be set
      */
 
     public void setAttributes(final List<Attribute> attributes);
 
     /**
-     * set images
+     *  <p>Images for the Product Variant.</p>
      * @param images values to be set
      */
 
@@ -137,14 +137,14 @@ public interface ProductVariantDraftImport {
     public void setImages(final Image... images);
 
     /**
-     * set images
+     *  <p>Images for the Product Variant.</p>
      * @param images values to be set
      */
 
     public void setImages(final List<Image> images);
 
     /**
-     * set assets
+     *  <p>Media assets for the Product Variant.</p>
      * @param assets values to be set
      */
 
@@ -152,7 +152,7 @@ public interface ProductVariantDraftImport {
     public void setAssets(final Asset... assets);
 
     /**
-     * set assets
+     *  <p>Media assets for the Product Variant.</p>
      * @param assets values to be set
      */
 

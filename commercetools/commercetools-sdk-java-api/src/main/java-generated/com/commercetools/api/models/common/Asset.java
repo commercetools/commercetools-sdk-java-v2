@@ -37,7 +37,7 @@ import jakarta.validation.constraints.NotNull;
 public interface Asset extends com.commercetools.api.models.Customizable<Asset>, com.commercetools.api.models.WithKey {
 
     /**
-     *  <p>Unique identifier of the Asset.</p>
+     *  <p>Unique identifier of the Asset. Not required when importing Assets using the Import API.</p>
      * @return id
      */
     @NotNull
@@ -95,7 +95,7 @@ public interface Asset extends com.commercetools.api.models.Customizable<Asset>,
     public String getKey();
 
     /**
-     *  <p>Unique identifier of the Asset.</p>
+     *  <p>Unique identifier of the Asset. Not required when importing Assets using the Import API.</p>
      * @param id value to be set
      */
 

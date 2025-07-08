@@ -52,7 +52,7 @@ public class LocalizedStringSetFieldImpl implements LocalizedStringSetField, Mod
     }
 
     /**
-     *
+     *  <p>JSON array of localized strings. The order of items in the array is not fixed.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.common.LocalizedString> getValue() {

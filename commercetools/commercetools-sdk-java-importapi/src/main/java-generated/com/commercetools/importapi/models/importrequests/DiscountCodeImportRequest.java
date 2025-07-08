@@ -18,7 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>The request body to import Discount Codes. Contains data for Discount Codes to be created or updated in a Project.</p>
+ *  <p>The request body to import DiscountCodes. Contains data for Discount Codes to be created or updated in a Project.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

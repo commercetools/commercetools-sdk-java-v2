@@ -11,7 +11,7 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>The type of the referenced resource.</p>
+ *  <p>Type of referenced resource.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ReferenceType extends JsonEnum {
@@ -37,6 +37,9 @@ public interface ReferenceType extends JsonEnum {
     /**
     <p>References a discount code.</p> */
     ReferenceType DISCOUNT_CODE = ReferenceTypeEnum.DISCOUNT_CODE;
+    /**
+    <p>References a custom object</p> */
+    ReferenceType KEY_VALUE_DOCUMENT = ReferenceTypeEnum.KEY_VALUE_DOCUMENT;
     /**
     <p>References an order.</p> */
     ReferenceType ORDER = ReferenceTypeEnum.ORDER;
@@ -73,9 +76,6 @@ public interface ReferenceType extends JsonEnum {
     /**
     <p>References a type.</p> */
     ReferenceType TYPE = ReferenceTypeEnum.TYPE;
-    /**
-    <p>References a custom object</p> */
-    ReferenceType KEY_VALUE_DOCUMENT = ReferenceTypeEnum.KEY_VALUE_DOCUMENT;
 
     /**
      * possible values of ReferenceType
@@ -115,6 +115,11 @@ public interface ReferenceType extends JsonEnum {
          * discount-code
          */
         DISCOUNT_CODE("discount-code"),
+
+        /**
+         * key-value-document
+         */
+        KEY_VALUE_DOCUMENT("key-value-document"),
 
         /**
          * order
@@ -174,12 +179,7 @@ public interface ReferenceType extends JsonEnum {
         /**
          * type
          */
-        TYPE("type"),
-
-        /**
-         * key-value-document
-         */
-        KEY_VALUE_DOCUMENT("key-value-document");
+        TYPE("type");
         private final String jsonName;
 
         private ReferenceTypeEnum(final String jsonName) {

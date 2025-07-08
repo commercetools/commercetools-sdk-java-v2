@@ -41,7 +41,7 @@ public interface MoneySetAttribute extends Attribute {
     String MONEY_SET = "money-set";
 
     /**
-     *
+     *  <p>A set of money values in cent precision format.</p>
      * @return value
      */
     @NotNull
@@ -50,7 +50,7 @@ public interface MoneySetAttribute extends Attribute {
     public List<TypedMoney> getValue();
 
     /**
-     * set value
+     *  <p>A set of money values in cent precision format.</p>
      * @param value values to be set
      */
 
@@ -58,7 +58,7 @@ public interface MoneySetAttribute extends Attribute {
     public void setValue(final TypedMoney... value);
 
     /**
-     * set value
+     *  <p>A set of money values in cent precision format.</p>
      * @param value values to be set
      */
 

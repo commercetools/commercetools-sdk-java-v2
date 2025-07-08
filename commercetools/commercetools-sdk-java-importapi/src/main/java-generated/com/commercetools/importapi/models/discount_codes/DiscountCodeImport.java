@@ -22,7 +22,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>The data representation for a Discount Code to be imported that is persisted as a Discount Code in the Project.</p>
+ *  <p>Represents the data used to import a DiscountCode. Once imported, this data is persisted as a DiscountCode in the Project.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -42,7 +42,7 @@ import jakarta.validation.constraints.NotNull;
 public interface DiscountCodeImport extends ImportResource {
 
     /**
-     *  <p>User-defined unique identifier. If a Discount Code with this <code>key</code> exists, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If a DiscountCode with this <code>key</code> exists, it is updated with the imported data.</p>
      * @return key
      */
     @NotNull
@@ -66,8 +66,7 @@ public interface DiscountCodeImport extends ImportResource {
     public LocalizedString getDescription();
 
     /**
-     *  <p>User-defined unique identifier of the DiscountCode that is used by the customer to apply the discount.</p>
-     *  <p>The value cannot be updated. Attempting to update the value will result in an InvalidFieldsUpdate error.</p>
+     *  <p>Maps to <code>DiscountCode.code</code>. This value cannot be updated. Attempting to update this value will result in an InvalidFieldsUpdate error.</p>
      * @return code
      */
     @NotNull
@@ -75,7 +74,7 @@ public interface DiscountCodeImport extends ImportResource {
     public String getCode();
 
     /**
-     *  <p>Reference to CartDiscounts that can be applied to the Cart once the DiscountCode is applied.</p>
+     *  <p>Maps to <code>DiscountCode.cartDiscounts</code>. If the referenced CartDiscounts do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CartDiscounts are created.</p>
      * @return cartDiscounts
      */
     @NotNull
@@ -84,7 +83,7 @@ public interface DiscountCodeImport extends ImportResource {
     public List<CartDiscountKeyReference> getCartDiscounts();
 
     /**
-     *  <p>DiscountCode can only be applied to Carts that match this predicate.</p>
+     *  <p>Maps to <code>DiscountCode.cartPredicate</code>.</p>
      * @return cartPredicate
      */
 
@@ -92,7 +91,7 @@ public interface DiscountCodeImport extends ImportResource {
     public String getCartPredicate();
 
     /**
-     *  <p>Indicates if the DiscountCode is active and can be applied to the Cart.</p>
+     *  <p>Maps to <code>DiscountCode.isActive</code>.</p>
      * @return isActive
      */
     @NotNull
@@ -100,7 +99,7 @@ public interface DiscountCodeImport extends ImportResource {
     public Boolean getIsActive();
 
     /**
-     *  <p>Number of times the DiscountCode can be applied. DiscountCode application is counted at the time of Order creation or update. However, Order cancellation or deletion does not decrement the count.</p>
+     *  <p>Maps to <code>DiscountCode.maxApplications</code>.</p>
      * @return maxApplications
      */
 
@@ -108,7 +107,7 @@ public interface DiscountCodeImport extends ImportResource {
     public Long getMaxApplications();
 
     /**
-     *  <p>Number of times the DiscountCode can be applied per Customer (anonymous Carts are not supported). DiscountCode application is counted at the time of Order creation or update. However, Order cancellation or deletion does not decrement the count.</p>
+     *  <p>Maps to <code>DiscountCode.maxApplicationsPerCustomer</code>.</p>
      * @return maxApplicationsPerCustomer
      */
 
@@ -116,7 +115,7 @@ public interface DiscountCodeImport extends ImportResource {
     public Long getMaxApplicationsPerCustomer();
 
     /**
-     *  <p>Groups to which the DiscountCode belongs.</p>
+     *  <p>Maps to <code>DiscountCode.groups</code>.</p>
      * @return groups
      */
 
@@ -124,7 +123,7 @@ public interface DiscountCodeImport extends ImportResource {
     public List<String> getGroups();
 
     /**
-     *  <p>Date and time (UTC) from which the DiscountCode is effective.</p>
+     *  <p>Maps to <code>DiscountCode.validFrom</code>.</p>
      * @return validFrom
      */
 
@@ -132,7 +131,7 @@ public interface DiscountCodeImport extends ImportResource {
     public ZonedDateTime getValidFrom();
 
     /**
-     *  <p>Date and time (UTC) until which the DiscountCode is effective.</p>
+     *  <p>Maps to <code>DiscountCode.validUntil</code>.</p>
      * @return validUntil
      */
 
@@ -140,7 +139,7 @@ public interface DiscountCodeImport extends ImportResource {
     public ZonedDateTime getValidUntil();
 
     /**
-     *  <p>Custom Fields of the DiscountCode.</p>
+     *  <p>Maps to <code>DiscountCode.custom</code>.</p>
      * @return custom
      */
     @Valid
@@ -148,7 +147,7 @@ public interface DiscountCodeImport extends ImportResource {
     public Custom getCustom();
 
     /**
-     *  <p>User-defined unique identifier. If a Discount Code with this <code>key</code> exists, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If a DiscountCode with this <code>key</code> exists, it is updated with the imported data.</p>
      * @param key value to be set
      */
 
@@ -169,15 +168,14 @@ public interface DiscountCodeImport extends ImportResource {
     public void setDescription(final LocalizedString description);
 
     /**
-     *  <p>User-defined unique identifier of the DiscountCode that is used by the customer to apply the discount.</p>
-     *  <p>The value cannot be updated. Attempting to update the value will result in an InvalidFieldsUpdate error.</p>
+     *  <p>Maps to <code>DiscountCode.code</code>. This value cannot be updated. Attempting to update this value will result in an InvalidFieldsUpdate error.</p>
      * @param code value to be set
      */
 
     public void setCode(final String code);
 
     /**
-     *  <p>Reference to CartDiscounts that can be applied to the Cart once the DiscountCode is applied.</p>
+     *  <p>Maps to <code>DiscountCode.cartDiscounts</code>. If the referenced CartDiscounts do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CartDiscounts are created.</p>
      * @param cartDiscounts values to be set
      */
 
@@ -185,42 +183,42 @@ public interface DiscountCodeImport extends ImportResource {
     public void setCartDiscounts(final CartDiscountKeyReference... cartDiscounts);
 
     /**
-     *  <p>Reference to CartDiscounts that can be applied to the Cart once the DiscountCode is applied.</p>
+     *  <p>Maps to <code>DiscountCode.cartDiscounts</code>. If the referenced CartDiscounts do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CartDiscounts are created.</p>
      * @param cartDiscounts values to be set
      */
 
     public void setCartDiscounts(final List<CartDiscountKeyReference> cartDiscounts);
 
     /**
-     *  <p>DiscountCode can only be applied to Carts that match this predicate.</p>
+     *  <p>Maps to <code>DiscountCode.cartPredicate</code>.</p>
      * @param cartPredicate value to be set
      */
 
     public void setCartPredicate(final String cartPredicate);
 
     /**
-     *  <p>Indicates if the DiscountCode is active and can be applied to the Cart.</p>
+     *  <p>Maps to <code>DiscountCode.isActive</code>.</p>
      * @param isActive value to be set
      */
 
     public void setIsActive(final Boolean isActive);
 
     /**
-     *  <p>Number of times the DiscountCode can be applied. DiscountCode application is counted at the time of Order creation or update. However, Order cancellation or deletion does not decrement the count.</p>
+     *  <p>Maps to <code>DiscountCode.maxApplications</code>.</p>
      * @param maxApplications value to be set
      */
 
     public void setMaxApplications(final Long maxApplications);
 
     /**
-     *  <p>Number of times the DiscountCode can be applied per Customer (anonymous Carts are not supported). DiscountCode application is counted at the time of Order creation or update. However, Order cancellation or deletion does not decrement the count.</p>
+     *  <p>Maps to <code>DiscountCode.maxApplicationsPerCustomer</code>.</p>
      * @param maxApplicationsPerCustomer value to be set
      */
 
     public void setMaxApplicationsPerCustomer(final Long maxApplicationsPerCustomer);
 
     /**
-     *  <p>Groups to which the DiscountCode belongs.</p>
+     *  <p>Maps to <code>DiscountCode.groups</code>.</p>
      * @param groups values to be set
      */
 
@@ -228,28 +226,28 @@ public interface DiscountCodeImport extends ImportResource {
     public void setGroups(final String... groups);
 
     /**
-     *  <p>Groups to which the DiscountCode belongs.</p>
+     *  <p>Maps to <code>DiscountCode.groups</code>.</p>
      * @param groups values to be set
      */
 
     public void setGroups(final List<String> groups);
 
     /**
-     *  <p>Date and time (UTC) from which the DiscountCode is effective.</p>
+     *  <p>Maps to <code>DiscountCode.validFrom</code>.</p>
      * @param validFrom value to be set
      */
 
     public void setValidFrom(final ZonedDateTime validFrom);
 
     /**
-     *  <p>Date and time (UTC) until which the DiscountCode is effective.</p>
+     *  <p>Maps to <code>DiscountCode.validUntil</code>.</p>
      * @param validUntil value to be set
      */
 
     public void setValidUntil(final ZonedDateTime validUntil);
 
     /**
-     *  <p>Custom Fields of the DiscountCode.</p>
+     *  <p>Maps to <code>DiscountCode.custom</code>.</p>
      * @param custom value to be set
      */
 

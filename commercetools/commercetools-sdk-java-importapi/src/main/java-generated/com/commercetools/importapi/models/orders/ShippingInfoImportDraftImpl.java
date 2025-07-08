@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Maps to an order's <code>shippingInfo</code> property. This field is usually populated by the cart associated with the order, but when importing orders you must provide a draft representation as a part of the OrderImport.</p>
+ *  <p>Maps to an Order's <code>shippingInfo</code> property. This field is usually populated by the Cart associated with the Order, but when importing Orders you must provide a draft representation as a part of the OrderImport.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, ModelBase {
@@ -71,7 +71,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
     }
 
     /**
-     *
+     *  <p>Maps to <code>shippingInfo.shippingMethodName</code>.</p>
      */
 
     public String getShippingMethodName() {
@@ -79,7 +79,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
     }
 
     /**
-     *
+     *  <p>Maps to <code>shippingInfo.price</code>.</p>
      */
 
     public com.commercetools.importapi.models.common.TypedMoney getPrice() {
@@ -87,7 +87,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
     }
 
     /**
-     *
+     *  <p>Used to determine the price.</p>
      */
 
     public com.commercetools.importapi.models.orders.ShippingRateDraft getShippingRate() {
@@ -95,7 +95,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
     }
 
     /**
-     *
+     *  <p>Maps to <code>shippingInfo.taxRate</code>.</p>
      */
 
     public com.commercetools.importapi.models.prices.TaxRate getTaxRate() {
@@ -103,7 +103,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
     }
 
     /**
-     *  <p>References a tax category by key.</p>
+     *  <p>Maps to <code>shippingInfo.taxCategory</code>. If the referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p>
      */
 
     public com.commercetools.importapi.models.common.TaxCategoryKeyReference getTaxCategory() {
@@ -111,7 +111,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
     }
 
     /**
-     *  <p>References a shipping method by key.</p>
+     *  <p>Maps to <code>shippingInfo.shippingMethod</code>. If the referenced ShippingMethod does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced ShippingMethod is created.</p>
      */
 
     public com.commercetools.importapi.models.common.ShippingMethodKeyReference getShippingMethod() {
@@ -119,7 +119,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
     }
 
     /**
-     *  <p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referenceable by an <code>id</code>.</p>
+     *  <p>Maps to <code>shippingInfo.deliveries</code>. You cannot add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referenceable by an <code>id</code>.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.orders.Delivery> getDeliveries() {
@@ -127,7 +127,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
     }
 
     /**
-     *
+     *  <p>Maps to <code>shippingInfo.discountedPrice</code>.</p>
      */
 
     public com.commercetools.importapi.models.orders.DiscountedLineItemPriceDraft getDiscountedPrice() {
@@ -135,7 +135,7 @@ public class ShippingInfoImportDraftImpl implements ShippingInfoImportDraft, Mod
     }
 
     /**
-     *
+     *  <p>Maps to <code>shippingInfo.shippingMethodState</code>.</p>
      */
 
     public com.commercetools.importapi.models.orders.ShippingMethodState getShippingMethodState() {

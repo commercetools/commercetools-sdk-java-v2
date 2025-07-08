@@ -51,7 +51,7 @@ public class DateSetFieldImpl implements DateSetField, ModelBase {
     }
 
     /**
-     *
+     *  <p>JSON array of date values in the format <code>YYYY-MM-DD</code> without duplicates. The order of items in the array is not fixed.</p>
      */
 
     public java.util.List<java.time.LocalDate> getValue() {

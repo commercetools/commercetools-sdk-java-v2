@@ -42,7 +42,7 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
     private Long canceled;
 
     /**
-     *  <p>The number of resources in the <code>processing</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>processing</code> state.</p>
      * @param processing value to be set
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
     }
 
     /**
-     *  <p>The number of resources in the <code>validationFailed</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>validationFailed</code> state.</p>
      * @param validationFailed value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
     }
 
     /**
-     *  <p>The number of resources in the <code>unresolved</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>unresolved</code> state.</p>
      * @param unresolved value to be set
      * @return Builder
      */
@@ -75,7 +75,7 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
     }
 
     /**
-     *  <p>The number of resources in the <code>waitForMasterVariant</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>waitForMasterVariant</code> state.</p>
      * @param waitForMasterVariant value to be set
      * @return Builder
      */
@@ -86,7 +86,7 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
     }
 
     /**
-     *  <p>The number of resources in the <code>imported</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>imported</code> state.</p>
      * @param imported value to be set
      * @return Builder
      */
@@ -97,7 +97,7 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
     }
 
     /**
-     *  <p>The number of resources in the <code>rejected</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>rejected</code> state.</p>
      * @param rejected value to be set
      * @return Builder
      */
@@ -108,7 +108,7 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
     }
 
     /**
-     *  <p>The number of resources in the <code>canceled</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>canceled</code> state.</p>
      * @param canceled value to be set
      * @return Builder
      */
@@ -119,7 +119,7 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
     }
 
     /**
-     *  <p>The number of resources in the <code>processing</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>processing</code> state.</p>
      * @return processing
      */
 
@@ -128,7 +128,7 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
     }
 
     /**
-     *  <p>The number of resources in the <code>validationFailed</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>validationFailed</code> state.</p>
      * @return validationFailed
      */
 
@@ -137,7 +137,7 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
     }
 
     /**
-     *  <p>The number of resources in the <code>unresolved</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>unresolved</code> state.</p>
      * @return unresolved
      */
 
@@ -146,7 +146,7 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
     }
 
     /**
-     *  <p>The number of resources in the <code>waitForMasterVariant</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>waitForMasterVariant</code> state.</p>
      * @return waitForMasterVariant
      */
 
@@ -155,7 +155,7 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
     }
 
     /**
-     *  <p>The number of resources in the <code>imported</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>imported</code> state.</p>
      * @return imported
      */
 
@@ -164,7 +164,7 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
     }
 
     /**
-     *  <p>The number of resources in the <code>rejected</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>rejected</code> state.</p>
      * @return rejected
      */
 
@@ -173,7 +173,7 @@ public class OperationStatesBuilder implements Builder<OperationStates> {
     }
 
     /**
-     *  <p>The number of resources in the <code>canceled</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>canceled</code> state.</p>
      * @return canceled
      */
 

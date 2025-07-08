@@ -51,7 +51,7 @@ public class LocalizedEnumSetFieldImpl implements LocalizedEnumSetField, ModelBa
     }
 
     /**
-     *
+     *  <p>JSON array of localized enum values, each represented by its key. Each key must match the key of an CustomFieldLocalizedEnumValue in the CustomFieldLocalizedEnumType. The order of items in the array is not fixed.</p>
      */
 
     public java.util.List<String> getValue() {

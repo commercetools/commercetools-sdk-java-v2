@@ -39,7 +39,7 @@ public interface DateField extends CustomField {
     String DATE = "Date";
 
     /**
-     *
+     *  <p>A date in the format <code>YYYY-MM-DD</code>.</p>
      * @return value
      */
     @NotNull
@@ -47,7 +47,7 @@ public interface DateField extends CustomField {
     public LocalDate getValue();
 
     /**
-     * set value
+     *  <p>A date in the format <code>YYYY-MM-DD</code>.</p>
      * @param value value to be set
      */
 

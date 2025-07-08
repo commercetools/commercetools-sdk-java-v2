@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- * ItemShippingDetailsDraft
+ *  <p>The sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,7 +34,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ItemShippingDetailsDraft extends io.vrap.rmf.base.client.Draft<ItemShippingDetailsDraft> {
 
     /**
-     *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
+     *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
      * @return targets
      */
     @NotNull
@@ -43,7 +43,7 @@ public interface ItemShippingDetailsDraft extends io.vrap.rmf.base.client.Draft<
     public List<ItemShippingTarget> getTargets();
 
     /**
-     *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
+     *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
      * @param targets values to be set
      */
 
@@ -51,7 +51,7 @@ public interface ItemShippingDetailsDraft extends io.vrap.rmf.base.client.Draft<
     public void setTargets(final ItemShippingTarget... targets);
 
     /**
-     *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
+     *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
      * @param targets values to be set
      */
 

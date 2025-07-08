@@ -103,7 +103,7 @@ public class LineItemPriceImpl implements LineItemPrice, ModelBase {
     }
 
     /**
-     *  <p>References a customer group by key.</p>
+     *  <p>Maps to <code>Price.customerGroup</code>. References a customer group by key. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
      */
 
     public com.commercetools.importapi.models.common.CustomerGroupKeyReference getCustomerGroup() {
@@ -111,7 +111,7 @@ public class LineItemPriceImpl implements LineItemPrice, ModelBase {
     }
 
     /**
-     *  <p>References a channel by key.</p>
+     *  <p>Maps to <code>Price.channel</code>. References a channel by key. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      */
 
     public com.commercetools.importapi.models.common.ChannelKeyReference getChannel() {
@@ -127,7 +127,7 @@ public class LineItemPriceImpl implements LineItemPrice, ModelBase {
     }
 
     /**
-     *  <p>The tiered prices for this price.</p>
+     *  <p>Maps to <code>Price.tiers</code>.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.common.PriceTier> getTiers() {

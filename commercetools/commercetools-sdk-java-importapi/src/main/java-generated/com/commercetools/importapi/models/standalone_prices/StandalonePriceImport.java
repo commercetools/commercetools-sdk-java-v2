@@ -25,7 +25,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>The data representation for a Standalone Price to be imported that is persisted as a Standalone Price) in the Project.</p>
+ *  <p>Represents the data used to import a StandalonePrice. Once imported, this data is persisted as a StandalonePrice) in the Project.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -44,7 +44,7 @@ import jakarta.validation.constraints.NotNull;
 public interface StandalonePriceImport extends ImportResource {
 
     /**
-     *  <p>User-defined unique identifier for the Standalone Price. If a StandalonePrice) with this <code>key</code> exists, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier for the StandalonePrice. If a StandalonePrice) with this <code>key</code> exists, it is updated with the imported data.</p>
      * @return key
      */
     @NotNull
@@ -52,7 +52,7 @@ public interface StandalonePriceImport extends ImportResource {
     public String getKey();
 
     /**
-     *  <p>Identifies the ProductVariant to which this Standalone Price is associated. This value is not validated to exist in Product Variants.</p>
+     *  <p>Maps to <code>StandalonePrice.sku</code>. This value is not validated to exist in Product Variants.</p>
      * @return sku
      */
     @NotNull
@@ -60,7 +60,7 @@ public interface StandalonePriceImport extends ImportResource {
     public String getSku();
 
     /**
-     *  <p>Sets the money value of this Price.</p>
+     *  <p>Maps to <code>StandalonePrice.value</code>.</p>
      * @return value
      */
     @NotNull
@@ -69,8 +69,7 @@ public interface StandalonePriceImport extends ImportResource {
     public TypedMoney getValue();
 
     /**
-     *  <p>Sets the country for this Price, if the Price does not yet have a country.</p>
-     *  <p>The country cannot be updated. Attempting to update the an existing country will result in an InvalidFieldsUpdate error.</p>
+     *  <p>Maps to <code>StandalonePrice.country</code>. This value cannot be updated. Attempting to update this value will result in an InvalidFieldsUpdate error.</p>
      * @return country
      */
 
@@ -78,8 +77,8 @@ public interface StandalonePriceImport extends ImportResource {
     public String getCountry();
 
     /**
-     *  <p>Sets the CustomerGroup for this Price, if the Price does not yet have a CustomerGroup.</p>
-     *  <p>The CustomerGroup cannot be updated. Attempting to update an existing CustomerGroup will result in an InvalidFieldsUpdate error.</p>
+     *  <p>Maps to <code>StandalonePrice.customerGroup</code>. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
+     *  <p>This value cannot be updated. Attempting to update this value will result in an InvalidFieldsUpdate error.</p>
      * @return customerGroup
      */
     @Valid
@@ -87,8 +86,8 @@ public interface StandalonePriceImport extends ImportResource {
     public CustomerGroupKeyReference getCustomerGroup();
 
     /**
-     *  <p>Sets the product distribution Channel for this Price, if the Price does not yet have a Channel.</p>
-     *  <p>The Channel cannot be updated. Attempting to update an existing Channel will result in an InvalidFieldsUpdate error.</p>
+     *  <p>Maps to <code>StandalonePrice.channel</code>. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p>
+     *  <p>This value cannot be updated. Attempting to update this value will result in an InvalidFieldsUpdate error.</p>
      * @return channel
      */
     @Valid
@@ -96,7 +95,7 @@ public interface StandalonePriceImport extends ImportResource {
     public ChannelKeyReference getChannel();
 
     /**
-     *  <p>Sets the date from which the Price is valid.</p>
+     *  <p>Maps to <code>StandalonePrice.validFrom</code>.</p>
      * @return validFrom
      */
 
@@ -104,7 +103,7 @@ public interface StandalonePriceImport extends ImportResource {
     public ZonedDateTime getValidFrom();
 
     /**
-     *  <p>Sets the date until the Price is valid.</p>
+     *  <p>Maps to <code>StandalonePrice.validUntil</code>.</p>
      * @return validUntil
      */
 
@@ -112,7 +111,7 @@ public interface StandalonePriceImport extends ImportResource {
     public ZonedDateTime getValidUntil();
 
     /**
-     *  <p>Sets price tiers.</p>
+     *  <p>Maps to <code>StandalonePrice.tiers</code>.</p>
      * @return tiers
      */
     @Valid
@@ -128,7 +127,7 @@ public interface StandalonePriceImport extends ImportResource {
     public DiscountedPrice getDiscounted();
 
     /**
-     *  <p>Custom Fields for the StandalonePrice.</p>
+     *  <p>Maps to <code>StandalonePrice.custom</code>.</p>
      * @return custom
      */
     @Valid
@@ -136,66 +135,65 @@ public interface StandalonePriceImport extends ImportResource {
     public Custom getCustom();
 
     /**
-     *  <p>User-defined unique identifier for the Standalone Price. If a StandalonePrice) with this <code>key</code> exists, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier for the StandalonePrice. If a StandalonePrice) with this <code>key</code> exists, it is updated with the imported data.</p>
      * @param key value to be set
      */
 
     public void setKey(final String key);
 
     /**
-     *  <p>Identifies the ProductVariant to which this Standalone Price is associated. This value is not validated to exist in Product Variants.</p>
+     *  <p>Maps to <code>StandalonePrice.sku</code>. This value is not validated to exist in Product Variants.</p>
      * @param sku value to be set
      */
 
     public void setSku(final String sku);
 
     /**
-     *  <p>Sets the money value of this Price.</p>
+     *  <p>Maps to <code>StandalonePrice.value</code>.</p>
      * @param value value to be set
      */
 
     public void setValue(final TypedMoney value);
 
     /**
-     *  <p>Sets the country for this Price, if the Price does not yet have a country.</p>
-     *  <p>The country cannot be updated. Attempting to update the an existing country will result in an InvalidFieldsUpdate error.</p>
+     *  <p>Maps to <code>StandalonePrice.country</code>. This value cannot be updated. Attempting to update this value will result in an InvalidFieldsUpdate error.</p>
      * @param country value to be set
      */
 
     public void setCountry(final String country);
 
     /**
-     *  <p>Sets the CustomerGroup for this Price, if the Price does not yet have a CustomerGroup.</p>
-     *  <p>The CustomerGroup cannot be updated. Attempting to update an existing CustomerGroup will result in an InvalidFieldsUpdate error.</p>
+     *  <p>Maps to <code>StandalonePrice.customerGroup</code>. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
+     *  <p>This value cannot be updated. Attempting to update this value will result in an InvalidFieldsUpdate error.</p>
      * @param customerGroup value to be set
      */
 
     public void setCustomerGroup(final CustomerGroupKeyReference customerGroup);
 
     /**
-     *  <p>Sets the product distribution Channel for this Price, if the Price does not yet have a Channel.</p>
-     *  <p>The Channel cannot be updated. Attempting to update an existing Channel will result in an InvalidFieldsUpdate error.</p>
+     *  <p>Maps to <code>StandalonePrice.channel</code>. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p>
+     *  <p>This value cannot be updated. Attempting to update this value will result in an InvalidFieldsUpdate error.</p>
      * @param channel value to be set
      */
 
     public void setChannel(final ChannelKeyReference channel);
 
     /**
-     *  <p>Sets the date from which the Price is valid.</p>
+     *  <p>Maps to <code>StandalonePrice.validFrom</code>.</p>
      * @param validFrom value to be set
      */
 
     public void setValidFrom(final ZonedDateTime validFrom);
 
     /**
-     *  <p>Sets the date until the Price is valid.</p>
+     *  <p>Maps to <code>StandalonePrice.validUntil</code>.</p>
      * @param validUntil value to be set
      */
 
     public void setValidUntil(final ZonedDateTime validUntil);
 
     /**
-     *  <p>Sets price tiers.</p>
+     *  <p>Maps to <code>StandalonePrice.tiers</code>.</p>
      * @param tiers values to be set
      */
 
@@ -203,7 +201,7 @@ public interface StandalonePriceImport extends ImportResource {
     public void setTiers(final PriceTier... tiers);
 
     /**
-     *  <p>Sets price tiers.</p>
+     *  <p>Maps to <code>StandalonePrice.tiers</code>.</p>
      * @param tiers values to be set
      */
 
@@ -217,7 +215,7 @@ public interface StandalonePriceImport extends ImportResource {
     public void setDiscounted(final DiscountedPrice discounted);
 
     /**
-     *  <p>Custom Fields for the StandalonePrice.</p>
+     *  <p>Maps to <code>StandalonePrice.custom</code>.</p>
      * @param custom value to be set
      */
 

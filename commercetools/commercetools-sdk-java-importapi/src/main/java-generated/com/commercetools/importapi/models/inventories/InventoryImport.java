@@ -20,7 +20,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>The data representation for an Inventory to be imported that is persisted as a Inventory in the Project.</p>
+ *  <p>Represents the data used to import an InventoryEntry. Once imported, this data is persisted as a InventoryEntry in the Project.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -39,7 +39,7 @@ import jakarta.validation.constraints.NotNull;
 public interface InventoryImport extends ImportResource {
 
     /**
-     *  <p>User-defined unique identifier. If an InventoryEntry with this <code>key</code> exists, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If an InventoryEntry with this <code>key</code> exists, it is updated with the imported data.</p>
      * @return key
      */
     @NotNull
@@ -47,7 +47,7 @@ public interface InventoryImport extends ImportResource {
     public String getKey();
 
     /**
-     *  <p>Maps to <code>Inventory.sku</code></p>
+     *  <p>Maps to <code>InventoryEntry.sku</code></p>
      * @return sku
      */
     @NotNull
@@ -55,7 +55,7 @@ public interface InventoryImport extends ImportResource {
     public String getSku();
 
     /**
-     *  <p>Maps to <code>Inventory.quantityOnStock</code></p>
+     *  <p>Maps to <code>InventoryEntry.quantityOnStock</code></p>
      * @return quantityOnStock
      */
     @NotNull
@@ -63,7 +63,7 @@ public interface InventoryImport extends ImportResource {
     public Long getQuantityOnStock();
 
     /**
-     *  <p>Maps to <code>Inventory.restockableInDays</code></p>
+     *  <p>Maps to <code>InventoryEntry.restockableInDays</code></p>
      * @return restockableInDays
      */
 
@@ -71,7 +71,7 @@ public interface InventoryImport extends ImportResource {
     public Long getRestockableInDays();
 
     /**
-     *  <p>Maps to <code>Inventory.expectedDelivery</code></p>
+     *  <p>Maps to <code>InventoryEntry.expectedDelivery</code></p>
      * @return expectedDelivery
      */
 
@@ -79,7 +79,7 @@ public interface InventoryImport extends ImportResource {
     public ZonedDateTime getExpectedDelivery();
 
     /**
-     *  <p>Maps to <code>Inventory.supplyChannel</code></p>
+     *  <p>Maps to <code>InventoryEntry.supplyChannel</code>. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      * @return supplyChannel
      */
     @Valid
@@ -87,7 +87,7 @@ public interface InventoryImport extends ImportResource {
     public ChannelKeyReference getSupplyChannel();
 
     /**
-     *  <p>Maps to <code>Inventory.custom</code>.</p>
+     *  <p>Maps to <code>InventoryEntry.custom</code>.</p>
      * @return custom
      */
     @Valid
@@ -95,49 +95,49 @@ public interface InventoryImport extends ImportResource {
     public Custom getCustom();
 
     /**
-     *  <p>User-defined unique identifier. If an InventoryEntry with this <code>key</code> exists, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If an InventoryEntry with this <code>key</code> exists, it is updated with the imported data.</p>
      * @param key value to be set
      */
 
     public void setKey(final String key);
 
     /**
-     *  <p>Maps to <code>Inventory.sku</code></p>
+     *  <p>Maps to <code>InventoryEntry.sku</code></p>
      * @param sku value to be set
      */
 
     public void setSku(final String sku);
 
     /**
-     *  <p>Maps to <code>Inventory.quantityOnStock</code></p>
+     *  <p>Maps to <code>InventoryEntry.quantityOnStock</code></p>
      * @param quantityOnStock value to be set
      */
 
     public void setQuantityOnStock(final Long quantityOnStock);
 
     /**
-     *  <p>Maps to <code>Inventory.restockableInDays</code></p>
+     *  <p>Maps to <code>InventoryEntry.restockableInDays</code></p>
      * @param restockableInDays value to be set
      */
 
     public void setRestockableInDays(final Long restockableInDays);
 
     /**
-     *  <p>Maps to <code>Inventory.expectedDelivery</code></p>
+     *  <p>Maps to <code>InventoryEntry.expectedDelivery</code></p>
      * @param expectedDelivery value to be set
      */
 
     public void setExpectedDelivery(final ZonedDateTime expectedDelivery);
 
     /**
-     *  <p>Maps to <code>Inventory.supplyChannel</code></p>
+     *  <p>Maps to <code>InventoryEntry.supplyChannel</code>. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      * @param supplyChannel value to be set
      */
 
     public void setSupplyChannel(final ChannelKeyReference supplyChannel);
 
     /**
-     *  <p>Maps to <code>Inventory.custom</code>.</p>
+     *  <p>Maps to <code>InventoryEntry.custom</code>.</p>
      * @param custom value to be set
      */
 

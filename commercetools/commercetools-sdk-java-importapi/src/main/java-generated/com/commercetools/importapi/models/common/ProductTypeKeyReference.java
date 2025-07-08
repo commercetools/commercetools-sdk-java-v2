@@ -12,8 +12,10 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+
 /**
- *  <p>References a product type by key.</p>
+ *  <p>Used by the Import API to identify a ProductType.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,6 +36,21 @@ public interface ProductTypeKeyReference extends KeyReference {
      * discriminator value for ProductTypeKeyReference
      */
     String PRODUCT_TYPE = "product-type";
+
+    /**
+     *  <p>User-defined unique identifier of the referenced ProductType.</p>
+     * @return key
+     */
+    @NotNull
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
+     *  <p>User-defined unique identifier of the referenced ProductType.</p>
+     * @param key value to be set
+     */
+
+    public void setKey(final String key);
 
     /**
      * factory method

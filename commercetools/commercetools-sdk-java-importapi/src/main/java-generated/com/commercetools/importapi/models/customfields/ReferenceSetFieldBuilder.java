@@ -25,7 +25,7 @@ public class ReferenceSetFieldBuilder implements Builder<ReferenceSetField> {
     private java.util.List<com.commercetools.importapi.models.common.KeyReference> value;
 
     /**
-     * set values to the value
+     *  <p>JSON array of references, each referencing an existing resource by key. The order of items in the array is not fixed.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -36,7 +36,7 @@ public class ReferenceSetFieldBuilder implements Builder<ReferenceSetField> {
     }
 
     /**
-     * set value to the value
+     *  <p>JSON array of references, each referencing an existing resource by key. The order of items in the array is not fixed.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -48,7 +48,7 @@ public class ReferenceSetFieldBuilder implements Builder<ReferenceSetField> {
     }
 
     /**
-     * add values to the value
+     *  <p>JSON array of references, each referencing an existing resource by key. The order of items in the array is not fixed.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -62,7 +62,7 @@ public class ReferenceSetFieldBuilder implements Builder<ReferenceSetField> {
     }
 
     /**
-     * add a value to the value using the builder function
+     *  <p>JSON array of references, each referencing an existing resource by key. The order of items in the array is not fixed.</p>
      * @param builder function to build the value value
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class ReferenceSetFieldBuilder implements Builder<ReferenceSetField> {
     }
 
     /**
-     * set the value to the value using the builder function
+     *  <p>JSON array of references, each referencing an existing resource by key. The order of items in the array is not fixed.</p>
      * @param builder function to build the value value
      * @return Builder
      */
@@ -90,7 +90,7 @@ public class ReferenceSetFieldBuilder implements Builder<ReferenceSetField> {
     }
 
     /**
-     * value of value}
+     *  <p>JSON array of references, each referencing an existing resource by key. The order of items in the array is not fixed.</p>
      * @return value
      */
 

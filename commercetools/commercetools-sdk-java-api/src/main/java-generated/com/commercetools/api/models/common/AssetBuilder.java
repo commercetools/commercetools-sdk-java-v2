@@ -45,7 +45,7 @@ public class AssetBuilder implements Builder<Asset> {
     private String key;
 
     /**
-     *  <p>Unique identifier of the Asset.</p>
+     *  <p>Unique identifier of the Asset. Not required when importing Assets using the Import API.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -294,7 +294,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     *  <p>Unique identifier of the Asset.</p>
+     *  <p>Unique identifier of the Asset. Not required when importing Assets using the Import API.</p>
      * @return id
      */
 

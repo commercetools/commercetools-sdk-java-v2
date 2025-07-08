@@ -30,7 +30,7 @@ public class ParcelTrackingDataBuilder implements Builder<ParcelTrackingData> {
     private com.commercetools.importapi.models.orders.TrackingData trackingData;
 
     /**
-     * set the value to the parcelId
+     *  <p><code>id</code> of an existing Parcel.</p>
      * @param parcelId value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class ParcelTrackingDataBuilder implements Builder<ParcelTrackingData> {
     }
 
     /**
-     * set the value to the trackingData using the builder function
+     *  <p>Information that helps track a Parcel.</p>
      * @param builder function to build the trackingData value
      * @return Builder
      */
@@ -53,7 +53,7 @@ public class ParcelTrackingDataBuilder implements Builder<ParcelTrackingData> {
     }
 
     /**
-     * set the value to the trackingData using the builder function
+     *  <p>Information that helps track a Parcel.</p>
      * @param builder function to build the trackingData value
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class ParcelTrackingDataBuilder implements Builder<ParcelTrackingData> {
     }
 
     /**
-     * set the value to the trackingData
+     *  <p>Information that helps track a Parcel.</p>
      * @param trackingData value to be set
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class ParcelTrackingDataBuilder implements Builder<ParcelTrackingData> {
     }
 
     /**
-     * value of parcelId}
+     *  <p><code>id</code> of an existing Parcel.</p>
      * @return parcelId
      */
 
@@ -86,7 +86,7 @@ public class ParcelTrackingDataBuilder implements Builder<ParcelTrackingData> {
     }
 
     /**
-     * value of trackingData}
+     *  <p>Information that helps track a Parcel.</p>
      * @return trackingData
      */
 

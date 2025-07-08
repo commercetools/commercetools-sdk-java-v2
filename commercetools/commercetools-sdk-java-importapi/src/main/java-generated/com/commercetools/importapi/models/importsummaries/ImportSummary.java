@@ -16,7 +16,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Describes the status of an ImportContainer by the number of resources in each ProcessingState. Can be used to monitor the import progress per Import Container.</p>
+ *  <p>The current status of ImportOperations in an ImportContainer.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,7 +34,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ImportSummary {
 
     /**
-     *  <p>The import status of an ImportContainer given by the number of resources in each ProcessingState.</p>
+     *  <p>The current ProcessingStates of ImportOperations in an ImportContainer.</p>
      * @return states
      */
     @NotNull
@@ -43,7 +43,7 @@ public interface ImportSummary {
     public OperationStates getStates();
 
     /**
-     *  <p>The total number of ImportOperations received for this Import Summary.</p>
+     *  <p>The total number of ImportOperations in <code>states</code>.</p>
      * @return total
      */
     @NotNull
@@ -51,14 +51,14 @@ public interface ImportSummary {
     public Long getTotal();
 
     /**
-     *  <p>The import status of an ImportContainer given by the number of resources in each ProcessingState.</p>
+     *  <p>The current ProcessingStates of ImportOperations in an ImportContainer.</p>
      * @param states value to be set
      */
 
     public void setStates(final OperationStates states);
 
     /**
-     *  <p>The total number of ImportOperations received for this Import Summary.</p>
+     *  <p>The total number of ImportOperations in <code>states</code>.</p>
      * @param total value to be set
      */
 

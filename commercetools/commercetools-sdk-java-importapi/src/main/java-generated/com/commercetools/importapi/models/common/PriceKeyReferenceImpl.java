@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>References a price by key.</p>
+ *  <p>Used by the Import API to identify an Embedded Price.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PriceKeyReferenceImpl implements PriceKeyReference, ModelBase {
@@ -43,7 +43,7 @@ public class PriceKeyReferenceImpl implements PriceKeyReference, ModelBase {
     }
 
     /**
-     *
+     *  <p>User-defined unique identifier of the referenced Embedded Price.</p>
      */
 
     public String getKey() {
@@ -51,7 +51,7 @@ public class PriceKeyReferenceImpl implements PriceKeyReference, ModelBase {
     }
 
     /**
-     *  <p>The type of the referenced resource.</p>
+     *  <p>Type of referenced resource.</p>
      */
 
     public com.commercetools.importapi.models.common.ReferenceType getTypeId() {

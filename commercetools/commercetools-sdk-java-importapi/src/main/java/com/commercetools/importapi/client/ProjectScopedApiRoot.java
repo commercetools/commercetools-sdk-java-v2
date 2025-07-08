@@ -35,4 +35,6 @@ public interface ProjectScopedApiRoot {
     ByProjectKeyTypesRequestBuilder types();
 
     ByProjectKeyDiscountCodesRequestBuilder discountCodes();
+
+    ByProjectKeyProductSelectionsRequestBuilder productSelections();
 }

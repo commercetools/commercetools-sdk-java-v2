@@ -24,14 +24,14 @@ public class MoneySetFieldImpl implements MoneySetField, ModelBase {
 
     private String type;
 
-    private java.util.List<com.commercetools.importapi.models.common.Money> value;
+    private java.util.List<com.commercetools.importapi.models.common.TypedMoney> value;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     MoneySetFieldImpl(
-            @JsonProperty("value") final java.util.List<com.commercetools.importapi.models.common.Money> value) {
+            @JsonProperty("value") final java.util.List<com.commercetools.importapi.models.common.TypedMoney> value) {
         this.value = value;
         this.type = MONEY_SET;
     }
@@ -52,18 +52,18 @@ public class MoneySetFieldImpl implements MoneySetField, ModelBase {
     }
 
     /**
-     *
+     *  <p>JSON array of money values in cent precision format. The order of items in the array is not fixed.</p>
      */
 
-    public java.util.List<com.commercetools.importapi.models.common.Money> getValue() {
+    public java.util.List<com.commercetools.importapi.models.common.TypedMoney> getValue() {
         return this.value;
     }
 
-    public void setValue(final com.commercetools.importapi.models.common.Money... value) {
+    public void setValue(final com.commercetools.importapi.models.common.TypedMoney... value) {
         this.value = new ArrayList<>(Arrays.asList(value));
     }
 
-    public void setValue(final java.util.List<com.commercetools.importapi.models.common.Money> value) {
+    public void setValue(final java.util.List<com.commercetools.importapi.models.common.TypedMoney> value) {
         this.value = value;
     }
 

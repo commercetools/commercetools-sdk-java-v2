@@ -44,7 +44,7 @@ public class ImportContainerDraftBuilder implements Builder<ImportContainerDraft
     }
 
     /**
-     *  <p>The resource type to be imported. If not given, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
+     *  <p>The resource type the ImportContainer will accept. If not specified, the ImportContainer can import all of the supported ImportResourceTypes.</p>
      * @param resourceType value to be set
      * @return Builder
      */
@@ -91,7 +91,7 @@ public class ImportContainerDraftBuilder implements Builder<ImportContainerDraft
     }
 
     /**
-     *  <p>The resource type to be imported. If not given, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
+     *  <p>The resource type the ImportContainer will accept. If not specified, the ImportContainer can import all of the supported ImportResourceTypes.</p>
      * @return resourceType
      */
 

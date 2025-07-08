@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>The number of resources in each ProcessingState.</p>
+ *  <p>The number of ImportOperations in each ProcessingState.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class OperationStatesImpl implements OperationStates, ModelBase {
@@ -62,7 +62,7 @@ public class OperationStatesImpl implements OperationStates, ModelBase {
     }
 
     /**
-     *  <p>The number of resources in the <code>processing</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>processing</code> state.</p>
      */
 
     public Long getProcessing() {
@@ -70,7 +70,7 @@ public class OperationStatesImpl implements OperationStates, ModelBase {
     }
 
     /**
-     *  <p>The number of resources in the <code>validationFailed</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>validationFailed</code> state.</p>
      */
 
     public Long getValidationFailed() {
@@ -78,7 +78,7 @@ public class OperationStatesImpl implements OperationStates, ModelBase {
     }
 
     /**
-     *  <p>The number of resources in the <code>unresolved</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>unresolved</code> state.</p>
      */
 
     public Long getUnresolved() {
@@ -86,7 +86,7 @@ public class OperationStatesImpl implements OperationStates, ModelBase {
     }
 
     /**
-     *  <p>The number of resources in the <code>waitForMasterVariant</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>waitForMasterVariant</code> state.</p>
      */
 
     public Long getWaitForMasterVariant() {
@@ -94,7 +94,7 @@ public class OperationStatesImpl implements OperationStates, ModelBase {
     }
 
     /**
-     *  <p>The number of resources in the <code>imported</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>imported</code> state.</p>
      */
 
     public Long getImported() {
@@ -102,7 +102,7 @@ public class OperationStatesImpl implements OperationStates, ModelBase {
     }
 
     /**
-     *  <p>The number of resources in the <code>rejected</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>rejected</code> state.</p>
      */
 
     public Long getRejected() {
@@ -110,7 +110,7 @@ public class OperationStatesImpl implements OperationStates, ModelBase {
     }
 
     /**
-     *  <p>The number of resources in the <code>canceled</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>canceled</code> state.</p>
      */
 
     public Long getCanceled() {

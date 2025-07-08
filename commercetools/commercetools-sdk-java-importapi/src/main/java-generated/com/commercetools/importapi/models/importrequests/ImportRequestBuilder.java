@@ -47,6 +47,10 @@ public class ImportRequestBuilder {
         return com.commercetools.importapi.models.importrequests.ProductImportRequestBuilder.of();
     }
 
+    public com.commercetools.importapi.models.importrequests.ProductSelectionImportRequestBuilder productSelectionBuilder() {
+        return com.commercetools.importapi.models.importrequests.ProductSelectionImportRequestBuilder.of();
+    }
+
     public com.commercetools.importapi.models.importrequests.ProductTypeImportRequestBuilder productTypeBuilder() {
         return com.commercetools.importapi.models.importrequests.ProductTypeImportRequestBuilder.of();
     }

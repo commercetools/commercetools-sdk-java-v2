@@ -16,7 +16,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>The representation sent to the server when updating an Import Container.</p>
+ *  <p>The representation sent to the server when updating an ImportContainer.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

@@ -52,7 +52,7 @@ public class ReferenceSetFieldImpl implements ReferenceSetField, ModelBase {
     }
 
     /**
-     *
+     *  <p>JSON array of references, each referencing an existing resource by key. The order of items in the array is not fixed.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.common.KeyReference> getValue() {

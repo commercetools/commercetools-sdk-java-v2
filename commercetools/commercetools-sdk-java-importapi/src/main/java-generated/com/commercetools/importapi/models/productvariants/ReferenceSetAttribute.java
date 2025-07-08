@@ -41,7 +41,7 @@ public interface ReferenceSetAttribute extends Attribute {
     String REFERENCE_SET = "reference-set";
 
     /**
-     *
+     *  <p>A set of references, each referencing a resource by key. Each reference must match the key of an existing resource in the project.</p>
      * @return value
      */
     @NotNull
@@ -50,7 +50,7 @@ public interface ReferenceSetAttribute extends Attribute {
     public List<KeyReference> getValue();
 
     /**
-     * set value
+     *  <p>A set of references, each referencing a resource by key. Each reference must match the key of an existing resource in the project.</p>
      * @param value values to be set
      */
 
@@ -58,7 +58,7 @@ public interface ReferenceSetAttribute extends Attribute {
     public void setValue(final KeyReference... value);
 
     /**
-     * set value
+     *  <p>A set of references, each referencing a resource by key. Each reference must match the key of an existing resource in the project.</p>
      * @param value values to be set
      */
 

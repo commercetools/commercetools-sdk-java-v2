@@ -98,7 +98,7 @@ public interface ResourceTypeId extends JsonEnum {
     <p>TextLineItem on ShoppingList</p> */
     ResourceTypeId SHOPPING_LIST_TEXT_LINE_ITEM = ResourceTypeIdEnum.SHOPPING_LIST_TEXT_LINE_ITEM;
     /**
-    <p>StandalonePrice)</p> */
+    <p>StandalonePrice</p> */
     ResourceTypeId STANDALONE_PRICE = ResourceTypeIdEnum.STANDALONE_PRICE;
     /**
     <p>Store</p> */

@@ -38,7 +38,7 @@ public class TrackingDataBuilder implements Builder<TrackingData> {
     private Boolean isReturn;
 
     /**
-     * set the value to the trackingId
+     *  <p>Identifier to track the Parcel.</p>
      * @param trackingId value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class TrackingDataBuilder implements Builder<TrackingData> {
     }
 
     /**
-     * set the value to the carrier
+     *  <p>Name of the carrier that delivers the Parcel.</p>
      * @param carrier value to be set
      * @return Builder
      */
@@ -60,7 +60,7 @@ public class TrackingDataBuilder implements Builder<TrackingData> {
     }
 
     /**
-     * set the value to the provider
+     *  <p>Name of the provider that serves as facade to several carriers.</p>
      * @param provider value to be set
      * @return Builder
      */
@@ -71,7 +71,7 @@ public class TrackingDataBuilder implements Builder<TrackingData> {
     }
 
     /**
-     * set the value to the providerTransaction
+     *  <p>Transaction identifier with the <code>provider</code>.</p>
      * @param providerTransaction value to be set
      * @return Builder
      */
@@ -82,7 +82,10 @@ public class TrackingDataBuilder implements Builder<TrackingData> {
     }
 
     /**
-     * set the value to the isReturn
+     *  <ul>
+     *   <li>If <code>true</code>, the Parcel is being returned.</li>
+     *   <li>If <code>false</code>, the Parcel is being delivered to the customer.</li>
+     *  </ul>
      * @param isReturn value to be set
      * @return Builder
      */
@@ -93,7 +96,7 @@ public class TrackingDataBuilder implements Builder<TrackingData> {
     }
 
     /**
-     * value of trackingId}
+     *  <p>Identifier to track the Parcel.</p>
      * @return trackingId
      */
 
@@ -103,7 +106,7 @@ public class TrackingDataBuilder implements Builder<TrackingData> {
     }
 
     /**
-     * value of carrier}
+     *  <p>Name of the carrier that delivers the Parcel.</p>
      * @return carrier
      */
 
@@ -113,7 +116,7 @@ public class TrackingDataBuilder implements Builder<TrackingData> {
     }
 
     /**
-     * value of provider}
+     *  <p>Name of the provider that serves as facade to several carriers.</p>
      * @return provider
      */
 
@@ -123,7 +126,7 @@ public class TrackingDataBuilder implements Builder<TrackingData> {
     }
 
     /**
-     * value of providerTransaction}
+     *  <p>Transaction identifier with the <code>provider</code>.</p>
      * @return providerTransaction
      */
 
@@ -133,7 +136,10 @@ public class TrackingDataBuilder implements Builder<TrackingData> {
     }
 
     /**
-     * value of isReturn}
+     *  <ul>
+     *   <li>If <code>true</code>, the Parcel is being returned.</li>
+     *   <li>If <code>false</code>, the Parcel is being delivered to the customer.</li>
+     *  </ul>
      * @return isReturn
      */
 

@@ -43,7 +43,7 @@ public class DiscountedLineItemPriceDraftImpl implements DiscountedLineItemPrice
     }
 
     /**
-     *
+     *  <p>Discounted money value.</p>
      */
 
     public com.commercetools.importapi.models.common.Money getValue() {
@@ -51,7 +51,7 @@ public class DiscountedLineItemPriceDraftImpl implements DiscountedLineItemPrice
     }
 
     /**
-     *
+     *  <p>Discounts to be applied.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.orders.DiscountedLineItemPortion> getIncludedDiscounts() {

@@ -99,7 +99,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     private com.commercetools.importapi.models.customfields.Custom custom;
 
     /**
-     *  <p>User-defined identifier for the address. Must follow the pattern <code>[a-zA-Z0-9_\-]{2,256}</code> and must be unique per customer.</p>
+     *  <p>User-defined identifier for the address. Must be unique per customer.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -399,7 +399,7 @@ public class CustomerAddressBuilder implements Builder<CustomerAddress> {
     }
 
     /**
-     *  <p>User-defined identifier for the address. Must follow the pattern <code>[a-zA-Z0-9_\-]{2,256}</code> and must be unique per customer.</p>
+     *  <p>User-defined identifier for the address. Must be unique per customer.</p>
      * @return key
      */
 

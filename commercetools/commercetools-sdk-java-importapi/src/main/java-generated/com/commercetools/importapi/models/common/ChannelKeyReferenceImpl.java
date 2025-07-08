@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>References a channel by key.</p>
+ *  <p>Used by the Import API to identify a Channel.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ChannelKeyReferenceImpl implements ChannelKeyReference, ModelBase {
@@ -43,7 +43,7 @@ public class ChannelKeyReferenceImpl implements ChannelKeyReference, ModelBase {
     }
 
     /**
-     *
+     *  <p>User-defined unique identifier of the referenced Channel.</p>
      */
 
     public String getKey() {
@@ -51,7 +51,7 @@ public class ChannelKeyReferenceImpl implements ChannelKeyReference, ModelBase {
     }
 
     /**
-     *  <p>The type of the referenced resource.</p>
+     *  <p>Type of referenced resource.</p>
      */
 
     public com.commercetools.importapi.models.common.ReferenceType getTypeId() {

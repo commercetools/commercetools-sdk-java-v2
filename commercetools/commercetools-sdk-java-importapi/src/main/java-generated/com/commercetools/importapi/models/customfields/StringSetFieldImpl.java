@@ -51,7 +51,7 @@ public class StringSetFieldImpl implements StringSetField, ModelBase {
     }
 
     /**
-     *
+     *  <p>JSON array of strings. The order of items in the array is not fixed.</p>
      */
 
     public java.util.List<String> getValue() {

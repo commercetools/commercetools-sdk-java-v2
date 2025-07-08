@@ -24,7 +24,7 @@ public class LocalizedEnumFieldBuilder implements Builder<LocalizedEnumField> {
     private String value;
 
     /**
-     * set the value to the value
+     *  <p>The key of the localized enum value. Must match the key of a CustomFieldLocalizedEnumValue in the CustomFieldLocalizedEnumType.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class LocalizedEnumFieldBuilder implements Builder<LocalizedEnumField> {
     }
 
     /**
-     * value of value}
+     *  <p>The key of the localized enum value. Must match the key of a CustomFieldLocalizedEnumValue in the CustomFieldLocalizedEnumType.</p>
      * @return value
      */
 

@@ -38,7 +38,7 @@ public interface BooleanSetAttribute extends Attribute {
     String BOOLEAN_SET = "boolean-set";
 
     /**
-     *
+     *  <p>A set of boolean values.</p>
      * @return value
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface BooleanSetAttribute extends Attribute {
     public List<Boolean> getValue();
 
     /**
-     * set value
+     *  <p>A set of boolean values.</p>
      * @param value values to be set
      */
 
@@ -54,7 +54,7 @@ public interface BooleanSetAttribute extends Attribute {
     public void setValue(final Boolean... value);
 
     /**
-     * set value
+     *  <p>A set of boolean values.</p>
      * @param value values to be set
      */
 

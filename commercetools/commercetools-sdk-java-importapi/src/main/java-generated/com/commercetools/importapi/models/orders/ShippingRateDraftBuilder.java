@@ -33,7 +33,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
     private java.util.List<com.commercetools.importapi.models.orders.ShippingRatePriceTier> tiers;
 
     /**
-     * set the value to the price using the builder function
+     *  <p>Currency amount of the ShippingRate.</p>
      * @param builder function to build the price value
      * @return Builder
      */
@@ -45,7 +45,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
     }
 
     /**
-     * set the value to the price using the builder function
+     *  <p>Currency amount of the ShippingRate.</p>
      * @param builder function to build the price value
      * @return Builder
      */
@@ -57,7 +57,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
     }
 
     /**
-     * set the value to the price
+     *  <p>Currency amount of the ShippingRate.</p>
      * @param price value to be set
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
     }
 
     /**
-     * set the value to the freeAbove using the builder function
+     *  <p>Free shipping is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
      * @param builder function to build the freeAbove value
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
     }
 
     /**
-     * set the value to the freeAbove using the builder function
+     *  <p>Free shipping is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
      * @param builder function to build the freeAbove value
      * @return Builder
      */
@@ -92,7 +92,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
     }
 
     /**
-     * set the value to the freeAbove
+     *  <p>Free shipping is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
      * @param freeAbove value to be set
      * @return Builder
      */
@@ -104,7 +104,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
     }
 
     /**
-     * set values to the tiers
+     *  <p>Price tiers for the ShippingRate.</p>
      * @param tiers value to be set
      * @return Builder
      */
@@ -116,7 +116,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
     }
 
     /**
-     * set value to the tiers
+     *  <p>Price tiers for the ShippingRate.</p>
      * @param tiers value to be set
      * @return Builder
      */
@@ -128,7 +128,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
     }
 
     /**
-     * add values to the tiers
+     *  <p>Price tiers for the ShippingRate.</p>
      * @param tiers value to be set
      * @return Builder
      */
@@ -143,7 +143,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
     }
 
     /**
-     * add a value to the tiers using the builder function
+     *  <p>Price tiers for the ShippingRate.</p>
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -159,7 +159,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
     }
 
     /**
-     * set the value to the tiers using the builder function
+     *  <p>Price tiers for the ShippingRate.</p>
      * @param builder function to build the tiers value
      * @return Builder
      */
@@ -173,7 +173,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
     }
 
     /**
-     * value of price}
+     *  <p>Currency amount of the ShippingRate.</p>
      * @return price
      */
 
@@ -182,7 +182,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
     }
 
     /**
-     * value of freeAbove}
+     *  <p>Free shipping is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
      * @return freeAbove
      */
 
@@ -192,7 +192,7 @@ public class ShippingRateDraftBuilder implements Builder<ShippingRateDraft> {
     }
 
     /**
-     * value of tiers}
+     *  <p>Price tiers for the ShippingRate.</p>
      * @return tiers
      */
 

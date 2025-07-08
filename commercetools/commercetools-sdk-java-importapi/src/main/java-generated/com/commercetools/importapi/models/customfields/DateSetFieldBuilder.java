@@ -24,7 +24,7 @@ public class DateSetFieldBuilder implements Builder<DateSetField> {
     private java.util.List<java.time.LocalDate> value;
 
     /**
-     * set values to the value
+     *  <p>JSON array of date values in the format <code>YYYY-MM-DD</code> without duplicates. The order of items in the array is not fixed.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class DateSetFieldBuilder implements Builder<DateSetField> {
     }
 
     /**
-     * set value to the value
+     *  <p>JSON array of date values in the format <code>YYYY-MM-DD</code> without duplicates. The order of items in the array is not fixed.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -46,7 +46,7 @@ public class DateSetFieldBuilder implements Builder<DateSetField> {
     }
 
     /**
-     * add values to the value
+     *  <p>JSON array of date values in the format <code>YYYY-MM-DD</code> without duplicates. The order of items in the array is not fixed.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -60,7 +60,7 @@ public class DateSetFieldBuilder implements Builder<DateSetField> {
     }
 
     /**
-     * value of value}
+     *  <p>JSON array of date values in the format <code>YYYY-MM-DD</code> without duplicates. The order of items in the array is not fixed.</p>
      * @return value
      */
 

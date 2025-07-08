@@ -38,7 +38,7 @@ public interface TextSetAttribute extends Attribute {
     String TEXT_SET = "text-set";
 
     /**
-     *
+     *  <p>A set of text values.</p>
      * @return value
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface TextSetAttribute extends Attribute {
     public List<String> getValue();
 
     /**
-     * set value
+     *  <p>A set of text values.</p>
      * @param value values to be set
      */
 
@@ -54,7 +54,7 @@ public interface TextSetAttribute extends Attribute {
     public void setValue(final String... value);
 
     /**
-     * set value
+     *  <p>A set of text values.</p>
      * @param value values to be set
      */
 

@@ -38,7 +38,7 @@ public interface LocalizedEnumField extends CustomField {
     String LOCALIZED_ENUM = "LocalizedEnum";
 
     /**
-     *
+     *  <p>The key of the localized enum value. Must match the key of a CustomFieldLocalizedEnumValue in the CustomFieldLocalizedEnumType.</p>
      * @return value
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface LocalizedEnumField extends CustomField {
     public String getValue();
 
     /**
-     * set value
+     *  <p>The key of the localized enum value. Must match the key of a CustomFieldLocalizedEnumValue in the CustomFieldLocalizedEnumType.</p>
      * @param value value to be set
      */
 

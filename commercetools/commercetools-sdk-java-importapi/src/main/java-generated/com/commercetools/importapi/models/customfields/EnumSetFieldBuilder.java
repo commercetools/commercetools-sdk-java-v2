@@ -24,7 +24,7 @@ public class EnumSetFieldBuilder implements Builder<EnumSetField> {
     private java.util.List<String> value;
 
     /**
-     * set values to the value
+     *  <p>JSON array of enum values, each represented by its key. Each key must match the key of a CustomFieldLocalizedEnumValue in the CustomFieldEnumType. The order of items in the array is not fixed.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class EnumSetFieldBuilder implements Builder<EnumSetField> {
     }
 
     /**
-     * set value to the value
+     *  <p>JSON array of enum values, each represented by its key. Each key must match the key of a CustomFieldLocalizedEnumValue in the CustomFieldEnumType. The order of items in the array is not fixed.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -46,7 +46,7 @@ public class EnumSetFieldBuilder implements Builder<EnumSetField> {
     }
 
     /**
-     * add values to the value
+     *  <p>JSON array of enum values, each represented by its key. Each key must match the key of a CustomFieldLocalizedEnumValue in the CustomFieldEnumType. The order of items in the array is not fixed.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -60,7 +60,7 @@ public class EnumSetFieldBuilder implements Builder<EnumSetField> {
     }
 
     /**
-     * value of value}
+     *  <p>JSON array of enum values, each represented by its key. Each key must match the key of a CustomFieldLocalizedEnumValue in the CustomFieldEnumType. The order of items in the array is not fixed.</p>
      * @return value
      */
 

@@ -23,6 +23,9 @@ public interface ImportResourceType extends JsonEnum {
     <p>The Customer import resource type.</p> */
     ImportResourceType CUSTOMER = ImportResourceTypeEnum.CUSTOMER;
     /**
+    <p>The Discount Code import resource type.</p> */
+    ImportResourceType DISCOUNT_CODE = ImportResourceTypeEnum.DISCOUNT_CODE;
+    /**
     <p>The Inventory import resource type.</p> */
     ImportResourceType INVENTORY = ImportResourceTypeEnum.INVENTORY;
     /**
@@ -41,6 +44,9 @@ public interface ImportResourceType extends JsonEnum {
     <p>The Product draft import resource type.</p> */
     ImportResourceType PRODUCT_DRAFT = ImportResourceTypeEnum.PRODUCT_DRAFT;
     /**
+    <p>The Product Selection import resource type.</p> */
+    ImportResourceType PRODUCT_SELECTION = ImportResourceTypeEnum.PRODUCT_SELECTION;
+    /**
     <p>The Product Type import resource type.</p> */
     ImportResourceType PRODUCT_TYPE = ImportResourceTypeEnum.PRODUCT_TYPE;
     /**
@@ -55,9 +61,6 @@ public interface ImportResourceType extends JsonEnum {
     /**
     <p>The Type import resource type.</p> */
     ImportResourceType TYPE = ImportResourceTypeEnum.TYPE;
-    /**
-    <p>The Discount Code import resource type.</p> */
-    ImportResourceType DISCOUNT_CODE = ImportResourceTypeEnum.DISCOUNT_CODE;
 
     /**
      * possible values of ImportResourceType
@@ -72,6 +75,11 @@ public interface ImportResourceType extends JsonEnum {
          * customer
          */
         CUSTOMER("customer"),
+
+        /**
+         * discount-code
+         */
+        DISCOUNT_CODE("discount-code"),
 
         /**
          * inventory
@@ -104,6 +112,11 @@ public interface ImportResourceType extends JsonEnum {
         PRODUCT_DRAFT("product-draft"),
 
         /**
+         * product-selection
+         */
+        PRODUCT_SELECTION("product-selection"),
+
+        /**
          * product-type
          */
         PRODUCT_TYPE("product-type"),
@@ -126,12 +139,7 @@ public interface ImportResourceType extends JsonEnum {
         /**
          * type
          */
-        TYPE("type"),
-
-        /**
-         * discount-code
-         */
-        DISCOUNT_CODE("discount-code");
+        TYPE("type");
         private final String jsonName;
 
         private ImportResourceTypeEnum(final String jsonName) {

@@ -36,7 +36,7 @@ import jakarta.validation.constraints.NotNull;
 public interface DiscountedLineItemPortion {
 
     /**
-     *  <p>References a cart discount by key.</p>
+     *  <p>References a cart discount by key. If the referenced CartDiscount does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CartDiscount is created.</p>
      * @return discount
      */
     @NotNull
@@ -45,7 +45,7 @@ public interface DiscountedLineItemPortion {
     public CartDiscountKeyReference getDiscount();
 
     /**
-     *
+     *  <p>Money value for the discount applicable.</p>
      * @return discountedAmount
      */
     @NotNull
@@ -54,14 +54,14 @@ public interface DiscountedLineItemPortion {
     public Money getDiscountedAmount();
 
     /**
-     *  <p>References a cart discount by key.</p>
+     *  <p>References a cart discount by key. If the referenced CartDiscount does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CartDiscount is created.</p>
      * @param discount value to be set
      */
 
     public void setDiscount(final CartDiscountKeyReference discount);
 
     /**
-     * set discountedAmount
+     *  <p>Money value for the discount applicable.</p>
      * @param discountedAmount value to be set
      */
 

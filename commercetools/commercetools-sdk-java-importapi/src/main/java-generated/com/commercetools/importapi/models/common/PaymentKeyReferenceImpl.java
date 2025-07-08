@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>References a payment by key.</p>
+ *  <p>Used by the Import API to identify a Payment.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class PaymentKeyReferenceImpl implements PaymentKeyReference, ModelBase {
@@ -43,7 +43,7 @@ public class PaymentKeyReferenceImpl implements PaymentKeyReference, ModelBase {
     }
 
     /**
-     *
+     *  <p>User-defined unique identifier of the referenced Payment.</p>
      */
 
     public String getKey() {
@@ -51,7 +51,7 @@ public class PaymentKeyReferenceImpl implements PaymentKeyReference, ModelBase {
     }
 
     /**
-     *  <p>The type of the referenced resource.</p>
+     *  <p>Type of referenced resource.</p>
      */
 
     public com.commercetools.importapi.models.common.ReferenceType getTypeId() {

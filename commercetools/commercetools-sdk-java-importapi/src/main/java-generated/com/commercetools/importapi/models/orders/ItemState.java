@@ -17,7 +17,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>The item's state.</p>
+ * ItemState
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,7 +35,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ItemState {
 
     /**
-     *
+     *  <p>Number of Line Items or Custom Line Items in this State.</p>
      * @return quantity
      */
     @NotNull
@@ -43,7 +43,7 @@ public interface ItemState {
     public Long getQuantity();
 
     /**
-     *  <p>Maps to <code>ItemState.state</code>.</p>
+     *  <p>State of the Line Items or Custom Line Items in a custom workflow. If the referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced State is created.</p>
      * @return state
      */
     @NotNull
@@ -52,14 +52,14 @@ public interface ItemState {
     public StateKeyReference getState();
 
     /**
-     * set quantity
+     *  <p>Number of Line Items or Custom Line Items in this State.</p>
      * @param quantity value to be set
      */
 
     public void setQuantity(final Long quantity);
 
     /**
-     *  <p>Maps to <code>ItemState.state</code>.</p>
+     *  <p>State of the Line Items or Custom Line Items in a custom workflow. If the referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced State is created.</p>
      * @param state value to be set
      */
 

@@ -38,7 +38,7 @@ public interface EnumSetField extends CustomField {
     String ENUM_SET = "EnumSet";
 
     /**
-     *
+     *  <p>JSON array of enum values, each represented by its key. Each key must match the key of a CustomFieldLocalizedEnumValue in the CustomFieldEnumType. The order of items in the array is not fixed.</p>
      * @return value
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface EnumSetField extends CustomField {
     public List<String> getValue();
 
     /**
-     * set value
+     *  <p>JSON array of enum values, each represented by its key. Each key must match the key of a CustomFieldLocalizedEnumValue in the CustomFieldEnumType. The order of items in the array is not fixed.</p>
      * @param value values to be set
      */
 
@@ -54,7 +54,7 @@ public interface EnumSetField extends CustomField {
     public void setValue(final String... value);
 
     /**
-     * set value
+     *  <p>JSON array of enum values, each represented by its key. Each key must match the key of a CustomFieldLocalizedEnumValue in the CustomFieldEnumType. The order of items in the array is not fixed.</p>
      * @param value values to be set
      */
 

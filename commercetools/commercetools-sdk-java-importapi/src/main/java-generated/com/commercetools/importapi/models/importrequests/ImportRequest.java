@@ -134,6 +134,14 @@ public interface ImportRequest {
     }
 
     /**
+     * builder for productSelection subtype
+     * @return builder
+     */
+    public static com.commercetools.importapi.models.importrequests.ProductSelectionImportRequestBuilder productSelectionBuilder() {
+        return com.commercetools.importapi.models.importrequests.ProductSelectionImportRequestBuilder.of();
+    }
+
+    /**
      * builder for productType subtype
      * @return builder
      */

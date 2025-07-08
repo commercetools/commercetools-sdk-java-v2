@@ -33,7 +33,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
     private java.time.ZonedDateTime returnDate;
 
     /**
-     * set values to the items
+     *  <p>Information on the Line Items or Custom Line Items returned.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -44,7 +44,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
     }
 
     /**
-     * set value to the items
+     *  <p>Information on the Line Items or Custom Line Items returned.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -56,7 +56,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
     }
 
     /**
-     * add values to the items
+     *  <p>Information on the Line Items or Custom Line Items returned.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -71,7 +71,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
     }
 
     /**
-     * add the value to the items using the builder function
+     *  <p>Information on the Line Items or Custom Line Items returned.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -87,7 +87,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
     }
 
     /**
-     * set the value to the items using the builder function
+     *  <p>Information on the Line Items or Custom Line Items returned.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -101,7 +101,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
     }
 
     /**
-     * add the value to the items using the builder function
+     *  <p>Information on the Line Items or Custom Line Items returned.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -112,7 +112,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
     }
 
     /**
-     * set the value to the items using the builder function
+     *  <p>Information on the Line Items or Custom Line Items returned.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -123,7 +123,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
     }
 
     /**
-     *  <p>Maps to <code>ReturnInfo.returnTrackingId</code></p>
+     *  <p>User-defined identifier to track the return.</p>
      * @param returnTrackingId value to be set
      * @return Builder
      */
@@ -134,7 +134,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
     }
 
     /**
-     *  <p>Maps to <code>ReturnInfo.returnDate</code></p>
+     *  <p>Date and time (UTC) the return is initiated.</p>
      * @param returnDate value to be set
      * @return Builder
      */
@@ -145,7 +145,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
     }
 
     /**
-     * value of items}
+     *  <p>Information on the Line Items or Custom Line Items returned.</p>
      * @return items
      */
 
@@ -154,7 +154,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
     }
 
     /**
-     *  <p>Maps to <code>ReturnInfo.returnTrackingId</code></p>
+     *  <p>User-defined identifier to track the return.</p>
      * @return returnTrackingId
      */
 
@@ -164,7 +164,7 @@ public class ReturnInfoBuilder implements Builder<ReturnInfo> {
     }
 
     /**
-     *  <p>Maps to <code>ReturnInfo.returnDate</code></p>
+     *  <p>Date and time (UTC) the return is initiated.</p>
      * @return returnDate
      */
 

@@ -38,7 +38,7 @@ public interface NumberField extends CustomField {
     String NUMBER = "Number";
 
     /**
-     *
+     *  <p>A number value. Can be an integer or a floating-point number.</p>
      * @return value
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface NumberField extends CustomField {
     public Double getValue();
 
     /**
-     * set value
+     *  <p>A number value. Can be an integer or a floating-point number.</p>
      * @param value value to be set
      */
 

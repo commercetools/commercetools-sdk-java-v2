@@ -24,7 +24,7 @@ public class RemoveParcelFromDeliveryDraftBuilder implements Builder<RemoveParce
     private String parcelId;
 
     /**
-     * set the value to the parcelId
+     *  <p><code>id</code> of the Parcel to be removed from the Delivery.</p>
      * @param parcelId value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class RemoveParcelFromDeliveryDraftBuilder implements Builder<RemoveParce
     }
 
     /**
-     * value of parcelId}
+     *  <p><code>id</code> of the Parcel to be removed from the Delivery.</p>
      * @return parcelId
      */
 

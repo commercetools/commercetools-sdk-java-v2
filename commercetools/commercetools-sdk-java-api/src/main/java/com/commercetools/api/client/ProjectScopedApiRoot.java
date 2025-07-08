@@ -102,5 +102,9 @@ public interface ProjectScopedApiRoot {
 
     ByProjectKeyPaymentMethodsRequestBuilder paymentMethods();
 
+    ByProjectKeyRecurringOrdersRequestBuilder recurringOrders();
+
+    ByProjectKeyRecurrencePoliciesRequestBuilder recurrencePolicies();
+
     <R> R with(Function<ProjectApiRoot, R> op);
 }

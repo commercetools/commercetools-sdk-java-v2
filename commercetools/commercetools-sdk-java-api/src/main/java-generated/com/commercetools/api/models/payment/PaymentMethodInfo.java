@@ -31,7 +31,7 @@ import jakarta.validation.Valid;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = PaymentMethodInfoImpl.class)
-public interface PaymentMethodInfo {
+public interface PaymentMethodInfo extends PaymentMethodInfoMixin {
 
     /**
      *  <p>Payment service that processes the Payment—for example, a PSP. The combination of <code>paymentInterface</code> and the <code>interfaceId</code> of a Payment is unique.</p>

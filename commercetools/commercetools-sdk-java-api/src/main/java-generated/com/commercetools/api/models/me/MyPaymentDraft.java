@@ -8,6 +8,7 @@ import java.util.function.Function;
 import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.payment.MyPaymentDraftMixin;
 import com.commercetools.api.models.payment.PaymentMethodInfoDraft;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
@@ -33,8 +34,8 @@ import jakarta.validation.constraints.NotNull;
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 @JsonDeserialize(as = MyPaymentDraftImpl.class)
-public interface MyPaymentDraft extends com.commercetools.api.models.CustomizableDraft<MyPaymentDraft>,
-        io.vrap.rmf.base.client.Draft<MyPaymentDraft> {
+public interface MyPaymentDraft extends MyPaymentDraftMixin,
+        com.commercetools.api.models.CustomizableDraft<MyPaymentDraft>, io.vrap.rmf.base.client.Draft<MyPaymentDraft> {
 
     /**
      *  <p>Money value the Payment intends to receive from the customer. The value usually matches the Cart or Order gross total.</p>

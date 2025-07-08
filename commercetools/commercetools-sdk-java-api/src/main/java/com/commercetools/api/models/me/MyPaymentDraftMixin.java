@@ -1,5 +1,8 @@
 
-package com.commercetools.api.models.payment;
+package com.commercetools.api.models.me;
+
+import com.commercetools.api.models.payment.PaymentMethodInfo;
+import com.commercetools.api.models.payment.PaymentMethodInfoDraft;
 
 public interface MyPaymentDraftMixin {
 

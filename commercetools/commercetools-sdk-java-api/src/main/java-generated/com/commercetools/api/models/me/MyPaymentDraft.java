@@ -1,14 +1,11 @@
 
 package com.commercetools.api.models.me;
 
-import java.time.*;
-import java.util.*;
 import java.util.function.Function;
 
 import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.Money;
-import com.commercetools.api.models.payment.MyPaymentDraftMixin;
 import com.commercetools.api.models.payment.PaymentMethodInfoDraft;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;

@@ -63,7 +63,7 @@ public class ResourceCreationErrorImpl implements ResourceCreationError, ModelBa
     }
 
     /**
-     *
+     *  <p>The resource that was created.</p>
      */
 
     public java.lang.Object getResource() {

@@ -44,7 +44,7 @@ public class DiscountedLineItemPortionImpl implements DiscountedLineItemPortion,
     }
 
     /**
-     *  <p>References a cart discount by key.</p>
+     *  <p>References a cart discount by key. If the referenced CartDiscount does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CartDiscount is created.</p>
      */
 
     public com.commercetools.importapi.models.common.CartDiscountKeyReference getDiscount() {
@@ -52,7 +52,7 @@ public class DiscountedLineItemPortionImpl implements DiscountedLineItemPortion,
     }
 
     /**
-     *
+     *  <p>Money value for the discount applicable.</p>
      */
 
     public com.commercetools.importapi.models.common.Money getDiscountedAmount() {

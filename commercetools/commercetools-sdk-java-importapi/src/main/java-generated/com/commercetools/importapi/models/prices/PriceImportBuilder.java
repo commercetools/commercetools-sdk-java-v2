@@ -63,7 +63,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     private com.commercetools.importapi.models.common.ProductKeyReference product;
 
     /**
-     *  <p>User-defined unique identifier for the Embedded Price. If a Price with this <code>key</code> exists on the specified <code>productVariant</code>, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier for the Embedded Price. If a Price with this <code>key</code> exists on the specified <code>productVariant</code>, it is updated with the imported data.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -130,7 +130,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     *  <p>The Reference to the CustomerGroup with which the Price is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p>
+     *  <p>Maps to <code>Price.customerGroup</code>. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -144,7 +144,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     *  <p>The Reference to the CustomerGroup with which the Price is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p>
+     *  <p>Maps to <code>Price.customerGroup</code>. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -157,7 +157,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     *  <p>The Reference to the CustomerGroup with which the Price is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p>
+     *  <p>Maps to <code>Price.customerGroup</code>. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
      * @param customerGroup value to be set
      * @return Builder
      */
@@ -169,7 +169,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     *  <p>The Reference to the Channel with which the Price is associated. If referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Channel is created.</p>
+     *  <p>Maps to <code>Price.channel</code>. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      * @param builder function to build the channel value
      * @return Builder
      */
@@ -181,7 +181,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     *  <p>The Reference to the Channel with which the Price is associated. If referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Channel is created.</p>
+     *  <p>Maps to <code>Price.channel</code>. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      * @param builder function to build the channel value
      * @return Builder
      */
@@ -193,7 +193,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     *  <p>The Reference to the Channel with which the Price is associated. If referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Channel is created.</p>
+     *  <p>Maps to <code>Price.channel</code>. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      * @param channel value to be set
      * @return Builder
      */
@@ -342,7 +342,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     *  <p>The custom fields for this price.</p>
+     *  <p>Maps to <code>Price.custom</code>.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -354,7 +354,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     *  <p>The custom fields for this price.</p>
+     *  <p>Maps to <code>Price.custom</code>.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -366,7 +366,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     *  <p>The custom fields for this price.</p>
+     *  <p>Maps to <code>Price.custom</code>.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -377,7 +377,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     *  <p>The ProductVariant in which this Embedded Price is contained. The Reference to the ProductVariant with which the Price is associated. If the referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
+     *  <p>The ProductVariant which contains this Embedded Price. If the referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced ProductVariant is created.</p>
      * @param builder function to build the productVariant value
      * @return Builder
      */
@@ -391,7 +391,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     *  <p>The ProductVariant in which this Embedded Price is contained. The Reference to the ProductVariant with which the Price is associated. If the referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
+     *  <p>The ProductVariant which contains this Embedded Price. If the referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced ProductVariant is created.</p>
      * @param builder function to build the productVariant value
      * @return Builder
      */
@@ -404,7 +404,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     *  <p>The ProductVariant in which this Embedded Price is contained. The Reference to the ProductVariant with which the Price is associated. If the referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
+     *  <p>The ProductVariant which contains this Embedded Price. If the referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced ProductVariant is created.</p>
      * @param productVariant value to be set
      * @return Builder
      */
@@ -416,7 +416,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     *  <p>The Product in which the Product Variant containing this Embedded Price is contained. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the Price is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>
+     *  <p>The Product which contains the <code>productVariant</code>. If the referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Product is created.</p>
      * @param builder function to build the product value
      * @return Builder
      */
@@ -428,7 +428,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     *  <p>The Product in which the Product Variant containing this Embedded Price is contained. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the Price is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>
+     *  <p>The Product which contains the <code>productVariant</code>. If the referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Product is created.</p>
      * @param builder function to build the product value
      * @return Builder
      */
@@ -440,7 +440,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     *  <p>The Product in which the Product Variant containing this Embedded Price is contained. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the Price is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>
+     *  <p>The Product which contains the <code>productVariant</code>. If the referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Product is created.</p>
      * @param product value to be set
      * @return Builder
      */
@@ -451,7 +451,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     *  <p>User-defined unique identifier for the Embedded Price. If a Price with this <code>key</code> exists on the specified <code>productVariant</code>, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier for the Embedded Price. If a Price with this <code>key</code> exists on the specified <code>productVariant</code>, it is updated with the imported data.</p>
      * @return key
      */
 
@@ -499,7 +499,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     *  <p>The Reference to the CustomerGroup with which the Price is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p>
+     *  <p>Maps to <code>Price.customerGroup</code>. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
      * @return customerGroup
      */
 
@@ -509,7 +509,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     *  <p>The Reference to the Channel with which the Price is associated. If referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Channel is created.</p>
+     *  <p>Maps to <code>Price.channel</code>. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      * @return channel
      */
 
@@ -552,7 +552,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     *  <p>The custom fields for this price.</p>
+     *  <p>Maps to <code>Price.custom</code>.</p>
      * @return custom
      */
 
@@ -562,7 +562,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     *  <p>The ProductVariant in which this Embedded Price is contained. The Reference to the ProductVariant with which the Price is associated. If the referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
+     *  <p>The ProductVariant which contains this Embedded Price. If the referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced ProductVariant is created.</p>
      * @return productVariant
      */
 
@@ -571,7 +571,7 @@ public class PriceImportBuilder implements Builder<PriceImport> {
     }
 
     /**
-     *  <p>The Product in which the Product Variant containing this Embedded Price is contained. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the Price is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>
+     *  <p>The Product which contains the <code>productVariant</code>. If the referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Product is created.</p>
      * @return product
      */
 

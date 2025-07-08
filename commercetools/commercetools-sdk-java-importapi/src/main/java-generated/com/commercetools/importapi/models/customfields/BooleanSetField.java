@@ -38,7 +38,7 @@ public interface BooleanSetField extends CustomField {
     String BOOLEAN_SET = "BooleanSet";
 
     /**
-     *
+     *  <p>JSON array of boolean values without duplicates. The order of items in the array is not fixed.</p>
      * @return value
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface BooleanSetField extends CustomField {
     public List<Boolean> getValue();
 
     /**
-     * set value
+     *  <p>JSON array of boolean values without duplicates. The order of items in the array is not fixed.</p>
      * @param value values to be set
      */
 
@@ -54,7 +54,7 @@ public interface BooleanSetField extends CustomField {
     public void setValue(final Boolean... value);
 
     /**
-     * set value
+     *  <p>JSON array of boolean values without duplicates. The order of items in the array is not fixed.</p>
      * @param value values to be set
      */
 

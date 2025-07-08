@@ -45,7 +45,7 @@ public class InventoryImportBuilder implements Builder<InventoryImport> {
     private com.commercetools.importapi.models.customfields.Custom custom;
 
     /**
-     *  <p>User-defined unique identifier. If an InventoryEntry with this <code>key</code> exists, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If an InventoryEntry with this <code>key</code> exists, it is updated with the imported data.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -56,7 +56,7 @@ public class InventoryImportBuilder implements Builder<InventoryImport> {
     }
 
     /**
-     *  <p>Maps to <code>Inventory.sku</code></p>
+     *  <p>Maps to <code>InventoryEntry.sku</code></p>
      * @param sku value to be set
      * @return Builder
      */
@@ -67,7 +67,7 @@ public class InventoryImportBuilder implements Builder<InventoryImport> {
     }
 
     /**
-     *  <p>Maps to <code>Inventory.quantityOnStock</code></p>
+     *  <p>Maps to <code>InventoryEntry.quantityOnStock</code></p>
      * @param quantityOnStock value to be set
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class InventoryImportBuilder implements Builder<InventoryImport> {
     }
 
     /**
-     *  <p>Maps to <code>Inventory.restockableInDays</code></p>
+     *  <p>Maps to <code>InventoryEntry.restockableInDays</code></p>
      * @param restockableInDays value to be set
      * @return Builder
      */
@@ -89,7 +89,7 @@ public class InventoryImportBuilder implements Builder<InventoryImport> {
     }
 
     /**
-     *  <p>Maps to <code>Inventory.expectedDelivery</code></p>
+     *  <p>Maps to <code>InventoryEntry.expectedDelivery</code></p>
      * @param expectedDelivery value to be set
      * @return Builder
      */
@@ -100,7 +100,7 @@ public class InventoryImportBuilder implements Builder<InventoryImport> {
     }
 
     /**
-     *  <p>Maps to <code>Inventory.supplyChannel</code></p>
+     *  <p>Maps to <code>InventoryEntry.supplyChannel</code>. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      * @param builder function to build the supplyChannel value
      * @return Builder
      */
@@ -113,7 +113,7 @@ public class InventoryImportBuilder implements Builder<InventoryImport> {
     }
 
     /**
-     *  <p>Maps to <code>Inventory.supplyChannel</code></p>
+     *  <p>Maps to <code>InventoryEntry.supplyChannel</code>. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      * @param builder function to build the supplyChannel value
      * @return Builder
      */
@@ -125,7 +125,7 @@ public class InventoryImportBuilder implements Builder<InventoryImport> {
     }
 
     /**
-     *  <p>Maps to <code>Inventory.supplyChannel</code></p>
+     *  <p>Maps to <code>InventoryEntry.supplyChannel</code>. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      * @param supplyChannel value to be set
      * @return Builder
      */
@@ -137,7 +137,7 @@ public class InventoryImportBuilder implements Builder<InventoryImport> {
     }
 
     /**
-     *  <p>Maps to <code>Inventory.custom</code>.</p>
+     *  <p>Maps to <code>InventoryEntry.custom</code>.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -149,7 +149,7 @@ public class InventoryImportBuilder implements Builder<InventoryImport> {
     }
 
     /**
-     *  <p>Maps to <code>Inventory.custom</code>.</p>
+     *  <p>Maps to <code>InventoryEntry.custom</code>.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -161,7 +161,7 @@ public class InventoryImportBuilder implements Builder<InventoryImport> {
     }
 
     /**
-     *  <p>Maps to <code>Inventory.custom</code>.</p>
+     *  <p>Maps to <code>InventoryEntry.custom</code>.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -173,7 +173,7 @@ public class InventoryImportBuilder implements Builder<InventoryImport> {
     }
 
     /**
-     *  <p>User-defined unique identifier. If an InventoryEntry with this <code>key</code> exists, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If an InventoryEntry with this <code>key</code> exists, it is updated with the imported data.</p>
      * @return key
      */
 
@@ -182,7 +182,7 @@ public class InventoryImportBuilder implements Builder<InventoryImport> {
     }
 
     /**
-     *  <p>Maps to <code>Inventory.sku</code></p>
+     *  <p>Maps to <code>InventoryEntry.sku</code></p>
      * @return sku
      */
 
@@ -191,7 +191,7 @@ public class InventoryImportBuilder implements Builder<InventoryImport> {
     }
 
     /**
-     *  <p>Maps to <code>Inventory.quantityOnStock</code></p>
+     *  <p>Maps to <code>InventoryEntry.quantityOnStock</code></p>
      * @return quantityOnStock
      */
 
@@ -200,7 +200,7 @@ public class InventoryImportBuilder implements Builder<InventoryImport> {
     }
 
     /**
-     *  <p>Maps to <code>Inventory.restockableInDays</code></p>
+     *  <p>Maps to <code>InventoryEntry.restockableInDays</code></p>
      * @return restockableInDays
      */
 
@@ -210,7 +210,7 @@ public class InventoryImportBuilder implements Builder<InventoryImport> {
     }
 
     /**
-     *  <p>Maps to <code>Inventory.expectedDelivery</code></p>
+     *  <p>Maps to <code>InventoryEntry.expectedDelivery</code></p>
      * @return expectedDelivery
      */
 
@@ -220,7 +220,7 @@ public class InventoryImportBuilder implements Builder<InventoryImport> {
     }
 
     /**
-     *  <p>Maps to <code>Inventory.supplyChannel</code></p>
+     *  <p>Maps to <code>InventoryEntry.supplyChannel</code>. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      * @return supplyChannel
      */
 
@@ -230,7 +230,7 @@ public class InventoryImportBuilder implements Builder<InventoryImport> {
     }
 
     /**
-     *  <p>Maps to <code>Inventory.custom</code>.</p>
+     *  <p>Maps to <code>InventoryEntry.custom</code>.</p>
      * @return custom
      */
 

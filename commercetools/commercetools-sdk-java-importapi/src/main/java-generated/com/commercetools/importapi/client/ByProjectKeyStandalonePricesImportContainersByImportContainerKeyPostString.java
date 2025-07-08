@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Creates a request for creating new Standalone Prices or updating existing ones.</p>
+ *  <p>Creates an Import Request for Standalone Prices.</p>
  *
  * <hr>
  * <div class=code-example>

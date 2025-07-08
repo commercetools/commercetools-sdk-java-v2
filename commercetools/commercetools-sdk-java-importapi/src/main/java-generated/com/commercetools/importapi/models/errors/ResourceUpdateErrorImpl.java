@@ -63,7 +63,7 @@ public class ResourceUpdateErrorImpl implements ResourceUpdateError, ModelBase {
     }
 
     /**
-     *
+     *  <p>The resource that was updated.</p>
      */
 
     public java.lang.Object getResource() {

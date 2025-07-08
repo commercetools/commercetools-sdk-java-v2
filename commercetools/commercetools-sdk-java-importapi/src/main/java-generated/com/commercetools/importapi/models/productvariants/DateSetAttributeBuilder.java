@@ -29,7 +29,8 @@ public class DateSetAttributeBuilder implements Builder<DateSetAttribute> {
     private java.util.List<java.time.LocalDate> value;
 
     /**
-     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     *  <p>Required if used for ProductVariantImport. Must not be set if used for ProductVariantPatch.</p>
+     *  <p>Must match <code>name</code> of an AttributeDefinition of the Product Type.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -40,7 +41,7 @@ public class DateSetAttributeBuilder implements Builder<DateSetAttribute> {
     }
 
     /**
-     * set values to the value
+     *  <p>A set of dates in the format <code>YYYY-MM-DD</code>.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -51,7 +52,7 @@ public class DateSetAttributeBuilder implements Builder<DateSetAttribute> {
     }
 
     /**
-     * set value to the value
+     *  <p>A set of dates in the format <code>YYYY-MM-DD</code>.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -62,7 +63,7 @@ public class DateSetAttributeBuilder implements Builder<DateSetAttribute> {
     }
 
     /**
-     * add values to the value
+     *  <p>A set of dates in the format <code>YYYY-MM-DD</code>.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -76,7 +77,8 @@ public class DateSetAttributeBuilder implements Builder<DateSetAttribute> {
     }
 
     /**
-     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     *  <p>Required if used for ProductVariantImport. Must not be set if used for ProductVariantPatch.</p>
+     *  <p>Must match <code>name</code> of an AttributeDefinition of the Product Type.</p>
      * @return name
      */
 
@@ -86,7 +88,7 @@ public class DateSetAttributeBuilder implements Builder<DateSetAttribute> {
     }
 
     /**
-     * value of value}
+     *  <p>A set of dates in the format <code>YYYY-MM-DD</code>.</p>
      * @return value
      */
 

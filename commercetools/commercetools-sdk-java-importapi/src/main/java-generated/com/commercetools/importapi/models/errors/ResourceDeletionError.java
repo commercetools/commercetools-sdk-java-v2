@@ -36,7 +36,7 @@ public interface ResourceDeletionError extends ErrorObject {
     String RESOURCE_DELETION = "ResourceDeletion";
 
     /**
-     *
+     *  <p>The resource that was deleted.</p>
      * @return resource
      */
 
@@ -44,7 +44,7 @@ public interface ResourceDeletionError extends ErrorObject {
     public Object getResource();
 
     /**
-     * set resource
+     *  <p>The resource that was deleted.</p>
      * @param resource value to be set
      */
 

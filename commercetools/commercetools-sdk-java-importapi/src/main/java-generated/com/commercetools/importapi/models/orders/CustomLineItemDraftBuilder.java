@@ -60,12 +60,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     private com.commercetools.importapi.models.orders.ItemShippingDetailsDraft shippingDetails;
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Maps to <code>CustomLineItem.name</code>.</p>
      * @param builder function to build the name value
      * @return Builder
      */
@@ -77,12 +72,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Maps to <code>CustomLineItem.name</code>.</p>
      * @param builder function to build the name value
      * @return Builder
      */
@@ -94,12 +84,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Maps to <code>CustomLineItem.name</code>.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -110,7 +95,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     * set the value to the money
+     *  <p>Maps to <code>CustomLineItem.money</code>.</p>
      * @param money value to be set
      * @return Builder
      */
@@ -121,7 +106,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     * set the value to the money using the builder function
+     *  <p>Maps to <code>CustomLineItem.money</code>.</p>
      * @param builder function to build the money value
      * @return Builder
      */
@@ -133,7 +118,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     * set the value to the taxedPrice using the builder function
+     *  <p>Maps to <code>CustomLineItem.taxedPrice</code>.</p>
      * @param builder function to build the taxedPrice value
      * @return Builder
      */
@@ -146,7 +131,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     * set the value to the taxedPrice using the builder function
+     *  <p>Maps to <code>CustomLineItem.taxedPrice</code>.</p>
      * @param builder function to build the taxedPrice value
      * @return Builder
      */
@@ -158,7 +143,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     * set the value to the taxedPrice
+     *  <p>Maps to <code>CustomLineItem.taxedPrice</code>.</p>
      * @param taxedPrice value to be set
      * @return Builder
      */
@@ -170,7 +155,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     * set the value to the totalPrice
+     *  <p>Maps to <code>CustomLineItem.totalPrice</code>.</p>
      * @param totalPrice value to be set
      * @return Builder
      */
@@ -182,7 +167,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     * set the value to the totalPrice using the builder function
+     *  <p>Maps to <code>CustomLineItem.totalPrice</code>.</p>
      * @param builder function to build the totalPrice value
      * @return Builder
      */
@@ -194,7 +179,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     * set the value to the slug
+     *  <p>Maps to <code>CustomLineItem.slug</code>.</p>
      * @param slug value to be set
      * @return Builder
      */
@@ -205,7 +190,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     * set the value to the quantity
+     *  <p>Maps to <code>CustomLineItem.quantity</code>.</p>
      * @param quantity value to be set
      * @return Builder
      */
@@ -216,7 +201,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     * set values to the state
+     *  <p>Maps to <code>CustomLineItem.state</code>.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -228,7 +213,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     * set value to the state
+     *  <p>Maps to <code>CustomLineItem.state</code>.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -240,7 +225,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     * add values to the state
+     *  <p>Maps to <code>CustomLineItem.state</code>.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -255,7 +240,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     * add the value to the state using the builder function
+     *  <p>Maps to <code>CustomLineItem.state</code>.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -270,7 +255,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     * set the value to the state using the builder function
+     *  <p>Maps to <code>CustomLineItem.state</code>.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -283,7 +268,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     * add the value to the state using the builder function
+     *  <p>Maps to <code>CustomLineItem.state</code>.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -294,7 +279,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     * set the value to the state using the builder function
+     *  <p>Maps to <code>CustomLineItem.state</code>.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -305,7 +290,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     *  <p>References a tax category by key.</p>
+     *  <p>Maps to <code>CustomLineItem.taxCategory</code>. References a tax category by key. If the referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p>
      * @param builder function to build the taxCategory value
      * @return Builder
      */
@@ -318,7 +303,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     *  <p>References a tax category by key.</p>
+     *  <p>Maps to <code>CustomLineItem.taxCategory</code>. References a tax category by key. If the referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p>
      * @param builder function to build the taxCategory value
      * @return Builder
      */
@@ -330,7 +315,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     *  <p>References a tax category by key.</p>
+     *  <p>Maps to <code>CustomLineItem.taxCategory</code>. References a tax category by key. If the referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p>
      * @param taxCategory value to be set
      * @return Builder
      */
@@ -342,7 +327,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     * set the value to the taxRate using the builder function
+     *  <p>Maps to <code>CustomLineItem.taxRate</code>.</p>
      * @param builder function to build the taxRate value
      * @return Builder
      */
@@ -354,7 +339,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     * set the value to the taxRate using the builder function
+     *  <p>Maps to <code>CustomLineItem.taxRate</code>.</p>
      * @param builder function to build the taxRate value
      * @return Builder
      */
@@ -366,7 +351,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     * set the value to the taxRate
+     *  <p>Maps to <code>CustomLineItem.taxRate</code>.</p>
      * @param taxRate value to be set
      * @return Builder
      */
@@ -378,7 +363,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     * set the value to the externalTaxRate using the builder function
+     *  <p>External Tax Rate for the Custom Line Item if the Cart has the <code>External</code> TaxMode.</p>
      * @param builder function to build the externalTaxRate value
      * @return Builder
      */
@@ -391,7 +376,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     * set the value to the externalTaxRate using the builder function
+     *  <p>External Tax Rate for the Custom Line Item if the Cart has the <code>External</code> TaxMode.</p>
      * @param builder function to build the externalTaxRate value
      * @return Builder
      */
@@ -404,7 +389,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     * set the value to the externalTaxRate
+     *  <p>External Tax Rate for the Custom Line Item if the Cart has the <code>External</code> TaxMode.</p>
      * @param externalTaxRate value to be set
      * @return Builder
      */
@@ -416,7 +401,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     * set values to the discountedPricePerQuantity
+     *  <p>Maps to <code>CustomLineItem.discountedPricePerQuantity</code>.</p>
      * @param discountedPricePerQuantity value to be set
      * @return Builder
      */
@@ -428,7 +413,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     * set value to the discountedPricePerQuantity
+     *  <p>Maps to <code>CustomLineItem.discountedPricePerQuantity</code>.</p>
      * @param discountedPricePerQuantity value to be set
      * @return Builder
      */
@@ -440,7 +425,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     * add values to the discountedPricePerQuantity
+     *  <p>Maps to <code>CustomLineItem.discountedPricePerQuantity</code>.</p>
      * @param discountedPricePerQuantity value to be set
      * @return Builder
      */
@@ -455,7 +440,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     * add the value to the discountedPricePerQuantity using the builder function
+     *  <p>Maps to <code>CustomLineItem.discountedPricePerQuantity</code>.</p>
      * @param builder function to build the discountedPricePerQuantity value
      * @return Builder
      */
@@ -471,7 +456,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     * set the value to the discountedPricePerQuantity using the builder function
+     *  <p>Maps to <code>CustomLineItem.discountedPricePerQuantity</code>.</p>
      * @param builder function to build the discountedPricePerQuantity value
      * @return Builder
      */
@@ -485,7 +470,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     * add the value to the discountedPricePerQuantity using the builder function
+     *  <p>Maps to <code>CustomLineItem.discountedPricePerQuantity</code>.</p>
      * @param builder function to build the discountedPricePerQuantity value
      * @return Builder
      */
@@ -497,7 +482,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     * set the value to the discountedPricePerQuantity using the builder function
+     *  <p>Maps to <code>CustomLineItem.discountedPricePerQuantity</code>.</p>
      * @param builder function to build the discountedPricePerQuantity value
      * @return Builder
      */
@@ -509,7 +494,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     * set the value to the shippingDetails using the builder function
+     *  <p>Maps to <code>CustomLineItem.shippingDetails</code>.</p>
      * @param builder function to build the shippingDetails value
      * @return Builder
      */
@@ -523,7 +508,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     * set the value to the shippingDetails using the builder function
+     *  <p>Maps to <code>CustomLineItem.shippingDetails</code>.</p>
      * @param builder function to build the shippingDetails value
      * @return Builder
      */
@@ -536,7 +521,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     * set the value to the shippingDetails
+     *  <p>Maps to <code>CustomLineItem.shippingDetails</code>.</p>
      * @param shippingDetails value to be set
      * @return Builder
      */
@@ -548,12 +533,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Maps to <code>CustomLineItem.name</code>.</p>
      * @return name
      */
 
@@ -562,7 +542,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     * value of money}
+     *  <p>Maps to <code>CustomLineItem.money</code>.</p>
      * @return money
      */
 
@@ -571,7 +551,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     * value of taxedPrice}
+     *  <p>Maps to <code>CustomLineItem.taxedPrice</code>.</p>
      * @return taxedPrice
      */
 
@@ -581,7 +561,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     * value of totalPrice}
+     *  <p>Maps to <code>CustomLineItem.totalPrice</code>.</p>
      * @return totalPrice
      */
 
@@ -590,7 +570,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     * value of slug}
+     *  <p>Maps to <code>CustomLineItem.slug</code>.</p>
      * @return slug
      */
 
@@ -599,7 +579,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     * value of quantity}
+     *  <p>Maps to <code>CustomLineItem.quantity</code>.</p>
      * @return quantity
      */
 
@@ -608,7 +588,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     * value of state}
+     *  <p>Maps to <code>CustomLineItem.state</code>.</p>
      * @return state
      */
 
@@ -618,7 +598,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     *  <p>References a tax category by key.</p>
+     *  <p>Maps to <code>CustomLineItem.taxCategory</code>. References a tax category by key. If the referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p>
      * @return taxCategory
      */
 
@@ -628,7 +608,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     * value of taxRate}
+     *  <p>Maps to <code>CustomLineItem.taxRate</code>.</p>
      * @return taxRate
      */
 
@@ -638,7 +618,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     * value of externalTaxRate}
+     *  <p>External Tax Rate for the Custom Line Item if the Cart has the <code>External</code> TaxMode.</p>
      * @return externalTaxRate
      */
 
@@ -648,7 +628,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     * value of discountedPricePerQuantity}
+     *  <p>Maps to <code>CustomLineItem.discountedPricePerQuantity</code>.</p>
      * @return discountedPricePerQuantity
      */
 
@@ -658,7 +638,7 @@ public class CustomLineItemDraftBuilder implements Builder<CustomLineItemDraft> 
     }
 
     /**
-     * value of shippingDetails}
+     *  <p>Maps to <code>CustomLineItem.shippingDetails</code>.</p>
      * @return shippingDetails
      */
 

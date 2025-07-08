@@ -139,12 +139,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Name of the Asset.</p>
      * @param builder function to build the name value
      * @return Builder
      */
@@ -156,12 +151,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Name of the Asset.</p>
      * @param builder function to build the name value
      * @return Builder
      */
@@ -173,12 +163,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Name of the Asset.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -189,12 +174,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Description of the Asset.</p>
      * @param builder function to build the description value
      * @return Builder
      */
@@ -206,12 +186,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Description of the Asset.</p>
      * @param builder function to build the description value
      * @return Builder
      */
@@ -223,12 +198,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Description of the Asset.</p>
      * @param description value to be set
      * @return Builder
      */
@@ -240,7 +210,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     * set values to the tags
+     *  <p>Keywords for categorizing and organizing Assets.</p>
      * @param tags value to be set
      * @return Builder
      */
@@ -251,7 +221,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     * set value to the tags
+     *  <p>Keywords for categorizing and organizing Assets.</p>
      * @param tags value to be set
      * @return Builder
      */
@@ -262,7 +232,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     * add values to the tags
+     *  <p>Keywords for categorizing and organizing Assets.</p>
      * @param tags value to be set
      * @return Builder
      */
@@ -276,7 +246,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
+     *  <p>Custom Fields defined for the Asset.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -288,7 +258,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
+     *  <p>Custom Fields defined for the Asset.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -300,7 +270,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
+     *  <p>Custom Fields defined for the Asset.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -329,12 +299,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Name of the Asset.</p>
      * @return name
      */
 
@@ -343,12 +308,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Description of the Asset.</p>
      * @return description
      */
 
@@ -358,7 +318,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     * value of tags}
+     *  <p>Keywords for categorizing and organizing Assets.</p>
      * @return tags
      */
 
@@ -368,7 +328,7 @@ public class AssetBuilder implements Builder<Asset> {
     }
 
     /**
-     *  <p>The representation to be sent to the server when creating a resource with custom fields.</p>
+     *  <p>Custom Fields defined for the Asset.</p>
      * @return custom
      */
 

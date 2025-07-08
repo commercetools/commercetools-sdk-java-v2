@@ -38,7 +38,7 @@ public interface BooleanField extends CustomField {
     String BOOLEAN = "Boolean";
 
     /**
-     *
+     *  <p><code>true</code> or <code>false</code></p>
      * @return value
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface BooleanField extends CustomField {
     public Boolean getValue();
 
     /**
-     * set value
+     *  <p><code>true</code> or <code>false</code></p>
      * @param value value to be set
      */
 

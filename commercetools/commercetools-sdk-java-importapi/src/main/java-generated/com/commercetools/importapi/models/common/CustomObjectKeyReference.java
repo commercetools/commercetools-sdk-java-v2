@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>References a key value document by key.</p>
+ *  <p>Used by the Import API to identify a CustomObject.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -39,7 +39,15 @@ public interface CustomObjectKeyReference extends KeyReference {
     String KEY_VALUE_DOCUMENT = "key-value-document";
 
     /**
-     *
+     *  <p>User-defined unique identifier of the referenced CustomObject.</p>
+     * @return key
+     */
+    @NotNull
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
+     *  <p>The <code>container</code> of the referenced CustomObject.</p>
      * @return container
      */
     @NotNull
@@ -47,7 +55,14 @@ public interface CustomObjectKeyReference extends KeyReference {
     public String getContainer();
 
     /**
-     * set container
+     *  <p>User-defined unique identifier of the referenced CustomObject.</p>
+     * @param key value to be set
+     */
+
+    public void setKey(final String key);
+
+    /**
+     *  <p>The <code>container</code> of the referenced CustomObject.</p>
      * @param container value to be set
      */
 

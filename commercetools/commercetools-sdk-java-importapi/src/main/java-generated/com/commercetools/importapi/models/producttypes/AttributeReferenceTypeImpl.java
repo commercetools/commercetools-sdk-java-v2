@@ -52,7 +52,7 @@ public class AttributeReferenceTypeImpl implements AttributeReferenceType, Model
     }
 
     /**
-     *  <p>The type of the referenced resource.</p>
+     *  <p>Type of referenced resource.</p>
      */
 
     public com.commercetools.importapi.models.common.ReferenceType getReferenceTypeId() {

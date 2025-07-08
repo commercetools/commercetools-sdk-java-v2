@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>The data representation for a ProductType to be imported that is persisted as a ProductType in the Project.</p>
+ *  <p>Represents the data used to import a ProductType. Once imported, this data is persisted as a ProductType in the Project.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductTypeImportImpl implements ProductTypeImport, ModelBase {
@@ -50,7 +50,7 @@ public class ProductTypeImportImpl implements ProductTypeImport, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier. If a ProductType with this <code>key</code> exists, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If a ProductType with this <code>key</code> exists, it is updated with the imported data.</p>
      */
 
     public String getKey() {

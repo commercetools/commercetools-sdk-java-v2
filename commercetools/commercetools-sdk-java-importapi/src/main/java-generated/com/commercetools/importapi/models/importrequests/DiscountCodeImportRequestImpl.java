@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>The request body to import Discount Codes. Contains data for Discount Codes to be created or updated in a Project.</p>
+ *  <p>The request body to import DiscountCodes. Contains data for Discount Codes to be created or updated in a Project.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountCodeImportRequestImpl implements DiscountCodeImportRequest, ModelBase {

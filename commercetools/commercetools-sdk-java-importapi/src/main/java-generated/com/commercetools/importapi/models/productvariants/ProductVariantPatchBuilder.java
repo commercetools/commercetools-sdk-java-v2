@@ -36,7 +36,7 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
     private com.commercetools.importapi.models.common.ProductKeyReference product;
 
     /**
-     *  <p>Reference to the ProductVariant to update. If the referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
+     *  <p>Reference to the ProductVariant to update.</p>
      * @param builder function to build the productVariant value
      * @return Builder
      */
@@ -50,7 +50,7 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
     }
 
     /**
-     *  <p>Reference to the ProductVariant to update. If the referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
+     *  <p>Reference to the ProductVariant to update.</p>
      * @param builder function to build the productVariant value
      * @return Builder
      */
@@ -63,7 +63,7 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
     }
 
     /**
-     *  <p>Reference to the ProductVariant to update. If the referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
+     *  <p>Reference to the ProductVariant to update.</p>
      * @param productVariant value to be set
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
      *   <li>The referenced Attribute must be defined in an existing ProductType, or the <code>state</code> of the ImportOperation will be <code>validationFailed</code>.</li>
      *   <li>Setting the value of a non-required Attribute to <code>null</code> will remove the Attribute.</li>
      *   <li>Attempting to set a <code>null</code> value to a required Attribute will make the import operation fail with an InvalidOperation error.</li>
-     *   <li>Importing LocalizableTextAttributes or LocalizableTextSetAttributes follows an override pattern, meaning that omitted localized fields will be deleted, new fields will be created, and existing fields will be updated. You can also delete localized fields by setting their value to <code>null</code>.</li>
+     *   <li>Importing LocalizableTextAttributes or LocalizableTextSetAttributes follows an override pattern, meaning that omitted localized fields will be deleted, new fields will be created, and existing fields will be updated. You can delete localized fields by setting their value to <code>null</code>.</li>
      *  </ul>
      * @param builder function to build the attributes value
      * @return Builder
@@ -99,7 +99,7 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
      *   <li>The referenced Attribute must be defined in an existing ProductType, or the <code>state</code> of the ImportOperation will be <code>validationFailed</code>.</li>
      *   <li>Setting the value of a non-required Attribute to <code>null</code> will remove the Attribute.</li>
      *   <li>Attempting to set a <code>null</code> value to a required Attribute will make the import operation fail with an InvalidOperation error.</li>
-     *   <li>Importing LocalizableTextAttributes or LocalizableTextSetAttributes follows an override pattern, meaning that omitted localized fields will be deleted, new fields will be created, and existing fields will be updated. You can also delete localized fields by setting their value to <code>null</code>.</li>
+     *   <li>Importing LocalizableTextAttributes or LocalizableTextSetAttributes follows an override pattern, meaning that omitted localized fields will be deleted, new fields will be created, and existing fields will be updated. You can delete localized fields by setting their value to <code>null</code>.</li>
      *  </ul>
      * @param builder function to build the attributes value
      * @return Builder
@@ -117,7 +117,7 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
      *   <li>The referenced Attribute must be defined in an existing ProductType, or the <code>state</code> of the ImportOperation will be <code>validationFailed</code>.</li>
      *   <li>Setting the value of a non-required Attribute to <code>null</code> will remove the Attribute.</li>
      *   <li>Attempting to set a <code>null</code> value to a required Attribute will make the import operation fail with an InvalidOperation error.</li>
-     *   <li>Importing LocalizableTextAttributes or LocalizableTextSetAttributes follows an override pattern, meaning that omitted localized fields will be deleted, new fields will be created, and existing fields will be updated. You can also delete localized fields by setting their value to <code>null</code>.</li>
+     *   <li>Importing LocalizableTextAttributes or LocalizableTextSetAttributes follows an override pattern, meaning that omitted localized fields will be deleted, new fields will be created, and existing fields will be updated. You can delete localized fields by setting their value to <code>null</code>.</li>
      *  </ul>
      * @param attributes value to be set
      * @return Builder
@@ -143,6 +143,7 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
     /**
      *  <p>Reference to the Product that contains the ProductVariant.</p>
      *  <p>We recommend to set this value to minimize concurrency errors. If set, this field is required for every ProductVariantPatch in the ProductVariantPatchRequest.</p>
+     *  <p>If the referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Product is created.</p>
      * @param builder function to build the product value
      * @return Builder
      */
@@ -156,6 +157,7 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
     /**
      *  <p>Reference to the Product that contains the ProductVariant.</p>
      *  <p>We recommend to set this value to minimize concurrency errors. If set, this field is required for every ProductVariantPatch in the ProductVariantPatchRequest.</p>
+     *  <p>If the referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Product is created.</p>
      * @param builder function to build the product value
      * @return Builder
      */
@@ -169,6 +171,7 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
     /**
      *  <p>Reference to the Product that contains the ProductVariant.</p>
      *  <p>We recommend to set this value to minimize concurrency errors. If set, this field is required for every ProductVariantPatch in the ProductVariantPatchRequest.</p>
+     *  <p>If the referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Product is created.</p>
      * @param product value to be set
      * @return Builder
      */
@@ -180,7 +183,7 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
     }
 
     /**
-     *  <p>Reference to the ProductVariant to update. If the referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
+     *  <p>Reference to the ProductVariant to update.</p>
      * @return productVariant
      */
 
@@ -194,7 +197,7 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
      *   <li>The referenced Attribute must be defined in an existing ProductType, or the <code>state</code> of the ImportOperation will be <code>validationFailed</code>.</li>
      *   <li>Setting the value of a non-required Attribute to <code>null</code> will remove the Attribute.</li>
      *   <li>Attempting to set a <code>null</code> value to a required Attribute will make the import operation fail with an InvalidOperation error.</li>
-     *   <li>Importing LocalizableTextAttributes or LocalizableTextSetAttributes follows an override pattern, meaning that omitted localized fields will be deleted, new fields will be created, and existing fields will be updated. You can also delete localized fields by setting their value to <code>null</code>.</li>
+     *   <li>Importing LocalizableTextAttributes or LocalizableTextSetAttributes follows an override pattern, meaning that omitted localized fields will be deleted, new fields will be created, and existing fields will be updated. You can delete localized fields by setting their value to <code>null</code>.</li>
      *  </ul>
      * @return attributes
      */
@@ -217,6 +220,7 @@ public class ProductVariantPatchBuilder implements Builder<ProductVariantPatch> 
     /**
      *  <p>Reference to the Product that contains the ProductVariant.</p>
      *  <p>We recommend to set this value to minimize concurrency errors. If set, this field is required for every ProductVariantPatch in the ProductVariantPatchRequest.</p>
+     *  <p>If the referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Product is created.</p>
      * @return product
      */
 

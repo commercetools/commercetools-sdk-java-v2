@@ -43,7 +43,7 @@ public class OrderKeyReferenceImpl implements OrderKeyReference, ModelBase {
     }
 
     /**
-     *
+     *  <p>User-defined unique identifier of the referenced resource. If the referenced resource does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced resource is created.</p>
      */
 
     public String getKey() {
@@ -51,7 +51,7 @@ public class OrderKeyReferenceImpl implements OrderKeyReference, ModelBase {
     }
 
     /**
-     *  <p>The type of the referenced resource.</p>
+     *  <p>Type of referenced resource.</p>
      */
 
     public com.commercetools.importapi.models.common.ReferenceType getTypeId() {

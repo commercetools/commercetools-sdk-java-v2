@@ -30,7 +30,8 @@ public class MoneyAttributeBuilder implements Builder<MoneyAttribute> {
     private com.commercetools.importapi.models.common.TypedMoney value;
 
     /**
-     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     *  <p>Required if used for ProductVariantImport. Must not be set if used for ProductVariantPatch.</p>
+     *  <p>Must match <code>name</code> of an AttributeDefinition of the Product Type.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -41,7 +42,7 @@ public class MoneyAttributeBuilder implements Builder<MoneyAttribute> {
     }
 
     /**
-     * set the value to the value
+     *  <p>A money value in cent precision format.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -52,7 +53,7 @@ public class MoneyAttributeBuilder implements Builder<MoneyAttribute> {
     }
 
     /**
-     * set the value to the value using the builder function
+     *  <p>A money value in cent precision format.</p>
      * @param builder function to build the value value
      * @return Builder
      */
@@ -64,7 +65,8 @@ public class MoneyAttributeBuilder implements Builder<MoneyAttribute> {
     }
 
     /**
-     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     *  <p>Required if used for ProductVariantImport. Must not be set if used for ProductVariantPatch.</p>
+     *  <p>Must match <code>name</code> of an AttributeDefinition of the Product Type.</p>
      * @return name
      */
 
@@ -74,7 +76,7 @@ public class MoneyAttributeBuilder implements Builder<MoneyAttribute> {
     }
 
     /**
-     * value of value}
+     *  <p>A money value in cent precision format.</p>
      * @return value
      */
 

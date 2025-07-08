@@ -18,7 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Serves as the entry point of resources. An Import Container is not resource type-specific.</p>
+ *  <p>Contains the resources to be imported. Unless <code>resourceType</code> is specified, the ImportContainer can import all of the supported ImportResourceTypes.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +38,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ImportContainer {
 
     /**
-     *  <p>User-defined unique identifier for the ImportContainer.</p>
+     *  <p>User-defined unique identifier of the ImportContainer.</p>
      * @return key
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface ImportContainer {
     public String getKey();
 
     /**
-     *  <p>The resource type the ImportContainer is able to handle. If not present, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
+     *  <p>The resource type the ImportContainer supports. If not present, the ImportContainer can import all of the supported ImportResourceTypes.</p>
      * @return resourceType
      */
 
@@ -54,7 +54,7 @@ public interface ImportContainer {
     public ImportResourceType getResourceType();
 
     /**
-     *  <p>The version of the ImportContainer.</p>
+     *  <p>Current version of the ImportContainer.</p>
      * @return version
      */
     @NotNull
@@ -94,21 +94,21 @@ public interface ImportContainer {
     public ZonedDateTime getExpiresAt();
 
     /**
-     *  <p>User-defined unique identifier for the ImportContainer.</p>
+     *  <p>User-defined unique identifier of the ImportContainer.</p>
      * @param key value to be set
      */
 
     public void setKey(final String key);
 
     /**
-     *  <p>The resource type the ImportContainer is able to handle. If not present, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
+     *  <p>The resource type the ImportContainer supports. If not present, the ImportContainer can import all of the supported ImportResourceTypes.</p>
      * @param resourceType value to be set
      */
 
     public void setResourceType(final ImportResourceType resourceType);
 
     /**
-     *  <p>The version of the ImportContainer.</p>
+     *  <p>Current version of the ImportContainer.</p>
      * @param version value to be set
      */
 

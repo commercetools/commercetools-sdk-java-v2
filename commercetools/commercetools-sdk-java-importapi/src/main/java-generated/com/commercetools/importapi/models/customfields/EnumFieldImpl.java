@@ -51,7 +51,7 @@ public class EnumFieldImpl implements EnumField, ModelBase {
     }
 
     /**
-     *
+     *  <p>The key of the enum value. Must be a <code>key</code> of one of the CustomFieldEnumValues defined in the CustomFieldEnumType.</p>
      */
 
     public String getValue() {

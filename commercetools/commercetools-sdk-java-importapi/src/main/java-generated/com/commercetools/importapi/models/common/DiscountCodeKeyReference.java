@@ -12,8 +12,10 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+
 /**
- *  <p>References a discount code by key.</p>
+ *  <p>Used by the Import API to identify a DiscountCode.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,6 +36,21 @@ public interface DiscountCodeKeyReference extends KeyReference {
      * discriminator value for DiscountCodeKeyReference
      */
     String DISCOUNT_CODE = "discount-code";
+
+    /**
+     *  <p>User-defined unique identifier of the referenced DiscountCode.</p>
+     * @return key
+     */
+    @NotNull
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
+     *  <p>User-defined unique identifier of the referenced DiscountCode.</p>
+     * @param key value to be set
+     */
+
+    public void setKey(final String key);
 
     /**
      * factory method

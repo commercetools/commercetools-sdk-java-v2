@@ -47,7 +47,7 @@ public class SyncInfoImpl implements SyncInfo, ModelBase {
     }
 
     /**
-     *  <p>Maps to <code>SyncInfo.channel</code></p>
+     *  <p>Maps to <code>SyncInfo.channel</code>. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      */
 
     public com.commercetools.importapi.models.common.ChannelKeyReference getChannel() {

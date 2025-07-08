@@ -33,7 +33,7 @@ import jakarta.validation.constraints.NotNull;
 public interface DeliveryItem {
 
     /**
-     *
+     *  <p><code>id</code> of the LineItem or CustomLineItem delivered.</p>
      * @return id
      */
     @NotNull
@@ -41,7 +41,7 @@ public interface DeliveryItem {
     public String getId();
 
     /**
-     *
+     *  <p>Number of Line Items or Custom Line Items delivered.</p>
      * @return quantity
      */
     @NotNull
@@ -49,14 +49,14 @@ public interface DeliveryItem {
     public Long getQuantity();
 
     /**
-     * set id
+     *  <p><code>id</code> of the LineItem or CustomLineItem delivered.</p>
      * @param id value to be set
      */
 
     public void setId(final String id);
 
     /**
-     * set quantity
+     *  <p>Number of Line Items or Custom Line Items delivered.</p>
      * @param quantity value to be set
      */
 

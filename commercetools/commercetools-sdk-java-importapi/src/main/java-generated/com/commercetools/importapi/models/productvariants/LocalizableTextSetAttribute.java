@@ -41,7 +41,7 @@ public interface LocalizableTextSetAttribute extends Attribute {
     String LTEXT_SET = "ltext-set";
 
     /**
-     *
+     *  <p>A set of localized strings.</p>
      * @return value
      */
     @NotNull
@@ -50,7 +50,7 @@ public interface LocalizableTextSetAttribute extends Attribute {
     public List<LocalizedString> getValue();
 
     /**
-     * set value
+     *  <p>A set of localized strings.</p>
      * @param value values to be set
      */
 
@@ -58,7 +58,7 @@ public interface LocalizableTextSetAttribute extends Attribute {
     public void setValue(final LocalizedString... value);
 
     /**
-     * set value
+     *  <p>A set of localized strings.</p>
      * @param value values to be set
      */
 

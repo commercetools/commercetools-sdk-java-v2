@@ -24,7 +24,7 @@ public class StoreKeyReferenceBuilder implements Builder<StoreKeyReference> {
     private String key;
 
     /**
-     * set the value to the key
+     *  <p>User-defined unique identifier of the referenced Store.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class StoreKeyReferenceBuilder implements Builder<StoreKeyReference> {
     }
 
     /**
-     * value of key}
+     *  <p>User-defined unique identifier of the referenced Store.</p>
      * @return key
      */
 

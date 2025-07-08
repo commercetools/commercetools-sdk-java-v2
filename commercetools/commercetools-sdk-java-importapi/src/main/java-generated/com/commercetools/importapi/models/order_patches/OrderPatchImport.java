@@ -16,7 +16,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>Representation for an update of an Order. Use this type to import updates for existing Orders in a Project.</p>
+ *  <p>Represents the data used to update an Order in a Project.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,7 +34,7 @@ import jakarta.validation.constraints.NotNull;
 public interface OrderPatchImport {
 
     /**
-     *  <p>Maps to <code>Order.orderNumber</code>, String that uniquely identifies an order, unique across a project.</p>
+     *  <p>User-defined unique identifier. If an Order with this <code>orderNumber</code> exists, it is updated with the imported data.</p>
      * @return orderNumber
      */
     @NotNull
@@ -42,7 +42,7 @@ public interface OrderPatchImport {
     public String getOrderNumber();
 
     /**
-     *  <p>Each field referenced must be defined in an already existing order in the project or the import operation state is set to <code>validationFailed</code>.</p>
+     *  <p>Each field referenced must be defined in an existing Order or the ImportOperationState is set to <code>validationFailed</code>.</p>
      * @return fields
      */
     @NotNull
@@ -51,14 +51,14 @@ public interface OrderPatchImport {
     public OrderField getFields();
 
     /**
-     *  <p>Maps to <code>Order.orderNumber</code>, String that uniquely identifies an order, unique across a project.</p>
+     *  <p>User-defined unique identifier. If an Order with this <code>orderNumber</code> exists, it is updated with the imported data.</p>
      * @param orderNumber value to be set
      */
 
     public void setOrderNumber(final String orderNumber);
 
     /**
-     *  <p>Each field referenced must be defined in an already existing order in the project or the import operation state is set to <code>validationFailed</code>.</p>
+     *  <p>Each field referenced must be defined in an existing Order or the ImportOperationState is set to <code>validationFailed</code>.</p>
      * @param fields value to be set
      */
 

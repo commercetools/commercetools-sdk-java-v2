@@ -58,7 +58,7 @@ public class ProductVariantDraftImportImpl implements ProductVariantDraftImport,
     }
 
     /**
-     *
+     *  <p>User-defined unique SKU of the Product Variant.</p>
      */
 
     public String getSku() {
@@ -66,7 +66,7 @@ public class ProductVariantDraftImportImpl implements ProductVariantDraftImport,
     }
 
     /**
-     *
+     *  <p>User-defined unique identifier for the ProductVariant.</p>
      */
 
     public String getKey() {
@@ -74,7 +74,7 @@ public class ProductVariantDraftImportImpl implements ProductVariantDraftImport,
     }
 
     /**
-     *
+     *  <p>The Embedded Prices for the Product Variant. Each Price must have its unique Price scope (with same currency, country, Customer Group, Channel, <code>validFrom</code> and <code>validUntil</code>).</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.productdrafts.PriceDraftImport> getPrices() {
@@ -82,7 +82,7 @@ public class ProductVariantDraftImportImpl implements ProductVariantDraftImport,
     }
 
     /**
-     *
+     *  <p>Attributes according to the respective AttributeDefinition.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.productvariants.Attribute> getAttributes() {
@@ -90,7 +90,7 @@ public class ProductVariantDraftImportImpl implements ProductVariantDraftImport,
     }
 
     /**
-     *
+     *  <p>Images for the Product Variant.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.common.Image> getImages() {
@@ -98,7 +98,7 @@ public class ProductVariantDraftImportImpl implements ProductVariantDraftImport,
     }
 
     /**
-     *
+     *  <p>Media assets for the Product Variant.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.common.Asset> getAssets() {

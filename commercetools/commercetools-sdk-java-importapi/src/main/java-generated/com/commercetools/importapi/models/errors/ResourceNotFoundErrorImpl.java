@@ -63,7 +63,7 @@ public class ResourceNotFoundErrorImpl implements ResourceNotFoundError, ModelBa
     }
 
     /**
-     *
+     *  <p>The resource that was not found.</p>
      */
 
     public java.lang.Object getResource() {

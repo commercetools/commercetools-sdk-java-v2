@@ -33,7 +33,7 @@ public class TaxPortionBuilder implements Builder<TaxPortion> {
     private com.commercetools.importapi.models.common.TypedMoney amount;
 
     /**
-     * set the value to the name
+     *  <p>Name of the tax portion.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -44,7 +44,7 @@ public class TaxPortionBuilder implements Builder<TaxPortion> {
     }
 
     /**
-     * set the value to the rate
+     *  <p>A number in the range 0-1.</p>
      * @param rate value to be set
      * @return Builder
      */
@@ -55,7 +55,7 @@ public class TaxPortionBuilder implements Builder<TaxPortion> {
     }
 
     /**
-     * set the value to the amount
+     *  <p>Money value of the tax portion.</p>
      * @param amount value to be set
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class TaxPortionBuilder implements Builder<TaxPortion> {
     }
 
     /**
-     * set the value to the amount using the builder function
+     *  <p>Money value of the tax portion.</p>
      * @param builder function to build the amount value
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class TaxPortionBuilder implements Builder<TaxPortion> {
     }
 
     /**
-     * value of name}
+     *  <p>Name of the tax portion.</p>
      * @return name
      */
 
@@ -88,7 +88,7 @@ public class TaxPortionBuilder implements Builder<TaxPortion> {
     }
 
     /**
-     * value of rate}
+     *  <p>A number in the range 0-1.</p>
      * @return rate
      */
 
@@ -97,7 +97,7 @@ public class TaxPortionBuilder implements Builder<TaxPortion> {
     }
 
     /**
-     * value of amount}
+     *  <p>Money value of the tax portion.</p>
      * @return amount
      */
 

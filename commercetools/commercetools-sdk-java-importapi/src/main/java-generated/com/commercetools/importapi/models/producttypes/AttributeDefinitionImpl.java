@@ -72,7 +72,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
     }
 
     /**
-     *
+     *  <p>Describes the Type of the Attribute.</p>
      */
 
     public com.commercetools.importapi.models.producttypes.AttributeType getType() {
@@ -80,7 +80,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
     }
 
     /**
-     *
+     *  <p>User-defined name of the Attribute that is unique within the Project.</p>
      */
 
     public String getName() {
@@ -88,12 +88,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Human-readable label for the Attribute.</p>
      */
 
     public com.commercetools.importapi.models.common.LocalizedString getLabel() {
@@ -101,7 +96,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, the Attribute must have a value on a ProductVariant.</p>
      */
 
     public Boolean getIsRequired() {
@@ -109,7 +104,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
     }
 
     /**
-     *
+     *  <p>Specifies how Attributes are validated across all variants of a Product.</p>
      */
 
     public com.commercetools.importapi.models.producttypes.AttributeConstraintEnum getAttributeConstraint() {
@@ -117,12 +112,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Provides additional Attribute information to aid content managers configure Product details.</p>
      */
 
     public com.commercetools.importapi.models.common.LocalizedString getInputTip() {
@@ -130,7 +120,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
     }
 
     /**
-     *
+     *  <p>Provides a visual representation directive for values of this Attribute (only relevant for AttributeTextType and AttributeLocalizableTextType).</p>
      */
 
     public com.commercetools.importapi.models.producttypes.TextInputHint getInputHint() {
@@ -138,7 +128,7 @@ public class AttributeDefinitionImpl implements AttributeDefinition, ModelBase {
     }
 
     /**
-     *
+     *  <p>If <code>true</code>, the Attribute's values are available in the Product Search or the Product Projection Search API for use in full-text search queries, filters, and facets.</p>
      */
 
     public Boolean getIsSearchable() {

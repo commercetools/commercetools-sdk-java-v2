@@ -51,7 +51,7 @@ public class DateFieldImpl implements DateField, ModelBase {
     }
 
     /**
-     *
+     *  <p>A date in the format <code>YYYY-MM-DD</code>.</p>
      */
 
     public java.time.LocalDate getValue() {

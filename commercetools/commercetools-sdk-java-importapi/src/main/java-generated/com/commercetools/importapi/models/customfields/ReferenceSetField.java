@@ -41,7 +41,7 @@ public interface ReferenceSetField extends CustomField {
     String REFERENCE_SET = "ReferenceSet";
 
     /**
-     *
+     *  <p>JSON array of references, each referencing an existing resource by key. The order of items in the array is not fixed.</p>
      * @return value
      */
     @NotNull
@@ -50,7 +50,7 @@ public interface ReferenceSetField extends CustomField {
     public List<KeyReference> getValue();
 
     /**
-     * set value
+     *  <p>JSON array of references, each referencing an existing resource by key. The order of items in the array is not fixed.</p>
      * @param value values to be set
      */
 
@@ -58,7 +58,7 @@ public interface ReferenceSetField extends CustomField {
     public void setValue(final KeyReference... value);
 
     /**
-     * set value
+     *  <p>JSON array of references, each referencing an existing resource by key. The order of items in the array is not fixed.</p>
      * @param value values to be set
      */
 

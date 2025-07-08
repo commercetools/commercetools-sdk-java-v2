@@ -34,7 +34,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ParcelTrackingData {
 
     /**
-     *
+     *  <p><code>id</code> of an existing Parcel.</p>
      * @return parcelId
      */
     @NotNull
@@ -42,7 +42,7 @@ public interface ParcelTrackingData {
     public String getParcelId();
 
     /**
-     *
+     *  <p>Information that helps track a Parcel.</p>
      * @return trackingData
      */
     @Valid
@@ -50,14 +50,14 @@ public interface ParcelTrackingData {
     public TrackingData getTrackingData();
 
     /**
-     * set parcelId
+     *  <p><code>id</code> of an existing Parcel.</p>
      * @param parcelId value to be set
      */
 
     public void setParcelId(final String parcelId);
 
     /**
-     * set trackingData
+     *  <p>Information that helps track a Parcel.</p>
      * @param trackingData value to be set
      */
 

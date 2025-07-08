@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Deletes the Import Container specified by the <code>importContainerKey</code>.</p>
+ *  <p>Deletes an Import Container in the Project.</p>
  *  <p>Generates the ImportContainerDeleted Event.</p>
  *
  * <hr>

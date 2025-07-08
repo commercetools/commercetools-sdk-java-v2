@@ -35,7 +35,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ShippingRateDraft extends io.vrap.rmf.base.client.Draft<ShippingRateDraft> {
 
     /**
-     *
+     *  <p>Currency amount of the ShippingRate.</p>
      * @return price
      */
     @NotNull
@@ -44,7 +44,7 @@ public interface ShippingRateDraft extends io.vrap.rmf.base.client.Draft<Shippin
     public Money getPrice();
 
     /**
-     *
+     *  <p>Free shipping is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
      * @return freeAbove
      */
     @Valid
@@ -52,7 +52,7 @@ public interface ShippingRateDraft extends io.vrap.rmf.base.client.Draft<Shippin
     public Money getFreeAbove();
 
     /**
-     *
+     *  <p>Price tiers for the ShippingRate.</p>
      * @return tiers
      */
     @Valid
@@ -60,21 +60,21 @@ public interface ShippingRateDraft extends io.vrap.rmf.base.client.Draft<Shippin
     public List<ShippingRatePriceTier> getTiers();
 
     /**
-     * set price
+     *  <p>Currency amount of the ShippingRate.</p>
      * @param price value to be set
      */
 
     public void setPrice(final Money price);
 
     /**
-     * set freeAbove
+     *  <p>Free shipping is applied if the sum of the (Custom) Line Item Prices reaches the specified value.</p>
      * @param freeAbove value to be set
      */
 
     public void setFreeAbove(final Money freeAbove);
 
     /**
-     * set tiers
+     *  <p>Price tiers for the ShippingRate.</p>
      * @param tiers values to be set
      */
 
@@ -82,7 +82,7 @@ public interface ShippingRateDraft extends io.vrap.rmf.base.client.Draft<Shippin
     public void setTiers(final ShippingRatePriceTier... tiers);
 
     /**
-     * set tiers
+     *  <p>Price tiers for the ShippingRate.</p>
      * @param tiers values to be set
      */
 

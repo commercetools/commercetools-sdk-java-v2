@@ -40,7 +40,7 @@ public class ResourceNotFoundErrorBuilder implements Builder<ResourceNotFoundErr
     }
 
     /**
-     * set the value to the resource
+     *  <p>The resource that was not found.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -60,7 +60,7 @@ public class ResourceNotFoundErrorBuilder implements Builder<ResourceNotFoundErr
     }
 
     /**
-     * value of resource}
+     *  <p>The resource that was not found.</p>
      * @return resource
      */
 

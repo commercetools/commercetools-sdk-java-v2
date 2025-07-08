@@ -39,7 +39,7 @@ public interface TimeField extends CustomField {
     String TIME = "Time";
 
     /**
-     *
+     *  <p>A time value in the format <code>HH:mm:ss.SSS</code>. The time zone is optional and defaults to UTC if not specified. If the time zone is specified, it must be in the format <code>±HH:mm</code> or <code>Z</code> for UTC.</p>
      * @return value
      */
     @NotNull
@@ -47,7 +47,7 @@ public interface TimeField extends CustomField {
     public LocalTime getValue();
 
     /**
-     * set value
+     *  <p>A time value in the format <code>HH:mm:ss.SSS</code>. The time zone is optional and defaults to UTC if not specified. If the time zone is specified, it must be in the format <code>±HH:mm</code> or <code>Z</code> for UTC.</p>
      * @param value value to be set
      */
 

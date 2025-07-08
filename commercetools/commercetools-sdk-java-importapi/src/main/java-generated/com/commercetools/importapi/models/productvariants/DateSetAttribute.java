@@ -39,7 +39,7 @@ public interface DateSetAttribute extends Attribute {
     String DATE_SET = "date-set";
 
     /**
-     *
+     *  <p>A set of dates in the format <code>YYYY-MM-DD</code>.</p>
      * @return value
      */
     @NotNull
@@ -47,7 +47,7 @@ public interface DateSetAttribute extends Attribute {
     public List<LocalDate> getValue();
 
     /**
-     * set value
+     *  <p>A set of dates in the format <code>YYYY-MM-DD</code>.</p>
      * @param value values to be set
      */
 
@@ -55,7 +55,7 @@ public interface DateSetAttribute extends Attribute {
     public void setValue(final LocalDate... value);
 
     /**
-     * set value
+     *  <p>A set of dates in the format <code>YYYY-MM-DD</code>.</p>
      * @param value values to be set
      */
 

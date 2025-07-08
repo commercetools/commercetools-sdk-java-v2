@@ -24,7 +24,7 @@ public class DateFieldBuilder implements Builder<DateField> {
     private java.time.LocalDate value;
 
     /**
-     * set the value to the value
+     *  <p>A date in the format <code>YYYY-MM-DD</code>.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class DateFieldBuilder implements Builder<DateField> {
     }
 
     /**
-     * value of value}
+     *  <p>A date in the format <code>YYYY-MM-DD</code>.</p>
      * @return value
      */
 

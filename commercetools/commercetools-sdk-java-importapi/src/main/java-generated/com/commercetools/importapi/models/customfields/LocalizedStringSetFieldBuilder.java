@@ -25,7 +25,7 @@ public class LocalizedStringSetFieldBuilder implements Builder<LocalizedStringSe
     private java.util.List<com.commercetools.importapi.models.common.LocalizedString> value;
 
     /**
-     * set values to the value
+     *  <p>JSON array of localized strings. The order of items in the array is not fixed.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class LocalizedStringSetFieldBuilder implements Builder<LocalizedStringSe
     }
 
     /**
-     * set value to the value
+     *  <p>JSON array of localized strings. The order of items in the array is not fixed.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class LocalizedStringSetFieldBuilder implements Builder<LocalizedStringSe
     }
 
     /**
-     * add values to the value
+     *  <p>JSON array of localized strings. The order of items in the array is not fixed.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class LocalizedStringSetFieldBuilder implements Builder<LocalizedStringSe
     }
 
     /**
-     * add the value to the value using the builder function
+     *  <p>JSON array of localized strings. The order of items in the array is not fixed.</p>
      * @param builder function to build the value value
      * @return Builder
      */
@@ -79,7 +79,7 @@ public class LocalizedStringSetFieldBuilder implements Builder<LocalizedStringSe
     }
 
     /**
-     * set the value to the value using the builder function
+     *  <p>JSON array of localized strings. The order of items in the array is not fixed.</p>
      * @param builder function to build the value value
      * @return Builder
      */
@@ -92,7 +92,7 @@ public class LocalizedStringSetFieldBuilder implements Builder<LocalizedStringSe
     }
 
     /**
-     * add the value to the value using the builder function
+     *  <p>JSON array of localized strings. The order of items in the array is not fixed.</p>
      * @param builder function to build the value value
      * @return Builder
      */
@@ -103,7 +103,7 @@ public class LocalizedStringSetFieldBuilder implements Builder<LocalizedStringSe
     }
 
     /**
-     * set the value to the value using the builder function
+     *  <p>JSON array of localized strings. The order of items in the array is not fixed.</p>
      * @param builder function to build the value value
      * @return Builder
      */
@@ -114,7 +114,7 @@ public class LocalizedStringSetFieldBuilder implements Builder<LocalizedStringSe
     }
 
     /**
-     * value of value}
+     *  <p>JSON array of localized strings. The order of items in the array is not fixed.</p>
      * @return value
      */
 

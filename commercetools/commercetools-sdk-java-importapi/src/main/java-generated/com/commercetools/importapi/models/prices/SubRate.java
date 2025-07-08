@@ -33,7 +33,7 @@ import jakarta.validation.constraints.NotNull;
 public interface SubRate {
 
     /**
-     *
+     *  <p>Name of the SubRate.</p>
      * @return name
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface SubRate {
     public Double getAmount();
 
     /**
-     * set name
+     *  <p>Name of the SubRate.</p>
      * @param name value to be set
      */
 

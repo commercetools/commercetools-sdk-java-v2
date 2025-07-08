@@ -40,7 +40,7 @@ public class ResourceDeletionErrorBuilder implements Builder<ResourceDeletionErr
     }
 
     /**
-     * set the value to the resource
+     *  <p>The resource that was deleted.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -60,7 +60,7 @@ public class ResourceDeletionErrorBuilder implements Builder<ResourceDeletionErr
     }
 
     /**
-     * value of resource}
+     *  <p>The resource that was deleted.</p>
      * @return resource
      */
 

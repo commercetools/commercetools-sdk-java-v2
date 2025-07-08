@@ -47,7 +47,8 @@ public class DateTimeAttributeImpl implements DateTimeAttribute, ModelBase {
     }
 
     /**
-     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     *  <p>Required if used for ProductVariantImport. Must not be set if used for ProductVariantPatch.</p>
+     *  <p>Must match <code>name</code> of an AttributeDefinition of the Product Type.</p>
      */
 
     public String getName() {
@@ -55,7 +56,7 @@ public class DateTimeAttributeImpl implements DateTimeAttribute, ModelBase {
     }
 
     /**
-     *
+     *  <p>Must match <code>type</code> of an AttributeDefinition of the Product Type. The type is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
      */
 
     public String getType() {
@@ -63,7 +64,7 @@ public class DateTimeAttributeImpl implements DateTimeAttribute, ModelBase {
     }
 
     /**
-     *
+     *  <p>A date with time in the format <code>YYYY-MM-DDTHH:mm:ss.SSSZ</code>. The time zone is optional and defaults to UTC if not specified. If the time zone is specified, it must be in the format <code>±HH:mm</code> or <code>Z</code> for UTC.</p>
      */
 
     public java.time.ZonedDateTime getValue() {

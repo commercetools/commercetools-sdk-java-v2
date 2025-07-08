@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>The data representation for an Inventory to be imported that is persisted as a Inventory in the Project.</p>
+ *  <p>Represents the data used to import an InventoryEntry. Once imported, this data is persisted as a InventoryEntry in the Project.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class InventoryImportImpl implements InventoryImport, ModelBase {
@@ -62,7 +62,7 @@ public class InventoryImportImpl implements InventoryImport, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier. If an InventoryEntry with this <code>key</code> exists, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If an InventoryEntry with this <code>key</code> exists, it is updated with the imported data.</p>
      */
 
     public String getKey() {
@@ -70,7 +70,7 @@ public class InventoryImportImpl implements InventoryImport, ModelBase {
     }
 
     /**
-     *  <p>Maps to <code>Inventory.sku</code></p>
+     *  <p>Maps to <code>InventoryEntry.sku</code></p>
      */
 
     public String getSku() {
@@ -78,7 +78,7 @@ public class InventoryImportImpl implements InventoryImport, ModelBase {
     }
 
     /**
-     *  <p>Maps to <code>Inventory.quantityOnStock</code></p>
+     *  <p>Maps to <code>InventoryEntry.quantityOnStock</code></p>
      */
 
     public Long getQuantityOnStock() {
@@ -86,7 +86,7 @@ public class InventoryImportImpl implements InventoryImport, ModelBase {
     }
 
     /**
-     *  <p>Maps to <code>Inventory.restockableInDays</code></p>
+     *  <p>Maps to <code>InventoryEntry.restockableInDays</code></p>
      */
 
     public Long getRestockableInDays() {
@@ -94,7 +94,7 @@ public class InventoryImportImpl implements InventoryImport, ModelBase {
     }
 
     /**
-     *  <p>Maps to <code>Inventory.expectedDelivery</code></p>
+     *  <p>Maps to <code>InventoryEntry.expectedDelivery</code></p>
      */
 
     public java.time.ZonedDateTime getExpectedDelivery() {
@@ -102,7 +102,7 @@ public class InventoryImportImpl implements InventoryImport, ModelBase {
     }
 
     /**
-     *  <p>Maps to <code>Inventory.supplyChannel</code></p>
+     *  <p>Maps to <code>InventoryEntry.supplyChannel</code>. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      */
 
     public com.commercetools.importapi.models.common.ChannelKeyReference getSupplyChannel() {
@@ -110,7 +110,7 @@ public class InventoryImportImpl implements InventoryImport, ModelBase {
     }
 
     /**
-     *  <p>Maps to <code>Inventory.custom</code>.</p>
+     *  <p>Maps to <code>InventoryEntry.custom</code>.</p>
      */
 
     public com.commercetools.importapi.models.customfields.Custom getCustom() {

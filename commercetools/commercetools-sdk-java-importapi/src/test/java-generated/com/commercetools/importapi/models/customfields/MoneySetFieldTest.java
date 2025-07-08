@@ -19,14 +19,14 @@ public class MoneySetFieldTest {
 
     public static Object[][] objectBuilder() {
         return new Object[][] { new Object[] { "value", MoneySetField.builder()
-                .value(Collections.singletonList(new com.commercetools.importapi.models.common.MoneyImpl())) } };
+                .value(Collections.singletonList(new com.commercetools.importapi.models.common.TypedMoneyImpl())) } };
     }
 
     @Test
     public void value() {
         MoneySetField value = MoneySetField.of();
-        value.setValue(Collections.singletonList(new com.commercetools.importapi.models.common.MoneyImpl()));
+        value.setValue(Collections.singletonList(new com.commercetools.importapi.models.common.TypedMoneyImpl()));
         Assertions.assertThat(value.getValue())
-                .isEqualTo(Collections.singletonList(new com.commercetools.importapi.models.common.MoneyImpl()));
+                .isEqualTo(Collections.singletonList(new com.commercetools.importapi.models.common.TypedMoneyImpl()));
     }
 }

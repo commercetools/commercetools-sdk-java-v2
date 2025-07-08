@@ -45,7 +45,7 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
     private java.time.ZonedDateTime expiresAt;
 
     /**
-     *  <p>User-defined unique identifier for the ImportContainer.</p>
+     *  <p>User-defined unique identifier of the ImportContainer.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -56,7 +56,7 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
     }
 
     /**
-     *  <p>The resource type the ImportContainer is able to handle. If not present, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
+     *  <p>The resource type the ImportContainer supports. If not present, the ImportContainer can import all of the supported ImportResourceTypes.</p>
      * @param resourceType value to be set
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
     }
 
     /**
-     *  <p>The version of the ImportContainer.</p>
+     *  <p>Current version of the ImportContainer.</p>
      * @param version value to be set
      * @return Builder
      */
@@ -138,7 +138,7 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
     }
 
     /**
-     *  <p>User-defined unique identifier for the ImportContainer.</p>
+     *  <p>User-defined unique identifier of the ImportContainer.</p>
      * @return key
      */
 
@@ -147,7 +147,7 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
     }
 
     /**
-     *  <p>The resource type the ImportContainer is able to handle. If not present, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
+     *  <p>The resource type the ImportContainer supports. If not present, the ImportContainer can import all of the supported ImportResourceTypes.</p>
      * @return resourceType
      */
 
@@ -157,7 +157,7 @@ public class ImportContainerBuilder implements Builder<ImportContainer> {
     }
 
     /**
-     *  <p>The version of the ImportContainer.</p>
+     *  <p>Current version of the ImportContainer.</p>
      * @return version
      */
 

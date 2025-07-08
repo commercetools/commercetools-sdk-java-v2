@@ -24,7 +24,7 @@ public class DateTimeSetFieldBuilder implements Builder<DateTimeSetField> {
     private java.util.List<java.time.ZonedDateTime> value;
 
     /**
-     * set values to the value
+     *  <p>JSON array of date time values in the format <code>YYYY-MM-DDTHH:mm:ss.SSSZ</code> without duplicates. The time zone is optional and defaults to UTC if not specified. If the time zone is specified, it must be in the format <code>±HH:mm</code> or <code>Z</code> for UTC. The order of items in the array is not fixed.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class DateTimeSetFieldBuilder implements Builder<DateTimeSetField> {
     }
 
     /**
-     * set value to the value
+     *  <p>JSON array of date time values in the format <code>YYYY-MM-DDTHH:mm:ss.SSSZ</code> without duplicates. The time zone is optional and defaults to UTC if not specified. If the time zone is specified, it must be in the format <code>±HH:mm</code> or <code>Z</code> for UTC. The order of items in the array is not fixed.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -46,7 +46,7 @@ public class DateTimeSetFieldBuilder implements Builder<DateTimeSetField> {
     }
 
     /**
-     * add values to the value
+     *  <p>JSON array of date time values in the format <code>YYYY-MM-DDTHH:mm:ss.SSSZ</code> without duplicates. The time zone is optional and defaults to UTC if not specified. If the time zone is specified, it must be in the format <code>±HH:mm</code> or <code>Z</code> for UTC. The order of items in the array is not fixed.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -60,7 +60,7 @@ public class DateTimeSetFieldBuilder implements Builder<DateTimeSetField> {
     }
 
     /**
-     * value of value}
+     *  <p>JSON array of date time values in the format <code>YYYY-MM-DDTHH:mm:ss.SSSZ</code> without duplicates. The time zone is optional and defaults to UTC if not specified. If the time zone is specified, it must be in the format <code>±HH:mm</code> or <code>Z</code> for UTC. The order of items in the array is not fixed.</p>
      * @return value
      */
 

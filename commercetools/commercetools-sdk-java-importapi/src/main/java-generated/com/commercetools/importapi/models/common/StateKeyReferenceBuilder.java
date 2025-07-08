@@ -24,7 +24,7 @@ public class StateKeyReferenceBuilder implements Builder<StateKeyReference> {
     private String key;
 
     /**
-     * set the value to the key
+     *  <p>User-defined unique identifier of the referenced State.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class StateKeyReferenceBuilder implements Builder<StateKeyReference> {
     }
 
     /**
-     * value of key}
+     *  <p>User-defined unique identifier of the referenced State.</p>
      * @return key
      */
 

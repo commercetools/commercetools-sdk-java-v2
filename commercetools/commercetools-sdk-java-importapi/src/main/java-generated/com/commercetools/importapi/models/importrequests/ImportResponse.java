@@ -18,7 +18,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>The response of each resource import endpoint, such as Import Categories and Import ProductTypes.</p>
+ *  <p>The response of each Import Request.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -35,7 +35,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ImportResponse {
 
     /**
-     *  <p>A list of the ID's and validation statuses of new ImportOperations.</p>
+     *  <p>The identifiers and status of the ImportOperations created by the ImportRequest.</p>
      * @return operationStatus
      */
     @NotNull
@@ -44,7 +44,7 @@ public interface ImportResponse {
     public List<ImportOperationStatus> getOperationStatus();
 
     /**
-     *  <p>A list of the ID's and validation statuses of new ImportOperations.</p>
+     *  <p>The identifiers and status of the ImportOperations created by the ImportRequest.</p>
      * @param operationStatus values to be set
      */
 
@@ -52,7 +52,7 @@ public interface ImportResponse {
     public void setOperationStatus(final ImportOperationStatus... operationStatus);
 
     /**
-     *  <p>A list of the ID's and validation statuses of new ImportOperations.</p>
+     *  <p>The identifiers and status of the ImportOperations created by the ImportRequest.</p>
      * @param operationStatus values to be set
      */
 

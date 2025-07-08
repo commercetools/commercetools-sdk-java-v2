@@ -27,7 +27,7 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
     private Long quantity;
 
     /**
-     *  <p>Maps to <code>ItemShippingTarget.addressKey</code>.</p>
+     *  <p>Key of the address in the Cart <code>itemShippingAddresses</code>. Duplicate address keys are not allowed.</p>
      * @param addressKey value to be set
      * @return Builder
      */
@@ -38,7 +38,7 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
     }
 
     /**
-     *  <p>Maps to <code>ItemShippingTarget.quantity</code>.</p>
+     *  <p>Quantity of Line Items or Custom Line Items shipped to the address with the specified <code>addressKey</code>.</p>
      * @param quantity value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
     }
 
     /**
-     *  <p>Maps to <code>ItemShippingTarget.addressKey</code>.</p>
+     *  <p>Key of the address in the Cart <code>itemShippingAddresses</code>. Duplicate address keys are not allowed.</p>
      * @return addressKey
      */
 
@@ -58,7 +58,7 @@ public class ItemShippingTargetBuilder implements Builder<ItemShippingTarget> {
     }
 
     /**
-     *  <p>Maps to <code>ItemShippingTarget.quantity</code>.</p>
+     *  <p>Quantity of Line Items or Custom Line Items shipped to the address with the specified <code>addressKey</code>.</p>
      * @return quantity
      */
 

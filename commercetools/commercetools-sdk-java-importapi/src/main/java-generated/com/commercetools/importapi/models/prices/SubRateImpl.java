@@ -42,7 +42,7 @@ public class SubRateImpl implements SubRate, ModelBase {
     }
 
     /**
-     *
+     *  <p>Name of the SubRate.</p>
      */
 
     public String getName() {

@@ -55,7 +55,7 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>Number of Line Items or Custom Line Items to return.</p>
      */
 
     public Long getQuantity() {
@@ -63,7 +63,8 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p><code>id</code> of the LineItem to return.</p>
+     *  <p>Required if Line Items are returned, to create a LineItemReturnItem.</p>
      */
 
     public String getLineItemId() {
@@ -71,7 +72,8 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p><code>id</code> of the CustomLineItem to return.</p>
+     *  <p>Required if Custom Line Items are returned, to create a CustomLineItemReturnItem.</p>
      */
 
     public String getCustomLineItemId() {
@@ -79,7 +81,7 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
     }
 
     /**
-     *
+     *  <p>User-defined description for the return.</p>
      */
 
     public String getComment() {
@@ -87,7 +89,7 @@ public class ReturnItemDraftImpl implements ReturnItemDraft, ModelBase {
     }
 
     /**
-     *  <p>Maps to <code>ReturnItem.shipmentState</code></p>
+     *  <p>Shipment status of the item to be returned.</p>
      */
 
     public com.commercetools.importapi.models.order_patches.ReturnShipmentState getShipmentState() {

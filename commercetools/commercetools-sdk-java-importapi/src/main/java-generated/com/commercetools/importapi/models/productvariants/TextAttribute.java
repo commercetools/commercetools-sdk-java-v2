@@ -38,7 +38,7 @@ public interface TextAttribute extends Attribute {
     String TEXT = "text";
 
     /**
-     *
+     *  <p>A text value.</p>
      * @return value
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface TextAttribute extends Attribute {
     public String getValue();
 
     /**
-     * set value
+     *  <p>A text value.</p>
      * @param value value to be set
      */
 

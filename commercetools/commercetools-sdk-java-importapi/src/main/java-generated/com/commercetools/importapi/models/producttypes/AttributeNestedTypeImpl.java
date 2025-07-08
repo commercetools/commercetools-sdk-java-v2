@@ -52,7 +52,7 @@ public class AttributeNestedTypeImpl implements AttributeNestedType, ModelBase {
     }
 
     /**
-     *  <p>References a product type by key.</p>
+     *  <p>References a ProductType by <code>key</code>.</p>
      */
 
     public com.commercetools.importapi.models.common.ProductTypeKeyReference getTypeReference() {

@@ -43,7 +43,7 @@ public class DeliveryAddressDraftImpl implements DeliveryAddressDraft, ModelBase
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Delivery.</p>
      */
 
     public String getDeliveryId() {
@@ -51,7 +51,7 @@ public class DeliveryAddressDraftImpl implements DeliveryAddressDraft, ModelBase
     }
 
     /**
-     *
+     *  <p>Address to which Parcels are delivered.</p>
      */
 
     public com.commercetools.importapi.models.common.Address getAddress() {

@@ -63,7 +63,7 @@ public class ResourceDeletionErrorImpl implements ResourceDeletionError, ModelBa
     }
 
     /**
-     *
+     *  <p>The resource that was deleted.</p>
      */
 
     public java.lang.Object getResource() {

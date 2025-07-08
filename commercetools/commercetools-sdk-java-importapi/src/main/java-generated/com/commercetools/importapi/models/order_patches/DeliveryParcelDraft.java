@@ -35,7 +35,7 @@ import jakarta.validation.Valid;
 public interface DeliveryParcelDraft extends io.vrap.rmf.base.client.Draft<DeliveryParcelDraft> {
 
     /**
-     *
+     *  <p>Information about the dimensions for the Parcel.</p>
      * @return measurements
      */
     @Valid
@@ -43,7 +43,7 @@ public interface DeliveryParcelDraft extends io.vrap.rmf.base.client.Draft<Deliv
     public ParcelMeasurements getMeasurements();
 
     /**
-     *
+     *  <p>Shipment tracking information for the Parcel.</p>
      * @return trackingData
      */
     @Valid
@@ -51,7 +51,7 @@ public interface DeliveryParcelDraft extends io.vrap.rmf.base.client.Draft<Deliv
     public TrackingData getTrackingData();
 
     /**
-     *
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      * @return items
      */
     @Valid
@@ -59,21 +59,21 @@ public interface DeliveryParcelDraft extends io.vrap.rmf.base.client.Draft<Deliv
     public List<DeliveryItem> getItems();
 
     /**
-     * set measurements
+     *  <p>Information about the dimensions for the Parcel.</p>
      * @param measurements value to be set
      */
 
     public void setMeasurements(final ParcelMeasurements measurements);
 
     /**
-     * set trackingData
+     *  <p>Shipment tracking information for the Parcel.</p>
      * @param trackingData value to be set
      */
 
     public void setTrackingData(final TrackingData trackingData);
 
     /**
-     * set items
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      * @param items values to be set
      */
 
@@ -81,7 +81,7 @@ public interface DeliveryParcelDraft extends io.vrap.rmf.base.client.Draft<Deliv
     public void setItems(final DeliveryItem... items);
 
     /**
-     * set items
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      * @param items values to be set
      */
 

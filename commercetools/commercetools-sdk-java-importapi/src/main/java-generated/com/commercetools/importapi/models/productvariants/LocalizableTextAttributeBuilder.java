@@ -30,7 +30,8 @@ public class LocalizableTextAttributeBuilder implements Builder<LocalizableTextA
     private com.commercetools.importapi.models.common.LocalizedString value;
 
     /**
-     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     *  <p>Required if used for ProductVariantImport. Must not be set if used for ProductVariantPatch.</p>
+     *  <p>Must match <code>name</code> of an AttributeDefinition of the Product Type.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -41,12 +42,7 @@ public class LocalizableTextAttributeBuilder implements Builder<LocalizableTextA
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>A localized string.</p>
      * @param builder function to build the value value
      * @return Builder
      */
@@ -58,12 +54,7 @@ public class LocalizableTextAttributeBuilder implements Builder<LocalizableTextA
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>A localized string.</p>
      * @param builder function to build the value value
      * @return Builder
      */
@@ -75,12 +66,7 @@ public class LocalizableTextAttributeBuilder implements Builder<LocalizableTextA
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>A localized string.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -92,7 +78,8 @@ public class LocalizableTextAttributeBuilder implements Builder<LocalizableTextA
     }
 
     /**
-     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     *  <p>Required if used for ProductVariantImport. Must not be set if used for ProductVariantPatch.</p>
+     *  <p>Must match <code>name</code> of an AttributeDefinition of the Product Type.</p>
      * @return name
      */
 
@@ -102,12 +89,7 @@ public class LocalizableTextAttributeBuilder implements Builder<LocalizableTextA
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>A localized string.</p>
      * @return value
      */
 

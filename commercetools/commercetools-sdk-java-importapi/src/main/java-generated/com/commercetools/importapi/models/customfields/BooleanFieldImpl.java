@@ -51,7 +51,7 @@ public class BooleanFieldImpl implements BooleanField, ModelBase {
     }
 
     /**
-     *
+     *  <p><code>true</code> or <code>false</code></p>
      */
 
     public Boolean getValue() {

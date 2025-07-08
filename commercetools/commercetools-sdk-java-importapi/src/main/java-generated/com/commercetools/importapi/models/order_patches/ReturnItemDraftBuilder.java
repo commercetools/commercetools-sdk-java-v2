@@ -38,7 +38,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     private com.commercetools.importapi.models.order_patches.ReturnShipmentState shipmentState;
 
     /**
-     * set the value to the quantity
+     *  <p>Number of Line Items or Custom Line Items to return.</p>
      * @param quantity value to be set
      * @return Builder
      */
@@ -49,7 +49,8 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     }
 
     /**
-     * set the value to the lineItemId
+     *  <p><code>id</code> of the LineItem to return.</p>
+     *  <p>Required if Line Items are returned, to create a LineItemReturnItem.</p>
      * @param lineItemId value to be set
      * @return Builder
      */
@@ -60,7 +61,8 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     }
 
     /**
-     * set the value to the customLineItemId
+     *  <p><code>id</code> of the CustomLineItem to return.</p>
+     *  <p>Required if Custom Line Items are returned, to create a CustomLineItemReturnItem.</p>
      * @param customLineItemId value to be set
      * @return Builder
      */
@@ -71,7 +73,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     }
 
     /**
-     * set the value to the comment
+     *  <p>User-defined description for the return.</p>
      * @param comment value to be set
      * @return Builder
      */
@@ -82,7 +84,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     }
 
     /**
-     *  <p>Maps to <code>ReturnItem.shipmentState</code></p>
+     *  <p>Shipment status of the item to be returned.</p>
      * @param shipmentState value to be set
      * @return Builder
      */
@@ -94,7 +96,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     }
 
     /**
-     * value of quantity}
+     *  <p>Number of Line Items or Custom Line Items to return.</p>
      * @return quantity
      */
 
@@ -103,7 +105,8 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     }
 
     /**
-     * value of lineItemId}
+     *  <p><code>id</code> of the LineItem to return.</p>
+     *  <p>Required if Line Items are returned, to create a LineItemReturnItem.</p>
      * @return lineItemId
      */
 
@@ -113,7 +116,8 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     }
 
     /**
-     * value of customLineItemId}
+     *  <p><code>id</code> of the CustomLineItem to return.</p>
+     *  <p>Required if Custom Line Items are returned, to create a CustomLineItemReturnItem.</p>
      * @return customLineItemId
      */
 
@@ -123,7 +127,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     }
 
     /**
-     * value of comment}
+     *  <p>User-defined description for the return.</p>
      * @return comment
      */
 
@@ -133,7 +137,7 @@ public class ReturnItemDraftBuilder implements Builder<ReturnItemDraft> {
     }
 
     /**
-     *  <p>Maps to <code>ReturnItem.shipmentState</code></p>
+     *  <p>Shipment status of the item to be returned.</p>
      * @return shipmentState
      */
 

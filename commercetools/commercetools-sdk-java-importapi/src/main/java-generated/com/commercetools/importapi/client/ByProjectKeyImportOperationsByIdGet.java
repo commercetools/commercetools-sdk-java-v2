@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Retrieves the ImportOperation of a given ID.</p>
+ *  <p>Retrieves an ImportOperation with the provided <code>id</code>.</p>
  *
  * <hr>
  * <div class=code-example>

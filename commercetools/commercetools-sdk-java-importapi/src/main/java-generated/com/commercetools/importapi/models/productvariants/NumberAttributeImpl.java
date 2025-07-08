@@ -46,7 +46,8 @@ public class NumberAttributeImpl implements NumberAttribute, ModelBase {
     }
 
     /**
-     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     *  <p>Required if used for ProductVariantImport. Must not be set if used for ProductVariantPatch.</p>
+     *  <p>Must match <code>name</code> of an AttributeDefinition of the Product Type.</p>
      */
 
     public String getName() {
@@ -54,7 +55,7 @@ public class NumberAttributeImpl implements NumberAttribute, ModelBase {
     }
 
     /**
-     *
+     *  <p>Must match <code>type</code> of an AttributeDefinition of the Product Type. The type is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
      */
 
     public String getType() {
@@ -62,7 +63,7 @@ public class NumberAttributeImpl implements NumberAttribute, ModelBase {
     }
 
     /**
-     *
+     *  <p>A number value. Can be an integer or a floating-point number.</p>
      */
 
     public Double getValue() {

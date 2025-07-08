@@ -25,8 +25,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>The data representation for an Order to be imported that is persisted as an Order in the Project.</p>
- *  <p>In commercetools, you can import an Order using the Create Order by Import endpoint method instead of creating it from a Cart.</p>
+ *  <p>Represents the data used to import an Order. Once imported, this data is persisted as an Order in the Project.</p>
  *  <p>An OrderImport is a snapshot of an order at the time it was imported.</p>
  *
  * <hr>
@@ -53,7 +52,7 @@ public interface OrderImport {
     public String getOrderNumber();
 
     /**
-     *
+     *  <p><code>key</code> of the Customer that the Order belongs to. If the referenced Customer does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Customer is created.</p>
      * @return customer
      */
     @Valid
@@ -118,7 +117,7 @@ public interface OrderImport {
     public Address getBillingAddress();
 
     /**
-     *  <p>Maps to <code>Order.customerGroup</code>.</p>
+     *  <p>Maps to <code>Order.customerGroup</code>. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
      * @return customerGroup
      */
     @Valid
@@ -222,7 +221,7 @@ public interface OrderImport {
     public List<Address> getItemShippingAddresses();
 
     /**
-     *  <p>Reference to the Store in which the Order is associated. If referenced Store does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Store exists.</p>
+     *  <p>Maps to <code>Order.store</code>. If the referenced Store does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Store is created.</p>
      * @return store
      */
     @Valid
@@ -230,7 +229,7 @@ public interface OrderImport {
     public StoreKeyReference getStore();
 
     /**
-     *  <p>Reference to a State in a custom workflow.</p>
+     *  <p>Maps to <code>Order.state</code>. If the referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced State is created.</p>
      * @return state
      */
     @Valid
@@ -245,7 +244,7 @@ public interface OrderImport {
     public void setOrderNumber(final String orderNumber);
 
     /**
-     * set customer
+     *  <p><code>key</code> of the Customer that the Order belongs to. If the referenced Customer does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Customer is created.</p>
      * @param customer value to be set
      */
 
@@ -317,7 +316,7 @@ public interface OrderImport {
     public void setBillingAddress(final Address billingAddress);
 
     /**
-     *  <p>Maps to <code>Order.customerGroup</code>.</p>
+     *  <p>Maps to <code>Order.customerGroup</code>. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
      * @param customerGroup value to be set
      */
 
@@ -416,14 +415,14 @@ public interface OrderImport {
     public void setItemShippingAddresses(final List<Address> itemShippingAddresses);
 
     /**
-     *  <p>Reference to the Store in which the Order is associated. If referenced Store does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Store exists.</p>
+     *  <p>Maps to <code>Order.store</code>. If the referenced Store does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Store is created.</p>
      * @param store value to be set
      */
 
     public void setStore(final StoreKeyReference store);
 
     /**
-     *  <p>Reference to a State in a custom workflow.</p>
+     *  <p>Maps to <code>Order.state</code>. If the referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced State is created.</p>
      * @param state value to be set
      */
 

@@ -30,7 +30,7 @@ public class ParcelMeasurementDraftBuilder implements Builder<ParcelMeasurementD
     private com.commercetools.importapi.models.orders.ParcelMeasurements measurements;
 
     /**
-     * set the value to the parcelId
+     *  <p><code>id</code> of an existing Parcel.</p>
      * @param parcelId value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class ParcelMeasurementDraftBuilder implements Builder<ParcelMeasurementD
     }
 
     /**
-     * set the value to the measurements using the builder function
+     *  <p>Information about the dimensions of the Parcel.</p>
      * @param builder function to build the measurements value
      * @return Builder
      */
@@ -54,7 +54,7 @@ public class ParcelMeasurementDraftBuilder implements Builder<ParcelMeasurementD
     }
 
     /**
-     * set the value to the measurements using the builder function
+     *  <p>Information about the dimensions of the Parcel.</p>
      * @param builder function to build the measurements value
      * @return Builder
      */
@@ -66,7 +66,7 @@ public class ParcelMeasurementDraftBuilder implements Builder<ParcelMeasurementD
     }
 
     /**
-     * set the value to the measurements
+     *  <p>Information about the dimensions of the Parcel.</p>
      * @param measurements value to be set
      * @return Builder
      */
@@ -78,7 +78,7 @@ public class ParcelMeasurementDraftBuilder implements Builder<ParcelMeasurementD
     }
 
     /**
-     * value of parcelId}
+     *  <p><code>id</code> of an existing Parcel.</p>
      * @return parcelId
      */
 
@@ -87,7 +87,7 @@ public class ParcelMeasurementDraftBuilder implements Builder<ParcelMeasurementD
     }
 
     /**
-     * value of measurements}
+     *  <p>Information about the dimensions of the Parcel.</p>
      * @return measurements
      */
 

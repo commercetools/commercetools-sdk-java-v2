@@ -51,7 +51,7 @@ public class MoneyFieldImpl implements MoneyField, ModelBase {
     }
 
     /**
-     *
+     *  <p>A money value in cent precision format.</p>
      */
 
     public com.commercetools.importapi.models.common.TypedMoney getValue() {

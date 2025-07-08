@@ -24,7 +24,7 @@ public class CustomerKeyReferenceBuilder implements Builder<CustomerKeyReference
     private String key;
 
     /**
-     * set the value to the key
+     *  <p>User-defined unique identifier of the referenced Customer.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -35,7 +35,7 @@ public class CustomerKeyReferenceBuilder implements Builder<CustomerKeyReference
     }
 
     /**
-     * value of key}
+     *  <p>User-defined unique identifier of the referenced Customer.</p>
      * @return key
      */
 

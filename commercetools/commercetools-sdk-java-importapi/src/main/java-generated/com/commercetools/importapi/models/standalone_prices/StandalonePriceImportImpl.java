@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>The data representation for a Standalone Price to be imported that is persisted as a Standalone Price) in the Project.</p>
+ *  <p>Represents the data used to import a StandalonePrice. Once imported, this data is persisted as a StandalonePrice) in the Project.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class StandalonePriceImportImpl implements StandalonePriceImport, ModelBase {
@@ -78,7 +78,7 @@ public class StandalonePriceImportImpl implements StandalonePriceImport, ModelBa
     }
 
     /**
-     *  <p>User-defined unique identifier for the Standalone Price. If a StandalonePrice) with this <code>key</code> exists, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier for the StandalonePrice. If a StandalonePrice) with this <code>key</code> exists, it is updated with the imported data.</p>
      */
 
     public String getKey() {
@@ -86,7 +86,7 @@ public class StandalonePriceImportImpl implements StandalonePriceImport, ModelBa
     }
 
     /**
-     *  <p>Identifies the ProductVariant to which this Standalone Price is associated. This value is not validated to exist in Product Variants.</p>
+     *  <p>Maps to <code>StandalonePrice.sku</code>. This value is not validated to exist in Product Variants.</p>
      */
 
     public String getSku() {
@@ -94,7 +94,7 @@ public class StandalonePriceImportImpl implements StandalonePriceImport, ModelBa
     }
 
     /**
-     *  <p>Sets the money value of this Price.</p>
+     *  <p>Maps to <code>StandalonePrice.value</code>.</p>
      */
 
     public com.commercetools.importapi.models.common.TypedMoney getValue() {
@@ -102,8 +102,7 @@ public class StandalonePriceImportImpl implements StandalonePriceImport, ModelBa
     }
 
     /**
-     *  <p>Sets the country for this Price, if the Price does not yet have a country.</p>
-     *  <p>The country cannot be updated. Attempting to update the an existing country will result in an InvalidFieldsUpdate error.</p>
+     *  <p>Maps to <code>StandalonePrice.country</code>. This value cannot be updated. Attempting to update this value will result in an InvalidFieldsUpdate error.</p>
      */
 
     public String getCountry() {
@@ -111,8 +110,8 @@ public class StandalonePriceImportImpl implements StandalonePriceImport, ModelBa
     }
 
     /**
-     *  <p>Sets the CustomerGroup for this Price, if the Price does not yet have a CustomerGroup.</p>
-     *  <p>The CustomerGroup cannot be updated. Attempting to update an existing CustomerGroup will result in an InvalidFieldsUpdate error.</p>
+     *  <p>Maps to <code>StandalonePrice.customerGroup</code>. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
+     *  <p>This value cannot be updated. Attempting to update this value will result in an InvalidFieldsUpdate error.</p>
      */
 
     public com.commercetools.importapi.models.common.CustomerGroupKeyReference getCustomerGroup() {
@@ -120,8 +119,8 @@ public class StandalonePriceImportImpl implements StandalonePriceImport, ModelBa
     }
 
     /**
-     *  <p>Sets the product distribution Channel for this Price, if the Price does not yet have a Channel.</p>
-     *  <p>The Channel cannot be updated. Attempting to update an existing Channel will result in an InvalidFieldsUpdate error.</p>
+     *  <p>Maps to <code>StandalonePrice.channel</code>. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p>
+     *  <p>This value cannot be updated. Attempting to update this value will result in an InvalidFieldsUpdate error.</p>
      */
 
     public com.commercetools.importapi.models.common.ChannelKeyReference getChannel() {
@@ -129,7 +128,7 @@ public class StandalonePriceImportImpl implements StandalonePriceImport, ModelBa
     }
 
     /**
-     *  <p>Sets the date from which the Price is valid.</p>
+     *  <p>Maps to <code>StandalonePrice.validFrom</code>.</p>
      */
 
     public java.time.ZonedDateTime getValidFrom() {
@@ -137,7 +136,7 @@ public class StandalonePriceImportImpl implements StandalonePriceImport, ModelBa
     }
 
     /**
-     *  <p>Sets the date until the Price is valid.</p>
+     *  <p>Maps to <code>StandalonePrice.validUntil</code>.</p>
      */
 
     public java.time.ZonedDateTime getValidUntil() {
@@ -145,7 +144,7 @@ public class StandalonePriceImportImpl implements StandalonePriceImport, ModelBa
     }
 
     /**
-     *  <p>Sets price tiers.</p>
+     *  <p>Maps to <code>StandalonePrice.tiers</code>.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.common.PriceTier> getTiers() {
@@ -161,7 +160,7 @@ public class StandalonePriceImportImpl implements StandalonePriceImport, ModelBa
     }
 
     /**
-     *  <p>Custom Fields for the StandalonePrice.</p>
+     *  <p>Maps to <code>StandalonePrice.custom</code>.</p>
      */
 
     public com.commercetools.importapi.models.customfields.Custom getCustom() {

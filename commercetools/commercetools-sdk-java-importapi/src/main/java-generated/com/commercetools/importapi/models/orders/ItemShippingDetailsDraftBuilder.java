@@ -25,7 +25,7 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
     private java.util.List<com.commercetools.importapi.models.orders.ItemShippingTarget> targets;
 
     /**
-     *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
+     *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
      * @param targets value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
     }
 
     /**
-     *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
+     *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
      * @param targets value to be set
      * @return Builder
      */
@@ -49,7 +49,7 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
     }
 
     /**
-     *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
+     *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
      * @param targets value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
     }
 
     /**
-     *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
+     *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
      * @param builder function to build the targets value
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
     }
 
     /**
-     *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
+     *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
      * @param builder function to build the targets value
      * @return Builder
      */
@@ -94,7 +94,7 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
     }
 
     /**
-     *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
+     *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
      * @param builder function to build the targets value
      * @return Builder
      */
@@ -105,7 +105,7 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
     }
 
     /**
-     *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
+     *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
      * @param builder function to build the targets value
      * @return Builder
      */
@@ -116,7 +116,7 @@ public class ItemShippingDetailsDraftBuilder implements Builder<ItemShippingDeta
     }
 
     /**
-     *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
+     *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
      * @return targets
      */
 

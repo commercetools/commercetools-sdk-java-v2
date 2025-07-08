@@ -29,7 +29,8 @@ public class TextSetAttributeBuilder implements Builder<TextSetAttribute> {
     private java.util.List<String> value;
 
     /**
-     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     *  <p>Required if used for ProductVariantImport. Must not be set if used for ProductVariantPatch.</p>
+     *  <p>Must match <code>name</code> of an AttributeDefinition of the Product Type.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -40,7 +41,7 @@ public class TextSetAttributeBuilder implements Builder<TextSetAttribute> {
     }
 
     /**
-     * set values to the value
+     *  <p>A set of text values.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -51,7 +52,7 @@ public class TextSetAttributeBuilder implements Builder<TextSetAttribute> {
     }
 
     /**
-     * set value to the value
+     *  <p>A set of text values.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -62,7 +63,7 @@ public class TextSetAttributeBuilder implements Builder<TextSetAttribute> {
     }
 
     /**
-     * add values to the value
+     *  <p>A set of text values.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -76,7 +77,8 @@ public class TextSetAttributeBuilder implements Builder<TextSetAttribute> {
     }
 
     /**
-     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     *  <p>Required if used for ProductVariantImport. Must not be set if used for ProductVariantPatch.</p>
+     *  <p>Must match <code>name</code> of an AttributeDefinition of the Product Type.</p>
      * @return name
      */
 
@@ -86,7 +88,7 @@ public class TextSetAttributeBuilder implements Builder<TextSetAttribute> {
     }
 
     /**
-     * value of value}
+     *  <p>A set of text values.</p>
      * @return value
      */
 

@@ -51,7 +51,7 @@ public class NumberSetFieldImpl implements NumberSetField, ModelBase {
     }
 
     /**
-     *
+     *  <p>JSON array of integer or floating-point number values. The order of items in the array is not fixed.</p>
      */
 
     public java.util.List<Double> getValue() {

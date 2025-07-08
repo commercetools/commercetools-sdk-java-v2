@@ -74,7 +74,7 @@ public interface LineItemPrice {
     public ZonedDateTime getValidUntil();
 
     /**
-     *  <p>References a customer group by key.</p>
+     *  <p>Maps to <code>Price.customerGroup</code>. References a customer group by key. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
      * @return customerGroup
      */
     @Valid
@@ -82,7 +82,7 @@ public interface LineItemPrice {
     public CustomerGroupKeyReference getCustomerGroup();
 
     /**
-     *  <p>References a channel by key.</p>
+     *  <p>Maps to <code>Price.channel</code>. References a channel by key. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      * @return channel
      */
     @Valid
@@ -98,7 +98,7 @@ public interface LineItemPrice {
     public DiscountedPrice getDiscounted();
 
     /**
-     *  <p>The tiered prices for this price.</p>
+     *  <p>Maps to <code>Price.tiers</code>.</p>
      * @return tiers
      */
     @Valid
@@ -142,14 +142,14 @@ public interface LineItemPrice {
     public void setValidUntil(final ZonedDateTime validUntil);
 
     /**
-     *  <p>References a customer group by key.</p>
+     *  <p>Maps to <code>Price.customerGroup</code>. References a customer group by key. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
      * @param customerGroup value to be set
      */
 
     public void setCustomerGroup(final CustomerGroupKeyReference customerGroup);
 
     /**
-     *  <p>References a channel by key.</p>
+     *  <p>Maps to <code>Price.channel</code>. References a channel by key. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      * @param channel value to be set
      */
 
@@ -163,7 +163,7 @@ public interface LineItemPrice {
     public void setDiscounted(final DiscountedPrice discounted);
 
     /**
-     *  <p>The tiered prices for this price.</p>
+     *  <p>Maps to <code>Price.tiers</code>.</p>
      * @param tiers values to be set
      */
 
@@ -171,7 +171,7 @@ public interface LineItemPrice {
     public void setTiers(final PriceTier... tiers);
 
     /**
-     *  <p>The tiered prices for this price.</p>
+     *  <p>Maps to <code>Price.tiers</code>.</p>
      * @param tiers values to be set
      */
 

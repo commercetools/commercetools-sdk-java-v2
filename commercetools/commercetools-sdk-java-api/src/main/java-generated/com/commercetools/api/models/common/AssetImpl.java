@@ -63,7 +63,7 @@ public class AssetImpl implements Asset, ModelBase {
     }
 
     /**
-     *  <p>Unique identifier of the Asset.</p>
+     *  <p>Unique identifier of the Asset. Not required when importing Assets using the Import API.</p>
      */
 
     public String getId() {

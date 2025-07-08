@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>References a resource which could not be resolved.</p>
+ *  <p>Contains a reference to a resource which does not exist. For example, if a Category is imported with a parent Category that does not exist, the reference to the parent Category is an unresolved reference.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class UnresolvedReferencesImpl implements UnresolvedReferences, ModelBase {
@@ -43,7 +43,7 @@ public class UnresolvedReferencesImpl implements UnresolvedReferences, ModelBase
     }
 
     /**
-     *  <p>The <code>key</code> of the resource.</p>
+     *  <p><code>key</code> of the unresolved resource.</p>
      */
 
     public String getKey() {
@@ -51,7 +51,7 @@ public class UnresolvedReferencesImpl implements UnresolvedReferences, ModelBase
     }
 
     /**
-     *  <p>The type of resource.</p>
+     *  <p>Type of the unresolved resource.</p>
      */
 
     public com.commercetools.importapi.models.common.ReferenceType getTypeId() {

@@ -107,7 +107,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-     * set the value to the customer using the builder function
+     *  <p><code>key</code> of the Customer that the Order belongs to. If the referenced Customer does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Customer is created.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -120,7 +120,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-     * set the value to the customer using the builder function
+     *  <p><code>key</code> of the Customer that the Order belongs to. If the referenced Customer does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Customer is created.</p>
      * @param builder function to build the customer value
      * @return Builder
      */
@@ -132,7 +132,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-     * set the value to the customer
+     *  <p><code>key</code> of the Customer that the Order belongs to. If the referenced Customer does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Customer is created.</p>
      * @param customer value to be set
      * @return Builder
      */
@@ -470,7 +470,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-     *  <p>Maps to <code>Order.customerGroup</code>.</p>
+     *  <p>Maps to <code>Order.customerGroup</code>. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -484,7 +484,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-     *  <p>Maps to <code>Order.customerGroup</code>.</p>
+     *  <p>Maps to <code>Order.customerGroup</code>. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -497,7 +497,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-     *  <p>Maps to <code>Order.customerGroup</code>.</p>
+     *  <p>Maps to <code>Order.customerGroup</code>. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
      * @param customerGroup value to be set
      * @return Builder
      */
@@ -778,7 +778,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-     *  <p>Reference to the Store in which the Order is associated. If referenced Store does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Store exists.</p>
+     *  <p>Maps to <code>Order.store</code>. If the referenced Store does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Store is created.</p>
      * @param builder function to build the store value
      * @return Builder
      */
@@ -790,7 +790,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-     *  <p>Reference to the Store in which the Order is associated. If referenced Store does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Store exists.</p>
+     *  <p>Maps to <code>Order.store</code>. If the referenced Store does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Store is created.</p>
      * @param builder function to build the store value
      * @return Builder
      */
@@ -802,7 +802,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-     *  <p>Reference to the Store in which the Order is associated. If referenced Store does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Store exists.</p>
+     *  <p>Maps to <code>Order.store</code>. If the referenced Store does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Store is created.</p>
      * @param store value to be set
      * @return Builder
      */
@@ -813,7 +813,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-     *  <p>Reference to a State in a custom workflow.</p>
+     *  <p>Maps to <code>Order.state</code>. If the referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced State is created.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -825,7 +825,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-     *  <p>Reference to a State in a custom workflow.</p>
+     *  <p>Maps to <code>Order.state</code>. If the referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced State is created.</p>
      * @param builder function to build the state value
      * @return Builder
      */
@@ -837,7 +837,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-     *  <p>Reference to a State in a custom workflow.</p>
+     *  <p>Maps to <code>Order.state</code>. If the referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced State is created.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -857,7 +857,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-     * value of customer}
+     *  <p><code>key</code> of the Customer that the Order belongs to. If the referenced Customer does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Customer is created.</p>
      * @return customer
      */
 
@@ -936,7 +936,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-     *  <p>Maps to <code>Order.customerGroup</code>.</p>
+     *  <p>Maps to <code>Order.customerGroup</code>. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
      * @return customerGroup
      */
 
@@ -1066,7 +1066,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-     *  <p>Reference to the Store in which the Order is associated. If referenced Store does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Store exists.</p>
+     *  <p>Maps to <code>Order.store</code>. If the referenced Store does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Store is created.</p>
      * @return store
      */
 
@@ -1076,7 +1076,7 @@ public class OrderImportBuilder implements Builder<OrderImport> {
     }
 
     /**
-     *  <p>Reference to a State in a custom workflow.</p>
+     *  <p>Maps to <code>Order.state</code>. If the referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced State is created.</p>
      * @return state
      */
 

@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>References a resource which could not be resolved.</p>
+ *  <p>Contains a reference to a resource which does not exist. For example, if a Category is imported with a parent Category that does not exist, the reference to the parent Category is an unresolved reference.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -33,7 +33,7 @@ import jakarta.validation.constraints.NotNull;
 public interface UnresolvedReferences {
 
     /**
-     *  <p>The <code>key</code> of the resource.</p>
+     *  <p><code>key</code> of the unresolved resource.</p>
      * @return key
      */
     @NotNull
@@ -41,7 +41,7 @@ public interface UnresolvedReferences {
     public String getKey();
 
     /**
-     *  <p>The type of resource.</p>
+     *  <p>Type of the unresolved resource.</p>
      * @return typeId
      */
     @NotNull
@@ -49,14 +49,14 @@ public interface UnresolvedReferences {
     public ReferenceType getTypeId();
 
     /**
-     *  <p>The <code>key</code> of the resource.</p>
+     *  <p><code>key</code> of the unresolved resource.</p>
      * @param key value to be set
      */
 
     public void setKey(final String key);
 
     /**
-     *  <p>The type of resource.</p>
+     *  <p>Type of the unresolved resource.</p>
      * @param typeId value to be set
      */
 

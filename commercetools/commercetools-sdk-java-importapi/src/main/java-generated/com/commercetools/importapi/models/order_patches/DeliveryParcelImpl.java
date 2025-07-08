@@ -51,7 +51,7 @@ public class DeliveryParcelImpl implements DeliveryParcel, ModelBase {
     }
 
     /**
-     *
+     *  <p>Unique identifier of the Delivery.</p>
      */
 
     public String getDeliveryId() {
@@ -59,7 +59,7 @@ public class DeliveryParcelImpl implements DeliveryParcel, ModelBase {
     }
 
     /**
-     *
+     *  <p>Information about the dimensions of the Parcel.</p>
      */
 
     public com.commercetools.importapi.models.orders.ParcelMeasurements getMeasurements() {
@@ -67,7 +67,7 @@ public class DeliveryParcelImpl implements DeliveryParcel, ModelBase {
     }
 
     /**
-     *
+     *  <p>Shipment tracking information of the Parcel.</p>
      */
 
     public com.commercetools.importapi.models.orders.TrackingData getTrackingData() {
@@ -75,7 +75,7 @@ public class DeliveryParcelImpl implements DeliveryParcel, ModelBase {
     }
 
     /**
-     *
+     *  <p>Line Items or Custom Line Items delivered in this Parcel.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.orders.DeliveryItem> getItems() {

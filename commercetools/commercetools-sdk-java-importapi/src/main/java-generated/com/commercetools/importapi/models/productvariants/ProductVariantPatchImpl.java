@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Representation for an update of a ProductVariant. Use this type to import updates for existing ProductVariants in a Project.</p>
+ *  <p>Represents the data used to update a ProductVariant.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantPatchImpl implements ProductVariantPatch, ModelBase {
@@ -52,7 +52,7 @@ public class ProductVariantPatchImpl implements ProductVariantPatch, ModelBase {
     }
 
     /**
-     *  <p>Reference to the ProductVariant to update. If the referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductVariant is created.</p>
+     *  <p>Reference to the ProductVariant to update.</p>
      */
 
     public com.commercetools.importapi.models.common.ProductVariantKeyReference getProductVariant() {
@@ -65,7 +65,7 @@ public class ProductVariantPatchImpl implements ProductVariantPatch, ModelBase {
      *   <li>The referenced Attribute must be defined in an existing ProductType, or the <code>state</code> of the ImportOperation will be <code>validationFailed</code>.</li>
      *   <li>Setting the value of a non-required Attribute to <code>null</code> will remove the Attribute.</li>
      *   <li>Attempting to set a <code>null</code> value to a required Attribute will make the import operation fail with an InvalidOperation error.</li>
-     *   <li>Importing LocalizableTextAttributes or LocalizableTextSetAttributes follows an override pattern, meaning that omitted localized fields will be deleted, new fields will be created, and existing fields will be updated. You can also delete localized fields by setting their value to <code>null</code>.</li>
+     *   <li>Importing LocalizableTextAttributes or LocalizableTextSetAttributes follows an override pattern, meaning that omitted localized fields will be deleted, new fields will be created, and existing fields will be updated. You can delete localized fields by setting their value to <code>null</code>.</li>
      *  </ul>
      */
 
@@ -84,6 +84,7 @@ public class ProductVariantPatchImpl implements ProductVariantPatch, ModelBase {
     /**
      *  <p>Reference to the Product that contains the ProductVariant.</p>
      *  <p>We recommend to set this value to minimize concurrency errors. If set, this field is required for every ProductVariantPatch in the ProductVariantPatchRequest.</p>
+     *  <p>If the referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Product is created.</p>
      */
 
     public com.commercetools.importapi.models.common.ProductKeyReference getProduct() {

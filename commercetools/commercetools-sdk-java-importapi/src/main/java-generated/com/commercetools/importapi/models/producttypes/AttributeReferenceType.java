@@ -39,7 +39,7 @@ public interface AttributeReferenceType extends AttributeType {
     String REFERENCE = "reference";
 
     /**
-     *  <p>The type of the referenced resource.</p>
+     *  <p>Type of referenced resource.</p>
      * @return referenceTypeId
      */
     @NotNull
@@ -47,7 +47,7 @@ public interface AttributeReferenceType extends AttributeType {
     public ReferenceType getReferenceTypeId();
 
     /**
-     *  <p>The type of the referenced resource.</p>
+     *  <p>Type of referenced resource.</p>
      * @param referenceTypeId value to be set
      */
 

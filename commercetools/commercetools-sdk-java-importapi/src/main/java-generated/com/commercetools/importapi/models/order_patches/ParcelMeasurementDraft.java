@@ -34,7 +34,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ParcelMeasurementDraft extends io.vrap.rmf.base.client.Draft<ParcelMeasurementDraft> {
 
     /**
-     *
+     *  <p><code>id</code> of an existing Parcel.</p>
      * @return parcelId
      */
     @NotNull
@@ -42,7 +42,7 @@ public interface ParcelMeasurementDraft extends io.vrap.rmf.base.client.Draft<Pa
     public String getParcelId();
 
     /**
-     *
+     *  <p>Information about the dimensions of the Parcel.</p>
      * @return measurements
      */
     @Valid
@@ -50,14 +50,14 @@ public interface ParcelMeasurementDraft extends io.vrap.rmf.base.client.Draft<Pa
     public ParcelMeasurements getMeasurements();
 
     /**
-     * set parcelId
+     *  <p><code>id</code> of an existing Parcel.</p>
      * @param parcelId value to be set
      */
 
     public void setParcelId(final String parcelId);
 
     /**
-     * set measurements
+     *  <p>Information about the dimensions of the Parcel.</p>
      * @param measurements value to be set
      */
 

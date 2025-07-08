@@ -30,7 +30,8 @@ public class ReferenceSetAttributeBuilder implements Builder<ReferenceSetAttribu
     private java.util.List<com.commercetools.importapi.models.common.KeyReference> value;
 
     /**
-     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     *  <p>Required if used for ProductVariantImport. Must not be set if used for ProductVariantPatch.</p>
+     *  <p>Must match <code>name</code> of an AttributeDefinition of the Product Type.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -41,7 +42,7 @@ public class ReferenceSetAttributeBuilder implements Builder<ReferenceSetAttribu
     }
 
     /**
-     * set values to the value
+     *  <p>A set of references, each referencing a resource by key. Each reference must match the key of an existing resource in the project.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -52,7 +53,7 @@ public class ReferenceSetAttributeBuilder implements Builder<ReferenceSetAttribu
     }
 
     /**
-     * set value to the value
+     *  <p>A set of references, each referencing a resource by key. Each reference must match the key of an existing resource in the project.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -64,7 +65,7 @@ public class ReferenceSetAttributeBuilder implements Builder<ReferenceSetAttribu
     }
 
     /**
-     * add values to the value
+     *  <p>A set of references, each referencing a resource by key. Each reference must match the key of an existing resource in the project.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -79,7 +80,7 @@ public class ReferenceSetAttributeBuilder implements Builder<ReferenceSetAttribu
     }
 
     /**
-     * add a value to the value using the builder function
+     *  <p>A set of references, each referencing a resource by key. Each reference must match the key of an existing resource in the project.</p>
      * @param builder function to build the value value
      * @return Builder
      */
@@ -94,7 +95,7 @@ public class ReferenceSetAttributeBuilder implements Builder<ReferenceSetAttribu
     }
 
     /**
-     * set the value to the value using the builder function
+     *  <p>A set of references, each referencing a resource by key. Each reference must match the key of an existing resource in the project.</p>
      * @param builder function to build the value value
      * @return Builder
      */
@@ -107,7 +108,8 @@ public class ReferenceSetAttributeBuilder implements Builder<ReferenceSetAttribu
     }
 
     /**
-     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     *  <p>Required if used for ProductVariantImport. Must not be set if used for ProductVariantPatch.</p>
+     *  <p>Must match <code>name</code> of an AttributeDefinition of the Product Type.</p>
      * @return name
      */
 
@@ -117,7 +119,7 @@ public class ReferenceSetAttributeBuilder implements Builder<ReferenceSetAttribu
     }
 
     /**
-     * value of value}
+     *  <p>A set of references, each referencing a resource by key. Each reference must match the key of an existing resource in the project.</p>
      * @return value
      */
 

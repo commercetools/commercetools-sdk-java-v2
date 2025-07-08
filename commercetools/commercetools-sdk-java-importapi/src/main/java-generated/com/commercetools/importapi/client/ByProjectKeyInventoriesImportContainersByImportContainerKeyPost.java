@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Creates a request for creating new Inventories or updating existing ones.</p>
+ *  <p>Creates an Import Request for InventoryEntries.</p>
  *
  * <hr>
  * <div class=code-example>

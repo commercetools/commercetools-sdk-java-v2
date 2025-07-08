@@ -48,7 +48,7 @@ public class ReturnInfoImpl implements ReturnInfo, ModelBase {
     }
 
     /**
-     *
+     *  <p>Information on the Line Items or Custom Line Items returned.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.order_patches.ReturnItemDraft> getItems() {
@@ -56,7 +56,7 @@ public class ReturnInfoImpl implements ReturnInfo, ModelBase {
     }
 
     /**
-     *  <p>Maps to <code>ReturnInfo.returnTrackingId</code></p>
+     *  <p>User-defined identifier to track the return.</p>
      */
 
     public String getReturnTrackingId() {
@@ -64,7 +64,7 @@ public class ReturnInfoImpl implements ReturnInfo, ModelBase {
     }
 
     /**
-     *  <p>Maps to <code>ReturnInfo.returnDate</code></p>
+     *  <p>Date and time (UTC) the return is initiated.</p>
      */
 
     public java.time.ZonedDateTime getReturnDate() {

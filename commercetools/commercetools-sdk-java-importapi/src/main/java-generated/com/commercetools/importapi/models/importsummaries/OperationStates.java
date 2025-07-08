@@ -15,7 +15,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 import jakarta.validation.constraints.NotNull;
 
 /**
- *  <p>The number of resources in each ProcessingState.</p>
+ *  <p>The number of ImportOperations in each ProcessingState.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -38,7 +38,7 @@ import jakarta.validation.constraints.NotNull;
 public interface OperationStates {
 
     /**
-     *  <p>The number of resources in the <code>processing</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>processing</code> state.</p>
      * @return processing
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface OperationStates {
     public Long getProcessing();
 
     /**
-     *  <p>The number of resources in the <code>validationFailed</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>validationFailed</code> state.</p>
      * @return validationFailed
      */
     @NotNull
@@ -54,7 +54,7 @@ public interface OperationStates {
     public Long getValidationFailed();
 
     /**
-     *  <p>The number of resources in the <code>unresolved</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>unresolved</code> state.</p>
      * @return unresolved
      */
     @NotNull
@@ -62,7 +62,7 @@ public interface OperationStates {
     public Long getUnresolved();
 
     /**
-     *  <p>The number of resources in the <code>waitForMasterVariant</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>waitForMasterVariant</code> state.</p>
      * @return waitForMasterVariant
      */
     @NotNull
@@ -70,7 +70,7 @@ public interface OperationStates {
     public Long getWaitForMasterVariant();
 
     /**
-     *  <p>The number of resources in the <code>imported</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>imported</code> state.</p>
      * @return imported
      */
     @NotNull
@@ -78,7 +78,7 @@ public interface OperationStates {
     public Long getImported();
 
     /**
-     *  <p>The number of resources in the <code>rejected</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>rejected</code> state.</p>
      * @return rejected
      */
     @NotNull
@@ -86,7 +86,7 @@ public interface OperationStates {
     public Long getRejected();
 
     /**
-     *  <p>The number of resources in the <code>canceled</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>canceled</code> state.</p>
      * @return canceled
      */
     @NotNull
@@ -94,49 +94,49 @@ public interface OperationStates {
     public Long getCanceled();
 
     /**
-     *  <p>The number of resources in the <code>processing</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>processing</code> state.</p>
      * @param processing value to be set
      */
 
     public void setProcessing(final Long processing);
 
     /**
-     *  <p>The number of resources in the <code>validationFailed</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>validationFailed</code> state.</p>
      * @param validationFailed value to be set
      */
 
     public void setValidationFailed(final Long validationFailed);
 
     /**
-     *  <p>The number of resources in the <code>unresolved</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>unresolved</code> state.</p>
      * @param unresolved value to be set
      */
 
     public void setUnresolved(final Long unresolved);
 
     /**
-     *  <p>The number of resources in the <code>waitForMasterVariant</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>waitForMasterVariant</code> state.</p>
      * @param waitForMasterVariant value to be set
      */
 
     public void setWaitForMasterVariant(final Long waitForMasterVariant);
 
     /**
-     *  <p>The number of resources in the <code>imported</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>imported</code> state.</p>
      * @param imported value to be set
      */
 
     public void setImported(final Long imported);
 
     /**
-     *  <p>The number of resources in the <code>rejected</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>rejected</code> state.</p>
      * @param rejected value to be set
      */
 
     public void setRejected(final Long rejected);
 
     /**
-     *  <p>The number of resources in the <code>canceled</code> state.</p>
+     *  <p>The number of ImportOperations in the <code>canceled</code> state.</p>
      * @param canceled value to be set
      */
 

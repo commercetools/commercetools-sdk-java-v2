@@ -51,7 +51,7 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
     }
 
     /**
-     *  <p>Reference to a ProductDiscount.</p>
+     *  <p>Reference to a ProductDiscount. If the referenced ProductDiscount does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced ProductDiscount is created.</p>
      * @param builder function to build the discount value
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
     }
 
     /**
-     *  <p>Reference to a ProductDiscount.</p>
+     *  <p>Reference to a ProductDiscount. If the referenced ProductDiscount does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced ProductDiscount is created.</p>
      * @param builder function to build the discount value
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
     }
 
     /**
-     *  <p>Reference to a ProductDiscount.</p>
+     *  <p>Reference to a ProductDiscount. If the referenced ProductDiscount does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced ProductDiscount is created.</p>
      * @param discount value to be set
      * @return Builder
      */
@@ -98,7 +98,7 @@ public class DiscountedPriceBuilder implements Builder<DiscountedPrice> {
     }
 
     /**
-     *  <p>Reference to a ProductDiscount.</p>
+     *  <p>Reference to a ProductDiscount. If the referenced ProductDiscount does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced ProductDiscount is created.</p>
      * @return discount
      */
 

@@ -32,7 +32,7 @@ public class CustomFieldDateTypeImpl implements CustomFieldDateType, ModelBase {
     }
 
     /**
-     *
+     *  <p>Name of the field type. Must be unique for a given ResourceTypeId. In case there is a FieldDefinition with the same <code>name</code> in another Type, both FieldDefinitions must have the same <code>type</code>. This value cannot be changed after the Type is imported.</p>
      */
 
     public String getName() {

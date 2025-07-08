@@ -38,7 +38,7 @@ public interface EnumSetAttribute extends Attribute {
     String ENUM_SET = "enum-set";
 
     /**
-     *
+     *  <p>A set of enum values, each represented by its key. Each key must match the key of an AttributePlainEnumValue in the Product Type.</p>
      * @return value
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface EnumSetAttribute extends Attribute {
     public List<String> getValue();
 
     /**
-     * set value
+     *  <p>A set of enum values, each represented by its key. Each key must match the key of an AttributePlainEnumValue in the Product Type.</p>
      * @param value values to be set
      */
 
@@ -54,7 +54,7 @@ public interface EnumSetAttribute extends Attribute {
     public void setValue(final String... value);
 
     /**
-     * set value
+     *  <p>A set of enum values, each represented by its key. Each key must match the key of an AttributePlainEnumValue in the Product Type.</p>
      * @param value values to be set
      */
 

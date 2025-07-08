@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>The data representation for a ProductVariant to be imported that is persisted as a ProductVariant in the Project.</p>
+ *  <p>Represents the data used to import a ProductVariant. Once imported, this data is persisted as a ProductVariant in the Project.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ProductVariantImportImpl implements ProductVariantImport, ModelBase {
@@ -66,7 +66,7 @@ public class ProductVariantImportImpl implements ProductVariantImport, ModelBase
     }
 
     /**
-     *  <p>User-defined unique identifier. If a ProductVariant with this <code>key</code> exists on the specified <code>product</code>, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If a ProductVariant with this <code>key</code> exists on the specified <code>product</code>, it is updated with the imported data.</p>
      */
 
     public String getKey() {
@@ -128,7 +128,7 @@ public class ProductVariantImportImpl implements ProductVariantImport, ModelBase
     }
 
     /**
-     *  <p>The Product to which this Product Variant belongs. Maps to <code>ProductVariant.product</code>. The Reference to the Product with which the ProductVariant is associated. If referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Product is created.</p>
+     *  <p>The Product containing this ProductVariant. If the referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Product is created.</p>
      */
 
     public com.commercetools.importapi.models.common.ProductKeyReference getProduct() {

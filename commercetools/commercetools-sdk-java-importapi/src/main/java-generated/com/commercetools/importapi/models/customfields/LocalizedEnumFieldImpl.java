@@ -51,7 +51,7 @@ public class LocalizedEnumFieldImpl implements LocalizedEnumField, ModelBase {
     }
 
     /**
-     *
+     *  <p>The key of the localized enum value. Must match the key of a CustomFieldLocalizedEnumValue in the CustomFieldLocalizedEnumType.</p>
      */
 
     public String getValue() {

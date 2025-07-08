@@ -103,7 +103,7 @@ public class ProductDraftImportImpl implements ProductDraftImport, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier. If a Product with this <code>key</code> exists, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If a Product with this <code>key</code> exists, it is updated with the imported data.</p>
      */
 
     public String getKey() {
@@ -111,7 +111,7 @@ public class ProductDraftImportImpl implements ProductDraftImport, ModelBase {
     }
 
     /**
-     *  <p>The <code>productType</code> of a Product. Maps to <code>Product.productType</code>. The Reference to the ProductType with which the ProductDraft is associated. If referenced ProductType does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductType is created.</p>
+     *  <p>Maps to <code>Product.productType</code>. If the referenced ProductType does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced ProductType is created.</p>
      */
 
     public com.commercetools.importapi.models.common.ProductTypeKeyReference getProductType() {
@@ -119,7 +119,7 @@ public class ProductDraftImportImpl implements ProductDraftImport, ModelBase {
     }
 
     /**
-     *
+     *  <p>Maps to <code>ProductData.name</code>.</p>
      */
 
     public com.commercetools.importapi.models.common.LocalizedString getName() {
@@ -127,7 +127,7 @@ public class ProductDraftImportImpl implements ProductDraftImport, ModelBase {
     }
 
     /**
-     *  <p>Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a project, but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.</p>
+     *  <p>Maps to <code>ProductData.slug</code>.</p>
      */
 
     public com.commercetools.importapi.models.common.LocalizedString getSlug() {
@@ -135,7 +135,7 @@ public class ProductDraftImportImpl implements ProductDraftImport, ModelBase {
     }
 
     /**
-     *  <p>Maps to <code>Product.description</code>.</p>
+     *  <p>Maps to <code>ProductData.description</code>.</p>
      */
 
     public com.commercetools.importapi.models.common.LocalizedString getDescription() {
@@ -143,7 +143,7 @@ public class ProductDraftImportImpl implements ProductDraftImport, ModelBase {
     }
 
     /**
-     *  <p>The Reference to the Categories with which the ProductDraft is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
+     *  <p>Maps to <code>ProductData.categories</code>. If the referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Categories are created.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.common.CategoryKeyReference> getCategories() {
@@ -159,12 +159,7 @@ public class ProductDraftImportImpl implements ProductDraftImport, ModelBase {
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Maps to <code>ProductData.metaTitle</code>.</p>
      */
 
     public com.commercetools.importapi.models.common.LocalizedString getMetaTitle() {
@@ -172,12 +167,7 @@ public class ProductDraftImportImpl implements ProductDraftImport, ModelBase {
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Maps to <code>ProductData.metaDescription</code>.</p>
      */
 
     public com.commercetools.importapi.models.common.LocalizedString getMetaDescription() {
@@ -185,12 +175,7 @@ public class ProductDraftImportImpl implements ProductDraftImport, ModelBase {
     }
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Maps to <code>ProductData.metaKeywords</code>.</p>
      */
 
     public com.commercetools.importapi.models.common.LocalizedString getMetaKeywords() {
@@ -198,7 +183,7 @@ public class ProductDraftImportImpl implements ProductDraftImport, ModelBase {
     }
 
     /**
-     *  <p>The master Product variant. Required if the <code>variants</code> array contains a Product Variant.</p>
+     *  <p>The master ProductVariant. Required if <code>variants</code> contains at least one ProductVariant.</p>
      */
 
     public com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport getMasterVariant() {
@@ -206,7 +191,7 @@ public class ProductDraftImportImpl implements ProductDraftImport, ModelBase {
     }
 
     /**
-     *  <p>An array of related Product Variants.</p>
+     *  <p>An array of related ProductVariants.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport> getVariants() {
@@ -214,7 +199,7 @@ public class ProductDraftImportImpl implements ProductDraftImport, ModelBase {
     }
 
     /**
-     *  <p>The Reference to the TaxCategory with which the ProductDraft is associated. If referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary TaxCategory is created.</p>
+     *  <p>Maps to <code>Product.taxCategory</code>. If the referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p>
      */
 
     public com.commercetools.importapi.models.common.TaxCategoryKeyReference getTaxCategory() {
@@ -222,23 +207,7 @@ public class ProductDraftImportImpl implements ProductDraftImport, ModelBase {
     }
 
     /**
-     *  <p>Search keywords are primarily used by the suggester but are also considered for the full-text search. SearchKeywords is a JSON object where the keys are of IETF language tag. The value to a language tag key is an array of SearchKeyword for the specific language.</p>
-     *  <pre><code>{
-     *    "en": [
-     *      { "text": "Multi tool" },
-     *      { "text": "Swiss Army Knife", "suggestTokenizer": { "type": "whitespace" } }
-     *    ],
-     *    "de": [
-     *      {
-     *        "text": "Schweizer Messer",
-     *        "suggestTokenizer": {
-     *          "type": "custom",
-     *          "inputs": ["schweizer messer", "offiziersmesser", "sackmesser"]
-     *        }
-     *      }
-     *    ]
-     *  }
-     *  </code></pre>
+     *  <p>Maps to <code>ProductData.searchKeywords</code>.</p>
      */
 
     public com.commercetools.importapi.models.products.SearchKeywords getSearchKeywords() {
@@ -246,7 +215,7 @@ public class ProductDraftImportImpl implements ProductDraftImport, ModelBase {
     }
 
     /**
-     *  <p>The Reference to the State with which the ProductDraft is associated. If referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary State is created.</p>
+     *  <p>Maps to <code>Product.state</code>. If the referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced State is created.</p>
      */
 
     public com.commercetools.importapi.models.common.StateKeyReference getState() {
@@ -262,7 +231,7 @@ public class ProductDraftImportImpl implements ProductDraftImport, ModelBase {
     }
 
     /**
-     *  <p>Determines the type of Prices the API uses. If not provided, the existing <code>Product.priceMode</code> is not changed.</p>
+     *  <p>Maps to <code>Product.priceMode</code>. If not provided, the existing <code>Product.priceMode</code> is not changed.</p>
      */
 
     public com.commercetools.importapi.models.common.ProductPriceModeEnum getPriceMode() {

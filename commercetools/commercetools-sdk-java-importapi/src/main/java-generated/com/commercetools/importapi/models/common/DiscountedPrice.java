@@ -43,7 +43,7 @@ public interface DiscountedPrice {
     public TypedMoney getValue();
 
     /**
-     *  <p>Reference to a ProductDiscount.</p>
+     *  <p>Reference to a ProductDiscount. If the referenced ProductDiscount does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced ProductDiscount is created.</p>
      * @return discount
      */
     @NotNull
@@ -59,7 +59,7 @@ public interface DiscountedPrice {
     public void setValue(final TypedMoney value);
 
     /**
-     *  <p>Reference to a ProductDiscount.</p>
+     *  <p>Reference to a ProductDiscount. If the referenced ProductDiscount does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced ProductDiscount is created.</p>
      * @param discount value to be set
      */
 

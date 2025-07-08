@@ -40,7 +40,7 @@ public interface MoneyAttribute extends Attribute {
     String MONEY = "money";
 
     /**
-     *
+     *  <p>A money value in cent precision format.</p>
      * @return value
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface MoneyAttribute extends Attribute {
     public TypedMoney getValue();
 
     /**
-     * set value
+     *  <p>A money value in cent precision format.</p>
      * @param value value to be set
      */
 

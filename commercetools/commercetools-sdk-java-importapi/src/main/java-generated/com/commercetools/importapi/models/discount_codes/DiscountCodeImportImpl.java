@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>The data representation for a Discount Code to be imported that is persisted as a Discount Code in the Project.</p>
+ *  <p>Represents the data used to import a DiscountCode. Once imported, this data is persisted as a DiscountCode in the Project.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class DiscountCodeImportImpl implements DiscountCodeImport, ModelBase {
@@ -86,7 +86,7 @@ public class DiscountCodeImportImpl implements DiscountCodeImport, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier. If a Discount Code with this <code>key</code> exists, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If a DiscountCode with this <code>key</code> exists, it is updated with the imported data.</p>
      */
 
     public String getKey() {
@@ -110,8 +110,7 @@ public class DiscountCodeImportImpl implements DiscountCodeImport, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier of the DiscountCode that is used by the customer to apply the discount.</p>
-     *  <p>The value cannot be updated. Attempting to update the value will result in an InvalidFieldsUpdate error.</p>
+     *  <p>Maps to <code>DiscountCode.code</code>. This value cannot be updated. Attempting to update this value will result in an InvalidFieldsUpdate error.</p>
      */
 
     public String getCode() {
@@ -119,7 +118,7 @@ public class DiscountCodeImportImpl implements DiscountCodeImport, ModelBase {
     }
 
     /**
-     *  <p>Reference to CartDiscounts that can be applied to the Cart once the DiscountCode is applied.</p>
+     *  <p>Maps to <code>DiscountCode.cartDiscounts</code>. If the referenced CartDiscounts do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CartDiscounts are created.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.common.CartDiscountKeyReference> getCartDiscounts() {
@@ -127,7 +126,7 @@ public class DiscountCodeImportImpl implements DiscountCodeImport, ModelBase {
     }
 
     /**
-     *  <p>DiscountCode can only be applied to Carts that match this predicate.</p>
+     *  <p>Maps to <code>DiscountCode.cartPredicate</code>.</p>
      */
 
     public String getCartPredicate() {
@@ -135,7 +134,7 @@ public class DiscountCodeImportImpl implements DiscountCodeImport, ModelBase {
     }
 
     /**
-     *  <p>Indicates if the DiscountCode is active and can be applied to the Cart.</p>
+     *  <p>Maps to <code>DiscountCode.isActive</code>.</p>
      */
 
     public Boolean getIsActive() {
@@ -143,7 +142,7 @@ public class DiscountCodeImportImpl implements DiscountCodeImport, ModelBase {
     }
 
     /**
-     *  <p>Number of times the DiscountCode can be applied. DiscountCode application is counted at the time of Order creation or update. However, Order cancellation or deletion does not decrement the count.</p>
+     *  <p>Maps to <code>DiscountCode.maxApplications</code>.</p>
      */
 
     public Long getMaxApplications() {
@@ -151,7 +150,7 @@ public class DiscountCodeImportImpl implements DiscountCodeImport, ModelBase {
     }
 
     /**
-     *  <p>Number of times the DiscountCode can be applied per Customer (anonymous Carts are not supported). DiscountCode application is counted at the time of Order creation or update. However, Order cancellation or deletion does not decrement the count.</p>
+     *  <p>Maps to <code>DiscountCode.maxApplicationsPerCustomer</code>.</p>
      */
 
     public Long getMaxApplicationsPerCustomer() {
@@ -159,7 +158,7 @@ public class DiscountCodeImportImpl implements DiscountCodeImport, ModelBase {
     }
 
     /**
-     *  <p>Groups to which the DiscountCode belongs.</p>
+     *  <p>Maps to <code>DiscountCode.groups</code>.</p>
      */
 
     public java.util.List<String> getGroups() {
@@ -167,7 +166,7 @@ public class DiscountCodeImportImpl implements DiscountCodeImport, ModelBase {
     }
 
     /**
-     *  <p>Date and time (UTC) from which the DiscountCode is effective.</p>
+     *  <p>Maps to <code>DiscountCode.validFrom</code>.</p>
      */
 
     public java.time.ZonedDateTime getValidFrom() {
@@ -175,7 +174,7 @@ public class DiscountCodeImportImpl implements DiscountCodeImport, ModelBase {
     }
 
     /**
-     *  <p>Date and time (UTC) until which the DiscountCode is effective.</p>
+     *  <p>Maps to <code>DiscountCode.validUntil</code>.</p>
      */
 
     public java.time.ZonedDateTime getValidUntil() {
@@ -183,7 +182,7 @@ public class DiscountCodeImportImpl implements DiscountCodeImport, ModelBase {
     }
 
     /**
-     *  <p>Custom Fields of the DiscountCode.</p>
+     *  <p>Maps to <code>DiscountCode.custom</code>.</p>
      */
 
     public com.commercetools.importapi.models.customfields.Custom getCustom() {

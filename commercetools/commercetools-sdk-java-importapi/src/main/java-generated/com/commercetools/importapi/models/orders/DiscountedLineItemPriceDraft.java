@@ -36,7 +36,7 @@ import jakarta.validation.constraints.NotNull;
 public interface DiscountedLineItemPriceDraft extends io.vrap.rmf.base.client.Draft<DiscountedLineItemPriceDraft> {
 
     /**
-     *
+     *  <p>Discounted money value.</p>
      * @return value
      */
     @NotNull
@@ -45,7 +45,7 @@ public interface DiscountedLineItemPriceDraft extends io.vrap.rmf.base.client.Dr
     public Money getValue();
 
     /**
-     *
+     *  <p>Discounts to be applied.</p>
      * @return includedDiscounts
      */
     @NotNull
@@ -54,14 +54,14 @@ public interface DiscountedLineItemPriceDraft extends io.vrap.rmf.base.client.Dr
     public List<DiscountedLineItemPortion> getIncludedDiscounts();
 
     /**
-     * set value
+     *  <p>Discounted money value.</p>
      * @param value value to be set
      */
 
     public void setValue(final Money value);
 
     /**
-     * set includedDiscounts
+     *  <p>Discounts to be applied.</p>
      * @param includedDiscounts values to be set
      */
 
@@ -69,7 +69,7 @@ public interface DiscountedLineItemPriceDraft extends io.vrap.rmf.base.client.Dr
     public void setIncludedDiscounts(final DiscountedLineItemPortion... includedDiscounts);
 
     /**
-     * set includedDiscounts
+     *  <p>Discounts to be applied.</p>
      * @param includedDiscounts values to be set
      */
 

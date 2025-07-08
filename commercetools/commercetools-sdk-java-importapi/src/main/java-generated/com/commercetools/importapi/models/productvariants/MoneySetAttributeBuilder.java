@@ -30,7 +30,8 @@ public class MoneySetAttributeBuilder implements Builder<MoneySetAttribute> {
     private java.util.List<com.commercetools.importapi.models.common.TypedMoney> value;
 
     /**
-     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     *  <p>Required if used for ProductVariantImport. Must not be set if used for ProductVariantPatch.</p>
+     *  <p>Must match <code>name</code> of an AttributeDefinition of the Product Type.</p>
      * @param name value to be set
      * @return Builder
      */
@@ -41,7 +42,7 @@ public class MoneySetAttributeBuilder implements Builder<MoneySetAttribute> {
     }
 
     /**
-     * set values to the value
+     *  <p>A set of money values in cent precision format.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -52,7 +53,7 @@ public class MoneySetAttributeBuilder implements Builder<MoneySetAttribute> {
     }
 
     /**
-     * set value to the value
+     *  <p>A set of money values in cent precision format.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -64,7 +65,7 @@ public class MoneySetAttributeBuilder implements Builder<MoneySetAttribute> {
     }
 
     /**
-     * add values to the value
+     *  <p>A set of money values in cent precision format.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -78,7 +79,7 @@ public class MoneySetAttributeBuilder implements Builder<MoneySetAttribute> {
     }
 
     /**
-     * add a value to the value using the builder function
+     *  <p>A set of money values in cent precision format.</p>
      * @param builder function to build the value value
      * @return Builder
      */
@@ -93,7 +94,7 @@ public class MoneySetAttributeBuilder implements Builder<MoneySetAttribute> {
     }
 
     /**
-     * set the value to the value using the builder function
+     *  <p>A set of money values in cent precision format.</p>
      * @param builder function to build the value value
      * @return Builder
      */
@@ -106,7 +107,8 @@ public class MoneySetAttributeBuilder implements Builder<MoneySetAttribute> {
     }
 
     /**
-     *  <p>The name of this attribute must match a name of the product types attribute definitions. The name is required if this type is used in a product variant and must not be set when used in a product variant patch.</p>
+     *  <p>Required if used for ProductVariantImport. Must not be set if used for ProductVariantPatch.</p>
+     *  <p>Must match <code>name</code> of an AttributeDefinition of the Product Type.</p>
      * @return name
      */
 
@@ -116,7 +118,7 @@ public class MoneySetAttributeBuilder implements Builder<MoneySetAttribute> {
     }
 
     /**
-     * value of value}
+     *  <p>A set of money values in cent precision format.</p>
      * @return value
      */
 

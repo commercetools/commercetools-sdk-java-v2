@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>PagedQueryResult for ImportContainers. Used as a response to a query request for ImportContainers.</p>
+ *  <p>PagedQueryResult with results containing an array of ImportContainer.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImportContainerPagedResponseImpl implements ImportContainerPagedResponse, ModelBase {
@@ -70,7 +70,7 @@ public class ImportContainerPagedResponseImpl implements ImportContainerPagedRes
     }
 
     /**
-     *  <p>The actual number of results returned.</p>
+     *  <p>Actual number of results returned.</p>
      */
 
     public Long getCount() {
@@ -78,7 +78,7 @@ public class ImportContainerPagedResponseImpl implements ImportContainerPagedRes
     }
 
     /**
-     *  <p>The total number of results matching the query.</p>
+     *  <p>Total number of results matching the query.</p>
      */
 
     public Long getTotal() {
@@ -86,7 +86,7 @@ public class ImportContainerPagedResponseImpl implements ImportContainerPagedRes
     }
 
     /**
-     *  <p>The array of Import Containers matching the query.</p>
+     *  <p>ImportContainers matching the query.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.importcontainers.ImportContainer> getResults() {

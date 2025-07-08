@@ -41,7 +41,7 @@ public interface LocalizedStringSetField extends CustomField {
     String LOCALIZED_STRING_SET = "LocalizedStringSet";
 
     /**
-     *
+     *  <p>JSON array of localized strings. The order of items in the array is not fixed.</p>
      * @return value
      */
     @NotNull
@@ -50,7 +50,7 @@ public interface LocalizedStringSetField extends CustomField {
     public List<LocalizedString> getValue();
 
     /**
-     * set value
+     *  <p>JSON array of localized strings. The order of items in the array is not fixed.</p>
      * @param value values to be set
      */
 
@@ -58,7 +58,7 @@ public interface LocalizedStringSetField extends CustomField {
     public void setValue(final LocalizedString... value);
 
     /**
-     * set value
+     *  <p>JSON array of localized strings. The order of items in the array is not fixed.</p>
      * @param value values to be set
      */
 

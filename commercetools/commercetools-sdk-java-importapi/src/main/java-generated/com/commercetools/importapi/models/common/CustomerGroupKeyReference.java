@@ -12,8 +12,10 @@ import com.fasterxml.jackson.databind.annotation.*;
 
 import io.vrap.rmf.base.client.utils.Generated;
 
+import jakarta.validation.constraints.NotNull;
+
 /**
- *  <p>References a customer group by key.</p>
+ *  <p>Used by the Import API to identify a CustomerGroup.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern
@@ -34,6 +36,21 @@ public interface CustomerGroupKeyReference extends KeyReference {
      * discriminator value for CustomerGroupKeyReference
      */
     String CUSTOMER_GROUP = "customer-group";
+
+    /**
+     *  <p>User-defined unique identifier of the referenced CustomerGroup.</p>
+     * @return key
+     */
+    @NotNull
+    @JsonProperty("key")
+    public String getKey();
+
+    /**
+     *  <p>User-defined unique identifier of the referenced CustomerGroup.</p>
+     * @param key value to be set
+     */
+
+    public void setKey(final String key);
 
     /**
      * factory method

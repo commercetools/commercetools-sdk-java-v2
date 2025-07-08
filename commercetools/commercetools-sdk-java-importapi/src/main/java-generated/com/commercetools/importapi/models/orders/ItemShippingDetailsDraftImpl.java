@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- * ItemShippingDetailsDraft
+ *  <p>The sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ItemShippingDetailsDraftImpl implements ItemShippingDetailsDraft, ModelBase {
@@ -40,7 +40,7 @@ public class ItemShippingDetailsDraftImpl implements ItemShippingDetailsDraft, M
     }
 
     /**
-     *  <p>Maps to <code>ItemShippingDetailsDraft.targets</code>.</p>
+     *  <p>Holds information on the quantity of Line Items or Custom Line Items and the address it is shipped.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.orders.ItemShippingTarget> getTargets() {

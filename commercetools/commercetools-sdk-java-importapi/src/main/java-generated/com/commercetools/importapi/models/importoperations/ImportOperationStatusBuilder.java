@@ -33,7 +33,7 @@ public class ImportOperationStatusBuilder implements Builder<ImportOperationStat
     private java.util.List<com.commercetools.importapi.models.errors.ErrorObject> errors;
 
     /**
-     *  <p>The ID of the ImportOperation.</p>
+     *  <p><code>id</code> of the ImportOperation.</p>
      * @param operationId value to be set
      * @return Builder
      */
@@ -44,7 +44,7 @@ public class ImportOperationStatusBuilder implements Builder<ImportOperationStat
     }
 
     /**
-     *  <p>The validation state of the ImportOperation.</p>
+     *  <p>Validation state of the ImportOperation.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -56,7 +56,7 @@ public class ImportOperationStatusBuilder implements Builder<ImportOperationStat
     }
 
     /**
-     *  <p>The validation errors for the ImportOperation. See Errors.</p>
+     *  <p>Errors for the ImportOperation.</p>
      * @param errors value to be set
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class ImportOperationStatusBuilder implements Builder<ImportOperationStat
     }
 
     /**
-     *  <p>The validation errors for the ImportOperation. See Errors.</p>
+     *  <p>Errors for the ImportOperation.</p>
      * @param errors value to be set
      * @return Builder
      */
@@ -80,7 +80,7 @@ public class ImportOperationStatusBuilder implements Builder<ImportOperationStat
     }
 
     /**
-     *  <p>The validation errors for the ImportOperation. See Errors.</p>
+     *  <p>Errors for the ImportOperation.</p>
      * @param errors value to be set
      * @return Builder
      */
@@ -95,7 +95,7 @@ public class ImportOperationStatusBuilder implements Builder<ImportOperationStat
     }
 
     /**
-     *  <p>The validation errors for the ImportOperation. See Errors.</p>
+     *  <p>Errors for the ImportOperation.</p>
      * @param builder function to build the errors value
      * @return Builder
      */
@@ -110,7 +110,7 @@ public class ImportOperationStatusBuilder implements Builder<ImportOperationStat
     }
 
     /**
-     *  <p>The validation errors for the ImportOperation. See Errors.</p>
+     *  <p>Errors for the ImportOperation.</p>
      * @param builder function to build the errors value
      * @return Builder
      */
@@ -123,7 +123,7 @@ public class ImportOperationStatusBuilder implements Builder<ImportOperationStat
     }
 
     /**
-     *  <p>The ID of the ImportOperation.</p>
+     *  <p><code>id</code> of the ImportOperation.</p>
      * @return operationId
      */
 
@@ -133,7 +133,7 @@ public class ImportOperationStatusBuilder implements Builder<ImportOperationStat
     }
 
     /**
-     *  <p>The validation state of the ImportOperation.</p>
+     *  <p>Validation state of the ImportOperation.</p>
      * @return state
      */
 
@@ -142,7 +142,7 @@ public class ImportOperationStatusBuilder implements Builder<ImportOperationStat
     }
 
     /**
-     *  <p>The validation errors for the ImportOperation. See Errors.</p>
+     *  <p>Errors for the ImportOperation.</p>
      * @return errors
      */
 

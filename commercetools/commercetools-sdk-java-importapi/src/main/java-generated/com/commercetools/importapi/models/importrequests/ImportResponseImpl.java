@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>The response of each resource import endpoint, such as Import Categories and Import ProductTypes.</p>
+ *  <p>The response of each Import Request.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImportResponseImpl implements ImportResponse, ModelBase {
@@ -40,7 +40,7 @@ public class ImportResponseImpl implements ImportResponse, ModelBase {
     }
 
     /**
-     *  <p>A list of the ID's and validation statuses of new ImportOperations.</p>
+     *  <p>The identifiers and status of the ImportOperations created by the ImportRequest.</p>
      */
 
     public java.util.List<com.commercetools.importapi.models.importoperations.ImportOperationStatus> getOperationStatus() {

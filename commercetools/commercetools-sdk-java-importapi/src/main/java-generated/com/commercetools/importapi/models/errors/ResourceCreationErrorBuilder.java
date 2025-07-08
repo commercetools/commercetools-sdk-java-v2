@@ -40,7 +40,7 @@ public class ResourceCreationErrorBuilder implements Builder<ResourceCreationErr
     }
 
     /**
-     * set the value to the resource
+     *  <p>The resource that was created.</p>
      * @param resource value to be set
      * @return Builder
      */
@@ -60,7 +60,7 @@ public class ResourceCreationErrorBuilder implements Builder<ResourceCreationErr
     }
 
     /**
-     * value of resource}
+     *  <p>The resource that was created.</p>
      * @return resource
      */
 

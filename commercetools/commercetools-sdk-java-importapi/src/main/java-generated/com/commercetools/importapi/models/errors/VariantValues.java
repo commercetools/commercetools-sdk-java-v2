@@ -37,7 +37,7 @@ import jakarta.validation.constraints.NotNull;
 public interface VariantValues {
 
     /**
-     *
+     *  <p>The SKU of the Product Variant.</p>
      * @return sku
      */
 
@@ -63,7 +63,7 @@ public interface VariantValues {
     public List<Attribute> getAttributes();
 
     /**
-     * set sku
+     *  <p>The SKU of the Product Variant.</p>
      * @param sku value to be set
      */
 

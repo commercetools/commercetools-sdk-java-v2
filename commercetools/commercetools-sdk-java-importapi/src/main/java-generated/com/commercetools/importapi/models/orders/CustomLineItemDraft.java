@@ -42,12 +42,7 @@ import jakarta.validation.constraints.NotNull;
 public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<CustomLineItemDraft> {
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Maps to <code>CustomLineItem.name</code>.</p>
      * @return name
      */
     @NotNull
@@ -56,7 +51,7 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
     public LocalizedString getName();
 
     /**
-     *
+     *  <p>Maps to <code>CustomLineItem.money</code>.</p>
      * @return money
      */
     @NotNull
@@ -65,7 +60,7 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
     public TypedMoney getMoney();
 
     /**
-     *
+     *  <p>Maps to <code>CustomLineItem.taxedPrice</code>.</p>
      * @return taxedPrice
      */
     @Valid
@@ -73,7 +68,7 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
     public CustomLineItemTaxedPrice getTaxedPrice();
 
     /**
-     *
+     *  <p>Maps to <code>CustomLineItem.totalPrice</code>.</p>
      * @return totalPrice
      */
     @NotNull
@@ -82,7 +77,7 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
     public TypedMoney getTotalPrice();
 
     /**
-     *
+     *  <p>Maps to <code>CustomLineItem.slug</code>.</p>
      * @return slug
      */
     @NotNull
@@ -90,7 +85,7 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
     public String getSlug();
 
     /**
-     *
+     *  <p>Maps to <code>CustomLineItem.quantity</code>.</p>
      * @return quantity
      */
     @NotNull
@@ -98,7 +93,7 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
     public Long getQuantity();
 
     /**
-     *
+     *  <p>Maps to <code>CustomLineItem.state</code>.</p>
      * @return state
      */
     @Valid
@@ -106,7 +101,7 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
     public List<ItemState> getState();
 
     /**
-     *  <p>References a tax category by key.</p>
+     *  <p>Maps to <code>CustomLineItem.taxCategory</code>. References a tax category by key. If the referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p>
      * @return taxCategory
      */
     @Valid
@@ -114,7 +109,7 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
     public TaxCategoryKeyReference getTaxCategory();
 
     /**
-     *
+     *  <p>Maps to <code>CustomLineItem.taxRate</code>.</p>
      * @return taxRate
      */
     @Valid
@@ -122,7 +117,7 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
     public TaxRate getTaxRate();
 
     /**
-     *
+     *  <p>External Tax Rate for the Custom Line Item if the Cart has the <code>External</code> TaxMode.</p>
      * @return externalTaxRate
      */
     @Valid
@@ -130,7 +125,7 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
     public ExternalTaxRateDraft getExternalTaxRate();
 
     /**
-     *
+     *  <p>Maps to <code>CustomLineItem.discountedPricePerQuantity</code>.</p>
      * @return discountedPricePerQuantity
      */
     @Valid
@@ -138,7 +133,7 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
     public List<DiscountedLineItemPriceDraft> getDiscountedPricePerQuantity();
 
     /**
-     *
+     *  <p>Maps to <code>CustomLineItem.shippingDetails</code>.</p>
      * @return shippingDetails
      */
     @Valid
@@ -146,54 +141,49 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
     public ItemShippingDetailsDraft getShippingDetails();
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Maps to <code>CustomLineItem.name</code>.</p>
      * @param name value to be set
      */
 
     public void setName(final LocalizedString name);
 
     /**
-     * set money
+     *  <p>Maps to <code>CustomLineItem.money</code>.</p>
      * @param money value to be set
      */
 
     public void setMoney(final TypedMoney money);
 
     /**
-     * set taxedPrice
+     *  <p>Maps to <code>CustomLineItem.taxedPrice</code>.</p>
      * @param taxedPrice value to be set
      */
 
     public void setTaxedPrice(final CustomLineItemTaxedPrice taxedPrice);
 
     /**
-     * set totalPrice
+     *  <p>Maps to <code>CustomLineItem.totalPrice</code>.</p>
      * @param totalPrice value to be set
      */
 
     public void setTotalPrice(final TypedMoney totalPrice);
 
     /**
-     * set slug
+     *  <p>Maps to <code>CustomLineItem.slug</code>.</p>
      * @param slug value to be set
      */
 
     public void setSlug(final String slug);
 
     /**
-     * set quantity
+     *  <p>Maps to <code>CustomLineItem.quantity</code>.</p>
      * @param quantity value to be set
      */
 
     public void setQuantity(final Long quantity);
 
     /**
-     * set state
+     *  <p>Maps to <code>CustomLineItem.state</code>.</p>
      * @param state values to be set
      */
 
@@ -201,35 +191,35 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
     public void setState(final ItemState... state);
 
     /**
-     * set state
+     *  <p>Maps to <code>CustomLineItem.state</code>.</p>
      * @param state values to be set
      */
 
     public void setState(final List<ItemState> state);
 
     /**
-     *  <p>References a tax category by key.</p>
+     *  <p>Maps to <code>CustomLineItem.taxCategory</code>. References a tax category by key. If the referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p>
      * @param taxCategory value to be set
      */
 
     public void setTaxCategory(final TaxCategoryKeyReference taxCategory);
 
     /**
-     * set taxRate
+     *  <p>Maps to <code>CustomLineItem.taxRate</code>.</p>
      * @param taxRate value to be set
      */
 
     public void setTaxRate(final TaxRate taxRate);
 
     /**
-     * set externalTaxRate
+     *  <p>External Tax Rate for the Custom Line Item if the Cart has the <code>External</code> TaxMode.</p>
      * @param externalTaxRate value to be set
      */
 
     public void setExternalTaxRate(final ExternalTaxRateDraft externalTaxRate);
 
     /**
-     * set discountedPricePerQuantity
+     *  <p>Maps to <code>CustomLineItem.discountedPricePerQuantity</code>.</p>
      * @param discountedPricePerQuantity values to be set
      */
 
@@ -237,14 +227,14 @@ public interface CustomLineItemDraft extends io.vrap.rmf.base.client.Draft<Custo
     public void setDiscountedPricePerQuantity(final DiscountedLineItemPriceDraft... discountedPricePerQuantity);
 
     /**
-     * set discountedPricePerQuantity
+     *  <p>Maps to <code>CustomLineItem.discountedPricePerQuantity</code>.</p>
      * @param discountedPricePerQuantity values to be set
      */
 
     public void setDiscountedPricePerQuantity(final List<DiscountedLineItemPriceDraft> discountedPricePerQuantity);
 
     /**
-     * set shippingDetails
+     *  <p>Maps to <code>CustomLineItem.shippingDetails</code>.</p>
      * @param shippingDetails value to be set
      */
 

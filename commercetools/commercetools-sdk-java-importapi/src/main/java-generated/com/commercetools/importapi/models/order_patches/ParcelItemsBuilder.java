@@ -30,7 +30,7 @@ public class ParcelItemsBuilder implements Builder<ParcelItems> {
     private java.util.List<com.commercetools.importapi.models.orders.DeliveryItem> items;
 
     /**
-     * set the value to the parcelId
+     *  <p><code>id</code> of an existing Parcel.</p>
      * @param parcelId value to be set
      * @return Builder
      */
@@ -41,7 +41,7 @@ public class ParcelItemsBuilder implements Builder<ParcelItems> {
     }
 
     /**
-     * set values to the items
+     *  <p>Items in the Parcel.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -52,7 +52,7 @@ public class ParcelItemsBuilder implements Builder<ParcelItems> {
     }
 
     /**
-     * set value to the items
+     *  <p>Items in the Parcel.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -64,7 +64,7 @@ public class ParcelItemsBuilder implements Builder<ParcelItems> {
     }
 
     /**
-     * add values to the items
+     *  <p>Items in the Parcel.</p>
      * @param items value to be set
      * @return Builder
      */
@@ -79,7 +79,7 @@ public class ParcelItemsBuilder implements Builder<ParcelItems> {
     }
 
     /**
-     * add the value to the items using the builder function
+     *  <p>Items in the Parcel.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -94,7 +94,7 @@ public class ParcelItemsBuilder implements Builder<ParcelItems> {
     }
 
     /**
-     * set the value to the items using the builder function
+     *  <p>Items in the Parcel.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -107,7 +107,7 @@ public class ParcelItemsBuilder implements Builder<ParcelItems> {
     }
 
     /**
-     * add the value to the items using the builder function
+     *  <p>Items in the Parcel.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -118,7 +118,7 @@ public class ParcelItemsBuilder implements Builder<ParcelItems> {
     }
 
     /**
-     * set the value to the items using the builder function
+     *  <p>Items in the Parcel.</p>
      * @param builder function to build the items value
      * @return Builder
      */
@@ -129,7 +129,7 @@ public class ParcelItemsBuilder implements Builder<ParcelItems> {
     }
 
     /**
-     * value of parcelId}
+     *  <p><code>id</code> of an existing Parcel.</p>
      * @return parcelId
      */
 
@@ -138,7 +138,7 @@ public class ParcelItemsBuilder implements Builder<ParcelItems> {
     }
 
     /**
-     * value of items}
+     *  <p>Items in the Parcel.</p>
      * @return items
      */
 

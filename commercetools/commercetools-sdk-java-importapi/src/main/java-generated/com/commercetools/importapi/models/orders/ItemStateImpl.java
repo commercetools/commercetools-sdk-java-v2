@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>The item's state.</p>
+ * ItemState
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ItemStateImpl implements ItemState, ModelBase {
@@ -43,7 +43,7 @@ public class ItemStateImpl implements ItemState, ModelBase {
     }
 
     /**
-     *
+     *  <p>Number of Line Items or Custom Line Items in this State.</p>
      */
 
     public Long getQuantity() {
@@ -51,7 +51,7 @@ public class ItemStateImpl implements ItemState, ModelBase {
     }
 
     /**
-     *  <p>Maps to <code>ItemState.state</code>.</p>
+     *  <p>State of the Line Items or Custom Line Items in a custom workflow. If the referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced State is created.</p>
      */
 
     public com.commercetools.importapi.models.common.StateKeyReference getState() {

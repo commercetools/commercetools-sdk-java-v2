@@ -39,7 +39,7 @@ public interface DateSetField extends CustomField {
     String DATE_SET = "DateSet";
 
     /**
-     *
+     *  <p>JSON array of date values in the format <code>YYYY-MM-DD</code> without duplicates. The order of items in the array is not fixed.</p>
      * @return value
      */
     @NotNull
@@ -47,7 +47,7 @@ public interface DateSetField extends CustomField {
     public List<LocalDate> getValue();
 
     /**
-     * set value
+     *  <p>JSON array of date values in the format <code>YYYY-MM-DD</code> without duplicates. The order of items in the array is not fixed.</p>
      * @param value values to be set
      */
 
@@ -55,7 +55,7 @@ public interface DateSetField extends CustomField {
     public void setValue(final LocalDate... value);
 
     /**
-     * set value
+     *  <p>JSON array of date values in the format <code>YYYY-MM-DD</code> without duplicates. The order of items in the array is not fixed.</p>
      * @param value values to be set
      */
 

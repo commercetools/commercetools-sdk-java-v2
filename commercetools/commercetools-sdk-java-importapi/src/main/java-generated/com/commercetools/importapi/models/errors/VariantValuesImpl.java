@@ -47,7 +47,7 @@ public class VariantValuesImpl implements VariantValues, ModelBase {
     }
 
     /**
-     *
+     *  <p>The SKU of the Product Variant.</p>
      */
 
     public String getSku() {

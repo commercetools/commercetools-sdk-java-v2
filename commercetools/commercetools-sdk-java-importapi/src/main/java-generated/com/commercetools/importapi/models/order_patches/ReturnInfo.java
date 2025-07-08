@@ -35,7 +35,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ReturnInfo {
 
     /**
-     *
+     *  <p>Information on the Line Items or Custom Line Items returned.</p>
      * @return items
      */
     @NotNull
@@ -44,7 +44,7 @@ public interface ReturnInfo {
     public List<ReturnItemDraft> getItems();
 
     /**
-     *  <p>Maps to <code>ReturnInfo.returnTrackingId</code></p>
+     *  <p>User-defined identifier to track the return.</p>
      * @return returnTrackingId
      */
 
@@ -52,7 +52,7 @@ public interface ReturnInfo {
     public String getReturnTrackingId();
 
     /**
-     *  <p>Maps to <code>ReturnInfo.returnDate</code></p>
+     *  <p>Date and time (UTC) the return is initiated.</p>
      * @return returnDate
      */
 
@@ -60,7 +60,7 @@ public interface ReturnInfo {
     public ZonedDateTime getReturnDate();
 
     /**
-     * set items
+     *  <p>Information on the Line Items or Custom Line Items returned.</p>
      * @param items values to be set
      */
 
@@ -68,21 +68,21 @@ public interface ReturnInfo {
     public void setItems(final ReturnItemDraft... items);
 
     /**
-     * set items
+     *  <p>Information on the Line Items or Custom Line Items returned.</p>
      * @param items values to be set
      */
 
     public void setItems(final List<ReturnItemDraft> items);
 
     /**
-     *  <p>Maps to <code>ReturnInfo.returnTrackingId</code></p>
+     *  <p>User-defined identifier to track the return.</p>
      * @param returnTrackingId value to be set
      */
 
     public void setReturnTrackingId(final String returnTrackingId);
 
     /**
-     *  <p>Maps to <code>ReturnInfo.returnDate</code></p>
+     *  <p>Date and time (UTC) the return is initiated.</p>
      * @param returnDate value to be set
      */
 

@@ -57,7 +57,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     private java.time.ZonedDateTime expiresAt;
 
     /**
-     *  <p>The version of the ImportOperation.</p>
+     *  <p>Current version of the ImportOperation.</p>
      * @param version value to be set
      * @return Builder
      */
@@ -68,7 +68,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     *  <p>The key of the ImportContainer.</p>
+     *  <p><code>key</code> of the ImportContainer.</p>
      * @param importContainerKey value to be set
      * @return Builder
      */
@@ -79,7 +79,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     *  <p>The key of the resource.</p>
+     *  <p><code>key</code> of the resource being imported.</p>
      * @param resourceKey value to be set
      * @return Builder
      */
@@ -90,7 +90,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     *  <p>The ID of the ImportOperation.</p>
+     *  <p>Unique identifier of the ImportOperation.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -101,7 +101,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     *  <p>The import status of the resource. Set to <code>rejected</code> or <code>validationFailed</code> if the import of the resource was not successful.</p>
+     *  <p>The import status of the resource. If <code>rejected</code> or <code>validationFailed</code>, the import was unsuccessful.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -112,7 +112,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     *  <p>The version of the imported resource when the import was successful.</p>
+     *  <p>The <code>version</code> of the imported resource when the import was successful.</p>
      * @param resourceVersion value to be set
      * @return Builder
      */
@@ -123,7 +123,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     *  <p>Contains an error if the import of the resource was not successful. See Errors.</p>
+     *  <p>Contains errors if the import was unsuccessful. See Errors.</p>
      * @param errors value to be set
      * @return Builder
      */
@@ -135,7 +135,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     *  <p>Contains an error if the import of the resource was not successful. See Errors.</p>
+     *  <p>Contains errors if the import was unsuccessful. See Errors.</p>
      * @param errors value to be set
      * @return Builder
      */
@@ -147,7 +147,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     *  <p>Contains an error if the import of the resource was not successful. See Errors.</p>
+     *  <p>Contains errors if the import was unsuccessful. See Errors.</p>
      * @param errors value to be set
      * @return Builder
      */
@@ -162,7 +162,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     *  <p>Contains an error if the import of the resource was not successful. See Errors.</p>
+     *  <p>Contains errors if the import was unsuccessful. See Errors.</p>
      * @param builder function to build the errors value
      * @return Builder
      */
@@ -177,7 +177,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     *  <p>Contains an error if the import of the resource was not successful. See Errors.</p>
+     *  <p>Contains errors if the import was unsuccessful. See Errors.</p>
      * @param builder function to build the errors value
      * @return Builder
      */
@@ -190,7 +190,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     *  <p>In case of unresolved status this array will show the unresolved references</p>
+     *  <p>If the resource being imported contains references to resources which do not exist, these references are contained within this array.</p>
      * @param unresolvedReferences value to be set
      * @return Builder
      */
@@ -202,7 +202,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     *  <p>In case of unresolved status this array will show the unresolved references</p>
+     *  <p>If the resource being imported contains references to resources which do not exist, these references are contained within this array.</p>
      * @param unresolvedReferences value to be set
      * @return Builder
      */
@@ -214,7 +214,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     *  <p>In case of unresolved status this array will show the unresolved references</p>
+     *  <p>If the resource being imported contains references to resources which do not exist, these references are contained within this array.</p>
      * @param unresolvedReferences value to be set
      * @return Builder
      */
@@ -229,7 +229,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     *  <p>In case of unresolved status this array will show the unresolved references</p>
+     *  <p>If the resource being imported contains references to resources which do not exist, these references are contained within this array.</p>
      * @param builder function to build the unresolvedReferences value
      * @return Builder
      */
@@ -245,7 +245,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     *  <p>In case of unresolved status this array will show the unresolved references</p>
+     *  <p>If the resource being imported contains references to resources which do not exist, these references are contained within this array.</p>
      * @param builder function to build the unresolvedReferences value
      * @return Builder
      */
@@ -259,7 +259,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     *  <p>In case of unresolved status this array will show the unresolved references</p>
+     *  <p>If the resource being imported contains references to resources which do not exist, these references are contained within this array.</p>
      * @param builder function to build the unresolvedReferences value
      * @return Builder
      */
@@ -271,7 +271,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     *  <p>In case of unresolved status this array will show the unresolved references</p>
+     *  <p>If the resource being imported contains references to resources which do not exist, these references are contained within this array.</p>
      * @param builder function to build the unresolvedReferences value
      * @return Builder
      */
@@ -283,7 +283,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     *  <p>The time when the ImportOperation was created.</p>
+     *  <p>Date and time (UTC) the ImportOperation was created.</p>
      * @param createdAt value to be set
      * @return Builder
      */
@@ -294,7 +294,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     *  <p>The last time When the ImportOperation was modified.</p>
+     *  <p>Date and time (UTC) the ImportOperation was last updated.</p>
      * @param lastModifiedAt value to be set
      * @return Builder
      */
@@ -305,7 +305,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     *  <p>The expiration time of the ImportOperation.</p>
+     *  <p>Date and time (UTC) the ImportOperation will be deleted.</p>
      * @param expiresAt value to be set
      * @return Builder
      */
@@ -316,7 +316,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     *  <p>The version of the ImportOperation.</p>
+     *  <p>Current version of the ImportOperation.</p>
      * @return version
      */
 
@@ -325,7 +325,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     *  <p>The key of the ImportContainer.</p>
+     *  <p><code>key</code> of the ImportContainer.</p>
      * @return importContainerKey
      */
 
@@ -334,7 +334,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     *  <p>The key of the resource.</p>
+     *  <p><code>key</code> of the resource being imported.</p>
      * @return resourceKey
      */
 
@@ -343,7 +343,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     *  <p>The ID of the ImportOperation.</p>
+     *  <p>Unique identifier of the ImportOperation.</p>
      * @return id
      */
 
@@ -352,7 +352,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     *  <p>The import status of the resource. Set to <code>rejected</code> or <code>validationFailed</code> if the import of the resource was not successful.</p>
+     *  <p>The import status of the resource. If <code>rejected</code> or <code>validationFailed</code>, the import was unsuccessful.</p>
      * @return state
      */
 
@@ -361,7 +361,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     *  <p>The version of the imported resource when the import was successful.</p>
+     *  <p>The <code>version</code> of the imported resource when the import was successful.</p>
      * @return resourceVersion
      */
 
@@ -371,7 +371,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     *  <p>Contains an error if the import of the resource was not successful. See Errors.</p>
+     *  <p>Contains errors if the import was unsuccessful. See Errors.</p>
      * @return errors
      */
 
@@ -381,7 +381,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     *  <p>In case of unresolved status this array will show the unresolved references</p>
+     *  <p>If the resource being imported contains references to resources which do not exist, these references are contained within this array.</p>
      * @return unresolvedReferences
      */
 
@@ -391,7 +391,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     *  <p>The time when the ImportOperation was created.</p>
+     *  <p>Date and time (UTC) the ImportOperation was created.</p>
      * @return createdAt
      */
 
@@ -400,7 +400,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     *  <p>The last time When the ImportOperation was modified.</p>
+     *  <p>Date and time (UTC) the ImportOperation was last updated.</p>
      * @return lastModifiedAt
      */
 
@@ -409,7 +409,7 @@ public class ImportOperationBuilder implements Builder<ImportOperation> {
     }
 
     /**
-     *  <p>The expiration time of the ImportOperation.</p>
+     *  <p>Date and time (UTC) the ImportOperation will be deleted.</p>
      * @return expiresAt
      */
 

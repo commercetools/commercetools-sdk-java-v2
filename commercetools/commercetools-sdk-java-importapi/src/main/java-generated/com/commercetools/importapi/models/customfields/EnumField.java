@@ -38,7 +38,7 @@ public interface EnumField extends CustomField {
     String ENUM = "Enum";
 
     /**
-     *
+     *  <p>The key of the enum value. Must be a <code>key</code> of one of the CustomFieldEnumValues defined in the CustomFieldEnumType.</p>
      * @return value
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface EnumField extends CustomField {
     public String getValue();
 
     /**
-     * set value
+     *  <p>The key of the enum value. Must be a <code>key</code> of one of the CustomFieldEnumValues defined in the CustomFieldEnumType.</p>
      * @param value value to be set
      */
 

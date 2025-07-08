@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
- *  <p>Serves as the entry point of resources. An Import Container is not resource type-specific.</p>
+ *  <p>Contains the resources to be imported. Unless <code>resourceType</code> is specified, the ImportContainer can import all of the supported ImportResourceTypes.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ImportContainerImpl implements ImportContainer, ModelBase {
@@ -63,7 +63,7 @@ public class ImportContainerImpl implements ImportContainer, ModelBase {
     }
 
     /**
-     *  <p>User-defined unique identifier for the ImportContainer.</p>
+     *  <p>User-defined unique identifier of the ImportContainer.</p>
      */
 
     public String getKey() {
@@ -71,7 +71,7 @@ public class ImportContainerImpl implements ImportContainer, ModelBase {
     }
 
     /**
-     *  <p>The resource type the ImportContainer is able to handle. If not present, the ImportContainer is able to import all of the supported ImportResourceTypes.</p>
+     *  <p>The resource type the ImportContainer supports. If not present, the ImportContainer can import all of the supported ImportResourceTypes.</p>
      */
 
     public com.commercetools.importapi.models.common.ImportResourceType getResourceType() {
@@ -79,7 +79,7 @@ public class ImportContainerImpl implements ImportContainer, ModelBase {
     }
 
     /**
-     *  <p>The version of the ImportContainer.</p>
+     *  <p>Current version of the ImportContainer.</p>
      */
 
     public Long getVersion() {

@@ -98,7 +98,7 @@ public class InvalidFieldErrorImpl implements InvalidFieldError, ModelBase {
     }
 
     /**
-     *
+     *  <p>The index of the resource in the import request that contains the invalid field.</p>
      */
 
     public Long getResourceIndex() {

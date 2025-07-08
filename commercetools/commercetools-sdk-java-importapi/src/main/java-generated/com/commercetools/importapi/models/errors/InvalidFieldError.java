@@ -63,7 +63,7 @@ public interface InvalidFieldError extends ErrorObject {
     public List<Object> getAllowedValues();
 
     /**
-     *
+     *  <p>The index of the resource in the import request that contains the invalid field.</p>
      * @return resourceIndex
      */
 
@@ -100,7 +100,7 @@ public interface InvalidFieldError extends ErrorObject {
     public void setAllowedValues(final List<Object> allowedValues);
 
     /**
-     * set resourceIndex
+     *  <p>The index of the resource in the import request that contains the invalid field.</p>
      * @param resourceIndex value to be set
      */
 

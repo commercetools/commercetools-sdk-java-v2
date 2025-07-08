@@ -102,7 +102,8 @@ public class AddressBuilder implements Builder<Address> {
     private com.commercetools.importapi.models.customfields.Custom custom;
 
     /**
-     * set the value to the id
+     *  <p>Unique identifier of the Address.</p>
+     *  <p>It is not recommended to set it manually since the API overwrites this ID when creating an Address for a Customer. Use <code>key</code> instead and omit this field from the request to let the API generate the ID for the Address.</p>
      * @param id value to be set
      * @return Builder
      */
@@ -113,7 +114,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * set the value to the key
+     *  <p>User-defined identifier of the Address that must be unique when multiple addresses are referenced in BusinessUnits, Customers, and <code>itemShippingAddresses</code> (LineItem-specific addresses) of a Cart, Order, QuoteRequest, or Quote.</p>
      * @param key value to be set
      * @return Builder
      */
@@ -124,7 +125,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * set the value to the title
+     *  <p>Title of the contact, for example 'Dr.'</p>
      * @param title value to be set
      * @return Builder
      */
@@ -135,7 +136,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * set the value to the salutation
+     *  <p>Salutation of the contact, for example 'Mr.' or 'Ms.'</p>
      * @param salutation value to be set
      * @return Builder
      */
@@ -146,7 +147,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * set the value to the firstName
+     *  <p>Given name (first name) of the contact.</p>
      * @param firstName value to be set
      * @return Builder
      */
@@ -157,7 +158,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * set the value to the lastName
+     *  <p>Family name (last name) of the contact.</p>
      * @param lastName value to be set
      * @return Builder
      */
@@ -168,7 +169,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * set the value to the streetName
+     *  <p>Name of the street.</p>
      * @param streetName value to be set
      * @return Builder
      */
@@ -179,7 +180,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * set the value to the streetNumber
+     *  <p>Street number.</p>
      * @param streetNumber value to be set
      * @return Builder
      */
@@ -190,7 +191,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * set the value to the additionalStreetInfo
+     *  <p>Further information on the street address.</p>
      * @param additionalStreetInfo value to be set
      * @return Builder
      */
@@ -201,7 +202,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * set the value to the postalCode
+     *  <p>Postal code.</p>
      * @param postalCode value to be set
      * @return Builder
      */
@@ -212,7 +213,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * set the value to the city
+     *  <p>Name of the city.</p>
      * @param city value to be set
      * @return Builder
      */
@@ -223,7 +224,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * set the value to the region
+     *  <p>Name of the region.</p>
      * @param region value to be set
      * @return Builder
      */
@@ -234,7 +235,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * set the value to the state
+     *  <p>Name of the state, for example, Colorado.</p>
      * @param state value to be set
      * @return Builder
      */
@@ -245,7 +246,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
+     *  <p>Name of the country.</p>
      * @param country value to be set
      * @return Builder
      */
@@ -256,7 +257,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * set the value to the company
+     *  <p>Name of the company.</p>
      * @param company value to be set
      * @return Builder
      */
@@ -267,7 +268,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * set the value to the department
+     *  <p>Name of the department.</p>
      * @param department value to be set
      * @return Builder
      */
@@ -278,7 +279,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * set the value to the building
+     *  <p>Number or name of the building.</p>
      * @param building value to be set
      * @return Builder
      */
@@ -289,7 +290,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * set the value to the apartment
+     *  <p>Number or name of the apartment.</p>
      * @param apartment value to be set
      * @return Builder
      */
@@ -300,7 +301,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * set the value to the pOBox
+     *  <p>Post office box number.</p>
      * @param pOBox value to be set
      * @return Builder
      */
@@ -311,7 +312,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * set the value to the phone
+     *  <p>Phone number of the contact.</p>
      * @param phone value to be set
      * @return Builder
      */
@@ -322,7 +323,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * set the value to the mobile
+     *  <p>Mobile phone number of the contact.</p>
      * @param mobile value to be set
      * @return Builder
      */
@@ -333,7 +334,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * set the value to the email
+     *  <p>Email address of the contact.</p>
      * @param email value to be set
      * @return Builder
      */
@@ -344,7 +345,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * set the value to the fax
+     *  <p>Fax number of the contact.</p>
      * @param fax value to be set
      * @return Builder
      */
@@ -355,7 +356,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * set the value to the additionalAddressInfo
+     *  <p>Further information on the Address.</p>
      * @param additionalAddressInfo value to be set
      * @return Builder
      */
@@ -366,7 +367,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * set the value to the externalId
+     *  <p>ID for the contact used in an external system.</p>
      * @param externalId value to be set
      * @return Builder
      */
@@ -377,7 +378,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *  <p>Custom Fields defined for the Address. Custom Fields can only be applied to <code>shippingAddress</code>.</p>
+     *  <p>Custom Fields defined for the Address.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -389,7 +390,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *  <p>Custom Fields defined for the Address. Custom Fields can only be applied to <code>shippingAddress</code>.</p>
+     *  <p>Custom Fields defined for the Address.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -401,7 +402,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *  <p>Custom Fields defined for the Address. Custom Fields can only be applied to <code>shippingAddress</code>.</p>
+     *  <p>Custom Fields defined for the Address.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -412,7 +413,8 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * value of id}
+     *  <p>Unique identifier of the Address.</p>
+     *  <p>It is not recommended to set it manually since the API overwrites this ID when creating an Address for a Customer. Use <code>key</code> instead and omit this field from the request to let the API generate the ID for the Address.</p>
      * @return id
      */
 
@@ -422,7 +424,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * value of key}
+     *  <p>User-defined identifier of the Address that must be unique when multiple addresses are referenced in BusinessUnits, Customers, and <code>itemShippingAddresses</code> (LineItem-specific addresses) of a Cart, Order, QuoteRequest, or Quote.</p>
      * @return key
      */
 
@@ -432,7 +434,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * value of title}
+     *  <p>Title of the contact, for example 'Dr.'</p>
      * @return title
      */
 
@@ -442,7 +444,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * value of salutation}
+     *  <p>Salutation of the contact, for example 'Mr.' or 'Ms.'</p>
      * @return salutation
      */
 
@@ -452,7 +454,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * value of firstName}
+     *  <p>Given name (first name) of the contact.</p>
      * @return firstName
      */
 
@@ -462,7 +464,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * value of lastName}
+     *  <p>Family name (last name) of the contact.</p>
      * @return lastName
      */
 
@@ -472,7 +474,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * value of streetName}
+     *  <p>Name of the street.</p>
      * @return streetName
      */
 
@@ -482,7 +484,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * value of streetNumber}
+     *  <p>Street number.</p>
      * @return streetNumber
      */
 
@@ -492,7 +494,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * value of additionalStreetInfo}
+     *  <p>Further information on the street address.</p>
      * @return additionalStreetInfo
      */
 
@@ -502,7 +504,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * value of postalCode}
+     *  <p>Postal code.</p>
      * @return postalCode
      */
 
@@ -512,7 +514,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * value of city}
+     *  <p>Name of the city.</p>
      * @return city
      */
 
@@ -522,7 +524,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * value of region}
+     *  <p>Name of the region.</p>
      * @return region
      */
 
@@ -532,7 +534,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * value of state}
+     *  <p>Name of the state, for example, Colorado.</p>
      * @return state
      */
 
@@ -542,7 +544,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
+     *  <p>Name of the country.</p>
      * @return country
      */
 
@@ -551,7 +553,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * value of company}
+     *  <p>Name of the company.</p>
      * @return company
      */
 
@@ -561,7 +563,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * value of department}
+     *  <p>Name of the department.</p>
      * @return department
      */
 
@@ -571,7 +573,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * value of building}
+     *  <p>Number or name of the building.</p>
      * @return building
      */
 
@@ -581,7 +583,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * value of apartment}
+     *  <p>Number or name of the apartment.</p>
      * @return apartment
      */
 
@@ -591,7 +593,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * value of pOBox}
+     *  <p>Post office box number.</p>
      * @return pOBox
      */
 
@@ -601,7 +603,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * value of phone}
+     *  <p>Phone number of the contact.</p>
      * @return phone
      */
 
@@ -611,7 +613,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * value of mobile}
+     *  <p>Mobile phone number of the contact.</p>
      * @return mobile
      */
 
@@ -621,7 +623,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * value of email}
+     *  <p>Email address of the contact.</p>
      * @return email
      */
 
@@ -631,7 +633,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * value of fax}
+     *  <p>Fax number of the contact.</p>
      * @return fax
      */
 
@@ -641,7 +643,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * value of additionalAddressInfo}
+     *  <p>Further information on the Address.</p>
      * @return additionalAddressInfo
      */
 
@@ -651,7 +653,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     * value of externalId}
+     *  <p>ID for the contact used in an external system.</p>
      * @return externalId
      */
 
@@ -661,7 +663,7 @@ public class AddressBuilder implements Builder<Address> {
     }
 
     /**
-     *  <p>Custom Fields defined for the Address. Custom Fields can only be applied to <code>shippingAddress</code>.</p>
+     *  <p>Custom Fields defined for the Address.</p>
      * @return custom
      */
 

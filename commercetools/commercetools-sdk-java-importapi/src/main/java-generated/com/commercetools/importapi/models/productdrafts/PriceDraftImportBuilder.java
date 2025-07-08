@@ -54,7 +54,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     private String key;
 
     /**
-     * set the value to the value
+     *  <p>Money value of this Price.</p>
      * @param value value to be set
      * @return Builder
      */
@@ -65,7 +65,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     * set the value to the value using the builder function
+     *  <p>Money value of this Price.</p>
      * @param builder function to build the value value
      * @return Builder
      */
@@ -77,7 +77,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
+     *  <p>Set this field if this Price is only valid for the specified country.</p>
      * @param country value to be set
      * @return Builder
      */
@@ -88,7 +88,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     *  <p>References a customer group by key.</p>
+     *  <p>Set this field if this Price is only valid for the referenced CustomerGroup. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -102,7 +102,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     *  <p>References a customer group by key.</p>
+     *  <p>Set this field if this Price is only valid for the referenced CustomerGroup. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
      * @param builder function to build the customerGroup value
      * @return Builder
      */
@@ -115,7 +115,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     *  <p>References a customer group by key.</p>
+     *  <p>Set this field if this Price is only valid for the referenced CustomerGroup. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
      * @param customerGroup value to be set
      * @return Builder
      */
@@ -127,7 +127,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     *  <p>References a channel by key.</p>
+     *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> Channel. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      * @param builder function to build the channel value
      * @return Builder
      */
@@ -139,7 +139,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     *  <p>References a channel by key.</p>
+     *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> Channel. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      * @param builder function to build the channel value
      * @return Builder
      */
@@ -151,7 +151,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     *  <p>References a channel by key.</p>
+     *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> Channel. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      * @param channel value to be set
      * @return Builder
      */
@@ -163,7 +163,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     * set the value to the validFrom
+     *  <p>Set this field if this Price is only valid from the specified date and time. Must be at least 1 ms earlier than <code>validUntil</code>.</p>
      * @param validFrom value to be set
      * @return Builder
      */
@@ -174,7 +174,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     * set the value to the validUntil
+     *  <p>Set this field if this Price is only valid until the specified date and time. Must be at least 1 ms later than <code>validFrom</code>.</p>
      * @param validUntil value to be set
      * @return Builder
      */
@@ -185,7 +185,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     *  <p>The custom fields for this category.</p>
+     *  <p>Custom Fields for the Embedded Price.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -197,7 +197,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     *  <p>The custom fields for this category.</p>
+     *  <p>Custom Fields for the Embedded Price.</p>
      * @param builder function to build the custom value
      * @return Builder
      */
@@ -209,7 +209,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     *  <p>The custom fields for this category.</p>
+     *  <p>Custom Fields for the Embedded Price.</p>
      * @param custom value to be set
      * @return Builder
      */
@@ -221,7 +221,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     *  <p>Sets a discounted price from an external service.</p>
+     *  <p>Set this field to add a DiscountedPrice from an <strong>external service</strong>.</p>
      * @param builder function to build the discounted value
      * @return Builder
      */
@@ -233,7 +233,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     *  <p>Sets a discounted price from an external service.</p>
+     *  <p>Set this field to add a DiscountedPrice from an <strong>external service</strong>.</p>
      * @param builder function to build the discounted value
      * @return Builder
      */
@@ -245,7 +245,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     *  <p>Sets a discounted price from an external service.</p>
+     *  <p>Set this field to add a DiscountedPrice from an <strong>external service</strong>.</p>
      * @param discounted value to be set
      * @return Builder
      */
@@ -356,7 +356,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     * value of value}
+     *  <p>Money value of this Price.</p>
      * @return value
      */
 
@@ -365,7 +365,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     *  <p>A two-digit country code as per ISO 3166-1 alpha-2.</p>
+     *  <p>Set this field if this Price is only valid for the specified country.</p>
      * @return country
      */
 
@@ -375,7 +375,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     *  <p>References a customer group by key.</p>
+     *  <p>Set this field if this Price is only valid for the referenced CustomerGroup. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
      * @return customerGroup
      */
 
@@ -385,7 +385,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     *  <p>References a channel by key.</p>
+     *  <p>Set this field if this Price is only valid for the referenced <code>ProductDistribution</code> Channel. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p>
      * @return channel
      */
 
@@ -395,7 +395,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     * value of validFrom}
+     *  <p>Set this field if this Price is only valid from the specified date and time. Must be at least 1 ms earlier than <code>validUntil</code>.</p>
      * @return validFrom
      */
 
@@ -405,7 +405,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     * value of validUntil}
+     *  <p>Set this field if this Price is only valid until the specified date and time. Must be at least 1 ms later than <code>validFrom</code>.</p>
      * @return validUntil
      */
 
@@ -415,7 +415,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     *  <p>The custom fields for this category.</p>
+     *  <p>Custom Fields for the Embedded Price.</p>
      * @return custom
      */
 
@@ -425,7 +425,7 @@ public class PriceDraftImportBuilder implements Builder<PriceDraftImport> {
     }
 
     /**
-     *  <p>Sets a discounted price from an external service.</p>
+     *  <p>Set this field to add a DiscountedPrice from an <strong>external service</strong>.</p>
      * @return discounted
      */
 

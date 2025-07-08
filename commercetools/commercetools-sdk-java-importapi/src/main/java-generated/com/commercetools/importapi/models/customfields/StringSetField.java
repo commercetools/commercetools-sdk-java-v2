@@ -38,7 +38,7 @@ public interface StringSetField extends CustomField {
     String STRING_SET = "StringSet";
 
     /**
-     *
+     *  <p>JSON array of strings. The order of items in the array is not fixed.</p>
      * @return value
      */
     @NotNull
@@ -46,7 +46,7 @@ public interface StringSetField extends CustomField {
     public List<String> getValue();
 
     /**
-     * set value
+     *  <p>JSON array of strings. The order of items in the array is not fixed.</p>
      * @param value values to be set
      */
 
@@ -54,7 +54,7 @@ public interface StringSetField extends CustomField {
     public void setValue(final String... value);
 
     /**
-     * set value
+     *  <p>JSON array of strings. The order of items in the array is not fixed.</p>
      * @param value values to be set
      */
 

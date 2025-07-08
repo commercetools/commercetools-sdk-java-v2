@@ -32,7 +32,7 @@ public class MoneyBuilder implements Builder<Money> {
     private String currencyCode;
 
     /**
-     * set the value to the fractionDigits
+     *  <p>The number of fraction digits of the money value. This is used to determine how many digits are after the decimal point. For example, for EUR and USD, this is <code>2</code>, and for JPY, this is <code>0</code>.</p>
      * @param fractionDigits value to be set
      * @return Builder
      */
@@ -43,7 +43,11 @@ public class MoneyBuilder implements Builder<Money> {
     }
 
     /**
-     * set the value to the centAmount
+     *  <p>Amount in the smallest indivisible unit of a currency, such as:</p>
+     *  <ul>
+     *   <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
+     *   <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
+     *  </ul>
      * @param centAmount value to be set
      * @return Builder
      */
@@ -65,7 +69,7 @@ public class MoneyBuilder implements Builder<Money> {
     }
 
     /**
-     * value of fractionDigits}
+     *  <p>The number of fraction digits of the money value. This is used to determine how many digits are after the decimal point. For example, for EUR and USD, this is <code>2</code>, and for JPY, this is <code>0</code>.</p>
      * @return fractionDigits
      */
 
@@ -75,7 +79,11 @@ public class MoneyBuilder implements Builder<Money> {
     }
 
     /**
-     * value of centAmount}
+     *  <p>Amount in the smallest indivisible unit of a currency, such as:</p>
+     *  <ul>
+     *   <li>Cents for EUR and USD, pence for GBP, or centime for CHF (5 CHF is specified as <code>500</code>).</li>
+     *   <li>The value in the major unit for currencies without minor units, like JPY (5 JPY is specified as <code>5</code>).</li>
+     *  </ul>
      * @return centAmount
      */
 

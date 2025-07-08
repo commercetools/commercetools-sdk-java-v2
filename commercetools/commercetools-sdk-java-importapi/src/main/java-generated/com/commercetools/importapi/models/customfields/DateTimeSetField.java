@@ -39,7 +39,7 @@ public interface DateTimeSetField extends CustomField {
     String DATE_TIME_SET = "DateTimeSet";
 
     /**
-     *
+     *  <p>JSON array of date time values in the format <code>YYYY-MM-DDTHH:mm:ss.SSSZ</code> without duplicates. The time zone is optional and defaults to UTC if not specified. If the time zone is specified, it must be in the format <code>±HH:mm</code> or <code>Z</code> for UTC. The order of items in the array is not fixed.</p>
      * @return value
      */
     @NotNull
@@ -47,7 +47,7 @@ public interface DateTimeSetField extends CustomField {
     public List<ZonedDateTime> getValue();
 
     /**
-     * set value
+     *  <p>JSON array of date time values in the format <code>YYYY-MM-DDTHH:mm:ss.SSSZ</code> without duplicates. The time zone is optional and defaults to UTC if not specified. If the time zone is specified, it must be in the format <code>±HH:mm</code> or <code>Z</code> for UTC. The order of items in the array is not fixed.</p>
      * @param value values to be set
      */
 
@@ -55,7 +55,7 @@ public interface DateTimeSetField extends CustomField {
     public void setValue(final ZonedDateTime... value);
 
     /**
-     * set value
+     *  <p>JSON array of date time values in the format <code>YYYY-MM-DDTHH:mm:ss.SSSZ</code> without duplicates. The time zone is optional and defaults to UTC if not specified. If the time zone is specified, it must be in the format <code>±HH:mm</code> or <code>Z</code> for UTC. The order of items in the array is not fixed.</p>
      * @param value values to be set
      */
 

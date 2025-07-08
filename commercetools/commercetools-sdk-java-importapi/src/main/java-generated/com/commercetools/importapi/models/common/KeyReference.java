@@ -33,7 +33,7 @@ import jakarta.validation.constraints.NotNull;
 public interface KeyReference {
 
     /**
-     *
+     *  <p>User-defined unique identifier of the referenced resource. If the referenced resource does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced resource is created.</p>
      * @return key
      */
     @NotNull
@@ -41,7 +41,7 @@ public interface KeyReference {
     public String getKey();
 
     /**
-     *  <p>The type of the referenced resource.</p>
+     *  <p>Type of referenced resource.</p>
      * @return typeId
      */
     @NotNull
@@ -49,7 +49,7 @@ public interface KeyReference {
     public ReferenceType getTypeId();
 
     /**
-     * set key
+     *  <p>User-defined unique identifier of the referenced resource. If the referenced resource does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced resource is created.</p>
      * @param key value to be set
      */
 

@@ -46,7 +46,7 @@ import jakarta.validation.constraints.NotNull;
 public interface ProductDraftImport extends ImportResource {
 
     /**
-     *  <p>User-defined unique identifier. If a Product with this <code>key</code> exists, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If a Product with this <code>key</code> exists, it is updated with the imported data.</p>
      * @return key
      */
     @NotNull
@@ -54,7 +54,7 @@ public interface ProductDraftImport extends ImportResource {
     public String getKey();
 
     /**
-     *  <p>The <code>productType</code> of a Product. Maps to <code>Product.productType</code>. The Reference to the ProductType with which the ProductDraft is associated. If referenced ProductType does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductType is created.</p>
+     *  <p>Maps to <code>Product.productType</code>. If the referenced ProductType does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced ProductType is created.</p>
      * @return productType
      */
     @NotNull
@@ -63,7 +63,7 @@ public interface ProductDraftImport extends ImportResource {
     public ProductTypeKeyReference getProductType();
 
     /**
-     *
+     *  <p>Maps to <code>ProductData.name</code>.</p>
      * @return name
      */
     @NotNull
@@ -72,7 +72,7 @@ public interface ProductDraftImport extends ImportResource {
     public LocalizedString getName();
 
     /**
-     *  <p>Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a project, but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.</p>
+     *  <p>Maps to <code>ProductData.slug</code>.</p>
      * @return slug
      */
     @NotNull
@@ -81,7 +81,7 @@ public interface ProductDraftImport extends ImportResource {
     public LocalizedString getSlug();
 
     /**
-     *  <p>Maps to <code>Product.description</code>.</p>
+     *  <p>Maps to <code>ProductData.description</code>.</p>
      * @return description
      */
     @Valid
@@ -89,7 +89,7 @@ public interface ProductDraftImport extends ImportResource {
     public LocalizedString getDescription();
 
     /**
-     *  <p>The Reference to the Categories with which the ProductDraft is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
+     *  <p>Maps to <code>ProductData.categories</code>. If the referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Categories are created.</p>
      * @return categories
      */
     @Valid
@@ -105,12 +105,7 @@ public interface ProductDraftImport extends ImportResource {
     public List<Attribute> getAttributes();
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Maps to <code>ProductData.metaTitle</code>.</p>
      * @return metaTitle
      */
     @Valid
@@ -118,12 +113,7 @@ public interface ProductDraftImport extends ImportResource {
     public LocalizedString getMetaTitle();
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Maps to <code>ProductData.metaDescription</code>.</p>
      * @return metaDescription
      */
     @Valid
@@ -131,12 +121,7 @@ public interface ProductDraftImport extends ImportResource {
     public LocalizedString getMetaDescription();
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Maps to <code>ProductData.metaKeywords</code>.</p>
      * @return metaKeywords
      */
     @Valid
@@ -144,7 +129,7 @@ public interface ProductDraftImport extends ImportResource {
     public LocalizedString getMetaKeywords();
 
     /**
-     *  <p>The master Product variant. Required if the <code>variants</code> array contains a Product Variant.</p>
+     *  <p>The master ProductVariant. Required if <code>variants</code> contains at least one ProductVariant.</p>
      * @return masterVariant
      */
     @Valid
@@ -152,7 +137,7 @@ public interface ProductDraftImport extends ImportResource {
     public ProductVariantDraftImport getMasterVariant();
 
     /**
-     *  <p>An array of related Product Variants.</p>
+     *  <p>An array of related ProductVariants.</p>
      * @return variants
      */
     @Valid
@@ -160,7 +145,7 @@ public interface ProductDraftImport extends ImportResource {
     public List<ProductVariantDraftImport> getVariants();
 
     /**
-     *  <p>The Reference to the TaxCategory with which the ProductDraft is associated. If referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary TaxCategory is created.</p>
+     *  <p>Maps to <code>Product.taxCategory</code>. If the referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p>
      * @return taxCategory
      */
     @Valid
@@ -168,23 +153,7 @@ public interface ProductDraftImport extends ImportResource {
     public TaxCategoryKeyReference getTaxCategory();
 
     /**
-     *  <p>Search keywords are primarily used by the suggester but are also considered for the full-text search. SearchKeywords is a JSON object where the keys are of IETF language tag. The value to a language tag key is an array of SearchKeyword for the specific language.</p>
-     *  <pre><code>{
-     *    "en": [
-     *      { "text": "Multi tool" },
-     *      { "text": "Swiss Army Knife", "suggestTokenizer": { "type": "whitespace" } }
-     *    ],
-     *    "de": [
-     *      {
-     *        "text": "Schweizer Messer",
-     *        "suggestTokenizer": {
-     *          "type": "custom",
-     *          "inputs": ["schweizer messer", "offiziersmesser", "sackmesser"]
-     *        }
-     *      }
-     *    ]
-     *  }
-     *  </code></pre>
+     *  <p>Maps to <code>ProductData.searchKeywords</code>.</p>
      * @return searchKeywords
      */
     @Valid
@@ -192,7 +161,7 @@ public interface ProductDraftImport extends ImportResource {
     public SearchKeywords getSearchKeywords();
 
     /**
-     *  <p>The Reference to the State with which the ProductDraft is associated. If referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary State is created.</p>
+     *  <p>Maps to <code>Product.state</code>. If the referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced State is created.</p>
      * @return state
      */
     @Valid
@@ -208,7 +177,7 @@ public interface ProductDraftImport extends ImportResource {
     public Boolean getPublish();
 
     /**
-     *  <p>Determines the type of Prices the API uses. If not provided, the existing <code>Product.priceMode</code> is not changed.</p>
+     *  <p>Maps to <code>Product.priceMode</code>. If not provided, the existing <code>Product.priceMode</code> is not changed.</p>
      * @return priceMode
      */
 
@@ -216,42 +185,42 @@ public interface ProductDraftImport extends ImportResource {
     public ProductPriceModeEnum getPriceMode();
 
     /**
-     *  <p>User-defined unique identifier. If a Product with this <code>key</code> exists, it will be updated with the imported data.</p>
+     *  <p>User-defined unique identifier. If a Product with this <code>key</code> exists, it is updated with the imported data.</p>
      * @param key value to be set
      */
 
     public void setKey(final String key);
 
     /**
-     *  <p>The <code>productType</code> of a Product. Maps to <code>Product.productType</code>. The Reference to the ProductType with which the ProductDraft is associated. If referenced ProductType does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductType is created.</p>
+     *  <p>Maps to <code>Product.productType</code>. If the referenced ProductType does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced ProductType is created.</p>
      * @param productType value to be set
      */
 
     public void setProductType(final ProductTypeKeyReference productType);
 
     /**
-     * set name
+     *  <p>Maps to <code>ProductData.name</code>.</p>
      * @param name value to be set
      */
 
     public void setName(final LocalizedString name);
 
     /**
-     *  <p>Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a project, but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.</p>
+     *  <p>Maps to <code>ProductData.slug</code>.</p>
      * @param slug value to be set
      */
 
     public void setSlug(final LocalizedString slug);
 
     /**
-     *  <p>Maps to <code>Product.description</code>.</p>
+     *  <p>Maps to <code>ProductData.description</code>.</p>
      * @param description value to be set
      */
 
     public void setDescription(final LocalizedString description);
 
     /**
-     *  <p>The Reference to the Categories with which the ProductDraft is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
+     *  <p>Maps to <code>ProductData.categories</code>. If the referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Categories are created.</p>
      * @param categories values to be set
      */
 
@@ -259,7 +228,7 @@ public interface ProductDraftImport extends ImportResource {
     public void setCategories(final CategoryKeyReference... categories);
 
     /**
-     *  <p>The Reference to the Categories with which the ProductDraft is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p>
+     *  <p>Maps to <code>ProductData.categories</code>. If the referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Categories are created.</p>
      * @param categories values to be set
      */
 
@@ -281,50 +250,35 @@ public interface ProductDraftImport extends ImportResource {
     public void setAttributes(final List<Attribute> attributes);
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Maps to <code>ProductData.metaTitle</code>.</p>
      * @param metaTitle value to be set
      */
 
     public void setMetaTitle(final LocalizedString metaTitle);
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Maps to <code>ProductData.metaDescription</code>.</p>
      * @param metaDescription value to be set
      */
 
     public void setMetaDescription(final LocalizedString metaDescription);
 
     /**
-     *  <p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-     *  <pre><code>{
-     *    "de": "Hundefutter",
-     *    "en": "dog food"
-     *  }
-     *  </code></pre>
+     *  <p>Maps to <code>ProductData.metaKeywords</code>.</p>
      * @param metaKeywords value to be set
      */
 
     public void setMetaKeywords(final LocalizedString metaKeywords);
 
     /**
-     *  <p>The master Product variant. Required if the <code>variants</code> array contains a Product Variant.</p>
+     *  <p>The master ProductVariant. Required if <code>variants</code> contains at least one ProductVariant.</p>
      * @param masterVariant value to be set
      */
 
     public void setMasterVariant(final ProductVariantDraftImport masterVariant);
 
     /**
-     *  <p>An array of related Product Variants.</p>
+     *  <p>An array of related ProductVariants.</p>
      * @param variants values to be set
      */
 
@@ -332,44 +286,28 @@ public interface ProductDraftImport extends ImportResource {
     public void setVariants(final ProductVariantDraftImport... variants);
 
     /**
-     *  <p>An array of related Product Variants.</p>
+     *  <p>An array of related ProductVariants.</p>
      * @param variants values to be set
      */
 
     public void setVariants(final List<ProductVariantDraftImport> variants);
 
     /**
-     *  <p>The Reference to the TaxCategory with which the ProductDraft is associated. If referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary TaxCategory is created.</p>
+     *  <p>Maps to <code>Product.taxCategory</code>. If the referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p>
      * @param taxCategory value to be set
      */
 
     public void setTaxCategory(final TaxCategoryKeyReference taxCategory);
 
     /**
-     *  <p>Search keywords are primarily used by the suggester but are also considered for the full-text search. SearchKeywords is a JSON object where the keys are of IETF language tag. The value to a language tag key is an array of SearchKeyword for the specific language.</p>
-     *  <pre><code>{
-     *    "en": [
-     *      { "text": "Multi tool" },
-     *      { "text": "Swiss Army Knife", "suggestTokenizer": { "type": "whitespace" } }
-     *    ],
-     *    "de": [
-     *      {
-     *        "text": "Schweizer Messer",
-     *        "suggestTokenizer": {
-     *          "type": "custom",
-     *          "inputs": ["schweizer messer", "offiziersmesser", "sackmesser"]
-     *        }
-     *      }
-     *    ]
-     *  }
-     *  </code></pre>
+     *  <p>Maps to <code>ProductData.searchKeywords</code>.</p>
      * @param searchKeywords value to be set
      */
 
     public void setSearchKeywords(final SearchKeywords searchKeywords);
 
     /**
-     *  <p>The Reference to the State with which the ProductDraft is associated. If referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary State is created.</p>
+     *  <p>Maps to <code>Product.state</code>. If the referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced State is created.</p>
      * @param state value to be set
      */
 
@@ -383,7 +321,7 @@ public interface ProductDraftImport extends ImportResource {
     public void setPublish(final Boolean publish);
 
     /**
-     *  <p>Determines the type of Prices the API uses. If not provided, the existing <code>Product.priceMode</code> is not changed.</p>
+     *  <p>Maps to <code>Product.priceMode</code>. If not provided, the existing <code>Product.priceMode</code> is not changed.</p>
      * @param priceMode value to be set
      */
 

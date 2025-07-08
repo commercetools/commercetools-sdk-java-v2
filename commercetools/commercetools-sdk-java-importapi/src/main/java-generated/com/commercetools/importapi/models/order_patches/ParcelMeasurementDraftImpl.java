@@ -43,7 +43,7 @@ public class ParcelMeasurementDraftImpl implements ParcelMeasurementDraft, Model
     }
 
     /**
-     *
+     *  <p><code>id</code> of an existing Parcel.</p>
      */
 
     public String getParcelId() {
@@ -51,7 +51,7 @@ public class ParcelMeasurementDraftImpl implements ParcelMeasurementDraft, Model
     }
 
     /**
-     *
+     *  <p>Information about the dimensions of the Parcel.</p>
      */
 
     public com.commercetools.importapi.models.orders.ParcelMeasurements getMeasurements() {

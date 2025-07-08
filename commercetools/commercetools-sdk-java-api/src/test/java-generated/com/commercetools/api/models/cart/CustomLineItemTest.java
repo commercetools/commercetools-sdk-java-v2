@@ -58,7 +58,10 @@ public class CustomLineItemTest {
                         CustomLineItem.builder()
                                 .shippingDetails(new com.commercetools.api.models.cart.ItemShippingDetailsImpl()) },
                 new Object[] { "priceMode", CustomLineItem.builder()
-                        .priceMode(com.commercetools.api.models.cart.CustomLineItemPriceMode.findEnum("Standard")) } };
+                        .priceMode(com.commercetools.api.models.cart.CustomLineItemPriceMode.findEnum("Standard")) },
+                new Object[] { "recurrenceInfo", CustomLineItem.builder()
+                        .recurrenceInfo(
+                            new com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoImpl()) } };
     }
 
     @Test
@@ -191,5 +194,13 @@ public class CustomLineItemTest {
         value.setPriceMode(com.commercetools.api.models.cart.CustomLineItemPriceMode.findEnum("Standard"));
         Assertions.assertThat(value.getPriceMode())
                 .isEqualTo(com.commercetools.api.models.cart.CustomLineItemPriceMode.findEnum("Standard"));
+    }
+
+    @Test
+    public void recurrenceInfo() {
+        CustomLineItem value = CustomLineItem.of();
+        value.setRecurrenceInfo(new com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoImpl());
+        Assertions.assertThat(value.getRecurrenceInfo())
+                .isEqualTo(new com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoImpl());
     }
 }

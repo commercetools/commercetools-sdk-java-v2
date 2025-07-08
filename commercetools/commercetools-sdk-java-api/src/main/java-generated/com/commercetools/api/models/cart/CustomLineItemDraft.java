@@ -9,6 +9,7 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoDraft;
 import com.commercetools.api.models.tax_category.TaxCategoryResourceIdentifier;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
@@ -125,6 +126,14 @@ public interface CustomLineItemDraft extends com.commercetools.api.models.Custom
     public CustomLineItemPriceMode getPriceMode();
 
     /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @return recurrenceInfo
+     */
+    @Valid
+    @JsonProperty("recurrenceInfo")
+    public CustomLineItemRecurrenceInfoDraft getRecurrenceInfo();
+
+    /**
      *  <p>Name of the Custom Line Item.</p>
      * @param name value to be set
      */
@@ -198,6 +207,13 @@ public interface CustomLineItemDraft extends com.commercetools.api.models.Custom
     public void setPriceMode(final CustomLineItemPriceMode priceMode);
 
     /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @param recurrenceInfo value to be set
+     */
+
+    public void setRecurrenceInfo(final CustomLineItemRecurrenceInfoDraft recurrenceInfo);
+
+    /**
      * factory method
      * @return instance of CustomLineItemDraft
      */
@@ -222,6 +238,7 @@ public interface CustomLineItemDraft extends com.commercetools.api.models.Custom
         instance.setCustom(template.getCustom());
         instance.setShippingDetails(template.getShippingDetails());
         instance.setPriceMode(template.getPriceMode());
+        instance.setRecurrenceInfo(template.getRecurrenceInfo());
         return instance;
     }
 
@@ -251,6 +268,8 @@ public interface CustomLineItemDraft extends com.commercetools.api.models.Custom
         instance.setShippingDetails(
             com.commercetools.api.models.cart.ItemShippingDetailsDraft.deepCopy(template.getShippingDetails()));
         instance.setPriceMode(template.getPriceMode());
+        instance.setRecurrenceInfo(com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoDraft
+                .deepCopy(template.getRecurrenceInfo()));
         return instance;
     }
 

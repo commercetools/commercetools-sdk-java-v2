@@ -37,7 +37,10 @@ public class PriceTest {
                                 .tiers(Collections
                                         .singletonList(new com.commercetools.api.models.common.PriceTierImpl())) },
                 new Object[] { "custom",
-                        Price.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) } };
+                        Price.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) },
+                new Object[] { "recurrencePolicy", Price.builder()
+                        .recurrencePolicy(
+                            new com.commercetools.api.models.recurrence_policy.RecurrencePolicyReferenceImpl()) } };
     }
 
     @Test
@@ -119,5 +122,13 @@ public class PriceTest {
         Price value = Price.of();
         value.setCustom(new com.commercetools.api.models.type.CustomFieldsImpl());
         Assertions.assertThat(value.getCustom()).isEqualTo(new com.commercetools.api.models.type.CustomFieldsImpl());
+    }
+
+    @Test
+    public void recurrencePolicy() {
+        Price value = Price.of();
+        value.setRecurrencePolicy(new com.commercetools.api.models.recurrence_policy.RecurrencePolicyReferenceImpl());
+        Assertions.assertThat(value.getRecurrencePolicy())
+                .isEqualTo(new com.commercetools.api.models.recurrence_policy.RecurrencePolicyReferenceImpl());
     }
 }

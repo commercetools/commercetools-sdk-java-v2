@@ -40,7 +40,10 @@ public class PriceDraftTest {
                                 .tiers(Collections
                                         .singletonList(new com.commercetools.api.models.common.PriceTierDraftImpl())) },
                 new Object[] { "custom",
-                        PriceDraft.builder().custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) } };
+                        PriceDraft.builder().custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) },
+                new Object[] { "recurrencePolicy", PriceDraft.builder()
+                        .recurrencePolicy(
+                            new com.commercetools.api.models.recurrence_policy.RecurrencePolicyResourceIdentifierImpl()) } };
     }
 
     @Test
@@ -116,5 +119,14 @@ public class PriceDraftTest {
         value.setCustom(new com.commercetools.api.models.type.CustomFieldsDraftImpl());
         Assertions.assertThat(value.getCustom())
                 .isEqualTo(new com.commercetools.api.models.type.CustomFieldsDraftImpl());
+    }
+
+    @Test
+    public void recurrencePolicy() {
+        PriceDraft value = PriceDraft.of();
+        value.setRecurrencePolicy(
+            new com.commercetools.api.models.recurrence_policy.RecurrencePolicyResourceIdentifierImpl());
+        Assertions.assertThat(value.getRecurrencePolicy())
+                .isEqualTo(new com.commercetools.api.models.recurrence_policy.RecurrencePolicyResourceIdentifierImpl());
     }
 }

@@ -14,6 +14,7 @@ import com.commercetools.api.models.common.DiscountedPriceDraft;
 import com.commercetools.api.models.common.Money;
 import com.commercetools.api.models.common.PriceTierDraft;
 import com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier;
+import com.commercetools.api.models.recurrence_policy.RecurrencePolicyResourceIdentifier;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -134,6 +135,14 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
     public CustomFieldsDraft getCustom();
 
     /**
+     *  <p>RecurrencePolicy for which this Price is valid.</p>
+     * @return recurrencePolicy
+     */
+    @Valid
+    @JsonProperty("recurrencePolicy")
+    public RecurrencePolicyResourceIdentifier getRecurrencePolicy();
+
+    /**
      *  <p>Staged changes for the StandalonePrice.</p>
      * @return staged
      */
@@ -238,6 +247,13 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
     public void setCustom(final CustomFieldsDraft custom);
 
     /**
+     *  <p>RecurrencePolicy for which this Price is valid.</p>
+     * @param recurrencePolicy value to be set
+     */
+
+    public void setRecurrencePolicy(final RecurrencePolicyResourceIdentifier recurrencePolicy);
+
+    /**
      *  <p>Staged changes for the StandalonePrice.</p>
      * @param staged value to be set
      */
@@ -277,6 +293,7 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
         instance.setTiers(template.getTiers());
         instance.setDiscounted(template.getDiscounted());
         instance.setCustom(template.getCustom());
+        instance.setRecurrencePolicy(template.getRecurrencePolicy());
         instance.setStaged(template.getStaged());
         instance.setActive(template.getActive());
         return instance;
@@ -313,6 +330,8 @@ public interface StandalonePriceDraft extends com.commercetools.api.models.Custo
         instance.setDiscounted(
             com.commercetools.api.models.common.DiscountedPriceDraft.deepCopy(template.getDiscounted()));
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
+        instance.setRecurrencePolicy(com.commercetools.api.models.recurrence_policy.RecurrencePolicyResourceIdentifier
+                .deepCopy(template.getRecurrencePolicy()));
         instance.setStaged(
             com.commercetools.api.models.standalone_price.StagedPriceDraft.deepCopy(template.getStaged()));
         instance.setActive(template.getActive());

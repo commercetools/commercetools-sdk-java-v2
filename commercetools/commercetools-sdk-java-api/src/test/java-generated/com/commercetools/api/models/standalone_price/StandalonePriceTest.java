@@ -55,7 +55,10 @@ public class StandalonePriceTest {
                         StandalonePrice.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) },
                 new Object[] { "staged", StandalonePrice.builder()
                         .staged(new com.commercetools.api.models.standalone_price.StagedStandalonePriceImpl()) },
-                new Object[] { "active", StandalonePrice.builder().active(true) } };
+                new Object[] { "active", StandalonePrice.builder().active(true) },
+                new Object[] { "recurrencePolicy", StandalonePrice.builder()
+                        .recurrencePolicy(
+                            new com.commercetools.api.models.recurrence_policy.RecurrencePolicyReferenceImpl()) } };
     }
 
     @Test
@@ -195,5 +198,13 @@ public class StandalonePriceTest {
         StandalonePrice value = StandalonePrice.of();
         value.setActive(true);
         Assertions.assertThat(value.getActive()).isEqualTo(true);
+    }
+
+    @Test
+    public void recurrencePolicy() {
+        StandalonePrice value = StandalonePrice.of();
+        value.setRecurrencePolicy(new com.commercetools.api.models.recurrence_policy.RecurrencePolicyReferenceImpl());
+        Assertions.assertThat(value.getRecurrencePolicy())
+                .isEqualTo(new com.commercetools.api.models.recurrence_policy.RecurrencePolicyReferenceImpl());
     }
 }

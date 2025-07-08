@@ -83,6 +83,16 @@ public class MyCartAddLineItemActionQueryBuilderDsl {
             MyCartAddLineItemActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<MyCartAddLineItemActionQueryBuilderDsl> recurrenceInfo(
+            Function<com.commercetools.api.predicates.query.recurring_order.LineItemRecurrenceInfoDraftQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.recurring_order.LineItemRecurrenceInfoDraftQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("recurrenceInfo"))
+                .inner(fn.apply(
+                    com.commercetools.api.predicates.query.recurring_order.LineItemRecurrenceInfoDraftQueryBuilderDsl
+                            .of())),
+            MyCartAddLineItemActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<MyCartAddLineItemActionQueryBuilderDsl> custom(
             Function<com.commercetools.api.predicates.query.type.CustomFieldsDraftQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.type.CustomFieldsDraftQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

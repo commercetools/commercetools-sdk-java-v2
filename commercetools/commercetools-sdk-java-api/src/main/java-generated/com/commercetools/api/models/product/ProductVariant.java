@@ -135,6 +135,14 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     public Boolean getScopedPriceDiscounted();
 
     /**
+     *  <p>Only available when Product price selection is used. Cannot be used in a Query Predicate.</p>
+     * @return recurrencePrices
+     */
+    @Valid
+    @JsonProperty("recurrencePrices")
+    public List<Price> getRecurrencePrices();
+
+    /**
      *  <p>A unique, sequential identifier of the Product Variant within the Product.</p>
      * @param id value to be set
      */
@@ -252,6 +260,21 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     public void setScopedPriceDiscounted(final Boolean scopedPriceDiscounted);
 
     /**
+     *  <p>Only available when Product price selection is used. Cannot be used in a Query Predicate.</p>
+     * @param recurrencePrices values to be set
+     */
+
+    @JsonIgnore
+    public void setRecurrencePrices(final Price... recurrencePrices);
+
+    /**
+     *  <p>Only available when Product price selection is used. Cannot be used in a Query Predicate.</p>
+     * @param recurrencePrices values to be set
+     */
+
+    public void setRecurrencePrices(final List<Price> recurrencePrices);
+
+    /**
      * factory method
      * @return instance of ProductVariant
      */
@@ -278,6 +301,7 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
         instance.setIsMatchingVariant(template.getIsMatchingVariant());
         instance.setScopedPrice(template.getScopedPrice());
         instance.setScopedPriceDiscounted(template.getScopedPriceDiscounted());
+        instance.setRecurrencePrices(template.getRecurrencePrices());
         return instance;
     }
 
@@ -323,6 +347,11 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
         instance.setIsMatchingVariant(template.getIsMatchingVariant());
         instance.setScopedPrice(com.commercetools.api.models.common.ScopedPrice.deepCopy(template.getScopedPrice()));
         instance.setScopedPriceDiscounted(template.getScopedPriceDiscounted());
+        instance.setRecurrencePrices(Optional.ofNullable(template.getRecurrencePrices())
+                .map(t -> t.stream()
+                        .map(com.commercetools.api.models.common.Price::deepCopy)
+                        .collect(Collectors.toList()))
+                .orElse(null));
         return instance;
     }
 

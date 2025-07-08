@@ -10,6 +10,7 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.cart.ItemShippingDetailsDraft;
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
+import com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraft;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -110,6 +111,14 @@ public interface MyLineItemDraft extends com.commercetools.api.models.Customizab
     public ItemShippingDetailsDraft getShippingDetails();
 
     /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @return recurrenceInfo
+     */
+    @Valid
+    @JsonProperty("recurrenceInfo")
+    public LineItemRecurrenceInfoDraft getRecurrenceInfo();
+
+    /**
      *  <p>Custom Fields for the Cart.</p>
      * @return custom
      */
@@ -183,6 +192,13 @@ public interface MyLineItemDraft extends com.commercetools.api.models.Customizab
     public void setShippingDetails(final ItemShippingDetailsDraft shippingDetails);
 
     /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @param recurrenceInfo value to be set
+     */
+
+    public void setRecurrenceInfo(final LineItemRecurrenceInfoDraft recurrenceInfo);
+
+    /**
      *  <p>Custom Fields for the Cart.</p>
      * @param custom value to be set
      */
@@ -213,6 +229,7 @@ public interface MyLineItemDraft extends com.commercetools.api.models.Customizab
         instance.setSupplyChannel(template.getSupplyChannel());
         instance.setDistributionChannel(template.getDistributionChannel());
         instance.setShippingDetails(template.getShippingDetails());
+        instance.setRecurrenceInfo(template.getRecurrenceInfo());
         instance.setCustom(template.getCustom());
         return instance;
     }
@@ -242,6 +259,8 @@ public interface MyLineItemDraft extends com.commercetools.api.models.Customizab
             com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getDistributionChannel()));
         instance.setShippingDetails(
             com.commercetools.api.models.cart.ItemShippingDetailsDraft.deepCopy(template.getShippingDetails()));
+        instance.setRecurrenceInfo(com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraft
+                .deepCopy(template.getRecurrenceInfo()));
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         return instance;
     }

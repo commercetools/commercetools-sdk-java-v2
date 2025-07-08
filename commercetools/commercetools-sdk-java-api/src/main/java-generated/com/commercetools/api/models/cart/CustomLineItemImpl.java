@@ -56,6 +56,8 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
 
     private com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode;
 
+    private com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfo recurrenceInfo;
+
     /**
      * create instance with all properties
      */
@@ -74,7 +76,8 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
             @JsonProperty("discountedPricePerQuantity") final java.util.List<com.commercetools.api.models.cart.DiscountedLineItemPriceForQuantity> discountedPricePerQuantity,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
             @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetails shippingDetails,
-            @JsonProperty("priceMode") final com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode) {
+            @JsonProperty("priceMode") final com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode,
+            @JsonProperty("recurrenceInfo") final com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfo recurrenceInfo) {
         this.id = id;
         this.key = key;
         this.name = name;
@@ -92,6 +95,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
         this.custom = custom;
         this.shippingDetails = shippingDetails;
         this.priceMode = priceMode;
+        this.recurrenceInfo = recurrenceInfo;
     }
 
     /**
@@ -240,6 +244,14 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
         return this.priceMode;
     }
 
+    /**
+     *  <p>Recurring Order and frequency data.</p>
+     */
+
+    public com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfo getRecurrenceInfo() {
+        return this.recurrenceInfo;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -328,6 +340,11 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
         this.priceMode = priceMode;
     }
 
+    public void setRecurrenceInfo(
+            final com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfo recurrenceInfo) {
+        this.recurrenceInfo = recurrenceInfo;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -355,6 +372,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
                 .append(custom, that.custom)
                 .append(shippingDetails, that.shippingDetails)
                 .append(priceMode, that.priceMode)
+                .append(recurrenceInfo, that.recurrenceInfo)
                 .append(id, that.id)
                 .append(key, that.key)
                 .append(name, that.name)
@@ -372,6 +390,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
                 .append(custom, that.custom)
                 .append(shippingDetails, that.shippingDetails)
                 .append(priceMode, that.priceMode)
+                .append(recurrenceInfo, that.recurrenceInfo)
                 .isEquals();
     }
 
@@ -394,6 +413,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
                 .append(custom)
                 .append(shippingDetails)
                 .append(priceMode)
+                .append(recurrenceInfo)
                 .toHashCode();
     }
 
@@ -416,6 +436,7 @@ public class CustomLineItemImpl implements CustomLineItem, ModelBase {
                 .append("custom", custom)
                 .append("shippingDetails", shippingDetails)
                 .append("priceMode", priceMode)
+                .append("recurrenceInfo", recurrenceInfo)
                 .build();
     }
 

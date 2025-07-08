@@ -21,6 +21,8 @@ public interface PriceselectingTrait<T extends PriceselectingTrait<T>> {
 
     List<String> getPriceChannel();
 
+    List<String> getPriceRecurrencePolicy();
+
     /**
      * set priceCurrency with the specificied value
      * @param priceCurrency value to be set
@@ -100,6 +102,22 @@ public interface PriceselectingTrait<T extends PriceselectingTrait<T>> {
      * @return PriceselectingTrait
      */
     <TValue> PriceselectingTrait<T> addPriceChannel(final TValue priceChannel);
+
+    /**
+     * set priceRecurrencePolicy with the specificied value
+     * @param priceRecurrencePolicy value to be set
+     * @param <TValue> value type
+     * @return PriceselectingTrait
+     */
+    <TValue> PriceselectingTrait<T> withPriceRecurrencePolicy(final TValue priceRecurrencePolicy);
+
+    /**
+     * add additional priceRecurrencePolicy query parameter
+     * @param priceRecurrencePolicy value to be added
+     * @param <TValue> value type
+     * @return PriceselectingTrait
+     */
+    <TValue> PriceselectingTrait<T> addPriceRecurrencePolicy(final TValue priceRecurrencePolicy);
 
     default PriceselectingTrait<T> asPriceselectingTrait() {
         return this;

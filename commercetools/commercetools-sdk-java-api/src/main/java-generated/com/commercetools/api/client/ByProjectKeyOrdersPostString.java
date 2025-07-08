@@ -24,7 +24,7 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  *  <p>Creates an Order from a Cart.</p>
  *  <p>The Cart must have a shipping address and an active Shipping Method set.</p>
  *  <p>The shipping address is used for tax calculation for a Cart with <code>Platform</code> TaxMode.</p>
- *  <p>Creating an Order produces the OrderCreated Message.</p>
+ *  <p>Creating an Order produces the OrderCreated Message. If the Order is created from a Recurring Order schedule, the OrderCreatedFromRecurringOrder Message is generated.</p>
  *  <p>If a server-side problem occurs, indicated by a 500 Internal Server Error HTTP response, the Order creation may still successfully complete after the error is returned. If you receive this error, you should verify the status of the Order by querying a unique identifier supplied during the creation request, such as the Order number.</p>
  *  <p>Specific Error Codes:</p>
  *  <ul>

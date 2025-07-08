@@ -78,7 +78,11 @@ public class LineItemTest {
                         LineItem.builder().custom(new com.commercetools.api.models.type.CustomFieldsImpl()) },
                 new Object[] { "addedAt", LineItem.builder().addedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
                 new Object[] { "lastModifiedAt",
-                        LineItem.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) } };
+                        LineItem.builder().lastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z")) },
+                new Object[] { "recurrenceInfo",
+                        LineItem.builder()
+                                .recurrenceInfo(
+                                    new com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoImpl()) } };
     }
 
     @Test
@@ -280,5 +284,13 @@ public class LineItemTest {
         LineItem value = LineItem.of();
         value.setLastModifiedAt(ZonedDateTime.parse("2023-06-01T12:00Z"));
         Assertions.assertThat(value.getLastModifiedAt()).isEqualTo(ZonedDateTime.parse("2023-06-01T12:00Z"));
+    }
+
+    @Test
+    public void recurrenceInfo() {
+        LineItem value = LineItem.of();
+        value.setRecurrenceInfo(new com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoImpl());
+        Assertions.assertThat(value.getRecurrenceInfo())
+                .isEqualTo(new com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoImpl());
     }
 }

@@ -99,6 +99,7 @@ public interface StagedOrder extends Order {
         instance.setOrigin(template.getOrigin());
         instance.setCart(template.getCart());
         instance.setQuote(template.getQuote());
+        instance.setRecurringOrder(template.getRecurringOrder());
         instance.setOrderState(template.getOrderState());
         instance.setShipmentState(template.getShipmentState());
         instance.setPaymentState(template.getPaymentState());
@@ -204,6 +205,8 @@ public interface StagedOrder extends Order {
         instance.setOrigin(template.getOrigin());
         instance.setCart(com.commercetools.api.models.cart.CartReference.deepCopy(template.getCart()));
         instance.setQuote(com.commercetools.api.models.quote.QuoteReference.deepCopy(template.getQuote()));
+        instance.setRecurringOrder(com.commercetools.api.models.recurring_order.RecurringOrderReference
+                .deepCopy(template.getRecurringOrder()));
         instance.setOrderState(template.getOrderState());
         instance.setShipmentState(template.getShipmentState());
         instance.setPaymentState(template.getPaymentState());

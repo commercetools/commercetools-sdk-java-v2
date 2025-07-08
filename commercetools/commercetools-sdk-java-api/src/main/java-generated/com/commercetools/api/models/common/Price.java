@@ -11,6 +11,7 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.channel.ChannelReference;
 import com.commercetools.api.models.customer_group.CustomerGroupReference;
+import com.commercetools.api.models.recurrence_policy.RecurrencePolicyReference;
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -129,6 +130,14 @@ public interface Price extends com.commercetools.api.models.Customizable<Price>,
     public CustomFields getCustom();
 
     /**
+     *  <p>Recurrence Policy for which this Price is valid.</p>
+     * @return recurrencePolicy
+     */
+    @Valid
+    @JsonProperty("recurrencePolicy")
+    public RecurrencePolicyReference getRecurrencePolicy();
+
+    /**
      *  <p>Unique identifier of this Price.</p>
      * @param id value to be set
      */
@@ -216,6 +225,13 @@ public interface Price extends com.commercetools.api.models.Customizable<Price>,
     public void setCustom(final CustomFields custom);
 
     /**
+     *  <p>Recurrence Policy for which this Price is valid.</p>
+     * @param recurrencePolicy value to be set
+     */
+
+    public void setRecurrencePolicy(final RecurrencePolicyReference recurrencePolicy);
+
+    /**
      * factory method
      * @return instance of Price
      */
@@ -241,6 +257,7 @@ public interface Price extends com.commercetools.api.models.Customizable<Price>,
         instance.setDiscounted(template.getDiscounted());
         instance.setTiers(template.getTiers());
         instance.setCustom(template.getCustom());
+        instance.setRecurrencePolicy(template.getRecurrencePolicy());
         return instance;
     }
 
@@ -273,6 +290,8 @@ public interface Price extends com.commercetools.api.models.Customizable<Price>,
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
+        instance.setRecurrencePolicy(com.commercetools.api.models.recurrence_policy.RecurrencePolicyReference
+                .deepCopy(template.getRecurrencePolicy()));
         return instance;
     }
 

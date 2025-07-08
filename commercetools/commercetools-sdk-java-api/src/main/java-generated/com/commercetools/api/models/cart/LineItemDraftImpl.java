@@ -52,6 +52,8 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    private com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraft recurrenceInfo;
+
     /**
      * create instance with all properties
      */
@@ -68,7 +70,8 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
             @JsonProperty("perMethodExternalTaxRate") final java.util.List<com.commercetools.api.models.cart.MethodExternalTaxRateDraft> perMethodExternalTaxRate,
             @JsonProperty("inventoryMode") final com.commercetools.api.models.cart.InventoryMode inventoryMode,
             @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
+            @JsonProperty("recurrenceInfo") final com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraft recurrenceInfo) {
         this.key = key;
         this.productId = productId;
         this.variantId = variantId;
@@ -84,6 +87,7 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
         this.inventoryMode = inventoryMode;
         this.shippingDetails = shippingDetails;
         this.custom = custom;
+        this.recurrenceInfo = recurrenceInfo;
     }
 
     /**
@@ -214,6 +218,14 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
         return this.custom;
     }
 
+    /**
+     *  <p>Recurring Order and frequency data.</p>
+     */
+
+    public com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraft getRecurrenceInfo() {
+        return this.recurrenceInfo;
+    }
+
     public void setKey(final String key) {
         this.key = key;
     }
@@ -282,6 +294,11 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
         this.custom = custom;
     }
 
+    public void setRecurrenceInfo(
+            final com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraft recurrenceInfo) {
+        this.recurrenceInfo = recurrenceInfo;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -307,6 +324,7 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
                 .append(inventoryMode, that.inventoryMode)
                 .append(shippingDetails, that.shippingDetails)
                 .append(custom, that.custom)
+                .append(recurrenceInfo, that.recurrenceInfo)
                 .append(key, that.key)
                 .append(productId, that.productId)
                 .append(variantId, that.variantId)
@@ -322,6 +340,7 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
                 .append(inventoryMode, that.inventoryMode)
                 .append(shippingDetails, that.shippingDetails)
                 .append(custom, that.custom)
+                .append(recurrenceInfo, that.recurrenceInfo)
                 .isEquals();
     }
 
@@ -342,6 +361,7 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
                 .append(inventoryMode)
                 .append(shippingDetails)
                 .append(custom)
+                .append(recurrenceInfo)
                 .toHashCode();
     }
 
@@ -362,6 +382,7 @@ public class LineItemDraftImpl implements LineItemDraft, ModelBase {
                 .append("inventoryMode", inventoryMode)
                 .append("shippingDetails", shippingDetails)
                 .append("custom", custom)
+                .append("recurrenceInfo", recurrenceInfo)
                 .build();
     }
 

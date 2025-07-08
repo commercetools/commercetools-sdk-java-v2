@@ -11,6 +11,7 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.common.Money;
+import com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraft;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -159,6 +160,14 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
     public CustomFieldsDraft getCustom();
 
     /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @return recurrenceInfo
+     */
+    @Valid
+    @JsonProperty("recurrenceInfo")
+    public LineItemRecurrenceInfoDraft getRecurrenceInfo();
+
+    /**
      *  <p>User-defined unique identifier of the LineItem.</p>
      * @param key value to be set
      */
@@ -274,6 +283,13 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
     public void setCustom(final CustomFieldsDraft custom);
 
     /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @param recurrenceInfo value to be set
+     */
+
+    public void setRecurrenceInfo(final LineItemRecurrenceInfoDraft recurrenceInfo);
+
+    /**
      * factory method
      * @return instance of LineItemDraft
      */
@@ -303,6 +319,7 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
         instance.setInventoryMode(template.getInventoryMode());
         instance.setShippingDetails(template.getShippingDetails());
         instance.setCustom(template.getCustom());
+        instance.setRecurrenceInfo(template.getRecurrenceInfo());
         return instance;
     }
 
@@ -343,6 +360,8 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
         instance.setShippingDetails(
             com.commercetools.api.models.cart.ItemShippingDetailsDraft.deepCopy(template.getShippingDetails()));
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
+        instance.setRecurrenceInfo(com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraft
+                .deepCopy(template.getRecurrenceInfo()));
         return instance;
     }
 

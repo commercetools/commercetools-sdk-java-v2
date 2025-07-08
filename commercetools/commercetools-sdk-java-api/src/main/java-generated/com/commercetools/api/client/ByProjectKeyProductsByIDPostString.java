@@ -123,6 +123,10 @@ public class ByProjectKeyProductsByIDPostString
         return this.getQueryParam("priceChannel");
     }
 
+    public List<String> getPriceRecurrencePolicy() {
+        return this.getQueryParam("priceRecurrencePolicy");
+    }
+
     public List<String> getExpand() {
         return this.getQueryParam("expand");
     }
@@ -545,6 +549,91 @@ public class ByProjectKeyProductsByIDPostString
     public <TValue> ByProjectKeyProductsByIDPostString addPriceChannel(final Collection<TValue> priceChannel) {
         return copy().addQueryParams(priceChannel.stream()
                 .map(s -> new ParamEntry<>("priceChannel", s.toString()))
+                .collect(Collectors.toList()));
+    }
+
+    /**
+     * set priceRecurrencePolicy with the specified value
+     * @param <TValue> value type
+     * @param priceRecurrencePolicy value to be set
+     * @return ByProjectKeyProductsByIDPostString
+     */
+    public <TValue> ByProjectKeyProductsByIDPostString withPriceRecurrencePolicy(final TValue priceRecurrencePolicy) {
+        return copy().withQueryParam("priceRecurrencePolicy", priceRecurrencePolicy);
+    }
+
+    /**
+     * add additional priceRecurrencePolicy query parameter
+     * @param <TValue> value type
+     * @param priceRecurrencePolicy value to be added
+     * @return ByProjectKeyProductsByIDPostString
+     */
+    public <TValue> ByProjectKeyProductsByIDPostString addPriceRecurrencePolicy(final TValue priceRecurrencePolicy) {
+        return copy().addQueryParam("priceRecurrencePolicy", priceRecurrencePolicy);
+    }
+
+    /**
+     * set priceRecurrencePolicy with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductsByIDPostString
+     */
+    public ByProjectKeyProductsByIDPostString withPriceRecurrencePolicy(final Supplier<String> supplier) {
+        return copy().withQueryParam("priceRecurrencePolicy", supplier.get());
+    }
+
+    /**
+     * add additional priceRecurrencePolicy query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductsByIDPostString
+     */
+    public ByProjectKeyProductsByIDPostString addPriceRecurrencePolicy(final Supplier<String> supplier) {
+        return copy().addQueryParam("priceRecurrencePolicy", supplier.get());
+    }
+
+    /**
+     * set priceRecurrencePolicy with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductsByIDPostString
+     */
+    public ByProjectKeyProductsByIDPostString withPriceRecurrencePolicy(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("priceRecurrencePolicy", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional priceRecurrencePolicy query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductsByIDPostString
+     */
+    public ByProjectKeyProductsByIDPostString addPriceRecurrencePolicy(
+            final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("priceRecurrencePolicy", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set priceRecurrencePolicy with the specified values
+     * @param <TValue> value type
+     * @param priceRecurrencePolicy values to be set
+     * @return ByProjectKeyProductsByIDPostString
+     */
+    public <TValue> ByProjectKeyProductsByIDPostString withPriceRecurrencePolicy(
+            final Collection<TValue> priceRecurrencePolicy) {
+        return copy().withoutQueryParam("priceRecurrencePolicy")
+                .addQueryParams(priceRecurrencePolicy.stream()
+                        .map(s -> new ParamEntry<>("priceRecurrencePolicy", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional priceRecurrencePolicy query parameters
+     * @param <TValue> value type
+     * @param priceRecurrencePolicy values to be added
+     * @return ByProjectKeyProductsByIDPostString
+     */
+    public <TValue> ByProjectKeyProductsByIDPostString addPriceRecurrencePolicy(
+            final Collection<TValue> priceRecurrencePolicy) {
+        return copy().addQueryParams(priceRecurrencePolicy.stream()
+                .map(s -> new ParamEntry<>("priceRecurrencePolicy", s.toString()))
                 .collect(Collectors.toList()));
     }
 

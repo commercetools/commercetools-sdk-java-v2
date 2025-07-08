@@ -65,6 +65,9 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    @Nullable
+    private com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraft recurrenceInfo;
+
     /**
      *  <p>User-defined unique identifier of the LineItem.</p>
      * @param key value to be set
@@ -409,6 +412,45 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @param builder function to build the recurrenceInfo value
+     * @return Builder
+     */
+
+    public StagedOrderAddLineItemActionBuilder recurrenceInfo(
+            Function<com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraftBuilder, com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraftBuilder> builder) {
+        this.recurrenceInfo = builder
+                .apply(com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraftBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @param builder function to build the recurrenceInfo value
+     * @return Builder
+     */
+
+    public StagedOrderAddLineItemActionBuilder withRecurrenceInfo(
+            Function<com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraftBuilder, com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraft> builder) {
+        this.recurrenceInfo = builder
+                .apply(com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @param recurrenceInfo value to be set
+     * @return Builder
+     */
+
+    public StagedOrderAddLineItemActionBuilder recurrenceInfo(
+            @Nullable final com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraft recurrenceInfo) {
+        this.recurrenceInfo = recurrenceInfo;
+        return this;
+    }
+
+    /**
      *  <p>User-defined unique identifier of the LineItem.</p>
      * @return key
      */
@@ -553,13 +595,23 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     }
 
     /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @return recurrenceInfo
+     */
+
+    @Nullable
+    public com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraft getRecurrenceInfo() {
+        return this.recurrenceInfo;
+    }
+
+    /**
      * builds StagedOrderAddLineItemAction with checking for non-null required values
      * @return StagedOrderAddLineItemAction
      */
     public StagedOrderAddLineItemAction build() {
         return new StagedOrderAddLineItemActionImpl(key, productId, variantId, sku, quantity, addedAt,
             distributionChannel, supplyChannel, externalPrice, externalTotalPrice, externalTaxRate, inventoryMode,
-            shippingDetails, custom);
+            shippingDetails, custom, recurrenceInfo);
     }
 
     /**
@@ -569,7 +621,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
     public StagedOrderAddLineItemAction buildUnchecked() {
         return new StagedOrderAddLineItemActionImpl(key, productId, variantId, sku, quantity, addedAt,
             distributionChannel, supplyChannel, externalPrice, externalTotalPrice, externalTaxRate, inventoryMode,
-            shippingDetails, custom);
+            shippingDetails, custom, recurrenceInfo);
     }
 
     /**
@@ -601,6 +653,7 @@ public class StagedOrderAddLineItemActionBuilder implements Builder<StagedOrderA
         builder.inventoryMode = template.getInventoryMode();
         builder.shippingDetails = template.getShippingDetails();
         builder.custom = template.getCustom();
+        builder.recurrenceInfo = template.getRecurrenceInfo();
         return builder;
     }
 

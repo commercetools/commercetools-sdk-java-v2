@@ -46,6 +46,8 @@ public class StagedOrderAddCustomLineItemActionImpl implements StagedOrderAddCus
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    private com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoDraft recurrenceInfo;
+
     /**
      * create instance with all properties
      */
@@ -58,7 +60,8 @@ public class StagedOrderAddCustomLineItemActionImpl implements StagedOrderAddCus
             @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate,
             @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails,
             @JsonProperty("priceMode") final com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
+            @JsonProperty("recurrenceInfo") final com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoDraft recurrenceInfo) {
         this.money = money;
         this.name = name;
         this.key = key;
@@ -69,6 +72,7 @@ public class StagedOrderAddCustomLineItemActionImpl implements StagedOrderAddCus
         this.shippingDetails = shippingDetails;
         this.priceMode = priceMode;
         this.custom = custom;
+        this.recurrenceInfo = recurrenceInfo;
         this.action = ADD_CUSTOM_LINE_ITEM;
     }
 
@@ -170,6 +174,14 @@ public class StagedOrderAddCustomLineItemActionImpl implements StagedOrderAddCus
         return this.custom;
     }
 
+    /**
+     *  <p>Recurring Order and frequency data.</p>
+     */
+
+    public com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoDraft getRecurrenceInfo() {
+        return this.recurrenceInfo;
+    }
+
     public void setMoney(final com.commercetools.api.models.common.Money money) {
         this.money = money;
     }
@@ -211,6 +223,11 @@ public class StagedOrderAddCustomLineItemActionImpl implements StagedOrderAddCus
         this.custom = custom;
     }
 
+    public void setRecurrenceInfo(
+            final com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoDraft recurrenceInfo) {
+        this.recurrenceInfo = recurrenceInfo;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -232,6 +249,7 @@ public class StagedOrderAddCustomLineItemActionImpl implements StagedOrderAddCus
                 .append(shippingDetails, that.shippingDetails)
                 .append(priceMode, that.priceMode)
                 .append(custom, that.custom)
+                .append(recurrenceInfo, that.recurrenceInfo)
                 .append(action, that.action)
                 .append(money, that.money)
                 .append(name, that.name)
@@ -243,6 +261,7 @@ public class StagedOrderAddCustomLineItemActionImpl implements StagedOrderAddCus
                 .append(shippingDetails, that.shippingDetails)
                 .append(priceMode, that.priceMode)
                 .append(custom, that.custom)
+                .append(recurrenceInfo, that.recurrenceInfo)
                 .isEquals();
     }
 
@@ -259,6 +278,7 @@ public class StagedOrderAddCustomLineItemActionImpl implements StagedOrderAddCus
                 .append(shippingDetails)
                 .append(priceMode)
                 .append(custom)
+                .append(recurrenceInfo)
                 .toHashCode();
     }
 
@@ -275,6 +295,7 @@ public class StagedOrderAddCustomLineItemActionImpl implements StagedOrderAddCus
                 .append("shippingDetails", shippingDetails)
                 .append("priceMode", priceMode)
                 .append("custom", custom)
+                .append("recurrenceInfo", recurrenceInfo)
                 .build();
     }
 

@@ -359,6 +359,14 @@ public interface CartUpdateAction extends com.commercetools.api.models.ResourceU
     }
 
     /**
+     * builder for setCustomLineItemRecurrenceInfo subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.cart.CartSetCustomLineItemRecurrenceInfoActionBuilder setCustomLineItemRecurrenceInfoBuilder() {
+        return com.commercetools.api.models.cart.CartSetCustomLineItemRecurrenceInfoActionBuilder.of();
+    }
+
+    /**
      * builder for setCustomLineItemShippingDetails subtype
      * @return builder
      */
@@ -500,6 +508,14 @@ public interface CartUpdateAction extends com.commercetools.api.models.ResourceU
      */
     public static com.commercetools.api.models.cart.CartSetLineItemPriceActionBuilder setLineItemPriceBuilder() {
         return com.commercetools.api.models.cart.CartSetLineItemPriceActionBuilder.of();
+    }
+
+    /**
+     * builder for setLineItemRecurrenceInfo subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.cart.CartSetLineItemRecurrenceInfoActionBuilder setLineItemRecurrenceInfoBuilder() {
+        return com.commercetools.api.models.cart.CartSetLineItemRecurrenceInfoActionBuilder.of();
     }
 
     /**

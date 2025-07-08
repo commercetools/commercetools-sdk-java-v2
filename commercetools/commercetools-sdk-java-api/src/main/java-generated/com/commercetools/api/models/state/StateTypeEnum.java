@@ -20,6 +20,9 @@ public interface StateTypeEnum extends JsonEnum {
     <p>Used by Orders.</p> */
     StateTypeEnum ORDER_STATE = StateTypeEnumEnum.ORDER_STATE;
     /**
+    <p>Used by RecurringOrders.</p> */
+    StateTypeEnum RECURRING_ORDER_STATE = StateTypeEnumEnum.RECURRING_ORDER_STATE;
+    /**
     <p>Used by LineItems and CustomLineItems in Carts and Orders, with the <code>builtin</code> field always set to <code>true</code> by default. In addition, the <code>initial</code> field is set to <code>true</code> upon creation.</p> */
     StateTypeEnum LINE_ITEM_STATE = StateTypeEnumEnum.LINE_ITEM_STATE;
     /**
@@ -49,6 +52,11 @@ public interface StateTypeEnum extends JsonEnum {
          * OrderState
          */
         ORDER_STATE("OrderState"),
+
+        /**
+         * RecurringOrderState
+         */
+        RECURRING_ORDER_STATE("RecurringOrderState"),
 
         /**
          * LineItemState

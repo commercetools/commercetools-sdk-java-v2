@@ -59,6 +59,9 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     @Nullable
     private Boolean scopedPriceDiscounted;
 
+    @Nullable
+    private java.util.List<com.commercetools.api.models.common.Price> recurrencePrices;
+
     /**
      *  <p>A unique, sequential identifier of the Product Variant within the Product.</p>
      * @param id value to be set
@@ -574,6 +577,95 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
+     *  <p>Only available when Product price selection is used. Cannot be used in a Query Predicate.</p>
+     * @param recurrencePrices value to be set
+     * @return Builder
+     */
+
+    public ProductVariantBuilder recurrencePrices(
+            @Nullable final com.commercetools.api.models.common.Price... recurrencePrices) {
+        this.recurrencePrices = new ArrayList<>(Arrays.asList(recurrencePrices));
+        return this;
+    }
+
+    /**
+     *  <p>Only available when Product price selection is used. Cannot be used in a Query Predicate.</p>
+     * @param recurrencePrices value to be set
+     * @return Builder
+     */
+
+    public ProductVariantBuilder recurrencePrices(
+            @Nullable final java.util.List<com.commercetools.api.models.common.Price> recurrencePrices) {
+        this.recurrencePrices = recurrencePrices;
+        return this;
+    }
+
+    /**
+     *  <p>Only available when Product price selection is used. Cannot be used in a Query Predicate.</p>
+     * @param recurrencePrices value to be set
+     * @return Builder
+     */
+
+    public ProductVariantBuilder plusRecurrencePrices(
+            @Nullable final com.commercetools.api.models.common.Price... recurrencePrices) {
+        if (this.recurrencePrices == null) {
+            this.recurrencePrices = new ArrayList<>();
+        }
+        this.recurrencePrices.addAll(Arrays.asList(recurrencePrices));
+        return this;
+    }
+
+    /**
+     *  <p>Only available when Product price selection is used. Cannot be used in a Query Predicate.</p>
+     * @param builder function to build the recurrencePrices value
+     * @return Builder
+     */
+
+    public ProductVariantBuilder plusRecurrencePrices(
+            Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.PriceBuilder> builder) {
+        if (this.recurrencePrices == null) {
+            this.recurrencePrices = new ArrayList<>();
+        }
+        this.recurrencePrices.add(builder.apply(com.commercetools.api.models.common.PriceBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Only available when Product price selection is used. Cannot be used in a Query Predicate.</p>
+     * @param builder function to build the recurrencePrices value
+     * @return Builder
+     */
+
+    public ProductVariantBuilder withRecurrencePrices(
+            Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.PriceBuilder> builder) {
+        this.recurrencePrices = new ArrayList<>();
+        this.recurrencePrices.add(builder.apply(com.commercetools.api.models.common.PriceBuilder.of()).build());
+        return this;
+    }
+
+    /**
+     *  <p>Only available when Product price selection is used. Cannot be used in a Query Predicate.</p>
+     * @param builder function to build the recurrencePrices value
+     * @return Builder
+     */
+
+    public ProductVariantBuilder addRecurrencePrices(
+            Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.Price> builder) {
+        return plusRecurrencePrices(builder.apply(com.commercetools.api.models.common.PriceBuilder.of()));
+    }
+
+    /**
+     *  <p>Only available when Product price selection is used. Cannot be used in a Query Predicate.</p>
+     * @param builder function to build the recurrencePrices value
+     * @return Builder
+     */
+
+    public ProductVariantBuilder setRecurrencePrices(
+            Function<com.commercetools.api.models.common.PriceBuilder, com.commercetools.api.models.common.Price> builder) {
+        return recurrencePrices(builder.apply(com.commercetools.api.models.common.PriceBuilder.of()));
+    }
+
+    /**
      *  <p>A unique, sequential identifier of the Product Variant within the Product.</p>
      * @return id
      */
@@ -694,13 +786,23 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
+     *  <p>Only available when Product price selection is used. Cannot be used in a Query Predicate.</p>
+     * @return recurrencePrices
+     */
+
+    @Nullable
+    public java.util.List<com.commercetools.api.models.common.Price> getRecurrencePrices() {
+        return this.recurrencePrices;
+    }
+
+    /**
      * builds ProductVariant with checking for non-null required values
      * @return ProductVariant
      */
     public ProductVariant build() {
         Objects.requireNonNull(id, ProductVariant.class + ": id is missing");
         return new ProductVariantImpl(id, sku, key, prices, attributes, price, images, assets, availability,
-            isMatchingVariant, scopedPrice, scopedPriceDiscounted);
+            isMatchingVariant, scopedPrice, scopedPriceDiscounted, recurrencePrices);
     }
 
     /**
@@ -709,7 +811,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
      */
     public ProductVariant buildUnchecked() {
         return new ProductVariantImpl(id, sku, key, prices, attributes, price, images, assets, availability,
-            isMatchingVariant, scopedPrice, scopedPriceDiscounted);
+            isMatchingVariant, scopedPrice, scopedPriceDiscounted, recurrencePrices);
     }
 
     /**
@@ -739,6 +841,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
         builder.isMatchingVariant = template.getIsMatchingVariant();
         builder.scopedPrice = template.getScopedPrice();
         builder.scopedPriceDiscounted = template.getScopedPriceDiscounted();
+        builder.recurrencePrices = template.getRecurrencePrices();
         return builder;
     }
 

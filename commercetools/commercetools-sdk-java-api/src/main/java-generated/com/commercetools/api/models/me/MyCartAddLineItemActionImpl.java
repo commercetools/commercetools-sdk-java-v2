@@ -44,6 +44,8 @@ public class MyCartAddLineItemActionImpl implements MyCartAddLineItemAction, Mod
 
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
+    private com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraft recurrenceInfo;
+
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
@@ -57,6 +59,7 @@ public class MyCartAddLineItemActionImpl implements MyCartAddLineItemAction, Mod
             @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel,
             @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel,
             @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails,
+            @JsonProperty("recurrenceInfo") final com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraft recurrenceInfo,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.key = key;
         this.productId = productId;
@@ -67,6 +70,7 @@ public class MyCartAddLineItemActionImpl implements MyCartAddLineItemAction, Mod
         this.distributionChannel = distributionChannel;
         this.supplyChannel = supplyChannel;
         this.shippingDetails = shippingDetails;
+        this.recurrenceInfo = recurrenceInfo;
         this.custom = custom;
         this.action = ADD_LINE_ITEM;
     }
@@ -164,6 +168,14 @@ public class MyCartAddLineItemActionImpl implements MyCartAddLineItemAction, Mod
     }
 
     /**
+     *  <p>Recurring Order and frequency data.</p>
+     */
+
+    public com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraft getRecurrenceInfo() {
+        return this.recurrenceInfo;
+    }
+
+    /**
      *  <p>Custom Fields for the Line Item.</p>
      */
 
@@ -208,6 +220,11 @@ public class MyCartAddLineItemActionImpl implements MyCartAddLineItemAction, Mod
         this.shippingDetails = shippingDetails;
     }
 
+    public void setRecurrenceInfo(
+            final com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraft recurrenceInfo) {
+        this.recurrenceInfo = recurrenceInfo;
+    }
+
     public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
     }
@@ -232,6 +249,7 @@ public class MyCartAddLineItemActionImpl implements MyCartAddLineItemAction, Mod
                 .append(distributionChannel, that.distributionChannel)
                 .append(supplyChannel, that.supplyChannel)
                 .append(shippingDetails, that.shippingDetails)
+                .append(recurrenceInfo, that.recurrenceInfo)
                 .append(custom, that.custom)
                 .append(action, that.action)
                 .append(key, that.key)
@@ -243,6 +261,7 @@ public class MyCartAddLineItemActionImpl implements MyCartAddLineItemAction, Mod
                 .append(distributionChannel, that.distributionChannel)
                 .append(supplyChannel, that.supplyChannel)
                 .append(shippingDetails, that.shippingDetails)
+                .append(recurrenceInfo, that.recurrenceInfo)
                 .append(custom, that.custom)
                 .isEquals();
     }
@@ -259,6 +278,7 @@ public class MyCartAddLineItemActionImpl implements MyCartAddLineItemAction, Mod
                 .append(distributionChannel)
                 .append(supplyChannel)
                 .append(shippingDetails)
+                .append(recurrenceInfo)
                 .append(custom)
                 .toHashCode();
     }
@@ -275,6 +295,7 @@ public class MyCartAddLineItemActionImpl implements MyCartAddLineItemAction, Mod
                 .append("distributionChannel", distributionChannel)
                 .append("supplyChannel", supplyChannel)
                 .append("shippingDetails", shippingDetails)
+                .append("recurrenceInfo", recurrenceInfo)
                 .append("custom", custom)
                 .build();
     }

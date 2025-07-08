@@ -35,6 +35,7 @@ import com.commercetools.api.models.common.CreatedBy;
 import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.customer_group.CustomerGroupReference;
 import com.commercetools.api.models.quote.QuoteReference;
+import com.commercetools.api.models.recurring_order.RecurringOrderReference;
 import com.commercetools.api.models.state.StateReference;
 import com.commercetools.api.models.store.StoreKeyReference;
 import com.commercetools.api.models.type.CustomFields;
@@ -405,6 +406,14 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     @Valid
     @JsonProperty("quote")
     public QuoteReference getQuote();
+
+    /**
+     *  <p>Reference to the RecurringOrder that generated this Order.</p>
+     * @return recurringOrder
+     */
+    @Valid
+    @JsonProperty("recurringOrder")
+    public RecurringOrderReference getRecurringOrder();
 
     /**
      *  <p>Current status of the Order.</p>
@@ -861,6 +870,13 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
     public void setQuote(final QuoteReference quote);
 
     /**
+     *  <p>Reference to the RecurringOrder that generated this Order.</p>
+     * @param recurringOrder value to be set
+     */
+
+    public void setRecurringOrder(final RecurringOrderReference recurringOrder);
+
+    /**
      *  <p>Current status of the Order.</p>
      * @param orderState value to be set
      */
@@ -1030,6 +1046,7 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
         instance.setOrigin(template.getOrigin());
         instance.setCart(template.getCart());
         instance.setQuote(template.getQuote());
+        instance.setRecurringOrder(template.getRecurringOrder());
         instance.setOrderState(template.getOrderState());
         instance.setShipmentState(template.getShipmentState());
         instance.setPaymentState(template.getPaymentState());
@@ -1139,6 +1156,8 @@ public interface Order extends BaseResource, OrderMixin, com.commercetools.api.m
         instance.setOrigin(template.getOrigin());
         instance.setCart(com.commercetools.api.models.cart.CartReference.deepCopy(template.getCart()));
         instance.setQuote(com.commercetools.api.models.quote.QuoteReference.deepCopy(template.getQuote()));
+        instance.setRecurringOrder(com.commercetools.api.models.recurring_order.RecurringOrderReference
+                .deepCopy(template.getRecurringOrder()));
         instance.setOrderState(template.getOrderState());
         instance.setShipmentState(template.getShipmentState());
         instance.setPaymentState(template.getPaymentState());

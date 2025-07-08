@@ -104,6 +104,10 @@ public class OrderTest {
                         Order.builder().cart(new com.commercetools.api.models.cart.CartReferenceImpl()) },
                 new Object[] { "quote",
                         Order.builder().quote(new com.commercetools.api.models.quote.QuoteReferenceImpl()) },
+                new Object[] { "recurringOrder",
+                        Order.builder()
+                                .recurringOrder(
+                                    new com.commercetools.api.models.recurring_order.RecurringOrderReferenceImpl()) },
                 new Object[] { "orderState",
                         Order.builder().orderState(com.commercetools.api.models.order.OrderState.findEnum("Open")) },
                 new Object[] { "shipmentState",
@@ -435,6 +439,14 @@ public class OrderTest {
         Order value = Order.of();
         value.setQuote(new com.commercetools.api.models.quote.QuoteReferenceImpl());
         Assertions.assertThat(value.getQuote()).isEqualTo(new com.commercetools.api.models.quote.QuoteReferenceImpl());
+    }
+
+    @Test
+    public void recurringOrder() {
+        Order value = Order.of();
+        value.setRecurringOrder(new com.commercetools.api.models.recurring_order.RecurringOrderReferenceImpl());
+        Assertions.assertThat(value.getRecurringOrder())
+                .isEqualTo(new com.commercetools.api.models.recurring_order.RecurringOrderReferenceImpl());
     }
 
     @Test

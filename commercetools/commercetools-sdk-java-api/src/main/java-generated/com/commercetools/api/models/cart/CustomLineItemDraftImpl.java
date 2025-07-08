@@ -42,6 +42,8 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
 
     private com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode;
 
+    private com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoDraft recurrenceInfo;
+
     /**
      * create instance with all properties
      */
@@ -54,7 +56,8 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
             @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
             @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails,
-            @JsonProperty("priceMode") final com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode) {
+            @JsonProperty("priceMode") final com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode,
+            @JsonProperty("recurrenceInfo") final com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoDraft recurrenceInfo) {
         this.name = name;
         this.key = key;
         this.quantity = quantity;
@@ -65,6 +68,7 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
         this.custom = custom;
         this.shippingDetails = shippingDetails;
         this.priceMode = priceMode;
+        this.recurrenceInfo = recurrenceInfo;
     }
 
     /**
@@ -156,6 +160,14 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
         return this.priceMode;
     }
 
+    /**
+     *  <p>Recurring Order and frequency data.</p>
+     */
+
+    public com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoDraft getRecurrenceInfo() {
+        return this.recurrenceInfo;
+    }
+
     public void setName(final com.commercetools.api.models.common.LocalizedString name) {
         this.name = name;
     }
@@ -197,6 +209,11 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
         this.priceMode = priceMode;
     }
 
+    public void setRecurrenceInfo(
+            final com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoDraft recurrenceInfo) {
+        this.recurrenceInfo = recurrenceInfo;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -217,6 +234,7 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
                 .append(custom, that.custom)
                 .append(shippingDetails, that.shippingDetails)
                 .append(priceMode, that.priceMode)
+                .append(recurrenceInfo, that.recurrenceInfo)
                 .append(name, that.name)
                 .append(key, that.key)
                 .append(quantity, that.quantity)
@@ -227,6 +245,7 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
                 .append(custom, that.custom)
                 .append(shippingDetails, that.shippingDetails)
                 .append(priceMode, that.priceMode)
+                .append(recurrenceInfo, that.recurrenceInfo)
                 .isEquals();
     }
 
@@ -242,6 +261,7 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
                 .append(custom)
                 .append(shippingDetails)
                 .append(priceMode)
+                .append(recurrenceInfo)
                 .toHashCode();
     }
 
@@ -257,6 +277,7 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
                 .append("custom", custom)
                 .append("shippingDetails", shippingDetails)
                 .append("priceMode", priceMode)
+                .append("recurrenceInfo", recurrenceInfo)
                 .build();
     }
 

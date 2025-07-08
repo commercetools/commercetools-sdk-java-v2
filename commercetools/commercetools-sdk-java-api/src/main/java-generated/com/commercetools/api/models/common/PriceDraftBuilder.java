@@ -53,6 +53,9 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    @Nullable
+    private com.commercetools.api.models.recurrence_policy.RecurrencePolicyResourceIdentifier recurrencePolicy;
+
     /**
      *  <p>User-defined identifier for the Price. It must be unique per ProductVariant.</p>
      * @param key value to be set
@@ -395,6 +398,45 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
+     *  <p>RecurrencePolicy for which this Price is valid.</p>
+     * @param builder function to build the recurrencePolicy value
+     * @return Builder
+     */
+
+    public PriceDraftBuilder recurrencePolicy(
+            Function<com.commercetools.api.models.recurrence_policy.RecurrencePolicyResourceIdentifierBuilder, com.commercetools.api.models.recurrence_policy.RecurrencePolicyResourceIdentifierBuilder> builder) {
+        this.recurrencePolicy = builder
+                .apply(com.commercetools.api.models.recurrence_policy.RecurrencePolicyResourceIdentifierBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>RecurrencePolicy for which this Price is valid.</p>
+     * @param builder function to build the recurrencePolicy value
+     * @return Builder
+     */
+
+    public PriceDraftBuilder withRecurrencePolicy(
+            Function<com.commercetools.api.models.recurrence_policy.RecurrencePolicyResourceIdentifierBuilder, com.commercetools.api.models.recurrence_policy.RecurrencePolicyResourceIdentifier> builder) {
+        this.recurrencePolicy = builder
+                .apply(com.commercetools.api.models.recurrence_policy.RecurrencePolicyResourceIdentifierBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>RecurrencePolicy for which this Price is valid.</p>
+     * @param recurrencePolicy value to be set
+     * @return Builder
+     */
+
+    public PriceDraftBuilder recurrencePolicy(
+            @Nullable final com.commercetools.api.models.recurrence_policy.RecurrencePolicyResourceIdentifier recurrencePolicy) {
+        this.recurrencePolicy = recurrencePolicy;
+        return this;
+    }
+
+    /**
      *  <p>User-defined identifier for the Price. It must be unique per ProductVariant.</p>
      * @return key
      */
@@ -502,13 +544,23 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
     }
 
     /**
+     *  <p>RecurrencePolicy for which this Price is valid.</p>
+     * @return recurrencePolicy
+     */
+
+    @Nullable
+    public com.commercetools.api.models.recurrence_policy.RecurrencePolicyResourceIdentifier getRecurrencePolicy() {
+        return this.recurrencePolicy;
+    }
+
+    /**
      * builds PriceDraft with checking for non-null required values
      * @return PriceDraft
      */
     public PriceDraft build() {
         Objects.requireNonNull(value, PriceDraft.class + ": value is missing");
         return new PriceDraftImpl(key, value, country, customerGroup, channel, validFrom, validUntil, discounted, tiers,
-            custom);
+            custom, recurrencePolicy);
     }
 
     /**
@@ -517,7 +569,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
      */
     public PriceDraft buildUnchecked() {
         return new PriceDraftImpl(key, value, country, customerGroup, channel, validFrom, validUntil, discounted, tiers,
-            custom);
+            custom, recurrencePolicy);
     }
 
     /**
@@ -545,6 +597,7 @@ public class PriceDraftBuilder implements Builder<PriceDraft> {
         builder.discounted = template.getDiscounted();
         builder.tiers = template.getTiers();
         builder.custom = template.getCustom();
+        builder.recurrencePolicy = template.getRecurrencePolicy();
         return builder;
     }
 

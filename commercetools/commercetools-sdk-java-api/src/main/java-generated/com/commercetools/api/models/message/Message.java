@@ -1198,6 +1198,14 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     }
 
     /**
+     * builder for orderCreatedFromRecurringOrder subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.OrderCreatedFromRecurringOrderMessageBuilder orderCreatedFromRecurringOrderBuilder() {
+        return com.commercetools.api.models.message.OrderCreatedFromRecurringOrderMessageBuilder.of();
+    }
+
+    /**
      * builder for orderCreated subtype
      * @return builder
      */
@@ -2187,6 +2195,94 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
      */
     public static com.commercetools.api.models.message.QuoteStateTransitionMessageBuilder quoteStateTransitionBuilder() {
         return com.commercetools.api.models.message.QuoteStateTransitionMessageBuilder.of();
+    }
+
+    /**
+     * builder for recurringOrderCreated subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.RecurringOrderCreatedMessageBuilder recurringOrderCreatedBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderCreatedMessageBuilder.of();
+    }
+
+    /**
+     * builder for recurringOrderCustomFieldAdded subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.RecurringOrderCustomFieldAddedMessageBuilder recurringOrderCustomFieldAddedBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderCustomFieldAddedMessageBuilder.of();
+    }
+
+    /**
+     * builder for recurringOrderCustomFieldChanged subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.RecurringOrderCustomFieldChangedMessageBuilder recurringOrderCustomFieldChangedBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderCustomFieldChangedMessageBuilder.of();
+    }
+
+    /**
+     * builder for recurringOrderCustomFieldRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.RecurringOrderCustomFieldRemovedMessageBuilder recurringOrderCustomFieldRemovedBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderCustomFieldRemovedMessageBuilder.of();
+    }
+
+    /**
+     * builder for recurringOrderCustomTypeRemoved subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.RecurringOrderCustomTypeRemovedMessageBuilder recurringOrderCustomTypeRemovedBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderCustomTypeRemovedMessageBuilder.of();
+    }
+
+    /**
+     * builder for recurringOrderCustomTypeSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.RecurringOrderCustomTypeSetMessageBuilder recurringOrderCustomTypeSetBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderCustomTypeSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for recurringOrderKeySet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.RecurringOrderKeySetMessageBuilder recurringOrderKeySetBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderKeySetMessageBuilder.of();
+    }
+
+    /**
+     * builder for recurringOrderScheduleSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.RecurringOrderScheduleSetMessageBuilder recurringOrderScheduleSetBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderScheduleSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for recurringOrderStartsAtSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.RecurringOrderStartsAtSetMessageBuilder recurringOrderStartsAtSetBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderStartsAtSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for recurringOrderStateChanged subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.RecurringOrderStateChangedMessageBuilder recurringOrderStateChangedBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderStateChangedMessageBuilder.of();
+    }
+
+    /**
+     * builder for recurringOrderStateTransition subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.RecurringOrderStateTransitionMessageBuilder recurringOrderStateTransitionBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderStateTransitionMessageBuilder.of();
     }
 
     /**

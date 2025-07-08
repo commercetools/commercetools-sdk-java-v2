@@ -491,6 +491,10 @@ public class MessagePayloadBuilder {
         return com.commercetools.api.models.message.OrderBusinessUnitSetMessagePayloadBuilder.of();
     }
 
+    public com.commercetools.api.models.message.OrderCreatedFromRecurringOrderMessagePayloadBuilder orderCreatedFromRecurringOrderBuilder() {
+        return com.commercetools.api.models.message.OrderCreatedFromRecurringOrderMessagePayloadBuilder.of();
+    }
+
     public com.commercetools.api.models.message.OrderCreatedMessagePayloadBuilder orderCreatedBuilder() {
         return com.commercetools.api.models.message.OrderCreatedMessagePayloadBuilder.of();
     }
@@ -985,6 +989,50 @@ public class MessagePayloadBuilder {
 
     public com.commercetools.api.models.message.QuoteStateTransitionMessagePayloadBuilder quoteStateTransitionBuilder() {
         return com.commercetools.api.models.message.QuoteStateTransitionMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.RecurringOrderCreatedMessagePayloadBuilder recurringOrderCreatedBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderCreatedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.RecurringOrderCustomFieldAddedMessagePayloadBuilder recurringOrderCustomFieldAddedBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderCustomFieldAddedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.RecurringOrderCustomFieldChangedMessagePayloadBuilder recurringOrderCustomFieldChangedBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderCustomFieldChangedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.RecurringOrderCustomFieldRemovedMessagePayloadBuilder recurringOrderCustomFieldRemovedBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderCustomFieldRemovedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.RecurringOrderCustomTypeRemovedMessagePayloadBuilder recurringOrderCustomTypeRemovedBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderCustomTypeRemovedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.RecurringOrderCustomTypeSetMessagePayloadBuilder recurringOrderCustomTypeSetBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderCustomTypeSetMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.RecurringOrderKeySetMessagePayloadBuilder recurringOrderKeySetBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderKeySetMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.RecurringOrderScheduleSetMessagePayloadBuilder recurringOrderScheduleSetBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderScheduleSetMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.RecurringOrderStartsAtSetMessagePayloadBuilder recurringOrderStartsAtSetBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderStartsAtSetMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.RecurringOrderStateChangedMessagePayloadBuilder recurringOrderStateChangedBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderStateChangedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.RecurringOrderStateTransitionMessagePayloadBuilder recurringOrderStateTransitionBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderStateTransitionMessagePayloadBuilder.of();
     }
 
     public com.commercetools.api.models.message.ReturnInfoAddedMessagePayloadBuilder returnInfoAddedBuilder() {

@@ -140,6 +140,13 @@ public class MyCartUpdateActionQueryBuilderDsl {
             MyCartUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<MyCartUpdateActionQueryBuilderDsl> asSetCustomLineItemRecurrenceInfo(
+            Function<com.commercetools.api.predicates.query.me.MyCartSetCustomLineItemRecurrenceInfoActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.me.MyCartSetCustomLineItemRecurrenceInfoActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.me.MyCartSetCustomLineItemRecurrenceInfoActionQueryBuilderDsl.of()),
+            MyCartUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<MyCartUpdateActionQueryBuilderDsl> asSetCustomType(
             Function<com.commercetools.api.predicates.query.me.MyCartSetCustomTypeActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.me.MyCartSetCustomTypeActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(
@@ -180,6 +187,14 @@ public class MyCartUpdateActionQueryBuilderDsl {
             Function<com.commercetools.api.predicates.query.me.MyCartSetLineItemDistributionChannelActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.me.MyCartSetLineItemDistributionChannelActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(fn.apply(
             com.commercetools.api.predicates.query.me.MyCartSetLineItemDistributionChannelActionQueryBuilderDsl.of()),
+            MyCartUpdateActionQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<MyCartUpdateActionQueryBuilderDsl> asSetLineItemRecurrenceInfo(
+            Function<com.commercetools.api.predicates.query.me.MyCartSetLineItemRecurrenceInfoActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.me.MyCartSetLineItemRecurrenceInfoActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.me.MyCartSetLineItemRecurrenceInfoActionQueryBuilderDsl.of()),
             MyCartUpdateActionQueryBuilderDsl::of);
     }
 

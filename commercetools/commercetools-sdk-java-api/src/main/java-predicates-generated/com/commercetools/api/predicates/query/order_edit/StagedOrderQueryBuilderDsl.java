@@ -361,6 +361,16 @@ public class StagedOrderQueryBuilderDsl {
             StagedOrderQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<StagedOrderQueryBuilderDsl> recurringOrder(
+            Function<com.commercetools.api.predicates.query.recurring_order.RecurringOrderReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.recurring_order.RecurringOrderReferenceQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("recurringOrder"))
+                .inner(fn.apply(
+                    com.commercetools.api.predicates.query.recurring_order.RecurringOrderReferenceQueryBuilderDsl
+                            .of())),
+            StagedOrderQueryBuilderDsl::of);
+    }
+
     public StringComparisonPredicateBuilder<StagedOrderQueryBuilderDsl> orderState() {
         return new StringComparisonPredicateBuilder<>(
             BinaryQueryPredicate.of().left(new ConstantQueryPredicate("orderState")),

@@ -49,6 +49,9 @@ public class CartAddLineItemActionTest {
                                 .inventoryMode(com.commercetools.api.models.cart.InventoryMode.findEnum("None")) },
                 new Object[] { "shippingDetails", CartAddLineItemAction.builder()
                         .shippingDetails(new com.commercetools.api.models.cart.ItemShippingDetailsDraftImpl()) },
+                new Object[] { "recurrenceInfo", CartAddLineItemAction.builder()
+                        .recurrenceInfo(
+                            new com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraftImpl()) },
                 new Object[] { "custom", CartAddLineItemAction.builder()
                         .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) } };
     }
@@ -158,6 +161,14 @@ public class CartAddLineItemActionTest {
         value.setShippingDetails(new com.commercetools.api.models.cart.ItemShippingDetailsDraftImpl());
         Assertions.assertThat(value.getShippingDetails())
                 .isEqualTo(new com.commercetools.api.models.cart.ItemShippingDetailsDraftImpl());
+    }
+
+    @Test
+    public void recurrenceInfo() {
+        CartAddLineItemAction value = CartAddLineItemAction.of();
+        value.setRecurrenceInfo(new com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraftImpl());
+        Assertions.assertThat(value.getRecurrenceInfo())
+                .isEqualTo(new com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraftImpl());
     }
 
     @Test

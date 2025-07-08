@@ -57,4 +57,14 @@ public class ProductVariantExpansionBuilderDsl implements ExpansionDsl {
         return com.commercetools.api.predicates.expansion.common.ScopedPriceExpansionBuilderDsl
                 .of(appendOne(path, "scopedPrice"));
     }
+
+    public com.commercetools.api.predicates.expansion.common.PriceExpansionBuilderDsl recurrencePrices() {
+        return com.commercetools.api.predicates.expansion.common.PriceExpansionBuilderDsl
+                .of(appendOne(path, "recurrencePrices[*]"));
+    }
+
+    public com.commercetools.api.predicates.expansion.common.PriceExpansionBuilderDsl recurrencePrices(long index) {
+        return com.commercetools.api.predicates.expansion.common.PriceExpansionBuilderDsl
+                .of(appendOne(path, "recurrencePrices[" + index + "]"));
+    }
 }

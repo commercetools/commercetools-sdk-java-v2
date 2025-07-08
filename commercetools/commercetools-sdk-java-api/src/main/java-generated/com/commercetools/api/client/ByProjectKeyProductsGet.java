@@ -113,6 +113,10 @@ public class ByProjectKeyProductsGet
         return this.getQueryParam("priceChannel");
     }
 
+    public List<String> getPriceRecurrencePolicy() {
+        return this.getQueryParam("priceRecurrencePolicy");
+    }
+
     public List<String> getExpand() {
         return this.getQueryParam("expand");
     }
@@ -622,6 +626,87 @@ public class ByProjectKeyProductsGet
     public <TValue> ByProjectKeyProductsGet addPriceChannel(final Collection<TValue> priceChannel) {
         return copy().addQueryParams(priceChannel.stream()
                 .map(s -> new ParamEntry<>("priceChannel", s.toString()))
+                .collect(Collectors.toList()));
+    }
+
+    /**
+     * set priceRecurrencePolicy with the specified value
+     * @param priceRecurrencePolicy value to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsGet
+     */
+    public <TValue> ByProjectKeyProductsGet withPriceRecurrencePolicy(final TValue priceRecurrencePolicy) {
+        return copy().withQueryParam("priceRecurrencePolicy", priceRecurrencePolicy);
+    }
+
+    /**
+     * add additional priceRecurrencePolicy query parameter
+     * @param priceRecurrencePolicy value to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsGet
+     */
+    public <TValue> ByProjectKeyProductsGet addPriceRecurrencePolicy(final TValue priceRecurrencePolicy) {
+        return copy().addQueryParam("priceRecurrencePolicy", priceRecurrencePolicy);
+    }
+
+    /**
+     * set priceRecurrencePolicy with the specified value
+     * @param supplier supplier for the value to be set
+     * @return ByProjectKeyProductsGet
+     */
+    public ByProjectKeyProductsGet withPriceRecurrencePolicy(final Supplier<String> supplier) {
+        return copy().withQueryParam("priceRecurrencePolicy", supplier.get());
+    }
+
+    /**
+     * add additional priceRecurrencePolicy query parameter
+     * @param supplier supplier for the value to be added
+     * @return ByProjectKeyProductsGet
+     */
+    public ByProjectKeyProductsGet addPriceRecurrencePolicy(final Supplier<String> supplier) {
+        return copy().addQueryParam("priceRecurrencePolicy", supplier.get());
+    }
+
+    /**
+     * set priceRecurrencePolicy with the specified value
+     * @param op builder for the value to be set
+     * @return ByProjectKeyProductsGet
+     */
+    public ByProjectKeyProductsGet withPriceRecurrencePolicy(final Function<StringBuilder, StringBuilder> op) {
+        return copy().withQueryParam("priceRecurrencePolicy", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * add additional priceRecurrencePolicy query parameter
+     * @param op builder for the value to be added
+     * @return ByProjectKeyProductsGet
+     */
+    public ByProjectKeyProductsGet addPriceRecurrencePolicy(final Function<StringBuilder, StringBuilder> op) {
+        return copy().addQueryParam("priceRecurrencePolicy", op.apply(new StringBuilder()));
+    }
+
+    /**
+     * set priceRecurrencePolicy with the specified values
+     * @param priceRecurrencePolicy values to be set
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsGet
+     */
+    public <TValue> ByProjectKeyProductsGet withPriceRecurrencePolicy(final Collection<TValue> priceRecurrencePolicy) {
+        return copy().withoutQueryParam("priceRecurrencePolicy")
+                .addQueryParams(priceRecurrencePolicy.stream()
+                        .map(s -> new ParamEntry<>("priceRecurrencePolicy", s.toString()))
+                        .collect(Collectors.toList()));
+    }
+
+    /**
+     * add additional priceRecurrencePolicy query parameters
+     * @param priceRecurrencePolicy values to be added
+     * @param <TValue> value type
+     * @return ByProjectKeyProductsGet
+     */
+    public <TValue> ByProjectKeyProductsGet addPriceRecurrencePolicy(final Collection<TValue> priceRecurrencePolicy) {
+        return copy().addQueryParams(priceRecurrencePolicy.stream()
+                .map(s -> new ParamEntry<>("priceRecurrencePolicy", s.toString()))
                 .collect(Collectors.toList()));
     }
 

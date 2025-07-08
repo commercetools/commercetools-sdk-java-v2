@@ -89,6 +89,13 @@ public class ByProjectKeyProductsTest {
                         .get()
                         .withPriceChannel("priceChannel")
                         .createHttpRequest(), "get", "test_projectKey/products?priceChannel=priceChannel", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .products()
+                                .get()
+                                .withPriceRecurrencePolicy("priceRecurrencePolicy")
+                                .createHttpRequest(),
+                        "get", "test_projectKey/products?priceRecurrencePolicy=priceRecurrencePolicy", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .get()
@@ -152,6 +159,13 @@ public class ByProjectKeyProductsTest {
                         .post(com.commercetools.api.models.product.ProductDraft.of())
                         .withPriceChannel("priceChannel")
                         .createHttpRequest(), "post", "test_projectKey/products?priceChannel=priceChannel", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .products()
+                                .post(com.commercetools.api.models.product.ProductDraft.of())
+                                .withPriceRecurrencePolicy("priceRecurrencePolicy")
+                                .createHttpRequest(),
+                        "post", "test_projectKey/products?priceRecurrencePolicy=priceRecurrencePolicy", },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .post(com.commercetools.api.models.product.ProductDraft.of())
@@ -182,6 +196,10 @@ public class ByProjectKeyProductsTest {
                         .withPriceCustomerGroupAssignments("priceCustomerGroupAssignments"), },
                 new Object[] {
                         apiRoot.withProjectKey("test_projectKey").products().get().withPriceChannel("priceChannel"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .products()
+                        .get()
+                        .withPriceRecurrencePolicy("priceRecurrencePolicy"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").products().get().withExpand("expand"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").products().get().withSort("sort"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey").products().get().withLimit(7), },
@@ -214,6 +232,10 @@ public class ByProjectKeyProductsTest {
                         .products()
                         .post(com.commercetools.api.models.product.ProductDraft.of())
                         .withPriceChannel("priceChannel"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .products()
+                        .post(com.commercetools.api.models.product.ProductDraft.of())
+                        .withPriceRecurrencePolicy("priceRecurrencePolicy"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .products()
                         .post(com.commercetools.api.models.product.ProductDraft.of())

@@ -95,6 +95,14 @@ public class ResourceIdentifierBuilder implements ResourceIdentifierBuilderMixin
         return com.commercetools.api.models.quote.QuoteResourceIdentifierBuilder.of();
     }
 
+    public com.commercetools.api.models.recurrence_policy.RecurrencePolicyResourceIdentifierBuilder recurrencePolicyBuilder() {
+        return com.commercetools.api.models.recurrence_policy.RecurrencePolicyResourceIdentifierBuilder.of();
+    }
+
+    public com.commercetools.api.models.recurring_order.RecurringOrderResourceIdentifierBuilder recurringOrderBuilder() {
+        return com.commercetools.api.models.recurring_order.RecurringOrderResourceIdentifierBuilder.of();
+    }
+
     public com.commercetools.api.models.review.ReviewResourceIdentifierBuilder reviewBuilder() {
         return com.commercetools.api.models.review.ReviewResourceIdentifierBuilder.of();
     }

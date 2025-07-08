@@ -74,6 +74,8 @@ public class LineItemImpl implements LineItem, ModelBase {
 
     private java.time.ZonedDateTime lastModifiedAt;
 
+    private com.commercetools.api.models.recurring_order.LineItemRecurrenceInfo recurrenceInfo;
+
     /**
      * create instance with all properties
      */
@@ -101,7 +103,8 @@ public class LineItemImpl implements LineItem, ModelBase {
             @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetails shippingDetails,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
             @JsonProperty("addedAt") final java.time.ZonedDateTime addedAt,
-            @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt) {
+            @JsonProperty("lastModifiedAt") final java.time.ZonedDateTime lastModifiedAt,
+            @JsonProperty("recurrenceInfo") final com.commercetools.api.models.recurring_order.LineItemRecurrenceInfo recurrenceInfo) {
         this.id = id;
         this.key = key;
         this.productId = productId;
@@ -128,6 +131,7 @@ public class LineItemImpl implements LineItem, ModelBase {
         this.custom = custom;
         this.addedAt = addedAt;
         this.lastModifiedAt = lastModifiedAt;
+        this.recurrenceInfo = recurrenceInfo;
     }
 
     /**
@@ -355,6 +359,14 @@ public class LineItemImpl implements LineItem, ModelBase {
         return this.lastModifiedAt;
     }
 
+    /**
+     *  <p>Recurring Order and frequency data.</p>
+     */
+
+    public com.commercetools.api.models.recurring_order.LineItemRecurrenceInfo getRecurrenceInfo() {
+        return this.recurrenceInfo;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -480,6 +492,11 @@ public class LineItemImpl implements LineItem, ModelBase {
         this.lastModifiedAt = lastModifiedAt;
     }
 
+    public void setRecurrenceInfo(
+            final com.commercetools.api.models.recurring_order.LineItemRecurrenceInfo recurrenceInfo) {
+        this.recurrenceInfo = recurrenceInfo;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -516,6 +533,7 @@ public class LineItemImpl implements LineItem, ModelBase {
                 .append(custom, that.custom)
                 .append(addedAt, that.addedAt)
                 .append(lastModifiedAt, that.lastModifiedAt)
+                .append(recurrenceInfo, that.recurrenceInfo)
                 .append(id, that.id)
                 .append(key, that.key)
                 .append(productId, that.productId)
@@ -542,6 +560,7 @@ public class LineItemImpl implements LineItem, ModelBase {
                 .append(custom, that.custom)
                 .append(addedAt, that.addedAt)
                 .append(lastModifiedAt, that.lastModifiedAt)
+                .append(recurrenceInfo, that.recurrenceInfo)
                 .isEquals();
     }
 
@@ -573,6 +592,7 @@ public class LineItemImpl implements LineItem, ModelBase {
                 .append(custom)
                 .append(addedAt)
                 .append(lastModifiedAt)
+                .append(recurrenceInfo)
                 .toHashCode();
     }
 
@@ -604,6 +624,7 @@ public class LineItemImpl implements LineItem, ModelBase {
                 .append("custom", custom)
                 .append("addedAt", addedAt)
                 .append("lastModifiedAt", lastModifiedAt)
+                .append("recurrenceInfo", recurrenceInfo)
                 .build();
     }
 

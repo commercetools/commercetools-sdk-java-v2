@@ -60,6 +60,8 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
 
     private Boolean active;
 
+    private com.commercetools.api.models.recurrence_policy.RecurrencePolicyReference recurrencePolicy;
+
     /**
      * create instance with all properties
      */
@@ -80,7 +82,8 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
             @JsonProperty("discounted") final com.commercetools.api.models.common.DiscountedPrice discounted,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
             @JsonProperty("staged") final com.commercetools.api.models.standalone_price.StagedStandalonePrice staged,
-            @JsonProperty("active") final Boolean active) {
+            @JsonProperty("active") final Boolean active,
+            @JsonProperty("recurrencePolicy") final com.commercetools.api.models.recurrence_policy.RecurrencePolicyReference recurrencePolicy) {
         this.id = id;
         this.version = version;
         this.createdAt = createdAt;
@@ -100,6 +103,7 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
         this.custom = custom;
         this.staged = staged;
         this.active = active;
+        this.recurrencePolicy = recurrencePolicy;
     }
 
     /**
@@ -261,6 +265,14 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
         return this.active;
     }
 
+    /**
+     *  <p>RecurrencePolicy for which this Price is valid.</p>
+     */
+
+    public com.commercetools.api.models.recurrence_policy.RecurrencePolicyReference getRecurrencePolicy() {
+        return this.recurrencePolicy;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -342,6 +354,11 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
         this.active = active;
     }
 
+    public void setRecurrencePolicy(
+            final com.commercetools.api.models.recurrence_policy.RecurrencePolicyReference recurrencePolicy) {
+        this.recurrencePolicy = recurrencePolicy;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -371,6 +388,7 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
                 .append(custom, that.custom)
                 .append(staged, that.staged)
                 .append(active, that.active)
+                .append(recurrencePolicy, that.recurrencePolicy)
                 .append(id, that.id)
                 .append(version, that.version)
                 .append(createdAt, that.createdAt)
@@ -390,6 +408,7 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
                 .append(custom, that.custom)
                 .append(staged, that.staged)
                 .append(active, that.active)
+                .append(recurrencePolicy, that.recurrencePolicy)
                 .isEquals();
     }
 
@@ -414,6 +433,7 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
                 .append(custom)
                 .append(staged)
                 .append(active)
+                .append(recurrencePolicy)
                 .toHashCode();
     }
 
@@ -438,6 +458,7 @@ public class StandalonePriceImpl implements StandalonePrice, ModelBase {
                 .append("custom", custom)
                 .append("staged", staged)
                 .append("active", active)
+                .append("recurrencePolicy", recurrencePolicy)
                 .build();
     }
 

@@ -101,6 +101,9 @@ public class LineItemBuilder implements Builder<LineItem> {
     @Nullable
     private java.time.ZonedDateTime lastModifiedAt;
 
+    @Nullable
+    private com.commercetools.api.models.recurring_order.LineItemRecurrenceInfo recurrenceInfo;
+
     /**
      *  <p>Unique identifier of the LineItem.</p>
      * @param id value to be set
@@ -1019,6 +1022,45 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @param builder function to build the recurrenceInfo value
+     * @return Builder
+     */
+
+    public LineItemBuilder recurrenceInfo(
+            Function<com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoBuilder, com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoBuilder> builder) {
+        this.recurrenceInfo = builder
+                .apply(com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @param builder function to build the recurrenceInfo value
+     * @return Builder
+     */
+
+    public LineItemBuilder withRecurrenceInfo(
+            Function<com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoBuilder, com.commercetools.api.models.recurring_order.LineItemRecurrenceInfo> builder) {
+        this.recurrenceInfo = builder
+                .apply(com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @param recurrenceInfo value to be set
+     * @return Builder
+     */
+
+    public LineItemBuilder recurrenceInfo(
+            @Nullable final com.commercetools.api.models.recurring_order.LineItemRecurrenceInfo recurrenceInfo) {
+        this.recurrenceInfo = recurrenceInfo;
+        return this;
+    }
+
+    /**
      *  <p>Unique identifier of the LineItem.</p>
      * @return id
      */
@@ -1276,6 +1318,16 @@ public class LineItemBuilder implements Builder<LineItem> {
     }
 
     /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @return recurrenceInfo
+     */
+
+    @Nullable
+    public com.commercetools.api.models.recurring_order.LineItemRecurrenceInfo getRecurrenceInfo() {
+        return this.recurrenceInfo;
+    }
+
+    /**
      * builds LineItem with checking for non-null required values
      * @return LineItem
      */
@@ -1297,7 +1349,7 @@ public class LineItemBuilder implements Builder<LineItem> {
         return new LineItemImpl(id, key, productId, productKey, name, productSlug, productType, variant, price,
             quantity, totalPrice, discountedPricePerQuantity, taxedPrice, taxedPricePortions, state, taxRate,
             perMethodTaxRate, supplyChannel, distributionChannel, priceMode, lineItemMode, inventoryMode,
-            shippingDetails, custom, addedAt, lastModifiedAt);
+            shippingDetails, custom, addedAt, lastModifiedAt, recurrenceInfo);
     }
 
     /**
@@ -1308,7 +1360,7 @@ public class LineItemBuilder implements Builder<LineItem> {
         return new LineItemImpl(id, key, productId, productKey, name, productSlug, productType, variant, price,
             quantity, totalPrice, discountedPricePerQuantity, taxedPrice, taxedPricePortions, state, taxRate,
             perMethodTaxRate, supplyChannel, distributionChannel, priceMode, lineItemMode, inventoryMode,
-            shippingDetails, custom, addedAt, lastModifiedAt);
+            shippingDetails, custom, addedAt, lastModifiedAt, recurrenceInfo);
     }
 
     /**
@@ -1352,6 +1404,7 @@ public class LineItemBuilder implements Builder<LineItem> {
         builder.custom = template.getCustom();
         builder.addedAt = template.getAddedAt();
         builder.lastModifiedAt = template.getLastModifiedAt();
+        builder.recurrenceInfo = template.getRecurrenceInfo();
         return builder;
     }
 

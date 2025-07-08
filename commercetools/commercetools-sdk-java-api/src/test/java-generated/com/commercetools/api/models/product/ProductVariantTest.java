@@ -39,7 +39,11 @@ public class ProductVariantTest {
                 new Object[] { "scopedPrice",
                         ProductVariant.builder()
                                 .scopedPrice(new com.commercetools.api.models.common.ScopedPriceImpl()) },
-                new Object[] { "scopedPriceDiscounted", ProductVariant.builder().scopedPriceDiscounted(true) } };
+                new Object[] { "scopedPriceDiscounted", ProductVariant.builder().scopedPriceDiscounted(true) },
+                new Object[] { "recurrencePrices",
+                        ProductVariant.builder()
+                                .recurrencePrices(
+                                    Collections.singletonList(new com.commercetools.api.models.common.PriceImpl())) } };
     }
 
     @Test
@@ -130,5 +134,13 @@ public class ProductVariantTest {
         ProductVariant value = ProductVariant.of();
         value.setScopedPriceDiscounted(true);
         Assertions.assertThat(value.getScopedPriceDiscounted()).isEqualTo(true);
+    }
+
+    @Test
+    public void recurrencePrices() {
+        ProductVariant value = ProductVariant.of();
+        value.setRecurrencePrices(Collections.singletonList(new com.commercetools.api.models.common.PriceImpl()));
+        Assertions.assertThat(value.getRecurrencePrices())
+                .isEqualTo(Collections.singletonList(new com.commercetools.api.models.common.PriceImpl()));
     }
 }

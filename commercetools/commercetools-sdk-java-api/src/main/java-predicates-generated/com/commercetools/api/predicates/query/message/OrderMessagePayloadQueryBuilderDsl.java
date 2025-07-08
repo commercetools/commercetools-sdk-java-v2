@@ -117,6 +117,14 @@ public class OrderMessagePayloadQueryBuilderDsl {
             OrderMessagePayloadQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<OrderMessagePayloadQueryBuilderDsl> asOrderCreatedFromRecurringOrder(
+            Function<com.commercetools.api.predicates.query.message.OrderCreatedFromRecurringOrderMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.OrderCreatedFromRecurringOrderMessagePayloadQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.message.OrderCreatedFromRecurringOrderMessagePayloadQueryBuilderDsl
+                    .of()),
+            OrderMessagePayloadQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<OrderMessagePayloadQueryBuilderDsl> asOrderCreated(
             Function<com.commercetools.api.predicates.query.message.OrderCreatedMessagePayloadQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.OrderCreatedMessagePayloadQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

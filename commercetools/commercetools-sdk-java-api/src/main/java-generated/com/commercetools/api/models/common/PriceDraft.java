@@ -11,6 +11,7 @@ import javax.annotation.Nullable;
 
 import com.commercetools.api.models.channel.ChannelResourceIdentifier;
 import com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier;
+import com.commercetools.api.models.recurrence_policy.RecurrencePolicyResourceIdentifier;
 import com.commercetools.api.models.type.CustomFieldsDraft;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -128,6 +129,14 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
     public CustomFieldsDraft getCustom();
 
     /**
+     *  <p>RecurrencePolicy for which this Price is valid.</p>
+     * @return recurrencePolicy
+     */
+    @Valid
+    @JsonProperty("recurrencePolicy")
+    public RecurrencePolicyResourceIdentifier getRecurrencePolicy();
+
+    /**
      *  <p>User-defined identifier for the Price. It must be unique per ProductVariant.</p>
      * @param key value to be set
      */
@@ -215,6 +224,13 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
     public void setCustom(final CustomFieldsDraft custom);
 
     /**
+     *  <p>RecurrencePolicy for which this Price is valid.</p>
+     * @param recurrencePolicy value to be set
+     */
+
+    public void setRecurrencePolicy(final RecurrencePolicyResourceIdentifier recurrencePolicy);
+
+    /**
      * factory method
      * @return instance of PriceDraft
      */
@@ -239,6 +255,7 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
         instance.setDiscounted(template.getDiscounted());
         instance.setTiers(template.getTiers());
         instance.setCustom(template.getCustom());
+        instance.setRecurrencePolicy(template.getRecurrencePolicy());
         return instance;
     }
 
@@ -272,6 +289,8 @@ public interface PriceDraft extends com.commercetools.api.models.CustomizableDra
                         .collect(Collectors.toList()))
                 .orElse(null));
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
+        instance.setRecurrencePolicy(com.commercetools.api.models.recurrence_policy.RecurrencePolicyResourceIdentifier
+                .deepCopy(template.getRecurrencePolicy()));
         return instance;
     }
 

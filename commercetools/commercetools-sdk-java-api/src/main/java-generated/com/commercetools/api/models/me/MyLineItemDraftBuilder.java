@@ -51,6 +51,9 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
     @Nullable
+    private com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraft recurrenceInfo;
+
+    @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
@@ -237,6 +240,45 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @param builder function to build the recurrenceInfo value
+     * @return Builder
+     */
+
+    public MyLineItemDraftBuilder recurrenceInfo(
+            Function<com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraftBuilder, com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraftBuilder> builder) {
+        this.recurrenceInfo = builder
+                .apply(com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraftBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @param builder function to build the recurrenceInfo value
+     * @return Builder
+     */
+
+    public MyLineItemDraftBuilder withRecurrenceInfo(
+            Function<com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraftBuilder, com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraft> builder) {
+        this.recurrenceInfo = builder
+                .apply(com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @param recurrenceInfo value to be set
+     * @return Builder
+     */
+
+    public MyLineItemDraftBuilder recurrenceInfo(
+            @Nullable final com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraft recurrenceInfo) {
+        this.recurrenceInfo = recurrenceInfo;
+        return this;
+    }
+
+    /**
      *  <p>Custom Fields for the Cart.</p>
      * @param builder function to build the custom value
      * @return Builder
@@ -364,6 +406,16 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
     }
 
     /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @return recurrenceInfo
+     */
+
+    @Nullable
+    public com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraft getRecurrenceInfo() {
+        return this.recurrenceInfo;
+    }
+
+    /**
      *  <p>Custom Fields for the Cart.</p>
      * @return custom
      */
@@ -379,7 +431,7 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
      */
     public MyLineItemDraft build() {
         return new MyLineItemDraftImpl(key, productId, variantId, sku, quantity, addedAt, supplyChannel,
-            distributionChannel, shippingDetails, custom);
+            distributionChannel, shippingDetails, recurrenceInfo, custom);
     }
 
     /**
@@ -388,7 +440,7 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
      */
     public MyLineItemDraft buildUnchecked() {
         return new MyLineItemDraftImpl(key, productId, variantId, sku, quantity, addedAt, supplyChannel,
-            distributionChannel, shippingDetails, custom);
+            distributionChannel, shippingDetails, recurrenceInfo, custom);
     }
 
     /**
@@ -415,6 +467,7 @@ public class MyLineItemDraftBuilder implements Builder<MyLineItemDraft> {
         builder.supplyChannel = template.getSupplyChannel();
         builder.distributionChannel = template.getDistributionChannel();
         builder.shippingDetails = template.getShippingDetails();
+        builder.recurrenceInfo = template.getRecurrenceInfo();
         builder.custom = template.getCustom();
         return builder;
     }

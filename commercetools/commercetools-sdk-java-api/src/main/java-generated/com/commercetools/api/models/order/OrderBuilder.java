@@ -148,6 +148,9 @@ public class OrderBuilder implements Builder<Order> {
     @Nullable
     private com.commercetools.api.models.quote.QuoteReference quote;
 
+    @Nullable
+    private com.commercetools.api.models.recurring_order.RecurringOrderReference recurringOrder;
+
     private com.commercetools.api.models.order.OrderState orderState;
 
     @Nullable
@@ -1570,6 +1573,45 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
+     *  <p>Reference to the RecurringOrder that generated this Order.</p>
+     * @param builder function to build the recurringOrder value
+     * @return Builder
+     */
+
+    public OrderBuilder recurringOrder(
+            Function<com.commercetools.api.models.recurring_order.RecurringOrderReferenceBuilder, com.commercetools.api.models.recurring_order.RecurringOrderReferenceBuilder> builder) {
+        this.recurringOrder = builder
+                .apply(com.commercetools.api.models.recurring_order.RecurringOrderReferenceBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>Reference to the RecurringOrder that generated this Order.</p>
+     * @param builder function to build the recurringOrder value
+     * @return Builder
+     */
+
+    public OrderBuilder withRecurringOrder(
+            Function<com.commercetools.api.models.recurring_order.RecurringOrderReferenceBuilder, com.commercetools.api.models.recurring_order.RecurringOrderReference> builder) {
+        this.recurringOrder = builder
+                .apply(com.commercetools.api.models.recurring_order.RecurringOrderReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Reference to the RecurringOrder that generated this Order.</p>
+     * @param recurringOrder value to be set
+     * @return Builder
+     */
+
+    public OrderBuilder recurringOrder(
+            @Nullable final com.commercetools.api.models.recurring_order.RecurringOrderReference recurringOrder) {
+        this.recurringOrder = recurringOrder;
+        return this;
+    }
+
+    /**
      *  <p>Current status of the Order.</p>
      * @param orderState value to be set
      * @return Builder
@@ -2376,6 +2418,16 @@ public class OrderBuilder implements Builder<Order> {
     }
 
     /**
+     *  <p>Reference to the RecurringOrder that generated this Order.</p>
+     * @return recurringOrder
+     */
+
+    @Nullable
+    public com.commercetools.api.models.recurring_order.RecurringOrderReference getRecurringOrder() {
+        return this.recurringOrder;
+    }
+
+    /**
      *  <p>Current status of the Order.</p>
      * @return orderState
      */
@@ -2516,9 +2568,9 @@ public class OrderBuilder implements Builder<Order> {
             taxedPrice, taxedShippingPrice, discountOnTotalPrice, priceRoundingMode, taxMode, taxRoundingMode,
             taxCalculationMode, inventoryMode, billingAddress, shippingAddress, shippingMode, shippingKey, shippingInfo,
             shippingRateInput, shippingCustomFields, shipping, itemShippingAddresses, discountCodes, directDiscounts,
-            refusedGifts, paymentInfo, country, locale, origin, cart, quote, orderState, shipmentState, paymentState,
-            state, syncInfo, returnInfo, discountTypeCombination, lastMessageSequenceNumber, custom, completedAt,
-            lastModifiedBy, createdBy);
+            refusedGifts, paymentInfo, country, locale, origin, cart, quote, recurringOrder, orderState, shipmentState,
+            paymentState, state, syncInfo, returnInfo, discountTypeCombination, lastMessageSequenceNumber, custom,
+            completedAt, lastModifiedBy, createdBy);
     }
 
     /**
@@ -2531,9 +2583,9 @@ public class OrderBuilder implements Builder<Order> {
             taxedPrice, taxedShippingPrice, discountOnTotalPrice, priceRoundingMode, taxMode, taxRoundingMode,
             taxCalculationMode, inventoryMode, billingAddress, shippingAddress, shippingMode, shippingKey, shippingInfo,
             shippingRateInput, shippingCustomFields, shipping, itemShippingAddresses, discountCodes, directDiscounts,
-            refusedGifts, paymentInfo, country, locale, origin, cart, quote, orderState, shipmentState, paymentState,
-            state, syncInfo, returnInfo, discountTypeCombination, lastMessageSequenceNumber, custom, completedAt,
-            lastModifiedBy, createdBy);
+            refusedGifts, paymentInfo, country, locale, origin, cart, quote, recurringOrder, orderState, shipmentState,
+            paymentState, state, syncInfo, returnInfo, discountTypeCombination, lastMessageSequenceNumber, custom,
+            completedAt, lastModifiedBy, createdBy);
     }
 
     /**
@@ -2592,6 +2644,7 @@ public class OrderBuilder implements Builder<Order> {
         builder.origin = template.getOrigin();
         builder.cart = template.getCart();
         builder.quote = template.getQuote();
+        builder.recurringOrder = template.getRecurringOrder();
         builder.orderState = template.getOrderState();
         builder.shipmentState = template.getShipmentState();
         builder.paymentState = template.getPaymentState();

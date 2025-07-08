@@ -40,6 +40,8 @@ public class MyLineItemDraftImpl implements MyLineItemDraft, ModelBase {
 
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
+    private com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraft recurrenceInfo;
+
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
@@ -53,6 +55,7 @@ public class MyLineItemDraftImpl implements MyLineItemDraft, ModelBase {
             @JsonProperty("supplyChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier supplyChannel,
             @JsonProperty("distributionChannel") final com.commercetools.api.models.channel.ChannelResourceIdentifier distributionChannel,
             @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails,
+            @JsonProperty("recurrenceInfo") final com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraft recurrenceInfo,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.key = key;
         this.productId = productId;
@@ -63,6 +66,7 @@ public class MyLineItemDraftImpl implements MyLineItemDraft, ModelBase {
         this.supplyChannel = supplyChannel;
         this.distributionChannel = distributionChannel;
         this.shippingDetails = shippingDetails;
+        this.recurrenceInfo = recurrenceInfo;
         this.custom = custom;
     }
 
@@ -147,6 +151,14 @@ public class MyLineItemDraftImpl implements MyLineItemDraft, ModelBase {
     }
 
     /**
+     *  <p>Recurring Order and frequency data.</p>
+     */
+
+    public com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraft getRecurrenceInfo() {
+        return this.recurrenceInfo;
+    }
+
+    /**
      *  <p>Custom Fields for the Cart.</p>
      */
 
@@ -191,6 +203,11 @@ public class MyLineItemDraftImpl implements MyLineItemDraft, ModelBase {
         this.shippingDetails = shippingDetails;
     }
 
+    public void setRecurrenceInfo(
+            final com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraft recurrenceInfo) {
+        this.recurrenceInfo = recurrenceInfo;
+    }
+
     public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
     }
@@ -214,6 +231,7 @@ public class MyLineItemDraftImpl implements MyLineItemDraft, ModelBase {
                 .append(supplyChannel, that.supplyChannel)
                 .append(distributionChannel, that.distributionChannel)
                 .append(shippingDetails, that.shippingDetails)
+                .append(recurrenceInfo, that.recurrenceInfo)
                 .append(custom, that.custom)
                 .append(key, that.key)
                 .append(productId, that.productId)
@@ -224,6 +242,7 @@ public class MyLineItemDraftImpl implements MyLineItemDraft, ModelBase {
                 .append(supplyChannel, that.supplyChannel)
                 .append(distributionChannel, that.distributionChannel)
                 .append(shippingDetails, that.shippingDetails)
+                .append(recurrenceInfo, that.recurrenceInfo)
                 .append(custom, that.custom)
                 .isEquals();
     }
@@ -239,6 +258,7 @@ public class MyLineItemDraftImpl implements MyLineItemDraft, ModelBase {
                 .append(supplyChannel)
                 .append(distributionChannel)
                 .append(shippingDetails)
+                .append(recurrenceInfo)
                 .append(custom)
                 .toHashCode();
     }
@@ -254,6 +274,7 @@ public class MyLineItemDraftImpl implements MyLineItemDraft, ModelBase {
                 .append("supplyChannel", supplyChannel)
                 .append("distributionChannel", distributionChannel)
                 .append("shippingDetails", shippingDetails)
+                .append("recurrenceInfo", recurrenceInfo)
                 .append("custom", custom)
                 .build();
     }

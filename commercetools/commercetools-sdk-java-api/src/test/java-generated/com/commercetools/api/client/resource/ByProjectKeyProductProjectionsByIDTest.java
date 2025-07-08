@@ -111,6 +111,15 @@ public class ByProjectKeyProductProjectionsByIDTest {
                                 .productProjections()
                                 .withId("test_ID")
                                 .get()
+                                .withPriceRecurrencePolicy("priceRecurrencePolicy")
+                                .createHttpRequest(),
+                        "get",
+                        "test_projectKey/product-projections/test_ID?priceRecurrencePolicy=priceRecurrencePolicy", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .productProjections()
+                                .withId("test_ID")
+                                .get()
                                 .withLocaleProjection("localeProjection")
                                 .createHttpRequest(),
                         "get", "test_projectKey/product-projections/test_ID?localeProjection=localeProjection", },
@@ -174,6 +183,11 @@ public class ByProjectKeyProductProjectionsByIDTest {
                         .withId("test_ID")
                         .get()
                         .withPriceChannel("priceChannel"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productProjections()
+                        .withId("test_ID")
+                        .get()
+                        .withPriceRecurrencePolicy("priceRecurrencePolicy"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productProjections()
                         .withId("test_ID")

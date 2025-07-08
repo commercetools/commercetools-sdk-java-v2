@@ -218,6 +218,22 @@ public class ReferenceQueryBuilderDsl {
             ReferenceQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<ReferenceQueryBuilderDsl> asRecurrencePolicy(
+            Function<com.commercetools.api.predicates.query.recurrence_policy.RecurrencePolicyReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.recurrence_policy.RecurrencePolicyReferenceQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.recurrence_policy.RecurrencePolicyReferenceQueryBuilderDsl.of()),
+            ReferenceQueryBuilderDsl::of);
+    }
+
+    public CombinationQueryPredicate<ReferenceQueryBuilderDsl> asRecurringOrder(
+            Function<com.commercetools.api.predicates.query.recurring_order.RecurringOrderReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.recurring_order.RecurringOrderReferenceQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.recurring_order.RecurringOrderReferenceQueryBuilderDsl.of()),
+            ReferenceQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<ReferenceQueryBuilderDsl> asReview(
             Function<com.commercetools.api.predicates.query.review.ReviewReferenceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.review.ReviewReferenceQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

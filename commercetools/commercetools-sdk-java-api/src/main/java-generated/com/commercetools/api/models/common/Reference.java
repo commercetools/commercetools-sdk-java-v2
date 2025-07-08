@@ -293,6 +293,22 @@ public interface Reference extends ReferenceMixin {
     }
 
     /**
+     * builder for recurrencePolicy subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.recurrence_policy.RecurrencePolicyReferenceBuilder recurrencePolicyBuilder() {
+        return com.commercetools.api.models.recurrence_policy.RecurrencePolicyReferenceBuilder.of();
+    }
+
+    /**
+     * builder for recurringOrder subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.recurring_order.RecurringOrderReferenceBuilder recurringOrderBuilder() {
+        return com.commercetools.api.models.recurring_order.RecurringOrderReferenceBuilder.of();
+    }
+
+    /**
      * builder for review subtype
      * @return builder
      */

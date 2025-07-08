@@ -66,6 +66,9 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
     @Nullable
+    private com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraft recurrenceInfo;
+
+    @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
@@ -469,6 +472,45 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     }
 
     /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @param builder function to build the recurrenceInfo value
+     * @return Builder
+     */
+
+    public CartAddLineItemActionBuilder recurrenceInfo(
+            Function<com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraftBuilder, com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraftBuilder> builder) {
+        this.recurrenceInfo = builder
+                .apply(com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraftBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @param builder function to build the recurrenceInfo value
+     * @return Builder
+     */
+
+    public CartAddLineItemActionBuilder withRecurrenceInfo(
+            Function<com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraftBuilder, com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraft> builder) {
+        this.recurrenceInfo = builder
+                .apply(com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @param recurrenceInfo value to be set
+     * @return Builder
+     */
+
+    public CartAddLineItemActionBuilder recurrenceInfo(
+            @Nullable final com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraft recurrenceInfo) {
+        this.recurrenceInfo = recurrenceInfo;
+        return this;
+    }
+
+    /**
      *  <p>Custom Fields for the Line Item.</p>
      * @param builder function to build the custom value
      * @return Builder
@@ -649,6 +691,16 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     }
 
     /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @return recurrenceInfo
+     */
+
+    @Nullable
+    public com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraft getRecurrenceInfo() {
+        return this.recurrenceInfo;
+    }
+
+    /**
      *  <p>Custom Fields for the Line Item.</p>
      * @return custom
      */
@@ -665,7 +717,7 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     public CartAddLineItemAction build() {
         return new CartAddLineItemActionImpl(key, productId, variantId, sku, quantity, addedAt, distributionChannel,
             supplyChannel, externalPrice, externalTotalPrice, externalTaxRate, perMethodExternalTaxRate, inventoryMode,
-            shippingDetails, custom);
+            shippingDetails, recurrenceInfo, custom);
     }
 
     /**
@@ -675,7 +727,7 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
     public CartAddLineItemAction buildUnchecked() {
         return new CartAddLineItemActionImpl(key, productId, variantId, sku, quantity, addedAt, distributionChannel,
             supplyChannel, externalPrice, externalTotalPrice, externalTaxRate, perMethodExternalTaxRate, inventoryMode,
-            shippingDetails, custom);
+            shippingDetails, recurrenceInfo, custom);
     }
 
     /**
@@ -707,6 +759,7 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
         builder.perMethodExternalTaxRate = template.getPerMethodExternalTaxRate();
         builder.inventoryMode = template.getInventoryMode();
         builder.shippingDetails = template.getShippingDetails();
+        builder.recurrenceInfo = template.getRecurrenceInfo();
         builder.custom = template.getCustom();
         return builder;
     }

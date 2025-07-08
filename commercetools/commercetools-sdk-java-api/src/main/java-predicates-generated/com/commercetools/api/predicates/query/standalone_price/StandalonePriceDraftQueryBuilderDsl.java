@@ -103,6 +103,16 @@ public class StandalonePriceDraftQueryBuilderDsl {
             StandalonePriceDraftQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<StandalonePriceDraftQueryBuilderDsl> recurrencePolicy(
+            Function<com.commercetools.api.predicates.query.recurrence_policy.RecurrencePolicyResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.recurrence_policy.RecurrencePolicyResourceIdentifierQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("recurrencePolicy"))
+                .inner(fn.apply(
+                    com.commercetools.api.predicates.query.recurrence_policy.RecurrencePolicyResourceIdentifierQueryBuilderDsl
+                            .of())),
+            StandalonePriceDraftQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<StandalonePriceDraftQueryBuilderDsl> staged(
             Function<com.commercetools.api.predicates.query.standalone_price.StagedPriceDraftQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.standalone_price.StagedPriceDraftQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

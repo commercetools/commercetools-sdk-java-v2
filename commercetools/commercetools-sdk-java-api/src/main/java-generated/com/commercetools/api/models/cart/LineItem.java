@@ -16,6 +16,7 @@ import com.commercetools.api.models.common.Price;
 import com.commercetools.api.models.order.ItemState;
 import com.commercetools.api.models.product.ProductVariant;
 import com.commercetools.api.models.product_type.ProductTypeReference;
+import com.commercetools.api.models.recurring_order.LineItemRecurrenceInfo;
 import com.commercetools.api.models.tax_category.TaxRate;
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
@@ -285,6 +286,14 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
     public ZonedDateTime getLastModifiedAt();
 
     /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @return recurrenceInfo
+     */
+    @Valid
+    @JsonProperty("recurrenceInfo")
+    public LineItemRecurrenceInfo getRecurrenceInfo();
+
+    /**
      *  <p>Unique identifier of the LineItem.</p>
      * @param id value to be set
      */
@@ -511,6 +520,13 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
     public void setLastModifiedAt(final ZonedDateTime lastModifiedAt);
 
     /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @param recurrenceInfo value to be set
+     */
+
+    public void setRecurrenceInfo(final LineItemRecurrenceInfo recurrenceInfo);
+
+    /**
      * factory method
      * @return instance of LineItem
      */
@@ -551,6 +567,7 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
         instance.setCustom(template.getCustom());
         instance.setAddedAt(template.getAddedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setRecurrenceInfo(template.getRecurrenceInfo());
         return instance;
     }
 
@@ -615,6 +632,8 @@ public interface LineItem extends com.commercetools.api.models.Customizable<Line
         instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));
         instance.setAddedAt(template.getAddedAt());
         instance.setLastModifiedAt(template.getLastModifiedAt());
+        instance.setRecurrenceInfo(
+            com.commercetools.api.models.recurring_order.LineItemRecurrenceInfo.deepCopy(template.getRecurrenceInfo()));
         return instance;
     }
 

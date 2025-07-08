@@ -12,6 +12,7 @@ import com.commercetools.api.models.common.CentPrecisionMoney;
 import com.commercetools.api.models.common.LocalizedString;
 import com.commercetools.api.models.common.TypedMoney;
 import com.commercetools.api.models.order.ItemState;
+import com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfo;
 import com.commercetools.api.models.tax_category.TaxCategoryReference;
 import com.commercetools.api.models.tax_category.TaxRate;
 import com.commercetools.api.models.type.CustomFields;
@@ -198,6 +199,14 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     public CustomLineItemPriceMode getPriceMode();
 
     /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @return recurrenceInfo
+     */
+    @Valid
+    @JsonProperty("recurrenceInfo")
+    public CustomLineItemRecurrenceInfo getRecurrenceInfo();
+
+    /**
      *  <p>Unique identifier of the Custom Line Item.</p>
      * @param id value to be set
      */
@@ -354,6 +363,13 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
     public void setPriceMode(final CustomLineItemPriceMode priceMode);
 
     /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @param recurrenceInfo value to be set
+     */
+
+    public void setRecurrenceInfo(final CustomLineItemRecurrenceInfo recurrenceInfo);
+
+    /**
      * factory method
      * @return instance of CustomLineItem
      */
@@ -385,6 +401,7 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
         instance.setCustom(template.getCustom());
         instance.setShippingDetails(template.getShippingDetails());
         instance.setPriceMode(template.getPriceMode());
+        instance.setRecurrenceInfo(template.getRecurrenceInfo());
         return instance;
     }
 
@@ -437,6 +454,8 @@ public interface CustomLineItem extends com.commercetools.api.models.Customizabl
         instance.setShippingDetails(
             com.commercetools.api.models.cart.ItemShippingDetails.deepCopy(template.getShippingDetails()));
         instance.setPriceMode(template.getPriceMode());
+        instance.setRecurrenceInfo(com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfo
+                .deepCopy(template.getRecurrenceInfo()));
         return instance;
     }
 

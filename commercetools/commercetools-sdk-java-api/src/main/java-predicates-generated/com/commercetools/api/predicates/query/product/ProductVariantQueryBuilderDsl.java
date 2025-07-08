@@ -125,4 +125,19 @@ public class ProductVariantQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, ProductVariantQueryBuilderDsl::of));
     }
 
+    public CombinationQueryPredicate<ProductVariantQueryBuilderDsl> recurrencePrices(
+            Function<com.commercetools.api.predicates.query.common.PriceQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.common.PriceQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            ContainerQueryPredicate.of()
+                    .parent(ConstantQueryPredicate.of().constant("recurrencePrices"))
+                    .inner(fn.apply(com.commercetools.api.predicates.query.common.PriceQueryBuilderDsl.of())),
+            ProductVariantQueryBuilderDsl::of);
+    }
+
+    public CollectionPredicateBuilder<ProductVariantQueryBuilderDsl> recurrencePrices() {
+        return new CollectionPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("recurrencePrices")),
+            p -> new CombinationQueryPredicate<>(p, ProductVariantQueryBuilderDsl::of));
+    }
+
 }

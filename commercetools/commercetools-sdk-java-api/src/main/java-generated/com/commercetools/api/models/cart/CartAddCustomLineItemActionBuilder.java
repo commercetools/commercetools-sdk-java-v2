@@ -53,6 +53,9 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     @Nullable
     private com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode;
 
+    @Nullable
+    private com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoDraft recurrenceInfo;
+
     /**
      *  <p>Money value of the Custom Line Item. The value can be negative.</p>
      * @param builder function to build the money value
@@ -324,6 +327,45 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     }
 
     /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @param builder function to build the recurrenceInfo value
+     * @return Builder
+     */
+
+    public CartAddCustomLineItemActionBuilder recurrenceInfo(
+            Function<com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoDraftBuilder, com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoDraftBuilder> builder) {
+        this.recurrenceInfo = builder
+                .apply(com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoDraftBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @param builder function to build the recurrenceInfo value
+     * @return Builder
+     */
+
+    public CartAddCustomLineItemActionBuilder withRecurrenceInfo(
+            Function<com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoDraftBuilder, com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoDraft> builder) {
+        this.recurrenceInfo = builder
+                .apply(com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoDraftBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @param recurrenceInfo value to be set
+     * @return Builder
+     */
+
+    public CartAddCustomLineItemActionBuilder recurrenceInfo(
+            @Nullable final com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoDraft recurrenceInfo) {
+        this.recurrenceInfo = recurrenceInfo;
+        return this;
+    }
+
+    /**
      *  <p>Money value of the Custom Line Item. The value can be negative.</p>
      * @return money
      */
@@ -425,6 +467,16 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
     }
 
     /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @return recurrenceInfo
+     */
+
+    @Nullable
+    public com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoDraft getRecurrenceInfo() {
+        return this.recurrenceInfo;
+    }
+
+    /**
      * builds CartAddCustomLineItemAction with checking for non-null required values
      * @return CartAddCustomLineItemAction
      */
@@ -433,7 +485,7 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
         Objects.requireNonNull(name, CartAddCustomLineItemAction.class + ": name is missing");
         Objects.requireNonNull(slug, CartAddCustomLineItemAction.class + ": slug is missing");
         return new CartAddCustomLineItemActionImpl(money, name, key, quantity, slug, taxCategory, externalTaxRate,
-            shippingDetails, custom, priceMode);
+            shippingDetails, custom, priceMode, recurrenceInfo);
     }
 
     /**
@@ -442,7 +494,7 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
      */
     public CartAddCustomLineItemAction buildUnchecked() {
         return new CartAddCustomLineItemActionImpl(money, name, key, quantity, slug, taxCategory, externalTaxRate,
-            shippingDetails, custom, priceMode);
+            shippingDetails, custom, priceMode, recurrenceInfo);
     }
 
     /**
@@ -470,6 +522,7 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
         builder.shippingDetails = template.getShippingDetails();
         builder.custom = template.getCustom();
         builder.priceMode = template.getPriceMode();
+        builder.recurrenceInfo = template.getRecurrenceInfo();
         return builder;
     }
 

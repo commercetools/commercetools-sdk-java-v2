@@ -123,6 +123,16 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyTest {
                                 .productProjections()
                                 .withKey("test_key")
                                 .get()
+                                .withPriceRecurrencePolicy("priceRecurrencePolicy")
+                                .createHttpRequest(),
+                        "get",
+                        "test_projectKey/in-store/key=test_storeKey/product-projections/key=test_key?priceRecurrencePolicy=priceRecurrencePolicy", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .inStoreKeyWithStoreKeyValue("test_storeKey")
+                                .productProjections()
+                                .withKey("test_key")
+                                .get()
                                 .withLocaleProjection("localeProjection")
                                 .createHttpRequest(),
                         "get",
@@ -193,6 +203,12 @@ public class ByProjectKeyInStoreKeyByStoreKeyProductProjectionsKeyByKeyTest {
                         .withKey("test_key")
                         .get()
                         .withPriceChannel("priceChannel"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .inStoreKeyWithStoreKeyValue("test_storeKey")
+                        .productProjections()
+                        .withKey("test_key")
+                        .get()
+                        .withPriceRecurrencePolicy("priceRecurrencePolicy"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .inStoreKeyWithStoreKeyValue("test_storeKey")
                         .productProjections()

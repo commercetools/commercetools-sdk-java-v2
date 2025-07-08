@@ -32,6 +32,9 @@ public class MyLineItemDraftTest {
                                     new com.commercetools.api.models.channel.ChannelResourceIdentifierImpl()) },
                 new Object[] { "shippingDetails", MyLineItemDraft.builder()
                         .shippingDetails(new com.commercetools.api.models.cart.ItemShippingDetailsDraftImpl()) },
+                new Object[] { "recurrenceInfo", MyLineItemDraft.builder()
+                        .recurrenceInfo(
+                            new com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraftImpl()) },
                 new Object[] { "custom", MyLineItemDraft.builder()
                         .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) } };
     }
@@ -100,6 +103,14 @@ public class MyLineItemDraftTest {
         value.setShippingDetails(new com.commercetools.api.models.cart.ItemShippingDetailsDraftImpl());
         Assertions.assertThat(value.getShippingDetails())
                 .isEqualTo(new com.commercetools.api.models.cart.ItemShippingDetailsDraftImpl());
+    }
+
+    @Test
+    public void recurrenceInfo() {
+        MyLineItemDraft value = MyLineItemDraft.of();
+        value.setRecurrenceInfo(new com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraftImpl());
+        Assertions.assertThat(value.getRecurrenceInfo())
+                .isEqualTo(new com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraftImpl());
     }
 
     @Test

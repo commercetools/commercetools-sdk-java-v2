@@ -319,6 +319,16 @@ public class ProjectApiRoot implements Closeable, ProjectScopedApiRoot {
     }
 
     @Override
+    public ByProjectKeyRecurringOrdersRequestBuilder recurringOrders() {
+        return with().recurringOrders();
+    }
+
+    @Override
+    public ByProjectKeyRecurrencePoliciesRequestBuilder recurrencePolicies() {
+        return with().recurrencePolicies();
+    }
+
+    @Override
     public <R> R with(Function<ProjectApiRoot, R> op) {
         return op.apply(this);
     }

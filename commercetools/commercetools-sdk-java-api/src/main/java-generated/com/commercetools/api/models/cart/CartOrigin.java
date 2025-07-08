@@ -26,6 +26,9 @@ public interface CartOrigin extends JsonEnum {
     /**
     <p>Cart was created as part of a Quote.</p> */
     CartOrigin QUOTE = CartOriginEnum.QUOTE;
+    /**
+    <p>Cart was created as part of a Recurring Order.</p> */
+    CartOrigin RECURRING_ORDER = CartOriginEnum.RECURRING_ORDER;
 
     /**
      * possible values of CartOrigin
@@ -44,7 +47,12 @@ public interface CartOrigin extends JsonEnum {
         /**
          * Quote
          */
-        QUOTE("Quote");
+        QUOTE("Quote"),
+
+        /**
+         * RecurringOrder
+         */
+        RECURRING_ORDER("RecurringOrder");
         private final String jsonName;
 
         private CartOriginEnum(final String jsonName) {

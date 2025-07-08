@@ -46,6 +46,8 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
 
     private Boolean scopedPriceDiscounted;
 
+    private java.util.List<com.commercetools.api.models.common.Price> recurrencePrices;
+
     /**
      * create instance with all properties
      */
@@ -60,7 +62,8 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
             @JsonProperty("availability") final com.commercetools.api.models.product.ProductVariantAvailability availability,
             @JsonProperty("isMatchingVariant") final Boolean isMatchingVariant,
             @JsonProperty("scopedPrice") final com.commercetools.api.models.common.ScopedPrice scopedPrice,
-            @JsonProperty("scopedPriceDiscounted") final Boolean scopedPriceDiscounted) {
+            @JsonProperty("scopedPriceDiscounted") final Boolean scopedPriceDiscounted,
+            @JsonProperty("recurrencePrices") final java.util.List<com.commercetools.api.models.common.Price> recurrencePrices) {
         this.id = id;
         this.sku = sku;
         this.key = key;
@@ -73,6 +76,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
         this.isMatchingVariant = isMatchingVariant;
         this.scopedPrice = scopedPrice;
         this.scopedPriceDiscounted = scopedPriceDiscounted;
+        this.recurrencePrices = recurrencePrices;
     }
 
     /**
@@ -178,6 +182,14 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
         return this.scopedPriceDiscounted;
     }
 
+    /**
+     *  <p>Only available when Product price selection is used. Cannot be used in a Query Predicate.</p>
+     */
+
+    public java.util.List<com.commercetools.api.models.common.Price> getRecurrencePrices() {
+        return this.recurrencePrices;
+    }
+
     public void setId(final Long id) {
         this.id = id;
     }
@@ -242,6 +254,14 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
         this.scopedPriceDiscounted = scopedPriceDiscounted;
     }
 
+    public void setRecurrencePrices(final com.commercetools.api.models.common.Price... recurrencePrices) {
+        this.recurrencePrices = new ArrayList<>(Arrays.asList(recurrencePrices));
+    }
+
+    public void setRecurrencePrices(final java.util.List<com.commercetools.api.models.common.Price> recurrencePrices) {
+        this.recurrencePrices = recurrencePrices;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -264,6 +284,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
                 .append(isMatchingVariant, that.isMatchingVariant)
                 .append(scopedPrice, that.scopedPrice)
                 .append(scopedPriceDiscounted, that.scopedPriceDiscounted)
+                .append(recurrencePrices, that.recurrencePrices)
                 .append(id, that.id)
                 .append(sku, that.sku)
                 .append(key, that.key)
@@ -276,6 +297,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
                 .append(isMatchingVariant, that.isMatchingVariant)
                 .append(scopedPrice, that.scopedPrice)
                 .append(scopedPriceDiscounted, that.scopedPriceDiscounted)
+                .append(recurrencePrices, that.recurrencePrices)
                 .isEquals();
     }
 
@@ -293,6 +315,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
                 .append(isMatchingVariant)
                 .append(scopedPrice)
                 .append(scopedPriceDiscounted)
+                .append(recurrencePrices)
                 .toHashCode();
     }
 
@@ -310,6 +333,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
                 .append("isMatchingVariant", isMatchingVariant)
                 .append("scopedPrice", scopedPrice)
                 .append("scopedPriceDiscounted", scopedPriceDiscounted)
+                .append("recurrencePrices", recurrencePrices)
                 .build();
     }
 

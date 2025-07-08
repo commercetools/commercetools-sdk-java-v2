@@ -159,6 +159,10 @@ public class CartUpdateActionBuilder {
         return com.commercetools.api.models.cart.CartSetCustomLineItemCustomTypeActionBuilder.of();
     }
 
+    public com.commercetools.api.models.cart.CartSetCustomLineItemRecurrenceInfoActionBuilder setCustomLineItemRecurrenceInfoBuilder() {
+        return com.commercetools.api.models.cart.CartSetCustomLineItemRecurrenceInfoActionBuilder.of();
+    }
+
     public com.commercetools.api.models.cart.CartSetCustomLineItemShippingDetailsActionBuilder setCustomLineItemShippingDetailsBuilder() {
         return com.commercetools.api.models.cart.CartSetCustomLineItemShippingDetailsActionBuilder.of();
     }
@@ -229,6 +233,10 @@ public class CartUpdateActionBuilder {
 
     public com.commercetools.api.models.cart.CartSetLineItemPriceActionBuilder setLineItemPriceBuilder() {
         return com.commercetools.api.models.cart.CartSetLineItemPriceActionBuilder.of();
+    }
+
+    public com.commercetools.api.models.cart.CartSetLineItemRecurrenceInfoActionBuilder setLineItemRecurrenceInfoBuilder() {
+        return com.commercetools.api.models.cart.CartSetLineItemRecurrenceInfoActionBuilder.of();
     }
 
     public com.commercetools.api.models.cart.CartSetLineItemShippingDetailsActionBuilder setLineItemShippingDetailsBuilder() {

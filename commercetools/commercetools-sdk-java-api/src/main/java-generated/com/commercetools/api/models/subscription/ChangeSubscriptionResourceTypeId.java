@@ -98,6 +98,12 @@ public interface ChangeSubscriptionResourceTypeId extends JsonEnum {
     <p>Changes to QuoteRequests.</p> */
     ChangeSubscriptionResourceTypeId QUOTE_REQUEST = ChangeSubscriptionResourceTypeIdEnum.QUOTE_REQUEST;
     /**
+    <p>Changes to RecurrencePolicies.</p> */
+    ChangeSubscriptionResourceTypeId RECURRENCE_POLICY = ChangeSubscriptionResourceTypeIdEnum.RECURRENCE_POLICY;
+    /**
+    <p>Changes to RecurringOrders.</p> */
+    ChangeSubscriptionResourceTypeId RECURRING_ORDER = ChangeSubscriptionResourceTypeIdEnum.RECURRING_ORDER;
+    /**
     <p>Changes to Reviews.</p> */
     ChangeSubscriptionResourceTypeId REVIEW = ChangeSubscriptionResourceTypeIdEnum.REVIEW;
     /**
@@ -269,6 +275,16 @@ public interface ChangeSubscriptionResourceTypeId extends JsonEnum {
          * quote-request
          */
         QUOTE_REQUEST("quote-request"),
+
+        /**
+         * recurrence-policy
+         */
+        RECURRENCE_POLICY("recurrence-policy"),
+
+        /**
+         * recurring-order
+         */
+        RECURRING_ORDER("recurring-order"),
 
         /**
          * review

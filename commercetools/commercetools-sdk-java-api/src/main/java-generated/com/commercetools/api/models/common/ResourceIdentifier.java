@@ -259,6 +259,22 @@ public interface ResourceIdentifier extends com.commercetools.api.models.WithKey
     }
 
     /**
+     * builder for recurrencePolicy subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.recurrence_policy.RecurrencePolicyResourceIdentifierBuilder recurrencePolicyBuilder() {
+        return com.commercetools.api.models.recurrence_policy.RecurrencePolicyResourceIdentifierBuilder.of();
+    }
+
+    /**
+     * builder for recurringOrder subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.recurring_order.RecurringOrderResourceIdentifierBuilder recurringOrderBuilder() {
+        return com.commercetools.api.models.recurring_order.RecurringOrderResourceIdentifierBuilder.of();
+    }
+
+    /**
      * builder for review subtype
      * @return builder
      */

@@ -44,6 +44,8 @@ public class PriceImpl implements Price, ModelBase {
 
     private com.commercetools.api.models.type.CustomFields custom;
 
+    private com.commercetools.api.models.recurrence_policy.RecurrencePolicyReference recurrencePolicy;
+
     /**
      * create instance with all properties
      */
@@ -57,7 +59,8 @@ public class PriceImpl implements Price, ModelBase {
             @JsonProperty("validUntil") final java.time.ZonedDateTime validUntil,
             @JsonProperty("discounted") final com.commercetools.api.models.common.DiscountedPrice discounted,
             @JsonProperty("tiers") final java.util.List<com.commercetools.api.models.common.PriceTier> tiers,
-            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom) {
+            @JsonProperty("custom") final com.commercetools.api.models.type.CustomFields custom,
+            @JsonProperty("recurrencePolicy") final com.commercetools.api.models.recurrence_policy.RecurrencePolicyReference recurrencePolicy) {
         this.id = id;
         this.key = key;
         this.value = value;
@@ -69,6 +72,7 @@ public class PriceImpl implements Price, ModelBase {
         this.discounted = discounted;
         this.tiers = tiers;
         this.custom = custom;
+        this.recurrencePolicy = recurrencePolicy;
     }
 
     /**
@@ -166,6 +170,14 @@ public class PriceImpl implements Price, ModelBase {
         return this.custom;
     }
 
+    /**
+     *  <p>Recurrence Policy for which this Price is valid.</p>
+     */
+
+    public com.commercetools.api.models.recurrence_policy.RecurrencePolicyReference getRecurrencePolicy() {
+        return this.recurrencePolicy;
+    }
+
     public void setId(final String id) {
         this.id = id;
     }
@@ -215,6 +227,11 @@ public class PriceImpl implements Price, ModelBase {
         this.custom = custom;
     }
 
+    public void setRecurrencePolicy(
+            final com.commercetools.api.models.recurrence_policy.RecurrencePolicyReference recurrencePolicy) {
+        this.recurrencePolicy = recurrencePolicy;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -236,6 +253,7 @@ public class PriceImpl implements Price, ModelBase {
                 .append(discounted, that.discounted)
                 .append(tiers, that.tiers)
                 .append(custom, that.custom)
+                .append(recurrencePolicy, that.recurrencePolicy)
                 .append(id, that.id)
                 .append(key, that.key)
                 .append(value, that.value)
@@ -247,6 +265,7 @@ public class PriceImpl implements Price, ModelBase {
                 .append(discounted, that.discounted)
                 .append(tiers, that.tiers)
                 .append(custom, that.custom)
+                .append(recurrencePolicy, that.recurrencePolicy)
                 .isEquals();
     }
 
@@ -263,6 +282,7 @@ public class PriceImpl implements Price, ModelBase {
                 .append(discounted)
                 .append(tiers)
                 .append(custom)
+                .append(recurrencePolicy)
                 .toHashCode();
     }
 
@@ -279,6 +299,7 @@ public class PriceImpl implements Price, ModelBase {
                 .append("discounted", discounted)
                 .append("tiers", tiers)
                 .append("custom", custom)
+                .append("recurrencePolicy", recurrencePolicy)
                 .build();
     }
 

@@ -20,6 +20,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
  *  <p>Change triggered by the following update actions:</p>
  *  <ul>
  *   <li>Transition State on Orders.</li>
+ *   <li>Transition State on Recurring Orders.</li>
  *   <li>Transition State on Staged Orders.</li>
  *   <li>Transition State on Payments.</li>
  *   <li>Transition State on Products.</li>

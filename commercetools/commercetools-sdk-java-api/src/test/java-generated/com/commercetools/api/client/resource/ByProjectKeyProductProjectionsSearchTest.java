@@ -201,6 +201,15 @@ public class ByProjectKeyProductProjectionsSearchTest {
                                 .productProjections()
                                 .search()
                                 .get()
+                                .withPriceRecurrencePolicy("priceRecurrencePolicy")
+                                .createHttpRequest(),
+                        "get",
+                        "test_projectKey/product-projections/search?priceRecurrencePolicy=priceRecurrencePolicy", },
+                new Object[] {
+                        apiRoot.withProjectKey("test_projectKey")
+                                .productProjections()
+                                .search()
+                                .get()
                                 .withLocaleProjection("localeProjection")
                                 .createHttpRequest(),
                         "get", "test_projectKey/product-projections/search?localeProjection=localeProjection", },
@@ -306,6 +315,11 @@ public class ByProjectKeyProductProjectionsSearchTest {
                         .search()
                         .get()
                         .withPriceChannel("priceChannel"), },
+                new Object[] { apiRoot.withProjectKey("test_projectKey")
+                        .productProjections()
+                        .search()
+                        .get()
+                        .withPriceRecurrencePolicy("priceRecurrencePolicy"), },
                 new Object[] { apiRoot.withProjectKey("test_projectKey")
                         .productProjections()
                         .search()

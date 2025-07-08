@@ -55,6 +55,8 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
 
     private com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails;
 
+    private com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraft recurrenceInfo;
+
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     /**
@@ -73,6 +75,7 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
             @JsonProperty("perMethodExternalTaxRate") final java.util.List<com.commercetools.api.models.cart.MethodExternalTaxRateDraft> perMethodExternalTaxRate,
             @JsonProperty("inventoryMode") final com.commercetools.api.models.cart.InventoryMode inventoryMode,
             @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails,
+            @JsonProperty("recurrenceInfo") final com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraft recurrenceInfo,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.key = key;
         this.productId = productId;
@@ -88,6 +91,7 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
         this.perMethodExternalTaxRate = perMethodExternalTaxRate;
         this.inventoryMode = inventoryMode;
         this.shippingDetails = shippingDetails;
+        this.recurrenceInfo = recurrenceInfo;
         this.custom = custom;
         this.action = ADD_LINE_ITEM;
     }
@@ -224,6 +228,14 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
     }
 
     /**
+     *  <p>Recurring Order and frequency data.</p>
+     */
+
+    public com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraft getRecurrenceInfo() {
+        return this.recurrenceInfo;
+    }
+
+    /**
      *  <p>Custom Fields for the Line Item.</p>
      */
 
@@ -295,6 +307,11 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
         this.shippingDetails = shippingDetails;
     }
 
+    public void setRecurrenceInfo(
+            final com.commercetools.api.models.recurring_order.LineItemRecurrenceInfoDraft recurrenceInfo) {
+        this.recurrenceInfo = recurrenceInfo;
+    }
+
     public void setCustom(final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.custom = custom;
     }
@@ -324,6 +341,7 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
                 .append(perMethodExternalTaxRate, that.perMethodExternalTaxRate)
                 .append(inventoryMode, that.inventoryMode)
                 .append(shippingDetails, that.shippingDetails)
+                .append(recurrenceInfo, that.recurrenceInfo)
                 .append(custom, that.custom)
                 .append(action, that.action)
                 .append(key, that.key)
@@ -340,6 +358,7 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
                 .append(perMethodExternalTaxRate, that.perMethodExternalTaxRate)
                 .append(inventoryMode, that.inventoryMode)
                 .append(shippingDetails, that.shippingDetails)
+                .append(recurrenceInfo, that.recurrenceInfo)
                 .append(custom, that.custom)
                 .isEquals();
     }
@@ -361,6 +380,7 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
                 .append(perMethodExternalTaxRate)
                 .append(inventoryMode)
                 .append(shippingDetails)
+                .append(recurrenceInfo)
                 .append(custom)
                 .toHashCode();
     }
@@ -382,6 +402,7 @@ public class CartAddLineItemActionImpl implements CartAddLineItemAction, ModelBa
                 .append("perMethodExternalTaxRate", perMethodExternalTaxRate)
                 .append("inventoryMode", inventoryMode)
                 .append("shippingDetails", shippingDetails)
+                .append("recurrenceInfo", recurrenceInfo)
                 .append("custom", custom)
                 .build();
     }

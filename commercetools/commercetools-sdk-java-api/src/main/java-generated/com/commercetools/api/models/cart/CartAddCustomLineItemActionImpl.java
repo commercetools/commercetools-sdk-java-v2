@@ -46,6 +46,8 @@ public class CartAddCustomLineItemActionImpl implements CartAddCustomLineItemAct
 
     private com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode;
 
+    private com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoDraft recurrenceInfo;
+
     /**
      * create instance with all properties
      */
@@ -58,7 +60,8 @@ public class CartAddCustomLineItemActionImpl implements CartAddCustomLineItemAct
             @JsonProperty("externalTaxRate") final com.commercetools.api.models.cart.ExternalTaxRateDraft externalTaxRate,
             @JsonProperty("shippingDetails") final com.commercetools.api.models.cart.ItemShippingDetailsDraft shippingDetails,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
-            @JsonProperty("priceMode") final com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode) {
+            @JsonProperty("priceMode") final com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode,
+            @JsonProperty("recurrenceInfo") final com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoDraft recurrenceInfo) {
         this.money = money;
         this.name = name;
         this.key = key;
@@ -69,6 +72,7 @@ public class CartAddCustomLineItemActionImpl implements CartAddCustomLineItemAct
         this.shippingDetails = shippingDetails;
         this.custom = custom;
         this.priceMode = priceMode;
+        this.recurrenceInfo = recurrenceInfo;
         this.action = ADD_CUSTOM_LINE_ITEM;
     }
 
@@ -171,6 +175,14 @@ public class CartAddCustomLineItemActionImpl implements CartAddCustomLineItemAct
         return this.priceMode;
     }
 
+    /**
+     *  <p>Recurring Order and frequency data.</p>
+     */
+
+    public com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoDraft getRecurrenceInfo() {
+        return this.recurrenceInfo;
+    }
+
     public void setMoney(final com.commercetools.api.models.common.Money money) {
         this.money = money;
     }
@@ -212,6 +224,11 @@ public class CartAddCustomLineItemActionImpl implements CartAddCustomLineItemAct
         this.priceMode = priceMode;
     }
 
+    public void setRecurrenceInfo(
+            final com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoDraft recurrenceInfo) {
+        this.recurrenceInfo = recurrenceInfo;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o)
@@ -233,6 +250,7 @@ public class CartAddCustomLineItemActionImpl implements CartAddCustomLineItemAct
                 .append(shippingDetails, that.shippingDetails)
                 .append(custom, that.custom)
                 .append(priceMode, that.priceMode)
+                .append(recurrenceInfo, that.recurrenceInfo)
                 .append(action, that.action)
                 .append(money, that.money)
                 .append(name, that.name)
@@ -244,6 +262,7 @@ public class CartAddCustomLineItemActionImpl implements CartAddCustomLineItemAct
                 .append(shippingDetails, that.shippingDetails)
                 .append(custom, that.custom)
                 .append(priceMode, that.priceMode)
+                .append(recurrenceInfo, that.recurrenceInfo)
                 .isEquals();
     }
 
@@ -260,6 +279,7 @@ public class CartAddCustomLineItemActionImpl implements CartAddCustomLineItemAct
                 .append(shippingDetails)
                 .append(custom)
                 .append(priceMode)
+                .append(recurrenceInfo)
                 .toHashCode();
     }
 
@@ -276,6 +296,7 @@ public class CartAddCustomLineItemActionImpl implements CartAddCustomLineItemAct
                 .append("shippingDetails", shippingDetails)
                 .append("custom", custom)
                 .append("priceMode", priceMode)
+                .append("recurrenceInfo", recurrenceInfo)
                 .build();
     }
 

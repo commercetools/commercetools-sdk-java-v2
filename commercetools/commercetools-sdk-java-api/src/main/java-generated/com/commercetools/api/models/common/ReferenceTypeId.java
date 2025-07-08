@@ -110,6 +110,12 @@ public interface ReferenceTypeId extends JsonEnum {
     <p>References a QuoteRequest.</p> */
     ReferenceTypeId QUOTE_REQUEST = ReferenceTypeIdEnum.QUOTE_REQUEST;
     /**
+    <p>References a RecurrencePolicy.</p> */
+    ReferenceTypeId RECURRENCE_POLICY = ReferenceTypeIdEnum.RECURRENCE_POLICY;
+    /**
+    <p>References a RecurringOrder.</p> */
+    ReferenceTypeId RECURRING_ORDER = ReferenceTypeIdEnum.RECURRING_ORDER;
+    /**
     <p>References a Review.</p> */
     ReferenceTypeId REVIEW = ReferenceTypeIdEnum.REVIEW;
     /**
@@ -301,6 +307,16 @@ public interface ReferenceTypeId extends JsonEnum {
          * quote-request
          */
         QUOTE_REQUEST("quote-request"),
+
+        /**
+         * recurrence-policy
+         */
+        RECURRENCE_POLICY("recurrence-policy"),
+
+        /**
+         * recurring-order
+         */
+        RECURRING_ORDER("recurring-order"),
 
         /**
          * review

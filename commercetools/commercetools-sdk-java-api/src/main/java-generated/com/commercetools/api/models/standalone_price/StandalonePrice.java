@@ -17,6 +17,7 @@ import com.commercetools.api.models.common.LastModifiedBy;
 import com.commercetools.api.models.common.PriceTier;
 import com.commercetools.api.models.common.TypedMoney;
 import com.commercetools.api.models.customer_group.CustomerGroupReference;
+import com.commercetools.api.models.recurrence_policy.RecurrencePolicyReference;
 import com.commercetools.api.models.type.CustomFields;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.annotation.*;
@@ -208,6 +209,14 @@ public interface StandalonePrice
     public Boolean getActive();
 
     /**
+     *  <p>RecurrencePolicy for which this Price is valid.</p>
+     * @return recurrencePolicy
+     */
+    @Valid
+    @JsonProperty("recurrencePolicy")
+    public RecurrencePolicyReference getRecurrencePolicy();
+
+    /**
      *  <p>Unique identifier of the StandalonePrice.</p>
      * @param id value to be set
      */
@@ -351,6 +360,13 @@ public interface StandalonePrice
     public void setActive(final Boolean active);
 
     /**
+     *  <p>RecurrencePolicy for which this Price is valid.</p>
+     * @param recurrencePolicy value to be set
+     */
+
+    public void setRecurrencePolicy(final RecurrencePolicyReference recurrencePolicy);
+
+    /**
      * factory method
      * @return instance of StandalonePrice
      */
@@ -384,6 +400,7 @@ public interface StandalonePrice
         instance.setCustom(template.getCustom());
         instance.setStaged(template.getStaged());
         instance.setActive(template.getActive());
+        instance.setRecurrencePolicy(template.getRecurrencePolicy());
         return instance;
     }
 
@@ -426,6 +443,8 @@ public interface StandalonePrice
         instance.setStaged(
             com.commercetools.api.models.standalone_price.StagedStandalonePrice.deepCopy(template.getStaged()));
         instance.setActive(template.getActive());
+        instance.setRecurrencePolicy(com.commercetools.api.models.recurrence_policy.RecurrencePolicyReference
+                .deepCopy(template.getRecurrencePolicy()));
         return instance;
     }
 

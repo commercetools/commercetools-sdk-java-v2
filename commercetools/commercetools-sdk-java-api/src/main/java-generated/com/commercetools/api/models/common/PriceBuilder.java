@@ -56,6 +56,9 @@ public class PriceBuilder implements Builder<Price> {
     @Nullable
     private com.commercetools.api.models.type.CustomFields custom;
 
+    @Nullable
+    private com.commercetools.api.models.recurrence_policy.RecurrencePolicyReference recurrencePolicy;
+
     /**
      *  <p>Unique identifier of this Price.</p>
      * @param id value to be set
@@ -372,6 +375,45 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
+     *  <p>Recurrence Policy for which this Price is valid.</p>
+     * @param builder function to build the recurrencePolicy value
+     * @return Builder
+     */
+
+    public PriceBuilder recurrencePolicy(
+            Function<com.commercetools.api.models.recurrence_policy.RecurrencePolicyReferenceBuilder, com.commercetools.api.models.recurrence_policy.RecurrencePolicyReferenceBuilder> builder) {
+        this.recurrencePolicy = builder
+                .apply(com.commercetools.api.models.recurrence_policy.RecurrencePolicyReferenceBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>Recurrence Policy for which this Price is valid.</p>
+     * @param builder function to build the recurrencePolicy value
+     * @return Builder
+     */
+
+    public PriceBuilder withRecurrencePolicy(
+            Function<com.commercetools.api.models.recurrence_policy.RecurrencePolicyReferenceBuilder, com.commercetools.api.models.recurrence_policy.RecurrencePolicyReference> builder) {
+        this.recurrencePolicy = builder
+                .apply(com.commercetools.api.models.recurrence_policy.RecurrencePolicyReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Recurrence Policy for which this Price is valid.</p>
+     * @param recurrencePolicy value to be set
+     * @return Builder
+     */
+
+    public PriceBuilder recurrencePolicy(
+            @Nullable final com.commercetools.api.models.recurrence_policy.RecurrencePolicyReference recurrencePolicy) {
+        this.recurrencePolicy = recurrencePolicy;
+        return this;
+    }
+
+    /**
      *  <p>Unique identifier of this Price.</p>
      * @return id
      */
@@ -481,6 +523,16 @@ public class PriceBuilder implements Builder<Price> {
     }
 
     /**
+     *  <p>Recurrence Policy for which this Price is valid.</p>
+     * @return recurrencePolicy
+     */
+
+    @Nullable
+    public com.commercetools.api.models.recurrence_policy.RecurrencePolicyReference getRecurrencePolicy() {
+        return this.recurrencePolicy;
+    }
+
+    /**
      * builds Price with checking for non-null required values
      * @return Price
      */
@@ -488,7 +540,7 @@ public class PriceBuilder implements Builder<Price> {
         Objects.requireNonNull(id, Price.class + ": id is missing");
         Objects.requireNonNull(value, Price.class + ": value is missing");
         return new PriceImpl(id, key, value, country, customerGroup, channel, validFrom, validUntil, discounted, tiers,
-            custom);
+            custom, recurrencePolicy);
     }
 
     /**
@@ -497,7 +549,7 @@ public class PriceBuilder implements Builder<Price> {
      */
     public Price buildUnchecked() {
         return new PriceImpl(id, key, value, country, customerGroup, channel, validFrom, validUntil, discounted, tiers,
-            custom);
+            custom, recurrencePolicy);
     }
 
     /**
@@ -526,6 +578,7 @@ public class PriceBuilder implements Builder<Price> {
         builder.discounted = template.getDiscounted();
         builder.tiers = template.getTiers();
         builder.custom = template.getCustom();
+        builder.recurrencePolicy = template.getRecurrencePolicy();
         return builder;
     }
 

@@ -104,6 +104,8 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
 
     private com.commercetools.api.models.quote.QuoteReference quote;
 
+    private com.commercetools.api.models.recurring_order.RecurringOrderReference recurringOrder;
+
     private com.commercetools.api.models.order.OrderState orderState;
 
     private com.commercetools.api.models.order.ShipmentState shipmentState;
@@ -172,6 +174,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
             @JsonProperty("origin") final com.commercetools.api.models.cart.CartOrigin origin,
             @JsonProperty("cart") final com.commercetools.api.models.cart.CartReference cart,
             @JsonProperty("quote") final com.commercetools.api.models.quote.QuoteReference quote,
+            @JsonProperty("recurringOrder") final com.commercetools.api.models.recurring_order.RecurringOrderReference recurringOrder,
             @JsonProperty("orderState") final com.commercetools.api.models.order.OrderState orderState,
             @JsonProperty("shipmentState") final com.commercetools.api.models.order.ShipmentState shipmentState,
             @JsonProperty("paymentState") final com.commercetools.api.models.order.PaymentState paymentState,
@@ -225,6 +228,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
         this.origin = origin;
         this.cart = cart;
         this.quote = quote;
+        this.recurringOrder = recurringOrder;
         this.orderState = orderState;
         this.shipmentState = shipmentState;
         this.paymentState = paymentState;
@@ -586,6 +590,14 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
     }
 
     /**
+     *  <p>Reference to the RecurringOrder that generated this Order.</p>
+     */
+
+    public com.commercetools.api.models.recurring_order.RecurringOrderReference getRecurringOrder() {
+        return this.recurringOrder;
+    }
+
+    /**
      *  <p>Current status of the Order.</p>
      */
 
@@ -882,6 +894,11 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
         this.quote = quote;
     }
 
+    public void setRecurringOrder(
+            final com.commercetools.api.models.recurring_order.RecurringOrderReference recurringOrder) {
+        this.recurringOrder = recurringOrder;
+    }
+
     public void setOrderState(final com.commercetools.api.models.order.OrderState orderState) {
         this.orderState = orderState;
     }
@@ -991,6 +1008,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
                 .append(origin, that.origin)
                 .append(cart, that.cart)
                 .append(quote, that.quote)
+                .append(recurringOrder, that.recurringOrder)
                 .append(orderState, that.orderState)
                 .append(shipmentState, that.shipmentState)
                 .append(paymentState, that.paymentState)
@@ -1044,6 +1062,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
                 .append(origin, that.origin)
                 .append(cart, that.cart)
                 .append(quote, that.quote)
+                .append(recurringOrder, that.recurringOrder)
                 .append(orderState, that.orderState)
                 .append(shipmentState, that.shipmentState)
                 .append(paymentState, that.paymentState)
@@ -1102,6 +1121,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
                 .append(origin)
                 .append(cart)
                 .append(quote)
+                .append(recurringOrder)
                 .append(orderState)
                 .append(shipmentState)
                 .append(paymentState)
@@ -1160,6 +1180,7 @@ public class StagedOrderImpl implements StagedOrder, ModelBase {
                 .append("origin", origin)
                 .append("cart", cart)
                 .append("quote", quote)
+                .append("recurringOrder", recurringOrder)
                 .append("orderState", orderState)
                 .append("shipmentState", shipmentState)
                 .append("paymentState", paymentState)

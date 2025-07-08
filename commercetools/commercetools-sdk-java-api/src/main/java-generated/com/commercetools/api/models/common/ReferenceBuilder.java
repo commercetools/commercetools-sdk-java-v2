@@ -119,6 +119,14 @@ public class ReferenceBuilder {
         return com.commercetools.api.models.quote_request.QuoteRequestReferenceBuilder.of();
     }
 
+    public com.commercetools.api.models.recurrence_policy.RecurrencePolicyReferenceBuilder recurrencePolicyBuilder() {
+        return com.commercetools.api.models.recurrence_policy.RecurrencePolicyReferenceBuilder.of();
+    }
+
+    public com.commercetools.api.models.recurring_order.RecurringOrderReferenceBuilder recurringOrderBuilder() {
+        return com.commercetools.api.models.recurring_order.RecurringOrderReferenceBuilder.of();
+    }
+
     public com.commercetools.api.models.review.ReviewReferenceBuilder reviewBuilder() {
         return com.commercetools.api.models.review.ReviewReferenceBuilder.of();
     }

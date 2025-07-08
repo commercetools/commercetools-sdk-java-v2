@@ -38,7 +38,10 @@ public class CartAddCustomLineItemActionTest {
                         CartAddCustomLineItemAction.builder()
                                 .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) },
                 new Object[] { "priceMode", CartAddCustomLineItemAction.builder()
-                        .priceMode(com.commercetools.api.models.cart.CustomLineItemPriceMode.findEnum("Standard")) } };
+                        .priceMode(com.commercetools.api.models.cart.CustomLineItemPriceMode.findEnum("Standard")) },
+                new Object[] { "recurrenceInfo", CartAddCustomLineItemAction.builder()
+                        .recurrenceInfo(
+                            new com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoDraftImpl()) } };
     }
 
     @Test
@@ -114,5 +117,14 @@ public class CartAddCustomLineItemActionTest {
         value.setPriceMode(com.commercetools.api.models.cart.CustomLineItemPriceMode.findEnum("Standard"));
         Assertions.assertThat(value.getPriceMode())
                 .isEqualTo(com.commercetools.api.models.cart.CustomLineItemPriceMode.findEnum("Standard"));
+    }
+
+    @Test
+    public void recurrenceInfo() {
+        CartAddCustomLineItemAction value = CartAddCustomLineItemAction.of();
+        value.setRecurrenceInfo(
+            new com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoDraftImpl());
+        Assertions.assertThat(value.getRecurrenceInfo())
+                .isEqualTo(new com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoDraftImpl());
     }
 }

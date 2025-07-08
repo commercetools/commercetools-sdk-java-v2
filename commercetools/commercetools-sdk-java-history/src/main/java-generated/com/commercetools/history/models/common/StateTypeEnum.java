@@ -18,6 +18,8 @@ public interface StateTypeEnum extends JsonEnum {
 
     StateTypeEnum ORDER_STATE = StateTypeEnumEnum.ORDER_STATE;
 
+    StateTypeEnum RECURRING_ORDER_STATE = StateTypeEnumEnum.RECURRING_ORDER_STATE;
+
     StateTypeEnum LINE_ITEM_STATE = StateTypeEnumEnum.LINE_ITEM_STATE;
 
     StateTypeEnum PRODUCT_STATE = StateTypeEnumEnum.PRODUCT_STATE;
@@ -40,6 +42,11 @@ public interface StateTypeEnum extends JsonEnum {
          * OrderState
          */
         ORDER_STATE("OrderState"),
+
+        /**
+         * RecurringOrderState
+         */
+        RECURRING_ORDER_STATE("RecurringOrderState"),
 
         /**
          * LineItemState

@@ -80,6 +80,9 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
 
     private Boolean active;
 
+    @Nullable
+    private com.commercetools.api.models.recurrence_policy.RecurrencePolicyReference recurrencePolicy;
+
     /**
      *  <p>Unique identifier of the StandalonePrice.</p>
      * @param id value to be set
@@ -562,6 +565,45 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
+     *  <p>RecurrencePolicy for which this Price is valid.</p>
+     * @param builder function to build the recurrencePolicy value
+     * @return Builder
+     */
+
+    public StandalonePriceBuilder recurrencePolicy(
+            Function<com.commercetools.api.models.recurrence_policy.RecurrencePolicyReferenceBuilder, com.commercetools.api.models.recurrence_policy.RecurrencePolicyReferenceBuilder> builder) {
+        this.recurrencePolicy = builder
+                .apply(com.commercetools.api.models.recurrence_policy.RecurrencePolicyReferenceBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>RecurrencePolicy for which this Price is valid.</p>
+     * @param builder function to build the recurrencePolicy value
+     * @return Builder
+     */
+
+    public StandalonePriceBuilder withRecurrencePolicy(
+            Function<com.commercetools.api.models.recurrence_policy.RecurrencePolicyReferenceBuilder, com.commercetools.api.models.recurrence_policy.RecurrencePolicyReference> builder) {
+        this.recurrencePolicy = builder
+                .apply(com.commercetools.api.models.recurrence_policy.RecurrencePolicyReferenceBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>RecurrencePolicy for which this Price is valid.</p>
+     * @param recurrencePolicy value to be set
+     * @return Builder
+     */
+
+    public StandalonePriceBuilder recurrencePolicy(
+            @Nullable final com.commercetools.api.models.recurrence_policy.RecurrencePolicyReference recurrencePolicy) {
+        this.recurrencePolicy = recurrencePolicy;
+        return this;
+    }
+
+    /**
      *  <p>Unique identifier of the StandalonePrice.</p>
      * @return id
      */
@@ -746,6 +788,16 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
     }
 
     /**
+     *  <p>RecurrencePolicy for which this Price is valid.</p>
+     * @return recurrencePolicy
+     */
+
+    @Nullable
+    public com.commercetools.api.models.recurrence_policy.RecurrencePolicyReference getRecurrencePolicy() {
+        return this.recurrencePolicy;
+    }
+
+    /**
      * builds StandalonePrice with checking for non-null required values
      * @return StandalonePrice
      */
@@ -758,7 +810,8 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
         Objects.requireNonNull(value, StandalonePrice.class + ": value is missing");
         Objects.requireNonNull(active, StandalonePrice.class + ": active is missing");
         return new StandalonePriceImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, sku,
-            value, country, customerGroup, channel, validFrom, validUntil, tiers, discounted, custom, staged, active);
+            value, country, customerGroup, channel, validFrom, validUntil, tiers, discounted, custom, staged, active,
+            recurrencePolicy);
     }
 
     /**
@@ -767,7 +820,8 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
      */
     public StandalonePrice buildUnchecked() {
         return new StandalonePriceImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, sku,
-            value, country, customerGroup, channel, validFrom, validUntil, tiers, discounted, custom, staged, active);
+            value, country, customerGroup, channel, validFrom, validUntil, tiers, discounted, custom, staged, active,
+            recurrencePolicy);
     }
 
     /**
@@ -804,6 +858,7 @@ public class StandalonePriceBuilder implements Builder<StandalonePrice> {
         builder.custom = template.getCustom();
         builder.staged = template.getStaged();
         builder.active = template.getActive();
+        builder.recurrencePolicy = template.getRecurrencePolicy();
         return builder;
     }
 

@@ -236,4 +236,13 @@ public class LineItemQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, LineItemQueryBuilderDsl::of));
     }
 
+    public CombinationQueryPredicate<LineItemQueryBuilderDsl> recurrenceInfo(
+            Function<com.commercetools.api.predicates.query.recurring_order.LineItemRecurrenceInfoQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.recurring_order.LineItemRecurrenceInfoQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(ContainerQueryPredicate.of()
+                .parent(ConstantQueryPredicate.of().constant("recurrenceInfo"))
+                .inner(fn.apply(
+                    com.commercetools.api.predicates.query.recurring_order.LineItemRecurrenceInfoQueryBuilderDsl.of())),
+            LineItemQueryBuilderDsl::of);
+    }
+
 }

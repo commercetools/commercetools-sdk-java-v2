@@ -149,6 +149,14 @@ public class ByProjectKeyRequestBuilder {
         return new ByProjectKeyStagedQuotesRequestBuilder(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyRecurringOrdersRequestBuilder recurringOrders() {
+        return new ByProjectKeyRecurringOrdersRequestBuilder(apiHttpClient, projectKey);
+    }
+
+    public ByProjectKeyRecurrencePoliciesRequestBuilder recurrencePolicies() {
+        return new ByProjectKeyRecurrencePoliciesRequestBuilder(apiHttpClient, projectKey);
+    }
+
     public ByProjectKeyReviewsRequestBuilder reviews() {
         return new ByProjectKeyReviewsRequestBuilder(apiHttpClient, projectKey);
     }

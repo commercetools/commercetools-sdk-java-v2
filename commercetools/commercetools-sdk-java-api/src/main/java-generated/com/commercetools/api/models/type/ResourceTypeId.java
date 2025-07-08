@@ -98,6 +98,9 @@ public interface ResourceTypeId extends JsonEnum {
     <p>Review</p> */
     ResourceTypeId REVIEW = ResourceTypeIdEnum.REVIEW;
     /**
+    <p>RecurringOrder</p> */
+    ResourceTypeId RECURRING_ORDER = ResourceTypeIdEnum.RECURRING_ORDER;
+    /**
     <p>Shipping</p> */
     ResourceTypeId SHIPPING = ResourceTypeIdEnum.SHIPPING;
     /**
@@ -257,6 +260,11 @@ public interface ResourceTypeId extends JsonEnum {
          * review
          */
         REVIEW("review"),
+
+        /**
+         * recurring-order
+         */
+        RECURRING_ORDER("recurring-order"),
 
         /**
          * shipping

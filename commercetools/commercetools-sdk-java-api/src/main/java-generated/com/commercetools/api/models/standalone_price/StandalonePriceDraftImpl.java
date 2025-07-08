@@ -44,6 +44,8 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
+    private com.commercetools.api.models.recurrence_policy.RecurrencePolicyResourceIdentifier recurrencePolicy;
+
     private com.commercetools.api.models.standalone_price.StagedPriceDraft staged;
 
     private Boolean active;
@@ -62,6 +64,7 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
             @JsonProperty("tiers") final java.util.List<com.commercetools.api.models.common.PriceTierDraft> tiers,
             @JsonProperty("discounted") final com.commercetools.api.models.common.DiscountedPriceDraft discounted,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
+            @JsonProperty("recurrencePolicy") final com.commercetools.api.models.recurrence_policy.RecurrencePolicyResourceIdentifier recurrencePolicy,
             @JsonProperty("staged") final com.commercetools.api.models.standalone_price.StagedPriceDraft staged,
             @JsonProperty("active") final Boolean active) {
         this.key = key;
@@ -75,6 +78,7 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
         this.tiers = tiers;
         this.discounted = discounted;
         this.custom = custom;
+        this.recurrencePolicy = recurrencePolicy;
         this.staged = staged;
         this.active = active;
     }
@@ -176,6 +180,14 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
     }
 
     /**
+     *  <p>RecurrencePolicy for which this Price is valid.</p>
+     */
+
+    public com.commercetools.api.models.recurrence_policy.RecurrencePolicyResourceIdentifier getRecurrencePolicy() {
+        return this.recurrencePolicy;
+    }
+
+    /**
      *  <p>Staged changes for the StandalonePrice.</p>
      */
 
@@ -240,6 +252,11 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
         this.custom = custom;
     }
 
+    public void setRecurrencePolicy(
+            final com.commercetools.api.models.recurrence_policy.RecurrencePolicyResourceIdentifier recurrencePolicy) {
+        this.recurrencePolicy = recurrencePolicy;
+    }
+
     public void setStaged(final com.commercetools.api.models.standalone_price.StagedPriceDraft staged) {
         this.staged = staged;
     }
@@ -269,6 +286,7 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
                 .append(tiers, that.tiers)
                 .append(discounted, that.discounted)
                 .append(custom, that.custom)
+                .append(recurrencePolicy, that.recurrencePolicy)
                 .append(staged, that.staged)
                 .append(active, that.active)
                 .append(key, that.key)
@@ -282,6 +300,7 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
                 .append(tiers, that.tiers)
                 .append(discounted, that.discounted)
                 .append(custom, that.custom)
+                .append(recurrencePolicy, that.recurrencePolicy)
                 .append(staged, that.staged)
                 .append(active, that.active)
                 .isEquals();
@@ -300,6 +319,7 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
                 .append(tiers)
                 .append(discounted)
                 .append(custom)
+                .append(recurrencePolicy)
                 .append(staged)
                 .append(active)
                 .toHashCode();
@@ -318,6 +338,7 @@ public class StandalonePriceDraftImpl implements StandalonePriceDraft, ModelBase
                 .append("tiers", tiers)
                 .append("discounted", discounted)
                 .append("custom", custom)
+                .append("recurrencePolicy", recurrencePolicy)
                 .append("staged", staged)
                 .append("active", active)
                 .build();

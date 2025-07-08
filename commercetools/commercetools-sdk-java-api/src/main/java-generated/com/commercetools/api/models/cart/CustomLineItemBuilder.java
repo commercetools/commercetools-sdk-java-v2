@@ -74,6 +74,9 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
 
     private com.commercetools.api.models.cart.CustomLineItemPriceMode priceMode;
 
+    @Nullable
+    private com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfo recurrenceInfo;
+
     /**
      *  <p>Unique identifier of the Custom Line Item.</p>
      * @param id value to be set
@@ -773,6 +776,45 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @param builder function to build the recurrenceInfo value
+     * @return Builder
+     */
+
+    public CustomLineItemBuilder recurrenceInfo(
+            Function<com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoBuilder, com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoBuilder> builder) {
+        this.recurrenceInfo = builder
+                .apply(com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoBuilder.of())
+                .build();
+        return this;
+    }
+
+    /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @param builder function to build the recurrenceInfo value
+     * @return Builder
+     */
+
+    public CustomLineItemBuilder withRecurrenceInfo(
+            Function<com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoBuilder, com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfo> builder) {
+        this.recurrenceInfo = builder
+                .apply(com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfoBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @param recurrenceInfo value to be set
+     * @return Builder
+     */
+
+    public CustomLineItemBuilder recurrenceInfo(
+            @Nullable final com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfo recurrenceInfo) {
+        this.recurrenceInfo = recurrenceInfo;
+        return this;
+    }
+
+    /**
      *  <p>Unique identifier of the Custom Line Item.</p>
      * @return id
      */
@@ -936,6 +978,16 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     }
 
     /**
+     *  <p>Recurring Order and frequency data.</p>
+     * @return recurrenceInfo
+     */
+
+    @Nullable
+    public com.commercetools.api.models.recurring_order.CustomLineItemRecurrenceInfo getRecurrenceInfo() {
+        return this.recurrenceInfo;
+    }
+
+    /**
      * builds CustomLineItem with checking for non-null required values
      * @return CustomLineItem
      */
@@ -954,7 +1006,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
         Objects.requireNonNull(priceMode, CustomLineItem.class + ": priceMode is missing");
         return new CustomLineItemImpl(id, key, name, money, taxedPrice, taxedPricePortions, totalPrice, slug, quantity,
             state, taxCategory, taxRate, perMethodTaxRate, discountedPricePerQuantity, custom, shippingDetails,
-            priceMode);
+            priceMode, recurrenceInfo);
     }
 
     /**
@@ -964,7 +1016,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
     public CustomLineItem buildUnchecked() {
         return new CustomLineItemImpl(id, key, name, money, taxedPrice, taxedPricePortions, totalPrice, slug, quantity,
             state, taxCategory, taxRate, perMethodTaxRate, discountedPricePerQuantity, custom, shippingDetails,
-            priceMode);
+            priceMode, recurrenceInfo);
     }
 
     /**
@@ -999,6 +1051,7 @@ public class CustomLineItemBuilder implements Builder<CustomLineItem> {
         builder.custom = template.getCustom();
         builder.shippingDetails = template.getShippingDetails();
         builder.priceMode = template.getPriceMode();
+        builder.recurrenceInfo = template.getRecurrenceInfo();
         return builder;
     }
 

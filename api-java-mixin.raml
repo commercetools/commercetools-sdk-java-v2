@@ -1347,7 +1347,7 @@ types:
   MyPayment:
     (java-extends): 'com.commercetools.api.models.DomainResource<MyPayment>, com.commercetools.api.models.Customizable<MyPayment>'
   MyPaymentDraft:
-    (java-extends): 'com.commercetools.api.models.CustomizableDraft<MyPaymentDraft>'
+    (java-extends): 'MyPaymenDraftMixin, com.commercetools.api.models.CustomizableDraft<MyPaymentDraft>'
   MyPaymentUpdate:
     (java-extends): 'com.commercetools.api.models.ResourceUpdate<MyPaymentUpdate,
       MyPaymentUpdateAction, MyPaymentUpdateBuilder>'

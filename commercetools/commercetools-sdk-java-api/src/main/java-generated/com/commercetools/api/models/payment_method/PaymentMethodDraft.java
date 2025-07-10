@@ -69,7 +69,7 @@ public interface PaymentMethodDraft extends io.vrap.rmf.base.client.Draft<Paymen
     public BusinessUnitResourceIdentifier getBusinessUnit();
 
     /**
-     *  <p>Payment method to use for the Payment—for example, a credit card or cash advance.</p>
+     *  <p>Payment method to use for the Payment—for example, a credit card or direct debit.</p>
      * @return method
      */
 
@@ -156,7 +156,7 @@ public interface PaymentMethodDraft extends io.vrap.rmf.base.client.Draft<Paymen
     public void setBusinessUnit(final BusinessUnitResourceIdentifier businessUnit);
 
     /**
-     *  <p>Payment method to use for the Payment—for example, a credit card or cash advance.</p>
+     *  <p>Payment method to use for the Payment—for example, a credit card or direct debit.</p>
      * @param method value to be set
      */
 

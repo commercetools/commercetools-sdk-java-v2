@@ -96,7 +96,7 @@ public interface PaymentMethod extends BaseResource {
     public BusinessUnitKeyReference getBusinessUnit();
 
     /**
-     *  <p>Payment Method used for the Payment—for example, a credit card or cash advance.</p>
+     *  <p>Payment Method used for the Payment—for example, a credit card or direct debit.</p>
      * @return method
      */
 
@@ -229,7 +229,7 @@ public interface PaymentMethod extends BaseResource {
     public void setBusinessUnit(final BusinessUnitKeyReference businessUnit);
 
     /**
-     *  <p>Payment Method used for the Payment—for example, a credit card or cash advance.</p>
+     *  <p>Payment Method used for the Payment—for example, a credit card or direct debit.</p>
      * @param method value to be set
      */
 

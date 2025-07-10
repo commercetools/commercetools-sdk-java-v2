@@ -42,7 +42,7 @@ public interface PaymentMethodInfo extends PaymentMethodInfoMixin {
     public String getPaymentInterface();
 
     /**
-     *  <p>Payment method used—for example, a credit card or cash advance.</p>
+     *  <p>Payment method used—for example, a credit card or direct debit.</p>
      * @return method
      */
 
@@ -89,7 +89,7 @@ public interface PaymentMethodInfo extends PaymentMethodInfoMixin {
     public void setPaymentInterface(final String paymentInterface);
 
     /**
-     *  <p>Payment method used—for example, a credit card or cash advance.</p>
+     *  <p>Payment method used—for example, a credit card or direct debit.</p>
      * @param method value to be set
      */
 

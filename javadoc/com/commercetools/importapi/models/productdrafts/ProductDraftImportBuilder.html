@@ -125,12 +125,22 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addCategories(java.util.function.Function)" class="member-name-link">addCategories</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CategoryKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">CategoryKeyReferenceBuilder</a>,<wbr><a href="../common/CategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">CategoryKeyReference</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The Reference to the Categories with which the ProductDraft is associated.</div>
+<div class="block">Maps to <code>ProductData.categories</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addVariants(java.util.function.Function)" class="member-name-link">addVariants</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductVariantDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImportBuilder</a>,<wbr><a href="ProductVariantDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImport</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">An array of related Product Variants.</div>
+<div class="block">An array of related ProductVariants.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#attributes(com.commercetools.importapi.models.productvariants.Attribute...)" class="member-name-link">attributes</a><wbr>(<a href="../productvariants/Attribute.html" title="interface in com.commercetools.importapi.models.productvariants">Attribute</a>...&nbsp;attributes)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">set values to the attributes</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#attributes(java.util.List)" class="member-name-link">attributes</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../productvariants/Attribute.html" title="interface in com.commercetools.importapi.models.productvariants">Attribute</a>&gt;&nbsp;attributes)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">set value to the attributes</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductDraftImport</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#build()" class="member-name-link">build</a>()</code></div>
@@ -145,332 +155,352 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#categories(com.commercetools.importapi.models.common.CategoryKeyReference...)" class="member-name-link">categories</a><wbr>(<a href="../common/CategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">CategoryKeyReference</a>...&nbsp;categories)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The Reference to the Categories with which the ProductDraft is associated.</div>
+<div class="block">Maps to <code>ProductData.categories</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#categories(java.util.List)" class="member-name-link">categories</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/CategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">CategoryKeyReference</a>&gt;&nbsp;categories)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The Reference to the Categories with which the ProductDraft is associated.</div>
+<div class="block">Maps to <code>ProductData.categories</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#description(com.commercetools.importapi.models.common.LocalizedString)" class="member-name-link">description</a><wbr>(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;description)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Maps to <code>Product.description</code>.</div>
+<div class="block">Maps to <code>ProductData.description</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#description(java.util.function.Function)" class="member-name-link">description</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Maps to <code>Product.description</code>.</div>
+<div class="block">Maps to <code>ProductData.description</code>.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/CategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">CategoryKeyReference</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCategories()" class="member-name-link">getCategories</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../productvariants/Attribute.html" title="interface in com.commercetools.importapi.models.productvariants">Attribute</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAttributes()" class="member-name-link">getAttributes</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The Reference to the Categories with which the ProductDraft is associated.</div>
+<div class="block">value of attributes}</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDescription()" class="member-name-link">getDescription</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/CategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">CategoryKeyReference</a>&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCategories()" class="member-name-link">getCategories</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Maps to <code>Product.description</code>.</div>
+<div class="block">Maps to <code>ProductData.categories</code>.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getKey()" class="member-name-link">getKey</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDescription()" class="member-name-link">getDescription</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Maps to <code>ProductData.description</code>.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getKey()" class="member-name-link">getKey</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">User-defined unique identifier.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductVariantDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImport</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMasterVariant()" class="member-name-link">getMasterVariant</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The master Product variant.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMetaDescription()" class="member-name-link">getMetaDescription</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductVariantDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImport</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMasterVariant()" class="member-name-link">getMasterVariant</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</div>
+<div class="block">The master ProductVariant.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMetaKeywords()" class="member-name-link">getMetaKeywords</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMetaDescription()" class="member-name-link">getMetaDescription</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</div>
+<div class="block">Maps to <code>ProductData.metaDescription</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMetaTitle()" class="member-name-link">getMetaTitle</a>()</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMetaKeywords()" class="member-name-link">getMetaKeywords</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</div>
+<div class="block">Maps to <code>ProductData.metaKeywords</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMetaTitle()" class="member-name-link">getMetaTitle</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">value of name}</div>
+<div class="block">Maps to <code>ProductData.metaTitle</code>.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/ProductPriceModeEnum.html" title="interface in com.commercetools.importapi.models.common">ProductPriceModeEnum</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPriceMode()" class="member-name-link">getPriceMode</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Determines the type of Prices the API uses.</div>
+<div class="block">Maps to <code>ProductData.name</code>.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/ProductTypeKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductTypeKeyReference</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getProductType()" class="member-name-link">getProductType</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/ProductPriceModeEnum.html" title="interface in com.commercetools.importapi.models.common">ProductPriceModeEnum</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPriceMode()" class="member-name-link">getPriceMode</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The <code>productType</code> of a Product.</div>
+<div class="block">Maps to <code>Product.priceMode</code>.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPublish()" class="member-name-link">getPublish</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/ProductTypeKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductTypeKeyReference</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getProductType()" class="member-name-link">getProductType</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Maps to <code>Product.productType</code>.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPublish()" class="member-name-link">getPublish</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Determines the published status and current/staged projection of the Product.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../products/SearchKeywords.html" title="interface in com.commercetools.importapi.models.products">SearchKeywords</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSearchKeywords()" class="member-name-link">getSearchKeywords</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Search keywords are primarily used by the suggester but are also considered for the full-text search.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSlug()" class="member-name-link">getSlug</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../products/SearchKeywords.html" title="interface in com.commercetools.importapi.models.products">SearchKeywords</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSearchKeywords()" class="member-name-link">getSearchKeywords</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Human-readable identifiers usually used as deep-link URL to the related product.</div>
+<div class="block">Maps to <code>ProductData.searchKeywords</code>.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/StateKeyReference.html" title="interface in com.commercetools.importapi.models.common">StateKeyReference</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getState()" class="member-name-link">getState</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSlug()" class="member-name-link">getSlug</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The Reference to the State with which the ProductDraft is associated.</div>
+<div class="block">Maps to <code>ProductData.slug</code>.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/TaxCategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">TaxCategoryKeyReference</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTaxCategory()" class="member-name-link">getTaxCategory</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/StateKeyReference.html" title="interface in com.commercetools.importapi.models.common">StateKeyReference</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getState()" class="member-name-link">getState</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The Reference to the TaxCategory with which the ProductDraft is associated.</div>
+<div class="block">Maps to <code>Product.state</code>.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductVariantDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImport</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVariants()" class="member-name-link">getVariants</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/TaxCategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">TaxCategoryKeyReference</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTaxCategory()" class="member-name-link">getTaxCategory</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">An array of related Product Variants.</div>
+<div class="block">Maps to <code>Product.taxCategory</code>.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#key(java.lang.String)" class="member-name-link">key</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductVariantDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImport</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getVariants()" class="member-name-link">getVariants</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">An array of related ProductVariants.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#key(java.lang.String)" class="member-name-link">key</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">User-defined unique identifier.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#masterVariant(com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport)" class="member-name-link">masterVariant</a><wbr>(<a href="ProductVariantDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImport</a>&nbsp;masterVariant)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The master Product variant.</div>
-</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#masterVariant(java.util.function.Function)" class="member-name-link">masterVariant</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductVariantDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImportBuilder</a>,<wbr><a href="ProductVariantDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImportBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#masterVariant(com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport)" class="member-name-link">masterVariant</a><wbr>(<a href="ProductVariantDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImport</a>&nbsp;masterVariant)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The master Product variant.</div>
+<div class="block">The master ProductVariant.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#metaDescription(com.commercetools.importapi.models.common.LocalizedString)" class="member-name-link">metaDescription</a><wbr>(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;metaDescription)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#masterVariant(java.util.function.Function)" class="member-name-link">masterVariant</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductVariantDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImportBuilder</a>,<wbr><a href="ProductVariantDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImportBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</div>
+<div class="block">The master ProductVariant.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#metaDescription(java.util.function.Function)" class="member-name-link">metaDescription</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#metaDescription(com.commercetools.importapi.models.common.LocalizedString)" class="member-name-link">metaDescription</a><wbr>(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;metaDescription)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</div>
+<div class="block">Maps to <code>ProductData.metaDescription</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#metaKeywords(com.commercetools.importapi.models.common.LocalizedString)" class="member-name-link">metaKeywords</a><wbr>(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;metaKeywords)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#metaDescription(java.util.function.Function)" class="member-name-link">metaDescription</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</div>
+<div class="block">Maps to <code>ProductData.metaDescription</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#metaKeywords(java.util.function.Function)" class="member-name-link">metaKeywords</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#metaKeywords(com.commercetools.importapi.models.common.LocalizedString)" class="member-name-link">metaKeywords</a><wbr>(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;metaKeywords)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</div>
+<div class="block">Maps to <code>ProductData.metaKeywords</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#metaTitle(com.commercetools.importapi.models.common.LocalizedString)" class="member-name-link">metaTitle</a><wbr>(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;metaTitle)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#metaKeywords(java.util.function.Function)" class="member-name-link">metaKeywords</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</div>
+<div class="block">Maps to <code>ProductData.metaKeywords</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#metaTitle(java.util.function.Function)" class="member-name-link">metaTitle</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#metaTitle(com.commercetools.importapi.models.common.LocalizedString)" class="member-name-link">metaTitle</a><wbr>(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;metaTitle)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</div>
+<div class="block">Maps to <code>ProductData.metaTitle</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#name(com.commercetools.importapi.models.common.LocalizedString)" class="member-name-link">name</a><wbr>(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;name)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#metaTitle(java.util.function.Function)" class="member-name-link">metaTitle</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the name</div>
+<div class="block">Maps to <code>ProductData.metaTitle</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#name(java.util.function.Function)" class="member-name-link">name</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#name(com.commercetools.importapi.models.common.LocalizedString)" class="member-name-link">name</a><wbr>(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;name)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the name using the builder function</div>
+<div class="block">Maps to <code>ProductData.name</code>.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">factory method for an instance of ProductDraftImportBuilder</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#name(java.util.function.Function)" class="member-name-link">name</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Maps to <code>ProductData.name</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of(com.commercetools.importapi.models.productdrafts.ProductDraftImport)" class="member-name-link">of</a><wbr>(<a href="ProductDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductDraftImport</a>&nbsp;template)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">factory method for an instance of ProductDraftImportBuilder</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of(com.commercetools.importapi.models.productdrafts.ProductDraftImport)" class="member-name-link">of</a><wbr>(<a href="ProductDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductDraftImport</a>&nbsp;template)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">create builder for ProductDraftImport instance</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusCategories(com.commercetools.importapi.models.common.CategoryKeyReference...)" class="member-name-link">plusCategories</a><wbr>(<a href="../common/CategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">CategoryKeyReference</a>...&nbsp;categories)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The Reference to the Categories with which the ProductDraft is associated.</div>
-</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusCategories(java.util.function.Function)" class="member-name-link">plusCategories</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CategoryKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">CategoryKeyReferenceBuilder</a>,<wbr><a href="../common/CategoryKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">CategoryKeyReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusAttributes(com.commercetools.importapi.models.productvariants.Attribute...)" class="member-name-link">plusAttributes</a><wbr>(<a href="../productvariants/Attribute.html" title="interface in com.commercetools.importapi.models.productvariants">Attribute</a>...&nbsp;attributes)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The Reference to the Categories with which the ProductDraft is associated.</div>
+<div class="block">add values to the attributes</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusVariants(com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport...)" class="member-name-link">plusVariants</a><wbr>(<a href="ProductVariantDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImport</a>...&nbsp;variants)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusAttributes(java.util.function.Function)" class="member-name-link">plusAttributes</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../productvariants/AttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">AttributeBuilder</a>,<wbr><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../productvariants/Attribute.html" title="interface in com.commercetools.importapi.models.productvariants">Attribute</a>&gt;&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">An array of related Product Variants.</div>
+<div class="block">add a value to the attributes using the builder function</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusVariants(java.util.function.Function)" class="member-name-link">plusVariants</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductVariantDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImportBuilder</a>,<wbr><a href="ProductVariantDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImportBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusCategories(com.commercetools.importapi.models.common.CategoryKeyReference...)" class="member-name-link">plusCategories</a><wbr>(<a href="../common/CategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">CategoryKeyReference</a>...&nbsp;categories)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">An array of related Product Variants.</div>
+<div class="block">Maps to <code>ProductData.categories</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#priceMode(com.commercetools.importapi.models.common.ProductPriceModeEnum)" class="member-name-link">priceMode</a><wbr>(<a href="../common/ProductPriceModeEnum.html" title="interface in com.commercetools.importapi.models.common">ProductPriceModeEnum</a>&nbsp;priceMode)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusCategories(java.util.function.Function)" class="member-name-link">plusCategories</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CategoryKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">CategoryKeyReferenceBuilder</a>,<wbr><a href="../common/CategoryKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">CategoryKeyReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Determines the type of Prices the API uses.</div>
+<div class="block">Maps to <code>ProductData.categories</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#productType(com.commercetools.importapi.models.common.ProductTypeKeyReference)" class="member-name-link">productType</a><wbr>(<a href="../common/ProductTypeKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductTypeKeyReference</a>&nbsp;productType)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusVariants(com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport...)" class="member-name-link">plusVariants</a><wbr>(<a href="ProductVariantDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImport</a>...&nbsp;variants)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The <code>productType</code> of a Product.</div>
+<div class="block">An array of related ProductVariants.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#productType(java.util.function.Function)" class="member-name-link">productType</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ProductTypeKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">ProductTypeKeyReferenceBuilder</a>,<wbr><a href="../common/ProductTypeKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">ProductTypeKeyReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusVariants(java.util.function.Function)" class="member-name-link">plusVariants</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductVariantDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImportBuilder</a>,<wbr><a href="ProductVariantDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImportBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The <code>productType</code> of a Product.</div>
+<div class="block">An array of related ProductVariants.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#publish(java.lang.Boolean)" class="member-name-link">publish</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;publish)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#priceMode(com.commercetools.importapi.models.common.ProductPriceModeEnum)" class="member-name-link">priceMode</a><wbr>(<a href="../common/ProductPriceModeEnum.html" title="interface in com.commercetools.importapi.models.common">ProductPriceModeEnum</a>&nbsp;priceMode)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Maps to <code>Product.priceMode</code>.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#productType(com.commercetools.importapi.models.common.ProductTypeKeyReference)" class="member-name-link">productType</a><wbr>(<a href="../common/ProductTypeKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductTypeKeyReference</a>&nbsp;productType)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Maps to <code>Product.productType</code>.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#productType(java.util.function.Function)" class="member-name-link">productType</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ProductTypeKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">ProductTypeKeyReferenceBuilder</a>,<wbr><a href="../common/ProductTypeKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">ProductTypeKeyReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Maps to <code>Product.productType</code>.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#publish(java.lang.Boolean)" class="member-name-link">publish</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;publish)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Determines the published status and current/staged projection of the Product.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#searchKeywords(com.commercetools.importapi.models.products.SearchKeywords)" class="member-name-link">searchKeywords</a><wbr>(<a href="../products/SearchKeywords.html" title="interface in com.commercetools.importapi.models.products">SearchKeywords</a>&nbsp;searchKeywords)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Search keywords are primarily used by the suggester but are also considered for the full-text search.</div>
-</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#searchKeywords(java.util.function.Function)" class="member-name-link">searchKeywords</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../products/SearchKeywordsBuilder.html" title="class in com.commercetools.importapi.models.products">SearchKeywordsBuilder</a>,<wbr><a href="../products/SearchKeywordsBuilder.html" title="class in com.commercetools.importapi.models.products">SearchKeywordsBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#searchKeywords(com.commercetools.importapi.models.products.SearchKeywords)" class="member-name-link">searchKeywords</a><wbr>(<a href="../products/SearchKeywords.html" title="interface in com.commercetools.importapi.models.products">SearchKeywords</a>&nbsp;searchKeywords)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Search keywords are primarily used by the suggester but are also considered for the full-text search.</div>
+<div class="block">Maps to <code>ProductData.searchKeywords</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCategories(java.util.function.Function)" class="member-name-link">setCategories</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CategoryKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">CategoryKeyReferenceBuilder</a>,<wbr><a href="../common/CategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">CategoryKeyReference</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#searchKeywords(java.util.function.Function)" class="member-name-link">searchKeywords</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../products/SearchKeywordsBuilder.html" title="class in com.commercetools.importapi.models.products">SearchKeywordsBuilder</a>,<wbr><a href="../products/SearchKeywordsBuilder.html" title="class in com.commercetools.importapi.models.products">SearchKeywordsBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The Reference to the Categories with which the ProductDraft is associated.</div>
+<div class="block">Maps to <code>ProductData.searchKeywords</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVariants(java.util.function.Function)" class="member-name-link">setVariants</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductVariantDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImportBuilder</a>,<wbr><a href="ProductVariantDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImport</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCategories(java.util.function.Function)" class="member-name-link">setCategories</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CategoryKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">CategoryKeyReferenceBuilder</a>,<wbr><a href="../common/CategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">CategoryKeyReference</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">An array of related Product Variants.</div>
+<div class="block">Maps to <code>ProductData.categories</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#slug(com.commercetools.importapi.models.common.LocalizedString)" class="member-name-link">slug</a><wbr>(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;slug)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVariants(java.util.function.Function)" class="member-name-link">setVariants</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductVariantDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImportBuilder</a>,<wbr><a href="ProductVariantDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImport</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Human-readable identifiers usually used as deep-link URL to the related product.</div>
+<div class="block">An array of related ProductVariants.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#slug(java.util.function.Function)" class="member-name-link">slug</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#slug(com.commercetools.importapi.models.common.LocalizedString)" class="member-name-link">slug</a><wbr>(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;slug)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Human-readable identifiers usually used as deep-link URL to the related product.</div>
+<div class="block">Maps to <code>ProductData.slug</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#state(com.commercetools.importapi.models.common.StateKeyReference)" class="member-name-link">state</a><wbr>(<a href="../common/StateKeyReference.html" title="interface in com.commercetools.importapi.models.common">StateKeyReference</a>&nbsp;state)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#slug(java.util.function.Function)" class="member-name-link">slug</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The Reference to the State with which the ProductDraft is associated.</div>
+<div class="block">Maps to <code>ProductData.slug</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#state(java.util.function.Function)" class="member-name-link">state</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StateKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">StateKeyReferenceBuilder</a>,<wbr><a href="../common/StateKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">StateKeyReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#state(com.commercetools.importapi.models.common.StateKeyReference)" class="member-name-link">state</a><wbr>(<a href="../common/StateKeyReference.html" title="interface in com.commercetools.importapi.models.common">StateKeyReference</a>&nbsp;state)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The Reference to the State with which the ProductDraft is associated.</div>
+<div class="block">Maps to <code>Product.state</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#taxCategory(com.commercetools.importapi.models.common.TaxCategoryKeyReference)" class="member-name-link">taxCategory</a><wbr>(<a href="../common/TaxCategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">TaxCategoryKeyReference</a>&nbsp;taxCategory)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#state(java.util.function.Function)" class="member-name-link">state</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StateKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">StateKeyReferenceBuilder</a>,<wbr><a href="../common/StateKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">StateKeyReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The Reference to the TaxCategory with which the ProductDraft is associated.</div>
+<div class="block">Maps to <code>Product.state</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#taxCategory(java.util.function.Function)" class="member-name-link">taxCategory</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/TaxCategoryKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">TaxCategoryKeyReferenceBuilder</a>,<wbr><a href="../common/TaxCategoryKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">TaxCategoryKeyReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#taxCategory(com.commercetools.importapi.models.common.TaxCategoryKeyReference)" class="member-name-link">taxCategory</a><wbr>(<a href="../common/TaxCategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">TaxCategoryKeyReference</a>&nbsp;taxCategory)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The Reference to the TaxCategory with which the ProductDraft is associated.</div>
+<div class="block">Maps to <code>Product.taxCategory</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#variants(com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport...)" class="member-name-link">variants</a><wbr>(<a href="ProductVariantDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImport</a>...&nbsp;variants)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#taxCategory(java.util.function.Function)" class="member-name-link">taxCategory</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/TaxCategoryKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">TaxCategoryKeyReferenceBuilder</a>,<wbr><a href="../common/TaxCategoryKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">TaxCategoryKeyReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">An array of related Product Variants.</div>
+<div class="block">Maps to <code>Product.taxCategory</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#variants(java.util.List)" class="member-name-link">variants</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductVariantDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImport</a>&gt;&nbsp;variants)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#variants(com.commercetools.importapi.models.productdrafts.ProductVariantDraftImport...)" class="member-name-link">variants</a><wbr>(<a href="ProductVariantDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImport</a>...&nbsp;variants)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">An array of related Product Variants.</div>
+<div class="block">An array of related ProductVariants.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#variants(java.util.List)" class="member-name-link">variants</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductVariantDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImport</a>&gt;&nbsp;variants)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">An array of related ProductVariants.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withAttributes(java.util.function.Function)" class="member-name-link">withAttributes</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../productvariants/AttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">AttributeBuilder</a>,<wbr><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../productvariants/Attribute.html" title="interface in com.commercetools.importapi.models.productvariants">Attribute</a>&gt;&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">set the value to the attributes using the builder function</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withCategories(java.util.function.Function)" class="member-name-link">withCategories</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CategoryKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">CategoryKeyReferenceBuilder</a>,<wbr><a href="../common/CategoryKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">CategoryKeyReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The Reference to the Categories with which the ProductDraft is associated.</div>
+<div class="block">Maps to <code>ProductData.categories</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withDescription(java.util.function.Function)" class="member-name-link">withDescription</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Maps to <code>Product.description</code>.</div>
+<div class="block">Maps to <code>ProductData.description</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withMasterVariant(java.util.function.Function)" class="member-name-link">withMasterVariant</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductVariantDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImportBuilder</a>,<wbr><a href="ProductVariantDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImport</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The master Product variant.</div>
+<div class="block">The master ProductVariant.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withMetaDescription(java.util.function.Function)" class="member-name-link">withMetaDescription</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</div>
+<div class="block">Maps to <code>ProductData.metaDescription</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withMetaKeywords(java.util.function.Function)" class="member-name-link">withMetaKeywords</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</div>
+<div class="block">Maps to <code>ProductData.metaKeywords</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withMetaTitle(java.util.function.Function)" class="member-name-link">withMetaTitle</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</div>
+<div class="block">Maps to <code>ProductData.metaTitle</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withName(java.util.function.Function)" class="member-name-link">withName</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the name using the builder function</div>
+<div class="block">Maps to <code>ProductData.name</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withProductType(java.util.function.Function)" class="member-name-link">withProductType</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ProductTypeKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">ProductTypeKeyReferenceBuilder</a>,<wbr><a href="../common/ProductTypeKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductTypeKeyReference</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The <code>productType</code> of a Product.</div>
+<div class="block">Maps to <code>Product.productType</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withSearchKeywords(java.util.function.Function)" class="member-name-link">withSearchKeywords</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../products/SearchKeywordsBuilder.html" title="class in com.commercetools.importapi.models.products">SearchKeywordsBuilder</a>,<wbr><a href="../products/SearchKeywords.html" title="interface in com.commercetools.importapi.models.products">SearchKeywords</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Search keywords are primarily used by the suggester but are also considered for the full-text search.</div>
+<div class="block">Maps to <code>ProductData.searchKeywords</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withSlug(java.util.function.Function)" class="member-name-link">withSlug</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Human-readable identifiers usually used as deep-link URL to the related product.</div>
+<div class="block">Maps to <code>ProductData.slug</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withState(java.util.function.Function)" class="member-name-link">withState</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StateKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">StateKeyReferenceBuilder</a>,<wbr><a href="../common/StateKeyReference.html" title="interface in com.commercetools.importapi.models.common">StateKeyReference</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The Reference to the State with which the ProductDraft is associated.</div>
+<div class="block">Maps to <code>Product.state</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withTaxCategory(java.util.function.Function)" class="member-name-link">withTaxCategory</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/TaxCategoryKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">TaxCategoryKeyReferenceBuilder</a>,<wbr><a href="../common/TaxCategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">TaxCategoryKeyReference</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The Reference to the TaxCategory with which the ProductDraft is associated.</div>
+<div class="block">Maps to <code>Product.taxCategory</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withVariants(java.util.function.Function)" class="member-name-link">withVariants</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductVariantDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImportBuilder</a>,<wbr><a href="ProductVariantDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImportBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">An array of related Product Variants.</div>
+<div class="block">An array of related ProductVariants.</div>
 </div>
 </div>
 </div>
@@ -507,7 +537,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="key(java.lang.String)">
 <h3>key</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">key</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
-<div class="block"><p>User-defined unique identifier. If a Product with this <code>key</code> exists, it will be updated with the imported data.</p></div>
+<div class="block"><p>User-defined unique identifier. If a Product with this <code>key</code> exists, it is updated with the imported data.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>key</code> - value to be set</dd>
@@ -520,7 +550,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="productType(java.util.function.Function)">
 <h3>productType</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">productType</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ProductTypeKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">ProductTypeKeyReferenceBuilder</a>,<wbr><a href="../common/ProductTypeKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">ProductTypeKeyReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>The <code>productType</code> of a Product. Maps to <code>Product.productType</code>. The Reference to the ProductType with which the ProductDraft is associated. If referenced ProductType does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductType is created.</p></div>
+<div class="block"><p>Maps to <code>Product.productType</code>. If the referenced ProductType does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced ProductType is created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the productType value</dd>
@@ -533,7 +563,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withProductType(java.util.function.Function)">
 <h3>withProductType</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">withProductType</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/ProductTypeKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">ProductTypeKeyReferenceBuilder</a>,<wbr><a href="../common/ProductTypeKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductTypeKeyReference</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>The <code>productType</code> of a Product. Maps to <code>Product.productType</code>. The Reference to the ProductType with which the ProductDraft is associated. If referenced ProductType does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductType is created.</p></div>
+<div class="block"><p>Maps to <code>Product.productType</code>. If the referenced ProductType does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced ProductType is created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the productType value</dd>
@@ -546,7 +576,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="productType(com.commercetools.importapi.models.common.ProductTypeKeyReference)">
 <h3>productType</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">productType</span><wbr><span class="parameters">(<a href="../common/ProductTypeKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductTypeKeyReference</a>&nbsp;productType)</span></div>
-<div class="block"><p>The <code>productType</code> of a Product. Maps to <code>Product.productType</code>. The Reference to the ProductType with which the ProductDraft is associated. If referenced ProductType does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductType is created.</p></div>
+<div class="block"><p>Maps to <code>Product.productType</code>. If the referenced ProductType does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced ProductType is created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>productType</code> - value to be set</dd>
@@ -559,7 +589,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="name(java.util.function.Function)">
 <h3>name</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">name</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block">set the value to the name using the builder function</div>
+<div class="block"><p>Maps to <code>ProductData.name</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the name value</dd>
@@ -572,7 +602,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withName(java.util.function.Function)">
 <h3>withName</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">withName</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&gt;&nbsp;builder)</span></div>
-<div class="block">set the value to the name using the builder function</div>
+<div class="block"><p>Maps to <code>ProductData.name</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the name value</dd>
@@ -585,7 +615,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="name(com.commercetools.importapi.models.common.LocalizedString)">
 <h3>name</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">name</span><wbr><span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;name)</span></div>
-<div class="block">set the value to the name</div>
+<div class="block"><p>Maps to <code>ProductData.name</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>name</code> - value to be set</dd>
@@ -598,7 +628,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="slug(java.util.function.Function)">
 <h3>slug</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">slug</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a project, but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.</p></div>
+<div class="block"><p>Maps to <code>ProductData.slug</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the slug value</dd>
@@ -611,7 +641,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withSlug(java.util.function.Function)">
 <h3>withSlug</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">withSlug</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a project, but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.</p></div>
+<div class="block"><p>Maps to <code>ProductData.slug</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the slug value</dd>
@@ -624,7 +654,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="slug(com.commercetools.importapi.models.common.LocalizedString)">
 <h3>slug</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">slug</span><wbr><span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;slug)</span></div>
-<div class="block"><p>Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a project, but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.</p></div>
+<div class="block"><p>Maps to <code>ProductData.slug</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>slug</code> - value to be set</dd>
@@ -637,7 +667,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="description(java.util.function.Function)">
 <h3>description</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">description</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Maps to <code>Product.description</code>.</p></div>
+<div class="block"><p>Maps to <code>ProductData.description</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the description value</dd>
@@ -650,7 +680,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withDescription(java.util.function.Function)">
 <h3>withDescription</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">withDescription</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Maps to <code>Product.description</code>.</p></div>
+<div class="block"><p>Maps to <code>ProductData.description</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the description value</dd>
@@ -664,7 +694,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>description</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">description</span><wbr><span class="parameters">(@Nullable
  <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;description)</span></div>
-<div class="block"><p>Maps to <code>Product.description</code>.</p></div>
+<div class="block"><p>Maps to <code>ProductData.description</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>description</code> - value to be set</dd>
@@ -678,7 +708,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>categories</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">categories</span><wbr><span class="parameters">(@Nullable
  <a href="../common/CategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">CategoryKeyReference</a>...&nbsp;categories)</span></div>
-<div class="block"><p>The Reference to the Categories with which the ProductDraft is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p></div>
+<div class="block"><p>Maps to <code>ProductData.categories</code>. If the referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Categories are created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>categories</code> - value to be set</dd>
@@ -692,7 +722,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>categories</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">categories</span><wbr><span class="parameters">(@Nullable
  <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/CategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">CategoryKeyReference</a>&gt;&nbsp;categories)</span></div>
-<div class="block"><p>The Reference to the Categories with which the ProductDraft is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p></div>
+<div class="block"><p>Maps to <code>ProductData.categories</code>. If the referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Categories are created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>categories</code> - value to be set</dd>
@@ -706,7 +736,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>plusCategories</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">plusCategories</span><wbr><span class="parameters">(@Nullable
  <a href="../common/CategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">CategoryKeyReference</a>...&nbsp;categories)</span></div>
-<div class="block"><p>The Reference to the Categories with which the ProductDraft is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p></div>
+<div class="block"><p>Maps to <code>ProductData.categories</code>. If the referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Categories are created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>categories</code> - value to be set</dd>
@@ -719,7 +749,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="plusCategories(java.util.function.Function)">
 <h3>plusCategories</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">plusCategories</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CategoryKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">CategoryKeyReferenceBuilder</a>,<wbr><a href="../common/CategoryKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">CategoryKeyReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>The Reference to the Categories with which the ProductDraft is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p></div>
+<div class="block"><p>Maps to <code>ProductData.categories</code>. If the referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Categories are created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the categories value</dd>
@@ -732,7 +762,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withCategories(java.util.function.Function)">
 <h3>withCategories</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">withCategories</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CategoryKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">CategoryKeyReferenceBuilder</a>,<wbr><a href="../common/CategoryKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">CategoryKeyReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>The Reference to the Categories with which the ProductDraft is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p></div>
+<div class="block"><p>Maps to <code>ProductData.categories</code>. If the referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Categories are created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the categories value</dd>
@@ -745,7 +775,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="addCategories(java.util.function.Function)">
 <h3>addCategories</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">addCategories</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CategoryKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">CategoryKeyReferenceBuilder</a>,<wbr><a href="../common/CategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">CategoryKeyReference</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>The Reference to the Categories with which the ProductDraft is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p></div>
+<div class="block"><p>Maps to <code>ProductData.categories</code>. If the referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Categories are created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the categories value</dd>
@@ -758,7 +788,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="setCategories(java.util.function.Function)">
 <h3>setCategories</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">setCategories</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CategoryKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">CategoryKeyReferenceBuilder</a>,<wbr><a href="../common/CategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">CategoryKeyReference</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>The Reference to the Categories with which the ProductDraft is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p></div>
+<div class="block"><p>Maps to <code>ProductData.categories</code>. If the referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Categories are created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the categories value</dd>
@@ -768,15 +798,78 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
+<section class="detail" id="attributes(com.commercetools.importapi.models.productvariants.Attribute...)">
+<h3>attributes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">attributes</span><wbr><span class="parameters">(@Nullable
+ <a href="../productvariants/Attribute.html" title="interface in com.commercetools.importapi.models.productvariants">Attribute</a>...&nbsp;attributes)</span></div>
+<div class="block">set values to the attributes</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>attributes</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="attributes(java.util.List)">
+<h3>attributes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">attributes</span><wbr><span class="parameters">(@Nullable
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../productvariants/Attribute.html" title="interface in com.commercetools.importapi.models.productvariants">Attribute</a>&gt;&nbsp;attributes)</span></div>
+<div class="block">set value to the attributes</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>attributes</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="plusAttributes(com.commercetools.importapi.models.productvariants.Attribute...)">
+<h3>plusAttributes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">plusAttributes</span><wbr><span class="parameters">(@Nullable
+ <a href="../productvariants/Attribute.html" title="interface in com.commercetools.importapi.models.productvariants">Attribute</a>...&nbsp;attributes)</span></div>
+<div class="block">add values to the attributes</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>attributes</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="plusAttributes(java.util.function.Function)">
+<h3>plusAttributes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">plusAttributes</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../productvariants/AttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">AttributeBuilder</a>,<wbr><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../productvariants/Attribute.html" title="interface in com.commercetools.importapi.models.productvariants">Attribute</a>&gt;&gt;&nbsp;builder)</span></div>
+<div class="block">add a value to the attributes using the builder function</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the attributes value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="withAttributes(java.util.function.Function)">
+<h3>withAttributes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">withAttributes</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../productvariants/AttributeBuilder.html" title="class in com.commercetools.importapi.models.productvariants">AttributeBuilder</a>,<wbr><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../productvariants/Attribute.html" title="interface in com.commercetools.importapi.models.productvariants">Attribute</a>&gt;&gt;&nbsp;builder)</span></div>
+<div class="block">set the value to the attributes using the builder function</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the attributes value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="metaTitle(java.util.function.Function)">
 <h3>metaTitle</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">metaTitle</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-  <pre><code>{
-    "de": "Hundefutter",
-    "en": "dog food"
-  }
-  </code></pre></div>
+<div class="block"><p>Maps to <code>ProductData.metaTitle</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the metaTitle value</dd>
@@ -789,12 +882,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withMetaTitle(java.util.function.Function)">
 <h3>withMetaTitle</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">withMetaTitle</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-  <pre><code>{
-    "de": "Hundefutter",
-    "en": "dog food"
-  }
-  </code></pre></div>
+<div class="block"><p>Maps to <code>ProductData.metaTitle</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the metaTitle value</dd>
@@ -808,12 +896,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>metaTitle</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">metaTitle</span><wbr><span class="parameters">(@Nullable
  <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;metaTitle)</span></div>
-<div class="block"><p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-  <pre><code>{
-    "de": "Hundefutter",
-    "en": "dog food"
-  }
-  </code></pre></div>
+<div class="block"><p>Maps to <code>ProductData.metaTitle</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>metaTitle</code> - value to be set</dd>
@@ -826,12 +909,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="metaDescription(java.util.function.Function)">
 <h3>metaDescription</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">metaDescription</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-  <pre><code>{
-    "de": "Hundefutter",
-    "en": "dog food"
-  }
-  </code></pre></div>
+<div class="block"><p>Maps to <code>ProductData.metaDescription</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the metaDescription value</dd>
@@ -844,12 +922,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withMetaDescription(java.util.function.Function)">
 <h3>withMetaDescription</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">withMetaDescription</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-  <pre><code>{
-    "de": "Hundefutter",
-    "en": "dog food"
-  }
-  </code></pre></div>
+<div class="block"><p>Maps to <code>ProductData.metaDescription</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the metaDescription value</dd>
@@ -863,12 +936,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>metaDescription</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">metaDescription</span><wbr><span class="parameters">(@Nullable
  <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;metaDescription)</span></div>
-<div class="block"><p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-  <pre><code>{
-    "de": "Hundefutter",
-    "en": "dog food"
-  }
-  </code></pre></div>
+<div class="block"><p>Maps to <code>ProductData.metaDescription</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>metaDescription</code> - value to be set</dd>
@@ -881,12 +949,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="metaKeywords(java.util.function.Function)">
 <h3>metaKeywords</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">metaKeywords</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-  <pre><code>{
-    "de": "Hundefutter",
-    "en": "dog food"
-  }
-  </code></pre></div>
+<div class="block"><p>Maps to <code>ProductData.metaKeywords</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the metaKeywords value</dd>
@@ -899,12 +962,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withMetaKeywords(java.util.function.Function)">
 <h3>withMetaKeywords</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">withMetaKeywords</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-  <pre><code>{
-    "de": "Hundefutter",
-    "en": "dog food"
-  }
-  </code></pre></div>
+<div class="block"><p>Maps to <code>ProductData.metaKeywords</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the metaKeywords value</dd>
@@ -918,12 +976,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>metaKeywords</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">metaKeywords</span><wbr><span class="parameters">(@Nullable
  <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;metaKeywords)</span></div>
-<div class="block"><p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-  <pre><code>{
-    "de": "Hundefutter",
-    "en": "dog food"
-  }
-  </code></pre></div>
+<div class="block"><p>Maps to <code>ProductData.metaKeywords</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>metaKeywords</code> - value to be set</dd>
@@ -936,7 +989,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="masterVariant(java.util.function.Function)">
 <h3>masterVariant</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">masterVariant</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductVariantDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImportBuilder</a>,<wbr><a href="ProductVariantDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImportBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>The master Product variant. Required if the <code>variants</code> array contains a Product Variant.</p></div>
+<div class="block"><p>The master ProductVariant. Required if <code>variants</code> contains at least one ProductVariant.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the masterVariant value</dd>
@@ -949,7 +1002,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withMasterVariant(java.util.function.Function)">
 <h3>withMasterVariant</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">withMasterVariant</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductVariantDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImportBuilder</a>,<wbr><a href="ProductVariantDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImport</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>The master Product variant. Required if the <code>variants</code> array contains a Product Variant.</p></div>
+<div class="block"><p>The master ProductVariant. Required if <code>variants</code> contains at least one ProductVariant.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the masterVariant value</dd>
@@ -963,7 +1016,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>masterVariant</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">masterVariant</span><wbr><span class="parameters">(@Nullable
  <a href="ProductVariantDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImport</a>&nbsp;masterVariant)</span></div>
-<div class="block"><p>The master Product variant. Required if the <code>variants</code> array contains a Product Variant.</p></div>
+<div class="block"><p>The master ProductVariant. Required if <code>variants</code> contains at least one ProductVariant.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>masterVariant</code> - value to be set</dd>
@@ -977,7 +1030,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>variants</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">variants</span><wbr><span class="parameters">(@Nullable
  <a href="ProductVariantDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImport</a>...&nbsp;variants)</span></div>
-<div class="block"><p>An array of related Product Variants.</p></div>
+<div class="block"><p>An array of related ProductVariants.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>variants</code> - value to be set</dd>
@@ -991,7 +1044,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>variants</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">variants</span><wbr><span class="parameters">(@Nullable
  <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductVariantDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImport</a>&gt;&nbsp;variants)</span></div>
-<div class="block"><p>An array of related Product Variants.</p></div>
+<div class="block"><p>An array of related ProductVariants.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>variants</code> - value to be set</dd>
@@ -1005,7 +1058,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>plusVariants</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">plusVariants</span><wbr><span class="parameters">(@Nullable
  <a href="ProductVariantDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImport</a>...&nbsp;variants)</span></div>
-<div class="block"><p>An array of related Product Variants.</p></div>
+<div class="block"><p>An array of related ProductVariants.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>variants</code> - value to be set</dd>
@@ -1018,7 +1071,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="plusVariants(java.util.function.Function)">
 <h3>plusVariants</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">plusVariants</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductVariantDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImportBuilder</a>,<wbr><a href="ProductVariantDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImportBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>An array of related Product Variants.</p></div>
+<div class="block"><p>An array of related ProductVariants.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the variants value</dd>
@@ -1031,7 +1084,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withVariants(java.util.function.Function)">
 <h3>withVariants</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">withVariants</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductVariantDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImportBuilder</a>,<wbr><a href="ProductVariantDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImportBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>An array of related Product Variants.</p></div>
+<div class="block"><p>An array of related ProductVariants.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the variants value</dd>
@@ -1044,7 +1097,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="addVariants(java.util.function.Function)">
 <h3>addVariants</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">addVariants</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductVariantDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImportBuilder</a>,<wbr><a href="ProductVariantDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImport</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>An array of related Product Variants.</p></div>
+<div class="block"><p>An array of related ProductVariants.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the variants value</dd>
@@ -1057,7 +1110,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="setVariants(java.util.function.Function)">
 <h3>setVariants</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">setVariants</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductVariantDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImportBuilder</a>,<wbr><a href="ProductVariantDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImport</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>An array of related Product Variants.</p></div>
+<div class="block"><p>An array of related ProductVariants.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the variants value</dd>
@@ -1070,7 +1123,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="taxCategory(java.util.function.Function)">
 <h3>taxCategory</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">taxCategory</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/TaxCategoryKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">TaxCategoryKeyReferenceBuilder</a>,<wbr><a href="../common/TaxCategoryKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">TaxCategoryKeyReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>The Reference to the TaxCategory with which the ProductDraft is associated. If referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary TaxCategory is created.</p></div>
+<div class="block"><p>Maps to <code>Product.taxCategory</code>. If the referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the taxCategory value</dd>
@@ -1083,7 +1136,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withTaxCategory(java.util.function.Function)">
 <h3>withTaxCategory</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">withTaxCategory</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/TaxCategoryKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">TaxCategoryKeyReferenceBuilder</a>,<wbr><a href="../common/TaxCategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">TaxCategoryKeyReference</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>The Reference to the TaxCategory with which the ProductDraft is associated. If referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary TaxCategory is created.</p></div>
+<div class="block"><p>Maps to <code>Product.taxCategory</code>. If the referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the taxCategory value</dd>
@@ -1097,7 +1150,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>taxCategory</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">taxCategory</span><wbr><span class="parameters">(@Nullable
  <a href="../common/TaxCategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">TaxCategoryKeyReference</a>&nbsp;taxCategory)</span></div>
-<div class="block"><p>The Reference to the TaxCategory with which the ProductDraft is associated. If referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary TaxCategory is created.</p></div>
+<div class="block"><p>Maps to <code>Product.taxCategory</code>. If the referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>taxCategory</code> - value to be set</dd>
@@ -1110,23 +1163,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="searchKeywords(java.util.function.Function)">
 <h3>searchKeywords</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">searchKeywords</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../products/SearchKeywordsBuilder.html" title="class in com.commercetools.importapi.models.products">SearchKeywordsBuilder</a>,<wbr><a href="../products/SearchKeywordsBuilder.html" title="class in com.commercetools.importapi.models.products">SearchKeywordsBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Search keywords are primarily used by the suggester but are also considered for the full-text search. SearchKeywords is a JSON object where the keys are of IETF language tag. The value to a language tag key is an array of SearchKeyword for the specific language.</p>
-  <pre><code>{
-    "en": [
-      { "text": "Multi tool" },
-      { "text": "Swiss Army Knife", "suggestTokenizer": { "type": "whitespace" } }
-    ],
-    "de": [
-      {
-        "text": "Schweizer Messer",
-        "suggestTokenizer": {
-          "type": "custom",
-          "inputs": ["schweizer messer", "offiziersmesser", "sackmesser"]
-        }
-      }
-    ]
-  }
-  </code></pre></div>
+<div class="block"><p>Maps to <code>ProductData.searchKeywords</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the searchKeywords value</dd>
@@ -1139,23 +1176,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withSearchKeywords(java.util.function.Function)">
 <h3>withSearchKeywords</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">withSearchKeywords</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../products/SearchKeywordsBuilder.html" title="class in com.commercetools.importapi.models.products">SearchKeywordsBuilder</a>,<wbr><a href="../products/SearchKeywords.html" title="interface in com.commercetools.importapi.models.products">SearchKeywords</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Search keywords are primarily used by the suggester but are also considered for the full-text search. SearchKeywords is a JSON object where the keys are of IETF language tag. The value to a language tag key is an array of SearchKeyword for the specific language.</p>
-  <pre><code>{
-    "en": [
-      { "text": "Multi tool" },
-      { "text": "Swiss Army Knife", "suggestTokenizer": { "type": "whitespace" } }
-    ],
-    "de": [
-      {
-        "text": "Schweizer Messer",
-        "suggestTokenizer": {
-          "type": "custom",
-          "inputs": ["schweizer messer", "offiziersmesser", "sackmesser"]
-        }
-      }
-    ]
-  }
-  </code></pre></div>
+<div class="block"><p>Maps to <code>ProductData.searchKeywords</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the searchKeywords value</dd>
@@ -1169,23 +1190,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>searchKeywords</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">searchKeywords</span><wbr><span class="parameters">(@Nullable
  <a href="../products/SearchKeywords.html" title="interface in com.commercetools.importapi.models.products">SearchKeywords</a>&nbsp;searchKeywords)</span></div>
-<div class="block"><p>Search keywords are primarily used by the suggester but are also considered for the full-text search. SearchKeywords is a JSON object where the keys are of IETF language tag. The value to a language tag key is an array of SearchKeyword for the specific language.</p>
-  <pre><code>{
-    "en": [
-      { "text": "Multi tool" },
-      { "text": "Swiss Army Knife", "suggestTokenizer": { "type": "whitespace" } }
-    ],
-    "de": [
-      {
-        "text": "Schweizer Messer",
-        "suggestTokenizer": {
-          "type": "custom",
-          "inputs": ["schweizer messer", "offiziersmesser", "sackmesser"]
-        }
-      }
-    ]
-  }
-  </code></pre></div>
+<div class="block"><p>Maps to <code>ProductData.searchKeywords</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>searchKeywords</code> - value to be set</dd>
@@ -1198,7 +1203,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="state(java.util.function.Function)">
 <h3>state</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">state</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StateKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">StateKeyReferenceBuilder</a>,<wbr><a href="../common/StateKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">StateKeyReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>The Reference to the State with which the ProductDraft is associated. If referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary State is created.</p></div>
+<div class="block"><p>Maps to <code>Product.state</code>. If the referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced State is created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the state value</dd>
@@ -1211,7 +1216,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withState(java.util.function.Function)">
 <h3>withState</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">withState</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StateKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">StateKeyReferenceBuilder</a>,<wbr><a href="../common/StateKeyReference.html" title="interface in com.commercetools.importapi.models.common">StateKeyReference</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>The Reference to the State with which the ProductDraft is associated. If referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary State is created.</p></div>
+<div class="block"><p>Maps to <code>Product.state</code>. If the referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced State is created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the state value</dd>
@@ -1225,7 +1230,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>state</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">state</span><wbr><span class="parameters">(@Nullable
  <a href="../common/StateKeyReference.html" title="interface in com.commercetools.importapi.models.common">StateKeyReference</a>&nbsp;state)</span></div>
-<div class="block"><p>The Reference to the State with which the ProductDraft is associated. If referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary State is created.</p></div>
+<div class="block"><p>Maps to <code>Product.state</code>. If the referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced State is created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>state</code> - value to be set</dd>
@@ -1253,7 +1258,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>priceMode</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductDraftImportBuilder.html" title="class in com.commercetools.importapi.models.productdrafts">ProductDraftImportBuilder</a></span>&nbsp;<span class="element-name">priceMode</span><wbr><span class="parameters">(@Nullable
  <a href="../common/ProductPriceModeEnum.html" title="interface in com.commercetools.importapi.models.common">ProductPriceModeEnum</a>&nbsp;priceMode)</span></div>
-<div class="block"><p>Determines the type of Prices the API uses. If not provided, the existing <code>Product.priceMode</code> is not changed.</p></div>
+<div class="block"><p>Maps to <code>Product.priceMode</code>. If not provided, the existing <code>Product.priceMode</code> is not changed.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>priceMode</code> - value to be set</dd>
@@ -1266,7 +1271,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getKey()">
 <h3>getKey</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getKey</span>()</div>
-<div class="block"><p>User-defined unique identifier. If a Product with this <code>key</code> exists, it will be updated with the imported data.</p></div>
+<div class="block"><p>User-defined unique identifier. If a Product with this <code>key</code> exists, it is updated with the imported data.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>key</dd>
@@ -1277,7 +1282,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getProductType()">
 <h3>getProductType</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/ProductTypeKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductTypeKeyReference</a></span>&nbsp;<span class="element-name">getProductType</span>()</div>
-<div class="block"><p>The <code>productType</code> of a Product. Maps to <code>Product.productType</code>. The Reference to the ProductType with which the ProductDraft is associated. If referenced ProductType does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary ProductType is created.</p></div>
+<div class="block"><p>Maps to <code>Product.productType</code>. If the referenced ProductType does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced ProductType is created.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>productType</dd>
@@ -1288,7 +1293,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getName()">
 <h3>getName</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></span>&nbsp;<span class="element-name">getName</span>()</div>
-<div class="block">value of name}</div>
+<div class="block"><p>Maps to <code>ProductData.name</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>name</dd>
@@ -1299,7 +1304,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getSlug()">
 <h3>getSlug</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></span>&nbsp;<span class="element-name">getSlug</span>()</div>
-<div class="block"><p>Human-readable identifiers usually used as deep-link URL to the related product. Each slug must be unique across a project, but a product can have the same slug for different languages. Allowed are alphabetic, numeric, underscore (_) and hyphen (-) characters.</p></div>
+<div class="block"><p>Maps to <code>ProductData.slug</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>slug</dd>
@@ -1311,7 +1316,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getDescription</h3>
 <div class="member-signature"><span class="annotations">@Nullable
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></span>&nbsp;<span class="element-name">getDescription</span>()</div>
-<div class="block"><p>Maps to <code>Product.description</code>.</p></div>
+<div class="block"><p>Maps to <code>ProductData.description</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>description</dd>
@@ -1323,10 +1328,22 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getCategories</h3>
 <div class="member-signature"><span class="annotations">@Nullable
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/CategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">CategoryKeyReference</a>&gt;</span>&nbsp;<span class="element-name">getCategories</span>()</div>
-<div class="block"><p>The Reference to the Categories with which the ProductDraft is associated. If referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Categories are created.</p></div>
+<div class="block"><p>Maps to <code>ProductData.categories</code>. If the referenced Categories do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Categories are created.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>categories</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getAttributes()">
+<h3>getAttributes</h3>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../productvariants/Attribute.html" title="interface in com.commercetools.importapi.models.productvariants">Attribute</a>&gt;</span>&nbsp;<span class="element-name">getAttributes</span>()</div>
+<div class="block">value of attributes}</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>attributes</dd>
 </dl>
 </section>
 </li>
@@ -1335,12 +1352,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getMetaTitle</h3>
 <div class="member-signature"><span class="annotations">@Nullable
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></span>&nbsp;<span class="element-name">getMetaTitle</span>()</div>
-<div class="block"><p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-  <pre><code>{
-    "de": "Hundefutter",
-    "en": "dog food"
-  }
-  </code></pre></div>
+<div class="block"><p>Maps to <code>ProductData.metaTitle</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>metaTitle</dd>
@@ -1352,12 +1364,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getMetaDescription</h3>
 <div class="member-signature"><span class="annotations">@Nullable
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></span>&nbsp;<span class="element-name">getMetaDescription</span>()</div>
-<div class="block"><p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-  <pre><code>{
-    "de": "Hundefutter",
-    "en": "dog food"
-  }
-  </code></pre></div>
+<div class="block"><p>Maps to <code>ProductData.metaDescription</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>metaDescription</dd>
@@ -1369,12 +1376,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getMetaKeywords</h3>
 <div class="member-signature"><span class="annotations">@Nullable
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></span>&nbsp;<span class="element-name">getMetaKeywords</span>()</div>
-<div class="block"><p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-  <pre><code>{
-    "de": "Hundefutter",
-    "en": "dog food"
-  }
-  </code></pre></div>
+<div class="block"><p>Maps to <code>ProductData.metaKeywords</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>metaKeywords</dd>
@@ -1386,7 +1388,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getMasterVariant</h3>
 <div class="member-signature"><span class="annotations">@Nullable
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductVariantDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImport</a></span>&nbsp;<span class="element-name">getMasterVariant</span>()</div>
-<div class="block"><p>The master Product variant. Required if the <code>variants</code> array contains a Product Variant.</p></div>
+<div class="block"><p>The master ProductVariant. Required if <code>variants</code> contains at least one ProductVariant.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>masterVariant</dd>
@@ -1398,7 +1400,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getVariants</h3>
 <div class="member-signature"><span class="annotations">@Nullable
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductVariantDraftImport.html" title="interface in com.commercetools.importapi.models.productdrafts">ProductVariantDraftImport</a>&gt;</span>&nbsp;<span class="element-name">getVariants</span>()</div>
-<div class="block"><p>An array of related Product Variants.</p></div>
+<div class="block"><p>An array of related ProductVariants.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>variants</dd>
@@ -1410,7 +1412,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getTaxCategory</h3>
 <div class="member-signature"><span class="annotations">@Nullable
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/TaxCategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">TaxCategoryKeyReference</a></span>&nbsp;<span class="element-name">getTaxCategory</span>()</div>
-<div class="block"><p>The Reference to the TaxCategory with which the ProductDraft is associated. If referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary TaxCategory is created.</p></div>
+<div class="block"><p>Maps to <code>Product.taxCategory</code>. If the referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>taxCategory</dd>
@@ -1422,23 +1424,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getSearchKeywords</h3>
 <div class="member-signature"><span class="annotations">@Nullable
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../products/SearchKeywords.html" title="interface in com.commercetools.importapi.models.products">SearchKeywords</a></span>&nbsp;<span class="element-name">getSearchKeywords</span>()</div>
-<div class="block"><p>Search keywords are primarily used by the suggester but are also considered for the full-text search. SearchKeywords is a JSON object where the keys are of IETF language tag. The value to a language tag key is an array of SearchKeyword for the specific language.</p>
-  <pre><code>{
-    "en": [
-      { "text": "Multi tool" },
-      { "text": "Swiss Army Knife", "suggestTokenizer": { "type": "whitespace" } }
-    ],
-    "de": [
-      {
-        "text": "Schweizer Messer",
-        "suggestTokenizer": {
-          "type": "custom",
-          "inputs": ["schweizer messer", "offiziersmesser", "sackmesser"]
-        }
-      }
-    ]
-  }
-  </code></pre></div>
+<div class="block"><p>Maps to <code>ProductData.searchKeywords</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>searchKeywords</dd>
@@ -1450,7 +1436,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getState</h3>
 <div class="member-signature"><span class="annotations">@Nullable
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/StateKeyReference.html" title="interface in com.commercetools.importapi.models.common">StateKeyReference</a></span>&nbsp;<span class="element-name">getState</span>()</div>
-<div class="block"><p>The Reference to the State with which the ProductDraft is associated. If referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary State is created.</p></div>
+<div class="block"><p>Maps to <code>Product.state</code>. If the referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced State is created.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>state</dd>
@@ -1474,7 +1460,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getPriceMode</h3>
 <div class="member-signature"><span class="annotations">@Nullable
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/ProductPriceModeEnum.html" title="interface in com.commercetools.importapi.models.common">ProductPriceModeEnum</a></span>&nbsp;<span class="element-name">getPriceMode</span>()</div>
-<div class="block"><p>Determines the type of Prices the API uses. If not provided, the existing <code>Product.priceMode</code> is not changed.</p></div>
+<div class="block"><p>Maps to <code>Product.priceMode</code>. If not provided, the existing <code>Product.priceMode</code> is not changed.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>priceMode</dd>

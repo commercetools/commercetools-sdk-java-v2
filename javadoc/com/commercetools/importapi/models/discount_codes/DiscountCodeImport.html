@@ -78,7 +78,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">DiscountCodeImport</span><span class="extends-implements">
 extends <a href="../common/ImportResource.html" title="interface in com.commercetools.importapi.models.common">ImportResource</a></span></div>
-<div class="block"><p>The data representation for a Discount Code to be imported that is persisted as a Discount Code in the Project.</p>
+<div class="block"><p>Represents the data used to import a DiscountCode. Once imported, this data is persisted as a DiscountCode in the Project.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -127,22 +127,22 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/CartDiscountKeyReference.html" title="interface in com.commercetools.importapi.models.common">CartDiscountKeyReference</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCartDiscounts()" class="member-name-link">getCartDiscounts</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Reference to CartDiscounts that can be applied to the Cart once the DiscountCode is applied.</div>
+<div class="block">Maps to <code>DiscountCode.cartDiscounts</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCartPredicate()" class="member-name-link">getCartPredicate</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">DiscountCode can only be applied to Carts that match this predicate.</div>
+<div class="block">Maps to <code>DiscountCode.cartPredicate</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCode()" class="member-name-link">getCode</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">User-defined unique identifier of the DiscountCode that is used by the customer to apply the discount.</div>
+<div class="block">Maps to <code>DiscountCode.code</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../customfields/Custom.html" title="interface in com.commercetools.importapi.models.customfields">Custom</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCustom()" class="member-name-link">getCustom</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Custom Fields of the DiscountCode.</div>
+<div class="block">Maps to <code>DiscountCode.custom</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDescription()" class="member-name-link">getDescription</a>()</code></div>
@@ -152,12 +152,12 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getGroups()" class="member-name-link">getGroups</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Groups to which the DiscountCode belongs.</div>
+<div class="block">Maps to <code>DiscountCode.groups</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getIsActive()" class="member-name-link">getIsActive</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Indicates if the DiscountCode is active and can be applied to the Cart.</div>
+<div class="block">Maps to <code>DiscountCode.isActive</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getKey()" class="member-name-link">getKey</a>()</code></div>
@@ -167,12 +167,12 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMaxApplications()" class="member-name-link">getMaxApplications</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Number of times the DiscountCode can be applied.</div>
+<div class="block">Maps to <code>DiscountCode.maxApplications</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMaxApplicationsPerCustomer()" class="member-name-link">getMaxApplicationsPerCustomer</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Number of times the DiscountCode can be applied per Customer (anonymous Carts are not supported).</div>
+<div class="block">Maps to <code>DiscountCode.maxApplicationsPerCustomer</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
@@ -182,12 +182,12 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getValidFrom()" class="member-name-link">getValidFrom</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Date and time (UTC) from which the DiscountCode is effective.</div>
+<div class="block">Maps to <code>DiscountCode.validFrom</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getValidUntil()" class="member-name-link">getValidUntil</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Date and time (UTC) until which the DiscountCode is effective.</div>
+<div class="block">Maps to <code>DiscountCode.validUntil</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="DiscountCodeImport.html" title="interface in com.commercetools.importapi.models.discount_codes">DiscountCodeImport</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -202,27 +202,27 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCartDiscounts(com.commercetools.importapi.models.common.CartDiscountKeyReference...)" class="member-name-link">setCartDiscounts</a><wbr>(<a href="../common/CartDiscountKeyReference.html" title="interface in com.commercetools.importapi.models.common">CartDiscountKeyReference</a>...&nbsp;cartDiscounts)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Reference to CartDiscounts that can be applied to the Cart once the DiscountCode is applied.</div>
+<div class="block">Maps to <code>DiscountCode.cartDiscounts</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCartDiscounts(java.util.List)" class="member-name-link">setCartDiscounts</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/CartDiscountKeyReference.html" title="interface in com.commercetools.importapi.models.common">CartDiscountKeyReference</a>&gt;&nbsp;cartDiscounts)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Reference to CartDiscounts that can be applied to the Cart once the DiscountCode is applied.</div>
+<div class="block">Maps to <code>DiscountCode.cartDiscounts</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCartPredicate(java.lang.String)" class="member-name-link">setCartPredicate</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;cartPredicate)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">DiscountCode can only be applied to Carts that match this predicate.</div>
+<div class="block">Maps to <code>DiscountCode.cartPredicate</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCode(java.lang.String)" class="member-name-link">setCode</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;code)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">User-defined unique identifier of the DiscountCode that is used by the customer to apply the discount.</div>
+<div class="block">Maps to <code>DiscountCode.code</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCustom(com.commercetools.importapi.models.customfields.Custom)" class="member-name-link">setCustom</a><wbr>(<a href="../customfields/Custom.html" title="interface in com.commercetools.importapi.models.customfields">Custom</a>&nbsp;custom)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Custom Fields of the DiscountCode.</div>
+<div class="block">Maps to <code>DiscountCode.custom</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setDescription(com.commercetools.importapi.models.common.LocalizedString)" class="member-name-link">setDescription</a><wbr>(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;description)</code></div>
@@ -232,17 +232,17 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setGroups(java.lang.String...)" class="member-name-link">setGroups</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;groups)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Groups to which the DiscountCode belongs.</div>
+<div class="block">Maps to <code>DiscountCode.groups</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setGroups(java.util.List)" class="member-name-link">setGroups</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;groups)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Groups to which the DiscountCode belongs.</div>
+<div class="block">Maps to <code>DiscountCode.groups</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setIsActive(java.lang.Boolean)" class="member-name-link">setIsActive</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isActive)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Indicates if the DiscountCode is active and can be applied to the Cart.</div>
+<div class="block">Maps to <code>DiscountCode.isActive</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setKey(java.lang.String)" class="member-name-link">setKey</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
@@ -252,12 +252,12 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setMaxApplications(java.lang.Long)" class="member-name-link">setMaxApplications</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;maxApplications)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Number of times the DiscountCode can be applied.</div>
+<div class="block">Maps to <code>DiscountCode.maxApplications</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setMaxApplicationsPerCustomer(java.lang.Long)" class="member-name-link">setMaxApplicationsPerCustomer</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;maxApplicationsPerCustomer)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Number of times the DiscountCode can be applied per Customer (anonymous Carts are not supported).</div>
+<div class="block">Maps to <code>DiscountCode.maxApplicationsPerCustomer</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setName(com.commercetools.importapi.models.common.LocalizedString)" class="member-name-link">setName</a><wbr>(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;name)</code></div>
@@ -267,12 +267,12 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setValidFrom(java.time.ZonedDateTime)" class="member-name-link">setValidFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;validFrom)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Date and time (UTC) from which the DiscountCode is effective.</div>
+<div class="block">Maps to <code>DiscountCode.validFrom</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setValidUntil(java.time.ZonedDateTime)" class="member-name-link">setValidUntil</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;validUntil)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Date and time (UTC) until which the DiscountCode is effective.</div>
+<div class="block">Maps to <code>DiscountCode.validUntil</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="DiscountCodeImport.html" title="interface in com.commercetools.importapi.models.discount_codes">DiscountCodeImport</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -306,7 +306,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <h3>getKey</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getKey</span>()</div>
-<div class="block"><p>User-defined unique identifier. If a Discount Code with this <code>key</code> exists, it will be updated with the imported data.</p></div>
+<div class="block"><p>User-defined unique identifier. If a DiscountCode with this <code>key</code> exists, it is updated with the imported data.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/ImportResource.html#getKey()">getKey</a></code>&nbsp;in interface&nbsp;<code><a href="../common/ImportResource.html" title="interface in com.commercetools.importapi.models.common">ImportResource</a></code></dd>
@@ -344,8 +344,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <h3>getCode</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getCode</span>()</div>
-<div class="block"><p>User-defined unique identifier of the DiscountCode that is used by the customer to apply the discount.</p>
-  <p>The value cannot be updated. Attempting to update the value will result in an InvalidFieldsUpdate error.</p></div>
+<div class="block"><p>Maps to <code>DiscountCode.code</code>. This value cannot be updated. Attempting to update this value will result in an InvalidFieldsUpdate error.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>code</dd>
@@ -358,7 +357,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
 </span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/CartDiscountKeyReference.html" title="interface in com.commercetools.importapi.models.common">CartDiscountKeyReference</a>&gt;</span>&nbsp;<span class="element-name">getCartDiscounts</span>()</div>
-<div class="block"><p>Reference to CartDiscounts that can be applied to the Cart once the DiscountCode is applied.</p></div>
+<div class="block"><p>Maps to <code>DiscountCode.cartDiscounts</code>. If the referenced CartDiscounts do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CartDiscounts are created.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>cartDiscounts</dd>
@@ -369,7 +368,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="getCartPredicate()">
 <h3>getCartPredicate</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getCartPredicate</span>()</div>
-<div class="block"><p>DiscountCode can only be applied to Carts that match this predicate.</p></div>
+<div class="block"><p>Maps to <code>DiscountCode.cartPredicate</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>cartPredicate</dd>
@@ -381,7 +380,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <h3>getIsActive</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name">getIsActive</span>()</div>
-<div class="block"><p>Indicates if the DiscountCode is active and can be applied to the Cart.</p></div>
+<div class="block"><p>Maps to <code>DiscountCode.isActive</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>isActive</dd>
@@ -392,7 +391,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="getMaxApplications()">
 <h3>getMaxApplications</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">getMaxApplications</span>()</div>
-<div class="block"><p>Number of times the DiscountCode can be applied. DiscountCode application is counted at the time of Order creation or update. However, Order cancellation or deletion does not decrement the count.</p></div>
+<div class="block"><p>Maps to <code>DiscountCode.maxApplications</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>maxApplications</dd>
@@ -403,7 +402,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="getMaxApplicationsPerCustomer()">
 <h3>getMaxApplicationsPerCustomer</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">getMaxApplicationsPerCustomer</span>()</div>
-<div class="block"><p>Number of times the DiscountCode can be applied per Customer (anonymous Carts are not supported). DiscountCode application is counted at the time of Order creation or update. However, Order cancellation or deletion does not decrement the count.</p></div>
+<div class="block"><p>Maps to <code>DiscountCode.maxApplicationsPerCustomer</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>maxApplicationsPerCustomer</dd>
@@ -414,7 +413,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="getGroups()">
 <h3>getGroups</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;</span>&nbsp;<span class="element-name">getGroups</span>()</div>
-<div class="block"><p>Groups to which the DiscountCode belongs.</p></div>
+<div class="block"><p>Maps to <code>DiscountCode.groups</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>groups</dd>
@@ -425,7 +424,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="getValidFrom()">
 <h3>getValidFrom</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name">getValidFrom</span>()</div>
-<div class="block"><p>Date and time (UTC) from which the DiscountCode is effective.</p></div>
+<div class="block"><p>Maps to <code>DiscountCode.validFrom</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>validFrom</dd>
@@ -436,7 +435,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="getValidUntil()">
 <h3>getValidUntil</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name">getValidUntil</span>()</div>
-<div class="block"><p>Date and time (UTC) until which the DiscountCode is effective.</p></div>
+<div class="block"><p>Maps to <code>DiscountCode.validUntil</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>validUntil</dd>
@@ -448,7 +447,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <h3>getCustom</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../customfields/Custom.html" title="interface in com.commercetools.importapi.models.customfields">Custom</a></span>&nbsp;<span class="element-name">getCustom</span>()</div>
-<div class="block"><p>Custom Fields of the DiscountCode.</p></div>
+<div class="block"><p>Maps to <code>DiscountCode.custom</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>custom</dd>
@@ -459,7 +458,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setKey(java.lang.String)">
 <h3>setKey</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setKey</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
-<div class="block"><p>User-defined unique identifier. If a Discount Code with this <code>key</code> exists, it will be updated with the imported data.</p></div>
+<div class="block"><p>User-defined unique identifier. If a DiscountCode with this <code>key</code> exists, it is updated with the imported data.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/ImportResource.html#setKey(java.lang.String)">setKey</a></code>&nbsp;in interface&nbsp;<code><a href="../common/ImportResource.html" title="interface in com.commercetools.importapi.models.common">ImportResource</a></code></dd>
@@ -494,8 +493,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setCode(java.lang.String)">
 <h3>setCode</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCode</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;code)</span></div>
-<div class="block"><p>User-defined unique identifier of the DiscountCode that is used by the customer to apply the discount.</p>
-  <p>The value cannot be updated. Attempting to update the value will result in an InvalidFieldsUpdate error.</p></div>
+<div class="block"><p>Maps to <code>DiscountCode.code</code>. This value cannot be updated. Attempting to update this value will result in an InvalidFieldsUpdate error.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>code</code> - value to be set</dd>
@@ -506,7 +504,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setCartDiscounts(com.commercetools.importapi.models.common.CartDiscountKeyReference...)">
 <h3>setCartDiscounts</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCartDiscounts</span><wbr><span class="parameters">(<a href="../common/CartDiscountKeyReference.html" title="interface in com.commercetools.importapi.models.common">CartDiscountKeyReference</a>...&nbsp;cartDiscounts)</span></div>
-<div class="block"><p>Reference to CartDiscounts that can be applied to the Cart once the DiscountCode is applied.</p></div>
+<div class="block"><p>Maps to <code>DiscountCode.cartDiscounts</code>. If the referenced CartDiscounts do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CartDiscounts are created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>cartDiscounts</code> - values to be set</dd>
@@ -517,7 +515,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setCartDiscounts(java.util.List)">
 <h3>setCartDiscounts</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCartDiscounts</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/CartDiscountKeyReference.html" title="interface in com.commercetools.importapi.models.common">CartDiscountKeyReference</a>&gt;&nbsp;cartDiscounts)</span></div>
-<div class="block"><p>Reference to CartDiscounts that can be applied to the Cart once the DiscountCode is applied.</p></div>
+<div class="block"><p>Maps to <code>DiscountCode.cartDiscounts</code>. If the referenced CartDiscounts do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CartDiscounts are created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>cartDiscounts</code> - values to be set</dd>
@@ -528,7 +526,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setCartPredicate(java.lang.String)">
 <h3>setCartPredicate</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCartPredicate</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;cartPredicate)</span></div>
-<div class="block"><p>DiscountCode can only be applied to Carts that match this predicate.</p></div>
+<div class="block"><p>Maps to <code>DiscountCode.cartPredicate</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>cartPredicate</code> - value to be set</dd>
@@ -539,7 +537,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setIsActive(java.lang.Boolean)">
 <h3>setIsActive</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setIsActive</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isActive)</span></div>
-<div class="block"><p>Indicates if the DiscountCode is active and can be applied to the Cart.</p></div>
+<div class="block"><p>Maps to <code>DiscountCode.isActive</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>isActive</code> - value to be set</dd>
@@ -550,7 +548,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setMaxApplications(java.lang.Long)">
 <h3>setMaxApplications</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setMaxApplications</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;maxApplications)</span></div>
-<div class="block"><p>Number of times the DiscountCode can be applied. DiscountCode application is counted at the time of Order creation or update. However, Order cancellation or deletion does not decrement the count.</p></div>
+<div class="block"><p>Maps to <code>DiscountCode.maxApplications</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>maxApplications</code> - value to be set</dd>
@@ -561,7 +559,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setMaxApplicationsPerCustomer(java.lang.Long)">
 <h3>setMaxApplicationsPerCustomer</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setMaxApplicationsPerCustomer</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;maxApplicationsPerCustomer)</span></div>
-<div class="block"><p>Number of times the DiscountCode can be applied per Customer (anonymous Carts are not supported). DiscountCode application is counted at the time of Order creation or update. However, Order cancellation or deletion does not decrement the count.</p></div>
+<div class="block"><p>Maps to <code>DiscountCode.maxApplicationsPerCustomer</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>maxApplicationsPerCustomer</code> - value to be set</dd>
@@ -572,7 +570,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setGroups(java.lang.String...)">
 <h3>setGroups</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setGroups</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;groups)</span></div>
-<div class="block"><p>Groups to which the DiscountCode belongs.</p></div>
+<div class="block"><p>Maps to <code>DiscountCode.groups</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>groups</code> - values to be set</dd>
@@ -583,7 +581,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setGroups(java.util.List)">
 <h3>setGroups</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setGroups</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&gt;&nbsp;groups)</span></div>
-<div class="block"><p>Groups to which the DiscountCode belongs.</p></div>
+<div class="block"><p>Maps to <code>DiscountCode.groups</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>groups</code> - values to be set</dd>
@@ -594,7 +592,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setValidFrom(java.time.ZonedDateTime)">
 <h3>setValidFrom</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setValidFrom</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;validFrom)</span></div>
-<div class="block"><p>Date and time (UTC) from which the DiscountCode is effective.</p></div>
+<div class="block"><p>Maps to <code>DiscountCode.validFrom</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>validFrom</code> - value to be set</dd>
@@ -605,7 +603,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setValidUntil(java.time.ZonedDateTime)">
 <h3>setValidUntil</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setValidUntil</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;validUntil)</span></div>
-<div class="block"><p>Date and time (UTC) until which the DiscountCode is effective.</p></div>
+<div class="block"><p>Maps to <code>DiscountCode.validUntil</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>validUntil</code> - value to be set</dd>
@@ -616,7 +614,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setCustom(com.commercetools.importapi.models.customfields.Custom)">
 <h3>setCustom</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCustom</span><wbr><span class="parameters">(<a href="../customfields/Custom.html" title="interface in com.commercetools.importapi.models.customfields">Custom</a>&nbsp;custom)</span></div>
-<div class="block"><p>Custom Fields of the DiscountCode.</p></div>
+<div class="block"><p>Maps to <code>DiscountCode.custom</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>custom</code> - value to be set</dd>

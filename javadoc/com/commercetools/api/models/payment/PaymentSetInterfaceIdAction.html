@@ -78,7 +78,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">PaymentSetInterfaceIdAction</span><span class="extends-implements">
 extends <a href="PaymentUpdateAction.html" title="interface in com.commercetools.api.models.payment">PaymentUpdateAction</a></span></div>
-<div class="block">PaymentSetInterfaceIdAction
+<div class="block"><p>This action generates the PaymentInterfaceIdSet Message.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -216,7 +216,8 @@ extends <a href="PaymentUpdateAction.html" title="interface in com.commercetools
 <h3>getInterfaceId</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getInterfaceId</span>()</div>
-<div class="block"><p>Value to set. Once set, the <code>interfaceId</code> cannot be changed.</p></div>
+<div class="block"><p>Value to set. The combination of <code>interfaceId</code> and <code>paymentInterface</code> of a PaymentMethodInfo must be unique.</p>
+  <p>The value cannot be modified after it is set.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>interfaceId</dd>
@@ -227,7 +228,8 @@ extends <a href="PaymentUpdateAction.html" title="interface in com.commercetools
 <section class="detail" id="setInterfaceId(java.lang.String)">
 <h3>setInterfaceId</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setInterfaceId</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;interfaceId)</span></div>
-<div class="block"><p>Value to set. Once set, the <code>interfaceId</code> cannot be changed.</p></div>
+<div class="block"><p>Value to set. The combination of <code>interfaceId</code> and <code>paymentInterface</code> of a PaymentMethodInfo must be unique.</p>
+  <p>The value cannot be modified after it is set.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>interfaceId</code> - value to be set</dd>

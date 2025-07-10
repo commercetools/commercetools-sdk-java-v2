@@ -73,11 +73,11 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Superinterfaces:</dt>
-<dd><code><a href="../CustomizableDraft.html" title="interface in com.commercetools.api.models">CustomizableDraft</a>&lt;<a href="PaymentDraft.html" title="interface in com.commercetools.api.models.payment">PaymentDraft</a>&gt;</code>, <code><a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="interface in io.vrap.rmf.base.client">Draft</a>&lt;<a href="PaymentDraft.html" title="interface in com.commercetools.api.models.payment">PaymentDraft</a>&gt;</code>, <code><a href="../WithKey.html" title="interface in com.commercetools.api.models">WithKey</a></code></dd>
+<dd><code><a href="../CustomizableDraft.html" title="interface in com.commercetools.api.models">CustomizableDraft</a>&lt;<a href="PaymentDraft.html" title="interface in com.commercetools.api.models.payment">PaymentDraft</a>&gt;</code>, <code><a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="interface in io.vrap.rmf.base.client">Draft</a>&lt;<a href="PaymentDraft.html" title="interface in com.commercetools.api.models.payment">PaymentDraft</a>&gt;</code>, <code><a href="PaymentDraftMixin.html" title="interface in com.commercetools.api.models.payment">PaymentDraftMixin</a></code>, <code><a href="../WithKey.html" title="interface in com.commercetools.api.models">WithKey</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">PaymentDraft</span><span class="extends-implements">
-extends <a href="../CustomizableDraft.html" title="interface in com.commercetools.api.models">CustomizableDraft</a>&lt;<a href="PaymentDraft.html" title="interface in com.commercetools.api.models.payment">PaymentDraft</a>&gt;, <a href="../WithKey.html" title="interface in com.commercetools.api.models">WithKey</a>, <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="interface in io.vrap.rmf.base.client">Draft</a>&lt;<a href="PaymentDraft.html" title="interface in com.commercetools.api.models.payment">PaymentDraft</a>&gt;</span></div>
+extends <a href="PaymentDraftMixin.html" title="interface in com.commercetools.api.models.payment">PaymentDraftMixin</a>, <a href="../CustomizableDraft.html" title="interface in com.commercetools.api.models">CustomizableDraft</a>&lt;<a href="PaymentDraft.html" title="interface in com.commercetools.api.models.payment">PaymentDraft</a>&gt;, <a href="../WithKey.html" title="interface in com.commercetools.api.models">WithKey</a>, <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="interface in io.vrap.rmf.base.client">Draft</a>&lt;<a href="PaymentDraft.html" title="interface in com.commercetools.api.models.payment">PaymentDraft</a>&gt;</span></div>
 <div class="block">PaymentDraft
 
  <hr>
@@ -156,7 +156,7 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">User-defined unique identifier for the Payment.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="PaymentMethodInfo.html" title="interface in com.commercetools.api.models.payment">PaymentMethodInfo</a></code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="PaymentMethodInfoDraft.html" title="interface in com.commercetools.api.models.payment">PaymentMethodInfoDraft</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPaymentMethodInfo()" class="member-name-link">getPaymentMethodInfo</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Information regarding the payment interface (for example, a PSP), and the specific payment method used.</div>
@@ -222,7 +222,7 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <div class="block">User-defined unique identifier for the Payment.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setPaymentMethodInfo(com.commercetools.api.models.payment.PaymentMethodInfo)" class="member-name-link">setPaymentMethodInfo</a><wbr>(<a href="PaymentMethodInfo.html" title="interface in com.commercetools.api.models.payment">PaymentMethodInfo</a>&nbsp;paymentMethodInfo)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setPaymentMethodInfo(com.commercetools.api.models.payment.PaymentMethodInfoDraft)" class="member-name-link">setPaymentMethodInfo</a><wbr>(<a href="PaymentMethodInfoDraft.html" title="interface in com.commercetools.api.models.payment">PaymentMethodInfoDraft</a>&nbsp;paymentMethodInfo)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">Information regarding the payment interface (for example, a PSP), and the specific payment method used.</div>
 </div>
@@ -257,6 +257,9 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.commercetools.api.models.CustomizableDraft">Methods inherited from interface&nbsp;com.commercetools.api.models.<a href="../CustomizableDraft.html" title="interface in com.commercetools.api.models">CustomizableDraft</a></h3>
 <code><a href="../CustomizableDraft.html#unwrapCustomizableDraft()">unwrapCustomizableDraft</a></code></div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.commercetools.api.models.payment.PaymentDraftMixin">Methods inherited from interface&nbsp;com.commercetools.api.models.payment.<a href="PaymentDraftMixin.html" title="interface in com.commercetools.api.models.payment">PaymentDraftMixin</a></h3>
+<code><a href="PaymentDraftMixin.html#setCustom(com.commercetools.api.models.type.CustomFields)">setCustom</a>, <a href="PaymentDraftMixin.html#setPaymentMethodInfo(com.commercetools.api.models.payment.PaymentMethodInfo)">setPaymentMethodInfo</a>, <a href="PaymentDraftMixin.html#toResourceIdentifier()">toResourceIdentifier</a></code></div>
 </section>
 </li>
 </ul>
@@ -319,7 +322,7 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <section class="detail" id="getPaymentMethodInfo()">
 <h3>getPaymentMethodInfo</h3>
 <div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="PaymentMethodInfo.html" title="interface in com.commercetools.api.models.payment">PaymentMethodInfo</a></span>&nbsp;<span class="element-name">getPaymentMethodInfo</span>()</div>
+</span><span class="return-type">@Valid <a href="PaymentMethodInfoDraft.html" title="interface in com.commercetools.api.models.payment">PaymentMethodInfoDraft</a></span>&nbsp;<span class="element-name">getPaymentMethodInfo</span>()</div>
 <div class="block"><p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -435,11 +438,13 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 </section>
 </li>
 <li>
-<section class="detail" id="setPaymentMethodInfo(com.commercetools.api.models.payment.PaymentMethodInfo)">
+<section class="detail" id="setPaymentMethodInfo(com.commercetools.api.models.payment.PaymentMethodInfoDraft)">
 <h3>setPaymentMethodInfo</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setPaymentMethodInfo</span><wbr><span class="parameters">(<a href="PaymentMethodInfo.html" title="interface in com.commercetools.api.models.payment">PaymentMethodInfo</a>&nbsp;paymentMethodInfo)</span></div>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setPaymentMethodInfo</span><wbr><span class="parameters">(<a href="PaymentMethodInfoDraft.html" title="interface in com.commercetools.api.models.payment">PaymentMethodInfoDraft</a>&nbsp;paymentMethodInfo)</span></div>
 <div class="block"><p>Information regarding the payment interface (for example, a PSP), and the specific payment method used.</p></div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="PaymentDraftMixin.html#setPaymentMethodInfo(com.commercetools.api.models.payment.PaymentMethodInfoDraft)">setPaymentMethodInfo</a></code>&nbsp;in interface&nbsp;<code><a href="PaymentDraftMixin.html" title="interface in com.commercetools.api.models.payment">PaymentDraftMixin</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>paymentMethodInfo</code> - value to be set</dd>
 </dl>
@@ -508,6 +513,8 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../CustomizableDraft.html#setCustom(com.commercetools.api.models.type.CustomFieldsDraft)">setCustom</a></code>&nbsp;in interface&nbsp;<code><a href="../CustomizableDraft.html" title="interface in com.commercetools.api.models">CustomizableDraft</a>&lt;<a href="PaymentDraft.html" title="interface in com.commercetools.api.models.payment">PaymentDraft</a>&gt;</code></dd>
+<dt>Specified by:</dt>
+<dd><code><a href="PaymentDraftMixin.html#setCustom(com.commercetools.api.models.type.CustomFieldsDraft)">setCustom</a></code>&nbsp;in interface&nbsp;<code><a href="PaymentDraftMixin.html" title="interface in com.commercetools.api.models.payment">PaymentDraftMixin</a></code></dd>
 <dt>Parameters:</dt>
 <dd><code>custom</code> - value to be set</dd>
 </dl>

@@ -248,11 +248,7 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab1"><a href="ItemShippingDetailsDraft.html" title="interface in com.commercetools.importapi.models.orders">ItemShippingDetailsDraft</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab1">
-<div class="block">ItemShippingDetailsDraft
-
- 
- Example to create an instance using the builder pattern
- </div>
+<div class="block">The sum of the <code>targets</code> must match the quantity of the Line Items or Custom Line Items</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ItemShippingDetailsDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">ItemShippingDetailsDraftBuilder</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
@@ -263,7 +259,7 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab1"><a href="ItemShippingTarget.html" title="interface in com.commercetools.importapi.models.orders">ItemShippingTarget</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab1">
-<div class="block">The item's shipping target.</div>
+<div class="block">Determines the address (as a reference to an address in <code>itemShippingAddresses</code>) and the quantity shipped to the address.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ItemShippingTargetBuilder.html" title="class in com.commercetools.importapi.models.orders">ItemShippingTargetBuilder</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
@@ -274,7 +270,11 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab1"><a href="ItemState.html" title="interface in com.commercetools.importapi.models.orders">ItemState</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab1">
-<div class="block">The item's state.</div>
+<div class="block">ItemState
+
+ 
+ Example to create an instance using the builder pattern
+ </div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ItemStateBuilder.html" title="class in com.commercetools.importapi.models.orders">ItemStateBuilder</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
@@ -326,7 +326,7 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab1"><a href="OrderImport.html" title="interface in com.commercetools.importapi.models.orders">OrderImport</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab1">
-<div class="block">The data representation for an Order to be imported that is persisted as an Order in the Project.</div>
+<div class="block">Represents the data used to import an Order.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="OrderImportBuilder.html" title="class in com.commercetools.importapi.models.orders">OrderImportBuilder</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">
@@ -383,7 +383,7 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab1"><a href="RoundingMode.html" title="interface in com.commercetools.importapi.models.orders">RoundingMode</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab1">
-<div class="block">Maps to <code>Order.taxRoundingMode</code>.</div>
+<div class="block">The rounding mode representation used in <code>Order.priceRoundingMode</code> and <code>Order.taxRoundingMode</code>.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab3"><a href="RoundingMode.RoundingModeEnum.html" title="enum in com.commercetools.importapi.models.orders">RoundingMode.RoundingModeEnum</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab3">
@@ -414,7 +414,7 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first even-row-color class-summary class-summary-tab1"><a href="ShippingInfoImportDraft.html" title="interface in com.commercetools.importapi.models.orders">ShippingInfoImportDraft</a></div>
 <div class="col-last even-row-color class-summary class-summary-tab1">
-<div class="block">Maps to an order's <code>shippingInfo</code> property.</div>
+<div class="block">Maps to an Order's <code>shippingInfo</code> property.</div>
 </div>
 <div class="col-first odd-row-color class-summary class-summary-tab2"><a href="ShippingInfoImportDraftBuilder.html" title="class in com.commercetools.importapi.models.orders">ShippingInfoImportDraftBuilder</a></div>
 <div class="col-last odd-row-color class-summary class-summary-tab2">

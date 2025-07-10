@@ -125,7 +125,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AttributeDefinitionBuilder.html" title="class in com.commercetools.importapi.models.producttypes">AttributeDefinitionBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#attributeConstraint(com.commercetools.importapi.models.producttypes.AttributeConstraintEnum)" class="member-name-link">attributeConstraint</a><wbr>(<a href="AttributeConstraintEnum.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeConstraintEnum</a>&nbsp;attributeConstraint)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the attributeConstraint</div>
+<div class="block">Specifies how Attributes are validated across all variants of a Product.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AttributeDefinition.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeDefinition</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#build()" class="member-name-link">build</a>()</code></div>
@@ -140,82 +140,92 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AttributeConstraintEnum.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeConstraintEnum</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAttributeConstraint()" class="member-name-link">getAttributeConstraint</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">value of attributeConstraint}</div>
+<div class="block">Specifies how Attributes are validated across all variants of a Product.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TextInputHint.html" title="interface in com.commercetools.importapi.models.producttypes">TextInputHint</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getInputHint()" class="member-name-link">getInputHint</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">value of inputHint}</div>
+<div class="block">Provides a visual representation directive for values of this Attribute (only relevant for AttributeTextType and AttributeLocalizableTextType).</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getInputTip()" class="member-name-link">getInputTip</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</div>
+<div class="block">Provides additional Attribute information to aid content managers configure Product details.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getIsRequired()" class="member-name-link">getIsRequired</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">value of isRequired}</div>
+<div class="block">If <code>true</code>, the Attribute must have a value on a ProductVariant.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getIsSearchable()" class="member-name-link">getIsSearchable</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">value of isSearchable}</div>
+<div class="block">If <code>true</code>, the Attribute's values are available in the Product Search or the Product Projection Search API for use in full-text search queries, filters, and facets.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLabel()" class="member-name-link">getLabel</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</div>
+<div class="block">Human-readable label for the Attribute.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AttributeLevel.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeLevel</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLevel()" class="member-name-link">getLevel</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">value of name}</div>
+<div class="block">value of level}</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AttributeType.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeType</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getType()" class="member-name-link">getType</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">value of type}</div>
+<div class="block">User-defined name of the Attribute that is unique within the Project.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AttributeDefinitionBuilder.html" title="class in com.commercetools.importapi.models.producttypes">AttributeDefinitionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#inputHint(com.commercetools.importapi.models.producttypes.TextInputHint)" class="member-name-link">inputHint</a><wbr>(<a href="TextInputHint.html" title="interface in com.commercetools.importapi.models.producttypes">TextInputHint</a>&nbsp;inputHint)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AttributeType.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeType</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getType()" class="member-name-link">getType</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the inputHint</div>
+<div class="block">Describes the Type of the Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AttributeDefinitionBuilder.html" title="class in com.commercetools.importapi.models.producttypes">AttributeDefinitionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#inputTip(com.commercetools.importapi.models.common.LocalizedString)" class="member-name-link">inputTip</a><wbr>(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;inputTip)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#inputHint(com.commercetools.importapi.models.producttypes.TextInputHint)" class="member-name-link">inputHint</a><wbr>(<a href="TextInputHint.html" title="interface in com.commercetools.importapi.models.producttypes">TextInputHint</a>&nbsp;inputHint)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</div>
+<div class="block">Provides a visual representation directive for values of this Attribute (only relevant for AttributeTextType and AttributeLocalizableTextType).</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AttributeDefinitionBuilder.html" title="class in com.commercetools.importapi.models.producttypes">AttributeDefinitionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#inputTip(java.util.function.Function)" class="member-name-link">inputTip</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#inputTip(com.commercetools.importapi.models.common.LocalizedString)" class="member-name-link">inputTip</a><wbr>(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;inputTip)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</div>
+<div class="block">Provides additional Attribute information to aid content managers configure Product details.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AttributeDefinitionBuilder.html" title="class in com.commercetools.importapi.models.producttypes">AttributeDefinitionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isRequired(java.lang.Boolean)" class="member-name-link">isRequired</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isRequired)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#inputTip(java.util.function.Function)" class="member-name-link">inputTip</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the isRequired</div>
+<div class="block">Provides additional Attribute information to aid content managers configure Product details.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AttributeDefinitionBuilder.html" title="class in com.commercetools.importapi.models.producttypes">AttributeDefinitionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isSearchable(java.lang.Boolean)" class="member-name-link">isSearchable</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isSearchable)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isRequired(java.lang.Boolean)" class="member-name-link">isRequired</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isRequired)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the isSearchable</div>
+<div class="block">If <code>true</code>, the Attribute must have a value on a ProductVariant.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AttributeDefinitionBuilder.html" title="class in com.commercetools.importapi.models.producttypes">AttributeDefinitionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#label(com.commercetools.importapi.models.common.LocalizedString)" class="member-name-link">label</a><wbr>(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;label)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isSearchable(java.lang.Boolean)" class="member-name-link">isSearchable</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isSearchable)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</div>
+<div class="block">If <code>true</code>, the Attribute's values are available in the Product Search or the Product Projection Search API for use in full-text search queries, filters, and facets.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AttributeDefinitionBuilder.html" title="class in com.commercetools.importapi.models.producttypes">AttributeDefinitionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#label(java.util.function.Function)" class="member-name-link">label</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#label(com.commercetools.importapi.models.common.LocalizedString)" class="member-name-link">label</a><wbr>(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;label)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</div>
+<div class="block">Human-readable label for the Attribute.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AttributeDefinitionBuilder.html" title="class in com.commercetools.importapi.models.producttypes">AttributeDefinitionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#label(java.util.function.Function)" class="member-name-link">label</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Human-readable label for the Attribute.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AttributeDefinitionBuilder.html" title="class in com.commercetools.importapi.models.producttypes">AttributeDefinitionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#level(com.commercetools.importapi.models.producttypes.AttributeLevel)" class="member-name-link">level</a><wbr>(<a href="AttributeLevel.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeLevel</a>&nbsp;level)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">set the value to the level</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AttributeDefinitionBuilder.html" title="class in com.commercetools.importapi.models.producttypes">AttributeDefinitionBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#name(java.lang.String)" class="member-name-link">name</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the name</div>
+<div class="block">User-defined name of the Attribute that is unique within the Project.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="AttributeDefinitionBuilder.html" title="class in com.commercetools.importapi.models.producttypes">AttributeDefinitionBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -230,22 +240,22 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AttributeDefinitionBuilder.html" title="class in com.commercetools.importapi.models.producttypes">AttributeDefinitionBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#type(com.commercetools.importapi.models.producttypes.AttributeType)" class="member-name-link">type</a><wbr>(<a href="AttributeType.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeType</a>&nbsp;type)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the type</div>
+<div class="block">Describes the Type of the Attribute.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AttributeDefinitionBuilder.html" title="class in com.commercetools.importapi.models.producttypes">AttributeDefinitionBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#type(java.util.function.Function)" class="member-name-link">type</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AttributeTypeBuilder.html" title="class in com.commercetools.importapi.models.producttypes">AttributeTypeBuilder</a>,<wbr><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="AttributeType.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeType</a>&gt;&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the type using the builder function</div>
+<div class="block">Describes the Type of the Attribute.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AttributeDefinitionBuilder.html" title="class in com.commercetools.importapi.models.producttypes">AttributeDefinitionBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withInputTip(java.util.function.Function)" class="member-name-link">withInputTip</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</div>
+<div class="block">Provides additional Attribute information to aid content managers configure Product details.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="AttributeDefinitionBuilder.html" title="class in com.commercetools.importapi.models.producttypes">AttributeDefinitionBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withLabel(java.util.function.Function)" class="member-name-link">withLabel</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</div>
+<div class="block">Human-readable label for the Attribute.</div>
 </div>
 </div>
 </div>
@@ -282,7 +292,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="type(com.commercetools.importapi.models.producttypes.AttributeType)">
 <h3>type</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionBuilder.html" title="class in com.commercetools.importapi.models.producttypes">AttributeDefinitionBuilder</a></span>&nbsp;<span class="element-name">type</span><wbr><span class="parameters">(<a href="AttributeType.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeType</a>&nbsp;type)</span></div>
-<div class="block">set the value to the type</div>
+<div class="block"><p>Describes the Type of the Attribute.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>type</code> - value to be set</dd>
@@ -295,7 +305,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="type(java.util.function.Function)">
 <h3>type</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionBuilder.html" title="class in com.commercetools.importapi.models.producttypes">AttributeDefinitionBuilder</a></span>&nbsp;<span class="element-name">type</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AttributeTypeBuilder.html" title="class in com.commercetools.importapi.models.producttypes">AttributeTypeBuilder</a>,<wbr><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="AttributeType.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeType</a>&gt;&gt;&nbsp;builder)</span></div>
-<div class="block">set the value to the type using the builder function</div>
+<div class="block"><p>Describes the Type of the Attribute.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the type value</dd>
@@ -308,7 +318,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="name(java.lang.String)">
 <h3>name</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionBuilder.html" title="class in com.commercetools.importapi.models.producttypes">AttributeDefinitionBuilder</a></span>&nbsp;<span class="element-name">name</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
-<div class="block">set the value to the name</div>
+<div class="block"><p>User-defined name of the Attribute that is unique within the Project.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>name</code> - value to be set</dd>
@@ -321,12 +331,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="label(java.util.function.Function)">
 <h3>label</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionBuilder.html" title="class in com.commercetools.importapi.models.producttypes">AttributeDefinitionBuilder</a></span>&nbsp;<span class="element-name">label</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-  <pre><code>{
-    "de": "Hundefutter",
-    "en": "dog food"
-  }
-  </code></pre></div>
+<div class="block"><p>Human-readable label for the Attribute.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the label value</dd>
@@ -339,12 +344,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withLabel(java.util.function.Function)">
 <h3>withLabel</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionBuilder.html" title="class in com.commercetools.importapi.models.producttypes">AttributeDefinitionBuilder</a></span>&nbsp;<span class="element-name">withLabel</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-  <pre><code>{
-    "de": "Hundefutter",
-    "en": "dog food"
-  }
-  </code></pre></div>
+<div class="block"><p>Human-readable label for the Attribute.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the label value</dd>
@@ -357,12 +357,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="label(com.commercetools.importapi.models.common.LocalizedString)">
 <h3>label</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionBuilder.html" title="class in com.commercetools.importapi.models.producttypes">AttributeDefinitionBuilder</a></span>&nbsp;<span class="element-name">label</span><wbr><span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;label)</span></div>
-<div class="block"><p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-  <pre><code>{
-    "de": "Hundefutter",
-    "en": "dog food"
-  }
-  </code></pre></div>
+<div class="block"><p>Human-readable label for the Attribute.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>label</code> - value to be set</dd>
@@ -375,7 +370,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="isRequired(java.lang.Boolean)">
 <h3>isRequired</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionBuilder.html" title="class in com.commercetools.importapi.models.producttypes">AttributeDefinitionBuilder</a></span>&nbsp;<span class="element-name">isRequired</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isRequired)</span></div>
-<div class="block">set the value to the isRequired</div>
+<div class="block"><p>If <code>true</code>, the Attribute must have a value on a ProductVariant.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>isRequired</code> - value to be set</dd>
@@ -389,7 +384,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>attributeConstraint</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionBuilder.html" title="class in com.commercetools.importapi.models.producttypes">AttributeDefinitionBuilder</a></span>&nbsp;<span class="element-name">attributeConstraint</span><wbr><span class="parameters">(@Nullable
  <a href="AttributeConstraintEnum.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeConstraintEnum</a>&nbsp;attributeConstraint)</span></div>
-<div class="block">set the value to the attributeConstraint</div>
+<div class="block"><p>Specifies how Attributes are validated across all variants of a Product.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>attributeConstraint</code> - value to be set</dd>
@@ -402,12 +397,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="inputTip(java.util.function.Function)">
 <h3>inputTip</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionBuilder.html" title="class in com.commercetools.importapi.models.producttypes">AttributeDefinitionBuilder</a></span>&nbsp;<span class="element-name">inputTip</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-  <pre><code>{
-    "de": "Hundefutter",
-    "en": "dog food"
-  }
-  </code></pre></div>
+<div class="block"><p>Provides additional Attribute information to aid content managers configure Product details.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the inputTip value</dd>
@@ -420,12 +410,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withInputTip(java.util.function.Function)">
 <h3>withInputTip</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionBuilder.html" title="class in com.commercetools.importapi.models.producttypes">AttributeDefinitionBuilder</a></span>&nbsp;<span class="element-name">withInputTip</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.importapi.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-  <pre><code>{
-    "de": "Hundefutter",
-    "en": "dog food"
-  }
-  </code></pre></div>
+<div class="block"><p>Provides additional Attribute information to aid content managers configure Product details.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the inputTip value</dd>
@@ -439,12 +424,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>inputTip</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionBuilder.html" title="class in com.commercetools.importapi.models.producttypes">AttributeDefinitionBuilder</a></span>&nbsp;<span class="element-name">inputTip</span><wbr><span class="parameters">(@Nullable
  <a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a>&nbsp;inputTip)</span></div>
-<div class="block"><p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-  <pre><code>{
-    "de": "Hundefutter",
-    "en": "dog food"
-  }
-  </code></pre></div>
+<div class="block"><p>Provides additional Attribute information to aid content managers configure Product details.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>inputTip</code> - value to be set</dd>
@@ -458,7 +438,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>inputHint</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionBuilder.html" title="class in com.commercetools.importapi.models.producttypes">AttributeDefinitionBuilder</a></span>&nbsp;<span class="element-name">inputHint</span><wbr><span class="parameters">(@Nullable
  <a href="TextInputHint.html" title="interface in com.commercetools.importapi.models.producttypes">TextInputHint</a>&nbsp;inputHint)</span></div>
-<div class="block">set the value to the inputHint</div>
+<div class="block"><p>Provides a visual representation directive for values of this Attribute (only relevant for AttributeTextType and AttributeLocalizableTextType).</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>inputHint</code> - value to be set</dd>
@@ -472,7 +452,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>isSearchable</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionBuilder.html" title="class in com.commercetools.importapi.models.producttypes">AttributeDefinitionBuilder</a></span>&nbsp;<span class="element-name">isSearchable</span><wbr><span class="parameters">(@Nullable
  <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isSearchable)</span></div>
-<div class="block">set the value to the isSearchable</div>
+<div class="block"><p>If <code>true</code>, the Attribute's values are available in the Product Search or the Product Projection Search API for use in full-text search queries, filters, and facets.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>isSearchable</code> - value to be set</dd>
@@ -482,10 +462,24 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
+<section class="detail" id="level(com.commercetools.importapi.models.producttypes.AttributeLevel)">
+<h3>level</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeDefinitionBuilder.html" title="class in com.commercetools.importapi.models.producttypes">AttributeDefinitionBuilder</a></span>&nbsp;<span class="element-name">level</span><wbr><span class="parameters">(@Nullable
+ <a href="AttributeLevel.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeLevel</a>&nbsp;level)</span></div>
+<div class="block">set the value to the level</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>level</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getType()">
 <h3>getType</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeType.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeType</a></span>&nbsp;<span class="element-name">getType</span>()</div>
-<div class="block">value of type}</div>
+<div class="block"><p>Describes the Type of the Attribute.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>type</dd>
@@ -496,7 +490,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getName()">
 <h3>getName</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getName</span>()</div>
-<div class="block">value of name}</div>
+<div class="block"><p>User-defined name of the Attribute that is unique within the Project.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>name</dd>
@@ -507,12 +501,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getLabel()">
 <h3>getLabel</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></span>&nbsp;<span class="element-name">getLabel</span>()</div>
-<div class="block"><p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-  <pre><code>{
-    "de": "Hundefutter",
-    "en": "dog food"
-  }
-  </code></pre></div>
+<div class="block"><p>Human-readable label for the Attribute.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>label</dd>
@@ -523,7 +512,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getIsRequired()">
 <h3>getIsRequired</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name">getIsRequired</span>()</div>
-<div class="block">value of isRequired}</div>
+<div class="block"><p>If <code>true</code>, the Attribute must have a value on a ProductVariant.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>isRequired</dd>
@@ -535,7 +524,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getAttributeConstraint</h3>
 <div class="member-signature"><span class="annotations">@Nullable
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeConstraintEnum.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeConstraintEnum</a></span>&nbsp;<span class="element-name">getAttributeConstraint</span>()</div>
-<div class="block">value of attributeConstraint}</div>
+<div class="block"><p>Specifies how Attributes are validated across all variants of a Product.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>attributeConstraint</dd>
@@ -547,12 +536,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getInputTip</h3>
 <div class="member-signature"><span class="annotations">@Nullable
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/LocalizedString.html" title="interface in com.commercetools.importapi.models.common">LocalizedString</a></span>&nbsp;<span class="element-name">getInputTip</span>()</div>
-<div class="block"><p>A localized string is a JSON object where the keys are of IETF language tag, and the values the corresponding strings used for that language.</p>
-  <pre><code>{
-    "de": "Hundefutter",
-    "en": "dog food"
-  }
-  </code></pre></div>
+<div class="block"><p>Provides additional Attribute information to aid content managers configure Product details.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>inputTip</dd>
@@ -564,7 +548,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getInputHint</h3>
 <div class="member-signature"><span class="annotations">@Nullable
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="TextInputHint.html" title="interface in com.commercetools.importapi.models.producttypes">TextInputHint</a></span>&nbsp;<span class="element-name">getInputHint</span>()</div>
-<div class="block">value of inputHint}</div>
+<div class="block"><p>Provides a visual representation directive for values of this Attribute (only relevant for AttributeTextType and AttributeLocalizableTextType).</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>inputHint</dd>
@@ -576,10 +560,22 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getIsSearchable</h3>
 <div class="member-signature"><span class="annotations">@Nullable
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name">getIsSearchable</span>()</div>
-<div class="block">value of isSearchable}</div>
+<div class="block"><p>If <code>true</code>, the Attribute's values are available in the Product Search or the Product Projection Search API for use in full-text search queries, filters, and facets.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>isSearchable</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getLevel()">
+<h3>getLevel</h3>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="AttributeLevel.html" title="interface in com.commercetools.importapi.models.producttypes">AttributeLevel</a></span>&nbsp;<span class="element-name">getLevel</span>()</div>
+<div class="block">value of level}</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>level</dd>
 </dl>
 </section>
 </li>

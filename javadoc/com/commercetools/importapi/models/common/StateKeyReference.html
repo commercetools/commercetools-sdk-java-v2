@@ -78,7 +78,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">StateKeyReference</span><span class="extends-implements">
 extends <a href="KeyReference.html" title="interface in com.commercetools.importapi.models.common">KeyReference</a></span></div>
-<div class="block"><p>References a state by key.</p>
+<div class="block"><p>Used by the Import API to identify a State.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -138,15 +138,25 @@ extends <a href="KeyReference.html" title="interface in com.commercetools.import
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a deep copy of StateKeyReference</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="StateKeyReference.html" title="interface in com.commercetools.importapi.models.common">StateKeyReference</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
-<div class="block">factory method</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getKey()" class="member-name-link">getKey</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">User-defined unique identifier of the referenced State.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="StateKeyReference.html" title="interface in com.commercetools.importapi.models.common">StateKeyReference</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(com.commercetools.importapi.models.common.StateKeyReference)" class="member-name-link">of</a><wbr>(<a href="StateKeyReference.html" title="interface in com.commercetools.importapi.models.common">StateKeyReference</a>&nbsp;template)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="block">factory method</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="StateKeyReference.html" title="interface in com.commercetools.importapi.models.common">StateKeyReference</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(com.commercetools.importapi.models.common.StateKeyReference)" class="member-name-link">of</a><wbr>(<a href="StateKeyReference.html" title="interface in com.commercetools.importapi.models.common">StateKeyReference</a>&nbsp;template)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a shallow copy StateKeyReference</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setKey(java.lang.String)" class="member-name-link">setKey</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">User-defined unique identifier of the referenced State.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="StateKeyReference.html" title="interface in com.commercetools.importapi.models.common">StateKeyReference</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -163,7 +173,7 @@ extends <a href="KeyReference.html" title="interface in com.commercetools.import
 </div>
 <div class="inherited-list">
 <h3 id="methods-inherited-from-class-com.commercetools.importapi.models.common.KeyReference">Methods inherited from interface&nbsp;com.commercetools.importapi.models.common.<a href="KeyReference.html" title="interface in com.commercetools.importapi.models.common">KeyReference</a></h3>
-<code><a href="KeyReference.html#getKey()">getKey</a>, <a href="KeyReference.html#getTypeId()">getTypeId</a>, <a href="KeyReference.html#setKey(java.lang.String)">setKey</a>, <a href="KeyReference.html#withKeyReference(java.util.function.Function)">withKeyReference</a></code></div>
+<code><a href="KeyReference.html#getTypeId()">getTypeId</a>, <a href="KeyReference.html#withKeyReference(java.util.function.Function)">withKeyReference</a></code></div>
 </section>
 </li>
 </ul>
@@ -198,6 +208,33 @@ extends <a href="KeyReference.html" title="interface in com.commercetools.import
 <section class="method-details" id="method-detail">
 <h2>Method Details</h2>
 <ul class="member-list">
+<li>
+<section class="detail" id="getKey()">
+<h3>getKey</h3>
+<div class="member-signature"><span class="annotations">@NotNull
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getKey</span>()</div>
+<div class="block"><p>User-defined unique identifier of the referenced State.</p></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="KeyReference.html#getKey()">getKey</a></code>&nbsp;in interface&nbsp;<code><a href="KeyReference.html" title="interface in com.commercetools.importapi.models.common">KeyReference</a></code></dd>
+<dt>Returns:</dt>
+<dd>key</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setKey(java.lang.String)">
+<h3>setKey</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setKey</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
+<div class="block"><p>User-defined unique identifier of the referenced State.</p></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="KeyReference.html#setKey(java.lang.String)">setKey</a></code>&nbsp;in interface&nbsp;<code><a href="KeyReference.html" title="interface in com.commercetools.importapi.models.common">KeyReference</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>key</code> - value to be set</dd>
+</dl>
+</section>
+</li>
 <li>
 <section class="detail" id="of()">
 <h3>of</h3>

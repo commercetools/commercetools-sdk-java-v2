@@ -21,6 +21,7 @@ com.commercetools.api.models.customer
 com.commercetools.api.models.customer_group
 com.commercetools.api.models.customer_search
 com.commercetools.api.models.discount_code
+com.commercetools.api.models.discount_group
 com.commercetools.api.models.error
 com.commercetools.api.models.event
 com.commercetools.api.models.extension
@@ -31,6 +32,7 @@ com.commercetools.api.models.message
 com.commercetools.api.models.order
 com.commercetools.api.models.order_edit
 com.commercetools.api.models.payment
+com.commercetools.api.models.payment_method
 com.commercetools.api.models.product
 com.commercetools.api.models.product_discount
 com.commercetools.api.models.product_search
@@ -40,6 +42,8 @@ com.commercetools.api.models.product_type
 com.commercetools.api.models.project
 com.commercetools.api.models.quote
 com.commercetools.api.models.quote_request
+com.commercetools.api.models.recurrence_policy
+com.commercetools.api.models.recurring_order
 com.commercetools.api.models.review
 com.commercetools.api.models.search
 com.commercetools.api.models.shipping_method
@@ -70,6 +74,7 @@ com.commercetools.api.predicates.expansion.custom_object
 com.commercetools.api.predicates.expansion.customer
 com.commercetools.api.predicates.expansion.customer_group
 com.commercetools.api.predicates.expansion.discount_code
+com.commercetools.api.predicates.expansion.discount_group
 com.commercetools.api.predicates.expansion.extension
 com.commercetools.api.predicates.expansion.inventory
 com.commercetools.api.predicates.expansion.me
@@ -77,6 +82,7 @@ com.commercetools.api.predicates.expansion.message
 com.commercetools.api.predicates.expansion.order
 com.commercetools.api.predicates.expansion.order_edit
 com.commercetools.api.predicates.expansion.payment
+com.commercetools.api.predicates.expansion.payment_method
 com.commercetools.api.predicates.expansion.product
 com.commercetools.api.predicates.expansion.product_discount
 com.commercetools.api.predicates.expansion.product_selection
@@ -84,6 +90,8 @@ com.commercetools.api.predicates.expansion.product_tailoring
 com.commercetools.api.predicates.expansion.product_type
 com.commercetools.api.predicates.expansion.quote
 com.commercetools.api.predicates.expansion.quote_request
+com.commercetools.api.predicates.expansion.recurrence_policy
+com.commercetools.api.predicates.expansion.recurring_order
 com.commercetools.api.predicates.expansion.review
 com.commercetools.api.predicates.expansion.shipping_method
 com.commercetools.api.predicates.expansion.shopping_list
@@ -135,6 +143,7 @@ com.commercetools.importapi.models.inventories
 com.commercetools.importapi.models.order_patches
 com.commercetools.importapi.models.orders
 com.commercetools.importapi.models.prices
+com.commercetools.importapi.models.product_selections
 com.commercetools.importapi.models.productdrafts
 com.commercetools.importapi.models.products
 com.commercetools.importapi.models.producttypes

@@ -124,7 +124,9 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/Money.html" title="interface in com.commercetools.importapi.models.common">Money</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDiscountedAmount()" class="member-name-link">getDiscountedAmount</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Money value for the discount applicable.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="DiscountedLineItemPortion.html" title="interface in com.commercetools.importapi.models.orders">DiscountedLineItemPortion</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1">
@@ -143,7 +145,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setDiscountedAmount(com.commercetools.importapi.models.common.Money)" class="member-name-link">setDiscountedAmount</a><wbr>(<a href="../common/Money.html" title="interface in com.commercetools.importapi.models.common">Money</a>&nbsp;discountedAmount)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set discountedAmount</div>
+<div class="block">Money value for the discount applicable.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="DiscountedLineItemPortion.html" title="interface in com.commercetools.importapi.models.orders">DiscountedLineItemPortion</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -175,7 +177,7 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
 </span><span class="return-type">@NotNull @Valid <a href="../common/CartDiscountKeyReference.html" title="interface in com.commercetools.importapi.models.common">CartDiscountKeyReference</a></span>&nbsp;<span class="element-name">getDiscount</span>()</div>
-<div class="block"><p>References a cart discount by key.</p></div>
+<div class="block"><p>References a cart discount by key. If the referenced CartDiscount does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CartDiscount is created.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>discount</dd>
@@ -188,6 +190,7 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
 </span><span class="return-type">@NotNull @Valid <a href="../common/Money.html" title="interface in com.commercetools.importapi.models.common">Money</a></span>&nbsp;<span class="element-name">getDiscountedAmount</span>()</div>
+<div class="block"><p>Money value for the discount applicable.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>discountedAmount</dd>
@@ -198,7 +201,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setDiscount(com.commercetools.importapi.models.common.CartDiscountKeyReference)">
 <h3>setDiscount</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setDiscount</span><wbr><span class="parameters">(<a href="../common/CartDiscountKeyReference.html" title="interface in com.commercetools.importapi.models.common">CartDiscountKeyReference</a>&nbsp;discount)</span></div>
-<div class="block"><p>References a cart discount by key.</p></div>
+<div class="block"><p>References a cart discount by key. If the referenced CartDiscount does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CartDiscount is created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>discount</code> - value to be set</dd>
@@ -209,7 +212,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setDiscountedAmount(com.commercetools.importapi.models.common.Money)">
 <h3>setDiscountedAmount</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setDiscountedAmount</span><wbr><span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.importapi.models.common">Money</a>&nbsp;discountedAmount)</span></div>
-<div class="block">set discountedAmount</div>
+<div class="block"><p>Money value for the discount applicable.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>discountedAmount</code> - value to be set</dd>

@@ -78,7 +78,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">ShippingInfoImportDraft</span><span class="extends-implements">
 extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="interface in io.vrap.rmf.base.client">Draft</a>&lt;<a href="ShippingInfoImportDraft.html" title="interface in com.commercetools.importapi.models.orders">ShippingInfoImportDraft</a>&gt;</span></div>
-<div class="block"><p>Maps to an order's <code>shippingInfo</code> property. This field is usually populated by the cart associated with the order, but when importing orders you must provide a draft representation as a part of the OrderImport.</p>
+<div class="block"><p>Maps to an Order's <code>shippingInfo</code> property. This field is usually populated by the Cart associated with the Order, but when importing Orders you must provide a draft representation as a part of the OrderImport.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -126,36 +126,48 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Delivery.html" title="interface in com.commercetools.importapi.models.orders">Delivery</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDeliveries()" class="member-name-link">getDeliveries</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referenceable by an <code>id</code>.</div>
+<div class="block">Maps to <code>shippingInfo.deliveries</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="DiscountedLineItemPriceDraft.html" title="interface in com.commercetools.importapi.models.orders">DiscountedLineItemPriceDraft</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDiscountedPrice()" class="member-name-link">getDiscountedPrice</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Maps to <code>shippingInfo.discountedPrice</code>.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/TypedMoney.html" title="interface in com.commercetools.importapi.models.common">TypedMoney</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPrice()" class="member-name-link">getPrice</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Maps to <code>shippingInfo.price</code>.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../common/ShippingMethodKeyReference.html" title="interface in com.commercetools.importapi.models.common">ShippingMethodKeyReference</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getShippingMethod()" class="member-name-link">getShippingMethod</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">References a shipping method by key.</div>
+<div class="block">Maps to <code>shippingInfo.shippingMethod</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getShippingMethodName()" class="member-name-link">getShippingMethodName</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Maps to <code>shippingInfo.shippingMethodName</code>.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="ShippingMethodState.html" title="interface in com.commercetools.importapi.models.orders">ShippingMethodState</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getShippingMethodState()" class="member-name-link">getShippingMethodState</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Maps to <code>shippingInfo.shippingMethodState</code>.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="ShippingRateDraft.html" title="interface in com.commercetools.importapi.models.orders">ShippingRateDraft</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getShippingRate()" class="member-name-link">getShippingRate</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Used to determine the price.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../common/TaxCategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">TaxCategoryKeyReference</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTaxCategory()" class="member-name-link">getTaxCategory</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">References a tax category by key.</div>
+<div class="block">Maps to <code>shippingInfo.taxCategory</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../prices/TaxRate.html" title="interface in com.commercetools.importapi.models.prices">TaxRate</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTaxRate()" class="member-name-link">getTaxRate</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Maps to <code>shippingInfo.taxRate</code>.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ShippingInfoImportDraft.html" title="interface in com.commercetools.importapi.models.orders">ShippingInfoImportDraft</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
@@ -169,52 +181,52 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setDeliveries(com.commercetools.importapi.models.orders.Delivery...)" class="member-name-link">setDeliveries</a><wbr>(<a href="Delivery.html" title="interface in com.commercetools.importapi.models.orders">Delivery</a>...&nbsp;deliveries)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referenceable by an <code>id</code>.</div>
+<div class="block">Maps to <code>shippingInfo.deliveries</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setDeliveries(java.util.List)" class="member-name-link">setDeliveries</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Delivery.html" title="interface in com.commercetools.importapi.models.orders">Delivery</a>&gt;&nbsp;deliveries)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referenceable by an <code>id</code>.</div>
+<div class="block">Maps to <code>shippingInfo.deliveries</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setDiscountedPrice(com.commercetools.importapi.models.orders.DiscountedLineItemPriceDraft)" class="member-name-link">setDiscountedPrice</a><wbr>(<a href="DiscountedLineItemPriceDraft.html" title="interface in com.commercetools.importapi.models.orders">DiscountedLineItemPriceDraft</a>&nbsp;discountedPrice)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set discountedPrice</div>
+<div class="block">Maps to <code>shippingInfo.discountedPrice</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setPrice(com.commercetools.importapi.models.common.TypedMoney)" class="member-name-link">setPrice</a><wbr>(<a href="../common/TypedMoney.html" title="interface in com.commercetools.importapi.models.common">TypedMoney</a>&nbsp;price)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set price</div>
+<div class="block">Maps to <code>shippingInfo.price</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setShippingMethod(com.commercetools.importapi.models.common.ShippingMethodKeyReference)" class="member-name-link">setShippingMethod</a><wbr>(<a href="../common/ShippingMethodKeyReference.html" title="interface in com.commercetools.importapi.models.common">ShippingMethodKeyReference</a>&nbsp;shippingMethod)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">References a shipping method by key.</div>
+<div class="block">Maps to <code>shippingInfo.shippingMethod</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setShippingMethodName(java.lang.String)" class="member-name-link">setShippingMethodName</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;shippingMethodName)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set shippingMethodName</div>
+<div class="block">Maps to <code>shippingInfo.shippingMethodName</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setShippingMethodState(com.commercetools.importapi.models.orders.ShippingMethodState)" class="member-name-link">setShippingMethodState</a><wbr>(<a href="ShippingMethodState.html" title="interface in com.commercetools.importapi.models.orders">ShippingMethodState</a>&nbsp;shippingMethodState)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set shippingMethodState</div>
+<div class="block">Maps to <code>shippingInfo.shippingMethodState</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setShippingRate(com.commercetools.importapi.models.orders.ShippingRateDraft)" class="member-name-link">setShippingRate</a><wbr>(<a href="ShippingRateDraft.html" title="interface in com.commercetools.importapi.models.orders">ShippingRateDraft</a>&nbsp;shippingRate)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set shippingRate</div>
+<div class="block">Used to determine the price.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTaxCategory(com.commercetools.importapi.models.common.TaxCategoryKeyReference)" class="member-name-link">setTaxCategory</a><wbr>(<a href="../common/TaxCategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">TaxCategoryKeyReference</a>&nbsp;taxCategory)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">References a tax category by key.</div>
+<div class="block">Maps to <code>shippingInfo.taxCategory</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTaxRate(com.commercetools.importapi.models.prices.TaxRate)" class="member-name-link">setTaxRate</a><wbr>(<a href="../prices/TaxRate.html" title="interface in com.commercetools.importapi.models.prices">TaxRate</a>&nbsp;taxRate)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set taxRate</div>
+<div class="block">Maps to <code>shippingInfo.taxRate</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ShippingInfoImportDraft.html" title="interface in com.commercetools.importapi.models.orders">ShippingInfoImportDraft</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -245,6 +257,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <h3>getShippingMethodName</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getShippingMethodName</span>()</div>
+<div class="block"><p>Maps to <code>shippingInfo.shippingMethodName</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>shippingMethodName</dd>
@@ -257,6 +270,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
 </span><span class="return-type">@NotNull @Valid <a href="../common/TypedMoney.html" title="interface in com.commercetools.importapi.models.common">TypedMoney</a></span>&nbsp;<span class="element-name">getPrice</span>()</div>
+<div class="block"><p>Maps to <code>shippingInfo.price</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>price</dd>
@@ -269,6 +283,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
 </span><span class="return-type">@NotNull @Valid <a href="ShippingRateDraft.html" title="interface in com.commercetools.importapi.models.orders">ShippingRateDraft</a></span>&nbsp;<span class="element-name">getShippingRate</span>()</div>
+<div class="block"><p>Used to determine the price.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>shippingRate</dd>
@@ -280,6 +295,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <h3>getTaxRate</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../prices/TaxRate.html" title="interface in com.commercetools.importapi.models.prices">TaxRate</a></span>&nbsp;<span class="element-name">getTaxRate</span>()</div>
+<div class="block"><p>Maps to <code>shippingInfo.taxRate</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>taxRate</dd>
@@ -291,7 +307,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <h3>getTaxCategory</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../common/TaxCategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">TaxCategoryKeyReference</a></span>&nbsp;<span class="element-name">getTaxCategory</span>()</div>
-<div class="block"><p>References a tax category by key.</p></div>
+<div class="block"><p>Maps to <code>shippingInfo.taxCategory</code>. If the referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>taxCategory</dd>
@@ -303,7 +319,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <h3>getShippingMethod</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../common/ShippingMethodKeyReference.html" title="interface in com.commercetools.importapi.models.common">ShippingMethodKeyReference</a></span>&nbsp;<span class="element-name">getShippingMethod</span>()</div>
-<div class="block"><p>References a shipping method by key.</p></div>
+<div class="block"><p>Maps to <code>shippingInfo.shippingMethod</code>. If the referenced ShippingMethod does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced ShippingMethod is created.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>shippingMethod</dd>
@@ -315,7 +331,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <h3>getDeliveries</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Delivery.html" title="interface in com.commercetools.importapi.models.orders">Delivery</a>&gt;</span>&nbsp;<span class="element-name">getDeliveries</span>()</div>
-<div class="block"><p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referenceable by an <code>id</code>.</p></div>
+<div class="block"><p>Maps to <code>shippingInfo.deliveries</code>. You cannot add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referenceable by an <code>id</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>deliveries</dd>
@@ -327,6 +343,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <h3>getDiscountedPrice</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="DiscountedLineItemPriceDraft.html" title="interface in com.commercetools.importapi.models.orders">DiscountedLineItemPriceDraft</a></span>&nbsp;<span class="element-name">getDiscountedPrice</span>()</div>
+<div class="block"><p>Maps to <code>shippingInfo.discountedPrice</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>discountedPrice</dd>
@@ -337,6 +354,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <section class="detail" id="getShippingMethodState()">
 <h3>getShippingMethodState</h3>
 <div class="member-signature"><span class="return-type"><a href="ShippingMethodState.html" title="interface in com.commercetools.importapi.models.orders">ShippingMethodState</a></span>&nbsp;<span class="element-name">getShippingMethodState</span>()</div>
+<div class="block"><p>Maps to <code>shippingInfo.shippingMethodState</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>shippingMethodState</dd>
@@ -347,7 +365,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <section class="detail" id="setShippingMethodName(java.lang.String)">
 <h3>setShippingMethodName</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setShippingMethodName</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;shippingMethodName)</span></div>
-<div class="block">set shippingMethodName</div>
+<div class="block"><p>Maps to <code>shippingInfo.shippingMethodName</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>shippingMethodName</code> - value to be set</dd>
@@ -358,7 +376,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <section class="detail" id="setPrice(com.commercetools.importapi.models.common.TypedMoney)">
 <h3>setPrice</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setPrice</span><wbr><span class="parameters">(<a href="../common/TypedMoney.html" title="interface in com.commercetools.importapi.models.common">TypedMoney</a>&nbsp;price)</span></div>
-<div class="block">set price</div>
+<div class="block"><p>Maps to <code>shippingInfo.price</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>price</code> - value to be set</dd>
@@ -369,7 +387,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <section class="detail" id="setShippingRate(com.commercetools.importapi.models.orders.ShippingRateDraft)">
 <h3>setShippingRate</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setShippingRate</span><wbr><span class="parameters">(<a href="ShippingRateDraft.html" title="interface in com.commercetools.importapi.models.orders">ShippingRateDraft</a>&nbsp;shippingRate)</span></div>
-<div class="block">set shippingRate</div>
+<div class="block"><p>Used to determine the price.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>shippingRate</code> - value to be set</dd>
@@ -380,7 +398,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <section class="detail" id="setTaxRate(com.commercetools.importapi.models.prices.TaxRate)">
 <h3>setTaxRate</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setTaxRate</span><wbr><span class="parameters">(<a href="../prices/TaxRate.html" title="interface in com.commercetools.importapi.models.prices">TaxRate</a>&nbsp;taxRate)</span></div>
-<div class="block">set taxRate</div>
+<div class="block"><p>Maps to <code>shippingInfo.taxRate</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>taxRate</code> - value to be set</dd>
@@ -391,7 +409,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <section class="detail" id="setTaxCategory(com.commercetools.importapi.models.common.TaxCategoryKeyReference)">
 <h3>setTaxCategory</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setTaxCategory</span><wbr><span class="parameters">(<a href="../common/TaxCategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">TaxCategoryKeyReference</a>&nbsp;taxCategory)</span></div>
-<div class="block"><p>References a tax category by key.</p></div>
+<div class="block"><p>Maps to <code>shippingInfo.taxCategory</code>. If the referenced TaxCategory does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced TaxCategory is created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>taxCategory</code> - value to be set</dd>
@@ -402,7 +420,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <section class="detail" id="setShippingMethod(com.commercetools.importapi.models.common.ShippingMethodKeyReference)">
 <h3>setShippingMethod</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setShippingMethod</span><wbr><span class="parameters">(<a href="../common/ShippingMethodKeyReference.html" title="interface in com.commercetools.importapi.models.common">ShippingMethodKeyReference</a>&nbsp;shippingMethod)</span></div>
-<div class="block"><p>References a shipping method by key.</p></div>
+<div class="block"><p>Maps to <code>shippingInfo.shippingMethod</code>. If the referenced ShippingMethod does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced ShippingMethod is created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>shippingMethod</code> - value to be set</dd>
@@ -413,7 +431,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <section class="detail" id="setDeliveries(com.commercetools.importapi.models.orders.Delivery...)">
 <h3>setDeliveries</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setDeliveries</span><wbr><span class="parameters">(<a href="Delivery.html" title="interface in com.commercetools.importapi.models.orders">Delivery</a>...&nbsp;deliveries)</span></div>
-<div class="block"><p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referenceable by an <code>id</code>.</p></div>
+<div class="block"><p>Maps to <code>shippingInfo.deliveries</code>. You cannot add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referenceable by an <code>id</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>deliveries</code> - values to be set</dd>
@@ -424,7 +442,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <section class="detail" id="setDeliveries(java.util.List)">
 <h3>setDeliveries</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setDeliveries</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Delivery.html" title="interface in com.commercetools.importapi.models.orders">Delivery</a>&gt;&nbsp;deliveries)</span></div>
-<div class="block"><p>Note that you can not add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referenceable by an <code>id</code>.</p></div>
+<div class="block"><p>Maps to <code>shippingInfo.deliveries</code>. You cannot add a <code>DeliveryItem</code> on import, as <code>LineItems</code> and <code>CustomLineItems</code> are not yet referenceable by an <code>id</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>deliveries</code> - values to be set</dd>
@@ -435,7 +453,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <section class="detail" id="setDiscountedPrice(com.commercetools.importapi.models.orders.DiscountedLineItemPriceDraft)">
 <h3>setDiscountedPrice</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setDiscountedPrice</span><wbr><span class="parameters">(<a href="DiscountedLineItemPriceDraft.html" title="interface in com.commercetools.importapi.models.orders">DiscountedLineItemPriceDraft</a>&nbsp;discountedPrice)</span></div>
-<div class="block">set discountedPrice</div>
+<div class="block"><p>Maps to <code>shippingInfo.discountedPrice</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>discountedPrice</code> - value to be set</dd>
@@ -446,7 +464,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <section class="detail" id="setShippingMethodState(com.commercetools.importapi.models.orders.ShippingMethodState)">
 <h3>setShippingMethodState</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setShippingMethodState</span><wbr><span class="parameters">(<a href="ShippingMethodState.html" title="interface in com.commercetools.importapi.models.orders">ShippingMethodState</a>&nbsp;shippingMethodState)</span></div>
-<div class="block">set shippingMethodState</div>
+<div class="block"><p>Maps to <code>shippingInfo.shippingMethodState</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>shippingMethodState</code> - value to be set</dd>

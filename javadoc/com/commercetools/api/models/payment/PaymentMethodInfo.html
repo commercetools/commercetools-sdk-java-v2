@@ -71,9 +71,14 @@ loadScripts(document, 'script');</script>
 <h1 title="Interface PaymentMethodInfo" class="title">Interface PaymentMethodInfo</h1>
 </div>
 <section class="class-description" id="class-description">
+<dl class="notes">
+<dt>All Superinterfaces:</dt>
+<dd><code><a href="PaymentMethodInfoMixin.html" title="interface in com.commercetools.api.models.payment">PaymentMethodInfoMixin</a></code></dd>
+</dl>
 <hr>
-<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">PaymentMethodInfo</span></div>
-<div class="block">PaymentMethodInfo
+<div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">PaymentMethodInfo</span><span class="extends-implements">
+extends <a href="PaymentMethodInfoMixin.html" title="interface in com.commercetools.api.models.payment">PaymentMethodInfoMixin</a></span></div>
+<div class="block"><p>Represents a snapshot of the PaymentMethod data used for a Payment.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -115,45 +120,75 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a deep copy of PaymentMethodInfo</div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCustom()" class="member-name-link">getCustom</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Custom Fields of the PaymentMethodInfo.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getInterfaceAccount()" class="member-name-link">getInterfaceAccount</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Account or instance of the payment interface when multiple accounts are used (per interface).</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMethod()" class="member-name-link">getMethod</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Payment method used, for example, credit card, or cash advance.</div>
+<div class="block">Payment method used—for example, a credit card or cash advance.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Localizable name of the payment method.</div>
+<div class="block">Name of the Payment Method.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPaymentInterface()" class="member-name-link">getPaymentInterface</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Payment service that processes the Payment (for example, a PSP).</div>
+<div class="block">Payment service that processes the Payment—for example, a PSP.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="PaymentMethodInfo.html" title="interface in com.commercetools.api.models.payment">PaymentMethodInfo</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
-<div class="block">factory method</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../payment_method/PaymentMethodToken.html" title="interface in com.commercetools.api.models.payment_method">PaymentMethodToken</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getToken()" class="member-name-link">getToken</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Tokenized representation of the Payment Method used by the payment interface.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="PaymentMethodInfo.html" title="interface in com.commercetools.api.models.payment">PaymentMethodInfo</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(com.commercetools.api.models.payment.PaymentMethodInfo)" class="member-name-link">of</a><wbr>(<a href="PaymentMethodInfo.html" title="interface in com.commercetools.api.models.payment">PaymentMethodInfo</a>&nbsp;template)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="block">factory method</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="PaymentMethodInfo.html" title="interface in com.commercetools.api.models.payment">PaymentMethodInfo</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(com.commercetools.api.models.payment.PaymentMethodInfo)" class="member-name-link">of</a><wbr>(<a href="PaymentMethodInfo.html" title="interface in com.commercetools.api.models.payment">PaymentMethodInfo</a>&nbsp;template)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a shallow copy PaymentMethodInfo</div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCustom(com.commercetools.api.models.type.CustomFields)" class="member-name-link">setCustom</a><wbr>(<a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&nbsp;custom)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Custom Fields of the PaymentMethodInfo.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setMethod(java.lang.String)" class="member-name-link">setMethod</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;method)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setInterfaceAccount(java.lang.String)" class="member-name-link">setInterfaceAccount</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;interfaceAccount)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Payment method used, for example, credit card, or cash advance.</div>
+<div class="block">Account or instance of the payment interface when multiple accounts are used (per interface).</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setName(com.commercetools.api.models.common.LocalizedString)" class="member-name-link">setName</a><wbr>(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;name)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setMethod(java.lang.String)" class="member-name-link">setMethod</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;method)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Localizable name of the payment method.</div>
+<div class="block">Payment method used—for example, a credit card or cash advance.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setPaymentInterface(java.lang.String)" class="member-name-link">setPaymentInterface</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;paymentInterface)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setName(com.commercetools.api.models.common.LocalizedString)" class="member-name-link">setName</a><wbr>(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;name)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Payment service that processes the Payment (for example, a PSP).</div>
+<div class="block">Name of the Payment Method.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setPaymentInterface(java.lang.String)" class="member-name-link">setPaymentInterface</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;paymentInterface)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Payment service that processes the Payment—for example, a PSP.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setToken(com.commercetools.api.models.payment_method.PaymentMethodToken)" class="member-name-link">setToken</a><wbr>(<a href="../payment_method/PaymentMethodToken.html" title="interface in com.commercetools.api.models.payment_method">PaymentMethodToken</a>&nbsp;token)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Tokenized representation of the Payment Method used by the payment interface.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="PaymentMethodInfo.html" title="interface in com.commercetools.api.models.payment">PaymentMethodInfo</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -168,6 +203,9 @@ loadScripts(document, 'script');</script>
 </div>
 </div>
 </div>
+<div class="inherited-list">
+<h3 id="methods-inherited-from-class-com.commercetools.api.models.payment.PaymentMethodInfoMixin">Methods inherited from interface&nbsp;com.commercetools.api.models.payment.<a href="PaymentMethodInfoMixin.html" title="interface in com.commercetools.api.models.payment">PaymentMethodInfoMixin</a></h3>
+<code><a href="PaymentMethodInfoMixin.html#toDraft()">toDraft</a></code></div>
 </section>
 </li>
 </ul>
@@ -183,8 +221,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getPaymentInterface()">
 <h3>getPaymentInterface</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getPaymentInterface</span>()</div>
-<div class="block"><p>Payment service that processes the Payment (for example, a PSP). Once set, it cannot be changed. The combination of <code>paymentInterface</code> and the <code>interfaceId</code> of a Payment must be unique.</p></div>
+<div class="block"><p>Payment service that processes the Payment—for example, a PSP. The combination of <code>paymentInterface</code> and the <code>interfaceId</code> of a Payment is unique.</p></div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="PaymentMethodInfoMixin.html#getPaymentInterface()">getPaymentInterface</a></code>&nbsp;in interface&nbsp;<code><a href="PaymentMethodInfoMixin.html" title="interface in com.commercetools.api.models.payment">PaymentMethodInfoMixin</a></code></dd>
 <dt>Returns:</dt>
 <dd>paymentInterface</dd>
 </dl>
@@ -194,8 +234,10 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getMethod()">
 <h3>getMethod</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getMethod</span>()</div>
-<div class="block"><p>Payment method used, for example, credit card, or cash advance.</p></div>
+<div class="block"><p>Payment method used—for example, a credit card or cash advance.</p></div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="PaymentMethodInfoMixin.html#getMethod()">getMethod</a></code>&nbsp;in interface&nbsp;<code><a href="PaymentMethodInfoMixin.html" title="interface in com.commercetools.api.models.payment">PaymentMethodInfoMixin</a></code></dd>
 <dt>Returns:</dt>
 <dd>method</dd>
 </dl>
@@ -206,10 +248,53 @@ loadScripts(document, 'script');</script>
 <h3>getName</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></span>&nbsp;<span class="element-name">getName</span>()</div>
-<div class="block"><p>Localizable name of the payment method.</p></div>
+<div class="block"><p>Name of the Payment Method.</p></div>
 <dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="PaymentMethodInfoMixin.html#getName()">getName</a></code>&nbsp;in interface&nbsp;<code><a href="PaymentMethodInfoMixin.html" title="interface in com.commercetools.api.models.payment">PaymentMethodInfoMixin</a></code></dd>
 <dt>Returns:</dt>
 <dd>name</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getToken()">
+<h3>getToken</h3>
+<div class="member-signature"><span class="annotations">@Valid
+</span><span class="return-type">@Valid <a href="../payment_method/PaymentMethodToken.html" title="interface in com.commercetools.api.models.payment_method">PaymentMethodToken</a></span>&nbsp;<span class="element-name">getToken</span>()</div>
+<div class="block"><p>Tokenized representation of the Payment Method used by the payment interface.</p></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="PaymentMethodInfoMixin.html#getToken()">getToken</a></code>&nbsp;in interface&nbsp;<code><a href="PaymentMethodInfoMixin.html" title="interface in com.commercetools.api.models.payment">PaymentMethodInfoMixin</a></code></dd>
+<dt>Returns:</dt>
+<dd>token</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getInterfaceAccount()">
+<h3>getInterfaceAccount</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getInterfaceAccount</span>()</div>
+<div class="block"><p>Account or instance of the payment interface when multiple accounts are used (per interface).</p></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="PaymentMethodInfoMixin.html#getInterfaceAccount()">getInterfaceAccount</a></code>&nbsp;in interface&nbsp;<code><a href="PaymentMethodInfoMixin.html" title="interface in com.commercetools.api.models.payment">PaymentMethodInfoMixin</a></code></dd>
+<dt>Returns:</dt>
+<dd>interfaceAccount</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getCustom()">
+<h3>getCustom</h3>
+<div class="member-signature"><span class="annotations">@Valid
+</span><span class="return-type">@Valid <a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a></span>&nbsp;<span class="element-name">getCustom</span>()</div>
+<div class="block"><p>Custom Fields of the PaymentMethodInfo.</p></div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="PaymentMethodInfoMixin.html#getCustom()">getCustom</a></code>&nbsp;in interface&nbsp;<code><a href="PaymentMethodInfoMixin.html" title="interface in com.commercetools.api.models.payment">PaymentMethodInfoMixin</a></code></dd>
+<dt>Returns:</dt>
+<dd>custom</dd>
 </dl>
 </section>
 </li>
@@ -217,7 +302,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setPaymentInterface(java.lang.String)">
 <h3>setPaymentInterface</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setPaymentInterface</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;paymentInterface)</span></div>
-<div class="block"><p>Payment service that processes the Payment (for example, a PSP). Once set, it cannot be changed. The combination of <code>paymentInterface</code> and the <code>interfaceId</code> of a Payment must be unique.</p></div>
+<div class="block"><p>Payment service that processes the Payment—for example, a PSP. The combination of <code>paymentInterface</code> and the <code>interfaceId</code> of a Payment is unique.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>paymentInterface</code> - value to be set</dd>
@@ -228,7 +313,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setMethod(java.lang.String)">
 <h3>setMethod</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setMethod</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;method)</span></div>
-<div class="block"><p>Payment method used, for example, credit card, or cash advance.</p></div>
+<div class="block"><p>Payment method used—for example, a credit card or cash advance.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>method</code> - value to be set</dd>
@@ -239,10 +324,43 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setName(com.commercetools.api.models.common.LocalizedString)">
 <h3>setName</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setName</span><wbr><span class="parameters">(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;name)</span></div>
-<div class="block"><p>Localizable name of the payment method.</p></div>
+<div class="block"><p>Name of the Payment Method.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>name</code> - value to be set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setToken(com.commercetools.api.models.payment_method.PaymentMethodToken)">
+<h3>setToken</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setToken</span><wbr><span class="parameters">(<a href="../payment_method/PaymentMethodToken.html" title="interface in com.commercetools.api.models.payment_method">PaymentMethodToken</a>&nbsp;token)</span></div>
+<div class="block"><p>Tokenized representation of the Payment Method used by the payment interface.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>token</code> - value to be set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setInterfaceAccount(java.lang.String)">
+<h3>setInterfaceAccount</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setInterfaceAccount</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;interfaceAccount)</span></div>
+<div class="block"><p>Account or instance of the payment interface when multiple accounts are used (per interface).</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>interfaceAccount</code> - value to be set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setCustom(com.commercetools.api.models.type.CustomFields)">
+<h3>setCustom</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCustom</span><wbr><span class="parameters">(<a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&nbsp;custom)</span></div>
+<div class="block"><p>Custom Fields of the PaymentMethodInfo.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>custom</code> - value to be set</dd>
 </dl>
 </section>
 </li>

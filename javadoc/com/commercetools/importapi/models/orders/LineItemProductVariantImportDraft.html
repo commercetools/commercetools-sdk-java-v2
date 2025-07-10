@@ -224,7 +224,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <h3>getProductVariant</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../common/ProductVariantKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductVariantKeyReference</a></span>&nbsp;<span class="element-name">getProductVariant</span>()</div>
-<div class="block"><p>Maps to <code>ProductVariant.product</code>.</p></div>
+<div class="block"><p>Maps to <code>ProductVariant.product</code>. If the referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced ProductVariant is created.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>productVariant</dd>
@@ -282,7 +282,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <section class="detail" id="setProductVariant(com.commercetools.importapi.models.common.ProductVariantKeyReference)">
 <h3>setProductVariant</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setProductVariant</span><wbr><span class="parameters">(<a href="../common/ProductVariantKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductVariantKeyReference</a>&nbsp;productVariant)</span></div>
-<div class="block"><p>Maps to <code>ProductVariant.product</code>.</p></div>
+<div class="block"><p>Maps to <code>ProductVariant.product</code>. If the referenced ProductVariant does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced ProductVariant is created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>productVariant</code> - value to be set</dd>

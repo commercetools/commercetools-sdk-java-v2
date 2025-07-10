@@ -98,6 +98,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
              .plusCategories(categoriesBuilder -> categoriesBuilder)
              .masterVariant(masterVariantBuilder -> masterVariantBuilder)
              .plusVariants(variantsBuilder -> variantsBuilder)
+             .plusAttributes(attributesBuilder -> attributesBuilder)
              .build()
  </code></pre>
  </div></div>
@@ -129,59 +130,79 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addCategories(java.util.function.Function)" class="member-name-link">addCategories</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../category/CategoryReferenceBuilder.html" title="class in com.commercetools.api.models.category">CategoryReferenceBuilder</a>,<wbr><a href="../category/CategoryReference.html" title="interface in com.commercetools.api.models.category">CategoryReference</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addAttributes(java.util.function.Function)" class="member-name-link">addAttributes</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AttributeBuilder.html" title="class in com.commercetools.api.models.product">AttributeBuilder</a>,<wbr><a href="Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Categories assigned to the Product.</div>
+<div class="block">Attributes according to the respective AttributeDefinition.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addVariants(java.util.function.Function)" class="member-name-link">addVariants</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductVariantBuilder.html" title="class in com.commercetools.api.models.product">ProductVariantBuilder</a>,<wbr><a href="ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addCategories(java.util.function.Function)" class="member-name-link">addCategories</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../category/CategoryReferenceBuilder.html" title="class in com.commercetools.api.models.category">CategoryReferenceBuilder</a>,<wbr><a href="../category/CategoryReference.html" title="interface in com.commercetools.api.models.category">CategoryReference</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Categories assigned to the Product.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addVariants(java.util.function.Function)" class="member-name-link">addVariants</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductVariantBuilder.html" title="class in com.commercetools.api.models.product">ProductVariantBuilder</a>,<wbr><a href="ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Additional Product Variants.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#build()" class="member-name-link">build</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#attributes(com.commercetools.api.models.product.Attribute...)" class="member-name-link">attributes</a><wbr>(<a href="Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>...&nbsp;attributes)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Attributes according to the respective AttributeDefinition.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#attributes(java.util.List)" class="member-name-link">attributes</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&gt;&nbsp;attributes)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">builds ProductProjection with checking for non-null required values</div>
+<div class="block">Attributes according to the respective AttributeDefinition.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#buildUnchecked()" class="member-name-link">buildUnchecked</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#build()" class="member-name-link">build</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">builds ProductProjection with checking for non-null required values</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjection.html" title="interface in com.commercetools.api.models.product">ProductProjection</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#buildUnchecked()" class="member-name-link">buildUnchecked</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">builds ProductProjection without checking for non-null required values</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#categories(com.commercetools.api.models.category.CategoryReference...)" class="member-name-link">categories</a><wbr>(<a href="../category/CategoryReference.html" title="interface in com.commercetools.api.models.category">CategoryReference</a>...&nbsp;categories)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Categories assigned to the Product.</div>
-</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#categories(java.util.List)" class="member-name-link">categories</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../category/CategoryReference.html" title="interface in com.commercetools.api.models.category">CategoryReference</a>&gt;&nbsp;categories)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#categories(com.commercetools.api.models.category.CategoryReference...)" class="member-name-link">categories</a><wbr>(<a href="../category/CategoryReference.html" title="interface in com.commercetools.api.models.category">CategoryReference</a>...&nbsp;categories)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Categories assigned to the Product.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#categoryOrderHints(com.commercetools.api.models.product.CategoryOrderHints)" class="member-name-link">categoryOrderHints</a><wbr>(<a href="CategoryOrderHints.html" title="interface in com.commercetools.api.models.product">CategoryOrderHints</a>&nbsp;categoryOrderHints)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#categories(java.util.List)" class="member-name-link">categories</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../category/CategoryReference.html" title="interface in com.commercetools.api.models.category">CategoryReference</a>&gt;&nbsp;categories)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Order of Product in Categories.</div>
+<div class="block">Categories assigned to the Product.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#categoryOrderHints(java.util.function.Function)" class="member-name-link">categoryOrderHints</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CategoryOrderHintsBuilder.html" title="class in com.commercetools.api.models.product">CategoryOrderHintsBuilder</a>,<wbr><a href="CategoryOrderHintsBuilder.html" title="class in com.commercetools.api.models.product">CategoryOrderHintsBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#categoryOrderHints(com.commercetools.api.models.product.CategoryOrderHints)" class="member-name-link">categoryOrderHints</a><wbr>(<a href="CategoryOrderHints.html" title="interface in com.commercetools.api.models.product">CategoryOrderHints</a>&nbsp;categoryOrderHints)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Order of Product in Categories.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createdAt(java.time.ZonedDateTime)" class="member-name-link">createdAt</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#categoryOrderHints(java.util.function.Function)" class="member-name-link">categoryOrderHints</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CategoryOrderHintsBuilder.html" title="class in com.commercetools.api.models.product">CategoryOrderHintsBuilder</a>,<wbr><a href="CategoryOrderHintsBuilder.html" title="class in com.commercetools.api.models.product">CategoryOrderHintsBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Order of Product in Categories.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#createdAt(java.time.ZonedDateTime)" class="member-name-link">createdAt</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;createdAt)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Date and time (UTC) the ProductProjection was initially created.</div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#description(com.commercetools.api.models.common.LocalizedString)" class="member-name-link">description</a><wbr>(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;description)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Description of the Product.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#description(com.commercetools.api.models.common.LocalizedString)" class="member-name-link">description</a><wbr>(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;description)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#description(java.util.function.Function)" class="member-name-link">description</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Description of the Product.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#description(java.util.function.Function)" class="member-name-link">description</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getAttributes()" class="member-name-link">getAttributes</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Description of the Product.</div>
+<div class="block">Attributes according to the respective AttributeDefinition.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../category/CategoryReference.html" title="interface in com.commercetools.api.models.category">CategoryReference</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCategories()" class="member-name-link">getCategories</a>()</code></div>
@@ -271,7 +292,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="SearchKeywords.html" title="interface in com.commercetools.api.models.product">SearchKeywords</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSearchKeywords()" class="member-name-link">getSearchKeywords</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Used by Product Suggestions, but is also considered for a full text search.</div>
+<div class="block">Used by Search Term Suggestions, but is also considered for a full text search in the Product Projection Search API.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSlug()" class="member-name-link">getSlug</a>()</code></div>
@@ -379,6 +400,16 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="block">create builder for ProductProjection instance</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusAttributes(com.commercetools.api.models.product.Attribute...)" class="member-name-link">plusAttributes</a><wbr>(<a href="Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>...&nbsp;attributes)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Attributes according to the respective AttributeDefinition.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusAttributes(java.util.function.Function)" class="member-name-link">plusAttributes</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AttributeBuilder.html" title="class in com.commercetools.api.models.product">AttributeBuilder</a>,<wbr><a href="AttributeBuilder.html" title="class in com.commercetools.api.models.product">AttributeBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Attributes according to the respective AttributeDefinition.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusCategories(com.commercetools.api.models.category.CategoryReference...)" class="member-name-link">plusCategories</a><wbr>(<a href="../category/CategoryReference.html" title="interface in com.commercetools.api.models.category">CategoryReference</a>...&nbsp;categories)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Categories assigned to the Product.</div>
@@ -431,67 +462,77 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#searchKeywords(com.commercetools.api.models.product.SearchKeywords)" class="member-name-link">searchKeywords</a><wbr>(<a href="SearchKeywords.html" title="interface in com.commercetools.api.models.product">SearchKeywords</a>&nbsp;searchKeywords)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Used by Product Suggestions, but is also considered for a full text search.</div>
+<div class="block">Used by Search Term Suggestions, but is also considered for a full text search in the Product Projection Search API.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#searchKeywords(java.util.function.Function)" class="member-name-link">searchKeywords</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SearchKeywordsBuilder.html" title="class in com.commercetools.api.models.product">SearchKeywordsBuilder</a>,<wbr><a href="SearchKeywordsBuilder.html" title="class in com.commercetools.api.models.product">SearchKeywordsBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Used by Product Suggestions, but is also considered for a full text search.</div>
+<div class="block">Used by Search Term Suggestions, but is also considered for a full text search in the Product Projection Search API.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCategories(java.util.function.Function)" class="member-name-link">setCategories</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../category/CategoryReferenceBuilder.html" title="class in com.commercetools.api.models.category">CategoryReferenceBuilder</a>,<wbr><a href="../category/CategoryReference.html" title="interface in com.commercetools.api.models.category">CategoryReference</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setAttributes(java.util.function.Function)" class="member-name-link">setAttributes</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AttributeBuilder.html" title="class in com.commercetools.api.models.product">AttributeBuilder</a>,<wbr><a href="Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Attributes according to the respective AttributeDefinition.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCategories(java.util.function.Function)" class="member-name-link">setCategories</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../category/CategoryReferenceBuilder.html" title="class in com.commercetools.api.models.category">CategoryReferenceBuilder</a>,<wbr><a href="../category/CategoryReference.html" title="interface in com.commercetools.api.models.category">CategoryReference</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Categories assigned to the Product.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVariants(java.util.function.Function)" class="member-name-link">setVariants</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductVariantBuilder.html" title="class in com.commercetools.api.models.product">ProductVariantBuilder</a>,<wbr><a href="ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setVariants(java.util.function.Function)" class="member-name-link">setVariants</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ProductVariantBuilder.html" title="class in com.commercetools.api.models.product">ProductVariantBuilder</a>,<wbr><a href="ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Additional Product Variants.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#slug(com.commercetools.api.models.common.LocalizedString)" class="member-name-link">slug</a><wbr>(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;slug)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">User-defined identifier used in a deep-link URL for the Product.</div>
-</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#slug(java.util.function.Function)" class="member-name-link">slug</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#slug(com.commercetools.api.models.common.LocalizedString)" class="member-name-link">slug</a><wbr>(<a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&nbsp;slug)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">User-defined identifier used in a deep-link URL for the Product.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#state(com.commercetools.api.models.state.StateReference)" class="member-name-link">state</a><wbr>(<a href="../state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a>&nbsp;state)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#slug(java.util.function.Function)" class="member-name-link">slug</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">State of the Product.</div>
+<div class="block">User-defined identifier used in a deep-link URL for the Product.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#state(java.util.function.Function)" class="member-name-link">state</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../state/StateReferenceBuilder.html" title="class in com.commercetools.api.models.state">StateReferenceBuilder</a>,<wbr><a href="../state/StateReferenceBuilder.html" title="class in com.commercetools.api.models.state">StateReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#state(com.commercetools.api.models.state.StateReference)" class="member-name-link">state</a><wbr>(<a href="../state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a>&nbsp;state)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">State of the Product.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#taxCategory(com.commercetools.api.models.tax_category.TaxCategoryReference)" class="member-name-link">taxCategory</a><wbr>(<a href="../tax_category/TaxCategoryReference.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryReference</a>&nbsp;taxCategory)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#state(java.util.function.Function)" class="member-name-link">state</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../state/StateReferenceBuilder.html" title="class in com.commercetools.api.models.state">StateReferenceBuilder</a>,<wbr><a href="../state/StateReferenceBuilder.html" title="class in com.commercetools.api.models.state">StateReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The TaxCategory of the Product.</div>
+<div class="block">State of the Product.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#taxCategory(java.util.function.Function)" class="member-name-link">taxCategory</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../tax_category/TaxCategoryReferenceBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryReferenceBuilder</a>,<wbr><a href="../tax_category/TaxCategoryReferenceBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#taxCategory(com.commercetools.api.models.tax_category.TaxCategoryReference)" class="member-name-link">taxCategory</a><wbr>(<a href="../tax_category/TaxCategoryReference.html" title="interface in com.commercetools.api.models.tax_category">TaxCategoryReference</a>&nbsp;taxCategory)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">The TaxCategory of the Product.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#variants(com.commercetools.api.models.product.ProductVariant...)" class="member-name-link">variants</a><wbr>(<a href="ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a>...&nbsp;variants)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#taxCategory(java.util.function.Function)" class="member-name-link">taxCategory</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../tax_category/TaxCategoryReferenceBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryReferenceBuilder</a>,<wbr><a href="../tax_category/TaxCategoryReferenceBuilder.html" title="class in com.commercetools.api.models.tax_category">TaxCategoryReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Additional Product Variants.</div>
+<div class="block">The TaxCategory of the Product.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#variants(java.util.List)" class="member-name-link">variants</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a>&gt;&nbsp;variants)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#variants(com.commercetools.api.models.product.ProductVariant...)" class="member-name-link">variants</a><wbr>(<a href="ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a>...&nbsp;variants)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Additional Product Variants.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#version(java.lang.Long)" class="member-name-link">version</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#variants(java.util.List)" class="member-name-link">variants</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ProductVariant.html" title="interface in com.commercetools.api.models.product">ProductVariant</a>&gt;&nbsp;variants)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Additional Product Variants.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#version(java.lang.Long)" class="member-name-link">version</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Current version of the Product.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withAttributes(java.util.function.Function)" class="member-name-link">withAttributes</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AttributeBuilder.html" title="class in com.commercetools.api.models.product">AttributeBuilder</a>,<wbr><a href="AttributeBuilder.html" title="class in com.commercetools.api.models.product">AttributeBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Attributes according to the respective AttributeDefinition.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withCategories(java.util.function.Function)" class="member-name-link">withCategories</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../category/CategoryReferenceBuilder.html" title="class in com.commercetools.api.models.category">CategoryReferenceBuilder</a>,<wbr><a href="../category/CategoryReferenceBuilder.html" title="class in com.commercetools.api.models.category">CategoryReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
@@ -546,7 +587,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withSearchKeywords(java.util.function.Function)" class="member-name-link">withSearchKeywords</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SearchKeywordsBuilder.html" title="class in com.commercetools.api.models.product">SearchKeywordsBuilder</a>,<wbr><a href="SearchKeywords.html" title="interface in com.commercetools.api.models.product">SearchKeywords</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Used by Product Suggestions, but is also considered for a full text search.</div>
+<div class="block">Used by Search Term Suggestions, but is also considered for a full text search in the Product Projection Search API.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withSlug(java.util.function.Function)" class="member-name-link">withSlug</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LocalizedStringBuilder.html" title="class in com.commercetools.api.models.common">LocalizedStringBuilder</a>,<wbr><a href="../common/LocalizedString.html" title="interface in com.commercetools.api.models.common">LocalizedString</a>&gt;&nbsp;builder)</code></div>
@@ -1077,7 +1118,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="searchKeywords(java.util.function.Function)">
 <h3>searchKeywords</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></span>&nbsp;<span class="element-name">searchKeywords</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SearchKeywordsBuilder.html" title="class in com.commercetools.api.models.product">SearchKeywordsBuilder</a>,<wbr><a href="SearchKeywordsBuilder.html" title="class in com.commercetools.api.models.product">SearchKeywordsBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Used by Product Suggestions, but is also considered for a full text search.</p></div>
+<div class="block"><p>Used by Search Term Suggestions, but is also considered for a full text search in the Product Projection Search API.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the searchKeywords value</dd>
@@ -1090,7 +1131,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withSearchKeywords(java.util.function.Function)">
 <h3>withSearchKeywords</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></span>&nbsp;<span class="element-name">withSearchKeywords</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SearchKeywordsBuilder.html" title="class in com.commercetools.api.models.product">SearchKeywordsBuilder</a>,<wbr><a href="SearchKeywords.html" title="interface in com.commercetools.api.models.product">SearchKeywords</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Used by Product Suggestions, but is also considered for a full text search.</p></div>
+<div class="block"><p>Used by Search Term Suggestions, but is also considered for a full text search in the Product Projection Search API.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the searchKeywords value</dd>
@@ -1104,7 +1145,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>searchKeywords</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></span>&nbsp;<span class="element-name">searchKeywords</span><wbr><span class="parameters">(@Nullable
  <a href="SearchKeywords.html" title="interface in com.commercetools.api.models.product">SearchKeywords</a>&nbsp;searchKeywords)</span></div>
-<div class="block"><p>Used by Product Suggestions, but is also considered for a full text search.</p></div>
+<div class="block"><p>Used by Search Term Suggestions, but is also considered for a full text search in the Product Projection Search API.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>searchKeywords</code> - value to be set</dd>
@@ -1406,6 +1447,97 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
+<section class="detail" id="attributes(com.commercetools.api.models.product.Attribute...)">
+<h3>attributes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></span>&nbsp;<span class="element-name">attributes</span><wbr><span class="parameters">(<a href="Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>...&nbsp;attributes)</span></div>
+<div class="block"><p>Attributes according to the respective AttributeDefinition.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>attributes</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="attributes(java.util.List)">
+<h3>attributes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></span>&nbsp;<span class="element-name">attributes</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&gt;&nbsp;attributes)</span></div>
+<div class="block"><p>Attributes according to the respective AttributeDefinition.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>attributes</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="plusAttributes(com.commercetools.api.models.product.Attribute...)">
+<h3>plusAttributes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></span>&nbsp;<span class="element-name">plusAttributes</span><wbr><span class="parameters">(<a href="Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>...&nbsp;attributes)</span></div>
+<div class="block"><p>Attributes according to the respective AttributeDefinition.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>attributes</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="plusAttributes(java.util.function.Function)">
+<h3>plusAttributes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></span>&nbsp;<span class="element-name">plusAttributes</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AttributeBuilder.html" title="class in com.commercetools.api.models.product">AttributeBuilder</a>,<wbr><a href="AttributeBuilder.html" title="class in com.commercetools.api.models.product">AttributeBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Attributes according to the respective AttributeDefinition.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the attributes value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="withAttributes(java.util.function.Function)">
+<h3>withAttributes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></span>&nbsp;<span class="element-name">withAttributes</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AttributeBuilder.html" title="class in com.commercetools.api.models.product">AttributeBuilder</a>,<wbr><a href="AttributeBuilder.html" title="class in com.commercetools.api.models.product">AttributeBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Attributes according to the respective AttributeDefinition.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the attributes value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="addAttributes(java.util.function.Function)">
+<h3>addAttributes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></span>&nbsp;<span class="element-name">addAttributes</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AttributeBuilder.html" title="class in com.commercetools.api.models.product">AttributeBuilder</a>,<wbr><a href="Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Attributes according to the respective AttributeDefinition.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the attributes value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setAttributes(java.util.function.Function)">
+<h3>setAttributes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ProductProjectionBuilder.html" title="class in com.commercetools.api.models.product">ProductProjectionBuilder</a></span>&nbsp;<span class="element-name">setAttributes</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="AttributeBuilder.html" title="class in com.commercetools.api.models.product">AttributeBuilder</a>,<wbr><a href="Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Attributes according to the respective AttributeDefinition.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the attributes value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getId()">
 <h3>getId</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getId</span>()</div>
@@ -1570,7 +1702,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getSearchKeywords</h3>
 <div class="member-signature"><span class="annotations">@Nullable
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="SearchKeywords.html" title="interface in com.commercetools.api.models.product">SearchKeywords</a></span>&nbsp;<span class="element-name">getSearchKeywords</span>()</div>
-<div class="block"><p>Used by Product Suggestions, but is also considered for a full text search.</p></div>
+<div class="block"><p>Used by Search Term Suggestions, but is also considered for a full text search in the Product Projection Search API.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>searchKeywords</dd>
@@ -1668,6 +1800,17 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>priceMode</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getAttributes()">
+<h3>getAttributes</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="Attribute.html" title="interface in com.commercetools.api.models.product">Attribute</a>&gt;</span>&nbsp;<span class="element-name">getAttributes</span>()</div>
+<div class="block"><p>Attributes according to the respective AttributeDefinition.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>attributes</dd>
 </dl>
 </section>
 </li>

@@ -190,7 +190,7 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
 </span><span class="return-type">@NotNull @Valid <a href="ProductDiscountKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductDiscountKeyReference</a></span>&nbsp;<span class="element-name">getDiscount</span>()</div>
-<div class="block"><p>Reference to a ProductDiscount.</p></div>
+<div class="block"><p>Reference to a ProductDiscount. If the referenced ProductDiscount does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced ProductDiscount is created.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>discount</dd>
@@ -212,7 +212,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setDiscount(com.commercetools.importapi.models.common.ProductDiscountKeyReference)">
 <h3>setDiscount</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setDiscount</span><wbr><span class="parameters">(<a href="ProductDiscountKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductDiscountKeyReference</a>&nbsp;discount)</span></div>
-<div class="block"><p>Reference to a ProductDiscount.</p></div>
+<div class="block"><p>Reference to a ProductDiscount. If the referenced ProductDiscount does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced ProductDiscount is created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>discount</code> - value to be set</dd>

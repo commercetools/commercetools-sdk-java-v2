@@ -147,11 +147,13 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getKey()" class="member-name-link">getKey</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">User-defined unique identifier of the referenced resource.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="ReferenceType.html" title="interface in com.commercetools.importapi.models.common">ReferenceType</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTypeId()" class="member-name-link">getTypeId</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The type of the referenced resource.</div>
+<div class="block">Type of referenced resource.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="CustomObjectKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">CustomObjectKeyReferenceBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#keyValueDocumentBuilder()" class="member-name-link">keyValueDocumentBuilder</a>()</code></div>
@@ -196,7 +198,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setKey(java.lang.String)" class="member-name-link">setKey</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set key</div>
+<div class="block">User-defined unique identifier of the referenced resource.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ShippingMethodKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">ShippingMethodKeyReferenceBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#shippingMethodBuilder()" class="member-name-link">shippingMethodBuilder</a>()</code></div>
@@ -252,6 +254,7 @@ loadScripts(document, 'script');</script>
 <h3>getKey</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getKey</span>()</div>
+<div class="block"><p>User-defined unique identifier of the referenced resource. If the referenced resource does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced resource is created.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>key</dd>
@@ -263,7 +266,7 @@ loadScripts(document, 'script');</script>
 <h3>getTypeId</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="ReferenceType.html" title="interface in com.commercetools.importapi.models.common">ReferenceType</a></span>&nbsp;<span class="element-name">getTypeId</span>()</div>
-<div class="block"><p>The type of the referenced resource.</p></div>
+<div class="block"><p>Type of referenced resource.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>typeId</dd>
@@ -274,7 +277,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setKey(java.lang.String)">
 <h3>setKey</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setKey</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
-<div class="block">set key</div>
+<div class="block"><p>User-defined unique identifier of the referenced resource. If the referenced resource does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced resource is created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>key</code> - value to be set</dd>

@@ -78,7 +78,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">InventoryImport</span><span class="extends-implements">
 extends <a href="../common/ImportResource.html" title="interface in com.commercetools.importapi.models.common">ImportResource</a></span></div>
-<div class="block"><p>The data representation for an Inventory to be imported that is persisted as a Inventory in the Project.</p>
+<div class="block"><p>Represents the data used to import an InventoryEntry. Once imported, this data is persisted as a InventoryEntry in the Project.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -126,12 +126,12 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../customfields/Custom.html" title="interface in com.commercetools.importapi.models.customfields">Custom</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCustom()" class="member-name-link">getCustom</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Maps to <code>Inventory.custom</code>.</div>
+<div class="block">Maps to <code>InventoryEntry.custom</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getExpectedDelivery()" class="member-name-link">getExpectedDelivery</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Maps to <code>Inventory.expectedDelivery</code></div>
+<div class="block">Maps to <code>InventoryEntry.expectedDelivery</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getKey()" class="member-name-link">getKey</a>()</code></div>
@@ -141,22 +141,22 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getQuantityOnStock()" class="member-name-link">getQuantityOnStock</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Maps to <code>Inventory.quantityOnStock</code></div>
+<div class="block">Maps to <code>InventoryEntry.quantityOnStock</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getRestockableInDays()" class="member-name-link">getRestockableInDays</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Maps to <code>Inventory.restockableInDays</code></div>
+<div class="block">Maps to <code>InventoryEntry.restockableInDays</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSku()" class="member-name-link">getSku</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Maps to <code>Inventory.sku</code></div>
+<div class="block">Maps to <code>InventoryEntry.sku</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSupplyChannel()" class="member-name-link">getSupplyChannel</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Maps to <code>Inventory.supplyChannel</code></div>
+<div class="block">Maps to <code>InventoryEntry.supplyChannel</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="InventoryImport.html" title="interface in com.commercetools.importapi.models.inventories">InventoryImport</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -171,12 +171,12 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCustom(com.commercetools.importapi.models.customfields.Custom)" class="member-name-link">setCustom</a><wbr>(<a href="../customfields/Custom.html" title="interface in com.commercetools.importapi.models.customfields">Custom</a>&nbsp;custom)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Maps to <code>Inventory.custom</code>.</div>
+<div class="block">Maps to <code>InventoryEntry.custom</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setExpectedDelivery(java.time.ZonedDateTime)" class="member-name-link">setExpectedDelivery</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;expectedDelivery)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Maps to <code>Inventory.expectedDelivery</code></div>
+<div class="block">Maps to <code>InventoryEntry.expectedDelivery</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setKey(java.lang.String)" class="member-name-link">setKey</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
@@ -186,22 +186,22 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setQuantityOnStock(java.lang.Long)" class="member-name-link">setQuantityOnStock</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;quantityOnStock)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Maps to <code>Inventory.quantityOnStock</code></div>
+<div class="block">Maps to <code>InventoryEntry.quantityOnStock</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setRestockableInDays(java.lang.Long)" class="member-name-link">setRestockableInDays</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;restockableInDays)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Maps to <code>Inventory.restockableInDays</code></div>
+<div class="block">Maps to <code>InventoryEntry.restockableInDays</code></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setSku(java.lang.String)" class="member-name-link">setSku</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sku)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Maps to <code>Inventory.sku</code></div>
+<div class="block">Maps to <code>InventoryEntry.sku</code></div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setSupplyChannel(com.commercetools.importapi.models.common.ChannelKeyReference)" class="member-name-link">setSupplyChannel</a><wbr>(<a href="../common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a>&nbsp;supplyChannel)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Maps to <code>Inventory.supplyChannel</code></div>
+<div class="block">Maps to <code>InventoryEntry.supplyChannel</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="InventoryImport.html" title="interface in com.commercetools.importapi.models.inventories">InventoryImport</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -235,7 +235,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <h3>getKey</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getKey</span>()</div>
-<div class="block"><p>User-defined unique identifier. If an InventoryEntry with this <code>key</code> exists, it will be updated with the imported data.</p></div>
+<div class="block"><p>User-defined unique identifier. If an InventoryEntry with this <code>key</code> exists, it is updated with the imported data.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/ImportResource.html#getKey()">getKey</a></code>&nbsp;in interface&nbsp;<code><a href="../common/ImportResource.html" title="interface in com.commercetools.importapi.models.common">ImportResource</a></code></dd>
@@ -249,7 +249,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <h3>getSku</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getSku</span>()</div>
-<div class="block"><p>Maps to <code>Inventory.sku</code></p></div>
+<div class="block"><p>Maps to <code>InventoryEntry.sku</code></p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>sku</dd>
@@ -261,7 +261,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <h3>getQuantityOnStock</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">getQuantityOnStock</span>()</div>
-<div class="block"><p>Maps to <code>Inventory.quantityOnStock</code></p></div>
+<div class="block"><p>Maps to <code>InventoryEntry.quantityOnStock</code></p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>quantityOnStock</dd>
@@ -272,7 +272,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="getRestockableInDays()">
 <h3>getRestockableInDays</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">getRestockableInDays</span>()</div>
-<div class="block"><p>Maps to <code>Inventory.restockableInDays</code></p></div>
+<div class="block"><p>Maps to <code>InventoryEntry.restockableInDays</code></p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>restockableInDays</dd>
@@ -283,7 +283,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="getExpectedDelivery()">
 <h3>getExpectedDelivery</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name">getExpectedDelivery</span>()</div>
-<div class="block"><p>Maps to <code>Inventory.expectedDelivery</code></p></div>
+<div class="block"><p>Maps to <code>InventoryEntry.expectedDelivery</code></p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>expectedDelivery</dd>
@@ -295,7 +295,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <h3>getSupplyChannel</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a></span>&nbsp;<span class="element-name">getSupplyChannel</span>()</div>
-<div class="block"><p>Maps to <code>Inventory.supplyChannel</code></p></div>
+<div class="block"><p>Maps to <code>InventoryEntry.supplyChannel</code>. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>supplyChannel</dd>
@@ -307,7 +307,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <h3>getCustom</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../customfields/Custom.html" title="interface in com.commercetools.importapi.models.customfields">Custom</a></span>&nbsp;<span class="element-name">getCustom</span>()</div>
-<div class="block"><p>Maps to <code>Inventory.custom</code>.</p></div>
+<div class="block"><p>Maps to <code>InventoryEntry.custom</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>custom</dd>
@@ -318,7 +318,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setKey(java.lang.String)">
 <h3>setKey</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setKey</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
-<div class="block"><p>User-defined unique identifier. If an InventoryEntry with this <code>key</code> exists, it will be updated with the imported data.</p></div>
+<div class="block"><p>User-defined unique identifier. If an InventoryEntry with this <code>key</code> exists, it is updated with the imported data.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/ImportResource.html#setKey(java.lang.String)">setKey</a></code>&nbsp;in interface&nbsp;<code><a href="../common/ImportResource.html" title="interface in com.commercetools.importapi.models.common">ImportResource</a></code></dd>
@@ -331,7 +331,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setSku(java.lang.String)">
 <h3>setSku</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setSku</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sku)</span></div>
-<div class="block"><p>Maps to <code>Inventory.sku</code></p></div>
+<div class="block"><p>Maps to <code>InventoryEntry.sku</code></p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>sku</code> - value to be set</dd>
@@ -342,7 +342,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setQuantityOnStock(java.lang.Long)">
 <h3>setQuantityOnStock</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setQuantityOnStock</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;quantityOnStock)</span></div>
-<div class="block"><p>Maps to <code>Inventory.quantityOnStock</code></p></div>
+<div class="block"><p>Maps to <code>InventoryEntry.quantityOnStock</code></p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>quantityOnStock</code> - value to be set</dd>
@@ -353,7 +353,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setRestockableInDays(java.lang.Long)">
 <h3>setRestockableInDays</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setRestockableInDays</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;restockableInDays)</span></div>
-<div class="block"><p>Maps to <code>Inventory.restockableInDays</code></p></div>
+<div class="block"><p>Maps to <code>InventoryEntry.restockableInDays</code></p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>restockableInDays</code> - value to be set</dd>
@@ -364,7 +364,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setExpectedDelivery(java.time.ZonedDateTime)">
 <h3>setExpectedDelivery</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setExpectedDelivery</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;expectedDelivery)</span></div>
-<div class="block"><p>Maps to <code>Inventory.expectedDelivery</code></p></div>
+<div class="block"><p>Maps to <code>InventoryEntry.expectedDelivery</code></p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>expectedDelivery</code> - value to be set</dd>
@@ -375,7 +375,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setSupplyChannel(com.commercetools.importapi.models.common.ChannelKeyReference)">
 <h3>setSupplyChannel</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setSupplyChannel</span><wbr><span class="parameters">(<a href="../common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a>&nbsp;supplyChannel)</span></div>
-<div class="block"><p>Maps to <code>Inventory.supplyChannel</code></p></div>
+<div class="block"><p>Maps to <code>InventoryEntry.supplyChannel</code>. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>supplyChannel</code> - value to be set</dd>
@@ -386,7 +386,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setCustom(com.commercetools.importapi.models.customfields.Custom)">
 <h3>setCustom</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCustom</span><wbr><span class="parameters">(<a href="../customfields/Custom.html" title="interface in com.commercetools.importapi.models.customfields">Custom</a>&nbsp;custom)</span></div>
-<div class="block"><p>Maps to <code>Inventory.custom</code>.</p></div>
+<div class="block"><p>Maps to <code>InventoryEntry.custom</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>custom</code> - value to be set</dd>

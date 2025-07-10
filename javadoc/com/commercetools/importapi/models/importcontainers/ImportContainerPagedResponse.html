@@ -73,7 +73,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">ImportContainerPagedResponse</span></div>
-<div class="block"><p>PagedQueryResult for ImportContainers. Used as a response to a query request for ImportContainers.</p>
+<div class="block"><p>PagedQueryResult with results containing an array of ImportContainer.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -123,7 +123,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCount()" class="member-name-link">getCount</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The actual number of results returned.</div>
+<div class="block">Actual number of results returned.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getLimit()" class="member-name-link">getLimit</a>()</code></div>
@@ -138,12 +138,12 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ImportContainer.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainer</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getResults()" class="member-name-link">getResults</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The array of Import Containers matching the query.</div>
+<div class="block">ImportContainers matching the query.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTotal()" class="member-name-link">getTotal</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The total number of results matching the query.</div>
+<div class="block">Total number of results matching the query.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="ImportContainerPagedResponse.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainerPagedResponse</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -158,7 +158,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCount(java.lang.Long)" class="member-name-link">setCount</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;count)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The actual number of results returned.</div>
+<div class="block">Actual number of results returned.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setLimit(java.lang.Integer)" class="member-name-link">setLimit</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;limit)</code></div>
@@ -173,17 +173,17 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setResults(com.commercetools.importapi.models.importcontainers.ImportContainer...)" class="member-name-link">setResults</a><wbr>(<a href="ImportContainer.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainer</a>...&nbsp;results)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The array of Import Containers matching the query.</div>
+<div class="block">ImportContainers matching the query.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setResults(java.util.List)" class="member-name-link">setResults</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ImportContainer.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainer</a>&gt;&nbsp;results)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The array of Import Containers matching the query.</div>
+<div class="block">ImportContainers matching the query.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTotal(java.lang.Long)" class="member-name-link">setTotal</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;total)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The total number of results matching the query.</div>
+<div class="block">Total number of results matching the query.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="ImportContainerPagedResponse.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainerPagedResponse</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -238,7 +238,7 @@ loadScripts(document, 'script');</script>
 <h3>getCount</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">getCount</span>()</div>
-<div class="block"><p>The actual number of results returned.</p></div>
+<div class="block"><p>Actual number of results returned.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>count</dd>
@@ -250,7 +250,7 @@ loadScripts(document, 'script');</script>
 <h3>getTotal</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">getTotal</span>()</div>
-<div class="block"><p>The total number of results matching the query.</p></div>
+<div class="block"><p>Total number of results matching the query.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>total</dd>
@@ -263,7 +263,7 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
 </span><span class="return-type">@NotNull @Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ImportContainer.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainer</a>&gt;</span>&nbsp;<span class="element-name">getResults</span>()</div>
-<div class="block"><p>The array of Import Containers matching the query.</p></div>
+<div class="block"><p>ImportContainers matching the query.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>results</dd>
@@ -296,7 +296,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setCount(java.lang.Long)">
 <h3>setCount</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCount</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;count)</span></div>
-<div class="block"><p>The actual number of results returned.</p></div>
+<div class="block"><p>Actual number of results returned.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>count</code> - value to be set</dd>
@@ -307,7 +307,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setTotal(java.lang.Long)">
 <h3>setTotal</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setTotal</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;total)</span></div>
-<div class="block"><p>The total number of results matching the query.</p></div>
+<div class="block"><p>Total number of results matching the query.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>total</code> - value to be set</dd>
@@ -318,7 +318,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setResults(com.commercetools.importapi.models.importcontainers.ImportContainer...)">
 <h3>setResults</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setResults</span><wbr><span class="parameters">(<a href="ImportContainer.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainer</a>...&nbsp;results)</span></div>
-<div class="block"><p>The array of Import Containers matching the query.</p></div>
+<div class="block"><p>ImportContainers matching the query.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>results</code> - values to be set</dd>
@@ -329,7 +329,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setResults(java.util.List)">
 <h3>setResults</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setResults</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ImportContainer.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainer</a>&gt;&nbsp;results)</span></div>
-<div class="block"><p>The array of Import Containers matching the query.</p></div>
+<div class="block"><p>ImportContainers matching the query.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>results</code> - values to be set</dd>

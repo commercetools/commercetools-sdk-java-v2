@@ -73,7 +73,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">UnresolvedReferences</span></div>
-<div class="block"><p>References a resource which could not be resolved.</p>
+<div class="block"><p>Contains a reference to a resource which does not exist. For example, if a Category is imported with a parent Category that does not exist, the reference to the parent Category is an unresolved reference.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -120,12 +120,12 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getKey()" class="member-name-link">getKey</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The <code>key</code> of the resource.</div>
+<div class="block"><code>key</code> of the unresolved resource.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="ReferenceType.html" title="interface in com.commercetools.importapi.models.common">ReferenceType</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTypeId()" class="member-name-link">getTypeId</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The type of resource.</div>
+<div class="block">Type of the unresolved resource.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="UnresolvedReferences.html" title="interface in com.commercetools.importapi.models.common">UnresolvedReferences</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -140,12 +140,12 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setKey(java.lang.String)" class="member-name-link">setKey</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The <code>key</code> of the resource.</div>
+<div class="block"><code>key</code> of the unresolved resource.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTypeId(com.commercetools.importapi.models.common.ReferenceType)" class="member-name-link">setTypeId</a><wbr>(<a href="ReferenceType.html" title="interface in com.commercetools.importapi.models.common">ReferenceType</a>&nbsp;typeId)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The type of resource.</div>
+<div class="block">Type of the unresolved resource.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="UnresolvedReferences.html" title="interface in com.commercetools.importapi.models.common">UnresolvedReferences</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -176,7 +176,7 @@ loadScripts(document, 'script');</script>
 <h3>getKey</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getKey</span>()</div>
-<div class="block"><p>The <code>key</code> of the resource.</p></div>
+<div class="block"><p><code>key</code> of the unresolved resource.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>key</dd>
@@ -188,7 +188,7 @@ loadScripts(document, 'script');</script>
 <h3>getTypeId</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="ReferenceType.html" title="interface in com.commercetools.importapi.models.common">ReferenceType</a></span>&nbsp;<span class="element-name">getTypeId</span>()</div>
-<div class="block"><p>The type of resource.</p></div>
+<div class="block"><p>Type of the unresolved resource.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>typeId</dd>
@@ -199,7 +199,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setKey(java.lang.String)">
 <h3>setKey</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setKey</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
-<div class="block"><p>The <code>key</code> of the resource.</p></div>
+<div class="block"><p><code>key</code> of the unresolved resource.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>key</code> - value to be set</dd>
@@ -210,7 +210,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setTypeId(com.commercetools.importapi.models.common.ReferenceType)">
 <h3>setTypeId</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setTypeId</span><wbr><span class="parameters">(<a href="ReferenceType.html" title="interface in com.commercetools.importapi.models.common">ReferenceType</a>&nbsp;typeId)</span></div>
-<div class="block"><p>The type of resource.</p></div>
+<div class="block"><p>Type of the unresolved resource.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>typeId</code> - value to be set</dd>

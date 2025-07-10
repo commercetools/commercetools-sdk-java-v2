@@ -137,27 +137,42 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/ImportResourceType.html" title="interface in com.commercetools.importapi.models.common">ImportResourceType</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getResourceType()" class="member-name-link">getResourceType</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The resource type to be imported.</div>
+<div class="block">The resource type the ImportContainer will accept.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ImportContainerDraftBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerDraftBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#key(java.lang.String)" class="member-name-link">key</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="RetentionPolicy.html" title="interface in com.commercetools.importapi.models.importcontainers">RetentionPolicy</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRetentionPolicy()" class="member-name-link">getRetentionPolicy</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">User-defined unique identifier of the ImportContainer.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="ImportContainerDraftBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerDraftBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">factory method for an instance of ImportContainerDraftBuilder</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="ImportContainerDraftBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerDraftBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of(com.commercetools.importapi.models.importcontainers.ImportContainerDraft)" class="member-name-link">of</a><wbr>(<a href="ImportContainerDraft.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainerDraft</a>&nbsp;template)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">create builder for ImportContainerDraft instance</div>
+<div class="block">Set a retention policy to automatically delete the ImportContainer after a defined period.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ImportContainerDraftBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerDraftBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#resourceType(com.commercetools.importapi.models.common.ImportResourceType)" class="member-name-link">resourceType</a><wbr>(<a href="../common/ImportResourceType.html" title="interface in com.commercetools.importapi.models.common">ImportResourceType</a>&nbsp;resourceType)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#key(java.lang.String)" class="member-name-link">key</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The resource type to be imported.</div>
+<div class="block">User-defined unique identifier of the ImportContainer.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="ImportContainerDraftBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerDraftBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">factory method for an instance of ImportContainerDraftBuilder</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="ImportContainerDraftBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerDraftBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of(com.commercetools.importapi.models.importcontainers.ImportContainerDraft)" class="member-name-link">of</a><wbr>(<a href="ImportContainerDraft.html" title="interface in com.commercetools.importapi.models.importcontainers">ImportContainerDraft</a>&nbsp;template)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">create builder for ImportContainerDraft instance</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ImportContainerDraftBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerDraftBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#resourceType(com.commercetools.importapi.models.common.ImportResourceType)" class="member-name-link">resourceType</a><wbr>(<a href="../common/ImportResourceType.html" title="interface in com.commercetools.importapi.models.common">ImportResourceType</a>&nbsp;resourceType)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">The resource type the ImportContainer will accept.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ImportContainerDraftBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerDraftBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#retentionPolicy(com.commercetools.importapi.models.importcontainers.RetentionPolicy)" class="member-name-link">retentionPolicy</a><wbr>(<a href="RetentionPolicy.html" title="interface in com.commercetools.importapi.models.importcontainers">RetentionPolicy</a>&nbsp;retentionPolicy)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Set a retention policy to automatically delete the ImportContainer after a defined period.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ImportContainerDraftBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerDraftBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#retentionPolicy(java.util.function.Function)" class="member-name-link">retentionPolicy</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="RetentionPolicyBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">RetentionPolicyBuilder</a>,<wbr><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="RetentionPolicy.html" title="interface in com.commercetools.importapi.models.importcontainers">RetentionPolicy</a>&gt;&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Set a retention policy to automatically delete the ImportContainer after a defined period.</div>
 </div>
 </div>
 </div>
@@ -194,7 +209,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="key(java.lang.String)">
 <h3>key</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportContainerDraftBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerDraftBuilder</a></span>&nbsp;<span class="element-name">key</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
-<div class="block"><p>User-defined unique identifier of the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p></div>
+<div class="block"><p>User-defined unique identifier of the ImportContainer.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>key</code> - value to be set</dd>
@@ -208,7 +223,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>resourceType</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportContainerDraftBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerDraftBuilder</a></span>&nbsp;<span class="element-name">resourceType</span><wbr><span class="parameters">(@Nullable
  <a href="../common/ImportResourceType.html" title="interface in com.commercetools.importapi.models.common">ImportResourceType</a>&nbsp;resourceType)</span></div>
-<div class="block"><p>The resource type to be imported. If not given, the ImportContainer is able to import all of the supported ImportResourceTypes.</p></div>
+<div class="block"><p>The resource type the ImportContainer will accept. If not specified, the ImportContainer can import all of the supported ImportResourceTypes.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>resourceType</code> - value to be set</dd>
@@ -218,10 +233,37 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
+<section class="detail" id="retentionPolicy(com.commercetools.importapi.models.importcontainers.RetentionPolicy)">
+<h3>retentionPolicy</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportContainerDraftBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerDraftBuilder</a></span>&nbsp;<span class="element-name">retentionPolicy</span><wbr><span class="parameters">(@Nullable
+ <a href="RetentionPolicy.html" title="interface in com.commercetools.importapi.models.importcontainers">RetentionPolicy</a>&nbsp;retentionPolicy)</span></div>
+<div class="block"><p>Set a retention policy to automatically delete the ImportContainer after a defined period.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>retentionPolicy</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="retentionPolicy(java.util.function.Function)">
+<h3>retentionPolicy</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ImportContainerDraftBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">ImportContainerDraftBuilder</a></span>&nbsp;<span class="element-name">retentionPolicy</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="RetentionPolicyBuilder.html" title="class in com.commercetools.importapi.models.importcontainers">RetentionPolicyBuilder</a>,<wbr><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="RetentionPolicy.html" title="interface in com.commercetools.importapi.models.importcontainers">RetentionPolicy</a>&gt;&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Set a retention policy to automatically delete the ImportContainer after a defined period.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the retentionPolicy value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getKey()">
 <h3>getKey</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getKey</span>()</div>
-<div class="block"><p>User-defined unique identifier of the ImportContainer. Keys can only contain alphanumeric characters (a-Z, 0-9), underscores and hyphens (_, -).</p></div>
+<div class="block"><p>User-defined unique identifier of the ImportContainer.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>key</dd>
@@ -233,10 +275,22 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getResourceType</h3>
 <div class="member-signature"><span class="annotations">@Nullable
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/ImportResourceType.html" title="interface in com.commercetools.importapi.models.common">ImportResourceType</a></span>&nbsp;<span class="element-name">getResourceType</span>()</div>
-<div class="block"><p>The resource type to be imported. If not given, the ImportContainer is able to import all of the supported ImportResourceTypes.</p></div>
+<div class="block"><p>The resource type the ImportContainer will accept. If not specified, the ImportContainer can import all of the supported ImportResourceTypes.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>resourceType</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getRetentionPolicy()">
+<h3>getRetentionPolicy</h3>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="RetentionPolicy.html" title="interface in com.commercetools.importapi.models.importcontainers">RetentionPolicy</a></span>&nbsp;<span class="element-name">getRetentionPolicy</span>()</div>
+<div class="block"><p>Set a retention policy to automatically delete the ImportContainer after a defined period.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>retentionPolicy</dd>
 </dl>
 </section>
 </li>

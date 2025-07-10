@@ -78,7 +78,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">CustomerImport</span><span class="extends-implements">
 extends <a href="../common/ImportResource.html" title="interface in com.commercetools.importapi.models.common">ImportResource</a></span></div>
-<div class="block"><p>The data representation for a Customer to be imported that is persisted as a Customer in the Project.</p>
+<div class="block"><p>Represents the data used to import a Customer. Once imported, this data is persisted as a Customer in the Project.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -138,7 +138,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getBillingAddresses()" class="member-name-link">getBillingAddresses</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The indices of the billing addresses in the addresses array.</div>
+<div class="block">Indices of the billing addresses in the <code>addresses</code> array.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCompanyName()" class="member-name-link">getCompanyName</a>()</code></div>
@@ -148,12 +148,12 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../customfields/Custom.html" title="interface in com.commercetools.importapi.models.customfields">Custom</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCustom()" class="member-name-link">getCustom</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The Custom Fields for this Customer.</div>
+<div class="block">Maps to <code>Customer.custom</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../common/CustomerGroupKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerGroupKeyReference</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCustomerGroup()" class="member-name-link">getCustomerGroup</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The Reference to the CustomerGroup with which the Customer is associated.</div>
+<div class="block">Maps to <code>Customer.customerGroup</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCustomerNumber()" class="member-name-link">getCustomerNumber</a>()</code></div>
@@ -168,12 +168,12 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDefaultBillingAddress()" class="member-name-link">getDefaultBillingAddress</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The index of the address in the addresses array.</div>
+<div class="block">Index of the address in the <code>addresses</code> array to use as the default billing address.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDefaultShippingAddress()" class="member-name-link">getDefaultShippingAddress</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The index of the address in the addresses array.</div>
+<div class="block">The index of the address in the <code>addresses</code> array.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getEmail()" class="member-name-link">getEmail</a>()</code></div>
@@ -218,7 +218,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getPassword()" class="member-name-link">getPassword</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Required when <code>authenticationMode</code> is set to <code>Password</code>.</div>
+<div class="block">Maps to <code>Customer.password</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSalutation()" class="member-name-link">getSalutation</a>()</code></div>
@@ -228,12 +228,12 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getShippingAddresses()" class="member-name-link">getShippingAddresses</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The indices of the shipping addresses in the addresses array.</div>
+<div class="block">Indices of the shipping addresses in the <code>addresses</code> array.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/StoreKeyReference.html" title="interface in com.commercetools.importapi.models.common">StoreKeyReference</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getStores()" class="member-name-link">getStores</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The References to the Stores with which the Customer is associated.</div>
+<div class="block">Maps to <code>Customer.stores</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTitle()" class="member-name-link">getTitle</a>()</code></div>
@@ -276,12 +276,12 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setBillingAddresses(java.lang.Integer...)" class="member-name-link">setBillingAddresses</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>...&nbsp;billingAddresses)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The indices of the billing addresses in the addresses array.</div>
+<div class="block">Indices of the billing addresses in the <code>addresses</code> array.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setBillingAddresses(java.util.List)" class="member-name-link">setBillingAddresses</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;billingAddresses)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The indices of the billing addresses in the addresses array.</div>
+<div class="block">Indices of the billing addresses in the <code>addresses</code> array.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCompanyName(java.lang.String)" class="member-name-link">setCompanyName</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;companyName)</code></div>
@@ -291,12 +291,12 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCustom(com.commercetools.importapi.models.customfields.Custom)" class="member-name-link">setCustom</a><wbr>(<a href="../customfields/Custom.html" title="interface in com.commercetools.importapi.models.customfields">Custom</a>&nbsp;custom)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The Custom Fields for this Customer.</div>
+<div class="block">Maps to <code>Customer.custom</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCustomerGroup(com.commercetools.importapi.models.common.CustomerGroupKeyReference)" class="member-name-link">setCustomerGroup</a><wbr>(<a href="../common/CustomerGroupKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerGroupKeyReference</a>&nbsp;customerGroup)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The Reference to the CustomerGroup with which the Customer is associated.</div>
+<div class="block">Maps to <code>Customer.customerGroup</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCustomerNumber(java.lang.String)" class="member-name-link">setCustomerNumber</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;customerNumber)</code></div>
@@ -311,12 +311,12 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setDefaultBillingAddress(java.lang.Integer)" class="member-name-link">setDefaultBillingAddress</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;defaultBillingAddress)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The index of the address in the addresses array.</div>
+<div class="block">Index of the address in the <code>addresses</code> array to use as the default billing address.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setDefaultShippingAddress(java.lang.Integer)" class="member-name-link">setDefaultShippingAddress</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;defaultShippingAddress)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The index of the address in the addresses array.</div>
+<div class="block">The index of the address in the <code>addresses</code> array.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setEmail(java.lang.String)" class="member-name-link">setEmail</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;email)</code></div>
@@ -361,7 +361,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setPassword(java.lang.String)" class="member-name-link">setPassword</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;password)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Required when <code>authenticationMode</code> is set to <code>Password</code>.</div>
+<div class="block">Maps to <code>Customer.password</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setSalutation(java.lang.String)" class="member-name-link">setSalutation</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;salutation)</code></div>
@@ -371,22 +371,22 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setShippingAddresses(java.lang.Integer...)" class="member-name-link">setShippingAddresses</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>...&nbsp;shippingAddresses)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The indices of the shipping addresses in the addresses array.</div>
+<div class="block">Indices of the shipping addresses in the <code>addresses</code> array.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setShippingAddresses(java.util.List)" class="member-name-link">setShippingAddresses</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;shippingAddresses)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The indices of the shipping addresses in the addresses array.</div>
+<div class="block">Indices of the shipping addresses in the <code>addresses</code> array.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setStores(com.commercetools.importapi.models.common.StoreKeyReference...)" class="member-name-link">setStores</a><wbr>(<a href="../common/StoreKeyReference.html" title="interface in com.commercetools.importapi.models.common">StoreKeyReference</a>...&nbsp;stores)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The References to the Stores with which the Customer is associated.</div>
+<div class="block">Maps to <code>Customer.stores</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setStores(java.util.List)" class="member-name-link">setStores</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/StoreKeyReference.html" title="interface in com.commercetools.importapi.models.common">StoreKeyReference</a>&gt;&nbsp;stores)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The References to the Stores with which the Customer is associated.</div>
+<div class="block">Maps to <code>Customer.stores</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTitle(java.lang.String)" class="member-name-link">setTitle</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;title)</code></div>
@@ -430,7 +430,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <h3>getKey</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getKey</span>()</div>
-<div class="block"><p>User-defined unique identifier. If a Customer with this <code>key</code> exists, it will be updated with the imported data.</p></div>
+<div class="block"><p>User-defined unique identifier. If a Customer with this <code>key</code> exists, it is updated with the imported data.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/ImportResource.html#getKey()">getKey</a></code>&nbsp;in interface&nbsp;<code><a href="../common/ImportResource.html" title="interface in com.commercetools.importapi.models.common">ImportResource</a></code></dd>
@@ -466,7 +466,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="getPassword()">
 <h3>getPassword</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getPassword</span>()</div>
-<div class="block"><p>Required when <code>authenticationMode</code> is set to <code>Password</code>. Maps to <code>Customer.password</code>.</p></div>
+<div class="block"><p>Maps to <code>Customer.password</code>. Required when <code>authenticationMode</code> is set to <code>Password</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>password</dd>
@@ -478,7 +478,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <h3>getStores</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/StoreKeyReference.html" title="interface in com.commercetools.importapi.models.common">StoreKeyReference</a>&gt;</span>&nbsp;<span class="element-name">getStores</span>()</div>
-<div class="block"><p>The References to the Stores with which the Customer is associated. If referenced Stores do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Stores are created.</p></div>
+<div class="block"><p>Maps to <code>Customer.stores</code>. If the referenced Stores do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Stores are created.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>stores</dd>
@@ -600,7 +600,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <h3>getCustomerGroup</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../common/CustomerGroupKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerGroupKeyReference</a></span>&nbsp;<span class="element-name">getCustomerGroup</span>()</div>
-<div class="block"><p>The Reference to the CustomerGroup with which the Customer is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p></div>
+<div class="block"><p>Maps to <code>Customer.customerGroup</code>. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>customerGroup</dd>
@@ -623,7 +623,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="getDefaultBillingAddress()">
 <h3>getDefaultBillingAddress</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">getDefaultBillingAddress</span>()</div>
-<div class="block"><p>The index of the address in the addresses array. The <code>defaultBillingAddressId</code> of the customer will be set to the ID of that address.</p></div>
+<div class="block"><p>Index of the address in the <code>addresses</code> array to use as the default billing address. The <code>defaultBillingAddressId</code> of the Customer will be set to the <code>id</code> of that address.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>defaultBillingAddress</dd>
@@ -634,7 +634,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="getBillingAddresses()">
 <h3>getBillingAddresses</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</span>&nbsp;<span class="element-name">getBillingAddresses</span>()</div>
-<div class="block"><p>The indices of the billing addresses in the addresses array. The <code>billingAddressIds</code> of the customer will be set to the IDs of that addresses.</p></div>
+<div class="block"><p>Indices of the billing addresses in the <code>addresses</code> array. The <code>billingAddressIds</code> of the Customer will be set to the <code>id</code> of these addresses.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>billingAddresses</dd>
@@ -645,7 +645,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="getDefaultShippingAddress()">
 <h3>getDefaultShippingAddress</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">getDefaultShippingAddress</span>()</div>
-<div class="block"><p>The index of the address in the addresses array. The <code>defaultShippingAddressId</code> of the customer will be set to the ID of that address.</p></div>
+<div class="block"><p>The index of the address in the <code>addresses</code> array. The <code>defaultShippingAddressId</code> of the Customer will be set to the <code>id</code> of that address.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>defaultShippingAddress</dd>
@@ -656,7 +656,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="getShippingAddresses()">
 <h3>getShippingAddresses</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</span>&nbsp;<span class="element-name">getShippingAddresses</span>()</div>
-<div class="block"><p>The indices of the shipping addresses in the addresses array. The <code>shippingAddressIds</code> of the customer will be set to the IDs of that addresses.</p></div>
+<div class="block"><p>Indices of the shipping addresses in the <code>addresses</code> array. The <code>shippingAddressIds</code> of the Customer will be set to the <code>id</code> of these addresses.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>shippingAddresses</dd>
@@ -679,7 +679,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <h3>getCustom</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../customfields/Custom.html" title="interface in com.commercetools.importapi.models.customfields">Custom</a></span>&nbsp;<span class="element-name">getCustom</span>()</div>
-<div class="block"><p>The Custom Fields for this Customer.</p></div>
+<div class="block"><p>Maps to <code>Customer.custom</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>custom</dd>
@@ -704,7 +704,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setKey(java.lang.String)">
 <h3>setKey</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setKey</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
-<div class="block"><p>User-defined unique identifier. If a Customer with this <code>key</code> exists, it will be updated with the imported data.</p></div>
+<div class="block"><p>User-defined unique identifier. If a Customer with this <code>key</code> exists, it is updated with the imported data.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/ImportResource.html#setKey(java.lang.String)">setKey</a></code>&nbsp;in interface&nbsp;<code><a href="../common/ImportResource.html" title="interface in com.commercetools.importapi.models.common">ImportResource</a></code></dd>
@@ -739,7 +739,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setPassword(java.lang.String)">
 <h3>setPassword</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setPassword</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;password)</span></div>
-<div class="block"><p>Required when <code>authenticationMode</code> is set to <code>Password</code>. Maps to <code>Customer.password</code>.</p></div>
+<div class="block"><p>Maps to <code>Customer.password</code>. Required when <code>authenticationMode</code> is set to <code>Password</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>password</code> - value to be set</dd>
@@ -750,7 +750,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setStores(com.commercetools.importapi.models.common.StoreKeyReference...)">
 <h3>setStores</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setStores</span><wbr><span class="parameters">(<a href="../common/StoreKeyReference.html" title="interface in com.commercetools.importapi.models.common">StoreKeyReference</a>...&nbsp;stores)</span></div>
-<div class="block"><p>The References to the Stores with which the Customer is associated. If referenced Stores do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Stores are created.</p></div>
+<div class="block"><p>Maps to <code>Customer.stores</code>. If the referenced Stores do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Stores are created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>stores</code> - values to be set</dd>
@@ -761,7 +761,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setStores(java.util.List)">
 <h3>setStores</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setStores</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/StoreKeyReference.html" title="interface in com.commercetools.importapi.models.common">StoreKeyReference</a>&gt;&nbsp;stores)</span></div>
-<div class="block"><p>The References to the Stores with which the Customer is associated. If referenced Stores do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Stores are created.</p></div>
+<div class="block"><p>Maps to <code>Customer.stores</code>. If the referenced Stores do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Stores are created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>stores</code> - values to be set</dd>
@@ -882,7 +882,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setCustomerGroup(com.commercetools.importapi.models.common.CustomerGroupKeyReference)">
 <h3>setCustomerGroup</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCustomerGroup</span><wbr><span class="parameters">(<a href="../common/CustomerGroupKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerGroupKeyReference</a>&nbsp;customerGroup)</span></div>
-<div class="block"><p>The Reference to the CustomerGroup with which the Customer is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p></div>
+<div class="block"><p>Maps to <code>Customer.customerGroup</code>. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>customerGroup</code> - value to be set</dd>
@@ -915,7 +915,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setDefaultBillingAddress(java.lang.Integer)">
 <h3>setDefaultBillingAddress</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setDefaultBillingAddress</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;defaultBillingAddress)</span></div>
-<div class="block"><p>The index of the address in the addresses array. The <code>defaultBillingAddressId</code> of the customer will be set to the ID of that address.</p></div>
+<div class="block"><p>Index of the address in the <code>addresses</code> array to use as the default billing address. The <code>defaultBillingAddressId</code> of the Customer will be set to the <code>id</code> of that address.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>defaultBillingAddress</code> - value to be set</dd>
@@ -926,7 +926,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setBillingAddresses(java.lang.Integer...)">
 <h3>setBillingAddresses</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setBillingAddresses</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>...&nbsp;billingAddresses)</span></div>
-<div class="block"><p>The indices of the billing addresses in the addresses array. The <code>billingAddressIds</code> of the customer will be set to the IDs of that addresses.</p></div>
+<div class="block"><p>Indices of the billing addresses in the <code>addresses</code> array. The <code>billingAddressIds</code> of the Customer will be set to the <code>id</code> of these addresses.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>billingAddresses</code> - values to be set</dd>
@@ -937,7 +937,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setBillingAddresses(java.util.List)">
 <h3>setBillingAddresses</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setBillingAddresses</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;billingAddresses)</span></div>
-<div class="block"><p>The indices of the billing addresses in the addresses array. The <code>billingAddressIds</code> of the customer will be set to the IDs of that addresses.</p></div>
+<div class="block"><p>Indices of the billing addresses in the <code>addresses</code> array. The <code>billingAddressIds</code> of the Customer will be set to the <code>id</code> of these addresses.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>billingAddresses</code> - values to be set</dd>
@@ -948,7 +948,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setDefaultShippingAddress(java.lang.Integer)">
 <h3>setDefaultShippingAddress</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setDefaultShippingAddress</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;defaultShippingAddress)</span></div>
-<div class="block"><p>The index of the address in the addresses array. The <code>defaultShippingAddressId</code> of the customer will be set to the ID of that address.</p></div>
+<div class="block"><p>The index of the address in the <code>addresses</code> array. The <code>defaultShippingAddressId</code> of the Customer will be set to the <code>id</code> of that address.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>defaultShippingAddress</code> - value to be set</dd>
@@ -959,7 +959,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setShippingAddresses(java.lang.Integer...)">
 <h3>setShippingAddresses</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setShippingAddresses</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>...&nbsp;shippingAddresses)</span></div>
-<div class="block"><p>The indices of the shipping addresses in the addresses array. The <code>shippingAddressIds</code> of the customer will be set to the IDs of that addresses.</p></div>
+<div class="block"><p>Indices of the shipping addresses in the <code>addresses</code> array. The <code>shippingAddressIds</code> of the Customer will be set to the <code>id</code> of these addresses.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>shippingAddresses</code> - values to be set</dd>
@@ -970,7 +970,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setShippingAddresses(java.util.List)">
 <h3>setShippingAddresses</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setShippingAddresses</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;shippingAddresses)</span></div>
-<div class="block"><p>The indices of the shipping addresses in the addresses array. The <code>shippingAddressIds</code> of the customer will be set to the IDs of that addresses.</p></div>
+<div class="block"><p>Indices of the shipping addresses in the <code>addresses</code> array. The <code>shippingAddressIds</code> of the Customer will be set to the <code>id</code> of these addresses.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>shippingAddresses</code> - values to be set</dd>
@@ -992,7 +992,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setCustom(com.commercetools.importapi.models.customfields.Custom)">
 <h3>setCustom</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCustom</span><wbr><span class="parameters">(<a href="../customfields/Custom.html" title="interface in com.commercetools.importapi.models.customfields">Custom</a>&nbsp;custom)</span></div>
-<div class="block"><p>The Custom Fields for this Customer.</p></div>
+<div class="block"><p>Maps to <code>Customer.custom</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>custom</code> - value to be set</dd>

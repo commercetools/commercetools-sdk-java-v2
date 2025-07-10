@@ -83,7 +83,8 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">DiscountCodeState</span><span class="extends-implements">
 extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="interface in io.vrap.rmf.base.client">JsonEnum</a></span></div>
 <div class="block"><p>Indicates the state of a Discount Code in a Cart.</p>
-  <p>If an Order is created from a Cart with a state other than <code>MatchesCart</code>, a DiscountCodeNonApplicable error is returned.</p></div>
+  <p>If an Order is created from a Cart with a state other than <code>MatchesCart</code> or <code>ApplicationStoppedByGroupBestDeal</code>, a DiscountCodeNonApplicable error is returned.</p>
+  <p>For Orders created from a Cart with a <code>ApplicationStoppedByGroupBestDeal</code> state, the discount code is not applied.</p></div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -114,33 +115,38 @@ extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="in
 <div class="table-header col-second">Field</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>static final <a href="DiscountCodeState.html" title="interface in com.commercetools.api.models.cart">DiscountCodeState</a></code></div>
-<div class="col-second even-row-color"><code><a href="#APPLICATION_STOPPED_BY_PREVIOUS_DISCOUNT" class="member-name-link">APPLICATION_STOPPED_BY_PREVIOUS_DISCOUNT</a></code></div>
+<div class="col-second even-row-color"><code><a href="#APPLICATION_STOPPED_BY_GROUP_BEST_DEAL" class="member-name-link">APPLICATION_STOPPED_BY_GROUP_BEST_DEAL</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">The Discount Code is active and no discounts are applied after a discount with <code>StopAfterThisDiscount</code> StackingMode is defined.</div>
+<div class="block">The Discount Code is active, but Cart Discounts from a Discount Group are not applied as another Cart Discount from that Discount Group, offering a better deal, is applied.</div>
 </div>
 <div class="col-first odd-row-color"><code>static final <a href="DiscountCodeState.html" title="interface in com.commercetools.api.models.cart">DiscountCodeState</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#DOES_NOT_MATCH_CART" class="member-name-link">DOES_NOT_MATCH_CART</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#APPLICATION_STOPPED_BY_PREVIOUS_DISCOUNT" class="member-name-link">APPLICATION_STOPPED_BY_PREVIOUS_DISCOUNT</a></code></div>
+<div class="col-last odd-row-color">
+<div class="block">The Discount Code is active, but further Cart Discounts are not applied as a Cart Discount with <code>StopAfterThisDiscount</code> StackingMode is applied.</div>
+</div>
+<div class="col-first even-row-color"><code>static final <a href="DiscountCodeState.html" title="interface in com.commercetools.api.models.cart">DiscountCodeState</a></code></div>
+<div class="col-second even-row-color"><code><a href="#DOES_NOT_MATCH_CART" class="member-name-link">DOES_NOT_MATCH_CART</a></code></div>
+<div class="col-last even-row-color">
+<div class="block">The Discount Code is active and contains at least one active and valid Cart Discount.</div>
+</div>
+<div class="col-first odd-row-color"><code>static final <a href="DiscountCodeState.html" title="interface in com.commercetools.api.models.cart">DiscountCodeState</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#MATCHES_CART" class="member-name-link">MATCHES_CART</a></code></div>
 <div class="col-last odd-row-color">
 <div class="block">The Discount Code is active and contains at least one active and valid Cart Discount.</div>
 </div>
 <div class="col-first even-row-color"><code>static final <a href="DiscountCodeState.html" title="interface in com.commercetools.api.models.cart">DiscountCodeState</a></code></div>
-<div class="col-second even-row-color"><code><a href="#MATCHES_CART" class="member-name-link">MATCHES_CART</a></code></div>
+<div class="col-second even-row-color"><code><a href="#MAX_APPLICATION_REACHED" class="member-name-link">MAX_APPLICATION_REACHED</a></code></div>
 <div class="col-last even-row-color">
-<div class="block">The Discount Code is active and contains at least one active and valid Cart Discount.</div>
-</div>
-<div class="col-first odd-row-color"><code>static final <a href="DiscountCodeState.html" title="interface in com.commercetools.api.models.cart">DiscountCodeState</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#MAX_APPLICATION_REACHED" class="member-name-link">MAX_APPLICATION_REACHED</a></code></div>
-<div class="col-last odd-row-color">
 <div class="block">The <code>maxApplications</code> or <code>maxApplicationsPerCustomer</code> for a DiscountCode has been reached.</div>
 </div>
-<div class="col-first even-row-color"><code>static final <a href="DiscountCodeState.html" title="interface in com.commercetools.api.models.cart">DiscountCodeState</a></code></div>
-<div class="col-second even-row-color"><code><a href="#NOT_ACTIVE" class="member-name-link">NOT_ACTIVE</a></code></div>
-<div class="col-last even-row-color">
+<div class="col-first odd-row-color"><code>static final <a href="DiscountCodeState.html" title="interface in com.commercetools.api.models.cart">DiscountCodeState</a></code></div>
+<div class="col-second odd-row-color"><code><a href="#NOT_ACTIVE" class="member-name-link">NOT_ACTIVE</a></code></div>
+<div class="col-last odd-row-color">
 <div class="block">The Discount Code is not active or does not contain any active Cart Discounts.</div>
 </div>
-<div class="col-first odd-row-color"><code>static final <a href="DiscountCodeState.html" title="interface in com.commercetools.api.models.cart">DiscountCodeState</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#NOT_VALID" class="member-name-link">NOT_VALID</a></code></div>
-<div class="col-last odd-row-color">
+<div class="col-first even-row-color"><code>static final <a href="DiscountCodeState.html" title="interface in com.commercetools.api.models.cart">DiscountCodeState</a></code></div>
+<div class="col-second even-row-color"><code><a href="#NOT_VALID" class="member-name-link">NOT_VALID</a></code></div>
+<div class="col-last even-row-color">
 <div class="block">The Discount Code is not valid or does not contain any valid Cart Discounts.</div>
 </div>
 </div>
@@ -241,7 +247,14 @@ extends <a href="../../../../../io/vrap/rmf/base/client/JsonEnum.html" title="in
 <section class="detail" id="APPLICATION_STOPPED_BY_PREVIOUS_DISCOUNT">
 <h3>APPLICATION_STOPPED_BY_PREVIOUS_DISCOUNT</h3>
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="DiscountCodeState.html" title="interface in com.commercetools.api.models.cart">DiscountCodeState</a></span>&nbsp;<span class="element-name">APPLICATION_STOPPED_BY_PREVIOUS_DISCOUNT</span></div>
-<div class="block"><p>The Discount Code is active and no discounts are applied after a discount with <code>StopAfterThisDiscount</code> StackingMode is defined.</p></div>
+<div class="block"><p>The Discount Code is active, but further Cart Discounts are not applied as a Cart Discount with <code>StopAfterThisDiscount</code> StackingMode is applied.</p></div>
+</section>
+</li>
+<li>
+<section class="detail" id="APPLICATION_STOPPED_BY_GROUP_BEST_DEAL">
+<h3>APPLICATION_STOPPED_BY_GROUP_BEST_DEAL</h3>
+<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="DiscountCodeState.html" title="interface in com.commercetools.api.models.cart">DiscountCodeState</a></span>&nbsp;<span class="element-name">APPLICATION_STOPPED_BY_GROUP_BEST_DEAL</span></div>
+<div class="block"><p>The Discount Code is active, but Cart Discounts from a Discount Group are not applied as another Cart Discount from that Discount Group, offering a better deal, is applied.</p></div>
 </section>
 </li>
 </ul>

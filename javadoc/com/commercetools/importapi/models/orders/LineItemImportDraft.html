@@ -79,7 +79,7 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">LineItemImportDraft</span><span class="extends-implements">
 extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="interface in io.vrap.rmf.base.client">Draft</a>&lt;<a href="LineItemImportDraft.html" title="interface in com.commercetools.importapi.models.orders">LineItemImportDraft</a>&gt;</span></div>
 <div class="block"><p>Represents an individual Line Item in an Order. A line item is a snapshot of a product at the time it was added to the order.</p>
-  <p>You cannot create an Order that includes line item operations that do not exist in the Project or have been deleted. Products and Product Variants referenced by a line item must already exist in the Project.</p>
+  <p>You cannot create an Order that includes line item operations that do not exist in the Project or have been deleted. Products and Product Variants referenced by a line item must already exist in the Project. Product Attributes are merged with Variant Attributes to ensure the full Attribute context of the Product Variant.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -128,7 +128,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../customfields/Custom.html" title="interface in com.commercetools.importapi.models.customfields">Custom</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCustom()" class="member-name-link">getCustom</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Custom Fields for this Line Item.</div>
+<div class="block">Maps to <code>LineItem.custom</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDistributionChannel()" class="member-name-link">getDistributionChannel</a>()</code></div>
@@ -158,11 +158,13 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="ItemShippingDetailsDraft.html" title="interface in com.commercetools.importapi.models.orders">ItemShippingDetailsDraft</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getShippingDetails()" class="member-name-link">getShippingDetails</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Maps to LineItem.shippingDetails.</div>
+<div class="block">Maps to <code>LineItem.shippingDetails</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ItemState.html" title="interface in com.commercetools.importapi.models.orders">ItemState</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getState()" class="member-name-link">getState</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Maps to <code>LineItem.state</code>.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSupplyChannel()" class="member-name-link">getSupplyChannel</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
@@ -191,7 +193,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCustom(com.commercetools.importapi.models.customfields.Custom)" class="member-name-link">setCustom</a><wbr>(<a href="../customfields/Custom.html" title="interface in com.commercetools.importapi.models.customfields">Custom</a>&nbsp;custom)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Custom Fields for this Line Item.</div>
+<div class="block">Maps to <code>LineItem.custom</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setDistributionChannel(com.commercetools.importapi.models.common.ChannelKeyReference)" class="member-name-link">setDistributionChannel</a><wbr>(<a href="../common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a>&nbsp;distributionChannel)</code></div>
@@ -221,17 +223,17 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setShippingDetails(com.commercetools.importapi.models.orders.ItemShippingDetailsDraft)" class="member-name-link">setShippingDetails</a><wbr>(<a href="ItemShippingDetailsDraft.html" title="interface in com.commercetools.importapi.models.orders">ItemShippingDetailsDraft</a>&nbsp;shippingDetails)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Maps to LineItem.shippingDetails.</div>
+<div class="block">Maps to <code>LineItem.shippingDetails</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setState(com.commercetools.importapi.models.orders.ItemState...)" class="member-name-link">setState</a><wbr>(<a href="ItemState.html" title="interface in com.commercetools.importapi.models.orders">ItemState</a>...&nbsp;state)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set state</div>
+<div class="block">Maps to <code>LineItem.state</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setState(java.util.List)" class="member-name-link">setState</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ItemState.html" title="interface in com.commercetools.importapi.models.orders">ItemState</a>&gt;&nbsp;state)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">set state</div>
+<div class="block">Maps to <code>LineItem.state</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setSupplyChannel(com.commercetools.importapi.models.common.ChannelKeyReference)" class="member-name-link">setSupplyChannel</a><wbr>(<a href="../common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a>&nbsp;supplyChannel)</code></div>
@@ -277,7 +279,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <h3>getProduct</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../common/ProductKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductKeyReference</a></span>&nbsp;<span class="element-name">getProduct</span>()</div>
-<div class="block"><p>Maps to <code>LineItem.productId</code>.</p></div>
+<div class="block"><p>Maps to <code>LineItem.productId</code>. If the referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Product is created.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>product</dd>
@@ -340,6 +342,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <h3>getState</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ItemState.html" title="interface in com.commercetools.importapi.models.orders">ItemState</a>&gt;</span>&nbsp;<span class="element-name">getState</span>()</div>
+<div class="block"><p>Maps to <code>LineItem.state</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>state</dd>
@@ -351,7 +354,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <h3>getSupplyChannel</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a></span>&nbsp;<span class="element-name">getSupplyChannel</span>()</div>
-<div class="block"><p>Maps to <code>LineItem.supplyChannel</code>. The Reference to the Supply Channel with which the LineItem is associated. If referenced Supply Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Supply Channel is created.</p></div>
+<div class="block"><p>Maps to <code>LineItem.supplyChannel</code>. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>supplyChannel</dd>
@@ -363,7 +366,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <h3>getDistributionChannel</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a></span>&nbsp;<span class="element-name">getDistributionChannel</span>()</div>
-<div class="block"><p>Maps to <code>LineItem.distributionChannel</code>. The Reference to the Distribution Channel with which the LineItem is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Distribution Channel is created.</p></div>
+<div class="block"><p>Maps to <code>LineItem.distributionChannel</code>. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>distributionChannel</dd>
@@ -387,7 +390,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <h3>getShippingDetails</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="ItemShippingDetailsDraft.html" title="interface in com.commercetools.importapi.models.orders">ItemShippingDetailsDraft</a></span>&nbsp;<span class="element-name">getShippingDetails</span>()</div>
-<div class="block"><p>Maps to LineItem.shippingDetails.</p></div>
+<div class="block"><p>Maps to <code>LineItem.shippingDetails</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>shippingDetails</dd>
@@ -399,7 +402,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <h3>getCustom</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../customfields/Custom.html" title="interface in com.commercetools.importapi.models.customfields">Custom</a></span>&nbsp;<span class="element-name">getCustom</span>()</div>
-<div class="block"><p>Custom Fields for this Line Item.</p></div>
+<div class="block"><p>Maps to <code>LineItem.custom</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>custom</dd>
@@ -410,7 +413,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <section class="detail" id="setProduct(com.commercetools.importapi.models.common.ProductKeyReference)">
 <h3>setProduct</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setProduct</span><wbr><span class="parameters">(<a href="../common/ProductKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductKeyReference</a>&nbsp;product)</span></div>
-<div class="block"><p>Maps to <code>LineItem.productId</code>.</p></div>
+<div class="block"><p>Maps to <code>LineItem.productId</code>. If the referenced Product does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Product is created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>product</code> - value to be set</dd>
@@ -465,7 +468,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <section class="detail" id="setState(com.commercetools.importapi.models.orders.ItemState...)">
 <h3>setState</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setState</span><wbr><span class="parameters">(<a href="ItemState.html" title="interface in com.commercetools.importapi.models.orders">ItemState</a>...&nbsp;state)</span></div>
-<div class="block">set state</div>
+<div class="block"><p>Maps to <code>LineItem.state</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>state</code> - values to be set</dd>
@@ -476,7 +479,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <section class="detail" id="setState(java.util.List)">
 <h3>setState</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setState</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ItemState.html" title="interface in com.commercetools.importapi.models.orders">ItemState</a>&gt;&nbsp;state)</span></div>
-<div class="block">set state</div>
+<div class="block"><p>Maps to <code>LineItem.state</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>state</code> - values to be set</dd>
@@ -487,7 +490,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <section class="detail" id="setSupplyChannel(com.commercetools.importapi.models.common.ChannelKeyReference)">
 <h3>setSupplyChannel</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setSupplyChannel</span><wbr><span class="parameters">(<a href="../common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a>&nbsp;supplyChannel)</span></div>
-<div class="block"><p>Maps to <code>LineItem.supplyChannel</code>. The Reference to the Supply Channel with which the LineItem is associated. If referenced Supply Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Supply Channel is created.</p></div>
+<div class="block"><p>Maps to <code>LineItem.supplyChannel</code>. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>supplyChannel</code> - value to be set</dd>
@@ -498,7 +501,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <section class="detail" id="setDistributionChannel(com.commercetools.importapi.models.common.ChannelKeyReference)">
 <h3>setDistributionChannel</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setDistributionChannel</span><wbr><span class="parameters">(<a href="../common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a>&nbsp;distributionChannel)</span></div>
-<div class="block"><p>Maps to <code>LineItem.distributionChannel</code>. The Reference to the Distribution Channel with which the LineItem is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Distribution Channel is created.</p></div>
+<div class="block"><p>Maps to <code>LineItem.distributionChannel</code>. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>distributionChannel</code> - value to be set</dd>
@@ -520,7 +523,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <section class="detail" id="setShippingDetails(com.commercetools.importapi.models.orders.ItemShippingDetailsDraft)">
 <h3>setShippingDetails</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setShippingDetails</span><wbr><span class="parameters">(<a href="ItemShippingDetailsDraft.html" title="interface in com.commercetools.importapi.models.orders">ItemShippingDetailsDraft</a>&nbsp;shippingDetails)</span></div>
-<div class="block"><p>Maps to LineItem.shippingDetails.</p></div>
+<div class="block"><p>Maps to <code>LineItem.shippingDetails</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>shippingDetails</code> - value to be set</dd>
@@ -531,7 +534,7 @@ extends <a href="../../../../../io/vrap/rmf/base/client/Draft.html" title="inter
 <section class="detail" id="setCustom(com.commercetools.importapi.models.customfields.Custom)">
 <h3>setCustom</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCustom</span><wbr><span class="parameters">(<a href="../customfields/Custom.html" title="interface in com.commercetools.importapi.models.customfields">Custom</a>&nbsp;custom)</span></div>
-<div class="block"><p>Custom Fields for this Line Item.</p></div>
+<div class="block"><p>Maps to <code>LineItem.custom</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>custom</code> - value to be set</dd>

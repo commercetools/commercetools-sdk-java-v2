@@ -218,7 +218,7 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/importapi/models/importsummaries/OperationStatesBuilder.html#unresolved(java.lang.Long)" class="member-name-link">unresolved(Long)</a> - Method in class com.commercetools.importapi.models.importsummaries.<a href="../com/commercetools/importapi/models/importsummaries/OperationStatesBuilder.html" title="class in com.commercetools.importapi.models.importsummaries">OperationStatesBuilder</a></dt>
 <dd>
-<div class="block">The number of resources in the <code>unresolved</code> state.</div>
+<div class="block">The number of ImportOperations in the <code>unresolved</code> state.</div>
 </dd>
 <dt><a href="../com/commercetools/importapi/models/common/ProcessingState.ProcessingStateEnum.html#UNRESOLVED" class="member-name-link">UNRESOLVED</a> - Enum constant in enum com.commercetools.importapi.models.common.<a href="../com/commercetools/importapi/models/common/ProcessingState.ProcessingStateEnum.html" title="enum in com.commercetools.importapi.models.common">ProcessingState.ProcessingStateEnum</a></dt>
 <dd>
@@ -230,15 +230,15 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="../com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#unresolvedReferences(com.commercetools.importapi.models.common.UnresolvedReferences...)" class="member-name-link">unresolvedReferences(UnresolvedReferences...)</a> - Method in class com.commercetools.importapi.models.importoperations.<a href="../com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></dt>
 <dd>
-<div class="block">In case of unresolved status this array will show the unresolved references</div>
+<div class="block">If the resource being imported contains references to resources which do not exist, these references are contained within this array.</div>
 </dd>
 <dt><a href="../com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html#unresolvedReferences(java.util.List)" class="member-name-link">unresolvedReferences(List&lt;UnresolvedReferences&gt;)</a> - Method in class com.commercetools.importapi.models.importoperations.<a href="../com/commercetools/importapi/models/importoperations/ImportOperationBuilder.html" title="class in com.commercetools.importapi.models.importoperations">ImportOperationBuilder</a></dt>
 <dd>
-<div class="block">In case of unresolved status this array will show the unresolved references</div>
+<div class="block">If the resource being imported contains references to resources which do not exist, these references are contained within this array.</div>
 </dd>
 <dt><a href="../com/commercetools/importapi/models/common/UnresolvedReferences.html" class="type-name-link" title="interface in com.commercetools.importapi.models.common">UnresolvedReferences</a> - Interface in <a href="../com/commercetools/importapi/models/common/package-summary.html">com.commercetools.importapi.models.common</a></dt>
 <dd>
-<div class="block">References a resource which could not be resolved.</div>
+<div class="block">Contains a reference to a resource which does not exist.</div>
 </dd>
 <dt><a href="../com/commercetools/importapi/models/common/UnresolvedReferencesBuilder.html" class="type-name-link" title="class in com.commercetools.importapi.models.common">UnresolvedReferencesBuilder</a> - Class in <a href="../com/commercetools/importapi/models/common/package-summary.html">com.commercetools.importapi.models.common</a></dt>
 <dd>
@@ -743,7 +743,13 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/graphql/api/GraphQL.html#updateCustomerGroup(java.util.function.UnaryOperator)" class="member-name-link">updateCustomerGroup(UnaryOperator&lt;UpdateCustomerGroupGraphQLQuery.Builder&gt;)</a> - Static method in class com.commercetools.graphql.api.<a href="../com/commercetools/graphql/api/GraphQL.html" title="class in com.commercetools.graphql.api">GraphQL</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/api/models/recurring_order/RecurringOrderSetOrderSkipConfigurationActionBuilder.html#updatedExpiresAt(java.time.ZonedDateTime)" class="member-name-link">updatedExpiresAt(ZonedDateTime)</a> - Method in class com.commercetools.api.models.recurring_order.<a href="../com/commercetools/api/models/recurring_order/RecurringOrderSetOrderSkipConfigurationActionBuilder.html" title="class in com.commercetools.api.models.recurring_order">RecurringOrderSetOrderSkipConfigurationActionBuilder</a></dt>
+<dd>
+<div class="block">Date and time (UTC) the Recurring Order will resume and start to generate new orders.</div>
+</dd>
 <dt><a href="../com/commercetools/graphql/api/GraphQL.html#updateDiscountCode(java.util.function.UnaryOperator)" class="member-name-link">updateDiscountCode(UnaryOperator&lt;UpdateDiscountCodeGraphQLQuery.Builder&gt;)</a> - Static method in class com.commercetools.graphql.api.<a href="../com/commercetools/graphql/api/GraphQL.html" title="class in com.commercetools.graphql.api">GraphQL</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/graphql/api/GraphQL.html#updateDiscountGroup(java.util.function.UnaryOperator)" class="member-name-link">updateDiscountGroup(UnaryOperator&lt;UpdateDiscountGroupGraphQLQuery.Builder&gt;)</a> - Static method in class com.commercetools.graphql.api.<a href="../com/commercetools/graphql/api/GraphQL.html" title="class in com.commercetools.graphql.api">GraphQL</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/message/ProductPriceDiscountsSetMessageBuilder.html#updatedPrices(com.commercetools.api.models.message.ProductPriceDiscountsSetUpdatedPrice...)" class="member-name-link">updatedPrices(ProductPriceDiscountsSetUpdatedPrice...)</a> - Method in class com.commercetools.api.models.message.<a href="../com/commercetools/api/models/message/ProductPriceDiscountsSetMessageBuilder.html" title="class in com.commercetools.api.models.message">ProductPriceDiscountsSetMessageBuilder</a></dt>
 <dd>
@@ -829,13 +835,15 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/graphql/api/GraphQL.html#updatePayment(java.util.function.UnaryOperator)" class="member-name-link">updatePayment(UnaryOperator&lt;UpdatePaymentGraphQLQuery.Builder&gt;)</a> - Static method in class com.commercetools.graphql.api.<a href="../com/commercetools/graphql/api/GraphQL.html" title="class in com.commercetools.graphql.api">GraphQL</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/graphql/api/GraphQL.html#updatePaymentMethod(java.util.function.UnaryOperator)" class="member-name-link">updatePaymentMethod(UnaryOperator&lt;UpdatePaymentMethodGraphQLQuery.Builder&gt;)</a> - Static method in class com.commercetools.graphql.api.<a href="../com/commercetools/graphql/api/GraphQL.html" title="class in com.commercetools.graphql.api">GraphQL</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/graphql/api/GraphQL.html#updateProduct(java.util.function.UnaryOperator)" class="member-name-link">updateProduct(UnaryOperator&lt;UpdateProductGraphQLQuery.Builder&gt;)</a> - Static method in class com.commercetools.graphql.api.<a href="../com/commercetools/graphql/api/GraphQL.html" title="class in com.commercetools.graphql.api">GraphQL</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/api/models/cart/CartRecalculateActionBuilder.html#updateProductData(java.lang.Boolean)" class="member-name-link">updateProductData(Boolean)</a> - Method in class com.commercetools.api.models.cart.<a href="../com/commercetools/api/models/cart/CartRecalculateActionBuilder.html" title="class in com.commercetools.api.models.cart">CartRecalculateActionBuilder</a></dt>
 <dd>
 <div class="block">
-   Leave empty or set to <code>false</code> to only update the Prices and TaxRates of the Line Items.
-   Set to <code>true</code> to update the Line Items' product data (like <code>name</code>, <code>variant</code> and <code>productType</code>) also.
+   Leave empty or set as <code>false</code> to update only the Prices and TaxRates of the Line Items.
+   Set as <code>true</code> to update the Product data (such as <code>name</code>, <code>variant</code>, <code>productType</code>, and Product Attributes) of the Line Items.
   </div>
 </dd>
 <dt><a href="../com/commercetools/api/models/customer/CustomerSigninBuilder.html#updateProductData(java.lang.Boolean)" class="member-name-link">updateProductData(Boolean)</a> - Method in class com.commercetools.api.models.customer.<a href="../com/commercetools/api/models/customer/CustomerSigninBuilder.html" title="class in com.commercetools.api.models.customer">CustomerSigninBuilder</a></dt>
@@ -872,6 +880,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="../com/commercetools/graphql/api/GraphQL.html#updateQuote(java.util.function.UnaryOperator)" class="member-name-link">updateQuote(UnaryOperator&lt;UpdateQuoteGraphQLQuery.Builder&gt;)</a> - Static method in class com.commercetools.graphql.api.<a href="../com/commercetools/graphql/api/GraphQL.html" title="class in com.commercetools.graphql.api">GraphQL</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/graphql/api/GraphQL.html#updateQuoteRequest(java.util.function.UnaryOperator)" class="member-name-link">updateQuoteRequest(UnaryOperator&lt;UpdateQuoteRequestGraphQLQuery.Builder&gt;)</a> - Static method in class com.commercetools.graphql.api.<a href="../com/commercetools/graphql/api/GraphQL.html" title="class in com.commercetools.graphql.api">GraphQL</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/graphql/api/GraphQL.html#updateRecurrencePolicy(java.util.function.UnaryOperator)" class="member-name-link">updateRecurrencePolicy(UnaryOperator&lt;UpdateRecurrencePolicyGraphQLQuery.Builder&gt;)</a> - Static method in class com.commercetools.graphql.api.<a href="../com/commercetools/graphql/api/GraphQL.html" title="class in com.commercetools.graphql.api">GraphQL</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="../com/commercetools/graphql/api/GraphQL.html#updateRecurringOrder(java.util.function.UnaryOperator)" class="member-name-link">updateRecurringOrder(UnaryOperator&lt;UpdateRecurringOrderGraphQLQuery.Builder&gt;)</a> - Static method in class com.commercetools.graphql.api.<a href="../com/commercetools/graphql/api/GraphQL.html" title="class in com.commercetools.graphql.api">GraphQL</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="../com/commercetools/graphql/api/GraphQL.html#updateReview(java.util.function.UnaryOperator)" class="member-name-link">updateReview(UnaryOperator&lt;UpdateReviewGraphQLQuery.Builder&gt;)</a> - Static method in class com.commercetools.graphql.api.<a href="../com/commercetools/graphql/api/GraphQL.html" title="class in com.commercetools.graphql.api">GraphQL</a></dt>
 <dd>&nbsp;</dd>

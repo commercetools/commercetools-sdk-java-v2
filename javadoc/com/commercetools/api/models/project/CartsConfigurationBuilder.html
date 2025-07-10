@@ -148,6 +148,16 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Default value for the <code>deleteDaysAfterLastModification</code> parameter of the CartDraft and MyCartDraft.</div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../cart/RoundingMode.html" title="interface in com.commercetools.api.models.cart">RoundingMode</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPriceRoundingMode()" class="member-name-link">getPriceRoundingMode</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Default value for the <code>priceRoundingMode</code> parameter of the CartDraft.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../cart/RoundingMode.html" title="interface in com.commercetools.api.models.cart">RoundingMode</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTaxRoundingMode()" class="member-name-link">getTaxRoundingMode</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Default value for the <code>taxRoundingMode</code> parameter of the CartDraft.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="CartsConfigurationBuilder.html" title="class in com.commercetools.api.models.project">CartsConfigurationBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
@@ -157,6 +167,16 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of(com.commercetools.api.models.project.CartsConfiguration)" class="member-name-link">of</a><wbr>(<a href="CartsConfiguration.html" title="interface in com.commercetools.api.models.project">CartsConfiguration</a>&nbsp;template)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">create builder for CartsConfiguration instance</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CartsConfigurationBuilder.html" title="class in com.commercetools.api.models.project">CartsConfigurationBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#priceRoundingMode(com.commercetools.api.models.cart.RoundingMode)" class="member-name-link">priceRoundingMode</a><wbr>(<a href="../cart/RoundingMode.html" title="interface in com.commercetools.api.models.cart">RoundingMode</a>&nbsp;priceRoundingMode)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Default value for the <code>priceRoundingMode</code> parameter of the CartDraft.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CartsConfigurationBuilder.html" title="class in com.commercetools.api.models.project">CartsConfigurationBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#taxRoundingMode(com.commercetools.api.models.cart.RoundingMode)" class="member-name-link">taxRoundingMode</a><wbr>(<a href="../cart/RoundingMode.html" title="interface in com.commercetools.api.models.cart">RoundingMode</a>&nbsp;taxRoundingMode)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Default value for the <code>taxRoundingMode</code> parameter of the CartDraft.</div>
 </div>
 </div>
 </div>
@@ -219,6 +239,34 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
+<section class="detail" id="priceRoundingMode(com.commercetools.api.models.cart.RoundingMode)">
+<h3>priceRoundingMode</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartsConfigurationBuilder.html" title="class in com.commercetools.api.models.project">CartsConfigurationBuilder</a></span>&nbsp;<span class="element-name">priceRoundingMode</span><wbr><span class="parameters">(@Nullable
+ <a href="../cart/RoundingMode.html" title="interface in com.commercetools.api.models.cart">RoundingMode</a>&nbsp;priceRoundingMode)</span></div>
+<div class="block"><p>Default value for the <code>priceRoundingMode</code> parameter of the CartDraft. Indicates how the total prices on LineItems and CustomLineItems are rounded when calculated.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>priceRoundingMode</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="taxRoundingMode(com.commercetools.api.models.cart.RoundingMode)">
+<h3>taxRoundingMode</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CartsConfigurationBuilder.html" title="class in com.commercetools.api.models.project">CartsConfigurationBuilder</a></span>&nbsp;<span class="element-name">taxRoundingMode</span><wbr><span class="parameters">(@Nullable
+ <a href="../cart/RoundingMode.html" title="interface in com.commercetools.api.models.cart">RoundingMode</a>&nbsp;taxRoundingMode)</span></div>
+<div class="block"><p>Default value for the <code>taxRoundingMode</code> parameter of the CartDraft. Indicates how monetary values are rounded when calculating taxes for <code>taxedPrice</code>.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>taxRoundingMode</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getDeleteDaysAfterLastModification()">
 <h3>getDeleteDaysAfterLastModification</h3>
 <div class="member-signature"><span class="annotations">@Nullable
@@ -240,6 +288,30 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>countryTaxRateFallbackEnabled</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getPriceRoundingMode()">
+<h3>getPriceRoundingMode</h3>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../cart/RoundingMode.html" title="interface in com.commercetools.api.models.cart">RoundingMode</a></span>&nbsp;<span class="element-name">getPriceRoundingMode</span>()</div>
+<div class="block"><p>Default value for the <code>priceRoundingMode</code> parameter of the CartDraft. Indicates how the total prices on LineItems and CustomLineItems are rounded when calculated.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>priceRoundingMode</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getTaxRoundingMode()">
+<h3>getTaxRoundingMode</h3>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../cart/RoundingMode.html" title="interface in com.commercetools.api.models.cart">RoundingMode</a></span>&nbsp;<span class="element-name">getTaxRoundingMode</span>()</div>
+<div class="block"><p>Default value for the <code>taxRoundingMode</code> parameter of the CartDraft. Indicates how monetary values are rounded when calculating taxes for <code>taxedPrice</code>.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>taxRoundingMode</dd>
 </dl>
 </section>
 </li>

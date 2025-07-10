@@ -717,10 +717,24 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <h3>getCustomerGroup</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../customer_group/CustomerGroupResourceIdentifier.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupResourceIdentifier</a></span>&nbsp;<span class="element-name">getCustomerGroup</span>()</div>
-<div class="block"><p>Sets the CustomerGroup for the Customer.</p></div>
+<div class="block"><p>Sets the CustomerGroup for the Customer.</p>
+  <p>For new projects, use <code>customerGroupAssignments</code> instead. It supports assigning Customers to multiple Customer Groups and provides greater flexibility in complex pricing scenarios.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>customerGroup</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getCustomerGroupAssignments()">
+<h3>getCustomerGroupAssignments</h3>
+<div class="member-signature"><span class="annotations">@Valid
+</span><span class="return-type">@Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CustomerGroupAssignmentDraft.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignmentDraft</a>&gt;</span>&nbsp;<span class="element-name">getCustomerGroupAssignments</span>()</div>
+<div class="block"><p>Customer Groups to assign the Customer to.</p>
+  <p>Used for Line Item price selection.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>customerGroupAssignments</dd>
 </dl>
 </section>
 </li>
@@ -787,18 +801,6 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>authenticationMode</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getCustomerGroupAssignments()">
-<h3>getCustomerGroupAssignments</h3>
-<div class="member-signature"><span class="annotations">@Valid
-</span><span class="return-type">@Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CustomerGroupAssignmentDraft.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignmentDraft</a>&gt;</span>&nbsp;<span class="element-name">getCustomerGroupAssignments</span>()</div>
-<div class="block"><p>Customer Groups to assign the Customer to.</p></div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>customerGroupAssignments</dd>
 </dl>
 </section>
 </li>
@@ -1074,10 +1076,35 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <section class="detail" id="setCustomerGroup(com.commercetools.api.models.customer_group.CustomerGroupResourceIdentifier)">
 <h3>setCustomerGroup</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCustomerGroup</span><wbr><span class="parameters">(<a href="../customer_group/CustomerGroupResourceIdentifier.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupResourceIdentifier</a>&nbsp;customerGroup)</span></div>
-<div class="block"><p>Sets the CustomerGroup for the Customer.</p></div>
+<div class="block"><p>Sets the CustomerGroup for the Customer.</p>
+  <p>For new projects, use <code>customerGroupAssignments</code> instead. It supports assigning Customers to multiple Customer Groups and provides greater flexibility in complex pricing scenarios.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>customerGroup</code> - value to be set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setCustomerGroupAssignments(com.commercetools.api.models.customer.CustomerGroupAssignmentDraft...)">
+<h3>setCustomerGroupAssignments</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCustomerGroupAssignments</span><wbr><span class="parameters">(<a href="CustomerGroupAssignmentDraft.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignmentDraft</a>...&nbsp;customerGroupAssignments)</span></div>
+<div class="block"><p>Customer Groups to assign the Customer to.</p>
+  <p>Used for Line Item price selection.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>customerGroupAssignments</code> - values to be set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setCustomerGroupAssignments(java.util.List)">
+<h3>setCustomerGroupAssignments</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCustomerGroupAssignments</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CustomerGroupAssignmentDraft.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignmentDraft</a>&gt;&nbsp;customerGroupAssignments)</span></div>
+<div class="block"><p>Customer Groups to assign the Customer to.</p>
+  <p>Used for Line Item price selection.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>customerGroupAssignments</code> - values to be set</dd>
 </dl>
 </section>
 </li>
@@ -1157,28 +1184,6 @@ extends <a href="../CustomizableDraft.html" title="interface in com.commercetool
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>authenticationMode</code> - value to be set</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setCustomerGroupAssignments(com.commercetools.api.models.customer.CustomerGroupAssignmentDraft...)">
-<h3>setCustomerGroupAssignments</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCustomerGroupAssignments</span><wbr><span class="parameters">(<a href="CustomerGroupAssignmentDraft.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignmentDraft</a>...&nbsp;customerGroupAssignments)</span></div>
-<div class="block"><p>Customer Groups to assign the Customer to.</p></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>customerGroupAssignments</code> - values to be set</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setCustomerGroupAssignments(java.util.List)">
-<h3>setCustomerGroupAssignments</h3>
-<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCustomerGroupAssignments</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CustomerGroupAssignmentDraft.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignmentDraft</a>&gt;&nbsp;customerGroupAssignments)</span></div>
-<div class="block"><p>Customer Groups to assign the Customer to.</p></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>customerGroupAssignments</code> - values to be set</dd>
 </dl>
 </section>
 </li>

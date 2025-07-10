@@ -138,7 +138,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addStores(java.util.function.Function)" class="member-name-link">addStores</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StoreKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">StoreKeyReferenceBuilder</a>,<wbr><a href="../common/StoreKeyReference.html" title="interface in com.commercetools.importapi.models.common">StoreKeyReference</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The References to the Stores with which the Customer is associated.</div>
+<div class="block">Maps to <code>Customer.stores</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#authenticationMode(com.commercetools.importapi.models.customers.AuthenticationMode)" class="member-name-link">authenticationMode</a><wbr>(<a href="AuthenticationMode.html" title="interface in com.commercetools.importapi.models.customers">AuthenticationMode</a>&nbsp;authenticationMode)</code></div>
@@ -151,12 +151,12 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#billingAddresses(java.lang.Integer...)" class="member-name-link">billingAddresses</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>...&nbsp;billingAddresses)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The indices of the billing addresses in the addresses array.</div>
+<div class="block">Indices of the billing addresses in the <code>addresses</code> array.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#billingAddresses(java.util.List)" class="member-name-link">billingAddresses</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;billingAddresses)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The indices of the billing addresses in the addresses array.</div>
+<div class="block">Indices of the billing addresses in the <code>addresses</code> array.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomerImport.html" title="interface in com.commercetools.importapi.models.customers">CustomerImport</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#build()" class="member-name-link">build</a>()</code></div>
@@ -176,22 +176,22 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#custom(com.commercetools.importapi.models.customfields.Custom)" class="member-name-link">custom</a><wbr>(<a href="../customfields/Custom.html" title="interface in com.commercetools.importapi.models.customfields">Custom</a>&nbsp;custom)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The Custom Fields for this Customer.</div>
+<div class="block">Maps to <code>Customer.custom</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#custom(java.util.function.Function)" class="member-name-link">custom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../customfields/CustomBuilder.html" title="class in com.commercetools.importapi.models.customfields">CustomBuilder</a>,<wbr><a href="../customfields/CustomBuilder.html" title="class in com.commercetools.importapi.models.customfields">CustomBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The Custom Fields for this Customer.</div>
+<div class="block">Maps to <code>Customer.custom</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#customerGroup(com.commercetools.importapi.models.common.CustomerGroupKeyReference)" class="member-name-link">customerGroup</a><wbr>(<a href="../common/CustomerGroupKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerGroupKeyReference</a>&nbsp;customerGroup)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The Reference to the CustomerGroup with which the Customer is associated.</div>
+<div class="block">Maps to <code>Customer.customerGroup</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#customerGroup(java.util.function.Function)" class="member-name-link">customerGroup</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CustomerGroupKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">CustomerGroupKeyReferenceBuilder</a>,<wbr><a href="../common/CustomerGroupKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">CustomerGroupKeyReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The Reference to the CustomerGroup with which the Customer is associated.</div>
+<div class="block">Maps to <code>Customer.customerGroup</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#customerNumber(java.lang.String)" class="member-name-link">customerNumber</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;customerNumber)</code></div>
@@ -206,12 +206,12 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#defaultBillingAddress(java.lang.Integer)" class="member-name-link">defaultBillingAddress</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;defaultBillingAddress)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The index of the address in the addresses array.</div>
+<div class="block">Index of the address in the <code>addresses</code> array to use as the default billing address.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#defaultShippingAddress(java.lang.Integer)" class="member-name-link">defaultShippingAddress</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;defaultShippingAddress)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The index of the address in the addresses array.</div>
+<div class="block">The index of the address in the <code>addresses</code> array.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#email(java.lang.String)" class="member-name-link">email</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;email)</code></div>
@@ -244,7 +244,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBillingAddresses()" class="member-name-link">getBillingAddresses</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The indices of the billing addresses in the addresses array.</div>
+<div class="block">Indices of the billing addresses in the <code>addresses</code> array.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCompanyName()" class="member-name-link">getCompanyName</a>()</code></div>
@@ -254,12 +254,12 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../customfields/Custom.html" title="interface in com.commercetools.importapi.models.customfields">Custom</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCustom()" class="member-name-link">getCustom</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The Custom Fields for this Customer.</div>
+<div class="block">Maps to <code>Customer.custom</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/CustomerGroupKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerGroupKeyReference</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCustomerGroup()" class="member-name-link">getCustomerGroup</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The Reference to the CustomerGroup with which the Customer is associated.</div>
+<div class="block">Maps to <code>Customer.customerGroup</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCustomerNumber()" class="member-name-link">getCustomerNumber</a>()</code></div>
@@ -274,12 +274,12 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDefaultBillingAddress()" class="member-name-link">getDefaultBillingAddress</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The index of the address in the addresses array.</div>
+<div class="block">Index of the address in the <code>addresses</code> array to use as the default billing address.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDefaultShippingAddress()" class="member-name-link">getDefaultShippingAddress</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The index of the address in the addresses array.</div>
+<div class="block">The index of the address in the <code>addresses</code> array.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getEmail()" class="member-name-link">getEmail</a>()</code></div>
@@ -324,7 +324,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPassword()" class="member-name-link">getPassword</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Required when <code>authenticationMode</code> is set to <code>Password</code>.</div>
+<div class="block">Maps to <code>Customer.password</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSalutation()" class="member-name-link">getSalutation</a>()</code></div>
@@ -334,12 +334,12 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getShippingAddresses()" class="member-name-link">getShippingAddresses</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The indices of the shipping addresses in the addresses array.</div>
+<div class="block">Indices of the shipping addresses in the <code>addresses</code> array.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/StoreKeyReference.html" title="interface in com.commercetools.importapi.models.common">StoreKeyReference</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStores()" class="member-name-link">getStores</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The References to the Stores with which the Customer is associated.</div>
+<div class="block">Maps to <code>Customer.stores</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTitle()" class="member-name-link">getTitle</a>()</code></div>
@@ -389,7 +389,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#password(java.lang.String)" class="member-name-link">password</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;password)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Required when <code>authenticationMode</code> is set to <code>Password</code>.</div>
+<div class="block">Maps to <code>Customer.password</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusAddresses(com.commercetools.importapi.models.customers.CustomerAddress...)" class="member-name-link">plusAddresses</a><wbr>(<a href="CustomerAddress.html" title="interface in com.commercetools.importapi.models.customers">CustomerAddress</a>...&nbsp;addresses)</code></div>
@@ -404,22 +404,22 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusBillingAddresses(java.lang.Integer...)" class="member-name-link">plusBillingAddresses</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>...&nbsp;billingAddresses)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The indices of the billing addresses in the addresses array.</div>
+<div class="block">Indices of the billing addresses in the <code>addresses</code> array.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusShippingAddresses(java.lang.Integer...)" class="member-name-link">plusShippingAddresses</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>...&nbsp;shippingAddresses)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The indices of the shipping addresses in the addresses array.</div>
+<div class="block">Indices of the shipping addresses in the <code>addresses</code> array.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusStores(com.commercetools.importapi.models.common.StoreKeyReference...)" class="member-name-link">plusStores</a><wbr>(<a href="../common/StoreKeyReference.html" title="interface in com.commercetools.importapi.models.common">StoreKeyReference</a>...&nbsp;stores)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The References to the Stores with which the Customer is associated.</div>
+<div class="block">Maps to <code>Customer.stores</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#plusStores(java.util.function.Function)" class="member-name-link">plusStores</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StoreKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">StoreKeyReferenceBuilder</a>,<wbr><a href="../common/StoreKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">StoreKeyReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The References to the Stores with which the Customer is associated.</div>
+<div class="block">Maps to <code>Customer.stores</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#salutation(java.lang.String)" class="member-name-link">salutation</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;salutation)</code></div>
@@ -434,27 +434,27 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setStores(java.util.function.Function)" class="member-name-link">setStores</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StoreKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">StoreKeyReferenceBuilder</a>,<wbr><a href="../common/StoreKeyReference.html" title="interface in com.commercetools.importapi.models.common">StoreKeyReference</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The References to the Stores with which the Customer is associated.</div>
+<div class="block">Maps to <code>Customer.stores</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingAddresses(java.lang.Integer...)" class="member-name-link">shippingAddresses</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>...&nbsp;shippingAddresses)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The indices of the shipping addresses in the addresses array.</div>
+<div class="block">Indices of the shipping addresses in the <code>addresses</code> array.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingAddresses(java.util.List)" class="member-name-link">shippingAddresses</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;shippingAddresses)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The indices of the shipping addresses in the addresses array.</div>
+<div class="block">Indices of the shipping addresses in the <code>addresses</code> array.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#stores(com.commercetools.importapi.models.common.StoreKeyReference...)" class="member-name-link">stores</a><wbr>(<a href="../common/StoreKeyReference.html" title="interface in com.commercetools.importapi.models.common">StoreKeyReference</a>...&nbsp;stores)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The References to the Stores with which the Customer is associated.</div>
+<div class="block">Maps to <code>Customer.stores</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#stores(java.util.List)" class="member-name-link">stores</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/StoreKeyReference.html" title="interface in com.commercetools.importapi.models.common">StoreKeyReference</a>&gt;&nbsp;stores)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The References to the Stores with which the Customer is associated.</div>
+<div class="block">Maps to <code>Customer.stores</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#title(java.lang.String)" class="member-name-link">title</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;title)</code></div>
@@ -474,17 +474,17 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withCustom(java.util.function.Function)" class="member-name-link">withCustom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../customfields/CustomBuilder.html" title="class in com.commercetools.importapi.models.customfields">CustomBuilder</a>,<wbr><a href="../customfields/Custom.html" title="interface in com.commercetools.importapi.models.customfields">Custom</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The Custom Fields for this Customer.</div>
+<div class="block">Maps to <code>Customer.custom</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withCustomerGroup(java.util.function.Function)" class="member-name-link">withCustomerGroup</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CustomerGroupKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">CustomerGroupKeyReferenceBuilder</a>,<wbr><a href="../common/CustomerGroupKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerGroupKeyReference</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The Reference to the CustomerGroup with which the Customer is associated.</div>
+<div class="block">Maps to <code>Customer.customerGroup</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withStores(java.util.function.Function)" class="member-name-link">withStores</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StoreKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">StoreKeyReferenceBuilder</a>,<wbr><a href="../common/StoreKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">StoreKeyReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">The References to the Stores with which the Customer is associated.</div>
+<div class="block">Maps to <code>Customer.stores</code>.</div>
 </div>
 </div>
 </div>
@@ -521,7 +521,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="key(java.lang.String)">
 <h3>key</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></span>&nbsp;<span class="element-name">key</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
-<div class="block"><p>User-defined unique identifier. If a Customer with this <code>key</code> exists, it will be updated with the imported data.</p></div>
+<div class="block"><p>User-defined unique identifier. If a Customer with this <code>key</code> exists, it is updated with the imported data.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>key</code> - value to be set</dd>
@@ -562,7 +562,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>password</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></span>&nbsp;<span class="element-name">password</span><wbr><span class="parameters">(@Nullable
  <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;password)</span></div>
-<div class="block"><p>Required when <code>authenticationMode</code> is set to <code>Password</code>. Maps to <code>Customer.password</code>.</p></div>
+<div class="block"><p>Maps to <code>Customer.password</code>. Required when <code>authenticationMode</code> is set to <code>Password</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>password</code> - value to be set</dd>
@@ -576,7 +576,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>stores</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></span>&nbsp;<span class="element-name">stores</span><wbr><span class="parameters">(@Nullable
  <a href="../common/StoreKeyReference.html" title="interface in com.commercetools.importapi.models.common">StoreKeyReference</a>...&nbsp;stores)</span></div>
-<div class="block"><p>The References to the Stores with which the Customer is associated. If referenced Stores do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Stores are created.</p></div>
+<div class="block"><p>Maps to <code>Customer.stores</code>. If the referenced Stores do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Stores are created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>stores</code> - value to be set</dd>
@@ -590,7 +590,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>stores</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></span>&nbsp;<span class="element-name">stores</span><wbr><span class="parameters">(@Nullable
  <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/StoreKeyReference.html" title="interface in com.commercetools.importapi.models.common">StoreKeyReference</a>&gt;&nbsp;stores)</span></div>
-<div class="block"><p>The References to the Stores with which the Customer is associated. If referenced Stores do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Stores are created.</p></div>
+<div class="block"><p>Maps to <code>Customer.stores</code>. If the referenced Stores do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Stores are created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>stores</code> - value to be set</dd>
@@ -604,7 +604,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>plusStores</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></span>&nbsp;<span class="element-name">plusStores</span><wbr><span class="parameters">(@Nullable
  <a href="../common/StoreKeyReference.html" title="interface in com.commercetools.importapi.models.common">StoreKeyReference</a>...&nbsp;stores)</span></div>
-<div class="block"><p>The References to the Stores with which the Customer is associated. If referenced Stores do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Stores are created.</p></div>
+<div class="block"><p>Maps to <code>Customer.stores</code>. If the referenced Stores do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Stores are created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>stores</code> - value to be set</dd>
@@ -617,7 +617,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="plusStores(java.util.function.Function)">
 <h3>plusStores</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></span>&nbsp;<span class="element-name">plusStores</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StoreKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">StoreKeyReferenceBuilder</a>,<wbr><a href="../common/StoreKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">StoreKeyReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>The References to the Stores with which the Customer is associated. If referenced Stores do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Stores are created.</p></div>
+<div class="block"><p>Maps to <code>Customer.stores</code>. If the referenced Stores do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Stores are created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the stores value</dd>
@@ -630,7 +630,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withStores(java.util.function.Function)">
 <h3>withStores</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></span>&nbsp;<span class="element-name">withStores</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StoreKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">StoreKeyReferenceBuilder</a>,<wbr><a href="../common/StoreKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">StoreKeyReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>The References to the Stores with which the Customer is associated. If referenced Stores do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Stores are created.</p></div>
+<div class="block"><p>Maps to <code>Customer.stores</code>. If the referenced Stores do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Stores are created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the stores value</dd>
@@ -643,7 +643,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="addStores(java.util.function.Function)">
 <h3>addStores</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></span>&nbsp;<span class="element-name">addStores</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StoreKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">StoreKeyReferenceBuilder</a>,<wbr><a href="../common/StoreKeyReference.html" title="interface in com.commercetools.importapi.models.common">StoreKeyReference</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>The References to the Stores with which the Customer is associated. If referenced Stores do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Stores are created.</p></div>
+<div class="block"><p>Maps to <code>Customer.stores</code>. If the referenced Stores do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Stores are created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the stores value</dd>
@@ -656,7 +656,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="setStores(java.util.function.Function)">
 <h3>setStores</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></span>&nbsp;<span class="element-name">setStores</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StoreKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">StoreKeyReferenceBuilder</a>,<wbr><a href="../common/StoreKeyReference.html" title="interface in com.commercetools.importapi.models.common">StoreKeyReference</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>The References to the Stores with which the Customer is associated. If referenced Stores do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Stores are created.</p></div>
+<div class="block"><p>Maps to <code>Customer.stores</code>. If the referenced Stores do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Stores are created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the stores value</dd>
@@ -809,7 +809,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="customerGroup(java.util.function.Function)">
 <h3>customerGroup</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></span>&nbsp;<span class="element-name">customerGroup</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CustomerGroupKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">CustomerGroupKeyReferenceBuilder</a>,<wbr><a href="../common/CustomerGroupKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">CustomerGroupKeyReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>The Reference to the CustomerGroup with which the Customer is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p></div>
+<div class="block"><p>Maps to <code>Customer.customerGroup</code>. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the customerGroup value</dd>
@@ -822,7 +822,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withCustomerGroup(java.util.function.Function)">
 <h3>withCustomerGroup</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></span>&nbsp;<span class="element-name">withCustomerGroup</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CustomerGroupKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">CustomerGroupKeyReferenceBuilder</a>,<wbr><a href="../common/CustomerGroupKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerGroupKeyReference</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>The Reference to the CustomerGroup with which the Customer is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p></div>
+<div class="block"><p>Maps to <code>Customer.customerGroup</code>. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the customerGroup value</dd>
@@ -836,7 +836,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>customerGroup</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></span>&nbsp;<span class="element-name">customerGroup</span><wbr><span class="parameters">(@Nullable
  <a href="../common/CustomerGroupKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerGroupKeyReference</a>&nbsp;customerGroup)</span></div>
-<div class="block"><p>The Reference to the CustomerGroup with which the Customer is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p></div>
+<div class="block"><p>Maps to <code>Customer.customerGroup</code>. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>customerGroup</code> - value to be set</dd>
@@ -944,7 +944,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>defaultBillingAddress</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></span>&nbsp;<span class="element-name">defaultBillingAddress</span><wbr><span class="parameters">(@Nullable
  <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;defaultBillingAddress)</span></div>
-<div class="block"><p>The index of the address in the addresses array. The <code>defaultBillingAddressId</code> of the customer will be set to the ID of that address.</p></div>
+<div class="block"><p>Index of the address in the <code>addresses</code> array to use as the default billing address. The <code>defaultBillingAddressId</code> of the Customer will be set to the <code>id</code> of that address.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>defaultBillingAddress</code> - value to be set</dd>
@@ -958,7 +958,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>billingAddresses</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></span>&nbsp;<span class="element-name">billingAddresses</span><wbr><span class="parameters">(@Nullable
  <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>...&nbsp;billingAddresses)</span></div>
-<div class="block"><p>The indices of the billing addresses in the addresses array. The <code>billingAddressIds</code> of the customer will be set to the IDs of that addresses.</p></div>
+<div class="block"><p>Indices of the billing addresses in the <code>addresses</code> array. The <code>billingAddressIds</code> of the Customer will be set to the <code>id</code> of these addresses.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>billingAddresses</code> - value to be set</dd>
@@ -972,7 +972,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>billingAddresses</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></span>&nbsp;<span class="element-name">billingAddresses</span><wbr><span class="parameters">(@Nullable
  <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;billingAddresses)</span></div>
-<div class="block"><p>The indices of the billing addresses in the addresses array. The <code>billingAddressIds</code> of the customer will be set to the IDs of that addresses.</p></div>
+<div class="block"><p>Indices of the billing addresses in the <code>addresses</code> array. The <code>billingAddressIds</code> of the Customer will be set to the <code>id</code> of these addresses.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>billingAddresses</code> - value to be set</dd>
@@ -986,7 +986,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>plusBillingAddresses</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></span>&nbsp;<span class="element-name">plusBillingAddresses</span><wbr><span class="parameters">(@Nullable
  <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>...&nbsp;billingAddresses)</span></div>
-<div class="block"><p>The indices of the billing addresses in the addresses array. The <code>billingAddressIds</code> of the customer will be set to the IDs of that addresses.</p></div>
+<div class="block"><p>Indices of the billing addresses in the <code>addresses</code> array. The <code>billingAddressIds</code> of the Customer will be set to the <code>id</code> of these addresses.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>billingAddresses</code> - value to be set</dd>
@@ -1000,7 +1000,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>defaultShippingAddress</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></span>&nbsp;<span class="element-name">defaultShippingAddress</span><wbr><span class="parameters">(@Nullable
  <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;defaultShippingAddress)</span></div>
-<div class="block"><p>The index of the address in the addresses array. The <code>defaultShippingAddressId</code> of the customer will be set to the ID of that address.</p></div>
+<div class="block"><p>The index of the address in the <code>addresses</code> array. The <code>defaultShippingAddressId</code> of the Customer will be set to the <code>id</code> of that address.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>defaultShippingAddress</code> - value to be set</dd>
@@ -1014,7 +1014,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>shippingAddresses</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></span>&nbsp;<span class="element-name">shippingAddresses</span><wbr><span class="parameters">(@Nullable
  <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>...&nbsp;shippingAddresses)</span></div>
-<div class="block"><p>The indices of the shipping addresses in the addresses array. The <code>shippingAddressIds</code> of the customer will be set to the IDs of that addresses.</p></div>
+<div class="block"><p>Indices of the shipping addresses in the <code>addresses</code> array. The <code>shippingAddressIds</code> of the Customer will be set to the <code>id</code> of these addresses.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>shippingAddresses</code> - value to be set</dd>
@@ -1028,7 +1028,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>shippingAddresses</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></span>&nbsp;<span class="element-name">shippingAddresses</span><wbr><span class="parameters">(@Nullable
  <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;&nbsp;shippingAddresses)</span></div>
-<div class="block"><p>The indices of the shipping addresses in the addresses array. The <code>shippingAddressIds</code> of the customer will be set to the IDs of that addresses.</p></div>
+<div class="block"><p>Indices of the shipping addresses in the <code>addresses</code> array. The <code>shippingAddressIds</code> of the Customer will be set to the <code>id</code> of these addresses.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>shippingAddresses</code> - value to be set</dd>
@@ -1042,7 +1042,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>plusShippingAddresses</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></span>&nbsp;<span class="element-name">plusShippingAddresses</span><wbr><span class="parameters">(@Nullable
  <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>...&nbsp;shippingAddresses)</span></div>
-<div class="block"><p>The indices of the shipping addresses in the addresses array. The <code>shippingAddressIds</code> of the customer will be set to the IDs of that addresses.</p></div>
+<div class="block"><p>Indices of the shipping addresses in the <code>addresses</code> array. The <code>shippingAddressIds</code> of the Customer will be set to the <code>id</code> of these addresses.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>shippingAddresses</code> - value to be set</dd>
@@ -1069,7 +1069,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="custom(java.util.function.Function)">
 <h3>custom</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></span>&nbsp;<span class="element-name">custom</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../customfields/CustomBuilder.html" title="class in com.commercetools.importapi.models.customfields">CustomBuilder</a>,<wbr><a href="../customfields/CustomBuilder.html" title="class in com.commercetools.importapi.models.customfields">CustomBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>The Custom Fields for this Customer.</p></div>
+<div class="block"><p>Maps to <code>Customer.custom</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the custom value</dd>
@@ -1082,7 +1082,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withCustom(java.util.function.Function)">
 <h3>withCustom</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></span>&nbsp;<span class="element-name">withCustom</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../customfields/CustomBuilder.html" title="class in com.commercetools.importapi.models.customfields">CustomBuilder</a>,<wbr><a href="../customfields/Custom.html" title="interface in com.commercetools.importapi.models.customfields">Custom</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>The Custom Fields for this Customer.</p></div>
+<div class="block"><p>Maps to <code>Customer.custom</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the custom value</dd>
@@ -1096,7 +1096,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>custom</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></span>&nbsp;<span class="element-name">custom</span><wbr><span class="parameters">(@Nullable
  <a href="../customfields/Custom.html" title="interface in com.commercetools.importapi.models.customfields">Custom</a>&nbsp;custom)</span></div>
-<div class="block"><p>The Custom Fields for this Customer.</p></div>
+<div class="block"><p>Maps to <code>Customer.custom</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>custom</code> - value to be set</dd>
@@ -1126,7 +1126,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getKey()">
 <h3>getKey</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getKey</span>()</div>
-<div class="block"><p>User-defined unique identifier. If a Customer with this <code>key</code> exists, it will be updated with the imported data.</p></div>
+<div class="block"><p>User-defined unique identifier. If a Customer with this <code>key</code> exists, it is updated with the imported data.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>key</dd>
@@ -1161,7 +1161,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getPassword</h3>
 <div class="member-signature"><span class="annotations">@Nullable
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getPassword</span>()</div>
-<div class="block"><p>Required when <code>authenticationMode</code> is set to <code>Password</code>. Maps to <code>Customer.password</code>.</p></div>
+<div class="block"><p>Maps to <code>Customer.password</code>. Required when <code>authenticationMode</code> is set to <code>Password</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>password</dd>
@@ -1173,7 +1173,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getStores</h3>
 <div class="member-signature"><span class="annotations">@Nullable
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/StoreKeyReference.html" title="interface in com.commercetools.importapi.models.common">StoreKeyReference</a>&gt;</span>&nbsp;<span class="element-name">getStores</span>()</div>
-<div class="block"><p>The References to the Stores with which the Customer is associated. If referenced Stores do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Stores are created.</p></div>
+<div class="block"><p>Maps to <code>Customer.stores</code>. If the referenced Stores do not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Stores are created.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>stores</dd>
@@ -1305,7 +1305,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getCustomerGroup</h3>
 <div class="member-signature"><span class="annotations">@Nullable
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/CustomerGroupKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerGroupKeyReference</a></span>&nbsp;<span class="element-name">getCustomerGroup</span>()</div>
-<div class="block"><p>The Reference to the CustomerGroup with which the Customer is associated. If referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary CustomerGroup is created.</p></div>
+<div class="block"><p>Maps to <code>Customer.customerGroup</code>. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>customerGroup</dd>
@@ -1329,7 +1329,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getDefaultBillingAddress</h3>
 <div class="member-signature"><span class="annotations">@Nullable
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">getDefaultBillingAddress</span>()</div>
-<div class="block"><p>The index of the address in the addresses array. The <code>defaultBillingAddressId</code> of the customer will be set to the ID of that address.</p></div>
+<div class="block"><p>Index of the address in the <code>addresses</code> array to use as the default billing address. The <code>defaultBillingAddressId</code> of the Customer will be set to the <code>id</code> of that address.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>defaultBillingAddress</dd>
@@ -1341,7 +1341,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getBillingAddresses</h3>
 <div class="member-signature"><span class="annotations">@Nullable
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</span>&nbsp;<span class="element-name">getBillingAddresses</span>()</div>
-<div class="block"><p>The indices of the billing addresses in the addresses array. The <code>billingAddressIds</code> of the customer will be set to the IDs of that addresses.</p></div>
+<div class="block"><p>Indices of the billing addresses in the <code>addresses</code> array. The <code>billingAddressIds</code> of the Customer will be set to the <code>id</code> of these addresses.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>billingAddresses</dd>
@@ -1353,7 +1353,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getDefaultShippingAddress</h3>
 <div class="member-signature"><span class="annotations">@Nullable
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">getDefaultShippingAddress</span>()</div>
-<div class="block"><p>The index of the address in the addresses array. The <code>defaultShippingAddressId</code> of the customer will be set to the ID of that address.</p></div>
+<div class="block"><p>The index of the address in the <code>addresses</code> array. The <code>defaultShippingAddressId</code> of the Customer will be set to the <code>id</code> of that address.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>defaultShippingAddress</dd>
@@ -1365,7 +1365,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getShippingAddresses</h3>
 <div class="member-signature"><span class="annotations">@Nullable
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&gt;</span>&nbsp;<span class="element-name">getShippingAddresses</span>()</div>
-<div class="block"><p>The indices of the shipping addresses in the addresses array. The <code>shippingAddressIds</code> of the customer will be set to the IDs of that addresses.</p></div>
+<div class="block"><p>Indices of the shipping addresses in the <code>addresses</code> array. The <code>shippingAddressIds</code> of the Customer will be set to the <code>id</code> of these addresses.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>shippingAddresses</dd>
@@ -1389,7 +1389,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getCustom</h3>
 <div class="member-signature"><span class="annotations">@Nullable
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../customfields/Custom.html" title="interface in com.commercetools.importapi.models.customfields">Custom</a></span>&nbsp;<span class="element-name">getCustom</span>()</div>
-<div class="block"><p>The Custom Fields for this Customer.</p></div>
+<div class="block"><p>Maps to <code>Customer.custom</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>custom</dd>

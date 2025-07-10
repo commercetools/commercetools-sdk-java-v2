@@ -132,17 +132,17 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DiscountCodeInfoBuilder.html" title="class in com.commercetools.importapi.models.orders">DiscountCodeInfoBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#discountCode(com.commercetools.importapi.models.common.DiscountCodeKeyReference)" class="member-name-link">discountCode</a><wbr>(<a href="../common/DiscountCodeKeyReference.html" title="interface in com.commercetools.importapi.models.common">DiscountCodeKeyReference</a>&nbsp;discountCode)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">References a discount code by key.</div>
+<div class="block">References a DiscountCode by key.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DiscountCodeInfoBuilder.html" title="class in com.commercetools.importapi.models.orders">DiscountCodeInfoBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#discountCode(java.util.function.Function)" class="member-name-link">discountCode</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/DiscountCodeKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">DiscountCodeKeyReferenceBuilder</a>,<wbr><a href="../common/DiscountCodeKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">DiscountCodeKeyReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">References a discount code by key.</div>
+<div class="block">References a DiscountCode by key.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/DiscountCodeKeyReference.html" title="interface in com.commercetools.importapi.models.common">DiscountCodeKeyReference</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDiscountCode()" class="member-name-link">getDiscountCode</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">References a discount code by key.</div>
+<div class="block">References a DiscountCode by key.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DiscountCodeState.html" title="interface in com.commercetools.importapi.models.orders">DiscountCodeState</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getState()" class="member-name-link">getState</a>()</code></div>
@@ -167,7 +167,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="DiscountCodeInfoBuilder.html" title="class in com.commercetools.importapi.models.orders">DiscountCodeInfoBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withDiscountCode(java.util.function.Function)" class="member-name-link">withDiscountCode</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/DiscountCodeKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">DiscountCodeKeyReferenceBuilder</a>,<wbr><a href="../common/DiscountCodeKeyReference.html" title="interface in com.commercetools.importapi.models.common">DiscountCodeKeyReference</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">References a discount code by key.</div>
+<div class="block">References a DiscountCode by key.</div>
 </div>
 </div>
 </div>
@@ -204,7 +204,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="discountCode(java.util.function.Function)">
 <h3>discountCode</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeInfoBuilder.html" title="class in com.commercetools.importapi.models.orders">DiscountCodeInfoBuilder</a></span>&nbsp;<span class="element-name">discountCode</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/DiscountCodeKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">DiscountCodeKeyReferenceBuilder</a>,<wbr><a href="../common/DiscountCodeKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">DiscountCodeKeyReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>References a discount code by key.</p></div>
+<div class="block"><p>References a DiscountCode by key. If the referenced DiscountCode does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced DiscountCode is created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the discountCode value</dd>
@@ -217,7 +217,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withDiscountCode(java.util.function.Function)">
 <h3>withDiscountCode</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeInfoBuilder.html" title="class in com.commercetools.importapi.models.orders">DiscountCodeInfoBuilder</a></span>&nbsp;<span class="element-name">withDiscountCode</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/DiscountCodeKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">DiscountCodeKeyReferenceBuilder</a>,<wbr><a href="../common/DiscountCodeKeyReference.html" title="interface in com.commercetools.importapi.models.common">DiscountCodeKeyReference</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>References a discount code by key.</p></div>
+<div class="block"><p>References a DiscountCode by key. If the referenced DiscountCode does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced DiscountCode is created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the discountCode value</dd>
@@ -230,7 +230,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="discountCode(com.commercetools.importapi.models.common.DiscountCodeKeyReference)">
 <h3>discountCode</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="DiscountCodeInfoBuilder.html" title="class in com.commercetools.importapi.models.orders">DiscountCodeInfoBuilder</a></span>&nbsp;<span class="element-name">discountCode</span><wbr><span class="parameters">(<a href="../common/DiscountCodeKeyReference.html" title="interface in com.commercetools.importapi.models.common">DiscountCodeKeyReference</a>&nbsp;discountCode)</span></div>
-<div class="block"><p>References a discount code by key.</p></div>
+<div class="block"><p>References a DiscountCode by key. If the referenced DiscountCode does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced DiscountCode is created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>discountCode</code> - value to be set</dd>
@@ -257,7 +257,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="getDiscountCode()">
 <h3>getDiscountCode</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/DiscountCodeKeyReference.html" title="interface in com.commercetools.importapi.models.common">DiscountCodeKeyReference</a></span>&nbsp;<span class="element-name">getDiscountCode</span>()</div>
-<div class="block"><p>References a discount code by key.</p></div>
+<div class="block"><p>References a DiscountCode by key. If the referenced DiscountCode does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced DiscountCode is created.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>discountCode</dd>

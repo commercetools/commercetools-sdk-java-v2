@@ -86,6 +86,7 @@ extends <a href="BusinessUnitUpdateAction.html" title="interface in com.commerce
  <pre><code class='java'>
      BusinessUnitChangeAssociateModeAction businessUnitChangeAssociateModeAction = BusinessUnitChangeAssociateModeAction.builder()
              .associateMode(BusinessUnitAssociateMode.EXPLICIT)
+             .makeInheritedAssociatesExplicit(true)
              .build()
  </code></pre>
  </div></div>
@@ -143,20 +144,30 @@ extends <a href="BusinessUnitUpdateAction.html" title="interface in com.commerce
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">The new value for <code>associateMode</code>.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="BusinessUnitChangeAssociateModeAction.html" title="interface in com.commercetools.api.models.business_unit">BusinessUnitChangeAssociateModeAction</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
-<div class="block">factory method</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMakeInheritedAssociatesExplicit()" class="member-name-link">getMakeInheritedAssociatesExplicit</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">If set to <code>true</code> during a change to <code>associateMode="Explicit"</code>, all inherited Associates will be converted to explicit Associates.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="BusinessUnitChangeAssociateModeAction.html" title="interface in com.commercetools.api.models.business_unit">BusinessUnitChangeAssociateModeAction</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(com.commercetools.api.models.business_unit.BusinessUnitChangeAssociateModeAction)" class="member-name-link">of</a><wbr>(<a href="BusinessUnitChangeAssociateModeAction.html" title="interface in com.commercetools.api.models.business_unit">BusinessUnitChangeAssociateModeAction</a>&nbsp;template)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="block">factory method</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="BusinessUnitChangeAssociateModeAction.html" title="interface in com.commercetools.api.models.business_unit">BusinessUnitChangeAssociateModeAction</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of(com.commercetools.api.models.business_unit.BusinessUnitChangeAssociateModeAction)" class="member-name-link">of</a><wbr>(<a href="BusinessUnitChangeAssociateModeAction.html" title="interface in com.commercetools.api.models.business_unit">BusinessUnitChangeAssociateModeAction</a>&nbsp;template)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
 <div class="block">factory method to create a shallow copy BusinessUnitChangeAssociateModeAction</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setAssociateMode(com.commercetools.api.models.business_unit.BusinessUnitAssociateMode)" class="member-name-link">setAssociateMode</a><wbr>(<a href="BusinessUnitAssociateMode.html" title="interface in com.commercetools.api.models.business_unit">BusinessUnitAssociateMode</a>&nbsp;associateMode)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setAssociateMode(com.commercetools.api.models.business_unit.BusinessUnitAssociateMode)" class="member-name-link">setAssociateMode</a><wbr>(<a href="BusinessUnitAssociateMode.html" title="interface in com.commercetools.api.models.business_unit">BusinessUnitAssociateMode</a>&nbsp;associateMode)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">The new value for <code>associateMode</code>.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setMakeInheritedAssociatesExplicit(java.lang.Boolean)" class="member-name-link">setMakeInheritedAssociatesExplicit</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;makeInheritedAssociatesExplicit)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">If set to <code>true</code> during a change to <code>associateMode="Explicit"</code>, all inherited Associates will be converted to explicit Associates.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="BusinessUnitChangeAssociateModeAction.html" title="interface in com.commercetools.api.models.business_unit">BusinessUnitChangeAssociateModeAction</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -224,6 +235,18 @@ extends <a href="BusinessUnitUpdateAction.html" title="interface in com.commerce
 </section>
 </li>
 <li>
+<section class="detail" id="getMakeInheritedAssociatesExplicit()">
+<h3>getMakeInheritedAssociatesExplicit</h3>
+<div class="member-signature"><span class="annotations">@NotNull
+</span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name">getMakeInheritedAssociatesExplicit</span>()</div>
+<div class="block"><p>If set to <code>true</code> during a change to <code>associateMode="Explicit"</code>, all inherited Associates will be converted to explicit Associates.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>makeInheritedAssociatesExplicit</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="setAssociateMode(com.commercetools.api.models.business_unit.BusinessUnitAssociateMode)">
 <h3>setAssociateMode</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setAssociateMode</span><wbr><span class="parameters">(<a href="BusinessUnitAssociateMode.html" title="interface in com.commercetools.api.models.business_unit">BusinessUnitAssociateMode</a>&nbsp;associateMode)</span></div>
@@ -231,6 +254,17 @@ extends <a href="BusinessUnitUpdateAction.html" title="interface in com.commerce
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>associateMode</code> - value to be set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setMakeInheritedAssociatesExplicit(java.lang.Boolean)">
+<h3>setMakeInheritedAssociatesExplicit</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setMakeInheritedAssociatesExplicit</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;makeInheritedAssociatesExplicit)</span></div>
+<div class="block"><p>If set to <code>true</code> during a change to <code>associateMode="Explicit"</code>, all inherited Associates will be converted to explicit Associates.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>makeInheritedAssociatesExplicit</code> - value to be set</dd>
 </dl>
 </section>
 </li>

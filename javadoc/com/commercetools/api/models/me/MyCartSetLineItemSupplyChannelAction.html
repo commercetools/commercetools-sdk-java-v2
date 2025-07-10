@@ -78,7 +78,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">MyCartSetLineItemSupplyChannelAction</span><span class="extends-implements">
 extends <a href="MyCartUpdateAction.html" title="interface in com.commercetools.api.models.me">MyCartUpdateAction</a></span></div>
-<div class="block"><p>Performing this action has no impact on inventory that should be reserved.</p>
+<div class="block"><p>Performing this action does not reserve stock. Stock is only reserved at Order creation if the InventoryMode of the Cart is <code>TrackOnly</code> or <code>ReserveOnOrder</code>.</p>
 
  <hr>
  Example to create an instance using the builder pattern

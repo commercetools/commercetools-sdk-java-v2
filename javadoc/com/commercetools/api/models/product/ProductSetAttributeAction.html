@@ -141,7 +141,7 @@ extends <a href="ProductUpdateAction.html" title="interface in com.commercetools
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The name of the Attribute to set.</div>
+<div class="block">Name of the Attribute to set.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSku()" class="member-name-link">getSku</a>()</code></div>
@@ -210,7 +210,7 @@ extends <a href="ProductUpdateAction.html" title="interface in com.commercetools
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setName(java.lang.String)" class="member-name-link">setName</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">The name of the Attribute to set.</div>
+<div class="block">Name of the Attribute to set.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setSku(java.lang.String)" class="member-name-link">setSku</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sku)</code></div>
@@ -312,7 +312,7 @@ extends <a href="ProductUpdateAction.html" title="interface in com.commercetools
 <h3>getName</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getName</span>()</div>
-<div class="block"><p>The name of the Attribute to set.</p></div>
+<div class="block"><p>Name of the Attribute to set.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>name</dd>
@@ -326,7 +326,7 @@ extends <a href="ProductUpdateAction.html" title="interface in com.commercetools
 <div class="block"><p>Value to set for the Attribute. If empty, any existing value will be removed.</p>
   <p>The AttributeType determines the format of the Attribute <code>value</code> to be provided:</p>
   <ul>
-   <li>For Enum Type and Localized Enum Type, use the <code>key</code> of the Plain Enum Value or Localized Enum Value objects, or the complete objects as <code>value</code>.</li>
+   <li>For Enum Type and Localized Enum Type, use the <code>key</code> of the Plain Enum Value or Localized Enum Value object or the complete object as <code>value</code>.</li>
    <li>For Localizable Text Type, use the LocalizedString object as <code>value</code>.</li>
    <li>For Money Type Attributes, use the Money object as <code>value</code>.</li>
    <li>For Set Type Attributes, use the entire <code>set</code> object as <code>value</code>.</li>
@@ -343,7 +343,7 @@ extends <a href="ProductUpdateAction.html" title="interface in com.commercetools
 <section class="detail" id="getStaged()">
 <h3>getStaged</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name">getStaged</span>()</div>
-<div class="block"><p>If <code>true</code>, only the staged Attribute is set. If <code>false</code>, both current and staged Attribute is set.</p></div>
+<div class="block"><p>If <code>true</code>, only the staged Attribute is set. If <code>false</code>, both the current and staged Attributes are set.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>staged</dd>
@@ -376,7 +376,7 @@ extends <a href="ProductUpdateAction.html" title="interface in com.commercetools
 <section class="detail" id="setName(java.lang.String)">
 <h3>setName</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setName</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
-<div class="block"><p>The name of the Attribute to set.</p></div>
+<div class="block"><p>Name of the Attribute to set.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>name</code> - value to be set</dd>
@@ -390,7 +390,7 @@ extends <a href="ProductUpdateAction.html" title="interface in com.commercetools
 <div class="block"><p>Value to set for the Attribute. If empty, any existing value will be removed.</p>
   <p>The AttributeType determines the format of the Attribute <code>value</code> to be provided:</p>
   <ul>
-   <li>For Enum Type and Localized Enum Type, use the <code>key</code> of the Plain Enum Value or Localized Enum Value objects, or the complete objects as <code>value</code>.</li>
+   <li>For Enum Type and Localized Enum Type, use the <code>key</code> of the Plain Enum Value or Localized Enum Value object or the complete object as <code>value</code>.</li>
    <li>For Localizable Text Type, use the LocalizedString object as <code>value</code>.</li>
    <li>For Money Type Attributes, use the Money object as <code>value</code>.</li>
    <li>For Set Type Attributes, use the entire <code>set</code> object as <code>value</code>.</li>
@@ -407,7 +407,7 @@ extends <a href="ProductUpdateAction.html" title="interface in com.commercetools
 <section class="detail" id="setStaged(java.lang.Boolean)">
 <h3>setStaged</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setStaged</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;staged)</span></div>
-<div class="block"><p>If <code>true</code>, only the staged Attribute is set. If <code>false</code>, both current and staged Attribute is set.</p></div>
+<div class="block"><p>If <code>true</code>, only the staged Attribute is set. If <code>false</code>, both the current and staged Attributes are set.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>staged</code> - value to be set</dd>

@@ -78,7 +78,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">StandalonePriceImport</span><span class="extends-implements">
 extends <a href="../common/ImportResource.html" title="interface in com.commercetools.importapi.models.common">ImportResource</a></span></div>
-<div class="block"><p>The data representation for a Standalone Price to be imported that is persisted as a Standalone Price) in the Project.</p>
+<div class="block"><p>Represents the data used to import a StandalonePrice. Once imported, this data is persisted as a StandalonePrice) in the Project.</p>
 
  <hr>
  Example to create an instance using the builder pattern
@@ -126,22 +126,22 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getChannel()" class="member-name-link">getChannel</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Sets the product distribution Channel for this Price, if the Price does not yet have a Channel.</div>
+<div class="block">Maps to <code>StandalonePrice.channel</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCountry()" class="member-name-link">getCountry</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Sets the country for this Price, if the Price does not yet have a country.</div>
+<div class="block">Maps to <code>StandalonePrice.country</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../customfields/Custom.html" title="interface in com.commercetools.importapi.models.customfields">Custom</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCustom()" class="member-name-link">getCustom</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Custom Fields for the StandalonePrice.</div>
+<div class="block">Maps to <code>StandalonePrice.custom</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../common/CustomerGroupKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerGroupKeyReference</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCustomerGroup()" class="member-name-link">getCustomerGroup</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Sets the CustomerGroup for this Price, if the Price does not yet have a CustomerGroup.</div>
+<div class="block">Maps to <code>StandalonePrice.customerGroup</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="../common/DiscountedPrice.html" title="interface in com.commercetools.importapi.models.common">DiscountedPrice</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDiscounted()" class="member-name-link">getDiscounted</a>()</code></div>
@@ -151,32 +151,32 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getKey()" class="member-name-link">getKey</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">User-defined unique identifier for the Standalone Price.</div>
+<div class="block">User-defined unique identifier for the StandalonePrice.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getSku()" class="member-name-link">getSku</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Identifies the ProductVariant to which this Standalone Price is associated.</div>
+<div class="block">Maps to <code>StandalonePrice.sku</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/PriceTier.html" title="interface in com.commercetools.importapi.models.common">PriceTier</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getTiers()" class="member-name-link">getTiers</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Sets price tiers.</div>
+<div class="block">Maps to <code>StandalonePrice.tiers</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getValidFrom()" class="member-name-link">getValidFrom</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Sets the date from which the Price is valid.</div>
+<div class="block">Maps to <code>StandalonePrice.validFrom</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getValidUntil()" class="member-name-link">getValidUntil</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Sets the date until the Price is valid.</div>
+<div class="block">Maps to <code>StandalonePrice.validUntil</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/TypedMoney.html" title="interface in com.commercetools.importapi.models.common">TypedMoney</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getValue()" class="member-name-link">getValue</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Sets the money value of this Price.</div>
+<div class="block">Maps to <code>StandalonePrice.value</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="StandalonePriceImport.html" title="interface in com.commercetools.importapi.models.standalone_prices">StandalonePriceImport</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -191,22 +191,22 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setChannel(com.commercetools.importapi.models.common.ChannelKeyReference)" class="member-name-link">setChannel</a><wbr>(<a href="../common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a>&nbsp;channel)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Sets the product distribution Channel for this Price, if the Price does not yet have a Channel.</div>
+<div class="block">Maps to <code>StandalonePrice.channel</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCountry(java.lang.String)" class="member-name-link">setCountry</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;country)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Sets the country for this Price, if the Price does not yet have a country.</div>
+<div class="block">Maps to <code>StandalonePrice.country</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCustom(com.commercetools.importapi.models.customfields.Custom)" class="member-name-link">setCustom</a><wbr>(<a href="../customfields/Custom.html" title="interface in com.commercetools.importapi.models.customfields">Custom</a>&nbsp;custom)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Custom Fields for the StandalonePrice.</div>
+<div class="block">Maps to <code>StandalonePrice.custom</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setCustomerGroup(com.commercetools.importapi.models.common.CustomerGroupKeyReference)" class="member-name-link">setCustomerGroup</a><wbr>(<a href="../common/CustomerGroupKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerGroupKeyReference</a>&nbsp;customerGroup)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Sets the CustomerGroup for this Price, if the Price does not yet have a CustomerGroup.</div>
+<div class="block">Maps to <code>StandalonePrice.customerGroup</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setDiscounted(com.commercetools.importapi.models.common.DiscountedPrice)" class="member-name-link">setDiscounted</a><wbr>(<a href="../common/DiscountedPrice.html" title="interface in com.commercetools.importapi.models.common">DiscountedPrice</a>&nbsp;discounted)</code></div>
@@ -216,37 +216,37 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setKey(java.lang.String)" class="member-name-link">setKey</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">User-defined unique identifier for the Standalone Price.</div>
+<div class="block">User-defined unique identifier for the StandalonePrice.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setSku(java.lang.String)" class="member-name-link">setSku</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sku)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Identifies the ProductVariant to which this Standalone Price is associated.</div>
+<div class="block">Maps to <code>StandalonePrice.sku</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTiers(com.commercetools.importapi.models.common.PriceTier...)" class="member-name-link">setTiers</a><wbr>(<a href="../common/PriceTier.html" title="interface in com.commercetools.importapi.models.common">PriceTier</a>...&nbsp;tiers)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Sets price tiers.</div>
+<div class="block">Maps to <code>StandalonePrice.tiers</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setTiers(java.util.List)" class="member-name-link">setTiers</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/PriceTier.html" title="interface in com.commercetools.importapi.models.common">PriceTier</a>&gt;&nbsp;tiers)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Sets price tiers.</div>
+<div class="block">Maps to <code>StandalonePrice.tiers</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setValidFrom(java.time.ZonedDateTime)" class="member-name-link">setValidFrom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;validFrom)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Sets the date from which the Price is valid.</div>
+<div class="block">Maps to <code>StandalonePrice.validFrom</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setValidUntil(java.time.ZonedDateTime)" class="member-name-link">setValidUntil</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;validUntil)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Sets the date until the Price is valid.</div>
+<div class="block">Maps to <code>StandalonePrice.validUntil</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setValue(com.commercetools.importapi.models.common.TypedMoney)" class="member-name-link">setValue</a><wbr>(<a href="../common/TypedMoney.html" title="interface in com.commercetools.importapi.models.common">TypedMoney</a>&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Sets the money value of this Price.</div>
+<div class="block">Maps to <code>StandalonePrice.value</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="StandalonePriceImport.html" title="interface in com.commercetools.importapi.models.standalone_prices">StandalonePriceImport</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -280,7 +280,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <h3>getKey</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getKey</span>()</div>
-<div class="block"><p>User-defined unique identifier for the Standalone Price. If a StandalonePrice) with this <code>key</code> exists, it will be updated with the imported data.</p></div>
+<div class="block"><p>User-defined unique identifier for the StandalonePrice. If a StandalonePrice) with this <code>key</code> exists, it is updated with the imported data.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/ImportResource.html#getKey()">getKey</a></code>&nbsp;in interface&nbsp;<code><a href="../common/ImportResource.html" title="interface in com.commercetools.importapi.models.common">ImportResource</a></code></dd>
@@ -294,7 +294,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <h3>getSku</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getSku</span>()</div>
-<div class="block"><p>Identifies the ProductVariant to which this Standalone Price is associated. This value is not validated to exist in Product Variants.</p></div>
+<div class="block"><p>Maps to <code>StandalonePrice.sku</code>. This value is not validated to exist in Product Variants.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>sku</dd>
@@ -307,7 +307,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
 </span><span class="return-type">@NotNull @Valid <a href="../common/TypedMoney.html" title="interface in com.commercetools.importapi.models.common">TypedMoney</a></span>&nbsp;<span class="element-name">getValue</span>()</div>
-<div class="block"><p>Sets the money value of this Price.</p></div>
+<div class="block"><p>Maps to <code>StandalonePrice.value</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>value</dd>
@@ -318,8 +318,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="getCountry()">
 <h3>getCountry</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getCountry</span>()</div>
-<div class="block"><p>Sets the country for this Price, if the Price does not yet have a country.</p>
-  <p>The country cannot be updated. Attempting to update the an existing country will result in an InvalidFieldsUpdate error.</p></div>
+<div class="block"><p>Maps to <code>StandalonePrice.country</code>. This value cannot be updated. Attempting to update this value will result in an InvalidFieldsUpdate error.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>country</dd>
@@ -331,8 +330,8 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <h3>getCustomerGroup</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../common/CustomerGroupKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerGroupKeyReference</a></span>&nbsp;<span class="element-name">getCustomerGroup</span>()</div>
-<div class="block"><p>Sets the CustomerGroup for this Price, if the Price does not yet have a CustomerGroup.</p>
-  <p>The CustomerGroup cannot be updated. Attempting to update an existing CustomerGroup will result in an InvalidFieldsUpdate error.</p></div>
+<div class="block"><p>Maps to <code>StandalonePrice.customerGroup</code>. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
+  <p>This value cannot be updated. Attempting to update this value will result in an InvalidFieldsUpdate error.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>customerGroup</dd>
@@ -344,8 +343,8 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <h3>getChannel</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a></span>&nbsp;<span class="element-name">getChannel</span>()</div>
-<div class="block"><p>Sets the product distribution Channel for this Price, if the Price does not yet have a Channel.</p>
-  <p>The Channel cannot be updated. Attempting to update an existing Channel will result in an InvalidFieldsUpdate error.</p></div>
+<div class="block"><p>Maps to <code>StandalonePrice.channel</code>. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p>
+  <p>This value cannot be updated. Attempting to update this value will result in an InvalidFieldsUpdate error.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>channel</dd>
@@ -356,7 +355,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="getValidFrom()">
 <h3>getValidFrom</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name">getValidFrom</span>()</div>
-<div class="block"><p>Sets the date from which the Price is valid.</p></div>
+<div class="block"><p>Maps to <code>StandalonePrice.validFrom</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>validFrom</dd>
@@ -367,7 +366,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="getValidUntil()">
 <h3>getValidUntil</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name">getValidUntil</span>()</div>
-<div class="block"><p>Sets the date until the Price is valid.</p></div>
+<div class="block"><p>Maps to <code>StandalonePrice.validUntil</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>validUntil</dd>
@@ -379,7 +378,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <h3>getTiers</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/PriceTier.html" title="interface in com.commercetools.importapi.models.common">PriceTier</a>&gt;</span>&nbsp;<span class="element-name">getTiers</span>()</div>
-<div class="block"><p>Sets price tiers.</p></div>
+<div class="block"><p>Maps to <code>StandalonePrice.tiers</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>tiers</dd>
@@ -403,7 +402,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <h3>getCustom</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../customfields/Custom.html" title="interface in com.commercetools.importapi.models.customfields">Custom</a></span>&nbsp;<span class="element-name">getCustom</span>()</div>
-<div class="block"><p>Custom Fields for the StandalonePrice.</p></div>
+<div class="block"><p>Maps to <code>StandalonePrice.custom</code>.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>custom</dd>
@@ -414,7 +413,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setKey(java.lang.String)">
 <h3>setKey</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setKey</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</span></div>
-<div class="block"><p>User-defined unique identifier for the Standalone Price. If a StandalonePrice) with this <code>key</code> exists, it will be updated with the imported data.</p></div>
+<div class="block"><p>User-defined unique identifier for the StandalonePrice. If a StandalonePrice) with this <code>key</code> exists, it is updated with the imported data.</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="../common/ImportResource.html#setKey(java.lang.String)">setKey</a></code>&nbsp;in interface&nbsp;<code><a href="../common/ImportResource.html" title="interface in com.commercetools.importapi.models.common">ImportResource</a></code></dd>
@@ -427,7 +426,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setSku(java.lang.String)">
 <h3>setSku</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setSku</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;sku)</span></div>
-<div class="block"><p>Identifies the ProductVariant to which this Standalone Price is associated. This value is not validated to exist in Product Variants.</p></div>
+<div class="block"><p>Maps to <code>StandalonePrice.sku</code>. This value is not validated to exist in Product Variants.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>sku</code> - value to be set</dd>
@@ -438,7 +437,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setValue(com.commercetools.importapi.models.common.TypedMoney)">
 <h3>setValue</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setValue</span><wbr><span class="parameters">(<a href="../common/TypedMoney.html" title="interface in com.commercetools.importapi.models.common">TypedMoney</a>&nbsp;value)</span></div>
-<div class="block"><p>Sets the money value of this Price.</p></div>
+<div class="block"><p>Maps to <code>StandalonePrice.value</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>value</code> - value to be set</dd>
@@ -449,8 +448,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setCountry(java.lang.String)">
 <h3>setCountry</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCountry</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;country)</span></div>
-<div class="block"><p>Sets the country for this Price, if the Price does not yet have a country.</p>
-  <p>The country cannot be updated. Attempting to update the an existing country will result in an InvalidFieldsUpdate error.</p></div>
+<div class="block"><p>Maps to <code>StandalonePrice.country</code>. This value cannot be updated. Attempting to update this value will result in an InvalidFieldsUpdate error.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>country</code> - value to be set</dd>
@@ -461,8 +459,8 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setCustomerGroup(com.commercetools.importapi.models.common.CustomerGroupKeyReference)">
 <h3>setCustomerGroup</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCustomerGroup</span><wbr><span class="parameters">(<a href="../common/CustomerGroupKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerGroupKeyReference</a>&nbsp;customerGroup)</span></div>
-<div class="block"><p>Sets the CustomerGroup for this Price, if the Price does not yet have a CustomerGroup.</p>
-  <p>The CustomerGroup cannot be updated. Attempting to update an existing CustomerGroup will result in an InvalidFieldsUpdate error.</p></div>
+<div class="block"><p>Maps to <code>StandalonePrice.customerGroup</code>. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p>
+  <p>This value cannot be updated. Attempting to update this value will result in an InvalidFieldsUpdate error.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>customerGroup</code> - value to be set</dd>
@@ -473,8 +471,8 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setChannel(com.commercetools.importapi.models.common.ChannelKeyReference)">
 <h3>setChannel</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setChannel</span><wbr><span class="parameters">(<a href="../common/ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a>&nbsp;channel)</span></div>
-<div class="block"><p>Sets the product distribution Channel for this Price, if the Price does not yet have a Channel.</p>
-  <p>The Channel cannot be updated. Attempting to update an existing Channel will result in an InvalidFieldsUpdate error.</p></div>
+<div class="block"><p>Maps to <code>StandalonePrice.channel</code>. If the referenced Channel does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Channel is created.</p>
+  <p>This value cannot be updated. Attempting to update this value will result in an InvalidFieldsUpdate error.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>channel</code> - value to be set</dd>
@@ -485,7 +483,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setValidFrom(java.time.ZonedDateTime)">
 <h3>setValidFrom</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setValidFrom</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;validFrom)</span></div>
-<div class="block"><p>Sets the date from which the Price is valid.</p></div>
+<div class="block"><p>Maps to <code>StandalonePrice.validFrom</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>validFrom</code> - value to be set</dd>
@@ -496,7 +494,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setValidUntil(java.time.ZonedDateTime)">
 <h3>setValidUntil</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setValidUntil</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;validUntil)</span></div>
-<div class="block"><p>Sets the date until the Price is valid.</p></div>
+<div class="block"><p>Maps to <code>StandalonePrice.validUntil</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>validUntil</code> - value to be set</dd>
@@ -507,7 +505,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setTiers(com.commercetools.importapi.models.common.PriceTier...)">
 <h3>setTiers</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setTiers</span><wbr><span class="parameters">(<a href="../common/PriceTier.html" title="interface in com.commercetools.importapi.models.common">PriceTier</a>...&nbsp;tiers)</span></div>
-<div class="block"><p>Sets price tiers.</p></div>
+<div class="block"><p>Maps to <code>StandalonePrice.tiers</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>tiers</code> - values to be set</dd>
@@ -518,7 +516,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setTiers(java.util.List)">
 <h3>setTiers</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setTiers</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../common/PriceTier.html" title="interface in com.commercetools.importapi.models.common">PriceTier</a>&gt;&nbsp;tiers)</span></div>
-<div class="block"><p>Sets price tiers.</p></div>
+<div class="block"><p>Maps to <code>StandalonePrice.tiers</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>tiers</code> - values to be set</dd>
@@ -540,7 +538,7 @@ extends <a href="../common/ImportResource.html" title="interface in com.commerce
 <section class="detail" id="setCustom(com.commercetools.importapi.models.customfields.Custom)">
 <h3>setCustom</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setCustom</span><wbr><span class="parameters">(<a href="../customfields/Custom.html" title="interface in com.commercetools.importapi.models.customfields">Custom</a>&nbsp;custom)</span></div>
-<div class="block"><p>Custom Fields for the StandalonePrice.</p></div>
+<div class="block"><p>Maps to <code>StandalonePrice.custom</code>.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>custom</code> - value to be set</dd>

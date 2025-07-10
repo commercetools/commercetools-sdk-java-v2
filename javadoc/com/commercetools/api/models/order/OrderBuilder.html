@@ -476,15 +476,25 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Payment status of the Order.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPurchaseOrderNumber()" class="member-name-link">getPurchaseOrderNumber</a>()</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../cart/RoundingMode.html" title="interface in com.commercetools.api.models.cart">RoundingMode</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPriceRoundingMode()" class="member-name-link">getPriceRoundingMode</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Indicates how the total prices on LineItems and CustomLineItems are rounded when calculated.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getPurchaseOrderNumber()" class="member-name-link">getPurchaseOrderNumber</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">User-defined identifier of a purchase Order.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../quote/QuoteReference.html" title="interface in com.commercetools.api.models.quote">QuoteReference</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getQuote()" class="member-name-link">getQuote</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../quote/QuoteReference.html" title="interface in com.commercetools.api.models.quote">QuoteReference</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getQuote()" class="member-name-link">getQuote</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Reference to the Quote for an Order created from Quote.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../recurring_order/RecurringOrderReference.html" title="interface in com.commercetools.api.models.recurring_order">RecurringOrderReference</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRecurringOrder()" class="member-name-link">getRecurringOrder</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Reference to the RecurringOrder that generated this Order.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../cart_discount/CartDiscountReference.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountReference</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRefusedGifts()" class="member-name-link">getRefusedGifts</a>()</code></div>
@@ -775,195 +785,202 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="block">Contains synchronization activity information of the Order (like export or import).</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#purchaseOrderNumber(java.lang.String)" class="member-name-link">purchaseOrderNumber</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;purchaseOrderNumber)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#priceRoundingMode(com.commercetools.api.models.cart.RoundingMode)" class="member-name-link">priceRoundingMode</a><wbr>(<a href="../cart/RoundingMode.html" title="interface in com.commercetools.api.models.cart">RoundingMode</a>&nbsp;priceRoundingMode)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Indicates how the total prices on LineItems and CustomLineItems are rounded when calculated.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#purchaseOrderNumber(java.lang.String)" class="member-name-link">purchaseOrderNumber</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;purchaseOrderNumber)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">User-defined identifier of a purchase Order.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#quote(com.commercetools.api.models.quote.QuoteReference)" class="member-name-link">quote</a><wbr>(<a href="../quote/QuoteReference.html" title="interface in com.commercetools.api.models.quote">QuoteReference</a>&nbsp;quote)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Reference to the Quote for an Order created from Quote.</div>
-</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#quote(java.util.function.Function)" class="member-name-link">quote</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../quote/QuoteReferenceBuilder.html" title="class in com.commercetools.api.models.quote">QuoteReferenceBuilder</a>,<wbr><a href="../quote/QuoteReferenceBuilder.html" title="class in com.commercetools.api.models.quote">QuoteReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#quote(com.commercetools.api.models.quote.QuoteReference)" class="member-name-link">quote</a><wbr>(<a href="../quote/QuoteReference.html" title="interface in com.commercetools.api.models.quote">QuoteReference</a>&nbsp;quote)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Reference to the Quote for an Order created from Quote.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#refusedGifts(com.commercetools.api.models.cart_discount.CartDiscountReference...)" class="member-name-link">refusedGifts</a><wbr>(<a href="../cart_discount/CartDiscountReference.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountReference</a>...&nbsp;refusedGifts)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#quote(java.util.function.Function)" class="member-name-link">quote</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../quote/QuoteReferenceBuilder.html" title="class in com.commercetools.api.models.quote">QuoteReferenceBuilder</a>,<wbr><a href="../quote/QuoteReferenceBuilder.html" title="class in com.commercetools.api.models.quote">QuoteReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Order.</div>
+<div class="block">Reference to the Quote for an Order created from Quote.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#refusedGifts(java.util.List)" class="member-name-link">refusedGifts</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../cart_discount/CartDiscountReference.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountReference</a>&gt;&nbsp;refusedGifts)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#recurringOrder(com.commercetools.api.models.recurring_order.RecurringOrderReference)" class="member-name-link">recurringOrder</a><wbr>(<a href="../recurring_order/RecurringOrderReference.html" title="interface in com.commercetools.api.models.recurring_order">RecurringOrderReference</a>&nbsp;recurringOrder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Reference to the RecurringOrder that generated this Order.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#recurringOrder(java.util.function.Function)" class="member-name-link">recurringOrder</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../recurring_order/RecurringOrderReferenceBuilder.html" title="class in com.commercetools.api.models.recurring_order">RecurringOrderReferenceBuilder</a>,<wbr><a href="../recurring_order/RecurringOrderReferenceBuilder.html" title="class in com.commercetools.api.models.recurring_order">RecurringOrderReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Reference to the RecurringOrder that generated this Order.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#refusedGifts(com.commercetools.api.models.cart_discount.CartDiscountReference...)" class="member-name-link">refusedGifts</a><wbr>(<a href="../cart_discount/CartDiscountReference.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountReference</a>...&nbsp;refusedGifts)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Order.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#returnInfo(com.commercetools.api.models.order.ReturnInfo...)" class="member-name-link">returnInfo</a><wbr>(<a href="ReturnInfo.html" title="interface in com.commercetools.api.models.order">ReturnInfo</a>...&nbsp;returnInfo)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#refusedGifts(java.util.List)" class="member-name-link">refusedGifts</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../cart_discount/CartDiscountReference.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountReference</a>&gt;&nbsp;refusedGifts)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Contains information regarding the returns associated with the Order.</div>
+<div class="block">Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Order.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#returnInfo(java.util.List)" class="member-name-link">returnInfo</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ReturnInfo.html" title="interface in com.commercetools.api.models.order">ReturnInfo</a>&gt;&nbsp;returnInfo)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#returnInfo(com.commercetools.api.models.order.ReturnInfo...)" class="member-name-link">returnInfo</a><wbr>(<a href="ReturnInfo.html" title="interface in com.commercetools.api.models.order">ReturnInfo</a>...&nbsp;returnInfo)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Contains information regarding the returns associated with the Order.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCustomLineItems(java.util.function.Function)" class="member-name-link">setCustomLineItems</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart/CustomLineItemBuilder.html" title="class in com.commercetools.api.models.cart">CustomLineItemBuilder</a>,<wbr><a href="../cart/CustomLineItem.html" title="interface in com.commercetools.api.models.cart">CustomLineItem</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#returnInfo(java.util.List)" class="member-name-link">returnInfo</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="ReturnInfo.html" title="interface in com.commercetools.api.models.order">ReturnInfo</a>&gt;&nbsp;returnInfo)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Contains information regarding the returns associated with the Order.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setCustomLineItems(java.util.function.Function)" class="member-name-link">setCustomLineItems</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart/CustomLineItemBuilder.html" title="class in com.commercetools.api.models.cart">CustomLineItemBuilder</a>,<wbr><a href="../cart/CustomLineItem.html" title="interface in com.commercetools.api.models.cart">CustomLineItem</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Custom Line Items that are part of the Order.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDirectDiscounts(java.util.function.Function)" class="member-name-link">setDirectDiscounts</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart/DirectDiscountBuilder.html" title="class in com.commercetools.api.models.cart">DirectDiscountBuilder</a>,<wbr><a href="../cart/DirectDiscount.html" title="interface in com.commercetools.api.models.cart">DirectDiscount</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDirectDiscounts(java.util.function.Function)" class="member-name-link">setDirectDiscounts</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart/DirectDiscountBuilder.html" title="class in com.commercetools.api.models.cart">DirectDiscountBuilder</a>,<wbr><a href="../cart/DirectDiscount.html" title="interface in com.commercetools.api.models.cart">DirectDiscount</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Direct Discounts added to the Order.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDiscountCodes(java.util.function.Function)" class="member-name-link">setDiscountCodes</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart/DiscountCodeInfoBuilder.html" title="class in com.commercetools.api.models.cart">DiscountCodeInfoBuilder</a>,<wbr><a href="../cart/DiscountCodeInfo.html" title="interface in com.commercetools.api.models.cart">DiscountCodeInfo</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setDiscountCodes(java.util.function.Function)" class="member-name-link">setDiscountCodes</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart/DiscountCodeInfoBuilder.html" title="class in com.commercetools.api.models.cart">DiscountCodeInfoBuilder</a>,<wbr><a href="../cart/DiscountCodeInfo.html" title="interface in com.commercetools.api.models.cart">DiscountCodeInfo</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Discount Codes added to the Order.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setItemShippingAddresses(java.util.function.Function)" class="member-name-link">setItemShippingAddresses</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/AddressBuilder.html" title="class in com.commercetools.api.models.common">AddressBuilder</a>,<wbr><a href="../common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setItemShippingAddresses(java.util.function.Function)" class="member-name-link">setItemShippingAddresses</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/AddressBuilder.html" title="class in com.commercetools.api.models.common">AddressBuilder</a>,<wbr><a href="../common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Additional shipping addresses of the Order as specified by LineItems using the <code>shippingDetails</code> field.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLineItems(java.util.function.Function)" class="member-name-link">setLineItems</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart/LineItemBuilder.html" title="class in com.commercetools.api.models.cart">LineItemBuilder</a>,<wbr><a href="../cart/LineItem.html" title="interface in com.commercetools.api.models.cart">LineItem</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setLineItems(java.util.function.Function)" class="member-name-link">setLineItems</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart/LineItemBuilder.html" title="class in com.commercetools.api.models.cart">LineItemBuilder</a>,<wbr><a href="../cart/LineItem.html" title="interface in com.commercetools.api.models.cart">LineItem</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Line Items that are part of the Order.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRefusedGifts(java.util.function.Function)" class="member-name-link">setRefusedGifts</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart_discount/CartDiscountReferenceBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountReferenceBuilder</a>,<wbr><a href="../cart_discount/CartDiscountReference.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountReference</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRefusedGifts(java.util.function.Function)" class="member-name-link">setRefusedGifts</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart_discount/CartDiscountReferenceBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountReferenceBuilder</a>,<wbr><a href="../cart_discount/CartDiscountReference.html" title="interface in com.commercetools.api.models.cart_discount">CartDiscountReference</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Automatically set when a Line Item with <code>GiftLineItem</code> LineItemMode is removed from the Order.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setReturnInfo(java.util.function.Function)" class="member-name-link">setReturnInfo</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ReturnInfoBuilder.html" title="class in com.commercetools.api.models.order">ReturnInfoBuilder</a>,<wbr><a href="ReturnInfo.html" title="interface in com.commercetools.api.models.order">ReturnInfo</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setReturnInfo(java.util.function.Function)" class="member-name-link">setReturnInfo</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="ReturnInfoBuilder.html" title="class in com.commercetools.api.models.order">ReturnInfoBuilder</a>,<wbr><a href="ReturnInfo.html" title="interface in com.commercetools.api.models.order">ReturnInfo</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Contains information regarding the returns associated with the Order.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setShipping(java.util.function.Function)" class="member-name-link">setShipping</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart/ShippingBuilder.html" title="class in com.commercetools.api.models.cart">ShippingBuilder</a>,<wbr><a href="../cart/Shipping.html" title="interface in com.commercetools.api.models.cart">Shipping</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setShipping(java.util.function.Function)" class="member-name-link">setShipping</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart/ShippingBuilder.html" title="class in com.commercetools.api.models.cart">ShippingBuilder</a>,<wbr><a href="../cart/Shipping.html" title="interface in com.commercetools.api.models.cart">Shipping</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Shipping-related information for <code>Multiple</code> ShippingMode.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSyncInfo(java.util.function.Function)" class="member-name-link">setSyncInfo</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SyncInfoBuilder.html" title="class in com.commercetools.api.models.order">SyncInfoBuilder</a>,<wbr><a href="SyncInfo.html" title="interface in com.commercetools.api.models.order">SyncInfo</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setSyncInfo(java.util.function.Function)" class="member-name-link">setSyncInfo</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="SyncInfoBuilder.html" title="class in com.commercetools.api.models.order">SyncInfoBuilder</a>,<wbr><a href="SyncInfo.html" title="interface in com.commercetools.api.models.order">SyncInfo</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Contains synchronization activity information of the Order (like export or import).</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shipmentState(com.commercetools.api.models.order.ShipmentState)" class="member-name-link">shipmentState</a><wbr>(<a href="ShipmentState.html" title="interface in com.commercetools.api.models.order">ShipmentState</a>&nbsp;shipmentState)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shipmentState(com.commercetools.api.models.order.ShipmentState)" class="member-name-link">shipmentState</a><wbr>(<a href="ShipmentState.html" title="interface in com.commercetools.api.models.order">ShipmentState</a>&nbsp;shipmentState)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Shipment status of the Order.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shipping(com.commercetools.api.models.cart.Shipping...)" class="member-name-link">shipping</a><wbr>(<a href="../cart/Shipping.html" title="interface in com.commercetools.api.models.cart">Shipping</a>...&nbsp;shipping)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Shipping-related information for <code>Multiple</code> ShippingMode.</div>
-</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shipping(java.util.List)" class="member-name-link">shipping</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../cart/Shipping.html" title="interface in com.commercetools.api.models.cart">Shipping</a>&gt;&nbsp;shipping)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shipping(com.commercetools.api.models.cart.Shipping...)" class="member-name-link">shipping</a><wbr>(<a href="../cart/Shipping.html" title="interface in com.commercetools.api.models.cart">Shipping</a>...&nbsp;shipping)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Shipping-related information for <code>Multiple</code> ShippingMode.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingAddress(com.commercetools.api.models.common.Address)" class="member-name-link">shippingAddress</a><wbr>(<a href="../common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&nbsp;shippingAddress)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shipping(java.util.List)" class="member-name-link">shipping</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="../cart/Shipping.html" title="interface in com.commercetools.api.models.cart">Shipping</a>&gt;&nbsp;shipping)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Shipping address associated with the Order.</div>
+<div class="block">Shipping-related information for <code>Multiple</code> ShippingMode.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingAddress(java.util.function.Function)" class="member-name-link">shippingAddress</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/AddressBuilder.html" title="class in com.commercetools.api.models.common">AddressBuilder</a>,<wbr><a href="../common/AddressBuilder.html" title="class in com.commercetools.api.models.common">AddressBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingAddress(com.commercetools.api.models.common.Address)" class="member-name-link">shippingAddress</a><wbr>(<a href="../common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&nbsp;shippingAddress)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Shipping address associated with the Order.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingCustomFields(com.commercetools.api.models.type.CustomFields)" class="member-name-link">shippingCustomFields</a><wbr>(<a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&nbsp;shippingCustomFields)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingAddress(java.util.function.Function)" class="member-name-link">shippingAddress</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/AddressBuilder.html" title="class in com.commercetools.api.models.common">AddressBuilder</a>,<wbr><a href="../common/AddressBuilder.html" title="class in com.commercetools.api.models.common">AddressBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Custom Fields of the Shipping Method for <code>Single</code> ShippingMode.</div>
+<div class="block">Shipping address associated with the Order.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingCustomFields(java.util.function.Function)" class="member-name-link">shippingCustomFields</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../type/CustomFieldsBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsBuilder</a>,<wbr><a href="../type/CustomFieldsBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingCustomFields(com.commercetools.api.models.type.CustomFields)" class="member-name-link">shippingCustomFields</a><wbr>(<a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&nbsp;shippingCustomFields)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Custom Fields of the Shipping Method for <code>Single</code> ShippingMode.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingInfo(com.commercetools.api.models.cart.ShippingInfo)" class="member-name-link">shippingInfo</a><wbr>(<a href="../cart/ShippingInfo.html" title="interface in com.commercetools.api.models.cart">ShippingInfo</a>&nbsp;shippingInfo)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingCustomFields(java.util.function.Function)" class="member-name-link">shippingCustomFields</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../type/CustomFieldsBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsBuilder</a>,<wbr><a href="../type/CustomFieldsBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Shipping-related information for <code>Single</code> ShippingMode.</div>
+<div class="block">Custom Fields of the Shipping Method for <code>Single</code> ShippingMode.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingInfo(java.util.function.Function)" class="member-name-link">shippingInfo</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart/ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a>,<wbr><a href="../cart/ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingInfo(com.commercetools.api.models.cart.ShippingInfo)" class="member-name-link">shippingInfo</a><wbr>(<a href="../cart/ShippingInfo.html" title="interface in com.commercetools.api.models.cart">ShippingInfo</a>&nbsp;shippingInfo)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Shipping-related information for <code>Single</code> ShippingMode.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingKey(java.lang.String)" class="member-name-link">shippingKey</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;shippingKey)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingInfo(java.util.function.Function)" class="member-name-link">shippingInfo</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart/ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a>,<wbr><a href="../cart/ShippingInfoBuilder.html" title="class in com.commercetools.api.models.cart">ShippingInfoBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Shipping-related information for <code>Single</code> ShippingMode.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingKey(java.lang.String)" class="member-name-link">shippingKey</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;shippingKey)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block"><code>key</code> of the ShippingMethod for <code>Single</code> ShippingMode.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingMode(com.commercetools.api.models.cart.ShippingMode)" class="member-name-link">shippingMode</a><wbr>(<a href="../cart/ShippingMode.html" title="interface in com.commercetools.api.models.cart">ShippingMode</a>&nbsp;shippingMode)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingMode(com.commercetools.api.models.cart.ShippingMode)" class="member-name-link">shippingMode</a><wbr>(<a href="../cart/ShippingMode.html" title="interface in com.commercetools.api.models.cart">ShippingMode</a>&nbsp;shippingMode)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Indicates whether there can be one or multiple Shipping Methods.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingRateInput(com.commercetools.api.models.cart.ShippingRateInput)" class="member-name-link">shippingRateInput</a><wbr>(<a href="../cart/ShippingRateInput.html" title="interface in com.commercetools.api.models.cart">ShippingRateInput</a>&nbsp;shippingRateInput)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Input used to select a ShippingRatePriceTier.</div>
-</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingRateInput(java.util.function.Function)" class="member-name-link">shippingRateInput</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart/ShippingRateInputBuilder.html" title="class in com.commercetools.api.models.cart">ShippingRateInputBuilder</a>,<wbr><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../cart/ShippingRateInput.html" title="interface in com.commercetools.api.models.cart">ShippingRateInput</a>&gt;&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingRateInput(com.commercetools.api.models.cart.ShippingRateInput)" class="member-name-link">shippingRateInput</a><wbr>(<a href="../cart/ShippingRateInput.html" title="interface in com.commercetools.api.models.cart">ShippingRateInput</a>&nbsp;shippingRateInput)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Input used to select a ShippingRatePriceTier.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#state(com.commercetools.api.models.state.StateReference)" class="member-name-link">state</a><wbr>(<a href="../state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a>&nbsp;state)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#shippingRateInput(java.util.function.Function)" class="member-name-link">shippingRateInput</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart/ShippingRateInputBuilder.html" title="class in com.commercetools.api.models.cart">ShippingRateInputBuilder</a>,<wbr><a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="interface in io.vrap.rmf.base.client">Builder</a>&lt;? extends <a href="../cart/ShippingRateInput.html" title="interface in com.commercetools.api.models.cart">ShippingRateInput</a>&gt;&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">State of the Order.</div>
+<div class="block">Input used to select a ShippingRatePriceTier.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#state(java.util.function.Function)" class="member-name-link">state</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../state/StateReferenceBuilder.html" title="class in com.commercetools.api.models.state">StateReferenceBuilder</a>,<wbr><a href="../state/StateReferenceBuilder.html" title="class in com.commercetools.api.models.state">StateReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#state(com.commercetools.api.models.state.StateReference)" class="member-name-link">state</a><wbr>(<a href="../state/StateReference.html" title="interface in com.commercetools.api.models.state">StateReference</a>&nbsp;state)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">State of the Order.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#store(com.commercetools.api.models.store.StoreKeyReference)" class="member-name-link">store</a><wbr>(<a href="../store/StoreKeyReference.html" title="interface in com.commercetools.api.models.store">StoreKeyReference</a>&nbsp;store)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#state(java.util.function.Function)" class="member-name-link">state</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../state/StateReferenceBuilder.html" title="class in com.commercetools.api.models.state">StateReferenceBuilder</a>,<wbr><a href="../state/StateReferenceBuilder.html" title="class in com.commercetools.api.models.state">StateReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Reference to a Store the Order belongs to.</div>
+<div class="block">State of the Order.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#store(java.util.function.Function)" class="member-name-link">store</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../store/StoreKeyReferenceBuilder.html" title="class in com.commercetools.api.models.store">StoreKeyReferenceBuilder</a>,<wbr><a href="../store/StoreKeyReferenceBuilder.html" title="class in com.commercetools.api.models.store">StoreKeyReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#store(com.commercetools.api.models.store.StoreKeyReference)" class="member-name-link">store</a><wbr>(<a href="../store/StoreKeyReference.html" title="interface in com.commercetools.api.models.store">StoreKeyReference</a>&nbsp;store)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Reference to a Store the Order belongs to.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#syncInfo(com.commercetools.api.models.order.SyncInfo...)" class="member-name-link">syncInfo</a><wbr>(<a href="SyncInfo.html" title="interface in com.commercetools.api.models.order">SyncInfo</a>...&nbsp;syncInfo)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#store(java.util.function.Function)" class="member-name-link">store</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../store/StoreKeyReferenceBuilder.html" title="class in com.commercetools.api.models.store">StoreKeyReferenceBuilder</a>,<wbr><a href="../store/StoreKeyReferenceBuilder.html" title="class in com.commercetools.api.models.store">StoreKeyReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Contains synchronization activity information of the Order (like export or import).</div>
+<div class="block">Reference to a Store the Order belongs to.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#syncInfo(java.util.List)" class="member-name-link">syncInfo</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="SyncInfo.html" title="interface in com.commercetools.api.models.order">SyncInfo</a>&gt;&nbsp;syncInfo)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#syncInfo(com.commercetools.api.models.order.SyncInfo...)" class="member-name-link">syncInfo</a><wbr>(<a href="SyncInfo.html" title="interface in com.commercetools.api.models.order">SyncInfo</a>...&nbsp;syncInfo)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Contains synchronization activity information of the Order (like export or import).</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#taxCalculationMode(com.commercetools.api.models.cart.TaxCalculationMode)" class="member-name-link">taxCalculationMode</a><wbr>(<a href="../cart/TaxCalculationMode.html" title="interface in com.commercetools.api.models.cart">TaxCalculationMode</a>&nbsp;taxCalculationMode)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#syncInfo(java.util.List)" class="member-name-link">syncInfo</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="SyncInfo.html" title="interface in com.commercetools.api.models.order">SyncInfo</a>&gt;&nbsp;syncInfo)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Contains synchronization activity information of the Order (like export or import).</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#taxCalculationMode(com.commercetools.api.models.cart.TaxCalculationMode)" class="member-name-link">taxCalculationMode</a><wbr>(<a href="../cart/TaxCalculationMode.html" title="interface in com.commercetools.api.models.cart">TaxCalculationMode</a>&nbsp;taxCalculationMode)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Indicates how taxes are calculated when calculating taxes for <code>taxedPrice</code>.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#taxedPrice(com.commercetools.api.models.cart.TaxedPrice)" class="member-name-link">taxedPrice</a><wbr>(<a href="../cart/TaxedPrice.html" title="interface in com.commercetools.api.models.cart">TaxedPrice</a>&nbsp;taxedPrice)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">
-   For <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.
-   For <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.
-  </div>
-</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#taxedPrice(java.util.function.Function)" class="member-name-link">taxedPrice</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart/TaxedPriceBuilder.html" title="class in com.commercetools.api.models.cart">TaxedPriceBuilder</a>,<wbr><a href="../cart/TaxedPriceBuilder.html" title="class in com.commercetools.api.models.cart">TaxedPriceBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#taxedPrice(com.commercetools.api.models.cart.TaxedPrice)" class="member-name-link">taxedPrice</a><wbr>(<a href="../cart/TaxedPrice.html" title="interface in com.commercetools.api.models.cart">TaxedPrice</a>&nbsp;taxedPrice)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">
    For <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.
@@ -971,114 +988,127 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
   </div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#taxedShippingPrice(com.commercetools.api.models.cart.TaxedPrice)" class="member-name-link">taxedShippingPrice</a><wbr>(<a href="../cart/TaxedPrice.html" title="interface in com.commercetools.api.models.cart">TaxedPrice</a>&nbsp;taxedShippingPrice)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#taxedPrice(java.util.function.Function)" class="member-name-link">taxedPrice</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart/TaxedPriceBuilder.html" title="class in com.commercetools.api.models.cart">TaxedPriceBuilder</a>,<wbr><a href="../cart/TaxedPriceBuilder.html" title="class in com.commercetools.api.models.cart">TaxedPriceBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Sum of the <code>taxedPrice</code> field of ShippingInfo across all Shipping Methods.</div>
+<div class="block">
+   For <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.
+   For <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.
+  </div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#taxedShippingPrice(java.util.function.Function)" class="member-name-link">taxedShippingPrice</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart/TaxedPriceBuilder.html" title="class in com.commercetools.api.models.cart">TaxedPriceBuilder</a>,<wbr><a href="../cart/TaxedPriceBuilder.html" title="class in com.commercetools.api.models.cart">TaxedPriceBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#taxedShippingPrice(com.commercetools.api.models.cart.TaxedPrice)" class="member-name-link">taxedShippingPrice</a><wbr>(<a href="../cart/TaxedPrice.html" title="interface in com.commercetools.api.models.cart">TaxedPrice</a>&nbsp;taxedShippingPrice)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Sum of the <code>taxedPrice</code> field of ShippingInfo across all Shipping Methods.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#taxMode(com.commercetools.api.models.cart.TaxMode)" class="member-name-link">taxMode</a><wbr>(<a href="../cart/TaxMode.html" title="interface in com.commercetools.api.models.cart">TaxMode</a>&nbsp;taxMode)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#taxedShippingPrice(java.util.function.Function)" class="member-name-link">taxedShippingPrice</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart/TaxedPriceBuilder.html" title="class in com.commercetools.api.models.cart">TaxedPriceBuilder</a>,<wbr><a href="../cart/TaxedPriceBuilder.html" title="class in com.commercetools.api.models.cart">TaxedPriceBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Sum of the <code>taxedPrice</code> field of ShippingInfo across all Shipping Methods.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#taxMode(com.commercetools.api.models.cart.TaxMode)" class="member-name-link">taxMode</a><wbr>(<a href="../cart/TaxMode.html" title="interface in com.commercetools.api.models.cart">TaxMode</a>&nbsp;taxMode)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Indicates how Tax Rates are set.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#taxRoundingMode(com.commercetools.api.models.cart.RoundingMode)" class="member-name-link">taxRoundingMode</a><wbr>(<a href="../cart/RoundingMode.html" title="interface in com.commercetools.api.models.cart">RoundingMode</a>&nbsp;taxRoundingMode)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#taxRoundingMode(com.commercetools.api.models.cart.RoundingMode)" class="member-name-link">taxRoundingMode</a><wbr>(<a href="../cart/RoundingMode.html" title="interface in com.commercetools.api.models.cart">RoundingMode</a>&nbsp;taxRoundingMode)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Indicates how monetary values are rounded when calculating taxes for <code>taxedPrice</code>.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#totalPrice(com.commercetools.api.models.common.CentPrecisionMoney)" class="member-name-link">totalPrice</a><wbr>(<a href="../common/CentPrecisionMoney.html" title="interface in com.commercetools.api.models.common">CentPrecisionMoney</a>&nbsp;totalPrice)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo.</div>
-</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#totalPrice(java.util.function.Function)" class="member-name-link">totalPrice</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CentPrecisionMoneyBuilder.html" title="class in com.commercetools.api.models.common">CentPrecisionMoneyBuilder</a>,<wbr><a href="../common/CentPrecisionMoneyBuilder.html" title="class in com.commercetools.api.models.common">CentPrecisionMoneyBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#totalPrice(com.commercetools.api.models.common.CentPrecisionMoney)" class="member-name-link">totalPrice</a><wbr>(<a href="../common/CentPrecisionMoney.html" title="interface in com.commercetools.api.models.common">CentPrecisionMoney</a>&nbsp;totalPrice)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#version(java.lang.Long)" class="member-name-link">version</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#totalPrice(java.util.function.Function)" class="member-name-link">totalPrice</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CentPrecisionMoneyBuilder.html" title="class in com.commercetools.api.models.common">CentPrecisionMoneyBuilder</a>,<wbr><a href="../common/CentPrecisionMoneyBuilder.html" title="class in com.commercetools.api.models.common">CentPrecisionMoneyBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Sum of the <code>totalPrice</code> field of all LineItems and CustomLineItems, and if available, the <code>price</code> field of ShippingInfo.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#version(java.lang.Long)" class="member-name-link">version</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;version)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Current version of the Order.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withBillingAddress(java.util.function.Function)" class="member-name-link">withBillingAddress</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/AddressBuilder.html" title="class in com.commercetools.api.models.common">AddressBuilder</a>,<wbr><a href="../common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withBillingAddress(java.util.function.Function)" class="member-name-link">withBillingAddress</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/AddressBuilder.html" title="class in com.commercetools.api.models.common">AddressBuilder</a>,<wbr><a href="../common/Address.html" title="interface in com.commercetools.api.models.common">Address</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Billing address associated with the Order.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withBusinessUnit(java.util.function.Function)" class="member-name-link">withBusinessUnit</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../business_unit/BusinessUnitKeyReferenceBuilder.html" title="class in com.commercetools.api.models.business_unit">BusinessUnitKeyReferenceBuilder</a>,<wbr><a href="../business_unit/BusinessUnitKeyReference.html" title="interface in com.commercetools.api.models.business_unit">BusinessUnitKeyReference</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withBusinessUnit(java.util.function.Function)" class="member-name-link">withBusinessUnit</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../business_unit/BusinessUnitKeyReferenceBuilder.html" title="class in com.commercetools.api.models.business_unit">BusinessUnitKeyReferenceBuilder</a>,<wbr><a href="../business_unit/BusinessUnitKeyReference.html" title="interface in com.commercetools.api.models.business_unit">BusinessUnitKeyReference</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Reference to a Business Unit the Order belongs to.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withCart(java.util.function.Function)" class="member-name-link">withCart</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart/CartReferenceBuilder.html" title="class in com.commercetools.api.models.cart">CartReferenceBuilder</a>,<wbr><a href="../cart/CartReference.html" title="interface in com.commercetools.api.models.cart">CartReference</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withCart(java.util.function.Function)" class="member-name-link">withCart</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart/CartReferenceBuilder.html" title="class in com.commercetools.api.models.cart">CartReferenceBuilder</a>,<wbr><a href="../cart/CartReference.html" title="interface in com.commercetools.api.models.cart">CartReference</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Reference to the Cart for an Order created from Cart.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withCreatedBy(java.util.function.Function)" class="member-name-link">withCreatedBy</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CreatedByBuilder.html" title="class in com.commercetools.api.models.common">CreatedByBuilder</a>,<wbr><a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withCreatedBy(java.util.function.Function)" class="member-name-link">withCreatedBy</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CreatedByBuilder.html" title="class in com.commercetools.api.models.common">CreatedByBuilder</a>,<wbr><a href="../common/CreatedBy.html" title="interface in com.commercetools.api.models.common">CreatedBy</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">IDs and references that created the Order.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withCustom(java.util.function.Function)" class="member-name-link">withCustom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../type/CustomFieldsBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsBuilder</a>,<wbr><a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withCustom(java.util.function.Function)" class="member-name-link">withCustom</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../type/CustomFieldsBuilder.html" title="class in com.commercetools.api.models.type">CustomFieldsBuilder</a>,<wbr><a href="../type/CustomFields.html" title="interface in com.commercetools.api.models.type">CustomFields</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Custom Fields of the Order.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withCustomerGroup(java.util.function.Function)" class="member-name-link">withCustomerGroup</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../customer_group/CustomerGroupReferenceBuilder.html" title="class in com.commercetools.api.models.customer_group">CustomerGroupReferenceBuilder</a>,<wbr><a href="../customer_group/CustomerGroupReference.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupReference</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withCustomerGroup(java.util.function.Function)" class="member-name-link">withCustomerGroup</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../customer_group/CustomerGroupReferenceBuilder.html" title="class in com.commercetools.api.models.customer_group">CustomerGroupReferenceBuilder</a>,<wbr><a href="../customer_group/CustomerGroupReference.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupReference</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Reference to the Customer Group of the Customer that the Order belongs to.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withCustomLineItems(java.util.function.Function)" class="member-name-link">withCustomLineItems</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart/CustomLineItemBuilder.html" title="class in com.commercetools.api.models.cart">CustomLineItemBuilder</a>,<wbr><a href="../cart/CustomLineItemBuilder.html" title="class in com.commercetools.api.models.cart">CustomLineItemBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withCustomLineItems(java.util.function.Function)" class="member-name-link">withCustomLineItems</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart/CustomLineItemBuilder.html" title="class in com.commercetools.api.models.cart">CustomLineItemBuilder</a>,<wbr><a href="../cart/CustomLineItemBuilder.html" title="class in com.commercetools.api.models.cart">CustomLineItemBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Custom Line Items that are part of the Order.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withDirectDiscounts(java.util.function.Function)" class="member-name-link">withDirectDiscounts</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart/DirectDiscountBuilder.html" title="class in com.commercetools.api.models.cart">DirectDiscountBuilder</a>,<wbr><a href="../cart/DirectDiscountBuilder.html" title="class in com.commercetools.api.models.cart">DirectDiscountBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withDirectDiscounts(java.util.function.Function)" class="member-name-link">withDirectDiscounts</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart/DirectDiscountBuilder.html" title="class in com.commercetools.api.models.cart">DirectDiscountBuilder</a>,<wbr><a href="../cart/DirectDiscountBuilder.html" title="class in com.commercetools.api.models.cart">DirectDiscountBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Direct Discounts added to the Order.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withDiscountCodes(java.util.function.Function)" class="member-name-link">withDiscountCodes</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart/DiscountCodeInfoBuilder.html" title="class in com.commercetools.api.models.cart">DiscountCodeInfoBuilder</a>,<wbr><a href="../cart/DiscountCodeInfoBuilder.html" title="class in com.commercetools.api.models.cart">DiscountCodeInfoBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withDiscountCodes(java.util.function.Function)" class="member-name-link">withDiscountCodes</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart/DiscountCodeInfoBuilder.html" title="class in com.commercetools.api.models.cart">DiscountCodeInfoBuilder</a>,<wbr><a href="../cart/DiscountCodeInfoBuilder.html" title="class in com.commercetools.api.models.cart">DiscountCodeInfoBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Discount Codes added to the Order.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withDiscountOnTotalPrice(java.util.function.Function)" class="member-name-link">withDiscountOnTotalPrice</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart/DiscountOnTotalPriceBuilder.html" title="class in com.commercetools.api.models.cart">DiscountOnTotalPriceBuilder</a>,<wbr><a href="../cart/DiscountOnTotalPrice.html" title="interface in com.commercetools.api.models.cart">DiscountOnTotalPrice</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withDiscountOnTotalPrice(java.util.function.Function)" class="member-name-link">withDiscountOnTotalPrice</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart/DiscountOnTotalPriceBuilder.html" title="class in com.commercetools.api.models.cart">DiscountOnTotalPriceBuilder</a>,<wbr><a href="../cart/DiscountOnTotalPrice.html" title="interface in com.commercetools.api.models.cart">DiscountOnTotalPrice</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Discounts that apply on the total price of the Order.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withItemShippingAddresses(java.util.function.Function)" class="member-name-link">withItemShippingAddresses</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/AddressBuilder.html" title="class in com.commercetools.api.models.common">AddressBuilder</a>,<wbr><a href="../common/AddressBuilder.html" title="class in com.commercetools.api.models.common">AddressBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withItemShippingAddresses(java.util.function.Function)" class="member-name-link">withItemShippingAddresses</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/AddressBuilder.html" title="class in com.commercetools.api.models.common">AddressBuilder</a>,<wbr><a href="../common/AddressBuilder.html" title="class in com.commercetools.api.models.common">AddressBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Additional shipping addresses of the Order as specified by LineItems using the <code>shippingDetails</code> field.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withLastModifiedBy(java.util.function.Function)" class="member-name-link">withLastModifiedBy</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a>,<wbr><a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withLastModifiedBy(java.util.function.Function)" class="member-name-link">withLastModifiedBy</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/LastModifiedByBuilder.html" title="class in com.commercetools.api.models.common">LastModifiedByBuilder</a>,<wbr><a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">IDs and references that last modified the Order.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withLineItems(java.util.function.Function)" class="member-name-link">withLineItems</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart/LineItemBuilder.html" title="class in com.commercetools.api.models.cart">LineItemBuilder</a>,<wbr><a href="../cart/LineItemBuilder.html" title="class in com.commercetools.api.models.cart">LineItemBuilder</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withLineItems(java.util.function.Function)" class="member-name-link">withLineItems</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart/LineItemBuilder.html" title="class in com.commercetools.api.models.cart">LineItemBuilder</a>,<wbr><a href="../cart/LineItemBuilder.html" title="class in com.commercetools.api.models.cart">LineItemBuilder</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Line Items that are part of the Order.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withPaymentInfo(java.util.function.Function)" class="member-name-link">withPaymentInfo</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="PaymentInfoBuilder.html" title="class in com.commercetools.api.models.order">PaymentInfoBuilder</a>,<wbr><a href="PaymentInfo.html" title="interface in com.commercetools.api.models.order">PaymentInfo</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withPaymentInfo(java.util.function.Function)" class="member-name-link">withPaymentInfo</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="PaymentInfoBuilder.html" title="class in com.commercetools.api.models.order">PaymentInfoBuilder</a>,<wbr><a href="PaymentInfo.html" title="interface in com.commercetools.api.models.order">PaymentInfo</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Payment information related to the Order.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withQuote(java.util.function.Function)" class="member-name-link">withQuote</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../quote/QuoteReferenceBuilder.html" title="class in com.commercetools.api.models.quote">QuoteReferenceBuilder</a>,<wbr><a href="../quote/QuoteReference.html" title="interface in com.commercetools.api.models.quote">QuoteReference</a>&gt;&nbsp;builder)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withQuote(java.util.function.Function)" class="member-name-link">withQuote</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../quote/QuoteReferenceBuilder.html" title="class in com.commercetools.api.models.quote">QuoteReferenceBuilder</a>,<wbr><a href="../quote/QuoteReference.html" title="interface in com.commercetools.api.models.quote">QuoteReference</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Reference to the Quote for an Order created from Quote.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withRecurringOrder(java.util.function.Function)" class="member-name-link">withRecurringOrder</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../recurring_order/RecurringOrderReferenceBuilder.html" title="class in com.commercetools.api.models.recurring_order">RecurringOrderReferenceBuilder</a>,<wbr><a href="../recurring_order/RecurringOrderReference.html" title="interface in com.commercetools.api.models.recurring_order">RecurringOrderReference</a>&gt;&nbsp;builder)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Reference to the RecurringOrder that generated this Order.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withRefusedGifts(java.util.function.Function)" class="member-name-link">withRefusedGifts</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart_discount/CartDiscountReferenceBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountReferenceBuilder</a>,<wbr><a href="../cart_discount/CartDiscountReferenceBuilder.html" title="class in com.commercetools.api.models.cart_discount">CartDiscountReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
@@ -1649,7 +1679,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
    <li>For <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
    <li>For <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
   </ul>
-  <p>If a discount applies on <code>totalPrice</code>, this field holds the discounted values.</p></div>
+  <p>If a discount applies on <code>totalPrice</code>, this field holds the proportionally discounted value.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the taxedPrice value</dd>
@@ -1666,7 +1696,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
    <li>For <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
    <li>For <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
   </ul>
-  <p>If a discount applies on <code>totalPrice</code>, this field holds the discounted values.</p></div>
+  <p>If a discount applies on <code>totalPrice</code>, this field holds the proportionally discounted value.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the taxedPrice value</dd>
@@ -1684,7 +1714,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
    <li>For <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
    <li>For <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
   </ul>
-  <p>If a discount applies on <code>totalPrice</code>, this field holds the discounted values.</p></div>
+  <p>If a discount applies on <code>totalPrice</code>, this field holds the proportionally discounted value.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>taxedPrice</code> - value to be set</dd>
@@ -1697,7 +1727,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="taxedShippingPrice(java.util.function.Function)">
 <h3>taxedShippingPrice</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></span>&nbsp;<span class="element-name">taxedShippingPrice</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart/TaxedPriceBuilder.html" title="class in com.commercetools.api.models.cart">TaxedPriceBuilder</a>,<wbr><a href="../cart/TaxedPriceBuilder.html" title="class in com.commercetools.api.models.cart">TaxedPriceBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Sum of the <code>taxedPrice</code> field of ShippingInfo across all Shipping Methods.</p></div>
+<div class="block"><p>Sum of the <code>taxedPrice</code> field of ShippingInfo across all Shipping Methods.</p>
+  <p>If a discount applies on <code>totalPrice</code>, this field holds the proportionally discounted value.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the taxedShippingPrice value</dd>
@@ -1710,7 +1741,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withTaxedShippingPrice(java.util.function.Function)">
 <h3>withTaxedShippingPrice</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></span>&nbsp;<span class="element-name">withTaxedShippingPrice</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../cart/TaxedPriceBuilder.html" title="class in com.commercetools.api.models.cart">TaxedPriceBuilder</a>,<wbr><a href="../cart/TaxedPrice.html" title="interface in com.commercetools.api.models.cart">TaxedPrice</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Sum of the <code>taxedPrice</code> field of ShippingInfo across all Shipping Methods.</p></div>
+<div class="block"><p>Sum of the <code>taxedPrice</code> field of ShippingInfo across all Shipping Methods.</p>
+  <p>If a discount applies on <code>totalPrice</code>, this field holds the proportionally discounted value.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the taxedShippingPrice value</dd>
@@ -1724,7 +1756,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>taxedShippingPrice</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></span>&nbsp;<span class="element-name">taxedShippingPrice</span><wbr><span class="parameters">(@Nullable
  <a href="../cart/TaxedPrice.html" title="interface in com.commercetools.api.models.cart">TaxedPrice</a>&nbsp;taxedShippingPrice)</span></div>
-<div class="block"><p>Sum of the <code>taxedPrice</code> field of ShippingInfo across all Shipping Methods.</p></div>
+<div class="block"><p>Sum of the <code>taxedPrice</code> field of ShippingInfo across all Shipping Methods.</p>
+  <p>If a discount applies on <code>totalPrice</code>, this field holds the proportionally discounted value.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>taxedShippingPrice</code> - value to be set</dd>
@@ -1768,6 +1801,20 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>discountOnTotalPrice</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="priceRoundingMode(com.commercetools.api.models.cart.RoundingMode)">
+<h3>priceRoundingMode</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></span>&nbsp;<span class="element-name">priceRoundingMode</span><wbr><span class="parameters">(@Nullable
+ <a href="../cart/RoundingMode.html" title="interface in com.commercetools.api.models.cart">RoundingMode</a>&nbsp;priceRoundingMode)</span></div>
+<div class="block"><p>Indicates how the total prices on LineItems and CustomLineItems are rounded when calculated.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>priceRoundingMode</code> - value to be set</dd>
 <dt>Returns:</dt>
 <dd>Builder</dd>
 </dl>
@@ -2679,6 +2726,46 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
+<section class="detail" id="recurringOrder(java.util.function.Function)">
+<h3>recurringOrder</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></span>&nbsp;<span class="element-name">recurringOrder</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../recurring_order/RecurringOrderReferenceBuilder.html" title="class in com.commercetools.api.models.recurring_order">RecurringOrderReferenceBuilder</a>,<wbr><a href="../recurring_order/RecurringOrderReferenceBuilder.html" title="class in com.commercetools.api.models.recurring_order">RecurringOrderReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Reference to the RecurringOrder that generated this Order.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the recurringOrder value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="withRecurringOrder(java.util.function.Function)">
+<h3>withRecurringOrder</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></span>&nbsp;<span class="element-name">withRecurringOrder</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../recurring_order/RecurringOrderReferenceBuilder.html" title="class in com.commercetools.api.models.recurring_order">RecurringOrderReferenceBuilder</a>,<wbr><a href="../recurring_order/RecurringOrderReference.html" title="interface in com.commercetools.api.models.recurring_order">RecurringOrderReference</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Reference to the RecurringOrder that generated this Order.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the recurringOrder value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="recurringOrder(com.commercetools.api.models.recurring_order.RecurringOrderReference)">
+<h3>recurringOrder</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></span>&nbsp;<span class="element-name">recurringOrder</span><wbr><span class="parameters">(@Nullable
+ <a href="../recurring_order/RecurringOrderReference.html" title="interface in com.commercetools.api.models.recurring_order">RecurringOrderReference</a>&nbsp;recurringOrder)</span></div>
+<div class="block"><p>Reference to the RecurringOrder that generated this Order.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>recurringOrder</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="orderState(com.commercetools.api.models.order.OrderState)">
 <h3>orderState</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderBuilder.html" title="class in com.commercetools.api.models.order">OrderBuilder</a></span>&nbsp;<span class="element-name">orderState</span><wbr><span class="parameters">(<a href="OrderState.html" title="interface in com.commercetools.api.models.order">OrderState</a>&nbsp;orderState)</span></div>
@@ -3305,7 +3392,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
    <li>For <code>Platform</code> TaxMode, it is automatically set when a shipping address is set.</li>
    <li>For <code>External</code> TaxMode, it is automatically set when <code>shippingAddress</code> and external Tax Rates for all Line Items, Custom Line Items, and Shipping Methods in the Cart are set.</li>
   </ul>
-  <p>If a discount applies on <code>totalPrice</code>, this field holds the discounted values.</p></div>
+  <p>If a discount applies on <code>totalPrice</code>, this field holds the proportionally discounted value.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>taxedPrice</dd>
@@ -3317,7 +3404,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getTaxedShippingPrice</h3>
 <div class="member-signature"><span class="annotations">@Nullable
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../cart/TaxedPrice.html" title="interface in com.commercetools.api.models.cart">TaxedPrice</a></span>&nbsp;<span class="element-name">getTaxedShippingPrice</span>()</div>
-<div class="block"><p>Sum of the <code>taxedPrice</code> field of ShippingInfo across all Shipping Methods.</p></div>
+<div class="block"><p>Sum of the <code>taxedPrice</code> field of ShippingInfo across all Shipping Methods.</p>
+  <p>If a discount applies on <code>totalPrice</code>, this field holds the proportionally discounted value.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>taxedShippingPrice</dd>
@@ -3333,6 +3421,18 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>discountOnTotalPrice</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getPriceRoundingMode()">
+<h3>getPriceRoundingMode</h3>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../cart/RoundingMode.html" title="interface in com.commercetools.api.models.cart">RoundingMode</a></span>&nbsp;<span class="element-name">getPriceRoundingMode</span>()</div>
+<div class="block"><p>Indicates how the total prices on LineItems and CustomLineItems are rounded when calculated.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>priceRoundingMode</dd>
 </dl>
 </section>
 </li>
@@ -3598,6 +3698,18 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>quote</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getRecurringOrder()">
+<h3>getRecurringOrder</h3>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../recurring_order/RecurringOrderReference.html" title="interface in com.commercetools.api.models.recurring_order">RecurringOrderReference</a></span>&nbsp;<span class="element-name">getRecurringOrder</span>()</div>
+<div class="block"><p>Reference to the RecurringOrder that generated this Order.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>recurringOrder</dd>
 </dl>
 </section>
 </li>

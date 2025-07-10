@@ -119,7 +119,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull @Valid <a href="../common/DiscountCodeKeyReference.html" title="interface in com.commercetools.importapi.models.common">DiscountCodeKeyReference</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getDiscountCode()" class="member-name-link">getDiscountCode</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">References a discount code by key.</div>
+<div class="block">References a DiscountCode by key.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="DiscountCodeState.html" title="interface in com.commercetools.importapi.models.orders">DiscountCodeState</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getState()" class="member-name-link">getState</a>()</code></div>
@@ -139,7 +139,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setDiscountCode(com.commercetools.importapi.models.common.DiscountCodeKeyReference)" class="member-name-link">setDiscountCode</a><wbr>(<a href="../common/DiscountCodeKeyReference.html" title="interface in com.commercetools.importapi.models.common">DiscountCodeKeyReference</a>&nbsp;discountCode)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">References a discount code by key.</div>
+<div class="block">References a DiscountCode by key.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setState(com.commercetools.importapi.models.orders.DiscountCodeState)" class="member-name-link">setState</a><wbr>(<a href="DiscountCodeState.html" title="interface in com.commercetools.importapi.models.orders">DiscountCodeState</a>&nbsp;state)</code></div>
@@ -176,7 +176,7 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="annotations">@NotNull
 @Valid
 </span><span class="return-type">@NotNull @Valid <a href="../common/DiscountCodeKeyReference.html" title="interface in com.commercetools.importapi.models.common">DiscountCodeKeyReference</a></span>&nbsp;<span class="element-name">getDiscountCode</span>()</div>
-<div class="block"><p>References a discount code by key.</p></div>
+<div class="block"><p>References a DiscountCode by key. If the referenced DiscountCode does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced DiscountCode is created.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>discountCode</dd>
@@ -198,7 +198,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setDiscountCode(com.commercetools.importapi.models.common.DiscountCodeKeyReference)">
 <h3>setDiscountCode</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setDiscountCode</span><wbr><span class="parameters">(<a href="../common/DiscountCodeKeyReference.html" title="interface in com.commercetools.importapi.models.common">DiscountCodeKeyReference</a>&nbsp;discountCode)</span></div>
-<div class="block"><p>References a discount code by key.</p></div>
+<div class="block"><p>References a DiscountCode by key. If the referenced DiscountCode does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced DiscountCode is created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>discountCode</code> - value to be set</dd>

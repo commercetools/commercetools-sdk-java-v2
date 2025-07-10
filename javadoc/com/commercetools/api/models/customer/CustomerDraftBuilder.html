@@ -1059,7 +1059,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="customerGroup(java.util.function.Function)">
 <h3>customerGroup</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerDraftBuilder.html" title="class in com.commercetools.api.models.customer">CustomerDraftBuilder</a></span>&nbsp;<span class="element-name">customerGroup</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../customer_group/CustomerGroupResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.customer_group">CustomerGroupResourceIdentifierBuilder</a>,<wbr><a href="../customer_group/CustomerGroupResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.customer_group">CustomerGroupResourceIdentifierBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Sets the CustomerGroup for the Customer.</p></div>
+<div class="block"><p>Sets the CustomerGroup for the Customer.</p>
+  <p>For new projects, use <code>customerGroupAssignments</code> instead. It supports assigning Customers to multiple Customer Groups and provides greater flexibility in complex pricing scenarios.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the customerGroup value</dd>
@@ -1072,7 +1073,8 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withCustomerGroup(java.util.function.Function)">
 <h3>withCustomerGroup</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerDraftBuilder.html" title="class in com.commercetools.api.models.customer">CustomerDraftBuilder</a></span>&nbsp;<span class="element-name">withCustomerGroup</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../customer_group/CustomerGroupResourceIdentifierBuilder.html" title="class in com.commercetools.api.models.customer_group">CustomerGroupResourceIdentifierBuilder</a>,<wbr><a href="../customer_group/CustomerGroupResourceIdentifier.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupResourceIdentifier</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Sets the CustomerGroup for the Customer.</p></div>
+<div class="block"><p>Sets the CustomerGroup for the Customer.</p>
+  <p>For new projects, use <code>customerGroupAssignments</code> instead. It supports assigning Customers to multiple Customer Groups and provides greater flexibility in complex pricing scenarios.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the customerGroup value</dd>
@@ -1086,10 +1088,112 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>customerGroup</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerDraftBuilder.html" title="class in com.commercetools.api.models.customer">CustomerDraftBuilder</a></span>&nbsp;<span class="element-name">customerGroup</span><wbr><span class="parameters">(@Nullable
  <a href="../customer_group/CustomerGroupResourceIdentifier.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupResourceIdentifier</a>&nbsp;customerGroup)</span></div>
-<div class="block"><p>Sets the CustomerGroup for the Customer.</p></div>
+<div class="block"><p>Sets the CustomerGroup for the Customer.</p>
+  <p>For new projects, use <code>customerGroupAssignments</code> instead. It supports assigning Customers to multiple Customer Groups and provides greater flexibility in complex pricing scenarios.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>customerGroup</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="customerGroupAssignments(com.commercetools.api.models.customer.CustomerGroupAssignmentDraft...)">
+<h3>customerGroupAssignments</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerDraftBuilder.html" title="class in com.commercetools.api.models.customer">CustomerDraftBuilder</a></span>&nbsp;<span class="element-name">customerGroupAssignments</span><wbr><span class="parameters">(@Nullable
+ <a href="CustomerGroupAssignmentDraft.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignmentDraft</a>...&nbsp;customerGroupAssignments)</span></div>
+<div class="block"><p>Customer Groups to assign the Customer to.</p>
+  <p>Used for Line Item price selection.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>customerGroupAssignments</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="customerGroupAssignments(java.util.List)">
+<h3>customerGroupAssignments</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerDraftBuilder.html" title="class in com.commercetools.api.models.customer">CustomerDraftBuilder</a></span>&nbsp;<span class="element-name">customerGroupAssignments</span><wbr><span class="parameters">(@Nullable
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CustomerGroupAssignmentDraft.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignmentDraft</a>&gt;&nbsp;customerGroupAssignments)</span></div>
+<div class="block"><p>Customer Groups to assign the Customer to.</p>
+  <p>Used for Line Item price selection.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>customerGroupAssignments</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="plusCustomerGroupAssignments(com.commercetools.api.models.customer.CustomerGroupAssignmentDraft...)">
+<h3>plusCustomerGroupAssignments</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerDraftBuilder.html" title="class in com.commercetools.api.models.customer">CustomerDraftBuilder</a></span>&nbsp;<span class="element-name">plusCustomerGroupAssignments</span><wbr><span class="parameters">(@Nullable
+ <a href="CustomerGroupAssignmentDraft.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignmentDraft</a>...&nbsp;customerGroupAssignments)</span></div>
+<div class="block"><p>Customer Groups to assign the Customer to.</p>
+  <p>Used for Line Item price selection.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>customerGroupAssignments</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="plusCustomerGroupAssignments(java.util.function.Function)">
+<h3>plusCustomerGroupAssignments</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerDraftBuilder.html" title="class in com.commercetools.api.models.customer">CustomerDraftBuilder</a></span>&nbsp;<span class="element-name">plusCustomerGroupAssignments</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CustomerGroupAssignmentDraftBuilder.html" title="class in com.commercetools.api.models.customer">CustomerGroupAssignmentDraftBuilder</a>,<wbr><a href="CustomerGroupAssignmentDraftBuilder.html" title="class in com.commercetools.api.models.customer">CustomerGroupAssignmentDraftBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Customer Groups to assign the Customer to.</p>
+  <p>Used for Line Item price selection.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the customerGroupAssignments value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="withCustomerGroupAssignments(java.util.function.Function)">
+<h3>withCustomerGroupAssignments</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerDraftBuilder.html" title="class in com.commercetools.api.models.customer">CustomerDraftBuilder</a></span>&nbsp;<span class="element-name">withCustomerGroupAssignments</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CustomerGroupAssignmentDraftBuilder.html" title="class in com.commercetools.api.models.customer">CustomerGroupAssignmentDraftBuilder</a>,<wbr><a href="CustomerGroupAssignmentDraftBuilder.html" title="class in com.commercetools.api.models.customer">CustomerGroupAssignmentDraftBuilder</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Customer Groups to assign the Customer to.</p>
+  <p>Used for Line Item price selection.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the customerGroupAssignments value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="addCustomerGroupAssignments(java.util.function.Function)">
+<h3>addCustomerGroupAssignments</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerDraftBuilder.html" title="class in com.commercetools.api.models.customer">CustomerDraftBuilder</a></span>&nbsp;<span class="element-name">addCustomerGroupAssignments</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CustomerGroupAssignmentDraftBuilder.html" title="class in com.commercetools.api.models.customer">CustomerGroupAssignmentDraftBuilder</a>,<wbr><a href="CustomerGroupAssignmentDraft.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignmentDraft</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Customer Groups to assign the Customer to.</p>
+  <p>Used for Line Item price selection.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the customerGroupAssignments value</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setCustomerGroupAssignments(java.util.function.Function)">
+<h3>setCustomerGroupAssignments</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerDraftBuilder.html" title="class in com.commercetools.api.models.customer">CustomerDraftBuilder</a></span>&nbsp;<span class="element-name">setCustomerGroupAssignments</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CustomerGroupAssignmentDraftBuilder.html" title="class in com.commercetools.api.models.customer">CustomerGroupAssignmentDraftBuilder</a>,<wbr><a href="CustomerGroupAssignmentDraft.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignmentDraft</a>&gt;&nbsp;builder)</span></div>
+<div class="block"><p>Customer Groups to assign the Customer to.</p>
+  <p>Used for Line Item price selection.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>builder</code> - function to build the customerGroupAssignments value</dd>
 <dt>Returns:</dt>
 <dd>Builder</dd>
 </dl>
@@ -1297,100 +1401,6 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>authenticationMode</code> - value to be set</dd>
-<dt>Returns:</dt>
-<dd>Builder</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="customerGroupAssignments(com.commercetools.api.models.customer.CustomerGroupAssignmentDraft...)">
-<h3>customerGroupAssignments</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerDraftBuilder.html" title="class in com.commercetools.api.models.customer">CustomerDraftBuilder</a></span>&nbsp;<span class="element-name">customerGroupAssignments</span><wbr><span class="parameters">(@Nullable
- <a href="CustomerGroupAssignmentDraft.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignmentDraft</a>...&nbsp;customerGroupAssignments)</span></div>
-<div class="block"><p>Customer Groups to assign the Customer to.</p></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>customerGroupAssignments</code> - value to be set</dd>
-<dt>Returns:</dt>
-<dd>Builder</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="customerGroupAssignments(java.util.List)">
-<h3>customerGroupAssignments</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerDraftBuilder.html" title="class in com.commercetools.api.models.customer">CustomerDraftBuilder</a></span>&nbsp;<span class="element-name">customerGroupAssignments</span><wbr><span class="parameters">(@Nullable
- <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CustomerGroupAssignmentDraft.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignmentDraft</a>&gt;&nbsp;customerGroupAssignments)</span></div>
-<div class="block"><p>Customer Groups to assign the Customer to.</p></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>customerGroupAssignments</code> - value to be set</dd>
-<dt>Returns:</dt>
-<dd>Builder</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="plusCustomerGroupAssignments(com.commercetools.api.models.customer.CustomerGroupAssignmentDraft...)">
-<h3>plusCustomerGroupAssignments</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerDraftBuilder.html" title="class in com.commercetools.api.models.customer">CustomerDraftBuilder</a></span>&nbsp;<span class="element-name">plusCustomerGroupAssignments</span><wbr><span class="parameters">(@Nullable
- <a href="CustomerGroupAssignmentDraft.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignmentDraft</a>...&nbsp;customerGroupAssignments)</span></div>
-<div class="block"><p>Customer Groups to assign the Customer to.</p></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>customerGroupAssignments</code> - value to be set</dd>
-<dt>Returns:</dt>
-<dd>Builder</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="plusCustomerGroupAssignments(java.util.function.Function)">
-<h3>plusCustomerGroupAssignments</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerDraftBuilder.html" title="class in com.commercetools.api.models.customer">CustomerDraftBuilder</a></span>&nbsp;<span class="element-name">plusCustomerGroupAssignments</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CustomerGroupAssignmentDraftBuilder.html" title="class in com.commercetools.api.models.customer">CustomerGroupAssignmentDraftBuilder</a>,<wbr><a href="CustomerGroupAssignmentDraftBuilder.html" title="class in com.commercetools.api.models.customer">CustomerGroupAssignmentDraftBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Customer Groups to assign the Customer to.</p></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>builder</code> - function to build the customerGroupAssignments value</dd>
-<dt>Returns:</dt>
-<dd>Builder</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="withCustomerGroupAssignments(java.util.function.Function)">
-<h3>withCustomerGroupAssignments</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerDraftBuilder.html" title="class in com.commercetools.api.models.customer">CustomerDraftBuilder</a></span>&nbsp;<span class="element-name">withCustomerGroupAssignments</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CustomerGroupAssignmentDraftBuilder.html" title="class in com.commercetools.api.models.customer">CustomerGroupAssignmentDraftBuilder</a>,<wbr><a href="CustomerGroupAssignmentDraftBuilder.html" title="class in com.commercetools.api.models.customer">CustomerGroupAssignmentDraftBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Customer Groups to assign the Customer to.</p></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>builder</code> - function to build the customerGroupAssignments value</dd>
-<dt>Returns:</dt>
-<dd>Builder</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="addCustomerGroupAssignments(java.util.function.Function)">
-<h3>addCustomerGroupAssignments</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerDraftBuilder.html" title="class in com.commercetools.api.models.customer">CustomerDraftBuilder</a></span>&nbsp;<span class="element-name">addCustomerGroupAssignments</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CustomerGroupAssignmentDraftBuilder.html" title="class in com.commercetools.api.models.customer">CustomerGroupAssignmentDraftBuilder</a>,<wbr><a href="CustomerGroupAssignmentDraft.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignmentDraft</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Customer Groups to assign the Customer to.</p></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>builder</code> - function to build the customerGroupAssignments value</dd>
-<dt>Returns:</dt>
-<dd>Builder</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="setCustomerGroupAssignments(java.util.function.Function)">
-<h3>setCustomerGroupAssignments</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerDraftBuilder.html" title="class in com.commercetools.api.models.customer">CustomerDraftBuilder</a></span>&nbsp;<span class="element-name">setCustomerGroupAssignments</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="CustomerGroupAssignmentDraftBuilder.html" title="class in com.commercetools.api.models.customer">CustomerGroupAssignmentDraftBuilder</a>,<wbr><a href="CustomerGroupAssignmentDraft.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignmentDraft</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Customer Groups to assign the Customer to.</p></div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>builder</code> - function to build the customerGroupAssignments value</dd>
 <dt>Returns:</dt>
 <dd>Builder</dd>
 </dl>
@@ -1656,10 +1666,24 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getCustomerGroup</h3>
 <div class="member-signature"><span class="annotations">@Nullable
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../customer_group/CustomerGroupResourceIdentifier.html" title="interface in com.commercetools.api.models.customer_group">CustomerGroupResourceIdentifier</a></span>&nbsp;<span class="element-name">getCustomerGroup</span>()</div>
-<div class="block"><p>Sets the CustomerGroup for the Customer.</p></div>
+<div class="block"><p>Sets the CustomerGroup for the Customer.</p>
+  <p>For new projects, use <code>customerGroupAssignments</code> instead. It supports assigning Customers to multiple Customer Groups and provides greater flexibility in complex pricing scenarios.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>customerGroup</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getCustomerGroupAssignments()">
+<h3>getCustomerGroupAssignments</h3>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CustomerGroupAssignmentDraft.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignmentDraft</a>&gt;</span>&nbsp;<span class="element-name">getCustomerGroupAssignments</span>()</div>
+<div class="block"><p>Customer Groups to assign the Customer to.</p>
+  <p>Used for Line Item price selection.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>customerGroupAssignments</dd>
 </dl>
 </section>
 </li>
@@ -1727,18 +1751,6 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>authenticationMode</dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="getCustomerGroupAssignments()">
-<h3>getCustomerGroupAssignments</h3>
-<div class="member-signature"><span class="annotations">@Nullable
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="CustomerGroupAssignmentDraft.html" title="interface in com.commercetools.api.models.customer">CustomerGroupAssignmentDraft</a>&gt;</span>&nbsp;<span class="element-name">getCustomerGroupAssignments</span>()</div>
-<div class="block"><p>Customer Groups to assign the Customer to.</p></div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>customerGroupAssignments</dd>
 </dl>
 </section>
 </li>

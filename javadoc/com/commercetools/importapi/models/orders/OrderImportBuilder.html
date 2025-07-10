@@ -178,12 +178,12 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderImportBuilder.html" title="class in com.commercetools.importapi.models.orders">OrderImportBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#customer(com.commercetools.importapi.models.common.CustomerKeyReference)" class="member-name-link">customer</a><wbr>(<a href="../common/CustomerKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerKeyReference</a>&nbsp;customer)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the customer</div>
+<div class="block"><code>key</code> of the Customer that the Order belongs to.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderImportBuilder.html" title="class in com.commercetools.importapi.models.orders">OrderImportBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#customer(java.util.function.Function)" class="member-name-link">customer</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CustomerKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">CustomerKeyReferenceBuilder</a>,<wbr><a href="../common/CustomerKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">CustomerKeyReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the customer using the builder function</div>
+<div class="block"><code>key</code> of the Customer that the Order belongs to.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderImportBuilder.html" title="class in com.commercetools.importapi.models.orders">OrderImportBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#customerEmail(java.lang.String)" class="member-name-link">customerEmail</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;customerEmail)</code></div>
@@ -233,7 +233,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/CustomerKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerKeyReference</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCustomer()" class="member-name-link">getCustomer</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">value of customer}</div>
+<div class="block"><code>key</code> of the Customer that the Order belongs to.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCustomerEmail()" class="member-name-link">getCustomerEmail</a>()</code></div>
@@ -303,12 +303,12 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/StateKeyReference.html" title="interface in com.commercetools.importapi.models.common">StateKeyReference</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getState()" class="member-name-link">getState</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Reference to a State in a custom workflow.</div>
+<div class="block">Maps to <code>Order.state</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="../common/StoreKeyReference.html" title="interface in com.commercetools.importapi.models.common">StoreKeyReference</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getStore()" class="member-name-link">getStore</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Reference to the Store in which the Order is associated.</div>
+<div class="block">Maps to <code>Order.store</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="TaxCalculationMode.html" title="interface in com.commercetools.importapi.models.orders">TaxCalculationMode</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTaxCalculationMode()" class="member-name-link">getTaxCalculationMode</a>()</code></div>
@@ -458,22 +458,22 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderImportBuilder.html" title="class in com.commercetools.importapi.models.orders">OrderImportBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#state(com.commercetools.importapi.models.common.StateKeyReference)" class="member-name-link">state</a><wbr>(<a href="../common/StateKeyReference.html" title="interface in com.commercetools.importapi.models.common">StateKeyReference</a>&nbsp;state)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Reference to a State in a custom workflow.</div>
+<div class="block">Maps to <code>Order.state</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderImportBuilder.html" title="class in com.commercetools.importapi.models.orders">OrderImportBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#state(java.util.function.Function)" class="member-name-link">state</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StateKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">StateKeyReferenceBuilder</a>,<wbr><a href="../common/StateKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">StateKeyReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Reference to a State in a custom workflow.</div>
+<div class="block">Maps to <code>Order.state</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderImportBuilder.html" title="class in com.commercetools.importapi.models.orders">OrderImportBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#store(com.commercetools.importapi.models.common.StoreKeyReference)" class="member-name-link">store</a><wbr>(<a href="../common/StoreKeyReference.html" title="interface in com.commercetools.importapi.models.common">StoreKeyReference</a>&nbsp;store)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Reference to the Store in which the Order is associated.</div>
+<div class="block">Maps to <code>Order.store</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderImportBuilder.html" title="class in com.commercetools.importapi.models.orders">OrderImportBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#store(java.util.function.Function)" class="member-name-link">store</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StoreKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">StoreKeyReferenceBuilder</a>,<wbr><a href="../common/StoreKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">StoreKeyReferenceBuilder</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Reference to the Store in which the Order is associated.</div>
+<div class="block">Maps to <code>Order.store</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderImportBuilder.html" title="class in com.commercetools.importapi.models.orders">OrderImportBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#taxCalculationMode(com.commercetools.importapi.models.orders.TaxCalculationMode)" class="member-name-link">taxCalculationMode</a><wbr>(<a href="TaxCalculationMode.html" title="interface in com.commercetools.importapi.models.orders">TaxCalculationMode</a>&nbsp;taxCalculationMode)</code></div>
@@ -518,7 +518,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderImportBuilder.html" title="class in com.commercetools.importapi.models.orders">OrderImportBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withCustomer(java.util.function.Function)" class="member-name-link">withCustomer</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CustomerKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">CustomerKeyReferenceBuilder</a>,<wbr><a href="../common/CustomerKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerKeyReference</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">set the value to the customer using the builder function</div>
+<div class="block"><code>key</code> of the Customer that the Order belongs to.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderImportBuilder.html" title="class in com.commercetools.importapi.models.orders">OrderImportBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withCustomerGroup(java.util.function.Function)" class="member-name-link">withCustomerGroup</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CustomerGroupKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">CustomerGroupKeyReferenceBuilder</a>,<wbr><a href="../common/CustomerGroupKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerGroupKeyReference</a>&gt;&nbsp;builder)</code></div>
@@ -553,12 +553,12 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderImportBuilder.html" title="class in com.commercetools.importapi.models.orders">OrderImportBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withState(java.util.function.Function)" class="member-name-link">withState</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StateKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">StateKeyReferenceBuilder</a>,<wbr><a href="../common/StateKeyReference.html" title="interface in com.commercetools.importapi.models.common">StateKeyReference</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Reference to a State in a custom workflow.</div>
+<div class="block">Maps to <code>Order.state</code>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderImportBuilder.html" title="class in com.commercetools.importapi.models.orders">OrderImportBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withStore(java.util.function.Function)" class="member-name-link">withStore</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StoreKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">StoreKeyReferenceBuilder</a>,<wbr><a href="../common/StoreKeyReference.html" title="interface in com.commercetools.importapi.models.common">StoreKeyReference</a>&gt;&nbsp;builder)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Reference to the Store in which the Order is associated.</div>
+<div class="block">Maps to <code>Order.store</code>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="OrderImportBuilder.html" title="class in com.commercetools.importapi.models.orders">OrderImportBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#withTaxedPrice(java.util.function.Function)" class="member-name-link">withTaxedPrice</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="TaxedPriceBuilder.html" title="class in com.commercetools.importapi.models.orders">TaxedPriceBuilder</a>,<wbr><a href="TaxedPrice.html" title="interface in com.commercetools.importapi.models.orders">TaxedPrice</a>&gt;&nbsp;builder)</code></div>
@@ -613,7 +613,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="customer(java.util.function.Function)">
 <h3>customer</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderImportBuilder.html" title="class in com.commercetools.importapi.models.orders">OrderImportBuilder</a></span>&nbsp;<span class="element-name">customer</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CustomerKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">CustomerKeyReferenceBuilder</a>,<wbr><a href="../common/CustomerKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">CustomerKeyReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block">set the value to the customer using the builder function</div>
+<div class="block"><p><code>key</code> of the Customer that the Order belongs to. If the referenced Customer does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Customer is created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the customer value</dd>
@@ -626,7 +626,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withCustomer(java.util.function.Function)">
 <h3>withCustomer</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderImportBuilder.html" title="class in com.commercetools.importapi.models.orders">OrderImportBuilder</a></span>&nbsp;<span class="element-name">withCustomer</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CustomerKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">CustomerKeyReferenceBuilder</a>,<wbr><a href="../common/CustomerKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerKeyReference</a>&gt;&nbsp;builder)</span></div>
-<div class="block">set the value to the customer using the builder function</div>
+<div class="block"><p><code>key</code> of the Customer that the Order belongs to. If the referenced Customer does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Customer is created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the customer value</dd>
@@ -640,7 +640,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>customer</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderImportBuilder.html" title="class in com.commercetools.importapi.models.orders">OrderImportBuilder</a></span>&nbsp;<span class="element-name">customer</span><wbr><span class="parameters">(@Nullable
  <a href="../common/CustomerKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerKeyReference</a>&nbsp;customer)</span></div>
-<div class="block">set the value to the customer</div>
+<div class="block"><p><code>key</code> of the Customer that the Order belongs to. If the referenced Customer does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Customer is created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>customer</code> - value to be set</dd>
@@ -1001,7 +1001,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="customerGroup(java.util.function.Function)">
 <h3>customerGroup</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderImportBuilder.html" title="class in com.commercetools.importapi.models.orders">OrderImportBuilder</a></span>&nbsp;<span class="element-name">customerGroup</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CustomerGroupKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">CustomerGroupKeyReferenceBuilder</a>,<wbr><a href="../common/CustomerGroupKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">CustomerGroupKeyReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Maps to <code>Order.customerGroup</code>.</p></div>
+<div class="block"><p>Maps to <code>Order.customerGroup</code>. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the customerGroup value</dd>
@@ -1014,7 +1014,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withCustomerGroup(java.util.function.Function)">
 <h3>withCustomerGroup</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderImportBuilder.html" title="class in com.commercetools.importapi.models.orders">OrderImportBuilder</a></span>&nbsp;<span class="element-name">withCustomerGroup</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/CustomerGroupKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">CustomerGroupKeyReferenceBuilder</a>,<wbr><a href="../common/CustomerGroupKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerGroupKeyReference</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Maps to <code>Order.customerGroup</code>.</p></div>
+<div class="block"><p>Maps to <code>Order.customerGroup</code>. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the customerGroup value</dd>
@@ -1028,7 +1028,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>customerGroup</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderImportBuilder.html" title="class in com.commercetools.importapi.models.orders">OrderImportBuilder</a></span>&nbsp;<span class="element-name">customerGroup</span><wbr><span class="parameters">(@Nullable
  <a href="../common/CustomerGroupKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerGroupKeyReference</a>&nbsp;customerGroup)</span></div>
-<div class="block"><p>Maps to <code>Order.customerGroup</code>.</p></div>
+<div class="block"><p>Maps to <code>Order.customerGroup</code>. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>customerGroup</code> - value to be set</dd>
@@ -1341,7 +1341,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="store(java.util.function.Function)">
 <h3>store</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderImportBuilder.html" title="class in com.commercetools.importapi.models.orders">OrderImportBuilder</a></span>&nbsp;<span class="element-name">store</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StoreKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">StoreKeyReferenceBuilder</a>,<wbr><a href="../common/StoreKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">StoreKeyReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Reference to the Store in which the Order is associated. If referenced Store does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Store exists.</p></div>
+<div class="block"><p>Maps to <code>Order.store</code>. If the referenced Store does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Store is created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the store value</dd>
@@ -1354,7 +1354,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withStore(java.util.function.Function)">
 <h3>withStore</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderImportBuilder.html" title="class in com.commercetools.importapi.models.orders">OrderImportBuilder</a></span>&nbsp;<span class="element-name">withStore</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StoreKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">StoreKeyReferenceBuilder</a>,<wbr><a href="../common/StoreKeyReference.html" title="interface in com.commercetools.importapi.models.common">StoreKeyReference</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Reference to the Store in which the Order is associated. If referenced Store does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Store exists.</p></div>
+<div class="block"><p>Maps to <code>Order.store</code>. If the referenced Store does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Store is created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the store value</dd>
@@ -1368,7 +1368,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>store</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderImportBuilder.html" title="class in com.commercetools.importapi.models.orders">OrderImportBuilder</a></span>&nbsp;<span class="element-name">store</span><wbr><span class="parameters">(@Nullable
  <a href="../common/StoreKeyReference.html" title="interface in com.commercetools.importapi.models.common">StoreKeyReference</a>&nbsp;store)</span></div>
-<div class="block"><p>Reference to the Store in which the Order is associated. If referenced Store does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Store exists.</p></div>
+<div class="block"><p>Maps to <code>Order.store</code>. If the referenced Store does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Store is created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>store</code> - value to be set</dd>
@@ -1381,7 +1381,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="state(java.util.function.Function)">
 <h3>state</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderImportBuilder.html" title="class in com.commercetools.importapi.models.orders">OrderImportBuilder</a></span>&nbsp;<span class="element-name">state</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StateKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">StateKeyReferenceBuilder</a>,<wbr><a href="../common/StateKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">StateKeyReferenceBuilder</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Reference to a State in a custom workflow.</p></div>
+<div class="block"><p>Maps to <code>Order.state</code>. If the referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced State is created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the state value</dd>
@@ -1394,7 +1394,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <section class="detail" id="withState(java.util.function.Function)">
 <h3>withState</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderImportBuilder.html" title="class in com.commercetools.importapi.models.orders">OrderImportBuilder</a></span>&nbsp;<span class="element-name">withState</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html" title="class or interface in java.util.function" class="external-link">Function</a>&lt;<a href="../common/StateKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">StateKeyReferenceBuilder</a>,<wbr><a href="../common/StateKeyReference.html" title="interface in com.commercetools.importapi.models.common">StateKeyReference</a>&gt;&nbsp;builder)</span></div>
-<div class="block"><p>Reference to a State in a custom workflow.</p></div>
+<div class="block"><p>Maps to <code>Order.state</code>. If the referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced State is created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>builder</code> - function to build the state value</dd>
@@ -1408,7 +1408,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>state</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="OrderImportBuilder.html" title="class in com.commercetools.importapi.models.orders">OrderImportBuilder</a></span>&nbsp;<span class="element-name">state</span><wbr><span class="parameters">(@Nullable
  <a href="../common/StateKeyReference.html" title="interface in com.commercetools.importapi.models.common">StateKeyReference</a>&nbsp;state)</span></div>
-<div class="block"><p>Reference to a State in a custom workflow.</p></div>
+<div class="block"><p>Maps to <code>Order.state</code>. If the referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced State is created.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>state</code> - value to be set</dd>
@@ -1433,7 +1433,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getCustomer</h3>
 <div class="member-signature"><span class="annotations">@Nullable
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/CustomerKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerKeyReference</a></span>&nbsp;<span class="element-name">getCustomer</span>()</div>
-<div class="block">value of customer}</div>
+<div class="block"><p><code>key</code> of the Customer that the Order belongs to. If the referenced Customer does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Customer is created.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>customer</dd>
@@ -1528,7 +1528,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getCustomerGroup</h3>
 <div class="member-signature"><span class="annotations">@Nullable
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/CustomerGroupKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerGroupKeyReference</a></span>&nbsp;<span class="element-name">getCustomerGroup</span>()</div>
-<div class="block"><p>Maps to <code>Order.customerGroup</code>.</p></div>
+<div class="block"><p>Maps to <code>Order.customerGroup</code>. If the referenced CustomerGroup does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced CustomerGroup is created.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>customerGroup</dd>
@@ -1684,7 +1684,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getStore</h3>
 <div class="member-signature"><span class="annotations">@Nullable
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/StoreKeyReference.html" title="interface in com.commercetools.importapi.models.common">StoreKeyReference</a></span>&nbsp;<span class="element-name">getStore</span>()</div>
-<div class="block"><p>Reference to the Store in which the Order is associated. If referenced Store does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the necessary Store exists.</p></div>
+<div class="block"><p>Maps to <code>Order.store</code>. If the referenced Store does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced Store is created.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>store</dd>
@@ -1696,7 +1696,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getState</h3>
 <div class="member-signature"><span class="annotations">@Nullable
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="../common/StateKeyReference.html" title="interface in com.commercetools.importapi.models.common">StateKeyReference</a></span>&nbsp;<span class="element-name">getState</span>()</div>
-<div class="block"><p>Reference to a State in a custom workflow.</p></div>
+<div class="block"><p>Maps to <code>Order.state</code>. If the referenced State does not exist, the <code>state</code> of the ImportOperation will be set to <code>unresolved</code> until the referenced State is created.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>state</dd>

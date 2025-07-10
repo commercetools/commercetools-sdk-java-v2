@@ -68,7 +68,7 @@ public class PaymentMethodInfoDraftImpl implements PaymentMethodInfoDraft, Model
     }
 
     /**
-     *  <p>Payment method to use—for example, a credit card or cash advance.</p>
+     *  <p>Payment method to use—for example, a credit card or direct debit.</p>
      */
 
     public String getMethod() {

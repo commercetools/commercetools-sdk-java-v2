@@ -80,7 +80,7 @@ public class PaymentSetMethodInfoActionImpl implements PaymentSetMethodInfoActio
     }
 
     /**
-     *  <p>Payment method to use—for example, a credit card or cash advance. If empty, any existing value will be removed.</p>
+     *  <p>Payment method to use—for example, a credit card or direct debit. If empty, any existing value will be removed.</p>
      *  <p>Setting this field is equivalent to the <code>setMethodInfoMethod</code> action and will generate the PaymentMethodInfoMethodSet Message.</p>
      */
 

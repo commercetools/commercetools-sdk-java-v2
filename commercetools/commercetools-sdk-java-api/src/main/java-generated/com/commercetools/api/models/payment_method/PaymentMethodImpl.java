@@ -168,7 +168,7 @@ public class PaymentMethodImpl implements PaymentMethod, ModelBase {
     }
 
     /**
-     *  <p>Payment Method used for the Payment—for example, a credit card or cash advance.</p>
+     *  <p>Payment Method used for the Payment—for example, a credit card or direct debit.</p>
      */
 
     public String getMethod() {

@@ -35,7 +35,7 @@ public interface PaymentMethodSetMethodAction extends PaymentMethodUpdateAction 
     String SET_METHOD = "setMethod";
 
     /**
-     *  <p>New payment method—for example, a credit card or cash advance. If empty, any existing value will be removed.</p>
+     *  <p>New payment method—for example, a credit card or direct debit. If empty, any existing value will be removed.</p>
      * @return method
      */
 
@@ -43,7 +43,7 @@ public interface PaymentMethodSetMethodAction extends PaymentMethodUpdateAction 
     public String getMethod();
 
     /**
-     *  <p>New payment method—for example, a credit card or cash advance. If empty, any existing value will be removed.</p>
+     *  <p>New payment method—for example, a credit card or direct debit. If empty, any existing value will be removed.</p>
      * @param method value to be set
      */
 

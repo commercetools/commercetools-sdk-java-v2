@@ -246,7 +246,7 @@ public class PaymentMethodBuilder implements Builder<PaymentMethod> {
     }
 
     /**
-     *  <p>Payment Method used for the Payment—for example, a credit card or cash advance.</p>
+     *  <p>Payment Method used for the Payment—for example, a credit card or direct debit.</p>
      * @param method value to be set
      * @return Builder
      */
@@ -523,7 +523,7 @@ public class PaymentMethodBuilder implements Builder<PaymentMethod> {
     }
 
     /**
-     *  <p>Payment Method used for the Payment—for example, a credit card or cash advance.</p>
+     *  <p>Payment Method used for the Payment—for example, a credit card or direct debit.</p>
      * @return method
      */
 

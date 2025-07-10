@@ -26,7 +26,7 @@ public class PaymentMethodSetMethodActionBuilder implements Builder<PaymentMetho
     private String method;
 
     /**
-     *  <p>New payment method—for example, a credit card or cash advance. If empty, any existing value will be removed.</p>
+     *  <p>New payment method—for example, a credit card or direct debit. If empty, any existing value will be removed.</p>
      * @param method value to be set
      * @return Builder
      */
@@ -37,7 +37,7 @@ public class PaymentMethodSetMethodActionBuilder implements Builder<PaymentMetho
     }
 
     /**
-     *  <p>New payment method—for example, a credit card or cash advance. If empty, any existing value will be removed.</p>
+     *  <p>New payment method—for example, a credit card or direct debit. If empty, any existing value will be removed.</p>
      * @return method
      */
 

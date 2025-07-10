@@ -22,7 +22,7 @@ import io.vrap.rmf.base.client.utils.Generated;
  * </div>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
-public class PaymentDraftBuilder implements PaymentDraftBuilderMixin, Builder<PaymentDraft> {
+public class PaymentDraftBuilder implements Builder<PaymentDraft>, PaymentDraftBuilderMixin {
 
     @Nullable
     private com.commercetools.api.models.customer.CustomerResourceIdentifier customer;

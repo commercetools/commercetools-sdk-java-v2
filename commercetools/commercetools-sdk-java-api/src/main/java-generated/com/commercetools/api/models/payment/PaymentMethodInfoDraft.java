@@ -43,7 +43,7 @@ public interface PaymentMethodInfoDraft extends io.vrap.rmf.base.client.Draft<Pa
     public String getPaymentInterface();
 
     /**
-     *  <p>Payment method to use—for example, a credit card or cash advance.</p>
+     *  <p>Payment method to use—for example, a credit card or direct debit.</p>
      * @return method
      */
 
@@ -91,7 +91,7 @@ public interface PaymentMethodInfoDraft extends io.vrap.rmf.base.client.Draft<Pa
     public void setPaymentInterface(final String paymentInterface);
 
     /**
-     *  <p>Payment method to use—for example, a credit card or cash advance.</p>
+     *  <p>Payment method to use—for example, a credit card or direct debit.</p>
      * @param method value to be set
      */
 

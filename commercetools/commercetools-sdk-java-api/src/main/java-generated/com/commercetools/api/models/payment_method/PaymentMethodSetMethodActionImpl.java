@@ -51,7 +51,7 @@ public class PaymentMethodSetMethodActionImpl implements PaymentMethodSetMethodA
     }
 
     /**
-     *  <p>New payment method—for example, a credit card or cash advance. If empty, any existing value will be removed.</p>
+     *  <p>New payment method—for example, a credit card or direct debit. If empty, any existing value will be removed.</p>
      */
 
     public String getMethod() {

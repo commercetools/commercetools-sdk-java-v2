@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Retrieves a ShoppingList with the provided <code>key</code> for the authenticated Customer or anonymous user in a Store. Returns <code>200 OK</code> status if successful.</p>
+ *  <p>Retrieves a ShoppingList with the provided <code>key</code> for the authenticated Customer or anonymous user in a Store. Returns <code>200</code> status if successful.</p>
  *  <p>A ResourceNotFound error is returned in the following scenarios:</p>
  *  <ul>
  *   <li>If no ShoppingList matches the provided <code>key</code> in a Store.</li>

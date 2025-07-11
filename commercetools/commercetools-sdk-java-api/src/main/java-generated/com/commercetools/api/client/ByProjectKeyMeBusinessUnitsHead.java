@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Checks if one or more BusinessUnits exist for the provided query predicate. Returns a <code>200 OK</code> status if any BusinessUnits match the Query Predicate and the Customer has access to them, or a ResourceNotFound error otherwise.</p>
+ *  <p>Checks if one or more BusinessUnits exist for the provided query predicate. Returns a <code>200</code> status if any BusinessUnits match the Query Predicate and the Customer has access to them, or a ResourceNotFound error otherwise.</p>
  *
  * <hr>
  * <div class=code-example>

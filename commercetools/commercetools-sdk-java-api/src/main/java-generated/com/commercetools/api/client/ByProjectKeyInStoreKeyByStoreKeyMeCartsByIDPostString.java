@@ -21,7 +21,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Updates the Cart for a given <code>id</code> in a Store. Returns a <code>200 OK</code> status if successful.</p>
+ *  <p>Updates the Cart for a given <code>id</code> in a Store. Returns a <code>200</code> status if successful.</p>
  *  <p>A ResourceNotFound error is returned in the following scenarios:</p>
  *  <ul>
  *   <li>If no Cart exists in the Store for the given <code>id</code>.</li>

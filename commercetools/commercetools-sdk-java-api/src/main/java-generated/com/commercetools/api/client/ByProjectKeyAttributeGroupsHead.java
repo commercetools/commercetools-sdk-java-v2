@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Checks if one or more AttributeGroups exist for the provided query predicate. Returns <code>200 OK</code> status if any AttributeGroups match the query predicate, or a <code>404 Not Found</code> otherwise.</p>
+ *  <p>Checks if one or more AttributeGroups exist for the provided query predicate. Returns <code>200</code> status if any AttributeGroups match the query predicate, or a <code>404</code> status otherwise.</p>
  *
  * <hr>
  * <div class=code-example>

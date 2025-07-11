@@ -16,7 +16,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>This is the last step in the email verification process of a Customer. Returns a <code>200 OK</code> status if successful.</p>
+ *  <p>This is the last step in the email verification process of a Customer. Returns a <code>200</code> status if successful.</p>
  *  <p>After the email is verified, all email tokens issued previously through the email verification flow are invalidated. This invalidation of tokens is eventually consistent.</p>
  *  <p>A ResourceNotFound error is returned in the following scenarios:</p>
  *  <ul>

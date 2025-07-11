@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Retrieves Quote Requests for the authenticated Customer. Returns a <code>200 OK</code> status if successful.</p>
+ *  <p>Retrieves Quote Requests for the authenticated Customer. Returns a <code>200</code> status if successful.</p>
  *
  * <hr>
  * <div class=code-example>

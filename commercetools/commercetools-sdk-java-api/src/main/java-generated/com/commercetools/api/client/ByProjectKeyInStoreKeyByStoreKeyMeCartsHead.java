@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Checks if a Cart exists for a Store that matches the given Query Predicate, and contains a matching <code>customerId</code> or <code>anonymousId</code>. Returns a <code>200 OK</code> status if any Carts match these conditions, or Not Found otherwise.</p>
+ *  <p>Checks if a Cart exists for a Store that matches the given Query Predicate, and contains a matching <code>customerId</code> or <code>anonymousId</code>. Returns a <code>200</code> status if any Carts match these conditions, or a <code>404</code> status otherwise.</p>
  *
  * <hr>
  * <div class=code-example>

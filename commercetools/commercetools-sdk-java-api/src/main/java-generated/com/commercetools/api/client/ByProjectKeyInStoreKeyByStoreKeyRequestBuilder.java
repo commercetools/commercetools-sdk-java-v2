@@ -18,32 +18,28 @@ public class ByProjectKeyInStoreKeyByStoreKeyRequestBuilder {
         this.storeKey = storeKey;
     }
 
+    public ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsRequestBuilder businessUnits() {
+        return new ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsRequestBuilder(apiHttpClient, projectKey, storeKey);
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyCartDiscountsRequestBuilder cartDiscounts() {
+        return new ByProjectKeyInStoreKeyByStoreKeyCartDiscountsRequestBuilder(apiHttpClient, projectKey, storeKey);
+    }
+
     public ByProjectKeyInStoreKeyByStoreKeyCartsRequestBuilder carts() {
         return new ByProjectKeyInStoreKeyByStoreKeyCartsRequestBuilder(apiHttpClient, projectKey, storeKey);
-    }
-
-    public ByProjectKeyInStoreKeyByStoreKeyOrdersRequestBuilder orders() {
-        return new ByProjectKeyInStoreKeyByStoreKeyOrdersRequestBuilder(apiHttpClient, projectKey, storeKey);
-    }
-
-    public ByProjectKeyInStoreKeyByStoreKeyMeRequestBuilder me() {
-        return new ByProjectKeyInStoreKeyByStoreKeyMeRequestBuilder(apiHttpClient, projectKey, storeKey);
     }
 
     public ByProjectKeyInStoreKeyByStoreKeyCustomersRequestBuilder customers() {
         return new ByProjectKeyInStoreKeyByStoreKeyCustomersRequestBuilder(apiHttpClient, projectKey, storeKey);
     }
 
-    public ByProjectKeyInStoreKeyByStoreKeyLoginRequestBuilder login() {
-        return new ByProjectKeyInStoreKeyByStoreKeyLoginRequestBuilder(apiHttpClient, projectKey, storeKey);
+    public ByProjectKeyInStoreKeyByStoreKeyMeRequestBuilder me() {
+        return new ByProjectKeyInStoreKeyByStoreKeyMeRequestBuilder(apiHttpClient, projectKey, storeKey);
     }
 
-    public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsRequestBuilder shippingMethods() {
-        return new ByProjectKeyInStoreKeyByStoreKeyShippingMethodsRequestBuilder(apiHttpClient, projectKey, storeKey);
-    }
-
-    public ByProjectKeyInStoreKeyByStoreKeyShoppingListsRequestBuilder shoppingLists() {
-        return new ByProjectKeyInStoreKeyByStoreKeyShoppingListsRequestBuilder(apiHttpClient, projectKey, storeKey);
+    public ByProjectKeyInStoreKeyByStoreKeyOrdersRequestBuilder orders() {
+        return new ByProjectKeyInStoreKeyByStoreKeyOrdersRequestBuilder(apiHttpClient, projectKey, storeKey);
     }
 
     public ByProjectKeyInStoreKeyByStoreKeyProductProjectionsRequestBuilder productProjections() {
@@ -54,10 +50,6 @@ public class ByProjectKeyInStoreKeyByStoreKeyRequestBuilder {
     public ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsRequestBuilder productSelectionAssignments() {
         return new ByProjectKeyInStoreKeyByStoreKeyProductSelectionAssignmentsRequestBuilder(apiHttpClient, projectKey,
             storeKey);
-    }
-
-    public ByProjectKeyInStoreKeyByStoreKeyCartDiscountsRequestBuilder cartDiscounts() {
-        return new ByProjectKeyInStoreKeyByStoreKeyCartDiscountsRequestBuilder(apiHttpClient, projectKey, storeKey);
     }
 
     public ByProjectKeyInStoreKeyByStoreKeyProductTailoringRequestBuilder productTailoring() {
@@ -72,16 +64,24 @@ public class ByProjectKeyInStoreKeyByStoreKeyRequestBuilder {
         return new ByProjectKeyInStoreKeyByStoreKeyQuoteRequestsRequestBuilder(apiHttpClient, projectKey, storeKey);
     }
 
-    public ByProjectKeyInStoreKeyByStoreKeyStagedQuotesRequestBuilder stagedQuotes() {
-        return new ByProjectKeyInStoreKeyByStoreKeyStagedQuotesRequestBuilder(apiHttpClient, projectKey, storeKey);
-    }
-
     public ByProjectKeyInStoreKeyByStoreKeyQuotesRequestBuilder quotes() {
         return new ByProjectKeyInStoreKeyByStoreKeyQuotesRequestBuilder(apiHttpClient, projectKey, storeKey);
     }
 
-    public ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsRequestBuilder businessUnits() {
-        return new ByProjectKeyInStoreKeyByStoreKeyBusinessUnitsRequestBuilder(apiHttpClient, projectKey, storeKey);
+    public ByProjectKeyInStoreKeyByStoreKeyShippingMethodsRequestBuilder shippingMethods() {
+        return new ByProjectKeyInStoreKeyByStoreKeyShippingMethodsRequestBuilder(apiHttpClient, projectKey, storeKey);
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyShoppingListsRequestBuilder shoppingLists() {
+        return new ByProjectKeyInStoreKeyByStoreKeyShoppingListsRequestBuilder(apiHttpClient, projectKey, storeKey);
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyStagedQuotesRequestBuilder stagedQuotes() {
+        return new ByProjectKeyInStoreKeyByStoreKeyStagedQuotesRequestBuilder(apiHttpClient, projectKey, storeKey);
+    }
+
+    public ByProjectKeyInStoreKeyByStoreKeyLoginRequestBuilder login() {
+        return new ByProjectKeyInStoreKeyByStoreKeyLoginRequestBuilder(apiHttpClient, projectKey, storeKey);
     }
 
 }

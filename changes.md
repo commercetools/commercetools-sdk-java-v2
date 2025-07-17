@@ -8,3 +8,10 @@
 - added type `ProductSearchFacetStatsValue`
 </details>
 
+
+<details>
+<summary>Removed Type(s)</summary>
+
+- :warning: removed type `RecurringOrderMessagePayload`
+</details>
+

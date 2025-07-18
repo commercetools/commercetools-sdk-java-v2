@@ -34,15 +34,16 @@ public class DayOfMonthScheduleDraftImpl implements DayOfMonthScheduleDraft, Mod
      * create instance with all properties
      */
     @JsonCreator
-    DayOfMonthScheduleDraftImpl(@JsonProperty("type") final String type, @JsonProperty("day") final Integer day) {
-        this.type = type;
+    DayOfMonthScheduleDraftImpl(@JsonProperty("day") final Integer day) {
         this.day = day;
+        this.type = DAY_OF_MONTH;
     }
 
     /**
      * create empty instance
      */
     public DayOfMonthScheduleDraftImpl() {
+        this.type = DAY_OF_MONTH;
     }
 
     /**

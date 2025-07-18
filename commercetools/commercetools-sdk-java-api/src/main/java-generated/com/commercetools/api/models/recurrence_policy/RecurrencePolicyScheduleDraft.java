@@ -21,9 +21,8 @@ import jakarta.validation.constraints.NotNull;
  * Example to create a subtype instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     RecurrencePolicyScheduleDraft recurrencePolicyScheduleDraft = RecurrencePolicyScheduleDraft.standardBuilder()
- *             value(0.3)
- *             intervalUnit(IntervalUnit.DAYS)
+ *     RecurrencePolicyScheduleDraft recurrencePolicyScheduleDraft = RecurrencePolicyScheduleDraft.dayOfMonthBuilder()
+ *             day(1)
  *             .build()
  * </code></pre>
  * </div>
@@ -59,6 +58,14 @@ public interface RecurrencePolicyScheduleDraft {
         }
         RecurrencePolicyScheduleDraftImpl instance = new RecurrencePolicyScheduleDraftImpl();
         return instance;
+    }
+
+    /**
+     * builder for dayOfMonth subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.recurrence_policy.DayOfMonthScheduleDraftBuilder dayOfMonthBuilder() {
+        return com.commercetools.api.models.recurrence_policy.DayOfMonthScheduleDraftBuilder.of();
     }
 
     /**

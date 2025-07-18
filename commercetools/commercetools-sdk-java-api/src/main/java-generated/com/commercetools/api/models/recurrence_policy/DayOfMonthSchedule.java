@@ -38,14 +38,6 @@ public interface DayOfMonthSchedule extends RecurrencePolicySchedule {
     String DAY_OF_MONTH = "dayOfMonth";
 
     /**
-     *
-     * @return type
-     */
-    @NotNull
-    @JsonProperty("type")
-    public String getType();
-
-    /**
      *  <p>The day of the month when the Recurring Order is created. If the value is greater than the number of days in a given month, the order is created on the last day of the month.</p>
      * @return day
      */

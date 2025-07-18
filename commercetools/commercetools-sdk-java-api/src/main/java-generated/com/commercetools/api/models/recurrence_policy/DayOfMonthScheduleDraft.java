@@ -31,17 +31,16 @@ import jakarta.validation.constraints.NotNull;
  * </code></pre>
  * </div>
  */
+@io.vrap.rmf.base.client.utils.json.SubType("dayOfMonth")
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+@JsonDeserialize(as = DayOfMonthScheduleDraftImpl.class)
 public interface DayOfMonthScheduleDraft
         extends RecurrencePolicyScheduleDraft, io.vrap.rmf.base.client.Draft<DayOfMonthScheduleDraft> {
 
     /**
-     *
-     * @return type
+     * discriminator value for DayOfMonthScheduleDraft
      */
-    @NotNull
-    @JsonProperty("type")
-    public String getType();
+    String DAY_OF_MONTH = "dayOfMonth";
 
     /**
      *  <p>The day of the month when the Recurring Order should be created. If the value is greater than the number of days in a given month, the order will be created on the last day of the month.</p>
@@ -58,6 +57,25 @@ public interface DayOfMonthScheduleDraft
 
     public void setDay(final Integer day);
 
+    /**
+     * factory method
+     * @return instance of DayOfMonthScheduleDraft
+     */
+    public static DayOfMonthScheduleDraft of() {
+        return new DayOfMonthScheduleDraftImpl();
+    }
+
+    /**
+     * factory method to create a shallow copy DayOfMonthScheduleDraft
+     * @param template instance to be copied
+     * @return copy instance
+     */
+    public static DayOfMonthScheduleDraft of(final DayOfMonthScheduleDraft template) {
+        DayOfMonthScheduleDraftImpl instance = new DayOfMonthScheduleDraftImpl();
+        instance.setDay(template.getDay());
+        return instance;
+    }
+
     public DayOfMonthScheduleDraft copyDeep();
 
     /**
@@ -73,6 +91,23 @@ public interface DayOfMonthScheduleDraft
         DayOfMonthScheduleDraftImpl instance = new DayOfMonthScheduleDraftImpl();
         instance.setDay(template.getDay());
         return instance;
+    }
+
+    /**
+     * builder factory method for DayOfMonthScheduleDraft
+     * @return builder
+     */
+    public static DayOfMonthScheduleDraftBuilder builder() {
+        return DayOfMonthScheduleDraftBuilder.of();
+    }
+
+    /**
+     * create builder for DayOfMonthScheduleDraft instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
+    public static DayOfMonthScheduleDraftBuilder builder(final DayOfMonthScheduleDraft template) {
+        return DayOfMonthScheduleDraftBuilder.of(template);
     }
 
     /**

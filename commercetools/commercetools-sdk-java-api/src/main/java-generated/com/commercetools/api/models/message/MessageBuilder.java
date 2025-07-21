@@ -1015,6 +1015,10 @@ public class MessageBuilder {
         return com.commercetools.api.models.message.RecurringOrderCustomTypeSetMessageBuilder.of();
     }
 
+    public com.commercetools.api.models.message.RecurringOrderDeletedMessageBuilder recurringOrderDeletedBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderDeletedMessageBuilder.of();
+    }
+
     public com.commercetools.api.models.message.RecurringOrderKeySetMessageBuilder recurringOrderKeySetBuilder() {
         return com.commercetools.api.models.message.RecurringOrderKeySetMessageBuilder.of();
     }

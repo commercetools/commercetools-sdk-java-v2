@@ -42,4 +42,12 @@ public class ByProjectKeyRecurringOrdersByIDRequestBuilder {
         return post(op.apply(com.commercetools.api.models.recurring_order.RecurringOrderUpdateBuilder.of()).build());
     }
 
+    public ByProjectKeyRecurringOrdersByIDDelete delete() {
+        return new ByProjectKeyRecurringOrdersByIDDelete(apiHttpClient, projectKey, ID);
+    }
+
+    public <TValue> ByProjectKeyRecurringOrdersByIDDelete delete(TValue version) {
+        return delete().withVersion(version);
+    }
+
 }

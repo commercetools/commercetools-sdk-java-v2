@@ -2070,6 +2070,14 @@ public interface MessagePayload extends MessagePayloadMixin {
     }
 
     /**
+     * builder for recurringOrderDeleted subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.RecurringOrderDeletedMessagePayloadBuilder recurringOrderDeletedBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderDeletedMessagePayloadBuilder.of();
+    }
+
+    /**
      * builder for recurringOrderKeySet subtype
      * @return builder
      */

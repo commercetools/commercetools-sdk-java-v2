@@ -33,7 +33,7 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
     @Nullable
     private java.util.List<java.lang.Object> path;
 
-    private java.lang.Object extensions;
+    private com.commercetools.history.models.error.GraphQLErrorObject extensions;
 
     /**
      *  <p>Detailed description of the error explaining the root cause of the problem and suggesting how to correct the error.</p>
@@ -179,8 +179,20 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
      * @return Builder
      */
 
-    public GraphQLErrorBuilder extensions(final java.lang.Object extensions) {
+    public GraphQLErrorBuilder extensions(final com.commercetools.history.models.error.GraphQLErrorObject extensions) {
         this.extensions = extensions;
+        return this;
+    }
+
+    /**
+     *  <p>Dictionary with additional information where applicable.</p>
+     * @param builder function to build the extensions value
+     * @return Builder
+     */
+
+    public GraphQLErrorBuilder extensions(
+            Function<com.commercetools.history.models.error.GraphQLErrorObjectBuilder, Builder<? extends com.commercetools.history.models.error.GraphQLErrorObject>> builder) {
+        this.extensions = builder.apply(com.commercetools.history.models.error.GraphQLErrorObjectBuilder.of()).build();
         return this;
     }
 
@@ -217,7 +229,7 @@ public class GraphQLErrorBuilder implements Builder<GraphQLError> {
      * @return extensions
      */
 
-    public java.lang.Object getExtensions() {
+    public com.commercetools.history.models.error.GraphQLErrorObject getExtensions() {
         return this.extensions;
     }
 

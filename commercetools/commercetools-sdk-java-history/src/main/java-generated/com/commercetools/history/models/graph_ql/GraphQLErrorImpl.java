@@ -28,7 +28,7 @@ public class GraphQLErrorImpl implements GraphQLError, ModelBase {
 
     private java.util.List<java.lang.Object> path;
 
-    private java.lang.Object extensions;
+    private com.commercetools.history.models.error.GraphQLErrorObject extensions;
 
     /**
      * create instance with all properties
@@ -37,7 +37,7 @@ public class GraphQLErrorImpl implements GraphQLError, ModelBase {
     GraphQLErrorImpl(@JsonProperty("message") final String message,
             @JsonProperty("locations") final java.util.List<com.commercetools.history.models.graph_ql.GraphQLErrorLocation> locations,
             @JsonProperty("path") final java.util.List<java.lang.Object> path,
-            @JsonProperty("extensions") final java.lang.Object extensions) {
+            @JsonProperty("extensions") final com.commercetools.history.models.error.GraphQLErrorObject extensions) {
         this.message = message;
         this.locations = locations;
         this.path = path;
@@ -78,7 +78,7 @@ public class GraphQLErrorImpl implements GraphQLError, ModelBase {
      *  <p>Dictionary with additional information where applicable.</p>
      */
 
-    public java.lang.Object getExtensions() {
+    public com.commercetools.history.models.error.GraphQLErrorObject getExtensions() {
         return this.extensions;
     }
 
@@ -103,7 +103,7 @@ public class GraphQLErrorImpl implements GraphQLError, ModelBase {
         this.path = path;
     }
 
-    public void setExtensions(final java.lang.Object extensions) {
+    public void setExtensions(final com.commercetools.history.models.error.GraphQLErrorObject extensions) {
         this.extensions = extensions;
     }
 

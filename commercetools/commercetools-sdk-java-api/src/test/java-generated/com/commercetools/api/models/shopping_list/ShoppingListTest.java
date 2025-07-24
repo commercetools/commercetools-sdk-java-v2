@@ -41,7 +41,7 @@ public class ShoppingListTest {
                                 .textLineItems(Collections.singletonList(
                                     new com.commercetools.api.models.shopping_list.TextLineItemImpl())) },
                 new Object[] { "deleteDaysAfterLastModification",
-                        ShoppingList.builder().deleteDaysAfterLastModification(3L) },
+                        ShoppingList.builder().deleteDaysAfterLastModification(3) },
                 new Object[] { "anonymousId", ShoppingList.builder().anonymousId("anonymousId") },
                 new Object[] { "store",
                         ShoppingList.builder().store(new com.commercetools.api.models.store.StoreKeyReferenceImpl()) },
@@ -134,8 +134,8 @@ public class ShoppingListTest {
     @Test
     public void deleteDaysAfterLastModification() {
         ShoppingList value = ShoppingList.of();
-        value.setDeleteDaysAfterLastModification(3L);
-        Assertions.assertThat(value.getDeleteDaysAfterLastModification()).isEqualTo(3L);
+        value.setDeleteDaysAfterLastModification(3);
+        Assertions.assertThat(value.getDeleteDaysAfterLastModification()).isEqualTo(3);
     }
 
     @Test

@@ -39,7 +39,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
     @Nullable
-    private Long deleteDaysAfterLastModification;
+    private Integer deleteDaysAfterLastModification;
 
     @Nullable
     private com.commercetools.api.models.store.StoreResourceIdentifier store;
@@ -343,7 +343,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
      */
 
     public MyShoppingListDraftBuilder deleteDaysAfterLastModification(
-            @Nullable final Long deleteDaysAfterLastModification) {
+            @Nullable final Integer deleteDaysAfterLastModification) {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
         return this;
     }
@@ -439,7 +439,7 @@ public class MyShoppingListDraftBuilder implements Builder<MyShoppingListDraft> 
      */
 
     @Nullable
-    public Long getDeleteDaysAfterLastModification() {
+    public Integer getDeleteDaysAfterLastModification() {
         return this.deleteDaysAfterLastModification;
     }
 

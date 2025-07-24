@@ -19,14 +19,14 @@ public class ShoppingListSetDeleteDaysAfterLastModificationActionTest {
 
     public static Object[][] objectBuilder() {
         return new Object[][] { new Object[] { "deleteDaysAfterLastModification",
-                ShoppingListSetDeleteDaysAfterLastModificationAction.builder().deleteDaysAfterLastModification(3L) } };
+                ShoppingListSetDeleteDaysAfterLastModificationAction.builder().deleteDaysAfterLastModification(3) } };
     }
 
     @Test
     public void deleteDaysAfterLastModification() {
         ShoppingListSetDeleteDaysAfterLastModificationAction value = ShoppingListSetDeleteDaysAfterLastModificationAction
                 .of();
-        value.setDeleteDaysAfterLastModification(3L);
-        Assertions.assertThat(value.getDeleteDaysAfterLastModification()).isEqualTo(3L);
+        value.setDeleteDaysAfterLastModification(3);
+        Assertions.assertThat(value.getDeleteDaysAfterLastModification()).isEqualTo(3);
     }
 }

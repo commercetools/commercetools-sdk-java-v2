@@ -37,7 +37,7 @@ public class MyShoppingListDraftTest {
                         MyShoppingListDraft.builder()
                                 .custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) },
                 new Object[] { "deleteDaysAfterLastModification",
-                        MyShoppingListDraft.builder().deleteDaysAfterLastModification(3L) },
+                        MyShoppingListDraft.builder().deleteDaysAfterLastModification(3) },
                 new Object[] { "store", MyShoppingListDraft.builder()
                         .store(new com.commercetools.api.models.store.StoreResourceIdentifierImpl()) } };
     }
@@ -88,8 +88,8 @@ public class MyShoppingListDraftTest {
     @Test
     public void deleteDaysAfterLastModification() {
         MyShoppingListDraft value = MyShoppingListDraft.of();
-        value.setDeleteDaysAfterLastModification(3L);
-        Assertions.assertThat(value.getDeleteDaysAfterLastModification()).isEqualTo(3L);
+        value.setDeleteDaysAfterLastModification(3);
+        Assertions.assertThat(value.getDeleteDaysAfterLastModification()).isEqualTo(3);
     }
 
     @Test

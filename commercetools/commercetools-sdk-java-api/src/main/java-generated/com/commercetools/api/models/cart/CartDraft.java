@@ -281,7 +281,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
      */
 
     @JsonProperty("deleteDaysAfterLastModification")
-    public Long getDeleteDaysAfterLastModification();
+    public Integer getDeleteDaysAfterLastModification();
 
     /**
      *  <p>Custom Fields for the Cart.</p>
@@ -552,7 +552,7 @@ public interface CartDraft extends com.commercetools.api.models.CustomizableDraf
      * @param deleteDaysAfterLastModification value to be set
      */
 
-    public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification);
+    public void setDeleteDaysAfterLastModification(final Integer deleteDaysAfterLastModification);
 
     /**
      *  <p>Custom Fields for the Cart.</p>

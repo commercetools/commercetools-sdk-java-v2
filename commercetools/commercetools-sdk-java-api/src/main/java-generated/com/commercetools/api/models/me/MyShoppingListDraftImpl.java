@@ -32,7 +32,7 @@ public class MyShoppingListDraftImpl implements MyShoppingListDraft, ModelBase {
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
-    private Long deleteDaysAfterLastModification;
+    private Integer deleteDaysAfterLastModification;
 
     private com.commercetools.api.models.store.StoreResourceIdentifier store;
 
@@ -45,7 +45,7 @@ public class MyShoppingListDraftImpl implements MyShoppingListDraft, ModelBase {
             @JsonProperty("lineItems") final java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft> lineItems,
             @JsonProperty("textLineItems") final java.util.List<com.commercetools.api.models.shopping_list.TextLineItemDraft> textLineItems,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom,
-            @JsonProperty("deleteDaysAfterLastModification") final Long deleteDaysAfterLastModification,
+            @JsonProperty("deleteDaysAfterLastModification") final Integer deleteDaysAfterLastModification,
             @JsonProperty("store") final com.commercetools.api.models.store.StoreResourceIdentifier store) {
         this.name = name;
         this.description = description;
@@ -106,7 +106,7 @@ public class MyShoppingListDraftImpl implements MyShoppingListDraft, ModelBase {
      *  <p>Number of days after the last modification before a ShoppingList is deleted. If not set, the default value configured in the Project is used.</p>
      */
 
-    public Long getDeleteDaysAfterLastModification() {
+    public Integer getDeleteDaysAfterLastModification() {
         return this.deleteDaysAfterLastModification;
     }
 
@@ -148,7 +148,7 @@ public class MyShoppingListDraftImpl implements MyShoppingListDraft, ModelBase {
         this.custom = custom;
     }
 
-    public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification) {
+    public void setDeleteDaysAfterLastModification(final Integer deleteDaysAfterLastModification) {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
     }
 

@@ -34,7 +34,7 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
 
     private String anonymousId;
 
-    private Long deleteDaysAfterLastModification;
+    private Integer deleteDaysAfterLastModification;
 
     private java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft> lineItems;
 
@@ -56,7 +56,7 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
             @JsonProperty("key") final String key,
             @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description,
             @JsonProperty("anonymousId") final String anonymousId,
-            @JsonProperty("deleteDaysAfterLastModification") final Long deleteDaysAfterLastModification,
+            @JsonProperty("deleteDaysAfterLastModification") final Integer deleteDaysAfterLastModification,
             @JsonProperty("lineItems") final java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItemDraft> lineItems,
             @JsonProperty("textLineItems") final java.util.List<com.commercetools.api.models.shopping_list.TextLineItemDraft> textLineItems,
             @JsonProperty("store") final com.commercetools.api.models.store.StoreResourceIdentifier store,
@@ -134,7 +134,7 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
      *  <p>Number of days after the last modification before a ShoppingList is deleted. If not set, the default value configured in the Project is used.</p>
      */
 
-    public Long getDeleteDaysAfterLastModification() {
+    public Integer getDeleteDaysAfterLastModification() {
         return this.deleteDaysAfterLastModification;
     }
 
@@ -202,7 +202,7 @@ public class ShoppingListDraftImpl implements ShoppingListDraft, ModelBase {
         this.anonymousId = anonymousId;
     }
 
-    public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification) {
+    public void setDeleteDaysAfterLastModification(final Integer deleteDaysAfterLastModification) {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
     }
 

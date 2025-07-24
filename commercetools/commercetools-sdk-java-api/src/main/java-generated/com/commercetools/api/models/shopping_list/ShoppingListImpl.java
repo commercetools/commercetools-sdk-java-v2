@@ -44,7 +44,7 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
 
     private java.util.List<com.commercetools.api.models.shopping_list.TextLineItem> textLineItems;
 
-    private Long deleteDaysAfterLastModification;
+    private Integer deleteDaysAfterLastModification;
 
     private String anonymousId;
 
@@ -72,7 +72,7 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
             @JsonProperty("description") final com.commercetools.api.models.common.LocalizedString description,
             @JsonProperty("lineItems") final java.util.List<com.commercetools.api.models.shopping_list.ShoppingListLineItem> lineItems,
             @JsonProperty("textLineItems") final java.util.List<com.commercetools.api.models.shopping_list.TextLineItem> textLineItems,
-            @JsonProperty("deleteDaysAfterLastModification") final Long deleteDaysAfterLastModification,
+            @JsonProperty("deleteDaysAfterLastModification") final Integer deleteDaysAfterLastModification,
             @JsonProperty("anonymousId") final String anonymousId,
             @JsonProperty("store") final com.commercetools.api.models.store.StoreKeyReference store,
             @JsonProperty("businessUnit") final com.commercetools.api.models.business_unit.BusinessUnitKeyReference businessUnit,
@@ -197,7 +197,7 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
      *  <p>Number of days after the last modification before a ShoppingList is deleted. If not set, the default value configured in the Project is used.</p>
      */
 
-    public Long getDeleteDaysAfterLastModification() {
+    public Integer getDeleteDaysAfterLastModification() {
         return this.deleteDaysAfterLastModification;
     }
 
@@ -303,7 +303,7 @@ public class ShoppingListImpl implements ShoppingList, ModelBase {
         this.textLineItems = textLineItems;
     }
 
-    public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification) {
+    public void setDeleteDaysAfterLastModification(final Integer deleteDaysAfterLastModification) {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
     }
 

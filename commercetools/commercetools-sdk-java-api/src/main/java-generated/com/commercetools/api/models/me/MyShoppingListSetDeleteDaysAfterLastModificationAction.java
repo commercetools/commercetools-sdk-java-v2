@@ -40,14 +40,14 @@ public interface MyShoppingListSetDeleteDaysAfterLastModificationAction extends 
      */
 
     @JsonProperty("deleteDaysAfterLastModification")
-    public Long getDeleteDaysAfterLastModification();
+    public Integer getDeleteDaysAfterLastModification();
 
     /**
      *  <p>Value to set. If not provided, the default value for this field configured in Project settings is assigned.</p>
      * @param deleteDaysAfterLastModification value to be set
      */
 
-    public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification);
+    public void setDeleteDaysAfterLastModification(final Integer deleteDaysAfterLastModification);
 
     /**
      * factory method

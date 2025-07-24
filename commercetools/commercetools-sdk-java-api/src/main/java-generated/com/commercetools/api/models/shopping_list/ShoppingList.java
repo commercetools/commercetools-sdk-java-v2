@@ -133,7 +133,7 @@ public interface ShoppingList
      */
 
     @JsonProperty("deleteDaysAfterLastModification")
-    public Long getDeleteDaysAfterLastModification();
+    public Integer getDeleteDaysAfterLastModification();
 
     /**
      *  <p>Identifies ShoppingLists belonging to an anonymous session.</p>
@@ -283,7 +283,7 @@ public interface ShoppingList
      * @param deleteDaysAfterLastModification value to be set
      */
 
-    public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification);
+    public void setDeleteDaysAfterLastModification(final Integer deleteDaysAfterLastModification);
 
     /**
      *  <p>Identifies ShoppingLists belonging to an anonymous session.</p>

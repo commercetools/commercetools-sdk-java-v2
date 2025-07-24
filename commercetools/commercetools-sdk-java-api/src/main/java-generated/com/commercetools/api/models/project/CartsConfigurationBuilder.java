@@ -23,7 +23,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class CartsConfigurationBuilder implements Builder<CartsConfiguration> {
 
     @Nullable
-    private Long deleteDaysAfterLastModification;
+    private Integer deleteDaysAfterLastModification;
 
     @Nullable
     private Boolean countryTaxRateFallbackEnabled;
@@ -42,7 +42,7 @@ public class CartsConfigurationBuilder implements Builder<CartsConfiguration> {
      */
 
     public CartsConfigurationBuilder deleteDaysAfterLastModification(
-            @Nullable final Long deleteDaysAfterLastModification) {
+            @Nullable final Integer deleteDaysAfterLastModification) {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
         return this;
     }
@@ -90,7 +90,7 @@ public class CartsConfigurationBuilder implements Builder<CartsConfiguration> {
      */
 
     @Nullable
-    public Long getDeleteDaysAfterLastModification() {
+    public Integer getDeleteDaysAfterLastModification() {
         return this.deleteDaysAfterLastModification;
     }
 

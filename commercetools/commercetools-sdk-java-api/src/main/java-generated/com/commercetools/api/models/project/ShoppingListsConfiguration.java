@@ -34,14 +34,14 @@ public interface ShoppingListsConfiguration {
      */
 
     @JsonProperty("deleteDaysAfterLastModification")
-    public Long getDeleteDaysAfterLastModification();
+    public Integer getDeleteDaysAfterLastModification();
 
     /**
      *  <p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the ShoppingListDraft. This field may not be present on Projects created before January 2020.</p>
      * @param deleteDaysAfterLastModification value to be set
      */
 
-    public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification);
+    public void setDeleteDaysAfterLastModification(final Integer deleteDaysAfterLastModification);
 
     /**
      * factory method

@@ -22,14 +22,14 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class ShoppingListsConfigurationImpl implements ShoppingListsConfiguration, ModelBase {
 
-    private Long deleteDaysAfterLastModification;
+    private Integer deleteDaysAfterLastModification;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     ShoppingListsConfigurationImpl(
-            @JsonProperty("deleteDaysAfterLastModification") final Long deleteDaysAfterLastModification) {
+            @JsonProperty("deleteDaysAfterLastModification") final Integer deleteDaysAfterLastModification) {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
     }
 
@@ -43,11 +43,11 @@ public class ShoppingListsConfigurationImpl implements ShoppingListsConfiguratio
      *  <p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the ShoppingListDraft. This field may not be present on Projects created before January 2020.</p>
      */
 
-    public Long getDeleteDaysAfterLastModification() {
+    public Integer getDeleteDaysAfterLastModification() {
         return this.deleteDaysAfterLastModification;
     }
 
-    public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification) {
+    public void setDeleteDaysAfterLastModification(final Integer deleteDaysAfterLastModification) {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
     }
 

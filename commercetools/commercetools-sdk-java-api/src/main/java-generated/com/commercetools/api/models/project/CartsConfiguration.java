@@ -36,7 +36,7 @@ public interface CartsConfiguration {
      */
 
     @JsonProperty("deleteDaysAfterLastModification")
-    public Long getDeleteDaysAfterLastModification();
+    public Integer getDeleteDaysAfterLastModification();
 
     /**
      *  <p>Indicates if country <em>- no state</em> Tax Rate fallback should be used when a shipping address state is not explicitly covered in the rates lists of all Tax Categories of a Cart Line Items. This field may not be present on Projects created before June 2020.</p>
@@ -68,7 +68,7 @@ public interface CartsConfiguration {
      * @param deleteDaysAfterLastModification value to be set
      */
 
-    public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification);
+    public void setDeleteDaysAfterLastModification(final Integer deleteDaysAfterLastModification);
 
     /**
      *  <p>Indicates if country <em>- no state</em> Tax Rate fallback should be used when a shipping address state is not explicitly covered in the rates lists of all Tax Categories of a Cart Line Items. This field may not be present on Projects created before June 2020.</p>

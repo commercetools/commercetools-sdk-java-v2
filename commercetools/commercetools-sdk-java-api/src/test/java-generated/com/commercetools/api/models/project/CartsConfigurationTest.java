@@ -18,7 +18,7 @@ public class CartsConfigurationTest {
     public static Object[][] objectBuilder() {
         return new Object[][] {
                 new Object[] { "deleteDaysAfterLastModification",
-                        CartsConfiguration.builder().deleteDaysAfterLastModification(3L) },
+                        CartsConfiguration.builder().deleteDaysAfterLastModification(3) },
                 new Object[] { "countryTaxRateFallbackEnabled",
                         CartsConfiguration.builder().countryTaxRateFallbackEnabled(true) },
                 new Object[] { "priceRoundingMode", CartsConfiguration.builder()
@@ -30,8 +30,8 @@ public class CartsConfigurationTest {
     @Test
     public void deleteDaysAfterLastModification() {
         CartsConfiguration value = CartsConfiguration.of();
-        value.setDeleteDaysAfterLastModification(3L);
-        Assertions.assertThat(value.getDeleteDaysAfterLastModification()).isEqualTo(3L);
+        value.setDeleteDaysAfterLastModification(3);
+        Assertions.assertThat(value.getDeleteDaysAfterLastModification()).isEqualTo(3);
     }
 
     @Test

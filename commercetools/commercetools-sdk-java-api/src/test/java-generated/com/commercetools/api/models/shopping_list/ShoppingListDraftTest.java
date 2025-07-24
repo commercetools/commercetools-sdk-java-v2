@@ -34,7 +34,7 @@ public class ShoppingListDraftTest {
                                 .description(new com.commercetools.api.models.common.LocalizedStringImpl()) },
                 new Object[] { "anonymousId", ShoppingListDraft.builder().anonymousId("anonymousId") },
                 new Object[] { "deleteDaysAfterLastModification",
-                        ShoppingListDraft.builder().deleteDaysAfterLastModification(3L) },
+                        ShoppingListDraft.builder().deleteDaysAfterLastModification(3) },
                 new Object[] { "lineItems",
                         ShoppingListDraft.builder()
                                 .lineItems(Collections.singletonList(
@@ -100,8 +100,8 @@ public class ShoppingListDraftTest {
     @Test
     public void deleteDaysAfterLastModification() {
         ShoppingListDraft value = ShoppingListDraft.of();
-        value.setDeleteDaysAfterLastModification(3L);
-        Assertions.assertThat(value.getDeleteDaysAfterLastModification()).isEqualTo(3L);
+        value.setDeleteDaysAfterLastModification(3);
+        Assertions.assertThat(value.getDeleteDaysAfterLastModification()).isEqualTo(3);
     }
 
     @Test

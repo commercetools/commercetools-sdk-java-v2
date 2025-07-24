@@ -86,7 +86,7 @@ public interface MyShoppingListDraft extends com.commercetools.api.models.Custom
      */
 
     @JsonProperty("deleteDaysAfterLastModification")
-    public Long getDeleteDaysAfterLastModification();
+    public Integer getDeleteDaysAfterLastModification();
 
     /**
      *  <p>Assigns the new ShoppingList to the Store. The Store assignment can not be modified.</p>
@@ -152,7 +152,7 @@ public interface MyShoppingListDraft extends com.commercetools.api.models.Custom
      * @param deleteDaysAfterLastModification value to be set
      */
 
-    public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification);
+    public void setDeleteDaysAfterLastModification(final Integer deleteDaysAfterLastModification);
 
     /**
      *  <p>Assigns the new ShoppingList to the Store. The Store assignment can not be modified.</p>

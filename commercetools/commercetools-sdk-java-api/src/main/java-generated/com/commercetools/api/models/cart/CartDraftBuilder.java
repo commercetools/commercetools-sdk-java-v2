@@ -108,7 +108,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
     private com.commercetools.api.models.cart.CartOrigin origin;
 
     @Nullable
-    private Long deleteDaysAfterLastModification;
+    private Integer deleteDaysAfterLastModification;
 
     @Nullable
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
@@ -1073,7 +1073,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
      * @return Builder
      */
 
-    public CartDraftBuilder deleteDaysAfterLastModification(@Nullable final Long deleteDaysAfterLastModification) {
+    public CartDraftBuilder deleteDaysAfterLastModification(@Nullable final Integer deleteDaysAfterLastModification) {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
         return this;
     }
@@ -1409,7 +1409,7 @@ public class CartDraftBuilder implements Builder<CartDraft> {
      */
 
     @Nullable
-    public Long getDeleteDaysAfterLastModification() {
+    public Integer getDeleteDaysAfterLastModification() {
         return this.deleteDaysAfterLastModification;
     }
 

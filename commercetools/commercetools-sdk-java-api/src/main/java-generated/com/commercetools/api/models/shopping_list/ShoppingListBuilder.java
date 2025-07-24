@@ -57,7 +57,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
     private java.util.List<com.commercetools.api.models.shopping_list.TextLineItem> textLineItems;
 
     @Nullable
-    private Long deleteDaysAfterLastModification;
+    private Integer deleteDaysAfterLastModification;
 
     @Nullable
     private String anonymousId;
@@ -463,7 +463,8 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
      * @return Builder
      */
 
-    public ShoppingListBuilder deleteDaysAfterLastModification(@Nullable final Long deleteDaysAfterLastModification) {
+    public ShoppingListBuilder deleteDaysAfterLastModification(
+            @Nullable final Integer deleteDaysAfterLastModification) {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
         return this;
     }
@@ -768,7 +769,7 @@ public class ShoppingListBuilder implements Builder<ShoppingList> {
      */
 
     @Nullable
-    public Long getDeleteDaysAfterLastModification() {
+    public Integer getDeleteDaysAfterLastModification() {
         return this.deleteDaysAfterLastModification;
     }
 

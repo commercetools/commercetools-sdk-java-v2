@@ -78,7 +78,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
 
     private com.commercetools.api.models.cart.CartOrigin origin;
 
-    private Long deleteDaysAfterLastModification;
+    private Integer deleteDaysAfterLastModification;
 
     private com.commercetools.api.models.type.CustomFieldsDraft custom;
 
@@ -112,7 +112,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
             @JsonProperty("discountCodes") final java.util.List<String> discountCodes,
             @JsonProperty("country") final String country, @JsonProperty("locale") final String locale,
             @JsonProperty("origin") final com.commercetools.api.models.cart.CartOrigin origin,
-            @JsonProperty("deleteDaysAfterLastModification") final Long deleteDaysAfterLastModification,
+            @JsonProperty("deleteDaysAfterLastModification") final Integer deleteDaysAfterLastModification,
             @JsonProperty("custom") final com.commercetools.api.models.type.CustomFieldsDraft custom) {
         this.currency = currency;
         this.key = key;
@@ -391,7 +391,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
      *  <p>Create a ChangeSubscription for Carts to receive a ResourceDeletedDeliveryPayload upon deletion of the Cart.</p>
      */
 
-    public Long getDeleteDaysAfterLastModification() {
+    public Integer getDeleteDaysAfterLastModification() {
         return this.deleteDaysAfterLastModification;
     }
 
@@ -547,7 +547,7 @@ public class CartDraftImpl implements CartDraft, ModelBase {
         this.origin = origin;
     }
 
-    public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification) {
+    public void setDeleteDaysAfterLastModification(final Integer deleteDaysAfterLastModification) {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
     }
 

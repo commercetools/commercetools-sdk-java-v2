@@ -22,7 +22,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartsConfigurationImpl implements CartsConfiguration, ModelBase {
 
-    private Long deleteDaysAfterLastModification;
+    private Integer deleteDaysAfterLastModification;
 
     private Boolean countryTaxRateFallbackEnabled;
 
@@ -34,7 +34,8 @@ public class CartsConfigurationImpl implements CartsConfiguration, ModelBase {
      * create instance with all properties
      */
     @JsonCreator
-    CartsConfigurationImpl(@JsonProperty("deleteDaysAfterLastModification") final Long deleteDaysAfterLastModification,
+    CartsConfigurationImpl(
+            @JsonProperty("deleteDaysAfterLastModification") final Integer deleteDaysAfterLastModification,
             @JsonProperty("countryTaxRateFallbackEnabled") final Boolean countryTaxRateFallbackEnabled,
             @JsonProperty("priceRoundingMode") final com.commercetools.api.models.cart.RoundingMode priceRoundingMode,
             @JsonProperty("taxRoundingMode") final com.commercetools.api.models.cart.RoundingMode taxRoundingMode) {
@@ -55,7 +56,7 @@ public class CartsConfigurationImpl implements CartsConfiguration, ModelBase {
      *  <p>This field may not be present on Projects created before January 2020.</p>
      */
 
-    public Long getDeleteDaysAfterLastModification() {
+    public Integer getDeleteDaysAfterLastModification() {
         return this.deleteDaysAfterLastModification;
     }
 
@@ -83,7 +84,7 @@ public class CartsConfigurationImpl implements CartsConfiguration, ModelBase {
         return this.taxRoundingMode;
     }
 
-    public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification) {
+    public void setDeleteDaysAfterLastModification(final Integer deleteDaysAfterLastModification) {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
     }
 

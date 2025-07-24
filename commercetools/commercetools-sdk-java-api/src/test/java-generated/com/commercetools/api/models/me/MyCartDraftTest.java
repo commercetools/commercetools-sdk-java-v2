@@ -56,7 +56,7 @@ public class MyCartDraftTest {
                 new Object[] { "country", MyCartDraft.builder().country("country") },
                 new Object[] { "locale", MyCartDraft.builder().locale("locale") },
                 new Object[] { "deleteDaysAfterLastModification",
-                        MyCartDraft.builder().deleteDaysAfterLastModification(3L) },
+                        MyCartDraft.builder().deleteDaysAfterLastModification(3) },
                 new Object[] { "custom",
                         MyCartDraft.builder().custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) } };
     }
@@ -181,8 +181,8 @@ public class MyCartDraftTest {
     @Test
     public void deleteDaysAfterLastModification() {
         MyCartDraft value = MyCartDraft.of();
-        value.setDeleteDaysAfterLastModification(3L);
-        Assertions.assertThat(value.getDeleteDaysAfterLastModification()).isEqualTo(3L);
+        value.setDeleteDaysAfterLastModification(3);
+        Assertions.assertThat(value.getDeleteDaysAfterLastModification()).isEqualTo(3);
     }
 
     @Test

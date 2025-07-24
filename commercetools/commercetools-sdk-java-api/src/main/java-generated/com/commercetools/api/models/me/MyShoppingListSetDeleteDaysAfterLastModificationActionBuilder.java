@@ -24,7 +24,7 @@ public class MyShoppingListSetDeleteDaysAfterLastModificationActionBuilder
         implements Builder<MyShoppingListSetDeleteDaysAfterLastModificationAction> {
 
     @Nullable
-    private Long deleteDaysAfterLastModification;
+    private Integer deleteDaysAfterLastModification;
 
     /**
      *  <p>Value to set. If not provided, the default value for this field configured in Project settings is assigned.</p>
@@ -33,7 +33,7 @@ public class MyShoppingListSetDeleteDaysAfterLastModificationActionBuilder
      */
 
     public MyShoppingListSetDeleteDaysAfterLastModificationActionBuilder deleteDaysAfterLastModification(
-            @Nullable final Long deleteDaysAfterLastModification) {
+            @Nullable final Integer deleteDaysAfterLastModification) {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
         return this;
     }
@@ -44,7 +44,7 @@ public class MyShoppingListSetDeleteDaysAfterLastModificationActionBuilder
      */
 
     @Nullable
-    public Long getDeleteDaysAfterLastModification() {
+    public Integer getDeleteDaysAfterLastModification() {
         return this.deleteDaysAfterLastModification;
     }
 

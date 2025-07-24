@@ -23,7 +23,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 public class ShoppingListsConfigurationBuilder implements Builder<ShoppingListsConfiguration> {
 
     @Nullable
-    private Long deleteDaysAfterLastModification;
+    private Integer deleteDaysAfterLastModification;
 
     /**
      *  <p>Default value for the <code>deleteDaysAfterLastModification</code> parameter of the ShoppingListDraft. This field may not be present on Projects created before January 2020.</p>
@@ -32,7 +32,7 @@ public class ShoppingListsConfigurationBuilder implements Builder<ShoppingListsC
      */
 
     public ShoppingListsConfigurationBuilder deleteDaysAfterLastModification(
-            @Nullable final Long deleteDaysAfterLastModification) {
+            @Nullable final Integer deleteDaysAfterLastModification) {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
         return this;
     }
@@ -43,7 +43,7 @@ public class ShoppingListsConfigurationBuilder implements Builder<ShoppingListsC
      */
 
     @Nullable
-    public Long getDeleteDaysAfterLastModification() {
+    public Integer getDeleteDaysAfterLastModification() {
         return this.deleteDaysAfterLastModification;
     }
 

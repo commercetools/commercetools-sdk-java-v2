@@ -94,7 +94,7 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
      */
 
     @JsonProperty("deleteDaysAfterLastModification")
-    public Long getDeleteDaysAfterLastModification();
+    public Integer getDeleteDaysAfterLastModification();
 
     /**
      *  <p>Line Items (containing Products) to add to the ShoppingList.</p>
@@ -183,7 +183,7 @@ public interface ShoppingListDraft extends com.commercetools.api.models.Customiz
      * @param deleteDaysAfterLastModification value to be set
      */
 
-    public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification);
+    public void setDeleteDaysAfterLastModification(final Integer deleteDaysAfterLastModification);
 
     /**
      *  <p>Line Items (containing Products) to add to the ShoppingList.</p>

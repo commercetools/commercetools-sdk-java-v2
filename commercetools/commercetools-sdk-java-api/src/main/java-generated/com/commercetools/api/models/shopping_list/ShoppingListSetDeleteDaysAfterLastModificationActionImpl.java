@@ -25,14 +25,14 @@ public class ShoppingListSetDeleteDaysAfterLastModificationActionImpl
 
     private String action;
 
-    private Long deleteDaysAfterLastModification;
+    private Integer deleteDaysAfterLastModification;
 
     /**
      * create instance with all properties
      */
     @JsonCreator
     ShoppingListSetDeleteDaysAfterLastModificationActionImpl(
-            @JsonProperty("deleteDaysAfterLastModification") final Long deleteDaysAfterLastModification) {
+            @JsonProperty("deleteDaysAfterLastModification") final Integer deleteDaysAfterLastModification) {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
         this.action = SET_DELETE_DAYS_AFTER_LAST_MODIFICATION;
     }
@@ -56,11 +56,11 @@ public class ShoppingListSetDeleteDaysAfterLastModificationActionImpl
      *  <p>Value to set. If not provided, the default value for this field configured in Project settings is assigned.</p>
      */
 
-    public Long getDeleteDaysAfterLastModification() {
+    public Integer getDeleteDaysAfterLastModification() {
         return this.deleteDaysAfterLastModification;
     }
 
-    public void setDeleteDaysAfterLastModification(final Long deleteDaysAfterLastModification) {
+    public void setDeleteDaysAfterLastModification(final Integer deleteDaysAfterLastModification) {
         this.deleteDaysAfterLastModification = deleteDaysAfterLastModification;
     }
 

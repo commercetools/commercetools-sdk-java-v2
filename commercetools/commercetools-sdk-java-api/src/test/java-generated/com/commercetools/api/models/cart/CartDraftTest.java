@@ -90,7 +90,7 @@ public class CartDraftTest {
                 new Object[] { "origin",
                         CartDraft.builder().origin(com.commercetools.api.models.cart.CartOrigin.findEnum("Customer")) },
                 new Object[] { "deleteDaysAfterLastModification",
-                        CartDraft.builder().deleteDaysAfterLastModification(3L) },
+                        CartDraft.builder().deleteDaysAfterLastModification(3) },
                 new Object[] { "custom",
                         CartDraft.builder().custom(new com.commercetools.api.models.type.CustomFieldsDraftImpl()) } };
     }
@@ -318,8 +318,8 @@ public class CartDraftTest {
     @Test
     public void deleteDaysAfterLastModification() {
         CartDraft value = CartDraft.of();
-        value.setDeleteDaysAfterLastModification(3L);
-        Assertions.assertThat(value.getDeleteDaysAfterLastModification()).isEqualTo(3L);
+        value.setDeleteDaysAfterLastModification(3);
+        Assertions.assertThat(value.getDeleteDaysAfterLastModification()).isEqualTo(3);
     }
 
     @Test

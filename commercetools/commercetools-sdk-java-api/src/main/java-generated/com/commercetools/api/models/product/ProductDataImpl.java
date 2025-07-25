@@ -171,7 +171,7 @@ public class ProductDataImpl implements ProductData, ModelBase {
     }
 
     /**
-     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Product Attributes according to the respective AttributeDefinition. <strong>Not supported</strong> by Product Projection Search.</p>
      */
 
     public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes() {

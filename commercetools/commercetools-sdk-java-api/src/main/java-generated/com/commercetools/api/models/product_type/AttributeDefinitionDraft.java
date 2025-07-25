@@ -105,7 +105,8 @@ public interface AttributeDefinitionDraft extends io.vrap.rmf.base.client.Draft<
     public TextInputHint getInputHint();
 
     /**
-     *  <p>Set to <code>true</code> if the Attribute's values should be available in the Product Search or the Product Projection Search API and can be used in full-text search queries, filters, and facets. Which exact features are available with this flag depends on the specific AttributeType. The maximum size of a searchable field is <strong>restricted</strong> by the Field content size limit. This constraint is enforced at both Product creation and Product update. If the length of the input exceeds the maximum size, an InvalidField error is returned.</p>
+     *  <p>Set as <code>true</code> if you want the Attribute's values to be available in the Product Search or the Product Projection Search API and can be used in full-text search queries, filters, and facets. If an Attribute's <code>level</code> is set as <code>Product</code>, then Product Projection Search does <strong>not support</strong> the Attribute.</p>
+     *  <p>Which exact features are available with this flag depends on the specific AttributeType. The maximum size of a searchable field is <strong>restricted</strong> by the Field content size limit. This constraint is enforced at both Product creation and Product update. If the length of the input exceeds the maximum size, an InvalidField error is returned.</p>
      * @return isSearchable
      */
 
@@ -171,7 +172,8 @@ public interface AttributeDefinitionDraft extends io.vrap.rmf.base.client.Draft<
     public void setInputHint(final TextInputHint inputHint);
 
     /**
-     *  <p>Set to <code>true</code> if the Attribute's values should be available in the Product Search or the Product Projection Search API and can be used in full-text search queries, filters, and facets. Which exact features are available with this flag depends on the specific AttributeType. The maximum size of a searchable field is <strong>restricted</strong> by the Field content size limit. This constraint is enforced at both Product creation and Product update. If the length of the input exceeds the maximum size, an InvalidField error is returned.</p>
+     *  <p>Set as <code>true</code> if you want the Attribute's values to be available in the Product Search or the Product Projection Search API and can be used in full-text search queries, filters, and facets. If an Attribute's <code>level</code> is set as <code>Product</code>, then Product Projection Search does <strong>not support</strong> the Attribute.</p>
+     *  <p>Which exact features are available with this flag depends on the specific AttributeType. The maximum size of a searchable field is <strong>restricted</strong> by the Field content size limit. This constraint is enforced at both Product creation and Product update. If the length of the input exceeds the maximum size, an InvalidField error is returned.</p>
      * @param isSearchable value to be set
      */
 

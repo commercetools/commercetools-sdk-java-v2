@@ -183,7 +183,7 @@ public interface ProductDraft
     public ProductPriceModeEnum getPriceMode();
 
     /**
-     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Product Attributes according to the respective AttributeDefinition. <strong>Not supported</strong> by Product Projection Search.</p>
      * @return attributes
      */
     @Valid
@@ -328,7 +328,7 @@ public interface ProductDraft
     public void setPriceMode(final ProductPriceModeEnum priceMode);
 
     /**
-     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Product Attributes according to the respective AttributeDefinition. <strong>Not supported</strong> by Product Projection Search.</p>
      * @param attributes values to be set
      */
 
@@ -336,7 +336,7 @@ public interface ProductDraft
     public void setAttributes(final Attribute... attributes);
 
     /**
-     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Product Attributes according to the respective AttributeDefinition. <strong>Not supported</strong> by Product Projection Search.</p>
      * @param attributes values to be set
      */
 

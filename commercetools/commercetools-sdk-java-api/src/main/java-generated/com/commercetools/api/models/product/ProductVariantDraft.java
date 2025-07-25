@@ -60,7 +60,7 @@ public interface ProductVariantDraft
     public List<PriceDraft> getPrices();
 
     /**
-     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Variant Attributes according to the respective AttributeDefinition.</p>
      * @return attributes
      */
     @Valid
@@ -113,7 +113,7 @@ public interface ProductVariantDraft
     public void setPrices(final List<PriceDraft> prices);
 
     /**
-     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Variant Attributes according to the respective AttributeDefinition.</p>
      * @param attributes values to be set
      */
 
@@ -121,7 +121,7 @@ public interface ProductVariantDraft
     public void setAttributes(final Attribute... attributes);
 
     /**
-     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Variant Attributes according to the respective AttributeDefinition.</p>
      * @param attributes values to be set
      */
 

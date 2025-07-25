@@ -82,7 +82,7 @@ public class ProductVariantDraftImpl implements ProductVariantDraft, ModelBase {
     }
 
     /**
-     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Variant Attributes according to the respective AttributeDefinition.</p>
      */
 
     public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes() {

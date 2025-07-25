@@ -20,7 +20,7 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Checks if an active ShippingMethod that can ship to the given Location exists for the given OrderEdit. Returns a <code>200</code> status if the ShippingMethod exists, or a <code>404</code> status otherwise.</p>
+ *  <p>Checks if an active ShippingMethod that can ship to the provided Location exists for the provided OrderEdit. Returns a <code>200 OK</code> status if the ShippingMethod exists or a Not Found error otherwise.</p>
  *
  * <hr>
  * <div class=code-example>

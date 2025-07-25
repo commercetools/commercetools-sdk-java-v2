@@ -184,7 +184,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Attributes of the Product Variant.</p>
+     *  <p>Variant Attributes according to the respective AttributeDefinition.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -196,7 +196,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Attributes of the Product Variant.</p>
+     *  <p>Variant Attributes according to the respective AttributeDefinition.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -208,7 +208,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Attributes of the Product Variant.</p>
+     *  <p>Variant Attributes according to the respective AttributeDefinition.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -223,7 +223,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Attributes of the Product Variant.</p>
+     *  <p>Variant Attributes according to the respective AttributeDefinition.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -238,7 +238,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Attributes of the Product Variant.</p>
+     *  <p>Variant Attributes according to the respective AttributeDefinition.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -251,7 +251,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Attributes of the Product Variant.</p>
+     *  <p>Variant Attributes according to the respective AttributeDefinition.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -262,7 +262,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Attributes of the Product Variant.</p>
+     *  <p>Variant Attributes according to the respective AttributeDefinition.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -706,7 +706,7 @@ public class ProductVariantBuilder implements Builder<ProductVariant> {
     }
 
     /**
-     *  <p>Attributes of the Product Variant.</p>
+     *  <p>Variant Attributes according to the respective AttributeDefinition.</p>
      * @return attributes
      */
 

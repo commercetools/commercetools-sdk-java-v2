@@ -71,7 +71,7 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     public List<Price> getPrices();
 
     /**
-     *  <p>Attributes of the Product Variant.</p>
+     *  <p>Variant Attributes according to the respective AttributeDefinition.</p>
      * @return attributes
      */
     @Valid
@@ -180,7 +180,7 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     public void setPrices(final List<Price> prices);
 
     /**
-     *  <p>Attributes of the Product Variant.</p>
+     *  <p>Variant Attributes according to the respective AttributeDefinition.</p>
      * @param attributes values to be set
      */
 
@@ -188,7 +188,7 @@ public interface ProductVariant extends AttributeContainer, com.commercetools.ap
     public void setAttributes(final Attribute... attributes);
 
     /**
-     *  <p>Attributes of the Product Variant.</p>
+     *  <p>Variant Attributes according to the respective AttributeDefinition.</p>
      * @param attributes values to be set
      */
 

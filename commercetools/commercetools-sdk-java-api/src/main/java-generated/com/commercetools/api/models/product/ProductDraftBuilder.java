@@ -732,7 +732,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
-     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Product Attributes according to the respective AttributeDefinition. <strong>Not supported</strong> by Product Projection Search.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -744,7 +744,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
-     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Product Attributes according to the respective AttributeDefinition. <strong>Not supported</strong> by Product Projection Search.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -756,7 +756,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
-     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Product Attributes according to the respective AttributeDefinition. <strong>Not supported</strong> by Product Projection Search.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -771,7 +771,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
-     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Product Attributes according to the respective AttributeDefinition. <strong>Not supported</strong> by Product Projection Search.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -786,7 +786,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
-     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Product Attributes according to the respective AttributeDefinition. <strong>Not supported</strong> by Product Projection Search.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -799,7 +799,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
-     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Product Attributes according to the respective AttributeDefinition. <strong>Not supported</strong> by Product Projection Search.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -810,7 +810,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
-     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Product Attributes according to the respective AttributeDefinition. <strong>Not supported</strong> by Product Projection Search.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -990,7 +990,7 @@ public class ProductDraftBuilder implements Builder<ProductDraft> {
     }
 
     /**
-     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Product Attributes according to the respective AttributeDefinition. <strong>Not supported</strong> by Product Projection Search.</p>
      * @return attributes
      */
 

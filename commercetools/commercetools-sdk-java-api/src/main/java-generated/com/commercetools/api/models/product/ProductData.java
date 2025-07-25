@@ -136,7 +136,7 @@ public interface ProductData extends ProductDataLike {
     public SearchKeywords getSearchKeywords();
 
     /**
-     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Product Attributes according to the respective AttributeDefinition. <strong>Not supported</strong> by Product Projection Search.</p>
      * @return attributes
      */
     @NotNull
@@ -238,7 +238,7 @@ public interface ProductData extends ProductDataLike {
     public void setSearchKeywords(final SearchKeywords searchKeywords);
 
     /**
-     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Product Attributes according to the respective AttributeDefinition. <strong>Not supported</strong> by Product Projection Search.</p>
      * @param attributes values to be set
      */
 
@@ -246,7 +246,7 @@ public interface ProductData extends ProductDataLike {
     public void setAttributes(final Attribute... attributes);
 
     /**
-     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Product Attributes according to the respective AttributeDefinition. <strong>Not supported</strong> by Product Projection Search.</p>
      * @param attributes values to be set
      */
 

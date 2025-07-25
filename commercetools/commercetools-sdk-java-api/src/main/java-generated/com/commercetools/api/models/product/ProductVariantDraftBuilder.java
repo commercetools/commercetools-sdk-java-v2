@@ -152,7 +152,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Variant Attributes according to the respective AttributeDefinition.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -164,7 +164,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Variant Attributes according to the respective AttributeDefinition.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -176,7 +176,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Variant Attributes according to the respective AttributeDefinition.</p>
      * @param attributes value to be set
      * @return Builder
      */
@@ -191,7 +191,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Variant Attributes according to the respective AttributeDefinition.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -206,7 +206,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Variant Attributes according to the respective AttributeDefinition.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -219,7 +219,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Variant Attributes according to the respective AttributeDefinition.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -230,7 +230,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Variant Attributes according to the respective AttributeDefinition.</p>
      * @param builder function to build the attributes value
      * @return Builder
      */
@@ -446,7 +446,7 @@ public class ProductVariantDraftBuilder implements Builder<ProductVariantDraft> 
     }
 
     /**
-     *  <p>Attributes according to the respective AttributeDefinition.</p>
+     *  <p>Variant Attributes according to the respective AttributeDefinition.</p>
      * @return attributes
      */
 

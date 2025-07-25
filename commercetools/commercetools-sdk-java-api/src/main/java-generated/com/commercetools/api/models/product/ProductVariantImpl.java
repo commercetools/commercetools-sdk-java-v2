@@ -119,7 +119,7 @@ public class ProductVariantImpl implements ProductVariant, ModelBase {
     }
 
     /**
-     *  <p>Attributes of the Product Variant.</p>
+     *  <p>Variant Attributes according to the respective AttributeDefinition.</p>
      */
 
     public java.util.List<com.commercetools.api.models.product.Attribute> getAttributes() {

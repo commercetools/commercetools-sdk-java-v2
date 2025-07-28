@@ -57,7 +57,7 @@ public class RecurringOrderSetOrderSkipConfigurationActionBuilder
     }
 
     /**
-     *  <p>Date and time (UTC) the Recurring Order will resume and start to generate new orders.</p>
+     *  <p>Date and time (UTC) the Recurring Order will expire and stop generating new orders.</p>
      * @param updatedExpiresAt value to be set
      * @return Builder
      */
@@ -79,7 +79,7 @@ public class RecurringOrderSetOrderSkipConfigurationActionBuilder
     }
 
     /**
-     *  <p>Date and time (UTC) the Recurring Order will resume and start to generate new orders.</p>
+     *  <p>Date and time (UTC) the Recurring Order will expire and stop generating new orders.</p>
      * @return updatedExpiresAt
      */
 

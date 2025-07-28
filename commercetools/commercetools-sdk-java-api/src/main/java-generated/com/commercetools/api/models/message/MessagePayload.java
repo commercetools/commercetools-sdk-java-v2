@@ -2078,6 +2078,14 @@ public interface MessagePayload extends MessagePayloadMixin {
     }
 
     /**
+     * builder for recurringOrderExpiresAtSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.RecurringOrderExpiresAtSetMessagePayloadBuilder recurringOrderExpiresAtSetBuilder() {
+        return com.commercetools.api.models.message.RecurringOrderExpiresAtSetMessagePayloadBuilder.of();
+    }
+
+    /**
      * builder for recurringOrderKeySet subtype
      * @return builder
      */

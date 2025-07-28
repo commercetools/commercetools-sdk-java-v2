@@ -21,8 +21,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
- *  <p>Creates a Recurring Order in the Project. The Cart is validated to ensure that it is convertible to an Order. If validation fails, an error is returned.</p>
- *  <p>Produces the RecurringOrderCreated message.</p>
+ *  <p>Creates a Recurring Order in the Project. Produces the RecurringOrderCreated message.</p>
+ *  <p>The Cart is validated to ensure that it is convertible to an Order. If the validation fails, an error is returned. If the expiration date has been reached when the Recurring Order is processed, its RecurringOrderState will be updated to <code>Expired</code>, and no Order will be created.</p>
  *  <p>If a server-side problem occurs, indicated by a 500 Internal Server Error HTTP response, the Recurring Order creation may still successfully complete after the error is returned. If you receive this error, you should verify the status of the Recurring Order by querying a unique identifier supplied during the creation request, such as the key.</p>
  *
  * <hr>

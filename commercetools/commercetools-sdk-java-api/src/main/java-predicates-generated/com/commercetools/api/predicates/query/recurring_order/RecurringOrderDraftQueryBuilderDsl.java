@@ -40,6 +40,12 @@ public class RecurringOrderDraftQueryBuilderDsl {
             p -> new CombinationQueryPredicate<>(p, RecurringOrderDraftQueryBuilderDsl::of));
     }
 
+    public DateTimeComparisonPredicateBuilder<RecurringOrderDraftQueryBuilderDsl> expiresAt() {
+        return new DateTimeComparisonPredicateBuilder<>(
+            BinaryQueryPredicate.of().left(new ConstantQueryPredicate("expiresAt")),
+            p -> new CombinationQueryPredicate<>(p, RecurringOrderDraftQueryBuilderDsl::of));
+    }
+
     public CombinationQueryPredicate<RecurringOrderDraftQueryBuilderDsl> state(
             Function<com.commercetools.api.predicates.query.state.StateResourceIdentifierQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.state.StateResourceIdentifierQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

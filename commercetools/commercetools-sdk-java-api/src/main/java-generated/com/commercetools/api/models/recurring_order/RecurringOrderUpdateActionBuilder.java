@@ -19,6 +19,10 @@ public class RecurringOrderUpdateActionBuilder {
         return com.commercetools.api.models.recurring_order.RecurringOrderSetCustomTypeActionBuilder.of();
     }
 
+    public com.commercetools.api.models.recurring_order.RecurringOrderSetExpiresAtActionBuilder setExpiresAtBuilder() {
+        return com.commercetools.api.models.recurring_order.RecurringOrderSetExpiresAtActionBuilder.of();
+    }
+
     public com.commercetools.api.models.recurring_order.RecurringOrderSetKeyActionBuilder setKeyBuilder() {
         return com.commercetools.api.models.recurring_order.RecurringOrderSetKeyActionBuilder.of();
     }

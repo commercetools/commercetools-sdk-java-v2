@@ -72,6 +72,14 @@ public interface RecurringOrderDraft extends io.vrap.rmf.base.client.Draft<Recur
     public ZonedDateTime getStartsAt();
 
     /**
+     *  <p>Date and time (UTC) when the RecurringOrder will expire.</p>
+     * @return expiresAt
+     */
+
+    @JsonProperty("expiresAt")
+    public ZonedDateTime getExpiresAt();
+
+    /**
      *  <p>State for the RecurringOrder in a custom workflow.</p>
      * @return state
      */
@@ -116,6 +124,13 @@ public interface RecurringOrderDraft extends io.vrap.rmf.base.client.Draft<Recur
     public void setStartsAt(final ZonedDateTime startsAt);
 
     /**
+     *  <p>Date and time (UTC) when the RecurringOrder will expire.</p>
+     * @param expiresAt value to be set
+     */
+
+    public void setExpiresAt(final ZonedDateTime expiresAt);
+
+    /**
      *  <p>State for the RecurringOrder in a custom workflow.</p>
      * @param state value to be set
      */
@@ -148,6 +163,7 @@ public interface RecurringOrderDraft extends io.vrap.rmf.base.client.Draft<Recur
         instance.setCart(template.getCart());
         instance.setCartVersion(template.getCartVersion());
         instance.setStartsAt(template.getStartsAt());
+        instance.setExpiresAt(template.getExpiresAt());
         instance.setState(template.getState());
         instance.setCustom(template.getCustom());
         return instance;
@@ -170,6 +186,7 @@ public interface RecurringOrderDraft extends io.vrap.rmf.base.client.Draft<Recur
         instance.setCart(com.commercetools.api.models.cart.CartResourceIdentifier.deepCopy(template.getCart()));
         instance.setCartVersion(template.getCartVersion());
         instance.setStartsAt(template.getStartsAt());
+        instance.setExpiresAt(template.getExpiresAt());
         instance.setState(com.commercetools.api.models.state.StateResourceIdentifier.deepCopy(template.getState()));
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));
         return instance;

@@ -46,7 +46,7 @@ public interface RecurringOrderSetOrderSkipConfigurationAction extends Recurring
     public SkipConfigurationDraft getSkipConfiguration();
 
     /**
-     *  <p>Date and time (UTC) the Recurring Order will resume and start to generate new orders.</p>
+     *  <p>Date and time (UTC) the Recurring Order will expire and stop generating new orders.</p>
      * @return updatedExpiresAt
      */
 
@@ -61,7 +61,7 @@ public interface RecurringOrderSetOrderSkipConfigurationAction extends Recurring
     public void setSkipConfiguration(final SkipConfigurationDraft skipConfiguration);
 
     /**
-     *  <p>Date and time (UTC) the Recurring Order will resume and start to generate new orders.</p>
+     *  <p>Date and time (UTC) the Recurring Order will expire and stop generating new orders.</p>
      * @param updatedExpiresAt value to be set
      */
 

@@ -1573,6 +1573,14 @@ public class MessageQueryBuilderDsl {
             MessageQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<MessageQueryBuilderDsl> asRecurringOrderExpiresAtSet(
+            Function<com.commercetools.api.predicates.query.message.RecurringOrderExpiresAtSetMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.RecurringOrderExpiresAtSetMessageQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(
+            fn.apply(
+                com.commercetools.api.predicates.query.message.RecurringOrderExpiresAtSetMessageQueryBuilderDsl.of()),
+            MessageQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<MessageQueryBuilderDsl> asRecurringOrderKeySet(
             Function<com.commercetools.api.predicates.query.message.RecurringOrderKeySetMessageQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.message.RecurringOrderKeySetMessageQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

@@ -77,6 +77,14 @@ public interface RecurringOrderUpdateAction {
     }
 
     /**
+     * builder for setExpiresAt subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.recurring_order.RecurringOrderSetExpiresAtActionBuilder setExpiresAtBuilder() {
+        return com.commercetools.api.models.recurring_order.RecurringOrderSetExpiresAtActionBuilder.of();
+    }
+
+    /**
      * builder for setKey subtype
      * @return builder
      */

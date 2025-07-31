@@ -150,7 +150,7 @@ public class CustomerImportImpl implements CustomerImport, ModelBase {
     }
 
     /**
-     *  <p>Maps to <code>Customer.password</code>. Required when <code>authenticationMode</code> is set to <code>Password</code>.</p>
+     *  <p>Maps to <code>Customer.password</code>. Required when <code>authenticationMode</code> is set to <code>Password</code>. This field is only used when creating new Customers, and is ignored when updating Customers. However, due to the Import API's upsert behavior, a non-empty value must still be provided when updating Customers.</p>
      */
 
     public String getPassword() {

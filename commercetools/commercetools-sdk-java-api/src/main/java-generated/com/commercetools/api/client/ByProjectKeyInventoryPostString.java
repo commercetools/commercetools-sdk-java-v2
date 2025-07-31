@@ -21,6 +21,8 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
 /**
+ *  <p>Creates an InventoryEntry in the Project.</p>
+ *  <p>If quantity limits are provided, existing Line Items that reference a Product Variant with an SKU that matches the Inventory Entry can be affected. For more information, see Quantity limits.</p>
  *  <p>Produces the InventoryEntryCreated Message.</p>
  *
  * <hr>

@@ -64,6 +64,14 @@ public class InventoryEntryUpdateActionQueryBuilderDsl {
             InventoryEntryUpdateActionQueryBuilderDsl::of);
     }
 
+    public CombinationQueryPredicate<InventoryEntryUpdateActionQueryBuilderDsl> asSetInventoryLimits(
+            Function<com.commercetools.api.predicates.query.inventory.InventoryEntrySetInventoryLimitsActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.inventory.InventoryEntrySetInventoryLimitsActionQueryBuilderDsl>> fn) {
+        return new CombinationQueryPredicate<>(fn.apply(
+            com.commercetools.api.predicates.query.inventory.InventoryEntrySetInventoryLimitsActionQueryBuilderDsl
+                    .of()),
+            InventoryEntryUpdateActionQueryBuilderDsl::of);
+    }
+
     public CombinationQueryPredicate<InventoryEntryUpdateActionQueryBuilderDsl> asSetKey(
             Function<com.commercetools.api.predicates.query.inventory.InventoryEntrySetKeyActionQueryBuilderDsl, CombinationQueryPredicate<com.commercetools.api.predicates.query.inventory.InventoryEntrySetKeyActionQueryBuilderDsl>> fn) {
         return new CombinationQueryPredicate<>(

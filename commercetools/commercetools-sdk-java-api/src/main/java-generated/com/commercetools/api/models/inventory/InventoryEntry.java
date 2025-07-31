@@ -137,6 +137,22 @@ public interface InventoryEntry
     public Long getAvailableQuantity();
 
     /**
+     *  <p>Minimum quantity that can be added to a Cart. See Quantity limits.</p>
+     * @return minCartQuantity
+     */
+
+    @JsonProperty("minCartQuantity")
+    public Integer getMinCartQuantity();
+
+    /**
+     *  <p>Maximum quantity that can be added to a Cart. See Quantity limits.</p>
+     * @return maxCartQuantity
+     */
+
+    @JsonProperty("maxCartQuantity")
+    public Integer getMaxCartQuantity();
+
+    /**
      *  <p>How often the InventoryEntry is restocked (in days).</p>
      * @return restockableInDays
      */
@@ -238,6 +254,20 @@ public interface InventoryEntry
     public void setAvailableQuantity(final Long availableQuantity);
 
     /**
+     *  <p>Minimum quantity that can be added to a Cart. See Quantity limits.</p>
+     * @param minCartQuantity value to be set
+     */
+
+    public void setMinCartQuantity(final Integer minCartQuantity);
+
+    /**
+     *  <p>Maximum quantity that can be added to a Cart. See Quantity limits.</p>
+     * @param maxCartQuantity value to be set
+     */
+
+    public void setMaxCartQuantity(final Integer maxCartQuantity);
+
+    /**
      *  <p>How often the InventoryEntry is restocked (in days).</p>
      * @param restockableInDays value to be set
      */
@@ -284,6 +314,8 @@ public interface InventoryEntry
         instance.setSupplyChannel(template.getSupplyChannel());
         instance.setQuantityOnStock(template.getQuantityOnStock());
         instance.setAvailableQuantity(template.getAvailableQuantity());
+        instance.setMinCartQuantity(template.getMinCartQuantity());
+        instance.setMaxCartQuantity(template.getMaxCartQuantity());
         instance.setRestockableInDays(template.getRestockableInDays());
         instance.setExpectedDelivery(template.getExpectedDelivery());
         instance.setCustom(template.getCustom());
@@ -316,6 +348,8 @@ public interface InventoryEntry
             com.commercetools.api.models.channel.ChannelReference.deepCopy(template.getSupplyChannel()));
         instance.setQuantityOnStock(template.getQuantityOnStock());
         instance.setAvailableQuantity(template.getAvailableQuantity());
+        instance.setMinCartQuantity(template.getMinCartQuantity());
+        instance.setMaxCartQuantity(template.getMaxCartQuantity());
         instance.setRestockableInDays(template.getRestockableInDays());
         instance.setExpectedDelivery(template.getExpectedDelivery());
         instance.setCustom(com.commercetools.api.models.type.CustomFields.deepCopy(template.getCustom()));

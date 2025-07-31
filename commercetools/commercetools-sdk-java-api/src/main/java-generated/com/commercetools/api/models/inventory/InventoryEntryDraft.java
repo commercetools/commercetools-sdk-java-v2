@@ -71,6 +71,22 @@ public interface InventoryEntryDraft extends com.commercetools.api.models.Custom
     public Long getQuantityOnStock();
 
     /**
+     *  <p>Minimum quantity that can be added to a Cart. See Quantity limits.</p>
+     * @return minCartQuantity
+     */
+
+    @JsonProperty("minCartQuantity")
+    public Integer getMinCartQuantity();
+
+    /**
+     *  <p>Maximum quantity that can be added to a Cart. See Quantity limits.</p>
+     * @return maxCartQuantity
+     */
+
+    @JsonProperty("maxCartQuantity")
+    public Integer getMaxCartQuantity();
+
+    /**
      *  <p>How often the InventoryEntry is restocked (in days).</p>
      * @return restockableInDays
      */
@@ -124,6 +140,20 @@ public interface InventoryEntryDraft extends com.commercetools.api.models.Custom
     public void setQuantityOnStock(final Long quantityOnStock);
 
     /**
+     *  <p>Minimum quantity that can be added to a Cart. See Quantity limits.</p>
+     * @param minCartQuantity value to be set
+     */
+
+    public void setMinCartQuantity(final Integer minCartQuantity);
+
+    /**
+     *  <p>Maximum quantity that can be added to a Cart. See Quantity limits.</p>
+     * @param maxCartQuantity value to be set
+     */
+
+    public void setMaxCartQuantity(final Integer maxCartQuantity);
+
+    /**
      *  <p>How often the InventoryEntry is restocked (in days).</p>
      * @param restockableInDays value to be set
      */
@@ -163,6 +193,8 @@ public interface InventoryEntryDraft extends com.commercetools.api.models.Custom
         instance.setKey(template.getKey());
         instance.setSupplyChannel(template.getSupplyChannel());
         instance.setQuantityOnStock(template.getQuantityOnStock());
+        instance.setMinCartQuantity(template.getMinCartQuantity());
+        instance.setMaxCartQuantity(template.getMaxCartQuantity());
         instance.setRestockableInDays(template.getRestockableInDays());
         instance.setExpectedDelivery(template.getExpectedDelivery());
         instance.setCustom(template.getCustom());
@@ -187,6 +219,8 @@ public interface InventoryEntryDraft extends com.commercetools.api.models.Custom
         instance.setSupplyChannel(
             com.commercetools.api.models.channel.ChannelResourceIdentifier.deepCopy(template.getSupplyChannel()));
         instance.setQuantityOnStock(template.getQuantityOnStock());
+        instance.setMinCartQuantity(template.getMinCartQuantity());
+        instance.setMaxCartQuantity(template.getMaxCartQuantity());
         instance.setRestockableInDays(template.getRestockableInDays());
         instance.setExpectedDelivery(template.getExpectedDelivery());
         instance.setCustom(com.commercetools.api.models.type.CustomFieldsDraft.deepCopy(template.getCustom()));

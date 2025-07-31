@@ -35,6 +35,10 @@ public class InventoryEntryUpdateActionBuilder {
         return com.commercetools.api.models.inventory.InventoryEntrySetExpectedDeliveryActionBuilder.of();
     }
 
+    public com.commercetools.api.models.inventory.InventoryEntrySetInventoryLimitsActionBuilder setInventoryLimitsBuilder() {
+        return com.commercetools.api.models.inventory.InventoryEntrySetInventoryLimitsActionBuilder.of();
+    }
+
     public com.commercetools.api.models.inventory.InventoryEntrySetKeyActionBuilder setKeyBuilder() {
         return com.commercetools.api.models.inventory.InventoryEntrySetKeyActionBuilder.of();
     }

@@ -18,6 +18,7 @@ import org.apache.commons.lang3.builder.ToStringStyle;
 
 /**
  *  <p>Performing this action does not reserve stock. Stock is only reserved at Order creation if the InventoryMode of the Cart is <code>TrackOnly</code> or <code>ReserveOnOrder</code>.</p>
+ *  <p>This action is subject to InventoryEntry min/max restrictions when applicable. For more information, see Quantity limits.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public class CartSetLineItemSupplyChannelActionImpl implements CartSetLineItemSupplyChannelAction, ModelBase {

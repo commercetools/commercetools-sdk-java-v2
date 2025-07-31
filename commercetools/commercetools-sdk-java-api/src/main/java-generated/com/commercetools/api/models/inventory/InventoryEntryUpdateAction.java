@@ -110,6 +110,14 @@ public interface InventoryEntryUpdateAction
     }
 
     /**
+     * builder for setInventoryLimits subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.inventory.InventoryEntrySetInventoryLimitsActionBuilder setInventoryLimitsBuilder() {
+        return com.commercetools.api.models.inventory.InventoryEntrySetInventoryLimitsActionBuilder.of();
+    }
+
+    /**
      * builder for setKey subtype
      * @return builder
      */

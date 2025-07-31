@@ -17,6 +17,7 @@ import jakarta.validation.Valid;
 
 /**
  *  <p>Performing this action does not reserve stock. Stock is only reserved at Order creation if the InventoryMode of the Cart is <code>TrackOnly</code> or <code>ReserveOnOrder</code>.</p>
+ *  <p>This action is subject to InventoryEntry min/max restrictions when applicable. For more information, see Quantity limits.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

@@ -57,6 +57,12 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
     private Long availableQuantity;
 
     @Nullable
+    private Integer minCartQuantity;
+
+    @Nullable
+    private Integer maxCartQuantity;
+
+    @Nullable
     private Long restockableInDays;
 
     @Nullable
@@ -261,6 +267,28 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
     }
 
     /**
+     *  <p>Minimum quantity that can be added to a Cart. See Quantity limits.</p>
+     * @param minCartQuantity value to be set
+     * @return Builder
+     */
+
+    public InventoryEntryBuilder minCartQuantity(@Nullable final Integer minCartQuantity) {
+        this.minCartQuantity = minCartQuantity;
+        return this;
+    }
+
+    /**
+     *  <p>Maximum quantity that can be added to a Cart. See Quantity limits.</p>
+     * @param maxCartQuantity value to be set
+     * @return Builder
+     */
+
+    public InventoryEntryBuilder maxCartQuantity(@Nullable final Integer maxCartQuantity) {
+        this.maxCartQuantity = maxCartQuantity;
+        return this;
+    }
+
+    /**
      *  <p>How often the InventoryEntry is restocked (in days).</p>
      * @param restockableInDays value to be set
      * @return Builder
@@ -421,6 +449,26 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
     }
 
     /**
+     *  <p>Minimum quantity that can be added to a Cart. See Quantity limits.</p>
+     * @return minCartQuantity
+     */
+
+    @Nullable
+    public Integer getMinCartQuantity() {
+        return this.minCartQuantity;
+    }
+
+    /**
+     *  <p>Maximum quantity that can be added to a Cart. See Quantity limits.</p>
+     * @return maxCartQuantity
+     */
+
+    @Nullable
+    public Integer getMaxCartQuantity() {
+        return this.maxCartQuantity;
+    }
+
+    /**
      *  <p>How often the InventoryEntry is restocked (in days).</p>
      * @return restockableInDays
      */
@@ -463,7 +511,8 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
         Objects.requireNonNull(quantityOnStock, InventoryEntry.class + ": quantityOnStock is missing");
         Objects.requireNonNull(availableQuantity, InventoryEntry.class + ": availableQuantity is missing");
         return new InventoryEntryImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, sku,
-            supplyChannel, quantityOnStock, availableQuantity, restockableInDays, expectedDelivery, custom);
+            supplyChannel, quantityOnStock, availableQuantity, minCartQuantity, maxCartQuantity, restockableInDays,
+            expectedDelivery, custom);
     }
 
     /**
@@ -472,7 +521,8 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
      */
     public InventoryEntry buildUnchecked() {
         return new InventoryEntryImpl(id, version, createdAt, lastModifiedAt, lastModifiedBy, createdBy, key, sku,
-            supplyChannel, quantityOnStock, availableQuantity, restockableInDays, expectedDelivery, custom);
+            supplyChannel, quantityOnStock, availableQuantity, minCartQuantity, maxCartQuantity, restockableInDays,
+            expectedDelivery, custom);
     }
 
     /**
@@ -501,6 +551,8 @@ public class InventoryEntryBuilder implements Builder<InventoryEntry> {
         builder.supplyChannel = template.getSupplyChannel();
         builder.quantityOnStock = template.getQuantityOnStock();
         builder.availableQuantity = template.getAvailableQuantity();
+        builder.minCartQuantity = template.getMinCartQuantity();
+        builder.maxCartQuantity = template.getMaxCartQuantity();
         builder.restockableInDays = template.getRestockableInDays();
         builder.expectedDelivery = template.getExpectedDelivery();
         builder.custom = template.getCustom();

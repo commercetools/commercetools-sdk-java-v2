@@ -23,6 +23,8 @@ public class InventoryEntryDraftTest {
                 new Object[] { "supplyChannel", InventoryEntryDraft.builder()
                         .supplyChannel(new com.commercetools.api.models.channel.ChannelResourceIdentifierImpl()) },
                 new Object[] { "quantityOnStock", InventoryEntryDraft.builder().quantityOnStock(2L) },
+                new Object[] { "minCartQuantity", InventoryEntryDraft.builder().minCartQuantity(6) },
+                new Object[] { "maxCartQuantity", InventoryEntryDraft.builder().maxCartQuantity(4) },
                 new Object[] { "restockableInDays", InventoryEntryDraft.builder().restockableInDays(4L) },
                 new Object[] { "expectedDelivery",
                         InventoryEntryDraft.builder().expectedDelivery(ZonedDateTime.parse("2023-06-01T12:00Z")) },
@@ -57,6 +59,20 @@ public class InventoryEntryDraftTest {
         InventoryEntryDraft value = InventoryEntryDraft.of();
         value.setQuantityOnStock(2L);
         Assertions.assertThat(value.getQuantityOnStock()).isEqualTo(2L);
+    }
+
+    @Test
+    public void minCartQuantity() {
+        InventoryEntryDraft value = InventoryEntryDraft.of();
+        value.setMinCartQuantity(6);
+        Assertions.assertThat(value.getMinCartQuantity()).isEqualTo(6);
+    }
+
+    @Test
+    public void maxCartQuantity() {
+        InventoryEntryDraft value = InventoryEntryDraft.of();
+        value.setMaxCartQuantity(4);
+        Assertions.assertThat(value.getMaxCartQuantity()).isEqualTo(4);
     }
 
     @Test

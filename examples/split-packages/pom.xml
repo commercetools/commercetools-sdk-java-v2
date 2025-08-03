@@ -53,6 +53,16 @@
         </dependency>
         <dependency>
             <groupId>com.commercetools.sdk</groupId>
+            <artifactId>commercetools-sdk-java-api-models_common</artifactId>
+            <version>${commercetools.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.commercetools.sdk</groupId>
+            <artifactId>commercetools-sdk-java-api-models_error</artifactId>
+            <version>${commercetools.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.commercetools.sdk</groupId>
             <artifactId>commercetools-sdk-java-api-predicates</artifactId>
             <version>${commercetools.version}</version>
         </dependency>

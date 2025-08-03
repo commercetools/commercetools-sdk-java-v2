@@ -13,7 +13,12 @@ import java.util.function.UnaryOperator;
 
 import javax.annotation.Nullable;
 
-import com.commercetools.api.client.*;
+import com.commercetools.api.client.ApiCorrelationIdProvider;
+import com.commercetools.api.client.ApiInternalLoggerFactory;
+import com.commercetools.api.client.ApiRoot;
+import com.commercetools.api.client.ByProjectKeyRequestBuilder;
+import com.commercetools.api.client.ConcurrentModificationMiddleware;
+import com.commercetools.api.client.ProjectApiRoot;
 import com.commercetools.api.client.error.ApiHttpExceptionFactory;
 
 import io.vrap.rmf.base.client.*;

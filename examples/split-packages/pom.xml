@@ -48,6 +48,16 @@
         </dependency>
         <dependency>
             <groupId>com.commercetools.sdk</groupId>
+            <artifactId>commercetools-sdk-java-api-models_category</artifactId>
+            <version>${commercetools.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.commercetools.sdk</groupId>
+            <artifactId>commercetools-sdk-java-api-predicates</artifactId>
+            <version>${commercetools.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.commercetools.sdk</groupId>
             <artifactId>commercetools-http-client</artifactId>
             <version>${commercetools.version}</version>
         </dependency>

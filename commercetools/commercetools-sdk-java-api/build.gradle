@@ -21,14 +21,25 @@ sourceSets.main.java.srcDirs += "src/main/java-generated"
 sourceSets.main.java.srcDirs += "src/main/java-predicates-generated"
 sourceSets.test.java.srcDirs += "src/test/java-generated"
 
-
 projectDir.toPath().resolve("src/main/java-generated/com/commercetools/api/models/").eachDir { dir ->
     def dirname = dir.toFile().name
-    def modelTask = tasks.register("models_${dirname}Jar", Jar) {
-        from sourceSets.main.output
 
-        include "**/models/$dirname/**"
-        archiveBaseName = project.name + "-models-$dirname"
+    def modelTask
+    if (dirname != "common") {
+        modelTask = tasks.register("models_${dirname}Jar", Jar) {
+            from sourceSets.main.output
+
+            include "**/models/$dirname/**"
+            exclude "**/models/**/*ReferenceBuilder*", "**/models/**/*ResourceIdentifierBuilder*"
+            archiveBaseName = project.name + "-models-$dirname"
+        }
+    } else {
+        modelTask = tasks.register("models_${dirname}Jar", Jar) {
+            from sourceSets.main.output
+
+            include "**/models/$dirname/**", "**/models/**/*ReferenceBuilder*", "**/models/**/*ResourceIdentifierBuilder*"
+            archiveBaseName = project.name + "-models-$dirname"
+        }
     }
     def modelSourcesTask = tasks.register("sources_${dirname}Jar", Jar) {
         archiveClassifier = 'sources'

@@ -136,6 +136,10 @@ jobs:
           cd examples/maven-okhttp3 && mvn verify --no-transfer-progress
           cd ../maven-okhttp4 && mvn verify --no-transfer-progress
           cd ../split-packages && mvn verify --no-transfer-progress
+        env:
+            CTP_CLIENT_ID: ${{ secrets.CTP_CLIENT_ID }}
+            CTP_CLIENT_SECRET: ${{ secrets.CTP_CLIENT_SECRET }}
+            CTP_PROJECT_KEY: ${{ secrets.CTP_PROJECT_KEY }}
 
       - name: Collect code coverage
         run: ./gradlew codeCoverageReport

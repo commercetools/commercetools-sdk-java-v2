@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.Optional;
 
-public class GettingStarted {
+public class GettingStartedTests {
 
     @Test
     public void project() {

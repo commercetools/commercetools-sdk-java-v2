@@ -59,6 +59,9 @@ public interface ChangeSubscriptionResourceTypeId extends JsonEnum {
     <p>Changes to DiscountCodes.</p> */
     ChangeSubscriptionResourceTypeId DISCOUNT_CODE = ChangeSubscriptionResourceTypeIdEnum.DISCOUNT_CODE;
     /**
+    <p>Changes to DiscountGroups.</p> */
+    ChangeSubscriptionResourceTypeId DISCOUNT_GROUP = ChangeSubscriptionResourceTypeIdEnum.DISCOUNT_GROUP;
+    /**
     <p>Changes to Extensions.</p> */
     ChangeSubscriptionResourceTypeId EXTENSION = ChangeSubscriptionResourceTypeIdEnum.EXTENSION;
     /**
@@ -210,6 +213,11 @@ public interface ChangeSubscriptionResourceTypeId extends JsonEnum {
          * discount-code
          */
         DISCOUNT_CODE("discount-code"),
+
+        /**
+         * discount-group
+         */
+        DISCOUNT_GROUP("discount-group"),
 
         /**
          * extension

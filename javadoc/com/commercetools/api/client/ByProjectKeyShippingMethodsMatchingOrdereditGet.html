@@ -86,7 +86,9 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">ByProjectKeyShippingMethodsMatchingOrdereditGet</span>
 <span class="extends-implements">extends <a href="../../../../io/vrap/rmf/base/client/TypeApiMethod.html" title="class in io.vrap.rmf.base.client">TypeApiMethod</a>&lt;<a href="ByProjectKeyShippingMethodsMatchingOrdereditGet.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingOrdereditGet</a>,<wbr><a href="../models/shipping_method/ShippingMethodPagedQueryResponse.html" title="interface in com.commercetools.api.models.shipping_method">ShippingMethodPagedQueryResponse</a>&gt;
 implements <a href="ErrorableTrait.html" title="interface in com.commercetools.api.client">ErrorableTrait</a>&lt;<a href="ByProjectKeyShippingMethodsMatchingOrdereditGet.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingOrdereditGet</a>&gt;, <a href="Deprecatable200Trait.html" title="interface in com.commercetools.api.client">Deprecatable200Trait</a>&lt;<a href="ByProjectKeyShippingMethodsMatchingOrdereditGet.html" title="class in com.commercetools.api.client">ByProjectKeyShippingMethodsMatchingOrdereditGet</a>&gt;</span></div>
-<div class="block"><p>Retrieves the active ShippingMethods that can ship to the given Location for an OrderEdit. If a matching ShippingMethod has <code>isDefault</code> set to <code>true</code>, it is returned as the first item in the array. If the OrderEdit preview cannot be generated, an EditPreviewFailed error is returned.</p>
+<div class="block"><p>Retrieves the active ShippingMethods that can ship to the provided Location for an OrderEdit.</p>
+  <p>If a matching ShippingMethod has <code>isDefault</code> set to <code>true</code>, it is returned as the first item in the array.</p>
+  <p>If the OrderEdit preview cannot be generated, an EditPreviewFailed error is returned.</p>
 
  <hr>
  <div class=code-example>

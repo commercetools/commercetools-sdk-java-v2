@@ -562,7 +562,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>password</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="CustomerImportBuilder.html" title="class in com.commercetools.importapi.models.customers">CustomerImportBuilder</a></span>&nbsp;<span class="element-name">password</span><wbr><span class="parameters">(@Nullable
  <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;password)</span></div>
-<div class="block"><p>Maps to <code>Customer.password</code>. Required when <code>authenticationMode</code> is set to <code>Password</code>.</p></div>
+<div class="block"><p>Maps to <code>Customer.password</code>. Required when <code>authenticationMode</code> is set to <code>Password</code>. This field is only used when creating new Customers, and is ignored when updating Customers. However, due to the Import API's upsert behavior, a non-empty value must still be provided when updating Customers.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>password</code> - value to be set</dd>
@@ -1161,7 +1161,7 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <h3>getPassword</h3>
 <div class="member-signature"><span class="annotations">@Nullable
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getPassword</span>()</div>
-<div class="block"><p>Maps to <code>Customer.password</code>. Required when <code>authenticationMode</code> is set to <code>Password</code>.</p></div>
+<div class="block"><p>Maps to <code>Customer.password</code>. Required when <code>authenticationMode</code> is set to <code>Password</code>. This field is only used when creating new Customers, and is ignored when updating Customers. However, due to the Import API's upsert behavior, a non-empty value must still be provided when updating Customers.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>password</dd>

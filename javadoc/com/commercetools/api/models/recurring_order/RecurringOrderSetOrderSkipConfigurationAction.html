@@ -145,7 +145,7 @@ extends <a href="RecurringOrderUpdateAction.html" title="interface in com.commer
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getUpdatedExpiresAt()" class="member-name-link">getUpdatedExpiresAt</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Date and time (UTC) the Recurring Order will resume and start to generate new orders.</div>
+<div class="block">Date and time (UTC) the Recurring Order will expire and stop generating new orders.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="RecurringOrderSetOrderSkipConfigurationAction.html" title="interface in com.commercetools.api.models.recurring_order">RecurringOrderSetOrderSkipConfigurationAction</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -165,7 +165,7 @@ extends <a href="RecurringOrderUpdateAction.html" title="interface in com.commer
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setUpdatedExpiresAt(java.time.ZonedDateTime)" class="member-name-link">setUpdatedExpiresAt</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;updatedExpiresAt)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Date and time (UTC) the Recurring Order will resume and start to generate new orders.</div>
+<div class="block">Date and time (UTC) the Recurring Order will expire and stop generating new orders.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static com.fasterxml.jackson.core.type.TypeReference&lt;<a href="RecurringOrderSetOrderSkipConfigurationAction.html" title="interface in com.commercetools.api.models.recurring_order">RecurringOrderSetOrderSkipConfigurationAction</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#typeReference()" class="member-name-link">typeReference</a>()</code></div>
@@ -233,7 +233,7 @@ extends <a href="RecurringOrderUpdateAction.html" title="interface in com.commer
 <section class="detail" id="getUpdatedExpiresAt()">
 <h3>getUpdatedExpiresAt</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a></span>&nbsp;<span class="element-name">getUpdatedExpiresAt</span>()</div>
-<div class="block"><p>Date and time (UTC) the Recurring Order will resume and start to generate new orders.</p></div>
+<div class="block"><p>Date and time (UTC) the Recurring Order will expire and stop generating new orders.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>updatedExpiresAt</dd>
@@ -255,7 +255,7 @@ extends <a href="RecurringOrderUpdateAction.html" title="interface in com.commer
 <section class="detail" id="setUpdatedExpiresAt(java.time.ZonedDateTime)">
 <h3>setUpdatedExpiresAt</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setUpdatedExpiresAt</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/ZonedDateTime.html" title="class or interface in java.time" class="external-link">ZonedDateTime</a>&nbsp;updatedExpiresAt)</span></div>
-<div class="block"><p>Date and time (UTC) the Recurring Order will resume and start to generate new orders.</p></div>
+<div class="block"><p>Date and time (UTC) the Recurring Order will expire and stop generating new orders.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>updatedExpiresAt</code> - value to be set</dd>

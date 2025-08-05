@@ -90,7 +90,9 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">ByProjectKeyInventoryPostString</span>
 <span class="extends-implements">extends <a href="../../../../io/vrap/rmf/base/client/StringBodyApiMethod.html" title="class in io.vrap.rmf.base.client">StringBodyApiMethod</a>&lt;<a href="ByProjectKeyInventoryPostString.html" title="class in com.commercetools.api.client">ByProjectKeyInventoryPostString</a>,<wbr><a href="../models/inventory/InventoryEntry.html" title="interface in com.commercetools.api.models.inventory">InventoryEntry</a>&gt;
 implements <a href="ExpandableTrait.html" title="interface in com.commercetools.api.client">ExpandableTrait</a>&lt;<a href="ByProjectKeyInventoryPostString.html" title="class in com.commercetools.api.client">ByProjectKeyInventoryPostString</a>&gt;, <a href="Deprecatable201Trait.html" title="interface in com.commercetools.api.client">Deprecatable201Trait</a>&lt;<a href="ByProjectKeyInventoryPostString.html" title="class in com.commercetools.api.client">ByProjectKeyInventoryPostString</a>&gt;, <a href="ErrorableTrait.html" title="interface in com.commercetools.api.client">ErrorableTrait</a>&lt;<a href="ByProjectKeyInventoryPostString.html" title="class in com.commercetools.api.client">ByProjectKeyInventoryPostString</a>&gt;</span></div>
-<div class="block"><p>Produces the InventoryEntryCreated Message.</p>
+<div class="block"><p>Creates an InventoryEntry in the Project.</p>
+  <p>If quantity limits are provided, existing Line Items that reference a Product Variant with an SKU that matches the Inventory Entry can be affected. For more information, see Quantity limits.</p>
+  <p>Produces the InventoryEntryCreated Message.</p>
 
  <hr>
  <div class=code-example>

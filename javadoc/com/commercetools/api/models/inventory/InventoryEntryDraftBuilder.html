@@ -160,6 +160,16 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">User-defined unique identifier for the InventoryEntry.</div>
 </div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMaxCartQuantity()" class="member-name-link">getMaxCartQuantity</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Maximum quantity that can be added to a Cart.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMinCartQuantity()" class="member-name-link">getMinCartQuantity</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Minimum quantity that can be added to a Cart.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getQuantityOnStock()" class="member-name-link">getQuantityOnStock</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
@@ -184,6 +194,16 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#key(java.lang.String)" class="member-name-link">key</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;key)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">User-defined unique identifier for the InventoryEntry.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="InventoryEntryDraftBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntryDraftBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#maxCartQuantity(java.lang.Integer)" class="member-name-link">maxCartQuantity</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;maxCartQuantity)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Maximum quantity that can be added to a Cart.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="InventoryEntryDraftBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntryDraftBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#minCartQuantity(java.lang.Integer)" class="member-name-link">minCartQuantity</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;minCartQuantity)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Minimum quantity that can be added to a Cart.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="InventoryEntryDraftBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntryDraftBuilder</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#of()" class="member-name-link">of</a>()</code></div>
@@ -343,6 +363,34 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 </section>
 </li>
 <li>
+<section class="detail" id="minCartQuantity(java.lang.Integer)">
+<h3>minCartQuantity</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="InventoryEntryDraftBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntryDraftBuilder</a></span>&nbsp;<span class="element-name">minCartQuantity</span><wbr><span class="parameters">(@Nullable
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;minCartQuantity)</span></div>
+<div class="block"><p>Minimum quantity that can be added to a Cart. See Quantity limits.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>minCartQuantity</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="maxCartQuantity(java.lang.Integer)">
+<h3>maxCartQuantity</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="InventoryEntryDraftBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntryDraftBuilder</a></span>&nbsp;<span class="element-name">maxCartQuantity</span><wbr><span class="parameters">(@Nullable
+ <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;maxCartQuantity)</span></div>
+<div class="block"><p>Maximum quantity that can be added to a Cart. See Quantity limits.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>maxCartQuantity</code> - value to be set</dd>
+<dt>Returns:</dt>
+<dd>Builder</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="restockableInDays(java.lang.Long)">
 <h3>restockableInDays</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="InventoryEntryDraftBuilder.html" title="class in com.commercetools.api.models.inventory">InventoryEntryDraftBuilder</a></span>&nbsp;<span class="element-name">restockableInDays</span><wbr><span class="parameters">(@Nullable
@@ -454,6 +502,30 @@ implements <a href="../../../../../io/vrap/rmf/base/client/Builder.html" title="
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>quantityOnStock</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMinCartQuantity()">
+<h3>getMinCartQuantity</h3>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">getMinCartQuantity</span>()</div>
+<div class="block"><p>Minimum quantity that can be added to a Cart. See Quantity limits.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>minCartQuantity</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMaxCartQuantity()">
+<h3>getMaxCartQuantity</h3>
+<div class="member-signature"><span class="annotations">@Nullable
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">getMaxCartQuantity</span>()</div>
+<div class="block"><p>Maximum quantity that can be added to a Cart. See Quantity limits.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>maxCartQuantity</dd>
 </dl>
 </section>
 </li>

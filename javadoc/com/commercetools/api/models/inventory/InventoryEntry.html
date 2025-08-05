@@ -172,6 +172,16 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">IDs and references that last modified the InventoryEntry.</div>
 </div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMaxCartQuantity()" class="member-name-link">getMaxCartQuantity</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Maximum quantity that can be added to a Cart.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getMinCartQuantity()" class="member-name-link">getMinCartQuantity</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Minimum quantity that can be added to a Cart.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getQuantityOnStock()" class="member-name-link">getQuantityOnStock</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
@@ -254,6 +264,16 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setLastModifiedBy(com.commercetools.api.models.common.LastModifiedBy)" class="member-name-link">setLastModifiedBy</a><wbr>(<a href="../common/LastModifiedBy.html" title="interface in com.commercetools.api.models.common">LastModifiedBy</a>&nbsp;lastModifiedBy)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
 <div class="block">IDs and references that last modified the InventoryEntry.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setMaxCartQuantity(java.lang.Integer)" class="member-name-link">setMaxCartQuantity</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;maxCartQuantity)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Maximum quantity that can be added to a Cart.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setMinCartQuantity(java.lang.Integer)" class="member-name-link">setMinCartQuantity</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;minCartQuantity)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Minimum quantity that can be added to a Cart.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#setQuantityOnStock(java.lang.Long)" class="member-name-link">setQuantityOnStock</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a>&nbsp;quantityOnStock)</code></div>
@@ -468,6 +488,28 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 </section>
 </li>
 <li>
+<section class="detail" id="getMinCartQuantity()">
+<h3>getMinCartQuantity</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">getMinCartQuantity</span>()</div>
+<div class="block"><p>Minimum quantity that can be added to a Cart. See Quantity limits.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>minCartQuantity</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="getMaxCartQuantity()">
+<h3>getMaxCartQuantity</h3>
+<div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a></span>&nbsp;<span class="element-name">getMaxCartQuantity</span>()</div>
+<div class="block"><p>Maximum quantity that can be added to a Cart. See Quantity limits.</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>maxCartQuantity</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="getRestockableInDays()">
 <h3>getRestockableInDays</h3>
 <div class="member-signature"><span class="return-type"><a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Long.html" title="class or interface in java.lang" class="external-link">Long</a></span>&nbsp;<span class="element-name">getRestockableInDays</span>()</div>
@@ -629,6 +671,28 @@ extends <a href="../common/BaseResource.html" title="interface in com.commerceto
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>availableQuantity</code> - value to be set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setMinCartQuantity(java.lang.Integer)">
+<h3>setMinCartQuantity</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setMinCartQuantity</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;minCartQuantity)</span></div>
+<div class="block"><p>Minimum quantity that can be added to a Cart. See Quantity limits.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>minCartQuantity</code> - value to be set</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="setMaxCartQuantity(java.lang.Integer)">
+<h3>setMaxCartQuantity</h3>
+<div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setMaxCartQuantity</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Integer.html" title="class or interface in java.lang" class="external-link">Integer</a>&nbsp;maxCartQuantity)</span></div>
+<div class="block"><p>Maximum quantity that can be added to a Cart. See Quantity limits.</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>maxCartQuantity</code> - value to be set</dd>
 </dl>
 </section>
 </li>

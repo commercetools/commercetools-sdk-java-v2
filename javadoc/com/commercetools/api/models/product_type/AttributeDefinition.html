@@ -73,7 +73,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">AttributeDefinition</span></div>
-<div class="block"><p>Describes an Attribute and allows you to define meta-information associated with the Attribute (like whether it should be searchable, or its constraints).</p>
+<div class="block">AttributeDefinition
 
  <hr>
  Example to create an instance using the builder pattern
@@ -350,8 +350,8 @@ loadScripts(document, 'script');</script>
 <h3>getIsSearchable</h3>
 <div class="member-signature"><span class="annotations">@NotNull
 </span><span class="return-type">@NotNull <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a></span>&nbsp;<span class="element-name">getIsSearchable</span>()</div>
-<div class="block"><p>If <code>true</code>, the Attribute's values are available in the Product Search or the Product Projection Search API for use in full-text search queries, filters, and facets.</p>
-  <p>Which exact features are available with this flag depends on the specific AttributeType. The maximum size of a searchable field is <strong>restricted</strong> by the Field content size limit. This constraint is enforced at both Product creation and Product update. If the length of the input exceeds the maximum size, an InvalidField error is returned.</p></div>
+<div class="block"><p>If <code>true</code>, the Attribute's values are available in the Product Search or the Product Projection Search API for use in full-text search queries, filters, and facets. However, if an Attribute's <code>level</code> is set as <code>Product</code>, then Product Projection Search does <strong>not support</strong> the Attribute.</p>
+  <p>The exact features that are available with this flag depend on the specific AttributeType. The maximum size of a searchable field is <strong>restricted</strong> by the Field content size limit. This constraint is enforced at both Product creation and Product update. If the length of the input exceeds the maximum size, an InvalidField error is returned.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>isSearchable</dd>
@@ -450,8 +450,8 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setIsSearchable(java.lang.Boolean)">
 <h3>setIsSearchable</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setIsSearchable</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Boolean.html" title="class or interface in java.lang" class="external-link">Boolean</a>&nbsp;isSearchable)</span></div>
-<div class="block"><p>If <code>true</code>, the Attribute's values are available in the Product Search or the Product Projection Search API for use in full-text search queries, filters, and facets.</p>
-  <p>Which exact features are available with this flag depends on the specific AttributeType. The maximum size of a searchable field is <strong>restricted</strong> by the Field content size limit. This constraint is enforced at both Product creation and Product update. If the length of the input exceeds the maximum size, an InvalidField error is returned.</p></div>
+<div class="block"><p>If <code>true</code>, the Attribute's values are available in the Product Search or the Product Projection Search API for use in full-text search queries, filters, and facets. However, if an Attribute's <code>level</code> is set as <code>Product</code>, then Product Projection Search does <strong>not support</strong> the Attribute.</p>
+  <p>The exact features that are available with this flag depend on the specific AttributeType. The maximum size of a searchable field is <strong>restricted</strong> by the Field content size limit. This constraint is enforced at both Product creation and Product update. If the length of the input exceeds the maximum size, an InvalidField error is returned.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>isSearchable</code> - value to be set</dd>

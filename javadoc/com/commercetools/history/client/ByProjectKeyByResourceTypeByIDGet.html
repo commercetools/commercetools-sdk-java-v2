@@ -86,6 +86,7 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">ByProjectKeyByResourceTypeByIDGet</span>
 <span class="extends-implements">extends <a href="../../../../io/vrap/rmf/base/client/TypeApiMethod.html" title="class in io.vrap.rmf.base.client">TypeApiMethod</a>&lt;<a href="ByProjectKeyByResourceTypeByIDGet.html" title="class in com.commercetools.history.client">ByProjectKeyByResourceTypeByIDGet</a>,<wbr><a href="../models/change_history/RecordPagedQueryResponse.html" title="interface in com.commercetools.history.models.change_history">RecordPagedQueryResponse</a>&gt;</span></div>
 <div class="block"><p>The <code>view_audit_log:{projectKey}</code> scope is required, and depending on the resource type queried, their respective scopes must be granted.</p>
+  <p>If the request exceeds the rate limit, a TooManyRequests error is returned.</p>
 
  <hr>
  <div class=code-example>

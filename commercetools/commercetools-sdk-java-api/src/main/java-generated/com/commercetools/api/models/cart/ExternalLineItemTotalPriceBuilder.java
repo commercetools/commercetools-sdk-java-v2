@@ -29,6 +29,7 @@ public class ExternalLineItemTotalPriceBuilder implements Builder<ExternalLineIt
 
     /**
      *  <p>Price of the Line Item.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @param builder function to build the price value
      * @return Builder
      */
@@ -41,6 +42,7 @@ public class ExternalLineItemTotalPriceBuilder implements Builder<ExternalLineIt
 
     /**
      *  <p>Price of the Line Item.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @param builder function to build the price value
      * @return Builder
      */
@@ -53,6 +55,7 @@ public class ExternalLineItemTotalPriceBuilder implements Builder<ExternalLineIt
 
     /**
      *  <p>Price of the Line Item.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @param price value to be set
      * @return Builder
      */
@@ -99,6 +102,7 @@ public class ExternalLineItemTotalPriceBuilder implements Builder<ExternalLineIt
 
     /**
      *  <p>Price of the Line Item.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @return price
      */
 

@@ -76,6 +76,7 @@ public class MyCartRemoveLineItemActionBuilder implements Builder<MyCartRemoveLi
 
     /**
      *  <p>Sets the LineItem <code>price</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @param builder function to build the externalPrice value
      * @return Builder
      */
@@ -88,6 +89,7 @@ public class MyCartRemoveLineItemActionBuilder implements Builder<MyCartRemoveLi
 
     /**
      *  <p>Sets the LineItem <code>price</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @param builder function to build the externalPrice value
      * @return Builder
      */
@@ -100,6 +102,7 @@ public class MyCartRemoveLineItemActionBuilder implements Builder<MyCartRemoveLi
 
     /**
      *  <p>Sets the LineItem <code>price</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @param externalPrice value to be set
      * @return Builder
      */
@@ -220,6 +223,7 @@ public class MyCartRemoveLineItemActionBuilder implements Builder<MyCartRemoveLi
 
     /**
      *  <p>Sets the LineItem <code>price</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @return externalPrice
      */
 

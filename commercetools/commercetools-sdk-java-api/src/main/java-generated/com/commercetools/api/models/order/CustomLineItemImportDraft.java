@@ -80,6 +80,7 @@ public interface CustomLineItemImportDraft
 
     /**
      *  <p>The cost of individual items in the Custom Line Item. The amount can be negative.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @return money
      */
     @NotNull
@@ -168,6 +169,7 @@ public interface CustomLineItemImportDraft
 
     /**
      *  <p>The cost of individual items in the Custom Line Item. The amount can be negative.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @param money value to be set
      */
 

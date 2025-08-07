@@ -58,6 +58,7 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
 
     /**
      *  <p>Money value of the Custom Line Item. The value can be negative.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @param builder function to build the money value
      * @return Builder
      */
@@ -70,6 +71,7 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
 
     /**
      *  <p>Money value of the Custom Line Item. The value can be negative.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @param builder function to build the money value
      * @return Builder
      */
@@ -82,6 +84,7 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
 
     /**
      *  <p>Money value of the Custom Line Item. The value can be negative.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @param money value to be set
      * @return Builder
      */
@@ -367,6 +370,7 @@ public class CartAddCustomLineItemActionBuilder implements Builder<CartAddCustom
 
     /**
      *  <p>Money value of the Custom Line Item. The value can be negative.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @return money
      */
 

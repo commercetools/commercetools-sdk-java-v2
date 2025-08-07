@@ -67,6 +67,7 @@ public interface CustomLineItemDraft extends com.commercetools.api.models.Custom
 
     /**
      *  <p>Money value of the Custom Line Item. The value can be negative.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @return money
      */
     @NotNull
@@ -156,6 +157,7 @@ public interface CustomLineItemDraft extends com.commercetools.api.models.Custom
 
     /**
      *  <p>Money value of the Custom Line Item. The value can be negative.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @param money value to be set
      */
 

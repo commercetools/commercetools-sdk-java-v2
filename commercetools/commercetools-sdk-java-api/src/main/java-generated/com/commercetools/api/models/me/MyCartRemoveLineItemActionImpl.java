@@ -95,6 +95,7 @@ public class MyCartRemoveLineItemActionImpl implements MyCartRemoveLineItemActio
 
     /**
      *  <p>Sets the LineItem <code>price</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      */
 
     public com.commercetools.api.models.common.Money getExternalPrice() {

@@ -40,7 +40,8 @@ public class PriceTierDraftBuilder implements Builder<PriceTierDraft> {
     }
 
     /**
-     *  <p>Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the LineItem <code>quantity</code>. To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
+     *  <p>Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the LineItem <code>quantity</code>.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      *  <p>The <code>currencyCode</code> of a Price tier must be the same as the <code>currencyCode</code> in the <code>value</code> of the related Price.</p>
      * @param builder function to build the value value
      * @return Builder
@@ -53,7 +54,8 @@ public class PriceTierDraftBuilder implements Builder<PriceTierDraft> {
     }
 
     /**
-     *  <p>Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the LineItem <code>quantity</code>. To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
+     *  <p>Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the LineItem <code>quantity</code>.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      *  <p>The <code>currencyCode</code> of a Price tier must be the same as the <code>currencyCode</code> in the <code>value</code> of the related Price.</p>
      * @param builder function to build the value value
      * @return Builder
@@ -66,7 +68,8 @@ public class PriceTierDraftBuilder implements Builder<PriceTierDraft> {
     }
 
     /**
-     *  <p>Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the LineItem <code>quantity</code>. To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
+     *  <p>Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the LineItem <code>quantity</code>.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      *  <p>The <code>currencyCode</code> of a Price tier must be the same as the <code>currencyCode</code> in the <code>value</code> of the related Price.</p>
      * @param value value to be set
      * @return Builder
@@ -88,7 +91,8 @@ public class PriceTierDraftBuilder implements Builder<PriceTierDraft> {
     }
 
     /**
-     *  <p>Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the LineItem <code>quantity</code>. To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
+     *  <p>Money value that applies when the <code>minimumQuantity</code> is greater than or equal to the LineItem <code>quantity</code>.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      *  <p>The <code>currencyCode</code> of a Price tier must be the same as the <code>currencyCode</code> in the <code>value</code> of the related Price.</p>
      * @return value
      */

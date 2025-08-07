@@ -176,6 +176,7 @@ public class StagedOrderAddLineItemActionImpl implements StagedOrderAddLineItemA
 
     /**
      *  <p>Sets the LineItem <code>price</code> value, and the <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      */
 
     public com.commercetools.api.models.common.Money getExternalPrice() {

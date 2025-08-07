@@ -126,6 +126,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
 
     /**
      *  <p>The cost of individual items in the Custom Line Item. The amount can be negative.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @param builder function to build the money value
      * @return Builder
      */
@@ -138,6 +139,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
 
     /**
      *  <p>The cost of individual items in the Custom Line Item. The amount can be negative.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @param builder function to build the money value
      * @return Builder
      */
@@ -150,6 +152,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
 
     /**
      *  <p>The cost of individual items in the Custom Line Item. The amount can be negative.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @param money value to be set
      * @return Builder
      */
@@ -450,6 +453,7 @@ public class CustomLineItemImportDraftBuilder implements Builder<CustomLineItemI
 
     /**
      *  <p>The cost of individual items in the Custom Line Item. The amount can be negative.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @return money
      */
 

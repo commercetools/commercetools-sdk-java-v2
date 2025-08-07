@@ -57,6 +57,7 @@ public interface CartChangeCustomLineItemMoneyAction extends CartUpdateAction {
 
     /**
      *  <p>Value to set. Must not be empty. Can be a negative amount.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @return money
      */
     @NotNull
@@ -80,6 +81,7 @@ public interface CartChangeCustomLineItemMoneyAction extends CartUpdateAction {
 
     /**
      *  <p>Value to set. Must not be empty. Can be a negative amount.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @param money value to be set
      */
 

@@ -219,6 +219,7 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
 
     /**
      *  <p>Sets the LineItem <code>price</code> value, and the <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @param builder function to build the externalPrice value
      * @return Builder
      */
@@ -231,6 +232,7 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
 
     /**
      *  <p>Sets the LineItem <code>price</code> value, and the <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @param builder function to build the externalPrice value
      * @return Builder
      */
@@ -243,6 +245,7 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
 
     /**
      *  <p>Sets the LineItem <code>price</code> value, and the <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @param externalPrice value to be set
      * @return Builder
      */
@@ -632,6 +635,7 @@ public class CartAddLineItemActionBuilder implements Builder<CartAddLineItemActi
 
     /**
      *  <p>Sets the LineItem <code>price</code> value, and the <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @return externalPrice
      */
 

@@ -105,6 +105,7 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>Sets the LineItem <code>price</code> value, and the <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @return externalPrice
      */
     @Valid
@@ -227,6 +228,7 @@ public interface LineItemDraft extends com.commercetools.api.models.Customizable
 
     /**
      *  <p>Sets the LineItem <code>price</code> value, and the <code>priceMode</code> to <code>ExternalPrice</code> LineItemPriceMode.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @param externalPrice value to be set
      */
 

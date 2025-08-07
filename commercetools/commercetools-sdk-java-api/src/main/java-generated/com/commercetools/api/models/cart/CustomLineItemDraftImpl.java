@@ -103,6 +103,7 @@ public class CustomLineItemDraftImpl implements CustomLineItemDraft, ModelBase {
 
     /**
      *  <p>Money value of the Custom Line Item. The value can be negative.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      */
 
     public com.commercetools.api.models.common.Money getMoney() {

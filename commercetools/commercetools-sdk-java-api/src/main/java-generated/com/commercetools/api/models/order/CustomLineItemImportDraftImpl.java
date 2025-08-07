@@ -111,6 +111,7 @@ public class CustomLineItemImportDraftImpl implements CustomLineItemImportDraft,
 
     /**
      *  <p>The cost of individual items in the Custom Line Item. The amount can be negative.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      */
 
     public com.commercetools.api.models.common.Money getMoney() {

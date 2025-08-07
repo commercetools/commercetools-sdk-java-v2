@@ -56,6 +56,7 @@ public class CartSetLineItemPriceActionBuilder implements Builder<CartSetLineIte
 
     /**
      *  <p>Value to set. If <code>externalPrice</code> is not given and the <code>priceMode</code> is <code>ExternalPrice</code>, the external price is unset and the <code>priceMode</code> is set to <code>Platform</code>.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @param builder function to build the externalPrice value
      * @return Builder
      */
@@ -68,6 +69,7 @@ public class CartSetLineItemPriceActionBuilder implements Builder<CartSetLineIte
 
     /**
      *  <p>Value to set. If <code>externalPrice</code> is not given and the <code>priceMode</code> is <code>ExternalPrice</code>, the external price is unset and the <code>priceMode</code> is set to <code>Platform</code>.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @param builder function to build the externalPrice value
      * @return Builder
      */
@@ -80,6 +82,7 @@ public class CartSetLineItemPriceActionBuilder implements Builder<CartSetLineIte
 
     /**
      *  <p>Value to set. If <code>externalPrice</code> is not given and the <code>priceMode</code> is <code>ExternalPrice</code>, the external price is unset and the <code>priceMode</code> is set to <code>Platform</code>.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @param externalPrice value to be set
      * @return Builder
      */
@@ -112,6 +115,7 @@ public class CartSetLineItemPriceActionBuilder implements Builder<CartSetLineIte
 
     /**
      *  <p>Value to set. If <code>externalPrice</code> is not given and the <code>priceMode</code> is <code>ExternalPrice</code>, the external price is unset and the <code>priceMode</code> is set to <code>Platform</code>.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @return externalPrice
      */
 

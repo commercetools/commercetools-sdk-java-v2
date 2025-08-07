@@ -70,6 +70,7 @@ public interface CartChangeLineItemQuantityAction extends CartUpdateAction {
     /**
      *  <p>Required when the Line Item uses <code>ExternalPrice</code> LineItemPriceMode. Sets the LineItem <code>price</code> to the given value when changing the quantity of a Line Item.</p>
      *  <p>The LineItem price is updated as described in Line Item price selection.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @return externalPrice
      */
     @Valid
@@ -109,6 +110,7 @@ public interface CartChangeLineItemQuantityAction extends CartUpdateAction {
     /**
      *  <p>Required when the Line Item uses <code>ExternalPrice</code> LineItemPriceMode. Sets the LineItem <code>price</code> to the given value when changing the quantity of a Line Item.</p>
      *  <p>The LineItem price is updated as described in Line Item price selection.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @param externalPrice value to be set
      */
 

@@ -77,6 +77,7 @@ public class StagedOrderChangeCustomLineItemMoneyActionImpl
 
     /**
      *  <p>Value to set. Must not be empty. Can be a negative amount.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      */
 
     public com.commercetools.api.models.common.Money getMoney() {

@@ -58,6 +58,7 @@ public class StagedOrderChangeCustomLineItemMoneyActionBuilder
 
     /**
      *  <p>Value to set. Must not be empty. Can be a negative amount.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @param builder function to build the money value
      * @return Builder
      */
@@ -70,6 +71,7 @@ public class StagedOrderChangeCustomLineItemMoneyActionBuilder
 
     /**
      *  <p>Value to set. Must not be empty. Can be a negative amount.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @param builder function to build the money value
      * @return Builder
      */
@@ -82,6 +84,7 @@ public class StagedOrderChangeCustomLineItemMoneyActionBuilder
 
     /**
      *  <p>Value to set. Must not be empty. Can be a negative amount.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @param money value to be set
      * @return Builder
      */
@@ -114,6 +117,7 @@ public class StagedOrderChangeCustomLineItemMoneyActionBuilder
 
     /**
      *  <p>Value to set. Must not be empty. Can be a negative amount.</p>
+     *  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p>
      * @return money
      */
 

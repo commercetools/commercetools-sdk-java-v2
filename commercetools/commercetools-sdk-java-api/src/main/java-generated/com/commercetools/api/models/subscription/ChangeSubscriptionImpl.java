@@ -40,7 +40,7 @@ public class ChangeSubscriptionImpl implements ChangeSubscription, ModelBase {
     }
 
     /**
-     *  <p>Unique identifier for the type of resource, for example, <code>cart</code>.</p>
+     *  <p>Unique identifier for the type of resource, for example, <code>order</code>.</p>
      */
 
     public com.commercetools.api.models.subscription.ChangeSubscriptionResourceTypeId getResourceTypeId() {

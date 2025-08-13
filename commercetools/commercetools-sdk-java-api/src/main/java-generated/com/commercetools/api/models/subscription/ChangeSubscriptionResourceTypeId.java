@@ -32,7 +32,7 @@ public interface ChangeSubscriptionResourceTypeId extends JsonEnum {
     <p>Changes to BusinessUnits. Only available for B2B-enabled Projects.</p> */
     ChangeSubscriptionResourceTypeId BUSINESS_UNIT = ChangeSubscriptionResourceTypeIdEnum.BUSINESS_UNIT;
     /**
-    <p>Changes to Carts.</p> */
+    <p>Changes to Carts. Only notification of creation is supported.</p> */
     ChangeSubscriptionResourceTypeId CART = ChangeSubscriptionResourceTypeIdEnum.CART;
     /**
     <p>Changes to CartDiscounts.</p> */

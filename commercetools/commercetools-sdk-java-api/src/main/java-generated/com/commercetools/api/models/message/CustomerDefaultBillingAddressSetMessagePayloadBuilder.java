@@ -1,0 +1,112 @@
+
+package com.commercetools.api.models.message;
+
+import java.util.*;
+import java.util.function.Function;
+
+import javax.annotation.Nullable;
+
+import io.vrap.rmf.base.client.Builder;
+import io.vrap.rmf.base.client.utils.Generated;
+
+/**
+ * CustomerDefaultBillingAddressSetMessagePayloadBuilder
+ * <hr>
+ * Example to create an instance using the builder pattern
+ * <div class=code-example>
+ * <pre><code class='java'>
+ *     CustomerDefaultBillingAddressSetMessagePayload customerDefaultBillingAddressSetMessagePayload = CustomerDefaultBillingAddressSetMessagePayload.builder()
+ *             .build()
+ * </code></pre>
+ * </div>
+ */
+@Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
+public class CustomerDefaultBillingAddressSetMessagePayloadBuilder
+        implements Builder<CustomerDefaultBillingAddressSetMessagePayload> {
+
+    @Nullable
+    private com.commercetools.api.models.common.Address address;
+
+    /**
+     *  <p>The address that was set as the default billing address.</p>
+     * @param builder function to build the address value
+     * @return Builder
+     */
+
+    public CustomerDefaultBillingAddressSetMessagePayloadBuilder address(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.AddressBuilder> builder) {
+        this.address = builder.apply(com.commercetools.api.models.common.AddressBuilder.of()).build();
+        return this;
+    }
+
+    /**
+     *  <p>The address that was set as the default billing address.</p>
+     * @param builder function to build the address value
+     * @return Builder
+     */
+
+    public CustomerDefaultBillingAddressSetMessagePayloadBuilder withAddress(
+            Function<com.commercetools.api.models.common.AddressBuilder, com.commercetools.api.models.common.Address> builder) {
+        this.address = builder.apply(com.commercetools.api.models.common.AddressBuilder.of());
+        return this;
+    }
+
+    /**
+     *  <p>The address that was set as the default billing address.</p>
+     * @param address value to be set
+     * @return Builder
+     */
+
+    public CustomerDefaultBillingAddressSetMessagePayloadBuilder address(
+            @Nullable final com.commercetools.api.models.common.Address address) {
+        this.address = address;
+        return this;
+    }
+
+    /**
+     *  <p>The address that was set as the default billing address.</p>
+     * @return address
+     */
+
+    @Nullable
+    public com.commercetools.api.models.common.Address getAddress() {
+        return this.address;
+    }
+
+    /**
+     * builds CustomerDefaultBillingAddressSetMessagePayload with checking for non-null required values
+     * @return CustomerDefaultBillingAddressSetMessagePayload
+     */
+    public CustomerDefaultBillingAddressSetMessagePayload build() {
+        return new CustomerDefaultBillingAddressSetMessagePayloadImpl(address);
+    }
+
+    /**
+     * builds CustomerDefaultBillingAddressSetMessagePayload without checking for non-null required values
+     * @return CustomerDefaultBillingAddressSetMessagePayload
+     */
+    public CustomerDefaultBillingAddressSetMessagePayload buildUnchecked() {
+        return new CustomerDefaultBillingAddressSetMessagePayloadImpl(address);
+    }
+
+    /**
+     * factory method for an instance of CustomerDefaultBillingAddressSetMessagePayloadBuilder
+     * @return builder
+     */
+    public static CustomerDefaultBillingAddressSetMessagePayloadBuilder of() {
+        return new CustomerDefaultBillingAddressSetMessagePayloadBuilder();
+    }
+
+    /**
+     * create builder for CustomerDefaultBillingAddressSetMessagePayload instance
+     * @param template instance with prefilled values for the builder
+     * @return builder
+     */
+    public static CustomerDefaultBillingAddressSetMessagePayloadBuilder of(
+            final CustomerDefaultBillingAddressSetMessagePayload template) {
+        CustomerDefaultBillingAddressSetMessagePayloadBuilder builder = new CustomerDefaultBillingAddressSetMessagePayloadBuilder();
+        builder.address = template.getAddress();
+        return builder;
+    }
+
+}

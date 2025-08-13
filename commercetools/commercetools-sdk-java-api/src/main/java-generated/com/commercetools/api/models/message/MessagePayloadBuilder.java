@@ -331,6 +331,14 @@ public class MessagePayloadBuilder {
         return com.commercetools.api.models.message.CustomerDateOfBirthSetMessagePayloadBuilder.of();
     }
 
+    public com.commercetools.api.models.message.CustomerDefaultBillingAddressSetMessagePayloadBuilder customerDefaultBillingAddressSetBuilder() {
+        return com.commercetools.api.models.message.CustomerDefaultBillingAddressSetMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CustomerDefaultShippingAddressSetMessagePayloadBuilder customerDefaultShippingAddressSetBuilder() {
+        return com.commercetools.api.models.message.CustomerDefaultShippingAddressSetMessagePayloadBuilder.of();
+    }
+
     public com.commercetools.api.models.message.CustomerDeletedMessagePayloadBuilder customerDeletedBuilder() {
         return com.commercetools.api.models.message.CustomerDeletedMessagePayloadBuilder.of();
     }
@@ -397,6 +405,10 @@ public class MessagePayloadBuilder {
 
     public com.commercetools.api.models.message.CustomerPasswordUpdatedMessagePayloadBuilder customerPasswordUpdatedBuilder() {
         return com.commercetools.api.models.message.CustomerPasswordUpdatedMessagePayloadBuilder.of();
+    }
+
+    public com.commercetools.api.models.message.CustomerStoresSetMessagePayloadBuilder customerStoresSetBuilder() {
+        return com.commercetools.api.models.message.CustomerStoresSetMessagePayloadBuilder.of();
     }
 
     public com.commercetools.api.models.message.CustomerTitleSetMessagePayloadBuilder customerTitleSetBuilder() {

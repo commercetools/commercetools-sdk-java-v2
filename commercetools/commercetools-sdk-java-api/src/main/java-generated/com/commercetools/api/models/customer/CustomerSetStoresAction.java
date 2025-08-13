@@ -19,6 +19,7 @@ import jakarta.validation.constraints.NotNull;
 
 /**
  *  <p>Sets the Stores the Customer account is associated with. If no Stores are specified, the Customer becomes a global Customer.</p>
+ *  <p>This action generates the CustomerStoresSet Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

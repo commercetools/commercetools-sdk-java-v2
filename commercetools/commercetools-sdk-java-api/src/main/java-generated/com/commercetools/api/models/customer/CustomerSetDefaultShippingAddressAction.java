@@ -14,6 +14,7 @@ import io.vrap.rmf.base.client.utils.Generated;
 
 /**
  *  <p>Sets the default shipping address from <code>addresses</code>. The action adds the <code>id</code> of the specified address to the <code>shippingAddressIds</code> if not contained already. Either <code>addressId</code> or <code>addressKey</code> is required.</p>
+ *  <p>This action generates the CustomerDefaultShippingAddressSet Message.</p>
  *
  * <hr>
  * Example to create an instance using the builder pattern

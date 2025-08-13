@@ -878,6 +878,22 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
     }
 
     /**
+     * builder for customerDefaultBillingAddressSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerDefaultBillingAddressSetMessageBuilder customerDefaultBillingAddressSetBuilder() {
+        return com.commercetools.api.models.message.CustomerDefaultBillingAddressSetMessageBuilder.of();
+    }
+
+    /**
+     * builder for customerDefaultShippingAddressSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerDefaultShippingAddressSetMessageBuilder customerDefaultShippingAddressSetBuilder() {
+        return com.commercetools.api.models.message.CustomerDefaultShippingAddressSetMessageBuilder.of();
+    }
+
+    /**
      * builder for customerDeleted subtype
      * @return builder
      */
@@ -1011,6 +1027,14 @@ public interface Message extends BaseResource, com.commercetools.api.models.Doma
      */
     public static com.commercetools.api.models.message.CustomerPasswordUpdatedMessageBuilder customerPasswordUpdatedBuilder() {
         return com.commercetools.api.models.message.CustomerPasswordUpdatedMessageBuilder.of();
+    }
+
+    /**
+     * builder for customerStoresSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerStoresSetMessageBuilder customerStoresSetBuilder() {
+        return com.commercetools.api.models.message.CustomerStoresSetMessageBuilder.of();
     }
 
     /**

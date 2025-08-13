@@ -25,7 +25,7 @@ public interface DiscountCodeState extends JsonEnum {
     <p>The Discount Code is not valid or does not contain any valid Cart Discounts. Validity is determined by the CartDiscount <code>validFrom</code> and <code>validUntil</code> dates.</p> */
     DiscountCodeState NOT_VALID = DiscountCodeStateEnum.NOT_VALID;
     /**
-    <p>The Discount Code is active and contains at least one active and valid Cart Discount. The DiscountCode <code>cartPredicate</code> does not match the Cart or the contained active discount's cart predicates do no match the Cart.</p> */
+    <p>The Discount Code is active and contains at least one active and valid Cart Discount. The DiscountCode <code>cartPredicate</code> does not match the Cart or the contained active discount's cart predicates do not match the Cart.</p> */
     DiscountCodeState DOES_NOT_MATCH_CART = DiscountCodeStateEnum.DOES_NOT_MATCH_CART;
     /**
     <p>The Discount Code is active and contains at least one active and valid Cart Discount. The DiscountCode <code>cartPredicate</code> matches the Cart and at least one of the contained active discount's cart predicates matches the Cart.</p> */

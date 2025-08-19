@@ -21,7 +21,7 @@ import jakarta.validation.constraints.NotNull;
  * Example to create a subtype instance using the builder pattern
  * <div class=code-example>
  * <pre><code class='java'>
- *     KeyReference keyReference = KeyReference.cartDiscountBuilder()
+ *     KeyReference keyReference = KeyReference.associateRoleBuilder()
  *             key("{key}")
  *             .build()
  * </code></pre>
@@ -74,6 +74,22 @@ public interface KeyReference {
         KeyReferenceImpl instance = new KeyReferenceImpl();
         instance.setKey(template.getKey());
         return instance;
+    }
+
+    /**
+     * builder for associateRole subtype
+     * @return builder
+     */
+    public static com.commercetools.importapi.models.common.AssociateRoleKeyReferenceBuilder associateRoleBuilder() {
+        return com.commercetools.importapi.models.common.AssociateRoleKeyReferenceBuilder.of();
+    }
+
+    /**
+     * builder for businessUnit subtype
+     * @return builder
+     */
+    public static com.commercetools.importapi.models.common.BusinessUnitKeyReferenceBuilder businessUnitBuilder() {
+        return com.commercetools.importapi.models.common.BusinessUnitKeyReferenceBuilder.of();
     }
 
     /**

@@ -1,4 +1,19 @@
 
+# 19.2.0 (2025-08-21)
+
+## What's Changed
+* Update changelog by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/962
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/963
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/965
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/966
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/967
+* Fix product Mixin Product level attributes by @ShipilA in https://github.com/commercetools/commercetools-sdk-java-v2/pull/971
+
+## New Contributors
+* @ShipilA made their first contribution in https://github.com/commercetools/commercetools-sdk-java-v2/pull/971
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/19.1.0...19.2.0
+
 # 19.1.0 (2025-08-05)
 
 ## What's Changed

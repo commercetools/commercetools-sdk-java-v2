@@ -293,7 +293,8 @@ extends <a href="../order/StagedOrderUpdateAction.html" title="interface in com.
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name">getExternalPrice</span>()</div>
 <div class="block"><p>Required when the Line Item uses <code>ExternalPrice</code> LineItemPriceMode. Sets the LineItem <code>price</code> to the given value when changing the quantity of a Line Item.</p>
-  <p>The LineItem price is updated as described in Line Item price selection.</p></div>
+  <p>The LineItem price is updated as described in Line Item price selection.</p>
+  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>externalPrice</dd>
@@ -350,7 +351,8 @@ extends <a href="../order/StagedOrderUpdateAction.html" title="interface in com.
 <h3>setExternalPrice</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setExternalPrice</span><wbr><span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;externalPrice)</span></div>
 <div class="block"><p>Required when the Line Item uses <code>ExternalPrice</code> LineItemPriceMode. Sets the LineItem <code>price</code> to the given value when changing the quantity of a Line Item.</p>
-  <p>The LineItem price is updated as described in Line Item price selection.</p></div>
+  <p>The LineItem price is updated as described in Line Item price selection.</p>
+  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>externalPrice</code> - value to be set</dd>

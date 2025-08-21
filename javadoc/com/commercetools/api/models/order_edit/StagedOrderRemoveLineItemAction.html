@@ -298,7 +298,8 @@ extends <a href="../order/StagedOrderUpdateAction.html" title="interface in com.
 <h3>getExternalPrice</h3>
 <div class="member-signature"><span class="annotations">@Valid
 </span><span class="return-type">@Valid <a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a></span>&nbsp;<span class="element-name">getExternalPrice</span>()</div>
-<div class="block"><p>Sets the LineItem <code>price</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p></div>
+<div class="block"><p>Sets the LineItem <code>price</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
+  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>externalPrice</dd>
@@ -366,7 +367,8 @@ extends <a href="../order/StagedOrderUpdateAction.html" title="interface in com.
 <section class="detail" id="setExternalPrice(com.commercetools.api.models.common.Money)">
 <h3>setExternalPrice</h3>
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">setExternalPrice</span><wbr><span class="parameters">(<a href="../common/Money.html" title="interface in com.commercetools.api.models.common">Money</a>&nbsp;externalPrice)</span></div>
-<div class="block"><p>Sets the LineItem <code>price</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p></div>
+<div class="block"><p>Sets the LineItem <code>price</code> to the given value when decreasing the quantity of a Line Item with the <code>ExternalPrice</code> LineItemPriceMode.</p>
+  <p>To set the money value in high precision, use HighPrecisionMoneyDraft.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>externalPrice</code> - value to be set</dd>

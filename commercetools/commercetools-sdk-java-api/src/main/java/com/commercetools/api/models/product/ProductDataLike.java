@@ -110,5 +110,6 @@ public interface ProductDataLike extends WithLocalizedSlug, MetaAttributes {
     @Nullable
     CategoryOrderHints getCategoryOrderHints();
 
+    @Nullable
     List<Attribute> getAttributes();
 }

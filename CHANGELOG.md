@@ -1,18 +1,80 @@
 
-# 19.2.0 (2025-08-21)
+# 19.3.0 (2025-08-22)
 
 ## What's Changed
-* Update changelog by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/962
-* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/963
-* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/965
-* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/966
-* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/967
-* Fix product Mixin Product level attributes by @ShipilA in https://github.com/commercetools/commercetools-sdk-java-v2/pull/971
+* Update changelog by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/972
+* Update generated SDKs by @ct-sdks[bot] in https://github.com/commercetools/commercetools-sdk-java-v2/pull/968
+* updating dependency by @ShipilA in https://github.com/commercetools/commercetools-sdk-java-v2/pull/973
 
-## New Contributors
-* @ShipilA made their first contribution in https://github.com/commercetools/commercetools-sdk-java-v2/pull/971
+**Api changes**
 
-**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/19.1.0...19.2.0
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `CustomerDefaultBillingAddressSetMessage`
+- added type `CustomerDefaultShippingAddressSetMessage`
+- added type `CustomerStoresSetMessage`
+- added type `CustomerDefaultBillingAddressSetMessagePayload`
+- added type `CustomerDefaultShippingAddressSetMessagePayload`
+- added type `CustomerStoresSetMessagePayload`
+</details>
+
+
+<details>
+<summary>Added Method(s)</summary>
+
+- added method `apiRoot.withProjectKey().recurrencePolicies().withKey().delete()`
+- added method `apiRoot.withProjectKey().recurrencePolicies().withId().delete()`
+</details>
+
+**Import changes**
+
+<details>
+<summary>Added Type(s)</summary>
+
+- added type `AssociateRoleKeyReference`
+- added type `BusinessUnitKeyReference`
+- added type `BusinessUnitImportRequest`
+- added type `AssociateRoleInheritanceMode`
+- added type `BusinessUnitStatus`
+- added type `BusinessUnitAssociateMode`
+- added type `BusinessUnitApprovalRuleMode`
+- added type `BusinessUnitStoreMode`
+- added type `BusinessUnitType`
+- added type `AssociateRoleAssignmentDraft`
+- added type `AssociateDraft`
+- added type `BusinessUnitImport`
+- added type `CompanyBusinessUnitImport`
+- added type `DivisionBusinessUnitImport`
+</details>
+
+
+<details>
+<summary>Added Method(s)</summary>
+
+- added method `apiRoot.withProjectKeyValue().businessUnits().importContainers().withImportContainerKeyValue().post()`
+</details>
+
+
+<details>
+<summary>Added Resource(s)</summary>
+
+- added resource `/{projectKey}/business-units`
+- added resource `/{projectKey}/business-units/import-containers`
+- added resource `/{projectKey}/business-units/import-containers/{importContainerKey}`
+</details>
+
+
+<details>
+<summary>Added Enum(s)</summary>
+
+- added enum `business-unit` to type `ImportResourceType`
+- added enum `associate-role` to type `ReferenceType`
+- added enum `business-unit` to type `ReferenceType`
+</details>
+
+**Full Changelog**: https://github.com/commercetools/commercetools-sdk-java-v2/compare/19.2.0...19.3.0
+
 
 # 19.1.0 (2025-08-05)
 

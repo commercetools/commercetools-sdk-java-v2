@@ -12,7 +12,7 @@ ext {
     commons = [
             lang3version: '3.17.0',
             text: 'org.apache.commons:commons-text:1.13.1',
-            lang3: 'org.apache.commons:commons-lang3:3.17.0',
+            lang3: 'org.apache.commons:commons-lang3:3.18.0',
             io: 'commons-io:commons-io:2.19.0',
             io_version: {
                     strictly '[2.8.0,)'

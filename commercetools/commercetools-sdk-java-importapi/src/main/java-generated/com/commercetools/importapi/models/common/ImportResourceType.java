@@ -11,11 +11,14 @@ import io.vrap.rmf.base.client.JsonEnum;
 import io.vrap.rmf.base.client.utils.Generated;
 
 /**
- *  <p>The resource types that can be imported.</p>
+ *  <p>The resource type that can be imported.</p>
  */
 @Generated(value = "io.vrap.rmf.codegen.rendering.CoreCodeGenerator", comments = "https://github.com/commercetools/rmf-codegen")
 public interface ImportResourceType extends JsonEnum {
 
+    /**
+    <p>The Business Unit import resource type.</p> */
+    ImportResourceType BUSINESS_UNIT = ImportResourceTypeEnum.BUSINESS_UNIT;
     /**
     <p>The Category import resource type.</p> */
     ImportResourceType CATEGORY = ImportResourceTypeEnum.CATEGORY;
@@ -66,6 +69,11 @@ public interface ImportResourceType extends JsonEnum {
      * possible values of ImportResourceType
      */
     enum ImportResourceTypeEnum implements ImportResourceType {
+        /**
+         * business-unit
+         */
+        BUSINESS_UNIT("business-unit"),
+
         /**
          * category
          */

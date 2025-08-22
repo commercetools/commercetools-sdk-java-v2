@@ -702,6 +702,22 @@ public interface MessagePayload extends MessagePayloadMixin {
     }
 
     /**
+     * builder for customerDefaultBillingAddressSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerDefaultBillingAddressSetMessagePayloadBuilder customerDefaultBillingAddressSetBuilder() {
+        return com.commercetools.api.models.message.CustomerDefaultBillingAddressSetMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for customerDefaultShippingAddressSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerDefaultShippingAddressSetMessagePayloadBuilder customerDefaultShippingAddressSetBuilder() {
+        return com.commercetools.api.models.message.CustomerDefaultShippingAddressSetMessagePayloadBuilder.of();
+    }
+
+    /**
      * builder for customerDeleted subtype
      * @return builder
      */
@@ -835,6 +851,14 @@ public interface MessagePayload extends MessagePayloadMixin {
      */
     public static com.commercetools.api.models.message.CustomerPasswordUpdatedMessagePayloadBuilder customerPasswordUpdatedBuilder() {
         return com.commercetools.api.models.message.CustomerPasswordUpdatedMessagePayloadBuilder.of();
+    }
+
+    /**
+     * builder for customerStoresSet subtype
+     * @return builder
+     */
+    public static com.commercetools.api.models.message.CustomerStoresSetMessagePayloadBuilder customerStoresSetBuilder() {
+        return com.commercetools.api.models.message.CustomerStoresSetMessagePayloadBuilder.of();
     }
 
     /**

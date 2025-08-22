@@ -23,7 +23,7 @@ import jakarta.validation.constraints.NotNull;
  * <pre><code class='java'>
  *     UnresolvedReferences unresolvedReferences = UnresolvedReferences.builder()
  *             .key("{key}")
- *             .typeId(ReferenceType.CART)
+ *             .typeId(ReferenceType.ASSOCIATE_ROLE)
  *             .build()
  * </code></pre>
  * </div>

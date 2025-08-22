@@ -19,7 +19,7 @@ public class ImportContainerUpdateDraftTest {
         return new Object[][] { new Object[] { "version", ImportContainerUpdateDraft.builder().version(2L) },
                 new Object[] { "resourceType", ImportContainerUpdateDraft.builder()
                         .resourceType(
-                            com.commercetools.importapi.models.common.ImportResourceType.findEnum("category")) } };
+                            com.commercetools.importapi.models.common.ImportResourceType.findEnum("business-unit")) } };
     }
 
     @Test
@@ -32,8 +32,8 @@ public class ImportContainerUpdateDraftTest {
     @Test
     public void resourceType() {
         ImportContainerUpdateDraft value = ImportContainerUpdateDraft.of();
-        value.setResourceType(com.commercetools.importapi.models.common.ImportResourceType.findEnum("category"));
+        value.setResourceType(com.commercetools.importapi.models.common.ImportResourceType.findEnum("business-unit"));
         Assertions.assertThat(value.getResourceType())
-                .isEqualTo(com.commercetools.importapi.models.common.ImportResourceType.findEnum("category"));
+                .isEqualTo(com.commercetools.importapi.models.common.ImportResourceType.findEnum("business-unit"));
     }
 }

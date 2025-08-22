@@ -83,4 +83,8 @@ public class ByProjectKeyRequestBuilder {
         return new ByProjectKeyProductSelectionsRequestBuilder(apiHttpClient, projectKey);
     }
 
+    public ByProjectKeyBusinessUnitsRequestBuilder businessUnits() {
+        return new ByProjectKeyBusinessUnitsRequestBuilder(apiHttpClient, projectKey);
+    }
+
 }

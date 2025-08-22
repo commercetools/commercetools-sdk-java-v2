@@ -130,6 +130,7 @@ com.commercetools.http.okhttp4
 com.commercetools.importapi.client
 com.commercetools.importapi.defaultconfig
 com.commercetools.importapi.json
+com.commercetools.importapi.models.business_units
 com.commercetools.importapi.models.categories
 com.commercetools.importapi.models.common
 com.commercetools.importapi.models.customers

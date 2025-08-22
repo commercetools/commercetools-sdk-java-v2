@@ -73,7 +73,7 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Known Subinterfaces:</dt>
-<dd><code><a href="CartDiscountKeyReference.html" title="interface in com.commercetools.importapi.models.common">CartDiscountKeyReference</a></code>, <code><a href="CartKeyReference.html" title="interface in com.commercetools.importapi.models.common">CartKeyReference</a></code>, <code><a href="CategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">CategoryKeyReference</a></code>, <code><a href="ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a></code>, <code><a href="CustomerGroupKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerGroupKeyReference</a></code>, <code><a href="CustomerKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerKeyReference</a></code>, <code><a href="CustomObjectKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomObjectKeyReference</a></code>, <code><a href="DiscountCodeKeyReference.html" title="interface in com.commercetools.importapi.models.common">DiscountCodeKeyReference</a></code>, <code><a href="OrderKeyReference.html" title="interface in com.commercetools.importapi.models.common">OrderKeyReference</a></code>, <code><a href="PaymentKeyReference.html" title="interface in com.commercetools.importapi.models.common">PaymentKeyReference</a></code>, <code><a href="PriceKeyReference.html" title="interface in com.commercetools.importapi.models.common">PriceKeyReference</a></code>, <code><a href="ProductDiscountKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductDiscountKeyReference</a></code>, <code><a href="ProductKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductKeyReference</a></code>, <code><a href="ProductTypeKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductTypeKeyReference</a></code>, <code><a href="ProductVariantKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductVariantKeyReference</a></code>, <code><a href="ShippingMethodKeyReference.html" title="interface in com.commercetools.importapi.models.common">ShippingMethodKeyReference</a></code>, <code><a href="StateKeyReference.html" title="interface in com.commercetools.importapi.models.common">StateKeyReference</a></code>, <code><a href="StoreKeyReference.html" title="interface in com.commercetools.importapi.models.common">StoreKeyReference</a></code>, <code><a href="TaxCategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">TaxCategoryKeyReference</a></code>, <code><a href="TypeKeyReference.html" title="interface in com.commercetools.importapi.models.common">TypeKeyReference</a></code></dd>
+<dd><code><a href="AssociateRoleKeyReference.html" title="interface in com.commercetools.importapi.models.common">AssociateRoleKeyReference</a></code>, <code><a href="BusinessUnitKeyReference.html" title="interface in com.commercetools.importapi.models.common">BusinessUnitKeyReference</a></code>, <code><a href="CartDiscountKeyReference.html" title="interface in com.commercetools.importapi.models.common">CartDiscountKeyReference</a></code>, <code><a href="CartKeyReference.html" title="interface in com.commercetools.importapi.models.common">CartKeyReference</a></code>, <code><a href="CategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">CategoryKeyReference</a></code>, <code><a href="ChannelKeyReference.html" title="interface in com.commercetools.importapi.models.common">ChannelKeyReference</a></code>, <code><a href="CustomerGroupKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerGroupKeyReference</a></code>, <code><a href="CustomerKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomerKeyReference</a></code>, <code><a href="CustomObjectKeyReference.html" title="interface in com.commercetools.importapi.models.common">CustomObjectKeyReference</a></code>, <code><a href="DiscountCodeKeyReference.html" title="interface in com.commercetools.importapi.models.common">DiscountCodeKeyReference</a></code>, <code><a href="OrderKeyReference.html" title="interface in com.commercetools.importapi.models.common">OrderKeyReference</a></code>, <code><a href="PaymentKeyReference.html" title="interface in com.commercetools.importapi.models.common">PaymentKeyReference</a></code>, <code><a href="PriceKeyReference.html" title="interface in com.commercetools.importapi.models.common">PriceKeyReference</a></code>, <code><a href="ProductDiscountKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductDiscountKeyReference</a></code>, <code><a href="ProductKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductKeyReference</a></code>, <code><a href="ProductTypeKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductTypeKeyReference</a></code>, <code><a href="ProductVariantKeyReference.html" title="interface in com.commercetools.importapi.models.common">ProductVariantKeyReference</a></code>, <code><a href="ShippingMethodKeyReference.html" title="interface in com.commercetools.importapi.models.common">ShippingMethodKeyReference</a></code>, <code><a href="StateKeyReference.html" title="interface in com.commercetools.importapi.models.common">StateKeyReference</a></code>, <code><a href="StoreKeyReference.html" title="interface in com.commercetools.importapi.models.common">StoreKeyReference</a></code>, <code><a href="TaxCategoryKeyReference.html" title="interface in com.commercetools.importapi.models.common">TaxCategoryKeyReference</a></code>, <code><a href="TypeKeyReference.html" title="interface in com.commercetools.importapi.models.common">TypeKeyReference</a></code></dd>
 </dl>
 <hr>
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">KeyReference</span></div>
@@ -83,7 +83,7 @@ loadScripts(document, 'script');</script>
  Example to create a subtype instance using the builder pattern
  <div class=code-example>
  <pre><code class='java'>
-     KeyReference keyReference = KeyReference.cartDiscountBuilder()
+     KeyReference keyReference = KeyReference.associateRoleBuilder()
              key("{key}")
              .build()
  </code></pre>
@@ -102,6 +102,16 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="AssociateRoleKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">AssociateRoleKeyReferenceBuilder</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#associateRoleBuilder()" class="member-name-link">associateRoleBuilder</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1">
+<div class="block">builder for associateRole subtype</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1"><code>static <a href="BusinessUnitKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">BusinessUnitKeyReferenceBuilder</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1"><code><a href="#businessUnitBuilder()" class="member-name-link">businessUnitBuilder</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1">
+<div class="block">builder for businessUnit subtype</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1"><code>static <a href="CartKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">CartKeyReferenceBuilder</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1"><code><a href="#cartBuilder()" class="member-name-link">cartBuilder</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1">
@@ -302,6 +312,28 @@ loadScripts(document, 'script');</script>
 <dd><code>template</code> - instance to be copied</dd>
 <dt>Returns:</dt>
 <dd>copy instance</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="associateRoleBuilder()">
+<h3>associateRoleBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="AssociateRoleKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">AssociateRoleKeyReferenceBuilder</a></span>&nbsp;<span class="element-name">associateRoleBuilder</span>()</div>
+<div class="block">builder for associateRole subtype</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>builder</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="businessUnitBuilder()">
+<h3>businessUnitBuilder</h3>
+<div class="member-signature"><span class="modifiers">static</span>&nbsp;<span class="return-type"><a href="BusinessUnitKeyReferenceBuilder.html" title="class in com.commercetools.importapi.models.common">BusinessUnitKeyReferenceBuilder</a></span>&nbsp;<span class="element-name">businessUnitBuilder</span>()</div>
+<div class="block">builder for businessUnit subtype</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>builder</dd>
 </dl>
 </section>
 </li>
